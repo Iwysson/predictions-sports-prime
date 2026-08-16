@@ -87,7 +87,7 @@ export function LiveLeagueRound({
   const [roundNumber, setRoundNumber] = useState<number | null>(null);
   const [state, setState] = useState<
     "loading" | "validated" | "fallback" | "invalid"
-  >("loading");
+  >(manualMatches.length > 0 ? "fallback" : "loading");
   const [warningCount, setWarningCount] = useState(0);
 
   useEffect(() => {

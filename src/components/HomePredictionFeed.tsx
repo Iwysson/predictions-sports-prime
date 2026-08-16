@@ -169,7 +169,7 @@ export function HomePredictionFeed({
 
                 return (
                   <a
-                    href={`/match/${match.slug}`}
+                    href={`/match/${match.slug}/`}
                     className="latest-row"
                     key={match.id}
                   >

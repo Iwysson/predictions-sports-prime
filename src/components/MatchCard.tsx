@@ -8,7 +8,7 @@ import { leagues } from "@/data/leagues";
 import { useI18n } from "@/i18n/I18nProvider";
 
 export function MatchCard({ match }: { match: MatchPreview }) {
-  const href = `/match/${match.slug}`;
+  const href = `/match/${match.slug}/`;
   const league = leagues.find((item) => item.slug === match.league);
   const { t } = useI18n();
 

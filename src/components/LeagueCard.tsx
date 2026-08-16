@@ -10,7 +10,7 @@ type Props = {
 
 export function LeagueCard({ slug, name, country, short }: Props) {
   return (
-    <Link href={`/league/${slug}`} className="league-card">
+    <Link href={`/league/${slug}/`} className="league-card">
       <div className="league-symbol-wrap league-symbol-wrap--real">
         <LeagueBadge slug={slug} short={short} />
       </div>

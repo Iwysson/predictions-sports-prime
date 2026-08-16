@@ -4,19 +4,40 @@ import { leagues } from "@/data/leagues";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 
 export function matchSeoTitle(match: Match) {
-  return `${match.homeTeam} vs ${match.awayTeam} Prediction & Match Analysis`;
+  const teams = `${match.homeTeam} vs ${match.awayTeam}`;
+  const title = `${teams} Prediction & Betting Tips`;
+
+  return title.length <= 70 ? title : `${teams} Prediction`;
 }
 
 export function matchSeoDescription(match: Match) {
   const league = leagues.find((item) => item.slug === match.league);
+  const mainPick = match.predictions.find(
+    (item) => item.label === "Main Prediction"
+  )?.value;
+  const odds = match.predictions.find(
+    (item) => item.label === "Odds"
+  )?.value;
 
-  return [
-    `${match.homeTeam} vs ${match.awayTeam} prediction and match preview`,
-    league ? `for the ${league.name}` : null,
-    "with manually written analysis and selected football tips.",
+  const context = [
+    league ? `for ${league.name}` : null,
+    match.date ? `on ${match.date}` : null,
   ]
     .filter(Boolean)
     .join(" ");
+
+  const selection = mainPick
+    ? ` Main pick: ${mainPick}${odds ? ` at odds of ${odds}` : ""}.`
+    : " Read our match analysis and selected football tip.";
+
+  const description =
+    `${match.homeTeam} vs ${match.awayTeam} prediction and betting tips${context ? ` ${context}` : ""}.${selection}`;
+
+  if (description.length <= 160) {
+    return description;
+  }
+
+  return `${description.slice(0, 157).replace(/\s+\S*$/, "")}...`;
 }
 
 export function matchCanonicalPath(match: Match) {
@@ -29,7 +50,9 @@ export function buildMatchMetadata(match: Match): Metadata {
   const canonical = absoluteUrl(matchCanonicalPath(match));
 
   return {
-    title,
+    title: {
+      absolute: title,
+    },
     description,
 
     alternates: {
@@ -63,6 +86,35 @@ export function buildMatchMetadata(match: Match): Metadata {
       description,
       images: [absoluteUrl("/og-default.png")],
     },
+  };
+}
+
+export function matchBreadcrumbJsonLd(match: Match) {
+  const league = leagues.find((item) => item.slug === match.league);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: absoluteUrl("/"),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: league?.name ?? "League",
+        item: absoluteUrl(`/league/${match.league}/`),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${match.homeTeam} vs ${match.awayTeam}`,
+        item: absoluteUrl(matchCanonicalPath(match)),
+      },
+    ],
   };
 }
 

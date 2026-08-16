@@ -35,14 +35,16 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${league.name} Predictions, Fixtures & Table`;
+  const title = `${league.name} Predictions & Betting Tips`;
   const description =
-    `${league.name} football predictions, current fixtures, standings and manually written match analysis on ${siteConfig.name}.`;
+    `${league.name} predictions, betting tips, current fixtures, standings and manually written football match analysis from ${siteConfig.name}.`;
 
   const canonical = absoluteUrl(`/league/${league.slug}/`);
 
   return {
-    title,
+    title: {
+      absolute: title,
+    },
     description,
 
     alternates: {
@@ -111,7 +113,7 @@ export default async function LeaguePage({
             <span className="league-title-icon league-title-icon--logo"><LeagueBadge slug={league.slug} short={league.short} /></span>
             <div>
               <span className="eyebrow">{league.country}</span>
-              <h1>{league.name}</h1>
+              <h1>{league.name} Predictions &amp; Betting Tips</h1>
             </div>
           </div>
           <span className="league-round-label">Current Round</span>

@@ -17,6 +17,7 @@ import { matches } from "@/data/matches";
 import {
   articleJsonLd,
   buildMatchMetadata,
+  matchBreadcrumbJsonLd,
 } from "@/lib/seo";
 
 export const dynamicParams = false;
@@ -82,11 +83,12 @@ export default async function MatchPage({
   return (
     <>
       <JsonLd data={articleJsonLd(match)} />
+      <JsonLd data={matchBreadcrumbJsonLd(match)} />
 
       <section className="compact-match-top">
         <div className="container">
           <div className="compact-match-breadcrumb">
-            <Link href={`/league/${match.league}`}>
+            <Link href={`/league/${match.league}/`}>
               ← {league?.name ?? "League"}
             </Link>
           </div>
