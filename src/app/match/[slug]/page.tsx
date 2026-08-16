@@ -7,9 +7,8 @@ import { TeamBadge } from "@/components/TeamBadge";
 import { LiveMatchMeta } from "@/components/LiveMatchMeta";
 import {
   MatchAnalysisLabel,
-  MatchPredictionsLabel,
-  MatchPicksLabel,
-  MatchAvailableLabel,
+  MainPredictionLabel,
+  OddsLabel,
   ResponsibleText,
 } from "@/components/MatchPageLabels";
 import { JsonLd } from "@/components/JsonLd";
@@ -80,6 +79,12 @@ export default async function MatchPage({
 
   const league = leagues.find(
     (item) => item.slug === match.league
+  );
+  const mainPrediction = match.predictions.find(
+    (item) => item.label === "Main Prediction"
+  );
+  const odds = match.predictions.find(
+    (item) => item.label === "Odds"
   );
 
   return (
@@ -166,29 +171,20 @@ export default async function MatchPage({
             <div className="compact-card-heading">
               <div>
                 <span className="eyebrow">
-                  <MatchPredictionsLabel />
+                  <MainPredictionLabel />
                 </span>
-
-                <h2>
-                  <MatchPicksLabel />
-                </h2>
               </div>
-
-              <span className="prediction-available-badge">
-                <MatchAvailableLabel />
-              </span>
             </div>
 
-            <div className="compact-prediction-list">
-              {match.predictions.map((prediction) => (
-                <div
-                  className="compact-prediction-row"
-                  key={`${prediction.label}-${prediction.value}`}
-                >
-                  <span>{prediction.label}</span>
-                  <strong>{prediction.value}</strong>
+            <div className="main-prediction-block">
+              <strong>{mainPrediction?.value}</strong>
+
+              {odds ? (
+                <div className="prediction-odds">
+                  <span><OddsLabel /></span>
+                  <b>{odds.value}</b>
                 </div>
-              ))}
+              ) : null}
             </div>
 
             <p className="compact-responsible-note">

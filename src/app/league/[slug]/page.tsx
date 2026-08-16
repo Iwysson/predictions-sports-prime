@@ -138,7 +138,7 @@ export default async function LeaguePage({
               <div className="empty-state">
                 <strong>No matches added yet.</strong>
                 <p>
-                  Add selected predictions in <code>src/data/predictions.ts</code>.
+                  Add selected predictions in <code>src/data/predictions/</code>.
                 </p>
               </div>
             )}

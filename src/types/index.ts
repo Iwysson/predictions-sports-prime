@@ -12,12 +12,7 @@ export type PredictionItem = {
 
 export type EditorialPicks = {
   main: string;
-  goals?: string;
-  btts?: string;
-  corners?: string;
-  cards?: string;
-  score?: string;
-  extra?: PredictionItem[];
+  odds?: number;
 };
 
 export type EditorialPrediction = {

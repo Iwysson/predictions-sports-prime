@@ -16,7 +16,7 @@ if (editorialErrors.length > 0) {
 
 // Compatibilidade com o restante do site.
 // NÃO edite este arquivo para publicar predictions.
-// Edite somente: src/data/predictions.ts
+// Edite somente os arquivos em: src/data/predictions/<liga>/<rodada>/
 export const matches = buildPublishedMatches(
   editorialPredictions
 );

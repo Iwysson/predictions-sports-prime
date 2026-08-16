@@ -36,7 +36,7 @@ http://localhost:3000
 Edite:
 
 ```text
-src/data/matches.ts
+src/data/predictions/
 ```
 
 Todos os prognósticos continuam 100% manuais.
@@ -100,7 +100,7 @@ A Premier League agora usa o dataset CC0 do OpenFootball para:
 - sem banco
 
 As predictions continuam manuais: um jogo só recebe `Prediction available`
-quando existir uma entrada correspondente em `src/data/matches.ts`.
+quando existir uma entrada publicada em `src/data/predictions/`.
 
 
 ## V7 — quatro ligas com open data

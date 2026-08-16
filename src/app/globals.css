@@ -1516,6 +1516,61 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
   }
 }
 
+/* Simple editorial presentation: analysis, main prediction and optional odds. */
+.card-prediction-summary {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 9px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.main-prediction-block {
+  display: grid;
+  gap: 10px;
+  padding-top: 12px;
+}
+
+.main-prediction-block > strong {
+  color: var(--accent);
+  font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.25;
+}
+
+.prediction-odds {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: fit-content;
+  min-width: 112px;
+  padding: 7px 9px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: rgba(85, 227, 143, .07);
+}
+
+.prediction-odds span {
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.prediction-odds b {
+  color: var(--text);
+  font-size: 14px;
+}
+
+@media (max-width: 430px) {
+  .card-prediction-summary { font-size: 8px; }
+  .main-prediction-block { padding-top: 10px; }
+}
+
 @media (max-width: 430px) {
   .brand strong {
     max-width: 170px;

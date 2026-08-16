@@ -59,7 +59,6 @@ publica páginas de partidas até o proprietário inserir conteúdo real.
 
 - Definir `NEXT_PUBLIC_SITE_URL` com o domínio real antes do build de produção; sem isso, URLs SEO usam `http://localhost:3000` apenas como fallback de desenvolvimento.
 - Publicar a pasta `out/` no provedor estático/Cloudflare escolhido.
-- Inserir predictions reais do proprietário em `src/data/predictions.ts` e mudar `published` para `true` somente após substituir todo o conteúdo demonstrativo.
+- Preencher os rascunhos em `src/data/predictions/<liga>/<rodada>/` e mudar `published` para `true` somente após concluir o conteúdo real.
 - Configurar Google Search Console depois que o domínio estiver online.
 - Integrar AdSense somente após aprovação; os espaços atuais são placeholders intencionais.
-

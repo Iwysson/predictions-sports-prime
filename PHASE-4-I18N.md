@@ -108,7 +108,7 @@ A interface está internacionalizada.
 Os textos das análises e predictions continuam exatamente como você escrever em:
 
 ```text
-src/data/predictions.ts
+src/data/predictions/
 ```
 
 Na próxima evolução, se desejado, podemos permitir que uma mesma prediction tenha versões manuais em vários idiomas.

@@ -5,7 +5,7 @@ A Home agora funciona assim:
 1. Você publica uma prediction em:
 
 ```text
-src/data/predictions.ts
+src/data/predictions/
 ```
 
 2. O site procura o jogo real no feed da liga.

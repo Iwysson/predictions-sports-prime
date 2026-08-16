@@ -4,7 +4,7 @@ import { leagues } from "@/data/leagues";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 
 export function matchSeoTitle(match: Match) {
-  return `${match.homeTeam} vs ${match.awayTeam} Prediction, Tips & Match Preview`;
+  return `${match.homeTeam} vs ${match.awayTeam} Prediction & Match Analysis`;
 }
 
 export function matchSeoDescription(match: Match) {

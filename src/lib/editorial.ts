@@ -31,43 +31,11 @@ function picksToItems(
     },
   ];
 
-  if (picks.goals) {
+  if (picks.odds !== undefined) {
     items.push({
-      label: "Goals",
-      value: picks.goals,
+      label: "Odds",
+      value: String(picks.odds),
     });
-  }
-
-  if (picks.btts) {
-    items.push({
-      label: "Both Teams To Score",
-      value: picks.btts,
-    });
-  }
-
-  if (picks.corners) {
-    items.push({
-      label: "Corners",
-      value: picks.corners,
-    });
-  }
-
-  if (picks.cards) {
-    items.push({
-      label: "Cards",
-      value: picks.cards,
-    });
-  }
-
-  if (picks.score) {
-    items.push({
-      label: "Correct Score",
-      value: picks.score,
-    });
-  }
-
-  if (picks.extra?.length) {
-    items.push(...picks.extra);
   }
 
   return items;
@@ -116,6 +84,7 @@ export function validateEditorialPredictions(
 
   predictions.forEach((prediction, index) => {
     const label = `Prediction ${index + 1}`;
+    const isDraft = prediction.published === false;
 
     if (!prediction.league) {
       errors.push(`${label}: league is required.`);
@@ -136,15 +105,25 @@ export function validateEditorialPredictions(
       errors.push(`${label}: home and away team cannot be the same.`);
     }
 
-    if (
-      !prediction.analysis.length ||
-      prediction.analysis.every((paragraph) => !paragraph.trim())
-    ) {
-      errors.push(`${label}: add at least one analysis paragraph.`);
+    if (!isDraft) {
+      if (
+        !prediction.analysis.length ||
+        prediction.analysis.every((paragraph) => !paragraph.trim())
+      ) {
+        errors.push(`${label}: add at least one analysis paragraph.`);
+      }
+
+      if (!prediction.picks.main.trim()) {
+        errors.push(`${label}: main prediction is required.`);
+      }
     }
 
-    if (!prediction.picks.main.trim()) {
-      errors.push(`${label}: main prediction is required.`);
+    if (
+      prediction.picks.odds !== undefined &&
+      (!Number.isFinite(prediction.picks.odds) ||
+        prediction.picks.odds <= 1)
+    ) {
+      errors.push(`${label}: odds must be a finite number greater than 1.`);
     }
 
     const slug = predictionSlug(

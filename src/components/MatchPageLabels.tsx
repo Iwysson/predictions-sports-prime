@@ -7,19 +7,14 @@ export function MatchAnalysisLabel() {
   return <>{t("matchAnalysis")}</>;
 }
 
-export function MatchPredictionsLabel() {
+export function MainPredictionLabel() {
   const { t } = useI18n();
-  return <>{t("predictions")}</>;
+  return <>{t("mainPrediction")}</>;
 }
 
-export function MatchPicksLabel() {
+export function OddsLabel() {
   const { t } = useI18n();
-  return <>{t("matchPicks")}</>;
-}
-
-export function MatchAvailableLabel() {
-  const { t } = useI18n();
-  return <>★ {t("available")}</>;
+  return <>{t("odds")}</>;
 }
 
 export function ResponsibleText() {
