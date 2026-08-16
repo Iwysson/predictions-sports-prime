@@ -93,6 +93,10 @@ export const metadata: Metadata = {
     follow: true,
   },
 
+  other: {
+    "google-adsense-account": "ca-pub-2602332152030838",
+  },
+
   category: "sports",
 };
 
