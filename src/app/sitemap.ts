@@ -12,6 +12,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 1,
     },
+    ...[
+      "/about/",
+      "/contact/",
+      "/privacy/",
+      "/cookies/",
+      "/terms/",
+      "/responsible-gambling/",
+    ].map((path) => ({
+      url: absoluteUrl(path),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
   ];
 
   const leaguePages: MetadataRoute.Sitemap = leagues.map((league) => ({

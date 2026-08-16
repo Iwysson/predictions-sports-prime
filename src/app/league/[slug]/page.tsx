@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { AdSlot } from "@/components/AdSlot";
+import { AdSlot } from "@/components/ads";
 import { MatchCard } from "@/components/MatchCard";
 import { CompactStandings } from "@/components/CompactStandings";
 import { LiveLeagueRound } from "@/components/LiveLeagueRound";
@@ -119,7 +119,7 @@ export default async function LeaguePage({
       </section>
 
       <div className="container league-top-ad">
-        <AdSlot />
+        <AdSlot placement="league-top" />
       </div>
 
       <section className="section league-content-section">
@@ -148,7 +148,7 @@ export default async function LeaguePage({
             </LeaguePageText>
 
             <div className="league-bottom-ad">
-              <AdSlot />
+              <AdSlot placement="league-middle" />
             </div>
           </div>
 
@@ -166,7 +166,7 @@ export default async function LeaguePage({
             )}
 
             <div className="league-side-ad">
-              <AdSlot size="rectangle" />
+              <AdSlot placement="league-sidebar" format="rectangle" />
             </div>
           </aside>
         </div>

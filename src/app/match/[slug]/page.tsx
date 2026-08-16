@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AdSlot } from "@/components/AdSlot";
+import { AdSlot } from "@/components/ads";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { TeamBadge } from "@/components/TeamBadge";
 import { LiveMatchMeta } from "@/components/LiveMatchMeta";
@@ -136,7 +136,7 @@ export default async function MatchPage({
       </section>
 
       <div className="container match-ad-top">
-        <AdSlot />
+        <AdSlot placement="match-top" />
       </div>
 
       <section className="section compact-match-content-section">
@@ -156,6 +156,10 @@ export default async function MatchPage({
               {match.analysis.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
+            </div>
+
+            <div className="match-content-ad">
+              <AdSlot placement="match-content" />
             </div>
           </article>
 
@@ -187,7 +191,7 @@ export default async function MatchPage({
       </section>
 
       <div className="container compact-match-bottom-area">
-        <AdSlot size="rectangle" />
+        <AdSlot placement="match-bottom" format="rectangle" />
       </div>
     </>
   );

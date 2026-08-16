@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { AdSenseScript } from "@/components/ads";
+import { ConsentIntegration } from "@/components/consent/ConsentIntegration";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import { JsonLd } from "@/components/JsonLd";
 import {
@@ -109,6 +111,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <AdSenseScript />
+        <ConsentIntegration />
         <JsonLd data={websiteJsonLd()} />
         <JsonLd data={organizationJsonLd()} />
 

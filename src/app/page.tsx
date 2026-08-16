@@ -1,4 +1,4 @@
-import { AdSlot } from "@/components/AdSlot";
+import { AdSlot } from "@/components/ads";
 import { LeagueCard } from "@/components/LeagueCard";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -9,14 +9,10 @@ import { toMatchPreview } from "@/lib/editorial";
 export default function Home() {
   return (
     <>
-      <div className="container top-ad-space">
-        <AdSlot />
-      </div>
-
       <HomePredictionFeed matches={matches.map(toMatchPreview)} />
 
       <div className="container inline-ad-space">
-        <AdSlot />
+        <AdSlot placement="home-middle" />
       </div>
 
       <section
@@ -39,7 +35,7 @@ export default function Home() {
       </section>
 
       <div className="container bottom-ad-space">
-        <AdSlot />
+        <AdSlot placement="home-bottom" />
       </div>
     </>
   );
