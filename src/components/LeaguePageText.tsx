@@ -20,6 +20,9 @@ export function LeaguePageText({
           <div>
             <span className="eyebrow">{t("fixtures")}</span>
             <h2>{t("currentRound")}</h2>
+            <span className="section-subtitle">
+              {t("analysesAndPredictions")}
+            </span>
           </div>
         </div>
 

@@ -969,6 +969,553 @@ code { color: var(--accent); }
   .footer-disclaimer { text-align: left; }
 }
 
+/* =========================
+   Global visual refinement
+   Shared by Home, leagues and prediction pages
+   ========================= */
+
+:where(a, button, select):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.container {
+  width: min(1320px, calc(100% - 32px));
+}
+
+.header-inner {
+  min-height: 62px;
+  gap: 14px;
+}
+
+.section {
+  padding-block: 28px;
+}
+
+.section--compact {
+  padding-block: 20px;
+}
+
+.section-heading,
+.section-heading--compact {
+  gap: 12px;
+  margin-bottom: 11px;
+}
+
+.heading-with-icon {
+  gap: 8px;
+}
+
+.section-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 15px;
+}
+
+.section-heading h1,
+.section-heading h2 {
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.08;
+}
+
+.section-subtitle {
+  display: block;
+  margin-top: 2px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.top-ad-space {
+  padding-top: 10px;
+}
+
+.inline-ad-space,
+.bottom-ad-space {
+  padding-block: 9px;
+}
+
+.ad-slot {
+  min-height: 66px;
+}
+
+.ad-slot--rectangle,
+.league-side-ad .ad-slot--rectangle {
+  min-height: 180px;
+}
+
+.match-grid,
+.match-grid--compact {
+  gap: 9px;
+}
+
+.match-card,
+.league-match-list .match-card {
+  padding: 9px 10px !important;
+  border-radius: 11px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .16);
+}
+
+.match-league-row,
+.league-match-list .match-league-row {
+  min-height: 22px;
+}
+
+.match-league {
+  gap: 6px;
+}
+
+.match-time,
+.league-match-list .match-time {
+  min-width: 42px;
+  padding: 3px 6px;
+  font-size: 9px;
+}
+
+.compact-teams,
+.league-match-list .compact-teams {
+  min-height: 50px;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.compact-team,
+.league-match-list .compact-team {
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  justify-items: start;
+  gap: 6px;
+}
+
+.compact-team:last-child,
+.league-match-list .compact-team:last-child {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.compact-team:last-child :is(.team-badge, .team-logo),
+.league-match-list .compact-team:last-child :is(.team-badge, .team-logo) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.compact-team:last-child strong,
+.league-match-list .compact-team:last-child strong {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: end;
+}
+
+.compact-team strong,
+.league-match-list .compact-team strong {
+  text-align: start;
+  font-size: 11px;
+}
+
+.team-badge--md,
+.team-logo--md,
+.league-match-list .team-badge--md,
+.league-match-list .team-logo--md {
+  width: 30px;
+  height: 32px;
+  flex: 0 0 30px;
+}
+
+.compact-match-footer,
+.league-match-list .compact-match-footer {
+  min-height: 25px;
+  padding-top: 5px;
+}
+
+.prediction-pill,
+.league-match-list .prediction-pill {
+  gap: 4px;
+  font-size: 8px;
+}
+
+.prediction-pill span,
+.league-match-list .prediction-pill span {
+  width: 17px;
+  height: 17px;
+  flex-basis: 17px;
+}
+
+.button--small,
+.league-match-list .button--small {
+  min-height: 26px;
+  padding-inline: 9px;
+  border-radius: 7px;
+  font-size: 9px;
+}
+
+.latest-list {
+  gap: 5px;
+}
+
+.latest-row {
+  min-height: 50px;
+  grid-template-columns: 170px minmax(0, 1fr) 96px 14px;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.latest-match {
+  gap: 2px;
+  padding-inline-start: 10px;
+  border-inline-start: 1px solid var(--line);
+  border-left: 0;
+}
+
+.latest-arrow {
+  font-size: 19px;
+}
+
+.league-grid,
+.league-grid--compact {
+  gap: 8px;
+}
+
+.league-card {
+  min-height: 92px;
+  padding: 10px;
+}
+
+.league-symbol-wrap {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 8px;
+  border-radius: 9px;
+}
+
+.league-symbol-wrap .league-logo--md {
+  width: 27px;
+  height: 27px;
+}
+
+.arrow {
+  inset-inline-end: 10px;
+  right: auto;
+  bottom: 9px;
+  font-size: 13px;
+}
+
+.league-title-inner {
+  min-height: 60px;
+}
+
+.league-title-icon {
+  width: 38px;
+  height: 38px;
+}
+
+.league-title-copy h1 {
+  font-size: clamp(24px, 2.5vw, 32px);
+}
+
+.league-top-ad {
+  padding-top: 8px;
+}
+
+.league-content-section {
+  padding-block: 15px 8px;
+}
+
+.league-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 28%);
+  gap: 12px;
+}
+
+.league-match-list {
+  gap: 5px !important;
+}
+
+.round-source-line {
+  min-height: 28px;
+  margin-bottom: 6px;
+  padding-inline: 8px;
+}
+
+.standings-header {
+  min-height: 48px;
+  padding: 8px 9px;
+}
+
+.standings-columns,
+.standing-row {
+  grid-template-columns: 25px minmax(0, 1fr) 30px 34px;
+  padding-inline: 8px;
+}
+
+.standings-columns {
+  min-height: 25px;
+  font-size: 7px;
+}
+
+.standing-row {
+  min-height: 25px;
+  font-size: 8px;
+}
+
+.standing-row strong {
+  font-size: 8px;
+}
+
+.site-footer {
+  margin-top: 10px;
+  padding-block: 16px;
+}
+
+.footer-inner {
+  gap: 18px;
+}
+
+.compact-match-breadcrumb {
+  padding-top: 9px;
+}
+
+.compact-match-header {
+  min-height: 48px;
+  padding-block: 5px;
+}
+
+.compact-match-scoreboard {
+  min-height: 78px;
+  gap: 12px;
+  padding: 4px 0 10px;
+}
+
+.compact-match-team {
+  gap: 8px;
+}
+
+.compact-match-team strong {
+  font-size: clamp(18px, 2.4vw, 26px);
+}
+
+.compact-match-vs span {
+  width: 32px;
+  height: 32px;
+}
+
+.match-ad-top {
+  padding-top: 8px;
+}
+
+.compact-match-content-section {
+  padding: 12px 0 6px;
+}
+
+.compact-match-layout {
+  gap: 10px;
+}
+
+.compact-analysis-card,
+.compact-predictions-card {
+  padding: 13px;
+  border-radius: 11px;
+}
+
+.compact-card-heading {
+  gap: 9px;
+  padding-bottom: 8px;
+}
+
+.compact-card-heading h1 {
+  font-size: clamp(21px, 2.5vw, 28px);
+}
+
+.compact-card-heading h2 {
+  font-size: 17px;
+}
+
+.compact-analysis-copy {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.compact-analysis-copy p {
+  margin-top: 10px;
+}
+
+.compact-prediction-row {
+  padding-block: 8px;
+}
+
+.compact-match-bottom-area {
+  padding-block: 6px 9px;
+}
+
+.compact-match-bottom-area .ad-slot--rectangle {
+  min-height: 110px;
+}
+
+html[dir="rtl"] .latest-match {
+  padding-right: 10px;
+  border-right: 1px solid var(--line);
+}
+
+html[dir="rtl"] .compact-team strong,
+html[dir="rtl"] .league-match-list .compact-team strong {
+  text-align: start;
+}
+
+html[dir="rtl"] .compact-team:last-child strong,
+html[dir="rtl"] .league-match-list .compact-team:last-child strong {
+  text-align: end;
+}
+
+@media (max-width: 900px) {
+  .league-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .league-sidebar {
+    position: static;
+    width: 100%;
+  }
+
+  .league-side-ad .ad-slot--rectangle {
+    min-height: 90px;
+  }
+
+  .compact-match-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .compact-predictions-card {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: min(100% - 20px, 1320px);
+  }
+
+  .header-inner {
+    min-height: 56px;
+    gap: 8px;
+  }
+
+  .section,
+  .section--compact {
+    padding-block: 15px;
+  }
+
+  .section-heading,
+  .section-heading--compact {
+    margin-bottom: 9px;
+  }
+
+  .section-heading h1,
+  .section-heading h2 {
+    font-size: 20px;
+  }
+
+  .ad-slot {
+    min-height: 58px;
+  }
+
+  .match-card,
+  .league-match-list .match-card {
+    padding: 8px 9px !important;
+  }
+
+  .team-badge--md,
+  .team-logo--md,
+  .league-match-list .team-badge--md,
+  .league-match-list .team-logo--md {
+    width: 26px;
+    height: 28px;
+    flex-basis: 26px;
+  }
+
+  .compact-teams,
+  .league-match-list .compact-teams {
+    min-height: 46px;
+  }
+
+  .latest-row {
+    min-height: 46px;
+    padding-block: 6px;
+  }
+
+  .league-grid--compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .league-card {
+    min-height: 84px;
+    padding: 9px;
+  }
+
+  .league-title-inner {
+    min-height: 56px;
+  }
+
+  .compact-match-scoreboard {
+    min-height: 70px;
+    padding-bottom: 8px;
+  }
+
+  .compact-match-team strong {
+    max-width: min(32vw, 125px);
+    font-size: 14px;
+  }
+
+  .compact-analysis-card,
+  .compact-predictions-card {
+    padding: 11px;
+  }
+
+  .site-footer {
+    padding-block: 13px;
+  }
+}
+
+@media (max-width: 430px) {
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+  }
+
+  .language-selector {
+    min-width: 82px;
+  }
+
+  .language-selector select {
+    max-width: 58px;
+  }
+
+  .compact-team strong,
+  .league-match-list .compact-team strong {
+    font-size: 10px;
+  }
+
+  .league-grid--compact {
+    grid-template-columns: 1fr;
+  }
+
+  .league-card {
+    min-height: 68px;
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr) 14px;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .league-symbol-wrap {
+    margin-bottom: 0;
+  }
+
+  .arrow {
+    position: static;
+  }
+}
+
 @media (max-width: 430px) {
   .brand strong {
     max-width: 170px;
@@ -2206,5 +2753,121 @@ html[dir="rtl"] .standing-position--relegation {
   html[dir="rtl"] .latest-match {
     padding-right: 0;
     border-right: 0;
+  }
+}
+
+/* Final page-specific normalization. Kept after legacy phase rules so the
+   shared compact scale is authoritative for every league and match page. */
+.league-title-inner { min-height: 60px; }
+.league-title-icon { width: 38px; height: 38px; }
+.league-title-copy h1 { font-size: clamp(24px, 2.5vw, 32px); }
+.league-top-ad { padding-top: 8px; }
+.league-content-section { padding-block: 15px 8px; }
+.league-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 28%);
+  gap: 12px;
+}
+.league-match-list { gap: 5px !important; }
+.league-match-list .match-card { padding: 9px 10px !important; }
+.league-match-list .match-league-row { min-height: 22px; }
+.league-match-list .match-time { min-width: 42px; padding: 3px 6px; }
+.league-match-list .compact-teams { min-height: 50px; padding-block: 4px; }
+.league-match-list .team-badge--md,
+.league-match-list .team-logo--md { width: 30px; height: 32px; }
+.league-match-list .compact-team { gap: 6px; }
+.league-match-list .compact-team strong { font-size: 11px; }
+.league-match-list .compact-match-footer { padding-top: 5px; }
+.league-match-list .prediction-pill { font-size: 8px; }
+.league-match-list .prediction-pill span {
+  width: 17px;
+  height: 17px;
+  flex-basis: 17px;
+}
+.league-match-list .button--small {
+  min-height: 26px;
+  padding-inline: 9px;
+  font-size: 9px;
+}
+.round-source-line { min-height: 28px; margin-bottom: 6px; padding-inline: 8px; }
+.standings-header { min-height: 48px; padding: 8px 9px; }
+.standings-columns,
+.standing-row {
+  grid-template-columns: 25px minmax(0, 1fr) 30px 34px;
+  padding-inline: 8px;
+}
+.standings-columns { min-height: 25px; font-size: 7px; }
+.standing-row { min-height: 25px; font-size: 8px; }
+.standing-row strong { font-size: 8px; }
+
+.compact-match-breadcrumb { padding-top: 9px; }
+.compact-match-header { min-height: 48px; padding-block: 5px; }
+.compact-match-scoreboard {
+  min-height: 78px;
+  gap: 12px;
+  padding: 4px 0 10px;
+}
+.compact-match-team { gap: 8px; }
+.compact-match-team strong { font-size: clamp(18px, 2.4vw, 26px); }
+.compact-match-vs span { width: 32px; height: 32px; }
+.match-ad-top { padding-top: 8px; }
+.compact-match-content-section { padding: 12px 0 6px; }
+.compact-match-layout { gap: 10px; }
+.compact-analysis-card,
+.compact-predictions-card { padding: 13px; border-radius: 11px; }
+.compact-card-heading { gap: 9px; padding-bottom: 8px; }
+.compact-card-heading h1 { font-size: clamp(21px, 2.5vw, 28px); }
+.compact-card-heading h2 { font-size: 17px; }
+.compact-analysis-copy { font-size: 12px; line-height: 1.6; }
+.compact-analysis-copy p { margin-top: 10px; }
+.compact-prediction-row { padding-block: 8px; }
+.compact-match-bottom-area { padding-block: 6px 9px; }
+.compact-match-bottom-area .ad-slot--rectangle { min-height: 110px; }
+
+@media (max-width: 900px) {
+  .league-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .league-main-column,
+  .league-sidebar { width: 100%; }
+
+  .league-sidebar { position: static; order: 2; }
+  .league-side-ad .ad-slot--rectangle { min-height: 90px; }
+  .compact-match-layout { grid-template-columns: 1fr; }
+  .compact-predictions-card { position: static; }
+}
+
+@media (max-width: 720px) {
+  .league-title-inner { min-height: 56px; }
+  .league-content-section { padding-top: 11px; }
+  .league-match-list .match-card { padding: 8px 9px !important; }
+  .league-match-list .compact-teams { min-height: 46px; }
+  .league-match-list .team-badge--md,
+  .league-match-list .team-logo--md { width: 26px; height: 28px; }
+  .compact-match-header { min-height: 44px; }
+  .compact-match-scoreboard { min-height: 70px; padding-bottom: 8px; }
+  .compact-match-team strong { max-width: min(32vw, 125px); font-size: 14px; }
+  .compact-analysis-card,
+  .compact-predictions-card { padding: 11px; }
+}
+
+html[dir="rtl"] .latest-match {
+  padding-inline-start: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 720px) {
+  html[dir="rtl"] .latest-match {
+    padding-inline-start: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .league-grid--compact { grid-template-columns: 1fr; }
+  .league-card {
+    grid-template-columns: 34px minmax(0, 1fr) 14px;
+    min-height: 68px;
   }
 }
