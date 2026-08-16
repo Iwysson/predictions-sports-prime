@@ -1,0 +1,69 @@
+export type LeagueSlug =
+  | "premier-league"
+  | "la-liga"
+  | "bundesliga"
+  | "serie-a"
+  | "other-leagues";
+
+export type PredictionItem = {
+  label: string;
+  value: string;
+};
+
+export type EditorialPicks = {
+  main: string;
+  goals?: string;
+  btts?: string;
+  corners?: string;
+  cards?: string;
+  score?: string;
+  extra?: PredictionItem[];
+};
+
+export type EditorialPrediction = {
+  league: LeagueSlug;
+  homeTeam: string;
+  awayTeam: string;
+
+  // Seu texto manual.
+  analysis: string[];
+
+  // Seus palpites manuais.
+  picks: EditorialPicks;
+
+  // Opcional. Se não informar, o título é criado automaticamente.
+  title?: string;
+
+  // Opcional. false = rascunho e não aparece no site.
+  published?: boolean;
+
+  // Só é necessário para "other-leagues" ou como fallback manual.
+  matchInfo?: {
+    date?: string;
+    time?: string;
+    round?: string;
+    venue?: string;
+  };
+};
+
+export type Match = {
+  id: string;
+  slug: string;
+  league: LeagueSlug;
+  round: string;
+  homeTeam: string;
+  awayTeam: string;
+  date: string;
+  time: string;
+  venue?: string;
+  status: "published" | "coming-soon";
+  title: string;
+  analysis: string[];
+  predictions: PredictionItem[];
+};
+
+export type TeamVisual = {
+  code: string;
+  primary: string;
+  secondary: string;
+};
