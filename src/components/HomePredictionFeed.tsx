@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Match, LeagueSlug } from "@/types";
+import { MatchPreview, LeagueSlug } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { leagues } from "@/data/leagues";
@@ -18,7 +18,7 @@ import { useI18n } from "@/i18n/I18nProvider";
 
 type SupportedSlug = Exclude<LeagueSlug, "other-leagues">;
 
-async function hydrateMatch(match: Match): Promise<Match> {
+async function hydrateMatch(match: MatchPreview): Promise<MatchPreview> {
   if (match.league === "other-leagues") {
     return match;
   }
@@ -54,7 +54,7 @@ async function hydrateMatch(match: Match): Promise<Match> {
 export function HomePredictionFeed({
   matches,
 }: {
-  matches: Match[];
+  matches: MatchPreview[];
 }) {
   const [hydrated, setHydrated] = useState(matches);
   const [ready, setReady] = useState(false);
@@ -167,10 +167,6 @@ export function HomePredictionFeed({
                   (item) => item.slug === match.league
                 );
 
-                const mainPrediction =
-                  match.predictions[0]?.value ??
-                  t("viewPrediction");
-
                 return (
                   <a
                     href={`/match/${match.slug}`}
@@ -193,7 +189,7 @@ export function HomePredictionFeed({
                       <strong>
                         {match.homeTeam} vs {match.awayTeam}
                       </strong>
-                      <span>{mainPrediction}</span>
+                      <span>{t("predictionAvailable")}</span>
                     </div>
 
                     <div className="latest-date">

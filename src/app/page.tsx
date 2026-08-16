@@ -4,6 +4,7 @@ import { HomePredictionFeed } from "@/components/HomePredictionFeed";
 import { SectionTitle } from "@/components/SectionTitle";
 import { leagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
+import { toMatchPreview } from "@/lib/editorial";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <AdSlot />
       </div>
 
-      <HomePredictionFeed matches={matches} />
+      <HomePredictionFeed matches={matches.map(toMatchPreview)} />
 
       <div className="container inline-ad-space">
         <AdSlot />

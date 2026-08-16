@@ -1,8 +1,25 @@
 import {
   EditorialPrediction,
   Match,
+  MatchPreview,
   PredictionItem,
 } from "@/types";
+
+export function toMatchPreview(match: Match): MatchPreview {
+  return {
+    id: match.id,
+    slug: match.slug,
+    league: match.league,
+    round: match.round,
+    homeTeam: match.homeTeam,
+    awayTeam: match.awayTeam,
+    date: match.date,
+    time: match.time,
+    venue: match.venue,
+    status: match.status,
+    title: match.title,
+  };
+}
 
 export function slugifyMatchPart(value: string) {
   return value

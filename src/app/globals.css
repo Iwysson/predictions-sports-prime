@@ -1517,17 +1517,6 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
 }
 
 /* Simple editorial presentation: analysis, main prediction and optional odds. */
-.card-prediction-summary {
-  min-width: 0;
-  flex: 1;
-  overflow: hidden;
-  color: var(--text);
-  font-size: 9px;
-  font-weight: 800;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .main-prediction-block {
   display: grid;
   gap: 10px;
@@ -1567,7 +1556,6 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
 }
 
 @media (max-width: 430px) {
-  .card-prediction-summary { font-size: 8px; }
   .main-prediction-block { padding-top: 10px; }
 }
 
@@ -2925,4 +2913,127 @@ html[dir="rtl"] .latest-match {
     grid-template-columns: 34px minmax(0, 1fr) 14px;
     min-height: 68px;
   }
+}
+
+/* Ultra-compact shared fixture card. Prediction content stays on /match only. */
+.match-grid,
+.match-grid--compact { gap: 4px; }
+
+.league-match-list { gap: 3px !important; }
+
+.match-card,
+.league-match-list .match-card {
+  padding: 5px 8px !important;
+  border-radius: 9px !important;
+}
+
+.match-league-row,
+.league-match-list .match-league-row { min-height: 18px; }
+
+.match-league strong,
+.league-match-list .match-league strong { font-size: 9px; }
+
+.mini-league-badge--sm,
+.league-logo--sm,
+.league-match-list .mini-league-badge {
+  width: 19px;
+  height: 19px;
+  flex-basis: 19px;
+}
+
+.match-time,
+.league-match-list .match-time {
+  min-width: 38px;
+  padding: 2px 5px;
+  border-radius: 6px;
+  font-size: 8px;
+}
+
+.compact-teams,
+.league-match-list .compact-teams {
+  min-height: 34px;
+  gap: 5px;
+  padding-block: 1px;
+}
+
+.compact-team,
+.league-match-list .compact-team { gap: 5px; }
+
+.compact-team strong,
+.league-match-list .compact-team strong { font-size: 13px; }
+
+.team-badge--md,
+.team-logo--md,
+.league-match-list .team-badge--md,
+.league-match-list .team-logo--md {
+  width: 26px;
+  height: 28px;
+  flex-basis: 26px;
+}
+
+.compact-vs,
+.league-match-list .compact-vs { font-size: 7px; }
+
+.compact-match-footer,
+.league-match-list .compact-match-footer {
+  min-height: 20px;
+  gap: 6px;
+  padding-top: 3px;
+}
+
+.prediction-pill,
+.league-match-list .prediction-pill {
+  gap: 3px;
+  font-size: 7px;
+}
+
+.prediction-pill span,
+.league-match-list .prediction-pill span {
+  width: 14px;
+  height: 14px;
+  flex-basis: 14px;
+  background: transparent;
+}
+
+.button--small,
+.league-match-list .button--small {
+  min-height: 26px;
+  padding-inline: 8px;
+  font-size: 9px;
+}
+
+.latest-list { gap: 3px; }
+
+.latest-row {
+  min-height: 44px;
+  padding-block: 4px;
+  border-radius: 8px;
+}
+
+.latest-match { gap: 1px; }
+.latest-match span { font-size: 9px; }
+
+@media (max-width: 720px) {
+  .match-grid,
+  .match-grid--compact { gap: 3px; }
+
+  .match-card,
+  .league-match-list .match-card { padding: 4px 7px !important; }
+
+  .compact-teams,
+  .league-match-list .compact-teams { min-height: 32px; }
+
+  .compact-team strong,
+  .league-match-list .compact-team strong { font-size: 12px; }
+
+  .team-badge--md,
+  .team-logo--md,
+  .league-match-list .team-badge--md,
+  .league-match-list .team-logo--md {
+    width: 24px;
+    height: 26px;
+    flex-basis: 24px;
+  }
+
+  .latest-row { min-height: 42px; }
 }

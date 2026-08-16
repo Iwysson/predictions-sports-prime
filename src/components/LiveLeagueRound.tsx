@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Match, LeagueSlug } from "@/types";
+import { MatchPreview, LeagueSlug } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
 import {
   findCurrentOrNextRound,
@@ -29,8 +29,8 @@ function slugify(value: string) {
 
 function findManualPrediction(
   game: OpenFootballGame,
-  manualMatches: Match[]
-): Match | undefined {
+  manualMatches: MatchPreview[]
+): MatchPreview | undefined {
   const home = normalizeTeamKey(game.homeTeam);
   const away = normalizeTeamKey(game.awayTeam);
 
@@ -44,8 +44,8 @@ function findManualPrediction(
 function toMatch(
   league: SupportedSlug,
   game: OpenFootballGame,
-  manualMatches: Match[]
-): Match {
+  manualMatches: MatchPreview[]
+): MatchPreview {
   const manual = findManualPrediction(game, manualMatches);
 
   if (manual) {
@@ -73,8 +73,6 @@ function toMatch(
     time: game.time,
     status: "coming-soon",
     title: `${game.homeTeam} vs ${game.awayTeam} Prediction`,
-    analysis: [],
-    predictions: [],
   };
 }
 
@@ -82,8 +80,8 @@ export function LiveLeagueRound({
   league,
   manualMatches,
 }: {
-  league: SupportedSlug;
-  manualMatches: Match[];
+    league: SupportedSlug;
+  manualMatches: MatchPreview[];
 }) {
   const config = openLeagueConfigs[league];
   const { t } = useI18n();

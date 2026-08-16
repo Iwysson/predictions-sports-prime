@@ -12,6 +12,7 @@ import { LeagueSlug } from "@/types";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { LeaguePageText } from "@/components/LeaguePageText";
+import { toMatchPreview } from "@/lib/editorial";
 
 export const dynamicParams = false;
 
@@ -97,7 +98,9 @@ export default async function LeaguePage({
     notFound();
   }
 
-  const leagueMatches = matches.filter((match) => match.league === league.slug);
+  const leagueMatches = matches
+    .filter((match) => match.league === league.slug)
+    .map(toMatchPreview);
   const standings = standingsByLeague[league.slug];
 
   return (

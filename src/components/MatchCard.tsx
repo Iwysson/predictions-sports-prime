@@ -1,19 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { Match } from "@/types";
+import { MatchPreview } from "@/types";
 import { TeamBadge } from "@/components/TeamBadge";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { leagues } from "@/data/leagues";
 import { useI18n } from "@/i18n/I18nProvider";
 
-export function MatchCard({ match }: { match: Match }) {
+export function MatchCard({ match }: { match: MatchPreview }) {
   const href = `/match/${match.slug}`;
   const league = leagues.find((item) => item.slug === match.league);
   const { t } = useI18n();
-  const mainPrediction = match.predictions.find(
-    (item) => item.label === "Main Prediction"
-  )?.value;
 
   return (
     <article className="match-card">
@@ -51,12 +48,6 @@ export function MatchCard({ match }: { match: Match }) {
             ? t("predictionAvailable")
             : t("comingSoon")}
         </span>
-
-        {match.status === "published" && mainPrediction ? (
-          <span className="card-prediction-summary" title={mainPrediction}>
-            {mainPrediction}
-          </span>
-        ) : null}
 
         {match.status === "published" ? (
           <Link href={href} className="button button--small">

@@ -57,6 +57,8 @@ export type Match = {
   predictions: PredictionItem[];
 };
 
+export type MatchPreview = Omit<Match, "analysis" | "predictions">;
+
 export type TeamVisual = {
   code: string;
   primary: string;

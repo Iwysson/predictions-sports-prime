@@ -1,4 +1,4 @@
-import { Match } from "@/types";
+import { MatchPreview } from "@/types";
 
 export function localTodayISO() {
   const now = new Date();
@@ -19,7 +19,7 @@ function timeToMinutes(time: string) {
   return hour * 60 + minute;
 }
 
-export function sortMatchesByKickoff(matches: Match[]) {
+export function sortMatchesByKickoff(matches: MatchPreview[]) {
   return [...matches].sort((a, b) => {
     const dateCompare = (a.date || "9999-99-99").localeCompare(
       b.date || "9999-99-99"
@@ -33,7 +33,7 @@ export function sortMatchesByKickoff(matches: Match[]) {
   });
 }
 
-function uniqueMatches(matches: Match[]) {
+function uniqueMatches(matches: MatchPreview[]) {
   const seen = new Set<string>();
 
   return matches.filter((match) => {
@@ -45,7 +45,7 @@ function uniqueMatches(matches: Match[]) {
 }
 
 export function filterTodaysPublishedPredictions(
-  matches: Match[],
+  matches: MatchPreview[],
   today = localTodayISO()
 ) {
   return sortMatchesByKickoff(
@@ -59,7 +59,7 @@ export function filterTodaysPublishedPredictions(
 }
 
 export function filterFuturePublishedPredictions(
-  matches: Match[],
+  matches: MatchPreview[],
   today = localTodayISO()
 ) {
   return sortMatchesByKickoff(
