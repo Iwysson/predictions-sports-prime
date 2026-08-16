@@ -4,19 +4,19 @@ import { brightonVsAstonVilla } from "./brighton-vs-aston-villa";
 import { evertonVsCrystalPalace } from "./everton-vs-crystal-palace";
 import { fulhamVsChelsea } from "./fulham-vs-chelsea";
 import { hullVsManUnited } from "./hull-vs-man-united";
-import { ipswichVsSunderland } from "./ipswich-vs-sunderland";
-import { manCityVsBournemouth } from "./man-city-vs-bournemouth";
+import { ipswichTownVsSunderland } from "./ipswich-vs-sunderland";
+import { manchesterCityVsBournemouth } from "./man-city-vs-bournemouth";
 import { newcastleVsLiverpool } from "./newcastle-vs-liverpool";
-import { nottinghamForestVsLeeds } from "./nottingham-forest-vs-leeds";
+import { nottinghamForestVsLeedsUnited } from "./nottingham-forest-vs-leeds";
 
 export const premierLeagueRound01 = [
   arsenalVsCoventry,
   hullVsManUnited,
-  ipswichVsSunderland,
-  nottinghamForestVsLeeds,
+  ipswichTownVsSunderland,
+  nottinghamForestVsLeedsUnited,
   evertonVsCrystalPalace,
   brentfordVsTottenham,
-  manCityVsBournemouth,
+  manchesterCityVsBournemouth,
   brightonVsAstonVilla,
   newcastleVsLiverpool,
   fulhamVsChelsea,

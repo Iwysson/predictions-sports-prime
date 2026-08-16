@@ -14,8 +14,6 @@ import {
 import { JsonLd } from "@/components/JsonLd";
 import { leagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
-import { editorialPredictions } from "@/data/predictions";
-import { predictionSlug } from "@/lib/editorial";
 import {
   articleJsonLd,
   buildMatchMetadata,
@@ -24,15 +22,9 @@ import {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  // Next.js static export requires at least one generated value for a dynamic
-  // route. Draft slugs are emitted as static 404 pages and remain unpublished.
-  return Array.from(
-    new Set(
-      editorialPredictions.map((prediction) =>
-        predictionSlug(prediction.homeTeam, prediction.awayTeam)
-      )
-    )
-  ).map((slug) => ({ slug }));
+  return matches.map((match) => ({
+    slug: match.slug,
+  }));
 }
 
 export async function generateMetadata({
