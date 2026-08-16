@@ -1,4 +1,4 @@
-import { LeagueSlug } from "@/types";
+import type { LeagueSlug } from "@/types";
 
 export type OpenFootballGame = {
   round: number;
@@ -109,7 +109,13 @@ export function normalizeTeamKey(name: string) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/&/g, "and")
-    .replace(/[^a-z0-9]+/g, "");
+    .split(/[^a-z0-9]+/)
+    .filter((part) => part && part !== "club" && part !== "de")
+    .join("");
+}
+
+export function teamNamesMatch(left: string, right: string) {
+  return normalizeTeamKey(left) === normalizeTeamKey(right);
 }
 
 export function parseFootballSeason(text: string): OpenFootballRound[] {

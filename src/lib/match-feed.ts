@@ -1,4 +1,4 @@
-import { MatchPreview } from "@/types";
+import type { MatchPreview } from "@/types";
 
 export function localTodayISO() {
   const now = new Date();
@@ -67,7 +67,7 @@ export function filterFuturePublishedPredictions(
       (match) =>
         match.status === "published" &&
         Boolean(match.date) &&
-        match.date >= today
+        match.date > today
     )
   );
 }

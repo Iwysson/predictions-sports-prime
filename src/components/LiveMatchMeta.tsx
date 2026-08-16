@@ -68,7 +68,7 @@ export function LiveMatchMeta({
         if (!cancelled) {
           setData({
             round: `Matchday ${fixture.round}`,
-            date: fixture.date,
+            date: fallbackDate || fixture.date,
             time: fixture.time,
             state: "live",
           });

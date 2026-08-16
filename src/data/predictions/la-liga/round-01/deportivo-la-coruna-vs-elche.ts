@@ -30,5 +30,9 @@ export const deportivoLaCorunaVsElche: EditorialPrediction = {
     odds: 1.44
   },
 
+  matchInfo: {
+    date: "2026-08-17",
+  },
+
   published: true,
 };

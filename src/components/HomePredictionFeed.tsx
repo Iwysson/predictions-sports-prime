@@ -41,7 +41,7 @@ async function hydrateMatch(match: MatchPreview): Promise<MatchPreview> {
     return {
       ...match,
       round: `Matchday ${fixture.round}`,
-      date: fixture.date,
+      date: match.date || fixture.date,
       time: fixture.time,
       homeTeam: fixture.homeTeam,
       awayTeam: fixture.awayTeam,

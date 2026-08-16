@@ -6,9 +6,9 @@ import { MatchCard } from "@/components/MatchCard";
 import {
   findCurrentOrNextRound,
   loadLeagueSeason,
-  normalizeTeamKey,
   openLeagueConfigs,
   OpenFootballGame,
+  teamNamesMatch,
 } from "@/lib/openfootball";
 import { useI18n } from "@/i18n/I18nProvider";
 import {
@@ -31,13 +31,10 @@ function findManualPrediction(
   game: OpenFootballGame,
   manualMatches: MatchPreview[]
 ): MatchPreview | undefined {
-  const home = normalizeTeamKey(game.homeTeam);
-  const away = normalizeTeamKey(game.awayTeam);
-
   return manualMatches.find(
     (match) =>
-      normalizeTeamKey(match.homeTeam) === home &&
-      normalizeTeamKey(match.awayTeam) === away
+      teamNamesMatch(match.homeTeam, game.homeTeam) &&
+      teamNamesMatch(match.awayTeam, game.awayTeam)
   );
 }
 
@@ -53,7 +50,7 @@ function toMatch(
       ...manual,
       league,
       round: `Matchday ${game.round}`,
-      date: game.date,
+      date: manual.date || game.date,
       time: game.time,
       homeTeam: game.homeTeam,
       awayTeam: game.awayTeam,
