@@ -35,6 +35,16 @@ assert.equal(canRenderComingSoon("scheduled", false), true, "H: unpublished sche
 assert.equal(isCompletedFixture("completed"), true, "I: finished fixture may enter history");
 assert.equal(isNonPlayableFixture("postponed"), true, "J: postponed fixture cannot settle");
 
+const publishedPostponed = [
+  { ...fixture("published-postponed", "postponed"), published: true },
+  { ...fixture("scheduled-coming-soon", "scheduled"), published: false },
+].filter((item) => !isNonPlayableFixture(item.status));
+assert.deepEqual(
+  publishedPostponed.map(({ id }) => id),
+  ["scheduled-coming-soon"],
+  "K: a published prediction must not make a postponed fixture displayable"
+);
+
 const providerCases = [
   [{ name: "STATUS_SCHEDULED", state: "pre", completed: false }, "scheduled"],
   [{ name: "STATUS_HALFTIME", state: "in", completed: false }, "in-progress"],
@@ -51,7 +61,7 @@ for (const [input, expected] of providerCases) {
   assert.equal(normalizeProviderStatus(input), expected, `provider normalization: ${input.name}`);
 }
 
-console.log("Fixture pipeline audit: PASS (A-J + provider normalization)");
+console.log("Fixture pipeline audit: PASS (A-K + provider normalization)");
 
 assert.equal(isHistoryEligibleFixture({ status: "completed", homeScore: 2, awayScore: 1 }), true, "History A: completed 2-1 eligible");
 assert.equal(isHistoryEligibleFixture({ status: "completed", homeScore: 0, awayScore: 0 }), true, "History B: completed 0-0 eligible");

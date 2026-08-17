@@ -15,7 +15,8 @@ import {
   validateLeagueRounds,
   validateRoundForDisplay,
 } from "@/lib/data-validation";
-import { canRenderComingSoon } from "@/lib/fixture-status";
+import { canRenderComingSoon, isNonPlayableFixture } from "@/lib/fixture-status";
+import { localTodayISO, sortMatchesByKickoff } from "@/lib/match-feed";
 
 type SupportedSlug = LeagueSlug;
 
@@ -144,12 +145,32 @@ export function LiveLeagueRound({
 
   const renderedMatches = useMemo(() => {
     if (state === "validated") {
-      return games
+      const currentRoundMatches = games
         .map((game) => ({ game, manual: findManualPrediction(game, manualMatches) }))
         .filter(({ game, manual }) =>
-          Boolean(manual) || canRenderComingSoon(game.status, false)
+          !isNonPlayableFixture(game.status) &&
+          (Boolean(manual) || canRenderComingSoon(game.status, false))
         )
         .map(({ game }) => toMatch(league, game, manualMatches));
+
+      const occupiedFixtures = games;
+      const today = localTodayISO();
+      const upcomingPublished = sortMatchesByKickoff(
+        manualMatches.filter(
+          (match) =>
+            (!match.date || match.date >= today) &&
+            !occupiedFixtures.some(
+              (game) =>
+                teamNamesMatch(match.homeTeam, game.homeTeam) &&
+                teamNamesMatch(match.awayTeam, game.awayTeam)
+            )
+        )
+      );
+
+      return [...currentRoundMatches, ...upcomingPublished].slice(
+        0,
+        config.expectedGamesPerRound
+      );
     }
 
     if (state === "fallback") {
