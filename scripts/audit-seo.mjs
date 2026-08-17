@@ -39,6 +39,15 @@ function count(html, pattern) {
   return [...html.matchAll(pattern)].length;
 }
 
+function visibleText(html) {
+  return html
+    .replace(/<!--.*?-->/gs, "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&[a-z0-9#]+;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 if (!statSync(outDir).isDirectory()) {
   throw new Error("out/ was not found. Run npm run build before audit:seo.");
 }
@@ -50,10 +59,15 @@ const pages = new Map(
 const matchRoutes = [...pages.keys()].filter((route) => route.startsWith("/match/"));
 const leagueRoutes = [...pages.keys()].filter((route) => route.startsWith("/league/"));
 const inbound = new Map(matchRoutes.map((route) => [route, 0]));
+const inboundSources = new Map(matchRoutes.map((route) => [route, new Set()]));
 const brokenLinks = new Set();
 let relatedLinks = 0;
+let relatedSelfLinks = 0;
+let relatedDraftLeakage = 0;
 const titles = new Map();
 const descriptions = new Map();
+const editorialBodies = new Map();
+const canonicalUrls = new Map();
 const indexingRows = [];
 
 for (const [route, html] of pages) {
@@ -66,6 +80,7 @@ for (const [route, html] of pages) {
     if (!pages.has(target)) brokenLinks.add(`${route} -> ${target}`);
     if (inbound.has(target) && target !== route) {
       inbound.set(target, inbound.get(target) + 1);
+      inboundSources.get(target).add(route);
     }
   }
 }
@@ -75,13 +90,39 @@ for (const route of matchRoutes) {
   const canonical = `${siteUrl}${route}`;
   const title = html.match(/<title>([^<]+)<\/title>/i)?.[1] ?? "";
   const description = html.match(/<meta name="description" content="([^"]+)"/i)?.[1] ?? "";
+  const canonicalUrl = html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1] ?? "";
+  const analysisBlock = html.match(/<div class="compact-analysis-copy">([\s\S]*?)<\/div>/i)?.[1] ?? "";
+  const analysisText = visibleText(analysisBlock);
   const leagueHref = html.match(/<a[^>]+href="(\/league\/[^"#?]+\/?)"/i)?.[1];
   const relatedBlock = html.match(/<section[^>]+class="related-predictions"[\s\S]*?<\/section>/i)?.[0] ?? "";
   const links = count(relatedBlock, /<a\b[^>]*href="\/match\//gi);
+  const relatedHrefs = [...relatedBlock.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>/gi)];
   relatedLinks += links;
+
+  for (const relatedLink of relatedHrefs) {
+    const relatedRoute = normalizeRoute(relatedLink[1]);
+    if (relatedRoute === route) relatedSelfLinks += 1;
+    if (relatedRoute?.startsWith("/match/") && !matchRoutes.includes(relatedRoute)) {
+      relatedDraftLeakage += 1;
+    }
+    if (
+      relatedRoute?.startsWith("/match/") &&
+      !/aria-label="[^"]+ Prediction"/i.test(relatedLink[0])
+    ) {
+      errors.push(`${route}: related link lacks meaningful accessible anchor text`);
+    }
+  }
 
   titles.set(title, [...(titles.get(title) ?? []), route]);
   descriptions.set(description, [...(descriptions.get(description) ?? []), route]);
+  canonicalUrls.set(canonicalUrl, [...(canonicalUrls.get(canonicalUrl) ?? []), route]);
+
+  const bodyKey = analysisText.toLowerCase();
+  if (analysisText.length < 300) errors.push(`${route}: published analysis is too short`);
+  if (/\b(?:lorem ipsum|todo|add analysis|placeholder text|coming soon)\b/i.test(analysisText)) {
+    errors.push(`${route}: published analysis contains placeholder text`);
+  }
+  if (bodyKey) editorialBodies.set(bodyKey, [...(editorialBodies.get(bodyKey) ?? []), route]);
 
   if (count(html, /<h1(?:\s|>)/gi) !== 1) errors.push(`${route}: expected one H1`);
   if (count(html, /<title>/gi) !== 1) errors.push(`${route}: expected one title`);
@@ -104,6 +145,13 @@ for (const route of matchRoutes) {
   }
 }
 
+if (relatedSelfLinks > 0) {
+  errors.push(`related prediction self-links: ${relatedSelfLinks}`);
+}
+if (relatedDraftLeakage > 0) {
+  errors.push(`draft or unpublished related links: ${relatedDraftLeakage}`);
+}
+
 for (const [title, routes] of titles) {
   if (!title) continue;
   if (routes.length > 1) errors.push(`duplicate title: ${title} (${routes.join(", ")})`);
@@ -112,6 +160,15 @@ for (const [title, routes] of titles) {
 for (const [description, routes] of descriptions) {
   if (!description) continue;
   if (routes.length > 1) errors.push(`duplicate description (${routes.join(", ")})`);
+}
+
+for (const [canonical, routes] of canonicalUrls) {
+  if (!canonical) continue;
+  if (routes.length > 1) errors.push(`duplicate canonical: ${canonical} (${routes.join(", ")})`);
+}
+
+for (const [, routes] of editorialBodies) {
+  if (routes.length > 1) errors.push(`duplicate editorial body (${routes.join(", ")})`);
 }
 
 for (const route of leagueRoutes) {
@@ -156,7 +213,13 @@ if (!robots.includes("Allow: /") || !robots.includes(`${siteUrl}/sitemap.xml`)) 
 }
 
 const orphans = [...inbound].filter(([, links]) => links === 0).map(([route]) => route);
+const weakDiscovery = [...inboundSources]
+  .filter(([, sources]) => sources.size < 2)
+  .map(([route]) => route);
 if (orphans.length > 0) errors.push(`orphan match pages: ${orphans.join(", ")}`);
+if (weakDiscovery.length > 0) {
+  errors.push(`match pages with fewer than two discovery paths: ${weakDiscovery.join(", ")}`);
+}
 if (brokenLinks.size > 0) errors.push(`broken internal links: ${[...brokenLinks].join(", ")}`);
 
 for (const route of matchRoutes.sort()) {
@@ -198,8 +261,12 @@ console.log(`League hubs: ${leagueRoutes.length}`);
 console.log(`Average related links: ${(relatedLinks / matchRoutes.length).toFixed(2)}`);
 console.log(`Orphan published pages: ${orphans.length}`);
 console.log(`Broken internal links: ${brokenLinks.size}`);
+console.log(`Match pages with 2+ discovery paths: ${matchRoutes.length - weakDiscovery.length}`);
+console.log(`Related self-links: ${relatedSelfLinks}`);
+console.log(`Draft leakage in related links: ${relatedDraftLeakage}`);
 console.log(`Unique match titles: ${titles.size}`);
 console.log(`Unique match descriptions: ${descriptions.size}`);
+console.log(`Unique editorial bodies: ${editorialBodies.size}`);
 console.log(`SEO indexing queue: ${indexingRows.length}`);
 
 if (errors.length > 0) {

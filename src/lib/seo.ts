@@ -35,14 +35,21 @@ export function matchIntroduction(match: Match) {
   const mainPick = match.predictions.find(
     (item) => item.label === "Main Prediction"
   )?.value;
+  const odds = match.predictions.find(
+    (item) => item.label === "Odds"
+  )?.value;
   const date = match.date ? ` on ${match.date}` : "";
+  const kickoff = match.time && match.time !== "TBD"
+    ? ` at ${match.time}`
+    : "";
   const competition = league?.name ?? "this competition";
 
   if (!mainPick) {
-    return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}. This preview outlines the match context, analysis and key considerations.`;
+    return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}${kickoff}. This preview outlines the match context, analysis and key considerations.`;
   }
 
-  return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}. This preview explains the reasoning behind our ${mainPick} selection and the key risks considered.`;
+  const price = odds ? ` at published odds of ${odds}` : "";
+  return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}${kickoff}. This preview explains the reasoning behind our ${mainPick} selection${price} and the key risks considered.`;
 }
 
 export function matchCanonicalPath(match: Match) {
@@ -153,20 +160,14 @@ export function articleJsonLd(match: Match) {
       name: siteConfig.name,
       url: siteConfig.url,
     },
-    about: [
-      {
-        "@type": "SportsEvent",
-        name: `${match.homeTeam} vs ${match.awayTeam}`,
-      },
-      ...(league
-        ? [
-            {
-              "@type": "SportsOrganization",
-              name: league.name,
-            },
-          ]
-        : []),
-    ],
+    ...(league
+      ? {
+          about: {
+            "@type": "SportsOrganization",
+            name: league.name,
+          },
+        }
+      : {}),
   };
 }
 

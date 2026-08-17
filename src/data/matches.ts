@@ -8,9 +8,8 @@ const editorialErrors =
   validateEditorialPredictions(editorialPredictions);
 
 if (editorialErrors.length > 0) {
-  console.error(
-    "Predictions Sports Prime — editorial validation errors:",
-    editorialErrors
+  throw new Error(
+    `Editorial prediction validation failed:\n${editorialErrors.join("\n")}`
   );
 }
 

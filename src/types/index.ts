@@ -21,6 +21,9 @@ export type EditorialPrediction = {
   homeTeam: string;
   awayTeam: string;
 
+  // Optional stable override for legitimate rematches between the same teams.
+  slug?: string;
+
   // Seu texto manual.
   analysis: string[];
 

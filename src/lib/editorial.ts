@@ -4,6 +4,13 @@ import {
   MatchPreview,
   PredictionItem,
 } from "@/types";
+import { leaguesBySlug } from "@/data/leagues";
+
+const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+const KICKOFF_PATTERN = /^(?:[01]\d|2[0-3]):[0-5]\d$/;
+const PLACEHOLDER_PATTERN = /\b(?:lorem ipsum|todo|add analysis|placeholder text|coming soon)\b/i;
+const MIN_PUBLISHED_ANALYSIS_CHARACTERS = 300;
 
 export function toMatchPreview(match: Match): MatchPreview {
   return {
@@ -61,10 +68,10 @@ function picksToItems(
 export function editorialToMatch(
   prediction: EditorialPrediction
 ): Match {
-  const slug = predictionSlug(
-    prediction.homeTeam,
-    prediction.awayTeam
-  );
+  const slug = prediction.slug ?? predictionSlug(
+      prediction.homeTeam,
+      prediction.awayTeam
+    );
 
   return {
     id: `${prediction.league}-${slug}`,
@@ -91,7 +98,7 @@ export function buildPublishedMatches(
   predictions: EditorialPrediction[]
 ) {
   return predictions
-    .filter((prediction) => prediction.published !== false)
+    .filter((prediction) => prediction.published === true)
     .map(editorialToMatch);
 }
 
@@ -99,14 +106,29 @@ export function validateEditorialPredictions(
   predictions: EditorialPrediction[]
 ) {
   const errors: string[] = [];
-  const seen = new Set<string>();
+  const seenSlugs = new Set<string>();
+  const seenIdentities = new Set<string>();
+  const seenImports = new Set<EditorialPrediction>();
+  const seenPublishedBodies = new Map<string, string>();
 
   predictions.forEach((prediction, index) => {
     const label = `Prediction ${index + 1}`;
-    const isDraft = prediction.published === false;
+    const isPublished = prediction.published === true;
+    const isDraft = !isPublished;
+
+    if (seenImports.has(prediction)) {
+      errors.push(`${label}: the same prediction object was imported more than once.`);
+    }
+    seenImports.add(prediction);
+
+    if (typeof prediction.published !== "boolean") {
+      errors.push(`${label}: published must be explicitly true or false.`);
+    }
 
     if (!prediction.league) {
       errors.push(`${label}: league is required.`);
+    } else if (!leaguesBySlug[prediction.league]) {
+      errors.push(`${label}: league is not registered.`);
     }
 
     if (!prediction.homeTeam.trim()) {
@@ -135,6 +157,25 @@ export function validateEditorialPredictions(
       if (!prediction.picks.main.trim()) {
         errors.push(`${label}: main prediction is required.`);
       }
+
+      const analysisText = prediction.analysis.join(" ").replace(/\s+/g, " ").trim();
+      if (analysisText.length < MIN_PUBLISHED_ANALYSIS_CHARACTERS) {
+        errors.push(
+          `${label}: published analysis must contain at least ${MIN_PUBLISHED_ANALYSIS_CHARACTERS} meaningful characters.`
+        );
+      }
+
+      if (PLACEHOLDER_PATTERN.test(analysisText) || PLACEHOLDER_PATTERN.test(prediction.picks.main)) {
+        errors.push(`${label}: published content contains placeholder text.`);
+      }
+
+      const bodyKey = analysisText.toLowerCase();
+      const duplicateBody = seenPublishedBodies.get(bodyKey);
+      if (duplicateBody) {
+        errors.push(`${label}: editorial body duplicates ${duplicateBody}.`);
+      } else if (bodyKey) {
+        seenPublishedBodies.set(bodyKey, label);
+      }
     }
 
     if (
@@ -154,16 +195,52 @@ export function validateEditorialPredictions(
       }
     }
 
-    const slug = predictionSlug(
+    const date = prediction.matchInfo?.date;
+    if (date !== undefined) {
+      const parsedDate = new Date(`${date}T00:00:00Z`);
+      if (
+        !ISO_DATE_PATTERN.test(date) ||
+        Number.isNaN(parsedDate.valueOf()) ||
+        parsedDate.toISOString().slice(0, 10) !== date
+      ) {
+        errors.push(`${label}: matchInfo.date must be a valid YYYY-MM-DD date.`);
+      }
+    }
+
+    const time = prediction.matchInfo?.time;
+    if (time !== undefined && !KICKOFF_PATTERN.test(time)) {
+      errors.push(`${label}: matchInfo.time must use 24-hour HH:mm format.`);
+    }
+
+    if (prediction.matchInfo?.round !== undefined && !prediction.matchInfo.round.trim()) {
+      errors.push(`${label}: matchInfo.round cannot be empty when supplied.`);
+    }
+
+    const slug = prediction.slug ?? predictionSlug(
       prediction.homeTeam,
       prediction.awayTeam
     );
 
-    if (seen.has(slug)) {
-      errors.push(`${label}: duplicated match (${slug}).`);
+    if (!SLUG_PATTERN.test(slug)) {
+      errors.push(`${label}: slug must contain lowercase letters, numbers and single hyphens only.`);
     }
 
-    seen.add(slug);
+    if (seenSlugs.has(slug)) {
+      errors.push(`${label}: duplicated canonical slug (${slug}).`);
+    }
+
+    seenSlugs.add(slug);
+
+    if (isPublished && date) {
+      const teams = [prediction.homeTeam, prediction.awayTeam]
+        .map((team) => slugifyMatchPart(team))
+        .join("-vs-");
+      const identity = `${prediction.league}:${teams}:${date}`;
+      if (seenIdentities.has(identity)) {
+        errors.push(`${label}: duplicated teams and canonical date (${identity}).`);
+      }
+      seenIdentities.add(identity);
+    }
   });
 
   return errors;

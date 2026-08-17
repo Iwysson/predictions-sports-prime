@@ -29,15 +29,14 @@ function rankCandidates(current: Match, candidates: Match[]) {
     const bTime = timestamp(b);
 
     if (currentTime !== null && aTime !== null && bTime !== null) {
+      const distanceDifference =
+        Math.abs(aTime - currentTime) - Math.abs(bTime - currentTime);
+      if (distanceDifference !== 0) return distanceDifference;
+
       const aUpcoming = aTime >= currentTime;
       const bUpcoming = bTime >= currentTime;
 
       if (aUpcoming !== bUpcoming) return aUpcoming ? -1 : 1;
-
-      const timeDifference = aUpcoming
-        ? aTime - bTime
-        : bTime - aTime;
-      if (timeDifference !== 0) return timeDifference;
     } else if ((aTime === null) !== (bTime === null)) {
       return aTime === null ? 1 : -1;
     }

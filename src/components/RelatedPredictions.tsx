@@ -18,7 +18,10 @@ export function RelatedPredictions({ matches }: { matches: Match[] }) {
             <span>{leaguesBySlug[match.league].name}</span>
             <h3>{match.homeTeam} vs {match.awayTeam}</h3>
             <p>Prediction available</p>
-            <Link href={`/match/${match.slug}/`}>
+            <Link
+              href={`/match/${match.slug}/`}
+              aria-label={`${match.homeTeam} vs ${match.awayTeam} Prediction`}
+            >
               View prediction <span aria-hidden="true">›</span>
             </Link>
           </article>

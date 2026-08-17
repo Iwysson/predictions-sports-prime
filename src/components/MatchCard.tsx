@@ -50,7 +50,11 @@ export function MatchCard({ match }: { match: MatchPreview }) {
         </span>
 
         {match.status === "published" ? (
-          <Link href={href} className="button button--small">
+          <Link
+            href={href}
+            className="button button--small"
+            aria-label={`${match.homeTeam} vs ${match.awayTeam} Prediction`}
+          >
             {t("view")} <span aria-hidden="true">›</span>
           </Link>
         ) : null}
