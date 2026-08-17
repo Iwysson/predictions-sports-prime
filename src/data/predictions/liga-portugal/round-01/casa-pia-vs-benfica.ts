@@ -34,5 +34,10 @@ export const casaPiaVsBenfica: EditorialPrediction = {
     odds: 1.70,
   },
 
+  matchInfo: {
+    date: "2026-08-17",
+    time: "19:15",
+  },
+
   published: true,
 };

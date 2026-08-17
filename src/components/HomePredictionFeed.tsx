@@ -5,12 +5,12 @@ import { MatchPreview } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { leagues } from "@/data/leagues";
-import { leaguesBySlug } from "@/data/leagues";
 import {
-  filterFuturePublishedPredictions,
   filterTodaysPublishedPredictions,
   findOmittedCurrentPredictions,
   localTodayISO,
+  selectLatestPublishedPredictions,
+  validateHomePredictionSelection,
 } from "@/lib/match-feed";
 import { useI18n } from "@/i18n/I18nProvider";
 
@@ -28,7 +28,7 @@ export function HomePredictionFeed({
   );
 
   const latestMatches = useMemo(
-    () => filterFuturePublishedPredictions(matches, today),
+    () => selectLatestPublishedPredictions(matches, today, 10),
     [matches, today]
   );
 
@@ -43,13 +43,19 @@ export function HomePredictionFeed({
     );
   }
 
-  const otherLeagueMatches = useMemo(
-    () => matches.filter((match) =>
-          match.status === "published" &&
-          !leaguesBySlug[match.league].featured
-        ),
-    [matches]
+  const selectionErrors = validateHomePredictionSelection(
+    matches,
+    todayMatches,
+    latestMatches,
+    today,
+    10
   );
+
+  if (selectionErrors.length > 0) {
+    throw new Error(
+      `Invalid Home prediction selection: ${selectionErrors.join(" ")}`
+    );
+  }
 
   return (
     <>
@@ -154,31 +160,6 @@ export function HomePredictionFeed({
         </div>
       </section>
 
-      <section className="section section--compact section--muted" id="other-leagues">
-        <div className="container">
-          <div className="section-heading section-heading--compact">
-            <div className="heading-with-icon">
-              <span className="section-icon">+</span>
-              <div>
-                <span className="eyebrow">Selected competitions</span>
-                <h2>Other Leagues</h2>
-              </div>
-            </div>
-          </div>
-
-          {otherLeagueMatches.length > 0 ? (
-            <div className="match-grid match-grid--compact">
-              {otherLeagueMatches.map((match) => (
-                <MatchCard key={match.id} match={match} />
-              ))}
-            </div>
-          ) : (
-            <div className="empty-state empty-state--compact">
-              <strong>No published predictions yet.</strong>
-            </div>
-          )}
-        </div>
-      </section>
     </>
   );
 }

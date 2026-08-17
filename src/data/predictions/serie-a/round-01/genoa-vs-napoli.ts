@@ -34,5 +34,9 @@ picks: {
   main: "Napoli to Win",
 },
 
+matchInfo: {
+  date: "2026-08-23",
+},
+
 published: true,
 };

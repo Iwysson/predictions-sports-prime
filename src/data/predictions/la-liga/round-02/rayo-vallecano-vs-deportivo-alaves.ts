@@ -31,5 +31,10 @@ picks: {
   odds: 2.02,
 },
 
+matchInfo: {
+  date: "2026-08-23",
+  time: "17:00",
+},
+
 published: true,
 };

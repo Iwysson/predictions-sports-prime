@@ -26,5 +26,9 @@ export const nottinghamForestVsLeedsUnited: EditorialPrediction = {
     odds: 1.93
   },
 
+  matchInfo: {
+    date: "2026-08-22",
+  },
+
   published: true,
 };

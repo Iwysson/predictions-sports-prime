@@ -24,5 +24,10 @@ export const hullVsManUnited: EditorialPrediction = {
     odds: 1.93
   },
 
+  matchInfo: {
+    date: "2026-08-22",
+    time: "12:30",
+  },
+
   published: true,
 };

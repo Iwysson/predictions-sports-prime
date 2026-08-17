@@ -41,5 +41,9 @@ picks: {
   odds: 1.72,
 },
 
+matchInfo: {
+  date: "2026-08-23",
+},
+
 published: true,
 };

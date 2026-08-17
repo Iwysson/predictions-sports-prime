@@ -34,5 +34,10 @@ export const atleticoMadridVsMalaga: EditorialPrediction = {
     odds: 1.44,
   },
 
+  matchInfo: {
+    date: "2026-08-16",
+    time: "17:00",
+  },
+
   published: true,
 };

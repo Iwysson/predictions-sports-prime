@@ -28,5 +28,10 @@ export const newcastleVsLiverpool: EditorialPrediction = {
     odds: 1.91
   },
 
+  matchInfo: {
+    date: "2026-08-23",
+    time: "16:30",
+  },
+
   published: true,
 };

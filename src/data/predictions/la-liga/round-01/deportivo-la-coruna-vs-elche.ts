@@ -32,6 +32,7 @@ export const deportivoLaCorunaVsElche: EditorialPrediction = {
 
   matchInfo: {
     date: "2026-08-17",
+    time: "19:00",
   },
 
   published: true,

@@ -26,5 +26,10 @@ export const manchesterCityVsBournemouth: EditorialPrediction = {
     odds: 2.12,
   },
 
+  matchInfo: {
+    date: "2026-08-23",
+    time: "14:00",
+  },
+
   published: true,
 };

@@ -10,6 +10,7 @@ export type OpenFootballGame = {
   homeScore: number | null;
   awayScore: number | null;
   status?: "scheduled" | "in-progress" | "completed" | "postponed";
+  dataSource?: "openfootball" | "espn";
 };
 
 export type OpenFootballRound = {
@@ -204,6 +205,7 @@ export function parseFootballSeason(text: string): OpenFootballRound[] {
       homeScore,
       awayScore,
       status: homeScore !== null && awayScore !== null ? "completed" : "scheduled",
+      dataSource: "openfootball",
     });
   }
 
@@ -305,6 +307,7 @@ async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[])
     fixture.date = event.date.slice(0, 10);
     fixture.time = `${String(date.getUTCHours()).padStart(2, "0")}:${String(date.getUTCMinutes()).padStart(2, "0")}`;
     fixture.status = eventStatus(event);
+    fixture.dataSource = "espn";
 
     if (fixture.status === "completed") {
       fixture.homeScore = Number(home.score);

@@ -26,5 +26,10 @@ export const ipswichTownVsSunderland: EditorialPrediction = {
     odds: 2.00
   },
 
+  matchInfo: {
+    date: "2026-08-22",
+    time: "15:00",
+  },
+
   published: true,
 };

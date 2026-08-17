@@ -26,5 +26,10 @@ export const brentfordVsTottenham: EditorialPrediction = {
     odds: 1.67,
   },
 
+  matchInfo: {
+    date: "2026-08-22",
+    time: "17:30",
+  },
+
   published: true,
 };

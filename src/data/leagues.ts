@@ -54,11 +54,3 @@ export const featuredLeagues = leagues.filter((item) => item.featured);
 export const homeLeagues = leagues.filter(
   (item) => item.display.showOnHome
 );
-
-export const otherLeaguesCard = {
-  slug: "other-leagues",
-  name: "Other Leagues",
-  country: "Selected matches",
-  short: "+",
-  href: "/#other-leagues",
-};

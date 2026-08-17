@@ -33,7 +33,13 @@ export function sortMatchesByKickoff(matches: MatchPreview[]) {
       return dateCompare;
     }
 
-    return timeToMinutes(a.time) - timeToMinutes(b.time);
+    const timeCompare = timeToMinutes(a.time) - timeToMinutes(b.time);
+
+    if (timeCompare !== 0) {
+      return timeCompare;
+    }
+
+    return a.slug.localeCompare(b.slug);
   });
 }
 
@@ -73,6 +79,65 @@ export function filterFuturePublishedPredictions(
         (!match.date || match.date > today)
     )
   );
+}
+
+export function selectLatestPublishedPredictions(
+  matches: MatchPreview[],
+  today = localTodayISO(),
+  limit = 10
+) {
+  return filterFuturePublishedPredictions(matches, today).slice(0, limit);
+}
+
+export function validateHomePredictionSelection(
+  matches: MatchPreview[],
+  todayMatches: MatchPreview[],
+  latestMatches: MatchPreview[],
+  today = localTodayISO(),
+  limit = 10
+) {
+  const errors: string[] = [];
+  const todaySlugs = new Set(todayMatches.map((match) => match.slug));
+  const expectedLatest = selectLatestPublishedPredictions(
+    matches,
+    today,
+    limit
+  );
+
+  if (
+    todayMatches.some(
+      (match) => match.status !== "published" || match.date !== today
+    )
+  ) {
+    errors.push("Today contains a non-current or unpublished prediction.");
+  }
+
+  if (latestMatches.some((match) => todaySlugs.has(match.slug))) {
+    errors.push("Latest duplicates a prediction from Today.");
+  }
+
+  if (latestMatches.length > limit) {
+    errors.push(`Latest contains more than ${limit} predictions.`);
+  }
+
+  const actualSlugs = latestMatches.map((match) => match.slug);
+  const expectedSlugs = expectedLatest.map((match) => match.slug);
+
+  if (actualSlugs.join("|") !== expectedSlugs.join("|")) {
+    errors.push(
+      "Latest is not the canonical chronological published selection."
+    );
+  }
+
+  const firstUnknownDate = latestMatches.findIndex((match) => !match.date);
+  if (
+    firstUnknownDate >= 0 &&
+    latestMatches.slice(firstUnknownDate).some((match) => Boolean(match.date))
+  ) {
+    errors.push("An unknown-date prediction precedes a dated prediction.");
+  }
+
+  return errors;
 }
 
 export function filterPastPublishedPredictions(

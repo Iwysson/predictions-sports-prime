@@ -2,7 +2,7 @@ import { AdSlot } from "@/components/ads";
 import { LeagueCard } from "@/components/LeagueCard";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
 import { SectionTitle } from "@/components/SectionTitle";
-import { homeLeagues, otherLeaguesCard } from "@/data/leagues";
+import { homeLeagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
 import { toMatchPreview } from "@/lib/editorial";
 import {
@@ -22,11 +22,19 @@ async function hydrateMatchAtBuild(match: MatchPreview): Promise<MatchPreview> {
 
     if (!fixture) return match;
 
+    const isLiveFixture = fixture.dataSource === "espn";
+
     return {
       ...match,
       round: `Matchday ${fixture.round}`,
-      date: match.date || fixture.date,
-      time: fixture.time,
+      date: isLiveFixture
+        ? fixture.date
+        : match.date || fixture.date,
+      time: isLiveFixture && fixture.time !== "TBD"
+        ? fixture.time
+        : match.time !== "TBD"
+          ? match.time
+          : fixture.time,
       homeTeam: fixture.homeTeam,
       awayTeam: fixture.awayTeam,
     };
@@ -60,7 +68,7 @@ export default async function Home() {
           />
 
           <div className="league-grid league-grid--compact">
-            {[...homeLeagues, otherLeaguesCard].map((league) => (
+            {homeLeagues.map((league) => (
               <LeagueCard key={league.slug} {...league} />
             ))}
           </div>

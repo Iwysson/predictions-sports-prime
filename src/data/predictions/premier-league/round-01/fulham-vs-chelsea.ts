@@ -28,5 +28,10 @@ export const fulhamVsChelsea: EditorialPrediction = {
     odds: 2.07,
   },
 
+  matchInfo: {
+    date: "2026-08-24",
+    time: "20:00",
+  },
+
   published: true,
 };

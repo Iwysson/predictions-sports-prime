@@ -26,5 +26,9 @@ export const evertonVsCrystalPalace: EditorialPrediction = {
     odds: 1.70
   },
 
+  matchInfo: {
+    date: "2026-08-22",
+  },
+
   published: true,
 };

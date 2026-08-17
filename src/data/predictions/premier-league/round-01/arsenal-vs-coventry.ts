@@ -24,5 +24,10 @@ export const arsenalVsCoventry: EditorialPrediction = {
     odds: 1.72
   },
 
+  matchInfo: {
+    date: "2026-08-21",
+    time: "20:00",
+  },
+
   published: true,
 };
