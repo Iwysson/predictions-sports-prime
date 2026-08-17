@@ -4,14 +4,12 @@ import { useEffect, useMemo, useState } from "react";
 import { LeagueSlug } from "@/types";
 import { StandingRow } from "@/data/standings";
 import {
-  computeStandings,
-  loadLeagueSeason,
   openLeagueConfigs,
 } from "@/lib/openfootball";
-import { validateLeagueRounds } from "@/lib/data-validation";
 import { useI18n } from "@/i18n/I18nProvider";
+import { loadLiveStandings } from "@/lib/live-standings";
 
-type SupportedSlug = Exclude<LeagueSlug, "other-leagues">;
+type SupportedSlug = LeagueSlug;
 
 export function LiveLeagueStandings({
   league,
@@ -30,31 +28,10 @@ export function LiveLeagueStandings({
   useEffect(() => {
     let cancelled = false;
 
-    loadLeagueSeason(league)
-      .then((rounds) => {
-        const validation = validateLeagueRounds(rounds, config);
-
-        if (!validation.valid) {
-          throw new Error(validation.errors.join(" | "));
-        }
-
-        const computed = computeStandings(rounds);
-
-        if (computed.length !== config.expectedClubs) {
-          throw new Error(
-            `${config.label}: expected ${config.expectedClubs} clubs, received ${computed.length}`
-          );
-        }
-
+    loadLiveStandings(league)
+      .then((computed) => {
         if (!cancelled) {
-          setRows(
-            computed.map((row) => ({
-              position: row.position,
-              team: row.team,
-              played: row.played,
-              points: row.points,
-            }))
-          );
+          setRows(computed);
           setSource("validated");
         }
       })
@@ -111,6 +88,7 @@ export function LiveLeagueStandings({
         <span>#</span>
         <span>{t("club")}</span>
         <span>{t("played")}</span>
+        <span>GD</span>
         <span>{t("points")}</span>
       </div>
 
@@ -122,6 +100,7 @@ export function LiveLeagueStandings({
             </span>
             <strong>{row.team}</strong>
             <span>{row.played}</span>
+            <span>{row.goalDifference ?? 0}</span>
             <b>{row.points}</b>
           </div>
         ))}

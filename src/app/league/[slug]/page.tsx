@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ads";
-import { MatchCard } from "@/components/MatchCard";
-import { CompactStandings } from "@/components/CompactStandings";
 import { LiveLeagueRound } from "@/components/LiveLeagueRound";
 import { LiveLeagueStandings } from "@/components/LiveLeagueStandings";
 import { leagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
 import { standingsByLeague } from "@/data/standings";
-import { LeagueSlug } from "@/types";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { LeaguePageText } from "@/components/LeaguePageText";
@@ -82,12 +79,6 @@ export function generateStaticParams() {
   }));
 }
 
-function isOpenDataLeague(
-  slug: LeagueSlug
-): slug is Exclude<LeagueSlug, "other-leagues"> {
-  return slug !== "other-leagues";
-}
-
 export default async function LeaguePage({
   params,
 }: {
@@ -128,25 +119,10 @@ export default async function LeaguePage({
         <div className="container league-layout">
           <div className="league-main-column">
             <LeaguePageText matchCount={leagueMatches.length}>
-              {isOpenDataLeague(league.slug) ? (
               <LiveLeagueRound
                 league={league.slug}
                 manualMatches={leagueMatches}
               />
-            ) : leagueMatches.length > 0 ? (
-              <div className="league-match-list">
-                {leagueMatches.map((match) => (
-                  <MatchCard key={match.id} match={match} />
-                ))}
-              </div>
-            ) : (
-              <div className="empty-state">
-                <strong>No matches added yet.</strong>
-                <p>
-                  Add selected predictions in <code>src/data/predictions/</code>.
-                </p>
-              </div>
-            )}
             </LeaguePageText>
 
             <div className="league-bottom-ad">
@@ -155,17 +131,10 @@ export default async function LeaguePage({
           </div>
 
           <aside className="league-sidebar">
-            {isOpenDataLeague(league.slug) ? (
-              <LiveLeagueStandings
+            <LiveLeagueStandings
                 league={league.slug}
                 fallbackRows={standings}
               />
-            ) : (
-              <CompactStandings
-                leagueName={league.name}
-                rows={standings}
-              />
-            )}
 
             <div className="league-side-ad">
               <AdSlot placement="league-sidebar" format="rectangle" />

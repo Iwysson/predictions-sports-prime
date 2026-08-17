@@ -1731,7 +1731,7 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
 .standings-columns,
 .standing-row {
   display: grid;
-  grid-template-columns: 28px minmax(0, 1fr) 28px 36px;
+  grid-template-columns: 28px minmax(0, 1fr) 28px 30px 36px;
   align-items: center;
   gap: 6px;
 }

@@ -16,7 +16,7 @@ import {
   validateRoundForDisplay,
 } from "@/lib/data-validation";
 
-type SupportedSlug = Exclude<LeagueSlug, "other-leagues">;
+type SupportedSlug = LeagueSlug;
 
 function slugify(value: string) {
   return value

@@ -5,6 +5,7 @@ export type StandingRow = {
   team: string;
   played: number;
   points: number;
+  goalDifference?: number;
   zone?: "champions" | "europa" | "relegation";
 };
 
@@ -14,6 +15,7 @@ function placeholderTeams(names: string[]): StandingRow[] {
     team,
     played: 0,
     points: 0,
+    goalDifference: 0,
   }));
 }
 
@@ -104,5 +106,6 @@ export const standingsByLeague: Record<LeagueSlug, StandingRow[]> = {
     "Udinese",
     "Verona",
   ]),
-  "other-leagues": [],
+  // Safe empty fallback: never fabricate a Liga Portugal table.
+  "liga-portugal": [],
 };

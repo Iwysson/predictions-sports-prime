@@ -1,4 +1,5 @@
 import type { LeagueSlug } from "@/types";
+import { leaguesBySlug } from "@/data/leagues";
 
 export type OpenFootballGame = {
   round: number;
@@ -8,6 +9,7 @@ export type OpenFootballGame = {
   awayTeam: string;
   homeScore: number | null;
   awayScore: number | null;
+  status?: "scheduled" | "in-progress" | "completed" | "postponed";
 };
 
 export type OpenFootballRound = {
@@ -26,50 +28,22 @@ export type ComputedStanding = {
 };
 
 export type OpenLeagueConfig = {
-  slug: Exclude<LeagueSlug, "other-leagues">;
+  slug: LeagueSlug;
   source: string;
   expectedClubs: number;
   expectedGamesPerRound: number;
   label: string;
 };
 
-export const openLeagueConfigs: Record<
-  Exclude<LeagueSlug, "other-leagues">,
-  OpenLeagueConfig
-> = {
-  "premier-league": {
-    slug: "premier-league",
-    source:
-      "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
-    expectedClubs: 20,
-    expectedGamesPerRound: 10,
-    label: "Premier League",
-  },
-  "la-liga": {
-    slug: "la-liga",
-    source:
-      "https://raw.githubusercontent.com/openfootball/espana/refs/heads/master/2026-27/1-liga.txt",
-    expectedClubs: 20,
-    expectedGamesPerRound: 10,
-    label: "La Liga",
-  },
-  bundesliga: {
-    slug: "bundesliga",
-    source:
-      "https://raw.githubusercontent.com/openfootball/deutschland/refs/heads/master/2026-27/1-bundesliga.txt",
-    expectedClubs: 18,
-    expectedGamesPerRound: 9,
-    label: "Bundesliga",
-  },
-  "serie-a": {
-    slug: "serie-a",
-    source:
-      "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt",
-    expectedClubs: 20,
-    expectedGamesPerRound: 10,
-    label: "Serie A",
-  },
-};
+export const openLeagueConfigs = Object.fromEntries(
+  Object.values(leaguesBySlug).map((league) => [league.slug, {
+    slug: league.slug,
+    source: league.sources.fixtures,
+    expectedClubs: league.expectedClubs,
+    expectedGamesPerRound: league.expectedGamesPerRound,
+    label: league.name,
+  }])
+) as Record<LeagueSlug, OpenLeagueConfig>;
 
 const MONTHS: Record<string, number> = {
   Jan: 1,
@@ -88,6 +62,21 @@ const MONTHS: Record<string, number> = {
 
 const promises = new Map<string, Promise<OpenFootballRound[]>>();
 
+type LiveCompetitor = {
+  homeAway: "home" | "away";
+  score?: string;
+  team: { displayName: string };
+};
+
+type LiveEvent = {
+  date: string;
+  season?: { year?: number };
+  status: {
+    type: { name: string; state: string; completed: boolean };
+  };
+  competitions: Array<{ competitors: LiveCompetitor[] }>;
+};
+
 function isoDate(year: number, month: number, day: number) {
   return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 }
@@ -104,7 +93,7 @@ function cleanTeamName(name: string) {
 }
 
 export function normalizeTeamKey(name: string) {
-  return cleanTeamName(name)
+  const key = cleanTeamName(name)
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
@@ -112,10 +101,23 @@ export function normalizeTeamKey(name: string) {
     .split(/[^a-z0-9]+/)
     .filter((part) => part && part !== "club" && part !== "de")
     .join("");
+
+  const aliases: Record<string, string> = {
+    casapiaac: "casapia",
+    sportlisboaebenfica: "benfica",
+  };
+
+  return aliases[key] ?? key;
 }
 
 export function teamNamesMatch(left: string, right: string) {
-  return normalizeTeamKey(left) === normalizeTeamKey(right);
+  const leftKey = normalizeTeamKey(left);
+  const rightKey = normalizeTeamKey(right);
+
+  return leftKey === rightKey || (
+    Math.min(leftKey.length, rightKey.length) >= 5 &&
+    (leftKey.includes(rightKey) || rightKey.includes(leftKey))
+  );
 }
 
 export function parseFootballSeason(text: string): OpenFootballRound[] {
@@ -197,6 +199,7 @@ export function parseFootballSeason(text: string): OpenFootballRound[] {
       awayTeam: cleanTeamName(teams[1]),
       homeScore,
       awayScore,
+      status: homeScore !== null && awayScore !== null ? "completed" : "scheduled",
     });
   }
 
@@ -265,15 +268,60 @@ async function fetchSeasonText(config: OpenLeagueConfig) {
   return text;
 }
 
+function eventStatus(event: LiveEvent): OpenFootballGame["status"] {
+  const status = event.status.type;
+  if (status.completed) return "completed";
+  if (/POSTPONED|CANCELED|CANCELLED/i.test(status.name)) return "postponed";
+  if (status.state === "in") return "in-progress";
+  return "scheduled";
+}
+
+async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[]) {
+  const league = leaguesBySlug[slug];
+  const response = await fetch(
+    `https://site.api.espn.com/apis/site/v2/sports/soccer/${league.liveDataId}/scoreboard?dates=2026&limit=1000`,
+    { headers: { Accept: "application/json" } }
+  );
+
+  if (!response.ok) throw new Error(`${league.name}: live results returned ${response.status}`);
+
+  const data = (await response.json()) as { events?: LiveEvent[] };
+  const events = (data.events ?? []).filter((event) => event.season?.year === 2026);
+
+  for (const event of events) {
+    const competitors = event.competitions[0]?.competitors ?? [];
+    const home = competitors.find((item) => item.homeAway === "home");
+    const away = competitors.find((item) => item.homeAway === "away");
+    if (!home || !away) continue;
+
+    const fixture = findFixtureByTeams(rounds, home.team.displayName, away.team.displayName);
+    if (!fixture) continue;
+
+    const date = new Date(event.date);
+    fixture.date = event.date.slice(0, 10);
+    fixture.time = `${String(date.getUTCHours()).padStart(2, "0")}:${String(date.getUTCMinutes()).padStart(2, "0")}`;
+    fixture.status = eventStatus(event);
+
+    if (fixture.status === "completed") {
+      fixture.homeScore = Number(home.score);
+      fixture.awayScore = Number(away.score);
+    }
+  }
+
+  return rounds;
+}
+
 export function loadLeagueSeason(
-  slug: Exclude<LeagueSlug, "other-leagues">
+  slug: LeagueSlug
 ) {
   const config = openLeagueConfigs[slug];
 
   if (!promises.has(slug)) {
     promises.set(
       slug,
-      fetchSeasonText(config).then(parseFootballSeason)
+      fetchSeasonText(config)
+        .then(parseFootballSeason)
+        .then((rounds) => hydrateLiveResults(slug, rounds).catch(() => rounds))
     );
   }
 
@@ -290,12 +338,13 @@ function localTodayIso() {
 
 export function findCurrentOrNextRound(
   rounds: OpenFootballRound[],
-  today = localTodayIso()
+  _today = localTodayIso()
 ) {
-  const candidate = rounds.find((round) => {
-    const dates = round.games.map((game) => game.date).sort();
-    return dates[dates.length - 1] >= today;
-  });
+  const candidate = rounds.find((round) =>
+    round.games.some(
+      (game) => game.status !== "completed" && game.status !== "postponed"
+    )
+  );
 
   return candidate ?? rounds[rounds.length - 1] ?? null;
 }
@@ -376,14 +425,11 @@ export function findFixtureByTeams(
   homeTeam: string,
   awayTeam: string
 ): OpenFootballGame | null {
-  const homeKey = normalizeTeamKey(homeTeam);
-  const awayKey = normalizeTeamKey(awayTeam);
-
   for (const round of rounds) {
     const game = round.games.find(
       (fixture) =>
-        normalizeTeamKey(fixture.homeTeam) === homeKey &&
-        normalizeTeamKey(fixture.awayTeam) === awayKey
+        teamNamesMatch(fixture.homeTeam, homeTeam) &&
+        teamNamesMatch(fixture.awayTeam, awayTeam)
     );
 
     if (game) {

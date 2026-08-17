@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { MatchPreview, LeagueSlug } from "@/types";
+import { MatchPreview } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { leagues } from "@/data/leagues";
+import { leaguesBySlug } from "@/data/leagues";
 import {
   findFixtureByTeams,
   loadLeagueSeason,
@@ -16,16 +17,10 @@ import {
 } from "@/lib/match-feed";
 import { useI18n } from "@/i18n/I18nProvider";
 
-type SupportedSlug = Exclude<LeagueSlug, "other-leagues">;
-
 async function hydrateMatch(match: MatchPreview): Promise<MatchPreview> {
-  if (match.league === "other-leagues") {
-    return match;
-  }
-
   try {
     const rounds = await loadLeagueSeason(
-      match.league as SupportedSlug
+      match.league
     );
 
     const fixture = findFixtureByTeams(
@@ -99,6 +94,16 @@ export function HomePredictionFeed({
     [hydrated, ready, today]
   );
 
+  const otherLeagueMatches = useMemo(
+    () => ready
+      ? hydrated.filter((match) =>
+          match.status === "published" &&
+          !leaguesBySlug[match.league].featured
+        )
+      : [],
+    [hydrated, ready]
+  );
+
   return (
     <>
       <section className="section section--compact" id="today">
@@ -143,7 +148,7 @@ export function HomePredictionFeed({
         </div>
       </section>
 
-      <section className="section section--compact">
+      <section className="section section--compact" id="upcoming">
         <div className="container">
           <div className="section-heading section-heading--compact">
             <div className="heading-with-icon">
@@ -205,6 +210,32 @@ export function HomePredictionFeed({
           ) : (
             <div className="empty-state empty-state--compact">
               <strong>{t("noUpcomingPredictions")}</strong>
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section className="section section--compact section--muted" id="other-leagues">
+        <div className="container">
+          <div className="section-heading section-heading--compact">
+            <div className="heading-with-icon">
+              <span className="section-icon">+</span>
+              <div>
+                <span className="eyebrow">Selected competitions</span>
+                <h2>Other Leagues</h2>
+              </div>
+            </div>
+          </div>
+
+          {otherLeagueMatches.length > 0 ? (
+            <div className="match-grid match-grid--compact">
+              {otherLeagueMatches.map((match) => (
+                <MatchCard key={match.id} match={match} />
+              ))}
+            </div>
+          ) : (
+            <div className="empty-state empty-state--compact">
+              <strong>No published predictions yet.</strong>
             </div>
           )}
         </div>

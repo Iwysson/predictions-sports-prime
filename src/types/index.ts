@@ -3,7 +3,7 @@ export type LeagueSlug =
   | "la-liga"
   | "bundesliga"
   | "serie-a"
-  | "other-leagues";
+  | "liga-portugal";
 
 export type PredictionItem = {
   label: string;
@@ -32,7 +32,7 @@ export type EditorialPrediction = {
   // Opcional. false = rascunho e não aparece no site.
   published?: boolean;
 
-  // Só é necessário para "other-leagues" ou como fallback manual.
+  // Optional manual fallback when the external fixture feed is unavailable.
   matchInfo?: {
     date?: string;
     time?: string;

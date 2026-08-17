@@ -7,8 +7,6 @@ import {
   loadLeagueSeason,
 } from "@/lib/openfootball";
 
-type SupportedSlug = Exclude<LeagueSlug, "other-leagues">;
-
 type State = {
   round: string;
   date: string;
@@ -43,17 +41,7 @@ export function LiveMatchMeta({
   useEffect(() => {
     let cancelled = false;
 
-    if (league === "other-leagues") {
-      setData({
-        round: fallbackRound,
-        date: fallbackDate,
-        time: fallbackTime,
-        state: "fallback",
-      });
-      return;
-    }
-
-    loadLeagueSeason(league as SupportedSlug)
+    loadLeagueSeason(league)
       .then((rounds) => {
         const fixture = findFixtureByTeams(
           rounds,

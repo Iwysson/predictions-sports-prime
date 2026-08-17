@@ -8,13 +8,6 @@ export type LeagueArtwork = {
   badge: string | null;
 };
 
-const leagueIds: Record<string, number> = {
-  "premier-league": 4328,
-  "la-liga": 4335,
-  bundesliga: 4331,
-  "serie-a": 4332,
-};
-
 async function fetchWithTimeout(url: string) {
   const controller = new AbortController();
   const timeout = globalThis.setTimeout(() => controller.abort(), 8_000);
@@ -98,7 +91,7 @@ export async function fetchTeamBadge(team: string): Promise<string | null> {
 }
 
 export async function fetchLeagueBadge(slug: string): Promise<string | null> {
-  const id = leagueIds[slug];
+  const id = leaguesBySlug[slug as LeagueSlug]?.artworkId;
 
   if (!id) {
     return null;
@@ -160,3 +153,5 @@ export async function fetchLeagueBadge(slug: string): Promise<string | null> {
     return null;
   }
 }
+import { leaguesBySlug } from "@/data/leagues";
+import type { LeagueSlug } from "@/types";
