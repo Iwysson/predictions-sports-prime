@@ -12,32 +12,37 @@ export function matchSeoTitle(match: Match) {
 
 export function matchSeoDescription(match: Match) {
   const league = leagues.find((item) => item.slug === match.league);
+  const teams = `${match.homeTeam} vs ${match.awayTeam}`;
+  const competition = league?.name ?? "the competition";
+  const variants = [
+    `Read our ${teams} prediction and betting analysis for this ${competition} fixture, including the main pick, available odds and key match considerations.`,
+    `Explore ${teams} betting tips and match analysis for ${competition}, with our main prediction, available odds and a balanced fixture assessment.`,
+    `Preview ${teams} with our ${competition} prediction, betting tips and analysis, including the selected market, available odds and important risks.`,
+  ];
+  const index = Array.from(match.slug).reduce(
+    (total, character) => total + character.charCodeAt(0),
+    0
+  ) % variants.length;
+  const description = variants[index];
+
+  if (description.length <= 160) return description;
+
+  return `Read our ${teams} prediction for ${competition}, with betting analysis, the selected market, available odds and key risks.`;
+}
+
+export function matchIntroduction(match: Match) {
+  const league = leagues.find((item) => item.slug === match.league);
   const mainPick = match.predictions.find(
     (item) => item.label === "Main Prediction"
   )?.value;
-  const odds = match.predictions.find(
-    (item) => item.label === "Odds"
-  )?.value;
+  const date = match.date ? ` on ${match.date}` : "";
+  const competition = league?.name ?? "this competition";
 
-  const context = [
-    league ? `for ${league.name}` : null,
-    match.date ? `on ${match.date}` : null,
-  ]
-    .filter(Boolean)
-    .join(" ");
-
-  const selection = mainPick
-    ? ` Main pick: ${mainPick}${odds ? ` at odds of ${odds}` : ""}.`
-    : " Read our match analysis and selected football tip.";
-
-  const description =
-    `${match.homeTeam} vs ${match.awayTeam} prediction and betting tips${context ? ` ${context}` : ""}.${selection}`;
-
-  if (description.length <= 160) {
-    return description;
+  if (!mainPick) {
+    return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}. This preview outlines the match context, analysis and key considerations.`;
   }
 
-  return `${description.slice(0, 157).replace(/\s+\S*$/, "")}...`;
+  return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}. This preview explains the reasoning behind our ${mainPick} selection and the key risks considered.`;
 }
 
 export function matchCanonicalPath(match: Match) {
@@ -142,6 +147,11 @@ export function articleJsonLd(match: Match) {
         "@type": "ImageObject",
         url: absoluteUrl("/icon-512.png"),
       },
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: siteConfig.url,
     },
     about: [
       {

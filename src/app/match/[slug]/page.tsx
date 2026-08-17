@@ -20,6 +20,7 @@ import {
   articleJsonLd,
   buildMatchMetadata,
   matchBreadcrumbJsonLd,
+  matchIntroduction,
 } from "@/lib/seo";
 import { selectRelatedPredictions } from "@/lib/related-predictions";
 
@@ -91,11 +92,17 @@ export default async function MatchPage({
 
       <section className="compact-match-top">
         <div className="container">
-          <div className="compact-match-breadcrumb">
+          <nav className="compact-match-breadcrumb" aria-label="Breadcrumb">
+            <Link href="/">Home</Link>
+            <span aria-hidden="true">›</span>
             <Link href={`/league/${match.league}/`}>
-              ← {league?.name ?? "League"}
+              {league?.name ?? "League"} Predictions
             </Link>
-          </div>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">
+              {match.homeTeam} vs {match.awayTeam}
+            </span>
+          </nav>
 
           <div className="compact-match-header">
             <div className="compact-match-league">
@@ -154,9 +161,13 @@ export default async function MatchPage({
                   <MatchAnalysisLabel />
                 </span>
 
-                <h1>{match.title}</h1>
+                <h1>{match.homeTeam} vs {match.awayTeam} Prediction</h1>
               </div>
             </div>
+
+            <p className="match-seo-intro">
+              {matchIntroduction(match)}
+            </p>
 
             <div className="compact-analysis-copy">
               {match.analysis.map((paragraph, index) => (

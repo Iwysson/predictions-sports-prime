@@ -5,9 +5,9 @@
 1. Add or update the prediction in `src/data/predictions/<league>/<round>/`.
 2. Set `published: true` only after the analysis, main pick and optional odds are ready.
 3. Run `npx.cmd tsc --noEmit` and `npm.cmd run build`.
-4. Run `npm.cmd run audit:seo` against the generated `out/` directory.
+4. Run `npm.cmd run audit:seo` against the generated `out/` directory. The audit also refreshes the internal `SEO-INDEXING-QUEUE.md` report.
 
-A published prediction is automatically converted into a match route, included in the sitemap, linked from its league hub and considered for related predictions. Related links require no manual configuration.
+A published prediction is automatically converted into a static match route with unique metadata, canonical URL, index/follow directives, league relationship, contextual links and valid structured data. It is included in the sitemap and indexing queue without manually editing `sitemap.ts`.
 
 Drafts marked `published: false` do not receive a match route, sitemap entry, league-hub link or related-prediction link.
 
@@ -29,3 +29,23 @@ published: true
 ```
 
 Historical published pages remain available. Related selection prioritizes published matches from the same league and round, then temporal proximity, with published matches from other leagues used only when needed to fill the compact list.
+
+## Automatic SEO lifecycle
+
+```text
+published: true
+  → static match page
+  → unique title and description
+  → canonical and index/follow
+  → sitemap and league hub
+  → Home Today/Latest when current or upcoming
+  → Related Predictions
+  → Article and Breadcrumb structured data
+  → SEO indexing queue
+```
+
+## Search Console review
+
+Use `SEO-INDEXING-QUEUE.md` to identify published canonical URLs that are indexable, present in the sitemap and internally linked. Submission or inspection remains a manual Google Search Console action; the project does not call unofficial indexing services.
+
+`lastModified` is emitted only when the prediction has a reliable editorial `updatedAt` or `publishedAt`. Never add a date merely to populate the sitemap or Article schema.
