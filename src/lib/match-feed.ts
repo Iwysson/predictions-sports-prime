@@ -70,8 +70,38 @@ export function filterFuturePublishedPredictions(
     uniqueMatches(matches).filter(
       (match) =>
         match.status === "published" &&
-        Boolean(match.date) &&
-        match.date > today
+        (!match.date || match.date > today)
     )
+  );
+}
+
+export function filterPastPublishedPredictions(
+  matches: MatchPreview[],
+  today = localTodayISO()
+) {
+  return sortMatchesByKickoff(
+    uniqueMatches(matches).filter(
+      (match) =>
+        match.status === "published" &&
+        Boolean(match.date) &&
+        match.date < today
+    )
+  );
+}
+
+export function findOmittedCurrentPredictions(
+  matches: MatchPreview[],
+  today = localTodayISO()
+) {
+  const eligible = new Set([
+    ...filterTodaysPublishedPredictions(matches, today),
+    ...filterFuturePublishedPredictions(matches, today),
+  ].map((match) => match.slug));
+
+  return uniqueMatches(matches).filter(
+    (match) =>
+      match.status === "published" &&
+      (!match.date || match.date >= today) &&
+      !eligible.has(match.slug)
   );
 }

@@ -9,6 +9,7 @@ import { leaguesBySlug } from "@/data/leagues";
 import {
   filterFuturePublishedPredictions,
   filterTodaysPublishedPredictions,
+  findOmittedCurrentPredictions,
   localTodayISO,
 } from "@/lib/match-feed";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -27,9 +28,20 @@ export function HomePredictionFeed({
   );
 
   const latestMatches = useMemo(
-    () => filterFuturePublishedPredictions(matches, today).slice(0, 5),
+    () => filterFuturePublishedPredictions(matches, today),
     [matches, today]
   );
+
+  const omittedMatches = useMemo(
+    () => findOmittedCurrentPredictions(matches, today),
+    [matches, today]
+  );
+
+  if (omittedMatches.length > 0) {
+    throw new Error(
+      `Published Home predictions omitted: ${omittedMatches.map((match) => match.slug).join(", ")}`
+    );
+  }
 
   const otherLeagueMatches = useMemo(
     () => matches.filter((match) =>
