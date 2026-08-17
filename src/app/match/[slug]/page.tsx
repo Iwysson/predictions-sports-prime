@@ -5,6 +5,7 @@ import { AdSlot } from "@/components/ads";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { TeamBadge } from "@/components/TeamBadge";
 import { LiveMatchMeta } from "@/components/LiveMatchMeta";
+import { MatchSearchIntent } from "@/components/MatchSearchIntent";
 import {
   MatchAnalysisLabel,
   MainPredictionLabel,
@@ -159,6 +160,12 @@ export default async function MatchPage({
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
+
+            <MatchSearchIntent
+              homeTeam={match.homeTeam}
+              awayTeam={match.awayTeam}
+              slug={match.slug}
+            />
 
             <div className="match-content-ad">
               <AdSlot placement="match-content" />

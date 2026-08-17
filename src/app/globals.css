@@ -68,7 +68,7 @@ code { color: var(--accent); }
   place-items: center;
   background: var(--accent);
   color: #04110a;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
   letter-spacing: .08em;
   box-shadow: 0 0 22px rgba(85,227,143,.13);
@@ -2420,6 +2420,23 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
 
 .compact-analysis-copy p {
   margin: 14px 0 0;
+}
+
+.match-search-intent {
+  display: grid;
+  gap: 6px;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--muted);
+  background: rgba(255,255,255,.018);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.match-search-intent p {
+  margin: 0;
 }
 
 .compact-predictions-card {
