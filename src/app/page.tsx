@@ -2,7 +2,7 @@ import { AdSlot } from "@/components/ads";
 import { LeagueCard } from "@/components/LeagueCard";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
 import { SectionTitle } from "@/components/SectionTitle";
-import { featuredLeagues, otherLeaguesCard } from "@/data/leagues";
+import { homeLeagues, otherLeaguesCard } from "@/data/leagues";
 import { matches } from "@/data/matches";
 import { toMatchPreview } from "@/lib/editorial";
 import {
@@ -60,7 +60,7 @@ export default async function Home() {
           />
 
           <div className="league-grid league-grid--compact">
-            {[...featuredLeagues, otherLeaguesCard].map((league) => (
+            {[...homeLeagues, otherLeaguesCard].map((league) => (
               <LeagueCard key={league.slug} {...league} />
             ))}
           </div>

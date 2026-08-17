@@ -108,4 +108,6 @@ export const standingsByLeague: Record<LeagueSlug, StandingRow[]> = {
   ]),
   // Safe empty fallback: never fabricate a Liga Portugal table.
   "liga-portugal": [],
+  // Safe empty fallback: live standings are loaded from the shared source.
+  "ligue-1": [],
 };

@@ -105,6 +105,10 @@ export function normalizeTeamKey(name: string) {
   const aliases: Record<string, string> = {
     casapiaac: "casapia",
     sportlisboaebenfica: "benfica",
+    olympiquemarseille: "marseille",
+    om: "marseille",
+    rcstrasbourg: "strasbourg",
+    rcstrasbourgalsace: "strasbourg",
   };
 
   return aliases[key] ?? key;

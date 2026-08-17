@@ -3,7 +3,8 @@ export type LeagueSlug =
   | "la-liga"
   | "bundesliga"
   | "serie-a"
-  | "liga-portugal";
+  | "liga-portugal"
+  | "ligue-1";
 
 export type PredictionItem = {
   label: string;
