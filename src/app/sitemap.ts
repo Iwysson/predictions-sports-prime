@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { leagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
 import { absoluteUrl } from "@/lib/site-config";
+import { matchCanonicalPath } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
@@ -35,7 +36,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const matchPages: MetadataRoute.Sitemap = matches
     .filter((match) => match.status === "published")
     .map((match) => ({
-      url: absoluteUrl(`/match/${match.slug}/`),
+      url: absoluteUrl(matchCanonicalPath(match)),
+      ...(match.updatedAt || match.publishedAt
+        ? { lastModified: new Date(match.updatedAt ?? match.publishedAt!) }
+        : {}),
       changeFrequency: "weekly",
       priority: 0.7,
     }));

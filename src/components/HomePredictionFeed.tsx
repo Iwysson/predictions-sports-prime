@@ -52,7 +52,9 @@ export function HomePredictionFeed({
   matches: MatchPreview[];
 }) {
   const [hydrated, setHydrated] = useState(matches);
-  const [ready, setReady] = useState(false);
+  // Keep registered prediction links in the server-rendered HTML. Hydration
+  // then enriches fixture dates/times without being required for discovery.
+  const [ready, setReady] = useState(true);
   const { t } = useI18n();
   const today = localTodayISO();
 

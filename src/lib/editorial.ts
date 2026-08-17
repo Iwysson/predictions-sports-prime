@@ -82,6 +82,8 @@ export function editorialToMatch(
       `${prediction.homeTeam} vs ${prediction.awayTeam} Prediction`,
     analysis: prediction.analysis,
     predictions: picksToItems(prediction),
+    publishedAt: prediction.publishedAt,
+    updatedAt: prediction.updatedAt,
   };
 }
 
@@ -141,6 +143,15 @@ export function validateEditorialPredictions(
         prediction.picks.odds <= 1)
     ) {
       errors.push(`${label}: odds must be a finite number greater than 1.`);
+    }
+
+    for (const [field, value] of [
+      ["publishedAt", prediction.publishedAt],
+      ["updatedAt", prediction.updatedAt],
+    ] as const) {
+      if (value !== undefined && Number.isNaN(Date.parse(value))) {
+        errors.push(`${label}: ${field} must be a valid ISO 8601 date.`);
+      }
     }
 
     const slug = predictionSlug(

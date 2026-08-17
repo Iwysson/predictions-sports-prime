@@ -132,6 +132,8 @@ export function articleJsonLd(match: Match) {
       "@type": "WebPage",
       "@id": url,
     },
+    ...(match.publishedAt ? { datePublished: match.publishedAt } : {}),
+    ...(match.updatedAt ? { dateModified: match.updatedAt } : {}),
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,

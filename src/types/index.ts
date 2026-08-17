@@ -32,6 +32,11 @@ export type EditorialPrediction = {
   // Opcional. false = rascunho e não aparece no site.
   published?: boolean;
 
+  // ISO 8601 editorial metadata. Sitemap/structured data only emit these
+  // values when an editor explicitly provides them.
+  publishedAt?: string;
+  updatedAt?: string;
+
   // Optional manual fallback when the external fixture feed is unavailable.
   matchInfo?: {
     date?: string;
@@ -55,6 +60,8 @@ export type Match = {
   title: string;
   analysis: string[];
   predictions: PredictionItem[];
+  publishedAt?: string;
+  updatedAt?: string;
 };
 
 export type MatchPreview = Omit<Match, "analysis" | "predictions">;
