@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { MatchPreview } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
@@ -21,7 +21,6 @@ export function HomePredictionFeed({
   matches: MatchPreview[];
 }) {
   const { t } = useI18n();
-  const [activeTab, setActiveTab] = useState<"today" | "upcoming" | "history">("today");
   const today = localTodayISO();
 
   const todayMatches = useMemo(
@@ -40,7 +39,7 @@ export function HomePredictionFeed({
   );
 
   const historyMatches = useMemo(
-    () => filterCompletedPredictions(matches),
+    () => filterCompletedPredictions(matches).slice(0, 10),
     [matches]
   );
 
@@ -66,13 +65,7 @@ export function HomePredictionFeed({
 
   return (
     <>
-      <nav className="container prediction-tabs" aria-label="Prediction sections">
-        <button className={activeTab === "today" ? "is-active" : ""} onClick={() => setActiveTab("today")}>{t("today")}</button>
-        <button className={activeTab === "upcoming" ? "is-active" : ""} onClick={() => setActiveTab("upcoming")}>{t("upcoming")}</button>
-        <button className={activeTab === "history" ? "is-active" : ""} onClick={() => setActiveTab("history")}>History</button>
-      </nav>
-
-      <section className="section section--compact" id="today" hidden={activeTab !== "today"}>
+      <section className="section section--compact" id="today">
         <div className="container">
           <div className="section-heading section-heading--compact">
             <div className="heading-with-icon">
@@ -110,7 +103,7 @@ export function HomePredictionFeed({
         </div>
       </section>
 
-      <section className="section section--compact" id="upcoming" hidden={activeTab !== "upcoming"}>
+      <section className="section section--compact" id="upcoming">
         <div className="container">
           <div className="section-heading section-heading--compact">
             <div className="heading-with-icon">
@@ -118,7 +111,7 @@ export function HomePredictionFeed({
 
               <div>
                 <span className="eyebrow">{t("upcoming")}</span>
-                <h2>{t("latestPredictions")}</h2>
+                <h2>{t("upcoming")} {t("predictions")}</h2>
               </div>
             </div>
           </div>
@@ -173,12 +166,12 @@ export function HomePredictionFeed({
         </div>
       </section>
 
-      <section className="section section--compact" id="history" hidden={activeTab !== "history"}>
+      <section className="section section--compact" id="history">
         <div className="container">
           <div className="section-heading section-heading--compact">
             <div className="heading-with-icon">
               <span className="section-icon">✓</span>
-              <div><span className="eyebrow">Results</span><h1>Prediction History</h1></div>
+              <div><span className="eyebrow">Results</span><h2>Prediction History</h2></div>
             </div>
           </div>
           {historyMatches.length > 0 ? (

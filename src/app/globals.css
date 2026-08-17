@@ -3243,23 +3243,6 @@ html[dir="rtl"] .footer-links { direction: rtl; }
 
 .related-prediction-card a:hover { color: var(--accent-2); }
 
-.prediction-tabs {
-  display: flex;
-  gap: 6px;
-  padding-top: 14px;
-}
-.prediction-tabs button {
-  padding: 8px 13px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--muted);
-  background: var(--panel);
-  cursor: pointer;
-  font: inherit;
-  font-size: 10px;
-  font-weight: 800;
-}
-.prediction-tabs button.is-active { border-color: rgba(85,227,143,.35); color: var(--accent); background: rgba(85,227,143,.08); }
 .history-list, .comment-list { display: grid; gap: 7px; }
 .history-row {
   display: grid;
