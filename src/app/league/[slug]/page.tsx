@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ads";
+import { JsonLd } from "@/components/JsonLd";
 import { LiveLeagueRound } from "@/components/LiveLeagueRound";
 import { LiveLeagueStandings } from "@/components/LiveLeagueStandings";
 import { leagues } from "@/data/leagues";
@@ -10,6 +12,14 @@ import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { LeaguePageText } from "@/components/LeaguePageText";
 import { toMatchPreview } from "@/lib/editorial";
+import {
+  leagueBreadcrumbJsonLd,
+  leagueCanonicalPath,
+  leagueCollectionJsonLd,
+  leagueIntro,
+  leagueSeoDescription,
+  leagueSeoTitle,
+} from "@/lib/league-seo";
 
 export const dynamicParams = false;
 
@@ -32,11 +42,9 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${league.name} Predictions & Betting Tips`;
-  const description =
-    `${league.name} predictions, betting tips, current fixtures, standings and manually written football match analysis from ${siteConfig.name}.`;
-
-  const canonical = absoluteUrl(`/league/${league.slug}/`);
+  const title = leagueSeoTitle(league);
+  const description = leagueSeoDescription(league);
+  const canonical = absoluteUrl(leagueCanonicalPath(league));
 
   return {
     title: {
@@ -94,16 +102,26 @@ export default async function LeaguePage({
   const leagueMatches = matches
     .filter((match) => match.league === league.slug)
     .map(toMatchPreview);
+  const publishedMatches = matches.filter(
+    (match) => match.league === league.slug && match.status === "published"
+  );
   const standings = standingsByLeague[league.slug];
 
   return (
     <>
+      <JsonLd data={leagueCollectionJsonLd(league, publishedMatches)} />
+      <JsonLd data={leagueBreadcrumbJsonLd(league)} />
+
       <section className="league-title-bar">
         <div className="container league-title-inner">
           <div className="league-title-copy">
             <span className="league-title-icon league-title-icon--logo"><LeagueBadge slug={league.slug} short={league.short} /></span>
             <div>
-              <span className="eyebrow">{league.country}</span>
+              <nav className="league-breadcrumb" aria-label="Breadcrumb">
+                <Link href="/">Home</Link>
+                <span aria-hidden="true">›</span>
+                <span aria-current="page">{league.name}</span>
+              </nav>
               <h1>{league.name} Predictions &amp; Betting Tips</h1>
             </div>
           </div>
@@ -113,6 +131,12 @@ export default async function LeaguePage({
 
       <div className="container league-top-ad">
         <AdSlot placement="league-top" />
+      </div>
+
+      <div className="container">
+        <p className="league-seo-intro">
+          {leagueIntro(league, publishedMatches.length)}
+        </p>
       </div>
 
       <section className="section league-content-section">

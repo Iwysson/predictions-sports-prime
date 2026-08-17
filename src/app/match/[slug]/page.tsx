@@ -6,6 +6,7 @@ import { LeagueBadge } from "@/components/LeagueBadge";
 import { TeamBadge } from "@/components/TeamBadge";
 import { LiveMatchMeta } from "@/components/LiveMatchMeta";
 import { MatchSearchIntent } from "@/components/MatchSearchIntent";
+import { RelatedPredictions } from "@/components/RelatedPredictions";
 import {
   MatchAnalysisLabel,
   MainPredictionLabel,
@@ -20,6 +21,7 @@ import {
   buildMatchMetadata,
   matchBreadcrumbJsonLd,
 } from "@/lib/seo";
+import { selectRelatedPredictions } from "@/lib/related-predictions";
 
 export const dynamicParams = false;
 
@@ -80,6 +82,7 @@ export default async function MatchPage({
   const odds = match.predictions.find(
     (item) => item.label === "Odds"
   );
+  const relatedMatches = selectRelatedPredictions(match, matches);
 
   return (
     <>
@@ -201,6 +204,10 @@ export default async function MatchPage({
 
       <div className="container compact-match-bottom-area">
         <AdSlot placement="match-bottom" format="rectangle" />
+      </div>
+
+      <div className="container related-predictions-area">
+        <RelatedPredictions matches={relatedMatches} />
       </div>
     </>
   );

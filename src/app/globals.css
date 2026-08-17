@@ -3149,3 +3149,88 @@ html[dir="rtl"] .footer-links { direction: rtl; }
   .legal-content section { padding: 12px; }
   .footer-links { gap: 7px 12px; }
 }
+
+/* Static league-hub and related-prediction navigation. */
+.league-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.2;
+}
+
+.league-breadcrumb a:hover { color: var(--accent); }
+
+.league-seo-intro {
+  max-width: 820px;
+  margin: 14px 0 0;
+  color: #c0cbd5;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.related-predictions-area {
+  padding-block: 14px 24px;
+}
+
+.related-predictions {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.related-predictions-heading h2 {
+  margin: 4px 0 12px;
+  font-size: 18px;
+  letter-spacing: -.025em;
+}
+
+.related-predictions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 9px;
+}
+
+.related-prediction-card {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+}
+
+.related-prediction-card > span,
+.related-prediction-card p {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.related-prediction-card > span {
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.related-prediction-card h3 {
+  margin: 6px 0;
+  font-size: 13px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.related-prediction-card p { margin: 0 0 9px; }
+
+.related-prediction-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.related-prediction-card a:hover { color: var(--accent-2); }
+
+@media (max-width: 600px) {
+  .related-predictions-grid { grid-template-columns: 1fr; }
+  .related-predictions-area { padding-bottom: 18px; }
+}
