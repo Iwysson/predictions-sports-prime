@@ -7,6 +7,7 @@ import { TeamBadge } from "@/components/TeamBadge";
 import { LiveMatchMeta } from "@/components/LiveMatchMeta";
 import { MatchSearchIntent } from "@/components/MatchSearchIntent";
 import { RelatedPredictions } from "@/components/RelatedPredictions";
+import { MatchComments } from "@/components/MatchComments";
 import {
   MatchAnalysisLabel,
   MainPredictionLabel,
@@ -174,6 +175,15 @@ export default async function MatchPage({
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
+
+            {match.comment ? (
+              <aside className="editorial-comment">
+                <strong>Editorial comment</strong>
+                <p>{match.comment}</p>
+              </aside>
+            ) : null}
+
+            <MatchComments matchSlug={match.slug} />
 
             <MatchSearchIntent
               homeTeam={match.homeTeam}

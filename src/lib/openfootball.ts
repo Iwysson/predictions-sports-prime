@@ -1,5 +1,10 @@
 import type { LeagueSlug } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
+import {
+  FixtureStatus,
+  findFirstActiveRound,
+  normalizeProviderStatus,
+} from "@/lib/fixture-status";
 
 export type OpenFootballGame = {
   round: number;
@@ -9,7 +14,7 @@ export type OpenFootballGame = {
   awayTeam: string;
   homeScore: number | null;
   awayScore: number | null;
-  status?: "scheduled" | "in-progress" | "completed" | "postponed";
+  status?: FixtureStatus;
   dataSource?: "openfootball" | "espn";
 };
 
@@ -276,10 +281,7 @@ async function fetchSeasonText(config: OpenLeagueConfig) {
 
 function eventStatus(event: LiveEvent): OpenFootballGame["status"] {
   const status = event.status.type;
-  if (status.completed) return "completed";
-  if (/POSTPONED|CANCELED|CANCELLED/i.test(status.name)) return "postponed";
-  if (status.state === "in") return "in-progress";
-  return "scheduled";
+  return normalizeProviderStatus(status);
 }
 
 async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[]) {
@@ -310,8 +312,10 @@ async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[])
     fixture.dataSource = "espn";
 
     if (fixture.status === "completed") {
-      fixture.homeScore = Number(home.score);
-      fixture.awayScore = Number(away.score);
+      const homeScore = Number(home.score);
+      const awayScore = Number(away.score);
+      fixture.homeScore = Number.isFinite(homeScore) ? homeScore : null;
+      fixture.awayScore = Number.isFinite(awayScore) ? awayScore : null;
     }
   }
 
@@ -347,13 +351,7 @@ export function findCurrentOrNextRound(
   rounds: OpenFootballRound[],
   _today = localTodayIso()
 ) {
-  const candidate = rounds.find((round) =>
-    round.games.some(
-      (game) => game.status !== "completed" && game.status !== "postponed"
-    )
-  );
-
-  return candidate ?? rounds[rounds.length - 1] ?? null;
+  return findFirstActiveRound(rounds);
 }
 
 export function computeStandings(

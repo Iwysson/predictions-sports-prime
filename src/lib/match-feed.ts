@@ -1,4 +1,5 @@
 import type { MatchPreview } from "@/types";
+import { isCompletedFixture, isHistoryEligibleFixture, isNonPlayableFixture } from "@/lib/fixture-status";
 
 export function localTodayISO() {
   const parts = new Intl.DateTimeFormat("en-US", {
@@ -63,7 +64,9 @@ export function filterTodaysPublishedPredictions(
       (match) =>
         match.status === "published" &&
         Boolean(match.date) &&
-        match.date === today
+        match.date === today &&
+        !isCompletedFixture(match.fixtureStatus) &&
+        !isNonPlayableFixture(match.fixtureStatus)
     )
   );
 }
@@ -76,6 +79,8 @@ export function filterFuturePublishedPredictions(
     uniqueMatches(matches).filter(
       (match) =>
         match.status === "published" &&
+        !isCompletedFixture(match.fixtureStatus) &&
+        !isNonPlayableFixture(match.fixtureStatus) &&
         (!match.date || match.date > today)
     )
   );
@@ -154,6 +159,20 @@ export function filterPastPublishedPredictions(
   );
 }
 
+export function filterCompletedPredictions(matches: MatchPreview[]) {
+  return sortMatchesByKickoff(
+    uniqueMatches(matches).filter(
+      (match) =>
+        match.status === "published" &&
+        isHistoryEligibleFixture({
+          status: match.fixtureStatus,
+          homeScore: match.homeScore,
+          awayScore: match.awayScore,
+        })
+    )
+  ).reverse();
+}
+
 export function findOmittedCurrentPredictions(
   matches: MatchPreview[],
   today = localTodayISO()
@@ -166,6 +185,8 @@ export function findOmittedCurrentPredictions(
   return uniqueMatches(matches).filter(
     (match) =>
       match.status === "published" &&
+      !isCompletedFixture(match.fixtureStatus) &&
+      !isNonPlayableFixture(match.fixtureStatus) &&
       (!match.date || match.date >= today) &&
       !eligible.has(match.slug)
   );

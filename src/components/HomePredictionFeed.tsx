@@ -1,12 +1,13 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { MatchPreview } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { leagues } from "@/data/leagues";
 import {
   filterTodaysPublishedPredictions,
+  filterCompletedPredictions,
   findOmittedCurrentPredictions,
   localTodayISO,
   selectLatestPublishedPredictions,
@@ -20,6 +21,7 @@ export function HomePredictionFeed({
   matches: MatchPreview[];
 }) {
   const { t } = useI18n();
+  const [activeTab, setActiveTab] = useState<"today" | "upcoming" | "history">("today");
   const today = localTodayISO();
 
   const todayMatches = useMemo(
@@ -35,6 +37,11 @@ export function HomePredictionFeed({
   const omittedMatches = useMemo(
     () => findOmittedCurrentPredictions(matches, today),
     [matches, today]
+  );
+
+  const historyMatches = useMemo(
+    () => filterCompletedPredictions(matches),
+    [matches]
   );
 
   if (omittedMatches.length > 0) {
@@ -59,7 +66,13 @@ export function HomePredictionFeed({
 
   return (
     <>
-      <section className="section section--compact" id="today">
+      <nav className="container prediction-tabs" aria-label="Prediction sections">
+        <button className={activeTab === "today" ? "is-active" : ""} onClick={() => setActiveTab("today")}>{t("today")}</button>
+        <button className={activeTab === "upcoming" ? "is-active" : ""} onClick={() => setActiveTab("upcoming")}>{t("upcoming")}</button>
+        <button className={activeTab === "history" ? "is-active" : ""} onClick={() => setActiveTab("history")}>History</button>
+      </nav>
+
+      <section className="section section--compact" id="today" hidden={activeTab !== "today"}>
         <div className="container">
           <div className="section-heading section-heading--compact">
             <div className="heading-with-icon">
@@ -97,7 +110,7 @@ export function HomePredictionFeed({
         </div>
       </section>
 
-      <section className="section section--compact" id="upcoming">
+      <section className="section section--compact" id="upcoming" hidden={activeTab !== "upcoming"}>
         <div className="container">
           <div className="section-heading section-heading--compact">
             <div className="heading-with-icon">
@@ -139,7 +152,7 @@ export function HomePredictionFeed({
                       <strong>
                         {match.homeTeam} vs {match.awayTeam}
                       </strong>
-                      <span>{t("predictionAvailable")}</span>
+                      <span>{["postponed", "canceled"].includes(match.fixtureStatus ?? "") ? match.fixtureStatus!.toUpperCase() : t("predictionAvailable")}</span>
                     </div>
 
                     <div className="latest-date">
@@ -157,6 +170,36 @@ export function HomePredictionFeed({
               <strong>{t("noUpcomingPredictions")}</strong>
             </div>
           )}
+        </div>
+      </section>
+
+      <section className="section section--compact" id="history" hidden={activeTab !== "history"}>
+        <div className="container">
+          <div className="section-heading section-heading--compact">
+            <div className="heading-with-icon">
+              <span className="section-icon">✓</span>
+              <div><span className="eyebrow">Results</span><h1>Prediction History</h1></div>
+            </div>
+          </div>
+          {historyMatches.length > 0 ? (
+            <div className="history-list">
+              {historyMatches.map((match) => (
+                <a href={`/match/${match.slug}/`} className="history-row" key={match.id}>
+                  <div>
+                    <strong>{match.homeTeam} vs {match.awayTeam}</strong>
+                    <span>{leagues.find((league) => league.slug === match.league)?.name ?? match.league} · {match.date} · {match.mainPrediction}</span>
+                  </div>
+                  <span className="history-score">
+                    {match.homeScore}–{match.awayScore}
+                  </span>
+                  <span className="history-odds">Odds {match.odds ?? "—"}</span>
+                  <b className={`bet-result bet-result--${match.betResult ?? "pending"}`}>
+                    {(match.betResult ?? "pending").replace("-", " ").toUpperCase()}
+                  </b>
+                </a>
+              ))}
+            </div>
+          ) : <div className="empty-state empty-state--compact"><strong>No completed predictions yet.</strong></div>}
         </div>
       </section>
 

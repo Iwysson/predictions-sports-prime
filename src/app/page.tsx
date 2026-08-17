@@ -10,6 +10,7 @@ import {
   loadLeagueSeason,
 } from "@/lib/openfootball";
 import type { MatchPreview } from "@/types";
+import { resolvePredictionResult } from "@/lib/prediction-results";
 
 async function hydrateMatchAtBuild(match: MatchPreview): Promise<MatchPreview> {
   try {
@@ -37,6 +38,9 @@ async function hydrateMatchAtBuild(match: MatchPreview): Promise<MatchPreview> {
           : fixture.time,
       homeTeam: fixture.homeTeam,
       awayTeam: fixture.awayTeam,
+      fixtureStatus: fixture.status,
+      homeScore: fixture.homeScore,
+      awayScore: fixture.awayScore,
     };
   } catch {
     return match;
@@ -47,10 +51,11 @@ export default async function Home() {
   const hydratedMatches = await Promise.all(
     matches.map(toMatchPreview).map(hydrateMatchAtBuild)
   );
+  const resolvedMatches = hydratedMatches.map(resolvePredictionResult);
 
   return (
     <>
-      <HomePredictionFeed matches={hydratedMatches} />
+      <HomePredictionFeed matches={resolvedMatches} />
 
       <div className="container inline-ad-space">
         <AdSlot placement="home-middle" />

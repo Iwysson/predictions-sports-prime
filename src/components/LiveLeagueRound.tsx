@@ -15,6 +15,7 @@ import {
   validateLeagueRounds,
   validateRoundForDisplay,
 } from "@/lib/data-validation";
+import { canRenderComingSoon } from "@/lib/fixture-status";
 
 type SupportedSlug = LeagueSlug;
 
@@ -54,6 +55,7 @@ function toMatch(
       time: game.time,
       homeTeam: game.homeTeam,
       awayTeam: game.awayTeam,
+      fixtureStatus: game.status,
     };
   }
 
@@ -70,6 +72,7 @@ function toMatch(
     time: game.time,
     status: "coming-soon",
     title: `${game.homeTeam} vs ${game.awayTeam} Prediction`,
+    fixtureStatus: game.status,
   };
 }
 
@@ -141,7 +144,12 @@ export function LiveLeagueRound({
 
   const renderedMatches = useMemo(() => {
     if (state === "validated") {
-      return games.map((game) => toMatch(league, game, manualMatches));
+      return games
+        .map((game) => ({ game, manual: findManualPrediction(game, manualMatches) }))
+        .filter(({ game, manual }) =>
+          Boolean(manual) || canRenderComingSoon(game.status, false)
+        )
+        .map(({ game }) => toMatch(league, game, manualMatches));
     }
 
     if (state === "fallback") {

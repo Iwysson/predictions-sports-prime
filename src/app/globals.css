@@ -3243,6 +3243,62 @@ html[dir="rtl"] .footer-links { direction: rtl; }
 
 .related-prediction-card a:hover { color: var(--accent-2); }
 
+.prediction-tabs {
+  display: flex;
+  gap: 6px;
+  padding-top: 14px;
+}
+.prediction-tabs button {
+  padding: 8px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--panel);
+  cursor: pointer;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 800;
+}
+.prediction-tabs button.is-active { border-color: rgba(85,227,143,.35); color: var(--accent); background: rgba(85,227,143,.08); }
+.history-list, .comment-list { display: grid; gap: 7px; }
+.history-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+}
+.history-row > div { display: grid; gap: 3px; }
+.history-row span { color: var(--muted); font-size: 9px; }
+.bet-result { min-width: 54px; padding: 5px 7px; border-radius: 999px; text-align: center; font-size: 9px; }
+.bet-result--green { color: var(--accent); background: rgba(85,227,143,.1); }
+.bet-result--red { color: #ff8585; background: rgba(255,80,80,.1); }
+.bet-result--push, .bet-result--void { color: #d3dbe2; background: rgba(255,255,255,.07); }
+.bet-result--half-green { color: #9be9bb; background: linear-gradient(90deg, rgba(85,227,143,.12) 50%, rgba(255,255,255,.05) 50%); }
+.bet-result--half-red { color: #ffaaaa; background: linear-gradient(90deg, rgba(255,80,80,.12) 50%, rgba(255,255,255,.05) 50%); }
+.bet-result--pending { color: var(--muted); background: rgba(255,255,255,.04); }
+.editorial-comment, .match-comments { margin-top: 16px; padding: 13px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.018); }
+.editorial-comment p { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.match-comments h2 { margin: 0 0 9px; font-size: 15px; }
+.match-comments form { display: grid; justify-items: end; gap: 7px; }
+.match-comments textarea { width: 100%; min-height: 76px; resize: vertical; padding: 9px; border: 1px solid var(--line); border-radius: 8px; color: var(--text); background: #111820; font: inherit; font-size: 11px; }
+.match-comments small { display: block; margin-top: 9px; color: var(--muted); font-size: 9px; }
+.comment-list { margin-top: 10px; }
+.comment-list p { margin: 0; padding: 9px; border-radius: 7px; color: #c0cbd5; background: rgba(255,255,255,.025); font-size: 11px; }
+.comment-item { display: grid; gap: 5px; }
+.comment-item > div { display: flex; justify-content: flex-end; gap: 8px; }
+.comment-item button { border: 0; padding: 0; color: var(--muted); background: transparent; cursor: pointer; font-size: 9px; }
+.comment-item button:hover { color: var(--accent); }
+
+@media (max-width: 620px) {
+  .history-row { grid-template-columns: 1fr auto; gap: 7px; }
+  .history-odds { grid-column: 1; }
+  .bet-result { grid-column: 2; grid-row: 1 / span 2; }
+}
+
 @media (max-width: 600px) {
   .related-predictions-grid { grid-template-columns: 1fr; }
   .related-predictions-area { padding-bottom: 18px; }

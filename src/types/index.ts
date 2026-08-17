@@ -1,3 +1,5 @@
+import type { FixtureStatus } from "@/lib/fixture-status";
+
 export type LeagueSlug =
   | "premier-league"
   | "la-liga"
@@ -11,9 +13,27 @@ export type PredictionItem = {
   value: string;
 };
 
+export type PredictionResultStatus =
+  | "pending"
+  | "green"
+  | "red"
+  | "push"
+  | "half-green"
+  | "half-red"
+  | "void";
+
+export type PredictionResultInput =
+  | PredictionResultStatus
+  | {
+      status: PredictionResultStatus;
+      source?: "automatic" | "manual";
+      finalScore?: { home: number; away: number };
+    };
+
 export type EditorialPicks = {
   main: string;
   odds?: number;
+  result?: PredictionResultInput;
 };
 
 export type EditorialPrediction = {
@@ -26,6 +46,9 @@ export type EditorialPrediction = {
 
   // Seu texto manual.
   analysis: string[];
+
+  // Optional note shown below the analysis.
+  comment?: string;
 
   // Seus palpites manuais.
   picks: EditorialPicks;
@@ -63,12 +86,21 @@ export type Match = {
   status: "published" | "coming-soon";
   title: string;
   analysis: string[];
+  comment?: string;
   predictions: PredictionItem[];
+  betResult?: PredictionResultStatus;
+  betResultSource?: "automatic" | "manual";
+  fixtureStatus?: FixtureStatus;
+  homeScore?: number | null;
+  awayScore?: number | null;
   publishedAt?: string;
   updatedAt?: string;
 };
 
-export type MatchPreview = Omit<Match, "analysis" | "predictions">;
+export type MatchPreview = Omit<Match, "analysis" | "comment" | "predictions"> & {
+  mainPrediction?: string;
+  odds?: number;
+};
 
 export type TeamVisual = {
   code: string;

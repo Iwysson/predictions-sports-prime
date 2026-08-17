@@ -13,6 +13,9 @@ const PLACEHOLDER_PATTERN = /\b(?:lorem ipsum|todo|add analysis|placeholder text
 const MIN_PUBLISHED_ANALYSIS_CHARACTERS = 300;
 
 export function toMatchPreview(match: Match): MatchPreview {
+  const mainPrediction = match.predictions.find((item) => item.label === "Main Prediction");
+  const odds = match.predictions.find((item) => item.label === "Odds");
+
   return {
     id: match.id,
     slug: match.slug,
@@ -25,6 +28,13 @@ export function toMatchPreview(match: Match): MatchPreview {
     venue: match.venue,
     status: match.status,
     title: match.title,
+    betResult: match.betResult,
+    betResultSource: match.betResultSource,
+    fixtureStatus: match.fixtureStatus,
+    homeScore: match.homeScore,
+    awayScore: match.awayScore,
+    mainPrediction: mainPrediction?.value,
+    odds: odds ? Number(odds.value) : undefined,
   };
 }
 
@@ -88,7 +98,16 @@ export function editorialToMatch(
       prediction.title ??
       `${prediction.homeTeam} vs ${prediction.awayTeam} Prediction`,
     analysis: prediction.analysis,
+    comment: prediction.comment,
     predictions: picksToItems(prediction),
+    betResult: typeof prediction.picks.result === "string"
+      ? prediction.picks.result
+      : prediction.picks.result?.status,
+    betResultSource: prediction.picks.result
+      ? (typeof prediction.picks.result === "string"
+          ? "manual"
+          : prediction.picks.result.source ?? "manual")
+      : undefined,
     publishedAt: prediction.publishedAt,
     updatedAt: prediction.updatedAt,
   };

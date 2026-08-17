@@ -6,11 +6,13 @@ import { TeamBadge } from "@/components/TeamBadge";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { leagues } from "@/data/leagues";
 import { useI18n } from "@/i18n/I18nProvider";
+import { canRenderComingSoon } from "@/lib/fixture-status";
 
 export function MatchCard({ match }: { match: MatchPreview }) {
   const href = `/match/${match.slug}/`;
   const league = leagues.find((item) => item.slug === match.league);
   const { t } = useI18n();
+  const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");
 
   return (
     <article className="match-card">
@@ -46,7 +48,7 @@ export function MatchCard({ match }: { match: MatchPreview }) {
           <span>★</span>
           {match.status === "published"
             ? t("predictionAvailable")
-            : t("comingSoon")}
+            : showComingSoon ? t("comingSoon") : match.fixtureStatus?.toUpperCase()}
         </span>
 
         {match.status === "published" ? (
