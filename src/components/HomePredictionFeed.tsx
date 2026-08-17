@@ -1,15 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { MatchPreview } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { leagues } from "@/data/leagues";
 import { leaguesBySlug } from "@/data/leagues";
-import {
-  findFixtureByTeams,
-  loadLeagueSeason,
-} from "@/lib/openfootball";
 import {
   filterFuturePublishedPredictions,
   filterTodaysPublishedPredictions,
@@ -17,93 +13,30 @@ import {
 } from "@/lib/match-feed";
 import { useI18n } from "@/i18n/I18nProvider";
 
-async function hydrateMatch(match: MatchPreview): Promise<MatchPreview> {
-  try {
-    const rounds = await loadLeagueSeason(
-      match.league
-    );
-
-    const fixture = findFixtureByTeams(
-      rounds,
-      match.homeTeam,
-      match.awayTeam
-    );
-
-    if (!fixture) {
-      return match;
-    }
-
-    return {
-      ...match,
-      round: `Matchday ${fixture.round}`,
-      date: match.date || fixture.date,
-      time: fixture.time,
-      homeTeam: fixture.homeTeam,
-      awayTeam: fixture.awayTeam,
-    };
-  } catch {
-    return match;
-  }
-}
-
 export function HomePredictionFeed({
   matches,
 }: {
   matches: MatchPreview[];
 }) {
-  const [hydrated, setHydrated] = useState(matches);
-  // Keep registered prediction links in the server-rendered HTML. Hydration
-  // then enriches fixture dates/times without being required for discovery.
-  const [ready, setReady] = useState(true);
   const { t } = useI18n();
   const today = localTodayISO();
 
-  useEffect(() => {
-    let cancelled = false;
-
-    Promise.all(matches.map(hydrateMatch))
-      .then((items) => {
-        if (!cancelled) {
-          setHydrated(items);
-          setReady(true);
-        }
-      })
-      .catch(() => {
-        if (!cancelled) {
-          setHydrated(matches);
-          setReady(true);
-        }
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [matches]);
-
   const todayMatches = useMemo(
-    () =>
-      ready
-        ? filterTodaysPublishedPredictions(hydrated, today)
-        : [],
-    [hydrated, ready, today]
+    () => filterTodaysPublishedPredictions(matches, today),
+    [matches, today]
   );
 
   const latestMatches = useMemo(
-    () =>
-      ready
-        ? filterFuturePublishedPredictions(hydrated, today).slice(0, 5)
-        : [],
-    [hydrated, ready, today]
+    () => filterFuturePublishedPredictions(matches, today).slice(0, 5),
+    [matches, today]
   );
 
   const otherLeagueMatches = useMemo(
-    () => ready
-      ? hydrated.filter((match) =>
+    () => matches.filter((match) =>
           match.status === "published" &&
           !leaguesBySlug[match.league].featured
-        )
-      : [],
-    [hydrated, ready]
+        ),
+    [matches]
   );
 
   return (
@@ -120,7 +53,7 @@ export function HomePredictionFeed({
                 <div className="today-title-row">
                   <h1>{t("todaysPredictions")}</h1>
 
-                  {ready && todayMatches.length > 0 ? (
+                  {todayMatches.length > 0 ? (
                     <span className="today-count">
                       {todayMatches.length}
                     </span>
@@ -132,11 +65,7 @@ export function HomePredictionFeed({
             <span className="date-chip">{today}</span>
           </div>
 
-          {!ready ? (
-            <div className="home-feed-loading">
-              {t("checkingToday")}
-            </div>
-          ) : todayMatches.length > 0 ? (
+          {todayMatches.length > 0 ? (
             <div className="match-grid match-grid--compact">
               {todayMatches.map((match) => (
                 <MatchCard key={match.id} match={match} />
@@ -163,11 +92,7 @@ export function HomePredictionFeed({
             </div>
           </div>
 
-          {!ready ? (
-            <div className="home-feed-loading">
-              {t("loadingPredictions")}
-            </div>
-          ) : latestMatches.length > 0 ? (
+          {latestMatches.length > 0 ? (
             <div className="latest-list">
               {latestMatches.map((match) => {
                 const league = leagues.find(
