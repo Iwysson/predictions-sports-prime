@@ -2,7 +2,7 @@ import type { LeagueSlug } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
 import {
   FixtureStatus,
-  findFirstActiveRound,
+  findCurrentOrNextDatedRound,
   normalizeProviderStatus,
 } from "@/lib/fixture-status";
 
@@ -115,6 +115,11 @@ export function normalizeTeamKey(name: string) {
     om: "marseille",
     rcstrasbourg: "strasbourg",
     rcstrasbourgalsace: "strasbourg",
+    racinglens: "lens",
+    staderennaisfc1901: "rennes",
+    ogcnice: "nice",
+    olympiquelyonnais: "lyon",
+    asroma: "roma",
   };
 
   return aliases[key] ?? key;
@@ -354,9 +359,9 @@ function localTodayIso() {
 
 export function findCurrentOrNextRound(
   rounds: OpenFootballRound[],
-  _today = localTodayIso()
+  today = localTodayIso()
 ) {
-  return findFirstActiveRound(rounds);
+  return findCurrentOrNextDatedRound(rounds, today);
 }
 
 export function computeStandings(

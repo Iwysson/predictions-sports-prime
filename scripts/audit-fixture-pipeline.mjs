@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import {
   canRenderComingSoon,
+  findCurrentOrNextDatedRound,
   findFirstActiveRound,
   filterPlayableBeforeLimit,
   fixtureStatusCategory,
@@ -29,6 +30,10 @@ assert.equal(findFirstActiveRound([
   { round: 1, games: [fixture("round-1-a", "postponed")] },
   { round: 2, games: [fixture("round-2-a", "scheduled", 2)] },
 ])?.round, 2, "E: postponed round must not block the next active round");
+assert.equal(findCurrentOrNextDatedRound([
+  { round: 1, games: [{ date: "2026-08-09", status: "scheduled" }] },
+  { round: 3, games: [{ date: "2026-08-22", status: "scheduled" }] },
+], "2026-08-18")?.round, 3, "E2: stale scheduled fixtures must not block the current dated round");
 
 assert.equal(canRenderComingSoon("scheduled", true), false, "G: published scheduled fixture uses prediction card");
 assert.equal(canRenderComingSoon("scheduled", false), true, "H: unpublished scheduled fixture may be coming soon");

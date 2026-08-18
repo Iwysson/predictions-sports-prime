@@ -54,6 +54,22 @@ export function findFirstActiveRound<T extends { games: Array<{ status?: Fixture
   ) ?? null;
 }
 
+export function findCurrentOrNextDatedRound<
+  T extends { games: Array<{ date: string; status?: FixtureStatus }> }
+>(rounds: T[], today: string) {
+  const liveRound = rounds.find((round) =>
+    round.games.some((game) => isLiveFixture(game.status))
+  );
+
+  if (liveRound) return liveRound;
+
+  return rounds.find((round) =>
+    round.games.some(
+      (game) => isPlayableUpcoming(game.status) && game.date >= today
+    )
+  ) ?? findFirstActiveRound(rounds);
+}
+
 export function isValidFinalScore(homeScore: unknown, awayScore: unknown) {
   return (
     typeof homeScore === "number" &&
