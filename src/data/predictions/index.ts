@@ -4,6 +4,8 @@ import { premierLeaguePredictions } from "./premier-league";
 import { serieAPredictions } from "./serie-a";
 import { ligaPortugalPredictions } from "./liga-portugal";
 import { ligue1Predictions } from "./ligue-1";
+import { eredivisiePredictions } from "./eredivisie";
+import { brasileiraoSerieAPredictions } from "./brasileirao-serie-a";
 
 export const editorialPredictions = [
   ...premierLeaguePredictions,
@@ -12,4 +14,6 @@ export const editorialPredictions = [
   ...serieAPredictions,
   ...ligaPortugalPredictions,
   ...ligue1Predictions,
+  ...eredivisiePredictions,
+  ...brasileiraoSerieAPredictions,
 ];

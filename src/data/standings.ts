@@ -110,4 +110,6 @@ export const standingsByLeague: Record<LeagueSlug, StandingRow[]> = {
   "liga-portugal": [],
   // Safe empty fallback: live standings are loaded from the shared source.
   "ligue-1": [],
+  eredivisie: [],
+  "brasileirao-serie-a": [],
 };

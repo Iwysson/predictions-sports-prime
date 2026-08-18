@@ -6,7 +6,9 @@ export type LeagueSlug =
   | "bundesliga"
   | "serie-a"
   | "liga-portugal"
-  | "ligue-1";
+  | "ligue-1"
+  | "eredivisie"
+  | "brasileirao-serie-a";
 
 export type PredictionItem = {
   label: string;

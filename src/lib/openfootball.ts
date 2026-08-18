@@ -143,11 +143,16 @@ export function parseFootballSeason(text: string): OpenFootballRound[] {
 
     const roundMatch = line.match(/^\s*▪\s*Matchday\s+(\d+)/i);
     if (roundMatch) {
-      currentRound = {
-        round: Number(roundMatch[1]),
-        games: [],
-      };
-      rounds.push(currentRound);
+      const roundNumber = Number(roundMatch[1]);
+      currentRound = rounds.find((item) => item.round === roundNumber) ?? null;
+
+      if (!currentRound) {
+        currentRound = {
+          round: roundNumber,
+          games: [],
+        };
+        rounds.push(currentRound);
+      }
       continue;
     }
 
