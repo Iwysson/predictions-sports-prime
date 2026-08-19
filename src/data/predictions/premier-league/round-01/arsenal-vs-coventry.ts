@@ -29,5 +29,8 @@ export const arsenalVsCoventry: EditorialPrediction = {
     time: "20:00",
   },
 
+  publishedAt: "2026-08-16T17:59:07.000Z",
+
+
   published: true,
 };

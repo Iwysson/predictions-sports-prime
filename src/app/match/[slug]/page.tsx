@@ -25,6 +25,15 @@ import {
 } from "@/lib/seo";
 import { selectRelatedPredictions } from "@/lib/related-predictions";
 
+function formatEditorialDate(value: string) {
+  return new Intl.DateTimeFormat("en", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(value));
+}
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -163,6 +172,15 @@ export default async function MatchPage({
                 </span>
 
                 <h1>{match.homeTeam} vs {match.awayTeam} Prediction</h1>
+
+                {match.publishedAt ? (
+                  <p className="editorial-dates">
+                    <span>Published: {formatEditorialDate(match.publishedAt)}</span>
+                    {match.updatedAt ? (
+                      <span>Updated: {formatEditorialDate(match.updatedAt)}</span>
+                    ) : null}
+                  </p>
+                ) : null}
               </div>
             </div>
 

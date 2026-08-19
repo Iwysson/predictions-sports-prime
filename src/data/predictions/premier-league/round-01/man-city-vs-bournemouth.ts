@@ -31,5 +31,8 @@ export const manchesterCityVsBournemouth: EditorialPrediction = {
     time: "14:00",
   },
 
+  publishedAt: "2026-08-16T19:07:21.000Z",
+
+
   published: true,
 };

@@ -130,5 +130,8 @@ export const moreirenseVsBenfica: EditorialPrediction = {
     odds: 1.75
   },
 
+  publishedAt: "2026-08-18T21:31:21.000Z",
+
+
   published: true
 };

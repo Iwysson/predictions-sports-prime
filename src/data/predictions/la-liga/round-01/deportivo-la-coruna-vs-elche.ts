@@ -35,5 +35,8 @@ export const deportivoLaCorunaVsElche: EditorialPrediction = {
     time: "19:00",
   },
 
+  publishedAt: "2026-08-16T20:27:43.000Z",
+
+
   published: true,
 };

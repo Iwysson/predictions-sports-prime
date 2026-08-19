@@ -116,5 +116,8 @@ export const psvVsGroningen: EditorialPrediction = {
     odds: 1.67
   },
 
+  publishedAt: "2026-08-18T21:31:21.000Z",
+
+
   published: true
 };

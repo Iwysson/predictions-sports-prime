@@ -39,5 +39,8 @@ export const casaPiaVsBenfica: EditorialPrediction = {
     time: "19:15",
   },
 
+  publishedAt: "2026-08-17T10:03:49.000Z",
+
+
   published: true,
 };

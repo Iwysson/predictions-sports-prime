@@ -36,5 +36,8 @@ export const frosinoneVsJuventus: EditorialPrediction = {
     odds: 1.98
   },
 
+  publishedAt: "2026-08-18T13:58:44.000Z",
+
+
   published: true
 };

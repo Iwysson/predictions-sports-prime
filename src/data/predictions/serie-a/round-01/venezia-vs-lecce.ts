@@ -44,5 +44,8 @@ export const veneziaVsLecce: EditorialPrediction = {
     odds: 1.88
   },
 
+  publishedAt: "2026-08-18T13:58:44.000Z",
+
+
   published: true
 };

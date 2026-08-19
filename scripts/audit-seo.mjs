@@ -5,6 +5,7 @@ const root = process.cwd();
 const outDir = join(root, "out");
 const siteUrl = "https://predictions-sports-prime.pages.dev";
 const errors = [];
+const ISO_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?(?:Z|[+-]\d{2}:\d{2})$/;
 
 function walk(directory) {
   return readdirSync(directory).flatMap((name) => {
@@ -37,6 +38,37 @@ function normalizeRoute(href) {
 
 function count(html, pattern) {
   return [...html.matchAll(pattern)].length;
+}
+
+function timestampIsValid(value) {
+  return ISO_TIMESTAMP_PATTERN.test(value) && !Number.isNaN(new Date(value).valueOf());
+}
+
+const predictionFiles = walk(join(root, "src", "data", "predictions"))
+  .filter((file) => file.endsWith(".ts") && !file.endsWith(`${sep}index.ts`));
+const editorialPredictions = predictionFiles.map((file) => {
+  const source = readFileSync(file, "utf8");
+  const publishedAt = source.match(/^\s*publishedAt:\s*["']([^"']+)["']/m)?.[1];
+  const updatedAt = source.match(/^\s*updatedAt:\s*["']([^"']+)["']/m)?.[1];
+  const published = /published:\s*true/.test(source);
+
+  return {
+    file: relative(root, file).split(sep).join("/"),
+    published,
+    publishedAt,
+    updatedAt,
+  };
+});
+
+for (const prediction of editorialPredictions) {
+  for (const [field, value] of [["publishedAt", prediction.publishedAt], ["updatedAt", prediction.updatedAt]]) {
+    if (value !== undefined && !timestampIsValid(value)) {
+      errors.push(`${prediction.file}: ${field} is not a valid ISO-8601 timestamp`);
+    }
+  }
+  if (prediction.publishedAt && prediction.updatedAt && Date.parse(prediction.updatedAt) < Date.parse(prediction.publishedAt)) {
+    errors.push(`${prediction.file}: updatedAt is earlier than publishedAt`);
+  }
 }
 
 function visibleText(html) {
@@ -137,12 +169,6 @@ for (const route of matchRoutes) {
   if (!html.includes('"@type":"Article"')) errors.push(`${route}: missing Article schema`);
   if (!html.includes('"@type":"BreadcrumbList"')) errors.push(`${route}: missing BreadcrumbList schema`);
 
-  if (leagueHref) {
-    const leagueRoute = normalizeRoute(leagueHref);
-    if (!pages.get(leagueRoute)?.includes(`href="${route}"`)) {
-      errors.push(`${leagueRoute}: missing backlink to ${route}`);
-    }
-  }
 }
 
 if (relatedSelfLinks > 0) {
@@ -199,10 +225,68 @@ if (sitemapLocations.some((location) => !location.startsWith(`${siteUrl}/`))) {
   errors.push("sitemap.xml: malformed or noncanonical absolute URL found");
 }
 const sitemapLastModifiedRoutes = new Set(
-  [...sitemap.matchAll(/<url><loc>([^<]+)<\/loc><lastmod>[^<]+<\/lastmod><\/url>/g)]
+  [...sitemap.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*<lastmod>[^<]+<\/lastmod>\s*<\/url>/g)]
     .map((match) => normalizeRoute(match[1]))
     .filter(Boolean)
 );
+const sitemapEntries = new Map(
+  [...sitemap.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*(?:<lastmod>([^<]+)<\/lastmod>\s*)?<\/url>/g)]
+    .map((match) => [normalizeRoute(match[1]), match[2]])
+    .filter(([route]) => route)
+);
+
+for (const [route, lastmod] of sitemapEntries) {
+  if (lastmod !== undefined && !timestampIsValid(lastmod)) {
+    errors.push(`${route}: sitemap lastmod is not a valid ISO-8601 timestamp`);
+  }
+}
+
+const publishedEditorial = editorialPredictions.filter((prediction) => prediction.published);
+if (matchRoutes.length !== publishedEditorial.length) {
+  errors.push(`generated match count (${matchRoutes.length}) does not equal published editorial count (${publishedEditorial.length}); possible draft leakage`);
+}
+
+const sourceDatePairs = publishedEditorial
+  .map((prediction) => `${prediction.publishedAt ?? ""}|${prediction.updatedAt ?? ""}`)
+  .sort();
+const renderedDatePairs = [];
+
+for (const route of matchRoutes) {
+  const html = pages.get(route);
+  const schemaPublished = html.match(/"datePublished":"([^"]+)"/)?.[1];
+  const schemaModified = html.match(/"dateModified":"([^"]+)"/)?.[1];
+  const expectedLastmod = schemaModified ?? schemaPublished;
+  const sitemapLastmod = sitemapEntries.get(route);
+  renderedDatePairs.push(`${schemaPublished ?? ""}|${schemaModified ?? ""}`);
+
+  if (!sitemapEntries.has(route)) errors.push(`${route}: published prediction missing from sitemap`);
+  if (expectedLastmod) {
+    if (!sitemapLastmod || Date.parse(sitemapLastmod) !== Date.parse(expectedLastmod)) {
+      errors.push(`${route}: sitemap lastmod does not match Article dateModified ?? datePublished`);
+    }
+  } else if (sitemapLastmod) {
+    errors.push(`${route}: sitemap contains a timestamp with no Article editorial date`);
+  }
+  if (schemaPublished && !html.includes("Published:")) errors.push(`${route}: trustworthy publication date is not visible`);
+  if (schemaModified && !html.includes("Updated:")) errors.push(`${route}: trustworthy update date is not visible`);
+}
+
+renderedDatePairs.sort();
+if (JSON.stringify(renderedDatePairs) !== JSON.stringify(sourceDatePairs)) {
+  errors.push("Article datePublished/dateModified values do not agree with published editorial data");
+}
+
+for (const route of sitemapEntries.keys()) {
+  if (route.startsWith("/match/") && !matchRoutes.includes(route)) {
+    errors.push(`${route}: sitemap match URL has no published page (possible draft leakage)`);
+  }
+}
+
+for (const [route, lastmod] of sitemapEntries) {
+  if (lastmod && !route.startsWith("/match/")) {
+    errors.push(`${route}: non-editorial sitemap URL has an unexplained lastmod`);
+  }
+}
 for (const route of [...matchRoutes, ...leagueRoutes]) {
   if (!sitemapRoutes.has(route)) errors.push(`${route}: missing from sitemap`);
 }

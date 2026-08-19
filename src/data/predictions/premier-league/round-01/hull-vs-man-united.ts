@@ -29,5 +29,8 @@ export const hullVsManUnited: EditorialPrediction = {
     time: "12:30",
   },
 
+  publishedAt: "2026-08-16T19:07:21.000Z",
+
+
   published: true,
 };

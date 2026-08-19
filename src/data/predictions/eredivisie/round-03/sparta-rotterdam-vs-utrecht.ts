@@ -86,5 +86,8 @@ export const spartaRotterdamVsUtrecht: EditorialPrediction = {
     odds: 1.72
   },
 
+  publishedAt: "2026-08-18T21:31:21.000Z",
+
+
   published: true
 };

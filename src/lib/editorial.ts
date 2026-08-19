@@ -11,6 +11,12 @@ const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const KICKOFF_PATTERN = /^(?:[01]\d|2[0-3]):[0-5]\d$/;
 const PLACEHOLDER_PATTERN = /\b(?:lorem ipsum|todo|add analysis|placeholder text|coming soon)\b/i;
 const MIN_PUBLISHED_ANALYSIS_CHARACTERS = 300;
+const ISO_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?(?:Z|[+-]\d{2}:\d{2})$/;
+
+function isValidIsoTimestamp(value: string) {
+  if (!ISO_TIMESTAMP_PATTERN.test(value)) return false;
+  return !Number.isNaN(new Date(value).valueOf());
+}
 
 export function toMatchPreview(match: Match): MatchPreview {
   const mainPrediction = match.predictions.find((item) => item.label === "Main Prediction");
@@ -209,9 +215,17 @@ export function validateEditorialPredictions(
       ["publishedAt", prediction.publishedAt],
       ["updatedAt", prediction.updatedAt],
     ] as const) {
-      if (value !== undefined && Number.isNaN(Date.parse(value))) {
-        errors.push(`${label}: ${field} must be a valid ISO 8601 date.`);
+      if (value !== undefined && !isValidIsoTimestamp(value)) {
+        errors.push(`${label}: ${field} must be a valid ISO 8601 timestamp.`);
       }
+    }
+
+    if (
+      prediction.publishedAt &&
+      prediction.updatedAt &&
+      Date.parse(prediction.updatedAt) < Date.parse(prediction.publishedAt)
+    ) {
+      errors.push(`${label}: updatedAt cannot be earlier than publishedAt.`);
     }
 
     const date = prediction.matchInfo?.date;

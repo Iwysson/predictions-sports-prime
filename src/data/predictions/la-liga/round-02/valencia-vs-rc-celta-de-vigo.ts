@@ -41,5 +41,8 @@ matchInfo: {
   date: "2026-08-23",
 },
 
+publishedAt: "2026-08-17T14:51:30.000Z",
+
+
 published: true,
 };

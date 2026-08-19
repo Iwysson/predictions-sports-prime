@@ -30,5 +30,8 @@ export const evertonVsCrystalPalace: EditorialPrediction = {
     date: "2026-08-22",
   },
 
+  publishedAt: "2026-08-16T19:07:21.000Z",
+
+
   published: true,
 };

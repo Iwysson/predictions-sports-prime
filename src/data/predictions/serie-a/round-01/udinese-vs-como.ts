@@ -48,5 +48,8 @@ matchInfo: {
   time: "18:30",
 },
 
+publishedAt: "2026-08-17T14:51:30.000Z",
+
+
 published: true,
 };

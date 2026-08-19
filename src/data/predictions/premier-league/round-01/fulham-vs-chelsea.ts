@@ -33,5 +33,8 @@ export const fulhamVsChelsea: EditorialPrediction = {
     time: "20:00",
   },
 
+  publishedAt: "2026-08-16T19:07:21.000Z",
+
+
   published: true,
 };

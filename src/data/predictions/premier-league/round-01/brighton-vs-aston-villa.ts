@@ -30,5 +30,8 @@ export const brightonVsAstonVilla: EditorialPrediction = {
     date: "2026-08-23",
   },
 
+  publishedAt: "2026-08-16T19:07:21.000Z",
+
+
   published: true,
 };

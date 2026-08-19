@@ -4,9 +4,10 @@
 
 1. Add or update the prediction in `src/data/predictions/<league>/<round>/`.
 2. Set `published: true` only after the analysis, main pick and optional odds are ready.
-3. Run `npx.cmd tsc --noEmit` and `npm.cmd run build`.
-4. Run `npm.cmd run audit:seo` against the generated `out/` directory. The audit also refreshes the internal `SEO-INDEXING-QUEUE.md` report.
-5. Deploy only after both commands pass. Normal discovery then occurs through internal links, league hubs, Home/Related placement and the sitemap.
+3. Run `npm.cmd run editorial:timestamp -- publish <prediction-file>` in the same editorial change. It records `publishedAt` once and refuses to overwrite an existing value or timestamp a prediction already published in `HEAD`.
+4. Run `npx.cmd tsc --noEmit` and `npm.cmd run build`.
+5. Run `npm.cmd run audit:seo` against the generated `out/` directory. The audit also refreshes the internal `SEO-INDEXING-QUEUE.md` report.
+6. Deploy only after both commands pass. Normal discovery then occurs through internal links, league hubs, Home/Related placement and the sitemap.
 
 A published prediction is automatically converted into a static match route with unique metadata, canonical URL, index/follow directives, league relationship, contextual links and valid structured data. It is included in the sitemap and indexing queue without manually editing `sitemap.ts`.
 
@@ -38,6 +39,8 @@ Optional fields:
 - reliable `publishedAt` and `updatedAt` ISO timestamps;
 - `title`;
 - `slug` override for a legitimate rematch that would otherwise reuse an existing route.
+
+Use `npm.cmd run editorial:timestamp -- update <prediction-file>` only after a significant editorial revision. It records or replaces `updatedAt` as an explicit editorial action and rejects values earlier than `publishedAt`. Normal builds never execute either timestamp command. An optional ISO timestamp argument is accepted when a trustworthy external editorial time must be recorded; otherwise the script records the time of the explicit publication/update action.
 
 For a rematch, use a stable descriptive slug such as `home-vs-away-2027-04-17`. Never change the slug after publication unless a redirect and canonical migration are deliberately planned.
 

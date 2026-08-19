@@ -116,5 +116,8 @@ export const cambuurVsFeyenoord: EditorialPrediction = {
     odds: 1.82
   },
 
+  publishedAt: "2026-08-18T21:31:21.000Z",
+
+
   published: true
 };

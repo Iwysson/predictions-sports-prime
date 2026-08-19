@@ -39,5 +39,8 @@ export const atleticoMadridVsMalaga: EditorialPrediction = {
     time: "17:00",
   },
 
+  publishedAt: "2026-08-16T20:43:04.000Z",
+
+
   published: true,
 };

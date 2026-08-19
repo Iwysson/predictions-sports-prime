@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next dev",
+    "editorial:timestamp": "node scripts/editorial-timestamp.mjs",
     "typecheck": "tsc --noEmit",
+    "audit": "node scripts/audit-seo.mjs",
     "audit:seo": "node scripts/audit-seo.mjs",
     "audit:fixtures": "node scripts/audit-fixture-pipeline.mjs"
   },
