@@ -295,6 +295,9 @@ const robots = readFileSync(join(outDir, "robots.txt"), "utf8");
 if (!robots.includes("Allow: /") || !robots.includes(`${siteUrl}/sitemap.xml`)) {
   errors.push("robots.txt: allow or sitemap directive missing");
 }
+if (/^Host:/im.test(robots)) {
+  errors.push("robots.txt: unsupported Host directive found");
+}
 
 const orphans = [...inbound].filter(([, links]) => links === 0).map(([route]) => route);
 const weakDiscovery = [...inboundSources]
