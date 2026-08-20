@@ -23,8 +23,8 @@ picks: {
 
   matchInfo: {
     round: "Matchday 1",
-    date: "2026-08-22",
-    time: "17:00",
+    date: "2026-08-21",
+    time: "15:45",
   },
 
   publishedAt: "2026-08-17T14:51:30.000Z",

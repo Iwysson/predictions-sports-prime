@@ -85,6 +85,27 @@ export function findCurrentOrNextDatedRound<
   return datedRounds[0]?.round ?? findFirstActiveRound(rounds);
 }
 
+export function selectFixtureKickoff(input: {
+  fallbackDate?: string;
+  fallbackTime?: string;
+  providerDate: string;
+  providerTime: string;
+  providerIsAuthoritative: boolean;
+}) {
+  const providerHasTime = input.providerTime !== "TBD";
+
+  return {
+    date: input.providerIsAuthoritative
+      ? input.providerDate
+      : input.fallbackDate || input.providerDate,
+    time: input.providerIsAuthoritative && providerHasTime
+      ? input.providerTime
+      : input.fallbackTime && input.fallbackTime !== "TBD"
+        ? input.fallbackTime
+        : input.providerTime,
+  };
+}
+
 export function isValidFinalScore(homeScore: unknown, awayScore: unknown) {
   return (
     typeof homeScore === "number" &&

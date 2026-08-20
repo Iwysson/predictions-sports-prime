@@ -10,6 +10,7 @@ import {
   isValidFinalScore,
   isNonPlayableFixture,
   normalizeProviderStatus,
+  selectFixtureKickoff,
 } from "../src/lib/fixture-status.ts";
 
 const fixture = (id, status, round = 1) => ({ id, status, round });
@@ -38,6 +39,21 @@ assert.equal(findCurrentOrNextDatedRound([
   { round: 1, games: [{ date: "2026-08-25", status: "scheduled" }] },
   { round: 2, games: [{ date: "2026-08-21", status: "scheduled" }] },
 ], "2026-08-20")?.round, 2, "E3: a rescheduled earlier matchday must not block the round played next");
+
+assert.deepEqual(selectFixtureKickoff({
+  fallbackDate: "2026-08-22",
+  fallbackTime: "17:00",
+  providerDate: "2026-08-21",
+  providerTime: "15:45",
+  providerIsAuthoritative: true,
+}), { date: "2026-08-21", time: "15:45" }, "E4: authoritative provider kickoff must replace stale editorial fallback");
+assert.deepEqual(selectFixtureKickoff({
+  fallbackDate: "2026-08-22",
+  fallbackTime: "17:00",
+  providerDate: "2026-08-21",
+  providerTime: "15:45",
+  providerIsAuthoritative: false,
+}), { date: "2026-08-22", time: "17:00" }, "E5: non-authoritative season feed must not replace editorial fallback");
 
 assert.equal(canRenderComingSoon("scheduled", true), false, "G: published scheduled fixture uses prediction card");
 assert.equal(canRenderComingSoon("scheduled", false), true, "H: unpublished scheduled fixture may be coming soon");

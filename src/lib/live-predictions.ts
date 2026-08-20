@@ -1,7 +1,7 @@
 import type { MatchPreview } from "@/types";
 import { findFixtureByTeams, loadLeagueSeason } from "@/lib/openfootball";
 import { resolvePredictionResult } from "@/lib/prediction-results";
-import { isHistoryEligibleFixture } from "@/lib/fixture-status";
+import { isHistoryEligibleFixture, selectFixtureKickoff } from "@/lib/fixture-status";
 
 /**
  * Applies the latest fixture status and score to an editorial prediction.
@@ -33,17 +33,18 @@ export async function hydratePrediction(match: MatchPreview): Promise<MatchPrevi
     }
 
     const isLiveData = fixture.dataSource === "espn";
-    const providerCanOverrideKickoff = isLiveData &&
-      (fixture.status === "in-progress" || fixture.status === "completed" || !match.date);
+    const kickoff = selectFixtureKickoff({
+      fallbackDate: match.date,
+      fallbackTime: match.time,
+      providerDate: fixture.date,
+      providerTime: fixture.time,
+      providerIsAuthoritative: isLiveData,
+    });
     const hydrated: MatchPreview = {
       ...match,
       round: `Matchday ${fixture.round}`,
-      date: providerCanOverrideKickoff ? fixture.date : match.date || fixture.date,
-      time: providerCanOverrideKickoff && fixture.time !== "TBD"
-        ? fixture.time
-        : match.time !== "TBD"
-          ? match.time
-          : fixture.time,
+      date: kickoff.date,
+      time: kickoff.time,
       homeTeam: fixture.homeTeam,
       awayTeam: fixture.awayTeam,
       fixtureStatus: fixture.status,
