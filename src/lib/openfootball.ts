@@ -232,7 +232,7 @@ export function parseFootballSeason(text: string): OpenFootballRound[] {
 }
 
 async function fetchSeasonText(config: OpenLeagueConfig) {
-  const cacheKey = `psp-openfootball-${config.slug}-2026-27`;
+  const cacheKey = `psp-openfootball-${config.slug}-2026-27-v2`;
   const cacheDuration = 6 * 60 * 60 * 1000;
 
   if (typeof window !== "undefined") {

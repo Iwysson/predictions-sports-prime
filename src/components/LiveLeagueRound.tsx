@@ -52,7 +52,7 @@ function toMatch(
       ...manual,
       league,
       round: `Matchday ${game.round}`,
-      date: manual.date || game.date,
+      date: game.dataSource === "espn" ? game.date : manual.date || game.date,
       time: game.time,
       homeTeam: game.homeTeam,
       awayTeam: game.awayTeam,
@@ -145,13 +145,18 @@ export function LiveLeagueRound({
 
   const renderedMatches = useMemo(() => {
     if (state === "validated") {
-      const currentRoundMatches = games
+      const currentRoundPublished = games
         .map((game) => ({ game, manual: findManualPrediction(game, manualMatches) }))
-        .filter(({ game, manual }) =>
-          !isNonPlayableFixture(game.status) &&
-          (Boolean(manual) || canRenderComingSoon(game.status, false))
-        )
+        .filter(({ game, manual }) => Boolean(manual) && !isNonPlayableFixture(game.status))
         .map(({ game }) => toMatch(league, game, manualMatches));
+
+      const currentRoundComingSoon = games
+        .filter(
+          (game) =>
+            !findManualPrediction(game, manualMatches) &&
+            canRenderComingSoon(game.status, false)
+        )
+        .map((game) => toMatch(league, game, manualMatches));
 
       const occupiedFixtures = games;
       const today = localTodayISO();
@@ -167,7 +172,14 @@ export function LiveLeagueRound({
         )
       );
 
-      return [...currentRoundMatches, ...upcomingPublished].slice(
+      // Published analysis is more useful than a placeholder from a delayed
+      // round. Only use Coming soon cards when there are not enough analysed
+      // fixtures to fill the league view.
+      return [
+        ...currentRoundPublished,
+        ...upcomingPublished,
+        ...currentRoundComingSoon,
+      ].slice(
         0,
         config.expectedGamesPerRound
       );
