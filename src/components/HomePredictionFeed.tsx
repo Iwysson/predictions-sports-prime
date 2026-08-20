@@ -171,8 +171,12 @@ export function HomePredictionFeed({
               ))}
             </div>
           ) : (
-            <div className="empty-state empty-state--compact">
-              <strong>{t("noPredictionsToday")}</strong>
+            <div className="empty-state empty-state--compact today-empty-state">
+              <strong>{t("nextPredictionsAvailable")}</strong>
+              <p>{t("upcomingPredictionsPrompt")}</p>
+              <a className="today-empty-state__cta" href="#upcoming">
+                {t("viewUpcomingPredictions")}
+              </a>
             </div>
           )}
         </div>

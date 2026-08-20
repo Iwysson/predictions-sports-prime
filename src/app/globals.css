@@ -2701,6 +2701,32 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
   font-size: 10px;
 }
 
+.today-empty-state p {
+  max-width: 560px;
+}
+
+.today-empty-state__cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  margin-top: 12px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.today-empty-state__cta:hover,
+.today-empty-state__cta:focus-visible {
+  text-decoration: underline;
+}
+
+.today-empty-state__cta:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
 @media (max-width: 720px) {
   .compact-match-league-copy .compact-match-meta {
     max-width: none;

@@ -90,7 +90,9 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       locale,
       setLocale,
       dir,
-      t: (key) => dictionaries[locale][key] ?? dictionaries.en[key],
+      t: (key) =>
+        (dictionaries[locale] as Partial<Record<TranslationKey, string>>)[key] ??
+        dictionaries.en[key],
     }),
     [dir, locale]
   );
