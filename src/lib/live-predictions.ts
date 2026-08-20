@@ -17,13 +17,18 @@ export async function hydratePrediction(match: MatchPreview): Promise<MatchPrevi
 
     // A delayed provider must never roll a confirmed final score back to
     // scheduled. This also keeps History stable during feed outages.
-    if (
-      isHistoryEligibleFixture({
-        status: match.fixtureStatus,
-        homeScore: match.homeScore,
-        awayScore: match.awayScore,
-      }) && fixture.status !== "completed"
-    ) {
+    const storedResultIsComplete = isHistoryEligibleFixture({
+      status: match.fixtureStatus,
+      homeScore: match.homeScore,
+      awayScore: match.awayScore,
+    });
+    const providerResultIsComplete = isHistoryEligibleFixture({
+      status: fixture.status,
+      homeScore: fixture.homeScore,
+      awayScore: fixture.awayScore,
+    });
+
+    if (storedResultIsComplete && !providerResultIsComplete) {
       return resolvePredictionResult(match);
     }
 

@@ -17,6 +17,11 @@ analysis: [
 picks: {
   main: "Rayo Vallecano or Draw (1X) + Over 1.5 Goals",
   odds: 2.02,
+  result: {
+    status: "green",
+    source: "automatic",
+    finalScore: { home: 1, away: 1 },
+  },
 },
 
 matchInfo: {

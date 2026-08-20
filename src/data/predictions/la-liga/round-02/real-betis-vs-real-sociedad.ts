@@ -22,7 +22,9 @@ picks: {
 },
 
 matchInfo: {
-  date: "2026-08-23",
+  date: "2026-08-21",
+  time: "16:00",
+  venue: "Estadio La Cartuja de Sevilla",
 },
 
 publishedAt: "2026-08-17T14:51:30.000Z",
