@@ -4,6 +4,13 @@ import { join, relative, sep } from "node:path";
 const root = process.cwd();
 const outDir = join(root, "out");
 const siteUrl = "https://predictions-sports-prime.pages.dev";
+const authorName = "Iwysson Nascimento";
+const authorRoute = "/author/iwysson-nascimento/";
+const authorUrl = `${siteUrl}${authorRoute}`;
+const contactEmail = "iwysson.wesklley1995@gmail.com";
+const methodologyRoute = "/methodology/";
+const editorialPolicyRoute = "/editorial-policy/";
+const resultsRoute = "/results/";
 const errors = [];
 const ISO_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?(?:Z|[+-]\d{2}:\d{2})$/;
 
@@ -168,6 +175,23 @@ for (const route of matchRoutes) {
   if (!html.includes('class="main-prediction-block"')) errors.push(`${route}: missing static final prediction`);
   if (!html.includes('"@type":"Article"')) errors.push(`${route}: missing Article schema`);
   if (!html.includes('"@type":"BreadcrumbList"')) errors.push(`${route}: missing BreadcrumbList schema`);
+  if (!visibleText(html).includes(`Analysis by ${authorName}`)) errors.push(`${route}: missing visible author byline`);
+  const bylineAnchor = html.match(new RegExp(`<a\\b[^>]*>${authorName}<\\/a>`, "i"))?.[0] ?? "";
+  if (!bylineAnchor.includes(`href="${authorRoute}"`) || !bylineAnchor.includes('rel="author"')) {
+    errors.push(`${route}: byline does not link to the author profile`);
+  }
+  const articleAuthor = html.match(/"author":\{"@type":"Person","name":"([^"]+)","url":"([^"]+)"\}/);
+  if (!articleAuthor) errors.push(`${route}: Article author Person is missing`);
+  else {
+    if (articleAuthor[1] !== authorName) errors.push(`${route}: Article author name is incorrect`);
+    if (articleAuthor[2] !== authorUrl) errors.push(`${route}: Article author URL is incorrect`);
+  }
+  if (html.includes(contactEmail)) errors.push(`${route}: public contact email must not appear on match pages`);
+  if (!html.includes(`href="${methodologyRoute}"`)) errors.push(`${route}: missing methodology link`);
+  if (!html.includes(`href="${resultsRoute}"`)) errors.push(`${route}: missing prediction-history link`);
+  if (html.includes("match-search-intent") || /prediction today|pron[oó]stico hoy|betting tips today/i.test(visibleText(html))) {
+    errors.push(`${route}: search-first MatchSearchIntent content remains`);
+  }
 
 }
 
@@ -234,6 +258,52 @@ const sitemapEntries = new Map(
     .map((match) => [normalizeRoute(match[1]), match[2]])
     .filter(([route]) => route)
 );
+
+const authorHtml = pages.get(authorRoute);
+if (!authorHtml) errors.push(`${authorRoute}: generated author page is missing`);
+else {
+  if (!authorHtml.includes(`<link rel="canonical" href="${authorUrl}"`)) errors.push(`${authorRoute}: invalid canonical`);
+  if (!/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(authorHtml)) errors.push(`${authorRoute}: missing index, follow`);
+  if (!visibleText(authorHtml).includes(authorName)) errors.push(`${authorRoute}: visible author identity is missing`);
+  if (!authorHtml.includes('"@type":"ProfilePage"') || !authorHtml.includes('"mainEntity":{"@type":"Person"')) {
+    errors.push(`${authorRoute}: ProfilePage/Person structured data is missing`);
+  }
+  if (!authorHtml.includes(`"name":"${authorName}"`) || !authorHtml.includes(`"url":"${authorUrl}"`)) {
+    errors.push(`${authorRoute}: ProfilePage/Person identity is incorrect`);
+  }
+  for (const route of [methodologyRoute, editorialPolicyRoute, "/contact/"]) {
+    if (!authorHtml.includes(`href="${route}"`)) errors.push(`${authorRoute}: missing editorial trust link to ${route}`);
+  }
+}
+
+for (const route of [methodologyRoute, editorialPolicyRoute]) {
+  const html = pages.get(route);
+  if (!html) { errors.push(`${route}: generated page is missing`); continue; }
+  if (!html.includes(`<link rel="canonical" href="${siteUrl}${route}"`)) errors.push(`${route}: invalid canonical`);
+  if (!/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(html)) errors.push(`${route}: missing index, follow`);
+  if (count(html, /<h1(?:\s|>)/gi) !== 1) errors.push(`${route}: expected one H1`);
+}
+
+const resultsHtml = pages.get(resultsRoute);
+if (!resultsHtml) errors.push(`${resultsRoute}: generated page is missing`);
+else {
+  if (!resultsHtml.includes(`<link rel="canonical" href="${siteUrl}${resultsRoute}"`)) errors.push(`${resultsRoute}: invalid canonical`);
+  if (!/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(resultsHtml)) errors.push(`${resultsRoute}: missing index, follow`);
+  if (!resultsHtml.includes('data-default-filter="all"')) errors.push(`${resultsRoute}: ALL is not the default history view`);
+  if (count(resultsHtml, /data-result-slug=/g) !== matchRoutes.length) errors.push(`${resultsRoute}: must contain every published match`);
+}
+
+for (const route of ["/", authorRoute, "/about/", methodologyRoute]) {
+  if (!pages.get(route)?.includes(`href="${resultsRoute}"`)) errors.push(`${route}: missing link to complete results`);
+}
+
+const contactHtml = pages.get("/contact/");
+if (!contactHtml?.includes(contactEmail)) errors.push("/contact/: public contact email is missing");
+if (!contactHtml?.includes(`href="mailto:${contactEmail}"`)) errors.push("/contact/: usable mailto link is missing");
+if (!sitemapRoutes.has(authorRoute)) errors.push(`${authorRoute}: missing from sitemap`);
+if (!sitemapRoutes.has(methodologyRoute)) errors.push(`${methodologyRoute}: missing from sitemap`);
+if (!sitemapRoutes.has(editorialPolicyRoute)) errors.push(`${editorialPolicyRoute}: missing from sitemap`);
+if (!sitemapRoutes.has(resultsRoute)) errors.push(`${resultsRoute}: missing from sitemap`);
 
 for (const [route, lastmod] of sitemapEntries) {
   if (lastmod !== undefined && !timestampIsValid(lastmod)) {

@@ -5,7 +5,8 @@
 1. Add or update the prediction in `src/data/predictions/<league>/<round>/`.
 2. Set `published: true` only after the analysis, main pick and optional odds are ready.
 3. Run `npm.cmd run editorial:timestamp -- publish <prediction-file>` in the same editorial change. It records `publishedAt` once and refuses to overwrite an existing value or timestamp a prediction already published in `HEAD`.
-4. Run `npx.cmd tsc --noEmit` and `npm.cmd run build`.
+4. For content first published after the Phase 2 cutoff, add `sourceStatus: "verified"` and the sources actually used. If odds are included, record their provenance and capture time.
+5. Run `npx.cmd tsc --noEmit`, `npm.cmd run build` and `npm.cmd run audit:sources`.
 5. Run `npm.cmd run audit:seo` against the generated `out/` directory. The audit also refreshes the internal `SEO-INDEXING-QUEUE.md` report.
 6. Deploy only after both commands pass. Normal discovery then occurs through internal links, league hubs, Home/Related placement and the sitemap.
 
@@ -29,10 +30,13 @@ Additional requirements for `published: true`:
 - unique canonical slug;
 - no duplicated editorial body;
 - no duplicate teams on the same canonical date.
+- for post-Phase-2 publication, a valid `publishedAt`, `sourceStatus: "verified"` and relevant source coverage. The existing 52-item archive is explicitly treated as legacy pending migration, not silently backfilled.
 
 Optional fields:
 
 - `picks.odds`, which must be a finite number greater than 1 when supplied;
+- `sources`, using named direct HTTPS URLs with optional description and access timestamp;
+- `picks.oddsProvenance`; required with new published odds and composed of the real source, capture timestamp and optional market description;
 - `matchInfo.date` in `YYYY-MM-DD` format;
 - `matchInfo.time` in 24-hour `HH:mm` format;
 - `matchInfo.round` and `matchInfo.venue`;
@@ -91,6 +95,8 @@ published: true
 ```
 
 Historical published pages remain available. Related selection prioritizes published matches from the same league and round, then temporal proximity, with published matches from other leagues used only when needed to fill the compact list.
+
+Every published prediction is also included in `/results/`, including pending, won, lost, push, half-result and void states. The archive defaults to ALL and must never be curated to show successful picks only. Results use the shared fixture and settlement pipeline; unsupported or unsafe-to-evaluate markets remain pending. Do not publish ROI, yield, units or profit metrics.
 
 ## Automatic SEO lifecycle
 

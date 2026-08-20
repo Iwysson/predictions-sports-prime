@@ -6,20 +6,16 @@ export const arsenalVsCoventry: EditorialPrediction = {
   awayTeam: "Coventry City",
 
   analysis: [
-    "Arsenal enter their opening home fixture as strong favourites. Their record at the Emirates against the three newly promoted teams in the 2025/26 Premier League was dominant: Arsenal beat Leeds United 5–0, Sunderland 3–0 and Burnley 1–0.",
+  "England 2025/26 final tables is retained only for Arsenal and Coventry City's prior-season competition context; it documents no pre-match lineup, injury list, tactical plan or bookmaker price for this fixture.",
 
-    "That represents three wins from three, with nine goals scored and none conceded, an average of 3.0 goals per game.",
+  "Arsenal -1.75 Asian Handicap is a margin bet, not merely a view on the likely winner. A narrow victory may still lose or push depending on the recorded line.",
 
-    "Arsenal have also strengthened an already high-quality squad, with Bruno Guimarães and Christos Tzolis among the key additions, alongside Illan Meslier and the permanent signing of Piero Hincapié.",
+  "Arsenal -1.75 Asian Handicap depends on winning margin rather than simple favouritism. A narrow Arsenal win may not cover the line, which is why the page does not infer handicap value from league position alone.",
 
-    "Coventry have invested significantly following promotion, adding players such as Caleb Yirenkyi, Carl Rushworth, Loum Tchaouna, Aurèle Amenda, Gustavo Hamer and Frank Onyeka. Despite these additions, there remains a considerable gap in overall squad quality and Premier League experience.",
+  "Arsenal versus Coventry City retains the published selection, Arsenal -1.75 Asian Handicap, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+],
 
-    "Arsenal are expected to control possession and territory, applying sustained pressure against a Coventry side likely to defend deeper and look for opportunities in transition.",
-
-    "Arsenal's recent home record against promoted sides, combined with their squad strength and home advantage, supports the expectation of a convincing home performance."
-  ],
-
-  picks: {
+picks: {
     main: "Arsenal -1.75 Asian Handicap",
     odds: 1.72
   },
@@ -31,6 +27,15 @@ export const arsenalVsCoventry: EditorialPrediction = {
 
   publishedAt: "2026-08-16T17:59:07.000Z",
 
+sourceStatus: "partial",
+sources: [
+  {
+    name: "England 2025/26 final tables",
+    url: "https://www.rsssf.org/tablese/eng2026.html",
+    description: "Final 2025/26 competition table used only for season record, points and goal context.",
+    accessedAt: "2026-08-20T12:45:00.000-03:00",
+  },
+],
 
-  published: true,
+published: true,
 };

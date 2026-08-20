@@ -14,10 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...[
       "/about/",
       "/contact/",
+      "/methodology/",
+      "/editorial-policy/",
+      "/results/",
       "/privacy/",
       "/cookies/",
       "/terms/",
       "/responsible-gambling/",
+      "/author/iwysson-nascimento/",
     ].map((path) => ({
       url: absoluteUrl(path),
     })),

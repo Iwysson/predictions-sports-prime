@@ -6,22 +6,16 @@ export const nottinghamForestVsLeedsUnited: EditorialPrediction = {
   awayTeam: "Leeds United",
 
   analysis: [
-    "Nottingham Forest begin their Premier League campaign at home against Leeds United in a matchup that presents an interesting statistical case for goals. Rather than taking a position on either side, the scoring profiles of both teams from the 2025/26 season make the total-goals market the main focus for this fixture.",
+  "Nottingham Forest-Leeds United uses England 2025/26 final tables as a final-table reference; xG, personnel, detailed head-to-head and venue-percentage claims were removed because that source does not verify them.",
 
-    "Nottingham Forest's 19 home league matches last season produced 43 total goals, with Forest scoring 20 and conceding 23. That represents an average of 2.26 total goals per game at the City Ground and shows that their home fixtures regularly provided opportunities at both ends of the pitch.",
+  "This selection does not depend on predicting which team will control the opening fixture.",
 
-    "Leeds displayed an even stronger goals profile away from home. Their 19 Premier League away matches produced 55 total goals, an average of 2.89 per game. Leeds scored 20 times on the road but conceded 35, equivalent to 1.84 goals conceded per away match. That defensive record is particularly relevant against a Forest side playing with home advantage.",
+  "Nottingham Forest-Leeds United must produce three goals for Over 2.5 Goals; low-event scorelines such as 1-0 and 1-1 lose, and the retained table does not prove how often this matchup should cross the line.",
 
-    "The recent head-to-head record provides additional support for a higher-scoring contest. Both Premier League meetings between Nottingham Forest and Leeds in 2025/26 finished 3–1, with Forest winning at the City Ground before Leeds claimed the reverse fixture by the same scoreline. Those two matches produced eight goals in total, an average of 4.0 per game, with Over 2.5 Goals landing on both occasions.",
+  "Nottingham Forest versus Leeds United retains the published selection, Over 2.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+],
 
-    "There are also reasons to believe both teams can contribute to the attacking side of the game. Forest have the opportunity to target a Leeds defence that conceded almost two goals per away match last season, while Leeds demonstrated enough attacking ability to score 20 times on their travels despite their defensive problems.",
-
-    "This selection does not depend on predicting which team will control the opening fixture. Both sides showed periods of inconsistency last season, making the match result less attractive than the goals market. Instead, the combination of Leeds' high-scoring away profile, their defensive vulnerability and the recent head-to-head numbers points towards another game with scoring opportunities.",
-
-    "With Leeds' away matches averaging 2.89 total goals and both league meetings last season comfortably clearing this line, Over 2.5 Goals at the current price offers the strongest statistical case for this matchup."
-  ],
-
-  picks: {
+picks: {
     main: "Over 2.5 Goals",
     odds: 1.93
   },
@@ -32,6 +26,15 @@ export const nottinghamForestVsLeedsUnited: EditorialPrediction = {
 
   publishedAt: "2026-08-16T19:07:21.000Z",
 
+sourceStatus: "partial",
+sources: [
+  {
+    name: "England 2025/26 final tables",
+    url: "https://www.rsssf.org/tablese/eng2026.html",
+    description: "Final 2025/26 competition table used only for season record, points and goal context.",
+    accessedAt: "2026-08-20T12:45:00.000-03:00",
+  },
+],
 
-  published: true,
+published: true,
 };

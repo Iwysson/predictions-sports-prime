@@ -6,22 +6,18 @@ export const ipswichTownVsSunderland: EditorialPrediction = {
   awayTeam: "Sunderland",
 
   analysis: [
-    "Ipswich Town return to the Premier League with a challenging opening fixture against a Sunderland side that established itself as one of last season's strongest performers. Sunderland finished seventh in the 2025/26 Premier League, securing European football in their first season back in the top flight.",
+  "For Ipswich Town-Sunderland, England 2025/26 final tables supports only broad season-record context and is not stretched into evidence about transfers, availability or either team's match plan.",
 
-    "Sunderland also demonstrated that they could compete effectively away from home, finishing their league campaign on the road with five wins, six draws and eight defeats. Their away performances included valuable results against lower-table opposition, showing an ability to collect points even when playing outside their own stadium.",
+  "The goals profile from those fixtures also supports a relatively conservative line.",
 
-    "The goals profile from those fixtures also supports a relatively conservative line. Sunderland's away matches against teams that finished 12th or lower averaged approximately 2.1 total goals per game, with Over 1.5 Goals landing in six of nine matches. This makes a two-goal requirement more attractive for this analysis than relying on a significantly higher-scoring contest.",
+  "For that reason, the selection does not require Sunderland to win.  The double-chance component covers both a Sunderland victory and a draw, providing protection against Ipswich's home advantage while still backing the visitors' stronger recent top-flight record.",
 
-    "Sunderland enter the 2026/27 campaign with considerably more recent Premier League experience than Ipswich. After a successful first season back in the division, they retain the foundations of a squad that proved capable of competing consistently at this level, while the addition of experienced defender Thomas Meunier provides further depth.",
+  "Sunderland or Draw + Over 1.5 Goals gives Ipswich Town-Sunderland two independent tests: the protected result and at least two goals; no unsupported venue percentage is used to claim that both legs are likely.",
 
-    "Ipswich will benefit from playing at Portman Road and should receive significant support in their first Premier League fixture following promotion. They have strengthened their squad for the step up, but immediately face an opponent with recent evidence of performing successfully against Premier League competition.",
+  "Ipswich Town versus Sunderland retains the published selection, Sunderland or Draw + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+],
 
-    "For that reason, the selection does not require Sunderland to win. The double-chance component covers both a Sunderland victory and a draw, providing protection against Ipswich's home advantage while still backing the visitors' stronger recent top-flight record.",
-
-    "Combining Sunderland or Draw with Over 1.5 Goals creates a balanced selection for the opening fixture. Sunderland's Premier League experience and away record support the X2 side of the bet, while their recent goal numbers against lower-table opposition provide the basis for the relatively conservative Over 1.5 Goals requirement."
-  ],
-
-  picks: {
+picks: {
     main: "Sunderland or Draw + Over 1.5 Goals",
     odds: 2.00
   },
@@ -33,6 +29,15 @@ export const ipswichTownVsSunderland: EditorialPrediction = {
 
   publishedAt: "2026-08-16T19:07:21.000Z",
 
+sourceStatus: "partial",
+sources: [
+  {
+    name: "England 2025/26 final tables",
+    url: "https://www.rsssf.org/tablese/eng2026.html",
+    description: "Final 2025/26 competition table used only for season record, points and goal context.",
+    accessedAt: "2026-08-20T12:45:00.000-03:00",
+  },
+],
 
-  published: true,
+published: true,
 };

@@ -1,31 +1,40 @@
 import { LegalPage } from "@/components/LegalPage";
 import { buildLegalMetadata } from "@/lib/legal-pages";
+import Link from "next/link";
+import { editorialAuthor } from "@/lib/editorial-identity";
+import { JsonLd } from "@/components/JsonLd";
+import { institutionalPageJsonLd } from "@/lib/seo";
+
+const description = "Who produces Predictions Sports Prime, what the publication covers, how its football analysis is prepared and why it exists.";
 
 export const metadata = buildLegalMetadata(
   "About",
   "/about/",
-  "About Predictions Sports Prime and its independent, manually written football analysis."
+  description
 );
 
 export default function AboutPage() {
   return (
+    <>
+    <JsonLd data={institutionalPageJsonLd("AboutPage", "About Predictions Sports Prime", "/about/", description)} />
     <LegalPage
       titleKey="about"
-      intro="Predictions Sports Prime is an independent football analysis and predictions platform."
+      intro="Predictions Sports Prime is an independent publication for pre-match football analysis and predictions."
       sections={[
         {
-          title: "Independent editorial analysis",
-          content: <p>Every published analysis and prediction is written and selected manually. The site does not use artificial intelligence to generate picks and is not a bookmaker.</p>,
+          title: "What we publish",
+          content: <p>The site publishes pre-match football analysis and predictions to give readers useful context about fixtures, markets and the considerations behind each editorial selection.</p>,
         },
         {
-          title: "Our approach",
-          content: <p>Editorial work may consider match history, home and away performance, squad context, statistical data and the competitive situation surrounding each fixture.</p>,
+          title: "Who produces the analyses",
+          content: <p><Link className="legal-link" href={editorialAuthor.path}>{editorialAuthor.name}</Link> is responsible for the analyses published on Predictions Sports Prime. Each prediction represents an editorial assessment rather than a guaranteed outcome.</p>,
         },
         {
-          title: "Informational purpose",
-          content: <p>Predictions are opinions provided for information and discussion. They do not guarantee any result, return or outcome.</p>,
+          title: "Editorial purpose and limitations",
+          content: <><p>Each article is an individual editorial assessment. See <Link className="legal-link" href="/methodology/">our methodology</Link>, <Link className="legal-link" href="/editorial-policy/">editorial policy</Link> and complete <Link className="legal-link" href="/results/">prediction results</Link>.</p><p>The purpose is to provide context before a match. The site is not a bookmaker, results are not guaranteed, and published odds may change. Use the <Link className="legal-link" href="/contact/">contact page</Link> for editorial enquiries.</p></>,
         },
       ]}
     />
+    </>
   );
 }

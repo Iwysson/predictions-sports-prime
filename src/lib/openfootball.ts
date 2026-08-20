@@ -300,9 +300,12 @@ function eventStatus(event: LiveEvent): OpenFootballGame["status"] {
 
 async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[]) {
   const league = leaguesBySlug[slug];
+  const dates = league.season.includes("/")
+    ? `${league.season.slice(0, 4)}0801-${league.season.slice(-2).padStart(4, "20")}0731`
+    : `${league.season}0101-${league.season}1231`;
   const response = await fetch(
-    `https://site.api.espn.com/apis/site/v2/sports/soccer/${league.liveDataId}/scoreboard?dates=2026&limit=1000`,
-    { headers: { Accept: "application/json" } }
+    `https://site.api.espn.com/apis/site/v2/sports/soccer/${league.liveDataId}/scoreboard?dates=${dates}&limit=1000`,
+    { headers: { Accept: "application/json" }, cache: "no-store" }
   );
 
   if (!response.ok) throw new Error(`${league.name}: live results returned ${response.status}`);

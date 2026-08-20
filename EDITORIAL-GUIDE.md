@@ -1,5 +1,15 @@
 # Como publicar uma prediction
 
+Toda prediction publicada aparece automaticamente em `/results/`, inclusive quando estiver pending ou resultar em loss, push, half-result ou void. Nao remova uma prediction do arquivo por causa do resultado. O settlement reutiliza o pipeline oficial; mercados que nao possam ser avaliados com seguranca permanecem pending para revisao, sem resultado inventado.
+
+## Fontes e odds para novas publicacoes
+
+As 52 predictions publicadas antes da Politica de Fontes da Fase 2 formam o arquivo legado e permanecem sem fontes retroativamente atribuidas. Conteudo publicado depois de `2026-08-20T23:59:59-03:00` deve informar `sourceStatus: "verified"` e `sources` com as fontes realmente usadas para sustentar afirmacoes factuais.
+
+Cada fonte exige `name` e uma `url` HTTPS direta. `description` explica a relacao da fonte com a analise quando isso nao for evidente; `accessedAt` e opcional e usa ISO 8601. Links vazios, HTTP, dominios de exemplo e fontes sem relacao editorial sao rejeitados. A validacao tecnica nao substitui a revisao humana de relevancia.
+
+Se uma nova publicacao incluir `picks.odds`, inclua `picks.oddsProvenance` com a fonte real e `capturedAt`. `market` e opcional. Nunca invente bookmaker, fonte ou horario para conteudo legado.
+
 As predictions são organizadas por liga, rodada e jogo em:
 
 ```text

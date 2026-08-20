@@ -6,22 +6,14 @@ export const brightonVsAstonVilla: EditorialPrediction = {
   awayTeam: "Aston Villa",
 
   analysis: [
-    "Brighton and Aston Villa begin the new Premier League campaign in a matchup with a strong statistical case for goals, particularly when Brighton's performances at the Amex Stadium are considered.",
+  "Brighton & Hove Albion-Aston Villa must produce three goals for Over 2.5 Goals; low-event scorelines such as 1-0 and 1-1 lose, and the retained table does not prove how often this matchup should cross the line.",
 
-    "Brighton's home matches in the 2025/26 Premier League averaged 2.63 total goals. Across 19 matches at the Amex, the Seagulls scored 30 goals and conceded 20, showing that they were capable of creating consistently at home while still giving opponents opportunities at the other end.",
+  "For Brighton & Hove Albion-Aston Villa, England 2025/26 final tables supports only broad season-record context and is not stretched into evidence about transfers, availability or either team's match plan.",
 
-    "The most striking recent example came in this exact fixture last season. Aston Villa won a dramatic 4–3 match at the Amex, producing seven goals. Villa also won the reverse fixture 1–0, meaning the two Premier League meetings between the teams in 2025/26 produced eight goals in total.",
+  "Brighton & Hove Albion versus Aston Villa retains the published selection, Over 2.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+],
 
-    "There have been significant squad changes heading into 2026/27. Brighton have lost important players including Danny Welbeck and Jan Paul van Hecke, with Van Hecke's departure particularly relevant to the defensive structure. Aston Villa have also seen Morgan Rogers, Youri Tielemans and Lucas Digne leave, but have responded with significant investment, including the additions of Johan Manzambi and João Gomes.",
-
-    "Despite those changes, both sides retain enough attacking quality to create chances. Brighton are generally willing to play proactively at the Amex, while Unai Emery's Aston Villa have the technical quality to punish opponents when space becomes available. That combination could produce another open contest if Brighton commit numbers forward.",
-
-    "The 4–3 result at this stadium should not be treated as a guarantee of another high-scoring match, but it reinforces the broader statistical case. Brighton's home fixtures averaged comfortably above two goals last season, and both teams have enough attacking potential to contribute to the total.",
-
-    "At odds of 1.62, the market already assigns a relatively high probability to three or more goals, so the price is shorter than some of our other selections. Even so, the combination of Brighton's home goals profile, the recent head-to-head numbers and the attacking characteristics of both teams makes Over 2.5 Goals our preferred selection."
-  ],
-
-  picks: {
+picks: {
     main: "Over 2.5 Goals",
     odds: 1.62,
   },
@@ -32,6 +24,15 @@ export const brightonVsAstonVilla: EditorialPrediction = {
 
   publishedAt: "2026-08-16T19:07:21.000Z",
 
+sourceStatus: "partial",
+sources: [
+  {
+    name: "England 2025/26 final tables",
+    url: "https://www.rsssf.org/tablese/eng2026.html",
+    description: "Final 2025/26 competition table used only for season record, points and goal context.",
+    accessedAt: "2026-08-20T12:45:00.000-03:00",
+  },
+],
 
-  published: true,
+published: true,
 };

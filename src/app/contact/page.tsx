@@ -1,27 +1,32 @@
 import { LegalPage } from "@/components/LegalPage";
 import { buildLegalMetadata } from "@/lib/legal-pages";
+import { publicContactEmail } from "@/lib/editorial-identity";
+import { JsonLd } from "@/components/JsonLd";
+import { institutionalPageJsonLd } from "@/lib/seo";
+
+const description = "Contact Predictions Sports Prime about factual corrections, editorial questions, feedback, privacy or general site information.";
 
 export const metadata = buildLegalMetadata(
   "Contact",
   "/contact/",
-  "Contact information for Predictions Sports Prime."
+  description
 );
-
-const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() ?? "";
 
 export default function ContactPage() {
   return (
+    <>
+    <JsonLd data={institutionalPageJsonLd("ContactPage", "Contact Predictions Sports Prime", "/contact/", description)} />
     <LegalPage
       titleKey="contact"
-      intro="Use the contact details below for editorial, privacy or general enquiries."
+      intro="Use the contact details below for corrections, editorial questions, feedback, privacy or general site enquiries."
       sections={[
         {
+          title: "Corrections and feedback",
+          content: <p>Include the page URL and the fact or passage you believe needs review. Reports are evaluated against the available record and sources; corrections do not silently rewrite a pre-match selection after the result.</p>,
+        },
+        {
           title: "Contact details",
-          content: contactEmail ? (
-            <p><a className="legal-link" href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
-          ) : (
-            <p>Contact details will be available soon.</p>
-          ),
+          content: <p>The public contact for Predictions Sports Prime is <a className="legal-link" href={`mailto:${publicContactEmail}`}>{publicContactEmail}</a>.</p>,
         },
         {
           title: "Response and scope",
@@ -29,5 +34,6 @@ export default function ContactPage() {
         },
       ]}
     />
+    </>
   );
 }

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Match } from "@/types";
 import { leagues } from "@/data/leagues";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
+import { editorialAuthorPersonJsonLd } from "@/lib/editorial-identity";
 
 export function matchSeoTitle(match: Match) {
   const teams = `${match.homeTeam} vs ${match.awayTeam}`;
@@ -146,6 +147,7 @@ export function articleJsonLd(match: Match) {
     },
     ...(match.publishedAt ? { datePublished: match.publishedAt } : {}),
     ...(match.updatedAt ? { dateModified: match.updatedAt } : {}),
+    author: editorialAuthorPersonJsonLd(),
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -189,5 +191,26 @@ export function organizationJsonLd() {
     name: siteConfig.name,
     url: siteConfig.url,
     logo: absoluteUrl("/icon-512.png"),
+  };
+}
+
+export function institutionalPageJsonLd(
+  type: "WebPage" | "AboutPage" | "ContactPage",
+  name: string,
+  path: string,
+  description: string
+) {
+  const url = absoluteUrl(path);
+  return {
+    "@context": "https://schema.org",
+    "@type": type,
+    name,
+    description,
+    url,
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   };
 }

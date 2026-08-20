@@ -11,10 +11,12 @@ export type LegalSection = {
 
 export function LegalPage({
   titleKey,
+  heading,
   intro,
   sections,
 }: {
   titleKey: TranslationKey;
+  heading?: string;
   intro: string;
   sections: LegalSection[];
 }) {
@@ -25,7 +27,7 @@ export function LegalPage({
       <div className="container legal-container">
         <header className="legal-header">
           <span className="eyebrow">{t("brandName")}</span>
-          <h1>{t(titleKey)}</h1>
+          <h1>{heading ?? t(titleKey)}</h1>
           <p>{intro}</p>
         </header>
 

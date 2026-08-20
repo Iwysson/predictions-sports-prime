@@ -35,7 +35,19 @@ export type PredictionResultInput =
 export type EditorialPicks = {
   main: string;
   odds?: number;
+  oddsProvenance?: {
+    source: string;
+    capturedAt: string;
+    market?: string;
+  };
   result?: PredictionResultInput;
+};
+
+export type EditorialSource = {
+  name: string;
+  url: string;
+  description?: string;
+  accessedAt?: string;
 };
 
 export type EditorialPrediction = {
@@ -65,6 +77,10 @@ export type EditorialPrediction = {
   // values when an editor explicitly provides them.
   publishedAt?: string;
   updatedAt?: string;
+
+  // Required for content first published after the Phase 2 source-policy cutoff.
+  sourceStatus?: "verified" | "partial" | "incomplete";
+  sources?: EditorialSource[];
 
   // Optional manual fallback when the external fixture feed is unavailable.
   matchInfo?: {
@@ -97,6 +113,7 @@ export type Match = {
   awayScore?: number | null;
   publishedAt?: string;
   updatedAt?: string;
+  sources?: EditorialSource[];
 };
 
 export type MatchPreview = Omit<Match, "analysis" | "comment" | "predictions"> & {

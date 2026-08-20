@@ -6,22 +6,16 @@ export const brentfordVsTottenham: EditorialPrediction = {
   awayTeam: "Tottenham Hotspur",
 
   analysis: [
-    "Brentford and Tottenham begin the new Premier League campaign in a matchup where last season's head-to-head results contrast sharply with the broader scoring profile of both teams.",
+  "Rather than backing either side in a potentially competitive opening fixture, the goals market offers the more attractive angle.",
 
-    "The two Premier League meetings in 2025/26 were unusually low-scoring. Tottenham won 2–0 at home, while the reverse fixture at the Gtech Community Stadium finished 0–0. Brentford failed to score in either match, with only two total goals produced across the two meetings.",
+  "Brentford-Tottenham Hotspur uses England 2025/26 final tables as a final-table reference; xG, personnel, detailed head-to-head and venue-percentage claims were removed because that source does not verify them.",
 
-    "However, Brentford's overall home numbers tell a different story. They scored 33 goals in 19 Premier League matches at the Gtech Community Stadium, averaging 1.74 goals per home game. Their home fixtures averaged approximately 2.84 total goals, suggesting that the 0–0 against Tottenham was not representative of Brentford's typical home matches.",
+  "Brentford versus Tottenham Hotspur retains the published selection, Over 2.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick.",
 
-    "The context is also different heading into 2026/27. Tottenham start the campaign under Roberto De Zerbi, whose approach could encourage a more proactive and attacking style. The squad has also been strengthened with additions including Sandro Tonali, Mateus Fernandes and Andy Robertson.",
+  "Brentford-Tottenham Hotspur must produce three goals for Over 2.5 Goals; low-event scorelines such as 1-0 and 1-1 lose, and the retained table does not prove how often this matchup should cross the line."
+],
 
-    "Brentford have also invested in their squad, with Mamadou Sangaré among their major additions and Callum Wilson and Jaidon Anthony providing further attacking options. These changes give Brentford additional ways to threaten a Tottenham side adapting to a new season and tactical setup.",
-
-    "While last season's direct meetings provide a legitimate argument for caution, the wider numbers support a different expectation. Brentford's home matches regularly produced goals, and the attacking potential available to both teams makes another extremely low-scoring encounter less convincing.",
-
-    "Rather than backing either side in a potentially competitive opening fixture, the goals market offers the more attractive angle. Three goals are enough to land the selection, and Brentford's home scoring profile combined with Tottenham's attacking quality provides a solid statistical basis for the Over 2.5 line."
-  ],
-
-  picks: {
+picks: {
     main: "Over 2.5 Goals",
     odds: 1.67,
   },
@@ -33,6 +27,15 @@ export const brentfordVsTottenham: EditorialPrediction = {
 
   publishedAt: "2026-08-16T19:07:21.000Z",
 
+sourceStatus: "partial",
+sources: [
+  {
+    name: "England 2025/26 final tables",
+    url: "https://www.rsssf.org/tablese/eng2026.html",
+    description: "Final 2025/26 competition table used only for season record, points and goal context.",
+    accessedAt: "2026-08-20T12:45:00.000-03:00",
+  },
+],
 
-  published: true,
+published: true,
 };

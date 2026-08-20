@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Phase 5 institutional trust, metadata, structured data and navigation checkpoint",
+  "createdAt": "2026-08-20T23:59:00.000-03:00",
+  "entries": [
+    {
+      "path": "src/app/layout.tsx",
+      "sha256": "19269d09d0bc357ad74fc8e6aaf3dadebcf142ab561876f29f703154e4b8e25d"
+    },
+    {
+      "path": "src/app/about/page.tsx",
+      "sha256": "794f3291ab14d3cdb6f7660a5e976866d4d00c983b6302a31ac84da0013785a5"
+    },
+    {
+      "path": "src/app/contact/page.tsx",
+      "sha256": "79fedf5eccfce3aac46635fa05e83ee8835fae394aa23f63f6252221e301c48a"
+    },
+    {
+      "path": "src/app/methodology/page.tsx",
+      "sha256": "af24ab51ad9a373735c23397bccace6d81af51f141a3dbeeae979a3b62395709"
+    },
+    {
+      "path": "src/app/editorial-policy/page.tsx",
+      "sha256": "27e3ee8c462886aa59956c3389688fb0b868346607c931c7c98316fccb5f165b"
+    },
+    {
+      "path": "src/app/results/page.tsx",
+      "sha256": "016ab7e0f5a0b82dae1e5043eff61f399737e0db0008e0e4812cbf4b7c909aa9"
+    },
+    {
+      "path": "src/app/author/iwysson-nascimento/page.tsx",
+      "sha256": "e18848d642cc9628e58a2a1ba07492e0e21d26cbc5908836ee7d3042da3f02cb"
+    },
+    {
+      "path": "src/app/sitemap.ts",
+      "sha256": "e19abe786b6b02c68286b1db49a652730d65205862ebcf945c3fc4abd07008e0"
+    },
+    {
+      "path": "src/app/robots.ts",
+      "sha256": "12910274b017bcd1a3c302f4e3ac4261aacfa4aa3a3e479ffc5b65804a53cba9"
+    },
+    {
+      "path": "src/components/Header.tsx",
+      "sha256": "d8d67af4c6391823dfd202166f1eb0f908aa6fa5b38ec74eafef1a449b60de5b"
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "sha256": "a37a85537e8a44f4c9986eb174bf6caa8959373f45a520d004da243d4582110d"
+    },
+    {
+      "path": "src/lib/editorial-identity.ts",
+      "sha256": "da7ec94a09c00990dae2c9f1264a093ef28caedb5cdd3f90b2f429255a2ed337"
+    },
+    {
+      "path": "src/lib/seo.ts",
+      "sha256": "a0e8a4a8659df74797cf0131c54c5901f1487352e2d9322bb5bb4a84e047a759"
+    }
+  ]
+}

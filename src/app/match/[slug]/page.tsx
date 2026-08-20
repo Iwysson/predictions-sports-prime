@@ -5,9 +5,11 @@ import { AdSlot } from "@/components/ads";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { TeamBadge } from "@/components/TeamBadge";
 import { LiveMatchMeta } from "@/components/LiveMatchMeta";
-import { MatchSearchIntent } from "@/components/MatchSearchIntent";
 import { RelatedPredictions } from "@/components/RelatedPredictions";
 import { MatchComments } from "@/components/MatchComments";
+import { ArticleByline } from "@/components/ArticleByline";
+import { MethodologyLink } from "@/components/MethodologyLink";
+import { ArticleSources } from "@/components/ArticleSources";
 import {
   MatchAnalysisLabel,
   MainPredictionLabel,
@@ -179,6 +181,8 @@ export default async function MatchPage({
                     {match.updatedAt ? (
                       <span>Updated: {formatEditorialDate(match.updatedAt)}</span>
                     ) : null}
+                    <ArticleByline />
+                    <MethodologyLink />
                   </p>
                 ) : null}
               </div>
@@ -201,13 +205,9 @@ export default async function MatchPage({
               </aside>
             ) : null}
 
-            <MatchComments matchSlug={match.slug} />
+            <ArticleSources sources={match.sources} />
 
-            <MatchSearchIntent
-              homeTeam={match.homeTeam}
-              awayTeam={match.awayTeam}
-              slug={match.slug}
-            />
+            <MatchComments matchSlug={match.slug} />
 
             <div className="match-content-ad">
               <AdSlot placement="match-content" />
@@ -237,6 +237,12 @@ export default async function MatchPage({
             <p className="compact-responsible-note">
               <ResponsibleText />
             </p>
+            {match.betResult ? (
+              <p className={`match-result-status bet-result bet-result--${match.betResult}`}>
+                Prediction result: {match.betResult.replace("green", "won").replace("red", "lost").replace("-", " ").toUpperCase()}
+              </p>
+            ) : null}
+            <Link className="match-results-link" href="/results/">View prediction history</Link>
           </aside>
         </div>
       </section>

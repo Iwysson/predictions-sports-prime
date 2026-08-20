@@ -21,6 +21,10 @@ export function Footer() {
         <nav className="footer-links" aria-label="Legal and information">
           <Link href="/about/">{t("about")}</Link>
           <Link href="/contact/">{t("contact")}</Link>
+          <Link href="/methodology/">Methodology</Link>
+          <Link href="/editorial-policy/">Editorial policy</Link>
+          <Link href="/results/">Results</Link>
+          <Link href="/author/iwysson-nascimento/">Author</Link>
           <Link href="/privacy/">{t("privacy")}</Link>
           <Link href="/cookies/">{t("cookies")}</Link>
           <Link href="/terms/">{t("terms")}</Link>

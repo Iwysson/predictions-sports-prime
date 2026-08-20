@@ -1,0 +1,27 @@
+import type { MatchPreview, PredictionResultStatus } from "@/types";
+
+export const resultStatusPresentation: Record<PredictionResultStatus, { label: string; icon: string }> = {
+  pending: { label: "PENDING", icon: "○" },
+  green: { label: "WON", icon: "✓" },
+  red: { label: "LOST", icon: "✕" },
+  push: { label: "PUSH", icon: "—" },
+  "half-green": { label: "HALF WON", icon: "◐" },
+  "half-red": { label: "HALF LOST", icon: "◑" },
+  void: { label: "VOID", icon: "⊘" },
+};
+
+export function completePredictionHistory(matches: MatchPreview[]) {
+  return [...matches].sort((left, right) =>
+    (right.date || right.publishedAt || "").localeCompare(left.date || left.publishedAt || "") ||
+    (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") ||
+    left.slug.localeCompare(right.slug)
+  );
+}
+
+export function predictionResultCounts(matches: MatchPreview[]) {
+  const counts: Record<PredictionResultStatus, number> = {
+    pending: 0, green: 0, red: 0, push: 0, "half-green": 0, "half-red": 0, void: 0,
+  };
+  matches.forEach((match) => { counts[match.betResult ?? "pending"] += 1; });
+  return counts;
+}

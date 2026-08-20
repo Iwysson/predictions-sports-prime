@@ -6,22 +6,18 @@ export const manchesterCityVsBournemouth: EditorialPrediction = {
   awayTeam: "Bournemouth",
 
   analysis: [
-    "Manchester City begin their Premier League campaign looking for an immediate response after a disappointing 3–0 defeat to Arsenal in the Community Shield. It was Enzo Maresca's first competitive match in charge, and City struggled to turn possession into consistent attacking threat.",
+  "That level of production is particularly relevant for a handicap selection that requires City to win by at least two goals.",
 
-    "That performance creates some uncertainty heading into the opening weekend, but the return to the Etihad provides a very different setting. City's home numbers in the 2025/26 Premier League were outstanding: 14 wins, three draws and only two defeats from 19 matches.",
+  "Rather than taking a shorter-priced Manchester City win or a conventional goals market, the Asian Handicap offers a more attractive risk-reward profile.",
 
-    "Their attacking production at home was equally impressive. City scored 45 Premier League goals at the Etihad, averaging 2.37 goals per match. That level of production is particularly relevant for a handicap selection that requires City to win by at least two goals.",
+  "Manchester City-Bournemouth has one retained evidence boundary: England 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
 
-    "Bournemouth should not be underestimated. They finished sixth last season and proved capable of competing with strong Premier League opposition. However, this matchup has historically been favourable for City, and they won the corresponding fixture 3–1 at the Etihad in 2025/26.",
+  "Manchester City versus Bournemouth retains the published selection, Manchester City -1.5 Asian Handicap, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick.",
 
-    "The key question is whether the Community Shield defeat represents a deeper problem or simply a poor performance at the beginning of a new cycle under Maresca. For this selection, we favour the second interpretation. City now return home with a clear incentive to produce a response and start their league campaign strongly.",
+  "Manchester City -1.5 Asian Handicap depends on winning margin rather than simple favouritism. A narrow Manchester City win may not cover the line, which is why the page does not infer handicap value from league position alone."
+],
 
-    "Rather than taking a shorter-priced Manchester City win or a conventional goals market, the Asian Handicap offers a more attractive risk-reward profile. City's 2.37 goals-per-game home average last season demonstrates their ability to build winning margins at the Etihad, while their superior individual quality gives them the tools to put Bournemouth under sustained pressure.",
-
-    "At odds of 2.12, we are accepting the additional risk of requiring a two-goal winning margin in exchange for a significantly stronger price. Bournemouth's quality makes this far from a low-risk selection, but if City return to the level they consistently showed at home last season, we believe they have enough attacking quality to win by multiple goals."
-  ],
-
-  picks: {
+picks: {
     main: "Manchester City -1.5 Asian Handicap",
     odds: 2.12,
   },
@@ -33,6 +29,15 @@ export const manchesterCityVsBournemouth: EditorialPrediction = {
 
   publishedAt: "2026-08-16T19:07:21.000Z",
 
+sourceStatus: "partial",
+sources: [
+  {
+    name: "England 2025/26 final tables",
+    url: "https://www.rsssf.org/tablese/eng2026.html",
+    description: "Final 2025/26 competition table used only for season record, points and goal context.",
+    accessedAt: "2026-08-20T12:45:00.000-03:00",
+  },
+],
 
-  published: true,
+published: true,
 };

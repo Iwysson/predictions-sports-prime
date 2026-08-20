@@ -6,26 +6,16 @@ export const deportivoLaCorunaVsElche: EditorialPrediction = {
   awayTeam: "Elche",
 
   analysis: [
-    "For this match, we see Over 1.5 Goals as the most attractive direction, although the best value may come from the live market rather than the current pre-match price.",
+  "RC Deportivo La Coruña-Elche needs two total goals for Over 1.5 Goals; 0-0 and 1-0 lose, and the cited table is insufficient for a fixture-level goals probability.",
 
-    "Deportivo's performances at Riazor suggest a team capable of creating consistent attacking pressure, while Elche's away profile has shown considerably more defensive vulnerability. Based on the numbers analysed, Deportivo's home fixtures have produced around 2.5 total goals per match.",
+  "RC Deportivo La Coruña-Elche uses Spain 2025/26 final tables as a final-table reference; xG, personnel, detailed head-to-head and venue-percentage claims were removed because that source does not verify them.",
 
-    "Elche's away matches have averaged close to 3.0 total goals, with Elche conceding approximately 2 goals per away game. This combination creates a favourable setup for at least two goals.",
+  "We only want to enter if the match itself confirms the attacking pattern we expect.",
 
-    "Deportivo should have opportunities to impose themselves at home, particularly if they can sustain pressure in the final third. Elche, however, have enough attacking quality to threaten in transition and potentially contribute a goal themselves.",
+  "RC Deportivo La Coruña versus Elche retains the published selection, Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+],
 
-    "Several realistic scorelines would cover this selection, including 1–1, 2–0 and 2–1.",
-
-    "The main concern is the pre-match price. At odds of 1.44, the market already reflects a relatively high probability of at least two goals, which limits the potential value before kick-off.",
-
-    "For that reason, our preferred strategy is to wait for a possible live entry. If the match remains 0–0 during the opening 10–20 minutes but continues to show positive attacking signs, including dangerous transitions, shots, corners and sustained pressure, the Over 1.5 price should increase.",
-
-    "The live entry should not be based on the clock alone. If the opening phase is slow, fragmented or produces very few dangerous situations, there is no reason to force the bet. We only want to enter if the match itself confirms the attacking pattern we expect.",
-
-    "Overall, the statistical profile supports a match with at least two goals. Over 1.5 Goals remains our preferred market, with the possibility of obtaining better value by waiting for the live market if the opening minutes confirm our pre-match analysis."
-  ],
-
-  picks: {
+picks: {
     main: "Over 1.5 Goals",
     odds: 1.44
   },
@@ -37,6 +27,15 @@ export const deportivoLaCorunaVsElche: EditorialPrediction = {
 
   publishedAt: "2026-08-16T20:27:43.000Z",
 
+sourceStatus: "partial",
+sources: [
+  {
+    name: "Spain 2025/26 final tables",
+    url: "https://www.rsssf.org/tabless/span2026.html",
+    description: "Final 2025/26 competition table used only for season record, points and goal context.",
+    accessedAt: "2026-08-20T12:45:00.000-03:00",
+  },
+],
 
-  published: true,
+published: true,
 };

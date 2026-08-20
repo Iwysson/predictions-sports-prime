@@ -6,22 +6,18 @@ export const evertonVsCrystalPalace: EditorialPrediction = {
   awayTeam: "Crystal Palace",
 
   analysis: [
-    "Everton begin their Premier League campaign at home against Crystal Palace in a matchup between two sides that were relatively close in overall level last season. Everton enter this fixture with home advantage and a recent head-to-head record that provides support for a more cautious position on the hosts rather than backing them to win outright.",
+  "Everton-Crystal Palace has one retained evidence boundary: England 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
 
-    "Everton were unbeaten against Crystal Palace in the 2025/26 Premier League. They won 2–1 at home before earning a 2–2 draw at Selhurst Park. Both meetings produced at least three goals, meaning the Everton double chance and Over 1.5 Goals combination would have landed in both matches.",
+  "Crystal Palace remain capable of making this a difficult match, which is why the selection avoids relying on an Everton victory alone.",
 
-    "The broader recent head-to-head record is also favourable to Everton. They have avoided defeat in each of their last five Premier League meetings with Crystal Palace, recording three wins and two draws. Everton have also scored in all five of those matches.",
+  "Everton or Draw + Over 1.5 Goals has a two-goal threshold, but the result protection and goal condition remain separate obligations whenever this is a combined market.",
 
-    "The goals component of the selection offers additional protection. Rather than requiring a high-scoring match, Over 1.5 Goals needs only two goals across the entire game. Recent meetings between these teams have regularly reached that mark, including the 2–1 and 2–2 results from last season.",
+  "Everton or Draw + Over 1.5 Goals gives Everton-Crystal Palace two independent tests: the protected result and at least two goals; no unsupported venue percentage is used to claim that both legs are likely.",
 
-    "Both clubs have made changes ahead of the new campaign. Everton have added further options to their squad, while Brennan Johnson has also arrived from Crystal Palace in a deal that saw Dwight McNeil move in the opposite direction. The changes add another interesting dimension to an already competitive opening-weekend fixture.",
+  "Everton versus Crystal Palace retains the published selection, Everton or Draw + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+],
 
-    "Crystal Palace remain capable of making this a difficult match, which is why the selection avoids relying on an Everton victory alone. The double-chance element covers both an Everton win and a draw, while the recent scoring pattern between the sides provides the basis for combining that protection with Over 1.5 Goals.",
-
-    "With Everton holding home advantage, an unbeaten record across the last five league meetings with Palace and both encounters last season producing at least three goals, Everton or Draw combined with Over 1.5 Goals is the main selection."
-  ],
-
-  picks: {
+picks: {
     main: "Everton or Draw + Over 1.5 Goals",
     odds: 1.70
   },
@@ -32,6 +28,15 @@ export const evertonVsCrystalPalace: EditorialPrediction = {
 
   publishedAt: "2026-08-16T19:07:21.000Z",
 
+sourceStatus: "partial",
+sources: [
+  {
+    name: "England 2025/26 final tables",
+    url: "https://www.rsssf.org/tablese/eng2026.html",
+    description: "Final 2025/26 competition table used only for season record, points and goal context.",
+    accessedAt: "2026-08-20T12:45:00.000-03:00",
+  },
+],
 
-  published: true,
+published: true,
 };

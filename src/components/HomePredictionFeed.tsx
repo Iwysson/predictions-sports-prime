@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { MatchPreview } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
@@ -14,6 +14,8 @@ import {
   validateHomePredictionSelection,
 } from "@/lib/match-feed";
 import { useI18n } from "@/i18n/I18nProvider";
+import { hydratePredictions } from "@/lib/live-predictions";
+import Link from "next/link";
 
 export function HomePredictionFeed({
   matches,
@@ -22,25 +24,40 @@ export function HomePredictionFeed({
 }) {
   const { t } = useI18n();
   const today = localTodayISO();
+  const [liveMatches, setLiveMatches] = useState(matches);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    // Static exports cannot change after deployment. Refresh fixture results in
+    // the browser so every published prediction moves to History automatically.
+    hydratePredictions(matches).then((hydrated) => {
+      if (!cancelled) setLiveMatches(hydrated);
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [matches]);
 
   const todayMatches = useMemo(
-    () => filterTodaysPublishedPredictions(matches, today),
-    [matches, today]
+    () => filterTodaysPublishedPredictions(liveMatches, today),
+    [liveMatches, today]
   );
 
   const latestMatches = useMemo(
-    () => selectLatestPublishedPredictions(matches, today, 10),
-    [matches, today]
+    () => selectLatestPublishedPredictions(liveMatches, today, 10),
+    [liveMatches, today]
   );
 
   const omittedMatches = useMemo(
-    () => findOmittedCurrentPredictions(matches, today),
-    [matches, today]
+    () => findOmittedCurrentPredictions(liveMatches, today),
+    [liveMatches, today]
   );
 
   const historyMatches = useMemo(
-    () => filterCompletedPredictions(matches).slice(0, 10),
-    [matches]
+    () => filterCompletedPredictions(liveMatches).slice(0, 10),
+    [liveMatches]
   );
 
   if (omittedMatches.length > 0) {
@@ -50,7 +67,7 @@ export function HomePredictionFeed({
   }
 
   const selectionErrors = validateHomePredictionSelection(
-    matches,
+    liveMatches,
     todayMatches,
     latestMatches,
     today,
@@ -193,6 +210,7 @@ export function HomePredictionFeed({
               ))}
             </div>
           ) : <div className="empty-state empty-state--compact"><strong>No completed predictions yet.</strong></div>}
+          <p className="history-all-link"><Link href="/results/">View all results</Link></p>
         </div>
       </section>
 

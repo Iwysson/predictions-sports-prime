@@ -5,53 +5,11 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { homeLeagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
 import { toMatchPreview } from "@/lib/editorial";
-import {
-  findFixtureByTeams,
-  loadLeagueSeason,
-} from "@/lib/openfootball";
-import type { MatchPreview } from "@/types";
-import { resolvePredictionResult } from "@/lib/prediction-results";
-
-async function hydrateMatchAtBuild(match: MatchPreview): Promise<MatchPreview> {
-  try {
-    const rounds = await loadLeagueSeason(match.league);
-    const fixture = findFixtureByTeams(
-      rounds,
-      match.homeTeam,
-      match.awayTeam
-    );
-
-    if (!fixture) return match;
-
-    const isLiveFixture = fixture.dataSource === "espn";
-
-    return {
-      ...match,
-      round: `Matchday ${fixture.round}`,
-      date: isLiveFixture
-        ? fixture.date
-        : match.date || fixture.date,
-      time: isLiveFixture && fixture.time !== "TBD"
-        ? fixture.time
-        : match.time !== "TBD"
-          ? match.time
-          : fixture.time,
-      homeTeam: fixture.homeTeam,
-      awayTeam: fixture.awayTeam,
-      fixtureStatus: fixture.status,
-      homeScore: fixture.homeScore,
-      awayScore: fixture.awayScore,
-    };
-  } catch {
-    return match;
-  }
-}
+import { hydratePredictions } from "@/lib/live-predictions";
+import Link from "next/link";
 
 export default async function Home() {
-  const hydratedMatches = await Promise.all(
-    matches.map(toMatchPreview).map(hydrateMatchAtBuild)
-  );
-  const resolvedMatches = hydratedMatches.map(resolvePredictionResult);
+  const resolvedMatches = await hydratePredictions(matches.map(toMatchPreview));
 
   return (
     <>
@@ -83,6 +41,17 @@ export default async function Home() {
       <div className="container bottom-ad-space">
         <AdSlot placement="home-bottom" />
       </div>
+
+      <section className="section section--compact" aria-labelledby="trust-links-title">
+        <div className="container">
+          <h2 id="trust-links-title">How this publication works</h2>
+          <p>
+            Learn about <Link href="/author/iwysson-nascimento/">the author</Link>,
+            our <Link href="/methodology/">analysis methodology</Link> and the
+            complete <Link href="/results/">prediction results</Link>.
+          </p>
+        </div>
+      </section>
     </>
   );
 }

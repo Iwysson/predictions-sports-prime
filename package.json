@@ -10,7 +10,16 @@
     "typecheck": "tsc --noEmit",
     "audit": "node scripts/audit-seo.mjs",
     "audit:seo": "node scripts/audit-seo.mjs",
-    "audit:fixtures": "node scripts/audit-fixture-pipeline.mjs"
+    "audit:fixtures": "node scripts/audit-fixture-pipeline.mjs",
+    "audit:sources": "node scripts/audit-editorial-sources.mjs",
+    "audit:results": "node scripts/audit-results.mjs",
+    "audit:content": "node scripts/audit-content-quality.mjs",
+    "audit:technical-seo": "node scripts/audit-technical-seo.mjs",
+    "baseline:trust:create": "node scripts/create-site-trust-baseline.mjs",
+    "audit:baseline:phase4": "node scripts/audit-phase4-baseline.mjs",
+    "audit:baseline:trust": "node scripts/audit-site-trust-baseline.mjs",
+    "baseline:create": "node scripts/create-editorial-baseline.mjs",
+    "audit:baseline": "node scripts/audit-editorial-baseline.mjs"
   },
   "dependencies": {
     "next": "latest",

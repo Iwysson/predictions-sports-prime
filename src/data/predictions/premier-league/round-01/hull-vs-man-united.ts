@@ -6,20 +6,18 @@ export const hullVsManUnited: EditorialPrediction = {
   awayTeam: "Manchester United",
 
   analysis: [
-    "Manchester United begin their Premier League campaign away to newly promoted Hull City. United enter the match as favourites, but their away record against lower-ranked opposition last season suggests this could be a more competitive fixture than the pre-match expectations imply.",
+  "Hull City-Manchester United loses Both Teams to Score — Yes if either side keeps a clean sheet; that two-sided dependency is the central risk, and the available table cannot turn it into a verified probability.",
 
-    "Against Wolves, Burnley, West Ham, Leeds United and Sunderland away from home in the 2025/26 Premier League, Manchester United recorded one win and four draws. They scored eight goals and conceded five across those five matches.",
+  "Hull City-Manchester United uses England 2025/26 final tables as a final-table reference; xG, personnel, detailed head-to-head and venue-percentage claims were removed because that source does not verify them.",
 
-    "The most relevant trend for this selection is Manchester United's defensive record in those fixtures. They conceded in four of the five matches, while both teams scored in four of them, representing an 80% BTTS rate across this sample.",
+  "The most relevant trend for this selection is Manchester United's defensive record in those fixtures.",
 
-    "Manchester United have strengthened their midfield with Andrey Santos and Youri Tielemans, while Karl Darlow has also joined the squad. The additions provide further depth, although the team is still entering the new campaign with areas of the squad undergoing development.",
+  "Both Teams to Score — Yes needs a goal from both Hull City and Manchester United; one clean sheet defeats the position even if the match otherwise follows the expected balance.",
 
-    "Hull City have also reinforced their squad following promotion, with Nobel Mendy, Lucas Gourna-Douath and Joe Gelhardt among their additions. Playing at home in their opening Premier League fixture should provide Hull with extra motivation, while the unpredictability associated with a newly promoted side could make the contest more open than expected.",
+  "Hull City versus Manchester United retains the published selection, Both Teams to Score — Yes, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+],
 
-    "Manchester United possess the stronger squad and should create scoring opportunities, but their recent away record against lower-ranked opposition provides a clear reason to consider Hull capable of contributing to the scoreline. With United conceding in four of the five comparable away fixtures and BTTS landing in 80% of that sample, both teams finding the net is the main selection for this match."
-  ],
-
-  picks: {
+picks: {
     main: "Both Teams to Score — Yes",
     odds: 1.93
   },
@@ -31,6 +29,15 @@ export const hullVsManUnited: EditorialPrediction = {
 
   publishedAt: "2026-08-16T19:07:21.000Z",
 
+sourceStatus: "partial",
+sources: [
+  {
+    name: "England 2025/26 final tables",
+    url: "https://www.rsssf.org/tablese/eng2026.html",
+    description: "Final 2025/26 competition table used only for season record, points and goal context.",
+    accessedAt: "2026-08-20T12:45:00.000-03:00",
+  },
+],
 
-  published: true,
+published: true,
 };
