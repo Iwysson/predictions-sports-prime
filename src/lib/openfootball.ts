@@ -298,6 +298,23 @@ function eventStatus(event: LiveEvent): OpenFootballGame["status"] {
   return normalizeProviderStatus(status);
 }
 
+function eventKickoffInSiteTimezone(value: string) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Fortaleza",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23",
+  }).formatToParts(new Date(value));
+  const fields = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return {
+    date: `${fields.year}-${fields.month}-${fields.day}`,
+    time: `${fields.hour}:${fields.minute}`,
+  };
+}
+
 async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[]) {
   const league = leaguesBySlug[slug];
   const dates = league.season.includes("/")
@@ -322,9 +339,9 @@ async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[])
     const fixture = findFixtureByTeams(rounds, home.team.displayName, away.team.displayName);
     if (!fixture) continue;
 
-    const date = new Date(event.date);
-    fixture.date = event.date.slice(0, 10);
-    fixture.time = `${String(date.getUTCHours()).padStart(2, "0")}:${String(date.getUTCMinutes()).padStart(2, "0")}`;
+    const kickoff = eventKickoffInSiteTimezone(event.date);
+    fixture.date = kickoff.date;
+    fixture.time = kickoff.time;
     fixture.status = eventStatus(event);
     fixture.dataSource = "espn";
 

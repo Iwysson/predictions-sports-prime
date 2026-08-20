@@ -15,7 +15,7 @@ import {
   validateLeagueRounds,
   validateRoundForDisplay,
 } from "@/lib/data-validation";
-import { canRenderComingSoon, isNonPlayableFixture } from "@/lib/fixture-status";
+import { canRenderComingSoon, isLiveFixture, isPlayableUpcoming } from "@/lib/fixture-status";
 import { localTodayISO, sortMatchesByKickoff } from "@/lib/match-feed";
 
 type SupportedSlug = LeagueSlug;
@@ -147,7 +147,11 @@ export function LiveLeagueRound({
     if (state === "validated") {
       const currentRoundPublished = games
         .map((game) => ({ game, manual: findManualPrediction(game, manualMatches) }))
-        .filter(({ game, manual }) => Boolean(manual) && !isNonPlayableFixture(game.status))
+        .filter(
+          ({ game, manual }) =>
+            Boolean(manual) &&
+            (isPlayableUpcoming(game.status) || isLiveFixture(game.status))
+        )
         .map(({ game }) => toMatch(league, game, manualMatches));
 
       const currentRoundComingSoon = games
