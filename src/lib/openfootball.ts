@@ -67,6 +67,7 @@ const MONTHS: Record<string, number> = {
 };
 
 const promises = new Map<string, Promise<OpenFootballRound[]>>();
+const dailyPromises = new Map<string, Promise<OpenFootballGame[]>>();
 
 type LiveCompetitor = {
   homeAway: "home" | "away";
@@ -371,6 +372,57 @@ export function loadLeagueSeason(
   }
 
   return promises.get(slug)!;
+}
+
+export function loadDailyLeagueFixtures(slug: LeagueSlug, date: string) {
+  const cacheKey = `${slug}:${date}`;
+
+  if (!dailyPromises.has(cacheKey)) {
+    dailyPromises.set(cacheKey, fetchDailyLeagueFixtures(slug, date));
+  }
+
+  return dailyPromises.get(cacheKey)!;
+}
+
+async function fetchDailyLeagueFixtures(slug: LeagueSlug, date: string) {
+  const league = leaguesBySlug[slug];
+  const compactDate = date.replace(/-/g, "");
+  const response = await fetch(
+    `https://site.api.espn.com/apis/site/v2/sports/soccer/${league.liveDataId}/scoreboard?dates=${compactDate}`,
+    { headers: { Accept: "application/json" }, cache: "no-store" }
+  );
+
+  if (!response.ok) {
+    throw new Error(`${league.name}: daily fixtures returned ${response.status}`);
+  }
+
+  const data = (await response.json()) as { events?: LiveEvent[] };
+
+  return (data.events ?? []).flatMap((event, index) => {
+    const competitors = event.competitions[0]?.competitors ?? [];
+    const home = competitors.find((item) => item.homeAway === "home");
+    const away = competitors.find((item) => item.homeAway === "away");
+    if (!home || !away) return [];
+
+    const kickoff = eventKickoffInSiteTimezone(event.date);
+    if (kickoff.date !== date) return [];
+
+    const status = eventStatus(event);
+    const homeScore = Number(home.score);
+    const awayScore = Number(away.score);
+
+    return [{
+      round: index + 1,
+      date: kickoff.date,
+      time: kickoff.time,
+      homeTeam: cleanTeamName(home.team.displayName),
+      awayTeam: cleanTeamName(away.team.displayName),
+      homeScore: Number.isFinite(homeScore) ? homeScore : null,
+      awayScore: Number.isFinite(awayScore) ? awayScore : null,
+      status,
+      dataSource: "espn" as const,
+    }];
+  });
 }
 
 function localTodayIso() {

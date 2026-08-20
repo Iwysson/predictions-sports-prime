@@ -28,11 +28,13 @@ export async function hydratePrediction(match: MatchPreview): Promise<MatchPrevi
     }
 
     const isLiveData = fixture.dataSource === "espn";
+    const providerCanOverrideKickoff = isLiveData &&
+      (fixture.status === "in-progress" || fixture.status === "completed" || !match.date);
     const hydrated: MatchPreview = {
       ...match,
       round: `Matchday ${fixture.round}`,
-      date: isLiveData ? fixture.date : match.date || fixture.date,
-      time: isLiveData && fixture.time !== "TBD"
+      date: providerCanOverrideKickoff ? fixture.date : match.date || fixture.date,
+      time: providerCanOverrideKickoff && fixture.time !== "TBD"
         ? fixture.time
         : match.time !== "TBD"
           ? match.time

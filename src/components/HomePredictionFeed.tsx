@@ -15,7 +15,7 @@ import {
 } from "@/lib/match-feed";
 import { useI18n } from "@/i18n/I18nProvider";
 import { hydratePredictions } from "@/lib/live-predictions";
-import { loadLeagueSeason, teamNamesMatch, type OpenFootballGame } from "@/lib/openfootball";
+import { loadDailyLeagueFixtures, loadLeagueSeason, teamNamesMatch, type OpenFootballGame } from "@/lib/openfootball";
 import { isLiveFixture, isPlayableUpcoming } from "@/lib/fixture-status";
 import Link from "next/link";
 
@@ -38,27 +38,35 @@ export function HomePredictionFeed({
       if (!cancelled) setLiveMatches(hydrated);
     });
 
-    Promise.allSettled(
-      leagues.map(async (league) => ({
-        league: league.slug,
-        rounds: await loadLeagueSeason(league.slug),
-      }))
-    ).then((seasons) => {
+    Promise.allSettled(leagues.map(async (league) => {
+      try {
+        return {
+          league: league.slug,
+          games: await loadDailyLeagueFixtures(league.slug, today),
+        };
+      } catch {
+        const rounds = await loadLeagueSeason(league.slug);
+        return {
+          league: league.slug,
+          games: rounds.flatMap((round) => round.games),
+        };
+      }
+    })).then((seasons) => {
       if (cancelled) return;
       const fixtures = seasons.flatMap((season) => {
         if (season.status !== "fulfilled") return [];
-        const { league, rounds } = season.value;
-        return rounds.flatMap((round) =>
-          round.games
-            .filter(
-              (game) =>
-                game.date === today &&
-                (isPlayableUpcoming(game.status) || isLiveFixture(game.status))
-            )
-            .map((game) => toTodayFixture(league, game, matches))
-        );
+        const { league, games } = season.value;
+        return games
+          .filter(
+            (game) =>
+              game.date === today &&
+              (isPlayableUpcoming(game.status) || isLiveFixture(game.status))
+          )
+          .map((game) => toTodayFixture(league, game, matches));
       });
-      setTodayFixtures(sortTodayFixtures(fixtures));
+      setTodayFixtures(sortTodayFixtures(
+        fixtures.filter((fixture) => fixture.status === "published")
+      ));
     });
 
     return () => {

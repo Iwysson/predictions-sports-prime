@@ -20,8 +20,9 @@ picks: {
 },
 
 matchInfo: {
-  date: "2026-08-23",
-  time: "17:00",
+  date: "2026-08-20",
+  time: "16:00",
+  venue: "Estadio Ontime Butarque",
 },
 
 publishedAt: "2026-08-17T14:51:30.000Z",
