@@ -52,6 +52,16 @@ export async function hydratePrediction(match: MatchPreview): Promise<MatchPrevi
   }
 }
 
-export function hydratePredictions(matches: MatchPreview[]) {
+export async function hydratePredictions(
+  matches: MatchPreview[],
+  options: { forceRefresh?: boolean } = {}
+) {
+  if (options.forceRefresh) {
+    const leagues = [...new Set(matches.map((match) => match.league))];
+    await Promise.allSettled(
+      leagues.map((league) => loadLeagueSeason(league, { forceRefresh: true }))
+    );
+  }
+
   return Promise.all(matches.map(hydratePrediction));
 }

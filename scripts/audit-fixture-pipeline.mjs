@@ -34,6 +34,10 @@ assert.equal(findCurrentOrNextDatedRound([
   { round: 1, games: [{ date: "2026-08-09", status: "scheduled" }] },
   { round: 3, games: [{ date: "2026-08-22", status: "scheduled" }] },
 ], "2026-08-18")?.round, 3, "E2: stale scheduled fixtures must not block the current dated round");
+assert.equal(findCurrentOrNextDatedRound([
+  { round: 1, games: [{ date: "2026-08-25", status: "scheduled" }] },
+  { round: 2, games: [{ date: "2026-08-21", status: "scheduled" }] },
+], "2026-08-20")?.round, 2, "E3: a rescheduled earlier matchday must not block the round played next");
 
 assert.equal(canRenderComingSoon("scheduled", true), false, "G: published scheduled fixture uses prediction card");
 assert.equal(canRenderComingSoon("scheduled", false), true, "H: unpublished scheduled fixture may be coming soon");

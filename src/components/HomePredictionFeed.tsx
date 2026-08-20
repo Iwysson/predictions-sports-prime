@@ -16,7 +16,7 @@ import {
 import { useI18n } from "@/i18n/I18nProvider";
 import { hydratePredictions } from "@/lib/live-predictions";
 import { loadDailyLeagueFixtures, loadLeagueSeason, teamNamesMatch, type OpenFootballGame } from "@/lib/openfootball";
-import { isLiveFixture, isPlayableUpcoming } from "@/lib/fixture-status";
+import { isCompletedFixture, isLiveFixture, isNonPlayableFixture, isPlayableUpcoming } from "@/lib/fixture-status";
 import Link from "next/link";
 
 export function HomePredictionFeed({
@@ -34,9 +34,14 @@ export function HomePredictionFeed({
 
     // Static exports cannot change after deployment. Refresh fixture results in
     // the browser so every published prediction moves to History automatically.
-    hydratePredictions(matches).then((hydrated) => {
-      if (!cancelled) setLiveMatches(hydrated);
-    });
+    const refreshResults = () => {
+      hydratePredictions(matches, { forceRefresh: true }).then((hydrated) => {
+        if (!cancelled) setLiveMatches(hydrated);
+      });
+    };
+
+    refreshResults();
+    const refreshTimer = window.setInterval(refreshResults, 60_000);
 
     Promise.allSettled(leagues.map(async (league) => {
       try {
@@ -71,6 +76,7 @@ export function HomePredictionFeed({
 
     return () => {
       cancelled = true;
+      window.clearInterval(refreshTimer);
     };
   }, [matches, today]);
 
@@ -79,9 +85,23 @@ export function HomePredictionFeed({
     [liveMatches, today]
   );
 
-  const displayedTodayMatches = todayFixtures.length > 0
-    ? todayFixtures
-    : todayMatches;
+  const displayedTodayMatches = useMemo(() => {
+    if (todayFixtures.length === 0) return todayMatches;
+
+    return todayFixtures
+      .map((fixture) => liveMatches.find(
+        (match) =>
+          match.league === fixture.league &&
+          teamNamesMatch(match.homeTeam, fixture.homeTeam) &&
+          teamNamesMatch(match.awayTeam, fixture.awayTeam)
+      ) ?? fixture)
+      .filter(
+        (match) =>
+          match.status === "published" &&
+          !isCompletedFixture(match.fixtureStatus) &&
+          !isNonPlayableFixture(match.fixtureStatus)
+      );
+  }, [liveMatches, todayFixtures, todayMatches]);
 
   const latestMatches = useMemo(
     () => selectLatestPublishedPredictions(liveMatches, today, 10),

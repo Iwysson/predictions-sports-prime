@@ -358,9 +358,14 @@ async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[])
 }
 
 export function loadLeagueSeason(
-  slug: LeagueSlug
+  slug: LeagueSlug,
+  options: { forceRefresh?: boolean } = {}
 ) {
   const config = openLeagueConfigs[slug];
+
+  if (options.forceRefresh) {
+    promises.delete(slug);
+  }
 
   if (!promises.has(slug)) {
     promises.set(

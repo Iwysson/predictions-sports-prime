@@ -21,8 +21,20 @@ export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] 
 
   useEffect(() => {
     let cancelled = false;
-    hydratePredictions(matches).then((resolved) => { if (!cancelled) setResolvedMatches(resolved); });
-    return () => { cancelled = true; };
+
+    const refreshResults = () => {
+      hydratePredictions(matches, { forceRefresh: true }).then((resolved) => {
+        if (!cancelled) setResolvedMatches(resolved);
+      });
+    };
+
+    refreshResults();
+    const refreshTimer = window.setInterval(refreshResults, 60_000);
+
+    return () => {
+      cancelled = true;
+      window.clearInterval(refreshTimer);
+    };
   }, [matches]);
 
   const history = useMemo(() => completePredictionHistory(resolvedMatches), [resolvedMatches]);

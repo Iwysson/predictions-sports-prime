@@ -63,11 +63,26 @@ export function findCurrentOrNextDatedRound<
 
   if (liveRound) return liveRound;
 
-  return rounds.find((round) =>
-    round.games.some(
-      (game) => isPlayableUpcoming(game.status) && game.date >= today
-    )
-  ) ?? findFirstActiveRound(rounds);
+  const datedRounds = rounds
+    .map((round, index) => ({
+      round,
+      index,
+      nextDate: round.games
+        .filter(
+          (game) => isPlayableUpcoming(game.status) && game.date >= today
+        )
+        .map((game) => game.date)
+        .sort()[0],
+    }))
+    .filter((item) => Boolean(item.nextDate))
+    .sort(
+      (left, right) =>
+        left.nextDate!.localeCompare(right.nextDate!) || left.index - right.index
+    );
+
+  // A postponed matchday may be rescheduled after a later matchday. Select the
+  // round that actually plays next, rather than trusting season-file order.
+  return datedRounds[0]?.round ?? findFirstActiveRound(rounds);
 }
 
 export function isValidFinalScore(homeScore: unknown, awayScore: unknown) {
