@@ -6,7 +6,7 @@ export const dictionaries = {
     today: "Today",
     todaysPredictions: "Today's Predictions",
     leagues: "Leagues",
-    topLeagues: "Top Leagues",
+    topLeagues: "Top Prediction Leagues",
     competitions: "Competitions",
     latestPredictions: "Latest Predictions",
     upcoming: "Upcoming",
