@@ -3,7 +3,7 @@ import { join, relative, sep } from "node:path";
 
 const root = process.cwd();
 const out = join(root, "out");
-const host = "https://predictions-sports-prime.pages.dev";
+const host = "https://predictions-sports-prime.com";
 const errors = [], warnings = [];
 function walk(dir) { return readdirSync(dir).flatMap((name) => { const path = join(dir, name); return statSync(path).isDirectory() ? walk(path) : [path]; }); }
 const htmlFiles = walk(out).filter((file) => file.endsWith("index.html"));

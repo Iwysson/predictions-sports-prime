@@ -3,7 +3,7 @@ import { join, relative, sep } from "node:path";
 
 const root = process.cwd();
 const outDir = join(root, "out");
-const siteUrl = "https://predictions-sports-prime.pages.dev";
+const siteUrl = "https://predictions-sports-prime.com";
 const authorName = "Iwysson Nascimento";
 const authorRoute = "/author/iwysson-nascimento/";
 const authorUrl = `${siteUrl}${authorRoute}`;

@@ -16,7 +16,7 @@ export const siteConfig = {
    */
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-    "https://predictions-sports-prime.pages.dev",
+    "https://predictions-sports-prime.com",
 
   locale: "en",
   twitterCard: "summary_large_image" as const,
