@@ -45,7 +45,7 @@ export function MatchCard({ match }: { match: MatchPreview }) {
 
       <div className="compact-match-footer">
         <span className={`prediction-pill prediction-pill--${match.status}`}>
-          <span>★</span>
+          <span aria-hidden="true">✓</span>
           {match.status === "published"
             ? t("predictionAvailable")
             : showComingSoon ? t("comingSoon") : match.fixtureStatus?.toUpperCase()}

@@ -16,7 +16,7 @@ export function LeaguePageText({
     <>
       <div className="section-heading section-heading--compact">
         <div className="heading-with-icon">
-          <span className="section-icon">▣</span>
+          <span className="section-icon" aria-hidden="true">✓</span>
           <div>
             <span className="eyebrow">{t("fixtures")}</span>
             <h2>{t("currentRound")}</h2>
