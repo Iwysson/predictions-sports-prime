@@ -15,12 +15,18 @@ export const veneziaVsLecce: EditorialPrediction = {
   "Venezia versus Lecce retains the published selection, Venezia or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
-picks: {
+  picks: {
     main: "Venezia or Draw (1X) + Over 1.5 Goals",
     odds: 1.88
   },
+  matchInfo: {
+    date: "2026-08-23",
+    time: "13:30",
+  },
 
   publishedAt: "2026-08-18T13:58:44.000Z",
+
+  updatedAt: "2026-08-21T18:02:31.241Z",
 
 sourceStatus: "partial",
 sources: [

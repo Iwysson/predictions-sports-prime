@@ -15,12 +15,18 @@ export const romaVsFiorentina: EditorialPrediction = {
   "Roma versus Fiorentina retains the published selection, Roma Over 1.5 Team Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
-picks: {
+  picks: {
     main: "Roma Over 1.5 Team Goals",
     odds: 1.70
   },
+  matchInfo: {
+    date: "2026-08-24",
+    time: "15:45",
+  },
 
   publishedAt: "2026-08-18T13:58:44.000Z",
+
+  updatedAt: "2026-08-21T18:02:28.197Z",
 
 sourceStatus: "partial",
 sources: [

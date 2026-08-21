@@ -17,12 +17,18 @@ export const bolognaVsLazio: EditorialPrediction = {
   "Bologna versus Lazio retains the published selection, Bologna or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
-picks: {
+  picks: {
     main: "Bologna or Draw (1X) + Over 1.5 Goals",
     odds: 1.85
   },
+  matchInfo: {
+    date: "2026-08-24",
+    time: "13:30",
+  },
 
   publishedAt: "2026-08-18T13:58:44.000Z",
+
+  updatedAt: "2026-08-21T18:02:22.692Z",
 
 sourceStatus: "partial",
 sources: [

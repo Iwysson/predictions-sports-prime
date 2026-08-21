@@ -17,12 +17,18 @@ export const frosinoneVsJuventus: EditorialPrediction = {
   "Frosinone-Juventus loses Both Teams to Score — Yes if either side keeps a clean sheet; that two-sided dependency is the central risk, and the available table cannot turn it into a verified probability."
 ],
 
-picks: {
+  picks: {
     main: "Both Teams to Score — Yes",
     odds: 1.98
   },
+  matchInfo: {
+    date: "2026-08-23",
+    time: "13:30",
+  },
 
   publishedAt: "2026-08-18T13:58:44.000Z",
+
+  updatedAt: "2026-08-21T18:02:23.723Z",
 
 sourceStatus: "partial",
 sources: [

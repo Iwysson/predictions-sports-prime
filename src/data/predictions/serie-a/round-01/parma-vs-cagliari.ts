@@ -22,10 +22,13 @@ picks: {
 },
 
 matchInfo: {
-  date: "2026-08-23",
+  date: "2026-08-22",
+  time: "15:45",
 },
 
 publishedAt: "2026-08-17T14:51:30.000Z",
+
+updatedAt: "2026-08-21T18:02:27.269Z",
 
 sourceStatus: "partial",
 sources: [

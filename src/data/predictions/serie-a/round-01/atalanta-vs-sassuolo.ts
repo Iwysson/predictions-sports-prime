@@ -15,12 +15,18 @@ export const atalantaVsSassuolo: EditorialPrediction = {
   "Atalanta versus Sassuolo retains the published selection, Over 2.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
-picks: {
+  picks: {
     main: "Over 2.5 Goals",
     odds: 1.70
   },
+  matchInfo: {
+    date: "2026-08-23",
+    time: "15:45",
+  },
 
   publishedAt: "2026-08-18T13:58:44.000Z",
+
+  updatedAt: "2026-08-21T18:02:21.582Z",
 
 sourceStatus: "partial",
 sources: [
