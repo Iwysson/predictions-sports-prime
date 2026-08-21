@@ -13,30 +13,35 @@ export default async function Home() {
 
   return (
     <>
-      <HomePredictionFeed matches={resolvedMatches} />
+      <HomePredictionFeed
+        matches={resolvedMatches}
+        beforeHistory={
+          <>
+            <div className="container inline-ad-space">
+              <AdSlot placement="home-middle" />
+            </div>
 
-      <div className="container inline-ad-space">
-        <AdSlot placement="home-middle" />
-      </div>
+            <section
+              className="section section--compact section--muted"
+              id="leagues"
+            >
+              <div className="container">
+                <SectionTitle
+                  icon="♜"
+                  eyebrowKey="competitions"
+                  titleKey="topLeagues"
+                />
 
-      <section
-        className="section section--compact section--muted"
-        id="leagues"
-      >
-        <div className="container">
-          <SectionTitle
-            icon="♜"
-            eyebrowKey="competitions"
-            titleKey="topLeagues"
-          />
-
-          <div className="league-grid league-grid--compact">
-            {homeLeagues.map((league) => (
-              <LeagueCard key={league.slug} {...league} />
-            ))}
-          </div>
-        </div>
-      </section>
+                <div className="league-grid league-grid--compact">
+                  {homeLeagues.map((league) => (
+                    <LeagueCard key={league.slug} {...league} />
+                  ))}
+                </div>
+              </div>
+            </section>
+          </>
+        }
+      />
 
       <div className="container bottom-ad-space">
         <AdSlot placement="home-bottom" />

@@ -71,18 +71,16 @@ code { color: var(--accent); }
   min-width: 0;
 }
 
-.brand-mark {
+.brand-symbol {
   width: 38px;
   height: 38px;
-  border-radius: 11px;
-  display: grid;
-  place-items: center;
-  background: var(--accent);
-  color: #04110a;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: .08em;
-  box-shadow: 0 0 22px rgba(85,227,143,.13);
+  flex: 0 0 auto;
+  color: var(--accent);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .brand strong,
@@ -846,7 +844,7 @@ code { color: var(--accent); }
 
   .header-inner { min-height: 58px; }
 
-  .brand-mark {
+  .brand-symbol {
     width: 36px;
     height: 36px;
   }
@@ -1487,10 +1485,9 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
 }
 
 @media (max-width: 430px) {
-  .brand-mark {
+  .brand-symbol {
     width: 32px;
     height: 32px;
-    border-radius: 9px;
   }
 
   .language-selector {
@@ -3408,10 +3405,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   backdrop-filter: blur(10px);
 }
 .header-inner { min-height: 70px; }
-.brand-mark {
-  width: 40px; height: 40px; color: #fff; background: var(--accent);
-  border-radius: 9px; box-shadow: none;
-}
+.brand-symbol { width: 40px; height: 40px; color: var(--accent); }
 .brand strong { color: var(--text-primary); font-size: 16px; letter-spacing: -.01em; }
 .brand strong em { color: var(--accent); }
 .brand small { color: var(--text-muted); font-size: 11px; }
@@ -3647,9 +3641,9 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   .container { width: min(100% - 22px, 1160px); }
   .header-inner { gap: 8px; }
   .header-actions { flex: 0 0 auto; gap: 6px; }
-  .brand > span { display: none; }
+  .brand-copy { display: none; }
   .brand small { display: none; }
-  .brand-mark { width: 36px; height: 36px; }
+  .brand-symbol { width: 36px; height: 36px; }
   .language-selector { min-width: 96px; }
   .section-heading { gap: 10px; }
   .date-chip { font-size: 11px; }

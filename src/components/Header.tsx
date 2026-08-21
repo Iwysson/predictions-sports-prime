@@ -13,9 +13,16 @@ export function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
-          <span className="brand-mark">PSP</span>
+          <svg
+            className="brand-symbol"
+            viewBox="0 0 48 48"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M8 25.5 19.5 37 41 11.5" />
+          </svg>
 
-          <span>
+          <span className="brand-copy">
             <strong>{t("brandName")}</strong>
             <small>{t("brandTagline")}</small>
           </span>

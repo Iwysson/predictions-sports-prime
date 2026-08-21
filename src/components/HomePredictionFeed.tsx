@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { MatchPreview } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
@@ -21,8 +21,10 @@ import Link from "next/link";
 
 export function HomePredictionFeed({
   matches,
+  beforeHistory,
 }: {
   matches: MatchPreview[];
+  beforeHistory?: ReactNode;
 }) {
   const { t } = useI18n();
   const today = localTodayISO();
@@ -244,6 +246,8 @@ export function HomePredictionFeed({
           )}
         </div>
       </section>
+
+      {beforeHistory}
 
       <section className="section section--compact" id="history">
         <div className="container">

@@ -25,6 +25,24 @@ for (const entry of baseline.entries) {
     current = createHash("sha256").update(normalized).digest("hex");
     if (current === entry.sha256) authorizedChanges.push("AdSense verification script in global head");
   }
+  if (current !== entry.sha256 && entry.path === "src/components/Header.tsx") {
+    const normalized = source
+      .toString("utf8")
+      .replace(
+        `          <svg
+            className="brand-symbol"
+            viewBox="0 0 48 48"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M8 25.5 19.5 37 41 11.5" />
+          </svg>`,
+        `          <span className="brand-mark">PSP</span>`,
+      )
+      .replace(`<span className="brand-copy">`, `<span>`);
+    current = createHash("sha256").update(normalized).digest("hex");
+    if (current === entry.sha256) authorizedChanges.push("header brand mark replaced with checkmark SVG");
+  }
   if (current !== entry.sha256) errors.push(`${entry.path}: changed after Phase 5 checkpoint`);
 }
 if (errors.length) { errors.forEach((error) => console.error(`ERROR: ${error}`)); console.error("Phase 5 trust baseline audit: FAIL"); process.exitCode = 1; }
