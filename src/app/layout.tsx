@@ -114,8 +114,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <head>
         <AdSenseScript />
+      </head>
+      <body>
         <ConsentIntegration />
         <JsonLd data={websiteJsonLd()} />
         <JsonLd data={organizationJsonLd()} />
