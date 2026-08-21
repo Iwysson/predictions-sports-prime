@@ -6,9 +6,11 @@ import { editorialAuthorPersonJsonLd } from "@/lib/editorial-identity";
 
 export function matchSeoTitle(match: Match) {
   const teams = `${match.homeTeam} vs ${match.awayTeam}`;
-  const title = `${teams} Prediction & Betting Tips`;
+  const title = `${teams} Prediction & Betting Tips | ${siteConfig.name}`;
 
-  return title.length <= 70 ? title : `${teams} Prediction`;
+  return title.length <= 70
+    ? title
+    : `${teams} Prediction | ${siteConfig.name}`;
 }
 
 export function matchSeoDescription(match: Match) {

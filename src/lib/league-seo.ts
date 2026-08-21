@@ -8,7 +8,7 @@ export function leagueCanonicalPath(league: LeagueConfig) {
 }
 
 export function leagueSeoTitle(league: LeagueConfig) {
-  return `${league.name} Predictions & Betting Tips`;
+  return `${league.name} Predictions & Betting Tips | ${siteConfig.name}`;
 }
 
 export function leagueSeoDescription(league: LeagueConfig) {
