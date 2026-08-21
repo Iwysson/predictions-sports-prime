@@ -1,3 +1,6 @@
+const canonicalSiteUrl = "https://predictions-sports-prime.com";
+const localSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+
 export const siteConfig = {
   name: "Predictions Sports Prime",
   shortName: "PSP",
@@ -7,16 +10,18 @@ export const siteConfig = {
 
   /*
    * IMPORTANT:
-   * Set NEXT_PUBLIC_SITE_URL in production.
+   * Production metadata must always use the canonical public origin. The
+   * environment override exists only for local preview development.
    *
    * Example:
-   * NEXT_PUBLIC_SITE_URL=https://predictionssportsprime.com
+   * NEXT_PUBLIC_SITE_URL=http://localhost:3000
    *
    * Local development can override this with http://localhost:3000.
    */
   url:
-    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-    "https://predictions-sports-prime.com",
+    process.env.NODE_ENV === "production"
+      ? canonicalSiteUrl
+      : localSiteUrl || canonicalSiteUrl,
 
   locale: "en",
   twitterCard: "summary_large_image" as const,
