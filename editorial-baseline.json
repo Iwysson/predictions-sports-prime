@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "hashAlgorithm": "sha256(JSON.stringify(decoded analysis string array), UTF-8)",
-  "publishedCount": 52,
-  "draftCount": 72,
+  "publishedCount": 62,
+  "draftCount": 62,
   "entries": [
     {
       "slug": "angers-vs-lille",
@@ -15,7 +15,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "7d3dae2c336dec75c7aecfdaa375f0d640bc42a49b65f03f1820d16f8123c025"
+      "analysisHash": "bf99ea711536ee88eb882ff89424b896ef7cceb841cd866951f4871fae437637"
     },
     {
       "slug": "arsenal-vs-coventry-city",
@@ -28,7 +28,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "5824ad60e7c2e45ceeba94ed9d19c0eadd19d74487a7c9b93d91156ac4420e5d"
+      "analysisHash": "02b48ec11a348b97af57463e2fc9ee21e9664d4b360f791d1bd8c177fb0ec9df"
     },
     {
       "slug": "atalanta-vs-sassuolo",
@@ -41,7 +41,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "1d01d6227dd03ef8c874e297869bb9600afb4f05447afa7e66c8da4cc8ea25cf"
+      "analysisHash": "b4c3ed88da838e5014c329361c0fff671631ab52d0cc204b984f6cacee6ce515"
     },
     {
       "slug": "athletic-club-vs-sevilla",
@@ -54,7 +54,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "39b96e848d51d46daa2981c83e9ed7e101bfe8d4a03e40038ae53e99d8fb8379"
+      "analysisHash": "a1d053d5fb981059c48c47f9c414aeb94f55eab7a04dc85ee8838b403b8a5933"
     },
     {
       "slug": "atletico-madrid-vs-malaga",
@@ -70,7 +70,7 @@
         "home": 2,
         "away": 0
       },
-      "analysisHash": "a6213d62b140f263f84babc0251e71efc91e06628cf884109db2dfa41e27638e"
+      "analysisHash": "cea2727dead3d84e64d55186448cb9d2d3a45e057fc1ab54cc5f65e833b75e58"
     },
     {
       "slug": "bologna-vs-lazio",
@@ -83,7 +83,20 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "c9f5143a5c94208d2d4610d1887e8efb2352b5508b6b87be98d9bb9c90009eaf"
+      "analysisHash": "587cce7c567694fe4a2f8cae265e5417c52cb78adc7bb8c781a3d33f9c22ba1e"
+    },
+    {
+      "slug": "botafogo-vs-athletico-paranaense",
+      "league": "brasileirao-serie-a",
+      "published": true,
+      "mainPick": "Botafogo or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.8,
+      "publishedAt": "2026-08-21T17:57:55.682Z",
+      "updatedAt": null,
+      "resultStatus": null,
+      "resultSource": null,
+      "finalScore": null,
+      "analysisHash": "b321c385e32ba2972609c56fd24422bcb099d44d5bf4199afe236783e8952316"
     },
     {
       "slug": "brentford-vs-tottenham-hotspur",
@@ -96,7 +109,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "c47aabc17faa4a103fb95daf5950c9a37409fee18da902e5a75d2a60796efded"
+      "analysisHash": "9ae7ec0f72fbaeb0f4c59250bd6204585fc5d5bf712ac1952b778fa75ca7117b"
     },
     {
       "slug": "brighton-hove-albion-vs-aston-villa",
@@ -109,7 +122,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "e67788c8a13d1b4b65ebbe7581fbf6f3cf39e4c12fc7a4bc0b767d2b619a6fcf"
+      "analysisHash": "87c8b92eb597c1e5796eda39cca2a9d83776fa7464a56ff0aa9e9e37728296a6"
     },
     {
       "slug": "casa-pia-vs-benfica",
@@ -122,7 +135,46 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "67ea76c3fc8e3802939222875de4a8ea91619b2aeee7af10de2b60a5eea9ffde"
+      "analysisHash": "def4e3ccbd633ee7b3d445dcc8cbe84ce6888e4edb581e49e1991e8f55d07df4"
+    },
+    {
+      "slug": "chapecoense-vs-sao-paulo",
+      "league": "brasileirao-serie-a",
+      "published": true,
+      "mainPick": "São Paulo or Draw (X2) + Under 3.5 Goals",
+      "odds": 1.72,
+      "publishedAt": "2026-08-21T17:57:56.625Z",
+      "updatedAt": null,
+      "resultStatus": null,
+      "resultSource": null,
+      "finalScore": null,
+      "analysisHash": "476b883921c9278a803b142b462f8ebd7c9681e01421c024139e5363ac2b5757"
+    },
+    {
+      "slug": "coritiba-vs-corinthians",
+      "league": "brasileirao-serie-a",
+      "published": true,
+      "mainPick": "Coritiba or Draw (1X)",
+      "odds": 1.57,
+      "publishedAt": "2026-08-21T17:57:57.466Z",
+      "updatedAt": null,
+      "resultStatus": null,
+      "resultSource": null,
+      "finalScore": null,
+      "analysisHash": "9f153c06f177274acfc15f186a2de48261b86370a1d7dd2a664f93b6e4a3c469"
+    },
+    {
+      "slug": "cruzeiro-vs-flamengo",
+      "league": "brasileirao-serie-a",
+      "published": true,
+      "mainPick": "Cruzeiro or Draw (1X)",
+      "odds": 1.6,
+      "publishedAt": "2026-08-21T17:57:58.349Z",
+      "updatedAt": null,
+      "resultStatus": null,
+      "resultSource": null,
+      "finalScore": null,
+      "analysisHash": "d4350eb676ac3e814458653927c160a72f279e90097f6286ca5d1bddccfe0305"
     },
     {
       "slug": "estoril-vs-rio-ave",
@@ -135,7 +187,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "f5da3cd139bf33a497e8ab2c816ffdaec701d85079bdeeea7d2809caaff2f946"
+      "analysisHash": "e1b031fe106c052c1bff8fe8805aa6baa4f52e94a4d96e58d357535f98970372"
     },
     {
       "slug": "estrela-da-amadora-vs-sc-braga",
@@ -148,7 +200,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "390ef37ddd52bfcd89af0af6034422fd78759c7e3dd4ff0bf4d4696acbeb1602"
+      "analysisHash": "55b5af877198d694e2adbcc6a6d5227398c6652f627acb8ee399e39f434b60ca"
     },
     {
       "slug": "everton-vs-crystal-palace",
@@ -161,7 +213,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "d4ab9e468183bcf147acd69dee184b42686543bfc03d4a21a0d23a68dc868e48"
+      "analysisHash": "ec55e226624eb6b1b98f16d06ecdbcf5b351c8931fe770dec008bdc620f6e569"
     },
     {
       "slug": "fc-porto-vs-arouca",
@@ -174,7 +226,20 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "1873b1d5c6714443d82a2d8f415fb9ad1fa65490c5ef17fce29e9aefad346beb"
+      "analysisHash": "a7bc494487b9afece1309d64cc13bf93b8b13432f0a2b9b808888b52d0a315e7"
+    },
+    {
+      "slug": "fluminense-vs-remo",
+      "league": "brasileirao-serie-a",
+      "published": true,
+      "mainPick": "Fluminense to Win + Fluminense Over 5.5 Corners",
+      "odds": 2.07,
+      "publishedAt": "2026-08-21T17:57:59.241Z",
+      "updatedAt": null,
+      "resultStatus": null,
+      "resultSource": null,
+      "finalScore": null,
+      "analysisHash": "b810c8ee64fd7ed02723e2e1f686e3ffbe865d59e06d7bcaf72df68ba64e00cf"
     },
     {
       "slug": "fortuna-sittard-vs-az-alkmaar",
@@ -187,7 +252,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "1e6633fa0bc255cb4e26210446daa6411f8d2c66b26e05be5717c0665f2e8d6c"
+      "analysisHash": "d0d279885fc4c46133e82e6f46df0e6115aa99e6d06177fd745226a3a489cb46"
     },
     {
       "slug": "frosinone-vs-juventus",
@@ -200,7 +265,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "0a0ab1558b169e0f2fd79bac5c36c4f5b61bf14f85683e0999d12e06a56c983e"
+      "analysisHash": "41ec91e48ba22423775f602dfd7a64df3433810b091eadb604b11aa1f2249240"
     },
     {
       "slug": "fulham-vs-chelsea",
@@ -213,7 +278,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "8b0da4b346510b6d54c7e5cb1c9ddbf8a27c2b68a7c1531a619756933b685503"
+      "analysisHash": "0a614f4d940e80610ba20c5409dd25ba069548b2b6a21121d285be4b0aa24a03"
     },
     {
       "slug": "genoa-cfc-vs-ssc-napoli",
@@ -226,7 +291,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "372c3058d98bc53f9b2d733a64a0c0abdfc2d8cf4604e86b2d5e43b089a79292"
+      "analysisHash": "b97cb1a5af117cabc6eb0efe4498b0b1f9dc190f70d1c30af7322f946d97271f"
     },
     {
       "slug": "gil-vicente-vs-casa-pia",
@@ -239,7 +304,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "ca64d58379af5661adb520b5ca3c663f9ccf7faced3b6f988dfa1f5dfdf4c33f"
+      "analysisHash": "14a63edf08c861475fef2faa98962f71fcb188ca6fe367d2ec3477a587672767"
     },
     {
       "slug": "go-ahead-eagles-vs-ado-den-haag",
@@ -252,7 +317,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "91bc440f692fab25700f791e3c3cc53beb2f405af8867132e51970c13d117461"
+      "analysisHash": "3e65076f8e1a509168cecc4593e20e7625fddcd856610fd2c028a5aef35c48a7"
     },
     {
       "slug": "hull-city-vs-manchester-united",
@@ -265,7 +330,20 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "a7342e5b84f5dfe37944bebcd2cb09fcd10ea52136b824637afb6380e18b0e0d"
+      "analysisHash": "4b0bdab293e80f2d0df27130ec542fa8bc664323f324a5b379cea1f3e7deb582"
+    },
+    {
+      "slug": "internacional-vs-atletico-mineiro",
+      "league": "brasileirao-serie-a",
+      "published": true,
+      "mainPick": "Internacional or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.72,
+      "publishedAt": "2026-08-21T17:58:00.209Z",
+      "updatedAt": null,
+      "resultStatus": null,
+      "resultSource": null,
+      "finalScore": null,
+      "analysisHash": "37ce242c5cce778c7894fbb10dc9f4af76e53a33322fc78e2bac6edd67c3a15f"
     },
     {
       "slug": "internazionale-milano-vs-ac-monza",
@@ -278,7 +356,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "02d04193169b0daf7578f925645001210c606081315e2ccc04d9c0af793705d2"
+      "analysisHash": "e188da8d513cc9bb5870a69836d0acd0cdda066b3af4cf6d33cb0cf2bbcbf655"
     },
     {
       "slug": "ipswich-town-vs-sunderland",
@@ -291,7 +369,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "b06ddecc2ad5173110dadda18a936a5ae6e3b6558ace7a56657a7568b4b4783c"
+      "analysisHash": "10677a714de582ea2b3822659cc467d19841de2108fb2cc2d02d84d0204c9f14"
     },
     {
       "slug": "le-havre-vs-monaco",
@@ -304,7 +382,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "867cea81d9392de07daaeadb46b507ade68a8b0e74109dac25b584d150d4574e"
+      "analysisHash": "17d83678ae771e541821d7a2b568dc8646f238909116e0cbb4947a9ae8597327"
     },
     {
       "slug": "le-mans-vs-brest",
@@ -317,7 +395,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "82910cd7f71f9a098b847cf604ab4dabb551ccaf39f34880efc77d36a865b4ed"
+      "analysisHash": "090b9363c02064c74f94681a65e064a7a871775f9afef60b02bb4853ba558748"
     },
     {
       "slug": "lens-vs-auxerre",
@@ -330,7 +408,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "8ee6f77a0d08a8f29f82ec2adbe0d3c16a0f5a602f38a3256386fd2fad86e049"
+      "analysisHash": "5659b41f2916c148ca003242e8e39cedb02bb821ae8536e231ff3e25f46a36f0"
     },
     {
       "slug": "manchester-city-vs-bournemouth",
@@ -343,7 +421,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "629d3de74a95990276cdccc760bcba81359944426a5c6cefb085d0167bb5c8b1"
+      "analysisHash": "6a6437722877ddddbb6e953cd09d266b73a5803e394f5a6c6b7d13e350aaf7d7"
     },
     {
       "slug": "maritimo-vs-academico-viseu",
@@ -356,7 +434,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "2a57d9068d41718fc3591c1fc37145749c51f98fc8286baedb91063e9cc9e464"
+      "analysisHash": "f300b701c2747e11799e49b4089f08aadd745531ce70fae1b3f031e95fdacbbe"
     },
     {
       "slug": "moreirense-vs-benfica",
@@ -369,7 +447,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "3ce2ec28c0a7ce5d569326178393ba1dfb1847a01895b323411526cbfea971be"
+      "analysisHash": "e0a41b80b69b49cba332d1a9d3d3e03613b0f69b587abdffffdc26b7a1292168"
     },
     {
       "slug": "newcastle-united-vs-liverpool",
@@ -382,7 +460,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "68d22e7adb459047d39ad742c01003786a6ff46b9a62014cc7a455a78bc70b07"
+      "analysisHash": "631832daf4490c629afd6f615d492ba030d1dfb7686b5884b25ab48f67d7e134"
     },
     {
       "slug": "nice-vs-lorient",
@@ -395,7 +473,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "f5453a28d03eafbfbd961d74ee8aa6a5a14c271322707f1f44fd450700b86d47"
+      "analysisHash": "eea70a0fb9ae97fe9dea7051f7b568d9a83aba68d6bcc2a0d129f411e8c0310e"
     },
     {
       "slug": "nottingham-forest-vs-leeds-united",
@@ -408,7 +486,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "ca100b29d3a25c988578fb5ca75bbb2e0360857b65fd8285214338223965bab9"
+      "analysisHash": "26ccfa3b91d5d4d77ca32071fe99604d1e171146f436d30072403fc90967c366"
     },
     {
       "slug": "olympique-de-marseille-vs-strasbourg",
@@ -421,7 +499,20 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "1618bc30c5c5ab03e66b84bba0cb7e3ff01da696687132fd5bfd9426f59882d3"
+      "analysisHash": "9f1e3370c8550e8a834fa8ce7782a3c2833ea0b59decca2c79e74cade3243f1d"
+    },
+    {
+      "slug": "palmeiras-vs-vasco-da-gama",
+      "league": "brasileirao-serie-a",
+      "published": true,
+      "mainPick": "Palmeiras to Win",
+      "odds": 1.62,
+      "publishedAt": "2026-08-21T17:58:01.166Z",
+      "updatedAt": null,
+      "resultStatus": null,
+      "resultSource": null,
+      "finalScore": null,
+      "analysisHash": "5af6cdaae524535af008ebc75277bcac2494c8c6be3980e66bd1f55ec77769a4"
     },
     {
       "slug": "paris-saint-germain-vs-rennes",
@@ -434,7 +525,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "e413ebe4934a82414d67ca04f81f4ea8918c449e7a70d00b13b25aac4b684f43"
+      "analysisHash": "8a5ce8ee224cdc8d9c7989dbc57be7c0a01caad67eb292f003ca3449fd5c1085"
     },
     {
       "slug": "parma-calcio-1913-vs-cagliari-calcio",
@@ -447,7 +538,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "90cc98952022bc535e688d1cb669ec99eeceb729b4816e6f67be152fde2d7446"
+      "analysisHash": "98d722666be854a18e78260339a78f15702e37fc89006bd31d9e5cb074be22e5"
     },
     {
       "slug": "psv-eindhoven-vs-fc-groningen",
@@ -460,7 +551,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "b6166034701918b095be77f22e0459ef3173937b6e24fe4122aa8997b3333fcf"
+      "analysisHash": "dfbd083cd6d95e4a4341efbc70d943a4392305a308c53c4a74234173cc99b96b"
     },
     {
       "slug": "rayo-vallecano-vs-deportivo-alaves",
@@ -470,10 +561,13 @@
       "odds": 2.02,
       "publishedAt": "2026-08-17T14:51:30.000Z",
       "updatedAt": null,
-      "resultStatus": null,
-      "resultSource": null,
-      "finalScore": null,
-      "analysisHash": "068e3ff428c4564bd914dc01c36886fcbb22c24ef14420c973d8b96cc371eee1"
+      "resultStatus": "green",
+      "resultSource": "automatic",
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "analysisHash": "e01c13ebcdc3fc43474cb59302e4595d3f7c700723a0fcce5f9cf54697aee94f"
     },
     {
       "slug": "rc-deportivo-la-coruna-vs-elche",
@@ -486,7 +580,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "7e9f5c2d522f17d8629642966b78f7a5edfacb71a8e6105dfd3920d47ac9767b"
+      "analysisHash": "2b46d85a341e1dce5e9958c9cde927ba83dbb732db875df8540f3dae5f305151"
     },
     {
       "slug": "rcd-espanyol-de-barcelona-vs-real-madrid",
@@ -499,7 +593,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "c62be247236eaa55b8410730da6d86ca958ef50ca6f11208a30ce847fb246ca8"
+      "analysisHash": "badb40699f98f564aad22b24fc5fbfc3f3184b7b897ae31a32a97e52d34ab138"
     },
     {
       "slug": "real-betis-vs-real-sociedad",
@@ -512,7 +606,20 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "4679c1b08de778dd745a87dc9d902aa9d8f64a1ead76c7909a7bcb1d0961a727"
+      "analysisHash": "e6363cf6f1fbbc68d0916f6e0678b2a874e263b74d782b772a7c533dd3205bc5"
+    },
+    {
+      "slug": "red-bull-bragantino-vs-gremio",
+      "league": "brasileirao-serie-a",
+      "published": true,
+      "mainPick": "Grêmio +2 Handicap + Over 8.5 Corners",
+      "odds": 1.93,
+      "publishedAt": "2026-08-21T17:58:02.349Z",
+      "updatedAt": null,
+      "resultStatus": null,
+      "resultSource": null,
+      "finalScore": null,
+      "analysisHash": "62a2f38926928256ab8ef29773688e4597ba6047e85cbdb7ac9419bd6b875311"
     },
     {
       "slug": "roma-vs-fiorentina",
@@ -525,7 +632,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "5ee6bd3ad71a7755aaffed72389427785d0af7ac856e7950a78d9d705d106ee7"
+      "analysisHash": "5303552d712f4da90b5a47994805b31a61e2cdc344a6124f76156f7e72c9d24b"
     },
     {
       "slug": "santa-clara-vs-famalicao",
@@ -538,7 +645,20 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "81ca34c820c8d0ead38319843b6ba2175a00c53add469bb2b877839d110f7b47"
+      "analysisHash": "3a1a9a19cc769ed03c25ec9cedfdab75f574c93502052e644a7d3bfa21eeb0d1"
+    },
+    {
+      "slug": "santos-vs-mirassol",
+      "league": "brasileirao-serie-a",
+      "published": true,
+      "mainPick": "Santos or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.6,
+      "publishedAt": "2026-08-21T17:58:03.294Z",
+      "updatedAt": null,
+      "resultStatus": null,
+      "resultSource": null,
+      "finalScore": null,
+      "analysisHash": "5982b5e48574e0681174776c756835c9e9d3809d2672a53906fe756856170201"
     },
     {
       "slug": "sc-cambuur-vs-feyenoord",
@@ -551,7 +671,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "21cf4ad9b2190b8b250514e8863eb11a7f81a3bfbb11d1acb49c2666eb67a62f"
+      "analysisHash": "63a8bef3e74d986eef287c5f461a5123be34fd815e8414a322479302d298b3a6"
     },
     {
       "slug": "sc-heerenveen-vs-pec-zwolle",
@@ -564,7 +684,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "55862d322eb4cda8fef435842dc57d02d84de6223b95da9585bb5275c304291a"
+      "analysisHash": "5c50dfed623a323afc97aef2e874215a6a494e1f5264479127347e5f938e3f2e"
     },
     {
       "slug": "sparta-rotterdam-vs-fc-utrecht",
@@ -577,7 +697,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "5fd75c81a4181236c7f704749d61972fab5f82c517885c6eed96fe4bb6e74e59"
+      "analysisHash": "100bcf332d0f160dc51aa14338564357f01f108c9eb2a9807eeaa924e9f349d3"
     },
     {
       "slug": "sporting-cp-vs-fc-alverca",
@@ -590,7 +710,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "4a2800e26aa33217ff77d20250531622072a8c038ce3a5eed8882302a7f9ad5f"
+      "analysisHash": "9fbf37e6a6087232063d3edf1198f6088d24db8ca74b01c5ff4436bf743def6a"
     },
     {
       "slug": "torino-vs-milan",
@@ -603,7 +723,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "542ded0bda29f7b5fcd06de327b32d1ff2ae37ceb32fa05e6d0cb2c7a639cbf3"
+      "analysisHash": "0e94cad1c126dec756c70e647a27c64b7a92430713ab7666f88723d2129b6e5a"
     },
     {
       "slug": "toulouse-vs-lyon",
@@ -616,7 +736,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "0507fda817e663866e4482838d92ac25bfb5d79be8e76085243f8c661d2d4d20"
+      "analysisHash": "ca6115e9f5e5bfdcd3ea88788e8abfad899e8fc5e51e9b357dc73402bb511f57"
     },
     {
       "slug": "troyes-vs-paris-fc",
@@ -629,7 +749,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "f3483be8a4c1c956818220061ce957afc3f3abdbae2367b58e538a1d10db569f"
+      "analysisHash": "41709285648b1d009b7d8ccd407877aaf5c5ddc47a57727df97e202c5a715f84"
     },
     {
       "slug": "udinese-calcio-vs-como-1907",
@@ -642,7 +762,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "a4bb1dfe14cc17a3fb723251a3c6e790d2f916393ff7ddb9f2252524ca87035c"
+      "analysisHash": "327c94ee3ae05514d1051659614965f00f92e3c83fc811aad55bbcea668cc224"
     },
     {
       "slug": "valencia-vs-rc-celta-de-vigo",
@@ -655,7 +775,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "e838d0446279788f7f7bfd4048fb36122f1d51717d9e8dcd2bbde85a936428f9"
+      "analysisHash": "570d20077d041682386b6978f9b119110eddaca977209d12ed8217cdd20cdc0a"
     },
     {
       "slug": "venezia-vs-lecce",
@@ -668,7 +788,7 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "03a3ddabf930b89321f98161e93fbe96abcb9266c299f4a46cccc29ba5c6dc26"
+      "analysisHash": "fd5ef84b5136b37b8ce09ebbafe75c8068f49c9b23bd10edb9829c30d926d226"
     },
     {
       "slug": "vitoria-de-guimaraes-vs-nacional",
@@ -681,7 +801,20 @@
       "resultStatus": null,
       "resultSource": null,
       "finalScore": null,
-      "analysisHash": "3111da132d9f7d71b0f154bb1e93ec6da31434e780b066d0029f0aaa0e97a21b"
+      "analysisHash": "0391d5bad279d8fb666884d9ad6ef6d03638ab572246749551b6b3b93179cbbd"
+    },
+    {
+      "slug": "vitoria-vs-bahia",
+      "league": "brasileirao-serie-a",
+      "published": true,
+      "mainPick": "Over 1.5 Goals + Over 8.5 Corners",
+      "odds": 1.82,
+      "publishedAt": "2026-08-21T17:58:04.200Z",
+      "updatedAt": null,
+      "resultStatus": null,
+      "resultSource": null,
+      "finalScore": null,
+      "analysisHash": "2b67414130d7cf878128cf234b1762e075c89ba67f35023eeb370413c47d36ab"
     }
   ]
 }
