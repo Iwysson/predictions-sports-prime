@@ -58,10 +58,9 @@ export function leagueCollectionJsonLd(
     name: leagueSeoTitle(league),
     description: leagueSeoDescription(league),
     url,
+    inLanguage: "en",
     isPartOf: {
-      "@type": "WebSite",
-      name: siteConfig.name,
-      url: siteConfig.url,
+      "@id": absoluteUrl("/#website"),
     },
     ...(publishedMatches.length > 0
       ? {

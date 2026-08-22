@@ -38,10 +38,6 @@ export const metadata: Metadata = {
     "football match analysis",
   ],
 
-  alternates: {
-    canonical: "/",
-  },
-
   icons: {
     icon: [
       {

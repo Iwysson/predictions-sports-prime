@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container footer-inner">
         <div>
-          <strong>{t("brandName")}</strong>
+          <strong><Link href="/">{t("brandName")}</Link></strong>
           <p>{t("footerDescription")}</p>
         </div>
 

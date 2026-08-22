@@ -8,7 +8,7 @@ import { institutionalPageJsonLd } from "@/lib/seo";
 const description = "Who produces Predictions Sports Prime, what the publication covers, how its football analysis is prepared and why it exists.";
 
 export const metadata = buildLegalMetadata(
-  "About",
+  "About Our Football Analysis",
   "/about/",
   description
 );

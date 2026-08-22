@@ -58,7 +58,7 @@ export const dictionaries = {
     responsibleGambling: "Responsible Gambling",
   },
   "pt-BR": {
-    brandName: "Palpites Sports Prime",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Análises e palpites de futebol",
     home: "Início",
     today: "Hoje",
@@ -116,7 +116,7 @@ export const dictionaries = {
     responsibleGambling: "Jogo Responsável",
   },
   es: {
-    brandName: "Predicciones Sports Prime",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Análisis y predicciones de fútbol",
     home: "Inicio",
     today: "Hoy",
@@ -171,7 +171,7 @@ export const dictionaries = {
     responsibleGambling: "Juego Responsable",
   },
   fr: {
-    brandName: "Pronostics Sports Prime",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Analyses et pronostics football",
     home: "Accueil",
     today: "Aujourd'hui",
@@ -226,7 +226,7 @@ export const dictionaries = {
     responsibleGambling: "Jeu Responsable",
   },
   de: {
-    brandName: "Sportprognosen Prime",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Fußballanalysen & Prognosen",
     home: "Start",
     today: "Heute",
@@ -281,7 +281,7 @@ export const dictionaries = {
     responsibleGambling: "Verantwortungsvolles Spielen",
   },
   it: {
-    brandName: "Pronostici Sports Prime",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Analisi e pronostici di calcio",
     home: "Home",
     today: "Oggi",
@@ -336,7 +336,7 @@ export const dictionaries = {
     responsibleGambling: "Gioco Responsabile",
   },
   ar: {
-    brandName: "برايم للتوقعات الرياضية",
+    brandName: "Predictions Sports Prime",
     brandTagline: "تحليلات وتوقعات كرة القدم",
     home: "الرئيسية",
     today: "اليوم",
@@ -391,7 +391,7 @@ export const dictionaries = {
     responsibleGambling: "المقامرة المسؤولة",
   },
   hi: {
-    brandName: "स्पोर्ट्स प्राइम भविष्यवाणियाँ",
+    brandName: "Predictions Sports Prime",
     brandTagline: "फुटबॉल विश्लेषण और भविष्यवाणियाँ",
     home: "होम",
     today: "आज",
@@ -446,7 +446,7 @@ export const dictionaries = {
     responsibleGambling: "जिम्मेदार जुआ",
   },
   bn: {
-    brandName: "স্পোর্টস প্রাইম পূর্বাভাস",
+    brandName: "Predictions Sports Prime",
     brandTagline: "ফুটবল বিশ্লেষণ ও পূর্বাভাস",
     home: "হোম",
     today: "আজ",
@@ -501,7 +501,7 @@ export const dictionaries = {
     responsibleGambling: "দায়িত্বশীল জুয়া",
   },
   ur: {
-    brandName: "اسپورٹس پرائم پیش گوئیاں",
+    brandName: "Predictions Sports Prime",
     brandTagline: "فٹبال تجزیہ اور پیش گوئیاں",
     home: "ہوم",
     today: "آج",
@@ -556,7 +556,7 @@ export const dictionaries = {
     responsibleGambling: "ذمہ دار جوا",
   },
   tr: {
-    brandName: "Sports Prime Tahminleri",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Futbol analizi ve tahminler",
     home: "Ana Sayfa",
     today: "Bugün",
@@ -611,7 +611,7 @@ export const dictionaries = {
     responsibleGambling: "Sorumlu Bahis",
   },
   ru: {
-    brandName: "Sports Prime Прогнозы",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Футбольная аналитика и прогнозы",
     home: "Главная",
     today: "Сегодня",
@@ -666,7 +666,7 @@ export const dictionaries = {
     responsibleGambling: "Ответственная игра",
   },
   zh: {
-    brandName: "体育至尊预测",
+    brandName: "Predictions Sports Prime",
     brandTagline: "足球分析与预测",
     home: "首页",
     today: "今天",
@@ -721,7 +721,7 @@ export const dictionaries = {
     responsibleGambling: "理性博彩",
   },
   ja: {
-    brandName: "スポーツプライム予想",
+    brandName: "Predictions Sports Prime",
     brandTagline: "サッカー分析と予想",
     home: "ホーム",
     today: "今日",
@@ -776,7 +776,7 @@ export const dictionaries = {
     responsibleGambling: "責任あるギャンブル",
   },
   ko: {
-    brandName: "스포츠 프라임 예측",
+    brandName: "Predictions Sports Prime",
     brandTagline: "축구 분석 및 예측",
     home: "홈",
     today: "오늘",
@@ -831,7 +831,7 @@ export const dictionaries = {
     responsibleGambling: "책임감 있는 도박",
   },
   id: {
-    brandName: "Prediksi Sports Prime",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Analisis & prediksi sepak bola",
     home: "Beranda",
     today: "Hari Ini",
@@ -886,7 +886,7 @@ export const dictionaries = {
     responsibleGambling: "Perjudian Bertanggung Jawab",
   },
   ms: {
-    brandName: "Ramalan Sports Prime",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Analisis & ramalan bola sepak",
     home: "Utama",
     today: "Hari Ini",
@@ -941,7 +941,7 @@ export const dictionaries = {
     responsibleGambling: "Perjudian Bertanggungjawab",
   },
   th: {
-    brandName: "สปอร์ตไพรม์พยากรณ์",
+    brandName: "Predictions Sports Prime",
     brandTagline: "วิเคราะห์และคาดการณ์ฟุตบอล",
     home: "หน้าแรก",
     today: "วันนี้",
@@ -996,7 +996,7 @@ export const dictionaries = {
     responsibleGambling: "การพนันอย่างรับผิดชอบ",
   },
   vi: {
-    brandName: "Dự đoán Sports Prime",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Phân tích & dự đoán bóng đá",
     home: "Trang chủ",
     today: "Hôm nay",
@@ -1051,7 +1051,7 @@ export const dictionaries = {
     responsibleGambling: "Cờ bạc Có Trách nhiệm",
   },
   nl: {
-    brandName: "Sports Prime Voorspellingen",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Voetbalanalyse & voorspellingen",
     home: "Home",
     today: "Vandaag",
@@ -1106,7 +1106,7 @@ export const dictionaries = {
     responsibleGambling: "Verantwoord Gokken",
   },
   pl: {
-    brandName: "Sports Prime Typy",
+    brandName: "Predictions Sports Prime",
     brandTagline: "Analizy i typy piłkarskie",
     home: "Start",
     today: "Dzisiaj",
@@ -1161,7 +1161,7 @@ export const dictionaries = {
     responsibleGambling: "Odpowiedzialna Gra",
   },
   "fa": {
-    brandName: "پیش‌بینی اسپورتس پرایم",
+    brandName: "Predictions Sports Prime",
     brandTagline: "تحلیل و پیش‌بینی فوتبال",
     home: "خانه",
     today: "امروز",
@@ -1216,7 +1216,7 @@ export const dictionaries = {
     responsibleGambling: "قمار مسئولانه",
   },
   he: {
-    brandName: "תחזיות Sports Prime",
+    brandName: "Predictions Sports Prime",
     brandTagline: "ניתוח ותחזיות כדורגל",
     home: "בית",
     today: "היום",

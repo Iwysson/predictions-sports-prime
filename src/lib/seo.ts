@@ -150,19 +150,10 @@ export function articleJsonLd(match: Match) {
     ...(match.publishedAt ? { datePublished: match.publishedAt } : {}),
     ...(match.updatedAt ? { dateModified: match.updatedAt } : {}),
     author: editorialAuthorPersonJsonLd(),
-    publisher: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      url: siteConfig.url,
-      logo: {
-        "@type": "ImageObject",
-        url: absoluteUrl("/icon-512.png"),
-      },
-    },
+    publisher: { "@id": absoluteUrl("/#organization") },
+    inLanguage: "en",
     isPartOf: {
-      "@type": "WebSite",
-      name: siteConfig.name,
-      url: siteConfig.url,
+      "@id": absoluteUrl("/#website"),
     },
     ...(league
       ? {
@@ -179,10 +170,13 @@ export function websiteJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": absoluteUrl("/#website"),
     name: siteConfig.name,
+    alternateName: siteConfig.shortName,
     url: siteConfig.url,
     description: siteConfig.description,
     inLanguage: "en",
+    publisher: { "@id": absoluteUrl("/#organization") },
   };
 }
 
@@ -190,9 +184,37 @@ export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": absoluteUrl("/#organization"),
     name: siteConfig.name,
+    alternateName: siteConfig.shortName,
     url: siteConfig.url,
-    logo: absoluteUrl("/icon-512.png"),
+    logo: {
+      "@type": "ImageObject",
+      url: absoluteUrl("/icon-512.png"),
+      width: 512,
+      height: 512,
+    },
+  };
+}
+
+export function homePageJsonLd() {
+  const url = absoluteUrl("/");
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: siteConfig.name,
+    headline: siteConfig.defaultTitle,
+    description: siteConfig.description,
+    inLanguage: "en",
+    isPartOf: { "@id": absoluteUrl("/#website") },
+    about: {
+      "@type": "Thing",
+      name: "Football predictions and match analysis",
+    },
+    publisher: { "@id": absoluteUrl("/#organization") },
   };
 }
 
@@ -209,10 +231,9 @@ export function institutionalPageJsonLd(
     name,
     description,
     url,
+    mainEntityOfPage: url,
     isPartOf: {
-      "@type": "WebSite",
-      name: siteConfig.name,
-      url: siteConfig.url,
+      "@id": absoluteUrl("/#website"),
     },
   };
 }
