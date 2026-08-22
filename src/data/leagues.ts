@@ -13,6 +13,7 @@ export type LeagueConfig = {
   expectedGamesPerRound: number;
   artworkId?: number;
   liveDataId: string;
+  timezone: string;
 };
 
 const source = (path: string) => `https://raw.githubusercontent.com/openfootball/${path}`;
@@ -39,14 +40,14 @@ function defineLeague(
 }
 
 export const leagues: LeagueConfig[] = [
-  defineLeague({ slug: "premier-league", name: "Premier League", country: "England", short: "PL", featured: true, sourcePath: "england/refs/heads/master/2026-27/1-premierleague.txt", expectedClubs: 20, expectedGamesPerRound: 10, artworkId: 4328, liveDataId: "eng.1" }),
-  defineLeague({ slug: "la-liga", name: "La Liga", country: "Spain", short: "LL", featured: true, sourcePath: "espana/refs/heads/master/2026-27/1-liga.txt", expectedClubs: 20, expectedGamesPerRound: 10, artworkId: 4335, liveDataId: "esp.1" }),
-  defineLeague({ slug: "bundesliga", name: "Bundesliga", country: "Germany", short: "BL", featured: true, sourcePath: "deutschland/refs/heads/master/2026-27/1-bundesliga.txt", expectedClubs: 18, expectedGamesPerRound: 9, artworkId: 4331, liveDataId: "ger.1" }),
-  defineLeague({ slug: "serie-a", name: "Serie A", country: "Italy", short: "SA", featured: true, sourcePath: "italy/refs/heads/master/2026-27/1-seriea.txt", expectedClubs: 20, expectedGamesPerRound: 10, artworkId: 4332, liveDataId: "ita.1" }),
-  defineLeague({ slug: "liga-portugal", name: "Liga Portugal", country: "Portugal", short: "LP", featured: false, showOnHome: true, sourcePath: "europe/refs/heads/master/portugal/2026-27_pt1.txt", expectedClubs: 18, expectedGamesPerRound: 9, artworkId: 4344, liveDataId: "por.1" }),
-  defineLeague({ slug: "ligue-1", name: "Ligue 1", country: "France", short: "L1", featured: false, showOnHome: true, sourcePath: "europe/refs/heads/master/france/2026-27_fr1.txt", expectedClubs: 18, expectedGamesPerRound: 9, artworkId: 4334, liveDataId: "fra.1" }),
-  defineLeague({ slug: "eredivisie", name: "VriendenLoterij Eredivisie", country: "Netherlands", short: "ERE", featured: false, showOnHome: true, sourcePath: "europe/refs/heads/master/netherlands/2026-27_nl1.txt", expectedClubs: 18, expectedGamesPerRound: 9, artworkId: 4337, liveDataId: "ned.1" }),
-  defineLeague({ slug: "brasileirao-serie-a", name: "Brasileirão Série A", country: "Brazil", short: "BRA", seasonLabel: "2026", featured: false, showOnHome: true, sourceUrl: "/data/brasileirao-2026.txt", expectedClubs: 20, expectedGamesPerRound: 10, artworkId: 4351, liveDataId: "bra.1" }),
+  defineLeague({ slug: "premier-league", name: "Premier League", country: "England", short: "PL", featured: true, sourcePath: "england/refs/heads/master/2026-27/1-premierleague.txt", expectedClubs: 20, expectedGamesPerRound: 10, artworkId: 4328, liveDataId: "eng.1", timezone: "Europe/London" }),
+  defineLeague({ slug: "la-liga", name: "La Liga", country: "Spain", short: "LL", featured: true, sourcePath: "espana/refs/heads/master/2026-27/1-liga.txt", expectedClubs: 20, expectedGamesPerRound: 10, artworkId: 4335, liveDataId: "esp.1", timezone: "Europe/Madrid" }),
+  defineLeague({ slug: "bundesliga", name: "Bundesliga", country: "Germany", short: "BL", featured: true, sourcePath: "deutschland/refs/heads/master/2026-27/1-bundesliga.txt", expectedClubs: 18, expectedGamesPerRound: 9, artworkId: 4331, liveDataId: "ger.1", timezone: "Europe/Berlin" }),
+  defineLeague({ slug: "serie-a", name: "Serie A", country: "Italy", short: "SA", featured: true, sourcePath: "italy/refs/heads/master/2026-27/1-seriea.txt", expectedClubs: 20, expectedGamesPerRound: 10, artworkId: 4332, liveDataId: "ita.1", timezone: "Europe/Rome" }),
+  defineLeague({ slug: "liga-portugal", name: "Liga Portugal", country: "Portugal", short: "LP", featured: false, showOnHome: true, sourcePath: "europe/refs/heads/master/portugal/2026-27_pt1.txt", expectedClubs: 18, expectedGamesPerRound: 9, artworkId: 4344, liveDataId: "por.1", timezone: "Europe/Lisbon" }),
+  defineLeague({ slug: "ligue-1", name: "Ligue 1", country: "France", short: "L1", featured: false, showOnHome: true, sourcePath: "europe/refs/heads/master/france/2026-27_fr1.txt", expectedClubs: 18, expectedGamesPerRound: 9, artworkId: 4334, liveDataId: "fra.1", timezone: "Europe/Paris" }),
+  defineLeague({ slug: "eredivisie", name: "VriendenLoterij Eredivisie", country: "Netherlands", short: "ERE", featured: false, showOnHome: true, sourcePath: "europe/refs/heads/master/netherlands/2026-27_nl1.txt", expectedClubs: 18, expectedGamesPerRound: 9, artworkId: 4337, liveDataId: "ned.1", timezone: "Europe/Amsterdam" }),
+  defineLeague({ slug: "brasileirao-serie-a", name: "Brasileirão Série A", country: "Brazil", short: "BRA", seasonLabel: "2026", featured: false, showOnHome: true, sourceUrl: "/data/brasileirao-2026.txt", expectedClubs: 20, expectedGamesPerRound: 10, artworkId: 4351, liveDataId: "bra.1", timezone: "America/Sao_Paulo" }),
 ];
 
 export const leaguesBySlug = Object.fromEntries(

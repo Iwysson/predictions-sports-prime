@@ -26,6 +26,27 @@ import {
   matchIntroduction,
 } from "@/lib/seo";
 import { selectRelatedPredictions } from "@/lib/related-predictions";
+import { hydratePrediction } from "@/lib/live-predictions";
+import { toMatchPreview } from "@/lib/editorial";
+import type { Match } from "@/types";
+
+async function resolveMatchFixture(match: Match): Promise<Match> {
+  const fixture = await hydratePrediction(toMatchPreview(match));
+  return {
+    ...match,
+    fixtureId: fixture.fixtureId,
+    kickoffUtc: fixture.kickoffUtc,
+    timeConfirmed: fixture.timeConfirmed,
+    round: fixture.round,
+    homeTeam: fixture.homeTeam,
+    awayTeam: fixture.awayTeam,
+    date: fixture.date,
+    time: fixture.time,
+    fixtureStatus: fixture.fixtureStatus,
+    homeScore: fixture.homeScore,
+    awayScore: fixture.awayScore,
+  };
+}
 
 function formatEditorialDate(value: string) {
   return new Intl.DateTimeFormat("en", {
@@ -66,7 +87,7 @@ export async function generateMetadata({
     };
   }
 
-  return buildMatchMetadata(match);
+  return buildMatchMetadata(await resolveMatchFixture(match));
 }
 
 export default async function MatchPage({
@@ -76,15 +97,17 @@ export default async function MatchPage({
 }) {
   const { slug } = await params;
 
-  const match = matches.find(
+  const storedMatch = matches.find(
     (item) =>
       item.slug === slug &&
       item.status === "published"
   );
 
-  if (!match) {
+  if (!storedMatch) {
     notFound();
   }
+
+  const match = await resolveMatchFixture(storedMatch);
 
   const league = leagues.find(
     (item) => item.slug === match.league

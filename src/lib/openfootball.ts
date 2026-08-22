@@ -1,5 +1,7 @@
 import type { LeagueSlug } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
+import fixtureSnapshot from "@/data/fixtures.snapshot.json";
+import { siteConfig } from "@/lib/site-config";
 import {
   FixtureStatus,
   findCurrentOrNextDatedRound,
@@ -7,6 +9,7 @@ import {
 } from "@/lib/fixture-status";
 
 export type OpenFootballGame = {
+  id?: string;
   round: number;
   date: string;
   time: string;
@@ -15,7 +18,10 @@ export type OpenFootballGame = {
   homeScore: number | null;
   awayScore: number | null;
   status?: FixtureStatus;
-  dataSource?: "openfootball" | "espn";
+  dataSource?: "openfootball" | "espn" | "thesportsdb" | "snapshot";
+  kickoffUtc?: string;
+  timeConfirmed?: boolean;
+  sourceAgreement?: boolean;
 };
 
 export type OpenFootballRound = {
@@ -76,13 +82,36 @@ type LiveCompetitor = {
 };
 
 type LiveEvent = {
+  id: string;
   date: string;
   season?: { year?: number };
   status: {
     type: { name: string; state: string; completed: boolean };
   };
-  competitions: Array<{ competitors: LiveCompetitor[] }>;
+  competitions: Array<{
+    date?: string;
+    timeValid?: boolean;
+    competitors: LiveCompetitor[];
+  }>;
 };
+
+type FixtureSnapshot = {
+  version: number;
+  generatedAt: string;
+  siteTimezone: string;
+  leagues: Partial<Record<LeagueSlug, OpenFootballRound[]>>;
+  predictionIds: Record<string, string>;
+};
+
+const snapshot = fixtureSnapshot as FixtureSnapshot;
+
+export function getFixtureSnapshotMetadata() {
+  return {
+    version: snapshot.version,
+    generatedAt: snapshot.generatedAt,
+    siteTimezone: snapshot.siteTimezone,
+  };
+}
 
 function isoDate(year: number, month: number, day: number) {
   return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
@@ -122,9 +151,105 @@ export function normalizeTeamKey(name: string) {
     rcstrasbourgalsace: "strasbourg",
     racinglens: "lens",
     staderennaisfc1901: "rennes",
+    staderennais: "rennes",
+    stadebrestois29: "brest",
+    racingclublens: "lens",
+    ajauxerre: "auxerre",
+    angerssco: "angers",
+    lehavreac: "lehavre",
+    estroyesac: "troyes",
+    lilleosc: "lille",
+    asmonaco: "monaco",
+    scheerenveen: "heerenveen",
+    twente65: "twente",
+    sccambuurleeuwarden: "cambuur",
+    sccambuur: "cambuur",
+    feyenoordrotterdam: "feyenoord",
+    sbvexcelsior: "excelsior",
+    willemiitilburg: "willemii",
     ogcnice: "nice",
     olympiquelyonnais: "lyon",
     asroma: "roma",
+    como1907: "como",
+    udinesecalcio: "udinese",
+    bolognafc1909: "bologna",
+    sslazio: "lazio",
+    ussassuolocalcio: "sassuolo",
+    internazionalemilano: "internazionale",
+    intermilano: "internazionale",
+    genoacfc: "genoa",
+    sscnapoli: "napoli",
+    acmonza: "monza",
+    atalantabc: "atalanta",
+    cagliaricalcio: "cagliari",
+    parmacalcio1913: "parma",
+    frosinonecalcio: "frosinone",
+    acffiorentina: "fiorentina",
+    uslecce: "lecce",
+    acmilan: "milan",
+    cfestreladaamadora: "estreladaamadora",
+    estrela: "estreladaamadora",
+    sportingclubedebraga: "braga",
+    sportingclubebraga: "braga",
+    scbraga: "braga",
+    cdnacional: "nacional",
+    gdestorilpraia: "estoril",
+    estorilpraia: "estoril",
+    cdsantaclara: "santaclara",
+    csmaritimo: "maritimo",
+    atleticomg: "atleticomineiro",
+    athleticopr: "athleticoparanaense",
+    rcdeportivolacoruna: "deportivolacoruna",
+    deportivo: "deportivolacoruna",
+    rcdespanyoldebarcelona: "espanyol",
+    rcdespanyolbarcelona: "espanyol",
+    espanyolbarcelona: "espanyol",
+    rcceltadevigo: "celtavigo",
+    rcceltavigo: "celtavigo",
+    caosasuna: "osasuna",
+    realracingclubdesantander: "racingsantander",
+    deportivoalaves: "alaves",
+    rayovallecanodemadrid: "rayovallecano",
+    rayovallecanomadrid: "rayovallecano",
+    realbetisbalompie: "realbetis",
+    realsociedadfutbol: "realsociedad",
+    realracingclubsantander: "racingsantander",
+    realracingsantander: "racingsantander",
+    racingsantander: "racingsantander",
+    levanteud: "levante",
+    clubatleticomadrid: "atleticomadrid",
+    athleticbilbao: "athleticclub",
+    bayernmunchen: "bayernmunich",
+    vfb1893stuttgart: "stuttgart",
+    vfbstuttgart: "stuttgart",
+    "1fsvmainz05": "mainz",
+    scpaderborn07: "paderborn",
+    sv07elversberg: "elversberg",
+    svelversberg: "elversberg",
+    bayer04leverkusen: "bayerleverkusen",
+    borussiadortmund: "dortmund",
+    hamburgersv: "hamburg",
+    hamburgsv: "hamburg",
+    "1fckoln": "cologne",
+    koln: "cologne",
+    tsg1899hoffenheim: "hoffenheim",
+    tsghoffenheim: "hoffenheim",
+    scfreiburg: "freiburg",
+    svwerderbremen: "werderbremen",
+    rbleipzig: "leipzig",
+    schalke04: "schalke",
+    "1fcunionberlin": "unionberlin",
+    borussiamonchengladbach: "monchengladbach",
+    borussiamgladbach: "monchengladbach",
+    fcaugsburg: "augsburg",
+    eintrachtfrankfurt: "frankfurt",
+    telstar1963: "telstar",
+    necnijmegen: "nec",
+    ajaxamsterdam: "ajax",
+    fcgroningen: "groningen",
+    fcutrecht: "utrecht",
+    goaheadeagles: "goaheadeagles",
+    adodenhaag: "adodenhaag",
   };
 
   return aliases[key] ?? key;
@@ -134,10 +259,7 @@ export function teamNamesMatch(left: string, right: string) {
   const leftKey = normalizeTeamKey(left);
   const rightKey = normalizeTeamKey(right);
 
-  return leftKey === rightKey || (
-    Math.min(leftKey.length, rightKey.length) >= 5 &&
-    (leftKey.includes(rightKey) || rightKey.includes(leftKey))
-  );
+  return leftKey === rightKey;
 }
 
 export function parseFootballSeason(text: string): OpenFootballRound[] {
@@ -299,9 +421,9 @@ function eventStatus(event: LiveEvent): OpenFootballGame["status"] {
   return normalizeProviderStatus(status);
 }
 
-function eventKickoffInSiteTimezone(value: string) {
+export function eventKickoffInSiteTimezone(value: string, timeZone = siteConfig.fixtureTimezone) {
   const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/Fortaleza",
+    timeZone,
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
@@ -316,10 +438,10 @@ function eventKickoffInSiteTimezone(value: string) {
   };
 }
 
-async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[]) {
+export async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[]) {
   const league = leaguesBySlug[slug];
   const dates = league.season.includes("/")
-    ? `${league.season.slice(0, 4)}0801-${league.season.slice(-2).padStart(4, "20")}0731`
+    ? `${league.season.slice(0, 4)}0801-${Number(league.season.slice(0, 4)) + 1}0731`
     : `${league.season}0101-${league.season}1231`;
   const response = await fetch(
     `https://site.api.espn.com/apis/site/v2/sports/soccer/${league.liveDataId}/scoreboard?dates=${dates}&limit=1000`,
@@ -329,7 +451,19 @@ async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[])
   if (!response.ok) throw new Error(`${league.name}: live results returned ${response.status}`);
 
   const data = (await response.json()) as { events?: LiveEvent[] };
-  const events = (data.events ?? []).filter((event) => event.season?.year === 2026);
+  const seasonStartYear = Number(league.season.slice(0, 4));
+  const baseGames = rounds.flatMap((round) => round.games);
+  const events = (data.events ?? [])
+    .filter((event) => event.season?.year === seasonStartYear)
+    .sort((left, right) => {
+      const distance = (event: LiveEvent) => {
+        const date = eventKickoffInSiteTimezone(event.date, league.timezone).date;
+        return Math.min(...baseGames.map((game) =>
+          Math.abs(Date.parse(`${game.date}T12:00:00Z`) - Date.parse(`${date}T12:00:00Z`))
+        ));
+      };
+      return distance(left) - distance(right);
+    });
 
   for (const event of events) {
     const competitors = event.competitions[0]?.competitors ?? [];
@@ -337,12 +471,33 @@ async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[])
     const away = competitors.find((item) => item.homeAway === "away");
     if (!home || !away) continue;
 
-    const fixture = findFixtureByTeams(rounds, home.team.displayName, away.team.displayName);
+    const eventDate = eventKickoffInSiteTimezone(event.date, league.timezone).date;
+    const fixture = rounds
+      .flatMap((round) => round.games)
+      .filter((game) => !game.id)
+      .filter((game) =>
+        (teamNamesMatch(game.homeTeam, home.team.displayName) && teamNamesMatch(game.awayTeam, away.team.displayName)) ||
+        (teamNamesMatch(game.homeTeam, away.team.displayName) && teamNamesMatch(game.awayTeam, home.team.displayName))
+      )
+      .sort((left, right) =>
+        Math.abs(Date.parse(`${left.date}T12:00:00Z`) - Date.parse(`${eventDate}T12:00:00Z`)) -
+        Math.abs(Date.parse(`${right.date}T12:00:00Z`) - Date.parse(`${eventDate}T12:00:00Z`))
+      )[0];
     if (!fixture) continue;
 
-    const kickoff = eventKickoffInSiteTimezone(event.date);
+    const competition = event.competitions[0];
+    const baseDate = fixture.date;
+    const baseTime = fixture.time;
+    const kickoffUtc = competition?.date ?? event.date;
+    const kickoff = eventKickoffInSiteTimezone(kickoffUtc, league.timezone);
+    fixture.id = event.id;
+    fixture.homeTeam = cleanTeamName(home.team.displayName);
+    fixture.awayTeam = cleanTeamName(away.team.displayName);
+    fixture.sourceAgreement = baseDate === kickoff.date && baseTime !== "TBD" && baseTime === kickoff.time;
     fixture.date = kickoff.date;
-    fixture.time = kickoff.time;
+    fixture.timeConfirmed = competition?.timeValid !== false && fixture.sourceAgreement;
+    fixture.time = fixture.timeConfirmed ? kickoff.time : "TBD";
+    fixture.kickoffUtc = kickoffUtc;
     fixture.status = eventStatus(event);
     fixture.dataSource = "espn";
 
@@ -357,9 +512,83 @@ async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[])
   return rounds;
 }
 
+type SportsDbEvent = {
+  idEvent: string;
+  strHomeTeam: string;
+  strAwayTeam: string;
+  intRound?: string;
+  strTimestamp?: string;
+  strTime?: string;
+  strStatus?: string;
+  strPostponed?: string;
+  intHomeScore?: string | null;
+  intAwayScore?: string | null;
+};
+
+function sportsDbStatus(event: SportsDbEvent): FixtureStatus {
+  if (event.strPostponed === "yes") return "postponed";
+  const status = (event.strStatus ?? "").toUpperCase();
+  if (/CANC/.test(status)) return "canceled";
+  if (/POSTP/.test(status)) return "postponed";
+  if (/SUSP/.test(status)) return "suspended";
+  if (/FT|MATCH FINISHED|FINISHED/.test(status)) return "completed";
+  if (/LIVE|1H|2H|HT/.test(status)) return "in-progress";
+  return "scheduled";
+}
+
+export async function hydrateTheSportsDb(slug: LeagueSlug, rounds: OpenFootballRound[]) {
+  const league = leaguesBySlug[slug];
+  if (!league.artworkId) return rounds;
+  const seasonStart = Number(league.season.slice(0, 4));
+  const season = league.season.includes("/")
+    ? `${seasonStart}-${seasonStart + 1}`
+    : league.season;
+  const sportsDbKey = process.env.THESPORTSDB_API_KEY || "123";
+  const response = await fetch(
+    `https://www.thesportsdb.com/api/v1/json/${sportsDbKey}/eventsseason.php?id=${league.artworkId}&s=${season}`,
+    { headers: { Accept: "application/json" }, cache: "no-store" }
+  );
+  if (!response.ok) throw new Error(`${league.name}: TheSportsDB returned ${response.status}`);
+  const data = (await response.json()) as { events?: SportsDbEvent[] };
+
+  for (const event of data.events ?? []) {
+    if (!event.strTimestamp) continue;
+    const kickoffUtc = `${event.strTimestamp.replace(/Z$/, "")}Z`;
+    if (!Number.isFinite(Date.parse(kickoffUtc))) continue;
+    const kickoff = eventKickoffInSiteTimezone(kickoffUtc);
+    const fixture = rounds.flatMap((round) => round.games)
+      .filter((game) =>
+        (teamNamesMatch(game.homeTeam, event.strHomeTeam) && teamNamesMatch(game.awayTeam, event.strAwayTeam)) ||
+        (teamNamesMatch(game.homeTeam, event.strAwayTeam) && teamNamesMatch(game.awayTeam, event.strHomeTeam))
+      )
+      .sort((left, right) =>
+        Math.abs(Date.parse(`${left.date}T12:00:00Z`) - Date.parse(`${kickoff.date}T12:00:00Z`)) -
+        Math.abs(Date.parse(`${right.date}T12:00:00Z`) - Date.parse(`${kickoff.date}T12:00:00Z`))
+      )[0];
+    if (!fixture) continue;
+
+    fixture.id = `tsdb:${event.idEvent}`;
+    fixture.homeTeam = cleanTeamName(event.strHomeTeam);
+    fixture.awayTeam = cleanTeamName(event.strAwayTeam);
+    fixture.round = Number(event.intRound) || fixture.round;
+    fixture.date = kickoff.date;
+    fixture.time = event.strTime ? kickoff.time : "TBD";
+    fixture.kickoffUtc = kickoffUtc;
+    fixture.timeConfirmed = Boolean(event.strTime);
+    fixture.sourceAgreement = true;
+    fixture.status = sportsDbStatus(event);
+    fixture.dataSource = "thesportsdb";
+    const homeScore = Number(event.intHomeScore);
+    const awayScore = Number(event.intAwayScore);
+    fixture.homeScore = event.intHomeScore !== null && Number.isFinite(homeScore) ? homeScore : null;
+    fixture.awayScore = event.intAwayScore !== null && Number.isFinite(awayScore) ? awayScore : null;
+  }
+  return rounds;
+}
+
 export function loadLeagueSeason(
   slug: LeagueSlug,
-  options: { forceRefresh?: boolean } = {}
+  options: { forceRefresh?: boolean; ignoreSnapshot?: boolean } = {}
 ) {
   const config = openLeagueConfigs[slug];
 
@@ -368,11 +597,19 @@ export function loadLeagueSeason(
   }
 
   if (!promises.has(slug)) {
+    const savedRounds = snapshot.leagues[slug];
+    if (!options.forceRefresh && !options.ignoreSnapshot && savedRounds?.length) {
+      promises.set(slug, Promise.resolve(structuredClone(savedRounds)));
+      return promises.get(slug)!;
+    }
     promises.set(
       slug,
       fetchSeasonText(config)
         .then(parseFootballSeason)
-        .then((rounds) => hydrateLiveResults(slug, rounds).catch(() => rounds))
+        .then((rounds) => hydrateLiveResults(slug, rounds).catch(() =>
+          savedRounds?.length ? structuredClone(savedRounds) : rounds
+        ))
+        .then((rounds) => hydrateTheSportsDb(slug, rounds).catch(() => rounds))
     );
   }
 
@@ -383,13 +620,18 @@ export function loadDailyLeagueFixtures(slug: LeagueSlug, date: string) {
   const cacheKey = `${slug}:${date}`;
 
   if (!dailyPromises.has(cacheKey)) {
-    dailyPromises.set(cacheKey, fetchDailyLeagueFixtures(slug, date));
+    dailyPromises.set(
+      cacheKey,
+      loadLeagueSeason(slug).then((rounds) =>
+        rounds.flatMap((round) => round.games).filter((game) => game.date === date)
+      )
+    );
   }
 
   return dailyPromises.get(cacheKey)!;
 }
 
-async function fetchDailyLeagueFixtures(slug: LeagueSlug, date: string) {
+export async function fetchDailyLeagueFixtures(slug: LeagueSlug, date: string) {
   const league = leaguesBySlug[slug];
   const compactDate = date.replace(/-/g, "");
   const response = await fetch(
@@ -409,7 +651,9 @@ async function fetchDailyLeagueFixtures(slug: LeagueSlug, date: string) {
     const away = competitors.find((item) => item.homeAway === "away");
     if (!home || !away) return [];
 
-    const kickoff = eventKickoffInSiteTimezone(event.date);
+    const competition = event.competitions[0];
+    const kickoffUtc = competition?.date ?? event.date;
+    const kickoff = eventKickoffInSiteTimezone(kickoffUtc, league.timezone);
     if (kickoff.date !== date) return [];
 
     const status = eventStatus(event);
@@ -418,8 +662,11 @@ async function fetchDailyLeagueFixtures(slug: LeagueSlug, date: string) {
 
     return [{
       round: index + 1,
+      id: event.id,
       date: kickoff.date,
-      time: kickoff.time,
+      time: competition?.timeValid === false ? "TBD" : kickoff.time,
+      kickoffUtc,
+      timeConfirmed: competition?.timeValid !== false,
       homeTeam: cleanTeamName(home.team.displayName),
       awayTeam: cleanTeamName(away.team.displayName),
       homeScore: Number.isFinite(homeScore) ? homeScore : null,
@@ -431,11 +678,7 @@ async function fetchDailyLeagueFixtures(slug: LeagueSlug, date: string) {
 }
 
 function localTodayIso() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, "0");
-  const day = String(now.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
+  return eventKickoffInSiteTimezone(new Date().toISOString()).date;
 }
 
 export function findCurrentOrNextRound(
@@ -534,4 +777,17 @@ export function findFixtureByTeams(
   }
 
   return null;
+}
+
+export function findFixtureForPrediction(
+  rounds: OpenFootballRound[],
+  prediction: { league: LeagueSlug; slug: string; homeTeam: string; awayTeam: string }
+) {
+  const providerId = snapshot.predictionIds[`${prediction.league}:${prediction.slug}`];
+  if (providerId) {
+    const byId = rounds.flatMap((round) => round.games).find((game) => game.id === providerId);
+    if (byId) return byId;
+  }
+
+  return findFixtureByTeams(rounds, prediction.homeTeam, prediction.awayTeam);
 }

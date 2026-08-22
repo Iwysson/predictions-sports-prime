@@ -15,8 +15,6 @@ import {
 } from "@/lib/match-feed";
 import { useI18n } from "@/i18n/I18nProvider";
 import { hydratePredictions } from "@/lib/live-predictions";
-import { loadDailyLeagueFixtures, loadLeagueSeason, teamNamesMatch, type OpenFootballGame } from "@/lib/openfootball";
-import { isCompletedFixture, isLiveFixture, isNonPlayableFixture, isPlayableUpcoming } from "@/lib/fixture-status";
 import Link from "next/link";
 
 export function HomePredictionFeed({
@@ -29,7 +27,6 @@ export function HomePredictionFeed({
   const { t } = useI18n();
   const today = localTodayISO();
   const [liveMatches, setLiveMatches] = useState(matches);
-  const [todayFixtures, setTodayFixtures] = useState<MatchPreview[]>([]);
 
   useEffect(() => {
     let cancelled = false;
@@ -43,38 +40,7 @@ export function HomePredictionFeed({
     };
 
     refreshResults();
-    const refreshTimer = window.setInterval(refreshResults, 60_000);
-
-    Promise.allSettled(leagues.map(async (league) => {
-      try {
-        return {
-          league: league.slug,
-          games: await loadDailyLeagueFixtures(league.slug, today),
-        };
-      } catch {
-        const rounds = await loadLeagueSeason(league.slug);
-        return {
-          league: league.slug,
-          games: rounds.flatMap((round) => round.games),
-        };
-      }
-    })).then((seasons) => {
-      if (cancelled) return;
-      const fixtures = seasons.flatMap((season) => {
-        if (season.status !== "fulfilled") return [];
-        const { league, games } = season.value;
-        return games
-          .filter(
-            (game) =>
-              game.date === today &&
-              (isPlayableUpcoming(game.status) || isLiveFixture(game.status))
-          )
-          .map((game) => toTodayFixture(league, game, matches));
-      });
-      setTodayFixtures(sortTodayFixtures(
-        fixtures.filter((fixture) => fixture.status === "published")
-      ));
-    });
+    const refreshTimer = window.setInterval(refreshResults, 15 * 60_000);
 
     return () => {
       cancelled = true;
@@ -87,23 +53,7 @@ export function HomePredictionFeed({
     [liveMatches, today]
   );
 
-  const displayedTodayMatches = useMemo(() => {
-    if (todayFixtures.length === 0) return todayMatches;
-
-    return todayFixtures
-      .map((fixture) => liveMatches.find(
-        (match) =>
-          match.league === fixture.league &&
-          teamNamesMatch(match.homeTeam, fixture.homeTeam) &&
-          teamNamesMatch(match.awayTeam, fixture.awayTeam)
-      ) ?? fixture)
-      .filter(
-        (match) =>
-          match.status === "published" &&
-          !isCompletedFixture(match.fixtureStatus) &&
-          !isNonPlayableFixture(match.fixtureStatus)
-      );
-  }, [liveMatches, todayFixtures, todayMatches]);
+  const displayedTodayMatches = todayMatches;
 
   const latestMatches = useMemo(
     () => selectLatestPublishedPredictions(liveMatches, today, 10),
@@ -281,53 +231,5 @@ export function HomePredictionFeed({
       </section>
 
     </>
-  );
-}
-
-function slugify(value: string) {
-  return value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-}
-
-function toTodayFixture(
-  league: MatchPreview["league"],
-  game: OpenFootballGame,
-  published: MatchPreview[]
-): MatchPreview {
-  const analysis = published.find(
-    (match) =>
-      match.league === league &&
-      teamNamesMatch(match.homeTeam, game.homeTeam) &&
-      teamNamesMatch(match.awayTeam, game.awayTeam)
-  );
-  if (analysis) {
-    return {
-      ...analysis,
-      date: game.date,
-      time: game.time,
-      round: `Matchday ${game.round}`,
-      homeTeam: game.homeTeam,
-      awayTeam: game.awayTeam,
-      fixtureStatus: game.status,
-    };
-  }
-  const slug = `${slugify(game.homeTeam)}-vs-${slugify(game.awayTeam)}`;
-  return {
-    id: `today-${league}-${game.round}-${slug}`,
-    slug,
-    league,
-    round: `Matchday ${game.round}`,
-    homeTeam: game.homeTeam,
-    awayTeam: game.awayTeam,
-    date: game.date,
-    time: game.time,
-    status: "coming-soon",
-    title: `${game.homeTeam} vs ${game.awayTeam}`,
-    fixtureStatus: game.status,
-  };
-}
-
-function sortTodayFixtures(fixtures: MatchPreview[]) {
-  return [...fixtures].sort((left, right) =>
-    left.time.localeCompare(right.time) || left.league.localeCompare(right.league)
   );
 }

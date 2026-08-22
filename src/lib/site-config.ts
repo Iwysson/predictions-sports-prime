@@ -24,6 +24,7 @@ export const siteConfig = {
       : localSiteUrl || canonicalSiteUrl,
 
   locale: "en",
+  fixtureTimezone: "America/Fortaleza",
   twitterCard: "summary_large_image" as const,
 };
 

@@ -52,8 +52,8 @@ function toMatch(
       ...manual,
       league,
       round: `Matchday ${game.round}`,
-      date: game.dataSource === "espn" ? game.date : manual.date || game.date,
-      time: game.time,
+      date: manual.date || game.date,
+      time: manual.time && manual.time !== "TBD" ? manual.time : game.time,
       homeTeam: game.homeTeam,
       awayTeam: game.awayTeam,
       fixtureStatus: game.status,
@@ -154,13 +154,15 @@ export function LiveLeagueRound({
         )
         .map(({ game }) => toMatch(league, game, manualMatches));
 
-      const currentRoundComingSoon = games
+      const currentRoundComingSoon = sortMatchesByKickoff(
+        games
         .filter(
           (game) =>
             !findManualPrediction(game, manualMatches) &&
             canRenderComingSoon(game.status, false)
         )
-        .map((game) => toMatch(league, game, manualMatches));
+        .map((game) => toMatch(league, game, manualMatches))
+      );
 
       const occupiedFixtures = games;
       const today = localTodayISO();

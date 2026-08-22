@@ -12,6 +12,8 @@ import {
   normalizeProviderStatus,
   selectFixtureKickoff,
 } from "../src/lib/fixture-status.ts";
+import { eventKickoffInSiteTimezone } from "../src/lib/openfootball.ts";
+import snapshot from "../src/data/fixtures.snapshot.json" with { type: "json" };
 
 const fixture = (id, status, round = 1) => ({ id, status, round });
 
@@ -54,6 +56,29 @@ assert.deepEqual(selectFixtureKickoff({
   providerTime: "15:45",
   providerIsAuthoritative: false,
 }), { date: "2026-08-22", time: "17:00" }, "E5: non-authoritative season feed must not replace editorial fallback");
+assert.deepEqual(selectFixtureKickoff({
+  fallbackDate: "2026-08-22",
+  fallbackTime: "17:00",
+  providerDate: "2026-08-23",
+  providerTime: "TBD",
+  providerIsAuthoritative: true,
+}), { date: "2026-08-23", time: "TBD" }, "E6: authoritative TBD must suppress a stale manual time");
+
+assert.deepEqual(
+  eventKickoffInSiteTimezone("2026-08-23T01:30:00Z"),
+  { date: "2026-08-22", time: "22:30" },
+  "Timezone A: UTC after midnight must remain on the previous Fortaleza date"
+);
+assert.deepEqual(
+  eventKickoffInSiteTimezone("2026-08-23T03:30:00Z"),
+  { date: "2026-08-23", time: "00:30" },
+  "Timezone B: kickoff after local midnight must use the new Fortaleza date"
+);
+
+for (const league of ["premier-league", "la-liga", "bundesliga", "serie-a", "liga-portugal", "ligue-1", "eredivisie", "brasileirao-serie-a"]) {
+  const sample = snapshot.leagues[league]?.flatMap((round) => round.games)[0];
+  assert.ok(sample?.id && sample.kickoffUtc, `${league}: representative normalized fixture is required`);
+}
 
 assert.equal(canRenderComingSoon("scheduled", true), false, "G: published scheduled fixture uses prediction card");
 assert.equal(canRenderComingSoon("scheduled", false), true, "H: unpublished scheduled fixture may be coming soon");

@@ -92,13 +92,11 @@ export function selectFixtureKickoff(input: {
   providerTime: string;
   providerIsAuthoritative: boolean;
 }) {
-  const providerHasTime = input.providerTime !== "TBD";
-
   return {
     date: input.providerIsAuthoritative
       ? input.providerDate
       : input.fallbackDate || input.providerDate,
-    time: input.providerIsAuthoritative && providerHasTime
+    time: input.providerIsAuthoritative
       ? input.providerTime
       : input.fallbackTime && input.fallbackTime !== "TBD"
         ? input.fallbackTime

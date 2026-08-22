@@ -4,6 +4,14 @@ import { leagues } from "@/data/leagues";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { editorialAuthorPersonJsonLd } from "@/lib/editorial-identity";
 
+function schemaEventStatus(status: Match["fixtureStatus"]) {
+  if (status === "postponed") return "https://schema.org/EventPostponed";
+  if (status === "canceled" || status === "abandoned") return "https://schema.org/EventCancelled";
+  if (status === "completed") return "https://schema.org/EventCompleted";
+  if (status === "in-progress") return "https://schema.org/EventInProgress";
+  return "https://schema.org/EventScheduled";
+}
+
 export function matchSeoTitle(match: Match) {
   const teams = `${match.homeTeam} vs ${match.awayTeam}`;
   const title = `${teams} Prediction & Betting Tips | ${siteConfig.name}`;
@@ -149,20 +157,25 @@ export function articleJsonLd(match: Match) {
     },
     ...(match.publishedAt ? { datePublished: match.publishedAt } : {}),
     ...(match.updatedAt ? { dateModified: match.updatedAt } : {}),
+    ...(match.date
+      ? {
+          about: {
+            "@type": "SportsEvent",
+            name: `${match.homeTeam} vs ${match.awayTeam}`,
+            startDate: match.time && match.time !== "TBD"
+              ? match.kickoffUtc ?? `${match.date}T${match.time}:00`
+              : match.date,
+            eventStatus: schemaEventStatus(match.fixtureStatus),
+          },
+        }
+      : {}),
     author: editorialAuthorPersonJsonLd(),
     publisher: { "@id": absoluteUrl("/#organization") },
     inLanguage: "en",
     isPartOf: {
       "@id": absoluteUrl("/#website"),
     },
-    ...(league
-      ? {
-          about: {
-            "@type": "SportsOrganization",
-            name: league.name,
-          },
-        }
-      : {}),
+    ...(league ? { articleSection: league.name } : {}),
   };
 }
 

@@ -93,6 +93,9 @@ export type EditorialPrediction = {
 
 export type Match = {
   id: string;
+  fixtureId?: string;
+  kickoffUtc?: string;
+  timeConfirmed?: boolean;
   slug: string;
   league: LeagueSlug;
   round: string;

@@ -60,7 +60,7 @@ export function LiveMatchMeta({
             fallbackTime,
             providerDate: fixture.date,
             providerTime: fixture.time,
-            providerIsAuthoritative: fixture.dataSource === "espn",
+            providerIsAuthoritative: !fallbackDate && (!fallbackTime || fallbackTime === "TBD"),
           });
           setData({
             round: `Matchday ${fixture.round}`,

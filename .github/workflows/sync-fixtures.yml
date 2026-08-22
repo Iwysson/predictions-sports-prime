@@ -1,0 +1,33 @@
+name: Sync fixtures
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run fixtures:sync
+        env:
+          THESPORTSDB_API_KEY: ${{ secrets.THESPORTSDB_API_KEY }}
+      - run: npm run fixtures:validate
+      - run: npm run build
+      - name: Commit updated fixture snapshot
+        run: |
+          if git diff --quiet -- src/data/fixtures.snapshot.json; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/fixtures.snapshot.json
+          git commit -m "chore: refresh fixture snapshot"
+          git push

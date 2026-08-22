@@ -65,6 +65,9 @@ export function toMatchPreview(match: Match): MatchPreview {
 
   return {
     id: match.id,
+    fixtureId: match.fixtureId,
+    kickoffUtc: match.kickoffUtc,
+    timeConfirmed: match.timeConfirmed,
     slug: match.slug,
     league: match.league,
     round: match.round,
