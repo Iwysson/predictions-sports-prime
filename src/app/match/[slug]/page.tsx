@@ -34,6 +34,7 @@ async function resolveMatchFixture(match: Match): Promise<Match> {
   const fixture = await hydratePrediction(toMatchPreview(match));
   return {
     ...match,
+    title: match.title,
     fixtureId: fixture.fixtureId,
     kickoffUtc: fixture.kickoffUtc,
     timeConfirmed: fixture.timeConfirmed,

@@ -41,10 +41,11 @@ export type ComputedStanding = {
 
 export type OpenLeagueConfig = {
   slug: LeagueSlug;
-  source: string;
+  source?: string;
   expectedClubs: number;
   expectedGamesPerRound: number;
   label: string;
+  manualOnly?: boolean;
 };
 
 export const openLeagueConfigs = Object.fromEntries(
@@ -54,6 +55,7 @@ export const openLeagueConfigs = Object.fromEntries(
     expectedClubs: league.expectedClubs,
     expectedGamesPerRound: league.expectedGamesPerRound,
     label: league.name,
+    manualOnly: league.manualOnly,
   }])
 ) as Record<LeagueSlug, OpenLeagueConfig>;
 
@@ -355,6 +357,10 @@ export function parseFootballSeason(text: string): OpenFootballRound[] {
 }
 
 async function fetchSeasonText(config: OpenLeagueConfig) {
+  if (!config.source) {
+    throw new Error(`${config.label}: no fixture source configured`);
+  }
+
   const cacheKey = `psp-openfootball-${config.slug}-2026-27-v2`;
   const cacheDuration = 6 * 60 * 60 * 1000;
 
@@ -592,6 +598,10 @@ export function loadLeagueSeason(
 ) {
   const config = openLeagueConfigs[slug];
 
+  if (config.manualOnly || !config.source) {
+    return Promise.resolve([]);
+  }
+
   if (options.forceRefresh) {
     promises.delete(slug);
   }
@@ -618,6 +628,10 @@ export function loadLeagueSeason(
 
 export function loadDailyLeagueFixtures(slug: LeagueSlug, date: string) {
   const cacheKey = `${slug}:${date}`;
+
+  if (openLeagueConfigs[slug].manualOnly) {
+    return Promise.resolve([]);
+  }
 
   if (!dailyPromises.has(cacheKey)) {
     dailyPromises.set(

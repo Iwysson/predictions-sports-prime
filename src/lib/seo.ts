@@ -14,7 +14,8 @@ function schemaEventStatus(status: Match["fixtureStatus"]) {
 
 export function matchSeoTitle(match: Match) {
   const teams = `${match.homeTeam} vs ${match.awayTeam}`;
-  const title = `${teams} Prediction & Betting Tips | ${siteConfig.name}`;
+  const baseTitle = match.title?.trim() || `${teams} Prediction & Betting Tips`;
+  const title = `${baseTitle} | ${siteConfig.name}`;
 
   return title.length <= 70
     ? title

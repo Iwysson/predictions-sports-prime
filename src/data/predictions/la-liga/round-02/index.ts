@@ -1,6 +1,6 @@
 import { rayoVallecanoVsDeportivoAlaves } from "./rayo-vallecano-vs-deportivo-alaves";
 import { caOsasunaVsLevanteUd } from "./ca-osasuna-vs-levante-ud";
-import { malagaVsRcDeportivoLaCoruna } from "./malaga-vs-rc-deportivo-la-coruna";
+import { malagaVsRcDeportivoLaCoruña } from "./malaga-vs-rc-deportivo-la-coruna";
 import { athleticClubVsSevilla } from "./athletic-club-vs-sevilla";
 import { elcheVsBarcelona } from "./elche-vs-barcelona";
 import { valenciaVsRcCeltaDeVigo } from "./valencia-vs-rc-celta-de-vigo";
@@ -12,7 +12,7 @@ import { realBetisVsRealSociedad } from "./real-betis-vs-real-sociedad";
 export const laLigaRound02 = [
   rayoVallecanoVsDeportivoAlaves,
   caOsasunaVsLevanteUd,
-  malagaVsRcDeportivoLaCoruna,
+  malagaVsRcDeportivoLaCoruña,
   athleticClubVsSevilla,
   elcheVsBarcelona,
   valenciaVsRcCeltaDeVigo,

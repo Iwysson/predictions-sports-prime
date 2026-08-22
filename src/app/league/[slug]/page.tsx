@@ -160,10 +160,12 @@ export default async function LeaguePage({
           </div>
 
           <aside className="league-sidebar">
-            <LiveLeagueStandings
+            {league.display.showStandings ? (
+              <LiveLeagueStandings
                 league={league.slug}
                 fallbackRows={standings}
               />
+            ) : null}
 
             <div className="league-side-ad">
               <AdSlot placement="league-sidebar" format="rectangle" />

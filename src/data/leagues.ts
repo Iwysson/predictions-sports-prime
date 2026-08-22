@@ -14,6 +14,7 @@ export type LeagueConfig = {
   artworkId?: number;
   liveDataId: string;
   timezone: string;
+  manualOnly?: boolean;
 };
 
 const source = (path: string) => `https://raw.githubusercontent.com/openfootball/${path}`;
@@ -24,16 +25,26 @@ function defineLeague(
     sourceUrl?: string;
     seasonLabel?: string;
     showOnHome?: boolean;
+    showStandings?: boolean;
   }
 ): LeagueConfig {
-  const { sourcePath, sourceUrl, seasonLabel, showOnHome, ...metadata } = config;
-  const feed = sourceUrl ?? source(sourcePath!);
+  const {
+    sourcePath,
+    sourceUrl,
+    seasonLabel,
+    showOnHome,
+    showStandings,
+    manualOnly,
+    ...metadata
+  } = config;
+  const feed = manualOnly ? "" : (sourceUrl ?? source(sourcePath!));
   return {
     ...metadata,
+    manualOnly,
     season: seasonLabel ?? "2026/27",
     display: {
       showOnHome: showOnHome ?? config.featured,
-      showStandings: true,
+      showStandings: showStandings ?? true,
     },
     sources: { fixtures: feed, standings: feed },
   };
@@ -48,6 +59,8 @@ export const leagues: LeagueConfig[] = [
   defineLeague({ slug: "ligue-1", name: "Ligue 1", country: "France", short: "L1", featured: false, showOnHome: true, sourcePath: "europe/refs/heads/master/france/2026-27_fr1.txt", expectedClubs: 18, expectedGamesPerRound: 9, artworkId: 4334, liveDataId: "fra.1", timezone: "Europe/Paris" }),
   defineLeague({ slug: "eredivisie", name: "VriendenLoterij Eredivisie", country: "Netherlands", short: "ERE", featured: false, showOnHome: true, sourcePath: "europe/refs/heads/master/netherlands/2026-27_nl1.txt", expectedClubs: 18, expectedGamesPerRound: 9, artworkId: 4337, liveDataId: "ned.1", timezone: "Europe/Amsterdam" }),
   defineLeague({ slug: "brasileirao-serie-a", name: "Brasileirão Série A", country: "Brazil", short: "BRA", seasonLabel: "2026", featured: false, showOnHome: true, sourceUrl: "/data/brasileirao-2026.txt", expectedClubs: 20, expectedGamesPerRound: 10, artworkId: 4351, liveDataId: "bra.1", timezone: "America/Sao_Paulo" }),
+  defineLeague({ slug: "copa-do-brasil", name: "Copa do Brasil", country: "Brazil", short: "CDB", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 8, expectedGamesPerRound: 4, timezone: "America/Sao_Paulo", liveDataId: "" }),
+  defineLeague({ slug: "efl-cup", name: "EFL Cup", country: "England", short: "EFL", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 24, expectedGamesPerRound: 12, timezone: "Europe/London", liveDataId: "" }),
 ];
 
 export const leaguesBySlug = Object.fromEntries(

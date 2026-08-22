@@ -1,6 +1,6 @@
 import type { EditorialPrediction } from "@/types";
 
-export const deportivoLaCorunaVsElche: EditorialPrediction = {
+export const deportivoLaCoruñaVsElche: EditorialPrediction = {
   league: "la-liga",
   homeTeam: "RC Deportivo La Coruña",
   awayTeam: "Elche",

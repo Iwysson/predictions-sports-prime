@@ -14,6 +14,9 @@ function stat(entry: Entry, name: string) {
 
 export async function loadLiveStandings(slug: LeagueSlug): Promise<StandingRow[]> {
   const league = leaguesBySlug[slug];
+  if (!league.liveDataId) {
+    return [];
+  }
   const response = await fetch(
     `https://site.api.espn.com/apis/v2/sports/soccer/${league.liveDataId}/standings?season=2026`,
     { headers: { Accept: "application/json" } }
