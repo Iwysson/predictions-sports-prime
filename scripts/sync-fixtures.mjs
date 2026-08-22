@@ -38,6 +38,9 @@ function findPredictionFixture(rounds, prediction) {
 }
 
 async function sourceText(source) {
+  if (typeof source !== "string" || source.trim() === "") {
+    return null;
+  }
   if (source.startsWith("/")) {
     return readFile(resolve("public", source.replace(/^\/+/, "")), "utf8");
   }
@@ -47,7 +50,12 @@ async function sourceText(source) {
 }
 
 for (const league of leagues) {
-  const base = parseFootballSeason(await sourceText(league.sources.fixtures));
+  const text = await sourceText(league.sources.fixtures);
+  if (text === null) {
+    console.log(`${league.name}: skipped (no automatic fixture feed configured)`);
+    continue;
+  }
+  const base = parseFootballSeason(text);
   const espnRounds = await hydrateLiveResults(league.slug, base);
   const rounds = await hydrateTheSportsDb(league.slug, espnRounds);
   const validation = validateLeagueRounds(rounds, {
@@ -96,8 +104,9 @@ for (const league of leagues) {
   console.log(`${league.name}: ${rounds.flatMap((round) => round.games).length} fixtures, ${leaguePredictions.length} predictions linked`);
 }
 
-if (Object.keys(snapshot.predictionIds).length !== matches.length) {
-  throw new Error(`Expected ${matches.length} prediction links, produced ${Object.keys(snapshot.predictionIds).length}.`);
+const automaticPredictions = matches.filter((match) => leagues.find((league) => league.slug === match.league)?.sources.fixtures);
+if (Object.keys(snapshot.predictionIds).length !== automaticPredictions.length) {
+  throw new Error(`Expected ${automaticPredictions.length} automatic prediction links, produced ${Object.keys(snapshot.predictionIds).length}.`);
 }
 
 await writeFile(outputPath, `${JSON.stringify(snapshot, null, 2)}\n`, "utf8");

@@ -14,6 +14,7 @@ assert.ok(Date.now() - Date.parse(snapshot.generatedAt) < 24 * 60 * 60 * 1000, "
 
 const ids = new Set();
 for (const league of leagues) {
+  if (!league.sources.fixtures) continue;
   const rounds = snapshot.leagues[league.slug];
   assert.ok(rounds?.length, `${league.name}: missing fixture snapshot.`);
   const result = validateLeagueRounds(rounds, {
@@ -34,10 +35,17 @@ for (const league of leagues) {
 }
 
 for (const match of matches) {
+  if (!leagues.find((league) => league.slug === match.league)?.sources.fixtures) continue;
   assert.ok(snapshot.predictionIds[`${match.league}:${match.slug}`], `${match.slug}: prediction is not linked to a provider fixture ID.`);
   const hydrated = await hydratePrediction(toMatchPreview(match));
-  if (match.date) assert.equal(hydrated.date, match.date, `${match.slug}: provider overwrote verified editorial date.`);
-  if (match.time && match.time !== "TBD") assert.equal(hydrated.time, match.time, `${match.slug}: provider overwrote verified editorial time.`);
+  const providerFixture = snapshot.leagues[match.league]
+    .flatMap((round) => round.games)
+    .find((game) => game.id === snapshot.predictionIds[`${match.league}:${match.slug}`]);
+  assert.equal(hydrated.date, providerFixture.date, `${match.slug}: reliable provider date was not retained.`);
+  assert.equal(hydrated.time, providerFixture.time, `${match.slug}: reliable provider kickoff was not retained.`);
 }
+
+const hullUnited = await hydratePrediction(toMatchPreview(matches.find((match) => match.slug === "hull-city-vs-manchester-united")));
+assert.equal(hullUnited.time, "08:30", "Hull City vs Manchester United must remain at 08:30 in Brazil.");
 
 console.log(`Fixture snapshot validation: PASS (${ids.size} fixtures, ${matches.length} predictions)`);
