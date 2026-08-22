@@ -6,7 +6,6 @@ import {
   findFixtureByTeams,
   loadLeagueSeason,
 } from "@/lib/openfootball";
-import { selectFixtureKickoff } from "@/lib/fixture-status";
 
 type State = {
   round: string;
@@ -55,17 +54,10 @@ export function LiveMatchMeta({
         }
 
         if (!cancelled) {
-          const kickoff = selectFixtureKickoff({
-            fallbackDate,
-            fallbackTime,
-            providerDate: fixture.date,
-            providerTime: fixture.time,
-            providerIsAuthoritative: !fallbackDate && (!fallbackTime || fallbackTime === "TBD"),
-          });
           setData({
             round: `Matchday ${fixture.round}`,
-            date: kickoff.date,
-            time: kickoff.time,
+            date: fixture.date,
+            time: fixture.time,
             state: "live",
           });
         }

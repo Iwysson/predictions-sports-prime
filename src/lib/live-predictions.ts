@@ -1,7 +1,7 @@
 import type { MatchPreview } from "@/types";
 import { findFixtureForPrediction, loadLeagueSeason } from "@/lib/openfootball";
 import { resolvePredictionResult } from "@/lib/prediction-results";
-import { isHistoryEligibleFixture, selectFixtureKickoff } from "@/lib/fixture-status";
+import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 
 /**
  * Applies the latest fixture status and score to an editorial prediction.
@@ -32,25 +32,14 @@ export async function hydratePrediction(match: MatchPreview): Promise<MatchPrevi
       return resolvePredictionResult(match);
     }
 
-    const hasVerifiedEditorialDate = Boolean(match.date);
-    const hasVerifiedEditorialTime = Boolean(match.time && match.time !== "TBD");
-    const kickoff = selectFixtureKickoff({
-      fallbackDate: match.date,
-      fallbackTime: match.time,
-      providerDate: fixture.date,
-      providerTime: fixture.time,
-      providerIsAuthoritative: !hasVerifiedEditorialDate && !hasVerifiedEditorialTime,
-    });
     const hydrated: MatchPreview = {
       ...match,
       fixtureId: fixture.id,
-      kickoffUtc: hasVerifiedEditorialDate || hasVerifiedEditorialTime
-        ? undefined
-        : fixture.kickoffUtc,
-      timeConfirmed: hasVerifiedEditorialTime ? true : fixture.timeConfirmed,
+      kickoffUtc: fixture.kickoffUtc,
+      timeConfirmed: fixture.timeConfirmed,
       round: `Matchday ${fixture.round}`,
-      date: hasVerifiedEditorialDate ? match.date : kickoff.date,
-      time: hasVerifiedEditorialTime ? match.time : fixture.time,
+      date: fixture.date,
+      time: fixture.time,
       homeTeam: fixture.homeTeam,
       awayTeam: fixture.awayTeam,
       fixtureStatus: fixture.status,
