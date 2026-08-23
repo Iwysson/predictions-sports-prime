@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-23T01:59:30.133Z",
+  "generatedAt": "2026-08-23T04:00:34.629Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -11628,9 +11628,9 @@
             "time": "20:30",
             "homeTeam": "Cruzeiro",
             "awayTeam": "Flamengo",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "in-progress",
+            "homeScore": 2,
+            "awayScore": 1,
+            "status": "completed",
             "dataSource": "espn",
             "id": "401841206",
             "sourceAgreement": true,
