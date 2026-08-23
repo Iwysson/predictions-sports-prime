@@ -122,6 +122,8 @@ function isoDate(year: number, month: number, day: number) {
 function cleanTeamName(name: string) {
   return name
     .trim()
+    .replace(/\s*\[[^\]]+\]\s*$/i, "")
+    .replace(/\s*\([^)]+\)\s*$/i, "")
     .replace(/\s+FC$/i, "")
     .replace(/\s+AFC$/i, "")
     .replace(/^AFC\s+/i, "")
