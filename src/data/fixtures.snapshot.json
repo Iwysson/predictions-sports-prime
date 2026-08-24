@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-24T10:03:45.535Z",
+  "generatedAt": "2026-08-24T13:12:43.158Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -5152,17 +5152,17 @@
           {
             "round": 1,
             "date": "2026-08-22",
-            "time": "TBD",
-            "homeTeam": "Internazionale",
+            "time": "13:30",
+            "homeTeam": "Inter Milan",
             "awayTeam": "Monza",
             "homeScore": 4,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "espn",
-            "id": "401874931",
-            "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-08-22T16:30Z"
+            "dataSource": "thesportsdb",
+            "id": "tsdb:2482144",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-08-22T16:30:00Z"
           },
           {
             "round": 1,
@@ -7534,7 +7534,7 @@
             "id": "401885457",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-08-31T18:00Z"
+            "kickoffUtc": "2026-08-31T19:15Z"
           },
           {
             "round": 4,
@@ -7549,7 +7549,7 @@
             "id": "401885462",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-08-31T18:00Z"
+            "kickoffUtc": "2026-08-31T19:15Z"
           }
         ]
       },
@@ -12086,7 +12086,7 @@
     "serie-a:udinese-calcio-vs-como-1907": "tsdb:2482138",
     "serie-a:bologna-vs-lazio": "tsdb:2482142",
     "serie-a:genoa-cfc-vs-ssc-napoli": "tsdb:2482139",
-    "serie-a:internazionale-milano-vs-ac-monza": "401874931",
+    "serie-a:internazionale-milano-vs-ac-monza": "tsdb:2482144",
     "serie-a:atalanta-vs-sassuolo": "tsdb:2482141",
     "serie-a:torino-vs-milan": "tsdb:2482143",
     "serie-a:frosinone-vs-juventus": "tsdb:2482145",
