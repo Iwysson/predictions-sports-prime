@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { MatchPreview, LeagueSlug } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
 import {
-  findCurrentOrNextRound,
+  getCentralCurrentRound,
   loadLeagueSeason,
   openLeagueConfigs,
   OpenFootballGame,
@@ -38,6 +38,22 @@ function findManualPrediction(
       teamNamesMatch(match.homeTeam, game.homeTeam) &&
       teamNamesMatch(match.awayTeam, game.awayTeam)
   );
+}
+
+function roundSignature(rounds: OpenFootballGame[]) {
+  return rounds
+    .map((game) => [
+      game.id ?? "",
+      game.homeTeam,
+      game.awayTeam,
+      game.date,
+      game.time,
+      game.status ?? "",
+      game.kickoffUtc ?? "",
+      game.homeScore ?? "",
+      game.awayScore ?? "",
+    ].join("|"))
+    .join("||");
 }
 
 function toMatch(
@@ -93,6 +109,8 @@ export function LiveLeagueRound({
     "loading" | "validated" | "fallback" | "invalid"
   >(manualMatches.length > 0 ? "fallback" : "loading");
   const [warningCount, setWarningCount] = useState(0);
+  const gamesSignatureRef = useRef("");
+  const roundNumberRef = useRef<number | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -107,7 +125,7 @@ export function LiveLeagueRound({
           );
         }
 
-        const round = findCurrentOrNextRound(rounds);
+        const round = getCentralCurrentRound(rounds);
         const roundValidation = validateRoundForDisplay(round, config);
 
         if (!roundValidation.valid || !round) {
@@ -117,9 +135,14 @@ export function LiveLeagueRound({
         }
 
         if (!cancelled) {
-          setGames(round.games);
-          setRoundNumber(round.round);
-          setWarningCount(roundValidation.warnings.length);
+          const nextSignature = roundSignature(round.games);
+          if (nextSignature !== gamesSignatureRef.current || round.round !== roundNumberRef.current) {
+            setGames(round.games);
+            setRoundNumber(round.round);
+            setWarningCount(roundValidation.warnings.length);
+            gamesSignatureRef.current = nextSignature;
+            roundNumberRef.current = round.round;
+          }
           setState("validated");
         }
       })
@@ -202,7 +225,7 @@ export function LiveLeagueRound({
     <div className="live-round-block">
       <div className="round-source-line">
         <span>
-          {roundNumber ? `Matchday ${roundNumber}` : "Current Round"}
+          {roundNumber ? `Matchday ${roundNumber}` : "Next round fixtures are not available yet."}
         </span>
 
         <span className={`round-source-status round-source-status--${state}`}>

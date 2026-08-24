@@ -7,12 +7,14 @@ import { LeagueBadge } from "@/components/LeagueBadge";
 import { leagues } from "@/data/leagues";
 import { useI18n } from "@/i18n/I18nProvider";
 import { canRenderComingSoon } from "@/lib/fixture-status";
+import { getMatchDisplayTime } from "@/lib/match-time";
 
 export function MatchCard({ match }: { match: MatchPreview }) {
   const href = `/match/${match.slug}/`;
   const league = leagues.find((item) => item.slug === match.league);
   const { t } = useI18n();
   const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");
+  const kickoff = getMatchDisplayTime(match);
 
   return (
     <article className="match-card">
@@ -26,7 +28,11 @@ export function MatchCard({ match }: { match: MatchPreview }) {
           <strong>{league?.name ?? match.league}</strong>
         </div>
 
-        <span className="match-time">◷ {match.time || "TBD"}</span>
+        <span className="match-time" aria-label={kickoff.ariaLabel}>
+          <span aria-hidden="true">🕒</span>
+          <strong>{kickoff.display}</strong>
+          <small>{kickoff.sublabel}</small>
+        </span>
       </div>
 
       <div className="compact-teams">

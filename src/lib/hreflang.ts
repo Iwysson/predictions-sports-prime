@@ -1,24 +1,39 @@
 import type { Match } from "@/types";
-import { searchIntentLocales } from "@/lib/match-search-intent";
+import type { SearchLocale } from "@/lib/search-intent-research";
+import { absoluteUrl } from "@/lib/site-config";
 
 type HreflangEntry = {
   locale: string;
   href: string;
 };
 
-function hasDistinctLocalizedMatchRoutes() {
-  return false;
+type LocalizedMatchPathBuilder = (match: Match) => string;
+
+// Keep this empty until crawlable, indexable localized routes actually exist.
+const localizedMatchPathBuilders: Partial<Record<SearchLocale, LocalizedMatchPathBuilder>> = {};
+
+function configuredLocalizedPaths(match: Match) {
+  return Object.entries(localizedMatchPathBuilders)
+    .map(([locale, buildPath]) => ({
+      locale,
+      path: buildPath?.(match) ?? "",
+    }))
+    .filter((entry) => entry.path.startsWith("/"));
 }
 
-export function buildMatchHreflangEntries(_match: Match): HreflangEntry[] {
-  if (!hasDistinctLocalizedMatchRoutes()) return [];
+export function buildMatchHreflangEntries(match: Match): HreflangEntry[] {
+  const localizedPaths = configuredLocalizedPaths(match);
+  const uniquePaths = new Set(localizedPaths.map((entry) => entry.path));
+  if (localizedPaths.length < 2 || uniquePaths.size !== localizedPaths.length) return [];
 
-  return searchIntentLocales.map((locale) => ({
-    locale,
-    href: "",
+  const entries = localizedPaths.map((entry) => ({
+    locale: entry.locale,
+    href: absoluteUrl(entry.path),
   }));
+  const defaultEntry = entries.find((entry) => entry.locale === "en") ?? entries[0];
+  return [...entries, { locale: "x-default", href: defaultEntry.href }];
 }
 
 export function hasLocalizedMatchRoutes() {
-  return hasDistinctLocalizedMatchRoutes();
+  return Object.keys(localizedMatchPathBuilders).length >= 2;
 }

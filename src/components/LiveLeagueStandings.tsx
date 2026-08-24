@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { LeagueSlug } from "@/types";
 import { StandingRow } from "@/data/standings";
 import {
@@ -24,6 +24,7 @@ export function LiveLeagueStandings({
   const [source, setSource] = useState<
     "validated" | "fallback" | "loading"
   >("loading");
+  const rowsSignatureRef = useRef("");
 
   useEffect(() => {
     let cancelled = false;
@@ -31,7 +32,25 @@ export function LiveLeagueStandings({
     loadLiveStandings(league)
       .then((computed) => {
         if (!cancelled) {
-          setRows(computed);
+          const nextSignature = computed
+            .map((row) => [
+              row.position,
+              row.team,
+              row.played ?? "",
+              row.wins ?? "",
+              row.draws ?? "",
+              row.losses ?? "",
+              row.goalsFor ?? "",
+              row.goalsAgainst ?? "",
+              row.goalDifference ?? "",
+              row.points ?? "",
+            ].join("|"))
+            .join("||");
+
+          if (nextSignature !== rowsSignatureRef.current) {
+            setRows(computed);
+            rowsSignatureRef.current = nextSignature;
+          }
           setSource("validated");
         }
       })
@@ -39,7 +58,25 @@ export function LiveLeagueStandings({
         console.warn(`Using table fallback for ${config.label}:`, error);
 
         if (!cancelled) {
-          setRows(fallbackRows);
+          const fallbackSignature = fallbackRows
+            .map((row) => [
+              row.position,
+              row.team,
+              row.played ?? "",
+              row.wins ?? "",
+              row.draws ?? "",
+              row.losses ?? "",
+              row.goalsFor ?? "",
+              row.goalsAgainst ?? "",
+              row.goalDifference ?? "",
+              row.points ?? "",
+            ].join("|"))
+            .join("||");
+
+          if (fallbackSignature !== rowsSignatureRef.current) {
+            setRows(fallbackRows);
+            rowsSignatureRef.current = fallbackSignature;
+          }
           setSource("fallback");
         }
       });
@@ -64,6 +101,8 @@ export function LiveLeagueStandings({
     });
   }, [config.expectedClubs, rows]);
 
+  const hasValidatedData = source === "validated" && rows.length > 0;
+
   return (
     <div className="standings-card standings-card--open">
       <div className="standings-header">
@@ -77,19 +116,43 @@ export function LiveLeagueStandings({
           <strong>
             {source === "loading"
               ? t("validating")
-              : source === "validated"
+              : hasValidatedData
                 ? t("validated")
                 : t("saved")}
           </strong>
         </div>
       </div>
 
-      <div className="standings-columns">
+      <div className="standings-columns standings-columns--desktop">
         <span>#</span>
         <span>{t("club")}</span>
-        <span>{t("played")}</span>
+        <span>P</span>
+        <span>W</span>
+        <span>D</span>
+        <span>L</span>
+        <span>GF</span>
+        <span>GA</span>
         <span>GD</span>
-        <span>{t("points")}</span>
+        <span>PTS</span>
+      </div>
+
+      <div className="standings-columns standings-columns--tablet">
+        <span>#</span>
+        <span>{t("club")}</span>
+        <span>P</span>
+        <span>W</span>
+        <span>D</span>
+        <span>L</span>
+        <span>GD</span>
+        <span>PTS</span>
+      </div>
+
+      <div className="standings-columns standings-columns--mobile">
+        <span>#</span>
+        <span>{t("club")}</span>
+        <span>P</span>
+        <span>GD</span>
+        <span>PTS</span>
       </div>
 
       <div className="standings-list">
@@ -99,16 +162,21 @@ export function LiveLeagueStandings({
               {row.position}
             </span>
             <strong>{row.team}</strong>
-            <span>{row.played}</span>
-            <span>{row.goalDifference ?? 0}</span>
-            <b>{row.points}</b>
+            <span className="standing-cell standing-cell--played">{row.played ?? 0}</span>
+            <span className="standing-cell standing-cell--wins">{row.wins ?? 0}</span>
+            <span className="standing-cell standing-cell--draws">{row.draws ?? 0}</span>
+            <span className="standing-cell standing-cell--losses">{row.losses ?? 0}</span>
+            <span className="standing-cell standing-cell--gf">{row.goalsFor ?? 0}</span>
+            <span className="standing-cell standing-cell--ga">{row.goalsAgainst ?? 0}</span>
+            <span className="standing-cell standing-cell--gd">{(row.goalDifference ?? 0) > 0 ? `+${row.goalDifference}` : `${row.goalDifference ?? 0}`}</span>
+            <b className="standing-cell standing-cell--points">{row.points}</b>
           </div>
         ))}
       </div>
 
       <div className="standings-status">
         <span>{config.expectedClubs} clubs</span>
-        <span>{source === "validated" ? "source checked" : "local fallback"}</span>
+        <span>{hasValidatedData ? "source checked" : "data updating"}</span>
       </div>
     </div>
   );

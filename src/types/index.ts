@@ -1,4 +1,5 @@
 import type { FixtureStatus } from "@/lib/fixture-status";
+import type { SearchIntentCategory, SearchLocale } from "@/lib/search-intent-research";
 
 export type LeagueSlug =
   | "premier-league"
@@ -119,6 +120,44 @@ export type Match = {
   publishedAt?: string;
   updatedAt?: string;
   sources?: EditorialSource[];
+};
+
+export type EditorialStatus = "draft" | "ready_for_analysis" | "published";
+
+export type UpcomingFixtureDraft = {
+  slug: string;
+  fixtureId?: string;
+  league: LeagueSlug;
+  round: string;
+  homeTeam: string;
+  awayTeam: string;
+  date: string;
+  time: string;
+  venue?: string;
+  status: "fixture-prepared";
+  editorialStatus: Exclude<EditorialStatus, "published">;
+  published: false;
+  matchDate: string;
+  kickoff: string;
+  fixtureLastUpdated?: string;
+  source?: string;
+  externalFixtureId?: string;
+  searchIntent?: {
+    locale: SearchLocale;
+    categories: SearchIntentCategory[];
+    primaryQuery: string;
+    alternateMatchQueries: string[];
+    predictionQueries: string[];
+    bettingQueries: string[];
+    oddsQueries: string[];
+    analysisQueries: string[];
+    secondaryQueries: string[];
+    marketQueries: string[];
+    statisticalQueries: string[];
+    temporalQueries: string[];
+    competitionQueries: string[];
+    temporalState: "today" | "tomorrow" | "upcoming" | "historical" | null;
+  };
 };
 
 export type MatchPreview = Omit<Match, "analysis" | "comment" | "predictions"> & {

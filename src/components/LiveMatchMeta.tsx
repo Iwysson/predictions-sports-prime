@@ -1,18 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { LeagueSlug } from "@/types";
-import {
-  findFixtureByTeams,
-  loadLeagueSeason,
-} from "@/lib/openfootball";
-
-type State = {
-  round: string;
-  date: string;
-  time: string;
-  state: "loading" | "live" | "fallback";
-};
+import { getMatchDisplayTime } from "@/lib/match-time";
 
 export function LiveMatchMeta({
   league,
@@ -31,71 +20,19 @@ export function LiveMatchMeta({
   fallbackTime: string;
   venue?: string;
 }) {
-  const [data, setData] = useState<State>({
-    round: fallbackRound,
+  const fallback = getMatchDisplayTime({
+    league,
     date: fallbackDate,
     time: fallbackTime,
-    state: "loading",
   });
-
-  useEffect(() => {
-    let cancelled = false;
-
-    loadLeagueSeason(league)
-      .then((rounds) => {
-        const fixture = findFixtureByTeams(
-          rounds,
-          homeTeam,
-          awayTeam
-        );
-
-        if (!fixture) {
-          throw new Error("Fixture not found.");
-        }
-
-        if (!cancelled) {
-          setData({
-            round: `Matchday ${fixture.round}`,
-            date: fixture.date,
-            time: fixture.time,
-            state: "live",
-          });
-        }
-      })
-      .catch(() => {
-        if (!cancelled) {
-          setData({
-            round: fallbackRound,
-            date: fallbackDate,
-            time: fallbackTime,
-            state: "fallback",
-          });
-        }
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [
-    awayTeam,
-    fallbackDate,
-    fallbackRound,
-    fallbackTime,
-    homeTeam,
-    league,
-  ]);
 
   return (
     <>
-      <small>
-        {data.state === "loading"
-          ? "Loading match details..."
-          : data.round}
-      </small>
+      <small>{fallbackRound}</small>
 
       <div className="compact-match-meta">
-        {data.date ? <span>{data.date}</span> : null}
-        <span>{data.time || "TBD"}</span>
+        <span aria-label={fallback.ariaLabel}>{fallback.display}</span>
+        <small>{fallback.sublabel}</small>
         {venue ? <span>{venue}</span> : null}
       </div>
     </>

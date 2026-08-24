@@ -3,11 +3,30 @@ import { LeagueSlug } from "@/types";
 export type StandingRow = {
   position: number;
   team: string;
-  played: number;
-  points: number;
+  played?: number;
+  wins?: number;
+  draws?: number;
+  losses?: number;
+  goalsFor?: number;
+  goalsAgainst?: number;
   goalDifference?: number;
+  points: number;
   zone?: "champions" | "europa" | "relegation";
 };
+
+export function normalizeStandingRow(row: StandingRow): StandingRow {
+  const goalDifference =
+    typeof row.goalDifference === "number"
+      ? row.goalDifference
+      : typeof row.goalsFor === "number" && typeof row.goalsAgainst === "number"
+        ? row.goalsFor - row.goalsAgainst
+        : undefined;
+
+  return {
+    ...row,
+    goalDifference,
+  };
+}
 
 function placeholderTeams(names: string[]): StandingRow[] {
   return names.map((team, index) => ({

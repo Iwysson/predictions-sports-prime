@@ -1711,8 +1711,8 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
 }
 
 .standings-header {
-  min-height: 58px;
-  padding: 12px 12px 9px;
+  min-height: 52px;
+  padding: 10px 12px 8px;
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -1722,37 +1722,47 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
 
 .standings-header h3 {
   margin: 3px 0 0;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: -.02em;
 }
 
 .standings-live {
-  padding: 5px 7px;
+  padding: 4px 7px;
   border-radius: 7px;
   background: rgba(85,227,143,.09);
   color: var(--accent);
   font-size: 8px;
-  font-weight: 900;
-  letter-spacing: .06em;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.standings-live--neutral {
+  background: rgba(255,255,255,.03);
+  color: var(--muted);
 }
 
 .standings-columns,
 .standing-row {
   display: grid;
-  grid-template-columns: 28px minmax(0, 1fr) 28px 30px 36px;
+  grid-template-columns: 28px minmax(0, 1.7fr) repeat(8, minmax(24px, auto));
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .standings-columns {
-  min-height: 27px;
-  padding: 0 9px;
+  min-height: 26px;
+  padding: 0 10px;
   color: #718596;
   background: rgba(255,255,255,.018);
   border-bottom: 1px solid var(--line);
   font-size: 8px;
   text-transform: uppercase;
   font-weight: 900;
+}
+
+.standings-columns--tablet,
+.standings-columns--mobile {
+  display: none;
 }
 
 .standings-list {
@@ -1762,8 +1772,8 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
 }
 
 .standing-row {
-  min-height: 31px;
-  padding: 0 9px;
+  min-height: 29px;
+  padding: 0 10px;
   border-bottom: 1px solid rgba(255,255,255,.055);
   font-size: 10px;
 }
@@ -1781,14 +1791,29 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
   font-weight: 700;
 }
 
-.standing-row > span:nth-child(3),
-.standing-row > b {
+.standing-cell--played,
+.standing-cell--wins,
+.standing-cell--draws,
+.standing-cell--losses,
+.standing-cell--gf,
+.standing-cell--ga,
+.standing-cell--gd,
+.standing-cell--points {
   text-align: right;
-  font-size: 9px;
 }
 
-.standing-row > b {
+.standing-cell--gd,
+.standing-cell--points {
+  font-variant-numeric: tabular-nums;
+}
+
+.standing-cell--points {
   color: var(--text);
+  font-weight: 800;
+}
+
+.standing-cell--gd {
+  color: var(--muted);
 }
 
 .standing-position {
@@ -1981,8 +2006,8 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
 }
 
 .standings-status {
-  min-height: 29px;
-  padding: 7px 10px;
+  min-height: 26px;
+  padding: 6px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2103,7 +2128,7 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
 }
 
 .standing-row {
-  min-height: 27px;
+  min-height: 29px;
   font-size: 9px;
 }
 
@@ -2113,6 +2138,69 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
 
 .standings-card {
   max-height: none;
+}
+
+@media (max-width: 980px) {
+  .standings-columns--desktop {
+    display: none;
+  }
+
+  .standings-columns--tablet {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1.7fr) repeat(6, minmax(24px, auto));
+  }
+
+  .standing-row {
+    grid-template-columns: 28px minmax(0, 1.7fr) repeat(6, minmax(24px, auto));
+  }
+
+  .standing-cell--gf,
+  .standing-cell--ga {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .standings-columns--tablet {
+    display: none;
+  }
+
+  .standings-columns--mobile {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1.8fr) 24px 42px 42px;
+  }
+
+  .standing-row {
+    min-height: 38px;
+    grid-template-columns: 24px minmax(0, 1.8fr) 24px 42px 42px;
+    padding: 0 9px;
+  }
+
+  .standing-cell--wins,
+  .standing-cell--draws,
+  .standing-cell--losses,
+  .standing-cell--gf,
+  .standing-cell--ga {
+    display: none;
+  }
+
+  .standings-list {
+    max-height: 440px;
+  }
+}
+
+@media (max-width: 430px) {
+  .standing-row {
+    grid-template-columns: 24px minmax(0, 1.55fr) 22px 40px 38px;
+  }
+
+  .standings-columns--mobile {
+    grid-template-columns: 24px minmax(0, 1.55fr) 22px 40px 38px;
+  }
+
+  .standing-row strong {
+    font-size: 8px;
+  }
 }
 
 @media (max-width: 760px) {

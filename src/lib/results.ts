@@ -25,3 +25,24 @@ export function predictionResultCounts(matches: MatchPreview[]) {
   matches.forEach((match) => { counts[match.betResult ?? "pending"] += 1; });
   return counts;
 }
+
+export function buildPredictionHistoryState(matches: MatchPreview[]) {
+  const entries = completePredictionHistory(
+    matches.filter((match) => match.betResult !== undefined || match.fixtureStatus === "completed")
+  );
+  const counts = predictionResultCounts(entries);
+  const settled = counts.green + counts.red + counts.push + counts["half-green"] + counts["half-red"] + counts.void;
+
+  return {
+    published: entries.length,
+    settled,
+    won: counts.green,
+    lost: counts.red,
+    push: counts.push,
+    halfWon: counts["half-green"],
+    halfLost: counts["half-red"],
+    void: counts.void,
+    pending: counts.pending,
+    entries,
+  };
+}

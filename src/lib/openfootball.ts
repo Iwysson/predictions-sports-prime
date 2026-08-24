@@ -7,6 +7,7 @@ import {
   findCurrentOrNextDatedRound,
   normalizeProviderStatus,
 } from "@/lib/fixture-status";
+import { getCurrentRound } from "@/lib/match-lifecycle";
 
 export type OpenFootballGame = {
   id?: string;
@@ -702,6 +703,10 @@ export function findCurrentOrNextRound(
   today = localTodayIso()
 ) {
   return findCurrentOrNextDatedRound(rounds, today);
+}
+
+export function getCentralCurrentRound(rounds: OpenFootballRound[], now = new Date()) {
+  return getCurrentRound(rounds, now);
 }
 
 export function computeStandings(

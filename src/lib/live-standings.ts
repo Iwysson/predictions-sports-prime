@@ -1,5 +1,5 @@
 import type { LeagueSlug } from "@/types";
-import type { StandingRow } from "@/data/standings";
+import { normalizeStandingRow, type StandingRow } from "@/data/standings";
 import { leaguesBySlug } from "@/data/leagues";
 
 type Stat = { name: string; value: number };
@@ -38,8 +38,14 @@ export async function loadLiveStandings(slug: LeagueSlug): Promise<StandingRow[]
       position: stat(entry, "rank"),
       team: entry.team.displayName,
       played: stat(entry, "gamesPlayed"),
+      wins: stat(entry, "wins"),
+      draws: stat(entry, "ties"),
+      losses: stat(entry, "losses"),
+      goalsFor: stat(entry, "pointsFor"),
+      goalsAgainst: stat(entry, "pointsAgainst"),
       points: stat(entry, "points"),
       goalDifference: stat(entry, "pointDifferential"),
     }))
+    .map(normalizeStandingRow)
     .sort((left, right) => left.position - right.position);
 }

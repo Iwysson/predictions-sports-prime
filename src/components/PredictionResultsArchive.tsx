@@ -1,11 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import type { MatchPreview, PredictionResultStatus } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
-import { hydratePredictions } from "@/lib/live-predictions";
-import { completePredictionHistory, predictionResultCounts, resultStatusPresentation } from "@/lib/results";
+import { buildPredictionHistoryState, resultStatusPresentation } from "@/lib/results";
 
 type ResultFilter = "all" | PredictionResultStatus;
 const filters: ResultFilter[] = ["all", "pending", "green", "red", "push", "half-green", "half-red", "void"];
@@ -16,38 +15,19 @@ function formatDate(value?: string) {
 }
 
 export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] }) {
-  const [resolvedMatches, setResolvedMatches] = useState(matches);
   const [filter, setFilter] = useState<ResultFilter>("all");
-
-  useEffect(() => {
-    let cancelled = false;
-
-    const refreshResults = () => {
-      hydratePredictions(matches, { forceRefresh: true }).then((resolved) => {
-        if (!cancelled) setResolvedMatches(resolved);
-      });
-    };
-
-    refreshResults();
-    const refreshTimer = window.setInterval(refreshResults, 60_000);
-
-    return () => {
-      cancelled = true;
-      window.clearInterval(refreshTimer);
-    };
-  }, [matches]);
-
-  const history = useMemo(() => completePredictionHistory(resolvedMatches), [resolvedMatches]);
-  const counts = useMemo(() => predictionResultCounts(history), [history]);
+  const historyState = useMemo(() => buildPredictionHistoryState(matches), [matches]);
+  const history = historyState.entries;
+  const counts = historyState;
   const visible = filter === "all" ? history : history.filter((match) => (match.betResult ?? "pending") === filter);
 
   return (
     <div className="results-archive" data-default-filter="all">
       <div className="results-summary" aria-label="Prediction result counts">
-        <span><b>{history.length}</b> Published</span>
-        <span><b>{history.length - counts.pending}</b> Settled</span>
-        <span><b>{counts.green}</b> Won</span>
-        <span><b>{counts.red}</b> Lost</span>
+        <span><b>{counts.published}</b> Published</span>
+        <span><b>{counts.settled}</b> Settled</span>
+        <span><b>{counts.won}</b> Won</span>
+        <span><b>{counts.lost}</b> Lost</span>
         <span><b>{counts.push}</b> Push</span>
         <span><b>{counts.pending}</b> Pending</span>
       </div>

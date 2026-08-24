@@ -1,6 +1,8 @@
 import type { MatchPreview } from "@/types";
 import { isCompletedFixture, isHistoryEligibleFixture, isNonPlayableFixture } from "@/lib/fixture-status";
 
+export type HomeTemporalBucket = "today" | "tomorrow" | "upcoming" | "historical" | "none";
+
 export function localTodayISO() {
   const parts = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/Fortaleza",
@@ -13,6 +15,29 @@ export function localTodayISO() {
   );
 
   return `${value.year}-${value.month}-${value.day}`;
+}
+
+export function localTomorrowISO(today = localTodayISO()) {
+  const date = new Date(`${today}T00:00:00-03:00`);
+  date.setUTCDate(date.getUTCDate() + 1);
+  return date.toISOString().slice(0, 10);
+}
+
+export function resolveHomeTemporalBucket(match: MatchPreview, today = localTodayISO()): HomeTemporalBucket {
+  if (match.status !== "published") return "none";
+  if (isCompletedFixture(match.fixtureStatus) || isHistoryEligibleFixture({
+    status: match.fixtureStatus,
+    homeScore: match.homeScore,
+    awayScore: match.awayScore,
+  })) {
+    return "historical";
+  }
+  if (isNonPlayableFixture(match.fixtureStatus)) return "none";
+  if (!match.date) return "upcoming";
+  if (match.date === today) return "today";
+  if (match.date === localTomorrowISO(today)) return "tomorrow";
+  if (match.date > localTomorrowISO(today)) return "upcoming";
+  return "none";
 }
 
 function timeToMinutes(time: string) {
@@ -63,10 +88,7 @@ export function filterTodaysPublishedPredictions(
     uniqueMatches(matches).filter(
       (match) =>
         match.status === "published" &&
-        Boolean(match.date) &&
-        match.date === today &&
-        !isCompletedFixture(match.fixtureStatus) &&
-        !isNonPlayableFixture(match.fixtureStatus)
+        resolveHomeTemporalBucket(match, today) === "today"
     )
   );
 }
@@ -78,10 +100,19 @@ export function filterFuturePublishedPredictions(
   return sortMatchesByKickoff(
     uniqueMatches(matches).filter(
       (match) =>
-        match.status === "published" &&
-        !isCompletedFixture(match.fixtureStatus) &&
-        !isNonPlayableFixture(match.fixtureStatus) &&
-        (!match.date || match.date > today)
+        resolveHomeTemporalBucket(match, today) === "upcoming"
+    )
+  );
+}
+
+export function filterTomorrowPublishedPredictions(
+  matches: MatchPreview[],
+  today = localTodayISO()
+) {
+  return sortMatchesByKickoff(
+    uniqueMatches(matches).filter(
+      (match) =>
+        resolveHomeTemporalBucket(match, today) === "tomorrow"
     )
   );
 }
@@ -179,15 +210,14 @@ export function findOmittedCurrentPredictions(
 ) {
   const eligible = new Set([
     ...filterTodaysPublishedPredictions(matches, today),
+    ...filterTomorrowPublishedPredictions(matches, today),
     ...filterFuturePublishedPredictions(matches, today),
   ].map((match) => match.slug));
 
   return uniqueMatches(matches).filter(
     (match) =>
       match.status === "published" &&
-      !isCompletedFixture(match.fixtureStatus) &&
-      !isNonPlayableFixture(match.fixtureStatus) &&
-      (!match.date || match.date >= today) &&
+      resolveHomeTemporalBucket(match, today) === "upcoming" &&
       !eligible.has(match.slug)
   );
 }

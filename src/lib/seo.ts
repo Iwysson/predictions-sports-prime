@@ -22,28 +22,6 @@ function sportsEventLocation(match: Match) {
   };
 }
 
-function slugSeed(value: string) {
-  return Array.from(value).reduce((total, character) => total + character.charCodeAt(0), 0);
-}
-
-function pickMarketCategory(mainPick: string) {
-  const value = mainPick.toLowerCase();
-  if (value.includes("asian handicap")) return "Asian Handicap";
-  if (value.includes("double chance")) return "Double Chance";
-  if (value.includes("both teams to score")) return "BTTS";
-  if (value.includes("corners")) return "Corners";
-  if (value.includes("over") || value.includes("under")) return "Over/Under";
-  if (value.includes("draw no bet")) return "Draw No Bet";
-  if (value.includes("win +")) return "Combined Market";
-  if (value.includes(" or draw") || value.includes("x2") || value.includes("1x")) return "Double Chance";
-  if (value.includes("to win")) return "Win";
-  return "Match Result";
-}
-
-function matchDescriptionPattern(match: Match) {
-  return slugSeed(match.slug) % 4;
-}
-
 export function matchSeoTitle(match: Match) {
   if (shouldApplySearchIntentSEO(match)) {
     return buildMatchSearchIntentCopy(match).title;
@@ -59,32 +37,7 @@ export function matchSeoTitle(match: Match) {
 
 export function matchSeoDescription(match: Match) {
   if (shouldApplySearchIntentSEO(match)) {
-    const copy = buildMatchSearchIntentCopy(match);
-    const league = leagues.find((item) => item.slug === match.league);
-    const competition = league?.name ?? "this competition";
-    const mainPick = match.predictions.find((item) => item.label === "Main Prediction")?.value;
-    const odds = match.predictions.find((item) => item.label === "Odds")?.value;
-    const market = mainPick ? pickMarketCategory(mainPick) : null;
-    const date = match.date || "";
-    const kickoff = match.time && match.time !== "TBD" ? match.time : "";
-    const pattern = matchDescriptionPattern(match);
-    const marketClause = market && mainPick ? `${mainPick}` : null;
-    const oddsClause = odds ? ` at odds of ${odds}` : null;
-    const timeClause = date ? `${date}${kickoff ? `, ${kickoff}` : ""}` : null;
-
-    if (pattern === 0) {
-      return `${match.homeTeam} vs ${match.awayTeam} prediction for ${timeClause ?? "this fixture"}. Our main pick is ${mainPick ?? "available"}${oddsClause ?? ""}, with match analysis and key betting context in ${competition}.`;
-    }
-
-    if (pattern === 1) {
-      return `Read the ${match.homeTeam} vs ${match.awayTeam} match analysis for ${competition}, including our ${marketClause ?? "main"} prediction${oddsClause ?? ""} and the pre-kickoff betting context.`;
-    }
-
-    if (pattern === 2) {
-      return `${competition}: ${match.homeTeam} vs ${match.awayTeam}. View our prediction${mainPick ? `, ${mainPick}` : ""}${oddsClause ?? ""} and statistical reasoning before kickoff${date ? ` on ${date}` : ""}.`;
-    }
-
-    return `Our ${match.homeTeam} vs ${match.awayTeam} betting analysis covers the main prediction${mainPick ? `, ${mainPick}` : ""}${oddsClause ?? ""} and the relevant fixture context for ${competition}.`;
+    return buildMatchSearchIntentCopy(match).description;
   }
   const league = leagues.find((item) => item.slug === match.league);
   const teams = `${match.homeTeam} vs ${match.awayTeam}`;

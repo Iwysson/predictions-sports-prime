@@ -1,21 +1,23 @@
 "use client";
 
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
+import Link from "next/link";
 import { MatchPreview } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { leagues } from "@/data/leagues";
 import {
-  filterTodaysPublishedPredictions,
   filterCompletedPredictions,
+  filterTodaysPublishedPredictions,
+  filterTomorrowPublishedPredictions,
   findOmittedCurrentPredictions,
   localTodayISO,
+  localTomorrowISO,
   selectLatestPublishedPredictions,
   validateHomePredictionSelection,
 } from "@/lib/match-feed";
 import { useI18n } from "@/i18n/I18nProvider";
-import { hydratePredictions } from "@/lib/live-predictions";
-import Link from "next/link";
+import { getMatchDisplayTime } from "@/lib/match-time";
 
 export function HomePredictionFeed({
   matches,
@@ -26,49 +28,12 @@ export function HomePredictionFeed({
 }) {
   const { t } = useI18n();
   const today = localTodayISO();
-  const [liveMatches, setLiveMatches] = useState(matches);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    // Static exports cannot change after deployment. Refresh fixture results in
-    // the browser so every published prediction moves to History automatically.
-    const refreshResults = () => {
-      hydratePredictions(matches, { forceRefresh: true }).then((hydrated) => {
-        if (!cancelled) setLiveMatches(hydrated);
-      });
-    };
-
-    refreshResults();
-    const refreshTimer = window.setInterval(refreshResults, 15 * 60_000);
-
-    return () => {
-      cancelled = true;
-      window.clearInterval(refreshTimer);
-    };
-  }, [matches, today]);
-
-  const todayMatches = useMemo(
-    () => filterTodaysPublishedPredictions(liveMatches, today),
-    [liveMatches, today]
-  );
-
-  const displayedTodayMatches = todayMatches;
-
-  const latestMatches = useMemo(
-    () => selectLatestPublishedPredictions(liveMatches, today, 10),
-    [liveMatches, today]
-  );
-
-  const omittedMatches = useMemo(
-    () => findOmittedCurrentPredictions(liveMatches, today),
-    [liveMatches, today]
-  );
-
-  const historyMatches = useMemo(
-    () => filterCompletedPredictions(liveMatches).slice(0, 10),
-    [liveMatches]
-  );
+  const tomorrow = localTomorrowISO(today);
+  const todayMatches = filterTodaysPublishedPredictions(matches, today);
+  const tomorrowMatches = filterTomorrowPublishedPredictions(matches, today);
+  const latestMatches = selectLatestPublishedPredictions(matches, today, 10);
+  const omittedMatches = findOmittedCurrentPredictions(matches, today);
+  const historyMatches = filterCompletedPredictions(matches).slice(0, 10);
 
   if (omittedMatches.length > 0) {
     throw new Error(
@@ -77,7 +42,7 @@ export function HomePredictionFeed({
   }
 
   const selectionErrors = validateHomePredictionSelection(
-    liveMatches,
+    matches,
     todayMatches,
     latestMatches,
     today,
@@ -121,9 +86,9 @@ export function HomePredictionFeed({
                   <div className="today-title-row">
                     <h1>{t("todaysPredictions")}</h1>
 
-                    {displayedTodayMatches.length > 0 ? (
+                    {todayMatches.length > 0 ? (
                       <span className="today-count">
-                        {displayedTodayMatches.length}
+                        {todayMatches.length}
                       </span>
                     ) : null}
                   </div>
@@ -133,9 +98,9 @@ export function HomePredictionFeed({
               <span className="date-chip">{today}</span>
             </div>
 
-            {displayedTodayMatches.length > 0 ? (
+            {todayMatches.length > 0 ? (
               <div className="match-grid match-grid--compact">
-                {displayedTodayMatches.map((match) => (
+                {todayMatches.map((match) => (
                   <MatchCard key={match.id} match={match} />
                 ))}
               </div>
@@ -143,7 +108,7 @@ export function HomePredictionFeed({
               <div className="empty-state empty-state--compact today-empty-state">
                 <strong>{t("nextPredictionsAvailable")}</strong>
                 <p>{t("upcomingPredictionsPrompt")}</p>
-                <a className="today-empty-state__cta" href="#upcoming">
+                <a className="today-empty-state__cta" href="#tomorrow">
                   {t("viewUpcomingPredictions")}
                 </a>
               </div>
@@ -151,6 +116,34 @@ export function HomePredictionFeed({
           </div>
         </div>
       </section>
+
+      {tomorrowMatches.length > 0 ? (
+        <section className="section section--compact" id="tomorrow">
+          <div className="container">
+            <div className="section-heading section-heading--compact">
+              <div className="heading-with-icon">
+                <span className="section-icon" aria-hidden="true">↘</span>
+
+                <div>
+                  <span className="eyebrow">Tomorrow</span>
+                  <div className="today-title-row">
+                    <h2>Tomorrow&apos;s Predictions</h2>
+                    <span className="today-count">{tomorrowMatches.length}</span>
+                  </div>
+                </div>
+              </div>
+
+              <span className="date-chip">{tomorrow}</span>
+            </div>
+
+            <div className="match-grid match-grid--compact">
+              {tomorrowMatches.map((match) => (
+                <MatchCard key={match.id} match={match} />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section section--compact" id="upcoming">
         <div className="container">
@@ -171,6 +164,7 @@ export function HomePredictionFeed({
                 const league = leagues.find(
                   (item) => item.slug === match.league
                 );
+                const kickoff = getMatchDisplayTime(match);
 
                 return (
                   <a
@@ -199,7 +193,7 @@ export function HomePredictionFeed({
 
                     <div className="latest-date">
                       <span>{match.date || "TBD"}</span>
-                      <small>{match.time || "TBD"}</small>
+                      <small>{kickoff.display}</small>
                     </div>
 
                     <span className="latest-arrow">›</span>
@@ -247,7 +241,6 @@ export function HomePredictionFeed({
           <p className="history-all-link"><Link href="/results/">View all results</Link></p>
         </div>
       </section>
-
     </>
   );
 }

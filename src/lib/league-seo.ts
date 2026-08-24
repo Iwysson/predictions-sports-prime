@@ -8,25 +8,27 @@ export function leagueCanonicalPath(league: LeagueConfig) {
 }
 
 export function leagueSeoTitle(league: LeagueConfig) {
-  return `${league.name} Predictions & Betting Tips | ${siteConfig.name}`;
+  const full = `${league.name} Predictions & Betting Tips | ${siteConfig.name}`;
+  const compact = `${league.name} Predictions | ${siteConfig.name}`;
+  return full.length <= 70 ? full : compact;
 }
 
 export function leagueSeoDescription(league: LeagueConfig) {
   const index = league.slug.length % 4;
+  const standings = league.display.showStandings
+    ? " and validated standings when available"
+    : " and the current knockout schedule";
 
-  if (index === 0) {
-    return `${league.name} predictions and betting tips for ${league.country}. Explore upcoming fixtures, published picks and available odds for the current season.`;
-  }
+  const description = index === 0
+    ? `${league.name} predictions and betting tips for ${league.country}. Explore current fixtures, published picks, available odds${standings}.`
+    : index === 1
+      ? `Latest ${league.name} match analysis from ${league.country}, with betting tips, odds${standings}.`
+      : index === 2
+        ? `Follow ${league.name} predictions and match previews for ${league.country}, including published picks, competition context${standings}.`
+        : `${league.name} betting tips for ${league.country}. Review published predictions, available odds, current fixtures${standings}.`;
 
-  if (index === 1) {
-    return `Latest ${league.name} match analysis from ${league.country}, with betting tips, odds and current standings when available.`;
-  }
-
-  if (index === 2) {
-    return `Follow ${league.name} predictions, match previews and betting analysis for ${league.country}, including the published picks and competition context.`;
-  }
-
-  return `${league.name} betting tips and predictions for ${league.country}. Review the current round, available odds and season context on Predictions Sports Prime.`;
+  if (description.length <= 160) return description;
+  return `${league.name} predictions for ${league.country}, with published picks, odds, current fixtures and competition analysis.`;
 }
 
 export function leagueIntro(league: LeagueConfig, publishedCount: number) {
@@ -36,7 +38,11 @@ export function leagueIntro(league: LeagueConfig, publishedCount: number) {
       ? `${publishedCount} published predictions are currently available.`
       : "New predictions will appear here when they are published.";
 
-  return `Follow the latest ${league.name} match analysis, predictions and betting tips for the current round in ${league.country}. ${availability} Review the available picks and odds alongside the current league standings.`;
+  const context = league.display.showStandings
+    ? "validated league standings when data is available"
+    : "the current knockout schedule";
+
+  return `Follow the latest ${league.name} match analysis, predictions and betting tips for the current round in ${league.country}. ${availability} Review the available picks and odds alongside ${context}.`;
 }
 
 export function leagueBreadcrumbJsonLd(league: LeagueConfig) {

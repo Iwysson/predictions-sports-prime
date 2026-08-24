@@ -19,7 +19,13 @@ function routeForFile(file) {
 }
 
 function extract(html, regex) {
-  return html.match(regex)?.[1]?.trim() ?? "";
+  return (html.match(regex)?.[1] ?? "")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .trim();
 }
 
 function normalize(value) {
@@ -80,6 +86,8 @@ const nearDuplicateTitles = [];
 const nearDuplicateDescriptions = [];
 const templateSimilarTitles = [];
 const templateSimilarDescriptions = [];
+const acceptableStructuralTitles = [];
+const acceptableStructuralDescriptions = [];
 
 for (let i = 0; i < pages.length; i += 1) {
   for (let j = i + 1; j < pages.length; j += 1) {
@@ -92,15 +100,22 @@ for (let i = 0; i < pages.length; i += 1) {
       nearDuplicateTitles.push({ urls: [left.route, right.route], score: titleScore });
     } else if (titleScore >= 0.75 && left.title !== right.title) {
       templateSimilarTitles.push({ urls: [left.route, right.route], score: titleScore });
+    } else if (titleScore >= 0.55 && left.title !== right.title) {
+      acceptableStructuralTitles.push({ urls: [left.route, right.route], score: titleScore });
     }
 
     if (descriptionScore >= 0.9 && left.description !== right.description) {
       nearDuplicateDescriptions.push({ urls: [left.route, right.route], score: descriptionScore });
     } else if (descriptionScore >= 0.75 && left.description !== right.description) {
       templateSimilarDescriptions.push({ urls: [left.route, right.route], score: descriptionScore });
+    } else if (descriptionScore >= 0.55 && left.description !== right.description) {
+      acceptableStructuralDescriptions.push({ urls: [left.route, right.route], score: descriptionScore });
     }
   }
 }
+
+const titlesOver70 = pages.filter((page) => page.title.length > 70);
+const descriptionsOver160 = pages.filter((page) => page.description.length > 160);
 
 console.log(`Indexable pages: ${pages.length}`);
 console.log(`Missing titles: ${missingTitles.length}`);
@@ -111,8 +126,10 @@ console.log(`Near duplicate titles: ${nearDuplicateTitles.length}`);
 console.log(`Near duplicate descriptions: ${nearDuplicateDescriptions.length}`);
 console.log(`Template similarity titles: ${templateSimilarTitles.length}`);
 console.log(`Template similarity descriptions: ${templateSimilarDescriptions.length}`);
-console.log(`Acceptable structural similarity titles: ${Math.max(0, pages.length - missingTitles.length - exactDuplicateTitles.length - nearDuplicateTitles.length - templateSimilarTitles.length)}`);
-console.log(`Acceptable structural similarity descriptions: ${Math.max(0, pages.length - missingDescriptions.length - exactDuplicateDescriptions.length - nearDuplicateDescriptions.length - templateSimilarDescriptions.length)}`);
+console.log(`Acceptable structural similarity titles: ${acceptableStructuralTitles.length}`);
+console.log(`Acceptable structural similarity descriptions: ${acceptableStructuralDescriptions.length}`);
+console.log(`Titles over 70 characters: ${titlesOver70.length}`);
+console.log(`Descriptions over 160 characters: ${descriptionsOver160.length}`);
 
 if (missingTitles.length) console.log(`Missing title URLs: ${missingTitles.join(", ")}`);
 if (missingDescriptions.length) console.log(`Missing description URLs: ${missingDescriptions.join(", ")}`);
@@ -123,3 +140,19 @@ for (const item of nearDuplicateTitles) console.log(`Near duplicate title URLs (
 for (const item of nearDuplicateDescriptions) console.log(`Near duplicate description URLs (${item.score.toFixed(2)}): ${item.urls.join(", ")}`);
 for (const item of templateSimilarTitles) console.log(`Template similarity title URLs (${item.score.toFixed(2)}): ${item.urls.join(", ")}`);
 for (const item of templateSimilarDescriptions) console.log(`Template similarity description URLs (${item.score.toFixed(2)}): ${item.urls.join(", ")}`);
+if (titlesOver70.length) console.log(`Long title URLs: ${titlesOver70.map((page) => `${page.route} (${page.title.length})`).join(", ")}`);
+if (descriptionsOver160.length) console.log(`Long description URLs: ${descriptionsOver160.map((page) => `${page.route} (${page.description.length})`).join(", ")}`);
+
+if (
+  missingTitles.length > 0 ||
+  missingDescriptions.length > 0 ||
+  exactDuplicateTitles.length > 0 ||
+  exactDuplicateDescriptions.length > 0 ||
+  nearDuplicateTitles.length > 0 ||
+  nearDuplicateDescriptions.length > 0
+) {
+  process.exitCode = 1;
+  console.log("Duplicate SEO audit: FAIL");
+} else {
+  console.log("Duplicate SEO audit: PASS");
+}

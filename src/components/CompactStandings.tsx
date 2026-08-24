@@ -34,13 +34,14 @@ export function CompactStandings({
             <span className="eyebrow">CLASSIFICATION</span>
             <h3>{leagueName}</h3>
           </div>
-          <span className="standings-live">TABLE</span>
+          <span className="standings-live standings-live--neutral">TABLE</span>
         </div>
 
-        <div className="standings-columns">
+        <div className="standings-columns standings-columns--mobile">
           <span>#</span>
           <span>Club</span>
-          <span>PJ</span>
+          <span>P</span>
+          <span>GD</span>
           <span>PTS</span>
         </div>
 
@@ -51,8 +52,9 @@ export function CompactStandings({
                 {row.position}
               </span>
               <strong>{row.team}</strong>
-              <span>{row.played}</span>
-              <b>{row.points}</b>
+              <span className="standing-cell standing-cell--played">{row.played ?? 0}</span>
+              <span className="standing-cell standing-cell--gd">{(row.goalDifference ?? 0) > 0 ? `+${row.goalDifference}` : `${row.goalDifference ?? 0}`}</span>
+              <b className="standing-cell standing-cell--points">{row.points}</b>
             </div>
           ))}
         </div>
