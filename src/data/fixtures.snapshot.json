@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-24T04:05:20.511Z",
+  "generatedAt": "2026-08-24T07:20:27.390Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -8662,8 +8662,8 @@
             "round": 1,
             "date": "2026-08-23",
             "time": "15:45",
-            "homeTeam": "Paris Saint-Germain",
-            "awayTeam": "Rennes",
+            "homeTeam": "Rennes",
+            "awayTeam": "Paris Saint-Germain",
             "homeScore": 2,
             "awayScore": 2,
             "status": "completed",
