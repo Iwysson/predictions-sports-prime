@@ -15,12 +15,26 @@ export type LeagueConfig = {
   liveDataId: string;
   timezone: string;
   manualOnly?: boolean;
+  asset:
+    | { kind: "image"; src: string; sourceUrl: string }
+    | { kind: "text"; label: string; reason: string };
+};
+
+const graphicalLeagueAssets: Partial<
+  Record<LeagueSlug, { src: string; sourceUrl: string }>
+> = {
+  "premier-league": { src: "/league-badges/premier-league.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/gasy9d1737743125.png" },
+  "la-liga": { src: "/league-badges/la-liga.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/ja4it51687628717.png" },
+  bundesliga: { src: "/league-badges/bundesliga.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/teqh1b1679952008.png" },
+  "serie-a": { src: "/league-badges/serie-a.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/67q3q21679951383.png" },
+  "ligue-1": { src: "/league-badges/ligue-1.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/9f7z9d1742983155.png" },
+  "brasileirao-serie-a": { src: "/league-badges/brasileirao-serie-a.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/lywv7t1766787179.png" },
 };
 
 const source = (path: string) => `https://raw.githubusercontent.com/openfootball/${path}`;
 
 function defineLeague(
-  config: Omit<LeagueConfig, "season" | "display" | "sources"> & {
+  config: Omit<LeagueConfig, "season" | "display" | "sources" | "asset"> & {
     sourcePath?: string;
     sourceUrl?: string;
     seasonLabel?: string;
@@ -38,6 +52,7 @@ function defineLeague(
     ...metadata
   } = config;
   const feed = manualOnly ? "" : (sourceUrl ?? source(sourcePath!));
+  const graphicalAsset = graphicalLeagueAssets[metadata.slug];
   return {
     ...metadata,
     manualOnly,
@@ -47,6 +62,15 @@ function defineLeague(
       showStandings: showStandings ?? true,
     },
     sources: { fixtures: feed, standings: feed },
+    asset: graphicalAsset
+      ? { kind: "image", ...graphicalAsset }
+      : {
+          kind: "text",
+          label: metadata.short,
+          reason: metadata.slug === "liga-portugal" || metadata.slug === "eredivisie"
+            ? "source badge is not visible on light surfaces"
+            : "no factual graphical asset is configured",
+        },
   };
 }
 

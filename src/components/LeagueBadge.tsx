@@ -1,7 +1,5 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { fetchLeagueBadge } from "@/lib/artwork";
+import { leaguesBySlug } from "@/data/leagues";
+import type { LeagueSlug } from "@/types";
 
 export function LeagueBadge({
   slug,
@@ -12,31 +10,16 @@ export function LeagueBadge({
   short: string;
   size?: "sm" | "md";
 }) {
-  const [badge, setBadge] = useState<string | null>(null);
+  const league = leaguesBySlug[slug as LeagueSlug];
+  const asset = league?.asset ?? { kind: "text" as const, label: short, reason: "unknown competition" };
 
-  useEffect(() => {
-    let cancelled = false;
-
-    fetchLeagueBadge(slug).then((url) => {
-      if (!cancelled) {
-        setBadge(url);
-      }
-    });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [slug]);
-
-  if (badge) {
+  if (asset.kind === "image") {
     return (
       <span className={`league-logo league-logo--${size}`}>
         <img
-          src={badge}
-          alt={`${short} logo`}
+          src={asset.src}
+          alt={`${league.name} competition badge`}
           loading="lazy"
-          referrerPolicy="no-referrer"
-          onError={() => setBadge(null)}
         />
       </span>
     );
@@ -44,7 +27,7 @@ export function LeagueBadge({
 
   return (
     <span className={`mini-league-badge mini-league-badge--${size}`}>
-      {short}
+      {asset.label}
     </span>
   );
 }

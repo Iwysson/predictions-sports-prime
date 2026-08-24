@@ -1,4 +1,6 @@
 import { matches } from "../src/data/matches.ts";
+import { toMatchPreview } from "../src/lib/editorial.ts";
+import { hydratePredictions } from "../src/lib/live-predictions.ts";
 import { isCompletedFixture } from "../src/lib/fixture-status.ts";
 import { localTodayISO, resolveHomeTemporalBucket } from "../src/lib/match-feed.ts";
 import {
@@ -10,7 +12,12 @@ import {
 } from "../src/lib/match-search-intent.ts";
 import { matchCanonicalPath, matchSeoDescription, matchSeoTitle } from "../src/lib/seo.ts";
 
-const publishedMatches = matches.filter((match) => match.status === "published");
+const publishedSource = matches.filter((match) => match.status === "published");
+const hydratedMatches = await hydratePredictions(publishedSource.map(toMatchPreview));
+const publishedMatches = publishedSource.map((match, index) => ({
+  ...match,
+  ...hydratedMatches[index],
+}));
 const analyzedMatches = publishedMatches.filter(shouldApplySearchIntentSEO);
 const today = localTodayISO();
 const errors = [];
@@ -85,6 +92,7 @@ if (!lifecycleBase) {
   const fixedToday = "2026-08-24";
   const cases = [
     { state: "upcoming", date: "2026-08-31", fixtureStatus: "scheduled" },
+    { state: "upcoming", date: "2026-08-27", fixtureStatus: "scheduled" },
     { state: "tomorrow", date: "2026-08-25", fixtureStatus: "scheduled" },
     { state: "today", date: "2026-08-24", fixtureStatus: "scheduled" },
     { state: "historical", date: "2026-08-23", fixtureStatus: "completed" },
@@ -106,11 +114,11 @@ if (!lifecycleBase) {
 
   const tomorrowDescription = generated.find((item) => item.state === "tomorrow").copy.description.toLowerCase();
   const todayDescription = generated.find((item) => item.state === "today").copy.description.toLowerCase();
-  const upcomingDescription = generated.find((item) => item.state === "upcoming").copy.description.toLowerCase();
+  const upcomingDescriptions = generated.filter((item) => item.state === "upcoming").map((item) => item.copy.description.toLowerCase());
   const historicalDescription = generated.find((item) => item.state === "historical").copy.description.toLowerCase();
   if (!tomorrowDescription.includes("tomorrow")) errors.push("T-1 regression: tomorrow is missing");
   if (!todayDescription.includes("today")) errors.push("Match-day regression: today is missing");
-  if (upcomingDescription.includes("today") || upcomingDescription.includes("tomorrow")) errors.push("T-7 regression: incorrect near-term wording");
+  if (upcomingDescriptions.some((description) => description.includes("today") || description.includes("tomorrow"))) errors.push("T-7/T-3 regression: incorrect near-term wording");
   if (!historicalDescription.includes("completed match")) errors.push("Completed regression: historical wording is missing");
 
   const titles = new Set(generated.map((item) => matchSeoTitle(item.match)));

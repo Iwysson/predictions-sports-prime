@@ -4,6 +4,7 @@ import type { LeagueSlug, Match, UpcomingFixtureDraft } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
 import { teamNamesMatch } from "@/lib/openfootball";
 import { buildMatchSearchIntent } from "@/lib/match-search-intent";
+import { isPlayableUpcoming, type FixtureStatus } from "@/lib/fixture-status";
 
 type SnapshotGame = {
   id?: string;
@@ -29,7 +30,8 @@ type FixtureSnapshot = {
 };
 
 const snapshot = fixtureSnapshot as FixtureSnapshot;
-const FUTURE_WINDOW_DAYS = 14;
+export const UPCOMING_FIXTURE_WINDOW_DAYS = 14;
+export const UPCOMING_FIXTURE_STALE_AFTER_HOURS = 48;
 
 export type EditorialQueueUrgency = "URGENT" | "HIGH" | "NORMAL" | "EARLY";
 
@@ -68,8 +70,38 @@ function publishedMatchKeys() {
   return new Set(matches.map((match) => `${match.league}:${match.slug}`));
 }
 
+export function matchFixtureIdentityKey(fixture: {
+  league: LeagueSlug;
+  date: string;
+  homeTeam: string;
+  awayTeam: string;
+}) {
+  const teams = [fixture.homeTeam, fixture.awayTeam]
+    .map((team) => slugify(team))
+    .join("-vs-");
+  return `${fixture.league}:${fixture.date}:${teams}`;
+}
+
+function publishedFixtureMatch(league: LeagueSlug, game: SnapshotGame, slug: string, publishedKeys: Set<string>) {
+  if (publishedKeys.has(`${league}:${slug}`)) return true;
+  return matches.some((match) =>
+    match.league === league &&
+    match.date === game.date &&
+    teamNamesMatch(match.homeTeam, game.homeTeam) &&
+    teamNamesMatch(match.awayTeam, game.awayTeam)
+  );
+}
+
 function hasRealKickoff(game: SnapshotGame) {
   return Boolean(game.date && /^\d{4}-\d{2}-\d{2}$/.test(game.date) && game.time && game.time !== "TBD");
+}
+
+function fixtureKickoff(game: SnapshotGame) {
+  return toDate(game.kickoffUtc ?? `${game.date}T${game.time}:00Z`);
+}
+
+function fixtureIsQueueEligible(game: SnapshotGame) {
+  return isPlayableUpcoming(game.status as FixtureStatus | undefined);
 }
 
 function toUtcMidnight(value: string) {
@@ -88,18 +120,22 @@ export function buildUpcomingFixtureDrafts(now: Date = new Date()): UpcomingFixt
   const published = publishedMatchKeys();
   const windowStart = new Date(now);
   const windowEnd = new Date(now);
-  windowEnd.setUTCDate(windowEnd.getUTCDate() + FUTURE_WINDOW_DAYS);
+  windowEnd.setUTCDate(windowEnd.getUTCDate() + UPCOMING_FIXTURE_WINDOW_DAYS);
   const drafts: UpcomingFixtureDraft[] = [];
+  const seenIdentities = new Set<string>();
 
   for (const league of leaguesBySlug && Object.values(leaguesBySlug)) {
     const rounds = snapshot.leagues[league.slug] ?? [];
     for (const round of rounds) {
       for (const game of round.games) {
-        if (!hasRealKickoff(game)) continue;
-        const kickoffDate = toDate(`${game.date}T${game.time}:00Z`);
+        if (!hasRealKickoff(game) || !fixtureIsQueueEligible(game)) continue;
+        const kickoffDate = fixtureKickoff(game);
         if (!kickoffDate || kickoffDate < windowStart || kickoffDate > windowEnd) continue;
         const slug = `${slugify(game.homeTeam)}-vs-${slugify(game.awayTeam)}`;
-        if (published.has(`${league.slug}:${slug}`)) continue;
+        if (publishedFixtureMatch(league.slug, game, slug, published)) continue;
+        const identity = matchFixtureIdentityKey({ league: league.slug, ...game });
+        if (seenIdentities.has(identity)) continue;
+        seenIdentities.add(identity);
         const externalFixtureId = game.id;
         const draftMatch = {
           id: `${league.slug}-${slug}`,
@@ -131,6 +167,7 @@ export function buildUpcomingFixtureDrafts(now: Date = new Date()): UpcomingFixt
           published: false,
           matchDate: game.date,
           kickoff: game.time,
+          kickoffUtc: game.kickoffUtc,
           fixtureLastUpdated: snapshot.generatedAt,
           source: game.dataSource ?? league.sources.fixtures,
           externalFixtureId,
@@ -152,11 +189,45 @@ export function buildUpcomingFixtureDrafts(now: Date = new Date()): UpcomingFixt
 
 export function buildUpcomingFixtureCoverage(now: Date = new Date()) {
   const drafts = buildUpcomingFixtureDrafts(now);
+  const published = publishedMatchKeys();
+  const draftByIdentity = new Set(drafts.map(matchFixtureIdentityKey));
   const preparedByLeague = new Map<LeagueSlug, number>();
   for (const draft of drafts) {
     preparedByLeague.set(draft.league, (preparedByLeague.get(draft.league) ?? 0) + 1);
   }
-  return { drafts, preparedByLeague };
+  const windowEnd = new Date(now);
+  windowEnd.setUTCDate(windowEnd.getUTCDate() + UPCOMING_FIXTURE_WINDOW_DAYS);
+  const byLeague = new Map<LeagueSlug, { fixtures: number; published: number; drafts: number; uncovered: number; rounds: Set<number> }>();
+
+  for (const league of Object.values(leaguesBySlug)) {
+    const coverage = { fixtures: 0, published: 0, drafts: 0, uncovered: 0, rounds: new Set<number>() };
+    for (const round of snapshot.leagues[league.slug] ?? []) {
+      for (const game of round.games) {
+        if (!hasRealKickoff(game) || !fixtureIsQueueEligible(game)) continue;
+        const kickoff = fixtureKickoff(game);
+        if (!kickoff || kickoff < now || kickoff > windowEnd) continue;
+        coverage.fixtures += 1;
+        coverage.rounds.add(round.round);
+        const slug = `${slugify(game.homeTeam)}-vs-${slugify(game.awayTeam)}`;
+        if (publishedFixtureMatch(league.slug, game, slug, published)) coverage.published += 1;
+        else if (draftByIdentity.has(matchFixtureIdentityKey({ league: league.slug, ...game }))) coverage.drafts += 1;
+        else coverage.uncovered += 1;
+      }
+    }
+    byLeague.set(league.slug, coverage);
+  }
+
+  const snapshotAgeHours = Math.max(0, (now.valueOf() - Date.parse(snapshot.generatedAt)) / 3_600_000);
+  return {
+    drafts,
+    preparedByLeague,
+    byLeague,
+    windowStart: now.toISOString(),
+    windowEnd: windowEnd.toISOString(),
+    snapshotGeneratedAt: snapshot.generatedAt,
+    snapshotAgeHours,
+    sourceStale: snapshotAgeHours > UPCOMING_FIXTURE_STALE_AFTER_HOURS,
+  };
 }
 
 export function buildEditorialQueue(now: Date = new Date()): EditorialQueueItem[] {
@@ -166,7 +237,7 @@ export function buildEditorialQueue(now: Date = new Date()): EditorialQueueItem[
   return drafts
     .filter((draft) => draft.published === false && draft.editorialStatus === "ready_for_analysis")
     .map((draft) => {
-      const kickoffUtc = new Date(`${draft.date}T${draft.kickoff}:00Z`);
+      const kickoffUtc = new Date(draft.kickoffUtc ?? `${draft.date}T${draft.kickoff}:00Z`);
       const daysUntilKickoff = Math.max(
         0,
         Math.ceil((kickoffUtc.valueOf() - todayUtc.valueOf()) / 86_400_000)

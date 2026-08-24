@@ -290,7 +290,9 @@ else {
   if (!resultsHtml.includes(`<link rel="canonical" href="${siteUrl}${resultsRoute}"`)) errors.push(`${resultsRoute}: invalid canonical`);
   if (!/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(resultsHtml)) errors.push(`${resultsRoute}: missing index, follow`);
   if (!resultsHtml.includes('data-default-filter="all"')) errors.push(`${resultsRoute}: ALL is not the default history view`);
-  if (count(resultsHtml, /data-result-slug=/g) !== matchRoutes.length) errors.push(`${resultsRoute}: must contain every published match`);
+  const historyEntries = count(resultsHtml, /data-result-slug=/g);
+  if (historyEntries === 0) errors.push(`${resultsRoute}: completed prediction History is empty`);
+  if (historyEntries > matchRoutes.length) errors.push(`${resultsRoute}: contains more History entries than published matches`);
 }
 
 for (const route of ["/", authorRoute, "/about/", methodologyRoute]) {

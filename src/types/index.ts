@@ -139,6 +139,7 @@ export type UpcomingFixtureDraft = {
   published: false;
   matchDate: string;
   kickoff: string;
+  kickoffUtc?: string;
   fixtureLastUpdated?: string;
   source?: string;
   externalFixtureId?: string;

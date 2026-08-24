@@ -3835,3 +3835,59 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   .result-card__details { grid-template-columns: 1fr; }
   .result-card__details div:nth-child(3) { grid-column: auto; }
 }
+
+/* Authoritative standings grid: keep every rendered cell on its declared row. */
+.standings-columns,
+.standing-row {
+  grid-template-columns: 24px minmax(0, 1fr) repeat(8, minmax(20px, 28px));
+  gap: 2px;
+  padding-inline: 8px;
+}
+
+.standing-row {
+  min-height: 36px;
+}
+
+@media (max-width: 980px) {
+  .standings-columns--desktop {
+    display: none;
+  }
+
+  .standings-columns--tablet {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr) repeat(6, minmax(22px, 30px));
+  }
+
+  .standing-row {
+    min-height: 40px;
+    grid-template-columns: 24px minmax(0, 1fr) repeat(6, minmax(22px, 30px));
+  }
+
+  .standing-cell--gf,
+  .standing-cell--ga {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .standings-columns--tablet {
+    display: none;
+  }
+
+  .standings-columns--mobile {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr) 26px 34px 34px;
+  }
+
+  .standing-row {
+    grid-template-columns: 24px minmax(0, 1fr) 26px 34px 34px;
+  }
+
+  .standing-cell--wins,
+  .standing-cell--draws,
+  .standing-cell--losses,
+  .standing-cell--gf,
+  .standing-cell--ga {
+    display: none;
+  }
+}

@@ -1,35 +1,38 @@
-import assert from "node:assert/strict";
 import { leagues } from "../src/data/leagues.ts";
-import { standingsByLeague } from "../src/data/standings.ts";
+import { standingDataState, standingsByLeague, validateStandingRows } from "../src/data/standings.ts";
 
-let leaguesAudited = 0;
-let invalid = 0;
+const states = {
+  validated: 0,
+  fallback: 0,
+  "not-available": 0,
+  "not-applicable": 0,
+};
+const errors = [];
 
 for (const league of leagues) {
   const rows = standingsByLeague[league.slug] ?? [];
-  if (!rows.length) continue;
-  leaguesAudited += 1;
-
-  const positions = new Set();
-  const teams = new Set();
-  for (const row of rows) {
-    assert.ok(row.team, `${league.name}: missing team`);
-    assert.ok(Number.isInteger(row.position) && row.position > 0, `${league.name}: invalid position`);
-    assert.ok(!positions.has(row.position), `${league.name}: duplicate position`);
-    assert.ok(!teams.has(row.team.toLowerCase()), `${league.name}: duplicate team`);
-    positions.add(row.position);
-    teams.add(row.team.toLowerCase());
-    if (row.played !== undefined) assert.ok(row.played >= 0, `${league.name}: invalid played`);
-    if (row.points !== undefined) assert.ok(row.points >= 0, `${league.name}: invalid points`);
-    if (row.wins !== undefined && row.draws !== undefined && row.losses !== undefined && row.played !== undefined) {
-      assert.equal(row.wins + row.draws + row.losses, row.played, `${league.name}: W+D+L mismatch`);
-    }
-    if (row.goalsFor !== undefined && row.goalsAgainst !== undefined && row.goalDifference !== undefined) {
-      assert.equal(row.goalsFor - row.goalsAgainst, row.goalDifference, `${league.name}: GD mismatch`);
-    }
-  }
+  const state = standingDataState(league, rows);
+  states[state] += 1;
+  const rowErrors = validateStandingRows(rows, rows.length > 0 ? { expectedClubs: league.expectedClubs } : {});
+  rowErrors.forEach((error) => errors.push(`${league.name}: ${error}`));
+  if (state === "not-applicable" && rows.length > 0) errors.push(`${league.name}: cup/non-table competition has standings rows`);
+  if (state === "not-available" && !league.liveDataId) errors.push(`${league.name}: standings expected but no live source is configured`);
+  const fields = [...new Set(rows.flatMap((row) => Object.entries(row).filter(([, value]) => value !== undefined).map(([field]) => field)))];
+  const source = state === "fallback"
+    ? "static safe fallback"
+    : state === "not-applicable"
+      ? "competition format"
+      : `runtime ${league.liveDataId || "unconfigured"}`;
+  console.log(`${league.name}: ${state.toUpperCase().replaceAll("-", " ")} | Source: ${source} | Rows: ${rows.length} | Fields: ${fields.join(", ") || "none"} | Last update: ${state === "validated" ? "runtime" : "not available"}`);
 }
 
-console.log(`Leagues audited: ${leaguesAudited}`);
-console.log(`Invalid standings: ${invalid}`);
-console.log("Standings audit: PASS");
+console.log("");
+console.log(`Competitions audited: ${leagues.length}`);
+console.log(`VALIDATED: ${states.validated}`);
+console.log(`FALLBACK: ${states.fallback}`);
+console.log(`NOT AVAILABLE: ${states["not-available"]}`);
+console.log(`NOT APPLICABLE: ${states["not-applicable"]}`);
+console.log(`Invalid standings: ${errors.length}`);
+for (const error of errors) console.error(`ERROR: ${error}`);
+if (errors.length > 0) process.exitCode = 1;
+else console.log("Standings audit: PASS");

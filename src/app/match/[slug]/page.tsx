@@ -30,9 +30,15 @@ import { selectRelatedPredictions } from "@/lib/related-predictions";
 import { hydratePrediction } from "@/lib/live-predictions";
 import { toMatchPreview } from "@/lib/editorial";
 import type { Match } from "@/types";
+import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 
 async function resolveMatchFixture(match: Match): Promise<Match> {
   const fixture = await hydratePrediction(toMatchPreview(match));
+  const completed = isHistoryEligibleFixture({
+    status: fixture.fixtureStatus,
+    homeScore: fixture.homeScore,
+    awayScore: fixture.awayScore,
+  });
   return {
     ...match,
     title: match.title,
@@ -48,6 +54,8 @@ async function resolveMatchFixture(match: Match): Promise<Match> {
     fixtureStatus: fixture.fixtureStatus,
     homeScore: fixture.homeScore,
     awayScore: fixture.awayScore,
+    betResult: completed ? fixture.betResult : match.betResult,
+    betResultSource: completed ? fixture.betResultSource : match.betResultSource,
   };
 }
 
@@ -123,6 +131,11 @@ export default async function MatchPage({
     (item) => item.label === "Odds"
   );
   const relatedMatches = selectRelatedPredictions(match, matches);
+  const hasFinalScore = isHistoryEligibleFixture({
+    status: match.fixtureStatus,
+    homeScore: match.homeScore,
+    awayScore: match.awayScore,
+  });
 
   return (
     <>
@@ -176,7 +189,7 @@ export default async function MatchPage({
             </div>
 
             <div className="compact-match-vs">
-              <span>VS</span>
+              <span>{hasFinalScore ? `${match.homeScore}-${match.awayScore}` : "VS"}</span>
             </div>
 
             <div className="compact-match-team compact-match-team--away">

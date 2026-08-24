@@ -22,8 +22,8 @@ export function LiveLeagueStandings({
   const { t } = useI18n();
   const [rows, setRows] = useState<StandingRow[]>(fallbackRows);
   const [source, setSource] = useState<
-    "validated" | "fallback" | "loading"
-  >("loading");
+    "validated" | "fallback" | "not-available"
+  >(fallbackRows.length > 0 ? "fallback" : "not-available");
   const rowsSignatureRef = useRef("");
 
   useEffect(() => {
@@ -77,7 +77,7 @@ export function LiveLeagueStandings({
             setRows(fallbackRows);
             rowsSignatureRef.current = fallbackSignature;
           }
-          setSource("fallback");
+          setSource(fallbackRows.length > 0 ? "fallback" : "not-available");
         }
       });
 
@@ -112,13 +112,13 @@ export function LiveLeagueStandings({
         </div>
 
         <div className="standings-source">
-          <span className={`source-dot source-dot--${source}`} />
+          <span className={`source-dot source-dot--${source === "not-available" ? "fallback" : source}`} />
           <strong>
-            {source === "loading"
-              ? t("validating")
-              : hasValidatedData
-                ? t("validated")
-                : t("saved")}
+            {hasValidatedData
+              ? t("validated")
+              : source === "fallback"
+                ? "FALLBACK"
+                : "NOT AVAILABLE"}
           </strong>
         </div>
       </div>
@@ -176,7 +176,7 @@ export function LiveLeagueStandings({
 
       <div className="standings-status">
         <span>{config.expectedClubs} clubs</span>
-        <span>{hasValidatedData ? "source checked" : "data updating"}</span>
+        <span>{hasValidatedData ? "source checked" : source === "fallback" ? "saved fallback" : "data updating"}</span>
       </div>
     </div>
   );

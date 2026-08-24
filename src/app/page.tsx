@@ -62,7 +62,7 @@ export default async function Home() {
                 <SectionTitle
                   icon="♜"
                   eyebrowKey="competitions"
-                  titleKey="topLeagues"
+                  titleKey="predictionCategories"
                 />
 
                 <div className="league-grid league-grid--compact">
