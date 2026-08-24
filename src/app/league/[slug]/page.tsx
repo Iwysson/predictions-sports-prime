@@ -11,6 +11,7 @@ import { standingsByLeague } from "@/data/standings";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { LeaguePageText } from "@/components/LeaguePageText";
+import { LeaguePublishedAnalysis } from "@/components/LeaguePublishedAnalysis";
 import { toMatchPreview } from "@/lib/editorial";
 import { loadLeagueSeason } from "@/lib/openfootball";
 import { buildCompetitionRoundSurface } from "@/lib/competition-rounds";
@@ -19,6 +20,7 @@ import {
   leagueCanonicalPath,
   leagueCollectionJsonLd,
   leagueIntro,
+  isLeagueIndexable,
   leagueSeoDescription,
   leagueSeoTitle,
 } from "@/lib/league-seo";
@@ -47,6 +49,9 @@ export async function generateMetadata({
   const title = leagueSeoTitle(league);
   const description = leagueSeoDescription(league);
   const canonical = absoluteUrl(leagueCanonicalPath(league));
+  const publishedMatchCount = matches.filter(
+    (match) => match.league === league.slug && match.status === "published"
+  ).length;
 
   return {
     title: {
@@ -59,7 +64,7 @@ export async function generateMetadata({
     },
 
     robots: {
-      index: true,
+      index: isLeagueIndexable(publishedMatchCount),
       follow: true,
     },
 
@@ -120,6 +125,21 @@ export default async function LeaguePage({
     publishedMatches: leagueMatches,
     now: new Date(),
   });
+  const activePublishedSlugs = new Set(
+    [
+      ...(roundSurface.current?.matches ?? []),
+      ...(roundSurface.next?.matches ?? []),
+    ]
+      .filter((match) => match.status === "published")
+      .map((match) => match.slug)
+  );
+  const archivedPublishedMatches = [...publishedMatches]
+    .filter((match) => !activePublishedSlugs.has(match.slug))
+    .sort((left, right) =>
+      (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") ||
+      left.title.localeCompare(right.title)
+    )
+    .slice(0, 4);
 
   return (
     <>
@@ -159,6 +179,11 @@ export default async function LeaguePage({
             <LeaguePageText matchCount={roundSurface.current?.matches.length ?? 0}>
               <LiveLeagueRounds surface={roundSurface} />
             </LeaguePageText>
+
+            <LeaguePublishedAnalysis
+              leagueName={league.name}
+              matches={archivedPublishedMatches}
+            />
 
             <div className="league-bottom-ad">
               <AdSlot placement="league-middle" />

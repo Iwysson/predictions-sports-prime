@@ -20,7 +20,7 @@ export default async function ResultsPage() {
   return (
     <>
     <JsonLd data={institutionalPageJsonLd("WebPage", "Prediction results", "/results/", description)} />
-    <main className="section results-page">
+    <section className="section results-page">
       <div className="container results-container">
         <header className="results-header">
           <span className="eyebrow">Transparency</span>
@@ -35,7 +35,7 @@ export default async function ResultsPage() {
           <p>See <Link href="/methodology/">our methodology</Link> and <Link href="/editorial-policy/">editorial policy</Link>.</p>
         </section>
       </div>
-    </main>
+    </section>
     </>
   );
 }

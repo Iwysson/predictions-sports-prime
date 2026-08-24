@@ -3,6 +3,10 @@ import type { Match } from "@/types";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { matchCanonicalPath } from "@/lib/seo";
 
+export function isLeagueIndexable(publishedMatchCount: number) {
+  return publishedMatchCount > 0;
+}
+
 export function leagueCanonicalPath(league: LeagueConfig) {
   return `/league/${league.slug}/`;
 }

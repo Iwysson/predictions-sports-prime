@@ -3,6 +3,7 @@ import { leagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
 import { absoluteUrl } from "@/lib/site-config";
 import { matchCanonicalPath } from "@/lib/seo";
+import { isLeagueIndexable } from "@/lib/league-seo";
 
 export const dynamic = "force-static";
 
@@ -27,9 +28,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
-  const leaguePages: MetadataRoute.Sitemap = leagues.map((league) => ({
-    url: absoluteUrl(`/league/${league.slug}/`),
-  }));
+  const leaguePages: MetadataRoute.Sitemap = leagues
+    .filter((league) => isLeagueIndexable(
+      matches.filter(
+        (match) => match.league === league.slug && match.status === "published"
+      ).length
+    ))
+    .map((league) => ({
+      url: absoluteUrl(`/league/${league.slug}/`),
+    }));
 
   const matchPages: MetadataRoute.Sitemap = matches
     .filter((match) => match.status === "published")

@@ -3672,12 +3672,24 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .latest-match span { color: var(--accent); font-size: 12px; }
 .latest-date { color: var(--text-muted); font-size: 12px; }
 
-.page-hero, .match-hero, .compact-match-top {
+.page-hero, .match-hero, .compact-match-top, .league-title-bar {
   color: var(--text-primary); background: var(--surface); background-image: none;
   border-bottom-color: var(--border);
 }
 .page-hero p, .legal-header p, .results-header p, .league-seo-intro {
   color: var(--text-secondary); font-size: 15px;
+}
+
+.league-analysis-archive {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.league-analysis-archive__intro {
+  margin: -12px 0 16px;
+  color: var(--text-secondary);
+  font-size: 14px;
 }
 .compact-match-breadcrumb, .league-breadcrumb, .back-link { color: var(--text-muted); font-size: 12px; }
 .compact-match-scoreboard { border-color: var(--border); }

@@ -97,6 +97,10 @@ const pages = new Map(
 );
 const matchRoutes = [...pages.keys()].filter((route) => route.startsWith("/match/"));
 const leagueRoutes = [...pages.keys()].filter((route) => route.startsWith("/league/"));
+const indexableLeagueRoutes = leagueRoutes.filter(
+  (route) => !/<meta name="robots" content="[^"]*noindex/i.test(pages.get(route) ?? "")
+);
+const noindexLeagueRoutes = leagueRoutes.filter((route) => !indexableLeagueRoutes.includes(route));
 const inbound = new Map(matchRoutes.map((route) => [route, 0]));
 const inboundSources = new Map(matchRoutes.map((route) => [route, new Set()]));
 const brokenLinks = new Set();
@@ -359,8 +363,11 @@ for (const [route, lastmod] of sitemapEntries) {
     errors.push(`${route}: non-editorial sitemap URL has an unexplained lastmod`);
   }
 }
-for (const route of [...matchRoutes, ...leagueRoutes]) {
+for (const route of [...matchRoutes, ...indexableLeagueRoutes]) {
   if (!sitemapRoutes.has(route)) errors.push(`${route}: missing from sitemap`);
+}
+for (const route of noindexLeagueRoutes) {
+  if (sitemapRoutes.has(route)) errors.push(`${route}: noindex league leaked into sitemap`);
 }
 
 const robots = readFileSync(join(outDir, "robots.txt"), "utf8");
@@ -417,6 +424,7 @@ writeFileSync(join(root, "SEO-INDEXING-QUEUE.md"), indexingReport, "utf8");
 console.log(`Static HTML pages: ${pages.size}`);
 console.log(`Published match pages: ${matchRoutes.length}`);
 console.log(`League hubs: ${leagueRoutes.length}`);
+console.log(`Indexable league hubs: ${indexableLeagueRoutes.length}`);
 console.log(`Average related links: ${(relatedLinks / matchRoutes.length).toFixed(2)}`);
 console.log(`Orphan published pages: ${orphans.length}`);
 console.log(`Broken internal links: ${brokenLinks.size}`);

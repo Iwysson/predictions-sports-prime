@@ -15,7 +15,11 @@ const allPages = htmlFiles.map((file) => {
 });
 const noindexPages = allPages.filter((page) => /<meta name="robots" content="[^"]*noindex/i.test(page.html) || page.path === "/404/" || page.path === "/_not-found/");
 const pages = allPages.filter((page) => !noindexPages.includes(page));
-const paths = new Set(pages.map((page) => page.path));
+const navigablePaths = new Set(
+  allPages
+    .filter((page) => page.path !== "/404/" && page.path !== "/_not-found/")
+    .map((page) => page.path)
+);
 const canonicals = new Map(), titles = new Map(), descriptions = new Map();
 let jsonLdCount = 0;
 for (const page of pages) {
@@ -35,7 +39,7 @@ for (const page of pages) {
     const href = match[1].split(/[?#]/)[0];
     if (!href || href.startsWith("/_next/") || /\.[a-z0-9]+$/i.test(href)) continue;
     const normalized = href === "/" ? "/" : `${href.replace(/\/$/, "")}/`;
-    if (!paths.has(normalized)) errors.push(`${page.path}: broken internal link ${href}`);
+    if (!navigablePaths.has(normalized)) errors.push(`${page.path}: broken internal link ${href}`);
   }
 }
 for (const [title, owners] of titles) if (owners.length > 1) errors.push(`duplicate title: ${title}`);
