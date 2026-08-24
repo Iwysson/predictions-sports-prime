@@ -93,44 +93,62 @@ export function HomePredictionFeed({
   return (
     <>
       <section className="section section--compact" id="today">
-        <div className="container">
-          <div className="section-heading section-heading--compact">
-            <div className="heading-with-icon">
-              <span className="section-icon" aria-hidden="true">✓</span>
-
-              <div>
-                <span className="eyebrow">{t("today")}</span>
-
-                <div className="today-title-row">
-                  <h1>{t("todaysPredictions")}</h1>
-
-                  {displayedTodayMatches.length > 0 ? (
-                    <span className="today-count">
-                      {displayedTodayMatches.length}
-                    </span>
-                  ) : null}
-                </div>
-              </div>
+        <div className="container home-today-layout">
+          <aside className="home-leagues-sidebar" aria-label="Prediction leagues">
+            <div className="home-leagues-sidebar__heading">
+              <span className="eyebrow">{t("competitions")}</span>
+              <h2>{t("topLeagues")}</h2>
             </div>
 
-            <span className="date-chip">{today}</span>
-          </div>
-
-          {displayedTodayMatches.length > 0 ? (
-            <div className="match-grid match-grid--compact">
-              {displayedTodayMatches.map((match) => (
-                <MatchCard key={match.id} match={match} />
+            <div className="home-leagues-sidebar__list">
+              {leagues.map((league) => (
+                <Link key={league.slug} href={`/league/${league.slug}/`} className="home-league-link">
+                  <LeagueBadge slug={league.slug} short={league.short} size="sm" />
+                  <span>{league.name}</span>
+                </Link>
               ))}
             </div>
-          ) : (
-            <div className="empty-state empty-state--compact today-empty-state">
-              <strong>{t("nextPredictionsAvailable")}</strong>
-              <p>{t("upcomingPredictionsPrompt")}</p>
-              <a className="today-empty-state__cta" href="#upcoming">
-                {t("viewUpcomingPredictions")}
-              </a>
+          </aside>
+
+          <div className="home-today-main">
+            <div className="section-heading section-heading--compact">
+              <div className="heading-with-icon">
+                <span className="section-icon" aria-hidden="true">✓</span>
+
+                <div>
+                  <span className="eyebrow">{t("today")}</span>
+
+                  <div className="today-title-row">
+                    <h1>{t("todaysPredictions")}</h1>
+
+                    {displayedTodayMatches.length > 0 ? (
+                      <span className="today-count">
+                        {displayedTodayMatches.length}
+                      </span>
+                    ) : null}
+                  </div>
+                </div>
+              </div>
+
+              <span className="date-chip">{today}</span>
             </div>
-          )}
+
+            {displayedTodayMatches.length > 0 ? (
+              <div className="match-grid match-grid--compact">
+                {displayedTodayMatches.map((match) => (
+                  <MatchCard key={match.id} match={match} />
+                ))}
+              </div>
+            ) : (
+              <div className="empty-state empty-state--compact today-empty-state">
+                <strong>{t("nextPredictionsAvailable")}</strong>
+                <p>{t("upcomingPredictionsPrompt")}</p>
+                <a className="today-empty-state__cta" href="#upcoming">
+                  {t("viewUpcomingPredictions")}
+                </a>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 

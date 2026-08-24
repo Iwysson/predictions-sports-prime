@@ -3056,6 +3056,64 @@ html[dir="rtl"] .latest-match {
   font-size: 7px;
 }
 
+.home-today-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.home-leagues-sidebar {
+  position: sticky;
+  top: 88px;
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: none;
+}
+
+.home-leagues-sidebar__heading h2 {
+  margin: 4px 0 0;
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.home-leagues-sidebar__list {
+  display: grid;
+  gap: 8px;
+}
+
+.home-league-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 40px;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--text-primary);
+  transition: border-color .15s ease, transform .15s ease;
+}
+
+.home-league-link:hover {
+  border-color: var(--line-strong);
+  transform: translateX(1px);
+}
+
+.home-league-link span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-today-main {
+  min-width: 0;
+}
+
 .prediction-pill span,
 .league-match-list .prediction-pill span {
   width: 14px;
@@ -3210,7 +3268,7 @@ html[dir="rtl"] .latest-match {
 .result-card__heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
 .result-card__heading span { color: var(--muted); font-size: 11px; }
 .result-card__heading h2 { margin: 4px 0 0; font-size: 17px; }
-.result-card__details { display: grid; grid-template-columns: 1fr 1fr 2fr 1fr 1fr; gap: 10px; margin: 14px 0; }
+.result-card__details { display: grid; grid-template-columns: 1fr 1fr 2fr 1fr 1fr; gap: 8px; margin: 10px 0 8px; }
 .result-card__details div { min-width: 0; }
 .result-card__details dt { color: var(--muted); font-size: 10px; text-transform: uppercase; }
 .result-card__details dd { margin: 3px 0 0; overflow-wrap: anywhere; font-size: 12px; }
@@ -3339,15 +3397,15 @@ html[dir="rtl"] .footer-links { direction: rtl; }
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto auto auto;
   align-items: center;
-  gap: 12px;
-  padding: 11px 13px;
+  gap: 10px;
+  padding: 9px 11px;
   border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--panel);
 }
 .history-row > div { display: grid; gap: 3px; }
 .history-row span { color: var(--muted); font-size: 9px; }
-.bet-result { min-width: 54px; padding: 5px 7px; border-radius: 999px; text-align: center; font-size: 9px; }
+.bet-result { min-width: 54px; padding: 4px 6px; border-radius: 999px; text-align: center; font-size: 9px; }
 .bet-result--green { color: var(--accent); background: rgba(85,227,143,.1); }
 .bet-result--red { color: #ff8585; background: rgba(255,80,80,.1); }
 .bet-result--push, .bet-result--void { color: #d3dbe2; background: rgba(255,255,255,.07); }
@@ -3634,7 +3692,31 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   .latest-match { padding-left: 0; border-left: 0; }
   .latest-date { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
   .latest-arrow { display: none; }
-  .compact-analysis-copy, .match-seo-intro, .legal-content { font-size: 15px; }
+.compact-analysis-copy, .match-seo-intro, .legal-content { font-size: 15px; }
+}
+
+@media (max-width: 980px) {
+  .home-today-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .home-leagues-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-leagues-sidebar {
+    padding: 12px;
+  }
+
+  .home-leagues-sidebar__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-league-link {
+    min-height: 36px;
+  }
 }
 
 @media (max-width: 520px) {

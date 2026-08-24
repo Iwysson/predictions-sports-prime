@@ -25,6 +25,7 @@ import {
   matchBreadcrumbJsonLd,
   matchIntroduction,
 } from "@/lib/seo";
+import { buildMatchSearchIntentCopy } from "@/lib/match-search-intent";
 import { selectRelatedPredictions } from "@/lib/related-predictions";
 import { hydratePrediction } from "@/lib/live-predictions";
 import { toMatchPreview } from "@/lib/editorial";
@@ -43,6 +44,7 @@ async function resolveMatchFixture(match: Match): Promise<Match> {
     awayTeam: fixture.awayTeam,
     date: fixture.date,
     time: fixture.time,
+    venue: fixture.venue ?? match.venue,
     fixtureStatus: fixture.fixtureStatus,
     homeScore: fixture.homeScore,
     awayScore: fixture.awayScore,
@@ -109,6 +111,7 @@ export default async function MatchPage({
   }
 
   const match = await resolveMatchFixture(storedMatch);
+  const seoCopy = buildMatchSearchIntentCopy(match);
 
   const league = leagues.find(
     (item) => item.slug === match.league
@@ -197,7 +200,7 @@ export default async function MatchPage({
                   <MatchAnalysisLabel />
                 </span>
 
-                <h1>{match.homeTeam} vs {match.awayTeam} Prediction</h1>
+                <h1>{seoCopy.h1}</h1>
 
                 {match.publishedAt ? (
                   <p className="editorial-dates">
@@ -212,9 +215,7 @@ export default async function MatchPage({
               </div>
             </div>
 
-            <p className="match-seo-intro">
-              {matchIntroduction(match)}
-            </p>
+            <p className="match-seo-intro">{matchIntroduction(match)}</p>
 
             <div className="compact-analysis-copy">
               {match.analysis.map((paragraph, index) => (
