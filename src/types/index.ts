@@ -126,6 +126,12 @@ export type Match = {
   fixtureStatus?: FixtureStatus;
   homeScore?: number | null;
   awayScore?: number | null;
+  marketStats?: {
+    homeCorners?: number;
+    awayCorners?: number;
+    source: string;
+    capturedAt: string;
+  };
   publishedAt?: string;
   updatedAt?: string;
   sources?: EditorialSource[];

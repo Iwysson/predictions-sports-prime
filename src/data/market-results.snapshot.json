@@ -1,0 +1,32 @@
+{
+  "la-liga:elche-vs-barcelona": {
+    "homeCorners": 3,
+    "awayCorners": 1,
+    "source": "https://www.eurosport.es/futbol/la-liga/2026-2027/live-elche-barcelona_mtc21891486/live.shtml",
+    "capturedAt": "2026-08-24T14:54:07-03:00"
+  },
+  "la-liga:atletico-madrid-vs-villarreal": {
+    "homeCorners": 5,
+    "awayCorners": 3,
+    "source": "https://ofstats.com/matches/view/atletico-de-madrid-villarreal-2026-08-23",
+    "capturedAt": "2026-08-24T14:54:07-03:00"
+  },
+  "brasileirao-serie-a:fluminense-vs-remo": {
+    "homeCorners": 11,
+    "awayCorners": 2,
+    "source": "https://www.totalcorner.com/h2h/fluminense-vs-remo",
+    "capturedAt": "2026-08-24T14:54:07-03:00"
+  },
+  "brasileirao-serie-a:red-bull-bragantino-vs-gremio": {
+    "homeCorners": 8,
+    "awayCorners": 5,
+    "source": "https://www.totalcorner.com/stats/bragantino-vs-gremio/198646809",
+    "capturedAt": "2026-08-24T14:54:07-03:00"
+  },
+  "brasileirao-serie-a:vitoria-vs-bahia": {
+    "homeCorners": 7,
+    "awayCorners": 7,
+    "source": "https://gioscore.com/pt/futebol/partida/bahia-vitoria/19621841",
+    "capturedAt": "2026-08-24T14:54:07-03:00"
+  }
+}

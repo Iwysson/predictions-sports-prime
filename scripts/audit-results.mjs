@@ -26,6 +26,7 @@ const rows = tags.map((tag) => ({
   publishedAt: attribute(tag, "data-published-at"),
   finalScore: attribute(tag, "data-final-score"),
   settlementMissing: attribute(tag, "data-settlement-missing"),
+  settlementReason: attribute(tag, "data-settlement-reason"),
 }));
 const rowBySlug = new Map(rows.map((row) => [row.slug, row]));
 const editorialBySlug = new Map(current.entries.map((entry) => [entry.slug, entry]));
@@ -59,10 +60,13 @@ if (baseline.publishedCount !== current.entries.length || baseline.draftCount !=
 }
 
 const counts = Object.fromEntries([...allowedStatuses].map((status) => [status, rows.filter((row) => row.status === status).length]));
+const awaitingMarketData = rows.filter((row) => row.status === "awaiting-data" && row.settlementReason === "MARKET_DATA_MISSING").length;
+const awaitingExecutionData = rows.filter((row) => row.status === "awaiting-data" && row.settlementReason === "EXECUTION_DATA_MISSING").length;
 console.log(`Published predictions: ${current.entries.length}`);
 console.log(`Completed History entries: ${rows.length}`);
 console.log(`Pending: ${counts.pending}`);
-console.log(`Awaiting data: ${counts["awaiting-data"]}`);
+console.log(`Awaiting Market Data: ${awaitingMarketData}`);
+console.log(`Awaiting Execution Data: ${awaitingExecutionData}`);
 console.log(`Won: ${counts.green}`);
 console.log(`Lost: ${counts.red}`);
 console.log(`Push: ${counts.push}`);

@@ -10,6 +10,7 @@ export type SettlementPendingReason =
   | "PICK_MISSING"
   | "UNSUPPORTED_MARKET"
   | "MARKET_DATA_MISSING"
+  | "EXECUTION_DATA_MISSING"
   | "TEAM_NOT_RESOLVED"
   | "MANUAL_PENDING";
 
@@ -21,7 +22,7 @@ export type ParsedPredictionLeg =
   | { kind: "win"; team: string; source: string }
   | { kind: "team-total"; team: string; selection: "over" | "under"; line: number; source: string }
   | { kind: "handicap"; team: string; line: number; source: string }
-  | { kind: "corners"; source: string };
+  | { kind: "corners"; team?: string; selection: "over" | "under"; line: number; source: string };
 
 export type SettlementEvaluation = {
   status: PredictionResultStatus;
@@ -64,7 +65,11 @@ function parseLeg(source: string): ParsedPredictionLeg | null {
   const liveEntry = source.match(/^(.+?)\s*[-\u2014]\s*Live Entry$/i);
   if (liveEntry) return { kind: "live-entry", market: liveEntry[1].trim(), source };
 
-  if (/\bCorners?$/i.test(source)) return { kind: "corners", source };
+  const totalCorners = source.match(/^(Over|Under) (\d+(?:\.\d+)?) Corners?$/i);
+  if (totalCorners) return { kind: "corners", selection: totalCorners[1].toLowerCase() as "over" | "under", line: Number(totalCorners[2]), source };
+
+  const teamCorners = source.match(/^(.+?) (Over|Under) (\d+(?:\.\d+)?) Corners?$/i);
+  if (teamCorners) return { kind: "corners", team: teamCorners[1], selection: teamCorners[2].toLowerCase() as "over" | "under", line: Number(teamCorners[3]), source };
 
   const total = source.match(/^(Over|Under) (\d+(?:\.\d+)?) Goals$/i);
   if (total) return { kind: "total-goals", selection: total[1].toLowerCase() as "over" | "under", line: Number(total[2]), source };
@@ -106,10 +111,18 @@ function settleDirectional(value: number, selection: "over" | "under") {
 function evaluateLeg(leg: ParsedPredictionLeg, match: MatchPreview, score: Score) {
   const totalGoals = score.home + score.away;
   if (leg.kind === "live-entry") {
-    return { status: "awaiting-data" as const, reason: "MARKET_DATA_MISSING" as const, missingField: "live-entry execution" };
+    return { status: "awaiting-data" as const, reason: "EXECUTION_DATA_MISSING" as const, missingField: "live-entry execution" };
   }
   if (leg.kind === "corners") {
-    return { status: "awaiting-data" as const, reason: "MARKET_DATA_MISSING" as const, missingField: "corners" };
+    const homeCorners = match.marketStats?.homeCorners;
+    const awayCorners = match.marketStats?.awayCorners;
+    if (homeCorners === undefined || awayCorners === undefined) {
+      return { status: "awaiting-data" as const, reason: "MARKET_DATA_MISSING" as const, missingField: "corners" };
+    }
+    if (!leg.team) return { status: settleDirectional(homeCorners + awayCorners - leg.line, leg.selection) };
+    const isHome = selectedTeamIsHome(leg.team, match);
+    if (isHome === null) return { status: "pending" as const, reason: "TEAM_NOT_RESOLVED" as const };
+    return { status: settleDirectional((isHome ? homeCorners : awayCorners) - leg.line, leg.selection) };
   }
   if (leg.kind === "total-goals") return { status: settleDirectional(totalGoals - leg.line, leg.selection) };
   if (leg.kind === "btts") {
@@ -163,9 +176,10 @@ export function evaluatePredictionSettlement(match: MatchPreview): SettlementEva
   const evaluations = parsed.legs.map((leg) => evaluateLeg(leg, match, { home: match.homeScore!, away: match.awayScore! }));
   const awaiting = evaluations.filter((evaluation) => evaluation.status === "awaiting-data");
   if (awaiting.length) {
+    const executionMissing = awaiting.some((evaluation) => evaluation.reason === "EXECUTION_DATA_MISSING");
     return {
       status: "awaiting-data",
-      pendingReason: "MARKET_DATA_MISSING",
+      pendingReason: executionMissing ? "EXECUTION_DATA_MISSING" : "MARKET_DATA_MISSING",
       missingFields: [...new Set(awaiting.flatMap((evaluation) => evaluation.missingField ?? []))],
       ...parsed,
     };
