@@ -3861,16 +3861,91 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   .result-card__details div:nth-child(3) { grid-column: auto; }
 }
 
-/* Authoritative standings grid: keep every rendered cell on its declared row. */
+/* Global standings typography and authoritative grid shared by every league. */
+@media (min-width: 1200px) {
+  .league-layout {
+    grid-template-columns: minmax(0, 1fr) 480px;
+  }
+}
+
 .standings-columns,
 .standing-row {
-  grid-template-columns: 24px minmax(0, 1fr) repeat(8, minmax(20px, 28px));
-  gap: 2px;
-  padding-inline: 8px;
+  grid-template-columns: 32px minmax(0, 1fr) repeat(6, 30px) 36px 38px;
+  gap: 3px;
+  padding-inline: 12px;
+}
+
+.standings-columns {
+  min-height: 32px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.standings-columns > span:first-child,
+.standings-columns > span:nth-child(n + 3),
+.standing-cell {
+  text-align: center;
 }
 
 .standing-row {
-  min-height: 36px;
+  min-height: 50px;
+  font-size: 14px;
+  font-weight: 550;
+  font-variant-numeric: tabular-nums;
+}
+
+.standing-row strong {
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.standing-position {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.standing-cell--points {
+  font-weight: 700;
+}
+
+@media (max-width: 1199px) {
+  .league-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .league-sidebar {
+    position: static;
+    width: 100%;
+  }
+
+  .standings-columns,
+  .standing-row {
+    grid-template-columns: 30px minmax(0, 1fr) repeat(6, 28px) 34px 36px;
+    padding-inline: 10px;
+  }
+
+  .standings-columns {
+    min-height: 30px;
+    font-size: 10.5px;
+  }
+
+  .standing-row {
+    min-height: 48px;
+    font-size: 13px;
+  }
+
+  .standing-row strong {
+    font-size: 14px;
+  }
+
+  .standing-position {
+    width: 27px;
+    height: 27px;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 980px) {
@@ -3880,12 +3955,11 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 
   .standings-columns--tablet {
     display: grid;
-    grid-template-columns: 24px minmax(0, 1fr) repeat(6, minmax(22px, 30px));
+    grid-template-columns: 30px minmax(0, 1fr) repeat(4, 28px) 36px 38px;
   }
 
   .standing-row {
-    min-height: 40px;
-    grid-template-columns: 24px minmax(0, 1fr) repeat(6, minmax(22px, 30px));
+    grid-template-columns: 30px minmax(0, 1fr) repeat(4, 28px) 36px 38px;
   }
 
   .standing-cell--gf,
@@ -3901,11 +3975,30 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 
   .standings-columns--mobile {
     display: grid;
-    grid-template-columns: 24px minmax(0, 1fr) 26px 34px 34px;
+    grid-template-columns: 30px minmax(0, 1fr) 34px 44px 44px;
   }
 
   .standing-row {
-    grid-template-columns: 24px minmax(0, 1fr) 26px 34px 34px;
+    min-height: 46px;
+    grid-template-columns: 30px minmax(0, 1fr) 34px 44px 44px;
+    padding-inline: 9px;
+    font-size: 12px;
+  }
+
+  .standings-columns {
+    min-height: 29px;
+    padding-inline: 9px;
+    font-size: 10px;
+  }
+
+  .standing-row strong {
+    font-size: 13px;
+  }
+
+  .standing-position {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
   }
 
   .standing-cell--wins,
