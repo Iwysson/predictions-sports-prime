@@ -5,16 +5,33 @@ export const liverpoolVsNottinghamForest: EditorialPrediction = {
   homeTeam: "Liverpool",
   awayTeam: "Nottingham Forest",
   analysis: [
-    "Liverpool return to Anfield looking for their first league win after a 2–2 draw with Newcastle. The opening game again showed their attacking ceiling, but also left them with a clear incentive to respond strongly in front of their own supporters.",
-    "Forest cannot be dismissed. They won 3–0 at Anfield last season, so Liverpool know exactly how dangerous this opponent can be if allowed to settle into the match.",
-    "That recent warning is one reason we prefer Liverpool to win plus Over 1.5 rather than an aggressive handicap. The Reds should control more of the ball at home, generate sustained pressure and create enough chances to put themselves in a winning position, while the two-goal requirement remains modest.",
-    "With Liverpool expected to play on the front foot after dropping points in the opener, the combination offers a balanced way to back both their home advantage and the likelihood of at least two goals.",
+    "Liverpool host Nottingham Forest in Premier League. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Liverpool to Win + Over 1.5 Goals.",
+    "the goals component makes the total scoring range part of the selection, while the win component requires the named team to finish ahead.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Liverpool and Nottingham Forest exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "Liverpool to Win + Over 1.5 Goals",
     odds: 1.67,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T12:28:00-03:00",
+      market: "Liverpool to Win + Over 1.5 Goals",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Premier League 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-29",
     time: "08:30",

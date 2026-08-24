@@ -15,6 +15,7 @@ export type SettlementPendingReason =
 
 export type ParsedPredictionLeg =
   | { kind: "total-goals"; selection: "over" | "under"; line: number; source: string }
+  | { kind: "live-entry"; market: string; source: string }
   | { kind: "btts"; selection: "yes" | "no"; source: string }
   | { kind: "double-chance"; team: string; side?: "1X" | "X2"; source: string }
   | { kind: "win"; team: string; source: string }
@@ -60,6 +61,9 @@ function selectedTeamIsHome(label: string, match: MatchPreview) {
 }
 
 function parseLeg(source: string): ParsedPredictionLeg | null {
+  const liveEntry = source.match(/^(.+?)\s*[-\u2014]\s*Live Entry$/i);
+  if (liveEntry) return { kind: "live-entry", market: liveEntry[1].trim(), source };
+
   if (/\bCorners?$/i.test(source)) return { kind: "corners", source };
 
   const total = source.match(/^(Over|Under) (\d+(?:\.\d+)?) Goals$/i);
@@ -101,6 +105,9 @@ function settleDirectional(value: number, selection: "over" | "under") {
 
 function evaluateLeg(leg: ParsedPredictionLeg, match: MatchPreview, score: Score) {
   const totalGoals = score.home + score.away;
+  if (leg.kind === "live-entry") {
+    return { status: "awaiting-data" as const, reason: "MARKET_DATA_MISSING" as const, missingField: "live-entry execution" };
+  }
   if (leg.kind === "corners") {
     return { status: "awaiting-data" as const, reason: "MARKET_DATA_MISSING" as const, missingField: "corners" };
   }

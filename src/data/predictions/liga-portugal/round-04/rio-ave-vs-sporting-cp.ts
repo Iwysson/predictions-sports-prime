@@ -5,16 +5,33 @@ export const rioAveVsSportingCp: EditorialPrediction = {
   homeTeam: "Rio Ave",
   awayTeam: "Sporting CP",
   analysis: [
-    "Sporting travel to Rio Ave with a strong recent record in this matchup. They won both Liga Portugal meetings last season, including the fixture played at Rio Ave's ground, and have started the new campaign unbeaten with seven points from the opening three rounds.",
-    "The away win is therefore the foundation of the selection. Rather than using an aggressive handicap, we pair Sporting with Under 4.5 Goals, which still allows for a convincing performance without requiring the match to become a shootout.",
-    "Rio Ave have already faced another Portuguese heavyweight at home this season, losing to Porto in a game that stayed below five total goals. That gives the Under line additional context.",
-    "Sporting's stronger squad, recent dominance of the fixture and positive start make them the side to trust. At 1.80, adding a generous goals ceiling improves the price while keeping a wide range of realistic Sporting wins covered.",
+    "Rio Ave host Sporting CP in Liga Portugal. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Sporting CP to Win + Under 4.5 Goals.",
+    "the goals component makes the total scoring range part of the selection, while the win component requires the named team to finish ahead.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Rio Ave and Sporting CP exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "Sporting CP to Win + Under 4.5 Goals",
     odds: 1.8,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T13:22:00-03:00",
+      market: "Sporting CP to Win + Under 4.5 Goals",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Liga Portugal 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/portugal/2026-27_pt1.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-28",
     time: "20:15",

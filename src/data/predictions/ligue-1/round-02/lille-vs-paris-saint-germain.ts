@@ -5,16 +5,33 @@ export const lilleVsParisSaintGermain: EditorialPrediction = {
   homeTeam: "Lille",
   awayTeam: "Paris Saint-Germain",
   analysis: [
-    "PSG travel to Lille looking for their first league win after opening the campaign with a draw away to Rennes. The response should be strong from a side that enters the season as five-time defending Ligue 1 champions.",
-    "Lille at home are a serious opponent, so there is little need to force an aggressive handicap. The straight PSG win keeps the selection focused on the clearest edge: superior squad depth, more individual match-winners and the ability to control long spells even in a difficult away fixture.",
-    "After dropping points in the opener, Paris have an obvious incentive to raise the level quickly and avoid falling further behind in the early table.",
-    "At 1.72, the moneyline offers a good balance. We are backing PSG's quality to make the difference over 90 minutes without requiring a multi-goal winning margin.",
+    "Lille host Paris Saint-Germain in Ligue 1. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Paris Saint-Germain to Win.",
+    "the win component requires the named team to finish ahead.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Lille and Paris Saint-Germain exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "Paris Saint-Germain to Win",
     odds: 1.72,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T13:37:00-03:00",
+      market: "Paris Saint-Germain to Win",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Ligue 1 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/france/2026-27_fr1.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-28",
     time: "15:45",

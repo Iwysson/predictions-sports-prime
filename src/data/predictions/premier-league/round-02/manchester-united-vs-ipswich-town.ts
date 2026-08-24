@@ -5,16 +5,33 @@ export const manchesterUnitedVsIpswichTown: EditorialPrediction = {
   homeTeam: "Manchester United",
   awayTeam: "Ipswich Town",
   analysis: [
-    "Manchester United return to Old Trafford needing a stronger performance after a disappointing opening result. At home, they should have the territorial and individual-quality advantage required to put Ipswich under sustained pressure.",
-    "United's depth and attacking options make the home win the foundation of the selection, but there is no need to take an aggressive handicap. Ipswich have started positively and should arrive with enough confidence to make the match competitive.",
-    "That is why Over 1.5 is a better addition than a large winning margin. Two goals is a relatively accessible requirement, and an Ipswich contribution would not damage the bet as long as United still take the points.",
-    "The wager is therefore built around a reaction from United at Old Trafford, with the goals line adding price without demanding an extreme scoreline.",
+    "Manchester United host Ipswich Town in Premier League. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Manchester United to Win + Over 1.5 Goals.",
+    "the goals component makes the total scoring range part of the selection, while the win component requires the named team to finish ahead.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Manchester United and Ipswich Town exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "Manchester United to Win + Over 1.5 Goals",
     odds: 1.67,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T12:39:00-03:00",
+      market: "Manchester United to Win + Over 1.5 Goals",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Premier League 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-30",
     time: "16:30",

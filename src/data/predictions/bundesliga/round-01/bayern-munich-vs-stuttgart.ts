@@ -13,8 +13,43 @@ export const bayernMunichVsStuttgart: EditorialPrediction = {
   picks: {
     main: "Bayern Munich -1.5 Asian Handicap",
     odds: 1.72,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T12:04:00-03:00",
+      market: "Bayern Munich -1.5 Asian Handicap",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "Bundesliga — Bayern Munich vs VfB Stuttgart 2026/27",
+      url: "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/1/fc-bayern-muenchen-vs-vfb-stuttgart/liveticker",
+      description: "Supports the opening fixture, venue, Bayern's title defence, and the recent 4-2 league meeting and 3-0 cup-final result.",
+      accessedAt: "2026-08-24T14:30:00-03:00",
+    },
+    {
+      name: "Bundesliga — Stuttgart 0-5 Bayern Munich",
+      url: "https://www.bundesliga.com/en/bundesliga/news/vfb-stuttgart-bayern-munich-match-report-highlights-matchday-13-35089",
+      description: "Official match report supporting Bayern's 5-0 away league victory in December 2025.",
+      accessedAt: "2026-08-24T14:30:00-03:00",
+    },
+    {
+      name: "DFB — Bayern defeat Stuttgart in the 2026 DFB-Pokal final",
+      url: "https://www.dfb.de/news/fc-bayern-dethrone-vfb-to-win-21st-dfb-pokal",
+      description: "Official DFB report supporting the 3-0 final score and Harry Kane's hat-trick.",
+      accessedAt: "2026-08-24T14:30:00-03:00",
+    },
+    {
+      name: "Bundesliga — 2026 Franz Beckenbauer Supercup",
+      url: "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/supercup/borussia-dortmund-vs-fc-bayern-muenchen/liveticker",
+      description: "Official match page supporting Bayern's 2-1 Supercup victory over Borussia Dortmund.",
+      accessedAt: "2026-08-24T14:30:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-28",
     time: "15:30",

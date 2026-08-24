@@ -5,16 +5,33 @@ export const astonVillaVsArsenal: EditorialPrediction = {
   homeTeam: "Aston Villa",
   awayTeam: "Arsenal",
   analysis: [
-    "Both Premier League meetings between Aston Villa and Arsenal went over 2.5 goals last season, and the ingredients are in place for another open contest at Villa Park.",
-    "Arsenal enter the campaign as defending champions and still possess one of the league's deepest attacking squads. Their ability to control possession and generate repeated pressure gives them a strong chance of contributing heavily to the total on their own.",
-    "Villa, meanwhile, return home needing a response after a difficult opener. That should encourage a more assertive approach in front of their supporters rather than a passive game plan.",
-    "If Villa push higher and commit more players forward, Arsenal have the quality to exploit the space left behind. At the same time, Villa have enough attacking talent to create chances of their own. With the recent head-to-head trend and a price of 1.82, Over 2.5 is the preferred angle.",
+    "Aston Villa host Arsenal in Premier League. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Over 2.5 Goals.",
+    "the goals component makes the total scoring range part of the selection.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Aston Villa and Arsenal exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "Over 2.5 Goals",
     odds: 1.82,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T12:42:00-03:00",
+      market: "Over 2.5 Goals",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Premier League 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-31",
     time: "20:00",

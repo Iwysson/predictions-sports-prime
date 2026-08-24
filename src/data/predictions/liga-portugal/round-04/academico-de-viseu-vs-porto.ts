@@ -5,16 +5,33 @@ export const academicoDeViseuVsPorto: EditorialPrediction = {
   homeTeam: "Académico de Viseu",
   awayTeam: "Porto",
   analysis: [
-    "Porto travel to Viseu as defending Liga Portugal champions and hold a clear advantage in squad depth, top-flight experience and individual quality. Académico face a significant step up against one of Portugal's strongest sides.",
-    "The head-to-head history supports the visitors as well. In the meetings referenced since 2020, Porto have three wins and one draw, with Académico yet to record a victory.",
-    "Porto should control possession for long periods and spend much of the match in advanced areas. The straight moneyline is likely to be short, so the -1.5 handicap is the more interesting way to improve the price.",
-    "The bet needs Porto to win by at least two goals, which makes it more aggressive, but 2.00 is sufficient compensation given the difference in level between the squads and Porto's championship pedigree.",
+    "Académico de Viseu host Porto in Liga Portugal. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: FC Porto -1.5 Asian Handicap.",
+    "The handicap component sets the required scoring margin rather than relying only on the match winner.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Académico de Viseu and Porto exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "FC Porto -1.5 Asian Handicap",
     odds: 2,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T13:27:00-03:00",
+      market: "FC Porto -1.5 Asian Handicap",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Liga Portugal 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/portugal/2026-27_pt1.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-29",
     time: "18:00",

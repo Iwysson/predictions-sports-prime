@@ -5,16 +5,33 @@ export const usSassuoloCalcioVsTorino: EditorialPrediction = {
   homeTeam: "US Sassuolo Calcio",
   awayTeam: "Torino",
   analysis: [
-    "Sassuolo finished slightly above Torino last season, taking 49 points to Torino's 45, and their home record was an important part of that campaign. They won nine of 19 league matches at the Mapei Stadium, giving the 1X double chance a solid base.",
-    "Torino, however, won both direct meetings last season. That is enough reason to avoid a straight Sassuolo victory and keep the draw onside.",
-    "Sassuolo have also opened the new competitive season positively, scoring three times in a convincing Coppa Italia win. That attacking start supports the Over 1.5 leg, while Torino have enough quality to contribute if the hosts leave space.",
-    "This selection respects Torino's recent head-to-head edge while still leaning on Sassuolo's stronger home profile. Two or more goals is a modest requirement, and at 1.78 the combined price is appealing.",
+    "US Sassuolo Calcio host Torino in Serie A. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Sassuolo or Draw (1X) + Over 1.5 Goals.",
+    "the goals component makes the total scoring range part of the selection, while the double-chance component protects one of the drawn-result paths.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to US Sassuolo Calcio and Torino exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "Sassuolo or Draw (1X) + Over 1.5 Goals",
     odds: 1.78,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T12:49:00-03:00",
+      market: "Sassuolo or Draw (1X) + Over 1.5 Goals",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Serie A 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-29",
     time: "13:30",

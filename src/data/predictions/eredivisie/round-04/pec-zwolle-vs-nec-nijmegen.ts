@@ -5,16 +5,33 @@ export const pecZwolleVsNecNijmegen: EditorialPrediction = {
   homeTeam: "PEC Zwolle",
   awayTeam: "NEC Nijmegen",
   analysis: [
-    "NEC come into this matchup after an excellent 2025/26 campaign, finishing third in the Eredivisie and establishing themselves as one of the stronger attacking teams in the division.",
-    "The recent head-to-head also supports the visitors. PEC failed to beat NEC in either league meeting last season, with NEC collecting four points from the two fixtures. The X2 double chance therefore gives us protection without requiring an away win.",
-    "The more aggressive part of the selection is Over 2.5 Goals. NEC's attacking output creates a strong base for that line, while PEC's defensive vulnerabilities have regularly allowed matches to open up.",
-    "The previous meeting at the MAC³PARK Stadion also featured goals from both sides. With NEC holding the stronger overall profile and the match carrying enough attacking potential for three goals, the combination is attractive at 1.78.",
+    "PEC Zwolle host NEC Nijmegen in Eredivisie. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: NEC Nijmegen or Draw (X2) + Over 2.5 Goals.",
+    "the goals component makes the total scoring range part of the selection, while the double-chance component protects one of the drawn-result paths.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to PEC Zwolle and NEC Nijmegen exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "NEC Nijmegen or Draw (X2) + Over 2.5 Goals",
     odds: 1.78,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T13:10:00-03:00",
+      market: "NEC Nijmegen or Draw (X2) + Over 2.5 Goals",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Eredivisie 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/netherlands/2026-27_nl1.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-29",
     time: "21:00",

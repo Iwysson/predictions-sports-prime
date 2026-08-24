@@ -5,16 +5,33 @@ export const mainzVsPaderborn: EditorialPrediction = {
   homeTeam: "1. FSV Mainz 05",
   awayTeam: "SC Paderborn 07",
   analysis: [
-    "Mainz open at the MEWA Arena against newly promoted Paderborn, and the home side have the clearer top-flight profile. Mainz spent last season competing in the Bundesliga, while Paderborn arrive after earning promotion from the second tier.",
-    "That difference in level matters in an opening-round matchup, particularly with Mainz playing at home. The hosts also have a favourable historical record against Paderborn in Bundesliga meetings, adding another positive layer to the selection.",
-    "Mainz enter the league opener with momentum after a 9–0 DFB-Pokal victory. Paderborn also progressed in the cup with a 4–2 win, but conceding twice against lower-level opposition is a concern before stepping up to face a Bundesliga side away from home.",
-    "We prefer the straight home win rather than adding a handicap. Mainz have the experience, home advantage and competitive preparation to control enough of the match and turn those edges into three points.",
+    "1. FSV Mainz 05 host SC Paderborn 07 in Bundesliga. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Mainz 05 to Win.",
+    "the win component requires the named team to finish ahead.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to 1. FSV Mainz 05 and SC Paderborn 07 exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "Mainz 05 to Win",
     odds: 1.72,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T12:14:00-03:00",
+      market: "Mainz 05 to Win",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Bundesliga 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/deutschland/refs/heads/master/2026-27/1-bundesliga.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-29",
     time: "10:30",

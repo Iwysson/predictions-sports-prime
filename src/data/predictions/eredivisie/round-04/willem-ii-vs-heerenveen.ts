@@ -5,16 +5,33 @@ export const willemIiVsHeerenveen: EditorialPrediction = {
   homeTeam: "Willem II",
   awayTeam: "Heerenveen",
   analysis: [
-    "Willem II's defensive start to the season is the key factor here. They lost their first two Eredivisie matches and conceded eight goals, a worrying early pattern before facing Heerenveen.",
-    "That makes Over 2.5 attractive, but we also want protection on the result. Rather than requiring an away win, the X2 double chance keeps a draw covered while still leaning against a Willem II side that has struggled badly without the ball.",
-    "The combination is more aggressive because both conditions need to land, but the even-money price reflects that extra risk. If Willem II's defensive issues continue, Heerenveen should have opportunities to score, while an open home response from the hosts would also help the goals line.",
-    "At 2.00, the price is strong enough to back Heerenveen to avoid defeat in another high-event Willem II match.",
+    "Willem II host Heerenveen in Eredivisie. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: SC Heerenveen or Draw (X2) + Over 2.5 Goals.",
+    "the goals component makes the total scoring range part of the selection, while the double-chance component protects one of the drawn-result paths.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Willem II and Heerenveen exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "SC Heerenveen or Draw (X2) + Over 2.5 Goals",
     odds: 2,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T13:14:00-03:00",
+      market: "SC Heerenveen or Draw (X2) + Over 2.5 Goals",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Eredivisie 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/netherlands/2026-27_nl1.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-30",
     time: "14:30",

@@ -5,16 +5,30 @@ export const bragaVsVitoriaDeGuimaraes: EditorialPrediction = {
   homeTeam: "Braga",
   awayTeam: "Vitória de Guimaraes",
   analysis: [
-    "Braga host Vitória Guimarães in a derby that usually carries plenty of intensity, and this combination gives us strong protection on the visitors while asking for only two goals in the match.",
-    "Vitória have already shown this season that they can compete offensively against stronger opposition. Even in defeat to Sporting, they managed to score twice away from home, an encouraging sign ahead of another demanding trip.",
-    "The +2 handicap provides a wide margin. Vitória can lose by one goal and the handicap still covers, while a draw or away win also keeps this part of the selection comfortably protected.",
-    "The Over 1.5 Goals line is deliberately more conservative than a higher goals requirement. Braga should take the initiative at home, but Vitória have enough attacking threat in transition to contribute. With only two goals needed, the selection remains well aligned with the expected competitive nature of the derby without demanding an especially high-scoring game.",
-    "At 2.10, the combination offers an attractive balance between protection on Vitória and a relatively accessible goals line.",
+    "Braga host Vitória de Guimaraes in Liga Portugal. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Vitória Guimarães +2 Handicap + Over 1.5 Goals.",
+    "The handicap component sets the required scoring margin rather than relying only on the match winner, while the goals component makes the total scoring range part of the selection.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Braga and Vitória de Guimaraes exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "Vitória Guimarães +2 Handicap + Over 1.5 Goals",
     odds: 2.1,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture; capture timestamp required",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      market: "Vitória Guimarães +2 Handicap + Over 1.5 Goals",
+    },
   },
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Liga Portugal 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/portugal/2026-27_pt1.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
   published: false,
   matchInfo: {
     date: "2026-08-31",

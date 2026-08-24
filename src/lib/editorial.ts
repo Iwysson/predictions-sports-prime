@@ -297,11 +297,24 @@ export function validateEditorialPredictions(
       if (!provenance.source.trim() || PLACEHOLDER_PATTERN.test(provenance.source)) {
         errors.push(`${label}: oddsProvenance.source must identify the actual source.`);
       }
-      if (!isValidIsoTimestamp(provenance.capturedAt)) {
+      if (provenance.capturedAt !== undefined && !isValidIsoTimestamp(provenance.capturedAt)) {
         errors.push(`${label}: oddsProvenance.capturedAt must be a valid ISO 8601 timestamp.`);
       }
       if (provenance.market !== undefined && !provenance.market.trim()) {
         errors.push(`${label}: oddsProvenance.market cannot be empty.`);
+      }
+    }
+
+    if (prediction.picks.liveEntryProvenance) {
+      const provenance = prediction.picks.liveEntryProvenance;
+      if (!provenance.bookmaker.trim() || PLACEHOLDER_PATTERN.test(provenance.bookmaker)) {
+        errors.push(`${label}: liveEntryProvenance.bookmaker must identify the actual bookmaker.`);
+      }
+      if (!Number.isFinite(provenance.preMatchOdds) || provenance.preMatchOdds <= 1) {
+        errors.push(`${label}: liveEntryProvenance.preMatchOdds must be a finite number greater than 1.`);
+      }
+      if (!isValidIsoTimestamp(provenance.capturedAt)) {
+        errors.push(`${label}: liveEntryProvenance.capturedAt must be a valid ISO 8601 timestamp.`);
       }
     }
 

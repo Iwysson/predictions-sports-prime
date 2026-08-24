@@ -5,16 +5,33 @@ export const groningenVsFortunaSittard: EditorialPrediction = {
   homeTeam: "Groningen",
   awayTeam: "Fortuna Sittard",
   analysis: [
-    "Groningen return to the Euroborg with a stronger recent profile than Fortuna. They finished ninth last season with 48 points, nine more than Fortuna, and the visitors' away record was a major weakness.",
-    "Fortuna won only four of 17 away league matches and lost 11, which gives Groningen a solid home edge. The hosts have also started the new campaign well, taking six points from their first three games and scoring seven goals.",
-    "That early attacking output supports the Over 1.5 leg. Groningen should take the initiative at home, while Fortuna's defensive record suggests they can be put under sustained pressure.",
-    "The combination keeps the focus on Groningen's home advantage but avoids an aggressive handicap. With only two goals required in the match, 1.62 is a reasonable price for the hosts to win in a game that produces some attacking action.",
+    "Groningen host Fortuna Sittard in Eredivisie. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: FC Groningen to Win + Over 1.5 Goals.",
+    "the goals component makes the total scoring range part of the selection, while the win component requires the named team to finish ahead.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Groningen and Fortuna Sittard exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "FC Groningen to Win + Over 1.5 Goals",
     odds: 1.62,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T13:05:00-03:00",
+      market: "FC Groningen to Win + Over 1.5 Goals",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Eredivisie 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/netherlands/2026-27_nl1.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-28",
     time: "20:00",

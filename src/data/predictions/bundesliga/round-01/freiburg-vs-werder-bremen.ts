@@ -5,16 +5,33 @@ export const freiburgVsWerderBremen: EditorialPrediction = {
   homeTeam: "SC Freiburg",
   awayTeam: "SV Werder Bremen",
   analysis: [
-    "Freiburg were particularly reliable at home last season and finished seventh in the Bundesliga, giving them a solid foundation for this opening fixture at the Europa-Park Stadion.",
-    "The recent matchup also leans strongly toward Freiburg. They won both league meetings with Bremen last season without conceding, taking the home game 1–0 and the away fixture 3–0. Rather than demanding a third straight win, the 1X double chance gives useful protection in the first round of a new campaign.",
-    "We pair that with Over 1.5 Goals. Bremen opened their competitive season with a 3–0 DFB-Pokal win and should offer more attacking resistance than they managed in last season's head-to-head meetings. Freiburg, meanwhile, have enough quality at home to create chances of their own.",
-    "The combination does not need a dominant Freiburg performance. It only asks the hosts to avoid defeat in a game that produces at least two goals, which fits both the home profile and the price.",
+    "SC Freiburg host SV Werder Bremen in Bundesliga. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Freiburg or Draw (1X) + Over 1.5 Goals.",
+    "the goals component makes the total scoring range part of the selection, while the double-chance component protects one of the drawn-result paths.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to SC Freiburg and SV Werder Bremen exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "Freiburg or Draw (1X) + Over 1.5 Goals",
     odds: 1.67,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T12:21:00-03:00",
+      market: "Freiburg or Draw (1X) + Over 1.5 Goals",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Bundesliga 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/deutschland/refs/heads/master/2026-27/1-bundesliga.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-30",
     time: "10:30",

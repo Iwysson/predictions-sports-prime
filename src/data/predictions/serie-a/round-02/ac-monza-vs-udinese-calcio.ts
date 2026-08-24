@@ -5,16 +5,32 @@ export const acMonzaVsUdineseCalcio: EditorialPrediction = {
   homeTeam: "AC Monza",
   awayTeam: "Udinese Calcio",
   analysis: [
-    "The direction is Over 1.5 Goals, but the pre-match price is too short to justify an immediate entry. At around 1.44, the market offers very little margin for error.",
-    "Recent meetings between Monza and Udinese have regularly produced goals, and both sides have enough attacking quality to create opportunities. The idea is therefore not to change the market, but to improve the price.",
-    "A goalless opening period can push the live Over 1.5 line toward a much more attractive number. If the game still shows attacking intent, entries into dangerous areas and genuine chances, 1.65 or better becomes a more interesting point to consider.",
-    "This is a value-based approach rather than a fixed pre-match bet. If the match becomes slow or chance creation disappears, there is no obligation to enter simply because the target price has been reached.",
+    "AC Monza host Udinese Calcio in Serie A. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Over 1.5 Goals — Live Entry.",
+    "the goals component makes the total scoring range part of the selection.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to AC Monza and Udinese Calcio exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "This is marked as a live-entry plan, so it is not a standard instruction to enter before kick-off. The stored note defines the intended price conditions; if those conditions or the expected match pattern do not appear, no entry is required.",
   ],
   comment: "Pre-Match Odds: 1.44. Preferred Entry: 1.65+ live. Live Entry Only. Target Odds: 1.65+.",
   picks: {
     main: "Over 1.5 Goals — Live Entry",
+    liveEntryProvenance: {
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      preMatchOdds: 1.44,
+      capturedAt: "2026-08-24T12:50:00-03:00",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Serie A 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-29",
     time: "13:30",

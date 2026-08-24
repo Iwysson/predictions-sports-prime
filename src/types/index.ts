@@ -41,8 +41,16 @@ export type EditorialPicks = {
   odds?: number;
   oddsProvenance?: {
     source: string;
-    capturedAt: string;
+    bookmaker?: string;
+    provenance?: "author_attested" | "external_verified";
+    capturedAt?: string;
     market?: string;
+  };
+  liveEntryProvenance?: {
+    bookmaker: string;
+    provenance: "author_attested" | "external_verified";
+    preMatchOdds: number;
+    capturedAt: string;
   };
   result?: PredictionResultInput;
 };

@@ -5,16 +5,33 @@ export const leedsUnitedVsBrentford: EditorialPrediction = {
   homeTeam: "Leeds United",
   awayTeam: "Brentford",
   analysis: [
-    "Leeds return to Elland Road for their first home league match of the new season, and the 1.90 price on Over 2.5 is attractive enough to take a more aggressive view on the goals market.",
-    "Last season's meetings were relatively controlled, but Leeds' broader home profile points to a different possibility. When they push the tempo at Elland Road, their games can become stretched quickly: the extra attacking numbers create chances, but also leave space for opponents to counter.",
-    "Brentford have enough quality in the final third to take advantage if that happens. They are unlikely to spend the entire game simply protecting their box, which increases the chance of opportunities at both ends.",
-    "With Leeds expected to approach their first home game aggressively and Brentford capable of responding, the setup is suitable for a match that reaches three goals. The price provides enough margin to back that scenario despite the more cautious recent head-to-head results.",
+    "Leeds United host Brentford in Premier League. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Over 2.5 Goals.",
+    "the goals component makes the total scoring range part of the selection.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Leeds United and Brentford exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "Over 2.5 Goals",
     odds: 1.9,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T12:38:00-03:00",
+      market: "Over 2.5 Goals",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Premier League 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-30",
     round: "Matchday 2",

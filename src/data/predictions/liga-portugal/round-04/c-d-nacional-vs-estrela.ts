@@ -5,16 +5,33 @@ export const cDNacionalVsEstrela: EditorialPrediction = {
   homeTeam: "C.D. Nacional",
   awayTeam: "Estrela",
   analysis: [
-    "Estrela's away record is the first reason to protect Nacional. They won only two of 17 league matches on the road last season, drawing six and losing nine.",
-    "The recent head-to-head also leans toward the hosts. Nacional went unbeaten in both meetings last season, drawing 1–1 and winning 2–0. Both games stayed under 3.5 goals, continuing a broader pattern in which six of the last seven competitive meetings finished below that line.",
-    "Rather than demanding another Nacional win, the 1X double chance keeps a draw covered in what could still be a balanced fixture.",
-    "The Under 3.5 line fits both the recent matchup history and the type of game we expect. At 1.85, the combination offers solid protection on the result while keeping a generous total-goals ceiling.",
+    "C.D. Nacional host Estrela in Liga Portugal. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Nacional or Draw (1X) + Under 3.5 Goals.",
+    "the goals component makes the total scoring range part of the selection, while the double-chance component protects one of the drawn-result paths.",
+    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to C.D. Nacional and Estrela exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
+    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
   ],
   picks: {
     main: "Nacional or Draw (1X) + Under 3.5 Goals",
     odds: 1.85,
+    oddsProvenance: {
+      source: "Betano — author-attested editorial capture",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-24T13:29:00-03:00",
+      market: "Nacional or Draw (1X) + Under 3.5 Goals",
+    },
   },
-  published: false,
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "OpenFootball — Liga Portugal 2026/27 fixtures",
+      url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/portugal/2026-27_pt1.txt",
+      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
+      accessedAt: "2026-08-24T14:45:00-03:00",
+    },
+  ],
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  published: true,
   matchInfo: {
     date: "2026-08-30",
     time: "15:30",
