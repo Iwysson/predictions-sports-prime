@@ -2225,6 +2225,18 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
   gap: 7px;
 }
 
+.league-round-section + .league-round-section {
+  margin-top: 22px;
+}
+
+.league-next-round-heading {
+  margin-bottom: 8px;
+}
+
+.league-match-list > [data-round-fixture] {
+  min-width: 0;
+}
+
 .round-source-line {
   min-height: 25px;
   display: flex;
@@ -3499,7 +3511,8 @@ html[dir="rtl"] .footer-links { direction: rtl; }
 .bet-result--push, .bet-result--void { color: #d3dbe2; background: rgba(255,255,255,.07); }
 .bet-result--half-green { color: #9be9bb; background: linear-gradient(90deg, rgba(85,227,143,.12) 50%, rgba(255,255,255,.05) 50%); }
 .bet-result--half-red { color: #ffaaaa; background: linear-gradient(90deg, rgba(255,80,80,.12) 50%, rgba(255,255,255,.05) 50%); }
-.bet-result--pending { color: var(--muted); background: rgba(255,255,255,.04); }
+.bet-result--pending,
+.bet-result--awaiting-data { color: var(--muted); background: rgba(255,255,255,.04); }
 .editorial-comment, .match-comments { margin-top: 16px; padding: 13px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.018); }
 .editorial-comment p { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
 .match-comments h2 { margin: 0 0 9px; font-size: 15px; }
@@ -3727,7 +3740,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 }
 .bet-result--green, .bet-result--half-green { color: var(--success); background: transparent; }
 .bet-result--red, .bet-result--half-red { color: var(--danger); background: transparent; }
-.bet-result--push, .bet-result--void, .bet-result--pending { color: var(--text-muted); background: transparent; }
+.bet-result--push, .bet-result--void, .bet-result--pending, .bet-result--awaiting-data { color: var(--text-muted); background: transparent; }
 .history-row { padding: 15px 17px; }
 .history-row span { color: var(--text-muted); font-size: 12px; }
 .history-score { color: var(--text-primary) !important; font-size: 14px !important; font-weight: 750; }

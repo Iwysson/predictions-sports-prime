@@ -16,6 +16,9 @@ let futureInHistory = 0;
 let postponedInHistory = 0;
 let duplicateHistory = 0;
 let automaticSettled = 0;
+let awaitingData = 0;
+let completedPlainPending = 0;
+let resolvableButUnsettled = 0;
 let manualPreserved = 0;
 let settlementMismatches = 0;
 const unresolvedReasons = new Map();
@@ -49,10 +52,17 @@ for (const match of published) {
     if (match.betResultSource === "manual") {
       manualPreserved += 1;
       if (settlement.status !== match.betResult) settlementMismatches += 1;
-    } else if (settlement.status === "pending") {
+    } else if (settlement.status === "awaiting-data") {
+      awaitingData += 1;
       const reason = settlement.pendingReason ?? "UNKNOWN";
       unresolvedReasons.set(reason, (unresolvedReasons.get(reason) ?? 0) + 1);
-      unresolvedItems.push({ slug: match.slug, pick: match.mainPrediction, reason });
+      unresolvedItems.push({ slug: match.slug, pick: match.mainPrediction, reason, missingFields: settlement.missingFields });
+    } else if (settlement.status === "pending") {
+      completedPlainPending += 1;
+      resolvableButUnsettled += settlement.pendingReason === "UNSUPPORTED_MARKET" || settlement.pendingReason === "TEAM_NOT_RESOLVED" ? 1 : 0;
+      const reason = settlement.pendingReason ?? "UNKNOWN";
+      unresolvedReasons.set(reason, (unresolvedReasons.get(reason) ?? 0) + 1);
+      unresolvedItems.push({ slug: match.slug, pick: match.mainPrediction, reason, missingFields: settlement.missingFields });
     } else {
       automaticSettled += 1;
       if (match.betResult && settlement.status !== match.betResult) settlementMismatches += 1;
@@ -100,13 +110,16 @@ console.log(`Duplicate history entries: ${duplicateHistory}`);
 console.log(`Completed missing History: ${completedMissingHistory}`);
 console.log(`Postponed in History: ${postponedInHistory}`);
 console.log(`Automatic settled: ${automaticSettled}`);
+console.log(`Awaiting factual data: ${awaitingData}`);
+console.log(`Completed incorrectly marked match PENDING: ${completedPlainPending}`);
+console.log(`Resolvable but unsettled: ${resolvableButUnsettled}`);
 console.log(`Manual results preserved: ${manualPreserved}`);
 console.log(`Settlement mismatches: ${settlementMismatches}`);
 console.log(`Unsupported published market legs: ${unsupportedMarkets.length}`);
 console.log(`Unresolved completed predictions: ${[...unresolvedReasons.values()].reduce((sum, count) => sum + count, 0)}`);
 console.log(`Manual override regression: ${manualOverrideResolution === manualOverride ? "PASS" : "FAIL"}`);
 for (const [reason, count] of [...unresolvedReasons].sort()) console.log(`Pending reason ${reason}: ${count}`);
-for (const item of unresolvedItems) console.log(`UNRESOLVED ${item.slug}: ${item.reason} | ${item.pick}`);
+for (const item of unresolvedItems) console.log(`UNRESOLVED ${item.slug}: ${item.reason} | missing ${item.missingFields.join(", ") || "none classified"} | ${item.pick}`);
 for (const [market, count] of [...marketCoverage].sort()) console.log(`Market ${market}: ${count}`);
 
 assert.equal(completedMissingHistory, 0, "Completed match missing history");
@@ -117,8 +130,11 @@ assert.equal(duplicateHistory, 0, "Duplicate history entries detected");
 assert.equal(settlementMismatches, 0, "Stored results diverge from deterministic settlement");
 assert.equal(unsupportedMarkets.length, 0, `Unsupported published markets: ${unsupportedMarkets.join(", ")}`);
 assert.equal(combinationRegression.status, "green", "Winning combination with a push must settle green");
-assert.equal(unavailableCornersRegression.status, "pending", "Corners cannot settle from a football score");
+assert.equal(unavailableCornersRegression.status, "awaiting-data", "Corners cannot settle from a football score");
 assert.equal(unavailableCornersRegression.pendingReason, "MARKET_DATA_MISSING", "Missing market data needs an explicit pending reason");
+assert.deepEqual(unavailableCornersRegression.missingFields, ["corners"], "Missing factual fields must be explicit");
 assert.equal(manualOverrideResolution, manualOverride, "Manual result must never be overwritten");
+assert.equal(completedPlainPending, 0, "A completed match must not be presented as ordinary PENDING");
+assert.equal(resolvableButUnsettled, 0, "A deterministically resolvable prediction remains unsettled");
 
 console.log("Prediction history audit: PASS");

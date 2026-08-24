@@ -25,6 +25,7 @@ export type ParsedPredictionLeg =
 export type SettlementEvaluation = {
   status: PredictionResultStatus;
   pendingReason?: SettlementPendingReason;
+  missingFields: string[];
   legs: ParsedPredictionLeg[];
   unsupportedLegs: string[];
 };
@@ -100,7 +101,9 @@ function settleDirectional(value: number, selection: "over" | "under") {
 
 function evaluateLeg(leg: ParsedPredictionLeg, match: MatchPreview, score: Score) {
   const totalGoals = score.home + score.away;
-  if (leg.kind === "corners") return { status: "pending" as const, reason: "MARKET_DATA_MISSING" as const };
+  if (leg.kind === "corners") {
+    return { status: "awaiting-data" as const, reason: "MARKET_DATA_MISSING" as const, missingField: "corners" };
+  }
   if (leg.kind === "total-goals") return { status: settleDirectional(totalGoals - leg.line, leg.selection) };
   if (leg.kind === "btts") {
     const bothScored = score.home > 0 && score.away > 0;
@@ -139,18 +142,30 @@ export function evaluatePredictionSettlement(match: MatchPreview): SettlementEva
     return {
       status: match.betResult,
       pendingReason: match.betResult === "pending" ? "MANUAL_PENDING" : undefined,
+      missingFields: [],
       ...parsed,
     };
   }
-  if (!match.mainPrediction) return { status: "pending", pendingReason: "PICK_MISSING", ...parsed };
-  if (!isCompletedFixture(match.fixtureStatus)) return { status: "pending", pendingReason: "NOT_COMPLETED", ...parsed };
-  if (!isValidFinalScore(match.homeScore, match.awayScore)) return { status: "pending", pendingReason: "FINAL_SCORE_MISSING", ...parsed };
-  if (parsed.unsupportedLegs.length > 0) return { status: "pending", pendingReason: "UNSUPPORTED_MARKET", ...parsed };
+  if (!match.mainPrediction) return { status: "pending", pendingReason: "PICK_MISSING", missingFields: [], ...parsed };
+  if (!isCompletedFixture(match.fixtureStatus)) return { status: "pending", pendingReason: "NOT_COMPLETED", missingFields: [], ...parsed };
+  if (!isValidFinalScore(match.homeScore, match.awayScore)) {
+    return { status: "awaiting-data", pendingReason: "FINAL_SCORE_MISSING", missingFields: ["final score"], ...parsed };
+  }
+  if (parsed.unsupportedLegs.length > 0) return { status: "pending", pendingReason: "UNSUPPORTED_MARKET", missingFields: [], ...parsed };
 
   const evaluations = parsed.legs.map((leg) => evaluateLeg(leg, match, { home: match.homeScore!, away: match.awayScore! }));
+  const awaiting = evaluations.filter((evaluation) => evaluation.status === "awaiting-data");
+  if (awaiting.length) {
+    return {
+      status: "awaiting-data",
+      pendingReason: "MARKET_DATA_MISSING",
+      missingFields: [...new Set(awaiting.flatMap((evaluation) => evaluation.missingField ?? []))],
+      ...parsed,
+    };
+  }
   const pending = evaluations.find((evaluation) => evaluation.status === "pending");
-  if (pending) return { status: "pending", pendingReason: pending.reason ?? "UNSUPPORTED_MARKET", ...parsed };
-  return { status: combineLegResults(evaluations.map((evaluation) => evaluation.status)), ...parsed };
+  if (pending) return { status: "pending", pendingReason: pending.reason ?? "UNSUPPORTED_MARKET", missingFields: [], ...parsed };
+  return { status: combineLegResults(evaluations.map((evaluation) => evaluation.status)), missingFields: [], ...parsed };
 }
 
 export function evaluatePrediction(match: MatchPreview): PredictionResultStatus {

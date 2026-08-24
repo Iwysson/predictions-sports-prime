@@ -1,262 +1,96 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import { MatchPreview, LeagueSlug } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
-import {
-  getCentralCurrentRound,
-  loadLeagueSeason,
-  openLeagueConfigs,
-  OpenFootballGame,
-  teamNamesMatch,
-} from "@/lib/openfootball";
+import type { CompetitionRoundSection, CompetitionRoundSurface } from "@/lib/competition-rounds";
 import { useI18n } from "@/i18n/I18nProvider";
-import {
-  validateLeagueRounds,
-  validateRoundForDisplay,
-} from "@/lib/data-validation";
-import { canRenderComingSoon, isLiveFixture, isPlayableUpcoming } from "@/lib/fixture-status";
-import { localTodayISO, sortMatchesByKickoff } from "@/lib/match-feed";
 
-type SupportedSlug = LeagueSlug;
-
-function slugify(value: string) {
-  return value
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
+function roundLabel(round: number | string) {
+  return typeof round === "number" ? `Matchday ${round}` : round;
 }
 
-function findManualPrediction(
-  game: OpenFootballGame,
-  manualMatches: MatchPreview[]
-): MatchPreview | undefined {
-  return manualMatches.find(
-    (match) =>
-      teamNamesMatch(match.homeTeam, game.homeTeam) &&
-      teamNamesMatch(match.awayTeam, game.awayTeam)
+function RoundFixtures({
+  section,
+  surfaceName,
+  emptyMessage,
+}: {
+  section: CompetitionRoundSection | null;
+  surfaceName: "current" | "next";
+  emptyMessage: string;
+}) {
+  if (!section?.matches.length) {
+    return (
+      <div className="data-validation-message data-validation-message--warning">
+        {emptyMessage}
+      </div>
+    );
+  }
+
+  return (
+    <div className="league-match-list" data-round-surface={surfaceName}>
+      {section.matches.map((match) => (
+        <div
+          key={match.fixtureId ?? match.id}
+          data-round-fixture={match.fixtureId ?? match.id}
+          data-round-position={surfaceName}
+          data-publication-state={match.status}
+        >
+          <MatchCard match={match} />
+        </div>
+      ))}
+    </div>
   );
 }
 
-function roundSignature(rounds: OpenFootballGame[]) {
-  return rounds
-    .map((game) => [
-      game.id ?? "",
-      game.homeTeam,
-      game.awayTeam,
-      game.date,
-      game.time,
-      game.status ?? "",
-      game.kickoffUtc ?? "",
-      game.homeScore ?? "",
-      game.awayScore ?? "",
-    ].join("|"))
-    .join("||");
-}
-
-function toMatch(
-  league: SupportedSlug,
-  game: OpenFootballGame,
-  manualMatches: MatchPreview[]
-): MatchPreview {
-  const manual = findManualPrediction(game, manualMatches);
-
-  if (manual) {
-    return {
-      ...manual,
-      league,
-      round: `Matchday ${game.round}`,
-      date: game.date,
-      time: game.time,
-      homeTeam: game.homeTeam,
-      awayTeam: game.awayTeam,
-      fixtureStatus: game.status,
-    };
-  }
-
-  const slug = `${slugify(game.homeTeam)}-vs-${slugify(game.awayTeam)}`;
-
-  return {
-    id: `live-${league}-${game.round}-${slug}`,
-    slug,
-    league,
-    round: `Matchday ${game.round}`,
-    homeTeam: game.homeTeam,
-    awayTeam: game.awayTeam,
-    date: game.date,
-    time: game.time,
-    status: "coming-soon",
-    title: `${game.homeTeam} vs ${game.awayTeam} Prediction`,
-    fixtureStatus: game.status,
-  };
-}
-
-export function LiveLeagueRound({
-  league,
-  manualMatches,
-}: {
-    league: SupportedSlug;
-  manualMatches: MatchPreview[];
-}) {
-  const config = openLeagueConfigs[league];
+export function LiveLeagueRound({ surface }: { surface: CompetitionRoundSurface }) {
   const { t } = useI18n();
-
-  const [games, setGames] = useState<OpenFootballGame[]>([]);
-  const [roundNumber, setRoundNumber] = useState<number | null>(null);
-  const [state, setState] = useState<
-    "loading" | "validated" | "fallback" | "invalid"
-  >(manualMatches.length > 0 ? "fallback" : "loading");
-  const [warningCount, setWarningCount] = useState(0);
-  const gamesSignatureRef = useRef("");
-  const roundNumberRef = useRef<number | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    loadLeagueSeason(league)
-      .then((rounds) => {
-        const seasonValidation = validateLeagueRounds(rounds, config);
-
-        if (!seasonValidation.valid) {
-          throw new Error(
-            `${config.label}: ${seasonValidation.errors.join(" | ")}`
-          );
-        }
-
-        const round = getCentralCurrentRound(rounds);
-        const roundValidation = validateRoundForDisplay(round, config);
-
-        if (!roundValidation.valid || !round) {
-          throw new Error(
-            `${config.label}: ${roundValidation.errors.join(" | ")}`
-          );
-        }
-
-        if (!cancelled) {
-          const nextSignature = roundSignature(round.games);
-          if (nextSignature !== gamesSignatureRef.current || round.round !== roundNumberRef.current) {
-            setGames(round.games);
-            setRoundNumber(round.round);
-            setWarningCount(roundValidation.warnings.length);
-            gamesSignatureRef.current = nextSignature;
-            roundNumberRef.current = round.round;
-          }
-          setState("validated");
-        }
-      })
-      .catch((error) => {
-        console.warn(`Using fixture fallback for ${config.label}:`, error);
-
-        if (!cancelled) {
-          setGames([]);
-          setRoundNumber(null);
-
-          if (manualMatches.length > 0) {
-            setState("fallback");
-          } else {
-            setState("invalid");
-          }
-        }
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [config, league, manualMatches.length]);
-
-  const renderedMatches = useMemo(() => {
-    if (state === "validated") {
-      const currentRoundPublished = games
-        .map((game) => ({ game, manual: findManualPrediction(game, manualMatches) }))
-        .filter(
-          ({ game, manual }) =>
-            Boolean(manual) &&
-            (isPlayableUpcoming(game.status) || isLiveFixture(game.status))
-        )
-        .map(({ game }) => toMatch(league, game, manualMatches));
-
-      const currentRoundComingSoon = sortMatchesByKickoff(
-        games
-        .filter(
-          (game) =>
-            !findManualPrediction(game, manualMatches) &&
-            canRenderComingSoon(game.status, false)
-        )
-        .map((game) => toMatch(league, game, manualMatches))
-      );
-
-      const occupiedFixtures = games;
-      const today = localTodayISO();
-      const upcomingPublished = sortMatchesByKickoff(
-        manualMatches.filter(
-          (match) =>
-            (!match.date || match.date >= today) &&
-            !occupiedFixtures.some(
-              (game) =>
-                teamNamesMatch(match.homeTeam, game.homeTeam) &&
-                teamNamesMatch(match.awayTeam, game.awayTeam)
-            )
-        )
-      );
-
-      // Published analysis is more useful than a placeholder from a delayed
-      // round. Only use Coming soon cards when there are not enough analysed
-      // fixtures to fill the league view.
-      return [
-        ...currentRoundPublished,
-        ...upcomingPublished,
-        ...currentRoundComingSoon,
-      ].slice(
-        0,
-        config.expectedGamesPerRound
-      );
-    }
-
-    if (state === "fallback") {
-      return manualMatches.slice(0, config.expectedGamesPerRound);
-    }
-
-    return [];
-  }, [config.expectedGamesPerRound, games, league, manualMatches, state]);
+  const sourceLabel = surface.sourceState === "validated"
+    ? t("validated")
+    : surface.sourceState === "editorial-fallback"
+      ? t("saved")
+      : t("unavailable");
+  const sourceClass = surface.sourceState === "validated"
+    ? "validated"
+    : surface.sourceState === "editorial-fallback"
+      ? "fallback"
+      : "invalid";
 
   return (
     <div className="live-round-block">
-      <div className="round-source-line">
-        <span>
-          {roundNumber ? `Matchday ${roundNumber}` : "Next round fixtures are not available yet."}
-        </span>
+      <section className="league-round-section" aria-labelledby="current-round-data-heading">
+        <div className="round-source-line">
+          <span id="current-round-data-heading">
+            {surface.current ? roundLabel(surface.current.round) : t("awaitingConfirmedData")}
+          </span>
+          <span className={`round-source-status round-source-status--${sourceClass}`}>
+            <i /> {sourceLabel}
+          </span>
+        </div>
+        <RoundFixtures
+          section={surface.current}
+          surfaceName="current"
+          emptyMessage={t("awaitingConfirmedData")}
+        />
+      </section>
 
-        <span className={`round-source-status round-source-status--${state}`}>
-          <i />
-          {state === "loading"
-            ? t("validating")
-            : state === "validated"
-              ? warningCount > 0
-                ? `Validated • ${warningCount} TBD`
-                : t("validated")
-              : state === "fallback"
-                ? t("saved")
-                : t("unavailable")}
-        </span>
-      </div>
-
-      {renderedMatches.length > 0 ? (
-        <div className="league-match-list">
-          {renderedMatches.map((match) => (
-            <MatchCard key={match.id} match={match} />
-          ))}
+      <section className="league-round-section" aria-labelledby="next-round-heading">
+        <div className="section-heading section-heading--compact league-next-round-heading">
+          <div className="heading-with-icon">
+            <span className="section-icon" aria-hidden="true">+</span>
+            <div>
+              <span className="eyebrow">{t("fixtures")}</span>
+              <h2 id="next-round-heading">{t("nextRound")}</h2>
+              <span className="section-subtitle">
+                {surface.next ? roundLabel(surface.next.round) : "Factual fixtures not available yet"}
+              </span>
+            </div>
+          </div>
         </div>
-      ) : state === "loading" ? (
-        <div className="data-validation-message">
-          {t("checkingFixtures")}
-        </div>
-      ) : (
-        <div className="data-validation-message data-validation-message--warning">
-          {t("awaitingConfirmedData")}
-        </div>
-      )}
+        <RoundFixtures
+          section={surface.next}
+          surfaceName="next"
+          emptyMessage="Next round fixtures are not available yet."
+        />
+      </section>
     </div>
   );
 }

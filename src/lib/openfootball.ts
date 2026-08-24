@@ -4,7 +4,6 @@ import fixtureSnapshot from "@/data/fixtures.snapshot.json";
 import { siteConfig } from "@/lib/site-config";
 import {
   FixtureStatus,
-  findCurrentOrNextDatedRound,
   normalizeProviderStatus,
 } from "@/lib/fixture-status";
 import { getCurrentRound } from "@/lib/match-lifecycle";
@@ -694,17 +693,6 @@ export async function fetchDailyLeagueFixtures(slug: LeagueSlug, date: string) {
       dataSource: "espn" as const,
     }];
   });
-}
-
-function localTodayIso() {
-  return eventKickoffInSiteTimezone(new Date().toISOString()).date;
-}
-
-export function findCurrentOrNextRound(
-  rounds: OpenFootballRound[],
-  today = localTodayIso()
-) {
-  return findCurrentOrNextDatedRound(rounds, today);
 }
 
 export function getCentralCurrentRound(rounds: OpenFootballRound[], now = new Date()) {

@@ -44,47 +44,6 @@ export function canRenderComingSoon(status: FixtureStatus | undefined, hasPublis
   return !hasPublishedPrediction && isPlayableUpcoming(status);
 }
 
-export function filterPlayableBeforeLimit<T extends { status?: FixtureStatus }>(items: T[], limit: number) {
-  return items.filter((item) => isPlayableUpcoming(item.status)).slice(0, limit);
-}
-
-export function findFirstActiveRound<T extends { games: Array<{ status?: FixtureStatus }> }>(rounds: T[]) {
-  return rounds.find((round) =>
-    round.games.some((game) => isPlayableUpcoming(game.status) || isLiveFixture(game.status))
-  ) ?? null;
-}
-
-export function findCurrentOrNextDatedRound<
-  T extends { games: Array<{ date: string; status?: FixtureStatus }> }
->(rounds: T[], today: string) {
-  const liveRound = rounds.find((round) =>
-    round.games.some((game) => isLiveFixture(game.status))
-  );
-
-  if (liveRound) return liveRound;
-
-  const datedRounds = rounds
-    .map((round, index) => ({
-      round,
-      index,
-      nextDate: round.games
-        .filter(
-          (game) => isPlayableUpcoming(game.status) && game.date >= today
-        )
-        .map((game) => game.date)
-        .sort()[0],
-    }))
-    .filter((item) => Boolean(item.nextDate))
-    .sort(
-      (left, right) =>
-        left.nextDate!.localeCompare(right.nextDate!) || left.index - right.index
-    );
-
-  // A postponed matchday may be rescheduled after a later matchday. Select the
-  // round that actually plays next, rather than trusting season-file order.
-  return datedRounds[0]?.round ?? findFirstActiveRound(rounds);
-}
-
 export function selectFixtureKickoff(input: {
   fallbackDate?: string;
   fallbackTime?: string;

@@ -20,6 +20,7 @@ export type PredictionItem = {
 
 export type PredictionResultStatus =
   | "pending"
+  | "awaiting-data"
   | "green"
   | "red"
   | "push"

@@ -7,7 +7,7 @@ const html = readFileSync(join(root, "out", "results", "index.html"), "utf8");
 const baseline = JSON.parse(readFileSync(join(root, "editorial-baseline.json"), "utf8"));
 const current = collectEditorialState(root);
 const errors = [];
-const allowedStatuses = new Set(["pending", "green", "red", "push", "half-green", "half-red", "void"]);
+const allowedStatuses = new Set(["pending", "awaiting-data", "green", "red", "push", "half-green", "half-red", "void"]);
 
 function decode(value) {
   return value.replaceAll("&quot;", '"').replaceAll("&#x27;", "'").replaceAll("&amp;", "&").replaceAll("&lt;", "<").replaceAll("&gt;", ">");
@@ -25,6 +25,7 @@ const rows = tags.map((tag) => ({
   odds: attribute(tag, "data-odds"),
   publishedAt: attribute(tag, "data-published-at"),
   finalScore: attribute(tag, "data-final-score"),
+  settlementMissing: attribute(tag, "data-settlement-missing"),
 }));
 const rowBySlug = new Map(rows.map((row) => [row.slug, row]));
 const editorialBySlug = new Map(current.entries.map((entry) => [entry.slug, entry]));
@@ -42,6 +43,9 @@ for (const row of rows) {
   const expectedScore = entry.finalScore ? `${entry.finalScore.home}-${entry.finalScore.away}` : "";
   if (expectedScore && row.finalScore !== expectedScore) errors.push(`${entry.slug}: stored final score was not preserved`);
   if (!row.finalScore) errors.push(`${entry.slug}: non-completed prediction leaked into History`);
+  if (row.status === "awaiting-data" && !row.settlementMissing) {
+    errors.push(`${entry.slug}: Awaiting Data row does not identify its missing factual field`);
+  }
 }
 
 for (const entry of current.entries.filter((item) => item.resultStatus)) {
@@ -58,12 +62,14 @@ const counts = Object.fromEntries([...allowedStatuses].map((status) => [status, 
 console.log(`Published predictions: ${current.entries.length}`);
 console.log(`Completed History entries: ${rows.length}`);
 console.log(`Pending: ${counts.pending}`);
+console.log(`Awaiting data: ${counts["awaiting-data"]}`);
 console.log(`Won: ${counts.green}`);
 console.log(`Lost: ${counts.red}`);
 console.log(`Push: ${counts.push}`);
 console.log(`Half won: ${counts["half-green"]}`);
 console.log(`Half lost: ${counts["half-red"]}`);
 console.log(`Void: ${counts.void}`);
+if (counts.pending > 0) errors.push(`${counts.pending} completed matches are still marked ordinary PENDING`);
 if (errors.length) {
   errors.forEach((error) => console.error(`ERROR: ${error}`));
   process.exitCode = 1;

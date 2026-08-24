@@ -5,6 +5,7 @@ import { leaguesBySlug } from "@/data/leagues";
 import { teamNamesMatch } from "@/lib/openfootball";
 import { buildMatchSearchIntent } from "@/lib/match-search-intent";
 import { isPlayableUpcoming, type FixtureStatus } from "@/lib/fixture-status";
+import { factualFixtureIdentity } from "@/lib/competition-rounds";
 
 type SnapshotGame = {
   id?: string;
@@ -75,11 +76,16 @@ export function matchFixtureIdentityKey(fixture: {
   date: string;
   homeTeam: string;
   awayTeam: string;
+  id?: string;
+  fixtureId?: string;
+  externalFixtureId?: string;
 }) {
-  const teams = [fixture.homeTeam, fixture.awayTeam]
-    .map((team) => slugify(team))
-    .join("-vs-");
-  return `${fixture.league}:${fixture.date}:${teams}`;
+  return factualFixtureIdentity(fixture.league, {
+    id: fixture.id ?? fixture.fixtureId ?? fixture.externalFixtureId,
+    date: fixture.date,
+    homeTeam: fixture.homeTeam,
+    awayTeam: fixture.awayTeam,
+  });
 }
 
 function publishedFixtureMatch(league: LeagueSlug, game: SnapshotGame, slug: string, publishedKeys: Set<string>) {

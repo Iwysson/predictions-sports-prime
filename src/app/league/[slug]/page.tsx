@@ -12,6 +12,8 @@ import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { LeaguePageText } from "@/components/LeaguePageText";
 import { toMatchPreview } from "@/lib/editorial";
+import { loadLeagueSeason } from "@/lib/openfootball";
+import { buildCompetitionRoundSurface } from "@/lib/competition-rounds";
 import {
   leagueBreadcrumbJsonLd,
   leagueCanonicalPath,
@@ -111,6 +113,13 @@ export default async function LeaguePage({
     (match) => match.league === league.slug && match.status === "published"
   );
   const standings = standingsByLeague[league.slug];
+  const fixtureRounds = await loadLeagueSeason(league.slug);
+  const roundSurface = buildCompetitionRoundSurface({
+    league: league.slug,
+    rounds: fixtureRounds,
+    publishedMatches: leagueMatches,
+    now: new Date(),
+  });
 
   return (
     <>
@@ -147,11 +156,8 @@ export default async function LeaguePage({
       <section className="section league-content-section">
         <div className="container league-layout">
           <div className="league-main-column">
-            <LeaguePageText matchCount={leagueMatches.length}>
-              <LiveLeagueRound
-                league={league.slug}
-                manualMatches={leagueMatches}
-              />
+            <LeaguePageText matchCount={roundSurface.current?.matches.length ?? 0}>
+              <LiveLeagueRound surface={roundSurface} />
             </LeaguePageText>
 
             <div className="league-bottom-ad">

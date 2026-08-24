@@ -32,6 +32,15 @@ const files = [
   "src/app/league/[slug]/page.tsx",
 ];
 
+const roundComponentSource = fs.readFileSync(path.join(process.cwd(), "src/components/LiveLeagueRound.tsx"), "utf8");
+const staleFirstRoundPaths = [
+  /useEffect\s*\(/,
+  /loadLeagueSeason\s*\(/,
+  /setTimeout\s*\(/,
+  /setInterval\s*\(/,
+  /forceRefresh:\s*true/,
+].filter((pattern) => pattern.test(roundComponentSource)).length;
+
 let runtimeReplacementPaths = 0;
 for (const file of files) {
   const text = fs.readFileSync(path.join(process.cwd(), file), "utf8");
@@ -43,9 +52,10 @@ for (const file of files) {
 console.log("Render Consistency Health");
 console.log(`Authoritative initial dataset: ${published.length}`);
 console.log(`History published: ${history.published}`);
+console.log(`History completed: ${history.completed}`);
 console.log(`History settled: ${history.settled}`);
 console.log(`Rendered History entries: ${renderedHistoryEntries}`);
-console.log(`History counter mismatches: ${Math.abs(history.published - renderedHistoryEntries)}`);
+console.log(`History counter mismatches: ${Math.abs(history.completed - renderedHistoryEntries)}`);
 console.log(`Completed match-page mismatches: ${completedPageMismatches}`);
 console.log(`Future result-status leaks: ${futureResultLeaks}`);
 console.log(`Signature-guarded live refresh paths: ${runtimeReplacementPaths}`);
@@ -53,9 +63,11 @@ console.log(`League initial/hydrated mismatches: 0`);
 console.log(`Current Round hydration mismatches: 0`);
 console.log(`Kickoff mismatches: 0`);
 console.log(`Stale league fallback renders: 0`);
+console.log(`Stale-first Current/Next replacement paths: ${staleFirstRoundPaths}`);
 
-assert.equal(renderedHistoryEntries, history.published, "Rendered History differs from the authoritative hydrated dataset");
+assert.equal(renderedHistoryEntries, history.completed, "Rendered History differs from the authoritative hydrated dataset");
 assert.equal(completedPageMismatches, 0, "Completed match page is missing final score or prediction result");
 assert.equal(futureResultLeaks, 0, "Future match page exposes a prediction result state");
+assert.equal(staleFirstRoundPaths, 0, "Current/Next Round uses a post-mount replacement path");
 
 console.log("Render consistency audit: PASS");

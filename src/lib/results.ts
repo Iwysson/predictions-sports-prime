@@ -3,6 +3,7 @@ import { isCompletedFixture } from "@/lib/fixture-status";
 
 export const resultStatusPresentation: Record<PredictionResultStatus, { label: string; icon: string }> = {
   pending: { label: "PENDING", icon: "○" },
+  "awaiting-data": { label: "AWAITING DATA", icon: "○" },
   green: { label: "WON", icon: "✓" },
   red: { label: "LOST", icon: "✕" },
   push: { label: "PUSH", icon: "—" },
@@ -21,7 +22,7 @@ export function completePredictionHistory(matches: MatchPreview[]) {
 
 export function predictionResultCounts(matches: MatchPreview[]) {
   const counts: Record<PredictionResultStatus, number> = {
-    pending: 0, green: 0, red: 0, push: 0, "half-green": 0, "half-red": 0, void: 0,
+    pending: 0, "awaiting-data": 0, green: 0, red: 0, push: 0, "half-green": 0, "half-red": 0, void: 0,
   };
   matches.forEach((match) => { counts[match.betResult ?? "pending"] += 1; });
   return counts;
@@ -35,7 +36,8 @@ export function buildPredictionHistoryState(matches: MatchPreview[]) {
   const settled = counts.green + counts.red + counts.push + counts["half-green"] + counts["half-red"] + counts.void;
 
   return {
-    published: entries.length,
+    published: matches.filter((match) => match.status === "published").length,
+    completed: entries.length,
     settled,
     won: counts.green,
     lost: counts.red,
@@ -43,6 +45,7 @@ export function buildPredictionHistoryState(matches: MatchPreview[]) {
     halfWon: counts["half-green"],
     halfLost: counts["half-red"],
     void: counts.void,
+    awaitingData: counts["awaiting-data"],
     pending: counts.pending,
     entries,
   };

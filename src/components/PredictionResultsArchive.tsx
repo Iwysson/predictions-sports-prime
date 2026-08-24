@@ -5,9 +5,10 @@ import { useMemo, useState } from "react";
 import type { MatchPreview, PredictionResultStatus } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
 import { buildPredictionHistoryState, resultStatusPresentation } from "@/lib/results";
+import { evaluatePredictionSettlement } from "@/lib/prediction-results";
 
 type ResultFilter = "all" | PredictionResultStatus;
-const filters: ResultFilter[] = ["all", "pending", "green", "red", "push", "half-green", "half-red", "void"];
+const filters: ResultFilter[] = ["all", "awaiting-data", "green", "red", "push", "half-green", "half-red", "void"];
 
 function formatDate(value?: string) {
   if (!value) return "Not available";
@@ -25,11 +26,12 @@ export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] 
     <div className="results-archive" data-default-filter="all">
       <div className="results-summary" aria-label="Prediction result counts">
         <span><b>{counts.published}</b> Published</span>
+        <span><b>{counts.completed}</b> Completed</span>
         <span><b>{counts.settled}</b> Settled</span>
         <span><b>{counts.won}</b> Won</span>
         <span><b>{counts.lost}</b> Lost</span>
         <span><b>{counts.push}</b> Push</span>
-        <span><b>{counts.pending}</b> Pending</span>
+        <span><b>{counts.awaitingData}</b> Awaiting Data</span>
       </div>
 
       <div className="results-filters" role="group" aria-label="Filter prediction history">
@@ -44,6 +46,7 @@ export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] 
         {visible.map((match) => {
           const status = match.betResult ?? "pending";
           const presentation = resultStatusPresentation[status];
+          const settlement = evaluatePredictionSettlement(match);
           const finalScore = match.homeScore !== undefined && match.homeScore !== null && match.awayScore !== undefined && match.awayScore !== null
             ? `${match.homeScore}–${match.awayScore}` : "Not available";
           return (
@@ -56,6 +59,7 @@ export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] 
               data-odds={match.odds ?? ""}
               data-published-at={match.publishedAt ?? ""}
               data-final-score={finalScore === "Not available" ? "" : finalScore.replace("–", "-")}
+              data-settlement-missing={settlement.missingFields.join(",")}
             >
               <div className="result-card__heading">
                 <div>
@@ -64,6 +68,9 @@ export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] 
                 </div>
                 <strong className={`bet-result bet-result--${status}`} aria-label={`Prediction result: ${presentation.label}`}>
                   <span aria-hidden="true">{presentation.icon}</span> {presentation.label}
+                  {status === "awaiting-data" && settlement.missingFields.length ? (
+                    <small>{settlement.missingFields.join(", ")} unavailable</small>
+                  ) : null}
                 </strong>
               </div>
               <dl className="result-card__details">

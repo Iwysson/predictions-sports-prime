@@ -48,26 +48,55 @@ export function isRoundCompleted(roundFixtures: Array<{ status?: OpenFootballGam
   return roundFixtures.every((fixture) => isCompletedFixture(fixture.status) || isNonPlayableFixture(fixture.status));
 }
 
+export type CompetitionRoundResolution<T> = {
+  currentRound: T | null;
+  nextRound: T | null;
+  followingRound: T | null;
+  currentFixtures: T extends { games: infer G } ? G : never;
+  nextFixtures: T extends { games: infer G } ? G : never;
+};
+
+function isActiveFixture(game: OpenFootballGame, now: Date | string) {
+  const lifecycle = getMatchLifecycleStatus(game, now);
+  return lifecycle === "upcoming" || lifecycle === "live" || lifecycle === "unknown";
+}
+
+/**
+ * Resolves the active round sequence from explicit matchday metadata. A round
+ * only advances when every fixture is completed or non-playable; calendar
+ * changes alone never promote it. Postponed fixtures follow the existing
+ * non-playable policy and remain available in their factual source record.
+ */
+export function resolveCompetitionRounds<
+  T extends { round: number; games: Array<OpenFootballGame & { status?: OpenFootballGame["status"] }> }
+>(leagueFixtures: T[], now: Date | string = new Date()): CompetitionRoundResolution<T> {
+  const ordered = [...leagueFixtures].sort((left, right) => left.round - right.round);
+  const liveIndex = ordered.findIndex((round) =>
+    round.games.some((game) => getMatchLifecycleStatus(game, now) === "live")
+  );
+  const currentIndex = liveIndex >= 0
+    ? liveIndex
+    : ordered.findIndex((round) => !isRoundCompleted(round.games));
+  const currentRound = currentIndex >= 0 ? ordered[currentIndex] : null;
+
+  const laterActiveRounds = currentIndex >= 0
+    ? ordered.slice(currentIndex + 1).filter((round) => !isRoundCompleted(round.games))
+    : [];
+  const nextRound = laterActiveRounds[0] ?? null;
+  const followingRound = laterActiveRounds[1] ?? null;
+
+  return {
+    currentRound,
+    nextRound,
+    followingRound,
+    currentFixtures: (currentRound?.games.filter((game) => isActiveFixture(game, now)) ?? []) as CompetitionRoundResolution<T>["currentFixtures"],
+    nextFixtures: (nextRound?.games.filter((game) => isActiveFixture(game, now)) ?? []) as CompetitionRoundResolution<T>["nextFixtures"],
+  };
+}
+
 export function getCurrentRound<T extends { round: number; games: Array<OpenFootballGame & { status?: OpenFootballGame["status"] }> }>(
   leagueFixtures: T[],
   now: Date | string = new Date()
 ) {
-  const ordered = [...leagueFixtures].sort((a, b) => a.round - b.round);
-
-  const liveRound = ordered.find((round) => round.games.some((game) => getMatchLifecycleStatus(game, now) === "live"));
-  if (liveRound) return liveRound;
-
-  const activeRound = ordered.find((round) => round.games.some((game) => {
-    const lifecycle = getMatchLifecycleStatus(game, now);
-    return lifecycle === "upcoming" || lifecycle === "unknown";
-  }));
-  if (activeRound) return activeRound;
-
-  const nextFuture = ordered.find((round) =>
-    round.games.some((game) => {
-      const lifecycle = getMatchLifecycleStatus(game, now);
-      return lifecycle === "upcoming" || lifecycle === "live";
-    })
-  );
-  return nextFuture ?? null;
+  return resolveCompetitionRounds(leagueFixtures, now).currentRound;
 }

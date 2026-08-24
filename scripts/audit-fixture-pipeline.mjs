@@ -1,9 +1,6 @@
 import assert from "node:assert/strict";
 import {
   canRenderComingSoon,
-  findCurrentOrNextDatedRound,
-  findFirstActiveRound,
-  filterPlayableBeforeLimit,
   fixtureStatusCategory,
   isCompletedFixture,
   isHistoryEligibleFixture,
@@ -13,6 +10,7 @@ import {
   selectFixtureKickoff,
 } from "../src/lib/fixture-status.ts";
 import { eventKickoffInSiteTimezone } from "../src/lib/openfootball.ts";
+import { resolveCompetitionRounds } from "../src/lib/match-lifecycle.ts";
 import snapshot from "../src/data/fixtures.snapshot.json" with { type: "json" };
 
 const fixture = (id, status, round = 1) => ({ id, status, round });
@@ -22,25 +20,13 @@ assert.equal(canRenderComingSoon("postponed", false), false, "B: postponed must 
 assert.equal(canRenderComingSoon("canceled", false), false, "C: canceled must not be coming soon");
 assert.equal(fixtureStatusCategory("completed"), "completed", "D: finished must not be upcoming");
 
-const roundAdvance = filterPlayableBeforeLimit([
-  fixture("round-1-a", "postponed", 1),
-  fixture("round-1-b", "postponed", 1),
-  fixture("round-2-a", "scheduled", 2),
-  fixture("round-2-b", "scheduled", 2),
-], 2);
-assert.deepEqual(roundAdvance.map(({ id }) => id), ["round-2-a", "round-2-b"], "E/F: filter non-playable before limit");
-assert.equal(findFirstActiveRound([
+const centralRoundAdvance = resolveCompetitionRounds([
   { round: 1, games: [fixture("round-1-a", "postponed")] },
   { round: 2, games: [fixture("round-2-a", "scheduled", 2)] },
-])?.round, 2, "E: postponed round must not block the next active round");
-assert.equal(findCurrentOrNextDatedRound([
-  { round: 1, games: [{ date: "2026-08-09", status: "scheduled" }] },
-  { round: 3, games: [{ date: "2026-08-22", status: "scheduled" }] },
-], "2026-08-18")?.round, 3, "E2: stale scheduled fixtures must not block the current dated round");
-assert.equal(findCurrentOrNextDatedRound([
-  { round: 1, games: [{ date: "2026-08-25", status: "scheduled" }] },
-  { round: 2, games: [{ date: "2026-08-21", status: "scheduled" }] },
-], "2026-08-20")?.round, 2, "E3: a rescheduled earlier matchday must not block the round played next");
+  { round: 3, games: [fixture("round-3-a", "scheduled", 3)] },
+]);
+assert.equal(centralRoundAdvance.currentRound?.round, 2, "E: terminal non-playable round must promote centrally");
+assert.equal(centralRoundAdvance.nextRound?.round, 3, "E2: explicit matchday sequence selects Next Round");
 
 assert.deepEqual(selectFixtureKickoff({
   fallbackDate: "2026-08-22",
