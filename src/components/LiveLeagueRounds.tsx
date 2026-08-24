@@ -33,6 +33,8 @@ function RoundFixtures({
           data-round-fixture={match.fixtureId ?? match.id}
           data-round-position={surfaceName}
           data-publication-state={match.status}
+          data-home-team={match.homeTeam}
+          data-away-team={match.awayTeam}
         >
           <MatchCard match={match} />
         </div>
@@ -41,7 +43,7 @@ function RoundFixtures({
   );
 }
 
-export function LiveLeagueRound({ surface }: { surface: CompetitionRoundSurface }) {
+export function LiveLeagueRounds({ surface }: { surface: CompetitionRoundSurface }) {
   const { t } = useI18n();
   const sourceLabel = surface.sourceState === "validated"
     ? t("validated")
@@ -84,6 +86,11 @@ export function LiveLeagueRound({ surface }: { surface: CompetitionRoundSurface 
               </span>
             </div>
           </div>
+          {surface.next ? (
+            <span className="league-match-count" aria-label={`${surface.next.matches.length} fixtures`}>
+              {surface.next.matches.length}
+            </span>
+          ) : null}
         </div>
         <RoundFixtures
           section={surface.next}

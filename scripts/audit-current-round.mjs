@@ -98,6 +98,23 @@ let completedRoundsStuck = 0;
 const productionExpectations = new Map();
 const comingSoonSlugs = new Set();
 
+function fixturePair(match) {
+  return `${match.homeTeam}\u0000${match.awayTeam}`;
+}
+
+function decodeHtmlAttribute(value) {
+  return value
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#x27;", "'")
+    .replaceAll("&amp;", "&")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">");
+}
+
+function htmlAttribute(attributes, name) {
+  return decodeHtmlAttribute(attributes.match(new RegExp(`${name}="([^"]*)"`))?.[1] ?? "");
+}
+
 console.log("");
 console.log("Competition Round Coverage");
 console.log(`Snapshot generated: ${snapshot.generatedAt}`);
@@ -168,6 +185,8 @@ for (const league of leagues) {
   productionExpectations.set(league.slug, {
     current: currentMatches.length,
     next: nextMatches.length,
+    currentPairs: currentMatches.map(fixturePair).sort(),
+    nextPairs: nextMatches.map(fixturePair).sort(),
   });
   [...currentMatches, ...nextMatches]
     .filter((match) => match.status === "coming-soon")
@@ -205,17 +224,34 @@ assert.equal(completedRoundsStuck, 0, "Completed round selected as Current");
 
 const outputDirectory = path.join(process.cwd(), "out");
 let productionCoverageMismatches = 0;
+let productionFixturePairMismatches = 0;
+let nextHeadingMissing = 0;
+let nextCountMismatch = 0;
 let comingSoonPublicLinks = 0;
 let comingSoonSitemapEntries = 0;
 if (fs.existsSync(outputDirectory)) {
   for (const [slug, expected] of productionExpectations) {
     const html = fs.readFileSync(path.join(outputDirectory, "league", slug, "index.html"), "utf8");
-    const cards = [...html.matchAll(/<div data-round-fixture="[^"]+" data-round-position="(current|next)" data-publication-state="([^"]+)">([\s\S]*?)<\/article><\/div>/g)];
-    const currentRendered = cards.filter((card) => card[1] === "current").length;
-    const nextRendered = cards.filter((card) => card[1] === "next").length;
+    const cards = [...html.matchAll(/<div ([^>]*data-round-fixture="[^"]+"[^>]*)>([\s\S]*?)<\/article><\/div>/g)]
+      .map((card) => ({
+        position: htmlAttribute(card[1], "data-round-position"),
+        publicationState: htmlAttribute(card[1], "data-publication-state"),
+        pair: `${htmlAttribute(card[1], "data-home-team")}\u0000${htmlAttribute(card[1], "data-away-team")}`,
+        body: card[2],
+      }));
+    const currentCards = cards.filter((card) => card.position === "current");
+    const nextCards = cards.filter((card) => card.position === "next");
+    const currentRendered = currentCards.length;
+    const nextRendered = nextCards.length;
+    const currentPairMismatch = Number(currentCards.map((card) => card.pair).sort().join("|") !== expected.currentPairs.join("|"));
+    const nextPairMismatch = Number(nextCards.map((card) => card.pair).sort().join("|") !== expected.nextPairs.join("|"));
     productionCoverageMismatches += Number(currentRendered !== expected.current);
     productionCoverageMismatches += Number(nextRendered !== expected.next);
-    comingSoonPublicLinks += cards.filter((card) => card[2] === "coming-soon" && /<a\b/.test(card[3])).length;
+    productionFixturePairMismatches += currentPairMismatch + nextPairMismatch;
+    nextHeadingMissing += Number(expected.next > 0 && !html.includes('id="next-round-heading"'));
+    nextCountMismatch += Number(expected.next > 0 && !html.includes(`aria-label="${expected.next} fixtures"`));
+    comingSoonPublicLinks += cards.filter((card) => card.publicationState === "coming-soon" && /<a\b/.test(card.body)).length;
+    console.log(`${slug} production display | Current resolved/displayed: ${expected.current}/${currentRendered} | Next resolved/displayed: ${expected.next}/${nextRendered} | pair mismatches: ${currentPairMismatch + nextPairMismatch}`);
   }
 
   const sitemap = fs.readFileSync(path.join(outputDirectory, "sitemap.xml"), "utf8");
@@ -225,6 +261,9 @@ if (fs.existsSync(outputDirectory)) {
 }
 
 assert.equal(productionCoverageMismatches, 0, "Production HTML differs from the authoritative round model");
+assert.equal(productionFixturePairMismatches, 0, "Production HTML contains incorrect Current/Next fixture pairs");
+assert.equal(nextHeadingMissing, 0, "Next Round heading is missing when factual fixtures exist");
+assert.equal(nextCountMismatch, 0, "Next Round count chip differs from the factual fixture count");
 assert.equal(comingSoonPublicLinks, 0, "Coming Soon fixture exposes a public match link");
 assert.equal(comingSoonSitemapEntries, 0, "Coming Soon fixture leaked into sitemap");
 
@@ -238,6 +277,9 @@ console.log(`Completed fixtures still active: ${completedStillActive}`);
 console.log(`Premature promotions: ${prematurePromotions}`);
 console.log(`Completed rounds stuck as Current: ${completedRoundsStuck}`);
 console.log(`Production round coverage mismatches: ${productionCoverageMismatches}`);
+console.log(`Production fixture pair mismatches: ${productionFixturePairMismatches}`);
+console.log(`Missing Next Round headings: ${nextHeadingMissing}`);
+console.log(`Next Round count mismatches: ${nextCountMismatch}`);
 console.log(`Coming Soon public links: ${comingSoonPublicLinks}`);
 console.log(`Coming Soon sitemap entries: ${comingSoonSitemapEntries}`);
 console.log("Current/Next round audit: PASS");

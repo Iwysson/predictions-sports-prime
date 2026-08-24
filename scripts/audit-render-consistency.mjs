@@ -27,12 +27,12 @@ const files = [
   "src/components/HomePredictionFeed.tsx",
   "src/components/PredictionResultsArchive.tsx",
   "src/components/LiveMatchMeta.tsx",
-  "src/components/LiveLeagueRound.tsx",
+  "src/components/LiveLeagueRounds.tsx",
   "src/components/LiveLeagueStandings.tsx",
   "src/app/league/[slug]/page.tsx",
 ];
 
-const roundComponentSource = fs.readFileSync(path.join(process.cwd(), "src/components/LiveLeagueRound.tsx"), "utf8");
+const roundComponentSource = fs.readFileSync(path.join(process.cwd(), "src/components/LiveLeagueRounds.tsx"), "utf8");
 const staleFirstRoundPaths = [
   /useEffect\s*\(/,
   /loadLeagueSeason\s*\(/,

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ads";
 import { JsonLd } from "@/components/JsonLd";
-import { LiveLeagueRound } from "@/components/LiveLeagueRound";
+import { LiveLeagueRounds } from "@/components/LiveLeagueRounds";
 import { LiveLeagueStandings } from "@/components/LiveLeagueStandings";
 import { leagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
@@ -157,7 +157,7 @@ export default async function LeaguePage({
         <div className="container league-layout">
           <div className="league-main-column">
             <LeaguePageText matchCount={roundSurface.current?.matches.length ?? 0}>
-              <LiveLeagueRound surface={roundSurface} />
+              <LiveLeagueRounds surface={roundSurface} />
             </LeaguePageText>
 
             <div className="league-bottom-ad">
