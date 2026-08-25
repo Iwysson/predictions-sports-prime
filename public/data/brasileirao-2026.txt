@@ -1,5 +1,5 @@
 = Campeonato Brasileiro Série A 2026
-# Grade editorial da rodada 24; resultados ao vivo são hidratados pela ESPN.
+# Grade editorial de fixtures confirmados; resultados ao vivo são hidratados pela ESPN.
 ▪ Matchday 24
   Sat Aug 22 2026
     16:00  Fluminense           v Remo
@@ -14,3 +14,18 @@
     19:30  Coritiba             v Corinthians
   Mon Aug 24
     20:00  Botafogo             v Athletico Paranaense
+
+▪ Matchday 25
+  Sat Aug 29 2026
+    18:30  Atlético Mineiro     v Vitória
+    20:00  São Paulo            v Red Bull Bragantino
+    21:20  Vasco da Gama        v Cruzeiro
+  Sun Aug 30
+    11:00  Athletico Paranaense v Fluminense
+    16:00  Flamengo             v Botafogo
+    16:00  Corinthians          v Santos
+    18:30  Grêmio               v Chapecoense
+    19:30  Mirassol             v Palmeiras
+    19:30  Bahia                v Internacional
+  Mon Aug 31
+    20:00  Remo                 v Coritiba

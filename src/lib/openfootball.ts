@@ -454,6 +454,36 @@ export function eventKickoffInSiteTimezone(value: string, timeZone = siteConfig.
   };
 }
 
+function localKickoffToUtc(date: string, time: string, timeZone: string) {
+  const [year, month, day] = date.split("-").map(Number);
+  const [hour, minute] = time.split(":").map(Number);
+  const targetWallTime = Date.UTC(year, month - 1, day, hour, minute);
+  let candidate = targetWallTime;
+
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hourCycle: "h23",
+    }).formatToParts(new Date(candidate));
+    const fields = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+    const renderedWallTime = Date.UTC(
+      Number(fields.year),
+      Number(fields.month) - 1,
+      Number(fields.day),
+      Number(fields.hour),
+      Number(fields.minute)
+    );
+    candidate += targetWallTime - renderedWallTime;
+  }
+
+  return new Date(candidate).toISOString();
+}
+
 export async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[]) {
   const league = leaguesBySlug[slug];
   const dates = league.season.includes("/")
@@ -506,14 +536,23 @@ export async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballR
     const baseTime = fixture.time;
     const kickoffUtc = competition?.date ?? event.date;
     const kickoff = eventKickoffInSiteTimezone(kickoffUtc, league.timezone);
+    const providerTimeValid = competition?.timeValid !== false;
+    const providerMatchesRegistry = providerTimeValid && baseDate === kickoff.date && baseTime !== "TBD" && baseTime === kickoff.time;
+    const retainConfirmedRegistryTime = baseTime !== "TBD" && (!providerTimeValid || (baseDate === kickoff.date && baseTime !== kickoff.time));
     fixture.id = event.id;
     fixture.homeTeam = cleanTeamName(home.team.displayName);
     fixture.awayTeam = cleanTeamName(away.team.displayName);
-    fixture.sourceAgreement = baseDate === kickoff.date && baseTime !== "TBD" && baseTime === kickoff.time;
-    fixture.date = kickoff.date;
-    fixture.timeConfirmed = competition?.timeValid !== false && fixture.sourceAgreement;
-    fixture.time = fixture.timeConfirmed ? kickoff.time : "TBD";
-    fixture.kickoffUtc = kickoffUtc;
+    fixture.sourceAgreement = providerMatchesRegistry;
+    fixture.date = providerTimeValid ? kickoff.date : baseDate;
+    fixture.timeConfirmed = providerMatchesRegistry || retainConfirmedRegistryTime;
+    fixture.time = providerMatchesRegistry
+      ? kickoff.time
+      : retainConfirmedRegistryTime
+        ? baseTime
+        : "TBD";
+    fixture.kickoffUtc = retainConfirmedRegistryTime
+      ? localKickoffToUtc(baseDate, baseTime, league.timezone)
+      : kickoffUtc;
     fixture.status = eventStatus(event);
     fixture.dataSource = "espn";
 
