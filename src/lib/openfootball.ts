@@ -147,6 +147,7 @@ export function normalizeTeamKey(name: string) {
   const aliases: Record<string, string> = {
     az: "azalkmaar",
     brighton: "brightonandhovealbion",
+    westhamunited: "westham",
     casapiaac: "casapia",
     psveindhoven: "psv",
     sportingclubeportugal: "sportingcp",
@@ -648,9 +649,10 @@ export function loadLeagueSeason(
   options: { forceRefresh?: boolean; ignoreSnapshot?: boolean } = {}
 ) {
   const config = openLeagueConfigs[slug];
+  const savedRounds = snapshot.leagues[slug];
 
   if (config.manualOnly || !config.source) {
-    return Promise.resolve([]);
+    return Promise.resolve(savedRounds?.length ? structuredClone(savedRounds) : []);
   }
 
   if (options.forceRefresh) {
@@ -658,7 +660,6 @@ export function loadLeagueSeason(
   }
 
   if (!promises.has(slug)) {
-    const savedRounds = snapshot.leagues[slug];
     if (!options.forceRefresh && !options.ignoreSnapshot && savedRounds?.length) {
       promises.set(slug, Promise.resolve(structuredClone(savedRounds)));
       return promises.get(slug)!;

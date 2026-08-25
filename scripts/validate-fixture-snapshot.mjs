@@ -14,7 +14,7 @@ assert.ok(Date.now() - Date.parse(snapshot.generatedAt) < 24 * 60 * 60 * 1000, "
 
 const ids = new Set();
 for (const league of leagues) {
-  if (!league.sources.fixtures) continue;
+  if (!league.sources.fixtures && !league.liveDataId) continue;
   const rounds = snapshot.leagues[league.slug];
   const sourceUpdatedAt = snapshot.leagueUpdatedAt?.[league.slug] ?? snapshot.generatedAt;
   assert.ok(Number.isFinite(Date.parse(sourceUpdatedAt)), `${league.name}: invalid source freshness metadata.`);
@@ -40,7 +40,8 @@ for (const league of leagues) {
 }
 
 for (const match of matches) {
-  if (!leagues.find((league) => league.slug === match.league)?.sources.fixtures) continue;
+  const league = leagues.find((item) => item.slug === match.league);
+  if (!league?.sources.fixtures && !league?.liveDataId) continue;
   assert.ok(snapshot.predictionIds[`${match.league}:${match.slug}`], `${match.slug}: prediction is not linked to a provider fixture ID.`);
   const hydrated = await hydratePrediction(toMatchPreview(match));
   const providerFixture = snapshot.leagues[match.league]

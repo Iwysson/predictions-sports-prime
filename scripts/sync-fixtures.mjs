@@ -52,12 +52,31 @@ async function sourceText(source) {
 
 for (const league of leagues) {
   try {
+    const leaguePredictions = matches.filter((match) => match.league === league.slug);
     const text = await sourceText(league.sources.fixtures);
-    if (text === null) {
+    if (text === null && !league.liveDataId) {
       console.log(`${league.name}: skipped (no automatic fixture feed configured)`);
       continue;
     }
-    const base = parseFootballSeason(text);
+    // Knockout competitions do not have a compatible season registry. Their
+    // published editorial fixtures provide the matching base while ESPN remains
+    // authoritative for kickoff state, provider ID and final score.
+    const base = text === null
+      ? [{
+          round: 1,
+          games: leaguePredictions.map((prediction) => ({
+            round: 1,
+            date: prediction.date,
+            time: prediction.time,
+            homeTeam: prediction.homeTeam,
+            awayTeam: prediction.awayTeam,
+            homeScore: null,
+            awayScore: null,
+            status: "scheduled",
+            dataSource: "snapshot",
+          })),
+        }]
+      : parseFootballSeason(text);
     const espnRounds = await hydrateLiveResults(league.slug, base);
     const rounds = await hydrateTheSportsDb(league.slug, espnRounds);
     const previousById = new Map(
@@ -80,7 +99,6 @@ for (const league of leagues) {
     if (!validation.valid) {
       throw new Error(`${league.name}: ${validation.errors.join(" | ")}`);
     }
-    const leaguePredictions = matches.filter((match) => match.league === league.slug);
     const linkedIds = new Set();
     for (const prediction of leaguePredictions) {
       const fixture = findPredictionFixture(rounds, prediction);
@@ -127,7 +145,10 @@ for (const league of leagues) {
   }
 }
 
-const automaticPredictions = matches.filter((match) => leagues.find((league) => league.slug === match.league)?.sources.fixtures);
+const automaticPredictions = matches.filter((match) => {
+  const league = leagues.find((item) => item.slug === match.league);
+  return Boolean(league?.sources.fixtures || league?.liveDataId);
+});
 if (Object.keys(snapshot.predictionIds).length !== automaticPredictions.length) {
   throw new Error(`Expected ${automaticPredictions.length} automatic prediction links, produced ${Object.keys(snapshot.predictionIds).length}.`);
 }
