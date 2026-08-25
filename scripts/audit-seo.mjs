@@ -184,7 +184,7 @@ for (const route of matchRoutes) {
   if (!bylineAnchor.includes(`href="${authorRoute}"`) || !bylineAnchor.includes('rel="author"')) {
     errors.push(`${route}: byline does not link to the author profile`);
   }
-  const articleAuthor = html.match(/"author":\{"@type":"Person","name":"([^"]+)","url":"([^"]+)"\}/);
+  const articleAuthor = html.match(/"author":\{"@type":"Person","name":"([^"]+)","url":"([^"]+)"/);
   if (!articleAuthor) errors.push(`${route}: Article author Person is missing`);
   else {
     if (articleAuthor[1] !== authorName) errors.push(`${route}: Article author name is incorrect`);

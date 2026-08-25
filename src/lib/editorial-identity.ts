@@ -19,9 +19,9 @@ export function editorialAuthorId() {
 export function editorialAuthorPersonJsonLd() {
   return {
     "@type": "Person",
-    "@id": editorialAuthorId(),
     name: editorialAuthor.name,
     url: editorialAuthorUrl(),
+    "@id": editorialAuthorId(),
     jobTitle: "Football analysis author",
     worksFor: { "@id": absoluteUrl("/#organization") },
   };
