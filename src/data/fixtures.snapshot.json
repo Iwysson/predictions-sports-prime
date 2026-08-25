@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-25T12:40:54.670Z",
+  "generatedAt": "2026-08-25T12:51:00.662Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -12299,6 +12299,7 @@
     "liga-portugal:maritimo-vs-academico-viseu": "401885471",
     "liga-portugal:academico-de-viseu-vs-porto": "401885465",
     "liga-portugal:benfica-vs-estoril": "401885457",
+    "liga-portugal:braga-vs-vitoria-de-guimaraes": "401885462",
     "liga-portugal:casa-pia-vs-moreirense": "401885461",
     "liga-portugal:famalicao-vs-gil-vicente": "401885460",
     "liga-portugal:alverca-vs-santa-clara": "401885464",
@@ -12359,13 +12360,13 @@
     "brasileirao-serie-a:remo-vs-coritiba": "401841210"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-08-25T12:40:54.670Z",
-    "la-liga": "2026-08-25T12:40:54.670Z",
-    "bundesliga": "2026-08-25T12:40:54.670Z",
-    "serie-a": "2026-08-25T12:40:54.670Z",
-    "liga-portugal": "2026-08-25T12:40:54.670Z",
-    "ligue-1": "2026-08-25T12:40:54.670Z",
-    "eredivisie": "2026-08-25T12:40:54.670Z",
-    "brasileirao-serie-a": "2026-08-25T12:40:54.670Z"
+    "premier-league": "2026-08-25T12:51:00.662Z",
+    "la-liga": "2026-08-25T12:51:00.662Z",
+    "bundesliga": "2026-08-25T12:51:00.662Z",
+    "serie-a": "2026-08-25T12:51:00.662Z",
+    "liga-portugal": "2026-08-25T12:51:00.662Z",
+    "ligue-1": "2026-08-25T12:51:00.662Z",
+    "eredivisie": "2026-08-25T12:51:00.662Z",
+    "brasileirao-serie-a": "2026-08-25T12:51:00.662Z"
   }
 }

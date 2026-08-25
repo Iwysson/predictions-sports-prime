@@ -14,9 +14,10 @@ export const bragaVsVitoriaDeGuimaraes: EditorialPrediction = {
     main: "Vitória Guimarães +2 Handicap + Over 1.5 Goals",
     odds: 2.1,
     oddsProvenance: {
-      source: "Betano — author-attested editorial capture; capture timestamp required",
+      source: "Betano — author-attested editorial capture recovered from repository history",
       bookmaker: "Betano",
       provenance: "author_attested",
+      capturedAt: "2026-08-24T14:27:13-03:00",
       market: "Vitória Guimarães +2 Handicap + Over 1.5 Goals",
     },
   },
@@ -29,7 +30,8 @@ export const bragaVsVitoriaDeGuimaraes: EditorialPrediction = {
       accessedAt: "2026-08-24T14:45:00-03:00",
     },
   ],
-  published: false,
+  publishedAt: "2026-08-25T09:50:39-03:00",
+  published: true,
   matchInfo: {
     date: "2026-08-31",
     round: "Matchday 4",
