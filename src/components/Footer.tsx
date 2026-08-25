@@ -19,6 +19,7 @@ export function Footer() {
         </p>
 
         <nav className="footer-links" aria-label="Legal and information">
+          <Link href="/">Home</Link>
           <Link href="/about/">{t("about")}</Link>
           <Link href="/contact/">{t("contact")}</Link>
           <Link href="/methodology/">Methodology</Link>

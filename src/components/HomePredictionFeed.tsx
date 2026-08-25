@@ -84,7 +84,7 @@ export function HomePredictionFeed({
                   <span className="eyebrow">{t("today")}</span>
 
                   <div className="today-title-row">
-                    <h1>{t("todaysPredictions")}</h1>
+                    <h2>Today&apos;s Football Predictions</h2>
 
                     {todayMatches.length > 0 ? (
                       <span className="today-count">
@@ -117,8 +117,7 @@ export function HomePredictionFeed({
         </div>
       </section>
 
-      {tomorrowMatches.length > 0 ? (
-        <section className="section section--compact" id="tomorrow">
+      <section className="section section--compact" id="tomorrow">
           <div className="container">
             <div className="section-heading section-heading--compact">
               <div className="heading-with-icon">
@@ -127,8 +126,8 @@ export function HomePredictionFeed({
                 <div>
                   <span className="eyebrow">Tomorrow</span>
                   <div className="today-title-row">
-                    <h2>Tomorrow&apos;s Predictions</h2>
-                    <span className="today-count">{tomorrowMatches.length}</span>
+                    <h2>Tomorrow&apos;s Football Predictions</h2>
+                    {tomorrowMatches.length > 0 ? <span className="today-count">{tomorrowMatches.length}</span> : null}
                   </div>
                 </div>
               </div>
@@ -136,14 +135,19 @@ export function HomePredictionFeed({
               <span className="date-chip">{tomorrow}</span>
             </div>
 
-            <div className="match-grid match-grid--compact">
+            {tomorrowMatches.length > 0 ? <div className="match-grid match-grid--compact">
               {tomorrowMatches.map((match) => (
                 <MatchCard key={match.id} match={match} />
               ))}
-            </div>
+            </div> : (
+              <div className="empty-state empty-state--compact">
+                <strong>No published matches are currently available for tomorrow.</strong>
+                <p>See the upcoming football predictions below.</p>
+                <a href="#upcoming">View upcoming predictions</a>
+              </div>
+            )}
           </div>
         </section>
-      ) : null}
 
       <section className="section section--compact" id="upcoming">
         <div className="container">
@@ -153,7 +157,7 @@ export function HomePredictionFeed({
 
               <div>
                 <span className="eyebrow">{t("upcoming")}</span>
-                <h2>{t("upcoming")} {t("predictions")}</h2>
+                <h2>Upcoming Football Predictions</h2>
               </div>
             </div>
           </div>
@@ -216,7 +220,7 @@ export function HomePredictionFeed({
           <div className="section-heading section-heading--compact">
             <div className="heading-with-icon">
               <span className="section-icon" aria-hidden="true">✓</span>
-              <div><span className="eyebrow">Results</span><h2>Prediction History</h2></div>
+              <div><span className="eyebrow">Results</span><h2>Latest Football Prediction Results</h2></div>
             </div>
           </div>
           {historyMatches.length > 0 ? (

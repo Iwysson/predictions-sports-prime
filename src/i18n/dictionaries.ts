@@ -8,7 +8,7 @@ export const dictionaries = {
     leagues: "Leagues",
     topLeagues: "Top Prediction Leagues",
     predictionCategories: "Prediction Categories",
-    competitions: "Competitions",
+    competitions: "Football Predictions by League",
     latestPredictions: "Latest Predictions",
     upcoming: "Upcoming",
     view: "View",

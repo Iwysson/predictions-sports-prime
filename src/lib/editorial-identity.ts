@@ -12,11 +12,18 @@ export function editorialAuthorUrl() {
   return absoluteUrl(editorialAuthor.path);
 }
 
+export function editorialAuthorId() {
+  return `${editorialAuthorUrl()}#person`;
+}
+
 export function editorialAuthorPersonJsonLd() {
   return {
     "@type": "Person",
+    "@id": editorialAuthorId(),
     name: editorialAuthor.name,
     url: editorialAuthorUrl(),
+    jobTitle: "Football analysis author",
+    worksFor: { "@id": absoluteUrl("/#organization") },
   };
 }
 
@@ -25,8 +32,10 @@ export function editorialAuthorProfileJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
+    "@id": `${url}#webpage`,
     name: `${editorialAuthor.name} — Author`,
     url,
+    isPartOf: { "@id": absoluteUrl("/#website") },
     mainEntity: editorialAuthorPersonJsonLd(),
   };
 }

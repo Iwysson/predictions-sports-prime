@@ -17,7 +17,7 @@ export function LeagueCard({ slug, name, country, short, href }: Props) {
       </div>
 
       <div className="league-card-copy">
-        <strong>{name}</strong>
+        <strong>{name} predictions</strong>
         <small>{country}</small>
       </div>
 

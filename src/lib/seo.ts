@@ -155,6 +155,7 @@ export function articleJsonLd(match: Match) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${url}#article`,
     headline: matchSeoTitle(match),
     description: matchSeoDescription(match),
     url,
@@ -168,6 +169,7 @@ export function articleJsonLd(match: Match) {
       ? {
           about: {
             "@type": "SportsEvent",
+            "@id": `${url}#sports-event`,
             name: `${match.homeTeam} vs ${match.awayTeam}`,
             startDate: sportsEventStartDate(match),
             eventStatus: schemaEventStatus(match.fixtureStatus),
@@ -257,6 +259,7 @@ export function institutionalPageJsonLd(
   return {
     "@context": "https://schema.org",
     "@type": type,
+    "@id": `${url}#webpage`,
     name,
     description,
     url,
@@ -264,5 +267,6 @@ export function institutionalPageJsonLd(
     isPartOf: {
       "@id": absoluteUrl("/#website"),
     },
+    publisher: { "@id": absoluteUrl("/#organization") },
   };
 }
