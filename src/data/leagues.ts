@@ -100,3 +100,21 @@ export const featuredLeagues = leagues.filter((item) => item.featured);
 export const homeLeagues = leagues.filter(
   (item) => item.display.showOnHome
 );
+
+export const primaryPredictionLeagueSlugs = [
+  "premier-league",
+  "la-liga",
+  "bundesliga",
+  "serie-a",
+  "ligue-1",
+  "liga-portugal",
+  "eredivisie",
+  "brasileirao-serie-a",
+] as const satisfies readonly LeagueSlug[];
+
+export const primaryPredictionLeagues = primaryPredictionLeagueSlugs.map(
+  (slug) => {
+    const league = leaguesBySlug[slug];
+    return slug === "eredivisie" ? { ...league, name: "Eredivisie" } : league;
+  }
+);

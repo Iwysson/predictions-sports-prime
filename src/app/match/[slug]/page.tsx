@@ -10,6 +10,7 @@ import { MatchComments } from "@/components/MatchComments";
 import { ArticleByline } from "@/components/ArticleByline";
 import { MethodologyLink } from "@/components/MethodologyLink";
 import { ArticleSources } from "@/components/ArticleSources";
+import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import {
   MatchAnalysisLabel,
   MainPredictionLabel,
@@ -292,6 +293,8 @@ export default async function MatchPage({
       <div className="container related-predictions-area">
         <RelatedPredictions matches={relatedMatches} />
       </div>
+
+      <PredictionLeagueCategories />
     </>
   );
 }

@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { AdSlot } from "@/components/ads";
 import { JsonLd } from "@/components/JsonLd";
-import { LeagueCard } from "@/components/LeagueCard";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
-import { SectionTitle } from "@/components/SectionTitle";
-import { homeLeagues } from "@/data/leagues";
+import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import { matches } from "@/data/matches";
 import { toMatchPreview } from "@/lib/editorial";
 import { hydratePredictions } from "@/lib/live-predictions";
@@ -54,7 +52,7 @@ export default async function Home() {
           <p>
             Explore independently prepared football predictions, betting tips and
             concise match analysis for today, tomorrow and upcoming fixtures across
-            major domestic leagues and cup competitions.
+            major leagues and cup competitions.
           </p>
         </div>
       </section>
@@ -66,24 +64,7 @@ export default async function Home() {
               <AdSlot placement="home-middle" />
             </div>
 
-            <section
-              className="section section--compact section--muted"
-              id="leagues"
-            >
-              <div className="container">
-                <SectionTitle
-                  icon="♜"
-                  eyebrowKey="predictionCategories"
-                  titleKey="competitions"
-                />
-
-                <div className="league-grid league-grid--compact">
-                  {homeLeagues.map((league) => (
-                    <LeagueCard key={league.slug} {...league} />
-                  ))}
-                </div>
-              </div>
-            </section>
+            <PredictionLeagueCategories id="leagues" muted />
           </>
         }
       />
