@@ -132,6 +132,24 @@ if (Object.keys(snapshot.predictionIds).length !== automaticPredictions.length) 
   throw new Error(`Expected ${automaticPredictions.length} automatic prediction links, produced ${Object.keys(snapshot.predictionIds).length}.`);
 }
 
+// Frequent polling is important around full time, but generatedAt alone must
+// not trigger a commit and deployment every 15 minutes. Persist immediately
+// when fixture data changes and otherwise write a twice-daily freshness
+// heartbeat so snapshot-age validation remains meaningful.
+const fixtureDataChanged =
+  JSON.stringify(snapshot.leagues) !== JSON.stringify(previous.leagues) ||
+  JSON.stringify(snapshot.predictionIds) !== JSON.stringify(previous.predictionIds);
+const previousGeneratedAt = Date.parse(previous.generatedAt ?? "");
+const heartbeatDue =
+  !Number.isFinite(previousGeneratedAt) ||
+  Date.now() - previousGeneratedAt >= 12 * 60 * 60 * 1000;
+
+if (!fixtureDataChanged && !heartbeatDue) {
+  console.log(`Fixture data unchanged; snapshot write skipped (${snapshot.generatedAt}).`);
+  console.log(`Previous snapshot: ${previous.generatedAt}`);
+  process.exit(0);
+}
+
 const temporaryPath = `${outputPath}.next`;
 await writeFile(temporaryPath, `${JSON.stringify(snapshot, null, 2)}\n`, "utf8");
 await rename(temporaryPath, outputPath);
