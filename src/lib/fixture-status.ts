@@ -1,5 +1,6 @@
 export type FixtureStatus =
   | "scheduled"
+  | "rescheduled"
   | "in-progress"
   | "completed"
   | "postponed"
@@ -19,6 +20,7 @@ export function normalizeProviderStatus(input: {
   const state = (input.state ?? "").trim().toLowerCase();
 
   if (/POSTPONED|PPD/.test(name)) return "postponed";
+  if (/RESCHEDULED|RE-?SCHEDULED/.test(name)) return "rescheduled";
   if (/CANCELED|CANCELLED/.test(name)) return "canceled";
   if (/ABANDONED/.test(name)) return "abandoned";
   if (/SUSPENDED|INTERRUPTED/.test(name)) return "suspended";

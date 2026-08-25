@@ -13,8 +13,9 @@ import { LeagueBadge } from "@/components/LeagueBadge";
 import { LeaguePageText } from "@/components/LeaguePageText";
 import { LeaguePublishedAnalysis } from "@/components/LeaguePublishedAnalysis";
 import { toMatchPreview } from "@/lib/editorial";
-import { loadLeagueSeason } from "@/lib/openfootball";
+import { findFixtureForPrediction, loadLeagueSeason } from "@/lib/openfootball";
 import { buildCompetitionRoundSurface } from "@/lib/competition-rounds";
+import { classifyFixture, isActiveFixtureState } from "@/lib/fixture-state";
 import {
   leagueBreadcrumbJsonLd,
   leagueCanonicalPath,
@@ -134,7 +135,11 @@ export default async function LeaguePage({
       .map((match) => match.slug)
   );
   const archivedPublishedMatches = [...publishedMatches]
-    .filter((match) => !activePublishedSlugs.has(match.slug))
+    .filter((match) => {
+      if (activePublishedSlugs.has(match.slug)) return false;
+      const fixture = findFixtureForPrediction(fixtureRounds, match);
+      return !fixture || !isActiveFixtureState(classifyFixture(fixture));
+    })
     .sort((left, right) =>
       (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") ||
       left.title.localeCompare(right.title)

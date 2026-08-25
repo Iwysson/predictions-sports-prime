@@ -16,6 +16,11 @@ const ids = new Set();
 for (const league of leagues) {
   if (!league.sources.fixtures) continue;
   const rounds = snapshot.leagues[league.slug];
+  const sourceUpdatedAt = snapshot.leagueUpdatedAt?.[league.slug] ?? snapshot.generatedAt;
+  assert.ok(Number.isFinite(Date.parse(sourceUpdatedAt)), `${league.name}: invalid source freshness metadata.`);
+  if (Date.now() - Date.parse(sourceUpdatedAt) >= 48 * 60 * 60 * 1000) {
+    console.warn(`SOURCE_DATA_STALE ${league.slug}: ${sourceUpdatedAt}`);
+  }
   assert.ok(rounds?.length, `${league.name}: missing fixture snapshot.`);
   const result = validateLeagueRounds(rounds, {
     slug: league.slug,

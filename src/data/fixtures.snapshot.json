@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-25T09:51:14.475Z",
+  "generatedAt": "2026-08-25T12:40:54.670Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -12314,7 +12314,15 @@
     "ligue-1:angers-vs-lille": "tsdb:2489462",
     "ligue-1:toulouse-vs-lyon": "tsdb:2489466",
     "ligue-1:le-havre-vs-monaco": "tsdb:2489468",
+    "ligue-1:auxerre-vs-angers": "tsdb:2489477",
+    "ligue-1:brest-vs-toulouse": "tsdb:2489476",
+    "ligue-1:lorient-vs-troyes": "tsdb:2489475",
+    "ligue-1:lyon-vs-le-havre": "tsdb:2489471",
     "ligue-1:lille-vs-paris-saint-germain": "tsdb:2489479",
+    "ligue-1:monaco-vs-olympique-de-marseille": "401876480",
+    "ligue-1:paris-fc-vs-nice": "401876479",
+    "ligue-1:rennes-vs-le-mans": "401876478",
+    "ligue-1:strasbourg-vs-lens": "tsdb:2489474",
     "eredivisie:fortuna-sittard-vs-az-alkmaar": "401875637",
     "eredivisie:sparta-rotterdam-vs-fc-utrecht": "401875635",
     "eredivisie:sc-heerenveen-vs-pec-zwolle": "401875634",
@@ -12349,5 +12357,15 @@
     "brasileirao-serie-a:gremio-vs-chapecoense": "401841217",
     "brasileirao-serie-a:bahia-vs-internacional": "401841215",
     "brasileirao-serie-a:remo-vs-coritiba": "401841210"
+  },
+  "leagueUpdatedAt": {
+    "premier-league": "2026-08-25T12:40:54.670Z",
+    "la-liga": "2026-08-25T12:40:54.670Z",
+    "bundesliga": "2026-08-25T12:40:54.670Z",
+    "serie-a": "2026-08-25T12:40:54.670Z",
+    "liga-portugal": "2026-08-25T12:40:54.670Z",
+    "ligue-1": "2026-08-25T12:40:54.670Z",
+    "eredivisie": "2026-08-25T12:40:54.670Z",
+    "brasileirao-serie-a": "2026-08-25T12:40:54.670Z"
   }
 }

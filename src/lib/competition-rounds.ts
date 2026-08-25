@@ -2,7 +2,7 @@ import type { LeagueSlug, MatchPreview } from "@/types";
 import type { OpenFootballGame, OpenFootballRound } from "@/lib/openfootball";
 import { normalizeTeamKey, teamNamesMatch } from "@/lib/openfootball";
 import { resolveCompetitionRounds } from "@/lib/match-lifecycle";
-import { isLiveFixture, isPlayableUpcoming } from "@/lib/fixture-status";
+import { classifyFixture, isActiveFixtureState } from "@/lib/fixture-state";
 import { sortMatchesByKickoff } from "@/lib/match-feed";
 
 export type CompetitionRoundSourceState = "validated" | "editorial-fallback" | "unavailable";
@@ -128,10 +128,10 @@ function buildSection(
   };
 }
 
-function editorialFallback(manualMatches: MatchPreview[]): CompetitionRoundSurface {
+function editorialFallback(manualMatches: MatchPreview[], now: Date | string): CompetitionRoundSurface {
   const active = sortMatchesByKickoff(manualMatches.filter((match) =>
     match.status === "published" &&
-    (isPlayableUpcoming(match.fixtureStatus) || isLiveFixture(match.fixtureStatus))
+    isActiveFixtureState(classifyFixture({ ...match, status: match.fixtureStatus ?? "scheduled" }, now))
   ));
   if (!active.length) {
     return { sourceState: "unavailable", current: null, next: null, followingRound: null };
@@ -161,7 +161,7 @@ export function buildCompetitionRoundSurface(input: {
   publishedMatches: MatchPreview[];
   now?: Date | string;
 }): CompetitionRoundSurface {
-  if (!input.rounds.length) return editorialFallback(input.publishedMatches);
+  if (!input.rounds.length) return editorialFallback(input.publishedMatches, input.now ?? new Date());
 
   const resolved = resolveCompetitionRounds(input.rounds, input.now);
   const usedPredictions = new Set<string>();

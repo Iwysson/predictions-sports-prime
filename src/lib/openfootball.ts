@@ -103,6 +103,7 @@ type FixtureSnapshot = {
   siteTimezone: string;
   leagues: Partial<Record<LeagueSlug, OpenFootballRound[]>>;
   predictionIds: Record<string, string>;
+  leagueUpdatedAt?: Partial<Record<LeagueSlug, string>>;
 };
 
 const snapshot = fixtureSnapshot as FixtureSnapshot;
@@ -112,6 +113,7 @@ export function getFixtureSnapshotMetadata() {
     version: snapshot.version,
     generatedAt: snapshot.generatedAt,
     siteTimezone: snapshot.siteTimezone,
+    leagueUpdatedAt: snapshot.leagueUpdatedAt ?? {},
   };
 }
 

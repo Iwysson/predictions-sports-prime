@@ -1,20 +1,11 @@
 import type { MatchPreview } from "@/types";
 import { isCompletedFixture, isHistoryEligibleFixture, isNonPlayableFixture } from "@/lib/fixture-status";
+import { classifyFixture, dateInTimeZone, fixtureDateInTimeZone, isActiveFixtureState, isFutureFixture } from "@/lib/fixture-state";
 
 export type HomeTemporalBucket = "today" | "tomorrow" | "upcoming" | "historical" | "none";
 
-export function localTodayISO() {
-  const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/Fortaleza",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).formatToParts(new Date());
-  const value = Object.fromEntries(
-    parts.map((part) => [part.type, part.value])
-  );
-
-  return `${value.year}-${value.month}-${value.day}`;
+export function localTodayISO(now: Date | string = new Date()) {
+  return dateInTimeZone(now);
 }
 
 export function localTomorrowISO(today = localTodayISO()) {
@@ -23,7 +14,7 @@ export function localTomorrowISO(today = localTodayISO()) {
   return date.toISOString().slice(0, 10);
 }
 
-export function resolveHomeTemporalBucket(match: MatchPreview, today = localTodayISO()): HomeTemporalBucket {
+export function resolveHomeTemporalBucket(match: MatchPreview, today = localTodayISO(), now: Date | string = new Date()): HomeTemporalBucket {
   if (match.status !== "published") return "none";
   if (isCompletedFixture(match.fixtureStatus) || isHistoryEligibleFixture({
     status: match.fixtureStatus,
@@ -32,11 +23,14 @@ export function resolveHomeTemporalBucket(match: MatchPreview, today = localToda
   })) {
     return "historical";
   }
-  if (isNonPlayableFixture(match.fixtureStatus)) return "none";
-  if (!match.date) return "upcoming";
-  if (match.date === today) return "today";
-  if (match.date === localTomorrowISO(today)) return "tomorrow";
-  if (match.date > localTomorrowISO(today)) return "upcoming";
+  const state = classifyFixture({ ...match, status: match.fixtureStatus ?? "scheduled" }, now);
+  if (!isActiveFixtureState(state)) return "none";
+  const fixtureDate = fixtureDateInTimeZone(match);
+  const temporalFixture = { ...match, status: match.fixtureStatus ?? "scheduled" };
+  if (!fixtureDate) return isFutureFixture(temporalFixture, now) ? "upcoming" : "none";
+  if (fixtureDate === today) return "today";
+  if (fixtureDate === localTomorrowISO(today)) return "tomorrow";
+  if (fixtureDate > localTomorrowISO(today) && isFutureFixture(temporalFixture, now)) return "upcoming";
   return "none";
 }
 

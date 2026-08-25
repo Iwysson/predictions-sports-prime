@@ -24,6 +24,7 @@
     "audit:structured-data": "node scripts/audit-structured-data.mjs",
     "audit:sports-event-location": "tsx scripts/audit-sports-event-location.mjs",
     "audit:current-round": "tsx scripts/audit-current-round.mjs",
+    "audit:round-state": "tsx scripts/audit-round-state.mjs",
     "audit:standings": "tsx scripts/audit-standings.mjs",
     "audit:competition-assets": "tsx scripts/audit-competition-assets.mjs",
     "audit:match-time": "tsx scripts/audit-match-time.mjs",

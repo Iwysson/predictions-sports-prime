@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, rename, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { leagues } from "../src/data/leagues.ts";
 import { matches } from "../src/data/matches.ts";
@@ -20,6 +20,7 @@ const snapshot = {
   displayTimezonePolicy: "league-local",
   leagues: {},
   predictionIds: {},
+  leagueUpdatedAt: {},
 };
 const changes = [];
 
@@ -50,58 +51,80 @@ async function sourceText(source) {
 }
 
 for (const league of leagues) {
-  const text = await sourceText(league.sources.fixtures);
-  if (text === null) {
-    console.log(`${league.name}: skipped (no automatic fixture feed configured)`);
-    continue;
-  }
-  const base = parseFootballSeason(text);
-  const espnRounds = await hydrateLiveResults(league.slug, base);
-  const rounds = await hydrateTheSportsDb(league.slug, espnRounds);
-  const validation = validateLeagueRounds(rounds, {
-    slug: league.slug,
-    source: league.sources.fixtures,
-    expectedClubs: league.expectedClubs,
-    expectedGamesPerRound: league.expectedGamesPerRound,
-    label: league.name,
-  });
-  if (!validation.valid) {
-    throw new Error(`${league.name}: ${validation.errors.join(" | ")}`);
-  }
-  const leaguePredictions = matches.filter((match) => match.league === league.slug);
-  const linkedIds = new Set();
-  for (const prediction of leaguePredictions) {
-    const fixture = findPredictionFixture(rounds, prediction);
-    if (!fixture?.id) {
-      const candidates = rounds.flatMap((round) => round.games)
-        .filter((game) => game.homeTeam.includes(prediction.homeTeam.split(" ")[0]) || game.awayTeam.includes(prediction.awayTeam.split(" ")[0]))
-        .slice(0, 8)
-        .map((game) => `${game.homeTeam} vs ${game.awayTeam} [${game.id ?? "no id"}]`);
-      throw new Error(`${league.name}: no authoritative fixture ID for ${prediction.slug}. Candidates: ${candidates.join(" | ")}`);
+  try {
+    const text = await sourceText(league.sources.fixtures);
+    if (text === null) {
+      console.log(`${league.name}: skipped (no automatic fixture feed configured)`);
+      continue;
     }
-    snapshot.predictionIds[`${league.slug}:${prediction.slug}`] = fixture.id;
-    linkedIds.add(fixture.id);
-    if (prediction.date !== fixture.date || prediction.time !== fixture.time) {
-      changes.push({
-        prediction: prediction.slug,
-        from: `${prediction.date || "unknown"} ${prediction.time || "TBD"}`,
-        to: `${fixture.date} ${fixture.time}`,
-      });
+    const base = parseFootballSeason(text);
+    const espnRounds = await hydrateLiveResults(league.slug, base);
+    const rounds = await hydrateTheSportsDb(league.slug, espnRounds);
+    const previousById = new Map(
+      (previous.leagues?.[league.slug] ?? []).flatMap((round) => round.games).map((game) => [game.id, game])
+    );
+    for (const fixture of rounds.flatMap((round) => round.games)) {
+      const saved = fixture.id ? previousById.get(fixture.id) : undefined;
+      const dateChanged = saved && saved.date !== fixture.date;
+      if (fixture.status === "scheduled" && (saved?.status === "rescheduled" || dateChanged)) {
+        fixture.status = "rescheduled";
+      }
     }
+    const validation = validateLeagueRounds(rounds, {
+      slug: league.slug,
+      source: league.sources.fixtures,
+      expectedClubs: league.expectedClubs,
+      expectedGamesPerRound: league.expectedGamesPerRound,
+      label: league.name,
+    });
+    if (!validation.valid) {
+      throw new Error(`${league.name}: ${validation.errors.join(" | ")}`);
+    }
+    const leaguePredictions = matches.filter((match) => match.league === league.slug);
+    const linkedIds = new Set();
+    for (const prediction of leaguePredictions) {
+      const fixture = findPredictionFixture(rounds, prediction);
+      if (!fixture?.id) {
+        const candidates = rounds.flatMap((round) => round.games)
+          .filter((game) => game.homeTeam.includes(prediction.homeTeam.split(" ")[0]) || game.awayTeam.includes(prediction.awayTeam.split(" ")[0]))
+          .slice(0, 8)
+          .map((game) => `${game.homeTeam} vs ${game.awayTeam} [${game.id ?? "no id"}]`);
+        throw new Error(`${league.name}: no authoritative fixture ID for ${prediction.slug}. Candidates: ${candidates.join(" | ")}`);
+      }
+      snapshot.predictionIds[`${league.slug}:${prediction.slug}`] = fixture.id;
+      linkedIds.add(fixture.id);
+      if (prediction.date !== fixture.date || prediction.time !== fixture.time) {
+        changes.push({
+          prediction: prediction.slug,
+          from: `${prediction.date || "unknown"} ${prediction.time || "TBD"}`,
+          to: `${fixture.date} ${fixture.time}`,
+        });
+      }
+    }
+    const generatedDay = snapshot.generatedAt.slice(0, 10);
+    const windowStart = new Date(`${generatedDay}T00:00:00Z`);
+    windowStart.setUTCDate(windowStart.getUTCDate() - 30);
+    const windowEnd = new Date(`${generatedDay}T00:00:00Z`);
+    windowEnd.setUTCDate(windowEnd.getUTCDate() + 90);
+    snapshot.leagues[league.slug] = rounds.filter((round) =>
+      round.games.some((game) => linkedIds.has(game.id)) ||
+      round.games.some((game) => {
+        const date = new Date(`${game.date}T00:00:00Z`);
+        return date >= windowStart && date <= windowEnd;
+      })
+    );
+    snapshot.leagueUpdatedAt[league.slug] = snapshot.generatedAt;
+    console.log(`${league.name}: ${rounds.flatMap((round) => round.games).length} fixtures, ${leaguePredictions.length} predictions linked`);
+  } catch (error) {
+    const savedRounds = previous.leagues?.[league.slug];
+    if (!savedRounds?.length) throw error;
+    snapshot.leagues[league.slug] = savedRounds;
+    snapshot.leagueUpdatedAt[league.slug] = previous.leagueUpdatedAt?.[league.slug] ?? previous.generatedAt;
+    for (const [key, id] of Object.entries(previous.predictionIds ?? {})) {
+      if (key.startsWith(`${league.slug}:`)) snapshot.predictionIds[key] = id;
+    }
+    console.error(`SOURCE_REFRESH_FAILED ${league.slug}: ${error instanceof Error ? error.message : String(error)}`);
   }
-  const generatedDay = snapshot.generatedAt.slice(0, 10);
-  const windowStart = new Date(`${generatedDay}T00:00:00Z`);
-  windowStart.setUTCDate(windowStart.getUTCDate() - 30);
-  const windowEnd = new Date(`${generatedDay}T00:00:00Z`);
-  windowEnd.setUTCDate(windowEnd.getUTCDate() + 90);
-  snapshot.leagues[league.slug] = rounds.filter((round) =>
-    round.games.some((game) => linkedIds.has(game.id)) ||
-    round.games.some((game) => {
-      const date = new Date(`${game.date}T00:00:00Z`);
-      return date >= windowStart && date <= windowEnd;
-    })
-  );
-  console.log(`${league.name}: ${rounds.flatMap((round) => round.games).length} fixtures, ${leaguePredictions.length} predictions linked`);
 }
 
 const automaticPredictions = matches.filter((match) => leagues.find((league) => league.slug === match.league)?.sources.fixtures);
@@ -109,7 +132,9 @@ if (Object.keys(snapshot.predictionIds).length !== automaticPredictions.length) 
   throw new Error(`Expected ${automaticPredictions.length} automatic prediction links, produced ${Object.keys(snapshot.predictionIds).length}.`);
 }
 
-await writeFile(outputPath, `${JSON.stringify(snapshot, null, 2)}\n`, "utf8");
+const temporaryPath = `${outputPath}.next`;
+await writeFile(temporaryPath, `${JSON.stringify(snapshot, null, 2)}\n`, "utf8");
+await rename(temporaryPath, outputPath);
 console.log(`Fixture snapshot updated: ${snapshot.generatedAt}`);
 console.log(`Provider differences retained for editorial review: ${changes.length}`);
 for (const change of changes) console.log(`  ${change.prediction}: ${change.from} -> ${change.to}`);
