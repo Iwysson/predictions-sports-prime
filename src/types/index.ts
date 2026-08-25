@@ -39,6 +39,7 @@ export type PredictionResultInput =
 export type EditorialPicks = {
   main: string;
   odds?: number;
+  previousOdds?: number;
   oddsProvenance?: {
     source: string;
     bookmaker?: string;

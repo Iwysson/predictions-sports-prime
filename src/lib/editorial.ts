@@ -125,6 +125,13 @@ function picksToItems(
     });
   }
 
+  if (picks.previousOdds !== undefined) {
+    items.push({
+      label: "Previous Odds",
+      value: String(picks.previousOdds),
+    });
+  }
+
   return items;
 }
 

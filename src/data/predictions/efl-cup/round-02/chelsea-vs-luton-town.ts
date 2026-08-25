@@ -6,7 +6,7 @@ export const chelseaVsLutonTown: EditorialPrediction = {
   awayTeam: "Luton Town",
   analysis:   [
       "Chelsea host Luton Town at Stamford Bridge on Thursday, August 27, in the second round of the EFL Cup. Chelsea enter the competition at this stage, while Luton arrive as a League One side.",
-      "For this match, our selection is Chelsea -1.5 Asian Handicap at odds of 1.75. Chelsea need to win by at least two goals, but the difference in squad quality, home advantage and an excellent recent head-to-head record provide strong support for the handicap.",
+      "For this match, our selection is Chelsea -1.5 Asian Handicap. The odds were 1.75 on the publication date and have since fallen to 1.55 at Betano. Chelsea need to win by at least two goals, but the difference in squad quality, home advantage and an excellent recent head-to-head record provide strong support for the handicap.",
       "🔵 Chelsea have dominated the recent H2H",
       "The recent meetings between Chelsea and Luton are extremely favorable to the Blues:",
       "- Luton 2–3 Chelsea",
@@ -41,9 +41,9 @@ export const chelseaVsLutonTown: EditorialPrediction = {
       "Port Vale were also lower-league opposition, and Chelsea demonstrated how large the difference in quality can become when they control this type of cup fixture at Stamford Bridge.",
       "Chelsea also defeated Wrexham 4–2 away during the same FA Cup run before reaching the final.",
       "This is encouraging when asking Chelsea not merely to win, but to create a multiple-goal margin.",
-      "📊 Why -1.5 at 1.75?",
+      "📊 Why Chelsea -1.5?",
       "The straight Chelsea victory naturally offers more protection, especially because rotation is always possible in the EFL Cup.",
-      "But 1.75 for -1.5 gives us a considerably more interesting return.",
+      "The price has moved since publication: Chelsea -1.5 was 1.75 when this analysis was published and is now 1.55 at Betano.",
       "We need:",
       "2–0 ✅",
       "3–0 ✅",
@@ -61,20 +61,24 @@ export const chelseaVsLutonTown: EditorialPrediction = {
       "-1.5 covered in 2/2 recent Stamford Bridge H2Hs.",
       "Chelsea also beat lower-league Port Vale 7–0 in last season's FA Cup.",
       "Luton's strong start means they shouldn't be completely underestimated, but the jump from League One opposition to Chelsea at Stamford Bridge is substantial.",
-      "At 1.75, we're backing Chelsea's superior squad and home advantage to produce a victory by at least two goals.",
+      "The selection remains Chelsea -1.5, although the Betano odds have shortened from the published 1.75 to 1.55.",
       "🎯 Prediction: Chelsea -1.5 Asian Handicap",
-      "💰 Odds: 1.75"
+      "💰 Odds: 1.75 (published) → 1.55 (current, Betano)"
     ],
   picks: {
     main: "Chelsea -1.5 Asian Handicap",
-    odds: 1.75,
+    odds: 1.55,
+    previousOdds: 1.75,
     oddsProvenance: {
-      source: "Editor-supplied market capture",
-      capturedAt: "2026-08-22T12:00:00.000-03:00",
+      source: "Betano",
+      bookmaker: "Betano",
+      provenance: "author_attested",
+      capturedAt: "2026-08-25T19:42:42.457-03:00",
       market: "Chelsea -1.5 Asian Handicap",
     },
   },
   publishedAt: "2026-08-22T12:00:00.000-03:00",
+  updatedAt: "2026-08-25T19:42:42.457-03:00",
   sourceStatus: "verified",
   sources:   [
       {
