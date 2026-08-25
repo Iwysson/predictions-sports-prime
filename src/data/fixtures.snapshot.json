@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-25T13:11:33.068Z",
+  "generatedAt": "2026-08-25T15:59:56.946Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -7524,7 +7524,7 @@
           {
             "round": 4,
             "date": "2026-08-31",
-            "time": "18:45",
+            "time": "20:15",
             "homeTeam": "Benfica",
             "awayTeam": "Estoril",
             "homeScore": null,
@@ -7532,14 +7532,14 @@
             "status": "scheduled",
             "dataSource": "espn",
             "id": "401885457",
-            "sourceAgreement": false,
+            "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-31T17:45:00.000Z"
+            "kickoffUtc": "2026-08-31T19:15Z"
           },
           {
             "round": 4,
             "date": "2026-08-31",
-            "time": "20:45",
+            "time": "TBD",
             "homeTeam": "Braga",
             "awayTeam": "Vitória de Guimaraes",
             "homeScore": null,
@@ -7548,8 +7548,8 @@
             "dataSource": "espn",
             "id": "401885462",
             "sourceAgreement": false,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-31T19:45:00.000Z"
+            "timeConfirmed": false,
+            "kickoffUtc": "2026-08-31T19:15Z"
           }
         ]
       },
@@ -12360,13 +12360,13 @@
     "brasileirao-serie-a:remo-vs-coritiba": "401841210"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-08-25T13:11:33.068Z",
-    "la-liga": "2026-08-25T13:11:33.068Z",
-    "bundesliga": "2026-08-25T13:11:33.068Z",
-    "serie-a": "2026-08-25T13:11:33.068Z",
-    "liga-portugal": "2026-08-25T13:11:33.068Z",
-    "ligue-1": "2026-08-25T13:11:33.068Z",
-    "eredivisie": "2026-08-25T13:11:33.068Z",
-    "brasileirao-serie-a": "2026-08-25T13:11:33.068Z"
+    "premier-league": "2026-08-25T15:59:56.946Z",
+    "la-liga": "2026-08-25T15:59:56.946Z",
+    "bundesliga": "2026-08-25T15:59:56.946Z",
+    "serie-a": "2026-08-25T15:59:56.946Z",
+    "liga-portugal": "2026-08-25T15:59:56.946Z",
+    "ligue-1": "2026-08-25T15:59:56.946Z",
+    "eredivisie": "2026-08-25T15:59:56.946Z",
+    "brasileirao-serie-a": "2026-08-25T15:59:56.946Z"
   }
 }
