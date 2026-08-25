@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-25T18:56:44.468Z",
+  "generatedAt": "2026-08-25T21:43:58.060Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -12360,13 +12360,13 @@
     "brasileirao-serie-a:remo-vs-coritiba": "401841210"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-08-25T18:56:44.468Z",
-    "la-liga": "2026-08-25T18:56:44.468Z",
-    "bundesliga": "2026-08-25T18:56:44.468Z",
-    "serie-a": "2026-08-25T18:56:44.468Z",
-    "liga-portugal": "2026-08-25T18:56:44.468Z",
-    "ligue-1": "2026-08-25T18:56:44.468Z",
-    "eredivisie": "2026-08-25T18:56:44.468Z",
-    "brasileirao-serie-a": "2026-08-25T18:56:44.468Z"
+    "premier-league": "2026-08-25T21:43:58.060Z",
+    "la-liga": "2026-08-25T21:43:58.060Z",
+    "bundesliga": "2026-08-25T21:43:58.060Z",
+    "serie-a": "2026-08-25T21:43:58.060Z",
+    "liga-portugal": "2026-08-25T21:43:58.060Z",
+    "ligue-1": "2026-08-25T21:43:58.060Z",
+    "eredivisie": "2026-08-25T21:43:58.060Z",
+    "brasileirao-serie-a": "2026-08-25T21:43:58.060Z"
   }
 }
