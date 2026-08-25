@@ -139,42 +139,39 @@ for (const page of pages) {
       }
     }
 
-    if (hasType(node, "SportsEvent")) {
+  }
+
+  const sportsEventNodes = allNodes.filter((node) => hasType(node, "SportsEvent"));
+  for (const node of sportsEventNodes) {
       const location = node.location;
-      const hasLocation = Boolean(location && typeof location === "object" && typeof location.name === "string" && location.name.trim());
+      const address = location?.address;
+      const hasLocation = location !== undefined;
+      const validLocation = !hasLocation || Boolean(
+        location &&
+        typeof location === "object" &&
+        hasType(location, "Place") &&
+        typeof location.name === "string" &&
+        location.name.trim() &&
+        address &&
+        typeof address === "object" &&
+        hasType(address, "PostalAddress") &&
+        typeof address.addressLocality === "string" &&
+        address.addressLocality.trim() &&
+        typeof address.addressCountry === "string" &&
+        address.addressCountry.trim()
+      );
       const validStartDate = typeof node.startDate === "string" && !Number.isNaN(new Date(node.startDate).valueOf());
       const validStatus = typeof node.eventStatus === "string" && /^https:\/\/schema\.org\/Event/.test(node.eventStatus);
-      if (hasLocation) counts.SportsEvent.factualLocation += 1;
-      if (hasLocation && validStartDate && validStatus) {
+      const validTeams = hasType(node.homeTeam, "SportsTeam") && hasType(node.awayTeam, "SportsTeam");
+      if (validLocation && hasLocation) counts.SportsEvent.factualLocation += 1;
+      if (!hasLocation) counts.SportsEvent.skipped += 1;
+      if (validLocation && validStartDate && validStatus && validTeams) {
         counts.SportsEvent.valid += 1;
       } else {
         counts.SportsEvent.invalid += 1;
         errors.push(`${page.route}: invalid SportsEvent schema`);
-        if (!hasLocation) counts.SportsEvent.skipped += 1;
-        if (!hasLocation) warnings.push(`${page.route}: SportsEvent skipped due to missing factual venue`);
       }
       if (node.url && node.url !== canonical) errors.push(`${page.route}: SportsEvent url mismatch`);
-    }
-  }
-
-  if (allNodes.some((node) => hasType(node, "SportsEvent"))) {
-    counts.SportsEvent.valid += 0;
-  }
-  if (hasTypeRecursive(page.jsonLd, "SportsEvent")) {
-    const sportsEventNodes = allNodes.filter((node) => hasType(node, "SportsEvent"));
-    for (const node of sportsEventNodes) {
-      const location = node.location;
-      const hasLocation = Boolean(location && typeof location === "object" && typeof location.name === "string" && location.name.trim());
-      const validStartDate = typeof node.startDate === "string" && !Number.isNaN(new Date(node.startDate).valueOf());
-      const validStatus = typeof node.eventStatus === "string" && /^https:\/\/schema\.org\/Event/.test(node.eventStatus);
-      if (hasLocation) counts.SportsEvent.factualLocation += 1;
-      if (hasLocation && validStartDate && validStatus) {
-        counts.SportsEvent.valid += 1;
-      } else {
-        counts.SportsEvent.invalid += 1;
-        if (!hasLocation) counts.SportsEvent.skipped += 1;
-      }
-    }
   }
 }
 
@@ -193,7 +190,7 @@ console.log(`Valid: ${counts.SportsEvent.valid}`);
 console.log(`Invalid: ${counts.SportsEvent.invalid}`);
 console.log(`SportsEvent with factual location: ${counts.SportsEvent.factualLocation}`);
 console.log(`SportsEvent without location: ${counts.SportsEvent.skipped}`);
-console.log(`SportsEvent skipped due to missing factual location: ${counts.SportsEvent.skipped}`);
+console.log(`SportsEvent with location correctly omitted: ${counts.SportsEvent.skipped}`);
 
 console.log("");
 console.log(`Critical errors: ${errors.length}`);

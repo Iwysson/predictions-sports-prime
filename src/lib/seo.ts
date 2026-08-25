@@ -4,6 +4,7 @@ import { leagues } from "@/data/leagues";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { editorialAuthorPersonJsonLd } from "@/lib/editorial-identity";
 import { buildMatchSearchIntentCopy, shouldApplySearchIntentSEO } from "@/lib/match-search-intent";
+import { sportsEventLocation, sportsEventStartDate } from "@/lib/sports-event-schema";
 
 function schemaEventStatus(status: Match["fixtureStatus"]) {
   if (status === "postponed") return "https://schema.org/EventPostponed";
@@ -11,15 +12,6 @@ function schemaEventStatus(status: Match["fixtureStatus"]) {
   if (status === "completed") return "https://schema.org/EventCompleted";
   if (status === "in-progress") return "https://schema.org/EventInProgress";
   return "https://schema.org/EventScheduled";
-}
-
-function sportsEventLocation(match: Match) {
-  if (!match.venue?.trim()) return undefined;
-
-  return {
-    "@type": "Place",
-    name: match.venue.trim(),
-  };
 }
 
 export function matchSeoTitle(match: Match) {
@@ -172,26 +164,23 @@ export function articleJsonLd(match: Match) {
     },
     ...(match.publishedAt ? { datePublished: match.publishedAt } : {}),
     ...(match.updatedAt ? { dateModified: match.updatedAt } : {}),
-    ...(match.date && sportsEventLocation(match)
+    ...(match.date
       ? {
           about: {
             "@type": "SportsEvent",
             name: `${match.homeTeam} vs ${match.awayTeam}`,
-            startDate: match.time && match.time !== "TBD"
-              ? match.kickoffUtc ?? `${match.date}T${match.time}:00`
-              : match.date,
+            startDate: sportsEventStartDate(match),
             eventStatus: schemaEventStatus(match.fixtureStatus),
-            location: sportsEventLocation(match),
-            performer: [
-              {
-                "@type": "SportsTeam",
-                name: match.homeTeam,
-              },
-              {
-                "@type": "SportsTeam",
-                name: match.awayTeam,
-              },
-            ],
+            url,
+            ...(sportsEventLocation(match) ? { location: sportsEventLocation(match) } : {}),
+            homeTeam: {
+              "@type": "SportsTeam",
+              name: match.homeTeam,
+            },
+            awayTeam: {
+              "@type": "SportsTeam",
+              name: match.awayTeam,
+            },
             description: matchSeoDescription(match),
           },
         }

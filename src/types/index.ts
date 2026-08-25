@@ -62,6 +62,14 @@ export type EditorialSource = {
   accessedAt?: string;
 };
 
+export type VenueAddress = {
+  streetAddress?: string;
+  addressLocality?: string;
+  addressRegion?: string;
+  postalCode?: string;
+  addressCountry?: string;
+};
+
 export type EditorialPrediction = {
   league: LeagueSlug;
   homeTeam: string;
@@ -100,6 +108,7 @@ export type EditorialPrediction = {
     time?: string;
     round?: string;
     venue?: string;
+    venueAddress?: VenueAddress;
   };
 };
 
@@ -116,6 +125,7 @@ export type Match = {
   date: string;
   time: string;
   venue?: string;
+  venueAddress?: VenueAddress;
   status: "published" | "coming-soon";
   title: string;
   analysis: string[];

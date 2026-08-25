@@ -76,6 +76,7 @@ export function toMatchPreview(match: Match): MatchPreview {
     date: match.date,
     time: match.time,
     venue: match.venue,
+    venueAddress: match.venueAddress,
     status: match.status,
     title: match.title,
     betResult: match.betResult,
@@ -151,6 +152,7 @@ export function editorialToMatch(
     date: prediction.matchInfo?.date ?? "",
     time: prediction.matchInfo?.time ?? "TBD",
     venue: prediction.matchInfo?.venue,
+    venueAddress: prediction.matchInfo?.venueAddress,
     status: "published",
     title:
       prediction.title ??
