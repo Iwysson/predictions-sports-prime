@@ -285,7 +285,10 @@ export function validateEditorialPredictions(
         if (!provenance?.source.trim() || PLACEHOLDER_PATTERN.test(provenance?.source ?? "")) {
           errors.push(`${label}: new published odds require a real provenance source.`);
         }
-        if (!provenance?.capturedAt || !isValidIsoTimestamp(provenance.capturedAt)) {
+        if (
+          provenance?.provenance !== "author_attested" &&
+          (!provenance?.capturedAt || !isValidIsoTimestamp(provenance.capturedAt))
+        ) {
           errors.push(`${label}: new published odds require a valid capturedAt timestamp.`);
         }
       }
