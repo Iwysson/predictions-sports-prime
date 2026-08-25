@@ -6,6 +6,8 @@ import { deportivoVsValencia } from "./deportivo-vs-valencia";
 import { celtaVigoVsAthleticClub } from "./celta-vigo-vs-athletic-club";
 import { osasunaVsGetafe } from "./osasuna-vs-getafe";
 import { barcelonaVsRayoVallecano } from "./barcelona-vs-rayo-vallecano";
+import { alavesVsVillarreal } from "./alaves-vs-villarreal";
+import { racingSantanderVsElche } from "./racing-santander-vs-elche";
 
 export const laLigaRound03 = [
   levanteVsRealBetis,
@@ -16,4 +18,6 @@ export const laLigaRound03 = [
   celtaVigoVsAthleticClub,
   osasunaVsGetafe,
   barcelonaVsRayoVallecano,
+  alavesVsVillarreal,
+  racingSantanderVsElche,
 ];
