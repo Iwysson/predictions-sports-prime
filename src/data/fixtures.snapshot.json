@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-25T09:31:26.663Z",
+  "generatedAt": "2026-08-25T09:51:14.475Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -12249,8 +12249,6 @@
     "la-liga:atletico-madrid-vs-villarreal": "tsdb:2506179",
     "la-liga:real-betis-vs-real-sociedad": "tsdb:2506184",
     "la-liga:levante-vs-real-betis": "401882902",
-    "la-liga:alaves-vs-villarreal": "401882906",
-    "la-liga:racing-santander-vs-elche": "401882900",
     "la-liga:real-sociedad-vs-espanyol": "401882898",
     "la-liga:sevilla-vs-atletico-madrid": "401882897",
     "la-liga:real-madrid-vs-malaga": "401882899",
@@ -12258,6 +12256,8 @@
     "la-liga:celta-vigo-vs-athletic-club": "401882905",
     "la-liga:osasuna-vs-getafe": "401882901",
     "la-liga:barcelona-vs-rayo-vallecano": "401882903",
+    "la-liga:alaves-vs-villarreal": "401882906",
+    "la-liga:racing-santander-vs-elche": "401882900",
     "bundesliga:bayern-munchen-vs-vfb-stuttgart": "tsdb:2508333",
     "bundesliga:rb-leipzig-vs-borussia-monchengladbach": "tsdb:2508338",
     "bundesliga:1-fsv-mainz-05-vs-sc-paderborn-07": "tsdb:2508335",
