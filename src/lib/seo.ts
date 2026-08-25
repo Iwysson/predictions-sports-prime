@@ -4,15 +4,7 @@ import { leagues } from "@/data/leagues";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { editorialAuthorPersonJsonLd } from "@/lib/editorial-identity";
 import { buildMatchSearchIntentCopy, shouldApplySearchIntentSEO } from "@/lib/match-search-intent";
-import { sportsEventLocation, sportsEventStartDate } from "@/lib/sports-event-schema";
-
-function schemaEventStatus(status: Match["fixtureStatus"]) {
-  if (status === "postponed") return "https://schema.org/EventPostponed";
-  if (status === "canceled" || status === "abandoned") return "https://schema.org/EventCancelled";
-  if (status === "completed") return "https://schema.org/EventCompleted";
-  if (status === "in-progress") return "https://schema.org/EventInProgress";
-  return "https://schema.org/EventScheduled";
-}
+import { buildSportsEventJsonLd } from "@/lib/sports-event-schema";
 
 export function matchSeoTitle(match: Match) {
   if (shouldApplySearchIntentSEO(match)) {
@@ -151,13 +143,15 @@ export function matchBreadcrumbJsonLd(match: Match) {
 export function articleJsonLd(match: Match) {
   const league = leagues.find((item) => item.slug === match.league);
   const url = absoluteUrl(matchCanonicalPath(match));
+  const description = matchSeoDescription(match);
+  const sportsEvent = buildSportsEventJsonLd(match, { url, description });
 
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": `${url}#article`,
     headline: matchSeoTitle(match),
-    description: matchSeoDescription(match),
+    description,
     url,
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -165,28 +159,7 @@ export function articleJsonLd(match: Match) {
     },
     ...(match.publishedAt ? { datePublished: match.publishedAt } : {}),
     ...(match.updatedAt ? { dateModified: match.updatedAt } : {}),
-    ...(match.date
-      ? {
-          about: {
-            "@type": "SportsEvent",
-            "@id": `${url}#sports-event`,
-            name: `${match.homeTeam} vs ${match.awayTeam}`,
-            startDate: sportsEventStartDate(match),
-            eventStatus: schemaEventStatus(match.fixtureStatus),
-            url,
-            ...(sportsEventLocation(match) ? { location: sportsEventLocation(match) } : {}),
-            homeTeam: {
-              "@type": "SportsTeam",
-              name: match.homeTeam,
-            },
-            awayTeam: {
-              "@type": "SportsTeam",
-              name: match.awayTeam,
-            },
-            description: matchSeoDescription(match),
-          },
-        }
-      : {}),
+    ...(sportsEvent ? { about: sportsEvent } : {}),
     author: editorialAuthorPersonJsonLd(),
     publisher: { "@id": absoluteUrl("/#organization") },
     inLanguage: "en",

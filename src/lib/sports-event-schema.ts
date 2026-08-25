@@ -43,3 +43,41 @@ export function sportsEventStartDate(
   // A date is preferable to a local date-time with no trustworthy UTC offset.
   return match.date;
 }
+
+function schemaEventStatus(status: Match["fixtureStatus"]) {
+  if (status === "postponed") return "https://schema.org/EventPostponed";
+  if (status === "canceled" || status === "abandoned") return "https://schema.org/EventCancelled";
+  if (status === "completed") return "https://schema.org/EventCompleted";
+  if (status === "in-progress") return "https://schema.org/EventInProgress";
+  return "https://schema.org/EventScheduled";
+}
+
+export function buildSportsEventJsonLd(
+  match: Match,
+  { url, description }: { url: string; description: string }
+) {
+  const location = sportsEventLocation(match);
+
+  // Never publish a SportsEvent that Google will treat as incomplete. The
+  // Article remains valid on its own when verified venue address data is absent.
+  if (!location) return undefined;
+
+  return {
+    "@type": "SportsEvent" as const,
+    "@id": `${url}#sports-event`,
+    name: `${match.homeTeam} vs ${match.awayTeam}`,
+    startDate: sportsEventStartDate(match),
+    eventStatus: schemaEventStatus(match.fixtureStatus),
+    url,
+    location,
+    homeTeam: {
+      "@type": "SportsTeam" as const,
+      name: match.homeTeam,
+    },
+    awayTeam: {
+      "@type": "SportsTeam" as const,
+      name: match.awayTeam,
+    },
+    description,
+  };
+}

@@ -1,4 +1,4 @@
-import { sportsEventLocation, sportsEventStartDate } from "../src/lib/sports-event-schema.ts";
+import { buildSportsEventJsonLd, sportsEventLocation, sportsEventStartDate } from "../src/lib/sports-event-schema.ts";
 
 const cases = [
   {
@@ -49,3 +49,34 @@ for (const testCase of cases) {
 }
 
 console.log("SportsEvent location cases: 3/3 PASS");
+
+const baseMatch = {
+  slug: "home-vs-away",
+  homeTeam: "Home",
+  awayTeam: "Away",
+  league: "test",
+  date: "2026-08-29",
+  time: "20:00",
+  predictions: [],
+  analysis: [],
+};
+const eventWithoutLocation = buildSportsEventJsonLd(baseMatch, {
+  url: "https://predictions-sports-prime.com/match/home-vs-away/",
+  description: "Verified test description",
+});
+if (eventWithoutLocation !== undefined) {
+  throw new Error("SportsEvent must be omitted when verified location is unavailable");
+}
+
+const eventWithLocation = buildSportsEventJsonLd(
+  { ...baseMatch, ...cases[1].match },
+  {
+    url: "https://predictions-sports-prime.com/match/home-vs-away/",
+    description: "Verified test description",
+  }
+);
+if (!eventWithLocation?.location?.address) {
+  throw new Error("SportsEvent with verified location must contain a structured address");
+}
+
+console.log("SportsEvent emission guard: 2/2 PASS");

@@ -94,9 +94,17 @@ const counts = {
   SportsEvent: { valid: 0, invalid: 0, skipped: 0, factualLocation: 0 },
 };
 
+let totalMatchPages = 0;
+let articlesWithoutSportsEvent = 0;
+let brokenSportsEventReferences = 0;
+let invalidLocations = 0;
+let emptyAddresses = 0;
+
 for (const page of pages) {
   const canonical = page.canonical;
   const allNodes = page.jsonLd.flatMap((node) => walkNodes(node));
+  const isMatchPage = page.route.startsWith("/match/");
+  if (isMatchPage) totalMatchPages += 1;
   const topLevelTypes = new Set(page.jsonLd.map((node) => node?.["@type"]).filter(Boolean));
   if (topLevelTypes.has("WebSite")) counts.WebSite.valid += 1;
   if (topLevelTypes.has("Organization")) counts.Organization.valid += 1;
@@ -142,11 +150,18 @@ for (const page of pages) {
   }
 
   const sportsEventNodes = allNodes.filter((node) => hasType(node, "SportsEvent"));
+  if (isMatchPage && sportsEventNodes.length === 0) articlesWithoutSportsEvent += 1;
+  for (const node of allNodes) {
+    if (node?.["@id"]?.endsWith("#sports-event") && !hasType(node, "SportsEvent")) {
+      brokenSportsEventReferences += 1;
+      errors.push(`${page.route}: broken #sports-event reference`);
+    }
+  }
   for (const node of sportsEventNodes) {
       const location = node.location;
       const address = location?.address;
       const hasLocation = location !== undefined;
-      const validLocation = !hasLocation || Boolean(
+      const validLocation = Boolean(
         location &&
         typeof location === "object" &&
         hasType(location, "Place") &&
@@ -160,6 +175,8 @@ for (const page of pages) {
         typeof address.addressCountry === "string" &&
         address.addressCountry.trim()
       );
+      if (!validLocation) invalidLocations += 1;
+      if (address && typeof address === "object" && Object.keys(address).filter((key) => key !== "@type").length === 0) emptyAddresses += 1;
       const validStartDate = typeof node.startDate === "string" && !Number.isNaN(new Date(node.startDate).valueOf());
       const validStatus = typeof node.eventStatus === "string" && /^https:\/\/schema\.org\/Event/.test(node.eventStatus);
       const validTeams = hasType(node.homeTeam, "SportsTeam") && hasType(node.awayTeam, "SportsTeam");
@@ -175,6 +192,9 @@ for (const page of pages) {
   }
 }
 
+if (counts.SportsEvent.skipped !== 0) errors.push("SPORTSEVENT_WITHOUT_LOCATION must equal 0");
+if (brokenSportsEventReferences !== 0) errors.push("Broken #sports-event references must equal 0");
+
 console.log("Structured Data Audit");
 console.log(`Indexable pages: ${pages.length}`);
 console.log("");
@@ -185,12 +205,14 @@ console.log(`Person: ${counts.Person.valid}/${pages.filter((page) => hasTypeRecu
 console.log(`Article: ${counts.Article.valid}/${pages.filter((page) => page.jsonLd.some((node) => hasType(node, "Article"))).length} valid`);
 console.log(`BreadcrumbList: ${counts.BreadcrumbList.valid}/${pages.filter((page) => page.jsonLd.some((node) => hasType(node, "BreadcrumbList"))).length} valid`);
 console.log(`SportsEvent:`);
-console.log(`Total: ${counts.SportsEvent.valid + counts.SportsEvent.invalid}`);
-console.log(`Valid: ${counts.SportsEvent.valid}`);
-console.log(`Invalid: ${counts.SportsEvent.invalid}`);
-console.log(`SportsEvent with factual location: ${counts.SportsEvent.factualLocation}`);
-console.log(`SportsEvent without location: ${counts.SportsEvent.skipped}`);
-console.log(`SportsEvent with location correctly omitted: ${counts.SportsEvent.skipped}`);
+console.log(`TOTAL_MATCH_PAGES: ${totalMatchPages}`);
+console.log(`SPORTSEVENT_EMITTED: ${counts.SportsEvent.valid + counts.SportsEvent.invalid}`);
+console.log(`SPORTSEVENT_SKIPPED_NO_LOCATION: ${articlesWithoutSportsEvent}`);
+console.log(`SPORTSEVENT_WITH_LOCATION: ${counts.SportsEvent.factualLocation}`);
+console.log(`SPORTSEVENT_WITHOUT_LOCATION: ${counts.SportsEvent.skipped}`);
+console.log(`SPORTSEVENT_INVALID_LOCATION: ${invalidLocations}`);
+console.log(`SPORTSEVENT_EMPTY_ADDRESS: ${emptyAddresses}`);
+console.log(`BROKEN_SPORTSEVENT_REFERENCES: ${brokenSportsEventReferences}`);
 
 console.log("");
 console.log(`Critical errors: ${errors.length}`);
