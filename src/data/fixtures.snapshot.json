@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-26T05:44:40.728Z",
+  "generatedAt": "2026-08-26T16:03:45.397Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -10362,18 +10362,18 @@
         "games": [
           {
             "round": 3,
-            "date": "2026-08-22",
+            "date": "2026-09-08",
             "time": "TBD",
             "homeTeam": "NEC Nijmegen",
             "awayTeam": "Excelsior",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401875636",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-08T18:00Z"
+            "kickoffUtc": "2026-09-08T16:45Z"
           },
           {
             "round": 3,
@@ -10842,18 +10842,18 @@
           },
           {
             "round": 6,
-            "date": "2026-09-12",
-            "time": "21:00",
+            "date": "2026-09-13",
+            "time": "TBD",
             "homeTeam": "Heerenveen",
             "awayTeam": "Telstar",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401875607",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-12T19:00Z"
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2026-09-13T12:30Z"
           },
           {
             "round": 6,
@@ -10872,18 +10872,18 @@
           },
           {
             "round": 6,
-            "date": "2026-09-13",
-            "time": "14:30",
+            "date": "2026-09-12",
+            "time": "TBD",
             "homeTeam": "SC Cambuur",
             "awayTeam": "NEC Nijmegen",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401875604",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-13T12:30Z"
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2026-09-12T19:00Z"
           },
           {
             "round": 6,
@@ -11232,18 +11232,18 @@
           },
           {
             "round": 9,
-            "date": "2026-10-17",
-            "time": "18:45",
+            "date": "2026-10-18",
+            "time": "TBD",
             "homeTeam": "NEC Nijmegen",
             "awayTeam": "Fortuna Sittard",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401875581",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T16:45Z"
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2026-10-18T18:00Z"
           },
           {
             "round": 9,
@@ -12984,16 +12984,16 @@
     "scottish-premiership:st-mirren-vs-motherwell": "official:scottish-premiership:st-mirren-vs-motherwell:2026-08-30"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-08-26T05:44:40.728Z",
-    "la-liga": "2026-08-26T05:44:40.728Z",
-    "bundesliga": "2026-08-26T05:44:40.728Z",
-    "serie-a": "2026-08-26T05:44:40.728Z",
-    "liga-portugal": "2026-08-26T05:44:40.728Z",
-    "ligue-1": "2026-08-26T05:44:40.728Z",
-    "eredivisie": "2026-08-26T05:44:40.728Z",
-    "brasileirao-serie-a": "2026-08-26T05:44:40.728Z",
-    "copa-do-brasil": "2026-08-26T05:44:40.728Z",
-    "efl-cup": "2026-08-26T05:44:40.728Z",
+    "premier-league": "2026-08-26T16:03:45.397Z",
+    "la-liga": "2026-08-26T16:03:45.397Z",
+    "bundesliga": "2026-08-26T16:03:45.397Z",
+    "serie-a": "2026-08-26T16:03:45.397Z",
+    "liga-portugal": "2026-08-26T16:03:45.397Z",
+    "ligue-1": "2026-08-26T16:03:45.397Z",
+    "eredivisie": "2026-08-26T16:03:45.397Z",
+    "brasileirao-serie-a": "2026-08-26T16:03:45.397Z",
+    "copa-do-brasil": "2026-08-26T16:03:45.397Z",
+    "efl-cup": "2026-08-26T16:03:45.397Z",
     "super-lig": "2026-08-26T11:54:38.899Z",
     "scottish-premiership": "2026-08-26T11:54:38.899Z"
   }
