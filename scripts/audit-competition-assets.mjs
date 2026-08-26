@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { leagues } from "../src/data/leagues.ts";
+import { teamBadgeAssets } from "../src/data/teams.ts";
 
 const root = process.cwd();
 const graphical = leagues.filter((league) => league.asset.kind === "image");
@@ -11,6 +12,13 @@ const assetPaths = new Set();
 const artworkIds = new Set();
 const errors = [];
 const pngSignature = "89504e470d0a1a0a";
+const addedLeagueTeams = [
+  "Gençlerbirliği", "Galatasaray", "Samsunspor", "Trabzonspor", "Alanyaspor", "Gaziantep FK",
+  "Kasımpaşa", "Fenerbahçe", "Amedspor", "İstanbul Başakşehir", "Kocaelispor", "Beşiktaş",
+  "Çaykur Rizespor", "Göztepe", "Çorum FK", "Eyüpspor", "Konyaspor", "Erzurumspor",
+  "Celtic", "Dundee", "St Mirren", "Motherwell", "Hearts", "St Johnstone", "Hibernian",
+  "Aberdeen", "Rangers", "Falkirk", "Dundee United", "Kilmarnock",
+];
 
 for (const league of leagues) {
   if (!league.slug || !league.name || !league.short) {
@@ -43,6 +51,26 @@ for (const league of leagues) {
   if (readFileSync(file).subarray(0, 8).toString("hex") !== pngSignature) {
     errors.push(`${league.slug}: local asset is not a valid PNG`);
   }
+  if (league.slug === "scottish-premiership" && !league.asset.needsDarkBackground) {
+    errors.push("scottish-premiership: white badge requires a dark contrast surface");
+  }
+}
+
+for (const team of addedLeagueTeams) {
+  const asset = teamBadgeAssets[team];
+  if (!asset) {
+    errors.push(`${team}: local team badge is not configured`);
+    continue;
+  }
+  const file = join(root, "public", asset.src.replace(/^\//, ""));
+  if (!existsSync(file)) {
+    errors.push(`${team}: local team badge is missing`);
+    continue;
+  }
+  if (statSync(file).size < 1_000) errors.push(`${team}: local team badge is unexpectedly small`);
+  if (readFileSync(file).subarray(0, 8).toString("hex") !== pngSignature) {
+    errors.push(`${team}: local team badge is not a valid PNG`);
+  }
 }
 
 const surfaces = [
@@ -66,6 +94,7 @@ console.log("Competition Asset Health");
 console.log(`Registered competitions: ${leagues.length}`);
 console.log(`Valid graphical assets: ${graphical.length}`);
 console.log(`Text fallbacks: ${fallbacks.length}`);
+console.log(`Added-league team badges: ${addedLeagueTeams.length}`);
 console.log(`Broken league images: ${errors.filter((error) => /missing|valid PNG|small/.test(error)).length}`);
 console.log(`Duplicate references: ${errors.filter((error) => error.includes("duplicate")).length}`);
 console.log(`Stale-first-render asset paths: ${errors.filter((error) => error.includes("runtime asset")).length}`);

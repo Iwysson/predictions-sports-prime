@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getTeamVisual } from "@/data/teams";
+import { getTeamBadgeAsset, getTeamVisual } from "@/data/teams";
 import { fetchTeamBadge } from "@/lib/artwork";
 
 export function TeamBadge({
@@ -12,10 +12,16 @@ export function TeamBadge({
   size?: "sm" | "md";
 }) {
   const visual = getTeamVisual(team);
+  const localBadge = getTeamBadgeAsset(team);
   const [badge, setBadge] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
+    if (localBadge) {
+      setLoaded(true);
+      return;
+    }
+
     let cancelled = false;
 
     fetchTeamBadge(team)
@@ -33,17 +39,19 @@ export function TeamBadge({
     return () => {
       cancelled = true;
     };
-  }, [team]);
+  }, [localBadge, team]);
 
-  if (badge) {
+  if (localBadge || badge) {
     return (
       <span className={`team-logo team-logo--${size}`}>
         <img
-          src={badge}
+          src={localBadge?.src ?? badge!}
           alt={`${team} badge`}
           loading="lazy"
-          referrerPolicy="no-referrer"
-          onError={() => setBadge(null)}
+          {...(!localBadge ? {
+            referrerPolicy: "no-referrer" as const,
+            onError: () => setBadge(null),
+          } : {})}
         />
       </span>
     );

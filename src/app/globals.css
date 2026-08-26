@@ -2326,6 +2326,12 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
   height: 24px;
 }
 
+.league-logo--dark-surface {
+  padding: 3px;
+  border-radius: 7px;
+  background: #17132f;
+}
+
 .mini-league-badge--md {
   width: 34px;
   height: 34px;
