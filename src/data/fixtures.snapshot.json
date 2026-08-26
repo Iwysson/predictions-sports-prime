@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-26T01:53:37.142Z",
+  "generatedAt": "2026-08-26T03:15:09.192Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -10368,12 +10368,12 @@
             "awayTeam": "Excelsior",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "postponed",
             "dataSource": "espn",
             "id": "401875636",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-08T18:00Z"
+            "kickoffUtc": "2026-08-22T18:00Z"
           },
           {
             "round": 3,
@@ -12220,9 +12220,9 @@
             "time": "21:00",
             "homeTeam": "Cruzeiro",
             "awayTeam": "Atlético-MG",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
+            "homeScore": 1,
+            "awayScore": 1,
+            "status": "completed",
             "dataSource": "espn",
             "id": "401909066",
             "sourceAgreement": true,
@@ -12630,15 +12630,15 @@
     "efl-cup:fulham-vs-afc-wimbledon": "401907948"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-08-26T01:53:37.142Z",
-    "la-liga": "2026-08-26T01:53:37.142Z",
-    "bundesliga": "2026-08-26T01:53:37.142Z",
-    "serie-a": "2026-08-26T01:53:37.142Z",
-    "liga-portugal": "2026-08-26T01:53:37.142Z",
-    "ligue-1": "2026-08-26T01:53:37.142Z",
-    "eredivisie": "2026-08-26T01:53:37.142Z",
-    "brasileirao-serie-a": "2026-08-26T01:53:37.142Z",
-    "copa-do-brasil": "2026-08-26T01:53:37.142Z",
-    "efl-cup": "2026-08-26T01:53:37.142Z"
+    "premier-league": "2026-08-26T03:15:09.192Z",
+    "la-liga": "2026-08-26T03:15:09.192Z",
+    "bundesliga": "2026-08-26T03:15:09.192Z",
+    "serie-a": "2026-08-26T03:15:09.192Z",
+    "liga-portugal": "2026-08-26T03:15:09.192Z",
+    "ligue-1": "2026-08-26T03:15:09.192Z",
+    "eredivisie": "2026-08-26T03:15:09.192Z",
+    "brasileirao-serie-a": "2026-08-26T03:15:09.192Z",
+    "copa-do-brasil": "2026-08-26T03:15:09.192Z",
+    "efl-cup": "2026-08-26T03:15:09.192Z"
   }
 }
