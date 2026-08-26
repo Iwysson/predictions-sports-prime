@@ -27,6 +27,7 @@ import {
   leagueSeoTitle,
 } from "@/lib/league-seo";
 import { localizedAlternates } from "@/lib/international-seo";
+import { indexableLocalizedHubLocaleSlugs } from "@/lib/seo-locales";
 
 export const dynamicParams = false;
 
@@ -64,7 +65,7 @@ export async function generateMetadata({
     keywords: leagueSeoKeywords(league),
 
     alternates: league.slug === "premier-league"
-      ? localizedAlternates("en", leagueCanonicalPath(league))
+      ? localizedAlternates("en", leagueCanonicalPath(league), ["en", ...indexableLocalizedHubLocaleSlugs])
       : { canonical },
 
     robots: {

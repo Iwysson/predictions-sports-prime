@@ -23,10 +23,10 @@ import { matches } from "@/data/matches";
 import {
   articleJsonLd,
   buildMatchMetadata,
+  matchHeading,
   matchBreadcrumbJsonLd,
   matchIntroduction,
 } from "@/lib/seo";
-import { buildMatchSearchIntentCopy } from "@/lib/match-search-intent";
 import { selectRelatedPredictions } from "@/lib/related-predictions";
 import { hydratePrediction } from "@/lib/live-predictions";
 import { toMatchPreview } from "@/lib/editorial";
@@ -120,8 +120,6 @@ export default async function MatchPage({
   }
 
   const match = await resolveMatchFixture(storedMatch);
-  const seoCopy = buildMatchSearchIntentCopy(match);
-
   const league = leagues.find(
     (item) => item.slug === match.league
   );
@@ -217,7 +215,7 @@ export default async function MatchPage({
                   <MatchAnalysisLabel />
                 </span>
 
-                <h1>{seoCopy.h1}</h1>
+                <h1>{matchHeading(match)}</h1>
 
                 {match.publishedAt ? (
                   <p className="editorial-dates">

@@ -6,7 +6,7 @@ import { matches } from "@/data/matches";
 import { hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { localizedAlternates } from "@/lib/international-seo";
 import { absoluteUrl } from "@/lib/site-config";
-import { isSeoLocale, localePath, seoLocaleSlugs, seoLocales } from "@/lib/seo-locales";
+import { indexableLocalizedHubLocaleSlugs, isIndexableLocalizedHubLocale, isSeoLocale, localePath, seoLocaleSlugs, seoLocales } from "@/lib/seo-locales";
 
 const localizedLeagueSlugs = ["premier-league"] as const;
 export const dynamicParams = false;
@@ -18,7 +18,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   if (!isSeoLocale(locale) || !league || !localizedLeagueSlugs.includes(slug as typeof localizedLeagueSlugs[number])) return { robots: { index: false, follow: false } };
   const copy = seoLocales[locale];
   const title = copy.leagueTitle(league.name); const description = copy.leagueDescription(league.name);
-  return { title: { absolute: title }, description, alternates: localizedAlternates(locale, `/league/${slug}/`), openGraph: { type: "website", title, description, url: absoluteUrl(localePath(locale, `/league/${slug}/`)), siteName: "Predictions Sports Prime", locale: copy.htmlLang } };
+  const url = absoluteUrl(localePath(locale, `/league/${slug}/`));
+  const indexable = isIndexableLocalizedHubLocale(locale);
+  return {
+    title: { absolute: title },
+    description,
+    alternates: indexable
+      ? localizedAlternates(locale, `/league/${slug}/`, ["en", ...indexableLocalizedHubLocaleSlugs])
+      : { canonical: url },
+    robots: { index: indexable, follow: true },
+    openGraph: { type: "website", title, description, url, siteName: "Predictions Sports Prime", locale: copy.htmlLang },
+  };
 }
 
 export default async function LocalizedLeague({ params }: { params: Promise<{ locale: string; slug: string }> }) {

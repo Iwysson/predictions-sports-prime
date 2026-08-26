@@ -65,6 +65,13 @@ export function matchIntroduction(match: Match) {
   return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}${kickoff}. This preview explains the reasoning behind our ${mainPick} selection${price} and the key risks considered.`;
 }
 
+export function matchHeading(match: Match) {
+  if (shouldApplySearchIntentSEO(match)) {
+    return buildMatchSearchIntentCopy(match).h1;
+  }
+  return `${match.homeTeam} vs ${match.awayTeam}: Prediction and Match Analysis`;
+}
+
 export function matchCanonicalPath(match: Match) {
   return `/match/${match.slug}/`;
 }
@@ -80,14 +87,16 @@ export function buildMatchMetadata(match: Match): Metadata {
       absolute: title,
     },
     description,
-    keywords: [
-      intent.primaryQuery,
-      ...intent.secondaryQueries,
-      ...intent.marketQueries,
-      ...intent.statisticalQueries,
-      ...intent.temporalQueries,
-      ...intent.competitionQueries,
-    ].slice(0, 24),
+    ...(shouldApplySearchIntentSEO(match) ? {
+      keywords: [
+        intent.primaryQuery,
+        ...intent.secondaryQueries,
+        ...intent.marketQueries,
+        ...intent.statisticalQueries,
+        ...intent.temporalQueries,
+        ...intent.competitionQueries,
+      ].slice(0, 24),
+    } : {}),
 
     alternates: seoLocaleSlugs.every((locale) => hasCompleteLocalizedEditorial(match.slug, locale))
       ? localizedAlternates("en", matchCanonicalPath(match))

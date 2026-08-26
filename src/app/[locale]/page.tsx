@@ -6,7 +6,7 @@ import { leaguesBySlug } from "@/data/leagues";
 import { getLocalizedEditorial } from "@/data/localized-editorial";
 import { localizedAlternates } from "@/lib/international-seo";
 import { absoluteUrl } from "@/lib/site-config";
-import { isSeoLocale, localePath, seoLocaleSlugs, seoLocales } from "@/lib/seo-locales";
+import { indexableLocalizedHubLocaleSlugs, isIndexableLocalizedHubLocale, isSeoLocale, localePath, seoLocaleSlugs, seoLocales } from "@/lib/seo-locales";
 
 const pilotSlug = "aston-villa-vs-arsenal";
 
@@ -18,9 +18,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   if (!isSeoLocale(locale)) return { robots: { index: false, follow: false } };
   const copy = seoLocales[locale];
   const url = absoluteUrl(localePath(locale));
+  const indexable = isIndexableLocalizedHubLocale(locale);
   return {
     title: { absolute: copy.homeTitle }, description: copy.homeDescription,
-    alternates: localizedAlternates(locale, "/"),
+    alternates: indexable
+      ? localizedAlternates(locale, "/", ["en", ...indexableLocalizedHubLocaleSlugs])
+      : { canonical: url },
+    robots: { index: indexable, follow: true },
     openGraph: { type: "website", title: copy.homeTitle, description: copy.homeDescription, url, siteName: "Predictions Sports Prime", locale: copy.htmlLang, images: [absoluteUrl("/og-default.png")] },
     twitter: { card: "summary_large_image", title: copy.homeTitle, description: copy.homeDescription, images: [absoluteUrl("/og-default.png")] },
   };

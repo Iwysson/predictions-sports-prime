@@ -33,6 +33,14 @@ export type MatchSearchIntent = {
   temporalState: MatchTemporalState | null;
 };
 
+const peopleFirstLegacyMatchSlugs = new Set([
+  "newcastle-united-vs-west-bromwich-albion",
+  "palmeiras-vs-santos",
+  "real-madrid-vs-real-sociedad",
+  "tottenham-hotspur-vs-charlton-athletic",
+  "vasco-da-gama-vs-vitoria",
+]);
+
 type MatchIntentFacts = {
   leagueName: string;
   mainPick: string;
@@ -102,7 +110,9 @@ export function resolveMatchTemporalState(
 }
 
 export function shouldApplySearchIntentSEO(match: Match) {
-  return match.status === "published" && readMatchFacts(match).hasAnalysis;
+  return match.status === "published" &&
+    readMatchFacts(match).hasAnalysis &&
+    !peopleFirstLegacyMatchSlugs.has(match.slug);
 }
 
 export function getMatchIntentCapabilities(match: Match) {
