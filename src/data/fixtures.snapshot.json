@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-25T22:57:27.882Z",
+  "generatedAt": "2026-08-26T01:53:37.142Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -10368,12 +10368,12 @@
             "awayTeam": "Excelsior",
             "homeScore": null,
             "awayScore": null,
-            "status": "postponed",
+            "status": "scheduled",
             "dataSource": "espn",
             "id": "401875636",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-08-22T18:00Z"
+            "kickoffUtc": "2026-09-08T18:00Z"
           },
           {
             "round": 3,
@@ -12630,15 +12630,15 @@
     "efl-cup:fulham-vs-afc-wimbledon": "401907948"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-08-25T22:57:27.882Z",
-    "la-liga": "2026-08-25T22:57:27.882Z",
-    "bundesliga": "2026-08-25T22:57:27.882Z",
-    "serie-a": "2026-08-25T22:57:27.882Z",
-    "liga-portugal": "2026-08-25T22:57:27.882Z",
-    "ligue-1": "2026-08-25T22:57:27.882Z",
-    "eredivisie": "2026-08-25T22:57:27.882Z",
-    "brasileirao-serie-a": "2026-08-25T22:57:27.882Z",
-    "copa-do-brasil": "2026-08-25T22:57:27.882Z",
-    "efl-cup": "2026-08-25T22:57:27.882Z"
+    "premier-league": "2026-08-26T01:53:37.142Z",
+    "la-liga": "2026-08-26T01:53:37.142Z",
+    "bundesliga": "2026-08-26T01:53:37.142Z",
+    "serie-a": "2026-08-26T01:53:37.142Z",
+    "liga-portugal": "2026-08-26T01:53:37.142Z",
+    "ligue-1": "2026-08-26T01:53:37.142Z",
+    "eredivisie": "2026-08-26T01:53:37.142Z",
+    "brasileirao-serie-a": "2026-08-26T01:53:37.142Z",
+    "copa-do-brasil": "2026-08-26T01:53:37.142Z",
+    "efl-cup": "2026-08-26T01:53:37.142Z"
   }
 }
