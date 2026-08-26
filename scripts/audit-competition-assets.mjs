@@ -49,8 +49,8 @@ const surfaces = [
   "src/components/HomePredictionFeed.tsx",
   "src/components/LeagueCard.tsx",
   "src/components/MatchCard.tsx",
-  "src/app/league/[slug]/page.tsx",
-  "src/app/match/[slug]/page.tsx",
+  "src/app/(en)/league/[slug]/page.tsx",
+  "src/app/(en)/match/[slug]/page.tsx",
 ];
 for (const surface of surfaces) {
   const source = readFileSync(join(root, surface), "utf8");

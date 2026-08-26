@@ -9,6 +9,7 @@ import { hydratePredictions } from "@/lib/live-predictions";
 import Link from "next/link";
 import { homePageJsonLd } from "@/lib/seo";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
+import { localizedAlternates } from "@/lib/international-seo";
 
 const homeTitle = "Football Predictions Today & Betting Tips | Predictions Sports Prime";
 const homeDescription = "Football predictions, betting tips and match analysis for today's, tomorrow's and upcoming fixtures across the Premier League, La Liga, Serie A and more.";
@@ -16,7 +17,7 @@ const homeDescription = "Football predictions, betting tips and match analysis f
 export const metadata: Metadata = {
   title: { absolute: homeTitle },
   description: homeDescription,
-  alternates: { canonical: absoluteUrl("/") },
+  alternates: localizedAlternates("en", "/"),
   openGraph: {
     type: "website",
     title: homeTitle,

@@ -89,16 +89,32 @@ const lifecycleBase = analyzedMatches[0];
 if (!lifecycleBase) {
   errors.push("No analyzed match is available for lifecycle regression tests");
 } else {
-  const fixedToday = "2026-08-24";
+  const fixedToday = localTodayISO();
+  const shiftDate = (days) => {
+    const value = new Date(`${fixedToday}T12:00:00-03:00`);
+    value.setUTCDate(value.getUTCDate() + days);
+    return value.toISOString().slice(0, 10);
+  };
   const cases = [
-    { state: "upcoming", date: "2026-08-31", fixtureStatus: "scheduled" },
-    { state: "upcoming", date: "2026-08-27", fixtureStatus: "scheduled" },
-    { state: "tomorrow", date: "2026-08-25", fixtureStatus: "scheduled" },
-    { state: "today", date: "2026-08-24", fixtureStatus: "scheduled" },
-    { state: "historical", date: "2026-08-23", fixtureStatus: "completed" },
+    { state: "upcoming", date: shiftDate(7), fixtureStatus: "scheduled" },
+    { state: "upcoming", date: shiftDate(3), fixtureStatus: "scheduled" },
+    { state: "tomorrow", date: shiftDate(1), fixtureStatus: "scheduled" },
+    { state: "today", date: fixedToday, fixtureStatus: "scheduled" },
+    { state: "historical", date: shiftDate(-1), fixtureStatus: "completed" },
   ];
   const generated = cases.map((entry) => {
-    const match = { ...lifecycleBase, date: entry.date, fixtureStatus: entry.fixtureStatus };
+    // Isolate the lifecycle date under test from any hydrated fixture timestamp
+    // carried by the sampled production match.
+    const match = {
+      ...lifecycleBase,
+      fixtureId: undefined,
+      kickoffUtc: undefined,
+      timeConfirmed: false,
+      date: entry.date,
+      fixtureStatus: entry.fixtureStatus,
+      homeScore: entry.fixtureStatus === "completed" ? 1 : null,
+      awayScore: entry.fixtureStatus === "completed" ? 0 : null,
+    };
     return {
       ...entry,
       match,

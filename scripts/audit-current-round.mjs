@@ -16,9 +16,10 @@ import { validateLeagueRounds } from "../src/lib/data-validation.ts";
 import { classifyFixture } from "../src/lib/fixture-state.ts";
 import { resolveHomeTemporalBucket } from "../src/lib/match-feed.ts";
 
-const now = new Date("2026-08-24T12:00:00Z");
+const regressionNow = new Date("2026-08-24T12:00:00Z");
+const productionNow = new Date();
 const snapshot = getFixtureSnapshotMetadata();
-const snapshotAgeHours = Math.max(0, (now.valueOf() - Date.parse(snapshot.generatedAt)) / 3_600_000);
+const snapshotAgeHours = Math.max(0, (productionNow.valueOf() - Date.parse(snapshot.generatedAt)) / 3_600_000);
 
 function game(round, index, status, kickoffUtc) {
   return {
@@ -53,14 +54,14 @@ const lifecycleBoundaries = [
   { expected: "stale-schedule", fixture: { status: "scheduled", kickoffUtc: "2026-08-24T07:59:59Z" } },
 ];
 for (const boundary of lifecycleBoundaries) {
-  assert.equal(getMatchLifecycleStatus(boundary.fixture, now), boundary.expected);
+  assert.equal(getMatchLifecycleStatus(boundary.fixture, regressionNow), boundary.expected);
 }
 
 const completedPromotion = resolveCompetitionRounds([
   regressionRound(1, ["completed", "completed"], "2026-08-20"),
   regressionRound(2, ["scheduled", "scheduled"], "2026-08-25"),
   regressionRound(3, ["scheduled", "scheduled"], "2026-09-01"),
-], now);
+], regressionNow);
 assert.equal(completedPromotion.currentRound?.round, 2);
 assert.equal(completedPromotion.nextRound?.round, 3);
 
@@ -68,7 +69,7 @@ const secondPromotion = resolveCompetitionRounds([
   regressionRound(2, ["completed", "completed"], "2026-08-20"),
   regressionRound(3, ["scheduled", "scheduled"], "2026-08-25"),
   regressionRound(4, ["scheduled", "scheduled"], "2026-09-01"),
-], now);
+], regressionNow);
 assert.equal(secondPromotion.currentRound?.round, 3);
 assert.equal(secondPromotion.nextRound?.round, 4);
 
@@ -78,7 +79,7 @@ const partialRound = resolveCompetitionRounds([
     "completed", "completed", "completed", "scheduled", "scheduled",
   ], "2026-08-25"),
   regressionRound(3, ["scheduled", "scheduled"], "2026-09-01"),
-], now);
+], regressionNow);
 assert.equal(partialRound.currentRound?.round, 2, "A partial round must not promote");
 assert.equal(partialRound.currentFixtures.length, 2, "Completed fixtures must leave the active surface");
 assert.equal(partialRound.nextRound?.round, 3);
@@ -86,24 +87,24 @@ assert.equal(partialRound.nextRound?.round, 3);
 const terminalNonPlayable = resolveCompetitionRounds([
   regressionRound(1, ["completed", "postponed"], "2026-08-20"),
   regressionRound(2, ["scheduled", "scheduled"], "2026-08-25"),
-], now);
+], regressionNow);
 assert.equal(terminalNonPlayable.currentRound?.round, 2, "Central non-playable policy must be deterministic");
 
 const postponedPreviousRound = resolveCompetitionRounds([
   { round: 3, games: [game(3, 1, "completed", "2026-08-20T12:00:00Z"), game(3, 2, "postponed", "2026-08-21T12:00:00Z")] },
   regressionRound(4, ["scheduled", "scheduled"], "2026-08-25"),
-], now);
+], regressionNow);
 assert.equal(postponedPreviousRound.currentRound?.round, 4, "A postponed previous round must not block the next active round");
 
 const rescheduledPreviousRound = resolveCompetitionRounds([
   { round: 3, games: [game(3, 1, "rescheduled", "2026-09-10T12:00:00Z")] },
   regressionRound(4, ["scheduled", "scheduled"], "2026-08-25"),
   regressionRound(5, ["scheduled", "scheduled"], "2026-09-01"),
-], now);
+], regressionNow);
 assert.equal(rescheduledPreviousRound.currentRound?.round, 4, "A later rescheduled fixture must be tracked without blocking the chronological round");
 assert.equal(rescheduledPreviousRound.nextRound?.round, 5);
 
-assert.equal(classifyFixture({ status: "canceled", kickoffUtc: "2026-08-25T12:00:00Z" }, now), "cancelled");
+assert.equal(classifyFixture({ status: "canceled", kickoffUtc: "2026-08-25T12:00:00Z" }, regressionNow), "cancelled");
 const publishedFixture = (fixtureStatus, kickoffUtc) => ({
   id: "published-regression", slug: "published-regression", league: "premier-league",
   round: "Matchday 1", homeTeam: "Home", awayTeam: "Away", date: kickoffUtc.slice(0, 10),
@@ -111,9 +112,9 @@ const publishedFixture = (fixtureStatus, kickoffUtc) => ({
   fixtureStatus, homeScore: fixtureStatus === "completed" ? 1 : null,
   awayScore: fixtureStatus === "completed" ? 0 : null,
 });
-assert.equal(resolveHomeTemporalBucket(publishedFixture("scheduled", "2026-08-25T12:00:00Z"), "2026-08-25", now), "today", "Published future fixture must remain active");
-assert.equal(resolveHomeTemporalBucket(publishedFixture("completed", "2026-08-23T12:00:00Z"), "2026-08-24", now), "historical", "Completed prediction must enter history");
-assert.equal(resolveHomeTemporalBucket(publishedFixture("postponed", "2026-08-25T12:00:00Z"), "2026-08-25", now), "none", "Postponed prediction must leave active feeds");
+assert.equal(resolveHomeTemporalBucket(publishedFixture("scheduled", "2026-08-25T12:00:00Z"), "2026-08-25", regressionNow), "today", "Published future fixture must remain active");
+assert.equal(resolveHomeTemporalBucket(publishedFixture("completed", "2026-08-23T12:00:00Z"), "2026-08-24", regressionNow), "historical", "Completed prediction must enter history");
+assert.equal(resolveHomeTemporalBucket(publishedFixture("postponed", "2026-08-25T12:00:00Z"), "2026-08-25", regressionNow), "none", "Postponed prediction must leave active feeds");
 console.log("Round promotion regressions: PASS");
 
 let currentMissingTotal = 0;
@@ -158,7 +159,7 @@ for (const league of leagues) {
     league: league.slug,
     rounds,
     publishedMatches,
-    now,
+    now: productionNow,
   });
 
   let validationState = "SOURCE_NOT_CONFIGURED";

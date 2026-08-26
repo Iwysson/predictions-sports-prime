@@ -5,6 +5,9 @@ import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { editorialAuthorPersonJsonLd } from "@/lib/editorial-identity";
 import { buildMatchSearchIntentCopy, shouldApplySearchIntentSEO } from "@/lib/match-search-intent";
 import { buildSportsEventJsonLd } from "@/lib/sports-event-schema";
+import { hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
+import { localizedAlternates } from "@/lib/international-seo";
+import { seoLocaleSlugs } from "@/lib/seo-locales";
 
 export function matchSeoTitle(match: Match) {
   if (shouldApplySearchIntentSEO(match)) {
@@ -77,9 +80,9 @@ export function buildMatchMetadata(match: Match): Metadata {
     },
     description,
 
-    alternates: {
-      canonical,
-    },
+    alternates: seoLocaleSlugs.every((locale) => hasCompleteLocalizedEditorial(match.slug, locale))
+      ? localizedAlternates("en", matchCanonicalPath(match))
+      : { canonical },
 
     robots: {
       index: true,

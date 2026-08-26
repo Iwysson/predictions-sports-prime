@@ -29,7 +29,7 @@ const files = [
   "src/components/LiveMatchMeta.tsx",
   "src/components/LiveLeagueRounds.tsx",
   "src/components/LiveLeagueStandings.tsx",
-  "src/app/league/[slug]/page.tsx",
+  "src/app/(en)/league/[slug]/page.tsx",
 ];
 
 const roundComponentSource = fs.readFileSync(path.join(process.cwd(), "src/components/LiveLeagueRounds.tsx"), "utf8");
