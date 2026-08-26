@@ -89,6 +89,8 @@ export const leagues: LeagueConfig[] = [
   defineLeague({ slug: "brasileirao-serie-a", name: "Brasileirão Série A", country: "Brazil", short: "BRA", seasonLabel: "2026", featured: false, showOnHome: true, sourceUrl: "/data/brasileirao-2026.txt", expectedClubs: 20, expectedGamesPerRound: 10, artworkId: 4351, liveDataId: "bra.1", timezone: "America/Sao_Paulo" }),
   defineLeague({ slug: "copa-do-brasil", name: "Copa do Brasil", country: "Brazil", short: "CDB", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 8, expectedGamesPerRound: 4, artworkId: 4725, timezone: "America/Sao_Paulo", liveDataId: "bra.copa_do_brazil" }),
   defineLeague({ slug: "efl-cup", name: "EFL Cup", country: "England", short: "EFL", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 24, expectedGamesPerRound: 12, artworkId: 4570, timezone: "Europe/London", liveDataId: "eng.league_cup" }),
+  defineLeague({ slug: "super-lig", name: "Süper Lig", country: "Turkey", short: "TSL", featured: false, showOnHome: true, manualOnly: true, expectedClubs: 18, expectedGamesPerRound: 9, timezone: "Europe/Istanbul", liveDataId: "tur.1" }),
+  defineLeague({ slug: "scottish-premiership", name: "Scottish Premiership", country: "Scotland", short: "SCO", featured: false, showOnHome: true, manualOnly: true, expectedClubs: 12, expectedGamesPerRound: 6, timezone: "Europe/London", liveDataId: "sco.1" }),
 ];
 
 export const leaguesBySlug = Object.fromEntries(
@@ -110,6 +112,8 @@ export const primaryPredictionLeagueSlugs = [
   "liga-portugal",
   "eredivisie",
   "brasileirao-serie-a",
+  "super-lig",
+  "scottish-premiership",
 ] as const satisfies readonly LeagueSlug[];
 
 export const primaryPredictionLeagues = primaryPredictionLeagueSlugs.map(

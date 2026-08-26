@@ -197,6 +197,18 @@ const teamAliases: Record<string, readonly string[]> = {
   "Paris Saint-Germain": ["PSG"],
   "Internazionale Milano": ["Inter Milan", "Inter"],
   "Inter": ["Inter Milan"],
+  "İstanbul Başakşehir": ["Istanbul Basaksehir", "Basaksehir"],
+  "Kasımpaşa": ["Kasimpasa"],
+  "Beşiktaş": ["Besiktas"],
+  "Çorum FK": ["Corum FK", "Arca Corum"],
+  "Gençlerbirliği": ["Genclerbirligi"],
+  "Göztepe": ["Goztepe"],
+  "Fenerbahçe": ["Fenerbahce"],
+  "Çaykur Rizespor": ["Rizespor"],
+  "Eyüpspor": ["Eyupspor"],
+  "Hearts": ["Heart of Midlothian"],
+  "St Johnstone": ["St. Johnstone"],
+  "St Mirren": ["St. Mirren"],
 };
 
 export function getTeamSearchAliases(team: string) {

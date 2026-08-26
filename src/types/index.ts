@@ -11,7 +11,9 @@ export type LeagueSlug =
   | "eredivisie"
   | "brasileirao-serie-a"
   | "copa-do-brasil"
-  | "efl-cup";
+  | "efl-cup"
+  | "super-lig"
+  | "scottish-premiership";
 
 export type PredictionItem = {
   label: string;

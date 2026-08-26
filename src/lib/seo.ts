@@ -73,12 +73,21 @@ export function buildMatchMetadata(match: Match): Metadata {
   const title = matchSeoTitle(match);
   const description = matchSeoDescription(match);
   const canonical = absoluteUrl(matchCanonicalPath(match));
+  const intent = buildMatchSearchIntentCopy(match);
 
   return {
     title: {
       absolute: title,
     },
     description,
+    keywords: [
+      intent.primaryQuery,
+      ...intent.secondaryQueries,
+      ...intent.marketQueries,
+      ...intent.statisticalQueries,
+      ...intent.temporalQueries,
+      ...intent.competitionQueries,
+    ].slice(0, 24),
 
     alternates: seoLocaleSlugs.every((locale) => hasCompleteLocalizedEditorial(match.slug, locale))
       ? localizedAlternates("en", matchCanonicalPath(match))

@@ -3,6 +3,29 @@ import type { Match } from "@/types";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { matchCanonicalPath } from "@/lib/seo";
 
+const leagueSearchAliases: Partial<Record<LeagueConfig["slug"], readonly string[]>> = {
+  "premier-league": ["English Premier League", "EPL"],
+  "la-liga": ["LaLiga", "Primera División"],
+  bundesliga: ["German Bundesliga"],
+  "serie-a": ["Serie A Italy", "Italian Serie A"],
+  "liga-portugal": ["Primeira Liga", "Liga Portugal Betclic"],
+  "ligue-1": ["French Ligue 1"],
+  eredivisie: ["Dutch Eredivisie", "VriendenLoterij Eredivisie"],
+  "brasileirao-serie-a": ["Brasileirão", "Campeonato Brasileiro Série A"],
+  "copa-do-brasil": ["Brazil Cup", "Copa Betano do Brasil"],
+  "efl-cup": ["Carabao Cup", "League Cup"],
+  "super-lig": ["Turkish Super Lig", "Trendyol Süper Lig", "Türkiye Süper Lig"],
+  "scottish-premiership": ["Scotland Premiership", "SPFL Premiership", "William Hill Premiership"],
+};
+
+export function leagueSeoKeywords(league: LeagueConfig) {
+  const names = [league.name, ...(leagueSearchAliases[league.slug] ?? [])];
+  return [...new Set(names.flatMap((name) => [
+    `${name} predictions`, `${name} betting tips`, `${name} odds`,
+    `${name} match analysis`, `${name} fixtures`, `${name} standings`,
+  ]))];
+}
+
 export function isLeagueIndexable(publishedMatchCount: number) {
   return publishedMatchCount > 0;
 }

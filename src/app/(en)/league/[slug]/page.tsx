@@ -23,6 +23,7 @@ import {
   leagueIntro,
   isLeagueIndexable,
   leagueSeoDescription,
+  leagueSeoKeywords,
   leagueSeoTitle,
 } from "@/lib/league-seo";
 import { localizedAlternates } from "@/lib/international-seo";
@@ -60,6 +61,7 @@ export async function generateMetadata({
       absolute: title,
     },
     description,
+    keywords: leagueSeoKeywords(league),
 
     alternates: league.slug === "premier-league"
       ? localizedAlternates("en", leagueCanonicalPath(league))

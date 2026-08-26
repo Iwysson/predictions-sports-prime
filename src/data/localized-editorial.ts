@@ -47,6 +47,33 @@ const astonVillaArsenal: Record<SeoLocaleSlug, LocalizedEditorial> = {
     mainPrediction: "Über 2,5 Tore",
     sourceDescription: "Direkte Saisondaten, die Wettbewerb, Spieltag, Datum, Heim- und Auswärtsteam dieser Analyse bestätigen.",
   },
+  it: {
+    analysis: [
+      "Aston Villa ospita l'Arsenal in Premier League. Questa anteprima riguarda la partita verificata e la selezione editoriale pubblicata: più di 2,5 gol.",
+      "La linea sul totale dei gol richiede almeno tre reti complessive e va valutata come un'unica posizione, non come la certezza di una particolare prestazione di una delle due squadre.",
+      "Il rischio principale è che la partita rimanga al di sotto della linea scelta. Il pronostico è un'opinione editoriale pre-partita, non una garanzia, e le quote registrate non determinano da sole la probabilità dell'esito.",
+    ],
+    mainPrediction: "Più di 2,5 gol",
+    sourceDescription: "Dati diretti della stagione che confermano competizione, giornata, data e squadre utilizzate nell'analisi.",
+  },
+  nl: {
+    analysis: [
+      "Aston Villa ontvangt Arsenal in de Premier League. Deze voorbeschouwing beperkt zich tot de bevestigde wedstrijd en de gepubliceerde redactionele keuze: meer dan 2,5 doelpunten.",
+      "De totaallijn vereist minimaal drie doelpunten in de hele wedstrijd en moet als één volledige positie worden beoordeeld, niet als zekerheid over de prestatie van een van beide teams.",
+      "Het belangrijkste risico is dat de wedstrijd onder de gekozen lijn blijft. De voorspelling is een redactionele mening vóór de aftrap, geen garantie, en de vastgelegde odds bepalen op zichzelf niet de kans op de uitkomst.",
+    ],
+    mainPrediction: "Meer dan 2,5 doelpunten",
+    sourceDescription: "Directe seizoensgegevens die competitie, speelronde, datum en beide teams in deze analyse bevestigen.",
+  },
+  tr: {
+    analysis: [
+      "Aston Villa, Premier League'de Arsenal'ı konuk ediyor. Bu ön inceleme doğrulanmış karşılaşma ve yayımlanan editoryal seçimle sınırlıdır: 2,5 gol üstü.",
+      "Toplam gol çizgisinin aşılması için maçta en az üç gol gerekir. Seçim, takımlardan birinin belirli bir performans göstereceği kesinliği olarak değil, tek bir bütün bahis pozisyonu olarak değerlendirilmelidir.",
+      "Temel risk maçın seçilen gol çizgisinin altında kalmasıdır. Tahmin maç öncesi editoryal bir görüştür, garanti değildir; kayıtlı oranlar da sonucun olasılığını tek başına belirlemez.",
+    ],
+    mainPrediction: "2,5 gol üstü",
+    sourceDescription: "Analizde kullanılan lig, hafta, tarih, ev sahibi ve deplasman takımını doğrulayan doğrudan sezon verileri.",
+  },
 };
 
 export const localizedEditorialBySlug: Record<string, Record<SeoLocaleSlug, LocalizedEditorial>> = {

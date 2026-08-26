@@ -7,6 +7,9 @@ const locales = [
   { slug: "es", lang: "es" },
   { slug: "fr", lang: "fr" },
   { slug: "de", lang: "de" },
+  { slug: "it", lang: "it" },
+  { slug: "nl", lang: "nl" },
+  { slug: "tr", lang: "tr" },
 ];
 const paths = ["/", "/league/premier-league/", "/match/aston-villa-vs-arsenal/"];
 const errors = [];
@@ -46,7 +49,7 @@ for (const { slug, lang } of locales) {
     if (canonical !== expectedCanonical) errors.push(`${route}: canonical mismatch`);
     if (h1Count !== 1) errors.push(`${route}: expected one H1, found ${h1Count}`);
     const hrefLangs = alternates(html);
-    for (const required of ["en", "pt-BR", "es", "fr", "de", "x-default"]) {
+    for (const required of ["en", "pt-BR", "es", "fr", "de", "it", "nl", "tr", "x-default"]) {
       if (!hrefLangs.some((entry) => entry.lang === required)) errors.push(`${route}: missing hreflang ${required}`);
     }
     if (/\/match\//.test(route)) {
@@ -61,7 +64,7 @@ for (const suffix of paths) {
   const route = suffix;
   const html = fs.readFileSync(htmlFile(route), "utf8");
   const hrefLangs = alternates(html);
-  for (const required of ["en", "pt-BR", "es", "fr", "de", "x-default"]) {
+  for (const required of ["en", "pt-BR", "es", "fr", "de", "it", "nl", "tr", "x-default"]) {
     if (!hrefLangs.some((entry) => entry.lang === required)) errors.push(`${route}: English page missing reciprocal hreflang ${required}`);
   }
 }
