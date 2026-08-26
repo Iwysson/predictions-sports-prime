@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-26T04:54:01.143Z",
+  "generatedAt": "2026-08-26T05:44:40.728Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -12220,9 +12220,9 @@
             "time": "21:00",
             "homeTeam": "Cruzeiro",
             "awayTeam": "Atlético-MG",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "in-progress",
+            "homeScore": 1,
+            "awayScore": 1,
+            "status": "completed",
             "dataSource": "espn",
             "id": "401909066",
             "sourceAgreement": true,
@@ -12630,15 +12630,15 @@
     "efl-cup:fulham-vs-afc-wimbledon": "401907948"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-08-26T04:54:01.143Z",
-    "la-liga": "2026-08-26T04:54:01.143Z",
-    "bundesliga": "2026-08-26T04:54:01.143Z",
-    "serie-a": "2026-08-26T04:54:01.143Z",
-    "liga-portugal": "2026-08-26T04:54:01.143Z",
-    "ligue-1": "2026-08-26T04:54:01.143Z",
-    "eredivisie": "2026-08-26T04:54:01.143Z",
-    "brasileirao-serie-a": "2026-08-26T04:54:01.143Z",
-    "copa-do-brasil": "2026-08-26T04:54:01.143Z",
-    "efl-cup": "2026-08-26T04:54:01.143Z"
+    "premier-league": "2026-08-26T05:44:40.728Z",
+    "la-liga": "2026-08-26T05:44:40.728Z",
+    "bundesliga": "2026-08-26T05:44:40.728Z",
+    "serie-a": "2026-08-26T05:44:40.728Z",
+    "liga-portugal": "2026-08-26T05:44:40.728Z",
+    "ligue-1": "2026-08-26T05:44:40.728Z",
+    "eredivisie": "2026-08-26T05:44:40.728Z",
+    "brasileirao-serie-a": "2026-08-26T05:44:40.728Z",
+    "copa-do-brasil": "2026-08-26T05:44:40.728Z",
+    "efl-cup": "2026-08-26T05:44:40.728Z"
   }
 }
