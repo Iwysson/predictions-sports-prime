@@ -13,8 +13,7 @@ export function MainPredictionLabel() {
 }
 
 export function OddsLabel() {
-  const { t } = useI18n();
-  return <>{t("odds")}</>;
+  return <>Published odds</>;
 }
 
 export function ResponsibleText() {
