@@ -13,6 +13,7 @@ export function LocalizedHeader({ locale }: { locale: SeoLocaleSlug }) {
         <nav className="main-nav" aria-label="Primary navigation">
           <Link href={`/${locale}/`}>{copy.today}</Link>
           <Link href={`/${locale}/league/premier-league/`}>{copy.leagues}</Link>
+          <Link href={`/${locale}/nfl/`}>NFL</Link>
           <Link href="/methodology/" hrefLang="en">{copy.methodology}</Link>
           <Link href="/results/" hrefLang="en">{copy.results}</Link>
         </nav>

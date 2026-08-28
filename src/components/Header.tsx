@@ -33,6 +33,7 @@ export function Header() {
             <Link href="/">{t("home")}</Link>
             <Link href="/#today">{t("today")}</Link>
             <Link href="/#leagues">{t("leagues")}</Link>
+            <Link href="/nfl/">NFL</Link>
             <Link href="/results/">Results</Link>
             <Link href="/methodology/">Methodology</Link>
           </nav>
@@ -65,6 +66,7 @@ export function Header() {
             <Link href="/#leagues" onClick={() => setOpen(false)}>
               {t("leagues")}
             </Link>
+            <Link href="/nfl/" onClick={() => setOpen(false)}>NFL</Link>
             <Link href="/results/" onClick={() => setOpen(false)}>Results</Link>
             <Link href="/methodology/" onClick={() => setOpen(false)}>Methodology</Link>
           </div>

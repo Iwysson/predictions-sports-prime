@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/about/",
       "/contact/",
       "/methodology/",
+      "/nfl/",
       "/editorial-policy/",
       "/results/",
       "/privacy/",
@@ -54,6 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: absoluteUrl(localePath(locale)) },
       { url: absoluteUrl(localePath(locale, "/league/premier-league/")) },
     ] : []),
+    { url: absoluteUrl(localePath(locale, "/nfl/")) },
     ...Object.keys(localizedEditorialBySlug)
       .filter((slug) => hasCompleteLocalizedEditorial(slug, locale))
       .map((slug) => ({ url: absoluteUrl(localePath(locale, `/match/${slug}/`)) })),
