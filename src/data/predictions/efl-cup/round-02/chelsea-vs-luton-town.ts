@@ -67,8 +67,8 @@ export const chelseaVsLutonTown: EditorialPrediction = {
     ],
   picks: {
     main: "Chelsea -1.5 Asian Handicap",
-    odds: 1.55,
-    previousOdds: 1.75,
+    publishedOdds: 1.75,
+    latestObservedOdds: 1.55,
     oddsProvenance: {
       source: "Betano",
       bookmaker: "Betano",

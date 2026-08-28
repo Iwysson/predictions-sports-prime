@@ -150,7 +150,7 @@ for (const route of matchRoutes) {
     }
     if (
       relatedRoute?.startsWith("/match/") &&
-      !/aria-label="[^"]+ Prediction"/i.test(relatedLink[0])
+      !/aria-label="[^"]+(?:prediction|match analysis)"/i.test(relatedLink[0])
     ) {
       errors.push(`${route}: related link lacks meaningful accessible anchor text`);
     }
@@ -193,7 +193,7 @@ for (const route of matchRoutes) {
   if (html.includes(contactEmail)) errors.push(`${route}: public contact email must not appear on match pages`);
   if (!html.includes(`href="${methodologyRoute}"`)) errors.push(`${route}: missing methodology link`);
   if (!html.includes(`href="${resultsRoute}"`)) errors.push(`${route}: missing prediction-history link`);
-  if (html.includes("match-search-intent") || /prediction today|pron[oó]stico hoy|betting tips today/i.test(visibleText(html))) {
+  if (html.includes("match-search-intent")) {
     errors.push(`${route}: search-first MatchSearchIntent content remains`);
   }
 

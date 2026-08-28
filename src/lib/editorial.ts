@@ -61,7 +61,7 @@ function validateSources(prediction: EditorialPrediction, label: string, errors:
 
 export function toMatchPreview(match: Match): MatchPreview {
   const mainPrediction = match.predictions.find((item) => item.label === "Main Prediction");
-  const odds = match.predictions.find((item) => item.label === "Odds");
+  const odds = match.predictions.find((item) => item.label === "Published Odds" || item.label === "Odds");
 
   return {
     id: match.id,
@@ -111,6 +111,7 @@ function picksToItems(
   prediction: EditorialPrediction
 ): PredictionItem[] {
   const picks = prediction.picks;
+  const publishedOdds = picks.publishedOdds ?? picks.odds;
   const items: PredictionItem[] = [
     {
       label: "Main Prediction",
@@ -118,17 +119,17 @@ function picksToItems(
     },
   ];
 
-  if (picks.odds !== undefined) {
+  if (publishedOdds !== undefined) {
     items.push({
-      label: "Odds",
-      value: String(picks.odds),
+      label: "Published Odds",
+      value: String(publishedOdds),
     });
   }
 
-  if (picks.previousOdds !== undefined) {
+  if (picks.latestObservedOdds !== undefined) {
     items.push({
-      label: "Previous Odds",
-      value: String(picks.previousOdds),
+      label: "Latest Observed Odds",
+      value: String(picks.latestObservedOdds),
     });
   }
 
@@ -269,12 +270,20 @@ export function validateEditorialPredictions(
       }
     }
 
-    if (
-      prediction.picks.odds !== undefined &&
-      (!Number.isFinite(prediction.picks.odds) ||
-        prediction.picks.odds <= 1)
-    ) {
-      errors.push(`${label}: odds must be a finite number greater than 1.`);
+    const publishedOdds = prediction.picks.publishedOdds ?? prediction.picks.odds;
+    if (prediction.picks.publishedOdds !== undefined && prediction.picks.odds !== undefined) {
+      errors.push(`${label}: use publishedOdds or legacy odds, never both.`);
+    }
+    if (prediction.picks.previousOdds !== undefined) {
+      errors.push(`${label}: previousOdds is ambiguous; use latestObservedOdds.`);
+    }
+    for (const [oddsLabel, value] of [
+      ["publishedOdds", publishedOdds],
+      ["latestObservedOdds", prediction.picks.latestObservedOdds],
+    ] as const) {
+      if (value !== undefined && (!Number.isFinite(value) || value <= 1)) {
+        errors.push(`${label}: ${oddsLabel} must be a finite number greater than 1.`);
+      }
     }
 
     validateSources(prediction, label, errors);
@@ -289,7 +298,7 @@ export function validateEditorialPredictions(
       if (!prediction.sources?.length) {
         errors.push(`${label}: newly published content requires source coverage for factual claims.`);
       }
-      if (prediction.picks.odds !== undefined) {
+      if (publishedOdds !== undefined) {
         const provenance = prediction.picks.oddsProvenance;
         if (!provenance?.source.trim() || PLACEHOLDER_PATTERN.test(provenance?.source ?? "")) {
           errors.push(`${label}: new published odds require a real provenance source.`);
@@ -305,7 +314,7 @@ export function validateEditorialPredictions(
 
     if (prediction.picks.oddsProvenance) {
       const provenance = prediction.picks.oddsProvenance;
-      if (prediction.picks.odds === undefined) errors.push(`${label}: oddsProvenance requires picks.odds.`);
+      if (publishedOdds === undefined) errors.push(`${label}: oddsProvenance requires published odds.`);
       if (!provenance.source.trim() || PLACEHOLDER_PATTERN.test(provenance.source)) {
         errors.push(`${label}: oddsProvenance.source must identify the actual source.`);
       }

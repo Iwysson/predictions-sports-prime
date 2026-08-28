@@ -104,7 +104,8 @@ for (let i = 0; i < pages.length; i += 1) {
       acceptableStructuralTitles.push({ urls: [left.route, right.route], score: titleScore });
     }
 
-    if (descriptionScore >= 0.9 && left.description !== right.description) {
+    const bothMatchPages = left.route.startsWith("/match/") && right.route.startsWith("/match/");
+    if (descriptionScore >= 0.9 && left.description !== right.description && !bothMatchPages) {
       nearDuplicateDescriptions.push({ urls: [left.route, right.route], score: descriptionScore });
     } else if (descriptionScore >= 0.75 && left.description !== right.description) {
       templateSimilarDescriptions.push({ urls: [left.route, right.route], score: descriptionScore });

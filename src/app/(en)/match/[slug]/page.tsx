@@ -127,10 +127,10 @@ export default async function MatchPage({
     (item) => item.label === "Main Prediction"
   );
   const odds = match.predictions.find(
-    (item) => item.label === "Odds"
+    (item) => item.label === "Published Odds" || item.label === "Odds"
   );
-  const previousOdds = match.predictions.find(
-    (item) => item.label === "Previous Odds"
+  const latestObservedOdds = match.predictions.find(
+    (item) => item.label === "Latest Observed Odds"
   );
   const relatedMatches = selectRelatedPredictions(match, matches);
   const hasFinalScore = isHistoryEligibleFixture({
@@ -270,10 +270,14 @@ export default async function MatchPage({
                 <div className="prediction-odds">
                   <span><OddsLabel /></span>
                   <b>
-                    {previousOdds ? <s>{previousOdds.value}</s> : null}
-                    {previousOdds ? " " : null}
                     {odds.value}
                   </b>
+                </div>
+              ) : null}
+              {latestObservedOdds ? (
+                <div className="prediction-odds">
+                  <span>Latest observed odds</span>
+                  <b>{latestObservedOdds.value}</b>
                 </div>
               ) : null}
             </div>

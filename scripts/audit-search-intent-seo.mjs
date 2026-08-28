@@ -111,6 +111,7 @@ if (!lifecycleBase) {
       kickoffUtc: undefined,
       timeConfirmed: false,
       date: entry.date,
+      time: "23:59",
       fixtureStatus: entry.fixtureStatus,
       homeScore: entry.fixtureStatus === "completed" ? 1 : null,
       awayScore: entry.fixtureStatus === "completed" ? 0 : null,

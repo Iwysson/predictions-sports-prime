@@ -40,7 +40,13 @@ export type PredictionResultInput =
 
 export type EditorialPicks = {
   main: string;
+  /** Immutable price recorded when the prediction was published. */
+  publishedOdds?: number;
+  /** A later observed price. It must never replace publishedOdds. */
+  latestObservedOdds?: number;
+  /** @deprecated Use publishedOdds for new and updated predictions. */
   odds?: number;
+  /** @deprecated Ambiguous legacy field; use latestObservedOdds. */
   previousOdds?: number;
   oddsProvenance?: {
     source: string;

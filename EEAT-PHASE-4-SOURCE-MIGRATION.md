@@ -8,11 +8,11 @@ This pre-migration inventory applies conservative lexical triage to every publis
 
 ## Corpus summary
 
-- Published predictions audited: 182
-- Predictions with existing sources: 182
+- Published predictions audited: 183
+- Predictions with existing sources: 183
 - Predictions requiring source research: 0
-- Total verified sources: 237
-- Factual/event candidates currently unsupported: 2000
+- Total verified sources: 238
+- Factual/event candidates currently unsupported: 2007
 - Exact sentences repeated across predictions: 45
 - High-similarity pairs (Jaccard token threshold ≥ 0.55): 887
 - Average analysis length: 258 words
@@ -121,6 +121,7 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | ipswich-town-vs-sunderland | 6 | 0 | 0 | 1 | Direct claim-specific research | 6 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | istanbul-basaksehir-vs-kas-mpasa | 5 | 0 | 0 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | juventus-vs-parma-calcio-1913 | 4 | 0 | 1 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
+| kilmarnock-vs-dundee-united | 7 | 0 | 0 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | kilmarnock-vs-st-mirren | 6 | 0 | 0 | 1 | Direct claim-specific research | 6 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | konyaspor-vs-kocaelispor | 7 | 0 | 1 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | le-havre-vs-monaco | 9 | 0 | 1 | 2 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |

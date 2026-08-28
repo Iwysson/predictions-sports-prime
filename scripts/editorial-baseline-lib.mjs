@@ -124,7 +124,7 @@ export function collectEditorialState(root = process.cwd()) {
     const analysis = parseAnalysis(source, path);
     const picks = balancedValue(source, "picks", "{", "}", path);
     const mainPick = stringProperty(picks, "main", path, true);
-    const odds = numberProperty(picks, "odds");
+    const odds = numberProperty(picks, "publishedOdds") ?? numberProperty(picks, "odds");
     const result = parseResult(picks, path);
 
     entries.push({

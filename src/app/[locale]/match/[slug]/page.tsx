@@ -28,7 +28,7 @@ export default async function LocalizedMatch({ params }: { params: Promise<{ loc
   const editorial = getLocalizedEditorial(slug, locale)!; const copy = seoLocales[locale]; const league = leaguesBySlug[match.league];
   const url = absoluteUrl(localePath(locale, `/match/${slug}/`));
   const mainPrediction = match.predictions.find((item) => item.label === "Main Prediction");
-  const odds = match.predictions.find((item) => item.label === "Odds");
+  const odds = match.predictions.find((item) => item.label === "Published Odds" || item.label === "Odds");
   const article = { "@context": "https://schema.org", "@type": "Article", "@id": `${url}#article`, headline: copy.matchH1(match.homeTeam, match.awayTeam), description: copy.matchDescription(match.homeTeam, match.awayTeam, league.name), url, mainEntityOfPage: { "@type": "WebPage", "@id": url }, ...(match.publishedAt ? { datePublished: match.publishedAt } : {}), ...(match.updatedAt ? { dateModified: match.updatedAt } : {}), author: { "@id": absoluteUrl("/author/iwysson-nascimento/#person") }, publisher: { "@id": absoluteUrl("/#organization") }, inLanguage: copy.htmlLang, articleSection: league.name };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: copy.today, item: absoluteUrl(localePath(locale)) },
