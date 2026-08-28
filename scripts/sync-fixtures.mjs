@@ -51,8 +51,8 @@ async function sourceText(source) {
 }
 
 for (const league of leagues) {
+  const leaguePredictions = matches.filter((match) => match.league === league.slug);
   try {
-    const leaguePredictions = matches.filter((match) => match.league === league.slug);
     const text = await sourceText(league.sources.fixtures);
     if (text === null && !league.liveDataId) {
       console.log(`${league.name}: skipped (no automatic fixture feed configured)`);
@@ -140,6 +140,15 @@ for (const league of leagues) {
     snapshot.leagueUpdatedAt[league.slug] = previous.leagueUpdatedAt?.[league.slug] ?? previous.generatedAt;
     for (const [key, id] of Object.entries(previous.predictionIds ?? {})) {
       if (key.startsWith(`${league.slug}:`)) snapshot.predictionIds[key] = id;
+    }
+    // Recover links for newly published predictions from the last valid
+    // snapshot. One failing league must not abort result updates from every
+    // healthy league.
+    for (const prediction of leaguePredictions) {
+      const key = `${league.slug}:${prediction.slug}`;
+      if (snapshot.predictionIds[key]) continue;
+      const savedFixture = findPredictionFixture(savedRounds, prediction);
+      if (savedFixture?.id) snapshot.predictionIds[key] = savedFixture.id;
     }
     console.error(`SOURCE_REFRESH_FAILED ${league.slug}: ${error instanceof Error ? error.message : String(error)}`);
   }

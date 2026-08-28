@@ -15,7 +15,9 @@ export const resultStatusPresentation: Record<PredictionResultStatus, { label: s
 
 export function completePredictionHistory(matches: MatchPreview[]) {
   return [...matches].sort((left, right) =>
-    (right.date || right.publishedAt || "").localeCompare(left.date || left.publishedAt || "") ||
+    `${right.date || right.publishedAt?.slice(0, 10) || ""}T${right.time || "00:00"}`.localeCompare(
+      `${left.date || left.publishedAt?.slice(0, 10) || ""}T${left.time || "00:00"}`
+    ) ||
     (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") ||
     left.slug.localeCompare(right.slug)
   );

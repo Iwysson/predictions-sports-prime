@@ -30,6 +30,15 @@ const unsupportedMarkets = [];
 const marketDataErrors = [];
 const marketDataItems = [];
 
+for (let index = 1; index < history.length; index += 1) {
+  const previousKickoff = `${history[index - 1].date ?? ""}T${history[index - 1].time ?? "00:00"}`;
+  const currentKickoff = `${history[index].date ?? ""}T${history[index].time ?? "00:00"}`;
+  assert.ok(
+    previousKickoff >= currentKickoff,
+    `History must show newest results first: ${history[index - 1].slug} before ${history[index].slug}`
+  );
+}
+
 const seen = new Set();
 for (const match of history) {
   const key = `${match.league}:${match.slug}`;
