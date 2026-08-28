@@ -28,5 +28,11 @@
     "awayCorners": 7,
     "source": "https://gioscore.com/pt/futebol/partida/bahia-vitoria/19621841",
     "capturedAt": "2026-08-24T14:54:07-03:00"
+  },
+  "efl-cup:cardiff-city-vs-norwich-city": {
+    "homeCorners": 5,
+    "awayCorners": 3,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=6005657",
+    "capturedAt": "2026-08-28T07:26:54-03:00"
   }
 }
