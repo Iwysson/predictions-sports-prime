@@ -3,8 +3,8 @@ name: Sync fixtures
 on:
   schedule:
     # Keep final scores close to real time. GitHub schedules can be delayed at
-    # the top of the hour, so use an offset and poll every 15 minutes.
-    - cron: "7,22,37,52 * * * *"
+    # the top of the hour, so use an offset and poll every five minutes.
+    - cron: "2-59/5 * * * *"
   workflow_dispatch:
 
 concurrency:

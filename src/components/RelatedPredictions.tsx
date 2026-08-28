@@ -9,7 +9,8 @@ export function RelatedPredictions({ matches }: { matches: Match[] }) {
     <section className="related-predictions" aria-labelledby="related-predictions-title">
       <div className="related-predictions-heading">
         <span className="eyebrow">Keep exploring</span>
-        <h2 id="related-predictions-title">Related Predictions</h2>
+        <h2 id="related-predictions-title">Related Match Analyses</h2>
+        <p>Explore more expert previews, key match insights and betting predictions.</p>
       </div>
 
       <div className="related-predictions-grid">
@@ -17,12 +18,12 @@ export function RelatedPredictions({ matches }: { matches: Match[] }) {
           <article className="related-prediction-card" key={match.id}>
             <span>{leaguesBySlug[match.league].name}</span>
             <h3>{match.homeTeam} vs {match.awayTeam}</h3>
-            <p>Prediction available</p>
+            <p>Match analysis and prediction available</p>
             <Link
               href={`/match/${match.slug}/`}
-              aria-label={`${match.homeTeam} vs ${match.awayTeam} Prediction`}
+              aria-label={`Read ${match.homeTeam} vs ${match.awayTeam} match analysis`}
             >
-              View prediction <span aria-hidden="true">›</span>
+              Read match analysis <span aria-hidden="true">›</span>
             </Link>
           </article>
         ))}

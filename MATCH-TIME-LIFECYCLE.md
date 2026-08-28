@@ -38,6 +38,8 @@ This project uses one shared match-state model for kickoff time, lifecycle, surf
 - The static HTML and the first client render should use the same authoritative dataset.
 - Runtime refreshes should only replace state when the fetched dataset is newer and valid.
 - The project avoids delayed "old data first" replacement behavior on the main history surfaces.
+- The fixture workflow checks providers every five minutes. A changed final state is committed immediately and triggers a new static deployment.
+- If providers fail to report a transition, a fixture still marked scheduled leaves active surfaces three hours after kickoff instead of lingering all day.
 
 ## Legacy Cleanup
 

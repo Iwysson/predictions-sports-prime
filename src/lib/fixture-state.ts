@@ -1,6 +1,10 @@
 import type { FixtureStatus } from "@/lib/fixture-status";
 
-export const DEFAULT_STALE_SCHEDULE_GRACE_MS = 4 * 60 * 60 * 1000;
+// If every provider misses a state transition, stop presenting the fixture as
+// active three hours after kickoff. This still covers regulation time, added
+// time and the usual extra-time/penalty window without leaving old matches in
+// Today's Predictions for most of the day.
+export const DEFAULT_STALE_SCHEDULE_GRACE_MS = 3 * 60 * 60 * 1000;
 export const SITE_FIXTURE_TIME_ZONE = "America/Fortaleza";
 
 export type CanonicalFixtureState =
