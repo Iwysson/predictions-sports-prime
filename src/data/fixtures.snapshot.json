@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-28T20:58:44.369Z",
+  "generatedAt": "2026-08-28T21:11:49.147Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -171,7 +171,7 @@
             "awayTeam": "Manchester City",
             "homeScore": 1,
             "awayScore": 4,
-            "status": "in-progress",
+            "status": "completed",
             "dataSource": "thesportsdb",
             "id": "tsdb:2494015",
             "sourceAgreement": true,
@@ -8686,7 +8686,7 @@
             "awayTeam": "Paris Saint-Germain",
             "homeScore": 2,
             "awayScore": 2,
-            "status": "in-progress",
+            "status": "completed",
             "dataSource": "thesportsdb",
             "id": "tsdb:2489479",
             "sourceAgreement": true,
@@ -12985,16 +12985,16 @@
     "scottish-premiership:kilmarnock-vs-dundee-united": "official:scottish-premiership:kilmarnock-vs-dundee-united:2026-08-29"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-08-28T20:58:44.369Z",
-    "la-liga": "2026-08-28T20:58:44.369Z",
-    "bundesliga": "2026-08-28T20:58:44.369Z",
-    "serie-a": "2026-08-28T20:58:44.369Z",
-    "liga-portugal": "2026-08-28T20:58:44.369Z",
-    "ligue-1": "2026-08-28T20:58:44.369Z",
-    "eredivisie": "2026-08-28T20:58:44.369Z",
-    "brasileirao-serie-a": "2026-08-28T20:58:44.369Z",
-    "copa-do-brasil": "2026-08-28T20:58:44.369Z",
-    "efl-cup": "2026-08-28T20:58:44.369Z",
+    "premier-league": "2026-08-28T21:11:49.147Z",
+    "la-liga": "2026-08-28T21:11:49.147Z",
+    "bundesliga": "2026-08-28T21:11:49.147Z",
+    "serie-a": "2026-08-28T21:11:49.147Z",
+    "liga-portugal": "2026-08-28T21:11:49.147Z",
+    "ligue-1": "2026-08-28T21:11:49.147Z",
+    "eredivisie": "2026-08-28T21:11:49.147Z",
+    "brasileirao-serie-a": "2026-08-28T21:11:49.147Z",
+    "copa-do-brasil": "2026-08-28T21:11:49.147Z",
+    "efl-cup": "2026-08-28T21:11:49.147Z",
     "super-lig": "2026-08-26T11:54:38.899Z",
     "scottish-premiership": "2026-08-26T11:54:38.899Z"
   }
