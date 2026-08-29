@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { MatchPreview } from "@/types";
 import { MatchCard } from "@/components/MatchCard";
@@ -27,13 +27,18 @@ export function HomePredictionFeed({
   beforeHistory?: ReactNode;
 }) {
   const { t } = useI18n();
-  const today = localTodayISO();
+  const [now, setNow] = useState(() => new Date());
+  useEffect(() => {
+    const timer = window.setInterval(() => setNow(new Date()), 30_000);
+    return () => window.clearInterval(timer);
+  }, []);
+  const today = localTodayISO(now);
   const tomorrow = localTomorrowISO(today);
-  const todayMatches = filterTodaysPublishedPredictions(matches, today);
+  const todayMatches = filterTodaysPublishedPredictions(matches, today, now);
   const tomorrowMatches = filterTomorrowPublishedPredictions(matches, today);
   const latestMatches = selectLatestPublishedPredictions(matches, today, 10);
   const omittedMatches = findOmittedCurrentPredictions(matches, today);
-  const historyMatches = filterCompletedPredictions(matches).slice(0, 10);
+  const historyMatches = filterCompletedPredictions(matches, now).slice(0, 10);
 
   if (omittedMatches.length > 0) {
     throw new Error(
@@ -101,7 +106,7 @@ export function HomePredictionFeed({
             {todayMatches.length > 0 ? (
               <div className="match-grid match-grid--compact">
                 {todayMatches.map((match) => (
-                  <MatchCard key={match.id} match={match} />
+                  <MatchCard key={match.id} match={match} now={now} />
                 ))}
               </div>
             ) : (
@@ -232,11 +237,11 @@ export function HomePredictionFeed({
                     <span>{leagues.find((league) => league.slug === match.league)?.name ?? match.league} · {match.date} · {match.mainPrediction}</span>
                   </div>
                   <span className="history-score">
-                    {match.homeScore}–{match.awayScore}
+                    {match.homeScore != null && match.awayScore != null ? `${match.homeScore}–${match.awayScore}` : "WAITING DATA"}
                   </span>
                   <span className="history-odds">Odds {match.odds ?? "—"}</span>
-                  <b className={`bet-result bet-result--${match.betResult ?? "pending"}`}>
-                    {(match.betResult ?? "pending").replace("-", " ").toUpperCase()}
+                  <b className={`bet-result bet-result--${match.homeScore == null || match.awayScore == null ? "awaiting-data" : match.betResult ?? "pending"}`}>
+                    {match.homeScore == null || match.awayScore == null ? "WAITING DATA" : (match.betResult ?? "pending").replace("-", " ").toUpperCase()}
                   </b>
                 </a>
               ))}

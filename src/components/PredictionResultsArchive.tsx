@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { MatchPreview, PredictionResultStatus } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
 import { buildPredictionHistoryState, resultStatusPresentation } from "@/lib/results";
 import { evaluatePredictionSettlement } from "@/lib/prediction-results";
+import { isWaitingForFixtureData } from "@/lib/fixture-state";
 
 type ResultFilter = "all" | "awaiting-market-data" | "awaiting-execution-data" | PredictionResultStatus;
 const filters: ResultFilter[] = ["all", "awaiting-market-data", "awaiting-execution-data", "green", "red", "push", "half-green", "half-red", "void"];
@@ -17,7 +18,12 @@ function formatDate(value?: string) {
 
 export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] }) {
   const [filter, setFilter] = useState<ResultFilter>("all");
-  const historyState = useMemo(() => buildPredictionHistoryState(matches), [matches]);
+  const [now, setNow] = useState(() => new Date());
+  useEffect(() => {
+    const timer = window.setInterval(() => setNow(new Date()), 30_000);
+    return () => window.clearInterval(timer);
+  }, []);
+  const historyState = useMemo(() => buildPredictionHistoryState(matches, now), [matches, now]);
   const history = historyState.entries;
   const counts = historyState;
   const visible = filter === "all" ? history : history.filter((match) => {
@@ -52,7 +58,8 @@ export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] 
           const status = match.betResult ?? "pending";
           const presentation = resultStatusPresentation[status];
           const settlement = evaluatePredictionSettlement(match);
-          const awaitingLabel = settlement.pendingReason === "EXECUTION_DATA_MISSING" ? "AWAITING EXECUTION DATA" : "AWAITING MARKET DATA";
+          const waitingForResult = isWaitingForFixtureData(match, now);
+          const awaitingLabel = waitingForResult ? "WAITING DATA" : settlement.pendingReason === "EXECUTION_DATA_MISSING" ? "AWAITING EXECUTION DATA" : "AWAITING MARKET DATA";
           const finalScore = match.homeScore !== undefined && match.homeScore !== null && match.awayScore !== undefined && match.awayScore !== null
             ? `${match.homeScore}–${match.awayScore}` : "Not available";
           return (

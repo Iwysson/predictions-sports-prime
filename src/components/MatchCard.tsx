@@ -8,13 +8,15 @@ import { leagues } from "@/data/leagues";
 import { useI18n } from "@/i18n/I18nProvider";
 import { canRenderComingSoon } from "@/lib/fixture-status";
 import { getMatchDisplayTime } from "@/lib/match-time";
+import { isFixtureLiveNow } from "@/lib/fixture-state";
 
-export function MatchCard({ match }: { match: MatchPreview }) {
+export function MatchCard({ match, now = new Date() }: { match: MatchPreview; now?: Date | string }) {
   const href = `/match/${match.slug}/`;
   const league = leagues.find((item) => item.slug === match.league);
   const { t } = useI18n();
   const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");
   const kickoff = getMatchDisplayTime(match);
+  const live = isFixtureLiveNow(match, now);
 
   return (
     <article className="match-card">
@@ -50,9 +52,9 @@ export function MatchCard({ match }: { match: MatchPreview }) {
       </div>
 
       <div className="compact-match-footer">
-        <span className={`prediction-pill prediction-pill--${match.status}`}>
+        <span className={`prediction-pill prediction-pill--${live ? "live" : match.status}`}>
           <span aria-hidden="true">✓</span>
-          {match.status === "published"
+          {live ? "LIVE" : match.status === "published"
             ? t("predictionAvailable")
             : showComingSoon ? t("comingSoon") : match.fixtureStatus?.toUpperCase()}
         </span>

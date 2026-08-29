@@ -5,6 +5,7 @@ import { hydratePredictions } from "../src/lib/live-predictions.ts";
 import { buildPredictionHistoryState } from "../src/lib/results.ts";
 import { isCompletedFixture, isNonPlayableFixture } from "../src/lib/fixture-status.ts";
 import { evaluatePredictionSettlement, parsePredictionMarket, resolvePredictionResult } from "../src/lib/prediction-results.ts";
+import { isWaitingForFixtureData } from "../src/lib/fixture-state.ts";
 
 const publishedSource = matches.filter((match) => match.status === "published");
 const published = await hydratePredictions(publishedSource.map(toMatchPreview));
@@ -53,7 +54,7 @@ for (const match of published) {
 
   if (completed && !inHistory) completedMissingHistory += 1;
   if (completed && !nonPlayable && !inHistory) completedStillActive += 1;
-  if (!completed && inHistory) futureInHistory += 1;
+  if (!completed && !isWaitingForFixtureData(match) && inHistory) futureInHistory += 1;
   if (match.fixtureStatus === "postponed" && inHistory) postponedInHistory += 1;
 
   const parsed = parsePredictionMarket(match.mainPrediction ?? "");

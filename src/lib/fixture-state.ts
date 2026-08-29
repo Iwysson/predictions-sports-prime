@@ -1,10 +1,8 @@
 import type { FixtureStatus } from "@/lib/fixture-status";
 
-// If every provider misses a state transition, stop presenting the fixture as
-// active three hours after kickoff. This still covers regulation time, added
-// time and the usual extra-time/penalty window without leaving old matches in
-// Today's Predictions for most of the day.
-export const DEFAULT_STALE_SCHEDULE_GRACE_MS = 3 * 60 * 60 * 1000;
+// If every provider misses a state transition, move the fixture out of the
+// active feed 110 minutes after kickoff and wait for authoritative result data.
+export const DEFAULT_STALE_SCHEDULE_GRACE_MS = 110 * 60 * 1000;
 export const SITE_FIXTURE_TIME_ZONE = "America/Fortaleza";
 
 export type CanonicalFixtureState =
@@ -63,6 +61,22 @@ export function classifyFixture(
 
 export function isActiveFixtureState(state: CanonicalFixtureState) {
   return state === "scheduled" || state === "rescheduled" || state === "live";
+}
+
+export function isFixtureLiveNow(fixture: FixtureStateInput, now: Date | string = new Date()) {
+  const state = classifyFixture(fixture, now);
+  if (state === "completed" || state === "stale-schedule") return false;
+  if (state === "live") return true;
+  const kickoff = fixtureKickoffMillis(fixture);
+  if (kickoff === null) return false;
+  const elapsed = new Date(now).valueOf() - kickoff;
+  return elapsed >= 0 && elapsed < DEFAULT_STALE_SCHEDULE_GRACE_MS;
+}
+
+export function isWaitingForFixtureData(fixture: FixtureStateInput, now: Date | string = new Date()) {
+  if (classifyFixture(fixture, now) === "completed") return false;
+  const kickoff = fixtureKickoffMillis(fixture);
+  return kickoff !== null && new Date(now).valueOf() - kickoff >= DEFAULT_STALE_SCHEDULE_GRACE_MS;
 }
 
 export function isFutureFixture(

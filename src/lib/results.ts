@@ -1,6 +1,7 @@
 import type { MatchPreview, PredictionResultStatus } from "@/types";
 import { isCompletedFixture } from "@/lib/fixture-status";
 import { evaluatePredictionSettlement } from "@/lib/prediction-results";
+import { isWaitingForFixtureData } from "@/lib/fixture-state";
 
 export const resultStatusPresentation: Record<PredictionResultStatus, { label: string; icon: string }> = {
   pending: { label: "PENDING", icon: "○" },
@@ -31,9 +32,11 @@ export function predictionResultCounts(matches: MatchPreview[]) {
   return counts;
 }
 
-export function buildPredictionHistoryState(matches: MatchPreview[]) {
+export function buildPredictionHistoryState(matches: MatchPreview[], now: Date | string = new Date()) {
   const entries = completePredictionHistory(
-    matches.filter((match) => isCompletedFixture(match.fixtureStatus))
+    matches
+      .filter((match) => isCompletedFixture(match.fixtureStatus) || isWaitingForFixtureData(match, now))
+      .map((match) => isWaitingForFixtureData(match, now) ? { ...match, betResult: "awaiting-data" as const } : match)
   );
   const counts = predictionResultCounts(entries);
   const settled = counts.green + counts.red + counts.push + counts["half-green"] + counts["half-red"] + counts.void;

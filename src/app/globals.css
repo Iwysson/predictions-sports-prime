@@ -454,6 +454,7 @@ code { color: var(--accent); }
 }
 
 .prediction-pill--published { color: var(--accent); }
+.prediction-pill--live { color: #ff5252; }
 .prediction-pill--coming-soon { color: var(--warning); }
 
 .button {

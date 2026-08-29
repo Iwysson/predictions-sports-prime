@@ -1,6 +1,6 @@
 import type { MatchPreview } from "@/types";
 import { isCompletedFixture, isHistoryEligibleFixture, isNonPlayableFixture } from "@/lib/fixture-status";
-import { classifyFixture, dateInTimeZone, fixtureDateInTimeZone, isActiveFixtureState, isFutureFixture } from "@/lib/fixture-state";
+import { classifyFixture, dateInTimeZone, fixtureDateInTimeZone, isActiveFixtureState, isFutureFixture, isWaitingForFixtureData } from "@/lib/fixture-state";
 
 export type HomeTemporalBucket = "today" | "tomorrow" | "upcoming" | "historical" | "none";
 
@@ -76,13 +76,14 @@ function uniqueMatches(matches: MatchPreview[]) {
 
 export function filterTodaysPublishedPredictions(
   matches: MatchPreview[],
-  today = localTodayISO()
+  today = localTodayISO(),
+  now: Date | string = new Date()
 ) {
   return sortMatchesByKickoff(
     uniqueMatches(matches).filter(
       (match) =>
         match.status === "published" &&
-        resolveHomeTemporalBucket(match, today) === "today"
+        resolveHomeTemporalBucket(match, today, now) === "today"
     )
   );
 }
@@ -184,16 +185,16 @@ export function filterPastPublishedPredictions(
   );
 }
 
-export function filterCompletedPredictions(matches: MatchPreview[]) {
+export function filterCompletedPredictions(matches: MatchPreview[], now: Date | string = new Date()) {
   return sortMatchesByKickoff(
     uniqueMatches(matches).filter(
       (match) =>
         match.status === "published" &&
-        isHistoryEligibleFixture({
+        (isHistoryEligibleFixture({
           status: match.fixtureStatus,
           homeScore: match.homeScore,
           awayScore: match.awayScore,
-        })
+        }) || isWaitingForFixtureData(match, now))
     )
   ).reverse();
 }

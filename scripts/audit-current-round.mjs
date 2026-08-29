@@ -51,8 +51,8 @@ const lifecycleBoundaries = [
   { expected: "completed", fixture: { status: "completed", kickoffUtc: "2026-08-24T11:59:59Z" } },
   { expected: "postponed", fixture: { status: "postponed", kickoffUtc: "2026-08-24T12:00:01Z" } },
   { expected: "cancelled", fixture: { status: "canceled", kickoffUtc: "2026-08-24T12:00:01Z" } },
-  { expected: "upcoming", fixture: { status: "scheduled", kickoffUtc: "2026-08-24T09:00:01Z" } },
-  { expected: "stale-schedule", fixture: { status: "scheduled", kickoffUtc: "2026-08-24T08:59:59Z" } },
+  { expected: "upcoming", fixture: { status: "scheduled", kickoffUtc: "2026-08-24T10:10:01Z" } },
+  { expected: "stale-schedule", fixture: { status: "scheduled", kickoffUtc: "2026-08-24T10:09:59Z" } },
   { expected: "stale-schedule", fixture: { status: "scheduled", kickoffUtc: "2026-08-24T07:59:59Z" } },
 ];
 for (const boundary of lifecycleBoundaries) {
