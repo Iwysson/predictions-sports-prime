@@ -3830,6 +3830,21 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   background: transparent; border: 0; border-radius: 0; font-size: 16px; line-height: 1;
 }
 .prediction-pill--coming-soon { color: var(--text-muted); }
+.prediction-pill.prediction-pill--live {
+  padding: 6px 10px;
+  color: #fff;
+  background: #d60000;
+  border: 1px solid #a80000;
+  border-radius: 6px;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(214, 0, 0, .32);
+}
+.prediction-pill.prediction-pill--live span {
+  color: #fff;
+  font-size: 14px;
+}
 .button {
   min-height: 40px; color: #fff; background: var(--accent); border-radius: 8px;
   font-size: 13px; font-weight: 700; box-shadow: none;
