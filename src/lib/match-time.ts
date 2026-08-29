@@ -1,5 +1,6 @@
 import { leaguesBySlug } from "@/data/leagues";
 import type { LeagueSlug, Match, MatchPreview } from "@/types";
+import { classifyFixture, isActiveFixtureState, isWaitingForFixtureData } from "@/lib/fixture-state";
 
 export type MatchTimezoneSource = "venue" | "city" | "competition" | "home-team" | "fallback" | "unknown";
 export type MatchTimeConfidence = "confirmed" | "derived" | "unknown";
@@ -100,28 +101,37 @@ export function getMatchDisplayTime(match: Pick<Match | MatchPreview, "league" |
   };
 }
 
-export function getMatchSurfaceEligibility(match: { fixtureStatus?: string; published?: boolean }) {
-  const completed = match.fixtureStatus === "completed";
+type SurfaceMatch = {
+  fixtureStatus?: string;
+  kickoffUtc?: string;
+  date?: string;
+  time?: string;
+  published?: boolean;
+};
+
+export function getMatchSurfaceEligibility(match: SurfaceMatch, now: Date | string = new Date()) {
+  const historical = Boolean(match.published && (match.fixtureStatus === "completed" || isWaitingForFixtureData(match, now)));
+  const active = Boolean(match.published && isActiveFixtureState(classifyFixture(match, now)) && !historical);
   return {
-    today: match.published && !completed,
-    tomorrow: match.published && !completed,
-    upcoming: match.published && !completed,
-    history: Boolean(match.published && completed),
+    today: active,
+    tomorrow: active,
+    upcoming: active,
+    history: historical,
   };
 }
 
-export function shouldAppearInToday(match: { published?: boolean; fixtureStatus?: string }, _now = new Date()) {
-  return Boolean(match.published && match.fixtureStatus !== "completed");
+export function shouldAppearInToday(match: SurfaceMatch, now = new Date()) {
+  return getMatchSurfaceEligibility(match, now).today;
 }
 
-export function shouldAppearInTomorrow(match: { published?: boolean; fixtureStatus?: string }, _now = new Date()) {
-  return Boolean(match.published && match.fixtureStatus !== "completed");
+export function shouldAppearInTomorrow(match: SurfaceMatch, now = new Date()) {
+  return getMatchSurfaceEligibility(match, now).tomorrow;
 }
 
-export function shouldAppearInUpcoming(match: { published?: boolean; fixtureStatus?: string }, _now = new Date()) {
-  return Boolean(match.published && match.fixtureStatus !== "completed");
+export function shouldAppearInUpcoming(match: SurfaceMatch, now = new Date()) {
+  return getMatchSurfaceEligibility(match, now).upcoming;
 }
 
-export function shouldAppearInPredictionHistory(match: { published?: boolean; fixtureStatus?: string }, _now = new Date()) {
-  return Boolean(match.published && match.fixtureStatus === "completed");
+export function shouldAppearInPredictionHistory(match: SurfaceMatch, now = new Date()) {
+  return getMatchSurfaceEligibility(match, now).history;
 }

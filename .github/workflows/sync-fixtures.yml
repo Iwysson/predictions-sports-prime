@@ -28,6 +28,7 @@ jobs:
         env:
           THESPORTSDB_API_KEY: ${{ secrets.THESPORTSDB_API_KEY }}
       - run: npm run fixtures:validate
+      - run: npm run audit:fixture-lifecycle
       - name: Detect fixture changes
         id: changes
         shell: bash
