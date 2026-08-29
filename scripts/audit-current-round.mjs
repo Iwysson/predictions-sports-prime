@@ -48,6 +48,8 @@ function regressionRound(round, statuses, date) {
 const lifecycleBoundaries = [
   { expected: "upcoming", fixture: { status: "scheduled", kickoffUtc: "2026-08-24T12:00:01Z" } },
   { expected: "live", fixture: { status: "in-progress", kickoffUtc: "2026-08-24T12:00:00Z" } },
+  { expected: "live", fixture: { status: "in-progress", kickoffUtc: "2026-08-24T10:10:01Z" } },
+  { expected: "stale-schedule", fixture: { status: "in-progress", kickoffUtc: "2026-08-24T10:09:59Z" } },
   { expected: "completed", fixture: { status: "completed", kickoffUtc: "2026-08-24T11:59:59Z" } },
   { expected: "postponed", fixture: { status: "postponed", kickoffUtc: "2026-08-24T12:00:01Z" } },
   { expected: "cancelled", fixture: { status: "canceled", kickoffUtc: "2026-08-24T12:00:01Z" } },
@@ -116,6 +118,7 @@ const publishedFixture = (fixtureStatus, kickoffUtc) => ({
 });
 assert.equal(resolveHomeTemporalBucket(publishedFixture("scheduled", "2026-08-25T12:00:00Z"), "2026-08-25", regressionNow), "today", "Published future fixture must remain active");
 assert.equal(resolveHomeTemporalBucket(publishedFixture("completed", "2026-08-23T12:00:00Z"), "2026-08-24", regressionNow), "historical", "Completed prediction must enter history");
+assert.equal(resolveHomeTemporalBucket(publishedFixture("in-progress", "2026-08-24T10:09:59Z"), "2026-08-24", regressionNow), "historical", "A stale provider LIVE status must enter history after 110 minutes");
 assert.equal(resolveHomeTemporalBucket(publishedFixture("postponed", "2026-08-25T12:00:00Z"), "2026-08-25", regressionNow), "none", "Postponed prediction must leave active feeds");
 console.log("Round promotion regressions: PASS");
 

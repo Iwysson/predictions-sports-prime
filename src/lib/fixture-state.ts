@@ -42,7 +42,6 @@ export function classifyFixture(
   staleGraceMs = DEFAULT_STALE_SCHEDULE_GRACE_MS
 ): CanonicalFixtureState {
   const status = fixture.fixtureStatus ?? fixture.status;
-  if (status === "in-progress") return "live";
   if (status === "completed" || status === "awarded") return "completed";
   if (status === "postponed") return "postponed";
   if (status === "canceled" || status === "cancelled") return "cancelled";
@@ -50,6 +49,10 @@ export function classifyFixture(
   if (status === "abandoned") return "abandoned";
 
   const kickoff = fixtureKickoffMillis(fixture);
+  if (status === "in-progress") {
+    if (kickoff !== null && kickoff <= new Date(now).valueOf() - staleGraceMs) return "stale-schedule";
+    return "live";
+  }
   if (status === "scheduled" || status === "rescheduled" || !status) {
     if (kickoff === null) return status === "rescheduled" ? "rescheduled" : status ? "scheduled" : "unknown";
     const current = new Date(now).valueOf();
@@ -66,9 +69,8 @@ export function isActiveFixtureState(state: CanonicalFixtureState) {
 export function isFixtureLiveNow(fixture: FixtureStateInput, now: Date | string = new Date()) {
   const state = classifyFixture(fixture, now);
   if (state === "completed" || state === "stale-schedule") return false;
-  if (state === "live") return true;
   const kickoff = fixtureKickoffMillis(fixture);
-  if (kickoff === null) return false;
+  if (kickoff === null) return state === "live";
   const elapsed = new Date(now).valueOf() - kickoff;
   return elapsed >= 0 && elapsed < DEFAULT_STALE_SCHEDULE_GRACE_MS;
 }

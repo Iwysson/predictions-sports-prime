@@ -23,6 +23,7 @@ export function resolveHomeTemporalBucket(match: MatchPreview, today = localToda
   })) {
     return "historical";
   }
+  if (isWaitingForFixtureData(match, now)) return "historical";
   const state = classifyFixture({ ...match, status: match.fixtureStatus ?? "scheduled" }, now);
   if (!isActiveFixtureState(state)) return "none";
   const fixtureDate = fixtureDateInTimeZone(match);
