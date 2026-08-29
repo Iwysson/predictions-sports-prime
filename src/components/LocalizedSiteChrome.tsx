@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { seoLocaleSlugs, seoLocales, type SeoLocaleSlug } from "@/lib/seo-locales";
+import { ResponsibleGamblingNoticeContent } from "@/components/ResponsibleGamblingNoticeContent";
+import { responsibleCopyForSeoLocale } from "@/lib/responsible-gambling-copy";
 
 export function LocalizedHeader({ locale }: { locale: SeoLocaleSlug }) {
   const copy = seoLocales[locale];
@@ -26,6 +28,9 @@ export function LocalizedFooter({ locale }: { locale: SeoLocaleSlug }) {
   const copy = seoLocales[locale];
   return (
     <footer className="site-footer">
+      <div className="container">
+        <ResponsibleGamblingNoticeContent copy={responsibleCopyForSeoLocale(locale)} />
+      </div>
       <div className="container footer-inner">
         <div><strong>Predictions Sports Prime</strong><p>{copy.responsible}</p></div>
         <nav aria-label="Language versions">

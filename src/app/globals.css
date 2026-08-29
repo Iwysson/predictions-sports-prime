@@ -3411,6 +3411,54 @@ html[dir="rtl"] .latest-match {
 
 .footer-links a:hover { color: var(--accent); }
 
+.responsible-gambling-notice {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) minmax(190px, auto);
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 18px;
+  border: 1px solid rgba(49, 216, 134, .24);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(49, 216, 134, .08), rgba(11, 23, 34, .94) 45%);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .18);
+}
+
+.responsible-gambling-age {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -.04em;
+}
+
+.responsible-gambling-copy h2 { margin: 0 0 6px; color: var(--text); font-size: 17px; }
+.responsible-gambling-copy p { margin: 0 0 5px; color: var(--muted); font-size: 11px; line-height: 1.55; }
+.responsible-gambling-copy strong { color: var(--text); font-size: 11px; }
+.responsible-gambling-link {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: right;
+}
+.responsible-gambling-link:hover { color: #78efb2; }
+
+@media (max-width: 720px) {
+  .responsible-gambling-notice {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px;
+  }
+  .responsible-gambling-age { width: 48px; height: 48px; font-size: 17px; }
+  .responsible-gambling-link { grid-column: 1 / -1; text-align: left; }
+}
+
 .legal-container { max-width: 900px; }
 
 .legal-header {
