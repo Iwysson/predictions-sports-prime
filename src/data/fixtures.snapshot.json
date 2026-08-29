@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-29T03:09:31.237Z",
+  "generatedAt": "2026-08-29T09:59:21.133Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -720,18 +720,18 @@
           },
           {
             "round": 5,
-            "date": "2026-09-19",
+            "date": "2026-09-20",
             "time": "TBD",
             "homeTeam": "Manchester City",
             "awayTeam": "Sunderland",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879272",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-19T14:00Z"
+            "kickoffUtc": "2026-09-20T13:00Z"
           },
           {
             "round": 5,
@@ -12985,16 +12985,16 @@
     "scottish-premiership:kilmarnock-vs-dundee-united": "official:scottish-premiership:kilmarnock-vs-dundee-united:2026-08-29"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-08-29T03:09:31.237Z",
-    "la-liga": "2026-08-29T03:09:31.237Z",
-    "bundesliga": "2026-08-29T03:09:31.237Z",
-    "serie-a": "2026-08-29T03:09:31.237Z",
-    "liga-portugal": "2026-08-29T03:09:31.237Z",
-    "ligue-1": "2026-08-29T03:09:31.237Z",
-    "eredivisie": "2026-08-29T03:09:31.237Z",
-    "brasileirao-serie-a": "2026-08-29T03:09:31.237Z",
-    "copa-do-brasil": "2026-08-29T03:09:31.237Z",
-    "efl-cup": "2026-08-29T03:09:31.237Z",
+    "premier-league": "2026-08-29T09:59:21.133Z",
+    "la-liga": "2026-08-29T09:59:21.133Z",
+    "bundesliga": "2026-08-29T09:59:21.133Z",
+    "serie-a": "2026-08-29T09:59:21.133Z",
+    "liga-portugal": "2026-08-29T09:59:21.133Z",
+    "ligue-1": "2026-08-29T09:59:21.133Z",
+    "eredivisie": "2026-08-29T09:59:21.133Z",
+    "brasileirao-serie-a": "2026-08-29T09:59:21.133Z",
+    "copa-do-brasil": "2026-08-29T09:59:21.133Z",
+    "efl-cup": "2026-08-29T09:59:21.133Z",
     "super-lig": "2026-08-26T11:54:38.899Z",
     "scottish-premiership": "2026-08-26T11:54:38.899Z"
   }
