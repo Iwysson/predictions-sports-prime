@@ -1,45 +1,15 @@
 import type { EditorialPrediction } from "@/types";
 
 export const osasunaVsGetafe: EditorialPrediction = {
-  league: "la-liga",
-  homeTeam: "Osasuna",
-  awayTeam: "Getafe",
-
-  analysis: [
-    "The market is simple here for a reason. Osasuna and Getafe can both be involved in tight matches, so instead of forcing Over 2.5 we only ask for two goals.",
-    "Getafe’s first two league matches have produced one goal scored and three conceded. Their 14 shots across those games show that there is still attacking activity even though the scoring return has been modest. Osasuna, meanwhile, have a demanding schedule around this fixture, with home and away league matches packed into a short period. That can create changes in game state and defensive concentration.",
-    "El Sadar is also an important factor. Osasuna are generally more proactive at home, where they can press higher and attack with greater numbers. Against a Getafe side that is comfortable competing physically and playing direct when necessary, the match can generate enough transitions and set-piece situations for two goals without needing sustained end-to-end football.",
-    "The 1.5 line protects us from the most obvious risk in this matchup: a game that remains controlled for long stretches. One goal before the final third of the match can completely change the behavior of the team that is behind.",
-    "At 1.50, we accept the shorter price in exchange for a lower threshold. We do not need a shootout; 1-1, 2-0 or 0-2 is enough.",
-  ],
-
-  picks: {
-    main: "Over 1.5 Goals",
-    odds: 1.50,
-    oddsProvenance: {
-      source: "Betano — editor-supplied price",
-      bookmaker: "Betano",
-      provenance: "author_attested",
-      market: "Over 1.5 Goals",
-    },
-  },
-
-  matchInfo: {
-    date: "2026-08-31",
-    time: "19:30",
-    round: "Matchday 3",
-    venue: "El Sadar",
-  },
-
-  publishedAt: "2026-08-25T06:17:27-03:00",
-  sourceStatus: "verified",
+  league: "la-liga", homeTeam: "Osasuna", awayTeam: "Getafe",
+  analysis: ["# Osasuna vs Getafe — LaLiga 2026/27 Match Analysis\n🎯 **Prediction: Over 1.5 Goals**\n💰 **Odds: 1.67**\n**LaLiga — Matchday 3 | August 31, 2026 — 7:30 PM local time | El Sadar, Pamplona**\n\nThe fixture is Osasuna, correcting the original misspelling, and the official calendar confirms **Osasuna vs Getafe** at El Sadar. The hosts have four points from two league games after drawing at home with Levante and winning at Celta Vigo on August 27. Getafe arrive after their first league win, against Racing Santander, and a Thursday trip to Belgrade that secured Conference League qualification. The **Osasuna vs Getafe prediction** therefore sits inside a compressed schedule and a matchup naturally associated with order, duels and narrow margins.\n\n**Probable lineups:** **Osasuna (5-4-1)** — Sergio Herrera; Iñigo Arguibide, Abel Bretones, Jorge Herrando, Alejandro Catena, Asier Osambela; Jonathan Dubasin, Jon Moncayola, Lucas Torró, Kike Barja; Raúl García de Haro. **Getafe (3-5-2)** — David Soria; Djené, Saba Sazonov, Zaid Romero; Andrés García, Ramón Terrats, Orel Mangala, Francho Serrano, Johan Mojica; Martín Satriano, Enes Ünal. The AS match page supplies eleven for each side, but final confirmation matters because both teams played on Thursday and rotation is plausible; Ante Budimir and Aimar Oroz remain major alternatives for Osasuna.\n\n**Availability.** Osasuna's official August 30 training update says every player trained except Valentin Rosier, who is recovering from a right biceps-femoris injury. Oroz had previously been monitored after cramp and knee ice, yet remains available in the projected squad. Getafe's principal issue is workload rather than a newly confirmed suspension: the Belgrade match reduces recovery time, while Bordalás has enough depth to alter the wing-backs or front pair. Rumour and stale injury lists are not treated as confirmed absences.\n\nLuis Miguel Ramis described Getafe as an established, physical side that wins duels and makes few errors. That is a useful tactical summary. Osasuna can use El Sadar's intensity, direct service and second balls, but a five-man defensive line also signals that the hosts need not force a high-possession contest. Getafe are comfortable compressing central space, competing for loose balls and progressing directly to Ünal. The result may depend more on field position, restarts and the first goal than on long possession sequences.\n\nThe current 2026/27 sample is only two league matches per team. Osasuna's four points demonstrate execution but do not yet establish a home scoring average; Getafe's recent league win and European qualification show momentum while simultaneously adding fatigue. The 2025/26 baseline should therefore carry greater weight for style, but it cannot be mixed into current rates without a uniform data source. xG (**Expected Goals — Gols Esperados**), xGA (**Expected Goals Against — Gols Esperados Contra**) and SOT (**Shots on Target — Finalizações no Alvo**) were not available from one reproducible provider for all four current team-games at cutoff, so no values are invented.\n\nFor Over 1.5, the threshold is deliberately lower than the more fragile Over 2.5. A 1–1, 2–0 or 0–2 is sufficient. Osasuna can generate one side of that total through direct pressure, Budimir or García de Haro in the box, and set pieces. Getafe can contribute through Ünal, transitions and dead-ball pressure. If either team scores early, the opponent must take more positional risk; that is the strongest route to a second goal. A late first goal or a long 0–0 is the clearest danger.\n\nThe H2H (**Head-to-Head — Confronto Direto**) carries limited predictive weight because coaching and personnel contexts change, yet its reputation for tight games is relevant to risk. Neither side is structurally required to chase when level. Getafe also travelled in Europe three days before this match, which can reduce pressing intensity rather than automatically create defensive collapse. Conversely, tired legs can damage concentration on crosses and second balls during the final 20 minutes.\n\nHome/away interpretation must stay disciplined. This is Osasuna's second home match and Getafe's early away sample remains tiny, so current venue averages would be misleading. El Sadar generally encourages Osasuna to play more proactively, but Getafe's established away plan can keep territory from becoming clear chances. Weather should be updated at kickoff: no stable hour-specific Pamplona forecast with verified temperature, rain, wind and humidity was available at cutoff, and none is presented as fact.\n\n### Statistical Core\n\n| Metric | Osasuna | Getafe |\n|---|---:|---:|\n| 2026/27 league matches | 2 | 2 |\n| Points | 4 | 3 |\n| Current league form | Draw, Win | Loss, Win |\n| Latest league result | Win at Celta | Win vs Racing |\n| Midweek European match | No | Yes, in Belgrade |\n| Current home sample | N=1 | — |\n| Current away sample | — | Small N |\n| xG/game | — | — |\n| xGA/game | — | — |\n| Shots/game | — | — |\n| SOT/game | — | — |\n| Relevant total | Over 1.5 | Over 1.5 |\n\n**Conflict Detector.** The market asks for only two goals, and an early opener or late fatigue can produce them. The contrary case is central to the matchup: both coaches can accept a controlled phase, Getafe specialise in duels and error reduction, and Osasuna's five-man base need not expose itself. Current home/away samples are too small for dependable rates, while the visitor's European load can either cause mistakes or suppress attacking ambition. A 0–0 or 1–0 is not an outlier scenario and must remain visible in the assessment.\n\nAt 1.67, the **raw implied probability / price-derived threshold** is approximately **59.9%** before bookmaker margin. This is a price conversion, not a model forecast, and the limited current sample does not justify a formal value claim.\n\n🎯 **Prediction: Over 1.5 Goals**\n💰 **Odds: 1.67**"],
+  analysisFormat: "markdown", seoTitle: "Osasuna vs Getafe Prediction, Odds & Match Analysis — LaLiga 2026/27",
+  picks: { main: "Over 1.5 Goals", publishedOdds: 1.67, oddsProvenance: { source: "Editor-supplied publication price", provenance: "author_attested", market: "Over 1.5 Goals" } },
+  matchInfo: { date: "2026-08-31", time: "19:30", round: "Matchday 3", venue: "El Sadar" },
+  publishedAt: "2026-08-25T06:17:27-03:00", updatedAt: "2026-08-30T22:45:00+02:00", sourceStatus: "verified",
   sources: [
-    {
-      name: "LaLiga — Matchday 3 fixtures and statistics",
-      url: "https://www.laliga.com/laliga-easports/resultados/2026-27/jornada-3",
-      description: "Official fixture and match-stat context for LaLiga Matchday 3.",
-      accessedAt: "2026-08-25T06:17:27-03:00",
-    },
-  ],
-  published: true,
+    { name: "CA Osasuna — pre-match press conference", url: "https://www.osasuna.es/osasuna-getafe-rueda-prensa-ramis-30-08-2026", description: "Official fixture, recent result and tactical context.", accessedAt: "2026-08-30T22:45:00+02:00" },
+    { name: "AS — Osasuna vs Getafe lineups", url: "https://as.com/resultados/futbol/primera/2026_2027/directo/regular_a_3_6a4496c62a74574/alineaciones/", description: "Projected elevens and kickoff cross-check.", accessedAt: "2026-08-30T22:45:00+02:00" },
+    { name: "LaLiga — Matchday 3", url: "https://www.laliga.com/laliga-easports/resultados/2026-27/jornada-3", description: "Official calendar and round verification.", accessedAt: "2026-08-30T22:45:00+02:00" },
+  ], published: true,
 };

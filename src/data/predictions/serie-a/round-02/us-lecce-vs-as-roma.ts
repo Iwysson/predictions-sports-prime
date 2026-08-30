@@ -1,40 +1,16 @@
 import type { EditorialPrediction } from "@/types";
 
 export const usLecceVsAsRoma: EditorialPrediction = {
-  league: "serie-a",
-  homeTeam: "US Lecce",
-  awayTeam: "AS Roma",
-  analysis: [
-    "US Lecce host AS Roma in Serie A. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: AS Roma or Draw (X2) + Over 1.5 Goals.",
-    "the goals component makes the total scoring range part of the selection, while the double-chance component protects one of the drawn-result paths.",
-    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to US Lecce and AS Roma exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
-    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
-  ],
-  picks: {
-    main: "AS Roma or Draw (X2) + Over 1.5 Goals",
-    odds: 1.65,
-    oddsProvenance: {
-      source: "Betano — author-attested editorial capture",
-      bookmaker: "Betano",
-      provenance: "author_attested",
-      capturedAt: "2026-08-24T12:56:00-03:00",
-      market: "AS Roma or Draw (X2) + Over 1.5 Goals",
-    },
-  },
+  league: "serie-a", homeTeam: "US Lecce", awayTeam: "AS Roma",
+  analysis: ["# Lecce vs Roma — Serie A 2026/27 Match Analysis\n🎯 **Prediction: Over 1.5 Goals + Over 7.5 Corners**\n💰 **Odds: 1.80**\n**Serie A — Matchday 2 | August 31, 2026 — 6:30 PM local time | Stadio Via del Mare, Lecce**\n\nThe **Lecce vs Roma prediction** is a two-part selection, but the match must be assessed before the price. Lecce arrive after winning at Venezia, while Roma opened by beating Fiorentina. One completed league game per club is not a statistical season: current results identify immediate personnel and shape, while 2025/26 supplies the broader baseline. Lecce scored a league-low 21 goals last term, and Roma won the two 2025/26 meetings 2–0 and 1–0. Those facts support Roma's defensive credibility but create a direct warning for the goal component.\n\n**Probable lineups:** **Lecce (4-2-3-1)** — Wladimiro Falcone; Danilo Veiga, Tiago Gabriel, Kialonda Gaspar, Antonino Gallo; Lassana Coulibaly, Olaf Gorter; Santiago Pierotti, Oumar Ngom, Konan N'Dri; Willem Geubbels. **Roma (3-4-2-1)** — Mile Svilar; Gianluca Mancini, Evan Ndicka, Mario Hermoso; Emanuele Lulli, Manu Koné, Bryan Cristante, Wesley; Paulo Dybala, Rodrigo Mora; Donyell Malen. Sky's August 30 projection preserves Roma's opening XI and identifies only Lulli/Molina as a live right-side decision; Geubbels and Nikola Stulic compete at centre-forward for Lecce.\n\n**Availability.** Sky reports Gallo fit despite the previous knock and expects Tiago Gabriel to enter Lecce's defence. Roma did not call Robinio Vaz amid transfer activity; new arrivals Leonardo Balerdi and Marten de Roon are in the group, as is Matías Soulé. Koné had been monitored after a knock but remains in the projected XI. No confirmed suspension is reported by the current previews. Older injury aggregators conflict on several names, so the latest squad and match reporting takes priority; final teams remain necessary before kickoff.\n\nEusebio Di Francesco's Lecce can form a 4-4-2 without the ball and use Pierotti and N'Dri to carry attacks outside. That width is relevant to both markets: early crosses and blocked deliveries can produce corners even when chance quality is modest. Roma under Gian Piero Gasperini should occupy the home back line with three forwards, aggressive wing-backs and centre-backs prepared to sustain attacks. If Lecce defend deep, Roma may accumulate territory and restarts; if Lecce score first, Roma's chase can increase shot and corner volume. A Roma lead creates the opposite risk because the visitors can protect possession and lower the final phase's tempo.\n\nxG means **Expected Goals — Gols Esperados**, xGA means **Expected Goals Against — Gols Esperados Contra**, and SOT means **Shots on Target — Finalizações no Alvo**. A uniform, reproducible 2026/27 xG, shots, SOT and corner feed was not available at the editorial cutoff, so those cells are not manufactured. The first-round score sample is too small to convert into stable per-game expectations. The larger baseline is clearer on outcomes: Lecce's 21 league goals in 2025/26 describe a low-output attack, while Roma kept Lecce to zero in both league meetings.\n\nThe goals route has two distinct paths. Roma can supply most or all of the required two goals, as in the 0–2 meeting in Lecce, or Lecce can turn the contest into a 1–1/1–2 game through transition or a set play. The recent H2H (**Head-to-Head — Confronto Direto**) is hostile to a high-scoring narrative: the last three meetings were 1–0, 2–0 and 1–0 to Roma, and only one of the last five cleared 2.5. However, three of those five did reach two goals, so the 1.5 threshold is materially less demanding than Over 2.5.\n\nThe **Lecce vs Roma corners** component needs separate treatment. Reliable current home/away corner averages do not yet exist because each club has played only once in the new league campaign, and no consistent source supplied competition-wide 2026/27 corner splits at cutoff. Tactical mechanisms therefore matter more than a false decimal average. Lecce's wide 4-2-3-1 can earn corners through direct outlets, while Roma's wing-backs, rotations around Dybala and Mora, and sustained occupation around the box can force blocks and clearances. The required production-versus-concession cross-check is deliberately left unavailable rather than mixing providers or seasons.\n\nGame state is decisive for eight or more corners. A long 0–0 can still create territorial Roma pressure, but it threatens the goal leg. An early Lecce goal is the most corner-positive script because Roma must expand and Lecce retain counterattacking width. An early Roma goal can help the goals leg yet hurt corners if Roma manage the ball rather than continue forcing the box. This dependence means the two legs are not independent. Weather guidance should be refreshed on matchday: no verified hour-specific precipitation, wind and humidity values were stable enough at cutoff to publish as definitive.\n\n### Statistical Core\n\n| Metric | Lecce | Roma |\n|---|---:|---:|\n| 2026/27 league matches | 1 | 1 |\n| 2026/27 start | Won at Venezia | Beat Fiorentina |\n| 2025/26 H2H goals | 0 | 3 |\n| Last five H2H W-D-L | 0-1-4 | 4-1-0 |\n| Last five H2H Over 1.5 | 3/5 | 3/5 |\n| 2025/26 league goals | 21 | — |\n| xG/game | — | — |\n| xGA/game | — | — |\n| Shots/game | — | — |\n| SOT/game | — | — |\n| Home/Away corners/game | — | — |\n| Relevant corner line | Over 7.5 combined | Over 7.5 combined |\n\n**Conflict Detector.** The strongest contrary evidence is Roma's repeated control of this matchup: Lecce failed to score in each 2025/26 meeting, and three consecutive H2Hs finished below 2.5. Lecce's 21 league goals last season also warn against assuming home contribution. Against that, the selection needs only two total goals, and Roma's high occupation plus both teams' wide structures offer several corner mechanisms. The corner evidence is less numerically mature than the tactical case, while the one-game current sample can distort any conclusion. A controlled 0–1 is the clearest losing score; a two-goal match with only seven corners loses the combined bet as well.\n\nAt 1.80, the **raw implied probability / price-derived threshold** is approximately **55.6%** before bookmaker margin. This is not a probability produced by our model. Because goals and corners can move together under certain game states, multiplying their historical hit rates would be methodologically unsound.\n\n🎯 **Prediction: Over 1.5 Goals + Over 7.5 Corners**\n💰 **Odds: 1.80**"],
+  analysisFormat: "markdown", seoTitle: "Lecce vs Roma Prediction, Odds & Match Analysis — Serie A 2026/27",
+  picks: { main: "Over 1.5 Goals + Over 7.5 Corners", publishedOdds: 1.8, oddsProvenance: { source: "Editor-supplied publication price", provenance: "author_attested", market: "Over 1.5 Goals + Over 7.5 Corners" } },
   sourceStatus: "verified",
   sources: [
-    {
-      name: "OpenFootball — Serie A 2026/27 fixtures",
-      url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt",
-      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
-      accessedAt: "2026-08-24T14:45:00-03:00",
-    },
+    { name: "Sky Sport — Lecce vs Roma probable lineups", url: "https://sport.sky.it/calcio/serie-a/2026/08/30/lecce-roma-probabili-formazioni-2-giornata", description: "Latest probable XIs, squad notes and kickoff confirmation.", accessedAt: "2026-08-30T22:45:00+02:00" },
+    { name: "La Gazzetta dello Sport — Lecce vs Roma", url: "https://www.gazzetta.it/Calcio/prob_form/lecce-roma/2638137", description: "Independent lineup and availability cross-check.", accessedAt: "2026-08-30T22:45:00+02:00" },
+    { name: "OpenFootball — Serie A 2026/27 fixtures", url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt", description: "Fixture, round and date verification.", accessedAt: "2026-08-30T22:45:00+02:00" },
   ],
-  publishedAt: "2026-08-24T17:38:36.651Z",
-  published: true,
-  matchInfo: {
-    date: "2026-08-31",
-    time: "18:30",
-    round: "Matchday 2",
-  },
+  publishedAt: "2026-08-24T17:38:36.651Z", updatedAt: "2026-08-30T22:45:00+02:00", published: true,
+  matchInfo: { date: "2026-08-31", time: "18:30", round: "Matchday 2", venue: "Stadio Via del Mare" },
 };

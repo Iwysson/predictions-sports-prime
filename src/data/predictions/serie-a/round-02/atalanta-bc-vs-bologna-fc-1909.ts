@@ -1,40 +1,16 @@
 import type { EditorialPrediction } from "@/types";
 
 export const atalantaBcVsBolognaFc1909: EditorialPrediction = {
-  league: "serie-a",
-  homeTeam: "Atalanta BC",
-  awayTeam: "Bologna FC 1909",
-  analysis: [
-    "Atalanta BC host Bologna FC 1909 in Serie A. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Over 2.5 Goals.",
-    "the goals component makes the total scoring range part of the selection.",
-    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Atalanta BC and Bologna FC 1909 exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
-    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
-  ],
-  picks: {
-    main: "Over 2.5 Goals",
-    odds: 1.8,
-    oddsProvenance: {
-      source: "Betano — author-attested editorial capture",
-      bookmaker: "Betano",
-      provenance: "author_attested",
-      capturedAt: "2026-08-24T12:57:00-03:00",
-      market: "Over 2.5 Goals",
-    },
-  },
+  league: "serie-a", homeTeam: "Atalanta BC", awayTeam: "Bologna FC 1909",
+  analysis: ["# Atalanta vs Bologna — Serie A 2026/27 Match Analysis\n🎯 **Prediction: Over 2.5 Goals**\n💰 **Odds: 1.90**\n**Serie A — Matchday 2 | August 31, 2026 — 8:45 PM local time | New Balance Arena, Bergamo**\n\nThe **Atalanta vs Bologna prediction** meets two teams under new management and with sharply different opening results. Maurizio Sarri's Atalanta beat Sassuolo 2–1 in the league and then completed Conference League qualification after a goalless first leg and a return-leg win over Hapoel Tel Aviv. Domenico Tedesco's Bologna began with a 1–0 home loss to Lazio. The current Serie A sample is N=1 for each side, so it must be read as a recent signal, not a stable scoring rate.\n\n**Probable lineups:** **Atalanta (4-3-3)** — Marco Carnesecchi; Davide Zappacosta, Odilon Kossounou, Giorgio Scalvini, Lorenzo Bernasconi; Lazar Samardzic, Gianluca Gaetano, Éderson; Charles De Ketelaere, Gianluca Scamacca, Giacomo Raspadori. **Bologna (4-3-3)** — Łukasz Skorupski; Emil Holm, Torbjørn Heggem, Arthur Theate, Juan Miranda; Tommaso Pobega, Nikola Moro, Lewis Ferguson; Federico Bernardeschi, Roberto Piccoli, Nicolò Cambiaghi. Sky's August 30 projection is preferred because it incorporates the European rotation and transfer-week decisions.\n\n**Availability.** Atalanta have Thomas Kristensen, Isak Hien and Kamaldeen Sulemana reported unavailable; Scamacca, Zappacosta and De Ketelaere are candidates to return after rotation in Europe. Bologna expect Nicolò Casale to be available again, while Oussama El Azzouzi remains sidelined with a thigh problem. Jonathan Rowe was omitted from the squad amid transfer discussions, so he is not inserted into the XI despite an older preview projecting him. This source conflict is resolved in favour of the later squad report.\n\nAtalanta's opening 2–1 gives the goal line an immediate hit, but the European sequence adds both rhythm and fatigue. Sarri's 4-3-3 should seek controlled construction, midfield occupation and combinations that release De Ketelaere and Raspadori inside the full-backs. Scamacca provides a central target and can turn wide possession into box entries. Bologna's 4-3-3 has enough progression through Ferguson and Moro to avoid becoming only a low block, while Bernardeschi and Cambiaghi can attack behind advanced home full-backs.\n\nxG (**Expected Goals — Gols Esperados**), xGA (**Expected Goals Against — Gols Esperados Contra**) and SOT (**Shots on Target — Finalizações no Alvo**) are useful process measures, but a consistent current feed was not available for both teams at the same cutoff. They are therefore marked unavailable rather than inferred from scores. The verified current outcome data are limited: Atalanta are 1-0-0 with two scored and one conceded; Bologna are 0-0-1 with zero scored and one conceded. That is one Over 2.5 in two separate team-games and no BTTS for Bologna.\n\nThe 2025/26 baseline complicates a simple home-favourite story. Atalanta finished only three points and one place above Bologna. Bologna won 10 away league games — only the top two won more — and won 1–0 in Bergamo in May. Their away strength creates attacking upside, but the latest H2H also demonstrates a credible low-event outcome. Bologna have won four of their last five trips to Atalanta across league and cup, so venue alone is not enough to forecast sustained home dominance.\n\nFor the goals module, the home side have several ways to create the third goal: a front three with penalty-box presence, midfield runners, and stronger bench alternatives after European rotation. Bologna can contribute through transitions or set pieces, particularly if Atalanta's full-backs are high. The cleanest Over script is an early opener that forces the trailing team away from its preferred structure. The Under script is equally identifiable: Bologna protect the central lane, slow Atalanta's combinations, and repeat a 1–0 or 1–1 pattern.\n\nThe H2H (**Head-to-Head — Confronto Direto**) must be descriptive rather than predictive because both coaches changed and personnel moved. Still, the May 2026 0–1 cannot be ignored. It says Bologna can defend this stadium and win without an open exchange. Conversely, Atalanta's 2–1 league opener and European match load suggest Sarri's team already have competitive rhythm that Bologna lack. Weather in Bergamo should be refreshed on matchday; no stable hour-specific temperature, precipitation, wind and humidity set was captured from a reliable feed at cutoff.\n\n### Statistical Core\n\n| Metric | Atalanta | Bologna |\n|---|---:|---:|\n| 2026/27 Serie A matches | 1 | 1 |\n| W-D-L | 1-0-0 | 0-0-1 |\n| GF/game | 2.00 | 0.00 |\n| GA/game | 1.00 | 1.00 |\n| Total goals/game | 3.00 | 1.00 |\n| Over 2.5 | 1/1 | 0/1 |\n| BTTS | 1/1 | 0/1 |\n| xG/game | — | — |\n| xGA/game | — | — |\n| Shots/game | — | — |\n| SOT/game | — | — |\n| 2025/26 away wins | — | 10 |\n| Latest H2H in Bergamo | 0 | 1 |\n\n**Conflict Detector.** Atalanta's opener and attacking options support an open-score path, and Bologna's away quality gives the visitor a credible contribution. The conflict is substantial: Bologna's first match ended 0–1, the latest H2H in Bergamo also ended 0–1, and Bologna have repeatedly travelled well here. Atalanta's third competitive match in a short span can mean rhythm or reduced tempo. The current sample is far too small to treat a 100% versus 0% Over split as predictive. A repeat of Bologna's compact away control is the selection's main threat.\n\nAt 1.90, the **raw implied probability / price-derived threshold** is approximately **52.6%** before bookmaker margin. It is not a model probability, and no value claim is made from one-round scoring frequencies.\n\n🎯 **Prediction: Over 2.5 Goals**\n💰 **Odds: 1.90**"],
+  analysisFormat: "markdown", seoTitle: "Atalanta vs Bologna Prediction, Odds & Match Analysis — Serie A 2026/27",
+  picks: { main: "Over 2.5 Goals", publishedOdds: 1.9, oddsProvenance: { source: "Editor-supplied publication price", provenance: "author_attested", market: "Over 2.5 Goals" } },
   sourceStatus: "verified",
   sources: [
-    {
-      name: "OpenFootball — Serie A 2026/27 fixtures",
-      url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt",
-      description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
-      accessedAt: "2026-08-24T14:45:00-03:00",
-    },
+    { name: "Sky Sport — Atalanta vs Bologna probable lineups", url: "https://sport.sky.it/calcio/serie-a/2026/08/30/atalanta-bologna-probabili-formazioni-2-giornata", description: "Latest probable XIs, team news and kickoff.", accessedAt: "2026-08-30T22:45:00+02:00" },
+    { name: "Sports Mole — Atalanta vs Bologna preview", url: "https://www.sportsmole.co.uk/football/atalanta-bc/preview/atalanta-vs-bologna-prediction-team-news-lineups_604013.html", description: "Results, prior-season away baseline, H2H and availability cross-check.", accessedAt: "2026-08-30T22:45:00+02:00" },
+    { name: "OpenFootball — Serie A 2026/27 fixtures", url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt", description: "Fixture verification.", accessedAt: "2026-08-30T22:45:00+02:00" },
   ],
-  publishedAt: "2026-08-24T17:38:36.651Z",
-  published: true,
-  matchInfo: {
-    date: "2026-08-31",
-    time: "20:45",
-    round: "Matchday 2",
-  },
+  publishedAt: "2026-08-24T17:38:36.651Z", updatedAt: "2026-08-30T22:45:00+02:00", published: true,
+  matchInfo: { date: "2026-08-31", time: "20:45", round: "Matchday 2", venue: "New Balance Arena" },
 };
