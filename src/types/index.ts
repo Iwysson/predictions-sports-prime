@@ -90,6 +90,10 @@ export type EditorialPrediction = {
   // Seu texto manual.
   analysis: string[];
 
+  // Opt-in rich rendering for supplied long-form Markdown analyses.
+  analysisFormat?: "markdown";
+  seoTitle?: string;
+
   // Optional note shown below the analysis.
   comment?: string;
 
@@ -138,6 +142,8 @@ export type Match = {
   status: "published" | "coming-soon";
   title: string;
   analysis: string[];
+  analysisFormat?: "markdown";
+  seoTitle?: string;
   comment?: string;
   predictions: PredictionItem[];
   betResult?: PredictionResultStatus;

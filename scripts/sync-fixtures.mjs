@@ -21,6 +21,7 @@ const snapshot = {
   leagues: {},
   predictionIds: {},
   leagueUpdatedAt: {},
+  manualFixtures: previous.manualFixtures ?? {},
 };
 const changes = [];
 

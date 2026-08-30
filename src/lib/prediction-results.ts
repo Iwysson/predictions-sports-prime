@@ -62,7 +62,7 @@ function selectedTeamIsHome(label: string, match: MatchPreview) {
 }
 
 function parseLeg(source: string): ParsedPredictionLeg | null {
-  const liveEntry = source.match(/^(.+?)\s*[-\u2014]\s*Live Entry$/i);
+  const liveEntry = source.match(/^(.+?)\s*[-\u2014]\s*(?:Live Entry|Wait Live)$/i);
   if (liveEntry) return { kind: "live-entry", market: liveEntry[1].trim(), source };
 
   const totalCorners = source.match(/^(Over|Under) (\d+(?:\.\d+)?) Corners?$/i);

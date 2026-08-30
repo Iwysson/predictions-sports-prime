@@ -1,0 +1,15 @@
+import { newcastleUnitedVsBournemouth } from "./newcastle-united-vs-bournemouth";
+import { brightonHoveAlbionVsLeedsUnited } from "./brighton-hove-albion-vs-leeds-united";
+import { manchesterCityVsCoventryCity } from "./manchester-city-vs-coventry-city";
+import { nottinghamForestVsTottenhamHotspur } from "./nottingham-forest-vs-tottenham-hotspur";
+import { fulhamVsCrystalPalace } from "./fulham-vs-crystal-palace";
+import { brentfordVsSunderland } from "./brentford-vs-sunderland";
+
+export const premierLeagueRound03 = [
+  newcastleUnitedVsBournemouth,
+  brightonHoveAlbionVsLeedsUnited,
+  manchesterCityVsCoventryCity,
+  nottinghamForestVsTottenhamHotspur,
+  fulhamVsCrystalPalace,
+  brentfordVsSunderland,
+];

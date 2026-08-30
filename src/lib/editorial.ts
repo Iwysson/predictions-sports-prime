@@ -166,6 +166,8 @@ export function editorialToMatch(
       prediction.title ??
       `${prediction.homeTeam} vs ${prediction.awayTeam} Prediction`,
     analysis: prediction.analysis,
+    analysisFormat: prediction.analysisFormat,
+    seoTitle: prediction.seoTitle,
     comment: prediction.comment,
     predictions: picksToItems(prediction),
     betResult: typeof prediction.picks.result === "string"

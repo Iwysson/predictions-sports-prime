@@ -104,6 +104,7 @@ type FixtureSnapshot = {
   leagues: Partial<Record<LeagueSlug, OpenFootballRound[]>>;
   predictionIds: Record<string, string>;
   leagueUpdatedAt?: Partial<Record<LeagueSlug, string>>;
+  manualFixtures?: Record<string, OpenFootballGame>;
 };
 
 const snapshot = fixtureSnapshot as FixtureSnapshot;
@@ -846,6 +847,8 @@ export function findFixtureForPrediction(
   if (providerId) {
     const byId = rounds.flatMap((round) => round.games).find((game) => game.id === providerId);
     if (byId) return byId;
+    const manualFixture = snapshot.manualFixtures?.[providerId];
+    if (manualFixture) return manualFixture;
   }
 
   return findFixtureByTeams(rounds, prediction.homeTeam, prediction.awayTeam);

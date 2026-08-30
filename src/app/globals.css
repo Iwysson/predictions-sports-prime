@@ -3845,6 +3845,19 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   color: #fff;
   font-size: 14px;
 }
+.editorial-statistical-core {
+  margin: 24px 0;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.editorial-statistical-core table { width: 100%; border-collapse: collapse; }
+.editorial-statistical-core th,
+.editorial-statistical-core td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: right; }
+.editorial-statistical-core th:first-child,
+.editorial-statistical-core td:first-child { text-align: left; }
+.editorial-statistical-core thead { background: var(--surface-muted); }
+.editorial-statistical-core tbody tr:last-child td { border-bottom: 0; }
 .button {
   min-height: 40px; color: #fff; background: var(--accent); border-radius: 8px;
   font-size: 13px; font-weight: 700; box-shadow: none;

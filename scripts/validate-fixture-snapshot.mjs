@@ -46,7 +46,9 @@ for (const match of matches) {
   const hydrated = await hydratePrediction(toMatchPreview(match));
   const providerFixture = snapshot.leagues[match.league]
     .flatMap((round) => round.games)
-    .find((game) => game.id === snapshot.predictionIds[`${match.league}:${match.slug}`]);
+    .find((game) => game.id === snapshot.predictionIds[`${match.league}:${match.slug}`])
+    ?? snapshot.manualFixtures?.[snapshot.predictionIds[`${match.league}:${match.slug}`]];
+  assert.ok(providerFixture, `${match.slug}: linked fixture data is unavailable.`);
   assert.equal(hydrated.date, providerFixture.date, `${match.slug}: reliable provider date was not retained.`);
   assert.equal(hydrated.time, providerFixture.time, `${match.slug}: reliable provider kickoff was not retained.`);
 }

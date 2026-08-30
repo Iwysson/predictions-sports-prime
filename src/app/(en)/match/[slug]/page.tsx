@@ -10,6 +10,7 @@ import { MatchComments } from "@/components/MatchComments";
 import { ArticleByline } from "@/components/ArticleByline";
 import { MethodologyLink } from "@/components/MethodologyLink";
 import { ArticleSources } from "@/components/ArticleSources";
+import { EditorialAnalysis } from "@/components/EditorialAnalysis";
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import {
   MatchAnalysisLabel,
@@ -132,7 +133,17 @@ export default async function MatchPage({
   const latestObservedOdds = match.predictions.find(
     (item) => item.label === "Latest Observed Odds"
   );
-  const relatedMatches = selectRelatedPredictions(match, matches);
+  const selectedRelatedMatches = selectRelatedPredictions(match, matches);
+  const suppliedAnalyses = matches.filter((item) => item.analysisFormat === "markdown");
+  const suppliedIndex = suppliedAnalyses.findIndex((item) => item.slug === match.slug);
+  const nextSuppliedAnalysis = suppliedIndex >= 0
+    ? suppliedAnalyses[(suppliedIndex + 1) % suppliedAnalyses.length]
+    : undefined;
+  const relatedMatches = nextSuppliedAnalysis
+    && nextSuppliedAnalysis.slug !== match.slug
+    && !selectedRelatedMatches.some((item) => item.slug === nextSuppliedAnalysis.slug)
+    ? [...selectedRelatedMatches.slice(0, 3), nextSuppliedAnalysis]
+    : selectedRelatedMatches;
   const hasFinalScore = isHistoryEligibleFixture({
     status: match.fixtureStatus,
     homeScore: match.homeScore,
@@ -233,9 +244,7 @@ export default async function MatchPage({
             <p className="match-seo-intro">{matchIntroduction(match)}</p>
 
             <div className="compact-analysis-copy">
-              {match.analysis.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+              <EditorialAnalysis analysis={match.analysis} format={match.analysisFormat} />
             </div>
 
             {match.comment ? (

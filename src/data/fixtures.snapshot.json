@@ -12850,6 +12850,75 @@
             "kickoffUtc": "2026-08-27T23:00Z"
           }
         ]
+      },
+      {
+        "round": 2,
+        "games": [
+          {
+            "round": 2,
+            "date": "2026-09-01",
+            "time": "21:00",
+            "homeTeam": "Atlético Mineiro",
+            "awayTeam": "Cruzeiro",
+            "venue": "Arena MRV",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "cbf",
+            "id": "cbf:copa-2026-game-148",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-02T00:00:00Z"
+          },
+          {
+            "round": 2,
+            "date": "2026-09-02",
+            "time": "21:30",
+            "homeTeam": "Vitória",
+            "awayTeam": "Vasco da Gama",
+            "venue": "Estádio Manoel Barradas (Barradão)",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "cbf",
+            "id": "cbf:835156",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-03T00:30:00Z"
+          },
+          {
+            "round": 2,
+            "date": "2026-09-02",
+            "time": "21:30",
+            "homeTeam": "Santos",
+            "awayTeam": "Palmeiras",
+            "venue": "Vila Belmiro",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "cbf",
+            "id": "cbf:copa-2026-game-150",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-03T00:30:00Z"
+          },
+          {
+            "round": 2,
+            "date": "2026-09-03",
+            "time": "20:00",
+            "homeTeam": "Grêmio",
+            "awayTeam": "Internacional",
+            "venue": "Arena do Grêmio",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "cbf",
+            "id": "cbf:835154",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-03T23:00:00Z"
+          }
+        ]
       }
     ],
     "efl-cup": [
@@ -13557,7 +13626,27 @@
     "scottish-premiership:kilmarnock-vs-st-mirren": "official:scottish-premiership:kilmarnock-vs-st-mirren:2026-09-02",
     "scottish-premiership:motherwell-vs-dundee-united": "official:scottish-premiership:motherwell-vs-dundee-united:2026-09-02",
     "scottish-premiership:st-mirren-vs-motherwell": "official:scottish-premiership:st-mirren-vs-motherwell:2026-08-30",
-    "scottish-premiership:kilmarnock-vs-dundee-united": "official:scottish-premiership:kilmarnock-vs-dundee-united:2026-08-29"
+    "scottish-premiership:kilmarnock-vs-dundee-united": "official:scottish-premiership:kilmarnock-vs-dundee-united:2026-08-29",
+    "premier-league:newcastle-united-vs-bournemouth": "401879286",
+    "premier-league:brighton-hove-albion-vs-leeds-united": "401879290",
+    "premier-league:manchester-city-vs-coventry-city": "401879287",
+    "premier-league:nottingham-forest-vs-tottenham-hotspur": "401878780",
+    "premier-league:fulham-vs-crystal-palace": "401879289",
+    "premier-league:brentford-vs-sunderland": "401879311",
+    "copa-do-brasil:atletico-mineiro-vs-cruzeiro": "cbf:copa-2026-game-148",
+    "brasileirao-serie-a:flamengo-vs-mirassol": "cbf:831919",
+    "copa-do-brasil:santos-vs-palmeiras": "cbf:copa-2026-game-150",
+    "copa-do-brasil:vitoria-vs-vasco-da-gama": "cbf:835156",
+    "copa-do-brasil:gremio-vs-internacional": "cbf:835154",
+    "bundesliga:vfb-stuttgart-vs-1-fc-koln": "tsdb:2508347",
+    "bundesliga:bayer-04-leverkusen-vs-1-fc-union-berlin": "tsdb:2508345",
+    "bundesliga:tsg-1899-hoffenheim-vs-borussia-dortmund": "tsdb:2508344",
+    "bundesliga:sv-werder-bremen-vs-rb-leipzig": "tsdb:2508342",
+    "bundesliga:borussia-monchengladbach-vs-sv-07-elversberg": "tsdb:2508343",
+    "bundesliga:schalke-04-vs-bayern-munchen": "tsdb:2508348",
+    "bundesliga:hamburger-sv-vs-1-fsv-mainz-05": "401884803",
+    "bundesliga:eintracht-frankfurt-vs-augsburg": "401884805",
+    "la-liga:real-sociedad-vs-celta-vigo": "401882867"
   },
   "leagueUpdatedAt": {
     "premier-league": "2026-08-30T10:44:40.959Z",
@@ -13572,5 +13661,23 @@
     "efl-cup": "2026-08-30T10:44:40.959Z",
     "super-lig": "2026-08-26T11:54:38.899Z",
     "scottish-premiership": "2026-08-26T11:54:38.899Z"
+  },
+  "manualFixtures": {
+    "cbf:831919": {
+      "round": 4,
+      "date": "2026-09-02",
+      "time": "19:30",
+      "homeTeam": "Flamengo",
+      "awayTeam": "Mirassol",
+      "venue": "Maracanã",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "rescheduled",
+      "dataSource": "cbf",
+      "id": "cbf:831919",
+      "sourceAgreement": true,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-09-02T22:30:00Z"
+    }
   }
 }
