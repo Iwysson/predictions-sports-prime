@@ -626,7 +626,10 @@ export async function hydrateTheSportsDb(slug: LeagueSlug, rounds: OpenFootballR
       )[0];
     if (!fixture) continue;
 
-    fixture.id = `tsdb:${event.idEvent}`;
+    // Keep ESPN's event id when both providers matched the same fixture. It is
+    // needed by the summary endpoint that supplies settlement statistics such
+    // as corners. TheSportsDB remains a fallback identity when ESPN has none.
+    fixture.id ??= `tsdb:${event.idEvent}`;
     fixture.homeTeam = cleanTeamName(event.strHomeTeam);
     fixture.awayTeam = cleanTeamName(event.strAwayTeam);
     fixture.round = Number(event.intRound) || fixture.round;
@@ -635,12 +638,30 @@ export async function hydrateTheSportsDb(slug: LeagueSlug, rounds: OpenFootballR
     fixture.kickoffUtc = kickoffUtc;
     fixture.timeConfirmed = Boolean(event.strTime);
     fixture.sourceAgreement = true;
-    fixture.status = sportsDbStatus(event);
-    fixture.dataSource = "thesportsdb";
+    const incomingStatus = sportsDbStatus(event);
+    const statusRank: Partial<Record<FixtureStatus, number>> = {
+      scheduled: 0,
+      rescheduled: 1,
+      "in-progress": 2,
+      suspended: 2,
+      completed: 3,
+      awarded: 3,
+      postponed: 3,
+      canceled: 3,
+      abandoned: 3,
+    };
+    const providerIsFresher = (statusRank[incomingStatus] ?? 0) >= (statusRank[fixture.status ?? "scheduled"] ?? 0);
+    if (providerIsFresher) {
+      fixture.status = incomingStatus;
+      fixture.dataSource = "thesportsdb";
+    }
     const homeScore = Number(event.intHomeScore);
     const awayScore = Number(event.intAwayScore);
-    fixture.homeScore = event.intHomeScore !== null && Number.isFinite(homeScore) ? homeScore : null;
-    fixture.awayScore = event.intAwayScore !== null && Number.isFinite(awayScore) ? awayScore : null;
+    if (incomingStatus === "completed" && event.intHomeScore !== null && event.intAwayScore !== null &&
+        Number.isFinite(homeScore) && Number.isFinite(awayScore)) {
+      fixture.homeScore = homeScore;
+      fixture.awayScore = awayScore;
+    }
   }
   return rounds;
 }

@@ -18,6 +18,7 @@ import {
 } from "@/lib/match-feed";
 import { useI18n } from "@/i18n/I18nProvider";
 import { getMatchDisplayTime } from "@/lib/match-time";
+import { evaluatePredictionSettlement } from "@/lib/prediction-results";
 
 export function HomePredictionFeed({
   matches,
@@ -230,21 +231,29 @@ export function HomePredictionFeed({
           </div>
           {historyMatches.length > 0 ? (
             <div className="history-list">
-              {historyMatches.map((match) => (
-                <a href={`/match/${match.slug}/`} className="history-row" key={match.id}>
+              {historyMatches.map((match) => {
+                const settlement = evaluatePredictionSettlement(match);
+                const resultLabel = match.homeScore == null || match.awayScore == null
+                  ? "WAITING SCORE"
+                  : settlement.pendingReason === "EXECUTION_DATA_MISSING"
+                    ? "ENTRY NOT RECORDED"
+                    : settlement.pendingReason === "MARKET_DATA_MISSING"
+                      ? "AWAITING STATS"
+                      : (match.betResult ?? "pending").replace("-", " ").toUpperCase();
+                return <a href={`/match/${match.slug}/`} className="history-row" key={match.id}>
                   <div>
                     <strong>{match.homeTeam} vs {match.awayTeam}</strong>
                     <span>{leagues.find((league) => league.slug === match.league)?.name ?? match.league} · {match.date} · {match.mainPrediction}</span>
                   </div>
                   <span className="history-score">
-                    {match.homeScore != null && match.awayScore != null ? `${match.homeScore}–${match.awayScore}` : "WAITING DATA"}
+                    {match.homeScore != null && match.awayScore != null ? `${match.homeScore}–${match.awayScore}` : "WAITING SCORE"}
                   </span>
                   <span className="history-odds">Odds {match.odds ?? "—"}</span>
                   <b className={`bet-result bet-result--${match.homeScore == null || match.awayScore == null ? "awaiting-data" : match.betResult ?? "pending"}`}>
-                    {match.homeScore == null || match.awayScore == null ? "WAITING DATA" : (match.betResult ?? "pending").replace("-", " ").toUpperCase()}
+                    {resultLabel}
                   </b>
                 </a>
-              ))}
+              })}
             </div>
           ) : <div className="empty-state empty-state--compact"><strong>No completed predictions yet.</strong></div>}
           <p className="history-all-link"><Link href="/results/">View all results</Link></p>

@@ -10,9 +10,12 @@ import {
   teamNamesMatch,
 } from "../src/lib/openfootball.ts";
 import { validateLeagueRounds } from "../src/lib/data-validation.ts";
+import { parsePredictionMarket } from "../src/lib/prediction-results.ts";
 
 const outputPath = resolve("src/data/fixtures.snapshot.json");
+const marketResultsPath = resolve("src/data/market-results.snapshot.json");
 const previous = JSON.parse(await readFile(outputPath, "utf8"));
+const previousMarketResults = JSON.parse(await readFile(marketResultsPath, "utf8"));
 const snapshot = {
   version: 1,
   generatedAt: new Date().toISOString(),
@@ -51,7 +54,7 @@ async function sourceText(source) {
   return response.text();
 }
 
-for (const league of leagues) {
+await Promise.all(leagues.map(async (league) => {
   const leaguePredictions = matches.filter((match) => match.league === league.slug);
   try {
     const text = await sourceText(league.sources.fixtures);
@@ -80,12 +83,27 @@ for (const league of leagues) {
       : parseFootballSeason(text);
     const espnRounds = await hydrateLiveResults(league.slug, base);
     const rounds = await hydrateTheSportsDb(league.slug, espnRounds);
-    const previousById = new Map(
-      (previous.leagues?.[league.slug] ?? []).flatMap((round) => round.games).map((game) => [game.id, game])
-    );
+    const previousGames = (previous.leagues?.[league.slug] ?? []).flatMap((round) => round.games);
+    const previousById = new Map(previousGames.map((game) => [game.id, game]));
     for (const fixture of rounds.flatMap((round) => round.games)) {
-      const saved = fixture.id ? previousById.get(fixture.id) : undefined;
+      const saved = (fixture.id ? previousById.get(fixture.id) : undefined) ?? previousGames
+        .filter((game) => teamNamesMatch(game.homeTeam, fixture.homeTeam) && teamNamesMatch(game.awayTeam, fixture.awayTeam))
+        .sort((left, right) =>
+          Math.abs(Date.parse(`${left.date}T12:00:00Z`) - Date.parse(`${fixture.date}T12:00:00Z`)) -
+          Math.abs(Date.parse(`${right.date}T12:00:00Z`) - Date.parse(`${fixture.date}T12:00:00Z`))
+        )[0];
       const dateChanged = saved && saved.date !== fixture.date;
+      // Provider feeds are occasionally updated out of order. Once a valid
+      // final score has been observed it is immutable and must never be rolled
+      // back by a stale scheduled/live response from another provider.
+      if (saved?.status === "completed" && Number.isInteger(saved.homeScore) && Number.isInteger(saved.awayScore) &&
+          (fixture.status !== "completed" || !Number.isInteger(fixture.homeScore) || !Number.isInteger(fixture.awayScore))) {
+        fixture.status = "completed";
+        fixture.homeScore = saved.homeScore;
+        fixture.awayScore = saved.awayScore;
+        fixture.id = saved.id;
+        fixture.dataSource = saved.dataSource;
+      }
       if (fixture.status === "scheduled" && (saved?.status === "rescheduled" || dateChanged)) {
         fixture.status = "rescheduled";
       }
@@ -153,7 +171,44 @@ for (const league of leagues) {
     }
     console.error(`SOURCE_REFRESH_FAILED ${league.slug}: ${error instanceof Error ? error.message : String(error)}`);
   }
+}));
+
+function cornerValue(statistics) {
+  const item = statistics?.find((stat) => /^(wonCorners|cornerKicks|corners)$/i.test(stat.name ?? stat.label ?? ""));
+  if (!item) return null;
+  const value = Number(item.value ?? item.displayValue);
+  return Number.isInteger(value) && value >= 0 ? value : null;
 }
+
+const marketResults = { ...previousMarketResults };
+const cornerPredictions = matches.filter((match) =>
+  parsePredictionMarket(match.mainPrediction ?? "").legs.some((leg) => leg.kind === "corners")
+);
+await Promise.all(cornerPredictions.map(async (prediction) => {
+  const fixtureId = snapshot.predictionIds[`${prediction.league}:${prediction.slug}`];
+  if (!fixtureId || fixtureId.startsWith("tsdb:") || fixtureId.startsWith("official:")) return;
+  const fixture = Object.values(snapshot.leagues).flatMap((rounds) => rounds ?? [])
+    .flatMap((round) => round.games).find((game) => game.id === fixtureId);
+  if (fixture?.status !== "completed") return;
+  const key = `${prediction.league}:${prediction.slug}`;
+  if (marketResults[key]) return;
+  try {
+    const source = `https://site.api.espn.com/apis/site/v2/sports/soccer/${leagues.find((item) => item.slug === prediction.league)?.liveDataId}/summary?event=${fixtureId}`;
+    const response = await fetch(source, { headers: { Accept: "application/json" }, cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    const teams = data.boxscore?.teams ?? [];
+    const home = teams.find((team) => team.homeAway === "home") ?? teams[0];
+    const away = teams.find((team) => team.homeAway === "away") ?? teams[1];
+    const homeCorners = cornerValue(home?.statistics);
+    const awayCorners = cornerValue(away?.statistics);
+    if (homeCorners === null || awayCorners === null) throw new Error("corner statistics unavailable");
+    marketResults[key] = { homeCorners, awayCorners, source, capturedAt: snapshot.generatedAt };
+    console.log(`${prediction.slug}: captured corners ${homeCorners}-${awayCorners}`);
+  } catch (error) {
+    console.error(`MARKET_DATA_REFRESH_FAILED ${prediction.slug}: ${error instanceof Error ? error.message : String(error)}`);
+  }
+}));
 
 const automaticPredictions = matches.filter((match) => {
   const league = leagues.find((item) => item.slug === match.league);
@@ -170,12 +225,13 @@ if (Object.keys(snapshot.predictionIds).length !== automaticPredictions.length) 
 const fixtureDataChanged =
   JSON.stringify(snapshot.leagues) !== JSON.stringify(previous.leagues) ||
   JSON.stringify(snapshot.predictionIds) !== JSON.stringify(previous.predictionIds);
+const marketDataChanged = JSON.stringify(marketResults) !== JSON.stringify(previousMarketResults);
 const previousGeneratedAt = Date.parse(previous.generatedAt ?? "");
 const heartbeatDue =
   !Number.isFinite(previousGeneratedAt) ||
   Date.now() - previousGeneratedAt >= 12 * 60 * 60 * 1000;
 
-if (!fixtureDataChanged && !heartbeatDue) {
+if (!fixtureDataChanged && !marketDataChanged && !heartbeatDue) {
   console.log(`Fixture data unchanged; snapshot write skipped (${snapshot.generatedAt}).`);
   console.log(`Previous snapshot: ${previous.generatedAt}`);
   process.exit(0);
@@ -184,6 +240,11 @@ if (!fixtureDataChanged && !heartbeatDue) {
 const temporaryPath = `${outputPath}.next`;
 await writeFile(temporaryPath, `${JSON.stringify(snapshot, null, 2)}\n`, "utf8");
 await rename(temporaryPath, outputPath);
+if (marketDataChanged) {
+  const temporaryMarketPath = `${marketResultsPath}.next`;
+  await writeFile(temporaryMarketPath, `${JSON.stringify(marketResults, null, 2)}\n`, "utf8");
+  await rename(temporaryMarketPath, marketResultsPath);
+}
 console.log(`Fixture snapshot updated: ${snapshot.generatedAt}`);
 console.log(`Provider differences retained for editorial review: ${changes.length}`);
 for (const change of changes) console.log(`  ${change.prediction}: ${change.from} -> ${change.to}`);
