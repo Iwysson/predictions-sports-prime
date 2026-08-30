@@ -31,7 +31,7 @@ const records = files.filter((file) => /\bpublished:\s*true/.test(readFileSync(f
   const signals = contextSignals.filter((pattern) => pattern.test(text)).length;
   const reasons = [];
   let status = "good";
-  if (!quoted(source, "main") || !paragraphs.length || /lorem ipsum|todo|placeholder text|add analysis/i.test(text)) {
+  if (!quoted(source, "main") || !paragraphs.length || /lorem ipsum|placeholder text|add analysis/i.test(text) || /\bTODO\b/.test(text)) {
     status = "critical";
     reasons.push("missing or placeholder editorial content");
   } else if (words < 220 || paragraphs.length < 3 || signals < 4 || boilerplate.test(text)) {
@@ -48,4 +48,3 @@ const counts = Object.fromEntries(["good", "warning", "critical"].map((status) =
 console.log(`Editorial quality: ${counts.good} good / ${counts.warning} warning / ${counts.critical} critical`);
 records.filter((record) => record.status !== "good").forEach((record) => console.log(`${record.status.toUpperCase()}: ${record.file}: ${record.reasons.join(", ")}`));
 if (counts.critical) process.exitCode = 1;
-

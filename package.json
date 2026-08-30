@@ -36,6 +36,7 @@
     "audit:fixture-lifecycle": "tsx scripts/audit-fixture-lifecycle.mjs",
     "audit:supplied-20": "tsx scripts/audit-supplied-20-publication.mjs",
     "audit:supplied-10": "node scripts/audit-supplied-10-publication.mjs",
+    "audit:supplied-15": "node scripts/audit-supplied-15-publication.mjs",
     "audit:prediction-history": "tsx scripts/audit-prediction-history.mjs",
     "audit:render-consistency": "tsx scripts/audit-render-consistency.mjs",
     "audit:production-html": "node scripts/audit-production-html.mjs",

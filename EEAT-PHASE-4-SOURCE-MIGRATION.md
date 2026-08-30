@@ -8,14 +8,14 @@ This pre-migration inventory applies conservative lexical triage to every publis
 
 ## Corpus summary
 
-- Published predictions audited: 213
-- Predictions with existing sources: 213
+- Published predictions audited: 228
+- Predictions with existing sources: 228
 - Predictions requiring source research: 0
-- Total verified sources: 268
-- Factual/event candidates currently unsupported: 3718
-- Exact sentences repeated across predictions: 50
+- Total verified sources: 283
+- Factual/event candidates currently unsupported: 4445
+- Exact sentences repeated across predictions: 51
 - High-similarity pairs (Jaccard token threshold ≥ 0.55): 887
-- Average analysis length: 479 words
+- Average analysis length: 573 words
 - Shortest analysis: paris-fc-vs-nice (97 words)
 - Longest analysis: borussia-monchengladbach-vs-sv-07-elversberg (3479 words)
 - Prohibited guaranteed-win/profit candidates: 0
@@ -32,15 +32,18 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | ac-monza-vs-udinese-calcio | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | academico-de-viseu-vs-porto | 1 | 0 | 1 | 1 | Direct claim-specific research | 1 | LOW | SOURCE RESEARCH REQUIRED |
 | acf-fiorentina-vs-frosinone-calcio | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
+| ajax-vs-psv-eindhoven | 45 | 0 | 0 | 1 | Direct claim-specific research | 45 | HIGH | SOURCE RESEARCH REQUIRED |
 | alaves-vs-villarreal | 13 | 0 | 1 | 1 | Direct claim-specific research | 13 | HIGH | SOURCE RESEARCH REQUIRED |
 | alverca-vs-santa-clara | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | amedspor-vs-trabzonspor | 9 | 0 | 0 | 1 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | angers-vs-lille | 5 | 0 | 0 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
+| angers-vs-rennes | 28 | 0 | 0 | 1 | Direct claim-specific research | 28 | HIGH | SOURCE RESEARCH REQUIRED |
 | arouca-vs-maritimo | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | arsenal-vs-coventry-city | 5 | 1 | 1 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | aston-villa-vs-arsenal | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | atalanta-bc-vs-bologna-fc-1909 | 4 | 0 | 1 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | atalanta-vs-sassuolo | 4 | 1 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
+| athletic-club-vs-atletico-madrid | 48 | 0 | 0 | 1 | Direct claim-specific research | 48 | HIGH | SOURCE RESEARCH REQUIRED |
 | athletic-club-vs-sevilla | 4 | 0 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | athletico-pr-vs-fluminense | 9 | 0 | 0 | 1 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | atletico-madrid-vs-malaga | 6 | 0 | 1 | 2 | Direct claim-specific research | 6 | MEDIUM | SOURCE RESEARCH REQUIRED |
@@ -87,20 +90,25 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | cruzeiro-vs-atletico-mineiro | 36 | 0 | 1 | 1 | Direct claim-specific research | 36 | HIGH | SOURCE RESEARCH REQUIRED |
 | cruzeiro-vs-flamengo | 26 | 0 | 2 | 2 | Direct claim-specific research | 26 | HIGH | SOURCE RESEARCH REQUIRED |
 | crystal-palace-vs-manchester-city | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
+| deportivo-alaves-vs-osasuna | 50 | 0 | 0 | 1 | Direct claim-specific research | 50 | HIGH | SOURCE RESEARCH REQUIRED |
 | deportivo-vs-valencia | 5 | 0 | 1 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | doncaster-rovers-vs-middlesbrough | 33 | 3 | 0 | 1 | Direct claim-specific research | 34 | HIGH | SOURCE RESEARCH REQUIRED |
 | dundee-vs-hibernian | 7 | 0 | 0 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | dundee-vs-st-johnstone | 7 | 0 | 0 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | eintracht-frankfurt-vs-augsburg | 82 | 2 | 10 | 1 | Direct claim-specific research | 83 | HIGH | SOURCE RESEARCH REQUIRED |
 | elche-vs-barcelona | 23 | 0 | 0 | 1 | Direct claim-specific research | 23 | HIGH | SOURCE RESEARCH REQUIRED |
+| elche-vs-real-sociedad | 67 | 0 | 0 | 1 | Direct claim-specific research | 67 | HIGH | SOURCE RESEARCH REQUIRED |
+| espanyol-vs-sevilla | 71 | 0 | 0 | 1 | Direct claim-specific research | 71 | HIGH | SOURCE RESEARCH REQUIRED |
 | estoril-vs-rio-ave | 9 | 0 | 1 | 2 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | estrela-da-amadora-vs-sc-braga | 10 | 0 | 0 | 2 | Direct claim-specific research | 10 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | everton-vs-crystal-palace | 4 | 0 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
+| everton-vs-manchester-united | 57 | 0 | 1 | 1 | Direct claim-specific research | 57 | HIGH | SOURCE RESEARCH REQUIRED |
 | excelsior-vs-sparta-rotterdam | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | eyupspor-vs-alanyaspor | 6 | 0 | 0 | 1 | Direct claim-specific research | 6 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | falkirk-vs-rangers | 7 | 0 | 0 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | famalicao-vs-gil-vicente | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | fc-porto-vs-arouca | 3 | 1 | 1 | 1 | Direct claim-specific research | 3 | LOW | SOURCE RESEARCH REQUIRED |
+| fc-utrecht-vs-go-ahead-eagles | 47 | 0 | 0 | 1 | Direct claim-specific research | 47 | HIGH | SOURCE RESEARCH REQUIRED |
 | feyenoord-rotterdam-vs-ado-den-haag | 1 | 0 | 1 | 1 | Direct claim-specific research | 1 | LOW | SOURCE RESEARCH REQUIRED |
 | fiorentina-vs-torino | 26 | 2 | 1 | 1 | Direct claim-specific research | 28 | HIGH | SOURCE RESEARCH REQUIRED |
 | flamengo-vs-botafogo | 9 | 0 | 0 | 1 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
@@ -150,6 +158,7 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | lyon-vs-auxerre | 29 | 0 | 1 | 1 | Direct claim-specific research | 29 | HIGH | SOURCE RESEARCH REQUIRED |
 | lyon-vs-le-havre | 3 | 0 | 0 | 3 | Direct claim-specific research | 3 | LOW | SOURCE RESEARCH REQUIRED |
 | malaga-vs-deportivo-la-coruna | 43 | 0 | 1 | 1 | Direct claim-specific research | 43 | HIGH | SOURCE RESEARCH REQUIRED |
+| malaga-vs-levante | 32 | 0 | 0 | 1 | Direct claim-specific research | 32 | HIGH | SOURCE RESEARCH REQUIRED |
 | manchester-city-vs-bournemouth | 6 | 0 | 0 | 1 | Direct claim-specific research | 6 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | manchester-city-vs-coventry-city | 70 | 1 | 6 | 1 | Direct claim-specific research | 71 | HIGH | SOURCE RESEARCH REQUIRED |
 | manchester-united-vs-ipswich-town | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
@@ -158,6 +167,7 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | monaco-vs-olympique-de-marseille | 4 | 0 | 0 | 2 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | moreirense-vs-benfica | 9 | 0 | 1 | 2 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | motherwell-vs-dundee-united | 8 | 0 | 0 | 1 | Direct claim-specific research | 8 | MEDIUM | SOURCE RESEARCH REQUIRED |
+| nec-nijmegen-vs-feyenoord | 39 | 0 | 0 | 1 | Direct claim-specific research | 39 | HIGH | SOURCE RESEARCH REQUIRED |
 | newcastle-united-vs-bournemouth | 60 | 4 | 6 | 1 | Direct claim-specific research | 64 | HIGH | SOURCE RESEARCH REQUIRED |
 | newcastle-united-vs-liverpool | 5 | 2 | 1 | 5 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | newcastle-united-vs-west-bromwich-albion | 28 | 5 | 3 | 1 | Direct claim-specific research | 31 | HIGH | SOURCE RESEARCH REQUIRED |
@@ -178,6 +188,7 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | psv-eindhoven-vs-fc-groningen | 8 | 0 | 1 | 4 | Direct claim-specific research | 8 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | racing-santander-vs-elche | 12 | 0 | 1 | 1 | Direct claim-specific research | 12 | HIGH | SOURCE RESEARCH REQUIRED |
 | rayo-vallecano-vs-deportivo-alaves | 4 | 0 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
+| rayo-vallecano-vs-racing-santander | 40 | 0 | 0 | 1 | Direct claim-specific research | 40 | HIGH | SOURCE RESEARCH REQUIRED |
 | rb-leipzig-vs-borussia-monchengladbach | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | rc-deportivo-la-coruna-vs-elche | 3 | 0 | 1 | 1 | Direct claim-specific research | 3 | LOW | SOURCE RESEARCH REQUIRED |
 | rcd-espanyol-de-barcelona-vs-real-madrid | 5 | 0 | 0 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
@@ -221,21 +232,25 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | toulouse-vs-lille | 32 | 2 | 3 | 1 | Direct claim-specific research | 33 | HIGH | SOURCE RESEARCH REQUIRED |
 | toulouse-vs-lyon | 5 | 0 | 0 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | troyes-vs-paris-fc | 3 | 0 | 0 | 1 | Direct claim-specific research | 3 | LOW | SOURCE RESEARCH REQUIRED |
+| troyes-vs-strasbourg | 26 | 0 | 0 | 1 | Direct claim-specific research | 26 | HIGH | SOURCE RESEARCH REQUIRED |
 | tsg-1899-hoffenheim-vs-borussia-dortmund | 39 | 6 | 7 | 1 | Direct claim-specific research | 44 | HIGH | SOURCE RESEARCH REQUIRED |
 | udinese-calcio-vs-como-1907 | 4 | 1 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | us-lecce-vs-as-roma | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | us-sassuolo-calcio-vs-torino | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | utrecht-vs-psv-eindhoven | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
+| valencia-vs-barcelona | 58 | 0 | 1 | 1 | Direct claim-specific research | 58 | HIGH | SOURCE RESEARCH REQUIRED |
 | valencia-vs-rc-celta-de-vigo | 4 | 1 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | valencia-vs-real-betis | 30 | 0 | 2 | 1 | Direct claim-specific research | 30 | HIGH | SOURCE RESEARCH REQUIRED |
 | vasco-da-gama-vs-cruzeiro | 6 | 0 | 1 | 1 | Direct claim-specific research | 6 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | vasco-da-gama-vs-vitoria | 29 | 1 | 5 | 1 | Direct claim-specific research | 29 | HIGH | SOURCE RESEARCH REQUIRED |
 | venezia-vs-lecce | 4 | 0 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | vfb-stuttgart-vs-1-fc-koln | 40 | 3 | 5 | 1 | Direct claim-specific research | 43 | HIGH | SOURCE RESEARCH REQUIRED |
+| villarreal-vs-deportivo-la-coruna | 65 | 0 | 0 | 1 | Direct claim-specific research | 65 | HIGH | SOURCE RESEARCH REQUIRED |
 | vitoria-de-guimaraes-vs-nacional | 6 | 0 | 0 | 1 | Direct claim-specific research | 6 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | vitoria-vs-bahia | 48 | 0 | 0 | 3 | Direct claim-specific research | 48 | HIGH | SOURCE RESEARCH REQUIRED |
 | vitoria-vs-vasco-da-gama | 79 | 5 | 8 | 1 | Direct claim-specific research | 84 | HIGH | SOURCE RESEARCH REQUIRED |
 | watford-vs-peterborough-united | 33 | 2 | 2 | 1 | Direct claim-specific research | 34 | HIGH | SOURCE RESEARCH REQUIRED |
+| willem-ii-vs-excelsior | 54 | 0 | 0 | 1 | Direct claim-specific research | 54 | HIGH | SOURCE RESEARCH REQUIRED |
 | willem-ii-vs-heerenveen | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 
 ## Repetition inventory
@@ -274,6 +289,7 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - `4–1 ✅` — chelsea-vs-luton-town, fulham-vs-afc-wimbledon, newcastle-united-vs-west-bromwich-albion, real-madrid-vs-real-sociedad, tottenham-hotspur-vs-charlton-athletic
 - `💰 odds: 1.62` — doncaster-rovers-vs-middlesbrough, osasuna-vs-levante, sheffield-wednesday-vs-wolverhampton-wanderers
 - `st.` — dundee-vs-st-johnstone, hearts-vs-st-johnstone
+- `risco: médio.` — fc-utrecht-vs-go-ahead-eagles, willem-ii-vs-excelsior
 - `**market price:** **1.75 (-133 american)**.` — fulham-vs-crystal-palace, santos-vs-palmeiras
 - `🎯 prediction: over 1.5 goals` — getafe-vs-racing-santander, malaga-vs-deportivo-la-coruna
 - `the second component of the prediction is over 1.5 goals.` — internacional-vs-atletico-mineiro, santos-vs-mirassol
