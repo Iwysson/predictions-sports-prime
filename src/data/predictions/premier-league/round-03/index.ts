@@ -4,6 +4,7 @@ import { manchesterCityVsCoventryCity } from "./manchester-city-vs-coventry-city
 import { nottinghamForestVsTottenhamHotspur } from "./nottingham-forest-vs-tottenham-hotspur";
 import { fulhamVsCrystalPalace } from "./fulham-vs-crystal-palace";
 import { brentfordVsSunderland } from "./brentford-vs-sunderland";
+import { ipswichTownVsLiverpool } from "./ipswich-town-vs-liverpool";
 
 export const premierLeagueRound03 = [
   newcastleUnitedVsBournemouth,
@@ -12,4 +13,5 @@ export const premierLeagueRound03 = [
   nottinghamForestVsTottenhamHotspur,
   fulhamVsCrystalPalace,
   brentfordVsSunderland,
+  ipswichTownVsLiverpool,
 ];
