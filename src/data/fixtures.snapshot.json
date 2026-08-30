@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-30T05:53:28.485Z",
+  "generatedAt": "2026-08-30T10:44:40.959Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -11003,7 +11003,7 @@
             "awayTeam": "PSV Eindhoven",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "in-progress",
             "dataSource": "espn",
             "id": "401875626",
             "sourceAgreement": true,
@@ -13560,16 +13560,16 @@
     "scottish-premiership:kilmarnock-vs-dundee-united": "official:scottish-premiership:kilmarnock-vs-dundee-united:2026-08-29"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-08-30T05:53:28.485Z",
-    "la-liga": "2026-08-30T05:53:28.485Z",
-    "bundesliga": "2026-08-30T05:53:28.485Z",
-    "serie-a": "2026-08-30T05:53:28.485Z",
-    "liga-portugal": "2026-08-30T05:53:28.485Z",
-    "ligue-1": "2026-08-30T05:53:28.485Z",
-    "eredivisie": "2026-08-30T05:53:28.485Z",
-    "brasileirao-serie-a": "2026-08-30T05:53:28.485Z",
-    "copa-do-brasil": "2026-08-30T05:53:28.485Z",
-    "efl-cup": "2026-08-30T05:53:28.485Z",
+    "premier-league": "2026-08-30T10:44:40.959Z",
+    "la-liga": "2026-08-30T10:44:40.959Z",
+    "bundesliga": "2026-08-30T10:44:40.959Z",
+    "serie-a": "2026-08-30T10:44:40.959Z",
+    "liga-portugal": "2026-08-30T10:44:40.959Z",
+    "ligue-1": "2026-08-30T10:44:40.959Z",
+    "eredivisie": "2026-08-30T10:44:40.959Z",
+    "brasileirao-serie-a": "2026-08-30T10:44:40.959Z",
+    "copa-do-brasil": "2026-08-30T10:44:40.959Z",
+    "efl-cup": "2026-08-30T10:44:40.959Z",
     "super-lig": "2026-08-26T11:54:38.899Z",
     "scottish-premiership": "2026-08-26T11:54:38.899Z"
   }
