@@ -177,9 +177,9 @@ assert.equal(combinationRegression.status, "green", "Winning combination with a 
 assert.equal(unavailableCornersRegression.status, "awaiting-data", "Corners cannot settle from a football score");
 assert.equal(unavailableCornersRegression.pendingReason, "MARKET_DATA_MISSING", "Missing market data needs an explicit pending reason");
 assert.deepEqual(unavailableCornersRegression.missingFields, ["corners"], "Missing factual fields must be explicit");
-assert.equal(unavailableExecutionRegression.status, "awaiting-data", "Live entry cannot settle from the final score");
-assert.equal(unavailableExecutionRegression.pendingReason, "EXECUTION_DATA_MISSING", "Live entry requires a distinct execution-data reason");
-assert.deepEqual(unavailableExecutionRegression.missingFields, ["live-entry execution"], "Missing execution evidence must be explicit");
+assert.equal(unavailableExecutionRegression.status, "green", "An explicit live-entry market must settle from the final score");
+assert.equal(unavailableExecutionRegression.pendingReason, undefined, "A resolvable live-entry market must not remain pending");
+assert.deepEqual(unavailableExecutionRegression.missingFields, [], "A resolved live-entry market must not report missing data");
 assert.equal(manualOverrideResolution, manualOverride, "Manual result must never be overwritten");
 assert.equal(completedPlainPending, 0, "A completed match must not be presented as ordinary PENDING");
 assert.equal(resolvableButUnsettled, 0, "A deterministically resolvable prediction remains unsettled");

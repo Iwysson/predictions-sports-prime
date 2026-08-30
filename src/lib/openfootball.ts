@@ -18,7 +18,8 @@ export type OpenFootballGame = {
   homeScore: number | null;
   awayScore: number | null;
   status?: FixtureStatus;
-  dataSource?: "openfootball" | "espn" | "thesportsdb" | "snapshot";
+  dataSource?: "openfootball" | "espn" | "thesportsdb" | "fotmob" | "snapshot";
+  fotmobMatchId?: number;
   kickoffUtc?: string;
   timeConfirmed?: boolean;
   sourceAgreement?: boolean;
@@ -266,6 +267,8 @@ export function normalizeTeamKey(name: string) {
     fcutrecht: "utrecht",
     goaheadeagles: "goaheadeagles",
     adodenhaag: "adodenhaag",
+    caykurrizespor: "rizespor",
+    erzurumsporfk: "erzurumspor",
   };
 
   return aliases[key] ?? key;

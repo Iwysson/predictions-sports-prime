@@ -34,5 +34,65 @@
     "awayCorners": 3,
     "source": "https://www.fotmob.com/api/data/matchDetails?matchId=6005657",
     "capturedAt": "2026-08-28T07:26:54-03:00"
+  },
+  "la-liga:levante-vs-real-betis": {
+    "homeCorners": 5,
+    "awayCorners": 8,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5868035",
+    "capturedAt": "2026-08-30T09:50:00-03:00"
+  },
+  "la-liga:real-sociedad-vs-espanyol": {
+    "homeCorners": 7,
+    "awayCorners": 3,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5868039",
+    "capturedAt": "2026-08-30T09:50:00-03:00"
+  },
+  "la-liga:racing-santander-vs-elche": {
+    "homeCorners": 5,
+    "awayCorners": 10,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5868037",
+    "capturedAt": "2026-08-30T09:50:00-03:00"
+  },
+  "serie-a:juventus-vs-parma-calcio-1913": {
+    "homeCorners": 10,
+    "awayCorners": 2,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5749654",
+    "capturedAt": "2026-08-30T09:50:00-03:00"
+  },
+  "ligue-1:brest-vs-toulouse": {
+    "homeCorners": 7,
+    "awayCorners": 2,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5802911",
+    "capturedAt": "2026-08-30T09:50:00-03:00"
+  },
+  "super-lig:galatasaray-vs-goztepe": {
+    "homeCorners": 6,
+    "awayCorners": 2,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5904728",
+    "capturedAt": "2026-08-30T10:05:00-03:00"
+  },
+  "super-lig:gaziantep-fk-vs-caykur-rizespor": {
+    "homeCorners": 8,
+    "awayCorners": 0,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5904722",
+    "capturedAt": "2026-08-30T10:05:00-03:00"
+  },
+  "super-lig:konyaspor-vs-kocaelispor": {
+    "homeCorners": 1,
+    "awayCorners": 4,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5904727",
+    "capturedAt": "2026-08-30T10:05:00-03:00"
+  },
+  "scottish-premiership:hearts-vs-st-johnstone": {
+    "homeCorners": 8,
+    "awayCorners": 4,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5793919",
+    "capturedAt": "2026-08-30T10:05:00-03:00"
+  },
+  "scottish-premiership:kilmarnock-vs-dundee-united": {
+    "homeCorners": 3,
+    "awayCorners": 5,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5793920",
+    "capturedAt": "2026-08-30T10:05:00-03:00"
   }
 }

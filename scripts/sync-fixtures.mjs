@@ -54,13 +54,56 @@ async function sourceText(source) {
   return response.text();
 }
 
-await Promise.all(leagues.map(async (league) => {
+const fotmobDailyPromises = new Map();
+function fetchFotmobDay(date) {
+  if (!fotmobDailyPromises.has(date)) {
+    const compactDate = date.replace(/-/g, "");
+    const url = `https://www.fotmob.com/api/data/matches?date=${compactDate}`;
+    fotmobDailyPromises.set(date, fetch(url, {
+      headers: { Accept: "application/json", "User-Agent": "Mozilla/5.0" },
+      cache: "no-store",
+    }).then(async (response) => {
+      if (!response.ok) throw new Error(`FotMob matches HTTP ${response.status}`);
+      return response.json();
+    }));
+  }
+  return fotmobDailyPromises.get(date);
+}
+
+async function hydrateFotmobFinalScores(rounds) {
+  const fixtures = rounds.flatMap((round) => round.games);
+  const staleDates = [...new Set(fixtures
+    .filter((fixture) => fixture.status !== "completed" && fixture.date <= snapshot.generatedAt.slice(0, 10))
+    .map((fixture) => fixture.date))];
+  for (const date of staleDates) {
+    const daily = await fetchFotmobDay(date);
+    const events = (daily.leagues ?? []).flatMap((league) => league.matches ?? []);
+    for (const fixture of fixtures.filter((item) => item.date === date && item.status !== "completed")) {
+      const event = events.find((match) =>
+        match.status?.finished === true &&
+        teamNamesMatch(match.home?.name ?? "", fixture.homeTeam) &&
+        teamNamesMatch(match.away?.name ?? "", fixture.awayTeam)
+      );
+      const score = event?.status?.scoreStr?.match(/^(\d+)\s*-\s*(\d+)$/);
+      if (!event?.id || !score) continue;
+      fixture.status = "completed";
+      fixture.homeScore = Number(score[1]);
+      fixture.awayScore = Number(score[2]);
+      fixture.dataSource = "fotmob";
+      fixture.fotmobMatchId = Number(event.id);
+      console.log(`${fixture.homeTeam} vs ${fixture.awayTeam}: FotMob final ${fixture.homeScore}-${fixture.awayScore}`);
+    }
+  }
+  return rounds;
+}
+
+async function syncLeague(league) {
   const leaguePredictions = matches.filter((match) => match.league === league.slug);
   try {
     const text = await sourceText(league.sources.fixtures);
     if (text === null && !league.liveDataId) {
       console.log(`${league.name}: skipped (no automatic fixture feed configured)`);
-      continue;
+      return;
     }
     // Knockout competitions do not have a compatible season registry. Their
     // published editorial fixtures provide the matching base while ESPN remains
@@ -82,7 +125,7 @@ await Promise.all(leagues.map(async (league) => {
         }]
       : parseFootballSeason(text);
     const espnRounds = await hydrateLiveResults(league.slug, base);
-    const rounds = await hydrateTheSportsDb(league.slug, espnRounds);
+    const rounds = await hydrateFotmobFinalScores(await hydrateTheSportsDb(league.slug, espnRounds));
     const previousGames = (previous.leagues?.[league.slug] ?? []).flatMap((round) => round.games);
     const previousById = new Map(previousGames.map((game) => [game.id, game]));
     for (const fixture of rounds.flatMap((round) => round.games)) {
@@ -155,7 +198,7 @@ await Promise.all(leagues.map(async (league) => {
   } catch (error) {
     const savedRounds = previous.leagues?.[league.slug];
     if (!savedRounds?.length) throw error;
-    snapshot.leagues[league.slug] = savedRounds;
+    snapshot.leagues[league.slug] = await hydrateFotmobFinalScores(structuredClone(savedRounds));
     snapshot.leagueUpdatedAt[league.slug] = previous.leagueUpdatedAt?.[league.slug] ?? previous.generatedAt;
     for (const [key, id] of Object.entries(previous.predictionIds ?? {})) {
       if (key.startsWith(`${league.slug}:`)) snapshot.predictionIds[key] = id;
@@ -171,7 +214,29 @@ await Promise.all(leagues.map(async (league) => {
     }
     console.error(`SOURCE_REFRESH_FAILED ${league.slug}: ${error instanceof Error ? error.message : String(error)}`);
   }
-}));
+}
+
+// Keep network work concurrent without bursting provider rate limits. Two
+// leagues at a time substantially reduces wall time compared with the former
+// sequential loop while avoiding a dozen simultaneous TheSportsDB requests.
+for (let index = 0; index < leagues.length; index += 2) {
+  await Promise.all(leagues.slice(index, index + 2).map(syncLeague));
+}
+
+// Parallel provider requests finish in a nondeterministic order. Canonicalize
+// object keys before change detection so identical data never causes a noisy
+// snapshot rewrite or deployment.
+snapshot.leagues = Object.fromEntries(
+  leagues.filter((league) => snapshot.leagues[league.slug])
+    .map((league) => [league.slug, snapshot.leagues[league.slug]])
+);
+snapshot.leagueUpdatedAt = Object.fromEntries(
+  leagues.filter((league) => snapshot.leagueUpdatedAt[league.slug])
+    .map((league) => [league.slug, snapshot.leagueUpdatedAt[league.slug]])
+);
+snapshot.predictionIds = Object.fromEntries(
+  Object.entries(snapshot.predictionIds).sort(([left], [right]) => left.localeCompare(right))
+);
 
 function cornerValue(statistics) {
   const item = statistics?.find((stat) => /^(wonCorners|cornerKicks|corners)$/i.test(stat.name ?? stat.label ?? ""));
@@ -180,31 +245,70 @@ function cornerValue(statistics) {
   return Number.isInteger(value) && value >= 0 ? value : null;
 }
 
+async function fetchFotmobCorners(prediction, fixture) {
+  let eventId = fixture.fotmobMatchId;
+  if (!eventId) {
+    const daily = await fetchFotmobDay(fixture.date);
+    const event = (daily.leagues ?? []).flatMap((league) => league.matches ?? []).find((match) =>
+      teamNamesMatch(match.home?.name ?? "", prediction.homeTeam) &&
+      teamNamesMatch(match.away?.name ?? "", prediction.awayTeam)
+    );
+    eventId = event?.id;
+  }
+  if (!eventId) throw new Error("FotMob fixture not found");
+
+  const source = `https://www.fotmob.com/api/data/matchDetails?matchId=${eventId}`;
+  const detailResponse = await fetch(source, {
+    headers: { Accept: "application/json", "User-Agent": "Mozilla/5.0" },
+    cache: "no-store",
+  });
+  if (!detailResponse.ok) throw new Error(`FotMob details HTTP ${detailResponse.status}`);
+  const detail = await detailResponse.json();
+  const corners = detail.content?.stats?.Periods?.All?.stats
+    ?.flatMap((group) => group.stats ?? [])
+    .find((stat) => stat.key === "corners" || stat.title === "Corners")?.stats;
+  const homeCorners = Number(corners?.[0]);
+  const awayCorners = Number(corners?.[1]);
+  if (!Number.isInteger(homeCorners) || !Number.isInteger(awayCorners)) {
+    throw new Error("FotMob corner statistics unavailable");
+  }
+  return { homeCorners, awayCorners, source };
+}
+
 const marketResults = { ...previousMarketResults };
 const cornerPredictions = matches.filter((match) =>
   parsePredictionMarket(match.mainPrediction ?? "").legs.some((leg) => leg.kind === "corners")
 );
 await Promise.all(cornerPredictions.map(async (prediction) => {
   const fixtureId = snapshot.predictionIds[`${prediction.league}:${prediction.slug}`];
-  if (!fixtureId || fixtureId.startsWith("tsdb:") || fixtureId.startsWith("official:")) return;
+  if (!fixtureId) return;
   const fixture = Object.values(snapshot.leagues).flatMap((rounds) => rounds ?? [])
     .flatMap((round) => round.games).find((game) => game.id === fixtureId);
   if (fixture?.status !== "completed") return;
   const key = `${prediction.league}:${prediction.slug}`;
   if (marketResults[key]) return;
   try {
-    const source = `https://site.api.espn.com/apis/site/v2/sports/soccer/${leagues.find((item) => item.slug === prediction.league)?.liveDataId}/summary?event=${fixtureId}`;
-    const response = await fetch(source, { headers: { Accept: "application/json" }, cache: "no-store" });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
-    const teams = data.boxscore?.teams ?? [];
-    const home = teams.find((team) => team.homeAway === "home") ?? teams[0];
-    const away = teams.find((team) => team.homeAway === "away") ?? teams[1];
-    const homeCorners = cornerValue(home?.statistics);
-    const awayCorners = cornerValue(away?.statistics);
-    if (homeCorners === null || awayCorners === null) throw new Error("corner statistics unavailable");
-    marketResults[key] = { homeCorners, awayCorners, source, capturedAt: snapshot.generatedAt };
-    console.log(`${prediction.slug}: captured corners ${homeCorners}-${awayCorners}`);
+    let captured = null;
+    if (!fixtureId.startsWith("tsdb:") && !fixtureId.startsWith("official:")) {
+      try {
+        const source = `https://site.api.espn.com/apis/site/v2/sports/soccer/${leagues.find((item) => item.slug === prediction.league)?.liveDataId}/summary?event=${fixtureId}`;
+        const response = await fetch(source, { headers: { Accept: "application/json" }, cache: "no-store" });
+        if (!response.ok) throw new Error(`ESPN HTTP ${response.status}`);
+        const data = await response.json();
+        const teams = data.boxscore?.teams ?? [];
+        const home = teams.find((team) => team.homeAway === "home") ?? teams[0];
+        const away = teams.find((team) => team.homeAway === "away") ?? teams[1];
+        const homeCorners = cornerValue(home?.statistics);
+        const awayCorners = cornerValue(away?.statistics);
+        if (homeCorners === null || awayCorners === null) throw new Error("ESPN corner statistics unavailable");
+        captured = { homeCorners, awayCorners, source };
+      } catch (error) {
+        console.error(`ESPN_MARKET_DATA_FAILED ${prediction.slug}: ${error instanceof Error ? error.message : String(error)}`);
+      }
+    }
+    captured ??= await fetchFotmobCorners(prediction, fixture);
+    marketResults[key] = { ...captured, capturedAt: snapshot.generatedAt };
+    console.log(`${prediction.slug}: captured corners ${captured.homeCorners}-${captured.awayCorners}`);
   } catch (error) {
     console.error(`MARKET_DATA_REFRESH_FAILED ${prediction.slug}: ${error instanceof Error ? error.message : String(error)}`);
   }

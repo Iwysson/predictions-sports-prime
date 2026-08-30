@@ -63,7 +63,13 @@ function selectedTeamIsHome(label: string, match: MatchPreview) {
 
 function parseLeg(source: string): ParsedPredictionLeg | null {
   const liveEntry = source.match(/^(.+?)\s*[-\u2014]\s*(?:Live Entry|Wait Live)$/i);
-  if (liveEntry) return { kind: "live-entry", market: liveEntry[1].trim(), source };
+  if (liveEntry) {
+    // "Live Entry" describes timing/price provenance, not a different sports
+    // market. Once the fixture is final, grade the explicit market written
+    // before the suffix (for example Over 1.5 Goals) from the factual result.
+    // Retain the execution-only state only when that market cannot be parsed.
+    return parseLeg(liveEntry[1].trim()) ?? { kind: "live-entry", market: liveEntry[1].trim(), source };
+  }
 
   const totalCorners = source.match(/^(Over|Under) (\d+(?:\.\d+)?) Corners?$/i);
   if (totalCorners) return { kind: "corners", selection: totalCorners[1].toLowerCase() as "over" | "under", line: Number(totalCorners[2]), source };
