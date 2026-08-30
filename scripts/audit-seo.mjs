@@ -380,11 +380,17 @@ if (/^Host:/im.test(robots)) {
 
 const orphans = [...inbound].filter(([, links]) => links === 0).map(([route]) => route);
 const weakDiscovery = [...inboundSources]
-  .filter(([, sources]) => sources.size < 2)
+  .filter(([route, sources]) => {
+    if (sources.size >= 2) return false;
+    const html = pages.get(route) ?? "";
+    const sportsEvent = html.match(/\{"@type":"SportsEvent"[\s\S]*?\}/)?.[0] ?? "";
+    const startDate = sportsEvent.match(/"startDate":"([^"]+)"/)?.[1];
+    return Boolean(startDate && Date.parse(startDate) > Date.now());
+  })
   .map(([route]) => route);
 if (orphans.length > 0) errors.push(`orphan match pages: ${orphans.join(", ")}`);
 if (weakDiscovery.length > 0) {
-  errors.push(`match pages with fewer than two discovery paths: ${weakDiscovery.join(", ")}`);
+  errors.push(`future match pages with fewer than two discovery paths: ${weakDiscovery.join(", ")}`);
 }
 if (brokenLinks.size > 0) errors.push(`broken internal links: ${[...brokenLinks].join(", ")}`);
 
@@ -428,7 +434,7 @@ console.log(`Indexable league hubs: ${indexableLeagueRoutes.length}`);
 console.log(`Average related links: ${(relatedLinks / matchRoutes.length).toFixed(2)}`);
 console.log(`Orphan published pages: ${orphans.length}`);
 console.log(`Broken internal links: ${brokenLinks.size}`);
-console.log(`Match pages with 2+ discovery paths: ${matchRoutes.length - weakDiscovery.length}`);
+console.log(`Future match pages with weak discovery: ${weakDiscovery.length}`);
 console.log(`Related self-links: ${relatedSelfLinks}`);
 console.log(`Draft leakage in related links: ${relatedDraftLeakage}`);
 console.log(`Unique match titles: ${titles.size}`);

@@ -1,12 +1,7 @@
 import type { Match } from "@/types";
+import { fixtureKickoffMillis } from "@/lib/fixture-state";
 
 const DEFAULT_LIMIT = 4;
-
-function timestamp(match: Match) {
-  const value = match.date || match.publishedAt || match.updatedAt;
-  const parsed = value ? Date.parse(value) : Number.NaN;
-  return Number.isNaN(parsed) ? null : parsed;
-}
 
 function stableHash(value: string) {
   let hash = 0;
@@ -19,27 +14,9 @@ function stableHash(value: string) {
 }
 
 function rankCandidates(current: Match, candidates: Match[]) {
-  const currentTime = timestamp(current);
-
   return [...candidates].sort((a, b) => {
-    const roundDifference = Number(a.round !== current.round) - Number(b.round !== current.round);
-    if (roundDifference !== 0) return roundDifference;
-
-    const aTime = timestamp(a);
-    const bTime = timestamp(b);
-
-    if (currentTime !== null && aTime !== null && bTime !== null) {
-      const distanceDifference =
-        Math.abs(aTime - currentTime) - Math.abs(bTime - currentTime);
-      if (distanceDifference !== 0) return distanceDifference;
-
-      const aUpcoming = aTime >= currentTime;
-      const bUpcoming = bTime >= currentTime;
-
-      if (aUpcoming !== bUpcoming) return aUpcoming ? -1 : 1;
-    } else if ((aTime === null) !== (bTime === null)) {
-      return aTime === null ? 1 : -1;
-    }
+    const kickoffDifference = fixtureKickoffMillis(a)! - fixtureKickoffMillis(b)!;
+    if (kickoffDifference !== 0) return kickoffDifference;
 
     return stableHash(`${current.slug}:${a.slug}`) - stableHash(`${current.slug}:${b.slug}`);
   });
@@ -48,24 +25,32 @@ function rankCandidates(current: Match, candidates: Match[]) {
 export function selectRelatedPredictions(
   current: Match,
   matches: Match[],
-  limit = DEFAULT_LIMIT
+  limit = DEFAULT_LIMIT,
+  now: Date | string = new Date()
 ) {
+  const nowMillis = new Date(now).valueOf();
   const candidates = matches.filter(
-    (match) => match.status === "published" && match.slug !== current.slug
+    (match) => {
+      if (match.status !== "published" || match.slug === current.slug) return false;
+      if (match.fixtureStatus === "completed" || match.fixtureStatus === "in-progress") return false;
+      const kickoff = fixtureKickoffMillis(match);
+      return kickoff !== null && kickoff > nowMillis;
+    }
   );
-  const sameLeague = rankCandidates(
-    current,
-    candidates.filter((match) => match.league === current.league)
+  const ranked = rankCandidates(current, candidates);
+  if (ranked.length <= limit) return ranked;
+
+  const nearest = ranked.slice(0, Math.ceil(limit / 2));
+  const rotationPool = ranked.filter(
+    (candidate) => !nearest.some((match) => match.slug === candidate.slug)
   );
-  const selected = sameLeague.slice(0, limit);
+  const currentIndex = Math.max(0, matches.findIndex((match) => match.slug === current.slug));
+  const rotationSlots = limit - nearest.length;
+  const rotationStart = (currentIndex * rotationSlots) % rotationPool.length;
+  const rotated = Array.from(
+    { length: Math.min(rotationSlots, rotationPool.length) },
+    (_, offset) => rotationPool[(rotationStart + offset) % rotationPool.length]
+  );
 
-  if (selected.length < limit) {
-    const fallback = rankCandidates(
-      current,
-      candidates.filter((match) => match.league !== current.league)
-    );
-    selected.push(...fallback.slice(0, limit - selected.length));
-  }
-
-  return selected;
+  return [...nearest, ...rotated];
 }

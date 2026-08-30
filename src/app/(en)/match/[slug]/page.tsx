@@ -134,16 +134,6 @@ export default async function MatchPage({
     (item) => item.label === "Latest Observed Odds"
   );
   const selectedRelatedMatches = selectRelatedPredictions(match, matches);
-  const suppliedAnalyses = matches.filter((item) => item.analysisFormat === "markdown");
-  const suppliedIndex = suppliedAnalyses.findIndex((item) => item.slug === match.slug);
-  const nextSuppliedAnalysis = suppliedIndex >= 0
-    ? suppliedAnalyses[(suppliedIndex + 1) % suppliedAnalyses.length]
-    : undefined;
-  const relatedMatches = nextSuppliedAnalysis
-    && nextSuppliedAnalysis.slug !== match.slug
-    && !selectedRelatedMatches.some((item) => item.slug === nextSuppliedAnalysis.slug)
-    ? [...selectedRelatedMatches.slice(0, 3), nextSuppliedAnalysis]
-    : selectedRelatedMatches;
   const hasFinalScore = isHistoryEligibleFixture({
     status: match.fixtureStatus,
     homeScore: match.homeScore,
@@ -309,7 +299,7 @@ export default async function MatchPage({
       </div>
 
       <div className="container related-predictions-area">
-        <RelatedPredictions matches={relatedMatches} />
+        <RelatedPredictions matches={selectedRelatedMatches} />
       </div>
 
       <PredictionLeagueCategories />
