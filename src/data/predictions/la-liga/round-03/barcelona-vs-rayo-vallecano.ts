@@ -6,7 +6,8 @@ export const barcelonaVsRayoVallecano: EditorialPrediction = {
   analysisFormat: "markdown", seoTitle: "Barcelona vs Rayo Vallecano Prediction, Odds & Match Analysis — LaLiga 2026/27",
   picks: { main: "Over 8.5 Corners + Over 2.5 Goals", publishedOdds: 1.7, oddsProvenance: { source: "Editor-supplied publication price", provenance: "author_attested", market: "Over 8.5 Corners + Over 2.5 Goals" } },
   matchInfo: { date: "2026-08-31", time: "21:30", round: "Matchday 3", venue: "Spotify Camp Nou" },
-  publishedAt: "2026-08-25T06:17:27-03:00", updatedAt: "2026-08-30T22:45:00+02:00", sourceStatus: "verified",
+  publishedAt: "2026-08-25T06:17:27-03:00",
+  updatedAt: "2026-08-30T22:45:00+02:00", sourceStatus: "verified",
   sources: [
     { name: "Eurosport — Barcelona vs Rayo preview", url: "https://www.eurosport.es/futbol/la-liga/2026-2027/barcelona-athletic-jornada-3-alineaciones-probables-previa-estadisticas-horario-como-ver-tv-online-streaming-enlace_sto23332062/story.shtml", description: "Current results, probable lineups, availability and official-time cross-check.", accessedAt: "2026-08-30T22:45:00+02:00" },
     { name: "AS — Barcelona probable lineup", url: "https://as.com/futbol/posible-alineacion-del-barca-ante-el-rayo-vallecano-rodri-aun-no-f202608-n/", description: "Latest Barcelona XI and Rodri fitness update.", accessedAt: "2026-08-30T22:45:00+02:00" },

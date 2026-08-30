@@ -4,37 +4,13 @@ export const kilmarnockVsStMirren: EditorialPrediction = {
   league: "scottish-premiership",
   homeTeam: "Kilmarnock",
   awayTeam: "St Mirren",
-  analysis: [
-    "Rugby Park is the key factor behind the 1X. Kilmarnock are traditionally more competitive at home, where their direct style and territorial pressure make them difficult to beat.",
-    "The goals line is also modest. Recent meetings with St Mirren include results such as 2-2, 3-1, 2-1, 1-1 and 2-0, all compatible with a two-goal requirement.",
-    "Kilmarnock's league matches last season averaged about 3.1 total goals. They scored 50 and conceded 68 in 38 games, so both their attacking production and defensive vulnerability regularly pushed matches above 1.5.",
-    "St Mirren have enough attacking quality to contribute, which can actually help the bet. A 1-1 draw already completes both parts, while 2-0, 2-1 or 2-2 also work.",
-    "At 1.85, the combination protects Kilmarnock with the draw while keeping the goals requirement low."
-  ],
+  analysis: ["# Kilmarnock vs St Mirren — Scottish Premiership 2026/27 Match Analysis\n🎯 **Prediction: Kilmarnock or Draw (1X) + Over 1.5 Goals**\n💰 **Odds: 1.85**\n**Scottish Premiership — Matchday 5 | September 2, 2026 — 7:45 PM local time | BBSP Stadium Rugby Park, Kilmarnock**\n\nThe **Kilmarnock vs St Mirren prediction** is preserved exactly as published, but the evidence is assessed independently. Kilmarnock are 0-0-4 after a 4–0 home defeat to Dundee United, with a league goal difference already deeply negative. St Mirren followed a strong opening with a 0–0 home draw against Motherwell on August 30. The 2026/27 sample is still small, so its results describe current state rather than a settled team identity.\n\n**Probable lineups:** **Kilmarnock:** Kieran O'Hara; Lewis Mayo, Robbie Deas, Stuart Findlay, Corrie Ndaba; Brad Lyons, Liam Polworth; Danny Armstrong, David Watson, Marley Watkins; Bruce Anderson. **St Mirren:** Ellery Balcombe; Marcus Fraser, Alex Gogić, Richard Taylor; Elvis Bwomono, Mark O'Hara, Caolan Boyd-Munce, Scott Tanser; Roland Idowu; Mikael Mandron, Toyosi Olusanya. These are 11-player pre-match projections built from recent competitive personnel, not confirmed teams; the final sheets should be checked close to kickoff.\n\n**Availability.** FotMob listed no Kilmarnock absentees in its preview. St Mirren had Jonah Ayunga, Ryan Mullen and Keanu Baccus on the injury list, but return dates were stale; only Ayunga's long-term knee issue is treated as firmly unavailable pending club confirmation.\n\nThe larger context matters. Kilmarnock's 2025/26 league matches contained 118 goals: 50 scored and 68 conceded, 3.11 total per game. That supports the two-goal threshold but not automatically the home double chance. The correct home/away cross compares Kilmarnock's home attack with St Mirren's away defence, then St Mirren's away attack with Kilmarnock's home defence. Current venue samples contain at most a few matches, so no mixed-season rate is presented as a 2026/27 average.\n\nxG means **Expected Goals — Gols Esperados**, xGA means **Expected Goals Against — Gols Esperados Contra**, and SOT means **Shots on Target — Finalizações no Alvo**. A uniform provider had not published reproducible current home/away xG, shots, SOT and corner splits for both teams at the cutoff. Those metrics remain unavailable rather than being reverse-engineered from scorelines. Results and process are not interchangeable.\n\nFor the goals module, game state is central. An early goal increases the trailing team's need to press and expands transition space; a long level phase can protect defensive structure. Current GF and GA observations are shown in the table only where mathematically secure. First-half, second-half and final-20-minute distributions are omitted where the available source set did not support a consistent competition-only calculation.\n\nThe H2H (**Head-to-Head — Confronto Direto**) is contextual. Kilmarnock won three of the last five listed meetings, including 3–0 away in May 2026. That history conflicts with current form and must not override four current defeats.\n\nTactically, both teams' route to territory must be separated from chance quality. Build-up security, pressure on second balls, full-back or wing-back height, set pieces and box occupation determine whether possession becomes shots. The trailing side's response is especially relevant to the published market; the selection is not treated as guaranteed under any score path.\n\nThe complete corners review reaches the same evidence boundary. Rugby Park's artificial surface can support fast circulation, but surface alone is not evidence of more corners. Kilmarnock must recover territory after conceding four at home; St Mirren can produce wide transitions. Current corner splits remain unavailable under one method. Home production × away concession and away production × home concession cannot be quantified honestly from incompatible providers, tiny splits or all-competition mixtures. Over 7.5, 8.5 and 9.5 rates are therefore not fabricated.\n\nLong-range weather forecast — confidence remains limited and conditions should be rechecked closer to kickoff. No stable hour-specific combination of temperature, precipitation, wind and humidity was verified at cutoff. Rain or stronger wind could affect long passing, crossing accuracy, clearances and set pieces, but weather is not used as evidence without a reliable forecast.\n\n### Statistical Core\n\n| Metric | Kilmarnock | St Mirren |\n|---|---:|---:|\n| Matches 2026/27 | 4 | 3 |\n| Current W-D-L | 0-0-4 | 2-1-0 |\n| Latest result | 0–4 vs Dundee United | 0–0 vs Motherwell |\n| 2025/26 GF | 50 | — |\n| 2025/26 GA | 68 | — |\n| xG / xGA | — | — |\n| Shots / SOT per game | — | — |\n| Home/Away corners per game | — | — |\n| Corner concession per game | — | — |\n\n**Conflict Detector.** This is the batch's sharpest contradiction: a Kilmarnock 1X selection against a team that has lost all four league matches, including 0–4 at this venue. The historical H2H and low 1.5 line help, but current evidence clearly favours St Mirren avoiding defeat. The small current sample and missing uniform process data limit confidence, while contrary evidence remains part of the assessment rather than being removed to support the selection.\n\nAt 1.85, the **price-derived threshold / raw implied probability** is approximately **54.1%** before bookmaker margin. This is not a model probability. Where the selection combines markets, correlated historical rates must not be multiplied mechanically.\n\n🎯 **Prediction: Kilmarnock or Draw (1X) + Over 1.5 Goals**\n💰 **Odds: 1.85**"],
+  analysisFormat: "markdown",
+  seoTitle: "Kilmarnock vs St Mirren Prediction, Odds & Match Analysis — Scottish Premiership 2026/27",
   comment: "Odds supplied in the editorial package and recorded before kickoff; bookmaker not identified in the source file.",
-  picks: {
-    main: "Kilmarnock or Draw (1X) + Over 1.5 Goals",
-    odds: 1.85,
-    oddsProvenance: {
-      source: "Author-supplied editorial package",
-      provenance: "author_attested",
-      market: "Kilmarnock or Draw (1X) + Over 1.5 Goals"
-    }
-  },
+  picks: { main: "Kilmarnock or Draw (1X) + Over 1.5 Goals", publishedOdds: 1.85, oddsProvenance: { source: "Author-supplied editorial package", provenance: "author_attested", market: "Kilmarnock or Draw (1X) + Over 1.5 Goals" } },
   sourceStatus: "verified",
-  sources: [
-    {
-      name: "SPFL — 2026/27 Premiership fixtures and table",
-      url: "https://spfl.co.uk/match-day",
-      description: "Official competition page confirming the scheduled pairing, kickoff and current standings used for publication context.",
-      accessedAt: "2026-08-26T08:54:38-03:00"
-    }
-  ],
-  publishedAt: "2026-08-26T11:54:38.899Z",
-  published: true,
-  matchInfo: {
-    date: "2026-09-02",
-    time: "19:45",
-    round: "Matchday 5"
-  }
+  sources: [{ name: "Official competition and club fixture sources", url: "https://spfl.co.uk/match-day", description: "Fixture, current results and competition context.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "Independent current preview and match reporting", url: "https://fbref.com/en/comps/40/schedule/Scottish-Premiership-Scores-and-Fixtures", description: "Recent results, lineups, availability and H2H cross-check.", accessedAt: "2026-08-30T21:30:00+01:00" }],
+  publishedAt: "2026-08-26T11:54:38.899Z", published: true,
+  matchInfo: { date: "2026-09-02", time: "19:45", round: "Matchday 5", venue: "BBSP Stadium Rugby Park" },
 };

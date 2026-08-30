@@ -11,6 +11,7 @@ export const usLecceVsAsRoma: EditorialPrediction = {
     { name: "La Gazzetta dello Sport — Lecce vs Roma", url: "https://www.gazzetta.it/Calcio/prob_form/lecce-roma/2638137", description: "Independent lineup and availability cross-check.", accessedAt: "2026-08-30T22:45:00+02:00" },
     { name: "OpenFootball — Serie A 2026/27 fixtures", url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt", description: "Fixture, round and date verification.", accessedAt: "2026-08-30T22:45:00+02:00" },
   ],
-  publishedAt: "2026-08-24T17:38:36.651Z", updatedAt: "2026-08-30T22:45:00+02:00", published: true,
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  updatedAt: "2026-08-30T22:45:00+02:00", published: true,
   matchInfo: { date: "2026-08-31", time: "18:30", round: "Matchday 2", venue: "Stadio Via del Mare" },
 };

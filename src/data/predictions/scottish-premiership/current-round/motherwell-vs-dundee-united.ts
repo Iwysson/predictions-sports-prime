@@ -4,37 +4,13 @@ export const motherwellVsDundeeUnited: EditorialPrediction = {
   league: "scottish-premiership",
   homeTeam: "Motherwell",
   awayTeam: "Dundee United",
-  analysis: [
-    "Dundee United's defensive start is the strongest reason to support Over 2.5. After three league matches they had already conceded seven goals, an average of 2.33 per game, while scoring only once.",
-    "Their wider competitive sequence was even more concerning, including defeats of 4-0 to Hearts, 4-0 to Celtic and 2-0 to Dundee. Across those three losses, they conceded 10 without scoring.",
-    "Motherwell have already shown attacking quality this season, including a 2-1 away win over Hibernian. Recent meetings at Fir Park also support the Over, with scorelines such as 4-3, 3-2, 2-1 and 1-2.",
-    "The matchup therefore has a clear route to three goals: Motherwell can do much of the work themselves against a vulnerable defense, while any Dundee United goal makes the target even easier.",
-    "With Dundee United conceding heavily and recent head-to-heads repeatedly reaching three goals, Over 2.5 is a logical choice."
-  ],
+  analysis: ["# Motherwell vs Dundee United — Scottish Premiership 2026/27 Match Analysis\n🎯 **Prediction: Over 2.5 Goals**\n💰 **Odds: 1.75**\n**Scottish Premiership — Matchday 5 | September 2, 2026 — 7:45 PM local time | Fir Park, Motherwell**\n\nThe **Motherwell vs Dundee United prediction** is preserved exactly as published, but the evidence is assessed independently. Motherwell remain unbeaten after a 0–0 draw at St Mirren, while Dundee United produced the round's biggest result by winning 4–0 at Kilmarnock. The new evidence reverses the old description of United as only defensively vulnerable. The 2026/27 sample is still small, so its results describe current state rather than a settled team identity.\n\n**Probable lineups:** **Motherwell:** Aston Oxborough; Stephen O'Donnell, Kofi Balmer, Paul McGinn; Ewan Wilson, Andy Halliday, Davor Zdravkovski, Tom Sparrow; Lennon Miller; Apostolos Stamatelopoulos, Tawanda Maswanhise. **Dundee United:** Jack Walton; Ryan Strain, Ross Graham, Declan Gallagher, Will Ferry; Vicko Ševelj, Craig Sibbald; Glenn Middleton, David Babunski, Kristijan Trapanovski; Louis Moult. These are 11-player pre-match projections built from recent competitive personnel, not confirmed teams; the final sheets should be checked close to kickoff.\n\n**Availability.** Both squads have short recovery. Motherwell's official page confirms the St Mirren draw and the fixture; no consistent late bulletin established additional confirmed absences. The projection retains recent personnel but can change with rotation.\n\nThe larger context matters. Earlier current results included Motherwell's 2–1 win at Hibernian and heavy Dundee United defeats. Recent Fir Park H2Hs include 4–3, 3–2, 2–1 and 1–2, but the latest clean sheets on both sides matter more than an old score sequence. The correct home/away cross compares Motherwell's home attack with Dundee United's away defence, then Dundee United's away attack with Motherwell's home defence. Current venue samples contain at most a few matches, so no mixed-season rate is presented as a 2026/27 average.\n\nxG means **Expected Goals — Gols Esperados**, xGA means **Expected Goals Against — Gols Esperados Contra**, and SOT means **Shots on Target — Finalizações no Alvo**. A uniform provider had not published reproducible current home/away xG, shots, SOT and corner splits for both teams at the cutoff. Those metrics remain unavailable rather than being reverse-engineered from scorelines. Results and process are not interchangeable.\n\nFor the goals module, game state is central. An early goal increases the trailing team's need to press and expands transition space; a long level phase can protect defensive structure. Current GF and GA observations are shown in the table only where mathematically secure. First-half, second-half and final-20-minute distributions are omitted where the available source set did not support a consistent competition-only calculation.\n\nThe H2H (**Head-to-Head — Confronto Direto**) is contextual. The matchup has a documented high-scoring ceiling, although changes in coaches and squads make those scorelines contextual rather than a forecast.\n\nTactically, both teams' route to territory must be separated from chance quality. Build-up security, pressure on second balls, full-back or wing-back height, set pieces and box occupation determine whether possession becomes shots. The trailing side's response is especially relevant to the published market; the selection is not treated as guaranteed under any score path.\n\nThe complete corners review reaches the same evidence boundary. Motherwell's wing-back structure and United's width through Ferry and Middleton can create corners from both sides. A level game encourages continued wing play; a large early lead can reduce the leader's output. Reliable current corner averages are unavailable. Home production × away concession and away production × home concession cannot be quantified honestly from incompatible providers, tiny splits or all-competition mixtures. Over 7.5, 8.5 and 9.5 rates are therefore not fabricated.\n\nLong-range weather forecast — confidence remains limited and conditions should be rechecked closer to kickoff. No stable hour-specific combination of temperature, precipitation, wind and humidity was verified at cutoff. Rain or stronger wind could affect long passing, crossing accuracy, clearances and set pieces, but weather is not used as evidence without a reliable forecast.\n\n### Statistical Core\n\n| Metric | Motherwell | Dundee United |\n|---|---:|---:|\n| Matches 2026/27 | 3 | 4 |\n| Current W-D-L | 1-2-0 | 1-1-2 |\n| Latest result | 0–0 at St Mirren | 4–0 at Kilmarnock |\n| Clean sheet latest | Yes | Yes |\n| Earlier notable result | 2–1 at Hibernian | 0–4 at Hearts |\n| xG / xGA | — | — |\n| Shots / SOT per game | — | — |\n| Home/Away corners per game | — | — |\n| Corner concession per game | — | — |\n\n**Conflict Detector.** A 0–0 Motherwell result followed immediately by United's 4–0 away win cuts both ways: it shows United's scoring ceiling but also two fresh clean sheets. The Over cannot be justified by United's earlier concessions alone. The small current sample and missing uniform process data limit confidence, while contrary evidence remains part of the assessment rather than being removed to support the selection.\n\nAt 1.75, the **price-derived threshold / raw implied probability** is approximately **57.1%** before bookmaker margin. This is not a model probability. Where the selection combines markets, correlated historical rates must not be multiplied mechanically.\n\n🎯 **Prediction: Over 2.5 Goals**\n💰 **Odds: 1.75**"],
+  analysisFormat: "markdown",
+  seoTitle: "Motherwell vs Dundee United Prediction, Odds & Match Analysis — Scottish Premiership 2026/27",
   comment: "Odds supplied in the editorial package and recorded before kickoff; bookmaker not identified in the source file.",
-  picks: {
-    main: "Over 2.5 Goals",
-    odds: 1.75,
-    oddsProvenance: {
-      source: "Author-supplied editorial package",
-      provenance: "author_attested",
-      market: "Over 2.5 Goals"
-    }
-  },
+  picks: { main: "Over 2.5 Goals", publishedOdds: 1.75, oddsProvenance: { source: "Author-supplied editorial package", provenance: "author_attested", market: "Over 2.5 Goals" } },
   sourceStatus: "verified",
-  sources: [
-    {
-      name: "SPFL — 2026/27 Premiership fixtures and table",
-      url: "https://spfl.co.uk/match-day",
-      description: "Official competition page confirming the scheduled pairing, kickoff and current standings used for publication context.",
-      accessedAt: "2026-08-26T08:54:38-03:00"
-    }
-  ],
-  publishedAt: "2026-08-26T11:54:38.899Z",
-  published: true,
-  matchInfo: {
-    date: "2026-09-02",
-    time: "19:45",
-    round: "Matchday 5"
-  }
+  sources: [{ name: "Official competition and club fixture sources", url: "https://spfl.co.uk/match-day", description: "Fixture, current results and competition context.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "Independent current preview and match reporting", url: "https://fbref.com/en/comps/40/schedule/Scottish-Premiership-Scores-and-Fixtures", description: "Recent results, lineups, availability and H2H cross-check.", accessedAt: "2026-08-30T21:30:00+01:00" }],
+  publishedAt: "2026-08-26T11:54:38.899Z", published: true,
+  matchInfo: { date: "2026-09-02", time: "19:45", round: "Matchday 5", venue: "Fir Park" },
 };

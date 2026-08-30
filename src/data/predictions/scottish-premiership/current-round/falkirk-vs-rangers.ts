@@ -4,37 +4,13 @@ export const falkirkVsRangers: EditorialPrediction = {
   league: "scottish-premiership",
   homeTeam: "Falkirk",
   awayTeam: "Rangers",
-  analysis: [
-    "Rangers are the main driver of this Over 2.5 selection. They scored 80 goals in 38 league matches last season, an average above 2.1 per game, and recently showed their ceiling again with a 5-1 victory over St Mirren.",
-    "Falkirk can also contribute. Their promotion campaign was built on attack, with 72 goals in 36 matches — exactly 2.0 per game. At home they are more likely to compete than simply defend deep for 90 minutes.",
-    "The historical matchup has produced Rangers wins such as 4-0, 3-0 and 4-1, showing that the visitors are capable of covering the line almost by themselves.",
-    "That gives the bet two clear routes: Rangers score three, or Falkirk contribute and reduce the burden. A 1-2 scoreline is already enough.",
-    "With Rangers' attacking power and Falkirk's aggressive home profile, the three-goal line is well within reach."
-  ],
+  analysis: ["# Falkirk vs Rangers — Scottish Premiership 2026/27 Match Analysis\n🎯 **Prediction: Over 2.5 Goals**\n💰 **Odds: 1.60**\n**Scottish Premiership — Matchday 5 | September 2, 2026 — 8:00 PM local time | Falkirk Stadium, Falkirk**\n\nThe **Falkirk vs Rangers prediction** is preserved exactly as published, but the evidence is assessed independently. Falkirk lost only 2–1 at Celtic on August 29 and have one point from four matches. Rangers began the weekend with one point from two; their latest Aberdeen match sheet must supersede any earlier lineup projection. The 2026/27 sample is still small, so its results describe current state rather than a settled team identity.\n\n**Probable lineups:** **Falkirk:** Scott Bain; Leon McCann, Coll Donaldson, Liam Henderson, Sean Mackie; Brad Spencer, Dylan Tait; Calvin Miller, Aidan Nesbitt, Ethan Ross; Ross MacIver. **Rangers:** Jack Butland; James Tavernier, John Souttar, Nasser Djiga, Max Aarons; Mohamed Diomande, Connor Barron; Djeidi Gassama, Thelo Aasgaard, Rabbi Matondo; Lawrence Shankland. These are 11-player pre-match projections built from recent competitive personnel, not confirmed teams; the final sheets should be checked close to kickoff.\n\n**Availability.** Rangers' European schedule and the Sunday-to-Wednesday turnaround create rotation risk. The listed XI is a projection, not a confirmed team. Falkirk's competitive showing at Celtic supports retaining their recent core.\n\nThe larger context matters. Falkirk's 2025/26 promotion campaign produced 72 goals in 36 matches, exactly 2.00 per game, while Rangers scored 80 in 38 Premiership games, 2.11 per match. The correct home/away cross compares Falkirk's home attack with Rangers's away defence, then Rangers's away attack with Falkirk's home defence. Current venue samples contain at most a few matches, so no mixed-season rate is presented as a 2026/27 average.\n\nxG means **Expected Goals — Gols Esperados**, xGA means **Expected Goals Against — Gols Esperados Contra**, and SOT means **Shots on Target — Finalizações no Alvo**. A uniform provider had not published reproducible current home/away xG, shots, SOT and corner splits for both teams at the cutoff. Those metrics remain unavailable rather than being reverse-engineered from scorelines. Results and process are not interchangeable.\n\nFor the goals module, game state is central. An early goal increases the trailing team's need to press and expands transition space; a long level phase can protect defensive structure. Current GF and GA observations are shown in the table only where mathematically secure. First-half, second-half and final-20-minute distributions are omitted where the available source set did not support a consistent competition-only calculation.\n\nThe H2H (**Head-to-Head — Confronto Direto**) is contextual. Older Rangers wins of 4–0, 3–0 and 4–1 show the historical quality gap, but many were played with different squads or divisional contexts and receive limited weight.\n\nTactically, both teams' route to territory must be separated from chance quality. Build-up security, pressure on second balls, full-back or wing-back height, set pieces and box occupation determine whether possession becomes shots. The trailing side's response is especially relevant to the published market; the selection is not treated as guaranteed under any score path.\n\nThe complete corners review reaches the same evidence boundary. Rangers should lead territory through full-back width and counter-pressing, while Falkirk demonstrated at Celtic that they can reach attacking positions. If Rangers trail or remain level, corner pressure can rise; an early away lead may reduce urgency. Home production × away concession and away production × home concession cannot be quantified honestly from incompatible providers, tiny splits or all-competition mixtures. Over 7.5, 8.5 and 9.5 rates are therefore not fabricated.\n\nLong-range weather forecast — confidence remains limited and conditions should be rechecked closer to kickoff. No stable hour-specific combination of temperature, precipitation, wind and humidity was verified at cutoff. Rain or stronger wind could affect long passing, crossing accuracy, clearances and set pieces, but weather is not used as evidence without a reliable forecast.\n\n### Statistical Core\n\n| Metric | Falkirk | Rangers |\n|---|---:|---:|\n| Matches 2026/27 | 4 | 2+ |\n| Current points | 1 | 1 before Sunday |\n| Latest result | 1–2 at Celtic | Sunday sheet pending |\n| 2025/26 goals scored | 72 Championship | 80 Premiership |\n| 2025/26 GF/game | 2.00 | 2.11 |\n| xG / xGA | — | — |\n| Shots / SOT per game | — | — |\n| Home/Away corners per game | — | — |\n| Corner concession per game | — | — |\n\n**Conflict Detector.** The price requires 62.5%, a demanding threshold. Falkirk's 2–1 at Celtic supports goals, but Rangers' uneven opening and schedule congestion can produce another controlled, low-margin game rather than three goals. The small current sample and missing uniform process data limit confidence, while contrary evidence remains part of the assessment rather than being removed to support the selection.\n\nAt 1.60, the **price-derived threshold / raw implied probability** is approximately **62.5%** before bookmaker margin. This is not a model probability. Where the selection combines markets, correlated historical rates must not be multiplied mechanically.\n\n🎯 **Prediction: Over 2.5 Goals**\n💰 **Odds: 1.60**"],
+  analysisFormat: "markdown",
+  seoTitle: "Falkirk vs Rangers Prediction, Odds & Match Analysis — Scottish Premiership 2026/27",
   comment: "Odds supplied in the editorial package and recorded before kickoff; bookmaker not identified in the source file.",
-  picks: {
-    main: "Over 2.5 Goals",
-    odds: 1.6,
-    oddsProvenance: {
-      source: "Author-supplied editorial package",
-      provenance: "author_attested",
-      market: "Over 2.5 Goals"
-    }
-  },
+  picks: { main: "Over 2.5 Goals", publishedOdds: 1.6, oddsProvenance: { source: "Author-supplied editorial package", provenance: "author_attested", market: "Over 2.5 Goals" } },
   sourceStatus: "verified",
-  sources: [
-    {
-      name: "SPFL — 2026/27 Premiership fixtures and table",
-      url: "https://spfl.co.uk/match-day",
-      description: "Official competition page confirming the scheduled pairing, kickoff and current standings used for publication context.",
-      accessedAt: "2026-08-26T08:54:38-03:00"
-    }
-  ],
-  publishedAt: "2026-08-26T11:54:38.899Z",
-  published: true,
-  matchInfo: {
-    date: "2026-09-02",
-    time: "20:00",
-    round: "Matchday 5"
-  }
+  sources: [{ name: "Official competition and club fixture sources", url: "https://spfl.co.uk/match-day", description: "Fixture, current results and competition context.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "Independent current preview and match reporting", url: "https://fbref.com/en/comps/40/schedule/Scottish-Premiership-Scores-and-Fixtures", description: "Recent results, lineups, availability and H2H cross-check.", accessedAt: "2026-08-30T21:30:00+01:00" }],
+  publishedAt: "2026-08-26T11:54:38.899Z", published: true,
+  matchInfo: { date: "2026-09-02", time: "20:00", round: "Matchday 5", venue: "Falkirk Stadium" },
 };

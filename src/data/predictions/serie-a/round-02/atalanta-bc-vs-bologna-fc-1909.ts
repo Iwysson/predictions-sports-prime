@@ -11,6 +11,7 @@ export const atalantaBcVsBolognaFc1909: EditorialPrediction = {
     { name: "Sports Mole — Atalanta vs Bologna preview", url: "https://www.sportsmole.co.uk/football/atalanta-bc/preview/atalanta-vs-bologna-prediction-team-news-lineups_604013.html", description: "Results, prior-season away baseline, H2H and availability cross-check.", accessedAt: "2026-08-30T22:45:00+02:00" },
     { name: "OpenFootball — Serie A 2026/27 fixtures", url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt", description: "Fixture verification.", accessedAt: "2026-08-30T22:45:00+02:00" },
   ],
-  publishedAt: "2026-08-24T17:38:36.651Z", updatedAt: "2026-08-30T22:45:00+02:00", published: true,
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  updatedAt: "2026-08-30T22:45:00+02:00", published: true,
   matchInfo: { date: "2026-08-31", time: "20:45", round: "Matchday 2", venue: "New Balance Arena" },
 };

@@ -4,37 +4,13 @@ export const dundeeVsStJohnstone: EditorialPrediction = {
   league: "scottish-premiership",
   homeTeam: "Dundee",
   awayTeam: "St Johnstone",
-  analysis: [
-    "Dundee's home profile gives strong support to the 1X. Last season they went 9-4-6 at home and collected 31 of their 42 league points at Dens Park, almost 74% of their total.",
-    "Their current start also adds confidence. Dundee have already produced consecutive 2-0 league wins over Aberdeen and Dundee United, showing both defensive control and enough attacking output to cover the two-goal line themselves.",
-    "The head-to-head strongly supports Over 1.5. Across 34 meetings, 27 finished with at least two goals, a 79% rate. The last five Premiership meetings all cleared Over 1.5, while Dundee avoided defeat in four of them.",
-    "St. Johnstone have also shown they can contribute, including a 4-3 league win over Kilmarnock.",
-    "With Dundee stronger at home and only two goals required, 1X + Over 1.5 has several realistic routes such as 1-1, 2-0, 2-1 or 2-2."
-  ],
+  analysis: ["# Dundee vs St Johnstone — Scottish Premiership 2026/27 Match Analysis\n🎯 **Prediction: Dundee or Draw (1X) + Over 1.5 Goals**\n💰 **Odds: 1.95**\n**Scottish Premiership — Matchday 5 | September 2, 2026 — 7:45 PM local time | Dens Park, Dundee**\n\nThe **Dundee vs St Johnstone prediction** is preserved exactly as published, but the evidence is assessed independently. Dundee's latest match was a 2–1 home loss to Hibernian on August 30, following two early 2–0 league wins. St Johnstone lost 2–1 at Hearts on August 29 after earlier producing a 4–3 win over Kilmarnock. The 2026/27 sample is still small, so its results describe current state rather than a settled team identity.\n\n**Probable lineups:** **Dundee:** Jon McCracken; Ethan Ingram, Clark Robertson, Antonio Portales, Ziyad Larkeche; Mo Sylla, Lyall Cameron; Scott Tiffoney, Finlay Robertson, Oluwaseun Adewumi; Simon Murray. **St Johnstone:** Ross Sinclair; Drey Wright, Jack Sanders, Kyle Cameron, Andre Raymond; Sven Sprangler, Matt Smith; Graham Carey, Max Kucheriavyi, Nicky Clark; Benjamin Kimpioka. These are 11-player pre-match projections built from recent competitive personnel, not confirmed teams; the final sheets should be checked close to kickoff.\n\n**Availability.** Both clubs played within four days of kickoff, so recovery and rotation are the main verified concerns. The listed elevens preserve recent competitive cores; final medical updates were not sufficiently consistent to label additional players confirmed out.\n\nThe larger context matters. Dundee's 2025/26 home record was 9-4-6, with 31 of 42 points earned at Dens Park. That is a useful larger baseline but does not cancel Sunday's home defeat. The correct home/away cross compares Dundee's home attack with St Johnstone's away defence, then St Johnstone's away attack with Dundee's home defence. Current venue samples contain at most a few matches, so no mixed-season rate is presented as a 2026/27 average.\n\nxG means **Expected Goals — Gols Esperados**, xGA means **Expected Goals Against — Gols Esperados Contra**, and SOT means **Shots on Target — Finalizações no Alvo**. A uniform provider had not published reproducible current home/away xG, shots, SOT and corner splits for both teams at the cutoff. Those metrics remain unavailable rather than being reverse-engineered from scorelines. Results and process are not interchangeable.\n\nFor the goals module, game state is central. An early goal increases the trailing team's need to press and expands transition space; a long level phase can protect defensive structure. Current GF and GA observations are shown in the table only where mathematically secure. First-half, second-half and final-20-minute distributions are omitted where the available source set did not support a consistent competition-only calculation.\n\nThe H2H (**Head-to-Head — Confronto Direto**) is contextual. Twenty-seven of 34 recorded meetings reached two goals, and the last five league meetings cleared Over 1.5; Dundee avoided defeat in four of those five. Changes in squads reduce the predictive weight.\n\nTactically, both teams' route to territory must be separated from chance quality. Build-up security, pressure on second balls, full-back or wing-back height, set pieces and box occupation determine whether possession becomes shots. The trailing side's response is especially relevant to the published market; the selection is not treated as guaranteed under any score path.\n\nThe complete corners review reaches the same evidence boundary. Dundee's home width and St Johnstone's direct, set-piece-heavy approach can create corners without high-quality open-play chances. The home-production versus away-concession comparison lacks a uniform four-round provider, so qualitative mechanisms replace false precision. Home production × away concession and away production × home concession cannot be quantified honestly from incompatible providers, tiny splits or all-competition mixtures. Over 7.5, 8.5 and 9.5 rates are therefore not fabricated.\n\nLong-range weather forecast — confidence remains limited and conditions should be rechecked closer to kickoff. No stable hour-specific combination of temperature, precipitation, wind and humidity was verified at cutoff. Rain or stronger wind could affect long passing, crossing accuracy, clearances and set pieces, but weather is not used as evidence without a reliable forecast.\n\n### Statistical Core\n\n| Metric | Dundee | St Johnstone |\n|---|---:|---:|\n| Matches 2026/27 | 4 | 4 |\n| Latest result | 1–2 vs Hibernian | 1–2 at Hearts |\n| Early clean-sheet wins | 2 | — |\n| 2025/26 home W-D-L | 9-4-6 | — |\n| Recorded H2H Over 1.5 | 27/34 | 27/34 |\n| xG / xGA | — | — |\n| Shots / SOT per game | — | — |\n| Home/Away corners per game | — | — |\n| Corner concession per game | — | — |\n\n**Conflict Detector.** Dundee just lost at Dens Park and St Johnstone scored at Hearts, directly challenging the 1X. The two-goal leg has strong H2H support, but a compressed schedule can produce a cautious 1–0 either way. The small current sample and missing uniform process data limit confidence, while contrary evidence remains part of the assessment rather than being removed to support the selection.\n\nAt 1.95, the **price-derived threshold / raw implied probability** is approximately **51.3%** before bookmaker margin. This is not a model probability. Where the selection combines markets, correlated historical rates must not be multiplied mechanically.\n\n🎯 **Prediction: Dundee or Draw (1X) + Over 1.5 Goals**\n💰 **Odds: 1.95**"],
+  analysisFormat: "markdown",
+  seoTitle: "Dundee vs St Johnstone Prediction, Odds & Match Analysis — Scottish Premiership 2026/27",
   comment: "Odds supplied in the editorial package and recorded before kickoff; bookmaker not identified in the source file.",
-  picks: {
-    main: "Dundee or Draw (1X) + Over 1.5 Goals",
-    odds: 1.95,
-    oddsProvenance: {
-      source: "Author-supplied editorial package",
-      provenance: "author_attested",
-      market: "Dundee or Draw (1X) + Over 1.5 Goals"
-    }
-  },
+  picks: { main: "Dundee or Draw (1X) + Over 1.5 Goals", publishedOdds: 1.95, oddsProvenance: { source: "Author-supplied editorial package", provenance: "author_attested", market: "Dundee or Draw (1X) + Over 1.5 Goals" } },
   sourceStatus: "verified",
-  sources: [
-    {
-      name: "SPFL — 2026/27 Premiership fixtures and table",
-      url: "https://spfl.co.uk/match-day",
-      description: "Official competition page confirming the scheduled pairing, kickoff and current standings used for publication context.",
-      accessedAt: "2026-08-26T08:54:38-03:00"
-    }
-  ],
-  publishedAt: "2026-08-26T11:54:38.899Z",
-  published: true,
-  matchInfo: {
-    date: "2026-09-02",
-    time: "19:45",
-    round: "Matchday 5"
-  }
+  sources: [{ name: "Official competition and club fixture sources", url: "https://spfl.co.uk/match-day", description: "Fixture, current results and competition context.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "Independent current preview and match reporting", url: "https://fbref.com/en/comps/40/schedule/Scottish-Premiership-Scores-and-Fixtures", description: "Recent results, lineups, availability and H2H cross-check.", accessedAt: "2026-08-30T21:30:00+01:00" }],
+  publishedAt: "2026-08-26T11:54:38.899Z", published: true,
+  matchInfo: { date: "2026-09-02", time: "19:45", round: "Matchday 5", venue: "Dens Park" },
 };

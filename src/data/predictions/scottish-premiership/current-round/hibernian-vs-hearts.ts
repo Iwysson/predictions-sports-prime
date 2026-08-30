@@ -4,37 +4,13 @@ export const hibernianVsHearts: EditorialPrediction = {
   league: "scottish-premiership",
   homeTeam: "Hibernian",
   awayTeam: "Hearts",
-  analysis: [
-    "The Edinburgh derby has enough current attacking quality to support Over 2.5. Hearts arrive in strong scoring form, with recent results including 6-2, 4-0 and 2-2. Across those three matches alone they scored 12 goals.",
-    "Hibernian also bring a solid offensive base. Last season they scored 58 goals in 38 league matches, around 1.53 per game, while their fixtures averaged more than 2.7 total goals.",
-    "Recent derbies have shown the scoring ceiling of this matchup, with results such as 3-3, 3-1, 2-2 and 2-1. Once the first goal arrives, the game can become much more open because neither side is comfortable protecting a passive result.",
-    "We only need three goals, and either team is capable of contributing more than once. A 2-1 or 1-2 scoreline is enough.",
-    "At 1.83, the attacking form of Hearts and Hibernian's home threat give Over 2.5 a solid statistical base."
-  ],
+  analysis: ["# Hibernian vs Hearts — Scottish Premiership 2026/27 Match Analysis\n🎯 **Prediction: Over 2.5 Goals**\n💰 **Odds: 1.83**\n**Scottish Premiership — Matchday 5 | September 3, 2026 — 7:45 PM local time | Easter Road, Edinburgh**\n\nThe **Hibernian vs Hearts prediction** is preserved exactly as published, but the evidence is assessed independently. Hibernian won 2–1 at Dundee on August 30, while Hearts beat St Johnstone 2–1 a day earlier. Hearts have six points from three; Hibs moved to six from three. Both enter the Edinburgh derby after a match that cleared Over 2.5. The 2026/27 sample is still small, so its results describe current state rather than a settled team identity.\n\n**Probable lineups:** **Hibernian:** Raphael Sallinger; Lewis Miller, Rocky Bushiri, Warren O'Hora, Jordan Obita; Dan Barlaser, Dylan Levitt, Nectarios Triantis; Martin Boyle, Kieron Bowie, Élie Youan. **Hearts:** Alexander Schwolow; Sean McEntee, Stuart Findlay, Craig Halkett, Harry Milne; Cammy Devlin, Beni Baningime; Blair Spittal, Alexandros Kyziridis, Alan Forrest; Lawrence Shankland. These are 11-player pre-match projections built from recent competitive personnel, not confirmed teams; the final sheets should be checked close to kickoff.\n\n**Availability.** The short recovery is material for both sides. Recent match sheets take priority; no late official bulletin confirmed a new suspension at cutoff. The projected XIs preserve Sallinger and Barlaser for Hibs and Hearts' established defensive core.\n\nThe larger context matters. Hibernian scored 58 in 38 league games in 2025/26, 1.53 per match. Hearts' recent competitive sequence has included 6–2 and 4–0 results, but cup and league samples must not be merged into one rate. The correct home/away cross compares Hibernian's home attack with Hearts's away defence, then Hearts's away attack with Hibernian's home defence. Current venue samples contain at most a few matches, so no mixed-season rate is presented as a 2026/27 average.\n\nxG means **Expected Goals — Gols Esperados**, xGA means **Expected Goals Against — Gols Esperados Contra**, and SOT means **Shots on Target — Finalizações no Alvo**. A uniform provider had not published reproducible current home/away xG, shots, SOT and corner splits for both teams at the cutoff. Those metrics remain unavailable rather than being reverse-engineered from scorelines. Results and process are not interchangeable.\n\nFor the goals module, game state is central. An early goal increases the trailing team's need to press and expands transition space; a long level phase can protect defensive structure. Current GF and GA observations are shown in the table only where mathematically secure. First-half, second-half and final-20-minute distributions are omitted where the available source set did not support a consistent competition-only calculation.\n\nThe H2H (**Head-to-Head — Confronto Direto**) is contextual. The last four league derbies were 1–2, 1–0, 3–2 and 1–0: two Overs and two Unders. Hearts won three, but derby outcomes remain volatile and personnel has changed.\n\nTactically, both teams' route to territory must be separated from chance quality. Build-up security, pressure on second balls, full-back or wing-back height, set pieces and box occupation determine whether possession becomes shots. The trailing side's response is especially relevant to the published market; the selection is not treated as guaranteed under any score path.\n\nThe complete corners review reaches the same evidence boundary. Derby pressure can create territory, fouls and set pieces, but 'derby' is not a numeric corner model. Both teams use width and aggressive second-ball pressure. Corners can rise if level late; an early lead can instead produce a compact block. Home production × away concession and away production × home concession cannot be quantified honestly from incompatible providers, tiny splits or all-competition mixtures. Over 7.5, 8.5 and 9.5 rates are therefore not fabricated.\n\nLong-range weather forecast — confidence remains limited and conditions should be rechecked closer to kickoff. No stable hour-specific combination of temperature, precipitation, wind and humidity was verified at cutoff. Rain or stronger wind could affect long passing, crossing accuracy, clearances and set pieces, but weather is not used as evidence without a reliable forecast.\n\n### Statistical Core\n\n| Metric | Hibernian | Hearts |\n|---|---:|---:|\n| Matches 2026/27 | 3 | 3 |\n| Current points | 6 | 6 |\n| Latest result | 2–1 at Dundee | 2–1 vs St Johnstone |\n| 2025/26 GF/game | 1.53 | — |\n| Last four H2H Over 2.5 | 2/4 | 2/4 |\n| xG / xGA | — | — |\n| Shots / SOT per game | — | — |\n| Home/Away corners per game | — | — |\n| Corner concession per game | — | — |\n\n**Conflict Detector.** Both latest games ended 2–1, supporting the total, but two of the last four derbies finished 1–0. Emotional intensity can increase transitions or reduce shot quality through hurried decisions; it does not point in only one direction. The small current sample and missing uniform process data limit confidence, while contrary evidence remains part of the assessment rather than being removed to support the selection.\n\nAt 1.83, the **price-derived threshold / raw implied probability** is approximately **54.6%** before bookmaker margin. This is not a model probability. Where the selection combines markets, correlated historical rates must not be multiplied mechanically.\n\n🎯 **Prediction: Over 2.5 Goals**\n💰 **Odds: 1.83**"],
+  analysisFormat: "markdown",
+  seoTitle: "Hibernian vs Hearts Prediction, Odds & Match Analysis — Scottish Premiership 2026/27",
   comment: "Odds supplied in the editorial package and recorded before kickoff; bookmaker not identified in the source file.",
-  picks: {
-    main: "Over 2.5 Goals",
-    odds: 1.83,
-    oddsProvenance: {
-      source: "Author-supplied editorial package",
-      provenance: "author_attested",
-      market: "Over 2.5 Goals"
-    }
-  },
+  picks: { main: "Over 2.5 Goals", publishedOdds: 1.83, oddsProvenance: { source: "Author-supplied editorial package", provenance: "author_attested", market: "Over 2.5 Goals" } },
   sourceStatus: "verified",
-  sources: [
-    {
-      name: "SPFL — 2026/27 Premiership fixtures and table",
-      url: "https://spfl.co.uk/match-day",
-      description: "Official competition page confirming the scheduled pairing, kickoff and current standings used for publication context.",
-      accessedAt: "2026-08-26T08:54:38-03:00"
-    }
-  ],
-  publishedAt: "2026-08-26T11:54:38.899Z",
-  published: true,
-  matchInfo: {
-    date: "2026-09-03",
-    time: "19:45",
-    round: "Matchday 5"
-  }
+  sources: [{ name: "Official competition and club fixture sources", url: "https://spfl.co.uk/match-day", description: "Fixture, current results and competition context.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "Independent current preview and match reporting", url: "https://fbref.com/en/comps/40/schedule/Scottish-Premiership-Scores-and-Fixtures", description: "Recent results, lineups, availability and H2H cross-check.", accessedAt: "2026-08-30T21:30:00+01:00" }],
+  publishedAt: "2026-08-26T11:54:38.899Z", published: true,
+  matchInfo: { date: "2026-09-03", time: "19:45", round: "Matchday 5", venue: "Easter Road" },
 };

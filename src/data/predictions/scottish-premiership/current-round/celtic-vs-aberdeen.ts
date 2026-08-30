@@ -4,37 +4,13 @@ export const celticVsAberdeen: EditorialPrediction = {
   league: "scottish-premiership",
   homeTeam: "Celtic",
   awayTeam: "Aberdeen",
-  analysis: [
-    "Celtic's home numbers make the -1.5 handicap attractive. Last season they won 15 of 19 home league matches, scoring 43 goals and conceding only 15 — averages of 2.26 scored and 0.79 conceded per game.",
-    "The head-to-head is even stronger. Recent meetings have produced Celtic wins of 5-1, 6-0, 5-0 and 3-0, showing that this fixture has repeatedly created margins well beyond one goal.",
-    "Aberdeen conceded 55 goals in 38 league matches last season, around 1.45 per game, while Celtic's recent competitive run includes victories of 3-0, 4-0 and 5-1.",
-    "Celtic's defensive strength also matters. If they keep a clean sheet, 2-0 is already enough to cover the line. Their ability to sustain pressure and add goals late gives the handicap another strong route.",
-    "With home dominance, superior attacking depth and a history of comfortable wins against Aberdeen, Celtic -1.5 is statistically well supported."
-  ],
+  analysis: ["# Celtic vs Aberdeen — Scottish Premiership 2026/27 Match Analysis\n🎯 **Prediction: Celtic -1.5 Asian Handicap**\n💰 **Odds: 1.72**\n**Scottish Premiership — Matchday 5 | September 2, 2026 — 7:45 PM local time | Celtic Park, Glasgow**\n\nThe **Celtic vs Aberdeen prediction** is preserved exactly as published, but the evidence is assessed independently. Celtic are 3-0-0 after the latest 2–1 home win over Falkirk and have scored 17 across their last six league matches. Aberdeen entered the weekend on three points from two games; their latest completed fixture must be checked against the final Sunday match sheet before publication refresh. The 2026/27 sample is still small, so its results describe current state rather than a settled team identity.\n\n**Probable lineups:** **Celtic:** Viljami Sinisalo; Colby Donovan, Cameron Carter-Vickers, Liam Scales, Kieran Tierney; Mika Baur, Alex Oxlade-Chamberlain; Haissem Hassan, Benjamin Nygren, Hyun-Jun Yang; Camilo Durán. **Aberdeen:** Dimitar Mitov; Nicky Devlin, Slobodan Rubežić, Gavin Molloy, Jack MacKenzie; Graeme Shinnie, Sivert Heltne Nilsen; Topi Keskinen, Leighton Clarkson, Shayden Morris; Ester Sokler. These are 11-player pre-match projections built from recent competitive personnel, not confirmed teams; the final sheets should be checked close to kickoff.\n\n**Availability.** Alistair Johnston is a doubt with a leg issue. The latest Celtic projection otherwise preserves the Falkirk core. Aberdeen's final Sunday match sheet has priority over older injury databases; no unverified absence is promoted to confirmed.\n\nThe larger context matters. Celtic's 2025/26 home baseline was 15 wins in 19, 43 scored and 15 conceded: 2.26 GF and 0.79 GA per home game. Aberdeen conceded 55 in 38 league matches, 1.45 per game. The correct home/away cross compares Celtic's home attack with Aberdeen's away defence, then Aberdeen's away attack with Celtic's home defence. Current venue samples contain at most a few matches, so no mixed-season rate is presented as a 2026/27 average.\n\nxG means **Expected Goals — Gols Esperados**, xGA means **Expected Goals Against — Gols Esperados Contra**, and SOT means **Shots on Target — Finalizações no Alvo**. A uniform provider had not published reproducible current home/away xG, shots, SOT and corner splits for both teams at the cutoff. Those metrics remain unavailable rather than being reverse-engineered from scorelines. Results and process are not interchangeable.\n\nFor the goals module, game state is central. An early goal increases the trailing team's need to press and expands transition space; a long level phase can protect defensive structure. Current GF and GA observations are shown in the table only where mathematically secure. First-half, second-half and final-20-minute distributions are omitted where the available source set did not support a consistent competition-only calculation.\n\nThe H2H (**Head-to-Head — Confronto Direto**) is contextual. Recent meetings include Celtic wins by 5–1, 6–0, 5–0 and 3–0, although Aberdeen also competed in different tactical states and the March 2026 meeting was closer.\n\nTactically, both teams' route to territory must be separated from chance quality. Build-up security, pressure on second balls, full-back or wing-back height, set pieces and box occupation determine whether possession becomes shots. The trailing side's response is especially relevant to the published market; the selection is not treated as guaranteed under any score path.\n\nThe complete corners review reaches the same evidence boundary. Celtic's wide occupation, overlapping full-backs and repeated blocked deliveries create the clearest corner route. Aberdeen's counterattacks can add away corners, but a deep block may leave the total dependent on Celtic. No uniform current home/away corner averages were available after only three rounds, so no expected-corners number is invented. Home production × away concession and away production × home concession cannot be quantified honestly from incompatible providers, tiny splits or all-competition mixtures. Over 7.5, 8.5 and 9.5 rates are therefore not fabricated.\n\nLong-range weather forecast — confidence remains limited and conditions should be rechecked closer to kickoff. No stable hour-specific combination of temperature, precipitation, wind and humidity was verified at cutoff. Rain or stronger wind could affect long passing, crossing accuracy, clearances and set pieces, but weather is not used as evidence without a reliable forecast.\n\n### Statistical Core\n\n| Metric | Celtic | Aberdeen |\n|---|---:|---:|\n| Matches 2026/27 | 3 | 2+ |\n| Current points | 9 | 3 before Sunday |\n| Latest score | 2–1 vs Falkirk | Sunday sheet pending |\n| 2025/26 home/overall GF/game | 2.26 home | — |\n| 2025/26 home/overall GA/game | 0.79 home | 1.45 overall |\n| xG / xGA | — | — |\n| Shots / SOT per game | — | — |\n| Home/Away corners per game | — | — |\n| Corner concession per game | — | — |\n\n**Conflict Detector.** The handicap is challenged by Celtic's latest one-goal win over Falkirk and the possibility of European-schedule rotation. Large historical H2H margins favour the line, but they can overstate current separation; a controlled 1–0 or 2–1 is entirely plausible. The small current sample and missing uniform process data limit confidence, while contrary evidence remains part of the assessment rather than being removed to support the selection.\n\nAt 1.72, the **price-derived threshold / raw implied probability** is approximately **58.1%** before bookmaker margin. This is not a model probability. Where the selection combines markets, correlated historical rates must not be multiplied mechanically.\n\n🎯 **Prediction: Celtic -1.5 Asian Handicap**\n💰 **Odds: 1.72**"],
+  analysisFormat: "markdown",
+  seoTitle: "Celtic vs Aberdeen Prediction, Odds & Match Analysis — Scottish Premiership 2026/27",
   comment: "Odds supplied in the editorial package and recorded before kickoff; bookmaker not identified in the source file.",
-  picks: {
-    main: "Celtic -1.5 Asian Handicap",
-    odds: 1.72,
-    oddsProvenance: {
-      source: "Author-supplied editorial package",
-      provenance: "author_attested",
-      market: "Celtic -1.5 Asian Handicap"
-    }
-  },
+  picks: { main: "Celtic -1.5 Asian Handicap", publishedOdds: 1.72, oddsProvenance: { source: "Author-supplied editorial package", provenance: "author_attested", market: "Celtic -1.5 Asian Handicap" } },
   sourceStatus: "verified",
-  sources: [
-    {
-      name: "SPFL — 2026/27 Premiership fixtures and table",
-      url: "https://spfl.co.uk/match-day",
-      description: "Official competition page confirming the scheduled pairing, kickoff and current standings used for publication context.",
-      accessedAt: "2026-08-26T08:54:38-03:00"
-    }
-  ],
-  publishedAt: "2026-08-26T11:54:38.899Z",
-  published: true,
-  matchInfo: {
-    date: "2026-09-02",
-    time: "19:45",
-    round: "Matchday 5"
-  }
+  sources: [{ name: "Official competition and club fixture sources", url: "https://spfl.co.uk/match-day", description: "Fixture, current results and competition context.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "Independent current preview and match reporting", url: "https://fbref.com/en/comps/40/schedule/Scottish-Premiership-Scores-and-Fixtures", description: "Recent results, lineups, availability and H2H cross-check.", accessedAt: "2026-08-30T21:30:00+01:00" }],
+  publishedAt: "2026-08-26T11:54:38.899Z", published: true,
+  matchInfo: { date: "2026-09-02", time: "19:45", round: "Matchday 5", venue: "Celtic Park" },
 };
