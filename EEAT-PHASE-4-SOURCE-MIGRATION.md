@@ -8,14 +8,14 @@ This pre-migration inventory applies conservative lexical triage to every publis
 
 ## Corpus summary
 
-- Published predictions audited: 228
-- Predictions with existing sources: 228
+- Published predictions audited: 217
+- Predictions with existing sources: 217
 - Predictions requiring source research: 0
-- Total verified sources: 283
-- Factual/event candidates currently unsupported: 4445
-- Exact sentences repeated across predictions: 51
-- High-similarity pairs (Jaccard token threshold ≥ 0.55): 887
-- Average analysis length: 573 words
+- Total verified sources: 298
+- Factual/event candidates currently unsupported: 4377
+- Exact sentences repeated across predictions: 50
+- High-similarity pairs (Jaccard token threshold ≥ 0.55): 767
+- Average analysis length: 594 words
 - Shortest analysis: paris-fc-vs-nice (97 words)
 - Longest analysis: borussia-monchengladbach-vs-sv-07-elversberg (3479 words)
 - Prohibited guaranteed-win/profit candidates: 0
@@ -35,13 +35,11 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | ajax-vs-psv-eindhoven | 45 | 0 | 0 | 1 | Direct claim-specific research | 45 | HIGH | SOURCE RESEARCH REQUIRED |
 | alaves-vs-villarreal | 13 | 0 | 1 | 1 | Direct claim-specific research | 13 | HIGH | SOURCE RESEARCH REQUIRED |
 | alverca-vs-santa-clara | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
-| amedspor-vs-trabzonspor | 9 | 0 | 0 | 1 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
+| amedspor-vs-trabzonspor | 9 | 0 | 0 | 5 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | angers-vs-lille | 5 | 0 | 0 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | angers-vs-rennes | 28 | 0 | 0 | 1 | Direct claim-specific research | 28 | HIGH | SOURCE RESEARCH REQUIRED |
 | arouca-vs-maritimo | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | arsenal-vs-coventry-city | 5 | 1 | 1 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
-| aston-villa-vs-arsenal | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
-| atalanta-bc-vs-bologna-fc-1909 | 4 | 0 | 1 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | atalanta-vs-sassuolo | 4 | 1 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | athletic-club-vs-atletico-madrid | 48 | 0 | 0 | 1 | Direct claim-specific research | 48 | HIGH | SOURCE RESEARCH REQUIRED |
 | athletic-club-vs-sevilla | 4 | 0 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
@@ -55,18 +53,17 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | az-alkmaar-vs-go-ahead-eagles | 1 | 0 | 1 | 1 | Direct claim-specific research | 1 | LOW | SOURCE RESEARCH REQUIRED |
 | bahia-vs-internacional | 7 | 1 | 3 | 1 | Direct claim-specific research | 8 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | barcelona-vs-athletic-club | 49 | 0 | 0 | 1 | Direct claim-specific research | 47 | HIGH | SOURCE RESEARCH REQUIRED |
-| barcelona-vs-rayo-vallecano | 6 | 1 | 0 | 1 | Direct claim-specific research | 6 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | bayer-04-leverkusen-vs-1-fc-union-berlin | 53 | 2 | 3 | 1 | Direct claim-specific research | 54 | HIGH | SOURCE RESEARCH REQUIRED |
 | bayern-munchen-vs-vfb-stuttgart | 5 | 0 | 0 | 4 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
-| benfica-vs-estoril | 1 | 0 | 1 | 1 | Direct claim-specific research | 1 | LOW | SOURCE RESEARCH REQUIRED |
-| besiktas-vs-corum-fk | 9 | 0 | 0 | 1 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
+| benfica-vs-estoril | 1 | 0 | 1 | 8 | Direct claim-specific research | 1 | LOW | SOURCE RESEARCH REQUIRED |
+| besiktas-vs-corum-fk | 9 | 0 | 0 | 6 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | birmingham-city-vs-brentford | 21 | 2 | 1 | 1 | Direct claim-specific research | 23 | HIGH | SOURCE RESEARCH REQUIRED |
 | bologna-vs-lazio | 4 | 0 | 1 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | borussia-dortmund-vs-hamburger-sv | 1 | 0 | 1 | 1 | Direct claim-specific research | 1 | LOW | SOURCE RESEARCH REQUIRED |
 | borussia-monchengladbach-vs-sv-07-elversberg | 65 | 10 | 9 | 1 | Direct claim-specific research | 72 | HIGH | SOURCE RESEARCH REQUIRED |
 | botafogo-vs-athletico-paranaense | 50 | 0 | 3 | 2 | Direct claim-specific research | 50 | HIGH | SOURCE RESEARCH REQUIRED |
 | bournemouth-vs-everton | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
-| braga-vs-vitoria-de-guimaraes | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
+| braga-vs-vitoria-de-guimaraes | 2 | 0 | 1 | 5 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | brentford-vs-sunderland | 65 | 2 | 8 | 1 | Direct claim-specific research | 66 | HIGH | SOURCE RESEARCH REQUIRED |
 | brentford-vs-tottenham-hotspur | 4 | 0 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | brest-vs-toulouse | 4 | 0 | 0 | 3 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
@@ -79,7 +76,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | casa-pia-vs-moreirense | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | celta-vigo-vs-athletic-club | 4 | 0 | 1 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | celta-vigo-vs-osasuna | 42 | 0 | 2 | 1 | Direct claim-specific research | 41 | HIGH | SOURCE RESEARCH REQUIRED |
-| celtic-vs-aberdeen | 8 | 0 | 0 | 1 | Direct claim-specific research | 8 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | celtic-vs-falkirk | 7 | 0 | 0 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | chapecoense-vs-sao-paulo | 42 | 5 | 1 | 2 | Direct claim-specific research | 45 | HIGH | SOURCE RESEARCH REQUIRED |
 | chelsea-vs-brighton-hove-albion | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
@@ -94,7 +90,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | deportivo-vs-valencia | 5 | 0 | 1 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | doncaster-rovers-vs-middlesbrough | 33 | 3 | 0 | 1 | Direct claim-specific research | 34 | HIGH | SOURCE RESEARCH REQUIRED |
 | dundee-vs-hibernian | 7 | 0 | 0 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
-| dundee-vs-st-johnstone | 7 | 0 | 0 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | eintracht-frankfurt-vs-augsburg | 82 | 2 | 10 | 1 | Direct claim-specific research | 83 | HIGH | SOURCE RESEARCH REQUIRED |
 | elche-vs-barcelona | 23 | 0 | 0 | 1 | Direct claim-specific research | 23 | HIGH | SOURCE RESEARCH REQUIRED |
 | elche-vs-real-sociedad | 67 | 0 | 0 | 1 | Direct claim-specific research | 67 | HIGH | SOURCE RESEARCH REQUIRED |
@@ -105,7 +100,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | everton-vs-manchester-united | 57 | 0 | 1 | 1 | Direct claim-specific research | 57 | HIGH | SOURCE RESEARCH REQUIRED |
 | excelsior-vs-sparta-rotterdam | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | eyupspor-vs-alanyaspor | 6 | 0 | 0 | 1 | Direct claim-specific research | 6 | MEDIUM | SOURCE RESEARCH REQUIRED |
-| falkirk-vs-rangers | 7 | 0 | 0 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | famalicao-vs-gil-vicente | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | fc-porto-vs-arouca | 3 | 1 | 1 | 1 | Direct claim-specific research | 3 | LOW | SOURCE RESEARCH REQUIRED |
 | fc-utrecht-vs-go-ahead-eagles | 47 | 0 | 0 | 1 | Direct claim-specific research | 47 | HIGH | SOURCE RESEARCH REQUIRED |
@@ -131,7 +125,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | groningen-vs-fortuna-sittard | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | hamburger-sv-vs-1-fsv-mainz-05 | 85 | 5 | 6 | 1 | Direct claim-specific research | 90 | HIGH | SOURCE RESEARCH REQUIRED |
 | hearts-vs-st-johnstone | 8 | 0 | 0 | 1 | Direct claim-specific research | 8 | MEDIUM | SOURCE RESEARCH REQUIRED |
-| hibernian-vs-hearts | 9 | 0 | 0 | 1 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | hull-city-vs-manchester-united | 4 | 0 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | inter-vs-napoli | 29 | 2 | 1 | 1 | Direct claim-specific research | 31 | HIGH | SOURCE RESEARCH REQUIRED |
 | internacional-vs-atletico-mineiro | 36 | 0 | 1 | 2 | Direct claim-specific research | 36 | HIGH | SOURCE RESEARCH REQUIRED |
@@ -143,7 +136,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | istanbul-basaksehir-vs-kas-mpasa | 5 | 0 | 0 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | juventus-vs-parma-calcio-1913 | 4 | 0 | 1 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | kilmarnock-vs-dundee-united | 7 | 0 | 0 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
-| kilmarnock-vs-st-mirren | 6 | 0 | 0 | 1 | Direct claim-specific research | 6 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | konyaspor-vs-kocaelispor | 7 | 0 | 1 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | le-havre-vs-brest | 26 | 2 | 1 | 1 | Direct claim-specific research | 28 | HIGH | SOURCE RESEARCH REQUIRED |
 | le-havre-vs-monaco | 9 | 0 | 1 | 2 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
@@ -166,7 +158,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | mirassol-vs-palmeiras | 9 | 0 | 0 | 1 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | monaco-vs-olympique-de-marseille | 4 | 0 | 0 | 2 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | moreirense-vs-benfica | 9 | 0 | 1 | 2 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
-| motherwell-vs-dundee-united | 8 | 0 | 0 | 1 | Direct claim-specific research | 8 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | nec-nijmegen-vs-feyenoord | 39 | 0 | 0 | 1 | Direct claim-specific research | 39 | HIGH | SOURCE RESEARCH REQUIRED |
 | newcastle-united-vs-bournemouth | 60 | 4 | 6 | 1 | Direct claim-specific research | 64 | HIGH | SOURCE RESEARCH REQUIRED |
 | newcastle-united-vs-liverpool | 5 | 2 | 1 | 5 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
@@ -177,7 +168,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | nottingham-forest-vs-leeds-united-efl-cup | 41 | 0 | 1 | 1 | Direct claim-specific research | 40 | HIGH | SOURCE RESEARCH REQUIRED |
 | nottingham-forest-vs-tottenham-hotspur | 71 | 3 | 10 | 1 | Direct claim-specific research | 73 | HIGH | SOURCE RESEARCH REQUIRED |
 | olympique-de-marseille-vs-strasbourg | 5 | 1 | 1 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
-| osasuna-vs-getafe | 9 | 0 | 0 | 1 | Direct claim-specific research | 9 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | osasuna-vs-levante | 34 | 0 | 2 | 1 | Direct claim-specific research | 33 | HIGH | SOURCE RESEARCH REQUIRED |
 | palmeiras-vs-santos | 40 | 0 | 7 | 1 | Direct claim-specific research | 40 | HIGH | SOURCE RESEARCH REQUIRED |
 | palmeiras-vs-vasco-da-gama | 33 | 3 | 1 | 2 | Direct claim-specific research | 35 | HIGH | SOURCE RESEARCH REQUIRED |
@@ -199,7 +189,7 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | real-sociedad-vs-celta-vigo | 66 | 8 | 4 | 1 | Direct claim-specific research | 73 | HIGH | SOURCE RESEARCH REQUIRED |
 | real-sociedad-vs-espanyol | 5 | 0 | 0 | 1 | Direct claim-specific research | 5 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | red-bull-bragantino-vs-gremio | 38 | 0 | 5 | 2 | Direct claim-specific research | 38 | HIGH | SOURCE RESEARCH REQUIRED |
-| remo-vs-coritiba | 7 | 0 | 0 | 1 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
+| remo-vs-coritiba | 7 | 0 | 0 | 7 | Direct claim-specific research | 7 | MEDIUM | SOURCE RESEARCH REQUIRED |
 | rennes-vs-le-mans | 4 | 0 | 0 | 3 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
 | rio-ave-vs-sporting-cp | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | roma-vs-fiorentina | 3 | 0 | 0 | 1 | Direct claim-specific research | 3 | LOW | SOURCE RESEARCH REQUIRED |
@@ -235,7 +225,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 | troyes-vs-strasbourg | 26 | 0 | 0 | 1 | Direct claim-specific research | 26 | HIGH | SOURCE RESEARCH REQUIRED |
 | tsg-1899-hoffenheim-vs-borussia-dortmund | 39 | 6 | 7 | 1 | Direct claim-specific research | 44 | HIGH | SOURCE RESEARCH REQUIRED |
 | udinese-calcio-vs-como-1907 | 4 | 1 | 0 | 1 | Direct claim-specific research | 4 | LOW | SOURCE RESEARCH REQUIRED |
-| us-lecce-vs-as-roma | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | us-sassuolo-calcio-vs-torino | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | utrecht-vs-psv-eindhoven | 2 | 0 | 1 | 1 | Direct claim-specific research | 2 | LOW | SOURCE RESEARCH REQUIRED |
 | valencia-vs-barcelona | 58 | 0 | 1 | 1 | Direct claim-specific research | 58 | HIGH | SOURCE RESEARCH REQUIRED |
@@ -256,13 +245,13 @@ This pre-migration inventory applies conservative lexical triage to every publis
 ## Repetition inventory
 
 - `1.` — 1-fc-koln-vs-tsg-1899-hoffenheim, 1-fc-union-berlin-vs-eintracht-frankfurt, 1-fsv-mainz-05-vs-sc-paderborn-07
-- `the goals component makes the total scoring range part of the selection, while the double-chance component protects one of the drawn-result paths.` — 1-fc-koln-vs-tsg-1899-hoffenheim, alverca-vs-santa-clara, augsburg-vs-schalke-04, bournemouth-vs-everton, c-d-nacional-vs-estrela, coventry-city-vs-hull-city, pec-zwolle-vs-nec-nijmegen, sc-freiburg-vs-sv-werder-bremen, ss-lazio-vs-genoa-cfc, ssc-napoli-vs-como-1907, sunderland-vs-fulham, sv-07-elversberg-vs-bayer-04-leverkusen, us-lecce-vs-as-roma, us-sassuolo-calcio-vs-torino, utrecht-vs-psv-eindhoven, willem-ii-vs-heerenveen
+- `the goals component makes the total scoring range part of the selection, while the double-chance component protects one of the drawn-result paths.` — 1-fc-koln-vs-tsg-1899-hoffenheim, alverca-vs-santa-clara, augsburg-vs-schalke-04, bournemouth-vs-everton, c-d-nacional-vs-estrela, coventry-city-vs-hull-city, pec-zwolle-vs-nec-nijmegen, sc-freiburg-vs-sv-werder-bremen, ss-lazio-vs-genoa-cfc, ssc-napoli-vs-como-1907, sunderland-vs-fulham, sv-07-elversberg-vs-bayer-04-leverkusen, us-sassuolo-calcio-vs-torino, utrecht-vs-psv-eindhoven, willem-ii-vs-heerenveen
 - `the selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to 1.` — 1-fc-koln-vs-tsg-1899-hoffenheim, 1-fc-union-berlin-vs-eintracht-frankfurt, 1-fsv-mainz-05-vs-sc-paderborn-07
-- `it should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.` — 1-fc-koln-vs-tsg-1899-hoffenheim, 1-fc-union-berlin-vs-eintracht-frankfurt, 1-fsv-mainz-05-vs-sc-paderborn-07, ac-milan-vs-venezia, ac-monza-vs-udinese-calcio, academico-de-viseu-vs-porto, acf-fiorentina-vs-frosinone-calcio, alverca-vs-santa-clara, arouca-vs-maritimo, aston-villa-vs-arsenal, atalanta-bc-vs-bologna-fc-1909, augsburg-vs-schalke-04, az-alkmaar-vs-go-ahead-eagles, benfica-vs-estoril, borussia-dortmund-vs-hamburger-sv, bournemouth-vs-everton, braga-vs-vitoria-de-guimaraes, c-d-nacional-vs-estrela, cagliari-calcio-vs-internazionale-milano, casa-pia-vs-moreirense, chelsea-vs-brighton-hove-albion, coventry-city-vs-hull-city, crystal-palace-vs-manchester-city, excelsior-vs-sparta-rotterdam, famalicao-vs-gil-vicente, feyenoord-rotterdam-vs-ado-den-haag, groningen-vs-fortuna-sittard, juventus-vs-parma-calcio-1913, leeds-united-vs-brentford, lille-vs-paris-saint-germain, liverpool-vs-nottingham-forest, manchester-united-vs-ipswich-town, pec-zwolle-vs-nec-nijmegen, rb-leipzig-vs-borussia-monchengladbach, rio-ave-vs-sporting-cp, sc-freiburg-vs-sv-werder-bremen, ss-lazio-vs-genoa-cfc, ssc-napoli-vs-como-1907, sunderland-vs-fulham, sv-07-elversberg-vs-bayer-04-leverkusen, telstar-vs-ajax-amsterdam, tottenham-hotspur-vs-newcastle-united, us-lecce-vs-as-roma, us-sassuolo-calcio-vs-torino, utrecht-vs-psv-eindhoven, willem-ii-vs-heerenveen
-- `the main risk is that the match develops outside the selected market conditions.` — 1-fc-koln-vs-tsg-1899-hoffenheim, 1-fc-union-berlin-vs-eintracht-frankfurt, 1-fsv-mainz-05-vs-sc-paderborn-07, ac-milan-vs-venezia, academico-de-viseu-vs-porto, acf-fiorentina-vs-frosinone-calcio, alverca-vs-santa-clara, aston-villa-vs-arsenal, atalanta-bc-vs-bologna-fc-1909, augsburg-vs-schalke-04, az-alkmaar-vs-go-ahead-eagles, benfica-vs-estoril, borussia-dortmund-vs-hamburger-sv, bournemouth-vs-everton, braga-vs-vitoria-de-guimaraes, c-d-nacional-vs-estrela, cagliari-calcio-vs-internazionale-milano, chelsea-vs-brighton-hove-albion, coventry-city-vs-hull-city, crystal-palace-vs-manchester-city, excelsior-vs-sparta-rotterdam, feyenoord-rotterdam-vs-ado-den-haag, groningen-vs-fortuna-sittard, juventus-vs-parma-calcio-1913, leeds-united-vs-brentford, lille-vs-paris-saint-germain, liverpool-vs-nottingham-forest, manchester-united-vs-ipswich-town, pec-zwolle-vs-nec-nijmegen, rb-leipzig-vs-borussia-monchengladbach, rio-ave-vs-sporting-cp, sc-freiburg-vs-sv-werder-bremen, ss-lazio-vs-genoa-cfc, ssc-napoli-vs-como-1907, sunderland-vs-fulham, sv-07-elversberg-vs-bayer-04-leverkusen, telstar-vs-ajax-amsterdam, tottenham-hotspur-vs-newcastle-united, us-lecce-vs-as-roma, us-sassuolo-calcio-vs-torino, utrecht-vs-psv-eindhoven, willem-ii-vs-heerenveen
-- `the pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.` — 1-fc-koln-vs-tsg-1899-hoffenheim, 1-fc-union-berlin-vs-eintracht-frankfurt, 1-fsv-mainz-05-vs-sc-paderborn-07, ac-milan-vs-venezia, academico-de-viseu-vs-porto, acf-fiorentina-vs-frosinone-calcio, alverca-vs-santa-clara, aston-villa-vs-arsenal, atalanta-bc-vs-bologna-fc-1909, augsburg-vs-schalke-04, az-alkmaar-vs-go-ahead-eagles, benfica-vs-estoril, borussia-dortmund-vs-hamburger-sv, bournemouth-vs-everton, braga-vs-vitoria-de-guimaraes, c-d-nacional-vs-estrela, cagliari-calcio-vs-internazionale-milano, chelsea-vs-brighton-hove-albion, coventry-city-vs-hull-city, crystal-palace-vs-manchester-city, excelsior-vs-sparta-rotterdam, feyenoord-rotterdam-vs-ado-den-haag, groningen-vs-fortuna-sittard, juventus-vs-parma-calcio-1913, leeds-united-vs-brentford, lille-vs-paris-saint-germain, liverpool-vs-nottingham-forest, manchester-united-vs-ipswich-town, pec-zwolle-vs-nec-nijmegen, rb-leipzig-vs-borussia-monchengladbach, rio-ave-vs-sporting-cp, sc-freiburg-vs-sv-werder-bremen, ss-lazio-vs-genoa-cfc, ssc-napoli-vs-como-1907, sunderland-vs-fulham, sv-07-elversberg-vs-bayer-04-leverkusen, telstar-vs-ajax-amsterdam, tottenham-hotspur-vs-newcastle-united, us-lecce-vs-as-roma, us-sassuolo-calcio-vs-torino, utrecht-vs-psv-eindhoven, willem-ii-vs-heerenveen
-- `this preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: over 2.5 goals.` — 1-fc-union-berlin-vs-eintracht-frankfurt, acf-fiorentina-vs-frosinone-calcio, aston-villa-vs-arsenal, atalanta-bc-vs-bologna-fc-1909, excelsior-vs-sparta-rotterdam, leeds-united-vs-brentford, tottenham-hotspur-vs-newcastle-united
-- `the goals component makes the total scoring range part of the selection.` — 1-fc-union-berlin-vs-eintracht-frankfurt, ac-monza-vs-udinese-calcio, acf-fiorentina-vs-frosinone-calcio, arouca-vs-maritimo, aston-villa-vs-arsenal, atalanta-bc-vs-bologna-fc-1909, casa-pia-vs-moreirense, excelsior-vs-sparta-rotterdam, famalicao-vs-gil-vicente, leeds-united-vs-brentford, tottenham-hotspur-vs-newcastle-united
+- `it should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.` — 1-fc-koln-vs-tsg-1899-hoffenheim, 1-fc-union-berlin-vs-eintracht-frankfurt, 1-fsv-mainz-05-vs-sc-paderborn-07, ac-milan-vs-venezia, ac-monza-vs-udinese-calcio, academico-de-viseu-vs-porto, acf-fiorentina-vs-frosinone-calcio, alverca-vs-santa-clara, arouca-vs-maritimo, augsburg-vs-schalke-04, az-alkmaar-vs-go-ahead-eagles, benfica-vs-estoril, borussia-dortmund-vs-hamburger-sv, bournemouth-vs-everton, braga-vs-vitoria-de-guimaraes, c-d-nacional-vs-estrela, cagliari-calcio-vs-internazionale-milano, casa-pia-vs-moreirense, chelsea-vs-brighton-hove-albion, coventry-city-vs-hull-city, crystal-palace-vs-manchester-city, excelsior-vs-sparta-rotterdam, famalicao-vs-gil-vicente, feyenoord-rotterdam-vs-ado-den-haag, groningen-vs-fortuna-sittard, juventus-vs-parma-calcio-1913, leeds-united-vs-brentford, lille-vs-paris-saint-germain, liverpool-vs-nottingham-forest, manchester-united-vs-ipswich-town, pec-zwolle-vs-nec-nijmegen, rb-leipzig-vs-borussia-monchengladbach, rio-ave-vs-sporting-cp, sc-freiburg-vs-sv-werder-bremen, ss-lazio-vs-genoa-cfc, ssc-napoli-vs-como-1907, sunderland-vs-fulham, sv-07-elversberg-vs-bayer-04-leverkusen, telstar-vs-ajax-amsterdam, tottenham-hotspur-vs-newcastle-united, us-sassuolo-calcio-vs-torino, utrecht-vs-psv-eindhoven, willem-ii-vs-heerenveen
+- `the main risk is that the match develops outside the selected market conditions.` — 1-fc-koln-vs-tsg-1899-hoffenheim, 1-fc-union-berlin-vs-eintracht-frankfurt, 1-fsv-mainz-05-vs-sc-paderborn-07, ac-milan-vs-venezia, academico-de-viseu-vs-porto, acf-fiorentina-vs-frosinone-calcio, alverca-vs-santa-clara, augsburg-vs-schalke-04, az-alkmaar-vs-go-ahead-eagles, benfica-vs-estoril, borussia-dortmund-vs-hamburger-sv, bournemouth-vs-everton, braga-vs-vitoria-de-guimaraes, c-d-nacional-vs-estrela, cagliari-calcio-vs-internazionale-milano, chelsea-vs-brighton-hove-albion, coventry-city-vs-hull-city, crystal-palace-vs-manchester-city, excelsior-vs-sparta-rotterdam, feyenoord-rotterdam-vs-ado-den-haag, groningen-vs-fortuna-sittard, juventus-vs-parma-calcio-1913, leeds-united-vs-brentford, lille-vs-paris-saint-germain, liverpool-vs-nottingham-forest, manchester-united-vs-ipswich-town, pec-zwolle-vs-nec-nijmegen, rb-leipzig-vs-borussia-monchengladbach, rio-ave-vs-sporting-cp, sc-freiburg-vs-sv-werder-bremen, ss-lazio-vs-genoa-cfc, ssc-napoli-vs-como-1907, sunderland-vs-fulham, sv-07-elversberg-vs-bayer-04-leverkusen, telstar-vs-ajax-amsterdam, tottenham-hotspur-vs-newcastle-united, us-sassuolo-calcio-vs-torino, utrecht-vs-psv-eindhoven, willem-ii-vs-heerenveen
+- `the pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.` — 1-fc-koln-vs-tsg-1899-hoffenheim, 1-fc-union-berlin-vs-eintracht-frankfurt, 1-fsv-mainz-05-vs-sc-paderborn-07, ac-milan-vs-venezia, academico-de-viseu-vs-porto, acf-fiorentina-vs-frosinone-calcio, alverca-vs-santa-clara, augsburg-vs-schalke-04, az-alkmaar-vs-go-ahead-eagles, benfica-vs-estoril, borussia-dortmund-vs-hamburger-sv, bournemouth-vs-everton, braga-vs-vitoria-de-guimaraes, c-d-nacional-vs-estrela, cagliari-calcio-vs-internazionale-milano, chelsea-vs-brighton-hove-albion, coventry-city-vs-hull-city, crystal-palace-vs-manchester-city, excelsior-vs-sparta-rotterdam, feyenoord-rotterdam-vs-ado-den-haag, groningen-vs-fortuna-sittard, juventus-vs-parma-calcio-1913, leeds-united-vs-brentford, lille-vs-paris-saint-germain, liverpool-vs-nottingham-forest, manchester-united-vs-ipswich-town, pec-zwolle-vs-nec-nijmegen, rb-leipzig-vs-borussia-monchengladbach, rio-ave-vs-sporting-cp, sc-freiburg-vs-sv-werder-bremen, ss-lazio-vs-genoa-cfc, ssc-napoli-vs-como-1907, sunderland-vs-fulham, sv-07-elversberg-vs-bayer-04-leverkusen, telstar-vs-ajax-amsterdam, tottenham-hotspur-vs-newcastle-united, us-sassuolo-calcio-vs-torino, utrecht-vs-psv-eindhoven, willem-ii-vs-heerenveen
+- `this preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: over 2.5 goals.` — 1-fc-union-berlin-vs-eintracht-frankfurt, acf-fiorentina-vs-frosinone-calcio, excelsior-vs-sparta-rotterdam, leeds-united-vs-brentford, tottenham-hotspur-vs-newcastle-united
+- `the goals component makes the total scoring range part of the selection.` — 1-fc-union-berlin-vs-eintracht-frankfurt, ac-monza-vs-udinese-calcio, acf-fiorentina-vs-frosinone-calcio, arouca-vs-maritimo, casa-pia-vs-moreirense, excelsior-vs-sparta-rotterdam, famalicao-vs-gil-vicente, leeds-united-vs-brentford, tottenham-hotspur-vs-newcastle-united
 - `the win component requires the named team to finish ahead.` — 1-fsv-mainz-05-vs-sc-paderborn-07, chelsea-vs-brighton-hove-albion, crystal-palace-vs-manchester-city, lille-vs-paris-saint-germain, telstar-vs-ajax-amsterdam
 - `the goals component makes the total scoring range part of the selection, while the win component requires the named team to finish ahead.` — ac-milan-vs-venezia, groningen-vs-fortuna-sittard, liverpool-vs-nottingham-forest, manchester-united-vs-ipswich-town, rio-ave-vs-sporting-cp
 - `this preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: over 1.5 goals — live entry.` — ac-monza-vs-udinese-calcio, arouca-vs-maritimo, casa-pia-vs-moreirense, famalicao-vs-gil-vicente
@@ -288,7 +277,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - `there is also a direct reference from this season.` — chapecoense-vs-sao-paulo, red-bull-bragantino-vs-gremio
 - `4–1 ✅` — chelsea-vs-luton-town, fulham-vs-afc-wimbledon, newcastle-united-vs-west-bromwich-albion, real-madrid-vs-real-sociedad, tottenham-hotspur-vs-charlton-athletic
 - `💰 odds: 1.62` — doncaster-rovers-vs-middlesbrough, osasuna-vs-levante, sheffield-wednesday-vs-wolverhampton-wanderers
-- `st.` — dundee-vs-st-johnstone, hearts-vs-st-johnstone
 - `risco: médio.` — fc-utrecht-vs-go-ahead-eagles, willem-ii-vs-excelsior
 - `**market price:** **1.75 (-133 american)**.` — fulham-vs-crystal-palace, santos-vs-palmeiras
 - `🎯 prediction: over 1.5 goals` — getafe-vs-racing-santander, malaga-vs-deportivo-la-coruna
@@ -315,8 +303,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ academico-de-viseu-vs-porto: 0.652
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ acf-fiorentina-vs-frosinone-calcio: 0.810
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ alverca-vs-santa-clara: 0.877
-- 1-fc-koln-vs-tsg-1899-hoffenheim ↔ aston-villa-vs-arsenal: 0.800
-- 1-fc-koln-vs-tsg-1899-hoffenheim ↔ atalanta-bc-vs-bologna-fc-1909: 0.810
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ augsburg-vs-schalke-04: 0.923
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ az-alkmaar-vs-go-ahead-eagles: 0.674
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ benfica-vs-estoril: 0.667
@@ -346,7 +332,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.911
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ telstar-vs-ajax-amsterdam: 0.690
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ tottenham-hotspur-vs-newcastle-united: 0.790
-- 1-fc-koln-vs-tsg-1899-hoffenheim ↔ us-lecce-vs-as-roma: 0.923
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ us-sassuolo-calcio-vs-torino: 0.911
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ utrecht-vs-psv-eindhoven: 0.923
 - 1-fc-koln-vs-tsg-1899-hoffenheim ↔ willem-ii-vs-heerenveen: 0.923
@@ -355,8 +340,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ academico-de-viseu-vs-porto: 0.699
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ acf-fiorentina-vs-frosinone-calcio: 0.877
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ alverca-vs-santa-clara: 0.759
-- 1-fc-union-berlin-vs-eintracht-frankfurt ↔ aston-villa-vs-arsenal: 0.865
-- 1-fc-union-berlin-vs-eintracht-frankfurt ↔ atalanta-bc-vs-bologna-fc-1909: 0.877
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ augsburg-vs-schalke-04: 0.800
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ az-alkmaar-vs-go-ahead-eagles: 0.725
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ benfica-vs-estoril: 0.716
@@ -386,7 +369,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.790
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ telstar-vs-ajax-amsterdam: 0.744
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ tottenham-hotspur-vs-newcastle-united: 0.853
-- 1-fc-union-berlin-vs-eintracht-frankfurt ↔ us-lecce-vs-as-roma: 0.800
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ us-sassuolo-calcio-vs-torino: 0.790
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ utrecht-vs-psv-eindhoven: 0.800
 - 1-fc-union-berlin-vs-eintracht-frankfurt ↔ willem-ii-vs-heerenveen: 0.800
@@ -394,8 +376,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ academico-de-viseu-vs-porto: 0.725
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ acf-fiorentina-vs-frosinone-calcio: 0.763
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ alverca-vs-santa-clara: 0.682
-- 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ aston-villa-vs-arsenal: 0.753
-- 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ atalanta-bc-vs-bologna-fc-1909: 0.763
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ augsburg-vs-schalke-04: 0.720
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ az-alkmaar-vs-go-ahead-eagles: 0.776
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ benfica-vs-estoril: 0.744
@@ -425,15 +405,12 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.711
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ telstar-vs-ajax-amsterdam: 0.900
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ tottenham-hotspur-vs-newcastle-united: 0.744
-- 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ us-lecce-vs-as-roma: 0.699
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ us-sassuolo-calcio-vs-torino: 0.690
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ utrecht-vs-psv-eindhoven: 0.699
 - 1-fsv-mainz-05-vs-sc-paderborn-07 ↔ willem-ii-vs-heerenveen: 0.699
 - ac-milan-vs-venezia ↔ academico-de-viseu-vs-porto: 0.667
 - ac-milan-vs-venezia ↔ acf-fiorentina-vs-frosinone-calcio: 0.855
 - ac-milan-vs-venezia ↔ alverca-vs-santa-clara: 0.744
-- ac-milan-vs-venezia ↔ aston-villa-vs-arsenal: 0.821
-- ac-milan-vs-venezia ↔ atalanta-bc-vs-bologna-fc-1909: 0.855
 - ac-milan-vs-venezia ↔ augsburg-vs-schalke-04: 0.762
 - ac-milan-vs-venezia ↔ az-alkmaar-vs-go-ahead-eagles: 0.711
 - ac-milan-vs-venezia ↔ benfica-vs-estoril: 0.682
@@ -463,7 +440,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - ac-milan-vs-venezia ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.753
 - ac-milan-vs-venezia ↔ telstar-vs-ajax-amsterdam: 0.818
 - ac-milan-vs-venezia ↔ tottenham-hotspur-vs-newcastle-united: 0.810
-- ac-milan-vs-venezia ↔ us-lecce-vs-as-roma: 0.805
 - ac-milan-vs-venezia ↔ us-sassuolo-calcio-vs-torino: 0.795
 - ac-milan-vs-venezia ↔ utrecht-vs-psv-eindhoven: 0.783
 - ac-milan-vs-venezia ↔ willem-ii-vs-heerenveen: 0.783
@@ -472,8 +448,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - ac-monza-vs-udinese-calcio ↔ famalicao-vs-gil-vicente: 0.890
 - academico-de-viseu-vs-porto ↔ acf-fiorentina-vs-frosinone-calcio: 0.707
 - academico-de-viseu-vs-porto ↔ alverca-vs-santa-clara: 0.674
-- academico-de-viseu-vs-porto ↔ aston-villa-vs-arsenal: 0.699
-- academico-de-viseu-vs-porto ↔ atalanta-bc-vs-bologna-fc-1909: 0.707
 - academico-de-viseu-vs-porto ↔ augsburg-vs-schalke-04: 0.652
 - academico-de-viseu-vs-porto ↔ az-alkmaar-vs-go-ahead-eagles: 0.855
 - academico-de-viseu-vs-porto ↔ benfica-vs-estoril: 0.919
@@ -503,13 +477,10 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - academico-de-viseu-vs-porto ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.644
 - academico-de-viseu-vs-porto ↔ telstar-vs-ajax-amsterdam: 0.716
 - academico-de-viseu-vs-porto ↔ tottenham-hotspur-vs-newcastle-united: 0.690
-- academico-de-viseu-vs-porto ↔ us-lecce-vs-as-roma: 0.652
 - academico-de-viseu-vs-porto ↔ us-sassuolo-calcio-vs-torino: 0.644
 - academico-de-viseu-vs-porto ↔ utrecht-vs-psv-eindhoven: 0.652
 - academico-de-viseu-vs-porto ↔ willem-ii-vs-heerenveen: 0.652
 - acf-fiorentina-vs-frosinone-calcio ↔ alverca-vs-santa-clara: 0.768
-- acf-fiorentina-vs-frosinone-calcio ↔ aston-villa-vs-arsenal: 0.877
-- acf-fiorentina-vs-frosinone-calcio ↔ atalanta-bc-vs-bologna-fc-1909: 0.915
 - acf-fiorentina-vs-frosinone-calcio ↔ augsburg-vs-schalke-04: 0.787
 - acf-fiorentina-vs-frosinone-calcio ↔ az-alkmaar-vs-go-ahead-eagles: 0.734
 - acf-fiorentina-vs-frosinone-calcio ↔ benfica-vs-estoril: 0.725
@@ -539,12 +510,9 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - acf-fiorentina-vs-frosinone-calcio ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.778
 - acf-fiorentina-vs-frosinone-calcio ↔ telstar-vs-ajax-amsterdam: 0.753
 - acf-fiorentina-vs-frosinone-calcio ↔ tottenham-hotspur-vs-newcastle-united: 0.865
-- acf-fiorentina-vs-frosinone-calcio ↔ us-lecce-vs-as-roma: 0.833
 - acf-fiorentina-vs-frosinone-calcio ↔ us-sassuolo-calcio-vs-torino: 0.846
 - acf-fiorentina-vs-frosinone-calcio ↔ utrecht-vs-psv-eindhoven: 0.810
 - acf-fiorentina-vs-frosinone-calcio ↔ willem-ii-vs-heerenveen: 0.810
-- alverca-vs-santa-clara ↔ aston-villa-vs-arsenal: 0.759
-- alverca-vs-santa-clara ↔ atalanta-bc-vs-bologna-fc-1909: 0.768
 - alverca-vs-santa-clara ↔ augsburg-vs-schalke-04: 0.900
 - alverca-vs-santa-clara ↔ az-alkmaar-vs-go-ahead-eagles: 0.659
 - alverca-vs-santa-clara ↔ benfica-vs-estoril: 0.690
@@ -574,80 +542,12 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - alverca-vs-santa-clara ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.889
 - alverca-vs-santa-clara ↔ telstar-vs-ajax-amsterdam: 0.674
 - alverca-vs-santa-clara ↔ tottenham-hotspur-vs-newcastle-united: 0.750
-- alverca-vs-santa-clara ↔ us-lecce-vs-as-roma: 0.877
 - alverca-vs-santa-clara ↔ us-sassuolo-calcio-vs-torino: 0.866
 - alverca-vs-santa-clara ↔ utrecht-vs-psv-eindhoven: 0.877
 - alverca-vs-santa-clara ↔ willem-ii-vs-heerenveen: 0.877
 - arouca-vs-maritimo ↔ casa-pia-vs-moreirense: 0.944
 - arouca-vs-maritimo ↔ famalicao-vs-gil-vicente: 0.944
 - arsenal-vs-coventry-city ↔ internazionale-milano-vs-ac-monza: 0.592
-- aston-villa-vs-arsenal ↔ atalanta-bc-vs-bologna-fc-1909: 0.877
-- aston-villa-vs-arsenal ↔ augsburg-vs-schalke-04: 0.778
-- aston-villa-vs-arsenal ↔ az-alkmaar-vs-go-ahead-eagles: 0.725
-- aston-villa-vs-arsenal ↔ benfica-vs-estoril: 0.716
-- aston-villa-vs-arsenal ↔ borussia-dortmund-vs-hamburger-sv: 0.716
-- aston-villa-vs-arsenal ↔ bournemouth-vs-everton: 0.835
-- aston-villa-vs-arsenal ↔ braga-vs-vitoria-de-guimaraes: 0.780
-- aston-villa-vs-arsenal ↔ c-d-nacional-vs-estrela: 0.768
-- aston-villa-vs-arsenal ↔ cagliari-calcio-vs-internazionale-milano: 0.690
-- aston-villa-vs-arsenal ↔ chelsea-vs-brighton-hove-albion: 0.769
-- aston-villa-vs-arsenal ↔ coventry-city-vs-hull-city: 0.825
-- aston-villa-vs-arsenal ↔ crystal-palace-vs-manchester-city: 0.769
-- aston-villa-vs-arsenal ↔ excelsior-vs-sparta-rotterdam: 0.877
-- aston-villa-vs-arsenal ↔ feyenoord-rotterdam-vs-ado-den-haag: 0.716
-- aston-villa-vs-arsenal ↔ groningen-vs-fortuna-sittard: 0.810
-- aston-villa-vs-arsenal ↔ juventus-vs-parma-calcio-1913: 0.727
-- aston-villa-vs-arsenal ↔ leeds-united-vs-brentford: 0.917
-- aston-villa-vs-arsenal ↔ lille-vs-paris-saint-germain: 0.734
-- aston-villa-vs-arsenal ↔ liverpool-vs-nottingham-forest: 0.846
-- aston-villa-vs-arsenal ↔ manchester-united-vs-ipswich-town: 0.835
-- aston-villa-vs-arsenal ↔ pec-zwolle-vs-nec-nijmegen: 0.800
-- aston-villa-vs-arsenal ↔ rb-leipzig-vs-borussia-monchengladbach: 0.768
-- aston-villa-vs-arsenal ↔ rio-ave-vs-sporting-cp: 0.797
-- aston-villa-vs-arsenal ↔ sc-freiburg-vs-sv-werder-bremen: 0.790
-- aston-villa-vs-arsenal ↔ ss-lazio-vs-genoa-cfc: 0.800
-- aston-villa-vs-arsenal ↔ ssc-napoli-vs-como-1907: 0.790
-- aston-villa-vs-arsenal ↔ sunderland-vs-fulham: 0.835
-- aston-villa-vs-arsenal ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.768
-- aston-villa-vs-arsenal ↔ telstar-vs-ajax-amsterdam: 0.744
-- aston-villa-vs-arsenal ↔ tottenham-hotspur-vs-newcastle-united: 0.904
-- aston-villa-vs-arsenal ↔ us-lecce-vs-as-roma: 0.800
-- aston-villa-vs-arsenal ↔ us-sassuolo-calcio-vs-torino: 0.790
-- aston-villa-vs-arsenal ↔ utrecht-vs-psv-eindhoven: 0.800
-- aston-villa-vs-arsenal ↔ willem-ii-vs-heerenveen: 0.800
-- atalanta-bc-vs-bologna-fc-1909 ↔ augsburg-vs-schalke-04: 0.787
-- atalanta-bc-vs-bologna-fc-1909 ↔ az-alkmaar-vs-go-ahead-eagles: 0.734
-- atalanta-bc-vs-bologna-fc-1909 ↔ benfica-vs-estoril: 0.725
-- atalanta-bc-vs-bologna-fc-1909 ↔ borussia-dortmund-vs-hamburger-sv: 0.725
-- atalanta-bc-vs-bologna-fc-1909 ↔ bournemouth-vs-everton: 0.800
-- atalanta-bc-vs-bologna-fc-1909 ↔ braga-vs-vitoria-de-guimaraes: 0.790
-- atalanta-bc-vs-bologna-fc-1909 ↔ c-d-nacional-vs-estrela: 0.778
-- atalanta-bc-vs-bologna-fc-1909 ↔ cagliari-calcio-vs-internazionale-milano: 0.720
-- atalanta-bc-vs-bologna-fc-1909 ↔ chelsea-vs-brighton-hove-albion: 0.734
-- atalanta-bc-vs-bologna-fc-1909 ↔ coventry-city-vs-hull-city: 0.790
-- atalanta-bc-vs-bologna-fc-1909 ↔ crystal-palace-vs-manchester-city: 0.734
-- atalanta-bc-vs-bologna-fc-1909 ↔ excelsior-vs-sparta-rotterdam: 0.889
-- atalanta-bc-vs-bologna-fc-1909 ↔ feyenoord-rotterdam-vs-ado-den-haag: 0.725
-- atalanta-bc-vs-bologna-fc-1909 ↔ groningen-vs-fortuna-sittard: 0.821
-- atalanta-bc-vs-bologna-fc-1909 ↔ juventus-vs-parma-calcio-1913: 0.756
-- atalanta-bc-vs-bologna-fc-1909 ↔ leeds-united-vs-brentford: 0.877
-- atalanta-bc-vs-bologna-fc-1909 ↔ lille-vs-paris-saint-germain: 0.744
-- atalanta-bc-vs-bologna-fc-1909 ↔ liverpool-vs-nottingham-forest: 0.810
-- atalanta-bc-vs-bologna-fc-1909 ↔ manchester-united-vs-ipswich-town: 0.800
-- atalanta-bc-vs-bologna-fc-1909 ↔ pec-zwolle-vs-nec-nijmegen: 0.810
-- atalanta-bc-vs-bologna-fc-1909 ↔ rb-leipzig-vs-borussia-monchengladbach: 0.778
-- atalanta-bc-vs-bologna-fc-1909 ↔ rio-ave-vs-sporting-cp: 0.808
-- atalanta-bc-vs-bologna-fc-1909 ↔ sc-freiburg-vs-sv-werder-bremen: 0.800
-- atalanta-bc-vs-bologna-fc-1909 ↔ ss-lazio-vs-genoa-cfc: 0.833
-- atalanta-bc-vs-bologna-fc-1909 ↔ ssc-napoli-vs-como-1907: 0.823
-- atalanta-bc-vs-bologna-fc-1909 ↔ sunderland-vs-fulham: 0.800
-- atalanta-bc-vs-bologna-fc-1909 ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.778
-- atalanta-bc-vs-bologna-fc-1909 ↔ telstar-vs-ajax-amsterdam: 0.753
-- atalanta-bc-vs-bologna-fc-1909 ↔ tottenham-hotspur-vs-newcastle-united: 0.865
-- atalanta-bc-vs-bologna-fc-1909 ↔ us-lecce-vs-as-roma: 0.833
-- atalanta-bc-vs-bologna-fc-1909 ↔ us-sassuolo-calcio-vs-torino: 0.823
-- atalanta-bc-vs-bologna-fc-1909 ↔ utrecht-vs-psv-eindhoven: 0.810
-- atalanta-bc-vs-bologna-fc-1909 ↔ willem-ii-vs-heerenveen: 0.810
 - atalanta-vs-sassuolo ↔ brighton-hove-albion-vs-aston-villa: 0.550
 - atalanta-vs-sassuolo ↔ fc-porto-vs-arouca: 0.730
 - athletic-club-vs-sevilla ↔ everton-vs-crystal-palace: 0.671
@@ -682,7 +582,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - augsburg-vs-schalke-04 ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.936
 - augsburg-vs-schalke-04 ↔ telstar-vs-ajax-amsterdam: 0.690
 - augsburg-vs-schalke-04 ↔ tottenham-hotspur-vs-newcastle-united: 0.768
-- augsburg-vs-schalke-04 ↔ us-lecce-vs-as-roma: 0.899
 - augsburg-vs-schalke-04 ↔ us-sassuolo-calcio-vs-torino: 0.887
 - augsburg-vs-schalke-04 ↔ utrecht-vs-psv-eindhoven: 0.899
 - augsburg-vs-schalke-04 ↔ willem-ii-vs-heerenveen: 0.899
@@ -713,7 +612,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - az-alkmaar-vs-go-ahead-eagles ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.667
 - az-alkmaar-vs-go-ahead-eagles ↔ telstar-vs-ajax-amsterdam: 0.789
 - az-alkmaar-vs-go-ahead-eagles ↔ tottenham-hotspur-vs-newcastle-united: 0.716
-- az-alkmaar-vs-go-ahead-eagles ↔ us-lecce-vs-as-roma: 0.674
 - az-alkmaar-vs-go-ahead-eagles ↔ us-sassuolo-calcio-vs-torino: 0.667
 - az-alkmaar-vs-go-ahead-eagles ↔ utrecht-vs-psv-eindhoven: 0.694
 - az-alkmaar-vs-go-ahead-eagles ↔ willem-ii-vs-heerenveen: 0.694
@@ -743,7 +641,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - benfica-vs-estoril ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.659
 - benfica-vs-estoril ↔ telstar-vs-ajax-amsterdam: 0.734
 - benfica-vs-estoril ↔ tottenham-hotspur-vs-newcastle-united: 0.707
-- benfica-vs-estoril ↔ us-lecce-vs-as-roma: 0.667
 - benfica-vs-estoril ↔ us-sassuolo-calcio-vs-torino: 0.659
 - benfica-vs-estoril ↔ utrecht-vs-psv-eindhoven: 0.667
 - benfica-vs-estoril ↔ willem-ii-vs-heerenveen: 0.667
@@ -775,7 +672,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - borussia-dortmund-vs-hamburger-sv ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.678
 - borussia-dortmund-vs-hamburger-sv ↔ telstar-vs-ajax-amsterdam: 0.734
 - borussia-dortmund-vs-hamburger-sv ↔ tottenham-hotspur-vs-newcastle-united: 0.707
-- borussia-dortmund-vs-hamburger-sv ↔ us-lecce-vs-as-roma: 0.667
 - borussia-dortmund-vs-hamburger-sv ↔ us-sassuolo-calcio-vs-torino: 0.659
 - borussia-dortmund-vs-hamburger-sv ↔ utrecht-vs-psv-eindhoven: 0.667
 - borussia-dortmund-vs-hamburger-sv ↔ willem-ii-vs-heerenveen: 0.667
@@ -803,7 +699,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - bournemouth-vs-everton ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.877
 - bournemouth-vs-everton ↔ telstar-vs-ajax-amsterdam: 0.682
 - bournemouth-vs-everton ↔ tottenham-hotspur-vs-newcastle-united: 0.825
-- bournemouth-vs-everton ↔ us-lecce-vs-as-roma: 0.911
 - bournemouth-vs-everton ↔ us-sassuolo-calcio-vs-torino: 0.900
 - bournemouth-vs-everton ↔ utrecht-vs-psv-eindhoven: 0.911
 - bournemouth-vs-everton ↔ willem-ii-vs-heerenveen: 0.911
@@ -830,7 +725,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - braga-vs-vitoria-de-guimaraes ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.719
 - braga-vs-vitoria-de-guimaraes ↔ telstar-vs-ajax-amsterdam: 0.674
 - braga-vs-vitoria-de-guimaraes ↔ tottenham-hotspur-vs-newcastle-united: 0.771
-- braga-vs-vitoria-de-guimaraes ↔ us-lecce-vs-as-roma: 0.747
 - braga-vs-vitoria-de-guimaraes ↔ us-sassuolo-calcio-vs-torino: 0.739
 - braga-vs-vitoria-de-guimaraes ↔ utrecht-vs-psv-eindhoven: 0.747
 - braga-vs-vitoria-de-guimaraes ↔ willem-ii-vs-heerenveen: 0.747
@@ -860,7 +754,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - c-d-nacional-vs-estrela ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.900
 - c-d-nacional-vs-estrela ↔ telstar-vs-ajax-amsterdam: 0.682
 - c-d-nacional-vs-estrela ↔ tottenham-hotspur-vs-newcastle-united: 0.759
-- c-d-nacional-vs-estrela ↔ us-lecce-vs-as-roma: 0.887
 - c-d-nacional-vs-estrela ↔ us-sassuolo-calcio-vs-torino: 0.877
 - c-d-nacional-vs-estrela ↔ utrecht-vs-psv-eindhoven: 0.887
 - c-d-nacional-vs-estrela ↔ willem-ii-vs-heerenveen: 0.887
@@ -885,7 +778,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - cagliari-calcio-vs-internazionale-milano ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.637
 - cagliari-calcio-vs-internazionale-milano ↔ telstar-vs-ajax-amsterdam: 0.707
 - cagliari-calcio-vs-internazionale-milano ↔ tottenham-hotspur-vs-newcastle-united: 0.682
-- cagliari-calcio-vs-internazionale-milano ↔ us-lecce-vs-as-roma: 0.663
 - cagliari-calcio-vs-internazionale-milano ↔ us-sassuolo-calcio-vs-torino: 0.674
 - cagliari-calcio-vs-internazionale-milano ↔ utrecht-vs-psv-eindhoven: 0.644
 - cagliari-calcio-vs-internazionale-milano ↔ willem-ii-vs-heerenveen: 0.644
@@ -910,7 +802,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - chelsea-vs-brighton-hove-albion ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.667
 - chelsea-vs-brighton-hove-albion ↔ telstar-vs-ajax-amsterdam: 0.863
 - chelsea-vs-brighton-hove-albion ↔ tottenham-hotspur-vs-newcastle-united: 0.759
-- chelsea-vs-brighton-hove-albion ↔ us-lecce-vs-as-roma: 0.674
 - chelsea-vs-brighton-hove-albion ↔ us-sassuolo-calcio-vs-torino: 0.667
 - chelsea-vs-brighton-hove-albion ↔ utrecht-vs-psv-eindhoven: 0.674
 - chelsea-vs-brighton-hove-albion ↔ willem-ii-vs-heerenveen: 0.674
@@ -933,7 +824,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - coventry-city-vs-hull-city ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.866
 - coventry-city-vs-hull-city ↔ telstar-vs-ajax-amsterdam: 0.674
 - coventry-city-vs-hull-city ↔ tottenham-hotspur-vs-newcastle-united: 0.815
-- coventry-city-vs-hull-city ↔ us-lecce-vs-as-roma: 0.900
 - coventry-city-vs-hull-city ↔ us-sassuolo-calcio-vs-torino: 0.889
 - coventry-city-vs-hull-city ↔ utrecht-vs-psv-eindhoven: 0.900
 - coventry-city-vs-hull-city ↔ willem-ii-vs-heerenveen: 0.900
@@ -955,7 +845,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - crystal-palace-vs-manchester-city ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.667
 - crystal-palace-vs-manchester-city ↔ telstar-vs-ajax-amsterdam: 0.863
 - crystal-palace-vs-manchester-city ↔ tottenham-hotspur-vs-newcastle-united: 0.759
-- crystal-palace-vs-manchester-city ↔ us-lecce-vs-as-roma: 0.674
 - crystal-palace-vs-manchester-city ↔ us-sassuolo-calcio-vs-torino: 0.667
 - crystal-palace-vs-manchester-city ↔ utrecht-vs-psv-eindhoven: 0.674
 - crystal-palace-vs-manchester-city ↔ willem-ii-vs-heerenveen: 0.674
@@ -978,7 +867,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - excelsior-vs-sparta-rotterdam ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.778
 - excelsior-vs-sparta-rotterdam ↔ telstar-vs-ajax-amsterdam: 0.776
 - excelsior-vs-sparta-rotterdam ↔ tottenham-hotspur-vs-newcastle-united: 0.865
-- excelsior-vs-sparta-rotterdam ↔ us-lecce-vs-as-roma: 0.810
 - excelsior-vs-sparta-rotterdam ↔ us-sassuolo-calcio-vs-torino: 0.800
 - excelsior-vs-sparta-rotterdam ↔ utrecht-vs-psv-eindhoven: 0.833
 - excelsior-vs-sparta-rotterdam ↔ willem-ii-vs-heerenveen: 0.833
@@ -998,7 +886,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - feyenoord-rotterdam-vs-ado-den-haag ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.659
 - feyenoord-rotterdam-vs-ado-den-haag ↔ telstar-vs-ajax-amsterdam: 0.756
 - feyenoord-rotterdam-vs-ado-den-haag ↔ tottenham-hotspur-vs-newcastle-united: 0.707
-- feyenoord-rotterdam-vs-ado-den-haag ↔ us-lecce-vs-as-roma: 0.667
 - feyenoord-rotterdam-vs-ado-den-haag ↔ us-sassuolo-calcio-vs-torino: 0.659
 - feyenoord-rotterdam-vs-ado-den-haag ↔ utrecht-vs-psv-eindhoven: 0.686
 - feyenoord-rotterdam-vs-ado-den-haag ↔ willem-ii-vs-heerenveen: 0.686
@@ -1017,7 +904,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - groningen-vs-fortuna-sittard ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.744
 - groningen-vs-fortuna-sittard ↔ telstar-vs-ajax-amsterdam: 0.831
 - groningen-vs-fortuna-sittard ↔ tottenham-hotspur-vs-newcastle-united: 0.800
-- groningen-vs-fortuna-sittard ↔ us-lecce-vs-as-roma: 0.774
 - groningen-vs-fortuna-sittard ↔ us-sassuolo-calcio-vs-torino: 0.765
 - groningen-vs-fortuna-sittard ↔ utrecht-vs-psv-eindhoven: 0.795
 - groningen-vs-fortuna-sittard ↔ willem-ii-vs-heerenveen: 0.795
@@ -1035,7 +921,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - juventus-vs-parma-calcio-1913 ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.674
 - juventus-vs-parma-calcio-1913 ↔ telstar-vs-ajax-amsterdam: 0.724
 - juventus-vs-parma-calcio-1913 ↔ tottenham-hotspur-vs-newcastle-united: 0.719
-- juventus-vs-parma-calcio-1913 ↔ us-lecce-vs-as-roma: 0.717
 - juventus-vs-parma-calcio-1913 ↔ us-sassuolo-calcio-vs-torino: 0.728
 - juventus-vs-parma-calcio-1913 ↔ utrecht-vs-psv-eindhoven: 0.699
 - juventus-vs-parma-calcio-1913 ↔ willem-ii-vs-heerenveen: 0.699
@@ -1054,7 +939,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - leeds-united-vs-brentford ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.768
 - leeds-united-vs-brentford ↔ telstar-vs-ajax-amsterdam: 0.744
 - leeds-united-vs-brentford ↔ tottenham-hotspur-vs-newcastle-united: 0.931
-- leeds-united-vs-brentford ↔ us-lecce-vs-as-roma: 0.800
 - leeds-united-vs-brentford ↔ us-sassuolo-calcio-vs-torino: 0.790
 - leeds-united-vs-brentford ↔ utrecht-vs-psv-eindhoven: 0.800
 - leeds-united-vs-brentford ↔ willem-ii-vs-heerenveen: 0.800
@@ -1070,7 +954,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - lille-vs-paris-saint-germain ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.674
 - lille-vs-paris-saint-germain ↔ telstar-vs-ajax-amsterdam: 0.875
 - lille-vs-paris-saint-germain ↔ tottenham-hotspur-vs-newcastle-united: 0.725
-- lille-vs-paris-saint-germain ↔ us-lecce-vs-as-roma: 0.682
 - lille-vs-paris-saint-germain ↔ us-sassuolo-calcio-vs-torino: 0.674
 - lille-vs-paris-saint-germain ↔ utrecht-vs-psv-eindhoven: 0.682
 - lille-vs-paris-saint-germain ↔ willem-ii-vs-heerenveen: 0.682
@@ -1085,7 +968,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - liverpool-vs-nottingham-forest ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.736
 - liverpool-vs-nottingham-forest ↔ telstar-vs-ajax-amsterdam: 0.797
 - liverpool-vs-nottingham-forest ↔ tottenham-hotspur-vs-newcastle-united: 0.835
-- liverpool-vs-nottingham-forest ↔ us-lecce-vs-as-roma: 0.765
 - liverpool-vs-nottingham-forest ↔ us-sassuolo-calcio-vs-torino: 0.756
 - liverpool-vs-nottingham-forest ↔ utrecht-vs-psv-eindhoven: 0.765
 - liverpool-vs-nottingham-forest ↔ willem-ii-vs-heerenveen: 0.765
@@ -1099,7 +981,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - manchester-united-vs-ipswich-town ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.727
 - manchester-united-vs-ipswich-town ↔ telstar-vs-ajax-amsterdam: 0.787
 - manchester-united-vs-ipswich-town ↔ tottenham-hotspur-vs-newcastle-united: 0.848
-- manchester-united-vs-ipswich-town ↔ us-lecce-vs-as-roma: 0.756
 - manchester-united-vs-ipswich-town ↔ us-sassuolo-calcio-vs-torino: 0.747
 - manchester-united-vs-ipswich-town ↔ utrecht-vs-psv-eindhoven: 0.756
 - manchester-united-vs-ipswich-town ↔ willem-ii-vs-heerenveen: 0.756
@@ -1113,7 +994,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - pec-zwolle-vs-nec-nijmegen ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.887
 - pec-zwolle-vs-nec-nijmegen ↔ telstar-vs-ajax-amsterdam: 0.711
 - pec-zwolle-vs-nec-nijmegen ↔ tottenham-hotspur-vs-newcastle-united: 0.790
-- pec-zwolle-vs-nec-nijmegen ↔ us-lecce-vs-as-roma: 0.923
 - pec-zwolle-vs-nec-nijmegen ↔ us-sassuolo-calcio-vs-torino: 0.911
 - pec-zwolle-vs-nec-nijmegen ↔ utrecht-vs-psv-eindhoven: 0.948
 - pec-zwolle-vs-nec-nijmegen ↔ willem-ii-vs-heerenveen: 0.948
@@ -1125,7 +1005,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - rb-leipzig-vs-borussia-monchengladbach ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.767
 - rb-leipzig-vs-borussia-monchengladbach ↔ telstar-vs-ajax-amsterdam: 0.682
 - rb-leipzig-vs-borussia-monchengladbach ↔ tottenham-hotspur-vs-newcastle-united: 0.759
-- rb-leipzig-vs-borussia-monchengladbach ↔ us-lecce-vs-as-roma: 0.736
 - rb-leipzig-vs-borussia-monchengladbach ↔ us-sassuolo-calcio-vs-torino: 0.727
 - rb-leipzig-vs-borussia-monchengladbach ↔ utrecht-vs-psv-eindhoven: 0.736
 - rb-leipzig-vs-borussia-monchengladbach ↔ willem-ii-vs-heerenveen: 0.736
@@ -1136,7 +1015,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - rio-ave-vs-sporting-cp ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.774
 - rio-ave-vs-sporting-cp ↔ telstar-vs-ajax-amsterdam: 0.818
 - rio-ave-vs-sporting-cp ↔ tottenham-hotspur-vs-newcastle-united: 0.787
-- rio-ave-vs-sporting-cp ↔ us-lecce-vs-as-roma: 0.762
 - rio-ave-vs-sporting-cp ↔ us-sassuolo-calcio-vs-torino: 0.753
 - rio-ave-vs-sporting-cp ↔ utrecht-vs-psv-eindhoven: 0.762
 - rio-ave-vs-sporting-cp ↔ willem-ii-vs-heerenveen: 0.762
@@ -1146,7 +1024,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - sc-freiburg-vs-sv-werder-bremen ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.900
 - sc-freiburg-vs-sv-werder-bremen ↔ telstar-vs-ajax-amsterdam: 0.682
 - sc-freiburg-vs-sv-werder-bremen ↔ tottenham-hotspur-vs-newcastle-united: 0.780
-- sc-freiburg-vs-sv-werder-bremen ↔ us-lecce-vs-as-roma: 0.911
 - sc-freiburg-vs-sv-werder-bremen ↔ us-sassuolo-calcio-vs-torino: 0.900
 - sc-freiburg-vs-sv-werder-bremen ↔ utrecht-vs-psv-eindhoven: 0.911
 - sc-freiburg-vs-sv-werder-bremen ↔ willem-ii-vs-heerenveen: 0.911
@@ -1156,7 +1033,6 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - ss-lazio-vs-genoa-cfc ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.887
 - ss-lazio-vs-genoa-cfc ↔ telstar-vs-ajax-amsterdam: 0.690
 - ss-lazio-vs-genoa-cfc ↔ tottenham-hotspur-vs-newcastle-united: 0.790
-- ss-lazio-vs-genoa-cfc ↔ us-lecce-vs-as-roma: 0.948
 - ss-lazio-vs-genoa-cfc ↔ us-sassuolo-calcio-vs-torino: 0.936
 - ss-lazio-vs-genoa-cfc ↔ utrecht-vs-psv-eindhoven: 0.923
 - ss-lazio-vs-genoa-cfc ↔ willem-ii-vs-heerenveen: 0.923
@@ -1164,35 +1040,27 @@ This pre-migration inventory applies conservative lexical triage to every publis
 - ssc-napoli-vs-como-1907 ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.877
 - ssc-napoli-vs-como-1907 ↔ telstar-vs-ajax-amsterdam: 0.682
 - ssc-napoli-vs-como-1907 ↔ tottenham-hotspur-vs-newcastle-united: 0.780
-- ssc-napoli-vs-como-1907 ↔ us-lecce-vs-as-roma: 0.936
 - ssc-napoli-vs-como-1907 ↔ us-sassuolo-calcio-vs-torino: 0.924
 - ssc-napoli-vs-como-1907 ↔ utrecht-vs-psv-eindhoven: 0.911
 - ssc-napoli-vs-como-1907 ↔ willem-ii-vs-heerenveen: 0.911
 - sunderland-vs-fulham ↔ sv-07-elversberg-vs-bayer-04-leverkusen: 0.877
 - sunderland-vs-fulham ↔ telstar-vs-ajax-amsterdam: 0.682
 - sunderland-vs-fulham ↔ tottenham-hotspur-vs-newcastle-united: 0.825
-- sunderland-vs-fulham ↔ us-lecce-vs-as-roma: 0.911
 - sunderland-vs-fulham ↔ us-sassuolo-calcio-vs-torino: 0.900
 - sunderland-vs-fulham ↔ utrecht-vs-psv-eindhoven: 0.911
 - sunderland-vs-fulham ↔ willem-ii-vs-heerenveen: 0.911
 - sv-07-elversberg-vs-bayer-04-leverkusen ↔ telstar-vs-ajax-amsterdam: 0.682
 - sv-07-elversberg-vs-bayer-04-leverkusen ↔ tottenham-hotspur-vs-newcastle-united: 0.759
-- sv-07-elversberg-vs-bayer-04-leverkusen ↔ us-lecce-vs-as-roma: 0.887
 - sv-07-elversberg-vs-bayer-04-leverkusen ↔ us-sassuolo-calcio-vs-torino: 0.877
 - sv-07-elversberg-vs-bayer-04-leverkusen ↔ utrecht-vs-psv-eindhoven: 0.887
 - sv-07-elversberg-vs-bayer-04-leverkusen ↔ willem-ii-vs-heerenveen: 0.887
 - telstar-vs-ajax-amsterdam ↔ tottenham-hotspur-vs-newcastle-united: 0.734
-- telstar-vs-ajax-amsterdam ↔ us-lecce-vs-as-roma: 0.690
 - telstar-vs-ajax-amsterdam ↔ us-sassuolo-calcio-vs-torino: 0.682
 - telstar-vs-ajax-amsterdam ↔ utrecht-vs-psv-eindhoven: 0.711
 - telstar-vs-ajax-amsterdam ↔ willem-ii-vs-heerenveen: 0.711
-- tottenham-hotspur-vs-newcastle-united ↔ us-lecce-vs-as-roma: 0.790
 - tottenham-hotspur-vs-newcastle-united ↔ us-sassuolo-calcio-vs-torino: 0.780
 - tottenham-hotspur-vs-newcastle-united ↔ utrecht-vs-psv-eindhoven: 0.790
 - tottenham-hotspur-vs-newcastle-united ↔ willem-ii-vs-heerenveen: 0.790
-- us-lecce-vs-as-roma ↔ us-sassuolo-calcio-vs-torino: 0.936
-- us-lecce-vs-as-roma ↔ utrecht-vs-psv-eindhoven: 0.923
-- us-lecce-vs-as-roma ↔ willem-ii-vs-heerenveen: 0.923
 - us-sassuolo-calcio-vs-torino ↔ utrecht-vs-psv-eindhoven: 0.911
 - us-sassuolo-calcio-vs-torino ↔ willem-ii-vs-heerenveen: 0.911
 - utrecht-vs-psv-eindhoven ↔ willem-ii-vs-heerenveen: 0.948

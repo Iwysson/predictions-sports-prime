@@ -14,4 +14,15 @@ export const usLecceVsAsRoma: EditorialPrediction = {
   publishedAt: "2026-08-24T17:38:36.651Z",
   updatedAt: "2026-08-30T22:45:00+02:00", published: true,
   matchInfo: { date: "2026-08-31", time: "18:30", round: "Matchday 2", venue: "Stadio Via del Mare" },
+  matchSeo: {
+    information: { city: "Lecce", country: "Italy", timezone: "Europe/Rome", sources: [{ name: "Sky Sport", url: "https://sport.sky.it/calcio/serie-a/2026/08/30/lecce-roma-probabili-formazioni-2-giornata", accessedAt: "2026-08-31T10:00:00+02:00" }] },
+    lineups: {
+      status: "expected",
+      home: { formation: "4-2-3-1", players: ["Wladimiro Falcone", "Danilo Veiga", "Tiago Gabriel", "Kialonda Gaspar", "Antonino Gallo", "Lassana Coulibaly", "Olaf Gorter", "Santiago Pierotti", "Oumar Ngom", "Konan N'Dri", "Willem Geubbels"] },
+      away: { formation: "3-4-2-1", players: ["Mile Svilar", "Gianluca Mancini", "Evan Ndicka", "Mario Hermoso", "Emanuele Lulli", "Manu Kone", "Bryan Cristante", "Wesley", "Paulo Dybala", "Rodrigo Mora", "Donyell Malen"] },
+      sources: [{ name: "Sky Sport", url: "https://sport.sky.it/calcio/serie-a/2026/08/30/lecce-roma-probabili-formazioni-2-giornata", accessedAt: "2026-08-31T10:00:00+02:00" }, { name: "La Gazzetta dello Sport", url: "https://www.gazzetta.it/Calcio/prob_form/lecce-roma/2638137", accessedAt: "2026-08-31T10:00:00+02:00" }],
+    },
+    availability: { entries: [{ team: "home", player: "Medon Berisha", status: "doubtful", detail: "fitness to be assessed" }, { team: "away", player: "Lorenzo Pellegrini", status: "doubtful", detail: "fitness to be assessed" }, { team: "away", player: "Devyne Rensch", status: "doubtful", detail: "fitness to be assessed" }, { team: "away", player: "Robinio Vaz", status: "unavailable", detail: "not called amid transfer activity" }], sources: [{ name: "Sky Sport", url: "https://sport.sky.it/calcio/serie-a/2026/08/30/lecce-roma-probabili-formazioni-2-giornata", accessedAt: "2026-08-31T10:00:00+02:00" }, { name: "La Gazzetta dello Sport", url: "https://www.gazzetta.it/Calcio/prob_form/lecce-roma/2638137", accessedAt: "2026-08-31T10:00:00+02:00" }] },
+    teamNews: { entries: [{ team: "home", text: "Geubbels and Stulic remain the reported centre-forward decision." }, { team: "away", text: "Sources diverge between Lulli and Molina on the right; Lulli is retained as Sky's later projection." }], sources: [{ name: "Sky Sport", url: "https://sport.sky.it/calcio/serie-a/2026/08/30/lecce-roma-probabili-formazioni-2-giornata", accessedAt: "2026-08-31T10:00:00+02:00" }, { name: "La Gazzetta dello Sport", url: "https://www.gazzetta.it/Calcio/prob_form/lecce-roma/2638137", accessedAt: "2026-08-31T10:00:00+02:00" }] },
+  },
 };

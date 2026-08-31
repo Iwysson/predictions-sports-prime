@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { LanguageSelector } from "@/components/LanguageSelector";
+import { RouteLanguageSelector } from "@/components/RouteLanguageSelector";
 import { useI18n } from "@/i18n/I18nProvider";
 
 export function Header() {
@@ -38,7 +38,7 @@ export function Header() {
             <Link href="/methodology/">Methodology</Link>
           </nav>
 
-          <LanguageSelector />
+          <RouteLanguageSelector />
 
           <button
             className="menu-button"

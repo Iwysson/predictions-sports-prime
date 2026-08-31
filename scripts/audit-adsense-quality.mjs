@@ -85,8 +85,8 @@ for (const page of pages) {
 
   if (page.path.startsWith("/match/")) {
     const analysis = page.html.match(/<div class="compact-analysis-copy">([\s\S]*?)<\/div>/)?.[1] ?? "";
-    const paragraphs = [...analysis.matchAll(/<p>/g)].length;
-    if (paragraphs < 2 || words(visibleText(analysis)).length < 90) {
+    const substantiveBlocks = [...analysis.matchAll(/<(?:p|h2|h3|table)(?:\s[^>]*)?>/g)].length;
+    if (substantiveBlocks < 2 || words(visibleText(analysis)).length < 90) {
       errors.push(`${page.path}: published match lacks substantial editorial analysis`);
     }
     if (!page.html.includes("article-sources") || !page.html.includes('rel="author"')) {

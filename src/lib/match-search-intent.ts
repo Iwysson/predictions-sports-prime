@@ -50,6 +50,10 @@ type MatchIntentFacts = {
   hasForm: boolean;
   hasH2h: boolean;
   hasStandingsContext: boolean;
+  hasLineups: boolean;
+  hasAvailability: boolean;
+  hasTeamNews: boolean;
+  hasWeather: boolean;
 };
 
 function unique(values: string[]) {
@@ -84,7 +88,7 @@ function readMatchFacts(match: Match): MatchIntentFacts {
     match.predictions.find((item) => item.label === "Main Prediction")?.value
   );
   const odds = normalizeMainPick(
-    match.predictions.find((item) => item.label === "Odds")?.value
+    match.predictions.find((item) => item.label === "Published Odds" || item.label === "Odds")?.value
   );
 
   return {
@@ -92,10 +96,14 @@ function readMatchFacts(match: Match): MatchIntentFacts {
     mainPick,
     odds,
     hasAnalysis: match.analysis.some((paragraph) => paragraph.trim().length > 0),
-    hasStatistics: /\b(?:statistic|average|record|goals?|points?|matches?|wins?|draws?|losses?|scored|conceded|percentage|probability)\b|\d+(?:[.,]\d+)?%/i.test(analysis),
+    hasStatistics: Boolean(match.matchSeo?.statistics) || /\b(?:statistic|average|record|goals?|points?|matches?|wins?|draws?|losses?|scored|conceded|percentage|probability)\b|\d+(?:[.,]\d+)?%/i.test(analysis),
     hasForm: /\b(?:form|recent|last\s+\d+|sequence|run of|unbeaten|winning run)\b/i.test(analysis),
-    hasH2h: /\b(?:h2h|head[- ]to[- ]head|meetings?|confrontations?|direct encounters?)\b/i.test(analysis),
+    hasH2h: Boolean(match.matchSeo?.h2h) || /\b(?:h2h|head[- ]to[- ]head|meetings?|confrontations?|direct encounters?)\b/i.test(analysis),
     hasStandingsContext: /\b(?:standings|league table|table position|points table|finished\s+\d+)\b/i.test(analysis),
+    hasLineups: Boolean(match.matchSeo?.lineups),
+    hasAvailability: Boolean(match.matchSeo?.availability),
+    hasTeamNews: Boolean(match.matchSeo?.teamNews),
+    hasWeather: Boolean(match.matchSeo?.weather),
   };
 }
 
@@ -125,6 +133,10 @@ export function getMatchIntentCapabilities(match: Match) {
     hasForm: facts.hasForm,
     hasH2h: facts.hasH2h,
     hasStandingsContext: facts.hasStandingsContext,
+    hasLineups: facts.hasLineups,
+    hasAvailability: facts.hasAvailability,
+    hasTeamNews: facts.hasTeamNews,
+    hasWeather: facts.hasWeather,
     markets: detectPickMarkets(facts.mainPick),
   };
 }
@@ -193,6 +205,19 @@ function buildEnglishDescription(
   const when = descriptionDateQualifier(match, temporal);
   const odds = facts.odds ? ` at odds of ${facts.odds}` : "";
   const pick = facts.mainPick || "the main prediction";
+  if (match.matchSeo) {
+    const modules = [
+      facts.hasLineups ? "expected lineups" : "",
+      facts.hasAvailability ? "availability" : "",
+      facts.hasStatistics ? "statistics" : "",
+      facts.hasH2h ? "head-to-head context" : "",
+      facts.hasWeather ? "weather" : "",
+    ].filter(Boolean);
+    return fitDescription([
+      `${teams} prediction${when}: ${pick}${odds}. Review ${modules.join(", ")} for this ${facts.leagueName} match.`,
+      `${teams} prediction${when}, ${pick}${odds}, plus ${modules.slice(0, 3).join(", ")}.`,
+    ]);
+  }
   const detailed = [
     `${teams} prediction${when} in ${facts.leagueName}. Our main pick is ${pick}${odds}, with match analysis and relevant betting context.`,
     `Read the ${teams} match analysis${when}, including ${pick}${odds} and the key context for this ${facts.leagueName} fixture.`,
@@ -229,6 +254,19 @@ function buildTitle(match: Match, locale: SearchLocale) {
   const research = localeSearchResearch[locale];
   const teams = matchTeams(match, locale);
   const intent = sentenceCase(research.prediction);
+  if (locale === "en" && match.matchSeo) {
+    const capability = match.matchSeo.lineups
+      ? "Prediction & Lineups"
+      : match.matchSeo.teamNews || match.matchSeo.availability
+        ? "Prediction & Team News"
+        : match.matchSeo.statistics
+          ? "Prediction & Stats"
+          : "Prediction & Match Analysis";
+    const structuredTitle = `${teams} ${capability}`;
+    const competitionTitle = `${structuredTitle} | ${leaguesBySlug[match.league]?.name ?? match.league}`;
+    if (competitionTitle.length <= 65) return competitionTitle;
+    return structuredTitle.length <= 65 ? structuredTitle : `${teams} Prediction`;
+  }
   const full = locale === "en"
     ? `${teams} Prediction, Betting Tips & Odds | ${siteConfig.name}`
     : `${teams} ${intent}, ${sentenceCase(research.betting)} & ${sentenceCase(research.odds)} | ${siteConfig.name}`;

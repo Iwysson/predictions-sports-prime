@@ -34,6 +34,21 @@ let incorrectTomorrow = 0;
 let incorrectToday = 0;
 let marketIntentMismatches = 0;
 let unsupportedFactualIntent = 0;
+let structuredCapabilityMismatches = 0;
+const structuredMatches = publishedMatches.filter((match) => match.matchSeo);
+const expectedStructuredSlugs = new Set([
+  "us-lecce-vs-as-roma",
+  "osasuna-vs-getafe",
+  "aston-villa-vs-arsenal",
+  "remo-vs-coritiba",
+  "benfica-vs-estoril",
+  "atalanta-bc-vs-bologna-fc-1909",
+  "amedspor-vs-trabzonspor",
+  "barcelona-vs-rayo-vallecano",
+  "besiktas-vs-corum-fk",
+  "braga-vs-vitoria-de-guimaraes",
+]);
+const structuredModuleCounts = { lineups: 0, availability: 0, teamNews: 0, statistics: 0, h2h: 0, weather: 0 };
 
 for (const match of analyzedMatches) {
   const bucket = resolveHomeTemporalBucket(match, today);
@@ -75,6 +90,20 @@ for (const match of analyzedMatches) {
   if (!capabilities.hasForm && intent.categories.includes("FORM")) unsupportedFactualIntent += 1;
   if (!capabilities.hasH2h && intent.categories.includes("H2H")) unsupportedFactualIntent += 1;
   if (!capabilities.hasStandingsContext && intent.categories.includes("STANDINGS")) unsupportedFactualIntent += 1;
+
+  if (match.matchSeo) {
+    for (const moduleName of Object.keys(structuredModuleCounts)) {
+      if (match.matchSeo[moduleName]) structuredModuleCounts[moduleName] += 1;
+    }
+    if (capabilities.hasLineups !== Boolean(match.matchSeo.lineups)) structuredCapabilityMismatches += 1;
+    if (capabilities.hasAvailability !== Boolean(match.matchSeo.availability)) structuredCapabilityMismatches += 1;
+    if (capabilities.hasTeamNews !== Boolean(match.matchSeo.teamNews)) structuredCapabilityMismatches += 1;
+    if (capabilities.hasWeather !== Boolean(match.matchSeo.weather)) structuredCapabilityMismatches += 1;
+    if (/lineups/i.test(intent.title) !== Boolean(match.matchSeo.lineups)) structuredCapabilityMismatches += 1;
+    for (const [moduleName, module] of Object.entries(match.matchSeo)) {
+      if (!module.sources?.length) errors.push(`${match.slug}: ${moduleName} lacks provenance`);
+    }
+  }
 }
 
 function overlap(left, right) {
@@ -161,6 +190,14 @@ if (incorrectTomorrow > 0) errors.push(`Incorrect tomorrow metadata: ${incorrect
 if (incorrectToday > 0) errors.push(`Incorrect today metadata: ${incorrectToday}`);
 if (marketIntentMismatches > 0) errors.push(`Market-intent mismatches: ${marketIntentMismatches}`);
 if (unsupportedFactualIntent > 0) errors.push(`Unsupported factual intent: ${unsupportedFactualIntent}`);
+if (structuredCapabilityMismatches > 0) errors.push(`Structured capability mismatches: ${structuredCapabilityMismatches}`);
+const structuredSlugs = new Set(structuredMatches.map((match) => match.slug));
+for (const slug of expectedStructuredSlugs) {
+  if (!structuredSlugs.has(slug)) errors.push(`Expected Match SEO page is missing: ${slug}`);
+}
+for (const slug of structuredSlugs) {
+  if (!expectedStructuredSlugs.has(slug)) errors.push(`Unexpected Match SEO page outside today's editorial set: ${slug}`);
+}
 if (overlapTodayTomorrow + overlapTodayUpcoming + overlapTomorrowUpcoming > 0) {
   errors.push("Temporal bucket overlap detected");
 }
@@ -185,6 +222,9 @@ console.log(`Incorrect tomorrow metadata: ${incorrectTomorrow}`);
 console.log(`Incorrect today metadata: ${incorrectToday}`);
 console.log(`Market-intent mismatches: ${marketIntentMismatches}`);
 console.log(`Unsupported factual intent: ${unsupportedFactualIntent}`);
+console.log(`Match SEO 2.0 pages: ${structuredMatches.length}/${expectedStructuredSlugs.size}`);
+console.log(`Structured modules: ${Object.entries(structuredModuleCounts).map(([name, count]) => `${name}=${count}`).join(", ")}`);
+console.log(`Structured capability mismatches: ${structuredCapabilityMismatches}`);
 console.log(`Localized temporal mappings: ${searchIntentLocales.length} locales`);
 
 for (const locale of searchIntentLocales) {

@@ -10,6 +10,9 @@ import { localizedAlternates } from "@/lib/international-seo";
 import { seoLocaleSlugs } from "@/lib/seo-locales";
 
 export function matchSeoTitle(match: Match) {
+  if (match.matchSeo && shouldApplySearchIntentSEO(match)) {
+    return buildMatchSearchIntentCopy(match).title;
+  }
   if (match.seoTitle) return match.seoTitle;
   if (shouldApplySearchIntentSEO(match)) {
     return buildMatchSearchIntentCopy(match).title;

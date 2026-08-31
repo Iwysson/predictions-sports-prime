@@ -54,6 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(isIndexableLocalizedHubLocale(locale) ? [
       { url: absoluteUrl(localePath(locale)) },
       { url: absoluteUrl(localePath(locale, "/league/premier-league/")) },
+      { url: absoluteUrl(localePath(locale, "/league/la-liga/")) },
     ] : []),
     { url: absoluteUrl(localePath(locale, "/nfl/")) },
     ...Object.keys(localizedEditorialBySlug)

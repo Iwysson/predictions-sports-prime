@@ -13,4 +13,38 @@ export const astonVillaVsArsenal: EditorialPrediction = {
   sources: [{ name: "Official competition and club fixture sources", url: "https://www.premierleague.com/", description: "Fixture, current results and competition context.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "Independent current preview and match reporting", url: "https://www.sportsmole.co.uk/football/arsenal/preview/aston-villa-vs-arsenal-prediction-team-news-lineups_603999.html", description: "Recent results, lineups, availability and H2H cross-check.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "xGscore — Brighton vs Aston Villa", url: "https://xgscore.io/epl/brighton-aston-villa/xg-statistics", description: "Opening-match xG, shots, SOT, possession and corners for Aston Villa and Brighton.", accessedAt: "2026-08-30T23:30:00+01:00" }, { name: "xG Stat — Arsenal vs Coventry", url: "https://www.xgstat.com/competitions/premier-league/2026-2027/matches/arsenal-coventry-city-2026-08-21", description: "Opening-match xG, shots, SOT, possession and corners for Arsenal and Coventry.", accessedAt: "2026-08-30T23:30:00+01:00" }],
   publishedAt: "2026-08-24T17:38:36.651Z", published: true,
   matchInfo: { date: "2026-08-31", time: "20:00", round: "Matchday 2", venue: "Villa Park" },
+  matchSeo: {
+    information: { city: "Birmingham", country: "England", timezone: "Europe/London", sources: [{ name: "Premier League", url: "https://www.premierleague.com/", accessedAt: "2026-08-30T21:30:00+01:00" }] },
+    lineups: {
+      status: "expected",
+      home: { players: ["Zion Suzuki", "Matty Cash", "Victor Lindelof", "Pau Torres", "Matteo Ruggeri", "Lamare Bogarde", "Boubacar Kamara", "Emiliano Buendia", "Ross Barkley", "John McGinn", "Nicolas Jackson"] },
+      away: { players: ["David Raya", "Ben White", "Cristhian Mosquera", "Gabriel Magalhaes", "Riccardo Calafiori", "Declan Rice", "Myles Lewis-Skelly", "Bukayo Saka", "Martin Odegaard", "Christos Tzolis", "Kai Havertz"] },
+      sources: [{ name: "Sports Mole", url: "https://www.sportsmole.co.uk/football/arsenal/preview/aston-villa-vs-arsenal-prediction-team-news-lineups_603999.html", accessedAt: "2026-08-30T21:30:00+01:00" }],
+    },
+    availability: {
+      entries: [
+        { team: "home", player: "Joao Gomes", status: "suspended", detail: "opening-day red card" },
+        { team: "home", player: "Amadou Onana", status: "injured", detail: "long-term knee absence" },
+        { team: "away", player: "Bruno Guimaraes", status: "returning", detail: "may be available" },
+        { team: "away", player: "Jurrien Timber", status: "unavailable" },
+        { team: "away", player: "William Saliba", status: "unavailable" },
+      ],
+      sources: [{ name: "Sports Mole", url: "https://www.sportsmole.co.uk/football/arsenal/preview/aston-villa-vs-arsenal-prediction-team-news-lineups_603999.html", accessedAt: "2026-08-30T21:30:00+01:00" }],
+    },
+    statistics: {
+      sample: "Opening 2026/27 league match (N=1 per club)",
+      rows: [
+        { label: "Goals for / against", home: "0 / 4", away: "3 / 0", category: "goals", zeroVerified: true },
+        { label: "xG / xGA", home: "0.32 / 3.48", away: "2.30 / 0.30", category: "xg", zeroVerified: true },
+        { label: "Shots / on target", home: "6 / 0", away: "20 / 6", category: "shots", zeroVerified: true },
+        { label: "Possession", home: "27%", away: "62%", category: "possession" },
+        { label: "Corners for / against", home: "2 / 5", away: "8 / 2", category: "corners" },
+      ],
+      sources: [
+        { name: "xGscore — Brighton vs Aston Villa", url: "https://xgscore.io/epl/brighton-aston-villa/xg-statistics", accessedAt: "2026-08-30T23:30:00+01:00" },
+        { name: "xG Stat — Arsenal vs Coventry", url: "https://www.xgstat.com/competitions/premier-league/2026-2027/matches/arsenal-coventry-city-2026-08-21", accessedAt: "2026-08-30T23:30:00+01:00" },
+      ],
+    },
+    h2h: { summary: "Aston Villa have won four of seven home league meetings with Arsenal since returning to the division; Villa won this fixture last season before Arsenal won the reverse meeting 4-1.", sources: [{ name: "Sports Mole", url: "https://www.sportsmole.co.uk/football/arsenal/preview/aston-villa-vs-arsenal-prediction-team-news-lineups_603999.html", accessedAt: "2026-08-30T21:30:00+01:00" }] },
+  },
 };

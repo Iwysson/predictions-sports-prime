@@ -14,4 +14,33 @@ export const atalantaBcVsBolognaFc1909: EditorialPrediction = {
   publishedAt: "2026-08-24T17:38:36.651Z",
   updatedAt: "2026-08-30T22:45:00+02:00", published: true,
   matchInfo: { date: "2026-08-31", time: "20:45", round: "Matchday 2", venue: "New Balance Arena" },
+  matchSeo: {
+    information: { city: "Bergamo", country: "Italy", timezone: "Europe/Rome", sources: [{ name: "OpenFootball — Serie A fixtures", url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt", accessedAt: "2026-08-30T22:45:00+02:00" }] },
+    lineups: {
+      status: "expected",
+      home: { formation: "4-3-3", players: ["Marco Carnesecchi", "Davide Zappacosta", "Odilon Kossounou", "Giorgio Scalvini", "Lorenzo Bernasconi", "Lazar Samardzic", "Gianluca Gaetano", "Ederson", "Charles De Ketelaere", "Gianluca Scamacca", "Giacomo Raspadori"] },
+      away: { formation: "4-3-3", players: ["Lukasz Skorupski", "Emil Holm", "Torbjorn Heggem", "Arthur Theate", "Juan Miranda", "Tommaso Pobega", "Nikola Moro", "Lewis Ferguson", "Federico Bernardeschi", "Roberto Piccoli", "Nicolo Cambiaghi"] },
+      sources: [{ name: "Sky Sport", url: "https://sport.sky.it/calcio/serie-a/2026/08/30/atalanta-bologna-probabili-formazioni-2-giornata", accessedAt: "2026-08-30T22:45:00+02:00" }],
+    },
+    availability: {
+      entries: [
+        { team: "home", player: "Thomas Kristensen", status: "unavailable" },
+        { team: "home", player: "Isak Hien", status: "unavailable" },
+        { team: "home", player: "Kamaldeen Sulemana", status: "unavailable" },
+        { team: "away", player: "Nicolo Casale", status: "returning", detail: "expected to be available" },
+        { team: "away", player: "Oussama El Azzouzi", status: "injured", detail: "thigh injury" },
+      ],
+      sources: [{ name: "Sky Sport", url: "https://sport.sky.it/calcio/serie-a/2026/08/30/atalanta-bologna-probabili-formazioni-2-giornata", accessedAt: "2026-08-30T22:45:00+02:00" }, { name: "Sports Mole", url: "https://www.sportsmole.co.uk/football/atalanta-bc/preview/atalanta-vs-bologna-prediction-team-news-lineups_604013.html", accessedAt: "2026-08-30T22:45:00+02:00" }],
+    },
+    statistics: {
+      sample: "Opening 2026/27 Serie A match (N=1 per club)",
+      rows: [
+        { label: "W-D-L", home: "1-0-0", away: "0-0-1", category: "form", zeroVerified: true },
+        { label: "Goals for / against", home: "2 / 1", away: "0 / 1", category: "goals", zeroVerified: true },
+        { label: "Over 2.5", home: "1/1", away: "0/1", category: "goals", zeroVerified: true },
+      ],
+      sources: [{ name: "Sports Mole", url: "https://www.sportsmole.co.uk/football/atalanta-bc/preview/atalanta-vs-bologna-prediction-team-news-lineups_604013.html", accessedAt: "2026-08-30T22:45:00+02:00" }],
+    },
+    h2h: { summary: "Bologna won 1-0 in Bergamo in May 2026 and have won four of their last five trips to Atalanta across league and cup.", sources: [{ name: "Sports Mole", url: "https://www.sportsmole.co.uk/football/atalanta-bc/preview/atalanta-vs-bologna-prediction-team-news-lineups_604013.html", accessedAt: "2026-08-30T22:45:00+02:00" }] },
+  },
 };

@@ -1,6 +1,6 @@
 import { leaguesBySlug } from "@/data/leagues";
 import type { LeagueSlug, Match, MatchPreview } from "@/types";
-import { classifyFixture, isActiveFixtureState, isWaitingForFixtureData } from "@/lib/fixture-state";
+import { classifyFixture, isActiveFixtureState } from "@/lib/fixture-state";
 
 export type MatchTimezoneSource = "venue" | "city" | "competition" | "home-team" | "fallback" | "unknown";
 export type MatchTimeConfidence = "confirmed" | "derived" | "unknown";
@@ -110,7 +110,7 @@ type SurfaceMatch = {
 };
 
 export function getMatchSurfaceEligibility(match: SurfaceMatch, now: Date | string = new Date()) {
-  const historical = Boolean(match.published && (match.fixtureStatus === "completed" || isWaitingForFixtureData(match, now)));
+  const historical = Boolean(match.published && match.fixtureStatus === "completed");
   const active = Boolean(match.published && isActiveFixtureState(classifyFixture(match, now)) && !historical);
   return {
     today: active,

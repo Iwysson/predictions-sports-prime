@@ -28,13 +28,20 @@ export const amedsporVsTrabzonspor: EditorialPrediction = {
       url: "https://www.tff.org/default.aspx?pageID=198",
       description: "Official competition page confirming the Matchday 3 pairing, kickoff and standings used for publication context.",
       accessedAt: "2026-08-26T08:54:38-03:00"
-    }
+    },
+    { name: "Mackolik - Amed SK vs Trabzonspor", url: "https://www.mackolik.com/futbol/haber/amed-sk-trabzonspor-muhtemel-11ler/b8ee01df-a276-4479-973b-8d9cf6413992", description: "Current probable lineups, referee, venue and pre-match Opta context.", accessedAt: "2026-08-31T11:00:00+03:00" }
   ],
   publishedAt: "2026-08-26T11:54:38.899Z",
   published: true,
   matchInfo: {
     date: "2026-08-31",
     time: "21:30",
-    round: "Matchday 3"
+    round: "Matchday 3",
+    venue: "Diyarbakir Stadium"
+  },
+  matchSeo: {
+    information: { city: "Diyarbakir", country: "Turkiye", timezone: "Europe/Istanbul", referee: "Atilla Karaoglan", sources: [{ name: "Mackolik", url: "https://www.mackolik.com/futbol/haber/amed-sk-trabzonspor-muhtemel-11ler/b8ee01df-a276-4479-973b-8d9cf6413992", accessedAt: "2026-08-31T11:00:00+03:00" }] },
+    lineups: { status: "expected", home: { players: ["Alban Lafont", "Mehmet Yesil", "David Bates", "Lirim Dellova", "Ermal Krasniqi", "Romain Raveloson", "Cem", "Yannick Bolasie Sor", "Dia Saba", "Gift Orban", "Samuel Ballet"] }, away: { players: ["Andre Onana", "Mustafa", "Cenk", "C. Nwaiwu", "Wagner Pina", "Ozan", "Melih Kabasakal", "Aral Simsir", "Ernest Muci", "Mohamed Salah", "Paul Onuachu"] }, sources: [{ name: "Mackolik", url: "https://www.mackolik.com/futbol/haber/amed-sk-trabzonspor-muhtemel-11ler/b8ee01df-a276-4479-973b-8d9cf6413992", accessedAt: "2026-08-31T11:00:00+03:00" }] },
+    h2h: { summary: "This is the clubs' first senior-team meeting; no historical H2H sample is published as predictive evidence.", sources: [{ name: "Mackolik", url: "https://www.mackolik.com/futbol/haber/amed-sk-trabzonspor-muhtemel-11ler/b8ee01df-a276-4479-973b-8d9cf6413992", accessedAt: "2026-08-31T11:00:00+03:00" }] }
   }
 };

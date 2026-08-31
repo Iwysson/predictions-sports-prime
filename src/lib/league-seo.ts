@@ -34,13 +34,38 @@ export function leagueCanonicalPath(league: LeagueConfig) {
   return `/league/${league.slug}/`;
 }
 
-export function leagueSeoTitle(league: LeagueConfig) {
+export type LeagueSeoCapabilities = {
+  hasFixtures: boolean;
+  hasResults: boolean;
+  hasStandings: boolean;
+  hasAnalysis: boolean;
+};
+
+export function leagueSeoTitle(league: LeagueConfig, capabilities?: LeagueSeoCapabilities) {
+  if (capabilities) {
+    const suffix = capabilities.hasFixtures && capabilities.hasResults
+      ? "Predictions, Fixtures & Results"
+      : capabilities.hasAnalysis
+        ? "Predictions & Match Analysis"
+        : "Predictions";
+    return `${league.name} ${suffix}`;
+  }
   const full = `${league.name} Predictions & Betting Tips | ${siteConfig.name}`;
   const compact = `${league.name} Predictions | ${siteConfig.name}`;
   return full.length <= 70 ? full : compact;
 }
 
-export function leagueSeoDescription(league: LeagueConfig) {
+export function leagueSeoDescription(league: LeagueConfig, capabilities?: LeagueSeoCapabilities) {
+  if (capabilities) {
+    const features = [
+      "predictions",
+      capabilities.hasFixtures ? "upcoming fixtures" : "",
+      capabilities.hasResults ? "recent results" : "",
+      capabilities.hasStandings ? "standings" : "",
+      capabilities.hasAnalysis ? "match analysis" : "",
+    ].filter(Boolean);
+    return `${league.name} ${features.join(", ")} from ${siteConfig.name}.`;
+  }
   const index = league.slug.length % 4;
   const standings = league.display.showStandings
     ? " and validated standings when available"
@@ -95,15 +120,16 @@ export function leagueBreadcrumbJsonLd(league: LeagueConfig) {
 
 export function leagueCollectionJsonLd(
   league: LeagueConfig,
-  publishedMatches: Match[]
+  publishedMatches: Match[],
+  capabilities?: LeagueSeoCapabilities
 ) {
   const url = absoluteUrl(leagueCanonicalPath(league));
 
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: leagueSeoTitle(league),
-    description: leagueSeoDescription(league),
+    name: leagueSeoTitle(league, capabilities),
+    description: leagueSeoDescription(league, capabilities),
     url,
     inLanguage: "en",
     isPartOf: {

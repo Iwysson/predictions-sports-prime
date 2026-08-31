@@ -30,7 +30,7 @@ for (const file of walk(predictionsRoot).filter((path) => path.endsWith(".ts") &
   const isIncomplete = /sourceStatus:\s*["']incomplete["']/.test(source);
   const isLegacy = predatesPolicy && !isVerified && !isPartial && !isIncomplete;
   if (/sources:\s*\[\s*\{/s.test(source)) predictionsWithSources += 1;
-  const sourceUrls = new Set();
+  let sourceUrls = new Set();
 
   if (isLegacy) legacyPending += 1;
   else {
@@ -44,13 +44,18 @@ for (const file of walk(predictionsRoot).filter((path) => path.endsWith(".ts") &
     if (!predatesPolicy && /odds:\s*\d/.test(source) && !/oddsProvenance:\s*\{/s.test(source)) errors.push(`${label}: current published odds need provenance`);
   }
 
-  for (const match of source.matchAll(/\burl:\s*["']([^"']*)["']/g)) {
-    let url;
-    try { url = new URL(match[1]); } catch { errors.push(`${label}: invalid source URL (${match[1]})`); continue; }
-    if (url.protocol !== "https:") errors.push(`${label}: source URL must use HTTPS (${match[1]})`);
-    if (["example.com", "example.org", "example.net"].includes(url.hostname.toLowerCase())) errors.push(`${label}: placeholder source URL (${match[1]})`);
-    if (sourceUrls.has(match[1])) errors.push(`${label}: duplicate source URL (${match[1]})`);
-    sourceUrls.add(match[1]);
+  for (const line of source.split(/\r?\n/)) {
+    // A source may legitimately support more than one independent semantic module.
+    // Duplicate detection is scoped to each `sources` array, where repetition is noise.
+    if (/\bsources:\s*\[/.test(line)) sourceUrls = new Set();
+    for (const match of line.matchAll(/\burl:\s*["']([^"']*)["']/g)) {
+      let url;
+      try { url = new URL(match[1]); } catch { errors.push(`${label}: invalid source URL (${match[1]})`); continue; }
+      if (url.protocol !== "https:") errors.push(`${label}: source URL must use HTTPS (${match[1]})`);
+      if (["example.com", "example.org", "example.net"].includes(url.hostname.toLowerCase())) errors.push(`${label}: placeholder source URL (${match[1]})`);
+      if (sourceUrls.has(match[1])) errors.push(`${label}: duplicate source URL within one source list (${match[1]})`);
+      sourceUrls.add(match[1]);
+    }
   }
 }
 

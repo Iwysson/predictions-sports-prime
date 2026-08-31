@@ -71,6 +71,66 @@ export type EditorialSource = {
   accessedAt?: string;
 };
 
+export type MatchModuleSource = {
+  name: string;
+  url: string;
+  accessedAt?: string;
+  note?: string;
+};
+
+export type MatchTeamSide = "home" | "away";
+
+export type MatchSeoData = {
+  information?: {
+    city?: string;
+    country?: string;
+    timezone?: string;
+    referee?: string;
+    sources: MatchModuleSource[];
+  };
+  lineups?: {
+    status: "expected" | "confirmed";
+    home: { formation?: string; players: string[] };
+    away: { formation?: string; players: string[] };
+    sources: MatchModuleSource[];
+  };
+  availability?: {
+    entries: Array<{
+      team: MatchTeamSide;
+      player: string;
+      status: "injured" | "suspended" | "doubtful" | "returning" | "unavailable";
+      detail?: string;
+    }>;
+    sources: MatchModuleSource[];
+  };
+  teamNews?: {
+    entries: Array<{ team: MatchTeamSide; text: string }>;
+    sources: MatchModuleSource[];
+  };
+  statistics?: {
+    sample: string;
+    rows: Array<{
+      label: string;
+      home: string;
+      away: string;
+      category: "form" | "goals" | "xg" | "shots" | "possession" | "corners" | "other";
+      /** Required when either displayed value contains a factual zero token. */
+      zeroVerified?: boolean;
+    }>;
+    sources: MatchModuleSource[];
+  };
+  h2h?: {
+    summary: string;
+    sources: MatchModuleSource[];
+  };
+  weather?: {
+    status: "forecast" | "observed";
+    summary: string;
+    validAt?: string;
+    sources: MatchModuleSource[];
+  };
+};
+
 export type VenueAddress = {
   streetAddress?: string;
   addressLocality?: string;
@@ -114,6 +174,9 @@ export type EditorialPrediction = {
   // Required for content first published after the Phase 2 source-policy cutoff.
   sourceStatus?: "verified" | "partial" | "incomplete";
   sources?: EditorialSource[];
+
+  // Optional, source-backed semantic modules for Match SEO 2.0.
+  matchSeo?: MatchSeoData;
 
   // Optional manual fallback when the external fixture feed is unavailable.
   matchInfo?: {
@@ -160,6 +223,7 @@ export type Match = {
   publishedAt?: string;
   updatedAt?: string;
   sources?: EditorialSource[];
+  matchSeo?: MatchSeoData;
 };
 
 export type EditorialStatus = "draft" | "ready_for_analysis" | "published";

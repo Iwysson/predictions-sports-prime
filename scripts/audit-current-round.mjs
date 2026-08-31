@@ -118,7 +118,7 @@ const publishedFixture = (fixtureStatus, kickoffUtc) => ({
 });
 assert.equal(resolveHomeTemporalBucket(publishedFixture("scheduled", "2026-08-25T12:00:00Z"), "2026-08-25", regressionNow), "today", "Published future fixture must remain active");
 assert.equal(resolveHomeTemporalBucket(publishedFixture("completed", "2026-08-23T12:00:00Z"), "2026-08-24", regressionNow), "historical", "Completed prediction must enter history");
-assert.equal(resolveHomeTemporalBucket(publishedFixture("in-progress", "2026-08-24T10:09:59Z"), "2026-08-24", regressionNow), "historical", "A stale provider LIVE status must enter history after 110 minutes");
+assert.equal(resolveHomeTemporalBucket(publishedFixture("in-progress", "2026-08-24T10:09:59Z"), "2026-08-24", regressionNow), "none", "A stale provider LIVE status must leave active feeds without entering history");
 assert.equal(resolveHomeTemporalBucket(publishedFixture("postponed", "2026-08-25T12:00:00Z"), "2026-08-25", regressionNow), "none", "Postponed prediction must leave active feeds");
 console.log("Round promotion regressions: PASS");
 

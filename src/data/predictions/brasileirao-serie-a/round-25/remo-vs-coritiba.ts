@@ -40,6 +40,13 @@ export const remoVsCoritiba: EditorialPrediction = {
       description: "Official schedule and competition context for Brasileirão Matchday 25.",
       accessedAt: "2026-08-25T06:17:27-03:00",
     },
+    { name: "Bem Parana - Remo vs Coritiba team news", url: "https://www.bemparana.com.br/esportes/coritiba/remo-x-coritiba-escalacoes-onde-assistir-e-sem-o-garcom/", description: "Current probable lineups, absences, venue and kickoff.", accessedAt: "2026-08-31T08:00:00-03:00" },
+    { name: "ge - Jaja fitness update", url: "https://ge.globo.com/pa/futebol/times/remo/noticia/2026/08/27/artilheiro-do-remo-no-brasileirao-e-duvida-para-jogo-com-coritiba.ghtml", description: "Medical context for Jaja before the fixture.", accessedAt: "2026-08-31T08:00:00-03:00" },
   ],
+  matchSeo: {
+    information: { city: "Belem", country: "Brazil", timezone: "America/Belem", referee: "Daiane Muniz", sources: [{ name: "Bem Parana", url: "https://www.bemparana.com.br/esportes/coritiba/remo-x-coritiba-escalacoes-onde-assistir-e-sem-o-garcom/", accessedAt: "2026-08-31T08:00:00-03:00" }] },
+    lineups: { status: "expected", home: { formation: "4-2-3-1", players: ["Marcelo Rangel", "Marcelinho", "Marllon", "Tchamba", "Marlon", "Ze Welison", "Ze Ricardo", "Yago Pikachu", "Vitor Bueno", "Alef Manga", "Gabriel Taliari"] }, away: { formation: "4-2-3-1", players: ["Pedro Morisco", "JP Chermont", "Tiago Coser", "Jacy", "Bruno Melo", "Vitor Tissi", "Sebas Gomez", "Lavega", "Fernando Sobral", "Breno Lopes", "Pedro Rocha"] }, sources: [{ name: "Bem Parana", url: "https://www.bemparana.com.br/esportes/coritiba/remo-x-coritiba-escalacoes-onde-assistir-e-sem-o-garcom/", accessedAt: "2026-08-31T08:00:00-03:00" }] },
+    availability: { entries: [{ team: "home", player: "Jaja", status: "injured", detail: "ankle injury; reported out in the latest match preview" }, { team: "away", player: "Josue", status: "injured", detail: "thigh pain; did not travel" }, { team: "away", player: "Thiago Santos", status: "suspended", detail: "yellow-card accumulation" }, { team: "away", player: "Brian Ocampo", status: "injured" }, { team: "away", player: "Tinga", status: "injured" }, { team: "away", player: "Lucas Ronier", status: "injured" }], sources: [{ name: "Bem Parana", url: "https://www.bemparana.com.br/esportes/coritiba/remo-x-coritiba-escalacoes-onde-assistir-e-sem-o-garcom/", accessedAt: "2026-08-31T08:00:00-03:00" }, { name: "ge", url: "https://ge.globo.com/pa/futebol/times/remo/noticia/2026/08/27/artilheiro-do-remo-no-brasileirao-e-duvida-para-jogo-com-coritiba.ghtml", accessedAt: "2026-08-31T08:00:00-03:00", note: "Earlier medical report; later preview resolves Jaja as out" }] },
+  },
   published: true,
 };

@@ -11,7 +11,8 @@ const locales = [
   { slug: "nl", lang: "nl", hubsIndexable: false },
   { slug: "tr", lang: "tr", hubsIndexable: false },
 ];
-const paths = ["/", "/league/premier-league/", "/match/aston-villa-vs-arsenal/"];
+const hubPaths = ["/", "/league/premier-league/", "/league/la-liga/"];
+const paths = [...hubPaths, "/match/aston-villa-vs-arsenal/"];
 const hubHreflangs = ["en", "pt-BR", "es", "fr", "de", "x-default"];
 const matchHreflangs = ["en", "pt-BR", "es", "fr", "de", "it", "nl", "tr", "x-default"];
 const errors = [];
@@ -41,17 +42,21 @@ for (const { slug, lang, hubsIndexable } of locales) {
       continue;
     }
     const html = fs.readFileSync(file, "utf8");
-    const isHub = suffix === "/" || suffix === "/league/premier-league/";
+    const isHub = hubPaths.includes(suffix);
     const shouldIndex = !isHub || hubsIndexable;
     const declaredLang = attr(html, /<html[^>]*lang="([^"]+)"/, "html lang", route);
     const canonical = attr(html, /<link rel="canonical" href="([^"]+)"/, "canonical", route);
     attr(html, /<title>([^<]+)<\/title>/, "title", route);
     attr(html, /<meta name="description" content="([^"]+)"/, "description", route);
     const h1Count = (html.match(/<h1(?:\s|>)/g) ?? []).length;
+    const sectionCount = (html.match(/<section(?:\s|>)/g) ?? []).length;
     if (declaredLang !== lang) errors.push(`${route}: lang ${declaredLang} != ${lang}`);
     const expectedCanonical = `https://predictions-sports-prime.com${route}`;
     if (canonical !== expectedCanonical) errors.push(`${route}: canonical mismatch`);
     if (h1Count !== 1) errors.push(`${route}: expected one H1, found ${h1Count}`);
+    if (!html.includes("<header") || !html.includes("<main") || !html.includes("<footer")) errors.push(`${route}: localized chrome is structurally incomplete`);
+    if (!html.includes('class="language-selector"')) errors.push(`${route}: route-aware language selector missing`);
+    if (isHub && sectionCount < 3) errors.push(`${route}: localized hub lacks structural section parity (${sectionCount})`);
     const hrefLangs = alternates(html);
     if (shouldIndex) {
       for (const required of isHub ? hubHreflangs : matchHreflangs) {
@@ -85,7 +90,7 @@ for (const route of checked) {
 }
 for (const { slug, hubsIndexable } of locales) {
   if (hubsIndexable) continue;
-  for (const suffix of ["/", "/league/premier-league/"]) {
+  for (const suffix of hubPaths) {
     const route = `/${slug}${suffix}`;
     if (sitemap.includes(`<loc>https://predictions-sports-prime.com${route}</loc>`)) errors.push(`${route}: rollout page leaked into sitemap`);
   }

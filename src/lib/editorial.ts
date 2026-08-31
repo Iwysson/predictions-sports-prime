@@ -184,7 +184,52 @@ export function editorialToMatch(
     publishedAt: prediction.publishedAt,
     updatedAt: prediction.updatedAt,
     sources: prediction.sources,
+    matchSeo: prediction.matchSeo,
   };
+}
+
+function validateMatchSeo(prediction: EditorialPrediction, label: string, errors: string[]) {
+  const modules = prediction.matchSeo;
+  if (!modules) return;
+
+  for (const [moduleName, module] of Object.entries(modules)) {
+    if (!module) continue;
+    const moduleLabel = `${label}, Match SEO ${moduleName}`;
+    if (!module.sources?.length) errors.push(`${moduleLabel}: at least one provenance source is required.`);
+    for (const source of module.sources ?? []) {
+      if (!source.name.trim()) errors.push(`${moduleLabel}: source name cannot be empty.`);
+      try {
+        const url = new URL(source.url);
+        if (url.protocol !== "https:" || SOURCE_PLACEHOLDER_HOSTS.has(url.hostname.toLowerCase())) {
+          errors.push(`${moduleLabel}: source URL must use HTTPS and cannot use a placeholder host.`);
+        }
+      } catch {
+        errors.push(`${moduleLabel}: source URL must be a valid absolute URL.`);
+      }
+      if (source.accessedAt !== undefined && !isValidIsoTimestamp(source.accessedAt)) {
+        errors.push(`${moduleLabel}: source accessedAt must be a valid ISO 8601 timestamp.`);
+      }
+    }
+  }
+
+  if (modules.lineups && (!modules.lineups.home.players.length || !modules.lineups.away.players.length)) {
+    errors.push(`${label}, Match SEO lineups: both teams require players.`);
+  }
+  if (modules.availability && !modules.availability.entries.length) {
+    errors.push(`${label}, Match SEO availability: empty modules must be omitted.`);
+  }
+  if (modules.teamNews && !modules.teamNews.entries.length) {
+    errors.push(`${label}, Match SEO teamNews: empty modules must be omitted.`);
+  }
+  if (modules.statistics && (!modules.statistics.sample.trim() || !modules.statistics.rows.length)) {
+    errors.push(`${label}, Match SEO statistics: sample and rows are required.`);
+  }
+  if (modules.h2h && !modules.h2h.summary.trim()) {
+    errors.push(`${label}, Match SEO h2h: summary cannot be empty.`);
+  }
+  if (modules.weather && !modules.weather.summary.trim()) {
+    errors.push(`${label}, Match SEO weather: summary cannot be empty.`);
+  }
 }
 
 export function buildPublishedMatches(
@@ -289,6 +334,7 @@ export function validateEditorialPredictions(
     }
 
     validateSources(prediction, label, errors);
+    validateMatchSeo(prediction, label, errors);
 
     if (isPublished && !isLegacy) {
       if (!prediction.publishedAt) {

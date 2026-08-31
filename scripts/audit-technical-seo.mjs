@@ -54,16 +54,44 @@ for (const url of indexableCanonicals) if (!sitemapUrls.includes(url)) errors.pu
 for (const url of sitemapUrls) if (!indexableCanonicals.has(url)) errors.push(`SITEMAP_NOT_INDEXABLE: ${url}`);
 if (statSync(join(out, "sitemap-test.xml"), { throwIfNoEntry: false })) warnings.push("temporary sitemap-test.xml is present in static output");
 const home = pages.find((page) => page.path === "/");
-if (!home?.html.includes("Top Prediction Leagues")) errors.push("Home upper league taxonomy is missing Top Prediction Leagues");
-if (!home?.html.includes("Prediction Categories")) errors.push("Home lower competition taxonomy is missing Prediction Categories");
-if ((home?.html.match(/Top Prediction Leagues/g) ?? []).length !== 1) errors.push("Home repeats Top Prediction Leagues outside the upper sidebar");
-if ((home?.html.match(/Prediction Categories/g) ?? []).length !== 1) errors.push("Home must render Prediction Categories exactly once");
+const homeMarkup = home?.html.replace(/<script[\s\S]*?<\/script>/gi, "") ?? "";
+if (!homeMarkup.includes("Top Prediction Leagues")) errors.push("Home upper league taxonomy is missing Top Prediction Leagues");
+if (!homeMarkup.includes("Prediction Categories")) errors.push("Home lower competition taxonomy is missing Prediction Categories");
+if ((homeMarkup.match(/Top Prediction Leagues/g) ?? []).length !== 1) errors.push("Home repeats Top Prediction Leagues outside the upper sidebar");
+if ((homeMarkup.match(/Prediction Categories/g) ?? []).length !== 1) errors.push("Home must render Prediction Categories exactly once");
+const leagueSeoPilots = ["premier-league", "la-liga"];
+const leagueMetrics = [];
+for (const slug of leagueSeoPilots) {
+  const path = `/league/${slug}/`;
+  const page = pages.find((candidate) => candidate.path === path);
+  if (!page) {
+    errors.push(`${path}: League SEO pilot page missing`);
+    continue;
+  }
+  const markup = page.html.replace(/<script[\s\S]*?<\/script>/gi, "");
+  const matchLinks = [...markup.matchAll(/href="(\/match\/[^"?#]+\/?)"/g)].map((match) => match[1]);
+  const uniqueMatchLinks = new Set(matchLinks);
+  const hasResults = markup.includes(`Recent ${slug === "premier-league" ? "Premier League" : "La Liga"} Results`);
+  const sections = ["Overview", "Predictions", ...(hasResults ? ["Results"] : [])];
+  if (!markup.includes("league-editorial-hub")) errors.push(`${path}: editorial hub missing`);
+  if (!markup.includes("Overview")) errors.push(`${path}: factual overview missing`);
+  if (!markup.includes("Latest") || !markup.includes("Predictions")) errors.push(`${path}: latest predictions section missing`);
+  if (uniqueMatchLinks.size < 10) errors.push(`${path}: insufficient Match Page discovery (${uniqueMatchLinks.size})`);
+  const expectedTitle = hasResults ? "Predictions, Fixtures &amp; Results" : "Predictions &amp; Match Analysis";
+  if (!page.html.includes(expectedTitle)) errors.push(`${path}: metadata does not reflect hub capabilities`);
+  if (!page.html.includes('"@type":"CollectionPage"')) errors.push(`${path}: CollectionPage schema missing`);
+  if (/<section[^>]*>\s*<\/section>/i.test(markup)) errors.push(`${path}: empty section rendered`);
+  leagueMetrics.push({ slug, matchLinks: matchLinks.length, uniqueMatchLinks: uniqueMatchLinks.size, sections: sections.length });
+}
 console.log(`Indexable HTML routes: ${pages.length}`);
 console.log(`Noindex/error HTML routes: ${noindexPages.length}`);
 console.log(`Sitemap URLs: ${sitemapUrls.length}`);
 console.log(`JSON-LD blocks parsed: ${jsonLdCount}`);
 console.log(`Broken internal links: ${errors.filter((error) => error.includes("broken internal link")).length}`);
 console.log(`Sitemap discrepancies: ${errors.filter((error) => /SITEMAP_|INDEXABLE_/.test(error)).length}`);
+for (const metric of leagueMetrics) {
+  console.log(`League SEO ${metric.slug}: ${metric.matchLinks} Match links / ${metric.uniqueMatchLinks} unique / ${metric.sections} core sections`);
+}
 warnings.forEach((warning) => console.warn(`WARNING: ${warning}`));
 if (errors.length) { errors.forEach((error) => console.error(`ERROR: ${error}`)); console.error(`Technical SEO audit: FAIL (${errors.length})`); process.exitCode = 1; }
 else console.log("Technical SEO audit: PASS");

@@ -11,6 +11,7 @@ import { ArticleByline } from "@/components/ArticleByline";
 import { MethodologyLink } from "@/components/MethodologyLink";
 import { ArticleSources } from "@/components/ArticleSources";
 import { EditorialAnalysis } from "@/components/EditorialAnalysis";
+import { MatchSemanticDetails } from "@/components/MatchSemanticDetails";
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import {
   MatchAnalysisLabel,
@@ -203,10 +204,6 @@ export default async function MatchPage({
         </div>
       </section>
 
-      <div className="container match-ad-top">
-        <AdSlot placement="match-top" />
-      </div>
-
       <section className="section compact-match-content-section">
         <div className="container compact-match-layout">
           <article className="compact-analysis-card">
@@ -232,6 +229,12 @@ export default async function MatchPage({
             </div>
 
             <p className="match-seo-intro">{matchIntroduction(match)}</p>
+
+            <MatchSemanticDetails match={match} />
+
+            <div className="match-content-ad match-content-ad--early">
+              <AdSlot placement="match-top" />
+            </div>
 
             <div className="compact-analysis-copy">
               <EditorialAnalysis analysis={match.analysis} format={match.analysisFormat} />

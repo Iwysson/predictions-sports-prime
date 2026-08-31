@@ -34,7 +34,6 @@ assert.equal(classifyFixture(base, waitingForData), "stale-schedule", "A stale p
 assert.equal(isWaitingForFixtureData(base, waitingForData), true, "The match must wait for authoritative data after 110 minutes");
 assert.equal(filterTodaysPublishedPredictions([base], "2026-08-29", waitingForData).length, 0, "A 110-minute-old match must leave Today");
 const history = buildPredictionHistoryState([base], waitingForData).entries;
-assert.equal(history.length, 1, "A 110-minute-old match must enter prediction history");
-assert.equal(history[0].betResult, "awaiting-data", "History must label the match as awaiting data");
+assert.equal(history.length, 0, "A stale provider status must not enter history without a terminal result");
 
 console.log("Fixture lifecycle automation audit: PASS");

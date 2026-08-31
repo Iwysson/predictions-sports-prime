@@ -12,6 +12,7 @@ import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { LeaguePageText } from "@/components/LeaguePageText";
 import { LeaguePublishedAnalysis } from "@/components/LeaguePublishedAnalysis";
+import { LeagueEditorialHub } from "@/components/LeagueEditorialHub";
 import { toMatchPreview } from "@/lib/editorial";
 import { findFixtureForPrediction, loadLeagueSeason } from "@/lib/openfootball";
 import { buildCompetitionRoundSurface } from "@/lib/competition-rounds";
@@ -30,6 +31,8 @@ import { localizedAlternates } from "@/lib/international-seo";
 import { indexableLocalizedHubLocaleSlugs } from "@/lib/seo-locales";
 
 export const dynamicParams = false;
+
+const leagueSeoPilotSlugs = new Set(["premier-league", "la-liga"]);
 
 
 export async function generateMetadata({
@@ -50,8 +53,15 @@ export async function generateMetadata({
     };
   }
 
-  const title = leagueSeoTitle(league);
-  const description = leagueSeoDescription(league);
+  const publishedLeagueMatches = matches.filter((match) => match.league === league.slug && match.status === "published");
+  const capabilities = leagueSeoPilotSlugs.has(league.slug) ? {
+    hasFixtures: true,
+    hasResults: publishedLeagueMatches.some((match) => match.fixtureStatus === "completed" && match.homeScore != null && match.awayScore != null),
+    hasStandings: league.display.showStandings,
+    hasAnalysis: publishedLeagueMatches.length > 0,
+  } : undefined;
+  const title = leagueSeoTitle(league, capabilities);
+  const description = leagueSeoDescription(league, capabilities);
   const canonical = absoluteUrl(leagueCanonicalPath(league));
   const publishedMatchCount = matches.filter(
     (match) => match.league === league.slug && match.status === "published"
@@ -64,7 +74,7 @@ export async function generateMetadata({
     description,
     keywords: leagueSeoKeywords(league),
 
-    alternates: league.slug === "premier-league"
+    alternates: leagueSeoPilotSlugs.has(league.slug)
       ? localizedAlternates("en", leagueCanonicalPath(league), ["en", ...indexableLocalizedHubLocaleSlugs])
       : { canonical },
 
@@ -122,6 +132,12 @@ export default async function LeaguePage({
   const publishedMatches = matches.filter(
     (match) => match.league === league.slug && match.status === "published"
   );
+  const pilotCapabilities = leagueSeoPilotSlugs.has(league.slug) ? {
+    hasFixtures: true,
+    hasResults: publishedMatches.some((match) => match.fixtureStatus === "completed" && match.homeScore != null && match.awayScore != null),
+    hasStandings: league.display.showStandings,
+    hasAnalysis: publishedMatches.length > 0,
+  } : undefined;
   const standings = standingsByLeague[league.slug];
   const fixtureRounds = await loadLeagueSeason(league.slug);
   const roundSurface = buildCompetitionRoundSurface({
@@ -152,7 +168,7 @@ export default async function LeaguePage({
 
   return (
     <>
-      <JsonLd data={leagueCollectionJsonLd(league, publishedMatches)} />
+      <JsonLd data={leagueCollectionJsonLd(league, publishedMatches, pilotCapabilities)} />
       <JsonLd data={leagueBreadcrumbJsonLd(league)} />
 
       <section className="league-title-bar">
@@ -165,7 +181,7 @@ export default async function LeaguePage({
                 <span aria-hidden="true">›</span>
                 <span aria-current="page">{league.name}</span>
               </nav>
-              <h1>{league.name} Predictions &amp; Betting Tips</h1>
+              <h1>{leagueSeoPilotSlugs.has(league.slug) ? `${league.name} Predictions & Match Analysis` : `${league.name} Predictions & Betting Tips`}</h1>
             </div>
           </div>
           <span className="league-round-label">Current Round</span>
@@ -185,6 +201,10 @@ export default async function LeaguePage({
       <section className="section league-content-section">
         <div className="container league-layout">
           <div className="league-main-column">
+            {leagueSeoPilotSlugs.has(league.slug) ? (
+              <LeagueEditorialHub leagueName={league.name} publishedMatches={publishedMatches} surface={roundSurface} />
+            ) : null}
+
             <LeaguePageText matchCount={roundSurface.current?.matches.length ?? 0}>
               <LiveLeagueRounds surface={roundSurface} />
             </LeaguePageText>

@@ -13,4 +13,34 @@ export const barcelonaVsRayoVallecano: EditorialPrediction = {
     { name: "AS — Barcelona probable lineup", url: "https://as.com/futbol/posible-alineacion-del-barca-ante-el-rayo-vallecano-rodri-aun-no-f202608-n/", description: "Latest Barcelona XI and Rodri fitness update.", accessedAt: "2026-08-30T22:45:00+02:00" },
     { name: "LaLiga — Matchday 3", url: "https://www.laliga.com/laliga-easports/resultados/2026-27/jornada-3", description: "Official fixture and round verification.", accessedAt: "2026-08-30T22:45:00+02:00" },
   ], published: true,
+  matchSeo: {
+    information: { city: "Barcelona", country: "Spain", timezone: "Europe/Madrid", sources: [{ name: "LaLiga", url: "https://www.laliga.com/laliga-easports/resultados/2026-27/jornada-3", accessedAt: "2026-08-30T22:45:00+02:00" }] },
+    lineups: {
+      status: "expected",
+      home: { formation: "4-2-3-1", players: ["Joan Garcia", "Eric Garcia", "Andreas Christensen", "Gerard Martin", "Xavi Espart", "Marc Bernal", "Pedri", "Lamine Yamal", "Fermin Lopez", "Raphinha", "Anthony Gordon"] },
+      away: { formation: "4-3-3", players: ["Dani Cardenas", "Andrei Ratiu", "Alejandro Fernandez", "Florian Lejeune", "Henri Vertrouwd", "Unai Lopez", "Pathe Ciss", "Oscar Valentin", "Iker Perez", "Sergio Camello", "Jorge de Frutos"] },
+      sources: [{ name: "Eurosport", url: "https://www.eurosport.es/futbol/la-liga/2026-2027/barcelona-athletic-jornada-3-alineaciones-probables-previa-estadisticas-horario-como-ver-tv-online-streaming-enlace_sto23332062/story.shtml", accessedAt: "2026-08-30T22:45:00+02:00" }, { name: "AS", url: "https://as.com/futbol/posible-alineacion-del-barca-ante-el-rayo-vallecano-rodri-aun-no-f202608-n/", accessedAt: "2026-08-30T22:45:00+02:00" }],
+    },
+    availability: {
+      entries: [
+        { team: "home", player: "Frenkie de Jong", status: "injured", detail: "knee injury" },
+        { team: "home", player: "Roony Bardghji", status: "injured", detail: "knee injury" },
+        { team: "home", player: "Gavi", status: "doubtful", detail: "physical issue" },
+        { team: "away", player: "Augusto Batalla", status: "injured", detail: "long-term tibia fracture absence" },
+        { team: "away", player: "Luiz Felipe", status: "injured", detail: "hamstring issue" },
+      ],
+      sources: [{ name: "Eurosport", url: "https://www.eurosport.es/futbol/la-liga/2026-2027/barcelona-athletic-jornada-3-alineaciones-probables-previa-estadisticas-horario-como-ver-tv-online-streaming-enlace_sto23332062/story.shtml", accessedAt: "2026-08-30T22:45:00+02:00" }, { name: "AS", url: "https://as.com/futbol/posible-alineacion-del-barca-ante-el-rayo-vallecano-rodri-aun-no-f202608-n/", accessedAt: "2026-08-30T22:45:00+02:00" }],
+    },
+    statistics: {
+      sample: "First two 2026/27 league matches per club",
+      rows: [
+        { label: "W-D-L", home: "2-0-0", away: "0-1-1", category: "form", zeroVerified: true },
+        { label: "Goals per game", home: "3.50", away: "1.00", category: "goals" },
+        { label: "Goals against per game", home: "0.00", away: "1.50", category: "goals", zeroVerified: true },
+        { label: "Over 2.5", home: "1/2", away: "1/2", category: "goals" },
+      ],
+      sources: [{ name: "Eurosport", url: "https://www.eurosport.es/futbol/la-liga/2026-2027/barcelona-athletic-jornada-3-alineaciones-probables-previa-estadisticas-horario-como-ver-tv-online-streaming-enlace_sto23332062/story.shtml", accessedAt: "2026-08-30T22:45:00+02:00" }, { name: "LaLiga", url: "https://www.laliga.com/laliga-easports/resultados/2026-27/jornada-3", accessedAt: "2026-08-30T22:45:00+02:00" }],
+    },
+    h2h: { summary: "Barcelona won 1-0 at home in March 2026 after a 1-1 draw at Vallecas in August 2025. Across 47 meetings, Barcelona lead 29 wins to Rayo's 11, with seven draws.", sources: [{ name: "Eurosport", url: "https://www.eurosport.es/futbol/la-liga/2026-2027/barcelona-athletic-jornada-3-alineaciones-probables-previa-estadisticas-horario-como-ver-tv-online-streaming-enlace_sto23332062/story.shtml", accessedAt: "2026-08-30T22:45:00+02:00" }] },
+  },
 };

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { seoLocaleSlugs, seoLocales, type SeoLocaleSlug } from "@/lib/seo-locales";
 import { ResponsibleGamblingNoticeContent } from "@/components/ResponsibleGamblingNoticeContent";
 import { responsibleCopyForSeoLocale } from "@/lib/responsible-gambling-copy";
+import { RouteLanguageSelector } from "@/components/RouteLanguageSelector";
 
 export function LocalizedHeader({ locale }: { locale: SeoLocaleSlug }) {
   const copy = seoLocales[locale];
@@ -19,6 +20,7 @@ export function LocalizedHeader({ locale }: { locale: SeoLocaleSlug }) {
           <Link href="/methodology/" hrefLang="en">{copy.methodology}</Link>
           <Link href="/results/" hrefLang="en">{copy.results}</Link>
         </nav>
+        <RouteLanguageSelector currentLocale={locale} />
       </div>
     </header>
   );

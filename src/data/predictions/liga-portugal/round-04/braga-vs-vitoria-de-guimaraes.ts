@@ -29,11 +29,19 @@ export const bragaVsVitoriaDeGuimaraes: EditorialPrediction = {
       description: "Direct season fixture data supporting the competition, round, date, home team and away team used in this analysis.",
       accessedAt: "2026-08-24T14:45:00-03:00",
     },
+    { name: "Sports Mole - Braga vs Vitoria preview", url: "https://www.sportsmole.co.uk/football/braga/preview/braga-vs-guimaraes-prediction-team-news-lineups_604042.html", description: "Current venue, kickoff, team news and early-season context.", accessedAt: "2026-08-31T09:00:00+01:00" },
   ],
   publishedAt: "2026-08-25T09:50:39-03:00",
   published: true,
   matchInfo: {
     date: "2026-08-31",
+    time: "20:15",
     round: "Matchday 4",
+    venue: "Estadio Municipal de Braga",
+  },
+  matchSeo: {
+    information: { city: "Braga", country: "Portugal", timezone: "Europe/Lisbon", sources: [{ name: "Sports Mole", url: "https://www.sportsmole.co.uk/football/braga/preview/braga-vs-guimaraes-prediction-team-news-lineups_604042.html", accessedAt: "2026-08-31T09:00:00+01:00" }] },
+    availability: { entries: [{ team: "away", player: "Gui Ribeiro", status: "injured", detail: "recovering from an ACL injury" }], sources: [{ name: "Sports Mole", url: "https://www.sportsmole.co.uk/football/braga/preview/braga-vs-guimaraes-prediction-team-news-lineups_604042.html", accessedAt: "2026-08-31T09:00:00+01:00" }] },
+    teamNews: { entries: [{ team: "home", text: "Braga had played only one league match after postponements linked to illness and European scheduling." }, { team: "away", text: "Vitoria entered after a 1-0 league win over Nacional." }], sources: [{ name: "Sports Mole", url: "https://www.sportsmole.co.uk/football/braga/preview/braga-vs-guimaraes-prediction-team-news-lineups_604042.html", accessedAt: "2026-08-31T09:00:00+01:00" }] },
   },
 };

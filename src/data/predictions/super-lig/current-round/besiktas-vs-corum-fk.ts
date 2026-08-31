@@ -28,13 +28,21 @@ export const besiktasVsCorumFk: EditorialPrediction = {
       url: "https://www.tff.org/default.aspx?pageID=198",
       description: "Official competition page confirming the Matchday 3 pairing, kickoff and standings used for publication context.",
       accessedAt: "2026-08-26T08:54:38-03:00"
-    }
+    },
+    { name: "Mackolik - Besiktas vs Corum FK", url: "https://www.mackolik.com/futbol/haber/besiktas-corum-fk-muhtemel-11ler/4a374fca-adf2-4a72-8d5d-2706af485f47", description: "Current probable lineups, availability, referee, venue and pre-match Opta context.", accessedAt: "2026-08-31T11:00:00+03:00" }
   ],
   publishedAt: "2026-08-26T11:54:38.899Z",
   published: true,
   matchInfo: {
     date: "2026-08-31",
     time: "21:30",
-    round: "Matchday 3"
+    round: "Matchday 3",
+    venue: "Tupras Stadium"
+  },
+  matchSeo: {
+    information: { city: "Istanbul", country: "Turkiye", timezone: "Europe/Istanbul", referee: "Cagdas Altay", sources: [{ name: "Mackolik", url: "https://www.mackolik.com/futbol/haber/besiktas-corum-fk-muhtemel-11ler/4a374fca-adf2-4a72-8d5d-2706af485f47", accessedAt: "2026-08-31T11:00:00+03:00" }] },
+    lineups: { status: "expected", home: { players: ["Alexander Nubel", "Murillo", "Tiago Djalo", "Emirhan Topcu", "Ridvan Yilmaz", "Salih Ucan", "Vaclav Cerny", "Ibrahim Olaitan", "Orkun Kokcu", "Leandro Trossard", "Dusan Vlahovic"] }, away: { players: ["Felipe", "Gokhan", "David Penetra", "Hrvoje Smolcic", "Marius Borza", "Ylber Ramadani", "Serdar", "Fredy", "Diomande", "Emircan", "Ramirez"] }, sources: [{ name: "Mackolik", url: "https://www.mackolik.com/futbol/haber/besiktas-corum-fk-muhtemel-11ler/4a374fca-adf2-4a72-8d5d-2706af485f47", accessedAt: "2026-08-31T11:00:00+03:00" }] },
+    availability: { entries: [{ team: "away", player: "Alexandros Kyziridis", status: "suspended", detail: "red card in the opening league match" }], sources: [{ name: "Mackolik", url: "https://www.mackolik.com/futbol/haber/besiktas-corum-fk-muhtemel-11ler/4a374fca-adf2-4a72-8d5d-2706af485f47", accessedAt: "2026-08-31T11:00:00+03:00" }] },
+    h2h: { summary: "This is the first meeting between the clubs; no historical H2H series exists to publish.", sources: [{ name: "Mackolik", url: "https://www.mackolik.com/futbol/haber/besiktas-corum-fk-muhtemel-11ler/4a374fca-adf2-4a72-8d5d-2706af485f47", accessedAt: "2026-08-31T11:00:00+03:00" }] }
   }
 };

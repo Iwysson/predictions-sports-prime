@@ -13,4 +13,15 @@ export const osasunaVsGetafe: EditorialPrediction = {
     { name: "AS — Osasuna vs Getafe lineups", url: "https://as.com/resultados/futbol/primera/2026_2027/directo/regular_a_3_6a4496c62a74574/alineaciones/", description: "Projected elevens and kickoff cross-check.", accessedAt: "2026-08-30T22:45:00+02:00" },
     { name: "LaLiga — Matchday 3", url: "https://www.laliga.com/laliga-easports/resultados/2026-27/jornada-3", description: "Official calendar and round verification.", accessedAt: "2026-08-30T22:45:00+02:00" },
   ], published: true,
+  matchSeo: {
+    information: { city: "Pamplona", country: "Spain", timezone: "Europe/Madrid", sources: [{ name: "LaLiga", url: "https://www.laliga.com/laliga-easports/resultados/2026-27/jornada-3", accessedAt: "2026-08-31T10:00:00+02:00" }] },
+    lineups: {
+      status: "expected",
+      home: { formation: "4-4-2", players: ["Sergio Herrera", "Inigo Arguibide", "Jorge Herrando", "Alejandro Catena", "Abel Bretones", "Ruben Garcia", "Iker Munoz", "Jon Moncayola", "Victor Munoz", "Aimar Oroz", "Ante Budimir"] },
+      away: { formation: "4-4-2", players: ["David Soria", "Kiko Femenia", "Djene", "Zaid Romero", "Johan Mojica", "Orel Mangala", "Francho Serrano", "Andres Garcia", "Ramon Terrats", "Martin Satriano", "Enes Unal"] },
+      sources: [{ name: "AS", url: "https://as.com/futbol/alineacion-posible-de-osasuna-contra-el-getafe-en-laliga-ea-sports-f202608-n/", accessedAt: "2026-08-31T10:00:00+02:00" }, { name: "Cadena SER", url: "https://cadenaser.com/nacional/2026/08/26/laliga-fantasy-alineaciones-probables-de-los-partidos-de-la-jornada-3-de-laliga-ea-sports-cadena-ser/", accessedAt: "2026-08-31T10:00:00+02:00", note: "Independent projected-XI cross-check" }],
+    },
+    availability: { entries: [{ team: "home", player: "Valentin Rosier", status: "injured", detail: "recovering from a right biceps-femoris injury" }], sources: [{ name: "CA Osasuna", url: "https://www.osasuna.es/entrenamiento-30-08-2026", accessedAt: "2026-08-31T10:00:00+02:00" }] },
+    teamNews: { entries: [{ team: "home", text: "Ramis confirmed that changes were possible after the Thursday match." }, { team: "away", text: "Getafe enter after a Thursday European trip; the final official sheet remains decisive." }], sources: [{ name: "CA Osasuna", url: "https://www.osasuna.es/osasuna-getafe-rueda-prensa-ramis-30-08-2026", accessedAt: "2026-08-31T10:00:00+02:00" }] },
+  },
 };

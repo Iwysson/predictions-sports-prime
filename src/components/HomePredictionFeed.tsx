@@ -1,9 +1,7 @@
-"use client";
-
-import { useEffect, useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { MatchPreview } from "@/types";
-import { MatchCard } from "@/components/MatchCard";
+import { HomeMatchCard } from "@/components/HomeMatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { leagues } from "@/data/leagues";
 import {
@@ -16,7 +14,6 @@ import {
   selectLatestPublishedPredictions,
   validateHomePredictionSelection,
 } from "@/lib/match-feed";
-import { useI18n } from "@/i18n/I18nProvider";
 import { getMatchDisplayTime } from "@/lib/match-time";
 import { evaluatePredictionSettlement } from "@/lib/prediction-results";
 
@@ -27,12 +24,7 @@ export function HomePredictionFeed({
   matches: MatchPreview[];
   beforeHistory?: ReactNode;
 }) {
-  const { t } = useI18n();
-  const [now, setNow] = useState(() => new Date());
-  useEffect(() => {
-    const timer = window.setInterval(() => setNow(new Date()), 30_000);
-    return () => window.clearInterval(timer);
-  }, []);
+  const now = new Date();
   const today = localTodayISO(now);
   const tomorrow = localTomorrowISO(today);
   const todayMatches = filterTodaysPublishedPredictions(matches, today, now);
@@ -67,8 +59,8 @@ export function HomePredictionFeed({
         <div className="container home-today-layout">
           <aside className="home-leagues-sidebar" aria-label="Prediction leagues">
             <div className="home-leagues-sidebar__heading">
-              <span className="eyebrow">{t("competitions")}</span>
-              <h2>{t("topLeagues")}</h2>
+              <span className="eyebrow">Competitions</span>
+              <h2>Top Prediction Leagues</h2>
             </div>
 
             <div className="home-leagues-sidebar__list">
@@ -87,7 +79,7 @@ export function HomePredictionFeed({
                 <span className="section-icon" aria-hidden="true">✓</span>
 
                 <div>
-                  <span className="eyebrow">{t("today")}</span>
+                  <span className="eyebrow">Today</span>
 
                   <div className="today-title-row">
                     <h2>Today&apos;s Football Predictions</h2>
@@ -107,15 +99,15 @@ export function HomePredictionFeed({
             {todayMatches.length > 0 ? (
               <div className="match-grid match-grid--compact">
                 {todayMatches.map((match) => (
-                  <MatchCard key={match.id} match={match} now={now} />
+                  <HomeMatchCard key={match.id} match={match} now={now} />
                 ))}
               </div>
             ) : (
               <div className="empty-state empty-state--compact today-empty-state">
-                <strong>{t("nextPredictionsAvailable")}</strong>
-                <p>{t("upcomingPredictionsPrompt")}</p>
+                <strong>Next predictions available</strong>
+                <p>Explore tomorrow and upcoming match analyses.</p>
                 <a className="today-empty-state__cta" href="#tomorrow">
-                  {t("viewUpcomingPredictions")}
+                  View upcoming predictions
                 </a>
               </div>
             )}
@@ -143,7 +135,7 @@ export function HomePredictionFeed({
 
             {tomorrowMatches.length > 0 ? <div className="match-grid match-grid--compact">
               {tomorrowMatches.map((match) => (
-                <MatchCard key={match.id} match={match} />
+                <HomeMatchCard key={match.id} match={match} now={now} />
               ))}
             </div> : (
               <div className="empty-state empty-state--compact">
@@ -162,7 +154,7 @@ export function HomePredictionFeed({
               <span className="section-icon">↗</span>
 
               <div>
-                <span className="eyebrow">{t("upcoming")}</span>
+                <span className="eyebrow">Upcoming</span>
                 <h2>Upcoming Football Predictions</h2>
               </div>
             </div>
@@ -198,7 +190,7 @@ export function HomePredictionFeed({
                       <strong>
                         {match.homeTeam} vs {match.awayTeam}
                       </strong>
-                      <span>{["postponed", "canceled"].includes(match.fixtureStatus ?? "") ? match.fixtureStatus!.toUpperCase() : t("predictionAvailable")}</span>
+                      <span>{["postponed", "canceled"].includes(match.fixtureStatus ?? "") ? match.fixtureStatus!.toUpperCase() : "Prediction available"}</span>
                     </div>
 
                     <div className="latest-date">
@@ -213,7 +205,7 @@ export function HomePredictionFeed({
             </div>
           ) : (
             <div className="empty-state empty-state--compact">
-              <strong>{t("noUpcomingPredictions")}</strong>
+              <strong>No upcoming predictions available.</strong>
             </div>
           )}
         </div>
