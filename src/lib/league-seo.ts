@@ -14,6 +14,7 @@ const leagueSearchAliases: Partial<Record<LeagueConfig["slug"], readonly string[
   "brasileirao-serie-a": ["Brasileirão", "Campeonato Brasileiro Série A"],
   "copa-do-brasil": ["Brazil Cup", "Copa Betano do Brasil"],
   "efl-cup": ["Carabao Cup", "League Cup"],
+  championship: ["Championship", "English Championship", "Sky Bet Championship"],
   "super-lig": ["Turkish Super Lig", "Trendyol Süper Lig", "Türkiye Süper Lig"],
   "scottish-premiership": ["Scotland Premiership", "SPFL Premiership", "William Hill Premiership"],
 };

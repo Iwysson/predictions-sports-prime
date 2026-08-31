@@ -26,6 +26,7 @@ const competitionFallbackTimezones: Record<LeagueSlug, string> = {
   "brasileirao-serie-a": "America/Sao_Paulo",
   "copa-do-brasil": "America/Sao_Paulo",
   "efl-cup": "Europe/London",
+  championship: "Europe/London",
   "super-lig": "Europe/Istanbul",
   "scottish-premiership": "Europe/London",
 };

@@ -8,6 +8,7 @@ import { eredivisiePredictions } from "./eredivisie";
 import { brasileiraoSerieAPredictions } from "./brasileirao-serie-a";
 import { copaDoBrasilPredictions } from "./copa-do-brasil";
 import { eflCupPredictions } from "./efl-cup";
+import { championshipPredictions } from "./championship";
 import { superLigPredictions } from "./super-lig";
 import { scottishPremiershipPredictions } from "./scottish-premiership";
 
@@ -22,6 +23,7 @@ export const editorialPredictions = [
   ...brasileiraoSerieAPredictions,
   ...copaDoBrasilPredictions,
   ...eflCupPredictions,
+  ...championshipPredictions,
   ...superLigPredictions,
   ...scottishPremiershipPredictions,
 ];

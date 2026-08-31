@@ -199,6 +199,7 @@ export const standingsByLeague: Record<LeagueSlug, StandingRow[]> = {
   "brasileirao-serie-a": [],
   "copa-do-brasil": [],
   "efl-cup": [],
+  championship: [],
   "super-lig": [
     { position: 1, team: "Gençlerbirliği", played: 2, wins: 2, draws: 0, losses: 0, goalsFor: 3, goalsAgainst: 1, goalDifference: 2, points: 6, zone: "champions" },
     { position: 2, team: "Galatasaray", played: 2, wins: 1, draws: 1, losses: 0, goalsFor: 6, goalsAgainst: 2, goalDifference: 4, points: 4, zone: "champions" },

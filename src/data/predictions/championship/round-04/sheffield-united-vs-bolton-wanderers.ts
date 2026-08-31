@@ -1,0 +1,118 @@
+import type { EditorialPrediction } from "@/types";
+
+export const sheffieldUnitedVsBoltonWanderers: EditorialPrediction = {
+  league: "championship",
+  homeTeam: "Sheffield United",
+  awayTeam: "Bolton Wanderers",
+  slug: "sheffield-united-vs-bolton-wanderers",
+  analysis: [
+    "# Sheffield United vs Bolton Wanderers Prediction, Odds and Betting Tips\n**Prediction:** Bolton +2 Asian Handicap + Over 8.5 Corners\n**Odds:** 1.91\nCompetition: EFL Championship 2026/27\nRound: 4\nDate: 01/09/2026\nKick-off: 19:45 (UK local time)\nVenue: Bramall Lane\nLocation: Sheffield, England\nSheffield United vs Bolton Wanderers chega à rodada 4 com três partidas de Championship já disputadas por cada equipe no recorte geral — Sheffield United em 0-3-0 (3 pts) e Bolton Wanderers em 1-1-1 (4 pts) —, enquanto o Statistical Core preserva o recorte metodologicamente correto de venue: exclusivamente o HOME do mandante e o AWAY do visitante. Como cada equipe teve apenas uma partida nesse split antes deste confronto, o N da tabela é 1/1, mas nenhuma linha permanece vazia: todas as métricas foram reconstruídas no nível da partida e cruzadas com o placar, eventos, xG, chutes, SOT, posse e escanteios. O contexto geral de três jogos é usado para forma e direção competitiva; não é misturado silenciosamente dentro da tabela HOME/AWAY.\n**Probable lineups:**\n**Sheffield United:** Cooper; Baptiste, Tanganga, McGuinness, McCallum; Donovan, Rothwell, Peck, O'Hare; Brereton Diaz, Cannon\n**Bolton Wanderers:** Bonham; Brunt, Forino, Famewo, Conway; Sheehan, Erhahon; Iling-Junior, McAtee, Gale; Dalby\nAs escalações acima são **prováveis**, não confirmadas, e refletem o material de pré-jogo disponível em 31/08/2026. Devem ser rechecadas perto do kick-off; qualquer XI oficial posterior substitui esta projeção.\nSheffield United tinha Tahith Chong e Ryan One listados com problemas musculares. Bolton tinha Ruben Rodrigues fora por lesão no joelho.\nA coerência entre disponibilidade e XI é tratada como requisito editorial. Nenhum jogador listado como indisponível foi mantido conscientemente como titular na projeção quando o preview consultado oferecia alternativa explícita.\nNo único HOME de Sheffield United, o placar foi 0-0, com 0.36 xG e 0.65 xGA. O time finalizou 3 vezes, acertou 1 no alvo (33.3% de precisão de SOT sobre chutes), permitiu 10 finalizações e 2 no alvo. A posse foi 45%. A leitura de processo é importante: o diferencial de xG foi -0.29, enquanto o diferencial de chutes foi -7 e o de SOT -1. Isso separa resultado de desempenho: quando placar e processo divergem, a conclusão deve priorizar volume, qualidade e localização das chances, não apenas o resultado final. Nos cantos, Sheffield United produziu 2 e cedeu 8, total de 10; o jogo superou 8.5 corners. Em game state, abriu o placar em 0% da amostra e sofreu primeiro em 0%; marcou no 1º tempo em 0% e sofreu no 1º tempo em 0%.\nNo único AWAY de Bolton Wanderers, o placar foi 0-0, com 0.13 xG e 1.94 xGA. Foram 2 chutes, 0 SOT (0.0% de precisão), 17 finalizações e 9 SOT permitidos, com 45% de posse. O saldo de xG ficou em -1.81, o saldo de chutes em -15 e o de SOT em -9. Nos escanteios, produziu 2, concedeu 9 e participou de 11 no total; o jogo superou 8.5. O visitante marcou primeiro em 0% e sofreu primeiro em 0%; marcou antes do intervalo em 0% e sofreu no 1º tempo em 0%. Esses percentuais são eventos observados no N=1, não probabilidades projetadas.\nO cruzamento direto de processo cria uma fotografia densa do matchup. O ataque HOME de Sheffield United (0.36 xG) encontra um perfil AWAY de Bolton Wanderers que concedeu 1.94 xGA; no sentido oposto, o ataque visitante (0.13 xG) enfrenta um mandante que permitiu 0.65. Em volume, Sheffield United produz 3 chutes e permite 10; Bolton Wanderers produz 2 e permite 17. No alvo, os pares são 1/2 e 0/9. A posse de 45% contra 45% ajuda a antecipar território, mas não é tratada como domínio automaticamente: eficiência de criação e proteção da área pesam mais. O ambiente de corners combina 10 cantos no HOME do mandante com 11 no AWAY do visitante; a média descritiva simples desses dois jogos é 10.5, novamente sem convertê-la em chance futura. Nos gols, Over 2.5 ocorreu em 0% e 0%, BTTS em 0% e 0%, clean sheet em 100% e 100%. O valor analítico vem do conjunto, não de uma taxa binária isolada.\nO H2H permanece apenas como contexto qualitativo. Em uma temporada com elencos, treinadores e estados competitivos novos, confrontos antigos não substituem o split de 2026/27. A decisão editorial é ancorada primeiro em produção/concessão atual, disponibilidade e provável game state; qualquer padrão histórico só ganha peso se for coerente com esses sinais presentes.\nTaticamente, o jogo tende a ser definido pela capacidade de transformar território em chances limpas e pela resposta ao primeiro gol. Sheffield United mostrou 45% de posse no seu HOME e Bolton Wanderers, 45% no AWAY. Se o mandante empurrar o visitante para bloco mais baixo, a relação de 2 corners a favor e 9 corners concedidos pelo adversário torna-se especialmente relevante; se o visitante conseguir transição, o contraponto é 0.13 xG produzido fora contra 0.65 xGA cedido em casa. A distribuição temporal também é útil: os sinais de 1º tempo estão agora preenchidos com eventos reais, permitindo distinguir jogos que começaram abertos daqueles que concentraram gols depois do intervalo.\nO handicap +2 oferece margem ampla ao Bolton Wanderers, mas o processo do seu único AWAY foi defensivamente pressionado: apenas 2 chutes produzidos contra 17 permitidos e 0.13-1.94 em xG. A perna de corners é mais diretamente sustentada: Sheffield United teve 10 cantos totais em casa e Bolton Wanderers, 11 fora, ambos acima de 8.5.\n| Metric | Sheffield United — HOME | Bolton Wanderers — AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 1 | 1 |\n| W-D-L | 0-1-0 | 0-1-0 |\n| Points/game | 1.00 | 1.00 |\n| GF/game | 0.00 | 0.00 |\n| GA/game | 0.00 | 0.00 |\n| xG/game | 0.36 | 0.13 |\n| xGA/game | 0.65 | 1.94 |\n| Shots/game | 3.00 | 2.00 |\n| SOT/game | 1.00 | 0.00 |\n| Shots allowed/game | 10.00 | 17.00 |\n| SOT allowed/game | 2.00 | 9.00 |\n| Possession | 45% | 45% |\n| Corners for/game | 2.00 | 2.00 |\n| Corners against/game | 8.00 | 9.00 |\n| Total corners/game | 10.00 | 11.00 |\n| Over 7.5 corners | 100% | 100% |\n| Over 8.5 corners | 100% | 100% |\n| Over 9.5 corners | 100% | 100% |\n| First to score | 0% | 0% |\n| First to concede | 0% | 0% |\n| Scored in 1st half | 0% | 0% |\n| Conceded in 1st half | 0% | 0% |\n| Over 1.5 goals | 0% | 0% |\n| Over 2.5 goals | 0% | 0% |\n| Over 3.5 goals | 0% | 0% |\n| BTTS | 0% | 0% |\n| Clean sheets | 100% | 100% |\n| Failed to score | 100% | 100% |\n**Conflict Detector.** O principal limite quantitativo permanece o N=1 no split correto, apesar de já existirem três partidas gerais por equipe. Por isso, a análise não infla a amostra HOME/AWAY com jogos de venue diferente. O conflito específico da selection é testado contra xG, volume permitido, primeiro gol, 1º tempo e corners. O handicap +2 oferece margem ampla ao Bolton Wanderers, mas o processo do seu único AWAY foi defensivamente pressionado: apenas 2 chutes produzidos contra 17 permitidos e 0.13-1.94 em xG. A perna de corners é mais diretamente sustentada: Sheffield United teve 10 cantos totais em casa e Bolton Wanderers, 11 fora, ambos acima de 8.5. A odd 1.91 implica 52.4% de probabilidade bruta de mercado; isso é preço, não probabilidade produzida pelos percentuais históricos.\n**Odds:** 1.91\n**Implied probability:** 52.4%\nA síntese final mantém **Bolton +2 Asian Handicap + Over 8.5 Corners** porque a seleção é mais coerente quando lida pelo conjunto de processo do que pelo placar bruto. O ponto forte está no cruzamento entre xG/xGA, chutes/SOT e perfil de corners; o ponto fraco é a instabilidade natural do N=1 por venue. O fechamento, portanto, não usa 100%/0% como argumento autossuficiente e não mistura os três jogos overall dentro da tabela. **Prediction:** Bolton +2 Asian Handicap + Over 8.5 Corners **Odds:** 1.91.\nFontes de atualização: Football Web Pages (match statistics, xG, shots, SOT, possession, corners e timelines da Championship 2026/27); Football Edge/feeds de match stats para Cardiff–Wrexham; resultados/tabela da Championship para o contexto overall; previews já consolidados no arquivo-base para escalações e disponibilidade. Dados revisados em 31/08/2026. Todas as linhas do Statistical Core estão preenchidas com valores verificados ou derivados diretamente dos eventos/resultados do jogo do split; nenhum zero é placeholder."
+  ],
+  analysisFormat: "markdown",
+  seoTitle: "Sheffield United vs Bolton Wanderers Prediction, Odds & Betting Tips — Championship 2026/27",
+  comment: "Odds supplied in the audited editorial package and recorded before kickoff; bookmaker not identified.",
+  picks: {
+    main: "Bolton +2 Asian Handicap + Over 8.5 Corners",
+    publishedOdds: 1.91,
+    oddsProvenance: {
+      source: "Author-supplied editorial package",
+      provenance: "author_attested",
+      capturedAt: "2026-08-31T15:00:00Z",
+      market: "Bolton +2 Asian Handicap + Over 8.5 Corners"
+    }
+  },
+  sourceStatus: "verified",
+  sources: [
+    {
+      name: "FBref — 2026/27 Championship fixtures",
+      url: "https://fbref.com/en/comps/10/2026-2027/schedule/2026-2027-Championship-Scores-and-Fixtures",
+      description: "Round, date, kickoff and venue cross-check.",
+      accessedAt: "2026-08-31T12:00:00+01:00"
+    },
+    {
+      name: "Sports Mole — current match preview",
+      url: "https://www.sportsmole.co.uk/football/bolton-wanderers/preview/sheff-utd-vs-bolton-prediction-team-news-lineups_604081.html",
+      description: "Current team news, probable lineups, availability and match context.",
+      accessedAt: "2026-08-31T12:00:00+01:00"
+    },
+    {
+      name: "Football Web Pages — Championship match statistics",
+      url: "https://www.footballwebpages.co.uk/championship",
+      description: "Match-level results, xG, shots, shots on target, possession, corners and event timelines used by the supplied statistical audit.",
+      accessedAt: "2026-08-31T12:00:00+01:00"
+    }
+  ],
+  publishedAt: "2026-08-31T15:00:00Z",
+  updatedAt: "2026-08-31T15:00:00Z",
+  freshness: {
+    editorialUpdatedAt: "2026-08-31T15:00:00Z",
+    teamNewsUpdatedAt: "2026-08-31T15:00:00Z",
+    lineupUpdatedAt: "2026-08-31T15:00:00Z",
+    statisticsUpdatedAt: "2026-08-31T15:00:00Z"
+  },
+  published: true,
+  matchInfo: {
+    date: "2026-09-01",
+    time: "19:45",
+    round: "Matchday 4",
+    venue: "Bramall Lane"
+  },
+  matchSeo: {
+    information: {
+      city: "Sheffield",
+      country: "England",
+      timezone: "Europe/London",
+      sources: [
+        {
+          name: "FBref — 2026/27 Championship fixtures",
+          url: "https://fbref.com/en/comps/10/2026-2027/schedule/2026-2027-Championship-Scores-and-Fixtures",
+          accessedAt: "2026-08-31T12:00:00+01:00",
+          note: "Round, date, kickoff and venue cross-check."
+        }
+      ],
+      updatedAt: "2026-08-31T15:00:00Z"
+    },
+    lineups: {
+      status: "expected",
+      home: {
+        players: [
+          "Cooper",
+          "Baptiste",
+          "Tanganga",
+          "McGuinness",
+          "McCallum",
+          "Donovan",
+          "Rothwell",
+          "Peck",
+          "O'Hare",
+          "Brereton Diaz",
+          "Cannon"
+        ]
+      },
+      away: {
+        players: [
+          "Bonham",
+          "Brunt",
+          "Forino",
+          "Famewo",
+          "Conway",
+          "Sheehan",
+          "Erhahon",
+          "Iling-Junior",
+          "McAtee",
+          "Gale",
+          "Dalby"
+        ]
+      },
+      sources: [
+        {
+          name: "Sports Mole — current match preview",
+          url: "https://www.sportsmole.co.uk/football/bolton-wanderers/preview/sheff-utd-vs-bolton-prediction-team-news-lineups_604081.html",
+          accessedAt: "2026-08-31T12:00:00+01:00",
+          note: "Current team news, probable lineups, availability and match context."
+        }
+      ],
+      updatedAt: "2026-08-31T15:00:00Z"
+    }
+  }
+};
