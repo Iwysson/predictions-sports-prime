@@ -33,6 +33,7 @@ const graphicalLeagueAssets: Partial<
   eredivisie: { src: "/league-badges/eredivisie.png", sourceUrl: "https://eredivisie.b-cdn.net/production/VLED-SOCIAL-ICON.png" },
   "copa-do-brasil": { src: "/league-badges/copa-do-brasil.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/h38dax1582151151.png" },
   "efl-cup": { src: "/league-badges/efl-cup.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/x1va771565372556.png" },
+  championship: { src: "/league-badges/championship.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/ty5a681688770169.png" },
   "super-lig": { src: "/league-badges/super-lig.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/dikktz1785779891.png" },
   "scottish-premiership": { src: "/league-badges/scottish-premiership.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/72d3zc1688333496.png", needsDarkBackground: true },
 };
