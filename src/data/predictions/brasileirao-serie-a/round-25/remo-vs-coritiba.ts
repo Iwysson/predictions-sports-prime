@@ -5,13 +5,8 @@ export const remoVsCoritiba: EditorialPrediction = {
   homeTeam: "Remo",
   awayTeam: "Coritiba",
 
-  analysis: [
-    "Coritiba arrive in the stronger league position and with the better immediate result. Their 2-1 victory over Corinthians moved them to 34 points, while Remo remain inside the relegation zone on 23 after losing 2-1 to Fluminense.",
-    "The 11-point gap matters, but the selection is deliberately protected because playing in Belém is not a simple away assignment. Remo’s need for points should make them aggressive at home, so demanding a Coritiba victory would expose us to more risk than necessary.",
-    "X2 gives us two routes: Coritiba can win, or they can manage the match well enough to leave with a draw. Their current position allows them to play with more patience than Remo, who are under greater pressure to chase results.",
-    "Coritiba’s latest win also showed they can remain efficient in a competitive game without needing overwhelming possession. That profile travels well for a double-chance selection: stay organized, avoid giving away cheap transitions and use the opponent’s urgency to create opportunities.",
-    "At 1.65, the draw protection is valuable. We are backing the stronger current campaign without underestimating Remo’s home environment.",
-  ],
+  analysis: ["# Remo vs Coritiba — Brasileirao Serie A 2026 Match Analysis\n🎯 **Prediction: Coritiba or Draw (X2)**\n💰 **Odds: 1.65**\n**Brasileirao — Matchday 25 | August 31, 2026 — 8:00 PM local time | Mangueirao, Belem**\n\nThe **Remo vs Coritiba prediction** uses a full 24-match league sample rather than a short opening-season snapshot. Remo start the round 18th with 23 points from five wins, eight draws and 11 defeats. Coritiba are eighth with 34 points, creating an 11-point gap. X2 backs the stronger campaign while retaining the draw in a difficult away environment.\n\nImmediate form points in the same direction. Remo lost 2-1 at Fluminense after drawing 1-1 at Internacional, while Coritiba beat Corinthians 2-1 in their latest league game. Remo have conceded 31 goals in 24 matches, or 1.29 per game. Their latest loss was not an attacking no-show, but the repeated need to recover points increases exposure when they commit numbers forward.\n\nThe reverse league fixture ended Coritiba 1-0 Remo. The last three meetings across Serie A and Serie B are balanced at one win each and one draw, so the H2H does not justify treating an away win as automatic. It does, however, mean Coritiba avoided defeat in two of those three, consistent with the protection built into X2.\n\nPersonnel changes matter. Remo's Jaja is reported out with an ankle problem. Coritiba travelled without Josue, while Thiago Santos is suspended and Brian Ocampo, Tinga and Lucas Ronier are also listed unavailable. Those absences reduce confidence in an aggressive away-win position and reinforce the logic of retaining the draw.\n\nBoth projected teams use a 4-2-3-1. Remo can press with home support and attack through Yago Pikachu, Vitor Bueno and Alef Manga behind Gabriel Taliari. Coritiba's route is to stay compact through the first pressure, then release Lavega and Breno Lopes around Pedro Rocha. If Remo chase too early, the visitors should find transition space; if Coritiba protect their shape, a low-margin draw remains useful to the selection.\n\n### Statistical Core\n\n| Metric | Remo | Coritiba |\n|---|---:|---:|\n| League matches | 24 | 24 |\n| Points | 23 | 34 |\n| Position before kickoff | 18th | 8th |\n| W-D-L | 5-8-11 | — |\n| Goals conceded | 31 | — |\n| GA/game | 1.29 | — |\n| Latest league result | Lost 1-2 at Fluminense | Won 2-1 vs Corinthians |\n| Reverse fixture | Lost 0-1 | Won 1-0 |\n\n**Conflict Detector.** The table and reverse fixture support Coritiba, but Belem travel, Remo's urgency and Coritiba's absences prevent a high-confidence away-win claim. The clubs split the last three H2Hs evenly when the draw is included. The clearest losing route is a Remo home win driven by early pressure or a Coritiba error; X2 intentionally protects against a level match.\n\nAt 1.65, the **raw implied probability / price-derived threshold** is approximately **60.6%** before bookmaker margin. This is not a model probability.\n\n🎯 **Prediction: Coritiba or Draw (X2)**\n💰 **Odds: 1.65**"],
+  analysisFormat: "markdown",
 
   picks: {
     main: "Coritiba or Draw (X2)",
@@ -32,8 +27,10 @@ export const remoVsCoritiba: EditorialPrediction = {
   },
 
   publishedAt: "2026-08-25T06:17:27-03:00",
+  updatedAt: "2026-08-31T08:50:13.800Z",
   sourceStatus: "verified",
   sources: [
+    { name: "Sports Mole - Remo vs Coritiba preview", url: "https://www.sportsmole.co.uk/football/remo/preview/remo-vs-coritiba-prediction-team-news-lineups_604100.html", description: "Current standings, 24-match records, latest results and match context.", accessedAt: "2026-08-31T12:00:00-03:00" },
     {
       name: "CBF — Brasileirão 2026 Matchdays 25 and 26",
       url: "https://www.cbf.com.br/futebol-brasileiro/noticias/campeonato-brasileiro-serie-a/a/cbf-detalha-rodadas-25-e-26-do-brasileirao-betano",

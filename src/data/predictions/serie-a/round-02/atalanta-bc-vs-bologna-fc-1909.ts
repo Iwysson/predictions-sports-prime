@@ -12,7 +12,7 @@ export const atalantaBcVsBolognaFc1909: EditorialPrediction = {
     { name: "OpenFootball — Serie A 2026/27 fixtures", url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt", description: "Fixture verification.", accessedAt: "2026-08-30T22:45:00+02:00" },
   ],
   publishedAt: "2026-08-24T17:38:36.651Z",
-  updatedAt: "2026-08-30T22:45:00+02:00", published: true,
+  updatedAt: "2026-08-31T08:50:09.994Z", published: true,
   matchInfo: { date: "2026-08-31", time: "20:45", round: "Matchday 2", venue: "New Balance Arena" },
   matchSeo: {
     information: { city: "Bergamo", country: "Italy", timezone: "Europe/Rome", sources: [{ name: "OpenFootball — Serie A fixtures", url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt", accessedAt: "2026-08-30T22:45:00+02:00" }] },

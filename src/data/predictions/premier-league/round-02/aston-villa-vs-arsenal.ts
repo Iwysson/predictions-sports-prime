@@ -11,7 +11,8 @@ export const astonVillaVsArsenal: EditorialPrediction = {
   picks: { main: "Over 2.5 Goals", publishedOdds: 1.82, oddsProvenance: { source: "Author-supplied editorial package", provenance: "author_attested", market: "Over 2.5 Goals" } },
   sourceStatus: "verified",
   sources: [{ name: "Official competition and club fixture sources", url: "https://www.premierleague.com/", description: "Fixture, current results and competition context.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "Independent current preview and match reporting", url: "https://www.sportsmole.co.uk/football/arsenal/preview/aston-villa-vs-arsenal-prediction-team-news-lineups_603999.html", description: "Recent results, lineups, availability and H2H cross-check.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "xGscore — Brighton vs Aston Villa", url: "https://xgscore.io/epl/brighton-aston-villa/xg-statistics", description: "Opening-match xG, shots, SOT, possession and corners for Aston Villa and Brighton.", accessedAt: "2026-08-30T23:30:00+01:00" }, { name: "xG Stat — Arsenal vs Coventry", url: "https://www.xgstat.com/competitions/premier-league/2026-2027/matches/arsenal-coventry-city-2026-08-21", description: "Opening-match xG, shots, SOT, possession and corners for Arsenal and Coventry.", accessedAt: "2026-08-30T23:30:00+01:00" }],
-  publishedAt: "2026-08-24T17:38:36.651Z", published: true,
+  publishedAt: "2026-08-24T17:38:36.651Z",
+  updatedAt: "2026-08-31T08:50:10.898Z", published: true,
   matchInfo: { date: "2026-08-31", time: "20:00", round: "Matchday 2", venue: "Villa Park" },
   matchSeo: {
     information: { city: "Birmingham", country: "England", timezone: "Europe/London", sources: [{ name: "Premier League", url: "https://www.premierleague.com/", accessedAt: "2026-08-30T21:30:00+01:00" }] },

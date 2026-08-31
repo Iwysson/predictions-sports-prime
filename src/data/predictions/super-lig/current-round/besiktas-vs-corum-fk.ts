@@ -4,13 +4,8 @@ export const besiktasVsCorumFk: EditorialPrediction = {
   league: "super-lig",
   homeTeam: "Beşiktaş",
   awayTeam: "Çorum FK",
-  analysis: [
-    "Beşiktaş arrive with a strong recent profile, recording six wins in a seven-match competitive sample while conceding only one goal. Their defensive control gives them a solid platform to win, while the attacking numbers support adding Over 1.5.",
-    "Recent data puts Beşiktaş around 20 shots per match and more than five on target, with possession close to the 60% region. Çorum, meanwhile, have faced heavy attacking volume in their opening Süper Lig matches, including more than 20 shots per game in the available sample.",
-    "The market also supports the combination. Beşiktaş are around 1.45 to win, while Over 1.5 is approximately 1.28 individually. We are effectively combining two heavily favored outcomes to reach a more attractive 1.75.",
-    "Çorum have already shown they can score, drawing 2-2 away to Galatasaray, but that does not hurt this bet. A 2-1 Beşiktaş win works just as well as 2-0.",
-    "With Beşiktaş's recent consistency, home advantage and superior attacking volume, a home win with at least two total goals is well supported."
-  ],
+  analysis: ["# Besiktas vs Corum FK — Super Lig 2026/27 Match Analysis\n🎯 **Prediction: Besiktas to Win + Over 1.5 Goals**\n💰 **Odds: 1.75**\n**Turkish Super Lig — Matchday 3 | August 31, 2026 — 9:30 PM local time | Tupras Stadium, Istanbul**\n\nThe **Besiktas vs Corum FK prediction** requires a home win and at least two total goals. Both teams have only two league matches in the 2026/27 sample, so current averages are useful as observations rather than mature rates. Besiktas won their opener before losing 1-0 at Alanyaspor; promoted Corum opened with a 2-2 draw at Galatasaray and then played their second round.\n\nCorum's 2-2 away draw is important to both sides of the pick. It shows the newcomer can score in an elite away environment, which helps Over 1.5 but warns against treating the home win as automatic. Besiktas must respond to a match in which they failed to score. The selection can land through 2-0, 2-1 or any larger home win, but not through a controlled 1-0.\n\nThe wider competitive sample gives Besiktas the stronger platform: six wins in seven matches with only one goal conceded before the latest league defeat. Their recent attacking process was reported around 20 shots per match, more than five on target and possession near 60%. Corum faced more than 20 attempts per game in the small opening sample. These figures mix competitions and provider windows, so they are not labelled as clean Super Lig season averages.\n\nThere is no H2H series: this is the clubs' first meeting. That removes one commonly used reference point and increases the importance of current role and game state. Besiktas are projected with Cerny, Olaitan, Orkun Kokcu and Trossard behind Vlahovic. Corum's Alexandros Kyziridis is suspended after an opening-round red card, reducing the visitors' options.\n\nBesiktas should seek sustained territory, counter-pressing and repeated box occupation. Corum can still threaten the space behind advanced full-backs, as their Galatasaray result demonstrated. An early home goal is the strongest route because it makes Corum open up and creates the second-goal requirement naturally. A long 0-0 increases pressure and leaves the 1-0 trap in play.\n\n### Statistical Core\n\n| Metric | Besiktas | Corum FK |\n|---|---:|---:|\n| 2026/27 league matches | 2 | 2 |\n| Latest league result | Lost 0-1 at Alanyaspor | — |\n| Corum opening away result | — | Drew 2-2 at Galatasaray |\n| Wider competitive wins | 6 in 7 | — |\n| Reported shots/game, recent sample | about 20 | faced 20+ |\n| Reported SOT/game | 5+ | — |\n| Reported possession | about 60% | — |\n| Senior H2H | First meeting | First meeting |\n\n**Conflict Detector.** Home quality, attacking volume and Corum's defensive workload support Besiktas, but the visitors already earned a 2-2 draw at Galatasaray and Besiktas come from a scoreless defeat. The current league sample is only two matches each, while the larger Besiktas form window mixes competitions. A draw, away win or 1-0 home result defeats the combination.\n\nAt 1.75, the **raw implied probability / price-derived threshold** is approximately **57.1%** before bookmaker margin. This is not a model probability, and the home-win and goals legs are correlated.\n\n🎯 **Prediction: Besiktas to Win + Over 1.5 Goals**\n💰 **Odds: 1.75**"],
+  analysisFormat: "markdown",
   comment: "Odds supplied in the editorial package and recorded before kickoff; bookmaker not identified in the source file.",
   picks: {
     main: "Beşiktaş to Win + Over 1.5 Goals",
@@ -23,6 +18,7 @@ export const besiktasVsCorumFk: EditorialPrediction = {
   },
   sourceStatus: "verified",
   sources: [
+    { name: "Sports Mole - Besiktas vs Corum preview", url: "https://www.sportsmole.co.uk/football/besiktas/preview/besiktas-vs-orum-belediyespor-prediction-team-news-lineups_604027.html", description: "Opening results, recent competitive form and current match context.", accessedAt: "2026-08-31T12:00:00+03:00" },
     {
       name: "Turkish Football Federation — 2026/27 Süper Lig fixtures and table",
       url: "https://www.tff.org/default.aspx?pageID=198",
@@ -32,6 +28,7 @@ export const besiktasVsCorumFk: EditorialPrediction = {
     { name: "Mackolik - Besiktas vs Corum FK", url: "https://www.mackolik.com/futbol/haber/besiktas-corum-fk-muhtemel-11ler/4a374fca-adf2-4a72-8d5d-2706af485f47", description: "Current probable lineups, availability, referee, venue and pre-match Opta context.", accessedAt: "2026-08-31T11:00:00+03:00" }
   ],
   publishedAt: "2026-08-26T11:54:38.899Z",
+  updatedAt: "2026-08-31T08:50:04.567Z",
   published: true,
   matchInfo: {
     date: "2026-08-31",

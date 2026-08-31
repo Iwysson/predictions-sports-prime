@@ -1,4 +1,5 @@
 import { TeamVisual } from "@/types";
+import { generatedTeamBadgeAssets } from "@/data/team-badge-assets.generated";
 
 export type TeamBadgeAsset = { src: string; sourceUrl: string };
 
@@ -36,7 +37,7 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
 };
 
 export function getTeamBadgeAsset(team: string) {
-  return teamBadgeAssets[team];
+  return teamBadgeAssets[team] ?? generatedTeamBadgeAssets[team];
 }
 
 export const teamVisuals: Record<string, TeamVisual> = {

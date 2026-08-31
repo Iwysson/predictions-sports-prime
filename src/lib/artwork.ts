@@ -42,7 +42,7 @@ export async function fetchTeamBadge(team: string): Promise<string | null> {
 
   try {
     const response = await fetchWithTimeout(
-      `https://www.thesportsdb.com/api/v1/json/123/searchteams.php?t=${encodeURIComponent(team)}`
+      `https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=${encodeURIComponent(team)}`
     );
 
     if (!response.ok) {

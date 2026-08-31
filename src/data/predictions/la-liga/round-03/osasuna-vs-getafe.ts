@@ -7,7 +7,7 @@ export const osasunaVsGetafe: EditorialPrediction = {
   picks: { main: "Over 1.5 Goals", publishedOdds: 1.67, oddsProvenance: { source: "Editor-supplied publication price", provenance: "author_attested", market: "Over 1.5 Goals" } },
   matchInfo: { date: "2026-08-31", time: "19:30", round: "Matchday 3", venue: "El Sadar" },
   publishedAt: "2026-08-25T06:17:27-03:00",
-  updatedAt: "2026-08-30T22:45:00+02:00", sourceStatus: "verified",
+  updatedAt: "2026-08-31T08:50:06.781Z", sourceStatus: "verified",
   sources: [
     { name: "CA Osasuna — pre-match press conference", url: "https://www.osasuna.es/osasuna-getafe-rueda-prensa-ramis-30-08-2026", description: "Official fixture, recent result and tactical context.", accessedAt: "2026-08-30T22:45:00+02:00" },
     { name: "AS — Osasuna vs Getafe lineups", url: "https://as.com/resultados/futbol/primera/2026_2027/directo/regular_a_3_6a4496c62a74574/alineaciones/", description: "Projected elevens and kickoff cross-check.", accessedAt: "2026-08-30T22:45:00+02:00" },

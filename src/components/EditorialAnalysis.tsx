@@ -1,7 +1,7 @@
 import { Fragment, type ReactNode } from "react";
 
 function inlineMarkdown(text: string): ReactNode[] {
-  const parts = text.split("**");
+  const parts = text.replace(/\s+\|\s+/g, " · ").split("**");
   return parts.map((part, index) =>
     index % 2 === 1
       ? <strong key={index}>{part}</strong>

@@ -189,8 +189,6 @@ export default async function LeaguePage({
       <section className="section league-content-section">
         <div className="container league-layout">
           <div className="league-main-column">
-            <LeagueEditorialHub leagueName={league.name} publishedMatches={publishedMatches} surface={roundSurface} />
-
             <LeaguePageText matchCount={roundSurface.current?.matches.length ?? 0}>
               <LiveLeagueRounds surface={roundSurface} />
             </LeaguePageText>
@@ -199,6 +197,8 @@ export default async function LeaguePage({
               leagueName={league.name}
               matches={archivedPublishedMatches}
             />
+
+            <LeagueEditorialHub leagueName={league.name} publishedMatches={publishedMatches} surface={roundSurface} />
 
             <div className="league-bottom-ad">
               <AdSlot placement="league-middle" />

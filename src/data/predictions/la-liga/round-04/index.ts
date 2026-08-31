@@ -7,6 +7,7 @@ import { rayoVallecanoVsRacingSantander } from "./rayo-vallecano-vs-racing-santa
 import { villarrealVsDeportivoLaCoruna } from "./villarreal-vs-deportivo-la-coruna";
 import { valenciaVsBarcelona } from "./valencia-vs-barcelona";
 import { deportivoAlavesVsOsasuna } from "./deportivo-alaves-vs-osasuna";
+import { getafeVsCeltaVigo } from "./getafe-vs-celta-vigo";
 
 export const laLigaRound04 = [
   realBetisVsRealMadrid,
@@ -18,4 +19,5 @@ export const laLigaRound04 = [
   villarrealVsDeportivoLaCoruna,
   valenciaVsBarcelona,
   deportivoAlavesVsOsasuna,
+  getafeVsCeltaVigo,
 ];

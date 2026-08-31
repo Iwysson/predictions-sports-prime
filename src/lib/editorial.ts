@@ -10,7 +10,7 @@ import { isValidFinalScore } from "@/lib/fixture-status";
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const KICKOFF_PATTERN = /^(?:[01]\d|2[0-3]):[0-5]\d$/;
-const PLACEHOLDER_PATTERN = /\b(?:lorem ipsum|todo|add analysis|placeholder text|coming soon)\b/i;
+const PLACEHOLDER_PATTERN = /\b(?:lorem ipsum|add analysis|placeholder text|coming soon)\b|(?:\[TODO\]|TODO:)/i;
 const MIN_PUBLISHED_ANALYSIS_CHARACTERS = 300;
 const ISO_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?(?:Z|[+-]\d{2}:\d{2})$/;
 export const SOURCE_POLICY_EFFECTIVE_AT = "2026-08-20T23:59:59-03:00";

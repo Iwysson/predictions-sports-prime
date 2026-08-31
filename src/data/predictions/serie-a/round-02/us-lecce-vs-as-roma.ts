@@ -12,7 +12,7 @@ export const usLecceVsAsRoma: EditorialPrediction = {
     { name: "OpenFootball — Serie A 2026/27 fixtures", url: "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt", description: "Fixture, round and date verification.", accessedAt: "2026-08-30T22:45:00+02:00" },
   ],
   publishedAt: "2026-08-24T17:38:36.651Z",
-  updatedAt: "2026-08-30T22:45:00+02:00", published: true,
+  updatedAt: "2026-08-31T08:50:07.969Z", published: true,
   matchInfo: { date: "2026-08-31", time: "18:30", round: "Matchday 2", venue: "Stadio Via del Mare" },
   matchSeo: {
     information: { city: "Lecce", country: "Italy", timezone: "Europe/Rome", sources: [{ name: "Sky Sport", url: "https://sport.sky.it/calcio/serie-a/2026/08/30/lecce-roma-probabili-formazioni-2-giornata", accessedAt: "2026-08-31T10:00:00+02:00" }] },

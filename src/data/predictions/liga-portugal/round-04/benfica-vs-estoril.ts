@@ -4,12 +4,8 @@ export const benficaVsEstoril: EditorialPrediction = {
   league: "liga-portugal",
   homeTeam: "Benfica",
   awayTeam: "Estoril",
-  analysis: [
-    "Benfica host Estoril in Liga Portugal. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Benfica -2 Asian Handicap.",
-    "The handicap component sets the required scoring margin rather than relying only on the match winner.",
-    "The selection is match-specific because it assigns the relevant protection, scoring line, or winning requirement to Benfica and Estoril exactly as shown. It should be assessed as one complete betting position rather than as a claim that either side is certain to produce a particular performance.",
-    "The main risk is that the match develops outside the selected market conditions. The pick remains a pre-match editorial opinion, not a guarantee, and the supplied odds do not establish the probability of the outcome without a separately documented market capture.",
-  ],
+  analysis: ["# Benfica vs Estoril — Liga Portugal 2026/27 Match Analysis\n🎯 **Prediction: Benfica -2 Asian Handicap**\n💰 **Odds: 1.70**\n**Liga Portugal — Matchday 4 | August 31, 2026 — 8:15 PM local time | Estadio da Luz, Lisbon**\n\nThe **Benfica vs Estoril prediction** asks the home side to win by at least three goals for a full return; a two-goal Benfica win is a push. Benfica have four points from two league matches after drawing 1-1 with Academico Viseu and beating Casa Pia 7-0. Estoril have one point from three rounds. Those current samples are too small for stable averages, so the early-season evidence is separated from the 2025/26 baseline.\n\nBenfica's seven-goal win supplies the clearest current argument for the handicap, but it is one match and should not be treated as a normal scoring expectation. The broader baseline is stronger: Benfica finished the 2025/26 league season with 67 goals scored and 20 conceded in 31 matches, while both league meetings with Estoril ended 3-1. Benfica therefore won both by two goals — enough for a push on -2, but not a full win.\n\nThe historical matchup is one-sided. Benfica's official match centre records 47 wins and 11 draws in 62 meetings, with 161 goals scored and 49 conceded. Estoril have not beaten Benfica in the league since 1950 and have 11 defeats plus one draw in 12 league visits to the current Estadio da Luz this century. History supports home control, although the exact three-goal margin remains a materially harder condition than simply backing Benfica to win.\n\nTactically, Marco Silva has called for a dominant Benfica performance. Estoril coach Vasco Matos highlighted Benfica's aggressive movement and repeated runs against the last defensive line. That matchup can produce sustained home territory, box entries and second-ball pressure. Joao Palhinha is in Benfica's squad, but his starting status was not confirmed at the editorial cutoff; official lineups should still be checked before kickoff.\n\nGame state is decisive. An early Benfica goal keeps the three-goal route open and forces Estoril to leave more space. A long level phase, inefficient finishing or a late Estoril consolation goal all work against the handicap. The two 3-1 meetings last season demonstrate that even clear Benfica superiority can stop exactly on the push margin.\n\n### Statistical Core\n\n| Metric | Benfica | Estoril |\n|---|---:|---:|\n| 2026/27 league matches | 2 | 3 |\n| 2026/27 points | 4 | 1 |\n| Latest Benfica league result | Won 7-0 at Casa Pia | — |\n| Benfica 2025/26 league goals | 67 in 31 | — |\n| 2025/26 H2H | Won 3-1 twice | Lost 1-3 twice |\n| All-time H2H record | 47 wins in 62 | 4 wins in 62 |\n| All-time H2H goals | 161 | 49 |\n| Handicap settlement | 3+ goal win: win; 2-goal win: push | — |\n\n**Conflict Detector.** Benfica's 7-0 result and long-run dominance support a strong home expectation, but neither 2025/26 meeting covered -2: both landed on the push. With only two current league games for Benfica and three for Estoril, no reliable current home/away scoring rate exists. The selection has a plausible ceiling but a demanding winning margin.\n\nAt 1.70, the **raw implied probability / price-derived threshold** is approximately **58.8%** before bookmaker margin. That is a price conversion, not a model probability.\n\n🎯 **Prediction: Benfica -2 Asian Handicap**\n💰 **Odds: 1.70**"],
+  analysisFormat: "markdown",
   picks: {
     main: "Benfica -2 Asian Handicap",
     odds: 1.7,
@@ -23,6 +19,7 @@ export const benficaVsEstoril: EditorialPrediction = {
   },
   sourceStatus: "verified",
   sources: [
+    { name: "SL Benfica - Benfica vs Estoril match centre", url: "https://www.slbenfica.pt/pt-pt/futebol/match-center/benfica-estoril-praia-31-agosto-2026", description: "Official current points, Casa Pia result, 2025/26 meetings and all-time H2H figures.", accessedAt: "2026-08-31T12:00:00+01:00" },
     {
       name: "OpenFootball — Liga Portugal 2026/27 fixtures",
       url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/portugal/2026-27_pt1.txt",
@@ -34,6 +31,7 @@ export const benficaVsEstoril: EditorialPrediction = {
     { name: "A Bola - Estoril press conference", url: "https://www.abola.pt/noticias/benfica-estoril-as-ideias-e-as-novidades-de-vasco-matos-2026083015010006838", description: "Current Estoril tactical context.", accessedAt: "2026-08-31T09:00:00+01:00" },
   ],
   publishedAt: "2026-08-24T17:38:36.651Z",
+  updatedAt: "2026-08-31T08:50:12.691Z",
   published: true,
   matchInfo: {
     date: "2026-08-31",
