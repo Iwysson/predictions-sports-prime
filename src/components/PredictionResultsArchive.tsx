@@ -37,6 +37,7 @@ export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] 
       <div className="results-summary" aria-label="Prediction result counts">
         <span><b>{counts.published}</b> Published</span>
         <span><b>{counts.completed}</b> Completed</span>
+        <span><b>{counts.awaitingResult}</b> Waiting Result</span>
         <span><b>{counts.settled}</b> Settled</span>
         <span><b>{counts.won}</b> Won</span>
         <span><b>{counts.lost}</b> Lost</span>
@@ -59,7 +60,8 @@ export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] 
           const presentation = resultStatusPresentation[status];
           const settlement = evaluatePredictionSettlement(match);
           const waitingForResult = isWaitingForFixtureData(match, now);
-          const awaitingLabel = waitingForResult ? "WAITING DATA" : settlement.pendingReason === "EXECUTION_DATA_MISSING" ? "AWAITING EXECUTION DATA" : "AWAITING MARKET DATA";
+          const awaitingLabel = waitingForResult ? "WAITING RESULT" : settlement.pendingReason === "EXECUTION_DATA_MISSING" ? "AWAITING EXECUTION DATA" : "AWAITING MARKET DATA";
+          const displayedAsAwaiting = waitingForResult || status === "awaiting-data";
           const finalScore = match.homeScore !== undefined && match.homeScore !== null && match.awayScore !== undefined && match.awayScore !== null
             ? `${match.homeScore}–${match.awayScore}` : "Not available";
           return (
@@ -80,9 +82,9 @@ export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] 
                   <span>{leaguesBySlug[match.league].name}</span>
                   <h2><Link href={`/match/${match.slug}/`}>{match.homeTeam} vs {match.awayTeam}</Link></h2>
                 </div>
-                <strong className={`bet-result bet-result--${status}`} aria-label={`Prediction result: ${status === "awaiting-data" ? awaitingLabel : presentation.label}`}>
-                  <span aria-hidden="true">{presentation.icon}</span> {status === "awaiting-data" ? awaitingLabel : presentation.label}
-                  {status === "awaiting-data" && settlement.missingFields.length ? (
+                <strong className={`bet-result bet-result--${displayedAsAwaiting ? "awaiting-data" : status}`} aria-label={`Prediction result: ${displayedAsAwaiting ? awaitingLabel : presentation.label}`}>
+                  <span aria-hidden="true">{presentation.icon}</span> {displayedAsAwaiting ? awaitingLabel : presentation.label}
+                  {!waitingForResult && status === "awaiting-data" && settlement.missingFields.length ? (
                     <small>{settlement.missingFields.join(", ")} unavailable</small>
                   ) : null}
                 </strong>

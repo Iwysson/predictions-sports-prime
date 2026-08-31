@@ -56,7 +56,7 @@ export function classifyFixture(
   if (status === "scheduled" || status === "rescheduled" || !status) {
     if (kickoff === null) return status === "rescheduled" ? "rescheduled" : status ? "scheduled" : "unknown";
     const current = new Date(now).valueOf();
-    if (kickoff < current - staleGraceMs) return "stale-schedule";
+    if (kickoff <= current - staleGraceMs) return "stale-schedule";
     return status === "rescheduled" ? "rescheduled" : "scheduled";
   }
   return "unknown";
@@ -79,6 +79,11 @@ export function isWaitingForFixtureData(fixture: FixtureStateInput, now: Date | 
   if (classifyFixture(fixture, now) === "completed") return false;
   const kickoff = fixtureKickoffMillis(fixture);
   return kickoff !== null && new Date(now).valueOf() - kickoff >= DEFAULT_STALE_SCHEDULE_GRACE_MS;
+}
+
+export function isFixtureHistoryEligible(fixture: FixtureStateInput, now: Date | string = new Date()) {
+  const state = classifyFixture(fixture, now);
+  return state === "completed" || state === "stale-schedule";
 }
 
 export function isFutureFixture(

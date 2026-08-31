@@ -1,4 +1,6 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { MatchPreview } from "@/types";
 import { HomeMatchCard } from "@/components/HomeMatchCard";
@@ -24,7 +26,11 @@ export function HomePredictionFeed({
   matches: MatchPreview[];
   beforeHistory?: ReactNode;
 }) {
-  const now = new Date();
+  const [now, setNow] = useState(() => new Date());
+  useEffect(() => {
+    const timer = window.setInterval(() => setNow(new Date()), 30_000);
+    return () => window.clearInterval(timer);
+  }, []);
   const today = localTodayISO(now);
   const tomorrow = localTomorrowISO(today);
   const todayMatches = filterTodaysPublishedPredictions(matches, today, now);

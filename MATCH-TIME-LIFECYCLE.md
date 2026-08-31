@@ -30,7 +30,7 @@ This project uses one shared match-state model for kickoff time, lifecycle, surf
 ## Surface Eligibility
 
 - Today, Tomorrow, Upcoming and Prediction History are derived from the central lifecycle rules.
-- Completed published matches move to History automatically.
+- Published matches move to History automatically 110 minutes after kickoff, even if the provider has not delivered the final result yet. They remain there awaiting authoritative result data.
 - Postponed and cancelled fixtures remain outside normal active surfaces.
 
 ## Stale Render Prevention
@@ -39,7 +39,7 @@ This project uses one shared match-state model for kickoff time, lifecycle, surf
 - Runtime refreshes should only replace state when the fetched dataset is newer and valid.
 - The project avoids delayed "old data first" replacement behavior on the main history surfaces.
 - The fixture workflow checks providers every five minutes. A changed final state is committed immediately and triggers a new static deployment.
-- If providers fail to report a transition, a fixture still marked scheduled leaves active surfaces three hours after kickoff instead of lingering all day.
+- If providers fail to report a transition, a fixture still marked scheduled or live leaves active surfaces exactly 110 minutes after kickoff and enters Prediction History awaiting authoritative result data.
 
 ## Legacy Cleanup
 

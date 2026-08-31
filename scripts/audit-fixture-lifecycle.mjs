@@ -6,7 +6,7 @@ import {
   isWaitingForFixtureData,
 } from "../src/lib/fixture-state.ts";
 import { buildPredictionHistoryState } from "../src/lib/results.ts";
-import { filterTodaysPublishedPredictions } from "../src/lib/match-feed.ts";
+import { filterCompletedPredictions, filterTodaysPublishedPredictions } from "../src/lib/match-feed.ts";
 
 const kickoffUtc = "2026-08-29T18:00:00Z";
 const beforeKickoff = new Date("2026-08-29T17:59:59Z");
@@ -34,6 +34,12 @@ assert.equal(classifyFixture(base, waitingForData), "stale-schedule", "A stale p
 assert.equal(isWaitingForFixtureData(base, waitingForData), true, "The match must wait for authoritative data after 110 minutes");
 assert.equal(filterTodaysPublishedPredictions([base], "2026-08-29", waitingForData).length, 0, "A 110-minute-old match must leave Today");
 const history = buildPredictionHistoryState([base], waitingForData).entries;
-assert.equal(history.length, 0, "A stale provider status must not enter history without a terminal result");
+assert.equal(history.length, 1, "A match must enter prediction history after 110 minutes while awaiting its result");
+assert.equal(filterCompletedPredictions([base], waitingForData).length, 1, "Home history must receive the match after 110 minutes");
+
+const scheduledBase = { ...base, fixtureStatus: "scheduled" };
+assert.equal(filterTodaysPublishedPredictions([scheduledBase], "2026-08-29", duringMatch).length, 1, "A scheduled provider status remains in Today during the match window");
+assert.equal(filterTodaysPublishedPredictions([scheduledBase], "2026-08-29", waitingForData).length, 0, "A scheduled provider status must leave Today exactly at 110 minutes");
+assert.equal(buildPredictionHistoryState([scheduledBase], waitingForData).entries.length, 1, "A scheduled provider status must enter history exactly at 110 minutes");
 
 console.log("Fixture lifecycle automation audit: PASS");

@@ -1,6 +1,6 @@
 import type { MatchPreview } from "@/types";
 import { isCompletedFixture, isHistoryEligibleFixture, isNonPlayableFixture } from "@/lib/fixture-status";
-import { classifyFixture, dateInTimeZone, fixtureDateInTimeZone, isActiveFixtureState, isFutureFixture } from "@/lib/fixture-state";
+import { classifyFixture, dateInTimeZone, fixtureDateInTimeZone, isActiveFixtureState, isFixtureHistoryEligible, isFutureFixture } from "@/lib/fixture-state";
 
 export type HomeTemporalBucket = "today" | "tomorrow" | "upcoming" | "historical" | "none";
 
@@ -24,6 +24,7 @@ export function resolveHomeTemporalBucket(match: MatchPreview, today = localToda
     return "historical";
   }
   const state = classifyFixture({ ...match, status: match.fixtureStatus ?? "scheduled" }, now);
+  if (state === "stale-schedule") return "historical";
   if (!isActiveFixtureState(state)) return "none";
   const fixtureDate = fixtureDateInTimeZone(match);
   const temporalFixture = { ...match, status: match.fixtureStatus ?? "scheduled" };
@@ -186,16 +187,11 @@ export function filterPastPublishedPredictions(
 }
 
 export function filterCompletedPredictions(matches: MatchPreview[], now: Date | string = new Date()) {
-  void now;
   return sortMatchesByKickoff(
     uniqueMatches(matches).filter(
       (match) =>
         match.status === "published" &&
-        (isHistoryEligibleFixture({
-          status: match.fixtureStatus,
-          homeScore: match.homeScore,
-          awayScore: match.awayScore,
-        }))
+        isFixtureHistoryEligible(match, now)
     )
   ).reverse();
 }

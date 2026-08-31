@@ -1,6 +1,7 @@
 import type { MatchPreview, PredictionResultStatus } from "@/types";
-import { isCompletedFixture } from "@/lib/fixture-status";
 import { evaluatePredictionSettlement } from "@/lib/prediction-results";
+import { isFixtureHistoryEligible } from "@/lib/fixture-state";
+import { isCompletedFixture } from "@/lib/fixture-status";
 
 export const resultStatusPresentation: Record<PredictionResultStatus, { label: string; icon: string }> = {
   pending: { label: "PENDING", icon: "○" },
@@ -32,12 +33,13 @@ export function predictionResultCounts(matches: MatchPreview[]) {
 }
 
 export function buildPredictionHistoryState(matches: MatchPreview[], now: Date | string = new Date()) {
-  void now;
   const entries = completePredictionHistory(
     matches
-      .filter((match) => isCompletedFixture(match.fixtureStatus))
+      .filter((match) => match.status === "published" && isFixtureHistoryEligible(match, now))
   );
   const counts = predictionResultCounts(entries);
+  const completed = entries.filter((match) => isCompletedFixture(match.fixtureStatus)).length;
+  const awaitingResult = entries.length - completed;
   const settled = counts.green + counts.red + counts.push + counts["half-green"] + counts["half-red"] + counts.void;
   const awaitingMarketData = entries.filter((match) =>
     evaluatePredictionSettlement(match).pendingReason === "MARKET_DATA_MISSING"
@@ -48,7 +50,8 @@ export function buildPredictionHistoryState(matches: MatchPreview[], now: Date |
 
   return {
     published: matches.filter((match) => match.status === "published").length,
-    completed: entries.length,
+    completed,
+    awaitingResult,
     settled,
     won: counts.green,
     lost: counts.red,
