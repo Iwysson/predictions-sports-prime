@@ -4,6 +4,7 @@ import { matches } from "@/data/matches";
 import { absoluteUrl } from "@/lib/site-config";
 import { matchCanonicalPath } from "@/lib/seo";
 import { isLeagueIndexable } from "@/lib/league-seo";
+import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { isIndexableLocalizedHubLocale, localePath, seoLocaleSlugs } from "@/lib/seo-locales";
 
@@ -43,12 +44,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const matchPages: MetadataRoute.Sitemap = matches
     .filter((match) => match.status === "published")
-    .map((match) => ({
+    .map((match) => {
+      const modifiedAt = materialMatchUpdatedAt(match);
+      return ({
       url: absoluteUrl(matchCanonicalPath(match)),
-      ...(match.updatedAt || match.publishedAt
-        ? { lastModified: new Date(match.updatedAt ?? match.publishedAt!) }
+      ...(modifiedAt || match.publishedAt
+        ? { lastModified: new Date(modifiedAt ?? match.publishedAt!) }
         : {}),
-    }));
+    }); });
 
   const localizedPages: MetadataRoute.Sitemap = seoLocaleSlugs.flatMap((locale) => [
     ...(isIndexableLocalizedHubLocale(locale) ? [

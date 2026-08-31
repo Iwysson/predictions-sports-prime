@@ -207,7 +207,7 @@ function buildEnglishDescription(
   const pick = facts.mainPick || "the main prediction";
   if (match.matchSeo) {
     const modules = [
-      facts.hasLineups ? "expected lineups" : "",
+      facts.hasLineups ? (match.matchSeo?.lineups?.status === "confirmed" ? "confirmed lineups" : "expected lineups") : "",
       facts.hasAvailability ? "availability" : "",
       facts.hasStatistics ? "statistics" : "",
       facts.hasH2h ? "head-to-head context" : "",
@@ -256,15 +256,18 @@ function buildTitle(match: Match, locale: SearchLocale) {
   const intent = sentenceCase(research.prediction);
   if (locale === "en" && match.matchSeo) {
     const capability = match.matchSeo.lineups
-      ? "Prediction & Lineups"
+      ? match.matchSeo.lineups.status === "confirmed" ? "Prediction & Confirmed Lineups" : "Prediction & Expected Lineups"
       : match.matchSeo.teamNews || match.matchSeo.availability
         ? "Prediction & Team News"
         : match.matchSeo.statistics
           ? "Prediction & Stats"
           : "Prediction & Match Analysis";
     const structuredTitle = `${teams} ${capability}`;
-    const competitionTitle = `${structuredTitle} | ${leaguesBySlug[match.league]?.name ?? match.league}`;
+    const leagueName = leaguesBySlug[match.league]?.name ?? match.league;
+    const competitionTitle = `${structuredTitle} | ${leagueName}`;
     if (competitionTitle.length <= 65) return competitionTitle;
+    const compactCompetitionTitle = `${teams} Prediction | ${leagueName}`;
+    if (compactCompetitionTitle.length <= 70) return compactCompetitionTitle;
     return structuredTitle.length <= 65 ? structuredTitle : `${teams} Prediction`;
   }
   const full = locale === "en"

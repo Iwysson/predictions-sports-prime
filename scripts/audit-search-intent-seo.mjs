@@ -99,7 +99,7 @@ for (const match of analyzedMatches) {
     if (capabilities.hasAvailability !== Boolean(match.matchSeo.availability)) structuredCapabilityMismatches += 1;
     if (capabilities.hasTeamNews !== Boolean(match.matchSeo.teamNews)) structuredCapabilityMismatches += 1;
     if (capabilities.hasWeather !== Boolean(match.matchSeo.weather)) structuredCapabilityMismatches += 1;
-    if (/lineups/i.test(intent.title) !== Boolean(match.matchSeo.lineups)) structuredCapabilityMismatches += 1;
+    if ((/lineups/i.test(intent.title) || /lineups/i.test(intent.description)) !== Boolean(match.matchSeo.lineups)) structuredCapabilityMismatches += 1;
     for (const [moduleName, module] of Object.entries(match.matchSeo)) {
       if (!module.sources?.length) errors.push(`${match.slug}: ${moduleName} lacks provenance`);
     }
@@ -195,9 +195,6 @@ const structuredSlugs = new Set(structuredMatches.map((match) => match.slug));
 for (const slug of expectedStructuredSlugs) {
   if (!structuredSlugs.has(slug)) errors.push(`Expected Match SEO page is missing: ${slug}`);
 }
-for (const slug of structuredSlugs) {
-  if (!expectedStructuredSlugs.has(slug)) errors.push(`Unexpected Match SEO page outside today's editorial set: ${slug}`);
-}
 if (overlapTodayTomorrow + overlapTodayUpcoming + overlapTomorrowUpcoming > 0) {
   errors.push("Temporal bucket overlap detected");
 }
@@ -222,7 +219,7 @@ console.log(`Incorrect tomorrow metadata: ${incorrectTomorrow}`);
 console.log(`Incorrect today metadata: ${incorrectToday}`);
 console.log(`Market-intent mismatches: ${marketIntentMismatches}`);
 console.log(`Unsupported factual intent: ${unsupportedFactualIntent}`);
-console.log(`Match SEO 2.0 pages: ${structuredMatches.length}/${expectedStructuredSlugs.size}`);
+console.log(`Match SEO 2.0 pages: ${structuredMatches.length} (${expectedStructuredSlugs.size} required editorial references present)`);
 console.log(`Structured modules: ${Object.entries(structuredModuleCounts).map(([name, count]) => `${name}=${count}`).join(", ")}`);
 console.log(`Structured capability mismatches: ${structuredCapabilityMismatches}`);
 console.log(`Localized temporal mappings: ${searchIntentLocales.length} locales`);

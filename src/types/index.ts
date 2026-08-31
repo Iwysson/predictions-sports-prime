@@ -78,6 +78,14 @@ export type MatchModuleSource = {
   note?: string;
 };
 
+export type MatchFreshness = {
+  editorialUpdatedAt?: string;
+  teamNewsUpdatedAt?: string;
+  lineupUpdatedAt?: string;
+  statisticsUpdatedAt?: string;
+  resultUpdatedAt?: string;
+};
+
 export type MatchTeamSide = "home" | "away";
 
 export type MatchSeoData = {
@@ -87,12 +95,14 @@ export type MatchSeoData = {
     timezone?: string;
     referee?: string;
     sources: MatchModuleSource[];
+    updatedAt?: string;
   };
   lineups?: {
     status: "expected" | "confirmed";
     home: { formation?: string; players: string[] };
     away: { formation?: string; players: string[] };
     sources: MatchModuleSource[];
+    updatedAt?: string;
   };
   availability?: {
     entries: Array<{
@@ -100,12 +110,16 @@ export type MatchSeoData = {
       player: string;
       status: "injured" | "suspended" | "doubtful" | "returning" | "unavailable";
       detail?: string;
+      updatedAt?: string;
+      previousStatus?: "injured" | "suspended" | "doubtful" | "returning" | "unavailable";
     }>;
     sources: MatchModuleSource[];
+    updatedAt?: string;
   };
   teamNews?: {
     entries: Array<{ team: MatchTeamSide; text: string }>;
     sources: MatchModuleSource[];
+    updatedAt?: string;
   };
   statistics?: {
     sample: string;
@@ -118,16 +132,19 @@ export type MatchSeoData = {
       zeroVerified?: boolean;
     }>;
     sources: MatchModuleSource[];
+    updatedAt?: string;
   };
   h2h?: {
     summary: string;
     sources: MatchModuleSource[];
+    updatedAt?: string;
   };
   weather?: {
     status: "forecast" | "observed";
     summary: string;
     validAt?: string;
     sources: MatchModuleSource[];
+    updatedAt?: string;
   };
 };
 
@@ -170,6 +187,7 @@ export type EditorialPrediction = {
   // values when an editor explicitly provides them.
   publishedAt?: string;
   updatedAt?: string;
+  freshness?: MatchFreshness;
 
   // Required for content first published after the Phase 2 source-policy cutoff.
   sourceStatus?: "verified" | "partial" | "incomplete";
@@ -222,6 +240,7 @@ export type Match = {
   };
   publishedAt?: string;
   updatedAt?: string;
+  freshness?: MatchFreshness;
   sources?: EditorialSource[];
   matchSeo?: MatchSeoData;
 };

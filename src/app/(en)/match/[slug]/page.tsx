@@ -34,6 +34,7 @@ import { hydratePrediction } from "@/lib/live-predictions";
 import { toMatchPreview } from "@/lib/editorial";
 import type { Match } from "@/types";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
+import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 
 async function resolveMatchFixture(match: Match): Promise<Match> {
   const fixture = await hydratePrediction(toMatchPreview(match));
@@ -140,6 +141,7 @@ export default async function MatchPage({
     homeScore: match.homeScore,
     awayScore: match.awayScore,
   });
+  const modifiedAt = materialMatchUpdatedAt(match);
 
   return (
     <>
@@ -218,8 +220,8 @@ export default async function MatchPage({
                 {match.publishedAt ? (
                   <p className="editorial-dates">
                     <span>Published: {formatEditorialDate(match.publishedAt)}</span>
-                    {match.updatedAt ? (
-                      <span>Updated: {formatEditorialDate(match.updatedAt)}</span>
+                    {modifiedAt ? (
+                      <span>Updated: {formatEditorialDate(modifiedAt)}</span>
                     ) : null}
                     <ArticleByline />
                     <MethodologyLink />

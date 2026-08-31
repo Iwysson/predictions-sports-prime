@@ -41,6 +41,15 @@ export type LeagueSeoCapabilities = {
   hasAnalysis: boolean;
 };
 
+export function leagueSeoCapabilities(league: LeagueConfig, publishedMatches: Match[]): LeagueSeoCapabilities {
+  return {
+    hasFixtures: publishedMatches.some((match) => match.fixtureStatus !== "completed"),
+    hasResults: publishedMatches.some((match) => match.fixtureStatus === "completed" && match.homeScore != null && match.awayScore != null),
+    hasStandings: league.display.showStandings,
+    hasAnalysis: publishedMatches.length > 0,
+  };
+}
+
 export function leagueSeoTitle(league: LeagueConfig, capabilities?: LeagueSeoCapabilities) {
   if (capabilities) {
     const suffix = capabilities.hasFixtures && capabilities.hasResults
@@ -64,7 +73,8 @@ export function leagueSeoDescription(league: LeagueConfig, capabilities?: League
       capabilities.hasStandings ? "standings" : "",
       capabilities.hasAnalysis ? "match analysis" : "",
     ].filter(Boolean);
-    return `${league.name} ${features.join(", ")} from ${siteConfig.name}.`;
+    const format = league.display.showStandings ? "league table coverage" : "knockout-round coverage";
+    return `${league.name} ${features.join(", ")} for ${league.country}, with ${format} from ${siteConfig.name}.`;
   }
   const index = league.slug.length % 4;
   const standings = league.display.showStandings

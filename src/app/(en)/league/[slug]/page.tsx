@@ -26,14 +26,12 @@ import {
   leagueSeoDescription,
   leagueSeoKeywords,
   leagueSeoTitle,
+  leagueSeoCapabilities,
 } from "@/lib/league-seo";
 import { localizedAlternates } from "@/lib/international-seo";
 import { indexableLocalizedHubLocaleSlugs } from "@/lib/seo-locales";
 
 export const dynamicParams = false;
-
-const leagueSeoPilotSlugs = new Set(["premier-league", "la-liga"]);
-
 
 export async function generateMetadata({
   params,
@@ -54,12 +52,7 @@ export async function generateMetadata({
   }
 
   const publishedLeagueMatches = matches.filter((match) => match.league === league.slug && match.status === "published");
-  const capabilities = leagueSeoPilotSlugs.has(league.slug) ? {
-    hasFixtures: true,
-    hasResults: publishedLeagueMatches.some((match) => match.fixtureStatus === "completed" && match.homeScore != null && match.awayScore != null),
-    hasStandings: league.display.showStandings,
-    hasAnalysis: publishedLeagueMatches.length > 0,
-  } : undefined;
+  const capabilities = leagueSeoCapabilities(league, publishedLeagueMatches);
   const title = leagueSeoTitle(league, capabilities);
   const description = leagueSeoDescription(league, capabilities);
   const canonical = absoluteUrl(leagueCanonicalPath(league));
@@ -74,7 +67,7 @@ export async function generateMetadata({
     description,
     keywords: leagueSeoKeywords(league),
 
-    alternates: leagueSeoPilotSlugs.has(league.slug)
+    alternates: ["premier-league", "la-liga"].includes(league.slug)
       ? localizedAlternates("en", leagueCanonicalPath(league), ["en", ...indexableLocalizedHubLocaleSlugs])
       : { canonical },
 
@@ -132,12 +125,7 @@ export default async function LeaguePage({
   const publishedMatches = matches.filter(
     (match) => match.league === league.slug && match.status === "published"
   );
-  const pilotCapabilities = leagueSeoPilotSlugs.has(league.slug) ? {
-    hasFixtures: true,
-    hasResults: publishedMatches.some((match) => match.fixtureStatus === "completed" && match.homeScore != null && match.awayScore != null),
-    hasStandings: league.display.showStandings,
-    hasAnalysis: publishedMatches.length > 0,
-  } : undefined;
+  const capabilities = leagueSeoCapabilities(league, publishedMatches);
   const standings = standingsByLeague[league.slug];
   const fixtureRounds = await loadLeagueSeason(league.slug);
   const roundSurface = buildCompetitionRoundSurface({
@@ -168,7 +156,7 @@ export default async function LeaguePage({
 
   return (
     <>
-      <JsonLd data={leagueCollectionJsonLd(league, publishedMatches, pilotCapabilities)} />
+      <JsonLd data={leagueCollectionJsonLd(league, publishedMatches, capabilities)} />
       <JsonLd data={leagueBreadcrumbJsonLd(league)} />
 
       <section className="league-title-bar">
@@ -181,7 +169,7 @@ export default async function LeaguePage({
                 <span aria-hidden="true">›</span>
                 <span aria-current="page">{league.name}</span>
               </nav>
-              <h1>{leagueSeoPilotSlugs.has(league.slug) ? `${league.name} Predictions & Match Analysis` : `${league.name} Predictions & Betting Tips`}</h1>
+              <h1>{leagueSeoTitle(league, capabilities)}</h1>
             </div>
           </div>
           <span className="league-round-label">Current Round</span>
@@ -201,9 +189,7 @@ export default async function LeaguePage({
       <section className="section league-content-section">
         <div className="container league-layout">
           <div className="league-main-column">
-            {leagueSeoPilotSlugs.has(league.slug) ? (
-              <LeagueEditorialHub leagueName={league.name} publishedMatches={publishedMatches} surface={roundSurface} />
-            ) : null}
+            <LeagueEditorialHub leagueName={league.name} publishedMatches={publishedMatches} surface={roundSurface} />
 
             <LeaguePageText matchCount={roundSurface.current?.matches.length ?? 0}>
               <LiveLeagueRounds surface={roundSurface} />

@@ -136,6 +136,13 @@ function picksToItems(
   return items;
 }
 
+function matchSeoFromExistingData(prediction: EditorialPrediction) {
+  if (prediction.matchSeo) return prediction.matchSeo;
+  const sources = (prediction.sources ?? []).slice(0, 3).map(({ name, url, accessedAt }) => ({ name, url, accessedAt }));
+  if (!sources.length || !prediction.matchInfo) return undefined;
+  return { information: { sources } };
+}
+
 export function editorialToMatch(
   prediction: EditorialPrediction
 ): Match {
@@ -183,14 +190,27 @@ export function editorialToMatch(
     awayScore: hasFinalScore ? finalScore!.away : undefined,
     publishedAt: prediction.publishedAt,
     updatedAt: prediction.updatedAt,
+    freshness: prediction.freshness,
     sources: prediction.sources,
-    matchSeo: prediction.matchSeo,
+    matchSeo: matchSeoFromExistingData(prediction),
   };
 }
 
 function validateMatchSeo(prediction: EditorialPrediction, label: string, errors: string[]) {
   const modules = prediction.matchSeo;
   if (!modules) return;
+
+  const freshnessTimestamps = [
+    prediction.freshness?.editorialUpdatedAt,
+    prediction.freshness?.teamNewsUpdatedAt,
+    prediction.freshness?.lineupUpdatedAt,
+    prediction.freshness?.statisticsUpdatedAt,
+    prediction.freshness?.resultUpdatedAt,
+    ...Object.values(modules).map((module) => module?.updatedAt),
+  ];
+  if (freshnessTimestamps.some((value) => value !== undefined && !isValidIsoTimestamp(value))) {
+    errors.push(`${label}: freshness timestamps must use valid ISO 8601 values.`);
+  }
 
   for (const [moduleName, module] of Object.entries(modules)) {
     if (!module) continue;

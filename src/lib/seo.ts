@@ -8,9 +8,11 @@ import { buildSportsEventJsonLd } from "@/lib/sports-event-schema";
 import { hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { localizedAlternates } from "@/lib/international-seo";
 import { seoLocaleSlugs } from "@/lib/seo-locales";
+import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 
 export function matchSeoTitle(match: Match) {
-  if (match.matchSeo && shouldApplySearchIntentSEO(match)) {
+  const hasRichMatchCapability = Boolean(match.matchSeo && Object.keys(match.matchSeo).some((module) => module !== "information"));
+  if (hasRichMatchCapability && shouldApplySearchIntentSEO(match)) {
     return buildMatchSearchIntentCopy(match).title;
   }
   if (match.seoTitle) return match.seoTitle;
@@ -170,6 +172,7 @@ export function articleJsonLd(match: Match) {
   const url = absoluteUrl(matchCanonicalPath(match));
   const description = matchSeoDescription(match);
   const sportsEvent = buildSportsEventJsonLd(match, { url, description });
+  const modifiedAt = materialMatchUpdatedAt(match);
 
   return {
     "@context": "https://schema.org",
@@ -183,7 +186,7 @@ export function articleJsonLd(match: Match) {
       "@id": url,
     },
     ...(match.publishedAt ? { datePublished: match.publishedAt } : {}),
-    ...(match.updatedAt ? { dateModified: match.updatedAt } : {}),
+    ...(modifiedAt ? { dateModified: modifiedAt } : {}),
     ...(sportsEvent ? { about: sportsEvent } : {}),
     author: editorialAuthorPersonJsonLd(),
     publisher: { "@id": absoluteUrl("/#organization") },
