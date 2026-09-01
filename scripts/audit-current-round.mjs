@@ -108,6 +108,20 @@ const rescheduledPreviousRound = resolveCompetitionRounds([
 assert.equal(rescheduledPreviousRound.currentRound?.round, 4, "A later rescheduled fixture must be tracked without blocking the chronological round");
 assert.equal(rescheduledPreviousRound.nextRound?.round, 5);
 
+const isolatedAdvancedFixture = resolveCompetitionRounds([
+  {
+    round: 6,
+    games: [
+      game(6, 1, "scheduled", "2026-09-03T21:00:00Z"),
+      ...Array.from({ length: 9 }, (_, index) => game(6, index + 2, "scheduled", `2026-09-${String(15 + Math.floor(index / 5)).padStart(2, "0")}T${String(12 + (index % 5)).padStart(2, "0")}:00:00Z`)),
+    ],
+  },
+  regressionRound(4, Array(10).fill("scheduled"), "2026-09-04"),
+  regressionRound(5, Array(10).fill("scheduled"), "2026-09-11"),
+], new Date("2026-09-01T12:00:00Z"));
+assert.equal(isolatedAdvancedFixture.currentRound?.round, 4, "One advanced fixture must not promote an otherwise later round");
+assert.equal(isolatedAdvancedFixture.nextRound?.round, 5, "Next Round must follow the representative fixture window");
+
 assert.equal(classifyFixture({ status: "canceled", kickoffUtc: "2026-08-25T12:00:00Z" }, regressionNow), "cancelled");
 const publishedFixture = (fixtureStatus, kickoffUtc) => ({
   id: "published-regression", slug: "published-regression", league: "premier-league",

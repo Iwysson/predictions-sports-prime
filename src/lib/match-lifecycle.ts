@@ -36,6 +36,21 @@ function isActiveFixture(game: OpenFootballGame, now: Date | string) {
   return isActiveFixtureState(classifyFixture(game, now));
 }
 
+function representativeRoundKickoff(games: OpenFootballGame[], now: Date | string) {
+  const kickoffs = games
+    .filter((game) => isActiveFixture(game, now))
+    .map(fixtureKickoffMillis)
+    .filter((kickoff): kickoff is number => kickoff !== null)
+    .sort((left, right) => left - right);
+
+  // A single advanced/postponed fixture must not promote its entire matchday
+  // ahead of the round whose full fixture window comes first. The median is
+  // stable for normal rounds and deliberately ignores those isolated outliers.
+  return kickoffs.length
+    ? kickoffs[Math.floor(kickoffs.length / 2)]
+    : Number.MAX_SAFE_INTEGER;
+}
+
 /**
  * Resolves the active round sequence from explicit matchday metadata. A round
  * is selected from real chronological activity. Old postponed/rescheduled
@@ -51,16 +66,17 @@ export function resolveCompetitionRounds<
   const activeRounds = ordered
     .map((round, index) => ({
       index,
-      firstKickoff: Math.min(...round.games
-        .filter((game) => isActiveFixture(game, now))
-        .map((game) => fixtureKickoffMillis(game) ?? Number.MAX_SAFE_INTEGER)),
+      representativeKickoff: representativeRoundKickoff(round.games, now),
       hasActive: round.games.some((game) => isActiveFixture(game, now)),
     }))
     .filter((entry) => entry.hasActive)
-    .sort((left, right) => left.firstKickoff - right.firstKickoff || ordered[left.index].round - ordered[right.index].round);
+    .sort((left, right) => left.representativeKickoff - right.representativeKickoff || ordered[left.index].round - ordered[right.index].round);
   const currentIndex = liveIndex >= 0 ? liveIndex : (activeRounds[0]?.index ?? -1);
   const currentRound = currentIndex >= 0 ? ordered[currentIndex] : null;
 
+  // Once the current matchday is chosen chronologically, Next Round still
+  // follows the explicit competition sequence. Leftover fixtures from an
+  // earlier matchday remain tracked without being mislabeled as "next".
   const laterActiveRounds = currentIndex >= 0
     ? ordered.slice(currentIndex + 1).filter((round) => round.games.some((game) => isActiveFixture(game, now)))
     : [];
