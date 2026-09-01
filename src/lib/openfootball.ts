@@ -188,6 +188,7 @@ export function normalizeTeamKey(name: string) {
     sslazio: "lazio",
     ussassuolocalcio: "sassuolo",
     internazionalemilano: "internazionale",
+    inter: "internazionale",
     intermilano: "internazionale",
     intermilan: "internazionale",
     genoacfc: "genoa",
