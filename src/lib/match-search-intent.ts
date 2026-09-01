@@ -65,7 +65,7 @@ type MatchIntentFacts = {
 };
 
 type TodaySeoLocale = "en" | "pt-BR" | "es" | "it" | "fr" | "de";
-type TodaySeoIntent = "lineups" | "stats" | "odds" | "goals" | "corners" | "handicap" | "teamNews" | "injuries";
+type TodaySeoIntent = "lineups" | "stats" | "odds" | "goals" | "corners" | "handicap" | "teamNews" | "injuries" | "xg" | "shots" | "btts" | "recentMeeting" | "secondLeg" | "aggregate" | "competition";
 
 type TodaySeoProfile = {
   teams: [string, string];
@@ -110,15 +110,58 @@ const todaySeoProfiles: Record<string, TodaySeoProfile> = {
     teams: ["Atlético-MG", "Cruzeiro"], titleIntents: ["lineups", "injuries", "odds"], descriptionIntents: ["lineups", "teamNews", "injuries", "stats", "odds", "goals", "corners"],
     focus: { en: "Atlético Mineiro double chance and Under 3.5 Goals", "pt-BR": "Atlético-MG ou empate e menos de 3,5 gols", es: "Atlético Mineiro o empate y menos de 3,5 goles", it: "Atlético Mineiro o pareggio e meno di 3,5 gol", fr: "Atlético Mineiro ou nul et moins de 3,5 buts", de: "Atlético Mineiro oder Unentschieden und unter 3,5 Tore" },
   },
+  "flamengo-vs-mirassol": {
+    teams: ["Flamengo", "Mirassol"], titleIntents: ["handicap", "lineups", "stats"], descriptionIntents: ["handicap", "lineups", "odds", "stats", "goals", "corners", "recentMeeting"],
+    focus: { en: "Flamengo -1.5 Asian Handicap", "pt-BR": "Flamengo -1,5 no handicap asiático", es: "Flamengo -1,5 en hándicap asiático", it: "Flamengo -1,5 con handicap asiatico", fr: "Flamengo -1,5 avec handicap asiatique", de: "Flamengo -1,5 Asian Handicap" },
+  },
+  "celtic-vs-aberdeen": {
+    teams: ["Celtic", "Aberdeen"], titleIntents: ["teamNews", "lineups"], descriptionIntents: ["teamNews", "injuries", "lineups", "odds", "stats", "handicap", "xg", "shots", "corners"],
+    focus: { en: "Celtic -1.5 Asian Handicap", "pt-BR": "Celtic -1,5 no handicap asiático", es: "Celtic -1,5 en hándicap asiático", it: "Celtic -1,5 con handicap asiatico", fr: "Celtic -1,5 avec handicap asiatique", de: "Celtic -1,5 Asian Handicap" },
+  },
+  "dundee-vs-st-johnstone": {
+    teams: ["Dundee", "St Johnstone"], titleIntents: ["teamNews", "lineups"], descriptionIntents: ["teamNews", "injuries", "lineups", "odds", "stats", "goals", "corners"],
+  },
+  "kilmarnock-vs-st-mirren": {
+    teams: ["Kilmarnock", "St Mirren"], titleIntents: ["lineups", "stats"], descriptionIntents: ["lineups", "odds", "stats", "goals", "corners"],
+  },
+  "millwall-vs-wrexham": {
+    teams: ["Millwall", "Wrexham"], titleIntents: ["lineups", "stats", "odds"], descriptionIntents: ["lineups", "odds", "stats", "xg", "shots", "corners"],
+    focus: { en: "Millwall to win", "pt-BR": "vitória do Millwall", es: "victoria del Millwall", it: "vittoria del Millwall", fr: "victoire de Millwall", de: "Sieg von Millwall" },
+  },
+  "motherwell-vs-dundee-united": {
+    teams: ["Motherwell", "Dundee United"], titleIntents: ["lineups", "stats", "odds"], descriptionIntents: ["lineups", "odds", "stats", "btts", "goals", "xg", "shots", "corners"],
+  },
+  "queens-park-rangers-vs-cardiff-city": {
+    teams: ["QPR", "Cardiff City"], titleIntents: ["lineups", "stats", "odds"], descriptionIntents: ["lineups", "odds", "stats", "goals", "xg", "shots", "corners"],
+    focus: { en: "Over 2.5 Goals", "pt-BR": "mais de 2,5 gols", es: "más de 2,5 goles", it: "più di 2,5 gol", fr: "plus de 2,5 buts", de: "über 2,5 Tore" },
+  },
+  "west-bromwich-albion-vs-charlton-athletic": {
+    teams: ["West Brom", "Charlton"], titleIntents: ["lineups", "stats", "odds"], descriptionIntents: ["lineups", "odds", "stats", "goals", "shots", "corners"],
+    focus: { en: "Over 2.5 Goals", "pt-BR": "mais de 2,5 gols", es: "más de 2,5 goles", it: "più di 2,5 gol", fr: "plus de 2,5 buts", de: "über 2,5 Tore" },
+  },
+  "burnley-vs-middlesbrough": {
+    teams: ["Burnley", "Middlesbrough"], titleIntents: ["lineups", "stats", "odds"], descriptionIntents: ["lineups", "odds", "stats", "goals", "xg", "shots", "corners"],
+    focus: { en: "Middlesbrough X2 and Over 1.5 Goals", "pt-BR": "Middlesbrough X2 e mais de 1,5 gols", es: "Middlesbrough X2 y más de 1,5 goles", it: "Middlesbrough X2 e più di 1,5 gol", fr: "Middlesbrough X2 et plus de 1,5 but", de: "Middlesbrough X2 und über 1,5 Tore" },
+  },
+  "falkirk-vs-rangers": {
+    teams: ["Falkirk", "Rangers"], titleIntents: ["lineups", "stats", "odds"], descriptionIntents: ["lineups", "odds", "stats", "goals", "corners"],
+    focus: { en: "Rangers match prediction and Over 2.5 Goals", "pt-BR": "prognóstico do Rangers e mais de 2,5 gols", es: "pronóstico del Rangers y más de 2,5 goles", it: "pronostico Rangers e più di 2,5 gol", fr: "pronostic Rangers et plus de 2,5 buts", de: "Rangers-Prognose und über 2,5 Tore" },
+  },
+  "santos-vs-palmeiras": {
+    teams: ["Santos", "Palmeiras"], titleIntents: ["lineups", "injuries", "odds"], descriptionIntents: ["lineups", "injuries", "odds", "stats", "competition", "secondLeg", "aggregate", "goals", "corners"],
+  },
+  "vitoria-vs-vasco-da-gama": {
+    teams: ["Vitória", "Vasco"], titleIntents: ["lineups", "injuries", "odds"], descriptionIntents: ["lineups", "injuries", "odds", "stats", "competition", "secondLeg", "aggregate", "goals"],
+  },
 };
 
 const todaySeoTerms: Record<TodaySeoLocale, Record<TodaySeoIntent, string>> = {
-  en: { lineups: "Lineups", stats: "Stats", odds: "Odds", goals: "Goals", corners: "Corners", handicap: "Asian Handicap", teamNews: "Team News", injuries: "Injuries" },
-  "pt-BR": { lineups: "Escalações", stats: "Estatísticas", odds: "Odds", goals: "Gols", corners: "Escanteios", handicap: "Handicap Asiático", teamNews: "Notícias", injuries: "Desfalques" },
-  es: { lineups: "Alineaciones", stats: "Estadísticas", odds: "Cuotas", goals: "Goles", corners: "Córners", handicap: "Hándicap Asiático", teamNews: "Noticias", injuries: "Bajas" },
-  it: { lineups: "Formazioni", stats: "Statistiche", odds: "Quote", goals: "Gol", corners: "Corner", handicap: "Handicap Asiatico", teamNews: "Notizie", injuries: "Assenze" },
-  fr: { lineups: "Compositions", stats: "Statistiques", odds: "Cotes", goals: "Buts", corners: "Corners", handicap: "Handicap Asiatique", teamNews: "Actualités", injuries: "Absents" },
-  de: { lineups: "Aufstellungen", stats: "Statistik", odds: "Quoten", goals: "Tore", corners: "Ecken", handicap: "Asian Handicap", teamNews: "Team-News", injuries: "Ausfälle" },
+  en: { lineups: "Lineups", stats: "Stats", odds: "Odds", goals: "Goals", corners: "Corners", handicap: "Asian Handicap", teamNews: "Team News", injuries: "Injuries", xg: "xG and xGA", shots: "Shots on Target", btts: "BTTS", recentMeeting: "Recent Meeting", secondLeg: "Second Leg", aggregate: "Aggregate Score", competition: "Copa do Brasil" },
+  "pt-BR": { lineups: "Escalações", stats: "Estatísticas", odds: "Odds", goals: "Gols", corners: "Escanteios", handicap: "Handicap Asiático", teamNews: "Notícias", injuries: "Desfalques", xg: "xG e xGA", shots: "Finalizações no Alvo", btts: "Ambas Marcam", recentMeeting: "Confronto Recente", secondLeg: "Segundo Jogo", aggregate: "Placar Agregado", competition: "Copa do Brasil" },
+  es: { lineups: "Alineaciones", stats: "Estadísticas", odds: "Cuotas", goals: "Goles", corners: "Córners", handicap: "Hándicap Asiático", teamNews: "Noticias", injuries: "Bajas", xg: "xG y xGA", shots: "Tiros a Puerta", btts: "Ambos Marcan", recentMeeting: "Duelo Reciente", secondLeg: "Partido de Vuelta", aggregate: "Marcador Global", competition: "Copa do Brasil" },
+  it: { lineups: "Formazioni", stats: "Statistiche", odds: "Quote", goals: "Gol", corners: "Corner", handicap: "Handicap Asiatico", teamNews: "Notizie", injuries: "Assenze", xg: "xG e xGA", shots: "Tiri in Porta", btts: "Gol di Entrambe", recentMeeting: "Precedente Recente", secondLeg: "Gara di Ritorno", aggregate: "Risultato Aggregato", competition: "Copa do Brasil" },
+  fr: { lineups: "Compositions", stats: "Statistiques", odds: "Cotes", goals: "Buts", corners: "Corners", handicap: "Handicap Asiatique", teamNews: "Actualités", injuries: "Absents", xg: "xG et xGA", shots: "Tirs Cadrés", btts: "Les Deux Équipes Marquent", recentMeeting: "Duel Récent", secondLeg: "Match Retour", aggregate: "Score Cumulé", competition: "Copa do Brasil" },
+  de: { lineups: "Aufstellungen", stats: "Statistik", odds: "Quoten", goals: "Tore", corners: "Ecken", handicap: "Asian Handicap", teamNews: "Team-News", injuries: "Ausfälle", xg: "xG und xGA", shots: "Torschüsse", btts: "Beide Teams Treffen", recentMeeting: "Letztes Duell", secondLeg: "Rückspiel", aggregate: "Gesamtergebnis", competition: "Copa do Brasil" },
 };
 
 const todayEnglishDescriptions: Record<string, string> = {
@@ -131,6 +174,18 @@ const todayEnglishDescriptions: Record<string, string> = {
   "birmingham-city-vs-southampton": "Birmingham City vs Southampton prediction: Birmingham double chance and Over 1.5 Goals at odds 1.87, with probable lineups, stats and match analysis.",
   "stoke-city-vs-norwich-city": "Stoke City vs Norwich prediction: Norwich double chance (X2) and Over 1.5 Goals at odds 1.78, with probable lineups, stats and match analysis.",
   "atletico-mineiro-vs-cruzeiro": "Atlético-MG vs Cruzeiro prediction for Copa do Brasil, with probable lineups, team news, injuries, stats, odds 1.72, goals and corners.",
+  "flamengo-vs-mirassol": "Flamengo vs Mirassol prediction: Flamengo -1.5 Asian Handicap at odds 1.82, with probable lineups, stats, goals, corners and their recent meeting.",
+  "celtic-vs-aberdeen": "Celtic vs Aberdeen prediction: Celtic -1.5 Asian Handicap at odds 1.72, with probable lineups, team news, injuries, xG, shots and corners.",
+  "dundee-vs-st-johnstone": "Dundee vs St Johnstone prediction at odds 1.95, with probable lineups, team news, injuries, statistics, goals and corners.",
+  "kilmarnock-vs-st-mirren": "Kilmarnock vs St Mirren prediction at odds 1.85, with probable lineups, statistics, goals, corners and full match analysis.",
+  "millwall-vs-wrexham": "Millwall vs Wrexham prediction: Millwall to win at odds 2.25, with probable lineups, stats, xG, shots on target and corners.",
+  "motherwell-vs-dundee-united": "Motherwell vs Dundee United prediction at odds 1.75, with probable lineups, BTTS and goals analysis, xG, shots and corners.",
+  "queens-park-rangers-vs-cardiff-city": "QPR vs Cardiff prediction: Over 2.5 Goals at odds 1.78, with probable lineups, statistics, xG, shots on target and corners.",
+  "west-bromwich-albion-vs-charlton-athletic": "West Brom vs Charlton prediction: Over 2.5 Goals at odds 2.10, with probable lineups, statistics, shots and corners.",
+  "burnley-vs-middlesbrough": "Burnley vs Middlesbrough prediction: Middlesbrough X2 and Over 1.5 Goals at odds 1.80, with lineups, stats, xG, shots and corners.",
+  "falkirk-vs-rangers": "Falkirk vs Rangers prediction at odds 1.60, with probable lineups, Rangers match analysis, statistics, goals and corners.",
+  "santos-vs-palmeiras": "Santos vs Palmeiras prediction for the Copa do Brasil second leg, with probable lineups, injuries, odds, aggregate score, statistics, goals and corners.",
+  "vitoria-vs-vasco-da-gama": "Vitória vs Vasco prediction for the Copa do Brasil second leg, with probable lineups, injuries, odds, aggregate score and match statistics.",
 };
 
 function isTodaySeoLocale(locale: SearchLocale): locale is TodaySeoLocale {
@@ -145,6 +200,16 @@ function formatLocalizedList(values: string[], locale: TodaySeoLocale) {
 
 function todaySeoTeams(profile: TodaySeoProfile, locale: TodaySeoLocale) {
   return `${profile.teams[0]} ${localeSearchResearch[locale].separator} ${profile.teams[1]}`;
+}
+
+function buildProfileIntentQueries(match: Match, locale: SearchLocale) {
+  if (!isTodaySeoLocale(locale)) return [];
+  const profile = todaySeoProfiles[match.slug];
+  if (!profile) return [];
+  const teams = todaySeoTeams(profile, locale);
+  return unique(profile.descriptionIntents.map((intent) =>
+    `${teams} ${todaySeoTerms[locale][intent].toLocaleLowerCase()}`
+  ));
 }
 
 function buildTodaySeoTitle(match: Match, locale: TodaySeoLocale) {
@@ -167,6 +232,10 @@ function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale, facts: M
   if (locale === "en") return todayEnglishDescriptions[match.slug] ?? "";
   const teams = todaySeoTeams(profile, locale);
   const focus = profile.focus?.[locale];
+  const temporal = resolveMatchTemporalState(match);
+  const localizedWhen = temporal === "tomorrow"
+    ? { "pt-BR": "de amanhã", es: "de mañana", it: "di domani", fr: "de demain", de: "für morgen" }[locale]
+    : { "pt-BR": "de hoje", es: "de hoy", it: "di oggi", fr: "du jour", de: "heutige" }[locale];
   const descriptionIntents = facts.odds
     ? profile.descriptionIntents.filter((intent) => intent !== "odds")
     : profile.descriptionIntents;
@@ -177,11 +246,11 @@ function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale, facts: M
   const odds = facts.odds;
   const candidates = {
     en: `${teams} prediction for today${focus ? `: ${focus}` : ""}. Check ${modules}${odds ? ` at odds of ${odds}` : ""}, kick-off time and venue.`,
-    "pt-BR": `${teams}: palpite de hoje${focus ? ` para ${focus}` : ""}. Confira ${modules}${odds ? `, odds ${odds}` : ""}, horário e estádio.`,
-    es: `${teams}: pronóstico de hoy${focus ? ` para ${focus}` : ""}. Consulta ${modules}${odds ? `, cuotas ${odds}` : ""}, horario y estadio.`,
-    it: `${teams}: pronostico di oggi${focus ? ` per ${focus}` : ""}. Consulta ${modules}${odds ? `, quote ${odds}` : ""}, orario e stadio.`,
-    fr: `${teams} : pronostic du jour${focus ? ` pour ${focus}` : ""}. Consultez ${modules}${odds ? `, cotes ${odds}` : ""}, horaire et stade.`,
-    de: `${teams}: heutige Prognose${focus ? ` für ${focus}` : ""}. Mit ${modules}${odds ? `, Quote ${odds}` : ""}, Anstoßzeit und Stadion.`,
+    "pt-BR": `${teams}: palpite ${localizedWhen}${focus ? ` para ${focus}` : ""}. Confira ${modules}${odds ? `, odds ${odds}` : ""}, horário e estádio.`,
+    es: `${teams}: pronóstico ${localizedWhen}${focus ? ` para ${focus}` : ""}. Consulta ${modules}${odds ? `, cuotas ${odds}` : ""}, horario y estadio.`,
+    it: `${teams}: pronostico ${localizedWhen}${focus ? ` per ${focus}` : ""}. Consulta ${modules}${odds ? `, quote ${odds}` : ""}, orario e stadio.`,
+    fr: `${teams} : pronostic ${localizedWhen}${focus ? ` pour ${focus}` : ""}. Consultez ${modules}${odds ? `, cotes ${odds}` : ""}, horaire et stade.`,
+    de: `${teams}: Prognose ${localizedWhen}${focus ? ` für ${focus}` : ""}. Mit ${modules}${odds ? `, Quote ${odds}` : ""}, Anstoßzeit und Stadion.`,
   }[locale];
   if (candidates.length <= 160) return candidates;
   const compact = candidates.replace(/, (?:kick-off time and venue|horário e estádio|horario y estadio|orario e stadio|horaire et stade|Anstoßzeit und Stadion)\.$/, ".");
@@ -539,6 +608,7 @@ export function buildMatchSearchIntent(
     ...bettingQueries,
     ...oddsQueries,
     ...analysisQueries,
+    ...buildProfileIntentQueries(match, locale),
   ]);
 
   return {
