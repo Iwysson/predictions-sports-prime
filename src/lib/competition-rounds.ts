@@ -74,12 +74,13 @@ function fixtureToMatch(
   const published = findPublishedPrediction(game, publishedMatches, usedPredictions);
   if (published) {
     usedPredictions.add(published.id);
+    const roundLabel = published.round?.trim() || `Matchday ${round}`;
     return {
       ...published,
       fixtureId: game.id ?? published.fixtureId,
       kickoffUtc: game.kickoffUtc ?? published.kickoffUtc,
       timeConfirmed: game.timeConfirmed ?? published.timeConfirmed,
-      round: `Matchday ${round}`,
+      round: roundLabel,
       date: game.date,
       time: game.time,
       homeTeam: game.homeTeam,

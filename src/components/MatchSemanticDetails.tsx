@@ -87,21 +87,21 @@ export function MatchSemanticDetails({ match }: { match: Match }) {
         </section>
       ) : null}
 
-      {data.statistics ? (
+      {data.statistics || coreRows.length ? (
         <section className="match-module" aria-labelledby="match-statistics-heading">
-          <h2 id="match-statistics-heading">{upcoming ? `${match.homeTeam} vs ${match.awayTeam} Statistics` : "Match Statistics"}</h2>
-          <p className="match-module-note">Sample: {data.statistics.sample}</p>
+          <h2 id="match-statistics-heading">Statistical Core Predictions-Sports-Prime</h2>
+          {data.statistics ? <p className="match-module-note">Sample: {data.statistics.sample}</p> : null}
           <div className="match-stats" role="table" aria-label={`${match.homeTeam} and ${match.awayTeam} statistics`}>
             <div className="match-stats-row match-stats-header" role="row">
               <span role="columnheader">Metric</span><span role="columnheader">{match.homeTeam}</span><span role="columnheader">{match.awayTeam}</span>
             </div>
-            {(upcoming && coreRows.length ? coreRows : data.statistics.rows).map((row) => (
+            {(coreRows.length ? coreRows : data.statistics?.rows ?? []).map((row) => (
               <div className="match-stats-row" role="row" key={row.label}>
                 <span role="rowheader">{row.label}</span><span role="cell">{row.home}</span><span role="cell">{row.away}</span>
               </div>
             ))}
           </div>
-          <Sources sources={data.statistics.sources} />
+          {data.statistics ? <Sources sources={data.statistics.sources} /> : null}
         </section>
       ) : null}
 

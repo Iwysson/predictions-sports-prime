@@ -4,11 +4,11 @@ import type { Match } from "@/types";
 import { extractStatisticalCoreRows } from "@/lib/statistical-core";
 
 const labels = {
-  "pt-br": { info: "Informações da partida", competition: "Competição", round: "Rodada", date: "Data", time: "Horário", venue: "Estádio", city: "Cidade", lineups: "Prováveis escalações de", confirmed: "Escalações confirmadas de", availability: "Notícias das equipes, desfalques, lesões e suspensões", stats: "Estatísticas de", metric: "Métrica", sources: "Fontes", home: "Mandante", away: "Visitante" },
-  es: { info: "Información del partido", competition: "Competición", round: "Jornada", date: "Fecha", time: "Horario", venue: "Estadio", city: "Ciudad", lineups: "Alineaciones probables de", confirmed: "Alineaciones confirmadas de", availability: "Bajas, lesiones y sancionados", stats: "Estadísticas de", metric: "Métrica", sources: "Fuentes", home: "Local", away: "Visitante" },
-  it: { info: "Informazioni sulla partita", competition: "Competizione", round: "Giornata", date: "Data", time: "Orario", venue: "Stadio", city: "Città", lineups: "Probabili formazioni di", confirmed: "Formazioni confermate di", availability: "Indisponibili, infortuni e squalificati", stats: "Statistiche di", metric: "Metrica", sources: "Fonti", home: "Casa", away: "Trasferta" },
-  fr: { info: "Informations sur le match", competition: "Compétition", round: "Journée", date: "Date", time: "Horaire", venue: "Stade", city: "Ville", lineups: "Compositions probables de", confirmed: "Compositions confirmées de", availability: "Absents, blessures et suspendus", stats: "Statistiques de", metric: "Indicateur", sources: "Sources", home: "Domicile", away: "Extérieur" },
-  de: { info: "Spielinformationen", competition: "Wettbewerb", round: "Spieltag", date: "Datum", time: "Anstoßzeit", venue: "Stadion", city: "Stadt", lineups: "Voraussichtliche Aufstellungen für", confirmed: "Bestätigte Aufstellungen für", availability: "Ausfälle, Verletzungen und Sperren", stats: "Statistiken für", metric: "Kennzahl", sources: "Quellen", home: "Heim", away: "Auswärts" },
+  "pt-br": { info: "Informações da partida", competition: "Competição", round: "Rodada", date: "Data", time: "Horário", venue: "Estádio", city: "Cidade", lineups: "Prováveis escalações de", confirmed: "Escalações confirmadas de", availability: "Notícias das equipes, desfalques, lesões e suspensões", stats: "Core Estatístico Predictions-Sports-Prime", metric: "Métrica", sources: "Fontes", home: "Mandante", away: "Visitante" },
+  es: { info: "Información del partido", competition: "Competición", round: "Jornada", date: "Fecha", time: "Horario", venue: "Estadio", city: "Ciudad", lineups: "Alineaciones probables de", confirmed: "Alineaciones confirmadas de", availability: "Bajas, lesiones y sancionados", stats: "Núcleo Estadístico Predictions-Sports-Prime", metric: "Métrica", sources: "Fuentes", home: "Local", away: "Visitante" },
+  it: { info: "Informazioni sulla partita", competition: "Competizione", round: "Giornata", date: "Data", time: "Orario", venue: "Stadio", city: "Città", lineups: "Probabili formazioni di", confirmed: "Formazioni confermate di", availability: "Indisponibili, infortuni e squalificati", stats: "Core Statistico Predictions-Sports-Prime", metric: "Metrica", sources: "Fonti", home: "Casa", away: "Trasferta" },
+  fr: { info: "Informations sur le match", competition: "Compétition", round: "Journée", date: "Date", time: "Horaire", venue: "Stade", city: "Ville", lineups: "Compositions probables de", confirmed: "Compositions confirmées de", availability: "Absents, blessures et suspendus", stats: "Noyau Statistique Predictions-Sports-Prime", metric: "Indicateur", sources: "Sources", home: "Domicile", away: "Extérieur" },
+  de: { info: "Spielinformationen", competition: "Wettbewerb", round: "Spieltag", date: "Datum", time: "Anstoßzeit", venue: "Stadion", city: "Stadt", lineups: "Voraussichtliche Aufstellungen für", confirmed: "Bestätigte Aufstellungen für", availability: "Ausfälle, Verletzungen und Sperren", stats: "Statistischer Kern Predictions-Sports-Prime", metric: "Kennzahl", sources: "Quellen", home: "Heim", away: "Auswärts" },
 } as const;
 
 export const fullyLocalizedMatchLocales = ["pt-br", "es", "it", "fr", "de"] as const;
@@ -45,7 +45,7 @@ function localizedMetric(locale: FullyLocalizedMatchLocale, label: string, categ
   }[locale];
   const exact: Array<[RegExp, string]> = [
     [/^Matches \(N\)$/i, vocabulary[0]], [/^Points\/game$/i, vocabulary[1]], [/^GF\/game$/i, vocabulary[2]], [/^GA\/game$/i, vocabulary[3]],
-    [/^Shots\/game$/i, vocabulary[4]], [/^SOT\/game$/i, vocabulary[5]], [/^Possession$/i, vocabulary[6]], [/^Corners for\/game$/i, vocabulary[7]],
+    [/^Shots\/game$/i, vocabulary[4]], [/^SOT\/game$/i, vocabulary[5]], [/^Shots allowed\/game$/i, `${vocabulary[4]} (${labels[locale].away})`], [/^SOT allowed\/game$/i, `${vocabulary[5]} (${labels[locale].away})`], [/^Possession$/i, vocabulary[6]], [/^Corners for\/game$/i, vocabulary[7]],
     [/^Corners against\/game$/i, vocabulary[8]], [/^Total corners\/game$/i, vocabulary[9]], [/^First to score$/i, vocabulary[10]], [/^First to concede$/i, vocabulary[11]],
     [/^Scored in 1st half$/i, vocabulary[12]], [/^Conceded in 1st half$/i, vocabulary[13]], [/^BTTS$/i, vocabulary[14]], [/^Clean sheets$/i, vocabulary[15]], [/^Failed to score$/i, vocabulary[16]],
   ];
@@ -71,6 +71,21 @@ function localizedStatisticValue(locale: FullyLocalizedMatchLocale, value: strin
     .replace(/\bvisitante\b/gi, qualifiers.away);
 }
 
+function localizedRound(locale: FullyLocalizedMatchLocale, round: string) {
+  const matchday = round.match(/^Matchday\s+(\d+)$/i);
+  if (matchday) {
+    const prefix = { "pt-br": "Rodada", es: "Jornada", it: "Giornata", fr: "Journée", de: "Spieltag" }[locale];
+    return `${prefix} ${matchday[1]}`;
+  }
+  if (/^Quarter-finals$/i.test(round)) {
+    return { "pt-br": "Quartas de final", es: "Cuartos de final", it: "Quarti di finale", fr: "Quarts de finale", de: "Viertelfinale" }[locale];
+  }
+  if (/^Quarter-final\s+—\s+Second Leg$/i.test(round)) {
+    return { "pt-br": "Quartas de final — jogo de volta", es: "Cuartos de final — partido de vuelta", it: "Quarti di finale — ritorno", fr: "Quart de finale — match retour", de: "Viertelfinale — Rückspiel" }[locale];
+  }
+  return round;
+}
+
 function SourceLinks({ match, locale }: { match: Match; locale: FullyLocalizedMatchLocale }) {
   const sources = match.sources ?? [];
   if (!sources.length) return null;
@@ -89,12 +104,12 @@ export function LocalizedMatchDetails({ match, locale }: { match: Match; locale:
   return <div className="match-semantic-details">
     <section className="match-module"><h2>{copy.info}</h2><dl className="match-information-grid">
       <div><dt>{copy.competition}</dt><dd>{leaguesBySlug[match.league]?.name ?? match.league}</dd></div>
-      <div><dt>{copy.round}</dt><dd>{match.round}</dd></div><div><dt>{copy.date}</dt><dd>{match.date}</dd></div><div><dt>{copy.time}</dt><dd>{match.time}</dd></div>
+      <div><dt>{copy.round}</dt><dd>{localizedRound(locale, match.round)}</dd></div><div><dt>{copy.date}</dt><dd>{match.date}</dd></div><div><dt>{copy.time}</dt><dd>{match.time}</dd></div>
       {match.venue ? <div><dt>{copy.venue}</dt><dd>{match.venue}</dd></div> : null}{data.information?.city ? <div><dt>{copy.city}</dt><dd>{data.information.city}</dd></div> : null}
     </dl></section>
     {data.lineups ? <section className="match-module"><h2>{data.lineups.status === "confirmed" ? copy.confirmed : copy.lineups} {teams}</h2><div className="match-lineups-grid">{(["home", "away"] as const).map((side) => <div key={side}><h3>{side === "home" ? match.homeTeam : match.awayTeam}</h3><ol>{data.lineups![side].players.map((player) => <li key={player}>{player}</li>)}</ol></div>)}</div></section> : null}
     {data.availability ? <section className="match-module"><h2>{copy.availability}</h2><ul className="match-availability-list">{data.availability.entries.map((entry) => <li key={`${entry.team}-${entry.player}`}><strong>{entry.player}</strong> ({entry.team === "home" ? match.homeTeam : match.awayTeam}) — {statusLabels[locale][entry.status]}</li>)}</ul></section> : null}
-    {data.statistics ? <section className="match-module"><h2>{copy.stats} {teams}</h2><div className="match-stats" role="table" aria-label={`${copy.stats} ${teams}`}><div className="match-stats-row match-stats-header" role="row"><span role="columnheader">{copy.metric}</span><span role="columnheader">{copy.home}</span><span role="columnheader">{copy.away}</span></div>{statisticalRows.map((row, index) => <div className="match-stats-row" role="row" key={row.label}><span role="rowheader">{localizedMetric(locale, row.label, row.category, index)}</span><span role="cell">{localizedStatisticValue(locale, row.home)}</span><span role="cell">{localizedStatisticValue(locale, row.away)}</span></div>)}</div></section> : null}
+    {data.statistics || coreRows.length ? <section className="match-module"><h2>{copy.stats}</h2><div className="match-stats" role="table" aria-label={`${copy.stats}: ${teams}`}><div className="match-stats-row match-stats-header" role="row"><span role="columnheader">{copy.metric}</span><span role="columnheader">{copy.home}</span><span role="columnheader">{copy.away}</span></div>{statisticalRows.map((row, index) => <div className="match-stats-row" role="row" key={row.label}><span role="rowheader">{localizedMetric(locale, row.label, row.category, index)}</span><span role="cell">{localizedStatisticValue(locale, row.home)}</span><span role="cell">{localizedStatisticValue(locale, row.away)}</span></div>)}</div></section> : null}
     <SourceLinks match={match} locale={locale} />
   </div>;
 }

@@ -9,6 +9,7 @@ import {
   type SearchLocale,
 } from "@/lib/search-intent-research";
 import { siteConfig } from "@/lib/site-config";
+import { extractStatisticalCoreRows } from "@/lib/statistical-core";
 import type { Match } from "@/types";
 
 export { localeSearchResearch, searchIntentLocales } from "@/lib/search-intent-research";
@@ -103,7 +104,7 @@ function readMatchFacts(match: Match): MatchIntentFacts {
     mainPick,
     odds,
     hasAnalysis: match.analysis.some((paragraph) => paragraph.trim().length > 0),
-    hasStatistics: Boolean(match.matchSeo?.statistics) || /\b(?:statistic|average|record|goals?|points?|matches?|wins?|draws?|losses?|scored|conceded|percentage|probability)\b|\d+(?:[.,]\d+)?%/i.test(analysis),
+    hasStatistics: extractStatisticalCoreRows(match).length > 0 || Boolean(match.matchSeo?.statistics) || /\b(?:statistic|average|record|goals?|points?|matches?|wins?|draws?|losses?|scored|conceded|percentage|probability)\b|\d+(?:[.,]\d+)?%/i.test(analysis),
     hasForm: /\b(?:form|recent|last\s+\d+|sequence|run of|unbeaten|winning run)\b/i.test(analysis),
     hasH2h: Boolean(match.matchSeo?.h2h),
     hasStandingsContext: /\b(?:standings|league table|table position|points table|finished\s+\d+)\b/i.test(analysis),
@@ -158,7 +159,7 @@ export function getMatchIntentCapabilities(match: Match) {
     hasVenue: facts.hasVenue,
     hasKickOff: facts.hasKickOff,
     hasBroadcastInfo: facts.hasBroadcastInfo,
-    hasStatisticalCore: Boolean(match.matchSeo?.statistics),
+    hasStatisticalCore: extractStatisticalCoreRows(match).length > 0,
     markets: detectPickMarkets(facts.mainPick),
   };
 }
@@ -228,16 +229,17 @@ function buildEnglishDescription(
   const odds = facts.odds ? ` at odds of ${facts.odds}` : "";
   const pick = facts.mainPick || "the main prediction";
   if (match.matchSeo) {
-    const modules = [
-      facts.hasLineups ? (match.matchSeo?.lineups?.status === "confirmed" ? "confirmed lineups" : "expected lineups") : "",
-      facts.hasAvailability ? "availability" : "",
-      facts.hasStatistics ? "statistics" : "",
-      facts.hasH2h ? "head-to-head context" : "",
-      facts.hasWeather ? "weather" : "",
-    ].filter(Boolean);
+    const modules = [];
+    if (facts.hasLineups) modules.push(match.matchSeo?.lineups?.status === "confirmed" ? "confirmed lineups" : "probable lineups");
+    if (facts.hasInjuries) modules.push("injury news");
+    if (facts.hasStatistics) modules.push("statistics");
+    if (facts.hasH2h) modules.push("head-to-head");
+    if (facts.odds) modules.push("odds comparison");
+
     return fitDescription([
-      `${teams} prediction${when}: ${pick}${odds}. Review ${modules.join(", ")} for this ${facts.leagueName} match.`,
-      `${teams} prediction${when}, ${pick}${odds}, plus ${modules.slice(0, 3).join(", ")}.`,
+      `${teams} prediction${when}: ${pick}${odds}. Check ${modules.slice(0, 4).join(", ")} for this ${facts.leagueName} match.`,
+      `${teams} prediction${when}, ${pick}${odds}. Review ${modules.slice(0, 3).join(", ")} before the match.`,
+      `${teams} prediction${when}: ${pick}${odds}. Full analysis with ${modules.slice(0, 2).join(" and ")} for ${facts.leagueName}.`,
       `${teams} prediction${when} and match analysis for ${facts.leagueName}.`,
     ]);
   }
@@ -267,8 +269,14 @@ function buildLocalizedDescription(
   const teams = matchTeams(match, locale);
   const when = temporal ? ` ${research.temporal[temporal]}` : match.date ? ` ${match.date}` : "";
   const odds = facts.odds ? `, ${research.odds} ${facts.odds}` : "";
+
+  const modules = [];
+  if (facts.hasStatistics) modules.push(research.statistics);
+
+  const moduleStr = modules.slice(0, 2).join(", ") || research.analysis;
+
   return fitDescription([
-    `${teams}: ${research.prediction}${when}. ${sentenceCase(research.analysis)}, ${research.betting}${odds} - ${facts.leagueName}.`,
+    `${teams}: ${research.prediction}${when}. ${sentenceCase(moduleStr)}, ${research.analysis}${odds} - ${facts.leagueName}.`,
     `${teams}: ${research.prediction}${when}, ${research.analysis}${odds}.`,
     `${teams}: ${research.prediction} - ${facts.leagueName}.`,
   ]);
@@ -283,17 +291,22 @@ function buildTitle(match: Match, locale: SearchLocale) {
     const secondary = [
       facts.hasLineups ? (match.matchSeo.lineups?.status === "confirmed" ? "Lineups" : "Probable Lineups") : "",
       facts.hasStatistics ? "Stats" : "",
-      facts.hasTeamNews || facts.hasAvailability ? "Team News" : "",
+      facts.hasInjuries || facts.hasAvailability ? "Injuries" : "",
       facts.odds ? "Odds" : "",
-    ].filter(Boolean).slice(0, 2);
-    const capability = `Prediction${secondary.length ? `, ${secondary.join(" & ")}` : " & Match Analysis"}`;
+    ].filter(Boolean).slice(0, 3);
+    const capability = `Prediction${secondary.length ? `, ${secondary.join(" & ")}` : " & Analysis"}`;
     const structuredTitle = `${teams} ${capability}`;
     const leagueName = leaguesBySlug[match.league]?.name ?? match.league;
     const competitionTitle = `${structuredTitle} | ${leagueName}`;
-    if (competitionTitle.length <= 65) return competitionTitle;
-    const compactCompetitionTitle = `${teams} Prediction | ${leagueName}`;
-    if (compactCompetitionTitle.length <= 70) return compactCompetitionTitle;
-    return structuredTitle.length <= 65 ? structuredTitle : `${teams} Prediction`;
+    if (competitionTitle.length <= 60) return competitionTitle;
+    const compactSecondary = secondary.slice(0, 2).join(" & ");
+    const compactCapability = compactSecondary ? `Prediction, ${compactSecondary}` : "Prediction & Odds";
+    const compactStructured = `${teams} ${compactCapability}`;
+    const compactCompetitionTitle = `${compactStructured} | ${leagueName}`;
+    if (compactCompetitionTitle.length <= 68) return compactCompetitionTitle;
+    const minimalCompetition = `${teams} Prediction | ${leagueName}`;
+    if (minimalCompetition.length <= 70) return minimalCompetition;
+    return compactStructured.length <= 65 ? compactStructured : `${teams} Prediction`;
   }
   const full = locale === "en"
     ? `${teams} Prediction, Betting Tips & Odds | ${siteConfig.name}`
