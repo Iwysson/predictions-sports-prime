@@ -1,34 +1,43 @@
 import type { EditorialPrediction } from "@/types";
 
 export const realBetisVsRealMadrid: EditorialPrediction = {
-  league: "la-liga",
-  homeTeam: "Real Betis",
-  awayTeam: "Real Madrid",
-  slug: "real-betis-vs-real-madrid",
-  analysis: ["# Real Betis vs Real Madrid — La Liga 2026/27 Match Analysis\n\n🎯 **Prediction: Real Madrid or Draw (X2) + Over 8.5 Corners**  \n💰 **Odds: 1.80 (-125)**  \n**La Liga — Matchweek 4 | September 4, 2026 — 9:00 PM local time | Estadio La Cartuja, Seville**\n\n**Real Betis vs Real Madrid prediction** combines a protected away result with a corner line. The chronology is current through August 30: Betis arrive from a **5–2 defeat at Levante**, while Real Madrid beat **Málaga 4–0** and remain perfect through three league matches. The current sample is still small, so it updates rather than replaces the longer H2H and 2025/26 profiles.\n\nThe fixture is scheduled for **Friday at 21:00 local time at Estadio La Cartuja**. **Weather:** final temperature, wind, humidity and precipitation should be refreshed on matchday rather than frozen several days early. **Probable lineups:** the baseline must remain each club's latest competitive XI. Madrid rotated five positions against Málaga, so the final projection needs to account for recovery and the Champions League match against Inter shortly afterward.\n\n\n\n**Availability:** the final medical and suspension report must be refreshed after the latest training sessions. No unverified absence is promoted to confirmed status in this package; any player who appeared in the August 30 matches is treated as available unless a new report states otherwise.\nBetis' 5–2 loss is more useful analytically than the scoreline alone. They still finished with approximately **20 shots, six SOT, 60.2% possession and eight corners**. That matters directly to **Over 8.5 Corners** because falling behind did not suppress their attacking contribution; chasing the score increased their volume.\n\nAcross the broader 2025/26 comparison, Betis were around **1.46 xG (Expected Goals — Gols Esperados) per match**, while Real Madrid were around **2.11 xG**, reinforcing the visitors' larger attacking ceiling even before the perfect 2026/27 start. This is supporting context rather than a direct projection for La Cartuja.\n\nMadrid's 4–0 win over Málaga showed the opposite game-state risk. They effectively settled the contest early, scoring three times inside the opening half-hour before reducing intensity. That type of clinical start is a potential negative for corners because a team with a comfortable lead no longer needs to sustain maximum pressure.\n\nFor **X2**, the larger H2H is informative. Across the last 15 meetings, Betis won three, seven were draws and Madrid won five. Madrid therefore avoided defeat in **12/15 — 80%**. The most recent game in Seville finished **1–1**, a useful example of why protection through the draw is preferable to forcing an away win.\n\nThe corner database is the strongest specific evidence for the second leg. The last 15 H2Hs averaged approximately **10.5 total corners**, with **73% above 9.5**. With Betis at home, the average remains around **10.3**. Betis themselves produced **7, 8 and 9 corners** in three recent meetings with Madrid, showing that the total can be reached even if Madrid do not generate all nine.\n\nBetis' current season also shows variation rather than a fixed corner rate: roughly **4.67 corners per game** through the opening three, but with eight at Levante. That variability is normal and illustrates why match state matters. Madrid's wide one-against-one threat through Vinícius, Mbappé's depth and the supporting full-back/midfield runs can force repeated blocks and clearances, while Betis can contribute when chasing.\n\nThe selected **8.5** threshold is important. Historical H2H averages are above ten, but forcing 10.5 or 11.5 would unnecessarily increase dependence on one specific game script. Nine total corners can be reached through 5–4, 6–3, 7–2 or 8–1; equal contribution is not required.\n\n### Statistical Core\n\n| Metric | Real Betis | Real Madrid |\n|---|---:|---:|\n| La Liga 2026/27 record | 2-0-1 | 3-0-0 |\n| Current points | 6 | 9 |\n| Betis corners — current season | 4.67/game | — |\n| Latest match | 2–5 at Levante | 4–0 vs Málaga |\n| Madrid unbeaten — last 15 H2H | — | 12/15 (80%) |\n| H2H total corners | 10.5/game | 10.5/game |\n| H2H Over 9.5 corners | 73% | 73% |\n| H2H corners with Betis home | 10.3/game | 10.3/game |\n| Betis corners — Apr. 2026 H2H | 7 | — |\n| Betis corners — Jan. 2026 H2H | 8 | — |\n| Betis corners — Mar. 2025 H2H | 9 | — |\n\n**Conflict Detector.** Betis have beaten Madrid before, so X2 cannot be treated as automatic. Corners are even more score-sensitive: Madrid's 4–0 against Málaga shows how an early three-goal advantage can suppress later pressure. The positive counterweight is strong: Madrid are 3–0–0, avoided defeat in 80% of the 15-match H2H sample, and the historical corner environment sits above the chosen line.\n\nAt **1.80**, the raw implied probability is **55.6%**. That is the bookmaker's price threshold, not our model probability. Historical frequencies cannot be compared directly with 55.6% to claim value because squads change and the two legs are correlated.\n\n🎯 **Prediction: Real Madrid or Draw (X2) + Over 8.5 Corners**  \n💰 **Odds: 1.80 (-125)**\n"],
-  analysisFormat: "markdown",
-  picks: {
-    main: "Real Madrid or Draw (X2) + Over 8.5 Corners",
-    publishedOdds: 1.8,
-    oddsProvenance: {
-      source: "Supplied 10-analysis standardized verified final package",
-      provenance: "author_attested",
-      market: "Real Madrid or Draw (X2) + Over 8.5 Corners",
-    },
+  "league": "la-liga",
+  "homeTeam": "Real Betis",
+  "awayTeam": "Real Madrid",
+  "slug": "real-betis-vs-real-madrid",
+  "title": "Real Betis vs Real Madrid Prediction, Odds and Betting Tips",
+  "analysis": [
+    "# Real Betis vs Real Madrid Prediction, Odds and Betting Tips\n**Prediction:** Real Betis +1.5 Asian Handicap\n**Odds:** 1.80\nCompetition: La Liga\nRound: Matchday 4\nDate: 2026-09-04\nKick-off: 21:00 (Spain local time)\nVenue: Estadio La Cartuja de Sevilla\nLocation: Seville, Spain\nThe final PSP market has now been selected after reviewing the venue-specific Statistical Core, overall context, game-state profile and the principal conflicts in the data. Betis receive a +1.5-goal cushion. The home sample shows enough shot volume to keep this from being treated as a pure mismatch: 18 shots, seven on target and 1.06 xG against Real Sociedad. Real Madrid are clearly the superior process side, but their only away match still conceded and finished 2-1. The handicap therefore buys protection against a one-goal Madrid win while respecting Madrid's stronger territorial profile.\n### Team News and Probable Lineups\n**Probable lineups:** Real Betis: Álvaro Valles; Héctor Bellerín, Marc Bartra, Natan, Fran García; Marc Roca, Facundo Bernal; Antony, Pablo Fornals, Rodrigo Riquelme; Cucho Hernández. Real Madrid: Thibaut Courtois; Denzel Dumfries, Ibrahima Konaté, Dean Huijsen, Álvaro Carreras; Bernardo Silva, Federico Valverde, Arda Güler; Jude Bellingham; Vinícius Júnior, Kylian Mbappé. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.\n**Injuries / doubts:** Betis reports listed Gonzalo Petit, Giovani Lo Celso, Abde, Diego Conde, Aitor Ruibal and Ismael Barea unavailable or not ready. Real Madrid reports listed Aurélien Tchouaméni and Endrick out around early September. None is retained in this XI.\n**Suspensions:** No active suspension affecting the projected XI was identified in the sources checked.\n**Transfers / signings / registration:** The XI remains based on the latest verified competitive lineup material; current injury checks do not force an additional substitution among the listed starters.\n**Lineup source note:** Recent verified lineup baseline + FotMob current availability; checked 01/09/2026. Any new official club/competition update closer to kickoff overrides this probable XI.\nBetis' only home sample is a 1-0 win over Real Sociedad, but the process was less dominant than the result: 1.06 xG versus 1.40 xGA, 18-9 shots and 7-3 shots on target, with 48% possession. Their 4-5 corner split produced nine total corners, while the clean sheet came despite conceding more expected-goal value than they created. Real Madrid's only away match, a 2-1 win at Espanyol, was far more territorial: 63% possession, 21 shots, eight on target, 2.36 xG and eight corners, while allowing eight shots and 0.93 xG. Madrid scored first and in the first half but also conceded before the interval, so dominance did not equal a clean sheet. The matchup therefore pits Betis' home shot volume against Madrid's much stronger control and chance quality.\nThe tactical reading must remain anchored to venue-specific process rather than raw table position. HOME and AWAY samples are still small, so OVERALL is used only as context and never merged into the Statistical Core. With N=1 or N=2, 0% and 100% frequencies describe the observed sample, not future probability. Shot quality, SOT efficiency, corner pressure and first-score behaviour should be interpreted together with opponent strength and game-state distortions.\n### Statistical Core Predictions-Sports-Prime\n| Metric | Real Betis — HOME | Real Madrid — AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 1 | 1 |\n| W-D-L | 1-0-0 | 1-0-0 |\n| Points/game | 3.00 | 3.00 |\n| GF/game | 1.00 | 2.00 |\n| GA/game | 0.00 | 1.00 |\n| xG/game | 1.06 | 2.36 |\n| xGA/game | 1.40 | 0.93 |\n| Shots/game | 18.0 | 21.0 |\n| SOT/game | 7.0 | 8.0 |\n| Shots allowed/game | 9.0 | 8.0 |\n| SOT allowed/game | 3.0 | 3.0 |\n| Possession | 48.0% | 63.0% |\n| Corners for/game | 4.0 | 8.0 |\n| Corners against/game | 5.0 | 0.0 |\n| Total corners/game | 9.0 | 8.0 |\n| Over 7.5 corners | 100% | 100% |\n| Over 8.5 corners | 100% | 0% |\n| Over 9.5 corners | 0% | 0% |\n| First to score | 100% | 100% |\n| First to concede | 0% | 0% |\n| Scored in 1st half | 0% | 100% |\n| Conceded in 1st half | 0% | 100% |\n| Over 1.5 goals | 0% | 100% |\n| Over 2.5 goals | 0% | 100% |\n| Over 3.5 goals | 0% | 0% |\n| BTTS | 0% | 100% |\n| Clean sheets | 100% | 0% |\n| Failed to score | 0% | 0% |\n**Conflict Detector.** The main conflict is Real Madrid's early attacking ceiling: 10 goals in three league matches overall and 2.36 xG in the only away sample. Betis also arrive after conceding five at Levante, so a multi-goal Madrid margin is not a theoretical risk. The bet relies on Betis being materially more competitive at home than in that away collapse and on the +1.5 cushion absorbing Madrid's superiority.\nOdds/implied probability: 1.80 corresponds to a gross market-implied probability of approximately 55.6%. This is a price-derived probability, not a PSP model probability and not the same as the historical frequency of any single split metric.\nConclusion: the final selection is **Real Betis +1.5 Asian Handicap** at **1.80**. The bet is supported by the strongest venue-specific signals identified above, while the Conflict Detector defines the principal ways the market can fail. The statistical percentages remain descriptive because several HOME/AWAY samples are still small; the selection is therefore a synthesis of process, game state, opponent interaction and price rather than a mechanical reading of 0%/100% rates.\n**Prediction:** Real Betis +1.5 Asian Handicap\n**Odds:** 1.80\nSources: LALIGA official Matchday 4 schedule and standings; Football Web Pages 2026/27 Spanish La Liga match reports; xGscore for Valencia 0-1 Real Betis cross-check; oGol/zerozero and Guardian for selected match-stat cross-checks. Cutoff: 01/09/2026. Where providers disagreed, the chosen source context is retained rather than averaging incompatible xG models."
+  ],
+  "analysisFormat": "markdown",
+  "picks": {
+    "main": "Real Betis +1.5 Asian Handicap",
+    "publishedOdds": 1.8,
+    "oddsProvenance": {
+      "source": "PSP 29-game final publication package v2",
+      "provenance": "author_attested",
+      "market": "Real Betis +1.5 Asian Handicap"
+    }
   },
-  published: true,
-  publishedAt: "2026-08-30T10:00:00-03:00",
-  sourceStatus: "verified",
-  sources: [{
-    name: "LALIGA — 2026/27 Matchweek 4 fixtures",
-    url: "https://www.laliga.com/laliga-easports/resultados/2026-27/jornada-4",
-    description: "Season fixture data supporting the competition, round, date, home team and away team used for publication.",
-    accessedAt: "2026-08-30T10:00:00-03:00",
-  }],
-  matchInfo: {
-    date: "2026-09-04",
-    time: "21:00",
-    round: "Matchweek 4",
-    venue: "Estadio La Cartuja",
-  },
+  "published": true,
+  "publishedAt": "2026-09-01T12:00:00-03:00",
+  "sourceStatus": "verified",
+  "sources": [
+    {
+      "name": "OpenFootball — La Liga 2026/27 fixture feed",
+      "url": "https://raw.githubusercontent.com/openfootball/espana/refs/heads/master/2026-27/1-liga.txt",
+      "description": "Existing project fixture source used to link the supplied analysis to the correct match.",
+      "accessedAt": "2026-09-01T12:00:00-03:00"
+    }
+  ],
+  "matchInfo": {
+    "date": "2026-09-04",
+    "time": "21:00",
+    "round": "Matchday 4",
+    "venue": "Estadio La Cartuja de Sevilla",
+    "venueAddress": {
+      "addressLocality": "Seville",
+      "addressCountry": "Spain"
+    }
+  }
 };
