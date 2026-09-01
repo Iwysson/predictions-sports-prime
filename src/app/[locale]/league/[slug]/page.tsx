@@ -40,7 +40,7 @@ export default async function LocalizedLeague({ params }: { params: Promise<{ lo
   const upcomingMatches = matches.filter((match) => match.league === league.slug && match.status === "published" && isUpcomingMatch(match));
   const latestMatches = [...upcomingMatches].sort((left, right) =>
     left.date.localeCompare(right.date) || left.time.localeCompare(right.time)
-  ).slice(0, 8);
+  );
   return <>
     <section className="league-title-bar"><div className="container league-title-inner"><div className="league-title-copy"><div><nav className="league-breadcrumb" aria-label="Breadcrumb"><Link href={localePath(locale)}>{copy.today}</Link><span aria-hidden="true">›</span><span>{league.name}</span></nav><h1>{copy.leagueTitle(league.name).split(" | ")[0]}</h1></div></div></div></section>
     <section className="section"><div className="container"><h2>{copy.leagues}: {league.name}</h2><p className="league-seo-intro">{copy.leagueIntro(league.name)}</p><p>{copy.leagueDescription(league.name)}</p></div></section>

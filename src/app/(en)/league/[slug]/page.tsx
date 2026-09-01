@@ -140,6 +140,17 @@ export default async function LeaguePage({
       .filter((match) => match.status === "published")
       .map((match) => match.slug)
   );
+  const surfacedPublishedMatches = [...publishedMatches]
+    .filter((match) => {
+      if (activePublishedSlugs.has(match.slug)) return false;
+      const fixture = findFixtureForPrediction(fixtureRounds, match);
+      return fixture && isActiveFixtureState(classifyFixture(fixture));
+    })
+    .sort((left, right) =>
+      left.date.localeCompare(right.date) ||
+      left.time.localeCompare(right.time) ||
+      left.title.localeCompare(right.title)
+    );
   const archivedPublishedMatches = [...publishedMatches]
     .filter((match) => {
       if (activePublishedSlugs.has(match.slug)) return false;
@@ -151,6 +162,10 @@ export default async function LeaguePage({
       left.title.localeCompare(right.title)
     )
     .slice(0, 4);
+  const publishedAnalysisMatches = [
+    ...surfacedPublishedMatches,
+    ...archivedPublishedMatches,
+  ];
 
   return (
     <>
@@ -193,7 +208,7 @@ export default async function LeaguePage({
 
             <LeaguePublishedAnalysis
               leagueName={league.name}
-              matches={archivedPublishedMatches}
+              matches={publishedAnalysisMatches}
             />
 
             <LeagueEditorialHub leagueName={league.name} publishedMatches={publishedMatches} surface={roundSurface} />
