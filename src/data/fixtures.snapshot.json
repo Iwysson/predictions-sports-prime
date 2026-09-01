@@ -13256,7 +13256,7 @@
             "dataSource": "editorial-package",
             "id": "editorial:brasileirao-serie-a:red-bull-bragantino-vs-bahia:2026-09-05",
             "sourceAgreement": false,
-            "timeConfirmed": false,
+            "timeConfirmed": true,
             "kickoffUtc": "2026-09-05T21:00:00.000Z"
           },
           {
@@ -13271,7 +13271,7 @@
             "dataSource": "editorial-package",
             "id": "editorial:brasileirao-serie-a:sao-paulo-vs-atletico-mg:2026-09-05",
             "sourceAgreement": false,
-            "timeConfirmed": false,
+            "timeConfirmed": true,
             "kickoffUtc": "2026-09-05T21:30:00.000Z"
           },
           {
@@ -13286,7 +13286,7 @@
             "dataSource": "editorial-package",
             "id": "editorial:brasileirao-serie-a:fluminense-vs-vasco-da-gama:2026-09-05",
             "sourceAgreement": false,
-            "timeConfirmed": false,
+            "timeConfirmed": true,
             "kickoffUtc": "2026-09-06T00:00:00.000Z"
           },
           {
@@ -13301,7 +13301,7 @@
             "dataSource": "editorial-package",
             "id": "editorial:brasileirao-serie-a:coritiba-vs-mirassol:2026-09-06",
             "sourceAgreement": false,
-            "timeConfirmed": false,
+            "timeConfirmed": true,
             "kickoffUtc": "2026-09-06T14:00:00.000Z"
           },
           {
@@ -13316,7 +13316,7 @@
             "dataSource": "editorial-package",
             "id": "editorial:brasileirao-serie-a:remo-vs-flamengo:2026-09-06",
             "sourceAgreement": false,
-            "timeConfirmed": false,
+            "timeConfirmed": true,
             "kickoffUtc": "2026-09-06T19:00:00.000Z"
           },
           {
@@ -13331,7 +13331,7 @@
             "dataSource": "editorial-package",
             "id": "editorial:brasileirao-serie-a:internacional-vs-santos:2026-09-06",
             "sourceAgreement": false,
-            "timeConfirmed": false,
+            "timeConfirmed": true,
             "kickoffUtc": "2026-09-06T19:00:00.000Z"
           },
           {
@@ -13346,7 +13346,7 @@
             "dataSource": "editorial-package",
             "id": "editorial:brasileirao-serie-a:cruzeiro-vs-athletico-pr:2026-09-06",
             "sourceAgreement": false,
-            "timeConfirmed": false,
+            "timeConfirmed": true,
             "kickoffUtc": "2026-09-06T19:00:00.000Z"
           },
           {
@@ -13361,7 +13361,7 @@
             "dataSource": "editorial-package",
             "id": "editorial:brasileirao-serie-a:botafogo-vs-palmeiras:2026-09-06",
             "sourceAgreement": false,
-            "timeConfirmed": false,
+            "timeConfirmed": true,
             "kickoffUtc": "2026-09-06T21:30:00.000Z"
           },
           {
@@ -13376,7 +13376,7 @@
             "dataSource": "editorial-package",
             "id": "editorial:brasileirao-serie-a:corinthians-vs-chapecoense:2026-09-06",
             "sourceAgreement": false,
-            "timeConfirmed": false,
+            "timeConfirmed": true,
             "kickoffUtc": "2026-09-06T22:30:00.000Z"
           },
           {
@@ -13391,7 +13391,7 @@
             "dataSource": "editorial-package",
             "id": "editorial:brasileirao-serie-a:vitoria-vs-gremio:2026-09-07",
             "sourceAgreement": false,
-            "timeConfirmed": false,
+            "timeConfirmed": true,
             "kickoffUtc": "2026-09-07T23:00:00.000Z"
           }
         ]

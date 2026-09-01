@@ -76,7 +76,7 @@ snapshot.leagues["brasileirao-serie-a"].push({
   games: records.map(({ homeTeam, awayTeam, matchSlug, date, time }) => ({
     round: 26, date, time, homeTeam, awayTeam, homeScore: null, awayScore: null,
     status: "scheduled", dataSource: "editorial-package", id: `editorial:brasileirao-serie-a:${matchSlug}:${date}`,
-    sourceAgreement: false, timeConfirmed: false, kickoffUtc: new Date(`${date}T${time}:00-03:00`).toISOString(),
+    sourceAgreement: false, timeConfirmed: true, kickoffUtc: new Date(`${date}T${time}:00-03:00`).toISOString(),
   })),
 });
 for (const { matchSlug, date } of records) snapshot.predictionIds[`brasileirao-serie-a:${matchSlug}`] = `editorial:brasileirao-serie-a:${matchSlug}:${date}`;
