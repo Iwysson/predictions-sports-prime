@@ -24,7 +24,7 @@ const snapshot = {
   leagues: {},
   predictionIds: {},
   leagueUpdatedAt: {},
-  manualFixtures: previous.manualFixtures ?? {},
+  manualFixtures: structuredClone(previous.manualFixtures ?? {}),
 };
 const changes = [];
 
@@ -99,6 +99,7 @@ async function hydrateFotmobFinalScores(rounds) {
 
 async function syncLeague(league) {
   const leaguePredictions = matches.filter((match) => match.league === league.slug);
+  let refreshedRounds = null;
   try {
     const text = await sourceText(league.sources.fixtures);
     if (text === null && !league.liveDataId) {
@@ -126,6 +127,11 @@ async function syncLeague(league) {
       : parseFootballSeason(text);
     const espnRounds = await hydrateLiveResults(league.slug, base);
     const rounds = await hydrateFotmobFinalScores(await hydrateTheSportsDb(league.slug, espnRounds));
+    // Keep the hydrated feed available to the recovery path. A provider can
+    // return valid fixture IDs while the season source has malformed round
+    // grouping; in that case we retain the last display-safe rounds but can
+    // still link newly published predictions to authoritative provider IDs.
+    refreshedRounds = rounds;
     const previousGames = (previous.leagues?.[league.slug] ?? []).flatMap((round) => round.games);
     const previousById = new Map(previousGames.map((game) => [game.id, game]));
     for (const fixture of rounds.flatMap((round) => round.games)) {
@@ -203,14 +209,36 @@ async function syncLeague(league) {
     for (const [key, id] of Object.entries(previous.predictionIds ?? {})) {
       if (key.startsWith(`${league.slug}:`)) snapshot.predictionIds[key] = id;
     }
-    // Recover links for newly published predictions from the last valid
-    // snapshot. One failing league must not abort result updates from every
-    // healthy league.
+    // Recover links for newly published predictions from the hydrated refresh
+    // first, even when its round structure failed validation. Only the fixture
+    // ID is retained; malformed rounds never replace the last valid snapshot.
+    // Fall back to saved rounds for predictions that were already known.
     for (const prediction of leaguePredictions) {
       const key = `${league.slug}:${prediction.slug}`;
-      if (snapshot.predictionIds[key]) continue;
-      const savedFixture = findPredictionFixture(savedRounds, prediction);
-      if (savedFixture?.id) snapshot.predictionIds[key] = savedFixture.id;
+      const existingId = snapshot.predictionIds[key];
+      const existingFixtureAvailable = existingId && (
+        savedRounds.flatMap((round) => round.games).some((fixture) => fixture.id === existingId) ||
+        Boolean(snapshot.manualFixtures[existingId])
+      );
+      if (existingFixtureAvailable) continue;
+      const refreshedFixture = refreshedRounds
+        ? refreshedRounds.flatMap((round) => round.games)
+            .find((fixture) => existingId && fixture.id === existingId) ??
+          findPredictionFixture(refreshedRounds, prediction)
+        : null;
+      const savedFixture = refreshedFixture?.id
+        ? null
+        : findPredictionFixture(savedRounds, prediction);
+      const fixtureId = refreshedFixture?.id ?? savedFixture?.id;
+      if (fixtureId) {
+        snapshot.predictionIds[key] = fixtureId;
+        const fixtureExistsInSavedRounds = savedRounds
+          .flatMap((round) => round.games)
+          .some((fixture) => fixture.id === fixtureId);
+        if (refreshedFixture?.id && !fixtureExistsInSavedRounds) {
+          snapshot.manualFixtures[fixtureId] = refreshedFixture;
+        }
+      }
     }
     console.error(`SOURCE_REFRESH_FAILED ${league.slug}: ${error instanceof Error ? error.message : String(error)}`);
   }
@@ -319,7 +347,13 @@ const automaticPredictions = matches.filter((match) => {
   return Boolean(league?.sources.fixtures || league?.liveDataId);
 });
 if (Object.keys(snapshot.predictionIds).length !== automaticPredictions.length) {
-  throw new Error(`Expected ${automaticPredictions.length} automatic prediction links, produced ${Object.keys(snapshot.predictionIds).length}.`);
+  const missingPredictionKeys = automaticPredictions
+    .map((prediction) => `${prediction.league}:${prediction.slug}`)
+    .filter((key) => !snapshot.predictionIds[key]);
+  throw new Error(
+    `Expected ${automaticPredictions.length} automatic prediction links, produced ${Object.keys(snapshot.predictionIds).length}. ` +
+    `Missing: ${missingPredictionKeys.join(", ")}.`
+  );
 }
 
 // Frequent polling is important around full time, but generatedAt alone must
@@ -328,7 +362,8 @@ if (Object.keys(snapshot.predictionIds).length !== automaticPredictions.length) 
 // heartbeat so snapshot-age validation remains meaningful.
 const fixtureDataChanged =
   JSON.stringify(snapshot.leagues) !== JSON.stringify(previous.leagues) ||
-  JSON.stringify(snapshot.predictionIds) !== JSON.stringify(previous.predictionIds);
+  JSON.stringify(snapshot.predictionIds) !== JSON.stringify(previous.predictionIds) ||
+  JSON.stringify(snapshot.manualFixtures) !== JSON.stringify(previous.manualFixtures);
 const marketDataChanged = JSON.stringify(marketResults) !== JSON.stringify(previousMarketResults);
 const previousGeneratedAt = Date.parse(previous.generatedAt ?? "");
 const heartbeatDue =
