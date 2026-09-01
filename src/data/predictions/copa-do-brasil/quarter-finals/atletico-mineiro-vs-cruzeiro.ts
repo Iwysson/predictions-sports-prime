@@ -224,7 +224,8 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
           "label": "W-D-L",
           "home": "2-1-0",
           "away": "0-2-1",
-          "category": "form"
+          "category": "form",
+          "zeroVerified": true
         },
         {
           "label": "Goals per game",
@@ -236,7 +237,8 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
           "label": "Goals allowed per game",
           "home": "0.67",
           "away": "1.67",
-          "category": "goals"
+          "category": "goals",
+          "zeroVerified": true
         },
         {
           "label": "Shots per game",

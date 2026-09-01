@@ -136,11 +136,77 @@ function picksToItems(
   return items;
 }
 
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function playersFromEditorial(text: string, homeTeam: string, awayTeam: string) {
+  const labelled = text.match(new RegExp(
+    `\\*\\*${escapeRegExp(homeTeam)}:\\*\\*\\s*([^*]+?)\\s*\\*\\*${escapeRegExp(awayTeam)}:\\*\\*\\s*([^*]+?)(?=\\s*\\*\\*|\\s+These are|\\s+The first-leg|\\s+Neymar|$)`,
+    "i"
+  ));
+  const previousMatch = text.match(new RegExp(
+    `(?:The )?starting ${escapeRegExp(homeTeam)} XI in that match was ([^.]+)\\. ${escapeRegExp(awayTeam)} started ([^.]+)\\.`,
+    "i"
+  ));
+  const probableSection = text.match(/\*\*Probable lineups[^*]*\*\*\s*\*\*[^:]+:\*\*\s*([^*]+?)\s*\*\*[^:]+:\*\*\s*([^*]+?)(?=\s*\*\*)/i);
+  const match = labelled ?? previousMatch ?? probableSection;
+  if (!match) return undefined;
+  const split = (value: string) => value
+    .replace(/\.$/, "")
+    .replace(/\s+and\s+/gi, ", ")
+    .split(/[;,]/)
+    .map((player) => player.trim())
+    .filter(Boolean);
+  const home = split(match[1]);
+  const away = split(match[2]);
+  return home.length === 11 && away.length === 11 ? { home, away } : undefined;
+}
+
+function statisticsFromEditorial(text: string) {
+  const section = text.match(/#{0,3}\s*Statistical Core[^\n]*\n+([\s\S]*?)(?=\n\s*\*\*Conflict Detector|$)/i)?.[1];
+  if (!section) return undefined;
+  const tableLines = section.split("\n").filter((line) => line.trim().startsWith("|"));
+  if (tableLines.length < 3) return undefined;
+  const cells = (line: string) => line.trim().replace(/^\||\|$/g, "").split("|").map((cell) => cell.trim());
+  const rows = tableLines.slice(2).map(cells).filter((row) => row.length >= 3).map(([label, home, away]) => {
+    const normalized = label.toLowerCase();
+    const category = normalized.includes("corner") ? "corners"
+      : normalized.includes("shot") || normalized.includes("sot") ? "shots"
+        : normalized.includes("xg") ? "xg"
+          : normalized.includes("goal") || normalized.includes("clean sheet") ? "goals"
+            : normalized.includes("w-d-l") || normalized.includes("point") || normalized.includes("result") || normalized.includes("match") ? "form"
+              : "other";
+    return { label, home, away, category } as const;
+  });
+  return rows.length ? rows : undefined;
+}
+
 function matchSeoFromExistingData(prediction: EditorialPrediction) {
-  if (prediction.matchSeo) return prediction.matchSeo;
   const sources = (prediction.sources ?? []).slice(0, 3).map(({ name, url, accessedAt }) => ({ name, url, accessedAt }));
-  if (!sources.length || !prediction.matchInfo) return undefined;
-  return { information: { sources } };
+  if (!sources.length || !prediction.matchInfo) return prediction.matchSeo;
+  const text = prediction.analysis.join("\n\n");
+  const lineups = playersFromEditorial(text, prediction.homeTeam, prediction.awayTeam);
+  const statistics = statisticsFromEditorial(text);
+  return {
+    ...prediction.matchSeo,
+    information: prediction.matchSeo?.information ?? { sources },
+    ...(!prediction.matchSeo?.lineups && lineups ? {
+      lineups: {
+        status: "expected" as const,
+        home: { players: lineups.home },
+        away: { players: lineups.away },
+        sources,
+      },
+    } : {}),
+    ...(!prediction.matchSeo?.statistics && statistics ? {
+      statistics: {
+        sample: "Published Statistical Core; sample sizes and caveats are shown per row",
+        rows: statistics,
+        sources,
+      },
+    } : {}),
+  };
 }
 
 export function editorialToMatch(
