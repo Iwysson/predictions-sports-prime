@@ -12,8 +12,8 @@ import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { localizedAlternates } from "@/lib/international-seo";
 import { indexableLocalizedHubLocaleSlugs } from "@/lib/seo-locales";
 
-const homeTitle = "Football Predictions Today & Betting Tips | Predictions Sports Prime";
-const homeDescription = "Football predictions, betting tips and match analysis for today's, tomorrow's and upcoming fixtures across the Premier League, La Liga, Serie A and more.";
+const homeTitle = "Football Predictions Today & Betting Tips";
+const homeDescription = "Football predictions, betting tips and match analysis for today's, tomorrow's and upcoming fixtures across major leagues.";
 
 export const metadata: Metadata = {
   title: { absolute: homeTitle },

@@ -2,7 +2,7 @@ import type { LeagueConfig } from "@/data/leagues";
 
 export const seoLocaleSlugs = ["pt-br", "es", "fr", "de", "it", "nl", "tr"] as const;
 export type SeoLocaleSlug = (typeof seoLocaleSlugs)[number];
-export const indexableLocalizedHubLocaleSlugs = ["pt-br", "es", "fr", "de"] as const satisfies readonly SeoLocaleSlug[];
+export const indexableLocalizedHubLocaleSlugs = ["pt-br", "es", "fr", "de", "it"] as const satisfies readonly SeoLocaleSlug[];
 
 export function isIndexableLocalizedHubLocale(locale: SeoLocaleSlug) {
   return indexableLocalizedHubLocaleSlugs.includes(locale as (typeof indexableLocalizedHubLocaleSlugs)[number]);

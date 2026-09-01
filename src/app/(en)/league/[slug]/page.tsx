@@ -67,9 +67,7 @@ export async function generateMetadata({
     description,
     keywords: leagueSeoKeywords(league),
 
-    alternates: ["premier-league", "la-liga"].includes(league.slug)
-      ? localizedAlternates("en", leagueCanonicalPath(league), ["en", ...indexableLocalizedHubLocaleSlugs])
-      : { canonical },
+    alternates: localizedAlternates("en", leagueCanonicalPath(league), ["en", ...indexableLocalizedHubLocaleSlugs]),
 
     robots: {
       index: isLeagueIndexable(publishedMatchCount),

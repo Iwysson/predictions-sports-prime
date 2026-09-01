@@ -54,6 +54,13 @@ type MatchIntentFacts = {
   hasAvailability: boolean;
   hasTeamNews: boolean;
   hasWeather: boolean;
+  hasInjuries: boolean;
+  hasSuspensions: boolean;
+  hasCorners: boolean;
+  hasGoals: boolean;
+  hasVenue: boolean;
+  hasKickOff: boolean;
+  hasBroadcastInfo: boolean;
 };
 
 function unique(values: string[]) {
@@ -98,12 +105,19 @@ function readMatchFacts(match: Match): MatchIntentFacts {
     hasAnalysis: match.analysis.some((paragraph) => paragraph.trim().length > 0),
     hasStatistics: Boolean(match.matchSeo?.statistics) || /\b(?:statistic|average|record|goals?|points?|matches?|wins?|draws?|losses?|scored|conceded|percentage|probability)\b|\d+(?:[.,]\d+)?%/i.test(analysis),
     hasForm: /\b(?:form|recent|last\s+\d+|sequence|run of|unbeaten|winning run)\b/i.test(analysis),
-    hasH2h: Boolean(match.matchSeo?.h2h) || /\b(?:h2h|head[- ]to[- ]head|meetings?|confrontations?|direct encounters?)\b/i.test(analysis),
+    hasH2h: Boolean(match.matchSeo?.h2h),
     hasStandingsContext: /\b(?:standings|league table|table position|points table|finished\s+\d+)\b/i.test(analysis),
     hasLineups: Boolean(match.matchSeo?.lineups),
     hasAvailability: Boolean(match.matchSeo?.availability),
     hasTeamNews: Boolean(match.matchSeo?.teamNews),
     hasWeather: Boolean(match.matchSeo?.weather),
+    hasInjuries: Boolean(match.matchSeo?.availability?.entries.some((entry) => entry.status === "injured" || entry.status === "doubtful" || entry.status === "unavailable")),
+    hasSuspensions: Boolean(match.matchSeo?.availability?.entries.some((entry) => entry.status === "suspended")),
+    hasCorners: Boolean(match.matchSeo?.statistics?.rows.some((row) => row.category === "corners")) || /\|\s*(?:corners?|total corners?|over \d+(?:\.\d+)? corners?)/i.test(match.analysis.join("\n")),
+    hasGoals: Boolean(match.matchSeo?.statistics?.rows.some((row) => row.category === "goals")) || /\|\s*(?:gf\/game|ga\/game|over \d+(?:\.\d+)? goals?|btts|clean sheets?)/i.test(match.analysis.join("\n")),
+    hasVenue: Boolean(match.venue && match.venue !== "TBD"),
+    hasKickOff: Boolean(match.time && match.time !== "TBD"),
+    hasBroadcastInfo: false,
   };
 }
 
@@ -137,6 +151,14 @@ export function getMatchIntentCapabilities(match: Match) {
     hasAvailability: facts.hasAvailability,
     hasTeamNews: facts.hasTeamNews,
     hasWeather: facts.hasWeather,
+    hasInjuries: facts.hasInjuries,
+    hasSuspensions: facts.hasSuspensions,
+    hasCorners: facts.hasCorners,
+    hasGoals: facts.hasGoals,
+    hasVenue: facts.hasVenue,
+    hasKickOff: facts.hasKickOff,
+    hasBroadcastInfo: facts.hasBroadcastInfo,
+    hasStatisticalCore: Boolean(match.matchSeo?.statistics),
     markets: detectPickMarkets(facts.mainPick),
   };
 }
@@ -216,6 +238,7 @@ function buildEnglishDescription(
     return fitDescription([
       `${teams} prediction${when}: ${pick}${odds}. Review ${modules.join(", ")} for this ${facts.leagueName} match.`,
       `${teams} prediction${when}, ${pick}${odds}, plus ${modules.slice(0, 3).join(", ")}.`,
+      `${teams} prediction${when} and match analysis for ${facts.leagueName}.`,
     ]);
   }
   const detailed = [
@@ -247,6 +270,7 @@ function buildLocalizedDescription(
   return fitDescription([
     `${teams}: ${research.prediction}${when}. ${sentenceCase(research.analysis)}, ${research.betting}${odds} - ${facts.leagueName}.`,
     `${teams}: ${research.prediction}${when}, ${research.analysis}${odds}.`,
+    `${teams}: ${research.prediction} - ${facts.leagueName}.`,
   ]);
 }
 
@@ -255,13 +279,14 @@ function buildTitle(match: Match, locale: SearchLocale) {
   const teams = matchTeams(match, locale);
   const intent = sentenceCase(research.prediction);
   if (locale === "en" && match.matchSeo) {
-    const capability = match.matchSeo.lineups
-      ? match.matchSeo.lineups.status === "confirmed" ? "Prediction & Confirmed Lineups" : "Prediction & Expected Lineups"
-      : match.matchSeo.teamNews || match.matchSeo.availability
-        ? "Prediction & Team News"
-        : match.matchSeo.statistics
-          ? "Prediction & Stats"
-          : "Prediction & Match Analysis";
+    const facts = readMatchFacts(match);
+    const secondary = [
+      facts.hasLineups ? (match.matchSeo.lineups?.status === "confirmed" ? "Lineups" : "Probable Lineups") : "",
+      facts.hasStatistics ? "Stats" : "",
+      facts.hasTeamNews || facts.hasAvailability ? "Team News" : "",
+      facts.odds ? "Odds" : "",
+    ].filter(Boolean).slice(0, 2);
+    const capability = `Prediction${secondary.length ? `, ${secondary.join(" & ")}` : " & Match Analysis"}`;
     const structuredTitle = `${teams} ${capability}`;
     const leagueName = leaguesBySlug[match.league]?.name ?? match.league;
     const competitionTitle = `${structuredTitle} | ${leagueName}`;

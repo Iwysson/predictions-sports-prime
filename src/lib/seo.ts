@@ -5,17 +5,23 @@ import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { editorialAuthorPersonJsonLd } from "@/lib/editorial-identity";
 import { buildMatchSearchIntentCopy, shouldApplySearchIntentSEO } from "@/lib/match-search-intent";
 import { buildSportsEventJsonLd } from "@/lib/sports-event-schema";
-import { hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { localizedAlternates } from "@/lib/international-seo";
-import { seoLocaleSlugs } from "@/lib/seo-locales";
+import { fullyLocalizedMatchLocales } from "@/components/LocalizedMatchDetails";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
+import { hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
+import { seoLocaleSlugs } from "@/lib/seo-locales";
+import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 
 export function matchSeoTitle(match: Match) {
   const hasRichMatchCapability = Boolean(match.matchSeo && Object.keys(match.matchSeo).some((module) => module !== "information"));
   if (hasRichMatchCapability && shouldApplySearchIntentSEO(match)) {
     return buildMatchSearchIntentCopy(match).title;
   }
-  if (match.seoTitle) return match.seoTitle;
+  if (match.seoTitle && match.seoTitle.length <= 70) return match.seoTitle;
+  if (match.seoTitle) {
+    const compact = `${match.homeTeam} vs ${match.awayTeam} Prediction`;
+    return compact.length <= 70 ? compact : `${match.homeTeam} vs ${match.awayTeam}`;
+  }
   if (shouldApplySearchIntentSEO(match)) {
     return buildMatchSearchIntentCopy(match).title;
   }
@@ -23,9 +29,9 @@ export function matchSeoTitle(match: Match) {
   const baseTitle = match.title?.trim() || `${teams} Prediction & Betting Tips`;
   const title = `${baseTitle} | ${siteConfig.name}`;
 
-  return title.length <= 70
-    ? title
-    : `${teams} Prediction | ${siteConfig.name}`;
+  if (title.length <= 70) return title;
+  const compact = `${teams} Prediction | ${siteConfig.name}`;
+  return compact.length <= 70 ? compact : `${teams} Prediction`;
 }
 
 export function matchSeoDescription(match: Match) {
@@ -104,9 +110,11 @@ export function buildMatchMetadata(match: Match): Metadata {
       ].slice(0, 24),
     } : {}),
 
-    alternates: seoLocaleSlugs.every((locale) => hasCompleteLocalizedEditorial(match.slug, locale))
-      ? localizedAlternates("en", matchCanonicalPath(match))
-      : { canonical },
+    alternates: isInternationalMatchExpansionEligible(match)
+      ? localizedAlternates("en", matchCanonicalPath(match), ["en", ...fullyLocalizedMatchLocales])
+      : seoLocaleSlugs.every((locale) => hasCompleteLocalizedEditorial(match.slug, locale))
+        ? localizedAlternates("en", matchCanonicalPath(match))
+        : { canonical },
 
     robots: {
       index: true,

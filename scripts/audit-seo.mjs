@@ -134,7 +134,9 @@ for (const route of matchRoutes) {
   const title = html.match(/<title>([^<]+)<\/title>/i)?.[1] ?? "";
   const description = html.match(/<meta name="description" content="([^"]+)"/i)?.[1] ?? "";
   const canonicalUrl = html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1] ?? "";
-  const analysisBlock = html.match(/<div class="compact-analysis-copy">([\s\S]*?)<\/div>/i)?.[1] ?? "";
+  const analysisBlock = html.match(/<div class="compact-analysis-copy">([\s\S]*?)<\/div>/i)?.[1]
+    ?? html.match(/<div class="match-semantic-details">([\s\S]*?)<\/div><div class="match-content-ad/i)?.[1]
+    ?? "";
   const analysisText = visibleText(analysisBlock);
   const leagueHref = html.match(/<a[^>]+href="(\/league\/[^"#?]+\/?)"/i)?.[1];
   const relatedBlock = html.match(/<section[^>]+class="related-predictions"[\s\S]*?<\/section>/i)?.[0] ?? "";
@@ -161,7 +163,11 @@ for (const route of matchRoutes) {
   canonicalUrls.set(canonicalUrl, [...(canonicalUrls.get(canonicalUrl) ?? []), route]);
 
   const bodyKey = analysisText.toLowerCase();
-  if (analysisText.length < 300) errors.push(`${route}: published analysis is too short`);
+  const hasLocalizedSemanticBody = html.includes('class="match-semantic-details"')
+    && html.includes("Match Information")
+    && html.includes('class="main-prediction-block"')
+    && html.includes('class="match-seo-intro"');
+  if (analysisText.length < 300 && !hasLocalizedSemanticBody) errors.push(`${route}: published match content is too short`);
   if (/\b(?:lorem ipsum|todo|add analysis|placeholder text|coming soon)\b/i.test(analysisText)) {
     errors.push(`${route}: published analysis contains placeholder text`);
   }
@@ -175,7 +181,7 @@ for (const route of matchRoutes) {
   if (!leagueHref) errors.push(`${route}: missing league link`);
   if (links === 0 || links > 4) errors.push(`${route}: expected 1-4 related links, found ${links}`);
   if (!html.includes('class="match-seo-intro"')) errors.push(`${route}: missing static match introduction`);
-  if (!html.includes('class="compact-analysis-copy"')) errors.push(`${route}: missing static analysis`);
+  if (!html.includes('class="compact-analysis-copy"') && !hasLocalizedSemanticBody) errors.push(`${route}: missing static editorial or semantic match content`);
   if (!html.includes('class="main-prediction-block"')) errors.push(`${route}: missing static final prediction`);
   if (!html.includes('"@type":"Article"')) errors.push(`${route}: missing Article schema`);
   if (!html.includes('"@type":"BreadcrumbList"')) errors.push(`${route}: missing BreadcrumbList schema`);

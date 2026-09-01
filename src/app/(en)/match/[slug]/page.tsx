@@ -35,6 +35,7 @@ import { toMatchPreview } from "@/lib/editorial";
 import type { Match } from "@/types";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
+import { isUpcomingMatch } from "@/lib/upcoming-match";
 
 async function resolveMatchFixture(match: Match): Promise<Match> {
   const fixture = await hydratePrediction(toMatchPreview(match));
@@ -70,6 +71,10 @@ function formatEditorialDate(value: string) {
     year: "numeric",
     timeZone: "UTC",
   }).format(new Date(value));
+}
+
+function isPortugueseEditorial(analysis: string[]) {
+  return /\b(?:palpite|escalações|análise|mandante|visitante|partida|gols|escanteios)\b/i.test(analysis.join(" "));
 }
 
 export const dynamicParams = false;
@@ -238,9 +243,11 @@ export default async function MatchPage({
               <AdSlot placement="match-top" />
             </div>
 
-            <div className="compact-analysis-copy">
-              <EditorialAnalysis analysis={match.analysis} format={match.analysisFormat} />
-            </div>
+            {(!isUpcomingMatch(match) || !isPortugueseEditorial(match.analysis)) ? (
+              <div className="compact-analysis-copy">
+                <EditorialAnalysis analysis={match.analysis} format={match.analysisFormat} />
+              </div>
+            ) : null}
 
             {match.comment ? (
               <aside className="editorial-comment">

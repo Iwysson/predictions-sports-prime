@@ -5,8 +5,10 @@ import { absoluteUrl } from "@/lib/site-config";
 import { matchCanonicalPath } from "@/lib/seo";
 import { isLeagueIndexable } from "@/lib/league-seo";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
-import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { isIndexableLocalizedHubLocale, localePath, seoLocaleSlugs } from "@/lib/seo-locales";
+import { fullyLocalizedMatchLocales } from "@/components/LocalizedMatchDetails";
+import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
+import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 
 export const dynamic = "force-static";
 
@@ -56,13 +58,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const localizedPages: MetadataRoute.Sitemap = seoLocaleSlugs.flatMap((locale) => [
     ...(isIndexableLocalizedHubLocale(locale) ? [
       { url: absoluteUrl(localePath(locale)) },
-      { url: absoluteUrl(localePath(locale, "/league/premier-league/")) },
-      { url: absoluteUrl(localePath(locale, "/league/la-liga/")) },
+      ...leagues.map((league) => ({ url: absoluteUrl(localePath(locale, `/league/${league.slug}/`)) })),
     ] : []),
     { url: absoluteUrl(localePath(locale, "/nfl/")) },
     ...Object.keys(localizedEditorialBySlug)
       .filter((slug) => hasCompleteLocalizedEditorial(slug, locale))
       .map((slug) => ({ url: absoluteUrl(localePath(locale, `/match/${slug}/`)) })),
+    ...(fullyLocalizedMatchLocales.includes(locale as (typeof fullyLocalizedMatchLocales)[number])
+      ? matches.filter((match) => isInternationalMatchExpansionEligible(match) && !hasCompleteLocalizedEditorial(match.slug, locale)).map((match) => ({ url: absoluteUrl(localePath(locale, `/match/${match.slug}/`)) }))
+      : []),
   ]);
 
   return [

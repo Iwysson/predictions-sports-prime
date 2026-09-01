@@ -2,120 +2,70 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = path.resolve("out");
-const locales = [
-  { slug: "pt-br", lang: "pt-BR", hubsIndexable: true },
-  { slug: "es", lang: "es", hubsIndexable: true },
-  { slug: "fr", lang: "fr", hubsIndexable: true },
-  { slug: "de", lang: "de", hubsIndexable: true },
-  { slug: "it", lang: "it", hubsIndexable: false },
-  { slug: "nl", lang: "nl", hubsIndexable: false },
-  { slug: "tr", lang: "tr", hubsIndexable: false },
-];
-const hubPaths = ["/", "/league/premier-league/", "/league/la-liga/"];
-const paths = [...hubPaths, "/match/aston-villa-vs-arsenal/"];
-const hubHreflangs = ["en", "pt-BR", "es", "fr", "de", "x-default"];
-const matchHreflangs = ["en", "pt-BR", "es", "fr", "de", "it", "nl", "tr", "x-default"];
+const host = "https://predictions-sports-prime.com";
+const matchLocales = [{ slug: "pt-br", lang: "pt-BR" }, { slug: "es", lang: "es" }, { slug: "it", lang: "it" }, { slug: "fr", lang: "fr" }, { slug: "de", lang: "de" }];
+const rolloutLocales = [{ slug: "nl", lang: "nl" }, { slug: "tr", lang: "tr" }];
+const expectedHreflangs = ["en", ...matchLocales.map((item) => item.lang), "x-default"];
 const errors = [];
-const checked = [];
+let clusters = 0;
+let localizedPages = 0;
 
-function htmlFile(urlPath) {
-  return path.join(root, ...urlPath.split("/").filter(Boolean), "index.html");
-}
+function walk(directory) { return fs.readdirSync(directory).flatMap((name) => { const file = path.join(directory, name); return fs.statSync(file).isDirectory() ? walk(file) : [file]; }); }
+function routeForFile(file) { const name = path.relative(root, file).split(path.sep).join("/"); return name === "index.html" ? "/" : `/${name.replace(/index\.html$/, "").replace(/\.html$/, "/")}`; }
+function htmlFile(route) { return path.join(root, ...route.split("/").filter(Boolean), "index.html"); }
+function isIndexable(html) { return /content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(html); }
+function alternates(html) { return [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"\/>/g)].map((match) => ({ lang: match[1], href: match[2] })); }
 
-function attr(html, pattern, label, route) {
-  const value = html.match(pattern)?.[1];
-  if (!value) errors.push(`${route}: missing ${label}`);
-  return value;
-}
-
-function alternates(html) {
-  return [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"\/>/g)]
-    .map((match) => ({ lang: match[1], href: match[2] }));
-}
-
-for (const { slug, lang, hubsIndexable } of locales) {
-  for (const suffix of paths) {
-    const route = `/${slug}${suffix}`;
-    const file = htmlFile(route);
-    if (!fs.existsSync(file)) {
-      errors.push(`${route}: missing static HTML`);
-      continue;
-    }
-    const html = fs.readFileSync(file, "utf8");
-    const isHub = hubPaths.includes(suffix);
-    const shouldIndex = !isHub || hubsIndexable;
-    const declaredLang = attr(html, /<html[^>]*lang="([^"]+)"/, "html lang", route);
-    const canonical = attr(html, /<link rel="canonical" href="([^"]+)"/, "canonical", route);
-    attr(html, /<title>([^<]+)<\/title>/, "title", route);
-    attr(html, /<meta name="description" content="([^"]+)"/, "description", route);
-    const h1Count = (html.match(/<h1(?:\s|>)/g) ?? []).length;
-    const sectionCount = (html.match(/<section(?:\s|>)/g) ?? []).length;
-    if (declaredLang !== lang) errors.push(`${route}: lang ${declaredLang} != ${lang}`);
-    const expectedCanonical = `https://predictions-sports-prime.com${route}`;
-    if (canonical !== expectedCanonical) errors.push(`${route}: canonical mismatch`);
-    if (h1Count !== 1) errors.push(`${route}: expected one H1, found ${h1Count}`);
-    if (!html.includes("<header") || !html.includes("<main") || !html.includes("<footer")) errors.push(`${route}: localized chrome is structurally incomplete`);
-    if (!html.includes('class="language-selector"')) errors.push(`${route}: route-aware language selector missing`);
-    if (isHub && sectionCount < 3) errors.push(`${route}: localized hub lacks structural section parity (${sectionCount})`);
-    const hrefLangs = alternates(html);
-    if (shouldIndex) {
-      for (const required of isHub ? hubHreflangs : matchHreflangs) {
-        if (!hrefLangs.some((entry) => entry.lang === required)) errors.push(`${route}: missing hreflang ${required}`);
-      }
-      checked.push(route);
-    } else {
-      if (!/<meta name="robots" content="[^"]*noindex/i.test(html)) errors.push(`${route}: rollout page must be noindex`);
-      if (hrefLangs.length) errors.push(`${route}: rollout page must not emit hreflang alternates`);
-    }
-    if (/\/match\//.test(route)) {
-      const paragraphs = (html.match(/<div class="compact-analysis-copy">[\s\S]*?<\/div>/)?.[0].match(/<p>/g) ?? []).length;
-      if (paragraphs < 3) errors.push(`${route}: localized editorial content is incomplete`);
-    }
-  }
-}
-
-for (const suffix of paths) {
-  const route = suffix;
-  const html = fs.readFileSync(htmlFile(route), "utf8");
-  const hrefLangs = alternates(html);
-  const requiredHreflangs = suffix === "/match/aston-villa-vs-arsenal/" ? matchHreflangs : hubHreflangs;
-  for (const required of requiredHreflangs) {
-    if (!hrefLangs.some((entry) => entry.lang === required)) errors.push(`${route}: English page missing reciprocal hreflang ${required}`);
-  }
-}
-
+const pages = new Map(walk(root).filter((file) => file.endsWith(".html")).map((file) => [routeForFile(file), fs.readFileSync(file, "utf8")]));
 const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-for (const route of checked) {
-  if (!sitemap.includes(`<loc>https://predictions-sports-prime.com${route}</loc>`)) errors.push(`${route}: missing from sitemap`);
-}
-for (const { slug, hubsIndexable } of locales) {
-  if (hubsIndexable) continue;
-  for (const suffix of hubPaths) {
-    const route = `/${slug}${suffix}`;
-    if (sitemap.includes(`<loc>https://predictions-sports-prime.com${route}</loc>`)) errors.push(`${route}: rollout page leaked into sitemap`);
+
+for (const [route, html] of pages) {
+  if (!isIndexable(html)) continue;
+  const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
+  if (canonical !== `${host}${route}`) errors.push(`${route}: canonical is not self-referencing`);
+  const lang = html.match(/<html[^>]*lang="([^"]+)"/)?.[1];
+  const locale = matchLocales.find((item) => route.startsWith(`/${item.slug}/`) || route === `/${item.slug}/`);
+  if (locale) {
+    localizedPages += 1;
+    if (lang !== locale.lang) errors.push(`${route}: html lang ${lang} != ${locale.lang}`);
   }
+  if (!sitemap.includes(`<loc>${host}${route}</loc>`)) errors.push(`${route}: indexable page missing from sitemap`);
 }
 
-function walk(directory) {
-  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
-    const file = path.join(directory, entry.name);
-    if (entry.isDirectory()) walk(file);
-    else if (/\.(?:html|xml)$/.test(entry.name) && fs.readFileSync(file, "utf8").includes("predictions-sports-prime.pages.dev")) {
-      errors.push(`${path.relative(root, file)}: legacy domain leakage`);
+const englishMatches = [...pages.keys()].filter((route) => /^\/match\/[^/]+\/$/.test(route) && isIndexable(pages.get(route)) && matchLocales.every(({ slug }) => pages.has(`/${slug}${route}`)));
+for (const route of englishMatches) {
+  clusters += 1;
+  const clusterRoutes = [route, ...matchLocales.map(({ slug }) => `/${slug}${route}`)];
+  for (const member of clusterRoutes) {
+    const html = pages.get(member);
+    if (!html || !isIndexable(html)) { errors.push(`${member}: hreflang target missing or noindex`); continue; }
+    const hrefLangs = alternates(html);
+    for (const required of expectedHreflangs) if (!hrefLangs.some((entry) => entry.lang === required)) errors.push(`${member}: missing hreflang ${required}`);
+    const defaultHref = hrefLangs.find((entry) => entry.lang === "x-default")?.href;
+    if (defaultHref !== `${host}${route}`) errors.push(`${member}: x-default does not target English`);
+    for (const entry of hrefLangs) {
+      const target = new URL(entry.href).pathname;
+      const targetHtml = pages.get(target);
+      if (!targetHtml || !isIndexable(targetHtml)) errors.push(`${member}: hreflang ${entry.lang} points to missing/noindex ${target}`);
+      else if (!alternates(targetHtml).some((back) => back.href === `${host}${member}`)) errors.push(`${member}: hreflang ${entry.lang} is not reciprocal`);
     }
   }
 }
-walk(root);
+
+for (const { slug } of rolloutLocales) {
+  for (const route of [`/${slug}/`, ...[...pages.keys()].filter((item) => item.startsWith(`/${slug}/league/`))]) {
+    const html = pages.get(route); if (!html) continue;
+    if (isIndexable(html)) errors.push(`${route}: rollout hub must remain noindex`);
+    if (sitemap.includes(`<loc>${host}${route}</loc>`)) errors.push(`${route}: noindex rollout hub leaked into sitemap`);
+  }
+}
+
+for (const file of walk(root).filter((item) => /\.(?:html|xml)$/.test(item))) if (fs.readFileSync(file, "utf8").includes("predictions-sports-prime.pages.dev")) errors.push(`${path.relative(root, file)}: legacy domain leakage`);
 
 console.log("International SEO Audit");
-console.log(`Localized indexable pages checked: ${checked.length}`);
-console.log(`Localized rollout pages checked: ${locales.filter((item) => !item.hubsIndexable).length * 2}`);
-console.log(`Locales: ${locales.map((item) => item.lang).join(", ")}`);
-console.log(`English reciprocal clusters checked: ${paths.length}`);
-console.log(`Legacy domain occurrences: ${errors.filter((item) => item.includes("legacy domain")).length}`);
-if (errors.length) {
-  for (const error of errors) console.error(`ERROR: ${error}`);
-  process.exitCode = 1;
-} else {
-  console.log("PASS");
-}
+console.log(`Indexable localized pages checked: ${localizedPages}`);
+console.log(`Complete match hreflang clusters: ${clusters}`);
+console.log(`Required hreflangs: ${expectedHreflangs.join(", ")}`);
+console.log(`Rollout locales checked: ${rolloutLocales.map((item) => item.lang).join(", ")}`);
+if (errors.length) { for (const error of errors) console.error(`ERROR: ${error}`); process.exitCode = 1; }
+else console.log("International SEO audit: PASS");

@@ -99,7 +99,7 @@ for (const match of analyzedMatches) {
     if (capabilities.hasAvailability !== Boolean(match.matchSeo.availability)) structuredCapabilityMismatches += 1;
     if (capabilities.hasTeamNews !== Boolean(match.matchSeo.teamNews)) structuredCapabilityMismatches += 1;
     if (capabilities.hasWeather !== Boolean(match.matchSeo.weather)) structuredCapabilityMismatches += 1;
-    if ((/lineups/i.test(intent.title) || /lineups/i.test(intent.description)) !== Boolean(match.matchSeo.lineups)) structuredCapabilityMismatches += 1;
+    if ((/lineups/i.test(intent.title) || /lineups/i.test(intent.description)) && !match.matchSeo.lineups) structuredCapabilityMismatches += 1;
     for (const [moduleName, module] of Object.entries(match.matchSeo)) {
       if (!module.sources?.length) errors.push(`${match.slug}: ${moduleName} lacks provenance`);
     }

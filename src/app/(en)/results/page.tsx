@@ -7,7 +7,7 @@ import { buildLegalMetadata } from "@/lib/legal-pages";
 import { JsonLd } from "@/components/JsonLd";
 import { institutionalPageJsonLd } from "@/lib/seo";
 
-const description = "The complete history of published Predictions Sports Prime football predictions, including wins, losses, pushes and completed entries awaiting factual market data.";
+const description = "Published Predictions Sports Prime football results, including wins, losses, pushes and completed entries awaiting market data.";
 
 export const metadata = buildLegalMetadata(
   "Prediction results",

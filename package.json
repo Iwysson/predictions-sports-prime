@@ -29,6 +29,8 @@
     "audit:site-quality": "node scripts/audit-site-quality.mjs",
     "audit:technical-seo": "node scripts/audit-technical-seo.mjs",
     "audit:international-seo": "node scripts/audit-international-seo.mjs",
+    "audit:localized-quality": "tsx scripts/audit-localized-page-quality.mjs",
+    "audit:future-eligibility": "tsx scripts/audit-future-match-eligibility.mjs",
     "audit:structured-data": "node scripts/audit-structured-data.mjs",
     "audit:sports-event-location": "tsx scripts/audit-sports-event-location.mjs",
     "audit:current-round": "tsx scripts/audit-current-round.mjs",

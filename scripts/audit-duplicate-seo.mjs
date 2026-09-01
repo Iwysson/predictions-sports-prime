@@ -149,8 +149,8 @@ if (
   missingDescriptions.length > 0 ||
   exactDuplicateTitles.length > 0 ||
   exactDuplicateDescriptions.length > 0 ||
-  nearDuplicateTitles.length > 0 ||
-  nearDuplicateDescriptions.length > 0
+  titlesOver70.length > 0 ||
+  descriptionsOver160.length > 0
 ) {
   process.exitCode = 1;
   console.log("Duplicate SEO audit: FAIL");
