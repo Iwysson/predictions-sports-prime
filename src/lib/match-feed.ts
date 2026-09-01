@@ -1,5 +1,5 @@
 import type { MatchPreview } from "@/types";
-import { isCompletedFixture, isHistoryEligibleFixture, isNonPlayableFixture } from "@/lib/fixture-status";
+import { isCompletedFixture, isHistoryEligibleFixture, isLiveFixture, isNonPlayableFixture } from "@/lib/fixture-status";
 import { classifyFixture, dateInTimeZone, fixtureDateInTimeZone, isActiveFixtureState, isFixtureHistoryEligible, isFutureFixture } from "@/lib/fixture-state";
 
 export type HomeTemporalBucket = "today" | "tomorrow" | "upcoming" | "historical" | "none";
@@ -24,7 +24,7 @@ export function resolveHomeTemporalBucket(match: MatchPreview, today = localToda
     return "historical";
   }
   const state = classifyFixture({ ...match, status: match.fixtureStatus ?? "scheduled" }, now);
-  if (state === "stale-schedule") return "historical";
+  if (state === "stale-schedule") return isLiveFixture(match.fixtureStatus) ? "none" : "historical";
   if (!isActiveFixtureState(state)) return "none";
   const fixtureDate = fixtureDateInTimeZone(match);
   const temporalFixture = { ...match, status: match.fixtureStatus ?? "scheduled" };

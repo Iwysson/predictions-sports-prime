@@ -22,8 +22,21 @@ export const vitóriaVsVascoDaGama: EditorialPrediction = {
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-01T06:20:00-03:00",
   sourceStatus: "verified",
   sources: [
+    {
+      name: "Lance — current expected lineups and availability",
+      url: "https://www.lance.com.br/sites-de-apostas/palpites/vitoria-x-vasco-02-09-2026.html",
+      description: "Current expected lineups, injuries, cup registration status and Diego Tarzia's return from suspension.",
+      accessedAt: "2026-09-01T06:20:00-03:00"
+    },
+    {
+      name: "CBF — official Vitória vs Vasco match record",
+      url: "https://www.cbf.com.br/futebol-brasileiro/jogos/copa-do-brasil/masculino/2026/vitoria-x-vasco-da-gama-saf/835156",
+      description: "Official date, kickoff, venue and competition match record.",
+      accessedAt: "2026-09-01T06:20:00-03:00"
+    },
     {
       name: "CBF — Copa do Brasil 2026 quarter-final schedule",
       url: "https://www.cbf.com.br/futebol-brasileiro/noticias/copa-brasil/copa-brasil-masculino/cbf-define-detalhes-das-quartas-de-final-da-copa-betano-do-brasil-2026",
@@ -31,6 +44,29 @@ export const vitóriaVsVascoDaGama: EditorialPrediction = {
       accessedAt: "2026-08-30T10:00:00-03:00"
     }
   ],
+  matchSeo: {
+    lineups: {
+      status: "expected",
+      home: { formation: "4-2-3-1", players: ["Lucas Arcanjo", "Fabiano Souza", "Cacá", "Luan Cândido", "Ramon", "Walace", "Emmanuel Martínez", "Erick", "Matheuzinho", "Diego Tarzia", "Renê"] },
+      away: { formation: "4-3-3", players: ["Léo Jardim", "José Luis Rodríguez", "Carlos Cuesta", "Robert Renan", "Lucas Piton", "Cauan Barros", "Thiago Mendes", "Tchê Tchê", "Andrés Gómez", "Facundo Colidio", "David"] },
+      sources: [{ name: "Lance", url: "https://www.lance.com.br/sites-de-apostas/palpites/vitoria-x-vasco-02-09-2026.html", accessedAt: "2026-09-01T06:20:00-03:00" }],
+      updatedAt: "2026-09-01T06:20:00-03:00"
+    },
+    availability: {
+      entries: [
+        { team: "home", player: "Gabriel Baralhas", status: "doubtful", detail: "Bone fissure; remains a doubt." },
+        { team: "home", player: "Diego Tarzia", status: "returning", detail: "Available after serving his first-leg suspension." },
+        { team: "home", player: "Nathan Mendes", status: "injured" },
+        { team: "home", player: "Camutanga", status: "injured" },
+        { team: "away", player: "Jair", status: "injured" },
+        { team: "away", player: "Brenner", status: "injured" },
+        { team: "away", player: "Johan Rojas", status: "injured" },
+        { team: "away", player: "Mateus Carvalho", status: "unavailable" }
+      ],
+      sources: [{ name: "Lance", url: "https://www.lance.com.br/sites-de-apostas/palpites/vitoria-x-vasco-02-09-2026.html", accessedAt: "2026-09-01T06:20:00-03:00" }],
+      updatedAt: "2026-09-01T06:20:00-03:00"
+    }
+  },
   matchInfo: {
     date: "2026-09-02",
     time: "21:30",

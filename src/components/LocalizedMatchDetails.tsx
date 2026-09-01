@@ -58,6 +58,19 @@ function localizedMetric(locale: FullyLocalizedMatchLocale, label: string, categ
   return `${metricLabels[locale][category]} ${index + 1}`;
 }
 
+function localizedStatisticValue(locale: FullyLocalizedMatchLocale, value: string) {
+  const qualifiers = {
+    "pt-br": { home: "mandante", away: "visitante" },
+    es: { home: "local", away: "visitante" },
+    it: { home: "casa", away: "trasferta" },
+    fr: { home: "domicile", away: "extérieur" },
+    de: { home: "Heim", away: "Auswärts" },
+  }[locale];
+  return value
+    .replace(/\bmandante\b/gi, qualifiers.home)
+    .replace(/\bvisitante\b/gi, qualifiers.away);
+}
+
 function SourceLinks({ match, locale }: { match: Match; locale: FullyLocalizedMatchLocale }) {
   const sources = match.sources ?? [];
   if (!sources.length) return null;
@@ -81,7 +94,7 @@ export function LocalizedMatchDetails({ match, locale }: { match: Match; locale:
     </dl></section>
     {data.lineups ? <section className="match-module"><h2>{data.lineups.status === "confirmed" ? copy.confirmed : copy.lineups} {teams}</h2><div className="match-lineups-grid">{(["home", "away"] as const).map((side) => <div key={side}><h3>{side === "home" ? match.homeTeam : match.awayTeam}</h3><ol>{data.lineups![side].players.map((player) => <li key={player}>{player}</li>)}</ol></div>)}</div></section> : null}
     {data.availability ? <section className="match-module"><h2>{copy.availability}</h2><ul className="match-availability-list">{data.availability.entries.map((entry) => <li key={`${entry.team}-${entry.player}`}><strong>{entry.player}</strong> ({entry.team === "home" ? match.homeTeam : match.awayTeam}) — {statusLabels[locale][entry.status]}</li>)}</ul></section> : null}
-    {data.statistics ? <section className="match-module"><h2>{copy.stats} {teams}</h2><div className="match-stats" role="table" aria-label={`${copy.stats} ${teams}`}><div className="match-stats-row match-stats-header" role="row"><span role="columnheader">{copy.metric}</span><span role="columnheader">{copy.home}</span><span role="columnheader">{copy.away}</span></div>{statisticalRows.map((row, index) => <div className="match-stats-row" role="row" key={row.label}><span role="rowheader">{localizedMetric(locale, row.label, row.category, index)}</span><span role="cell">{row.home}</span><span role="cell">{row.away}</span></div>)}</div></section> : null}
+    {data.statistics ? <section className="match-module"><h2>{copy.stats} {teams}</h2><div className="match-stats" role="table" aria-label={`${copy.stats} ${teams}`}><div className="match-stats-row match-stats-header" role="row"><span role="columnheader">{copy.metric}</span><span role="columnheader">{copy.home}</span><span role="columnheader">{copy.away}</span></div>{statisticalRows.map((row, index) => <div className="match-stats-row" role="row" key={row.label}><span role="rowheader">{localizedMetric(locale, row.label, row.category, index)}</span><span role="cell">{localizedStatisticValue(locale, row.home)}</span><span role="cell">{localizedStatisticValue(locale, row.away)}</span></div>)}</div></section> : null}
     <SourceLinks match={match} locale={locale} />
   </div>;
 }

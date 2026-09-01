@@ -86,6 +86,12 @@ function parseLeg(source: string): ParsedPredictionLeg | null {
   const doubleChance = source.match(/^(.+?) or Draw(?: \((1X|X2)\))?$/i);
   if (doubleChance) return { kind: "double-chance", team: doubleChance[1], side: doubleChance[2]?.toUpperCase() as "1X" | "X2" | undefined, source };
 
+  const compactDoubleChance = source.match(/^(.+?) (1X|X1|X2)$/i);
+  if (compactDoubleChance) {
+    const side = compactDoubleChance[2].toUpperCase() === "X2" ? "X2" : "1X";
+    return { kind: "double-chance", team: compactDoubleChance[1], side, source };
+  }
+
   const teamTotal = source.match(/^(.+?) (Over|Under) (\d+(?:\.\d+)?) Team Goals$/i);
   if (teamTotal) return { kind: "team-total", team: teamTotal[1], selection: teamTotal[2].toLowerCase() as "over" | "under", line: Number(teamTotal[3]), source };
 

@@ -1,11 +1,17 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { collectEditorialState } from "./editorial-baseline-lib.mjs";
+import { matches } from "../src/data/matches.ts";
+import { toMatchPreview } from "../src/lib/editorial.ts";
+import { hydratePredictions } from "../src/lib/live-predictions.ts";
+import { buildPredictionHistoryState } from "../src/lib/results.ts";
 
 const root = process.cwd();
 const html = readFileSync(join(root, "out", "results", "index.html"), "utf8");
 const baseline = JSON.parse(readFileSync(join(root, "editorial-baseline.json"), "utf8"));
 const current = collectEditorialState(root);
+const published = await hydratePredictions(matches.filter((match) => match.status === "published").map(toMatchPreview));
+const history = buildPredictionHistoryState(published);
 const errors = [];
 const allowedStatuses = new Set(["pending", "awaiting-data", "green", "red", "push", "half-green", "half-red", "void"]);
 
@@ -29,28 +35,29 @@ const rows = tags.map((tag) => ({
   settlementReason: attribute(tag, "data-settlement-reason"),
 }));
 const rowBySlug = new Map(rows.map((row) => [row.slug, row]));
-const editorialBySlug = new Map(current.entries.map((entry) => [entry.slug, entry]));
+const editorialBySlug = new Map(published.map((entry) => [entry.slug, entry]));
+const eligibleHistorySlugs = new Set(history.entries.map((entry) => entry.slug));
 if (rowBySlug.size !== rows.length) errors.push("duplicate result rows found");
 
 for (const row of rows) {
   const entry = editorialBySlug.get(row.slug);
   if (!entry) { errors.push(`${row.slug}: result row has no published prediction`); continue; }
-  if (row.pick !== entry.mainPick) errors.push(`${entry.slug}: displayed pick differs from editorial source`);
-  if (row.odds !== (entry.odds === null ? "" : String(entry.odds))) errors.push(`${entry.slug}: displayed odds differs from editorial source`);
+  if (row.pick !== entry.mainPrediction) errors.push(`${entry.slug}: displayed pick differs from editorial source`);
+  if (row.odds !== (entry.odds == null ? "" : String(entry.odds))) errors.push(`${entry.slug}: displayed odds differs from editorial source`);
   if (row.publishedAt !== (entry.publishedAt ?? "")) errors.push(`${entry.slug}: displayed publishedAt differs from editorial source`);
   if (!allowedStatuses.has(row.status)) errors.push(`${entry.slug}: invalid result status ${row.status}`);
   if (!html.includes(`href="/match/${entry.slug}/"`)) errors.push(`${entry.slug}: missing match-page link`);
-  if (entry.resultStatus && row.status !== entry.resultStatus) errors.push(`${entry.slug}: stored result status was not preserved`);
-  const expectedScore = entry.finalScore ? `${entry.finalScore.home}-${entry.finalScore.away}` : "";
+  if (entry.betResult && row.status !== entry.betResult) errors.push(`${entry.slug}: stored result status was not preserved`);
+  const expectedScore = entry.homeScore !== null && entry.homeScore !== undefined && entry.awayScore !== null && entry.awayScore !== undefined ? `${entry.homeScore}-${entry.awayScore}` : "";
   if (expectedScore && row.finalScore !== expectedScore) errors.push(`${entry.slug}: stored final score was not preserved`);
-  if (!row.finalScore) errors.push(`${entry.slug}: non-completed prediction leaked into History`);
+  if (!eligibleHistorySlugs.has(entry.slug)) errors.push(`${entry.slug}: ineligible prediction leaked into History`);
   if (row.status === "awaiting-data" && !row.settlementMissing) {
     errors.push(`${entry.slug}: Awaiting Data row does not identify its missing factual field`);
   }
 }
 
-for (const entry of current.entries.filter((item) => item.resultStatus)) {
-  if (!rowBySlug.has(entry.slug)) errors.push(`${entry.slug}: stored completed result is missing from History`);
+for (const entry of history.entries) {
+  if (!rowBySlug.has(entry.slug)) errors.push(`${entry.slug}: eligible result is missing from History`);
 }
 if (!html.includes('data-default-filter="all"')) errors.push("complete ALL history is not the default");
 if (!html.includes('aria-pressed="true">ALL')) errors.push("ALL filter is not visibly selected by default");
@@ -62,7 +69,7 @@ if (baseline.publishedCount !== current.entries.length || baseline.draftCount !=
 const counts = Object.fromEntries([...allowedStatuses].map((status) => [status, rows.filter((row) => row.status === status).length]));
 const awaitingMarketData = rows.filter((row) => row.status === "awaiting-data" && row.settlementReason === "MARKET_DATA_MISSING").length;
 const awaitingExecutionData = rows.filter((row) => row.status === "awaiting-data" && row.settlementReason === "EXECUTION_DATA_MISSING").length;
-console.log(`Published predictions: ${current.entries.length}`);
+console.log(`Published predictions: ${published.length}`);
 console.log(`Completed History entries: ${rows.length}`);
 console.log(`Pending: ${counts.pending}`);
 console.log(`Awaiting Market Data: ${awaitingMarketData}`);
@@ -73,7 +80,8 @@ console.log(`Push: ${counts.push}`);
 console.log(`Half won: ${counts["half-green"]}`);
 console.log(`Half lost: ${counts["half-red"]}`);
 console.log(`Void: ${counts.void}`);
-if (counts.pending > 0) errors.push(`${counts.pending} completed matches are still marked ordinary PENDING`);
+const completedPending = rows.filter((row) => row.status === "pending" && editorialBySlug.get(row.slug)?.fixtureStatus === "completed").length;
+if (completedPending > 0) errors.push(`${completedPending} completed matches are still marked ordinary PENDING`);
 if (errors.length) {
   errors.forEach((error) => console.error(`ERROR: ${error}`));
   process.exitCode = 1;

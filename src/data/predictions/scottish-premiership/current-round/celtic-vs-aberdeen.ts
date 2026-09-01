@@ -11,6 +11,30 @@ export const celticVsAberdeen: EditorialPrediction = {
   picks: { main: "Celtic -1.5 Asian Handicap", publishedOdds: 1.72, oddsProvenance: { source: "Author-supplied editorial package", provenance: "author_attested", market: "Celtic -1.5 Asian Handicap" } },
   sourceStatus: "verified",
   sources: [{ name: "Official competition and club fixture sources", url: "https://spfl.co.uk/match-day", description: "Fixture, current results and competition context.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "Independent current preview and match reporting", url: "https://fbref.com/en/comps/40/schedule/Scottish-Premiership-Scores-and-Fixtures", description: "Recent results, lineups, availability and H2H cross-check.", accessedAt: "2026-08-30T21:30:00+01:00" }, { name: "OddAlerts — Premiership xG table", url: "https://www.oddalerts.com/xg/premiership", description: "Current league xG and xGA totals and per-90 rates with explicit team sample sizes.", accessedAt: "2026-08-30T23:30:00+01:00" }, { name: "FBref — 2026/27 Premiership shooting", url: "https://fbref.com/en/comps/40/shooting/Scottish-Premiership-Stats", description: "Uniform team shots and shots-on-target rates used in Statistical Core.", accessedAt: "2026-08-30T23:30:00+01:00" }, { name: "TotalCorner — 2026/27 Premiership corners", url: "https://www.totalcorner.com/league/corner_stats/262", description: "Early-season corners for and against snapshot; N and stale-cutoff caveat shown in the analysis.", accessedAt: "2026-08-30T23:30:00+01:00" }],
-  publishedAt: "2026-08-26T11:54:38.899Z", published: true,
+  publishedAt: "2026-08-26T11:54:38.899Z", updatedAt: "2026-09-01T09:30:00+01:00", published: true,
+  matchSeo: {
+    lineups: {
+      status: "expected",
+      home: { players: ["Viljami Sinisalo", "Colby Donovan", "Cameron Carter-Vickers", "Liam Scales", "Kieran Tierney", "Mika Baur", "Alex Oxlade-Chamberlain", "Haissem Hassan", "Benjamin Nygren", "Hyun-Jun Yang", "Camilo Durán"] },
+      away: { players: ["Müller", "Cadden", "Mayo", "Happe", "Guinness-Walker", "Ronan", "Afeez", "Ntelo", "Armstrong", "Olusanya", "Nisbet"] },
+      sources: [{ name: "Sports Mole — current match preview", url: "https://www.sportsmole.co.uk/football/celtic/preview/celtic-vs-aberdeen-prediction-team-news-lineups_604127.html", accessedAt: "2026-09-01T09:30:00+01:00" }],
+      updatedAt: "2026-09-01T09:30:00+01:00"
+    },
+    availability: {
+      entries: [
+        { team: "home", player: "Alistair Johnston", status: "injured" },
+        { team: "home", player: "Jota", status: "injured" },
+        { team: "home", player: "Reo Hatate", status: "injured" },
+        { team: "home", player: "Callum McGregor", status: "doubtful" },
+        { team: "home", player: "Kasper Høgh", status: "doubtful" },
+        { team: "away", player: "Bradley Lyons", status: "injured" },
+        { team: "away", player: "Emmanuel Gyamfi", status: "injured" },
+        { team: "away", player: "Kristers Tobers", status: "injured" },
+        { team: "away", player: "Kusini Yengi", status: "injured" }
+      ],
+      sources: [{ name: "Sports Mole — current match preview", url: "https://www.sportsmole.co.uk/football/celtic/preview/celtic-vs-aberdeen-prediction-team-news-lineups_604127.html", accessedAt: "2026-09-01T09:30:00+01:00" }],
+      updatedAt: "2026-09-01T09:30:00+01:00"
+    }
+  },
   matchInfo: { date: "2026-09-02", time: "19:45", round: "Matchday 5", venue: "Celtic Park" },
 };

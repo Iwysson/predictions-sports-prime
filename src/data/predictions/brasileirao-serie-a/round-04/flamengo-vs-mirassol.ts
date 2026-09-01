@@ -20,8 +20,21 @@ export const flamengoVsMirassol: EditorialPrediction = {
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-01T06:20:00-03:00",
   sourceStatus: "verified",
   sources: [
+    {
+      name: "Lance — current expected lineups and availability",
+      url: "https://www.lance.com.br/sites-de-apostas/palpites/flamengo-x-mirassol-02-09-2026.html",
+      description: "Current September 1 pre-match lineups, injuries, returns and transfer-related availability.",
+      accessedAt: "2026-09-01T06:20:00-03:00"
+    },
+    {
+      name: "365Scores — current unavailable players",
+      url: "https://www.365scores.com/pt-br/football/match/brasileirao-serie-a-113/flamengo-mirassol-1215-1269-113",
+      description: "Current match page used to cross-check unavailable players.",
+      accessedAt: "2026-09-01T06:20:00-03:00"
+    },
     {
       name: "CBF — Flamengo vs Mirassol fixture",
       url: "https://www.cbf.com.br/futebol-brasileiro/jogos/campeonato-brasileiro/serie-a/2026/flamengo-x-mirassol/831919",
@@ -29,6 +42,28 @@ export const flamengoVsMirassol: EditorialPrediction = {
       accessedAt: "2026-08-30T10:00:00-03:00"
     }
   ],
+  matchSeo: {
+    lineups: {
+      status: "expected",
+      home: { formation: "4-2-3-1", players: ["Rossi", "Emerson Royal", "Léo Ortiz", "Léo Pereira", "Ayrton Lucas", "Erick Pulgar", "Jorginho", "Luiz Araújo (Carrascal alternative)", "Arrascaeta", "Samuel Lino", "Pedro"] },
+      away: { formation: "4-3-3", players: ["Walter", "Igor Formiga", "João Victor", "Willian Machado", "Reinaldo", "Neto Moura", "Denilson", "Eduardo", "Gustavo Silva (Wallisson alternative)", "Alesson", "Bruno Santos"] },
+      sources: [{ name: "Lance", url: "https://www.lance.com.br/sites-de-apostas/palpites/flamengo-x-mirassol-02-09-2026.html", accessedAt: "2026-09-01T06:20:00-03:00" }],
+      updatedAt: "2026-09-01T06:20:00-03:00"
+    },
+    availability: {
+      entries: [
+        { team: "home", player: "Alex Sandro", status: "injured" },
+        { team: "home", player: "Vitão", status: "injured" },
+        { team: "home", player: "Nicolás de la Cruz", status: "injured" },
+        { team: "away", player: "José Aldo", status: "injured" },
+        { team: "away", player: "Edson Carioca", status: "injured" },
+        { team: "away", player: "Negueba", status: "injured" },
+        { team: "away", player: "Wallisson", status: "returning", detail: "Available again after serving a league suspension." }
+      ],
+      sources: [{ name: "Lance", url: "https://www.lance.com.br/sites-de-apostas/palpites/flamengo-x-mirassol-02-09-2026.html", accessedAt: "2026-09-01T06:20:00-03:00" }],
+      updatedAt: "2026-09-01T06:20:00-03:00"
+    }
+  },
   matchInfo: {
     date: "2026-09-02",
     time: "19:30",

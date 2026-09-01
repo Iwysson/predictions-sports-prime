@@ -43,8 +43,13 @@ function classification(path) {
   if (["/contact/", "/privacy/", "/cookies/", "/terms/", "/responsible-gambling/"].includes(path)) {
     return "UTILITY";
   }
+  if (/^\/(?:pt-br|es|fr|de|it|nl|tr)\/$/.test(path) || /^\/(?:pt-br|es|fr|de|it|nl|tr)\/league\/[^/]+\/$/.test(path)) {
+    return "DISCOVERY";
+  }
   return "SUBSTANTIAL";
 }
+
+const minimumWords = { UTILITY: 70, DISCOVERY: 60, SUBSTANTIAL: 90 };
 
 const allPages = walk(outputRoot)
   .filter((file) => file.endsWith("index.html"))
@@ -68,7 +73,7 @@ for (const page of pages) {
   const bodyHash = createHash("sha256").update(text.toLowerCase()).digest("hex");
 
   if (mainCount !== 1) errors.push(`${page.path}: expected one main landmark, found ${mainCount}`);
-  if (wordCount < (category === "UTILITY" ? 70 : 90)) {
+  if (wordCount < minimumWords[category]) {
     errors.push(`${page.path}: insufficient visible value (${wordCount} words)`);
   }
   if (links.some((href) => href === "" || href === "#")) {
@@ -107,6 +112,17 @@ for (const page of pages) {
     }
   }
 
+  if (category === "DISCOVERY") {
+    const localizedHome = page.path.match(/^\/(pt-br|es|fr|de|it|nl|tr)\/$/);
+    const localizedLeague = page.path.match(/^\/(pt-br|es|fr|de|it|nl|tr)\/league\/[^/]+\/$/);
+    if (localizedHome && (!page.html.includes("home-seo-hero") || !page.html.includes('class="match-card') || !links.some((href) => href.startsWith(`/${localizedHome[1]}/league/`)))) {
+      errors.push(`${page.path}: localized discovery home lacks editorial cards or league navigation`);
+    }
+    if (localizedLeague && (!page.html.includes("league-title-bar") || !page.html.includes("league-seo-intro"))) {
+      errors.push(`${page.path}: localized league discovery lacks competition context`);
+    }
+  }
+
   for (const href of links.filter((href) => href.startsWith("/match/"))) {
     const normalized = href.endsWith("/") ? href : `${href}/`;
     if (!paths.has(normalized)) errors.push(`${page.path}: draft or broken match link ${href}`);
@@ -141,6 +157,7 @@ const minimum = [...records].sort((left, right) => left.wordCount - right.wordCo
 console.log("AdSense Site Quality Audit\n");
 console.log(`Indexable pages: ${records.length}`);
 console.log(`SUBSTANTIAL: ${categories.get("SUBSTANTIAL") ?? 0}`);
+console.log(`DISCOVERY: ${categories.get("DISCOVERY") ?? 0}`);
 console.log(`UTILITY: ${categories.get("UTILITY") ?? 0}`);
 console.log("THIN: 0");
 console.log("DUPLICATE: 0");

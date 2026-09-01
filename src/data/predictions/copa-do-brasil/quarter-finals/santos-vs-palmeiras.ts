@@ -22,8 +22,21 @@ export const santosVsPalmeiras: EditorialPrediction = {
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-01T06:20:00-03:00",
   sourceStatus: "verified",
   sources: [
+    {
+      name: "ge — Santos training and availability update",
+      url: "https://ge.globo.com/sp/santos-e-regiao/futebol/times/santos/noticia/2026/08/31/escalacao-do-santos-gustavinho-deve-perder-classico-na-copa-do-brasil-arthur-faz-primeiro-treino.ghtml",
+      description: "Latest Santos training report, including Gustavo Henrique's doubt and Arthur's ineligibility.",
+      accessedAt: "2026-09-01T06:20:00-03:00"
+    },
+    {
+      name: "Lance — current expected lineups and availability",
+      url: "https://www.lance.com.br/sites-de-apostas/palpites/santos-x-palmeiras-02-09-2026.html",
+      description: "Current expected lineups and availability for both clubs, including Palmeiras transfer and injury changes.",
+      accessedAt: "2026-09-01T06:20:00-03:00"
+    },
     {
       name: "CBF — Copa do Brasil 2026 quarter-final schedule",
       url: "https://www.cbf.com.br/futebol-brasileiro/noticias/copa-brasil/copa-brasil-masculino/cbf-define-detalhes-das-quartas-de-final-da-copa-betano-do-brasil-2026",
@@ -31,6 +44,33 @@ export const santosVsPalmeiras: EditorialPrediction = {
       accessedAt: "2026-08-30T10:00:00-03:00"
     }
   ],
+  matchSeo: {
+    lineups: {
+      status: "expected",
+      home: { formation: "4-3-3", players: ["Gabriel Brazão", "Igor Vinícius", "Lucas Veríssimo", "Luan Peres", "Escobar", "Willian Arão", "João Schmidt", "Gustavo Henrique (if cleared)", "Barreal", "Gabigol", "Neymar"] },
+      away: { formation: "4-3-3", players: ["Carlos Miguel", "Giay", "Murilo", "Gustavo Gómez", "Arthur", "Marlon Freitas", "Andreas Pereira", "Mauricio", "Felipe Anderson", "Vitor Roque", "Flaco López"] },
+      sources: [
+        { name: "ge", url: "https://ge.globo.com/sp/santos-e-regiao/futebol/times/santos/noticia/2026/08/31/escalacao-do-santos-gustavinho-deve-perder-classico-na-copa-do-brasil-arthur-faz-primeiro-treino.ghtml", accessedAt: "2026-09-01T06:20:00-03:00" },
+        { name: "Lance", url: "https://www.lance.com.br/sites-de-apostas/palpites/santos-x-palmeiras-02-09-2026.html", accessedAt: "2026-09-01T06:20:00-03:00" }
+      ],
+      updatedAt: "2026-09-01T06:20:00-03:00"
+    },
+    availability: {
+      entries: [
+        { team: "home", player: "Gustavo Henrique", status: "doubtful", detail: "Left-thigh pain after the Corinthians match." },
+        { team: "home", player: "Arthur", status: "unavailable", detail: "Not registered for this Copa do Brasil match." },
+        { team: "away", player: "Jefté", status: "injured", detail: "Recovering from knee surgery." },
+        { team: "away", player: "Ramón Sosa", status: "injured" },
+        { team: "away", player: "Paulinho", status: "injured" },
+        { team: "away", player: "Allan", status: "unavailable", detail: "Transferred to Manchester City and no longer available." }
+      ],
+      sources: [
+        { name: "ge", url: "https://ge.globo.com/sp/santos-e-regiao/futebol/times/santos/noticia/2026/08/31/escalacao-do-santos-gustavinho-deve-perder-classico-na-copa-do-brasil-arthur-faz-primeiro-treino.ghtml", accessedAt: "2026-09-01T06:20:00-03:00" },
+        { name: "Lance", url: "https://www.lance.com.br/sites-de-apostas/palpites/santos-x-palmeiras-02-09-2026.html", accessedAt: "2026-09-01T06:20:00-03:00" }
+      ],
+      updatedAt: "2026-09-01T06:20:00-03:00"
+    }
+  },
   matchInfo: {
     date: "2026-09-02",
     time: "21:30",

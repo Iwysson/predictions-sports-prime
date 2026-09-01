@@ -20,15 +20,21 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
-  updatedAt: "2026-08-31T16:45:00-03:00",
+  updatedAt: "2026-09-01T05:50:00-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-08-31T16:45:00-03:00",
-    teamNewsUpdatedAt: "2026-08-31T16:45:00-03:00",
-    lineupUpdatedAt: "2026-08-31T16:45:00-03:00",
+    editorialUpdatedAt: "2026-09-01T05:50:00-03:00",
+    teamNewsUpdatedAt: "2026-09-01T05:50:00-03:00",
+    lineupUpdatedAt: "2026-09-01T05:50:00-03:00",
     statisticsUpdatedAt: "2026-08-31T16:45:00-03:00"
   },
   sourceStatus: "verified",
   sources: [
+    {
+      name: "ge — matchday team news and expected lineups",
+      url: "https://ge.globo.com/mg/futebol/copa-do-brasil/noticia/2026/09/01/atletico-mg-x-cruzeiro-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml",
+      description: "Matchday report supporting the current expected lineups, doubts, injuries, venue and kickoff.",
+      accessedAt: "2026-09-01T05:50:00-03:00"
+    },
     {
       name: "CBF — Copa do Brasil 2026 quarter-final schedule",
       url: "https://www.cbf.com.br/futebol-brasileiro/noticias/copa-brasil/copa-brasil-masculino/cbf-define-detalhes-das-quartas-de-final-da-copa-betano-do-brasil-2026",
@@ -61,7 +67,7 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
       "home": {
         "formation": "4-2-3-1",
         "players": [
-          "Everson (Gabriel Delfim if unavailable)",
+          "Gabriel Delfim (Everson if cleared)",
           "Alan Franco",
           "Ruan Tressoldi (Vitão if unavailable)",
           "Vitor Hugo",
@@ -92,6 +98,11 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
       },
       "sources": [
         {
+          "name": "ge — matchday expected lineups",
+          "url": "https://ge.globo.com/mg/futebol/copa-do-brasil/noticia/2026/09/01/atletico-mg-x-cruzeiro-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml",
+          "accessedAt": "2026-09-01T05:50:00-03:00"
+        },
+        {
           "name": "Trivela",
           "url": "https://trivela.com.br/apostas/palpites-de-futebol/atletico-mg-x-cruzeiro-01-09-2026/",
           "accessedAt": "2026-08-31T16:45:00-03:00"
@@ -102,7 +113,7 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
           "accessedAt": "2026-08-31T16:45:00-03:00"
         }
       ],
-      "updatedAt": "2026-08-31T16:45:00-03:00"
+      "updatedAt": "2026-09-01T05:50:00-03:00"
     },
     "availability": {
       "entries": [
@@ -110,15 +121,15 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
           "team": "home",
           "player": "Everson",
           "status": "doubtful",
-          "detail": "Left-foot trauma; Gabriel Delfim is the expected replacement if unavailable.",
-          "updatedAt": "2026-08-31T16:45:00-03:00"
+          "detail": "Left-foot trauma; the club has not disclosed further detail and Gabriel Delfim is the matchday projection if Everson is not cleared.",
+          "updatedAt": "2026-09-01T05:50:00-03:00"
         },
         {
           "team": "home",
           "player": "Ruan Tressoldi",
           "status": "doubtful",
-          "detail": "Final concussion-protocol clearance pending; Vitão is the expected replacement if unavailable.",
-          "updatedAt": "2026-08-31T16:45:00-03:00"
+          "detail": "Completed the concussion protocol and is expected to be available; Vitão remains the reported alternative.",
+          "updatedAt": "2026-09-01T05:50:00-03:00"
         },
         {
           "team": "home",
@@ -139,18 +150,6 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
           "detail": "Foot injury."
         },
         {
-          "team": "home",
-          "player": "Patrick",
-          "status": "doubtful",
-          "detail": "Knee problem."
-        },
-        {
-          "team": "away",
-          "player": "Cássio",
-          "status": "injured",
-          "detail": "Knee injury."
-        },
-        {
           "team": "away",
           "player": "Luis Sinisterra",
           "status": "injured",
@@ -161,15 +160,14 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
           "player": "Gabriel Pec",
           "status": "injured",
           "detail": "Leg fracture."
-        },
-        {
-          "team": "away",
-          "player": "Bruno Rodrigues",
-          "status": "injured",
-          "detail": "Facial and rib injuries; conservative treatment."
         }
       ],
       "sources": [
+        {
+          "name": "ge — matchday availability",
+          "url": "https://ge.globo.com/mg/futebol/copa-do-brasil/noticia/2026/09/01/atletico-mg-x-cruzeiro-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml",
+          "accessedAt": "2026-09-01T05:50:00-03:00"
+        },
         {
           "name": "Itatiaia — Atlético",
           "url": "https://www.itatiaia.com.br/esportes/futebol/futebol-nacional/futebol-mineiro/atletico/atletico-tem-dia-decisivo-de-olho-em-classico-na-copa-do-brasil/",
@@ -186,7 +184,7 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
           "accessedAt": "2026-08-31T16:45:00-03:00"
         }
       ],
-      "updatedAt": "2026-08-31T16:45:00-03:00"
+      "updatedAt": "2026-09-01T05:50:00-03:00"
     },
     "teamNews": {
       "entries": [
@@ -205,6 +203,11 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
       ],
       "sources": [
         {
+          "name": "ge — matchday team news",
+          "url": "https://ge.globo.com/mg/futebol/copa-do-brasil/noticia/2026/09/01/atletico-mg-x-cruzeiro-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml",
+          "accessedAt": "2026-09-01T05:50:00-03:00"
+        },
+        {
           "name": "Itatiaia",
           "url": "https://www.itatiaia.com.br/esportes/futebol/futebol-nacional/futebol-mineiro/cruzeiro/apos-susto-jonathan-jesus-treina-com-elenco-e-nao-deve-ser-problema-no-cruzeiro/",
           "accessedAt": "2026-08-31T16:45:00-03:00"
@@ -215,7 +218,7 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
           "accessedAt": "2026-08-31T16:45:00-03:00"
         }
       ],
-      "updatedAt": "2026-08-31T16:45:00-03:00"
+      "updatedAt": "2026-09-01T05:50:00-03:00"
     },
     "statistics": {
       "sample": "2026 Brasileirão home/away split through August 30 (N=3 each; complete three-match xG aggregate unavailable)",
