@@ -14,8 +14,12 @@ const resultsHtml = fs.readFileSync(path.join(process.cwd(), "out", "results", "
 const renderedHistoryEntries = [...resultsHtml.matchAll(/<article\b[^>]*class="result-card"/g)].length;
 let completedPageMismatches = 0;
 let futureResultLeaks = 0;
+let missingEditorialBodies = 0;
 for (const match of published) {
   const matchHtml = fs.readFileSync(path.join(process.cwd(), "out", "match", match.slug, "index.html"), "utf8");
+  if (!matchHtml.includes('class="compact-analysis-copy"')) {
+    missingEditorialBodies += 1;
+  }
   if (match.fixtureStatus === "completed") {
     const score = `${match.homeScore}-${match.awayScore}`;
     if (!matchHtml.includes(`>${score}</span>`) || !matchHtml.includes("Prediction result:")) completedPageMismatches += 1;
@@ -58,6 +62,7 @@ console.log(`Rendered History entries: ${renderedHistoryEntries}`);
 console.log(`History counter mismatches: ${Math.abs(history.completed - renderedHistoryEntries)}`);
 console.log(`Completed match-page mismatches: ${completedPageMismatches}`);
 console.log(`Future result-status leaks: ${futureResultLeaks}`);
+console.log(`Missing editorial bodies: ${missingEditorialBodies}`);
 console.log(`Signature-guarded live refresh paths: ${runtimeReplacementPaths}`);
 console.log(`League initial/hydrated mismatches: 0`);
 console.log(`Current Round hydration mismatches: 0`);
@@ -68,6 +73,7 @@ console.log(`Stale-first Current/Next replacement paths: ${staleFirstRoundPaths}
 assert.equal(renderedHistoryEntries, history.completed, "Rendered History differs from the authoritative hydrated dataset");
 assert.equal(completedPageMismatches, 0, "Completed match page is missing final score or prediction result");
 assert.equal(futureResultLeaks, 0, "Future match page exposes a prediction result state");
+assert.equal(missingEditorialBodies, 0, "Published match page is missing its editorial analysis body");
 assert.equal(staleFirstRoundPaths, 0, "Current/Next Round uses a post-mount replacement path");
 
 console.log("Render consistency audit: PASS");
