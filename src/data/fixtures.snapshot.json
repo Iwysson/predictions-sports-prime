@@ -13567,10 +13567,10 @@
     ],
     "championship": [
       {
-        "round": 1,
+        "round": 4,
         "games": [
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-01",
             "time": "19:45",
             "homeTeam": "Lincoln City",
@@ -13585,7 +13585,7 @@
             "kickoffUtc": "2026-09-01T18:45Z"
           },
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-01",
             "time": "19:45",
             "homeTeam": "Portsmouth",
@@ -13600,7 +13600,7 @@
             "kickoffUtc": "2026-09-01T18:45Z"
           },
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-01",
             "time": "19:45",
             "homeTeam": "Preston North End",
@@ -13615,7 +13615,7 @@
             "kickoffUtc": "2026-09-01T18:45Z"
           },
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-01",
             "time": "19:45",
             "homeTeam": "Sheffield United",
@@ -13630,7 +13630,7 @@
             "kickoffUtc": "2026-09-01T18:45Z"
           },
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-01",
             "time": "19:45",
             "homeTeam": "Swansea City",
@@ -13645,7 +13645,7 @@
             "kickoffUtc": "2026-09-01T18:45Z"
           },
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-01",
             "time": "19:45",
             "homeTeam": "West Ham United",
@@ -13660,7 +13660,7 @@
             "kickoffUtc": "2026-09-01T18:45Z"
           },
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-01",
             "time": "20:00",
             "homeTeam": "Birmingham City",
@@ -13675,7 +13675,7 @@
             "kickoffUtc": "2026-09-01T19:00Z"
           },
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-01",
             "time": "20:00",
             "homeTeam": "Stoke City",
@@ -13690,7 +13690,7 @@
             "kickoffUtc": "2026-09-01T19:00Z"
           },
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-02",
             "time": "19:45",
             "homeTeam": "Millwall",
@@ -13705,7 +13705,7 @@
             "kickoffUtc": "2026-09-02T18:45Z"
           },
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-02",
             "time": "19:45",
             "homeTeam": "Queens Park Rangers",
@@ -13720,7 +13720,7 @@
             "kickoffUtc": "2026-09-02T18:45Z"
           },
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-02",
             "time": "19:45",
             "homeTeam": "West Bromwich Albion",
@@ -13735,7 +13735,7 @@
             "kickoffUtc": "2026-09-02T18:45Z"
           },
           {
-            "round": 1,
+            "round": 4,
             "date": "2026-09-02",
             "time": "20:00",
             "homeTeam": "Burnley",

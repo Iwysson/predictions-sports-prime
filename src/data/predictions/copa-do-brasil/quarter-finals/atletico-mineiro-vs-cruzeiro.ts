@@ -6,10 +6,10 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
   awayTeam: "Cruzeiro",
   slug: "atletico-mineiro-vs-cruzeiro",
   analysis: [
-    "Atlético Mineiro vs Cruzeiro — Copa do Brasil Quarter-Final Analysis\n\n🎯 **Prediction:** Atlético Mineiro or Draw (1X) + Under 3.5 Goals 💰 **Odds:** 1.72 (-139 American)\n**Copa do Brasil 2026** — Quarter-final, Second Leg | September 1, 2026 | 9:00 PM local time | Arena MRV, Belo Horizonte\n\n**Venue and kickoff:** Arena MRV, Belo Horizonte — September 1, 2026 — 9:00 PM BRT.\n**Expected lineups (updated August 31):** Atlético Mineiro — Everson or Gabriel Delfim; Alan Franco, Ruan Tressoldi or Vitão, Vitor Hugo, Renan Lodi; Kevin Castaño, Maycon; Cuello, Fred, Bernard; Cassierra. Cruzeiro — Otávio; Fagner, Fabrício Bruno, Jonathan Jesus, Lucas Villalba; Lucas Romero, Gerson; Keny Arroyo, Matheus Pereira, Wesley; Kaio Jorge.",
+    "Atlético Mineiro vs Cruzeiro — Copa do Brasil Quarter-Final Analysis\n\n🎯 **Prediction:** Atlético Mineiro or Draw (1X) + Under 3.5 Goals 💰 **Odds:** 1.72 (-139 American)\n**Copa do Brasil 2026** — Quarter-final, Second Leg | September 1, 2026 | 9:00 PM local time | Arena MRV, Belo Horizonte\n\n**Venue and kickoff:** Arena MRV, Belo Horizonte — September 1, 2026 — 9:00 PM BRT.\n**Expected lineups (updated September 1):** Atlético Mineiro — Gabriel Delfim; Alan Franco, Ruan Tressoldi, Vitor Hugo, Renan Lodi; Kevin Castaño, Maycon; Cuello, Fred, Bernard; Cassierra. Everson is a probable absentee, Gabriel Delfim is the probable replacement, and Ruan Tressoldi is available and expected to start. Cruzeiro are expected at full strength while retaining the base of the previous match: Otávio; Fagner, Fabrício Bruno, Jonathan Jesus, Lucas Villalba; Lucas Romero, Gerson; Keny Arroyo, Matheus Pereira, Wesley; Kaio Jorge.",
     "The home side arrive with the bigger incentive to control the tempo and manage the first half, while Cruzeiro still have a direct route to the next round if they can force the match into a more open pattern. With the aggregate at 1-1, the draw is not a neutral result: it leaves penalties as the decisive route, so the away side's profile is still relevant even though Atlético have the home advantage. The analysis remains rooted in the correct match context and the available team-news picture, not in a simplified reading of the table alone.",
     "The home side's better structure and the emotional weight of playing at Arena MRV keep the 1X angle well supported. Cruzeiro remain dangerous in transition and can damage the game through direct balls and wide entries, but their away profile is still more vulnerable to a stronger home-side control of the middle third. That makes the under 3.5 goals concept more appealing than a simple open-play scoreline expectation, because Atlético are likely to prioritize control more than pure chaos.",
-    "The current team-news picture still matters. Everson and Ruan Tressoldi remain the key questions for the home side, but the underlying structure does not change dramatically if the backup players are used, because the central match thread is still the home side's control and compactness. Jonathan Jesus is back to a more normal availability picture and Kaio Jorge remains eligible after the sanction adjustment, which keeps the away side's route to a competitive discussion alive.",
+    "The current team-news picture still matters. Everson is a probable absentee and Gabriel Delfim is the probable replacement in goal. Ruan Tressoldi is available and expected to start. Cruzeiro are expected at full strength while retaining the base of the previous match, including Jonathan Jesus and the eligible Kaio Jorge. The underlying structure does not change: the central match thread is still the home side's control and compactness against Cruzeiro's established base.",
     "The Statistical Core is not built on a single event or a single note from a likely lineup. It is built on the competition context, the home/away split, and the way both teams manage possession and transition phases. In this case, Atlético's need to dominate the middle third and keep the match under pressure makes the 1X selection the stronger editorial call, while the under 3.5 goals component keeps the line from being too dependent on a wide open game state.",
     "Final verdict: Atlético Mineiro or Draw (1X) + Under 3.5 Goals. The strongest route is a measured home performance where Atlético control the rhythm, reduce the amount of chaos, and deny Cruzeiro a clean route into a late set-piece or transition sequence. The price still needs to be handled with discipline, but the underlying process supports the selection.",
     "Sources used for the preview include ge, CBF, Itatiaia, O Tempo, and Trivela, alongside the available live-match data and team-news context. The editorial content remains limited to the valid objective description of the match, with no change to the Statistical Core, odds, or the underlying match-signature data."
@@ -73,9 +73,9 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
       "home": {
         "formation": "4-2-3-1",
         "players": [
-          "Gabriel Delfim (Everson if cleared)",
+          "Gabriel Delfim",
           "Alan Franco",
-          "Ruan Tressoldi (Vitão if unavailable)",
+          "Ruan Tressoldi",
           "Vitor Hugo",
           "Renan Lodi",
           "Kevin Castaño",
@@ -127,14 +127,14 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
           "team": "home",
           "player": "Everson",
           "status": "doubtful",
-          "detail": "Left-foot trauma; the club has not disclosed further detail and Gabriel Delfim is the matchday projection if Everson is not cleared.",
+          "detail": "Probable absentee; Gabriel Delfim is the probable replacement.",
           "updatedAt": "2026-09-01T05:50:00-03:00"
         },
         {
           "team": "home",
           "player": "Ruan Tressoldi",
-          "status": "doubtful",
-          "detail": "Completed the concussion protocol and is expected to be available; Vitão remains the reported alternative.",
+          "status": "returning",
+          "detail": "Available and expected to start after completing the concussion protocol.",
           "updatedAt": "2026-09-01T05:50:00-03:00"
         },
         {
@@ -204,7 +204,7 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
         },
         {
           "team": "home",
-          "text": "Everson and Ruan Tressoldi require final medical clearance."
+          "text": "Everson is a probable absentee, Gabriel Delfim is the probable replacement, and Ruan Tressoldi is available and expected to start. Cruzeiro are expected at full strength while retaining the base of the previous match."
         }
       ],
       "sources": [
