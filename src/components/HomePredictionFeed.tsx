@@ -37,7 +37,9 @@ export function HomePredictionFeed({
   const tomorrowMatches = filterTomorrowPublishedPredictions(matches, today);
   const latestMatches = selectLatestPublishedPredictions(matches, today, 10);
   const omittedMatches = findOmittedCurrentPredictions(matches, today);
-  const historyMatches = filterCompletedPredictions(matches, now).slice(0, 10);
+  const historyMatches = filterCompletedPredictions(matches, now)
+    .filter((match) => match.betResult === "green")
+    .slice(0, 10);
 
   if (omittedMatches.length > 0) {
     throw new Error(
