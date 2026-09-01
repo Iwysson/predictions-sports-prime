@@ -96,7 +96,8 @@ export function LocalizedMatchDetails({ match, locale }: { match: Match; locale:
   const data = match.matchSeo;
   if (!data) return null;
   const copy = labels[locale];
-  const teams = `${match.homeTeam} vs ${match.awayTeam}`;
+  const separator = { "pt-br": "x", es: "vs", it: "vs", fr: "vs", de: "gegen" }[locale];
+  const teams = `${match.homeTeam} ${separator} ${match.awayTeam}`;
   const coreRows = extractStatisticalCoreRows(match);
   const statisticalRows = coreRows.length
     ? coreRows.map((row) => ({ ...row, category: "other" as const }))

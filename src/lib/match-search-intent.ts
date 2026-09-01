@@ -64,6 +64,134 @@ type MatchIntentFacts = {
   hasBroadcastInfo: boolean;
 };
 
+type TodaySeoLocale = "en" | "pt-BR" | "es" | "it" | "fr" | "de";
+type TodaySeoIntent = "lineups" | "stats" | "odds" | "goals" | "corners" | "handicap" | "teamNews" | "injuries";
+
+type TodaySeoProfile = {
+  teams: [string, string];
+  titleIntents: TodaySeoIntent[];
+  descriptionIntents: TodaySeoIntent[];
+  focus?: Partial<Record<TodaySeoLocale, string>>;
+};
+
+const todaySeoProfiles: Record<string, TodaySeoProfile> = {
+  "lincoln-city-vs-blackburn-rovers": {
+    teams: ["Lincoln City", "Blackburn"], titleIntents: ["lineups", "stats"], descriptionIntents: ["lineups", "stats", "odds", "goals", "corners"],
+  },
+  "portsmouth-vs-derby-county": {
+    teams: ["Portsmouth", "Derby County"], titleIntents: ["lineups", "stats"], descriptionIntents: ["lineups", "stats", "odds", "goals"],
+    focus: { en: "Portsmouth double chance and Under 3.5 Goals", "pt-BR": "Portsmouth ou empate e menos de 3,5 gols", es: "Portsmouth o empate y menos de 3,5 goles", it: "Portsmouth o pareggio e meno di 3,5 gol", fr: "Portsmouth ou nul et moins de 3,5 buts", de: "Portsmouth oder Unentschieden und unter 3,5 Tore" },
+  },
+  "preston-north-end-vs-bristol-city": {
+    teams: ["Preston", "Bristol City"], titleIntents: ["corners", "lineups", "stats"], descriptionIntents: ["corners", "lineups", "stats", "odds"],
+    focus: { en: "Under 3.5 Goals and Over 8.5 Corners", "pt-BR": "menos de 3,5 gols e mais de 8,5 escanteios", es: "menos de 3,5 goles y más de 8,5 córners", it: "meno di 3,5 gol e più di 8,5 calci d'angolo", fr: "moins de 3,5 buts et plus de 8,5 corners", de: "unter 3,5 Tore und über 8,5 Ecken" },
+  },
+  "sheffield-united-vs-bolton-wanderers": {
+    teams: ["Sheffield United", "Bolton"], titleIntents: ["handicap", "corners"], descriptionIntents: ["handicap", "corners", "lineups", "stats", "odds"],
+    focus: { en: "Bolton +2 Asian Handicap and Over 8.5 Corners", "pt-BR": "Bolton +2 no handicap asiático e mais de 8,5 escanteios", es: "Bolton +2 en hándicap asiático y más de 8,5 córners", it: "Bolton +2 con handicap asiatico e più di 8,5 calci d'angolo", fr: "Bolton +2 avec handicap asiatique et plus de 8,5 corners", de: "Bolton +2 Asian Handicap und über 8,5 Ecken" },
+  },
+  "swansea-city-vs-watford": {
+    teams: ["Swansea City", "Watford"], titleIntents: ["lineups", "stats"], descriptionIntents: ["lineups", "stats", "odds"],
+    focus: { en: "Over 2.5 Goals", "pt-BR": "mais de 2,5 gols", es: "más de 2,5 goles", it: "più di 2,5 gol", fr: "plus de 2,5 buts", de: "über 2,5 Tore" },
+  },
+  "west-ham-united-vs-wolverhampton-wanderers": {
+    teams: ["West Ham", "Wolves"], titleIntents: ["lineups", "stats", "odds"], descriptionIntents: ["lineups", "stats", "odds", "goals"],
+    focus: { en: "West Ham double chance and Over 1.5 Goals", "pt-BR": "West Ham ou empate e mais de 1,5 gols", es: "West Ham o empate y más de 1,5 goles", it: "West Ham o pareggio e più di 1,5 gol", fr: "West Ham ou nul et plus de 1,5 but", de: "West Ham oder Unentschieden und über 1,5 Tore" },
+  },
+  "birmingham-city-vs-southampton": {
+    teams: ["Birmingham City", "Southampton"], titleIntents: ["lineups", "stats"], descriptionIntents: ["lineups", "stats", "odds", "goals"],
+    focus: { en: "Birmingham double chance and Over 1.5 Goals", "pt-BR": "Birmingham ou empate e mais de 1,5 gols", es: "Birmingham o empate y más de 1,5 goles", it: "Birmingham o pareggio e più di 1,5 gol", fr: "Birmingham ou nul et plus de 1,5 but", de: "Birmingham oder Unentschieden und über 1,5 Tore" },
+  },
+  "stoke-city-vs-norwich-city": {
+    teams: ["Stoke City", "Norwich"], titleIntents: ["lineups", "stats", "odds"], descriptionIntents: ["lineups", "stats", "odds", "goals"],
+    focus: { en: "Norwich double chance (X2) and Over 1.5 Goals", "pt-BR": "Norwich ou empate (X2) e mais de 1,5 gols", es: "Norwich o empate (X2) y más de 1,5 goles", it: "Norwich o pareggio (X2) e più di 1,5 gol", fr: "Norwich ou nul (X2) et plus de 1,5 but", de: "Norwich oder Unentschieden (X2) und über 1,5 Tore" },
+  },
+  "atletico-mineiro-vs-cruzeiro": {
+    teams: ["Atlético-MG", "Cruzeiro"], titleIntents: ["lineups", "injuries", "odds"], descriptionIntents: ["lineups", "teamNews", "injuries", "stats", "odds", "goals", "corners"],
+    focus: { en: "Atlético Mineiro double chance and Under 3.5 Goals", "pt-BR": "Atlético-MG ou empate e menos de 3,5 gols", es: "Atlético Mineiro o empate y menos de 3,5 goles", it: "Atlético Mineiro o pareggio e meno di 3,5 gol", fr: "Atlético Mineiro ou nul et moins de 3,5 buts", de: "Atlético Mineiro oder Unentschieden und unter 3,5 Tore" },
+  },
+};
+
+const todaySeoTerms: Record<TodaySeoLocale, Record<TodaySeoIntent, string>> = {
+  en: { lineups: "Lineups", stats: "Stats", odds: "Odds", goals: "Goals", corners: "Corners", handicap: "Asian Handicap", teamNews: "Team News", injuries: "Injuries" },
+  "pt-BR": { lineups: "Escalações", stats: "Estatísticas", odds: "Odds", goals: "Gols", corners: "Escanteios", handicap: "Handicap Asiático", teamNews: "Notícias", injuries: "Desfalques" },
+  es: { lineups: "Alineaciones", stats: "Estadísticas", odds: "Cuotas", goals: "Goles", corners: "Córners", handicap: "Hándicap Asiático", teamNews: "Noticias", injuries: "Bajas" },
+  it: { lineups: "Formazioni", stats: "Statistiche", odds: "Quote", goals: "Gol", corners: "Corner", handicap: "Handicap Asiatico", teamNews: "Notizie", injuries: "Assenze" },
+  fr: { lineups: "Compositions", stats: "Statistiques", odds: "Cotes", goals: "Buts", corners: "Corners", handicap: "Handicap Asiatique", teamNews: "Actualités", injuries: "Absents" },
+  de: { lineups: "Aufstellungen", stats: "Statistik", odds: "Quoten", goals: "Tore", corners: "Ecken", handicap: "Asian Handicap", teamNews: "Team-News", injuries: "Ausfälle" },
+};
+
+const todayEnglishDescriptions: Record<string, string> = {
+  "lincoln-city-vs-blackburn-rovers": "Lincoln City vs Blackburn prediction for today, with probable lineups, stats, odds 1.78, goals, corners, 19:45 kick-off and LNER Stadium context.",
+  "portsmouth-vs-derby-county": "Portsmouth vs Derby County prediction: Portsmouth double chance and Under 3.5 Goals at odds 1.78, plus probable lineups, stats and match details.",
+  "preston-north-end-vs-bristol-city": "Preston vs Bristol City prediction: Under 3.5 Goals and Over 8.5 Corners at odds 1.78, with probable lineups, stats and match analysis.",
+  "sheffield-united-vs-bolton-wanderers": "Sheffield United vs Bolton prediction: Bolton +2 Asian Handicap and Over 8.5 Corners at odds 1.91, with probable lineups and stats.",
+  "swansea-city-vs-watford": "Swansea City vs Watford prediction for today, Over 2.5 Goals at odds of 1.88. Review probable lineups, statistics, odds comparison before the match.",
+  "west-ham-united-vs-wolverhampton-wanderers": "West Ham vs Wolves prediction: West Ham double chance and Over 1.5 Goals at odds 1.60, with probable lineups, stats, kick-off time and venue.",
+  "birmingham-city-vs-southampton": "Birmingham City vs Southampton prediction: Birmingham double chance and Over 1.5 Goals at odds 1.87, with probable lineups, stats and match analysis.",
+  "stoke-city-vs-norwich-city": "Stoke City vs Norwich prediction: Norwich double chance (X2) and Over 1.5 Goals at odds 1.78, with probable lineups, stats and match analysis.",
+  "atletico-mineiro-vs-cruzeiro": "Atlético-MG vs Cruzeiro prediction for Copa do Brasil, with probable lineups, team news, injuries, stats, odds 1.72, goals and corners.",
+};
+
+function isTodaySeoLocale(locale: SearchLocale): locale is TodaySeoLocale {
+  return locale === "en" || locale === "pt-BR" || locale === "es" || locale === "it" || locale === "fr" || locale === "de";
+}
+
+function formatLocalizedList(values: string[], locale: TodaySeoLocale) {
+  if (values.length < 2) return values[0] ?? "";
+  const connector = { en: "and", "pt-BR": "e", es: "y", it: "e", fr: "et", de: "und" }[locale];
+  return `${values.slice(0, -1).join(", ")} ${connector} ${values.at(-1)}`;
+}
+
+function todaySeoTeams(profile: TodaySeoProfile, locale: TodaySeoLocale) {
+  return `${profile.teams[0]} ${localeSearchResearch[locale].separator} ${profile.teams[1]}`;
+}
+
+function buildTodaySeoTitle(match: Match, locale: TodaySeoLocale) {
+  const profile = todaySeoProfiles[match.slug];
+  if (!profile) return "";
+  const teams = todaySeoTeams(profile, locale);
+  const prediction = sentenceCase(localeSearchResearch[locale].prediction);
+  const intents = profile.titleIntents.map((intent) => todaySeoTerms[locale][intent]);
+  while (intents.length) {
+    const title = `${teams} ${prediction}, ${formatLocalizedList(intents, locale)}`;
+    if (title.length <= 70) return title;
+    intents.pop();
+  }
+  return `${teams} ${prediction}`;
+}
+
+function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale, facts: MatchIntentFacts) {
+  const profile = todaySeoProfiles[match.slug];
+  if (!profile) return "";
+  if (locale === "en") return todayEnglishDescriptions[match.slug] ?? "";
+  const teams = todaySeoTeams(profile, locale);
+  const focus = profile.focus?.[locale];
+  const descriptionIntents = facts.odds
+    ? profile.descriptionIntents.filter((intent) => intent !== "odds")
+    : profile.descriptionIntents;
+  const modules = formatLocalizedList(descriptionIntents.map((intent) => {
+    const term = todaySeoTerms[locale][intent];
+    return locale === "de" ? term : term.toLocaleLowerCase();
+  }), locale);
+  const odds = facts.odds;
+  const candidates = {
+    en: `${teams} prediction for today${focus ? `: ${focus}` : ""}. Check ${modules}${odds ? ` at odds of ${odds}` : ""}, kick-off time and venue.`,
+    "pt-BR": `${teams}: palpite de hoje${focus ? ` para ${focus}` : ""}. Confira ${modules}${odds ? `, odds ${odds}` : ""}, horário e estádio.`,
+    es: `${teams}: pronóstico de hoy${focus ? ` para ${focus}` : ""}. Consulta ${modules}${odds ? `, cuotas ${odds}` : ""}, horario y estadio.`,
+    it: `${teams}: pronostico di oggi${focus ? ` per ${focus}` : ""}. Consulta ${modules}${odds ? `, quote ${odds}` : ""}, orario e stadio.`,
+    fr: `${teams} : pronostic du jour${focus ? ` pour ${focus}` : ""}. Consultez ${modules}${odds ? `, cotes ${odds}` : ""}, horaire et stade.`,
+    de: `${teams}: heutige Prognose${focus ? ` für ${focus}` : ""}. Mit ${modules}${odds ? `, Quote ${odds}` : ""}, Anstoßzeit und Stadion.`,
+  }[locale];
+  if (candidates.length <= 160) return candidates;
+  const compact = candidates.replace(/, (?:kick-off time and venue|horário e estádio|horario y estadio|orario e stadio|horaire et stade|Anstoßzeit und Stadion)\.$/, ".");
+  if (compact.length <= 160) return compact;
+  const focusedCompact = `${teams}: ${sentenceCase(localeSearchResearch[locale].prediction)}${focus ? ` — ${focus}` : ""}. ${sentenceCase(modules)}${odds ? `, ${localeSearchResearch[locale].odds} ${odds}` : ""}.`;
+  return focusedCompact.length <= 160
+    ? focusedCompact
+    : `${teams}: ${sentenceCase(localeSearchResearch[locale].prediction)}. ${sentenceCase(modules)}${odds ? `, ${localeSearchResearch[locale].odds} ${odds}` : ""}.`;
+}
+
 function unique(values: string[]) {
   return [...new Set(values.map((value) => value.replace(/\s+/g, " ").trim()).filter(Boolean))];
 }
@@ -224,6 +352,8 @@ function buildEnglishDescription(
   facts: MatchIntentFacts,
   temporal: MatchTemporalState | null
 ) {
+  const todayDescription = buildTodaySeoDescription(match, "en", facts);
+  if (todayDescription) return todayDescription;
   const teams = matchTeams(match, "en");
   const when = descriptionDateQualifier(match, temporal);
   const odds = facts.odds ? ` at odds of ${facts.odds}` : "";
@@ -264,6 +394,10 @@ function buildLocalizedDescription(
   temporal: MatchTemporalState | null
 ) {
   if (locale === "en") return buildEnglishDescription(match, facts, temporal);
+  if (isTodaySeoLocale(locale)) {
+    const todayDescription = buildTodaySeoDescription(match, locale, facts);
+    if (todayDescription) return todayDescription;
+  }
 
   const research = localeSearchResearch[locale];
   const teams = matchTeams(match, locale);
@@ -283,6 +417,10 @@ function buildLocalizedDescription(
 }
 
 function buildTitle(match: Match, locale: SearchLocale) {
+  if (isTodaySeoLocale(locale)) {
+    const todayTitle = buildTodaySeoTitle(match, locale);
+    if (todayTitle) return todayTitle;
+  }
   const research = localeSearchResearch[locale];
   const teams = matchTeams(match, locale);
   const intent = sentenceCase(research.prediction);
@@ -326,7 +464,8 @@ function buildH1(match: Match, locale: SearchLocale) {
   if (locale === "en") {
     return `${matchTeams(match, locale)} Prediction & Match Analysis`;
   }
-  return `${matchTeams(match, locale)} ${sentenceCase(research.prediction)} & ${sentenceCase(research.analysis)}`;
+  const connector = { "pt-BR": "e", es: "y", it: "e", fr: "et", de: "und" }[locale as "pt-BR" | "es" | "it" | "fr" | "de"] ?? "&";
+  return `${matchTeams(match, locale)} ${sentenceCase(research.prediction)} ${connector} ${sentenceCase(research.analysis)}`;
 }
 
 function buildIntro(match: Match, locale: SearchLocale, facts: MatchIntentFacts) {
