@@ -9,7 +9,7 @@ import { localizedAlternates } from "@/lib/international-seo";
 import { buildMatchSearchIntentCopy } from "@/lib/match-search-intent";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 import { absoluteUrl } from "@/lib/site-config";
-import { isSeoLocale, localePath, seoLocaleSlugs, seoLocales } from "@/lib/seo-locales";
+import { isSeoLocale, localePath, seoLocaleSlugs, seoLocales, type SeoLocale } from "@/lib/seo-locales";
 import type { SearchLocale } from "@/lib/search-intent-research";
 import { getLocalizedEditorial, hasCompleteLocalizedEditorial, localizedEditorialBySlug } from "@/data/localized-editorial";
 import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
@@ -44,7 +44,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   if (legacy) {
     const copy = seoLocales[locale]; const league = leaguesBySlug[match.league];
     const fullTitle = copy.matchTitle(match.homeTeam, match.awayTeam); const title = fullTitle.length <= 70 ? fullTitle : fullTitle.replace(" | Predictions Sports Prime", ""); const description = copy.matchDescription(match.homeTeam, match.awayTeam, league.name);
-    return { title: { absolute: title }, description, alternates: localizedAlternates(locale, `/match/${slug}/`), robots: { index: true, follow: true }, openGraph: { type: "article", title, description, url: absoluteUrl(localePath(locale, `/match/${slug}/`)), siteName: "Predictions Sports Prime", locale: copy.htmlLang, images: [absoluteUrl("/og-default.png")] } };
+    const legacyAlternateLocales: SeoLocale[] = [
+      "en",
+      ...seoLocaleSlugs.filter((candidate) => hasCompleteLocalizedEditorial(slug, candidate)),
+    ];
+    return { title: { absolute: title }, description, alternates: localizedAlternates(locale, `/match/${slug}/`, legacyAlternateLocales), robots: { index: true, follow: true }, openGraph: { type: "article", title, description, url: absoluteUrl(localePath(locale, `/match/${slug}/`)), siteName: "Predictions Sports Prime", locale: copy.htmlLang, images: [absoluteUrl("/og-default.png")] } };
   }
   if (!isFullyLocalizedMatchLocale(locale)) return { robots: { index: false, follow: false } };
   const copy = buildMatchSearchIntentCopy(match, intentLocale[locale]); const path = `/match/${slug}/`;

@@ -6,6 +6,7 @@ import {
   getMatchIntentRegistry,
   isRestrictedSearchIntentFixture,
 } from "../src/lib/match-search-intent.ts";
+import { containsContextOnlyMetadataIntent } from "../src/lib/prediction-first-search-intent.ts";
 
 const today = localTodayISO();
 const tomorrowDate = new Date(`${today}T12:00:00Z`);
@@ -56,6 +57,8 @@ for (const match of scoped) {
     check(copy.h1.length >= 20 && copy.h1.length <= 100, `${id}: H1 length ${copy.h1.length}`);
     check(/\s(?:vs|x|gegen)\s/i.test(copy.title), `${id}: localized team separator missing from title`);
     check(!/[ÃÂ][\u0080-\u00bf]/u.test(`${copy.title} ${copy.description} ${copy.h1}`), `${id}: mojibake detected`);
+    check(!containsContextOnlyMetadataIntent(`${copy.title} ${copy.description}`), `${id}: context-only intent leaked into metadata`);
+    check(!copy.secondaryQueries.some((query) => containsContextOnlyMetadataIntent(query)), `${id}: context-only intent leaked into secondary query expansion`);
 
     const expectedTemporal = match.date === today ? "today" : "tomorrow";
     check(copy.temporalState === expectedTemporal, `${id}: wrong temporal state ${copy.temporalState}`);
@@ -90,7 +93,7 @@ if (errors.length) {
   console.log(`Fixtures: ${scoped.length} (${scoped.filter((match) => match.date === today).length} today, ${scoped.filter((match) => match.date === tomorrow).length} tomorrow)`);
   console.log(`Locales: ${locales.length} (${locales.join(", ")})`);
   console.log(`Pages audited: ${pages.length}`);
-  console.log("Sensitive intents: structured-only PASS");
+  console.log("Supporting modules: retained on-page but excluded from Search Intent metadata PASS");
   console.log("Temporal metadata: live today/tomorrow only PASS");
   console.log("Description odds: derived from published odds PASS");
 }

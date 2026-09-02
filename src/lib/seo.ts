@@ -9,7 +9,7 @@ import { localizedAlternates } from "@/lib/international-seo";
 import { fullyLocalizedMatchLocales } from "@/components/LocalizedMatchDetails";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 import { hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
-import { seoLocaleSlugs } from "@/lib/seo-locales";
+import { seoLocaleSlugs, type SeoLocale } from "@/lib/seo-locales";
 import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 
 export function matchSeoTitle(match: Match) {
@@ -104,17 +104,25 @@ export function buildMatchMetadata(match: Match): Metadata {
         intent.primaryQuery,
         ...intent.secondaryQueries,
         ...intent.marketQueries,
-        ...intent.statisticalQueries,
         ...intent.temporalQueries,
         ...intent.competitionQueries,
       ].slice(0, 24),
     } : {}),
 
-    alternates: isInternationalMatchExpansionEligible(match)
-      ? localizedAlternates("en", matchCanonicalPath(match), ["en", ...fullyLocalizedMatchLocales])
-      : seoLocaleSlugs.every((locale) => hasCompleteLocalizedEditorial(match.slug, locale))
-        ? localizedAlternates("en", matchCanonicalPath(match))
-        : { canonical },
+    alternates: (() => {
+      const availableLocalizedLocales = seoLocaleSlugs.filter((locale) =>
+        hasCompleteLocalizedEditorial(match.slug, locale)
+      );
+      const availableAlternates: SeoLocale[] = ["en", ...availableLocalizedLocales];
+
+      if (isInternationalMatchExpansionEligible(match)) {
+        return localizedAlternates("en", matchCanonicalPath(match), ["en", ...fullyLocalizedMatchLocales]);
+      }
+
+      return availableLocalizedLocales.length
+        ? localizedAlternates("en", matchCanonicalPath(match), availableAlternates)
+        : { canonical };
+    })(),
 
     robots: {
       index: true,

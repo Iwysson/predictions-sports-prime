@@ -11,6 +11,7 @@ import {
   shouldApplySearchIntentSEO,
 } from "../src/lib/match-search-intent.ts";
 import { matchCanonicalPath, matchSeoDescription, matchSeoTitle } from "../src/lib/seo.ts";
+import { containsContextOnlyMetadataIntent } from "../src/lib/prediction-first-search-intent.ts";
 
 const publishedSource = matches.filter((match) => match.status === "published");
 const hydratedMatches = await hydratePredictions(publishedSource.map(toMatchPreview));
@@ -35,6 +36,7 @@ let incorrectToday = 0;
 let marketIntentMismatches = 0;
 let unsupportedFactualIntent = 0;
 let structuredCapabilityMismatches = 0;
+let contextOnlyMetadataLeaks = 0;
 const structuredMatches = publishedMatches.filter((match) => match.matchSeo);
 const expectedStructuredSlugs = new Set([
   "us-lecce-vs-as-roma",
@@ -55,6 +57,9 @@ for (const match of analyzedMatches) {
   const intent = buildMatchSearchIntentCopy(match, "en", today);
   const capabilities = getMatchIntentCapabilities(match);
   const description = matchSeoDescription(match).toLowerCase();
+  const title = matchSeoTitle(match);
+  if (containsContextOnlyMetadataIntent(`${title} ${description}`)) contextOnlyMetadataLeaks += 1;
+  if (!/prediction/i.test(title)) errors.push(`${match.slug}: title is not prediction-first`);
 
   if (bucket in slugsByBucket) slugsByBucket[bucket].add(match.slug);
   else unresolvedTemporalState += 1;
@@ -99,7 +104,6 @@ for (const match of analyzedMatches) {
     if (capabilities.hasAvailability !== Boolean(match.matchSeo.availability)) structuredCapabilityMismatches += 1;
     if (capabilities.hasTeamNews !== Boolean(match.matchSeo.teamNews)) structuredCapabilityMismatches += 1;
     if (capabilities.hasWeather !== Boolean(match.matchSeo.weather)) structuredCapabilityMismatches += 1;
-    if ((/lineups/i.test(intent.title) || /lineups/i.test(intent.description)) && !match.matchSeo.lineups) structuredCapabilityMismatches += 1;
     for (const [moduleName, module] of Object.entries(match.matchSeo)) {
       if (!module.sources?.length) errors.push(`${match.slug}: ${moduleName} lacks provenance`);
     }
@@ -191,6 +195,7 @@ if (incorrectToday > 0) errors.push(`Incorrect today metadata: ${incorrectToday}
 if (marketIntentMismatches > 0) errors.push(`Market-intent mismatches: ${marketIntentMismatches}`);
 if (unsupportedFactualIntent > 0) errors.push(`Unsupported factual intent: ${unsupportedFactualIntent}`);
 if (structuredCapabilityMismatches > 0) errors.push(`Structured capability mismatches: ${structuredCapabilityMismatches}`);
+if (contextOnlyMetadataLeaks > 0) errors.push(`Context-only metadata leaks: ${contextOnlyMetadataLeaks}`);
 const structuredSlugs = new Set(structuredMatches.map((match) => match.slug));
 for (const slug of expectedStructuredSlugs) {
   if (!structuredSlugs.has(slug)) errors.push(`Expected Match SEO page is missing: ${slug}`);
@@ -222,6 +227,7 @@ console.log(`Unsupported factual intent: ${unsupportedFactualIntent}`);
 console.log(`Match SEO 2.0 pages: ${structuredMatches.length} (${expectedStructuredSlugs.size} required editorial references present)`);
 console.log(`Structured modules: ${Object.entries(structuredModuleCounts).map(([name, count]) => `${name}=${count}`).join(", ")}`);
 console.log(`Structured capability mismatches: ${structuredCapabilityMismatches}`);
+console.log(`Context-only metadata leaks: ${contextOnlyMetadataLeaks}`);
 console.log(`Localized temporal mappings: ${searchIntentLocales.length} locales`);
 
 for (const locale of searchIntentLocales) {
