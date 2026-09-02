@@ -95,6 +95,7 @@ export const leagues: LeagueConfig[] = [
   defineLeague({ slug: "championship", name: "EFL Championship", country: "England", short: "CH", featured: false, showOnHome: true, manualOnly: true, expectedClubs: 24, expectedGamesPerRound: 12, artworkId: 4329, timezone: "Europe/London", liveDataId: "eng.2" }),
   defineLeague({ slug: "super-lig", name: "Süper Lig", country: "Turkey", short: "TSL", featured: false, showOnHome: true, manualOnly: true, expectedClubs: 18, expectedGamesPerRound: 9, artworkId: 4339, timezone: "Europe/Istanbul", liveDataId: "tur.1" }),
   defineLeague({ slug: "scottish-premiership", name: "Scottish Premiership", country: "Scotland", short: "SCO", featured: false, showOnHome: true, manualOnly: true, expectedClubs: 12, expectedGamesPerRound: 6, artworkId: 4330, timezone: "Europe/London", liveDataId: "sco.1" }),
+  defineLeague({ slug: "eliteserien", name: "Eliteserien", country: "Norway", short: "NOR", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, expectedClubs: 16, expectedGamesPerRound: 8, timezone: "Europe/Oslo", liveDataId: "nor.1" }),
 ];
 
 export const leaguesBySlug = Object.fromEntries(
@@ -119,6 +120,7 @@ export const primaryPredictionLeagueSlugs = [
   "championship",
   "super-lig",
   "scottish-premiership",
+  "eliteserien",
 ] as const satisfies readonly LeagueSlug[];
 
 export const primaryPredictionLeagues = primaryPredictionLeagueSlugs.map(

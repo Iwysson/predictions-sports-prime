@@ -17,6 +17,7 @@ const leagueSearchAliases: Partial<Record<LeagueConfig["slug"], readonly string[
   championship: ["Championship", "English Championship", "Sky Bet Championship"],
   "super-lig": ["Turkish Super Lig", "Trendyol Süper Lig", "Türkiye Süper Lig"],
   "scottish-premiership": ["Scotland Premiership", "SPFL Premiership", "William Hill Premiership"],
+  eliteserien: ["Norwegian Eliteserien", "Norway Eliteserien", "Eliteserien Norway"],
 };
 
 export function leagueSeoKeywords(league: LeagueConfig) {

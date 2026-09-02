@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-02T22:00:31.836Z",
+  "generatedAt": "2026-09-02T23:30:00.000Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -14399,6 +14399,133 @@
           }
         ]
       }
+    ],
+    "eliteserien": [
+      {
+        "round": 20,
+        "games": [
+          {
+            "round": 20,
+            "date": "2026-09-04",
+            "time": "19:00",
+            "homeTeam": "Fredrikstad",
+            "awayTeam": "Bodø/Glimt",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "snapshot",
+            "id": "official:eliteserien:fredrikstad-vs-bodo-glimt:2026-09-04",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-04T17:00:00Z"
+          },
+          {
+            "round": 20,
+            "date": "2026-09-04",
+            "time": "19:00",
+            "homeTeam": "Aalesund",
+            "awayTeam": "Start",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "snapshot",
+            "id": "official:eliteserien:aalesund-vs-start:2026-09-04",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-04T17:00:00Z"
+          },
+          {
+            "round": 20,
+            "date": "2026-09-04",
+            "time": "21:00",
+            "homeTeam": "Sandefjord",
+            "awayTeam": "Viking",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "snapshot",
+            "id": "official:eliteserien:sandefjord-vs-viking:2026-09-04",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-04T19:00:00Z"
+          },
+          {
+            "round": 20,
+            "date": "2026-09-05",
+            "time": "16:00",
+            "homeTeam": "Rosenborg",
+            "awayTeam": "HamKam",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "snapshot",
+            "id": "official:eliteserien:rosenborg-vs-hamkam:2026-09-05",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-05T14:00:00Z"
+          },
+          {
+            "round": 20,
+            "date": "2026-09-05",
+            "time": "18:00",
+            "homeTeam": "Brann",
+            "awayTeam": "Lillestrøm",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "snapshot",
+            "id": "official:eliteserien:brann-vs-lillestrom:2026-09-05",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-05T16:00:00Z"
+          },
+          {
+            "round": 20,
+            "date": "2026-09-06",
+            "time": "17:00",
+            "homeTeam": "Molde",
+            "awayTeam": "KFUM Oslo",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "snapshot",
+            "id": "official:eliteserien:molde-vs-kfum-oslo:2026-09-06",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-06T15:00:00Z"
+          },
+          {
+            "round": 20,
+            "date": "2026-09-06",
+            "time": "17:00",
+            "homeTeam": "Sarpsborg 08",
+            "awayTeam": "Vålerenga",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "snapshot",
+            "id": "official:eliteserien:sarpsborg-08-vs-valerenga:2026-09-06",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-06T15:00:00Z"
+          },
+          {
+            "round": 20,
+            "date": "2026-09-06",
+            "time": "19:15",
+            "homeTeam": "Kristiansund",
+            "awayTeam": "Tromsø",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "snapshot",
+            "id": "official:eliteserien:kristiansund-vs-tromso:2026-09-06",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-06T17:15:00Z"
+          }
+        ]
+      }
     ]
   },
   "predictionIds": {
@@ -14685,7 +14812,15 @@
     "super-lig:kocaelispor-vs-samsunspor": "401888300",
     "super-lig:konyaspor-vs-kocaelispor": "official:super-lig:konyaspor-vs-kocaelispor:2026-08-29",
     "super-lig:samsunspor-vs-fenerbahce": "official:super-lig:samsunspor-vs-fenerbahce:2026-08-30",
-    "super-lig:trabzonspor-vs-genclerbirligi": "401888305"
+    "super-lig:trabzonspor-vs-genclerbirligi": "401888305",
+    "eliteserien:fredrikstad-vs-bodo-glimt": "official:eliteserien:fredrikstad-vs-bodo-glimt:2026-09-04",
+    "eliteserien:aalesund-vs-start": "official:eliteserien:aalesund-vs-start:2026-09-04",
+    "eliteserien:sandefjord-vs-viking": "official:eliteserien:sandefjord-vs-viking:2026-09-04",
+    "eliteserien:rosenborg-vs-hamkam": "official:eliteserien:rosenborg-vs-hamkam:2026-09-05",
+    "eliteserien:brann-vs-lillestrom": "official:eliteserien:brann-vs-lillestrom:2026-09-05",
+    "eliteserien:molde-vs-kfum-oslo": "official:eliteserien:molde-vs-kfum-oslo:2026-09-06",
+    "eliteserien:sarpsborg-08-vs-valerenga": "official:eliteserien:sarpsborg-08-vs-valerenga:2026-09-06",
+    "eliteserien:kristiansund-vs-tromso": "official:eliteserien:kristiansund-vs-tromso:2026-09-06"
   },
   "leagueUpdatedAt": {
     "premier-league": "2026-09-02T22:00:31.836Z",
@@ -14700,7 +14835,8 @@
     "efl-cup": "2026-09-02T22:00:31.836Z",
     "championship": "2026-09-02T22:00:31.836Z",
     "super-lig": "2026-08-26T11:54:38.899Z",
-    "scottish-premiership": "2026-08-26T11:54:38.899Z"
+    "scottish-premiership": "2026-08-26T11:54:38.899Z",
+    "eliteserien": "2026-09-02T23:30:00.000Z"
   },
   "manualFixtures": {
     "401888299": {
