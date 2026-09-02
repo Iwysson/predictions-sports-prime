@@ -273,6 +273,7 @@ export function normalizeTeamKey(name: string) {
     erzurumsporfk: "erzurumspor",
     erzurumbb: "erzurumspor",
     amedsfk: "amedsk",
+    amedspor: "amedsk",
   };
 
   return aliases[key] ?? key;
