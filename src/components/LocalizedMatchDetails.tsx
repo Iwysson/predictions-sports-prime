@@ -35,27 +35,34 @@ const metricLabels: Record<FullyLocalizedMatchLocale, Record<string, string>> = 
   de: { form: "Form", goals: "Tore", xg: "Erwartete Tore (xG)", shots: "Schüsse", possession: "Ballbesitz", corners: "Ecken", other: "Weitere Daten" },
 };
 
-function localizedMetric(locale: FullyLocalizedMatchLocale, label: string, category: keyof typeof metricLabels[FullyLocalizedMatchLocale] = "other", index = 0) {
+function localizedMetric(locale: FullyLocalizedMatchLocale, label: string, category: keyof typeof metricLabels[FullyLocalizedMatchLocale] = "other") {
   const vocabulary = {
-    "pt-br": ["Jogos (N)", "Pontos/jogo", "Gols marcados/jogo", "Gols sofridos/jogo", "Finalizações/jogo", "Finalizações no alvo/jogo", "Posse de bola", "Escanteios a favor/jogo", "Escanteios contra/jogo", "Total de escanteios/jogo", "Primeiro a marcar", "Primeiro a sofrer", "Marcou no 1º tempo", "Sofreu no 1º tempo", "Ambas marcam", "Jogos sem sofrer gol", "Não marcou"],
-    es: ["Partidos (N)", "Puntos/partido", "Goles a favor/partido", "Goles en contra/partido", "Remates/partido", "Remates a puerta/partido", "Posesión", "Córners a favor/partido", "Córners en contra/partido", "Total de córners/partido", "Primero en marcar", "Primero en encajar", "Marcó en la 1.ª parte", "Encajó en la 1.ª parte", "Ambos marcan", "Porterías a cero", "No marcó"],
-    it: ["Partite (N)", "Punti/partita", "Gol fatti/partita", "Gol subiti/partita", "Tiri/partita", "Tiri in porta/partita", "Possesso", "Calci d'angolo a favore/partita", "Calci d'angolo contro/partita", "Totale calci d'angolo/partita", "Primo a segnare", "Primo a subire", "Gol nel 1º tempo", "Gol subito nel 1º tempo", "Entrambe segnano", "Porte inviolate", "Senza gol"],
-    fr: ["Matchs (N)", "Points/match", "Buts marqués/match", "Buts encaissés/match", "Tirs/match", "Tirs cadrés/match", "Possession", "Corners pour/match", "Corners contre/match", "Total corners/match", "Premier à marquer", "Premier à encaisser", "But en 1re période", "But encaissé en 1re période", "Les deux équipes marquent", "Clean sheets", "Aucun but marqué"],
-    de: ["Spiele (N)", "Punkte/Spiel", "Tore/Spiel", "Gegentore/Spiel", "Schüsse/Spiel", "Torschüsse/Spiel", "Ballbesitz", "Ecken für/Spiel", "Ecken gegen/Spiel", "Ecken gesamt/Spiel", "Erstes Tor", "Erstes Gegentor", "Tor in der 1. Halbzeit", "Gegentor in der 1. Halbzeit", "Beide Teams treffen", "Spiele ohne Gegentor", "Ohne Tor"],
+    "pt-br": { matches: "Jogos (N)", points: "Pontos/jogo", gf: "Gols marcados/jogo", ga: "Gols sofridos/jogo", shots: "Finalizações/jogo", sot: "Finalizações no alvo/jogo", shotsAllowed: "Finalizações sofridas/jogo", sotAllowed: "Finalizações no alvo sofridas/jogo", possession: "Posse de bola", cornersFor: "Escanteios a favor/jogo", cornersAgainst: "Escanteios contra/jogo", totalCorners: "Total de escanteios/jogo", firstScore: "Primeiro a marcar", firstConcede: "Primeiro a sofrer", scoredFirstHalf: "Marcou no 1º tempo", concededFirstHalf: "Sofreu no 1º tempo", btts: "Ambas marcam", cleanSheets: "Jogos sem sofrer gol", failedScore: "Não marcou" },
+    es: { matches: "Partidos (N)", points: "Puntos/partido", gf: "Goles a favor/partido", ga: "Goles en contra/partido", shots: "Remates/partido", sot: "Remates a puerta/partido", shotsAllowed: "Remates recibidos/partido", sotAllowed: "Remates a puerta recibidos/partido", possession: "Posesión", cornersFor: "Córners a favor/partido", cornersAgainst: "Córners en contra/partido", totalCorners: "Total de córners/partido", firstScore: "Primero en marcar", firstConcede: "Primero en encajar", scoredFirstHalf: "Marcó en la 1.ª parte", concededFirstHalf: "Encajó en la 1.ª parte", btts: "Ambos marcan", cleanSheets: "Porterías a cero", failedScore: "No marcó" },
+    it: { matches: "Partite (N)", points: "Punti/partita", gf: "Gol fatti/partita", ga: "Gol subiti/partita", shots: "Tiri/partita", sot: "Tiri in porta/partita", shotsAllowed: "Tiri concessi/partita", sotAllowed: "Tiri in porta concessi/partita", possession: "Possesso", cornersFor: "Calci d'angolo a favore/partita", cornersAgainst: "Calci d'angolo contro/partita", totalCorners: "Totale calci d'angolo/partita", firstScore: "Primo a segnare", firstConcede: "Primo a subire", scoredFirstHalf: "Gol nel 1º tempo", concededFirstHalf: "Gol subito nel 1º tempo", btts: "Entrambe segnano", cleanSheets: "Porte inviolate", failedScore: "Senza gol" },
+    fr: { matches: "Matchs (N)", points: "Points/match", gf: "Buts marqués/match", ga: "Buts encaissés/match", shots: "Tirs/match", sot: "Tirs cadrés/match", shotsAllowed: "Tirs concédés/match", sotAllowed: "Tirs cadrés concédés/match", possession: "Possession", cornersFor: "Corners pour/match", cornersAgainst: "Corners contre/match", totalCorners: "Total corners/match", firstScore: "Premier à marquer", firstConcede: "Premier à encaisser", scoredFirstHalf: "But en 1re période", concededFirstHalf: "But encaissé en 1re période", btts: "Les deux équipes marquent", cleanSheets: "Matchs sans encaisser", failedScore: "Aucun but marqué" },
+    de: { matches: "Spiele (N)", points: "Punkte/Spiel", gf: "Tore/Spiel", ga: "Gegentore/Spiel", shots: "Schüsse/Spiel", sot: "Torschüsse/Spiel", shotsAllowed: "Zugelassene Schüsse/Spiel", sotAllowed: "Zugelassene Torschüsse/Spiel", possession: "Ballbesitz", cornersFor: "Ecken für/Spiel", cornersAgainst: "Ecken gegen/Spiel", totalCorners: "Ecken gesamt/Spiel", firstScore: "Erstes Tor", firstConcede: "Erstes Gegentor", scoredFirstHalf: "Tor in der 1. Halbzeit", concededFirstHalf: "Gegentor in der 1. Halbzeit", btts: "Beide Teams treffen", cleanSheets: "Spiele ohne Gegentor", failedScore: "Ohne Tor" },
   }[locale];
+
   const exact: Array<[RegExp, string]> = [
-    [/^Matches \(N\)$/i, vocabulary[0]], [/^Points\/game$/i, vocabulary[1]], [/^GF\/game$/i, vocabulary[2]], [/^GA\/game$/i, vocabulary[3]],
-    [/^Shots\/game$/i, vocabulary[4]], [/^SOT\/game$/i, vocabulary[5]], [/^Shots allowed\/game$/i, `${vocabulary[4]} (${labels[locale].away})`], [/^SOT allowed\/game$/i, `${vocabulary[5]} (${labels[locale].away})`], [/^Possession$/i, vocabulary[6]], [/^Corners for\/game$/i, vocabulary[7]],
-    [/^Corners against\/game$/i, vocabulary[8]], [/^Total corners\/game$/i, vocabulary[9]], [/^First to score$/i, vocabulary[10]], [/^First to concede$/i, vocabulary[11]],
-    [/^Scored in 1st half$/i, vocabulary[12]], [/^Conceded in 1st half$/i, vocabulary[13]], [/^BTTS$/i, vocabulary[14]], [/^Clean sheets$/i, vocabulary[15]], [/^Failed to score$/i, vocabulary[16]],
+    [/^Matches \(N\)$/i, vocabulary.matches], [/^Points\/game$/i, vocabulary.points], [/^GF\/game$/i, vocabulary.gf], [/^GA\/game$/i, vocabulary.ga],
+    [/^Shots\/game$/i, vocabulary.shots], [/^SOT\/game$/i, vocabulary.sot], [/^Shots allowed\/game$/i, vocabulary.shotsAllowed], [/^SOT allowed\/game$/i, vocabulary.sotAllowed],
+    [/^Possession$/i, vocabulary.possession], [/^Corners for\/game$/i, vocabulary.cornersFor], [/^Corners against\/game$/i, vocabulary.cornersAgainst], [/^Total corners\/game$/i, vocabulary.totalCorners],
+    [/^First to score$/i, vocabulary.firstScore], [/^First to concede$/i, vocabulary.firstConcede], [/^Scored in 1st half$/i, vocabulary.scoredFirstHalf], [/^Conceded in 1st half$/i, vocabulary.concededFirstHalf],
+    [/^BTTS$/i, vocabulary.btts], [/^Clean sheets$/i, vocabulary.cleanSheets], [/^Failed to score$/i, vocabulary.failedScore],
   ];
+
   for (const [pattern, translation] of exact) if (pattern.test(label)) return translation;
+
   const unit = locale === "it" ? "gol" : locale === "de" ? "Tore" : locale === "fr" ? "buts" : locale === "es" ? "goles" : "gols";
   const corner = locale === "it" ? "calci d'angolo" : locale === "de" ? "Ecken" : locale === "es" ? "córners" : locale === "pt-br" ? "escanteios" : "corners";
   if (/^Over [\d.]+ goals$/i.test(label)) return label.replace(/goals/i, unit);
   if (/^Over [\d.]+ corners$/i.test(label)) return label.replace(/corners/i, corner);
   if (/^(?:xG|xGA)\/game$/i.test(label) || /^W-D-L$/i.test(label)) return label;
-  return `${metricLabels[locale][category]} ${index + 1}`;
+
+  // Preserve unknown metric semantics instead of emitting generic "Other data 1" labels.
+  if (category !== "other") return `${metricLabels[locale][category]} — ${label}`;
+  return label;
 }
 
 function localizedStatisticValue(locale: FullyLocalizedMatchLocale, value: string) {
@@ -110,7 +117,7 @@ export function LocalizedMatchDetails({ match, locale, forceInformation = false 
     </dl></section>
     {data?.lineups ? <section className="match-module"><h2>{data.lineups.status === "confirmed" ? copy.confirmed : copy.lineups} {teams}</h2><div className="match-lineups-grid">{(["home", "away"] as const).map((side) => <div key={side}><h3>{side === "home" ? match.homeTeam : match.awayTeam}</h3><ol>{data.lineups![side].players.map((player) => <li key={player}>{player}</li>)}</ol></div>)}</div></section> : null}
     {data?.availability ? <section className="match-module"><h2>{copy.availability}</h2><ul className="match-availability-list">{data.availability.entries.map((entry) => <li key={`${entry.team}-${entry.player}`}><strong>{entry.player}</strong> ({entry.team === "home" ? match.homeTeam : match.awayTeam}) — {statusLabels[locale][entry.status]}</li>)}</ul></section> : null}
-    {data?.statistics || coreRows.length ? <section className="match-module"><h2>{copy.stats}</h2><div className="match-stats" role="table" aria-label={`${copy.stats}: ${teams}`}><div className="match-stats-row match-stats-header" role="row"><span role="columnheader">{copy.metric}</span><span role="columnheader">{copy.home}</span><span role="columnheader">{copy.away}</span></div>{statisticalRows.map((row, index) => <div className="match-stats-row" role="row" key={row.label}><span role="rowheader">{localizedMetric(locale, row.label, row.category, index)}</span><span role="cell">{localizedStatisticValue(locale, row.home)}</span><span role="cell">{localizedStatisticValue(locale, row.away)}</span></div>)}</div></section> : null}
+    {data?.statistics || coreRows.length ? <section className="match-module"><h2>{copy.stats}</h2><div className="match-stats" role="table" aria-label={`${copy.stats}: ${teams}`}><div className="match-stats-row match-stats-header" role="row"><span role="columnheader">{copy.metric}</span><span role="columnheader">{copy.home}</span><span role="columnheader">{copy.away}</span></div>{statisticalRows.map((row) => <div className="match-stats-row" role="row" key={row.label}><span role="rowheader">{localizedMetric(locale, row.label, row.category)}</span><span role="cell">{localizedStatisticValue(locale, row.home)}</span><span role="cell">{localizedStatisticValue(locale, row.away)}</span></div>)}</div></section> : null}
     <SourceLinks match={match} locale={locale} />
   </div>;
 }

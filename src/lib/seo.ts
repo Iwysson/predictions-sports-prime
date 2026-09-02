@@ -42,7 +42,7 @@ export function matchSeoDescription(match: Match) {
   const teams = `${match.homeTeam} vs ${match.awayTeam}`;
   const competition = league?.name ?? "the competition";
   const mainPick = match.predictions.find((item) => item.label === "Main Prediction")?.value ?? "our main pick";
-  const odds = match.predictions.find((item) => item.label === "Odds")?.value;
+  const odds = match.predictions.find((item) => item.label === "Published Odds" || item.label === "Odds")?.value;
   const oddsText = odds ? ` at odds of ${odds}` : "";
   const dateText = match.date ? ` for ${match.date}` : "";
   const description = `${teams} prediction and match analysis${dateText} in ${competition}. Our main pick is ${mainPick}${oddsText}, supported by the fixture context and available data.`;
@@ -61,7 +61,7 @@ export function matchIntroduction(match: Match) {
     (item) => item.label === "Main Prediction"
   )?.value;
   const odds = match.predictions.find(
-    (item) => item.label === "Odds"
+    (item) => item.label === "Published Odds" || item.label === "Odds"
   )?.value;
   const date = match.date ? ` on ${match.date}` : "";
   const kickoff = match.time && match.time !== "TBD"
@@ -74,7 +74,7 @@ export function matchIntroduction(match: Match) {
   }
 
   const price = odds ? ` at published odds of ${odds}` : "";
-  return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}${kickoff}. This preview explains the reasoning behind our ${mainPick} selection${price} and the key risks considered.`;
+  return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}${kickoff}. This preview covers the match context, available data and our published pick ${mainPick}${price}, without treating the analysis as justification for the selection.`;
 }
 
 export function matchHeading(match: Match) {

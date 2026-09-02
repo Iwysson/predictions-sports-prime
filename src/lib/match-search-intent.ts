@@ -1,5 +1,6 @@
 import { leaguesBySlug } from "@/data/leagues";
 import { localTodayISO, resolveHomeTemporalBucket } from "@/lib/match-feed";
+import { isFutureFixture } from "@/lib/fixture-state";
 import { detectPickMarkets, normalizeMainPick } from "@/lib/match-market";
 import {
   getTeamSearchAliases,
@@ -74,12 +75,25 @@ type TodaySeoProfile = {
   focus?: Partial<Record<TodaySeoLocale, string>>;
 };
 
-export const restrictedSearchIntentDates = ["2026-09-02", "2026-09-03"] as const;
+/**
+ * Hand-tuned profiles only apply while the fixture is genuinely in the
+ * current today/tomorrow pre-match window. This prevents stale temporal SEO
+ * from surviving after kickoff.
+ */
+type RestrictedSearchIntentFixtureInput = Pick<Match, "date" | "status">
+  & Partial<Pick<Match, "slug" | "fixtureStatus" | "kickoffUtc" | "time" | "timeConfirmed">>;
 
-export function isRestrictedSearchIntentFixture(match: Pick<Match, "date" | "status">) {
-  return match.status === "published" && restrictedSearchIntentDates.includes(
-    match.date as (typeof restrictedSearchIntentDates)[number]
-  );
+export function isRestrictedSearchIntentFixture(match: RestrictedSearchIntentFixtureInput) {
+  if (match.status !== "published" || !match.slug || !todaySeoProfiles[match.slug]) return false;
+  if (!isFutureFixture({
+    fixtureStatus: match.fixtureStatus,
+    kickoffUtc: match.kickoffUtc,
+    date: match.date,
+    time: match.time,
+    timeConfirmed: match.timeConfirmed,
+  })) return false;
+  const temporal = resolveHomeTemporalBucket(match as Match, localTodayISO());
+  return temporal === "today" || temporal === "tomorrow";
 }
 
 const todaySeoProfiles: Record<string, TodaySeoProfile> = {
@@ -188,33 +202,54 @@ const todaySeoTerms: Record<TodaySeoLocale, Record<TodaySeoIntent, string>> = {
   de: { lineups: "Aufstellungen", stats: "Statistik", odds: "Quoten", goals: "Tore", corners: "Ecken", handicap: "Asian Handicap", teamNews: "Team-News", injuries: "Ausfälle", xg: "xG und xGA", shots: "Torschüsse", btts: "Beide Teams Treffen", recentMeeting: "Letztes Duell", secondLeg: "Rückspiel", aggregate: "Gesamtergebnis", competition: "Copa do Brasil" },
 };
 
-const todayEnglishDescriptions: Record<string, string> = {
-  "lincoln-city-vs-blackburn-rovers": "Lincoln City vs Blackburn prediction for today, with probable lineups, stats, odds 1.78, goals, corners, 19:45 kick-off and LNER Stadium context.",
-  "portsmouth-vs-derby-county": "Portsmouth vs Derby County prediction: Portsmouth double chance and Under 3.5 Goals at odds 1.78, plus probable lineups, stats and match details.",
-  "preston-north-end-vs-bristol-city": "Preston vs Bristol City prediction: Under 3.5 Goals and Over 8.5 Corners at odds 1.78, with probable lineups, stats and match analysis.",
-  "sheffield-united-vs-bolton-wanderers": "Sheffield United vs Bolton prediction: Bolton +2 Asian Handicap and Over 8.5 Corners at odds 1.91, with probable lineups and stats.",
-  "swansea-city-vs-watford": "Swansea City vs Watford prediction for today, Over 2.5 Goals at odds of 1.88. Review probable lineups, statistics, odds comparison before the match.",
-  "west-ham-united-vs-wolverhampton-wanderers": "West Ham vs Wolves prediction: West Ham double chance and Over 1.5 Goals at odds 1.60, with probable lineups, stats, kick-off time and venue.",
-  "birmingham-city-vs-southampton": "Birmingham City vs Southampton prediction: Birmingham double chance and Over 1.5 Goals at odds 1.87, with probable lineups, stats and match analysis.",
-  "stoke-city-vs-norwich-city": "Stoke City vs Norwich prediction: Norwich double chance (X2) and Over 1.5 Goals at odds 1.78, with probable lineups, stats and match analysis.",
-  "atletico-mineiro-vs-cruzeiro": "Atlético-MG vs Cruzeiro prediction for Copa do Brasil, with probable lineups, team news, injuries, stats, odds 1.72, goals and corners.",
-  "flamengo-vs-mirassol": "Flamengo vs Mirassol prediction: Flamengo -1.5 Asian Handicap at odds 1.82, with probable lineups, stats, goals, corners and their recent meeting.",
-  "celtic-vs-aberdeen": "Celtic vs Aberdeen prediction: Celtic -1.5 Asian Handicap at odds 1.72, with probable lineups, team news, injuries, xG, shots and corners.",
-  "dundee-vs-st-johnstone": "Dundee vs St Johnstone prediction at odds 1.95, with probable lineups, team news, injuries, statistics, goals and corners.",
-  "kilmarnock-vs-st-mirren": "Kilmarnock vs St Mirren prediction at odds 1.85, with probable lineups, statistics, goals, corners and full match analysis.",
-  "millwall-vs-wrexham": "Millwall vs Wrexham prediction: Millwall to win at odds 2.25, with probable lineups, stats, xG, shots on target and corners.",
-  "motherwell-vs-dundee-united": "Motherwell vs Dundee United prediction at odds 1.75, with probable lineups, BTTS and goals analysis, xG, shots and corners.",
-  "queens-park-rangers-vs-cardiff-city": "QPR vs Cardiff prediction: Over 2.5 Goals at odds 1.78, with probable lineups, statistics, xG, shots on target and corners.",
-  "west-bromwich-albion-vs-charlton-athletic": "West Brom vs Charlton prediction: Over 2.5 Goals at odds 2.10, with probable lineups, statistics, shots and corners.",
-  "burnley-vs-middlesbrough": "Burnley vs Middlesbrough prediction: Middlesbrough X2 and Over 1.5 Goals at odds 1.80, with lineups, stats, xG, shots and corners.",
-  "falkirk-vs-rangers": "Falkirk vs Rangers prediction at odds 1.60, with probable lineups, Rangers match analysis, statistics, goals and corners.",
-  "santos-vs-palmeiras": "Santos vs Palmeiras prediction for the Copa do Brasil second leg, with probable lineups, injuries, odds, aggregate score, statistics, goals and corners.",
-  "vitoria-vs-vasco-da-gama": "Vitória vs Vasco prediction for the Copa do Brasil second leg, with probable lineups, injuries, odds, aggregate score and match statistics.",
-  "hibernian-vs-hearts": "Hibernian vs Hearts prediction for tomorrow: Over 2.5 Goals at odds 1.83, with probable lineups, statistics, goals and corners analysis.",
-  "gremio-vs-internacional": "Grêmio vs Internacional prediction for tomorrow: Grêmio double chance and Under 3.5 Goals at odds 1.65, with stats and second-leg analysis.",
-  "toulouse-vs-lille": "Toulouse vs Lille prediction for tomorrow: Lille double chance and Over 1.5 Goals at odds 1.83, with stats, xG, shots and corners analysis.",
-  "real-sociedad-vs-celta-vigo": "Real Sociedad vs Celta Vigo prediction for tomorrow: Sociedad double chance and Over 1.5 Goals at odds 1.70, with stats, xG and shots analysis.",
-};
+function structuredCoreLabels(match: Match) {
+  return extractStatisticalCoreRows(match).map((row) => row.label).join(" ");
+}
+
+function isProfileIntentSupported(
+  match: Match,
+  intent: TodaySeoIntent,
+  facts: MatchIntentFacts
+) {
+  const markets = new Set(detectPickMarkets(facts.mainPick));
+  const coreLabels = structuredCoreLabels(match);
+  const analysis = match.analysis.join(" ");
+
+  switch (intent) {
+    case "lineups":
+      return facts.hasLineups;
+    case "stats":
+      return facts.hasStatistics;
+    case "odds":
+      return Boolean(facts.odds);
+    case "goals":
+      return facts.hasGoals || markets.has("OVER_UNDER");
+    case "corners":
+      return facts.hasCorners || markets.has("CORNERS");
+    case "handicap":
+      return markets.has("ASIAN_HANDICAP");
+    case "teamNews":
+      return facts.hasTeamNews;
+    case "injuries":
+      return facts.hasInjuries;
+    case "xg":
+      return /\bxG(?:A)?(?:\/game)?\b/i.test(coreLabels);
+    case "shots":
+      return /\b(?:Shots|SOT)(?:\/game| allowed\/game)?\b/i.test(coreLabels);
+    case "btts":
+      return markets.has("BTTS") || /\bBTTS\b/i.test(coreLabels);
+    case "recentMeeting":
+      return facts.hasH2h;
+    case "secondLeg":
+      return /second leg|jogo de volta|partido de vuelta|gara di ritorno|match retour|rückspiel/i.test(`${match.round} ${analysis}`);
+    case "aggregate":
+      return /aggregate|placar agregado|marcador global|risultato aggregato|score cumulé|gesamtergebnis/i.test(analysis);
+    case "competition":
+      return Boolean(leaguesBySlug[match.league]);
+    default:
+      return false;
+  }
+}
 
 function isTodaySeoLocale(locale: SearchLocale): locale is TodaySeoLocale {
   return locale === "en" || locale === "pt-BR" || locale === "es" || locale === "it" || locale === "fr" || locale === "de";
@@ -235,19 +270,26 @@ function buildProfileIntentQueries(match: Match, locale: SearchLocale) {
   if (!isTodaySeoLocale(locale)) return [];
   const profile = todaySeoProfiles[match.slug];
   if (!profile) return [];
+  const facts = readMatchFacts(match);
   const teams = todaySeoTeams(profile, locale);
-  return unique(profile.descriptionIntents.map((intent) =>
-    `${teams} ${todaySeoTerms[locale][intent].toLocaleLowerCase()}`
-  ));
+  return unique(
+    profile.descriptionIntents
+      .filter((intent) => isProfileIntentSupported(match, intent, facts))
+      .map((intent) => `${teams} ${todaySeoTerms[locale][intent].toLocaleLowerCase()}`)
+  );
 }
 
 function buildTodaySeoTitle(match: Match, locale: TodaySeoLocale) {
   if (!isRestrictedSearchIntentFixture(match)) return "";
   const profile = todaySeoProfiles[match.slug];
   if (!profile) return "";
+  const facts = readMatchFacts(match);
   const teams = todaySeoTeams(profile, locale);
   const prediction = sentenceCase(localeSearchResearch[locale].prediction);
-  const intents = profile.titleIntents.map((intent) => todaySeoTerms[locale][intent]);
+  const intents = profile.titleIntents
+    .filter((intent) => isProfileIntentSupported(match, intent, facts))
+    .map((intent) => todaySeoTerms[locale][intent]);
+
   while (intents.length) {
     const title = `${teams} ${prediction}, ${formatLocalizedList(intents, locale)}`;
     if (title.length <= 70) return title;
@@ -260,44 +302,62 @@ function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale, facts: M
   if (!isRestrictedSearchIntentFixture(match)) return "";
   const profile = todaySeoProfiles[match.slug];
   if (!profile) return "";
-  if (locale === "en") {
-    const description = todayEnglishDescriptions[match.slug] ?? "";
-    const localized = match.date === restrictedSearchIntentDates[0] && !/\b(?:today|tomorrow)\b/i.test(description)
-      ? description.replace(/\bprediction\b/i, "prediction for today")
-      : description;
-    return localized.length <= 160
-      ? localized
-      : localized.replace("prediction for today for the ", "prediction for today: ");
-  }
-  const teams = todaySeoTeams(profile, locale);
-  const focus = profile.focus?.[locale];
+
   const temporal = resolveMatchTemporalState(match);
-  const localizedWhen = temporal === "tomorrow"
-    ? { "pt-BR": "de amanhã", es: "de mañana", it: "di domani", fr: "de demain", de: "für morgen" }[locale]
-    : { "pt-BR": "de hoje", es: "de hoy", it: "di oggi", fr: "du jour", de: "heutige" }[locale];
+  if (temporal !== "today" && temporal !== "tomorrow") return "";
+
+  const teams = todaySeoTeams(profile, locale);
+  // Never let a hand-authored focus phrase outlive a changed prediction.
+  // English can safely use the live main pick; localized descriptions rely on
+  // supported market/module terms instead of a stale translated pick string.
+  const focus = locale === "en" && facts.mainPick ? facts.mainPick : undefined;
+  const temporalPhrases = {
+    en: { today: "for today", tomorrow: "for tomorrow" },
+    "pt-BR": { today: "de hoje", tomorrow: "de amanhã" },
+    es: { today: "de hoy", tomorrow: "de mañana" },
+    it: { today: "di oggi", tomorrow: "di domani" },
+    fr: { today: "du jour", tomorrow: "de demain" },
+    de: { today: "heute", tomorrow: "für morgen" },
+  } as const;
+
+  const supportedIntents = profile.descriptionIntents.filter((intent) =>
+    isProfileIntentSupported(match, intent, facts)
+  );
   const descriptionIntents = facts.odds
-    ? profile.descriptionIntents.filter((intent) => intent !== "odds")
-    : profile.descriptionIntents;
-  const modules = formatLocalizedList(descriptionIntents.map((intent) => {
-    const term = todaySeoTerms[locale][intent];
-    return locale === "de" ? term : term.toLocaleLowerCase();
-  }), locale);
+    ? supportedIntents.filter((intent) => intent !== "odds")
+    : supportedIntents;
+  const modules = formatLocalizedList(
+    descriptionIntents.map((intent) => {
+      const term = todaySeoTerms[locale][intent];
+      return locale === "de" ? term : term.toLocaleLowerCase();
+    }),
+    locale
+  );
   const odds = facts.odds;
-  const candidates = {
-    en: `${teams} prediction for today${focus ? `: ${focus}` : ""}. Check ${modules}${odds ? ` at odds of ${odds}` : ""}, kick-off time and venue.`,
-    "pt-BR": `${teams}: palpite ${localizedWhen}${focus ? ` para ${focus}` : ""}. Confira ${modules}${odds ? `, odds ${odds}` : ""}, horário e estádio.`,
-    es: `${teams}: pronóstico ${localizedWhen}${focus ? ` para ${focus}` : ""}. Consulta ${modules}${odds ? `, cuotas ${odds}` : ""}, horario y estadio.`,
-    it: `${teams}: pronostico ${localizedWhen}${focus ? ` per ${focus}` : ""}. Consulta ${modules}${odds ? `, quote ${odds}` : ""}, orario e stadio.`,
-    fr: `${teams} : pronostic ${localizedWhen}${focus ? ` pour ${focus}` : ""}. Consultez ${modules}${odds ? `, cotes ${odds}` : ""}, horaire et stade.`,
-    de: `${teams}: Prognose ${localizedWhen}${focus ? ` für ${focus}` : ""}. Mit ${modules}${odds ? `, Quote ${odds}` : ""}, Anstoßzeit und Stadion.`,
+  const when = temporalPhrases[locale][temporal];
+
+  const candidate = {
+    en: `${teams} prediction ${when}${focus ? `: ${focus}` : ""}. Check ${modules || "match analysis"}${odds ? `, odds ${odds}` : ""}, kick-off time and venue.`,
+    "pt-BR": `${teams}: palpite ${when}${focus ? ` para ${focus}` : ""}. Confira ${modules || "análise do jogo"}${odds ? `, odds ${odds}` : ""}, horário e estádio.`,
+    es: `${teams}: pronóstico ${when}${focus ? ` para ${focus}` : ""}. Consulta ${modules || "análisis del partido"}${odds ? `, cuotas ${odds}` : ""}, horario y estadio.`,
+    it: `${teams}: pronostico ${when}${focus ? ` per ${focus}` : ""}. Consulta ${modules || "analisi della partita"}${odds ? `, quote ${odds}` : ""}, orario e stadio.`,
+    fr: `${teams} : pronostic ${when}${focus ? ` pour ${focus}` : ""}. Consultez ${modules || "analyse du match"}${odds ? `, cotes ${odds}` : ""}, horaire et stade.`,
+    de: `${teams}: Prognose ${when}${focus ? ` für ${focus}` : ""}. Mit ${modules || "Spielanalyse"}${odds ? `, Quote ${odds}` : ""}, Anstoßzeit und Stadion.`,
   }[locale];
-  if (candidates.length <= 160) return candidates;
-  const compact = candidates.replace(/, (?:kick-off time and venue|horário e estádio|horario y estadio|orario e stadio|horaire et stade|Anstoßzeit und Stadion)\.$/, ".");
+
+  if (candidate.length <= 160) return candidate;
+
+  const compact = candidate.replace(
+    /, (?:kick-off time and venue|horário e estádio|horario y estadio|orario e stadio|horaire et stade|Anstoßzeit und Stadion)\.$/,
+    "."
+  );
   if (compact.length <= 160) return compact;
-  const focusedCompact = `${teams}: ${sentenceCase(localeSearchResearch[locale].prediction)}${focus ? ` — ${focus}` : ""}. ${sentenceCase(modules)}${odds ? `, ${localeSearchResearch[locale].odds} ${odds}` : ""}.`;
-  return focusedCompact.length <= 160
-    ? focusedCompact
-    : `${teams}: ${sentenceCase(localeSearchResearch[locale].prediction)}. ${sentenceCase(modules)}${odds ? `, ${localeSearchResearch[locale].odds} ${odds}` : ""}.`;
+
+  const fallbackModules = modules || localeSearchResearch[locale].analysis;
+  const focusedCompact = `${teams}: ${sentenceCase(localeSearchResearch[locale].prediction)} ${when}${focus ? ` — ${focus}` : ""}. ${sentenceCase(fallbackModules)}${odds ? `, ${localeSearchResearch[locale].odds} ${odds}` : ""}.`;
+  if (focusedCompact.length <= 160) return focusedCompact;
+
+  return `${teams}: ${sentenceCase(localeSearchResearch[locale].prediction)} ${when}. ${sentenceCase(fallbackModules)}${odds ? `, ${localeSearchResearch[locale].odds} ${odds}` : ""}.`;
 }
 
 function unique(values: string[]) {
@@ -411,12 +471,13 @@ export function getMatchIntentRegistry(match: Match) {
     hasPrediction: capabilities.hasPick,
     hasOdds: capabilities.hasOdds,
     hasAnalysis: capabilities.hasAnalysis,
-    hasLineups: capabilities.hasLineups || /probable lineups?|probable lineup/i.test(analysis),
+    hasLineups: capabilities.hasLineups,
     hasStatistics: capabilities.hasStatistics,
     hasForm: capabilities.hasForm,
-    hasTeamNews: capabilities.hasTeamNews || /team news|availability/i.test(analysis),
-    hasInjuries: capabilities.hasInjuries || /injur(?:y|ies)|absence|unavailable/i.test(analysis),
-    hasSuspensions: capabilities.hasSuspensions || /suspension|suspended/i.test(analysis),
+    // Sensitive intents must be backed by structured modules, never prose-only matches.
+    hasTeamNews: capabilities.hasTeamNews,
+    hasInjuries: capabilities.hasInjuries,
+    hasSuspensions: capabilities.hasSuspensions,
     has1X2: markets.has("WIN"),
     hasDoubleChance: markets.has("DOUBLE_CHANCE"),
     hasDrawNoBet: markets.has("DRAW_NO_BET"),

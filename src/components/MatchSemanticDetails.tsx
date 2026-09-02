@@ -31,8 +31,8 @@ export function MatchSemanticDetails({ match, forceInformation = false }: { matc
       <section className="match-module" aria-labelledby="match-information-heading">
         <h2 id="match-information-heading">Match Information</h2>
         <dl className="match-information-grid">
-          <div><dt>Competition</dt><dd>{upcoming ? (leaguesBySlug[match.league]?.name ?? match.league) : match.round}</dd></div>
-          {upcoming ? <div><dt>Round</dt><dd>{match.round}</dd></div> : null}
+          <div><dt>Competition</dt><dd>{leaguesBySlug[match.league]?.name ?? match.league}</dd></div>
+          {match.round ? <div><dt>Round</dt><dd>{match.round}</dd></div> : null}
           <div><dt>Date</dt><dd>{match.date}</dd></div>
           <div><dt>Local time</dt><dd>{match.time}</dd></div>
           {match.venue ? <div><dt>Venue</dt><dd>{match.venue}</dd></div> : null}

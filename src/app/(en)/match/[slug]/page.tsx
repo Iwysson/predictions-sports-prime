@@ -265,6 +265,9 @@ export default async function MatchPage({
                 <span className="eyebrow">
                   <MainPredictionLabel />
                 </span>
+                {isRestrictedSearchIntentFixture(match) ? (
+                  <h2>Prediction and Betting Tips</h2>
+                ) : null}
               </div>
             </div>
 

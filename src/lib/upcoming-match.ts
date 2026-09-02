@@ -30,7 +30,7 @@ export function isInternationalMatchExpansionEligible(
   now: Date | string = new Date()
 ) {
   const data = match.matchSeo;
-  return isRestrictedSearchIntentFixture(match) || match.status === "published"
-    && isUpcomingMatch(match, now)
-    && Boolean(data && (data.lineups || data.availability || data.statistics));
+  if (match.status !== "published" || !isUpcomingMatch(match, now)) return false;
+  return isRestrictedSearchIntentFixture(match)
+    || Boolean(data && (data.lineups || data.availability || data.statistics));
 }
