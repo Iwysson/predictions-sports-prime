@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-02T23:30:00.000Z",
+  "generatedAt": "2026-09-02T23:54:50.321Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -13898,12 +13898,11 @@
             "homeScore": 1,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "fotmob",
+            "dataSource": "espn",
             "id": "401880296",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-02T19:00Z",
-            "fotmobMatchId": 5836798
+            "kickoffUtc": "2026-09-02T19:00Z"
           }
         ]
       }
@@ -14610,6 +14609,14 @@
     "efl-cup:southampton-vs-west-ham": "401907950",
     "efl-cup:tottenham-hotspur-vs-charlton-athletic": "401908140",
     "efl-cup:watford-vs-peterborough-united": "401907949",
+    "eliteserien:aalesund-vs-start": "official:eliteserien:aalesund-vs-start:2026-09-04",
+    "eliteserien:brann-vs-lillestrom": "official:eliteserien:brann-vs-lillestrom:2026-09-05",
+    "eliteserien:fredrikstad-vs-bodo-glimt": "official:eliteserien:fredrikstad-vs-bodo-glimt:2026-09-04",
+    "eliteserien:kristiansund-vs-tromso": "official:eliteserien:kristiansund-vs-tromso:2026-09-06",
+    "eliteserien:molde-vs-kfum-oslo": "official:eliteserien:molde-vs-kfum-oslo:2026-09-06",
+    "eliteserien:rosenborg-vs-hamkam": "official:eliteserien:rosenborg-vs-hamkam:2026-09-05",
+    "eliteserien:sandefjord-vs-viking": "official:eliteserien:sandefjord-vs-viking:2026-09-04",
+    "eliteserien:sarpsborg-08-vs-valerenga": "official:eliteserien:sarpsborg-08-vs-valerenga:2026-09-06",
     "eredivisie:ado-den-haag-vs-fortuna-sittard": "401875613",
     "eredivisie:ajax-vs-psv-eindhoven": "401875618",
     "eredivisie:az-alkmaar-vs-go-ahead-eagles": "401875628",
@@ -14812,28 +14819,20 @@
     "super-lig:kocaelispor-vs-samsunspor": "401888300",
     "super-lig:konyaspor-vs-kocaelispor": "official:super-lig:konyaspor-vs-kocaelispor:2026-08-29",
     "super-lig:samsunspor-vs-fenerbahce": "official:super-lig:samsunspor-vs-fenerbahce:2026-08-30",
-    "super-lig:trabzonspor-vs-genclerbirligi": "401888305",
-    "eliteserien:fredrikstad-vs-bodo-glimt": "official:eliteserien:fredrikstad-vs-bodo-glimt:2026-09-04",
-    "eliteserien:aalesund-vs-start": "official:eliteserien:aalesund-vs-start:2026-09-04",
-    "eliteserien:sandefjord-vs-viking": "official:eliteserien:sandefjord-vs-viking:2026-09-04",
-    "eliteserien:rosenborg-vs-hamkam": "official:eliteserien:rosenborg-vs-hamkam:2026-09-05",
-    "eliteserien:brann-vs-lillestrom": "official:eliteserien:brann-vs-lillestrom:2026-09-05",
-    "eliteserien:molde-vs-kfum-oslo": "official:eliteserien:molde-vs-kfum-oslo:2026-09-06",
-    "eliteserien:sarpsborg-08-vs-valerenga": "official:eliteserien:sarpsborg-08-vs-valerenga:2026-09-06",
-    "eliteserien:kristiansund-vs-tromso": "official:eliteserien:kristiansund-vs-tromso:2026-09-06"
+    "super-lig:trabzonspor-vs-genclerbirligi": "401888305"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-09-02T22:00:31.836Z",
-    "la-liga": "2026-09-02T22:00:31.836Z",
-    "bundesliga": "2026-09-02T22:00:31.836Z",
-    "serie-a": "2026-09-02T22:00:31.836Z",
-    "liga-portugal": "2026-09-02T22:00:31.836Z",
-    "ligue-1": "2026-09-02T22:00:31.836Z",
-    "eredivisie": "2026-09-02T22:00:31.836Z",
+    "premier-league": "2026-09-02T23:54:50.321Z",
+    "la-liga": "2026-09-02T23:54:50.321Z",
+    "bundesliga": "2026-09-02T23:54:50.321Z",
+    "serie-a": "2026-09-02T23:54:50.321Z",
+    "liga-portugal": "2026-09-02T23:54:50.321Z",
+    "ligue-1": "2026-09-02T23:54:50.321Z",
+    "eredivisie": "2026-09-02T23:54:50.321Z",
     "brasileirao-serie-a": "2026-09-01T19:00:00-03:00",
     "copa-do-brasil": "2026-08-30T10:44:40.959Z",
-    "efl-cup": "2026-09-02T22:00:31.836Z",
-    "championship": "2026-09-02T22:00:31.836Z",
+    "efl-cup": "2026-09-02T23:54:50.321Z",
+    "championship": "2026-09-02T23:54:50.321Z",
     "super-lig": "2026-08-26T11:54:38.899Z",
     "scottish-premiership": "2026-08-26T11:54:38.899Z",
     "eliteserien": "2026-09-02T23:30:00.000Z"
