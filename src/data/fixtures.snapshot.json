@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-02T08:24:17.156Z",
+  "generatedAt": "2026-09-02T13:34:53.881Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -9996,22 +9996,22 @@
             "id": "401876448",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-10T18:45Z"
           },
           {
             "round": 6,
-            "date": "2026-10-10",
+            "date": "2026-10-11",
             "time": "TBD",
             "homeTeam": "Stade Rennais",
             "awayTeam": "AJ Auxerre",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876441",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-11T15:15Z"
           },
           {
             "round": 6,
@@ -10026,52 +10026,52 @@
             "id": "401876445",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-10T18:45Z"
           },
           {
             "round": 6,
-            "date": "2026-10-10",
+            "date": "2026-10-09",
             "time": "TBD",
             "homeTeam": "Lens",
             "awayTeam": "Lyon",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876447",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-09T18:45Z"
           },
           {
             "round": 6,
-            "date": "2026-10-10",
+            "date": "2026-10-11",
             "time": "TBD",
             "homeTeam": "Nice",
             "awayTeam": "Strasbourg",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876443",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-11T13:00Z"
           },
           {
             "round": 6,
-            "date": "2026-10-10",
+            "date": "2026-10-11",
             "time": "TBD",
             "homeTeam": "Troyes",
             "awayTeam": "Marseille",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876440",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-11T18:45Z"
           },
           {
             "round": 6,
@@ -10086,7 +10086,7 @@
             "id": "401876442",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-10T18:45Z"
           },
           {
             "round": 6,
@@ -10101,7 +10101,7 @@
             "id": "401876444",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-10T18:45Z"
           },
           {
             "round": 6,
@@ -10116,7 +10116,7 @@
             "id": "401876446",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-10T15:15Z"
           }
         ]
       },
@@ -10125,33 +10125,33 @@
         "games": [
           {
             "round": 7,
-            "date": "2026-10-17",
+            "date": "2026-10-18",
             "time": "TBD",
             "homeTeam": "Lorient",
             "awayTeam": "AS Monaco",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876435",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-18T15:15Z"
           },
           {
             "round": 7,
-            "date": "2026-10-17",
+            "date": "2026-10-18",
             "time": "TBD",
             "homeTeam": "Paris",
             "awayTeam": "Stade Rennais",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876433",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-18T15:15Z"
           },
           {
             "round": 7,
@@ -10166,7 +10166,7 @@
             "id": "401876431",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T18:45Z"
           },
           {
             "round": 7,
@@ -10181,22 +10181,22 @@
             "id": "401876436",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T18:45Z"
           },
           {
             "round": 7,
-            "date": "2026-10-17",
+            "date": "2026-10-16",
             "time": "TBD",
             "homeTeam": "Le Mans",
             "awayTeam": "Toulouse",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876437",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-16T18:45Z"
           },
           {
             "round": 7,
@@ -10211,52 +10211,52 @@
             "id": "401876432",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T15:15Z"
           },
           {
             "round": 7,
-            "date": "2026-10-17",
+            "date": "2026-10-18",
             "time": "TBD",
             "homeTeam": "Le Havre AC",
             "awayTeam": "AJ Auxerre",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876438",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-18T15:15Z"
           },
           {
             "round": 7,
-            "date": "2026-10-17",
+            "date": "2026-10-18",
             "time": "TBD",
             "homeTeam": "Angers",
             "awayTeam": "Marseille",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876439",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-18T13:00Z"
           },
           {
             "round": 7,
-            "date": "2026-10-17",
+            "date": "2026-10-18",
             "time": "TBD",
             "homeTeam": "Lyon",
             "awayTeam": "Nice",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876434",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-18T18:45Z"
           }
         ]
       },
@@ -10265,48 +10265,48 @@
         "games": [
           {
             "round": 8,
-            "date": "2026-10-24",
+            "date": "2026-10-25",
             "time": "TBD",
             "homeTeam": "Marseille",
             "awayTeam": "Le Havre AC",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876426",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-25T16:15Z"
           },
           {
             "round": 8,
-            "date": "2026-10-24",
+            "date": "2026-10-25",
             "time": "TBD",
             "homeTeam": "AS Monaco",
             "awayTeam": "Lille",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876425",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-25T14:00Z"
           },
           {
             "round": 8,
-            "date": "2026-10-24",
+            "date": "2026-10-25",
             "time": "TBD",
             "homeTeam": "Stade Rennais",
             "awayTeam": "Strasbourg",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876424",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-25T16:15Z"
           },
           {
             "round": 8,
@@ -10321,37 +10321,37 @@
             "id": "401876427",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-24T18:45Z"
           },
           {
             "round": 8,
-            "date": "2026-10-24",
+            "date": "2026-10-25",
             "time": "TBD",
             "homeTeam": "Angers",
             "awayTeam": "Lorient",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876430",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-25T16:15Z"
           },
           {
             "round": 8,
-            "date": "2026-10-24",
+            "date": "2026-10-23",
             "time": "TBD",
             "homeTeam": "Brest",
             "awayTeam": "Nice",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876428",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-23T18:45Z"
           },
           {
             "round": 8,
@@ -10366,22 +10366,22 @@
             "id": "401876423",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-24T15:15Z"
           },
           {
             "round": 8,
-            "date": "2026-10-24",
+            "date": "2026-10-25",
             "time": "TBD",
             "homeTeam": "AJ Auxerre",
             "awayTeam": "Le Mans",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876429",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-25T16:15Z"
           },
           {
             "round": 8,
@@ -14542,17 +14542,17 @@
     "super-lig:trabzonspor-vs-genclerbirligi": "401888305"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-09-02T08:24:17.156Z",
-    "la-liga": "2026-09-02T08:24:17.156Z",
-    "bundesliga": "2026-09-02T08:24:17.156Z",
-    "serie-a": "2026-09-02T08:24:17.156Z",
-    "liga-portugal": "2026-09-02T08:24:17.156Z",
-    "ligue-1": "2026-09-02T08:24:17.156Z",
-    "eredivisie": "2026-09-02T08:24:17.156Z",
+    "premier-league": "2026-09-02T13:34:53.881Z",
+    "la-liga": "2026-09-02T13:34:53.881Z",
+    "bundesliga": "2026-09-02T13:34:53.881Z",
+    "serie-a": "2026-09-02T13:34:53.881Z",
+    "liga-portugal": "2026-09-02T13:34:53.881Z",
+    "ligue-1": "2026-09-02T13:34:53.881Z",
+    "eredivisie": "2026-09-02T13:34:53.881Z",
     "brasileirao-serie-a": "2026-09-01T19:00:00-03:00",
     "copa-do-brasil": "2026-08-30T10:44:40.959Z",
-    "efl-cup": "2026-09-02T08:24:17.156Z",
-    "championship": "2026-09-02T08:24:17.156Z",
+    "efl-cup": "2026-09-02T13:34:53.881Z",
+    "championship": "2026-09-02T13:34:53.881Z",
     "super-lig": "2026-08-26T11:54:38.899Z",
     "scottish-premiership": "2026-08-26T11:54:38.899Z"
   },
