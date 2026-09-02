@@ -92,25 +92,25 @@ function SourceLinks({ match, locale }: { match: Match; locale: FullyLocalizedMa
   return <p className="match-module-sources">{labels[locale].sources}: {sources.map((source, index) => <span key={source.url}>{index ? "; " : ""}<a href={source.url} rel="noopener noreferrer">{source.name}</a></span>)}</p>;
 }
 
-export function LocalizedMatchDetails({ match, locale }: { match: Match; locale: FullyLocalizedMatchLocale }) {
+export function LocalizedMatchDetails({ match, locale, forceInformation = false }: { match: Match; locale: FullyLocalizedMatchLocale; forceInformation?: boolean }) {
   const data = match.matchSeo;
-  if (!data) return null;
+  if (!data && !forceInformation) return null;
   const copy = labels[locale];
   const separator = { "pt-br": "x", es: "vs", it: "vs", fr: "vs", de: "gegen" }[locale];
   const teams = `${match.homeTeam} ${separator} ${match.awayTeam}`;
   const coreRows = extractStatisticalCoreRows(match);
   const statisticalRows = coreRows.length
     ? coreRows.map((row) => ({ ...row, category: "other" as const }))
-    : (data.statistics?.rows ?? []);
+    : (data?.statistics?.rows ?? []);
   return <div className="match-semantic-details">
     <section className="match-module"><h2>{copy.info}</h2><dl className="match-information-grid">
       <div><dt>{copy.competition}</dt><dd>{leaguesBySlug[match.league]?.name ?? match.league}</dd></div>
       <div><dt>{copy.round}</dt><dd>{localizedRound(locale, match.round)}</dd></div><div><dt>{copy.date}</dt><dd>{match.date}</dd></div><div><dt>{copy.time}</dt><dd>{match.time}</dd></div>
-      {match.venue ? <div><dt>{copy.venue}</dt><dd>{match.venue}</dd></div> : null}{data.information?.city ? <div><dt>{copy.city}</dt><dd>{data.information.city}</dd></div> : null}
+      {match.venue ? <div><dt>{copy.venue}</dt><dd>{match.venue}</dd></div> : null}{data?.information?.city ? <div><dt>{copy.city}</dt><dd>{data.information.city}</dd></div> : null}
     </dl></section>
-    {data.lineups ? <section className="match-module"><h2>{data.lineups.status === "confirmed" ? copy.confirmed : copy.lineups} {teams}</h2><div className="match-lineups-grid">{(["home", "away"] as const).map((side) => <div key={side}><h3>{side === "home" ? match.homeTeam : match.awayTeam}</h3><ol>{data.lineups![side].players.map((player) => <li key={player}>{player}</li>)}</ol></div>)}</div></section> : null}
-    {data.availability ? <section className="match-module"><h2>{copy.availability}</h2><ul className="match-availability-list">{data.availability.entries.map((entry) => <li key={`${entry.team}-${entry.player}`}><strong>{entry.player}</strong> ({entry.team === "home" ? match.homeTeam : match.awayTeam}) — {statusLabels[locale][entry.status]}</li>)}</ul></section> : null}
-    {data.statistics || coreRows.length ? <section className="match-module"><h2>{copy.stats}</h2><div className="match-stats" role="table" aria-label={`${copy.stats}: ${teams}`}><div className="match-stats-row match-stats-header" role="row"><span role="columnheader">{copy.metric}</span><span role="columnheader">{copy.home}</span><span role="columnheader">{copy.away}</span></div>{statisticalRows.map((row, index) => <div className="match-stats-row" role="row" key={row.label}><span role="rowheader">{localizedMetric(locale, row.label, row.category, index)}</span><span role="cell">{localizedStatisticValue(locale, row.home)}</span><span role="cell">{localizedStatisticValue(locale, row.away)}</span></div>)}</div></section> : null}
+    {data?.lineups ? <section className="match-module"><h2>{data.lineups.status === "confirmed" ? copy.confirmed : copy.lineups} {teams}</h2><div className="match-lineups-grid">{(["home", "away"] as const).map((side) => <div key={side}><h3>{side === "home" ? match.homeTeam : match.awayTeam}</h3><ol>{data.lineups![side].players.map((player) => <li key={player}>{player}</li>)}</ol></div>)}</div></section> : null}
+    {data?.availability ? <section className="match-module"><h2>{copy.availability}</h2><ul className="match-availability-list">{data.availability.entries.map((entry) => <li key={`${entry.team}-${entry.player}`}><strong>{entry.player}</strong> ({entry.team === "home" ? match.homeTeam : match.awayTeam}) — {statusLabels[locale][entry.status]}</li>)}</ul></section> : null}
+    {data?.statistics || coreRows.length ? <section className="match-module"><h2>{copy.stats}</h2><div className="match-stats" role="table" aria-label={`${copy.stats}: ${teams}`}><div className="match-stats-row match-stats-header" role="row"><span role="columnheader">{copy.metric}</span><span role="columnheader">{copy.home}</span><span role="columnheader">{copy.away}</span></div>{statisticalRows.map((row, index) => <div className="match-stats-row" role="row" key={row.label}><span role="rowheader">{localizedMetric(locale, row.label, row.category, index)}</span><span role="cell">{localizedStatisticValue(locale, row.home)}</span><span role="cell">{localizedStatisticValue(locale, row.away)}</span></div>)}</div></section> : null}
     <SourceLinks match={match} locale={locale} />
   </div>;
 }

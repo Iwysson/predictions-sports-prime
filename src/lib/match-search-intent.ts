@@ -74,6 +74,14 @@ type TodaySeoProfile = {
   focus?: Partial<Record<TodaySeoLocale, string>>;
 };
 
+export const restrictedSearchIntentDates = ["2026-09-02", "2026-09-03"] as const;
+
+export function isRestrictedSearchIntentFixture(match: Pick<Match, "date" | "status">) {
+  return match.status === "published" && restrictedSearchIntentDates.includes(
+    match.date as (typeof restrictedSearchIntentDates)[number]
+  );
+}
+
 const todaySeoProfiles: Record<string, TodaySeoProfile> = {
   "lincoln-city-vs-blackburn-rovers": {
     teams: ["Lincoln City", "Blackburn"], titleIntents: ["lineups", "stats"], descriptionIntents: ["lineups", "stats", "odds", "goals", "corners"],
@@ -153,6 +161,22 @@ const todaySeoProfiles: Record<string, TodaySeoProfile> = {
   "vitoria-vs-vasco-da-gama": {
     teams: ["Vitória", "Vasco"], titleIntents: ["lineups", "injuries", "odds"], descriptionIntents: ["lineups", "injuries", "odds", "stats", "competition", "secondLeg", "aggregate", "goals"],
   },
+  "hibernian-vs-hearts": {
+    teams: ["Hibernian", "Hearts"], titleIntents: ["lineups", "stats", "odds"], descriptionIntents: ["lineups", "stats", "odds", "goals", "corners"],
+    focus: { en: "Over 2.5 Goals", "pt-BR": "mais de 2,5 gols", es: "más de 2,5 goles", it: "più di 2,5 gol", fr: "plus de 2,5 buts", de: "über 2,5 Tore" },
+  },
+  "gremio-vs-internacional": {
+    teams: ["Grêmio", "Internacional"], titleIntents: ["stats", "odds", "goals"], descriptionIntents: ["stats", "odds", "goals", "corners", "secondLeg", "aggregate"],
+    focus: { en: "Grêmio double chance and Under 3.5 Goals", "pt-BR": "Grêmio ou empate e menos de 3,5 gols", es: "Grêmio o empate y menos de 3,5 goles", it: "Grêmio o pareggio e meno di 3,5 gol", fr: "Grêmio ou nul et moins de 3,5 buts", de: "Grêmio oder Unentschieden und unter 3,5 Tore" },
+  },
+  "toulouse-vs-lille": {
+    teams: ["Toulouse", "Lille"], titleIntents: ["stats", "odds", "goals"], descriptionIntents: ["stats", "odds", "goals", "corners", "xg", "shots"],
+    focus: { en: "Lille double chance and Over 1.5 Goals", "pt-BR": "Lille ou empate e mais de 1,5 gols", es: "Lille o empate y más de 1,5 goles", it: "Lille o pareggio e più di 1,5 gol", fr: "Lille ou nul et plus de 1,5 buts", de: "Lille oder Unentschieden und über 1,5 Tore" },
+  },
+  "real-sociedad-vs-celta-vigo": {
+    teams: ["Real Sociedad", "Celta Vigo"], titleIntents: ["stats", "odds", "goals"], descriptionIntents: ["stats", "odds", "goals", "corners", "xg", "shots"],
+    focus: { en: "Real Sociedad double chance and Over 1.5 Goals", "pt-BR": "Real Sociedad ou empate e mais de 1,5 gols", es: "Real Sociedad o empate y más de 1,5 goles", it: "Real Sociedad o pareggio e più di 1,5 gol", fr: "Real Sociedad ou nul et plus de 1,5 buts", de: "Real Sociedad oder Unentschieden und über 1,5 Tore" },
+  },
 };
 
 const todaySeoTerms: Record<TodaySeoLocale, Record<TodaySeoIntent, string>> = {
@@ -186,6 +210,10 @@ const todayEnglishDescriptions: Record<string, string> = {
   "falkirk-vs-rangers": "Falkirk vs Rangers prediction at odds 1.60, with probable lineups, Rangers match analysis, statistics, goals and corners.",
   "santos-vs-palmeiras": "Santos vs Palmeiras prediction for the Copa do Brasil second leg, with probable lineups, injuries, odds, aggregate score, statistics, goals and corners.",
   "vitoria-vs-vasco-da-gama": "Vitória vs Vasco prediction for the Copa do Brasil second leg, with probable lineups, injuries, odds, aggregate score and match statistics.",
+  "hibernian-vs-hearts": "Hibernian vs Hearts prediction for tomorrow: Over 2.5 Goals at odds 1.83, with probable lineups, statistics, goals and corners analysis.",
+  "gremio-vs-internacional": "Grêmio vs Internacional prediction for tomorrow: Grêmio double chance and Under 3.5 Goals at odds 1.65, with stats and second-leg analysis.",
+  "toulouse-vs-lille": "Toulouse vs Lille prediction for tomorrow: Lille double chance and Over 1.5 Goals at odds 1.83, with stats, xG, shots and corners analysis.",
+  "real-sociedad-vs-celta-vigo": "Real Sociedad vs Celta Vigo prediction for tomorrow: Sociedad double chance and Over 1.5 Goals at odds 1.70, with stats, xG and shots analysis.",
 };
 
 function isTodaySeoLocale(locale: SearchLocale): locale is TodaySeoLocale {
@@ -203,6 +231,7 @@ function todaySeoTeams(profile: TodaySeoProfile, locale: TodaySeoLocale) {
 }
 
 function buildProfileIntentQueries(match: Match, locale: SearchLocale) {
+  if (!isRestrictedSearchIntentFixture(match)) return [];
   if (!isTodaySeoLocale(locale)) return [];
   const profile = todaySeoProfiles[match.slug];
   if (!profile) return [];
@@ -213,6 +242,7 @@ function buildProfileIntentQueries(match: Match, locale: SearchLocale) {
 }
 
 function buildTodaySeoTitle(match: Match, locale: TodaySeoLocale) {
+  if (!isRestrictedSearchIntentFixture(match)) return "";
   const profile = todaySeoProfiles[match.slug];
   if (!profile) return "";
   const teams = todaySeoTeams(profile, locale);
@@ -227,9 +257,18 @@ function buildTodaySeoTitle(match: Match, locale: TodaySeoLocale) {
 }
 
 function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale, facts: MatchIntentFacts) {
+  if (!isRestrictedSearchIntentFixture(match)) return "";
   const profile = todaySeoProfiles[match.slug];
   if (!profile) return "";
-  if (locale === "en") return todayEnglishDescriptions[match.slug] ?? "";
+  if (locale === "en") {
+    const description = todayEnglishDescriptions[match.slug] ?? "";
+    const localized = match.date === restrictedSearchIntentDates[0] && !/\b(?:today|tomorrow)\b/i.test(description)
+      ? description.replace(/\bprediction\b/i, "prediction for today")
+      : description;
+    return localized.length <= 160
+      ? localized
+      : localized.replace("prediction for today for the ", "prediction for today: ");
+  }
   const teams = todaySeoTeams(profile, locale);
   const focus = profile.focus?.[locale];
   const temporal = resolveMatchTemporalState(match);
@@ -358,6 +397,43 @@ export function getMatchIntentCapabilities(match: Match) {
     hasBroadcastInfo: facts.hasBroadcastInfo,
     hasStatisticalCore: extractStatisticalCoreRows(match).length > 0,
     markets: detectPickMarkets(facts.mainPick),
+  };
+}
+
+export type MatchIntentRegistry = ReturnType<typeof getMatchIntentRegistry>;
+
+export function getMatchIntentRegistry(match: Match) {
+  const capabilities = getMatchIntentCapabilities(match);
+  const analysis = match.analysis.join(" ");
+  const markets = new Set(capabilities.markets);
+  const rows = extractStatisticalCoreRows(match).map((row) => row.label).join(" ");
+  return {
+    hasPrediction: capabilities.hasPick,
+    hasOdds: capabilities.hasOdds,
+    hasAnalysis: capabilities.hasAnalysis,
+    hasLineups: capabilities.hasLineups || /probable lineups?|probable lineup/i.test(analysis),
+    hasStatistics: capabilities.hasStatistics,
+    hasForm: capabilities.hasForm,
+    hasTeamNews: capabilities.hasTeamNews || /team news|availability/i.test(analysis),
+    hasInjuries: capabilities.hasInjuries || /injur(?:y|ies)|absence|unavailable/i.test(analysis),
+    hasSuspensions: capabilities.hasSuspensions || /suspension|suspended/i.test(analysis),
+    has1X2: markets.has("WIN"),
+    hasDoubleChance: markets.has("DOUBLE_CHANCE"),
+    hasDrawNoBet: markets.has("DRAW_NO_BET"),
+    hasAsianHandicap: markets.has("ASIAN_HANDICAP"),
+    hasGoals: capabilities.hasGoals || markets.has("OVER_UNDER"),
+    hasBtts: markets.has("BTTS") || /\bBTTS\b|both teams to score/i.test(analysis),
+    hasCorners: capabilities.hasCorners || markets.has("CORNERS"),
+    hasCorrectScore: /correct score prediction|placar exato/i.test(analysis),
+    hasXg: /\bxG(?:A)?\b/i.test(`${rows} ${analysis}`),
+    hasShots: /shots?(?: on target)?|SOT/i.test(`${rows} ${analysis}`),
+    hasPossession: /possession/i.test(`${rows} ${analysis}`),
+    hasImpliedProbability: /implied probability|price-derived threshold/i.test(analysis),
+    hasValueBet: /\bvalue bet\b|betting value/i.test(analysis),
+    hasKickOff: capabilities.hasKickOff,
+    hasVenue: capabilities.hasVenue,
+    hasCompetition: Boolean(leaguesBySlug[match.league]),
+    hasRound: Boolean(match.round),
   };
 }
 

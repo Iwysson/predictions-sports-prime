@@ -20,9 +20,9 @@ function teamName(match: Match, side: MatchTeamSide) {
   return side === "home" ? match.homeTeam : match.awayTeam;
 }
 
-export function MatchSemanticDetails({ match }: { match: Match }) {
+export function MatchSemanticDetails({ match, forceInformation = false }: { match: Match; forceInformation?: boolean }) {
   const data = match.matchSeo;
-  if (!data) return null;
+  if (!data && !forceInformation) return null;
   const upcoming = isUpcomingMatch(match);
   const coreRows = extractStatisticalCoreRows(match);
 
@@ -36,15 +36,15 @@ export function MatchSemanticDetails({ match }: { match: Match }) {
           <div><dt>Date</dt><dd>{match.date}</dd></div>
           <div><dt>Local time</dt><dd>{match.time}</dd></div>
           {match.venue ? <div><dt>Venue</dt><dd>{match.venue}</dd></div> : null}
-          {data.information?.city ? <div><dt>City</dt><dd>{data.information.city}</dd></div> : null}
-          {data.information?.country ? <div><dt>Country</dt><dd>{data.information.country}</dd></div> : null}
-          {data.information?.timezone ? <div><dt>Timezone</dt><dd>{data.information.timezone}</dd></div> : null}
-          {data.information?.referee ? <div><dt>Referee</dt><dd>{data.information.referee}</dd></div> : null}
+          {data?.information?.city ? <div><dt>City</dt><dd>{data.information.city}</dd></div> : null}
+          {data?.information?.country ? <div><dt>Country</dt><dd>{data.information.country}</dd></div> : null}
+          {data?.information?.timezone ? <div><dt>Timezone</dt><dd>{data.information.timezone}</dd></div> : null}
+          {data?.information?.referee ? <div><dt>Referee</dt><dd>{data.information.referee}</dd></div> : null}
         </dl>
-        {data.information ? <Sources sources={data.information.sources} /> : null}
+        {data?.information ? <Sources sources={data.information.sources} /> : null}
       </section>
 
-      {data.lineups ? (
+      {data?.lineups ? (
         <section className="match-module" aria-labelledby="match-lineups-heading">
           <h2 id="match-lineups-heading">{upcoming ? `${match.homeTeam} vs ${match.awayTeam} ${data.lineups.status === "confirmed" ? "Confirmed Lineups" : "Probable Lineups"}` : data.lineups.status === "confirmed" ? "Confirmed Lineups" : "Expected Lineups"}</h2>
           <p className="match-module-note">{data.lineups.status === "confirmed" ? "Official starting lineups." : "Pre-match projection; check the official team sheets close to kickoff."}</p>
@@ -63,7 +63,7 @@ export function MatchSemanticDetails({ match }: { match: Match }) {
         </section>
       ) : null}
 
-      {data.availability ? (
+      {data?.availability ? (
         <section className="match-module" aria-labelledby="match-availability-heading">
           <h2 id="match-availability-heading">{upcoming ? <>Team News, Injuries &amp; Suspensions</> : "Player Availability"}</h2>
           <ul className="match-availability-list">
@@ -77,7 +77,7 @@ export function MatchSemanticDetails({ match }: { match: Match }) {
         </section>
       ) : null}
 
-      {data.teamNews ? (
+      {data?.teamNews ? (
         <section className="match-module" aria-labelledby="match-team-news-heading">
           <h2 id="match-team-news-heading">{upcoming ? `${match.homeTeam} vs ${match.awayTeam} Team News` : "Team News"}</h2>
           {data.teamNews.entries.map((entry) => (
@@ -87,25 +87,25 @@ export function MatchSemanticDetails({ match }: { match: Match }) {
         </section>
       ) : null}
 
-      {data.statistics || coreRows.length ? (
+      {data?.statistics || coreRows.length ? (
         <section className="match-module" aria-labelledby="match-statistics-heading">
           <h2 id="match-statistics-heading">Statistical Core Predictions-Sports-Prime</h2>
-          {data.statistics ? <p className="match-module-note">Sample: {data.statistics.sample}</p> : null}
+          {data?.statistics ? <p className="match-module-note">Sample: {data.statistics.sample}</p> : null}
           <div className="match-stats" role="table" aria-label={`${match.homeTeam} and ${match.awayTeam} statistics`}>
             <div className="match-stats-row match-stats-header" role="row">
               <span role="columnheader">Metric</span><span role="columnheader">{match.homeTeam}</span><span role="columnheader">{match.awayTeam}</span>
             </div>
-            {(coreRows.length ? coreRows : data.statistics?.rows ?? []).map((row) => (
+            {(coreRows.length ? coreRows : data?.statistics?.rows ?? []).map((row) => (
               <div className="match-stats-row" role="row" key={row.label}>
                 <span role="rowheader">{row.label}</span><span role="cell">{row.home}</span><span role="cell">{row.away}</span>
               </div>
             ))}
           </div>
-          {data.statistics ? <Sources sources={data.statistics.sources} /> : null}
+          {data?.statistics ? <Sources sources={data.statistics.sources} /> : null}
         </section>
       ) : null}
 
-      {data.h2h ? (
+      {data?.h2h ? (
         <section className="match-module" aria-labelledby="match-h2h-heading">
           <h2 id="match-h2h-heading">{upcoming ? `${match.homeTeam} vs ${match.awayTeam} H2H` : "Head-to-Head"}</h2>
           <p>{data.h2h.summary}</p>
@@ -113,7 +113,7 @@ export function MatchSemanticDetails({ match }: { match: Match }) {
         </section>
       ) : null}
 
-      {data.weather ? (
+      {data?.weather ? (
         <section className="match-module" aria-labelledby="match-weather-heading">
           <h2 id="match-weather-heading">Match Weather</h2>
           <p>{data.weather.summary}</p>

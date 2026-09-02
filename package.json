@@ -16,6 +16,7 @@
     "audit:seo": "node scripts/audit-seo.mjs",
     "audit:duplicate-seo": "node scripts/audit-duplicate-seo.mjs",
     "audit:search-intent-seo": "tsx scripts/audit-search-intent-seo.mjs",
+    "audit:restricted-search-intent": "tsx scripts/audit-restricted-search-intent.mjs",
     "audit:match-seo-zeroes": "tsx scripts/audit-match-seo-zeroes.mjs",
     "audit:match-freshness": "tsx scripts/audit-match-freshness.mjs",
     "audit:seo2-capabilities": "tsx scripts/audit-seo2-capabilities.mjs",

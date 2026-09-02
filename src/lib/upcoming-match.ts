@@ -1,5 +1,6 @@
 import { isFutureFixture } from "@/lib/fixture-state";
 import type { Match } from "@/types";
+import { isRestrictedSearchIntentFixture } from "@/lib/match-search-intent";
 
 export type UpcomingMatchInput = Pick<
   Match,
@@ -29,7 +30,7 @@ export function isInternationalMatchExpansionEligible(
   now: Date | string = new Date()
 ) {
   const data = match.matchSeo;
-  return match.status === "published"
+  return isRestrictedSearchIntentFixture(match) || match.status === "published"
     && isUpcomingMatch(match, now)
     && Boolean(data && (data.lineups || data.availability || data.statistics));
 }

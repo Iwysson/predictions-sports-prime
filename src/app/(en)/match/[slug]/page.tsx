@@ -35,6 +35,7 @@ import { toMatchPreview } from "@/lib/editorial";
 import type { Match } from "@/types";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
+import { isRestrictedSearchIntentFixture } from "@/lib/match-search-intent";
 
 async function resolveMatchFixture(match: Match): Promise<Match> {
   const fixture = await hydratePrediction(toMatchPreview(match));
@@ -232,7 +233,7 @@ export default async function MatchPage({
 
             <p className="match-seo-intro">{matchIntroduction(match)}</p>
 
-            <MatchSemanticDetails match={match} />
+            <MatchSemanticDetails match={match} forceInformation={isRestrictedSearchIntentFixture(match)} />
 
             <div className="match-content-ad match-content-ad--early">
               <AdSlot placement="match-top" />
