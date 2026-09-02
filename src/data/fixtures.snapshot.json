@@ -13468,19 +13468,19 @@
         "games": [
           {
             "round": 2,
-            "date": "2026-09-02",
+            "date": "2026-09-01",
             "time": "21:00",
             "homeTeam": "Atlético Mineiro",
             "awayTeam": "Cruzeiro",
             "venue": "Arena MRV",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
+            "homeScore": 2,
+            "awayScore": 1,
+            "status": "completed",
             "dataSource": "cbf",
             "id": "cbf:copa-2026-game-148",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-03T00:00:00Z"
+            "kickoffUtc": "2026-09-02T00:00:00Z"
           },
           {
             "round": 2,
