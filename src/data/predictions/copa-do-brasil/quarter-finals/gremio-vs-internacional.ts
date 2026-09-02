@@ -15,7 +15,7 @@ export const grêmioVsInternacional: EditorialPrediction = {
 
 🎯 **Prediction: Grêmio or Draw (1X) + Under 3.5 Goals** 💰 **Odds: 1.65 (-154 American)** **Copa do Brasil 2026** — Quarter-final, Second Leg | September 3, 2026 | 8:00 PM local time | Arena do Grêmio, Porto Alegre | Referee: Bruno Arleu de Araújo | VAR: Caio Max Augusto Vieira. The tie arrives in Porto Alegre completely level after a 0–0 first leg at the Beira-Rio. Another draw sends the confrontation to penalties, while any victory produces a semi-finalist. The absence of an aggregate advantage is central to this market: Grêmio have home-field protection but do not need to force the game from the opening minutes, while Internacional also begin without an obligation to chase.
 
-**Venue, kickoff and weather:** **Arena do Grêmio, Porto Alegre — September 3, 2026 — 8:00 PM BRT. Referee: Bruno Arleu de Araújo; VAR: Caio Max Augusto Vieira.** Match-time weather should be refreshed before publication. **Probable lineups — first-leg structure as baseline.** **Grêmio:** use the first-leg competitive XI centred on Carlos Vinícius, Pavón and Jovane Cabral, with the most recent league lineup used only where it does not reflect rotation. **Internacional:** preserve the first-leg structure, with **Alan Patrick** a major candidate to enter the XI after starting the first meeting on the bench. Final names should be updated only from confirmed team news. **Availability:** The first leg is the highest-value tactical reference because both teams were playing the same opponent under the same knockout context. Any new injury or suspension takes precedence; otherwise avoid speculative changes simply to create novelty in the lineup.
+**Venue, kickoff and weather:** **Arena do Grêmio, Porto Alegre — September 3, 2026 — 8:00 PM BRT. Referee: Bruno Arleu de Araújo; VAR: Caio Max Augusto Vieira.** Match-time weather should be refreshed before publication. **Probable lineups:** **Grêmio:** Weverton; Cristian Pavón, Gustavo Martins (Kannemann), Wallace, Marlon; Erick Noriega, Mathias Villasanti; José Enamorado, Krovinovic, Amuzu (Tetê); Carlos Vinícius. **Internacional:** Matheus Cunha; Vitinho, Bruno Gomes, Gabriel Mercado, Guillermo Maripán, Matheus Bahia; Rodrigo Villagra, Bruno Henrique, Bernabei; Alan Patrick, Carbonero. **Availability:** Grêmio are without **Diego Caito, Dodi and Juan Nardoni**; **Amuzu and Jovane Cabral** require fitness monitoring. Internacional's unavailable list includes **Allex, Benjamin Arhin, Kayky and Sergio Rochet**, while **Victor Gabriel is suspended**. Alan Patrick is a strong candidate to return to the starting XI after beginning the first leg on the bench. Final official team sheets override this projection.
 
 The proposed combination has two independent requirements: Grêmio must avoid defeat, and the match must finish with three goals or fewer. The statistical case therefore should not be reduced to the first-leg 0–0. It needs to explain whether Grêmio's home environment materially improves their chances of avoiding defeat and whether the underlying scoring profiles of both teams make a four-goal match relatively uncommon. The first leg offers the most matchup-specific evidence available. Internacional and Grêmio combined for roughly 25–26 shots, but only around four to five were on target, depending on the provider. The game was dominated more by physical disputes than by high-quality attacking sequences, with 43 fouls and very limited clear chances. UOL described a first half in which neither side managed a shot on target until around the 40th minute, and even after both teams increased their attacking activity after the interval, the score remained 0–0.
 
@@ -107,6 +107,36 @@ The published price is retained exactly as supplied. The sporting evidence is as
       accessedAt: "2026-08-30T10:00:00-03:00"
     }
   ],
+  matchSeo: {
+    lineups: {
+      status: "expected",
+      home: { formation: "4-2-3-1", players: ["Weverton", "Cristian Pavón", "Gustavo Martins (Kannemann)", "Wallace", "Marlon", "Erick Noriega", "Mathias Villasanti", "José Enamorado", "Krovinovic", "Amuzu (Tetê)", "Carlos Vinícius"] },
+      away: { formation: "3-4-2-1", players: ["Matheus Cunha", "Vitinho", "Bruno Gomes", "Gabriel Mercado", "Guillermo Maripán", "Matheus Bahia", "Rodrigo Villagra", "Bruno Henrique", "Bernabei", "Alan Patrick", "Carbonero"] },
+      sources: [
+        { name: "UOL", url: "https://www.uol.com.br/esporte/futebol/ultimas-noticias/2026/08/27/internacional-x-gremio---escalacoes.ghtm", accessedAt: "2026-09-02T14:45:00-03:00" },
+        { name: "SportyTrader", url: "https://www.sportytrader.com/pt-br/palpites/gremio-rs-internacional-369827/", accessedAt: "2026-09-02T14:45:00-03:00" }
+      ],
+      updatedAt: "2026-09-02T14:45:00-03:00"
+    },
+    availability: {
+      entries: [
+        { team: "home", player: "Diego Caito", status: "injured" },
+        { team: "home", player: "Dodi", status: "injured" },
+        { team: "home", player: "Juan Nardoni", status: "injured" },
+        { team: "home", player: "Amuzu", status: "doubtful", detail: "Fitness concern / physical wear." },
+        { team: "home", player: "Jovane Cabral", status: "doubtful", detail: "Fitness concern / physical wear." },
+        { team: "away", player: "Sergio Rochet", status: "injured" },
+        { team: "away", player: "Allex", status: "injured" },
+        { team: "away", player: "Benjamin Arhin", status: "injured" },
+        { team: "away", player: "Kayky", status: "injured" },
+        { team: "away", player: "Victor Gabriel", status: "suspended" }
+      ],
+      sources: [
+        { name: "SportyTrader", url: "https://www.sportytrader.com/pt-br/palpites/gremio-rs-internacional-369827/", accessedAt: "2026-09-02T14:45:00-03:00" }
+      ],
+      updatedAt: "2026-09-02T14:45:00-03:00"
+    }
+  },
   matchInfo: {
     date: "2026-09-03",
     time: "20:00",

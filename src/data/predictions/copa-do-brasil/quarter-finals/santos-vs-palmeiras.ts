@@ -15,7 +15,7 @@ export const santosVsPalmeiras: EditorialPrediction = {
 
 🎯 **Prediction: Santos +2 **Asian Handicap** + Over 1.5 Goals** 💰 **Odds: 1.75 (-133 American)** **Copa do Brasil 2026** — Quarter-final, Second Leg | September 2, 2026 | 9:30 PM local time | Vila Belmiro, Santos
 
-**Venue, kickoff and weather:** **Vila Belmiro, Santos — September 2, 2026 — 9:30 PM BRT.** Match-time weather should be refreshed on the day. **Probable lineups — first-leg XI as baseline.** **Santos:** Gabriel Brazão; Igor Vinícius, Lucas Veríssimo, Luan Peres, Escobar; Willian Arão, João Schmidt, Gustavo Henrique; Rollheiser, Barreal, Gustavo Caballero. **Palmeiras:** Carlos Miguel; Giay, Murilo, Gustavo Gómez; Jhon Arias, Marlon Freitas, Andreas Pereira, Piquerez; Vitor Roque, Mauricio, Flaco López. Neymar’s possible return must be confirmed rather than assumed. **Availability:** Santos must recheck **Neymar** after he missed the first leg because of the synthetic surface; current injury reporting has also included **Gabriel Menino, Gabriel Bontempo, Pepê Firmino and Vini Lira**. Palmeiras have monitored **Ramón Sosa, Jefté and Paulinho**, while **Jhon Arias** requires reassessment after discomfort. The first-leg XI remains the safest baseline until confirmed updates.
+**Venue, kickoff and weather:** **Vila Belmiro, Santos — September 2, 2026 — 9:30 PM BRT.** Match-time weather should be refreshed on the day. **Probable lineups:** **Santos:** Gabriel Brazão; Igor Vinícius, Lucas Veríssimo, Luan Peres, Escobar; Willian Arão, Christian Oliva, Gabriel Bontempo, Barreal; Neymar, Gabigol. **Palmeiras:** Carlos Miguel; Giay, Murilo, Gustavo Gómez (Barboza), Arthur; Marlon Freitas (Emiliano Martínez), Andreas Pereira (Lucas Evangelista), Felipe Anderson, Mauricio; Flaco López, Vitor Roque. **Availability:** **Neymar is available and expected to start**. **Gustavo Henrique is out** with thigh pain; Vinícius Lira, Gabriel Menino and Pepê Firmino are also unavailable for Santos. For Palmeiras, **Paulinho, Ramón Sosa and Jefté are out**, while **Jhon Arias, Piquerez and Barboza are doubts/return candidates**. Final official team sheets override this projection.
 
 Santos and Palmeiras enter the second leg under one of the most asymmetric game states of the Copa do Brasil quarter-finals. Palmeiras won the first meeting 3–0, with two goals from Flaco López and another from Andreas Pereira, meaning Santos need to win by three goals merely to force penalties. Palmeiras, meanwhile, can lose by one or two and still qualify. That distinction is fundamental when evaluating Santos +2 **Asian Handicap** + **Over 1.5 Goals**, because the selection does not ask Santos to complete the comeback. It asks them to avoid losing by three or more while the match produces at least two goals. The handicap mechanics provide considerable protection. A Santos victory, a draw or a Palmeiras victory by exactly one goal all win the +2 component. If Palmeiras win by exactly two, the **Asian handicap** is a push on that leg rather than a conventional handicap loss, subject to the bookmaker's settlement rules for the combined market. Only a Palmeiras victory by three or more goals defeats the +2 selection outright. This means Palmeiras would effectively need another dominant scoreboard performance despite entering the Vila Belmiro with almost no competitive requirement to create a large winning margin.
 
@@ -131,8 +131,8 @@ The published price is retained exactly as supplied. The sporting evidence is as
   matchSeo: {
     lineups: {
       status: "expected",
-      home: { formation: "4-3-3", players: ["Gabriel Brazão", "Igor Vinícius", "Lucas Veríssimo", "Luan Peres", "Escobar", "Willian Arão", "João Schmidt", "Gustavo Henrique (if cleared)", "Barreal", "Gabigol", "Neymar"] },
-      away: { formation: "4-3-3", players: ["Carlos Miguel", "Giay", "Murilo", "Gustavo Gómez", "Arthur", "Marlon Freitas", "Andreas Pereira", "Mauricio", "Felipe Anderson", "Vitor Roque", "Flaco López"] },
+      home: { formation: "4-4-2", players: ["Gabriel Brazão", "Igor Vinícius", "Lucas Veríssimo", "Luan Peres", "Escobar", "Willian Arão", "Christian Oliva", "Gabriel Bontempo", "Barreal", "Neymar", "Gabigol"] },
+      away: { formation: "4-4-2", players: ["Carlos Miguel", "Giay", "Murilo", "Gustavo Gómez (Barboza)", "Arthur", "Marlon Freitas (Emiliano Martínez)", "Andreas Pereira (Lucas Evangelista)", "Felipe Anderson", "Mauricio", "Flaco López", "Vitor Roque"] },
       sources: [
         { name: "ge", url: "https://ge.globo.com/sp/santos-e-regiao/futebol/times/santos/noticia/2026/08/31/escalacao-do-santos-gustavinho-deve-perder-classico-na-copa-do-brasil-arthur-faz-primeiro-treino.ghtml", accessedAt: "2026-09-01T06:20:00-03:00" },
         { name: "Lance", url: "https://www.lance.com.br/sites-de-apostas/palpites/santos-x-palmeiras-02-09-2026.html", accessedAt: "2026-09-01T06:20:00-03:00" }
@@ -141,7 +141,8 @@ The published price is retained exactly as supplied. The sporting evidence is as
     },
     availability: {
       entries: [
-        { team: "home", player: "Gustavo Henrique", status: "doubtful", detail: "Left-thigh pain after the Corinthians match." },
+        { team: "home", player: "Neymar", status: "returning", detail: "Available and expected to start after missing the first leg on synthetic turf." },
+        { team: "home", player: "Gustavo Henrique", status: "injured", detail: "Ruled out with left-thigh pain." },
         { team: "home", player: "Arthur", status: "unavailable", detail: "Not registered for this Copa do Brasil match." },
         { team: "away", player: "Jefté", status: "injured", detail: "Recovering from knee surgery." },
         { team: "away", player: "Ramón Sosa", status: "injured" },

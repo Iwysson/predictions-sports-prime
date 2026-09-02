@@ -15,7 +15,7 @@ export const vitóriaVsVascoDaGama: EditorialPrediction = {
 
 🎯 **Prediction: Over 1.5 Goals** 💰 **Odds: 1.44 (-227 American)** — **WAIT LIVE** **Copa do Brasil 2026** — Quarter-final, Second Leg | September 2, 2026 | 9:30 PM local time | Estádio Manoel Barradas (Barradão), Salvador | Referee: Rafael Rodrigo Klein. Vasco travel to Bahia with a 1–0 aggregate advantage after winning the first leg at São Januário. A draw is enough for Vasco to qualify, a Vitória win by exactly one goal sends the tie to penalties, and Vitória need a two-goal victory to advance directly. That aggregate state is central to the goals analysis because the home side cannot treat 0–0 as a satisfactory result for long, while Vasco have the option of managing the clock and attacking the spaces created by an increasingly aggressive Vitória.
 
-**Venue, kickoff and weather:** **Barradão, Salvador — September 2, 2026 — 9:30 PM BRT. Referee: Rafael Rodrigo Klein.** Match-time weather should be refreshed on the day. **Probable lineups — first-leg XI as baseline.** **Vitória:** Lucas Arcanjo; Brítez, Cacá, Luan Cândido, Ramon; Caíque Gonçalves, Zé Vitor, Emmanuel Martínez; Marinho, Matheuzinho, Renato Kayzer. **Vasco:** Léo Jardim; Puma Rodríguez, Carlos Cuesta, Robert Renan, Lucas Piton; Ramon Rique, Thiago Mendes, replacement for Cauan Barros; Andrés Gómez, Facundo Colidio, Claudio Spinelli. **Availability:** **Cauan Barros is suspended** after his first-leg red card. Vasco have also had **Brenner, Jair, Rojas, Mateus Carvalho and Cuiabano** unavailable in recent team news. Vitória’s recent injury list has included **Nathan Mendes, Camutanga, Edu, Dudu, Anderson Pato, Caíque and Rúben Ismael**. **WAIT LIVE:** the recorded pre-match price is 1.44; the requested strategy is to wait for a better live entry.
+**Venue, kickoff and weather:** **Barradão, Salvador — September 2, 2026 — 9:30 PM BRT. Referee: Rafael Rodrigo Klein.** Match-time weather should be refreshed on the day. **Probable lineups:** **Vitória:** Lucas Arcanjo; Mateus Silva, Cacá, Luan Cândido, Ramon; Walace (Gabriel Baralhas or Renato Kayzer), Zé Vitor, Emmanuel Martínez; Erick, Matheuzinho (Diego Tarzia), Renê. **Vasco:** Léo Jardim; Paulo Henrique, Carlos Cuesta, Robert Renan, Lucas Piton; Santiago Sosa, Thiago Mendes, Tchê Tchê (Ramon Rique); Adson (Puma Rodríguez), Facundo Colidio, Andrés Gómez. **Availability:** **Emanuel Brítez and Caíque Gonçalves are suspended for Vitória**. Tomás Pochettino and Alex Bruno are not registered; Rúben Ismael, Camutanga, Edu, Dudu and Nathan Mendes remain unavailable. For Vasco, **Cauan Barros is suspended** after his first-leg red card; **Jair and Brenner are injured**. **WAIT LIVE:** the recorded pre-match price is 1.44; the requested strategy is to wait for a better live entry.
 
 The first leg was unusual enough that the 1–0 score should not be read in isolation. Vasco had Cauan Barros sent off after only 18 minutes, meaning they played more than 70 minutes with ten men, yet still scored the only goal through Andrés Gómez in the second half. Vitória consequently accumulated 64% possession, 561 passes, 17 shots, six **shots on target**, nine attempts from inside the penalty area and five **corners**, while Vasco finished with 15 shots, five on target and seven attempts from inside the box despite the numerical disadvantage. Léo Jardim made six saves, while Vitória goalkeeper Lucas Arcanjo made four. Those figures produce two different interpretations, both relevant to Over 1.5. Vitória failed to score despite playing most of the match with an extra man, which is an obvious counter-signal against simply assuming goals will arrive in Salvador. At the same time, 32 combined shots, 11 **shots on target** and 16 shots from inside the box represent considerably more attacking activity than the final 1–0 suggests. The first leg therefore had only one actual goal, but it was not a game completely devoid of offensive events.
 
@@ -131,17 +131,20 @@ The published price is retained exactly as supplied. The sporting evidence is as
   matchSeo: {
     lineups: {
       status: "expected",
-      home: { formation: "4-2-3-1", players: ["Lucas Arcanjo", "Fabiano Souza", "Cacá", "Luan Cândido", "Ramon", "Walace", "Emmanuel Martínez", "Erick", "Matheuzinho", "Diego Tarzia", "Renê"] },
-      away: { formation: "4-3-3", players: ["Léo Jardim", "José Luis Rodríguez", "Carlos Cuesta", "Robert Renan", "Lucas Piton", "Cauan Barros", "Thiago Mendes", "Tchê Tchê", "Andrés Gómez", "Facundo Colidio", "David"] },
+      home: { formation: "4-3-3", players: ["Lucas Arcanjo", "Mateus Silva", "Cacá", "Luan Cândido", "Ramon", "Walace (Gabriel Baralhas or Renato Kayzer)", "Zé Vitor", "Emmanuel Martínez", "Erick", "Matheuzinho (Diego Tarzia)", "Renê"] },
+      away: { formation: "4-3-3", players: ["Léo Jardim", "Paulo Henrique", "Carlos Cuesta", "Robert Renan", "Lucas Piton", "Santiago Sosa", "Thiago Mendes", "Tchê Tchê (Ramon Rique)", "Adson (Puma Rodríguez)", "Facundo Colidio", "Andrés Gómez"] },
       sources: [{ name: "Lance", url: "https://www.lance.com.br/sites-de-apostas/palpites/vitoria-x-vasco-02-09-2026.html", accessedAt: "2026-09-01T06:20:00-03:00" }],
       updatedAt: "2026-09-01T06:20:00-03:00"
     },
     availability: {
       entries: [
         { team: "home", player: "Gabriel Baralhas", status: "doubtful", detail: "Bone fissure; remains a doubt." },
+        { team: "home", player: "Emanuel Brítez", status: "suspended", detail: "Suspended for accumulated yellow cards." },
+        { team: "home", player: "Caíque Gonçalves", status: "suspended", detail: "Suspended for accumulated yellow cards." },
         { team: "home", player: "Diego Tarzia", status: "returning", detail: "Available after serving his first-leg suspension." },
         { team: "home", player: "Nathan Mendes", status: "injured" },
         { team: "home", player: "Camutanga", status: "injured" },
+        { team: "away", player: "Cauan Barros", status: "suspended", detail: "Suspended after the first-leg red card." },
         { team: "away", player: "Jair", status: "injured" },
         { team: "away", player: "Brenner", status: "injured" },
         { team: "away", player: "Johan Rojas", status: "injured" },
