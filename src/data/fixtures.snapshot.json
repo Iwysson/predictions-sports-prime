@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-02T00:28:55.928Z",
+  "generatedAt": "2026-09-02T08:24:17.156Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -13468,7 +13468,7 @@
         "games": [
           {
             "round": 2,
-            "date": "2026-09-01",
+            "date": "2026-09-02",
             "time": "21:00",
             "homeTeam": "Atlético Mineiro",
             "awayTeam": "Cruzeiro",
@@ -13480,7 +13480,7 @@
             "id": "cbf:copa-2026-game-148",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-02T00:00:00Z"
+            "kickoffUtc": "2026-09-03T00:00:00Z"
           },
           {
             "round": 2,
@@ -14542,17 +14542,17 @@
     "super-lig:trabzonspor-vs-genclerbirligi": "401888305"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-09-02T00:28:55.928Z",
-    "la-liga": "2026-09-02T00:28:55.928Z",
-    "bundesliga": "2026-09-02T00:28:55.928Z",
-    "serie-a": "2026-09-02T00:28:55.928Z",
-    "liga-portugal": "2026-09-02T00:28:55.928Z",
-    "ligue-1": "2026-09-02T00:28:55.928Z",
-    "eredivisie": "2026-09-02T00:28:55.928Z",
+    "premier-league": "2026-09-02T08:24:17.156Z",
+    "la-liga": "2026-09-02T08:24:17.156Z",
+    "bundesliga": "2026-09-02T08:24:17.156Z",
+    "serie-a": "2026-09-02T08:24:17.156Z",
+    "liga-portugal": "2026-09-02T08:24:17.156Z",
+    "ligue-1": "2026-09-02T08:24:17.156Z",
+    "eredivisie": "2026-09-02T08:24:17.156Z",
     "brasileirao-serie-a": "2026-09-01T19:00:00-03:00",
     "copa-do-brasil": "2026-08-30T10:44:40.959Z",
-    "efl-cup": "2026-09-02T00:28:55.928Z",
-    "championship": "2026-09-02T00:28:55.928Z",
+    "efl-cup": "2026-09-02T08:24:17.156Z",
+    "championship": "2026-09-02T08:24:17.156Z",
     "super-lig": "2026-08-26T11:54:38.899Z",
     "scottish-premiership": "2026-08-26T11:54:38.899Z"
   },

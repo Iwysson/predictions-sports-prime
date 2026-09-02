@@ -357,6 +357,11 @@ code { color: var(--accent); }
   white-space: nowrap;
 }
 
+.match-time .match-date {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
 .compact-teams {
   display: grid;
   grid-template-columns: 1fr auto 1fr;

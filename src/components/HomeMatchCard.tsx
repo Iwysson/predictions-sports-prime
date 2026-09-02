@@ -13,6 +13,9 @@ export function HomeMatchCard({ match, now }: { match: MatchPreview; now: Date |
   const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");
   const kickoff = getMatchDisplayTime(match);
   const live = isFixtureLiveNow(match, now);
+  const displayDate = match.date
+    ? match.date.split("-").reverse().join("/")
+    : "TBD";
 
   return (
     <article className="match-card">
@@ -22,6 +25,7 @@ export function HomeMatchCard({ match, now }: { match: MatchPreview; now: Date |
           <strong>{league?.name ?? match.league}</strong>
         </div>
         <span className="match-time" aria-label={kickoff.ariaLabel}>
+          <small className="match-date">{displayDate}</small>
           <span aria-hidden="true">◷</span>
           <strong>{kickoff.display}</strong>
           <small>{kickoff.sublabel}</small>
