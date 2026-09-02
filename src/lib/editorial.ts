@@ -6,6 +6,11 @@ import {
 } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
 import { isValidFinalScore } from "@/lib/fixture-status";
+import {
+  isPspFutureEligible,
+  isPspPolicyEnforcedForPrediction,
+  validatePspEditorialStandard,
+} from "@/lib/editorial-standard";
 
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
@@ -340,6 +345,20 @@ export function validateEditorialPredictions(
     const isPublished = prediction.published === true;
     const isDraft = !isPublished;
     const isLegacy = isLegacySourceRecord(prediction);
+
+    // Historical editorial content is immutable. PSP validation/enforcement applies only
+    // while the fixture is still pre-match. Once kickoff has passed, the page is treated
+    // as frozen history and is never forced through a retroactive editorial migration.
+    if (isPublished && isPspFutureEligible(prediction)) {
+      if (isPspPolicyEnforcedForPrediction(prediction) && prediction.editorialStandard !== "psp-v1") {
+        errors.push(`${label}: future/pre-match content published or materially updated under the PSP policy requires editorialStandard: "psp-v1".`);
+      }
+      if (prediction.editorialStandard === "psp-v1") {
+        for (const error of validatePspEditorialStandard(prediction)) {
+          errors.push(`${label}: PSP editorial standard: ${error}.`);
+        }
+      }
+    }
 
     if (seenImports.has(prediction)) {
       errors.push(`${label}: the same prediction object was imported more than once.`);

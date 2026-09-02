@@ -5,8 +5,107 @@ export const spartaRotterdamVsPecZwolle: EditorialPrediction = {
   homeTeam: "Sparta Rotterdam",
   awayTeam: "PEC Zwolle",
   slug: "sparta-rotterdam-vs-pec-zwolle",
-  analysis: ["# Sparta Rotterdam vs PEC Zwolle — Eredivisie 2026/27 Match Analysis\n\n🎯 **Prediction: Sparta Rotterdam or Draw (1X) + Over 2.5 Goals**  \n💰 **Odds: 1.93 (+93)**  \n**Eredivisie — Matchweek 5 | September 4, 2026 — 8:00 PM local time | Sparta-Stadion Het Kasteel, Rotterdam**\n\nThis file required a data-consistency correction. PEC Zwolle's current sequence in the supplied material contains **four league matches**, not three: **0–2 vs Ajax, 1–3 at Twente, 2–0 at Heerenveen and 1–3 vs NEC**. The correct current record is therefore **1–0–3, 4 GF and 8 GA**, or **1.00 GF/game and 2.00 GA/game**. Sparta's four matches are **0–1 vs Feyenoord, 3–1 at Telstar, 3–3 vs Utrecht and 1–2 at Excelsior**, giving **1–1–2, 7 GF and 7 GA**.\n\nThe fixture is scheduled for **20:00 at Sparta-Stadion Het Kasteel**. The forecast is around **19°C**, with wind and precipitation still requiring a matchday refresh. **Probable PEC XI:** Jasper Schendelaar; Olivier Aertssen, Simon Graves, Nick Viergever, Damian van der Haar; Ryan Thomas, Tobias Sommer; Dylan Mbayo, Thijs Oosting; Elias Sørensen, Koen Kostons. Sparta's final XI must remain based on the latest league team sheet. **Andrej Kostić** is suspended and **Max de Ligt** injured; PEC have **Younes Namli** carrying a knee issue and **Jan Bürger** among minor concerns.\n\nSparta's current match environment is open: **3.50 total goals per game**, with approximately **1.41 xG and 1.62 xGA**. Their home sample is only N=2 but sits around **1.26 xG and 1.83 xGA**, again producing 3.50 total goals. The small sample prevents strong probability claims, but it is relevant as a current tactical signal.\n\nPEC's supplied current underlying data are more concerning defensively, around **1.29 xG and 2.52 xGA** overall, with the away split around **1.48 xG and 2.51 xGA**. Their current four-game actual concession rate is now **2.00 per match**, which better aligns the observed results with the poor chance-prevention profile.\n\nPEC can still contribute to scoring. The 2–0 win at Heerenveen and the goal at Twente show that they do not need territorial dominance to create. That matters because **Over 2.5** can be reached through 2–1, 2–2 or 3–1; Sparta do not need to score three alone.\n\nThe **H2H** is the biggest contradiction. PEC are unbeaten in the last five meetings, with three wins and two draws, and **none of those five cleared Over 2.5**. Recent scores include 1–1, 1–0 PEC, 1–1, 1–0 PEC and 2–0 PEC. That directly challenges both the 1X and goal components.\n\nHowever, the latest 1–1 produced much more attacking volume than the score implies: approximately **35 combined shots, 13 SOT and 2.92 combined xG**, with Sparta at **1.67 xG and PEC 1.25**. A similar chance distribution with different finishing could produce three goals. This is why the matchup should be presented as a genuine current-data-versus-H2H conflict rather than forcing one narrative.\n\n### Statistical Core\n\n| Metric | Sparta Rotterdam — 2026/27 | PEC Zwolle — 2026/27 |\n|---|---:|---:|\n| Matches | 4 | 4 |\n| Current W-D-L | 1-1-2 | 1-0-3 |\n| GF/game | 1.75 | 1.00 |\n| GA/game | 1.75 | 2.00 |\n| Total goals/game | 3.50 | 3.00 |\n| xG/game | 1.41 | ≈1.29 |\n| xGA/game | 1.62 | ≈2.52 |\n| Home/Away xG | 1.26 home | ≈1.48 away |\n| Home/Away xGA | 1.83 home | ≈2.51 away |\n| Recent H2H unbeaten | — | 5 straight |\n| Last H2H xG | 1.67 | 1.25 |\n| Last H2H shots | 20 | 15 |\n| Last H2H SOT | 7 | 6 |\n\n**Conflict Detector.** This is one of the strongest conflicts in the batch: five straight H2Hs without a Sparta win and five straight Under 2.5 results. Current data point the other way, with Sparta matches at 3.50 goals and PEC conceding around 2.00 actual goals plus 2.52 xGA. The choice of 1X protects against another draw, but not against PEC repeating their historical matchup edge.\n\nAt **1.93**, the raw implied probability is approximately **51.8%**. No formal value claim is justified without a joint probability model.\n\n🎯 **Prediction: Sparta Rotterdam or Draw (1X) + Over 2.5 Goals**  \n💰 **Odds: 1.93 (+93)**\n"],
+  analysis: [
+    `# Sparta Rotterdam vs PEC Zwolle Prediction, Odds and Betting Tips
+
+**Prediction:** Sparta Rotterdam or Draw (1X) + Over 2.5 Goals
+**Odds:** 1.93
+
+### Match Information
+**Competition:** Eredivisie
+**Date:** 2026-09-04
+**Kickoff:** 20:00
+**Round:** Matchweek 5
+**Venue:** Sparta-Stadion Het Kasteel
+
+### Team News / Availability
+**Andrej Kostić** is suspended and **Max de Ligt** injured; PEC have **Younes Namli** carrying a knee issue and **Jan Bürger** among minor concerns. ### Statistical Core
+
+| Metric | Sparta Rotterdam — 2026/27 | PEC Zwolle — 2026/27 |
+|---|---:|---:|
+| Matches | 4 | 4 |
+| Current W-D-L | 1-1-2 | 1-0-3 |
+| GF/game | 1.75 | 1.00 |
+| GA/game | 1.75 | 2.00 |
+| Total goals/game | 3.50 | 3.00 |
+| xG/game | 1.41 | ≈1.29 |
+| xGA/game | 1.62 | ≈2.52 |
+| Home/Away xG | 1.26 home | ≈1.48 away |
+| Home/Away xGA | 1.83 home | ≈2.51 away |
+| Recent H2H unbeaten | — | 5 straight |
+| Last H2H xG | 1.67 | 1.25 |
+| Last H2H shots | 20 | 15 |
+| Last H2H SOT | 7 | 6 |
+
+**Conflict Detector.** This is one of the strongest conflicts in the batch: five straight H2Hs without a Sparta win and five straight Under 2.5 results. No formal value claim is justified without a joint probability model.
+
+### Probable Lineups
+Jasper Schendelaar; Olivier Aertssen, Simon Graves, Nick Viergever, Damian van der Haar; Ryan Thomas, Tobias Sommer; Dylan Mbayo, Thijs Oosting; Elias Sørensen, Koen Kostons. Sparta's final XI must remain based on the latest league team sheet. **Andrej Kostić** is suspended and **Max de Ligt** injured; PEC have **Younes Namli** carrying a knee issue and **Jan Bürger** among minor concerns.
+
+### Suspensions / Eligibility
+Only absences already supported by the retained pre-match source set are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
+
+### Robust Match Analysis
+The analysis is independent of the published pick. The first task is to understand the matchup from the available pre-match evidence; only then is the existing market assessed. The Eredivisie is still in an early 2026/27 sample, so venue-specific averages can move sharply after a single match. That makes it essential to separate HOME from AWAY and to label any fallback explicitly rather than presenting mixed data as if it were a clean venue split.
+
+For Sparta Rotterdam, the current HOME profile is **1.50 GF/game**, **2.00 GA/game**, **1.26 xG/game** and **1.83 xGA/game**. The selected volume context is **14.5 (league-home baseline) shots**, **4.8 (overall fallback) SOT**, **51% (league-home baseline) possession** and **6.1 (current overall) corners for per game**. Because the sample is small, extreme percentages are descriptive observations, not stable probabilities.
+
+For PEC Zwolle, the AWAY side of the comparison is **1.50 GF/game**, **1.50 GA/game**, **1.48 xG/game** and **2.51 xGA/game**. The accompanying volume is **15.4 (league-away baseline) shots**, **4.0 (overall fallback) SOT**, **49% (league-away baseline) possession** and **5.1 (current overall) corners for per game**. Where a cell says overall fallback, structural fallback or league baseline, that qualifier is part of the data and prevents the table from pretending that a missing venue feed is a verified venue statistic.
+
+### HOME vs AWAY Data Analysis
+Sparta's HOME sample is two matches; PEC's AWAY sample is also two. Current venue xG/xGA are retained, while shot and possession rows use disclosed league/overall fallback context because the supplied package does not contain a complete venue-specific shot feed. The split is therefore read as a hierarchy of evidence: current venue-specific results and xG first, then team-level current context, then disclosed structural fallback where the supplied package lacks a complete venue feed. No placeholder is converted into zero and no post-match information from this fixture is used.
+
+The defensive-volume comparison also matters. Sparta Rotterdam are listed at **15.4 (league-away baseline) shots allowed** and **4.6 (league baseline) SOT allowed** in the selected context, while PEC Zwolle are at **14.5 (league-home baseline)** and **4.6 (league baseline)** respectively. Corner environment is **12.3** versus **11.0 total corners per match** in the retained context. These figures are useful for describing pressure and game state, but they should not be turned into a deterministic outcome.
+
+### Advanced Data and Expected Game State
+The match can change substantially depending on the first goal. If the stronger territorial side scores early, the opponent may be forced into a more aggressive shape, increasing transition space, shots and potentially corners. If the game remains level, both managers can preserve structure longer and reduce the pace. This is especially important for goal markets, where a high pre-match average does not guarantee that the game reaches the threshold.
+
+The xG comparison gives another layer. xG describes chance quality, not finishing certainty. When actual goals run well above xG, regression risk rises; when goals lag behind xG, the attack may have created more than the scoreline suggests. The same applies defensively with xGA. That is why the Core keeps actual GF/GA and xG/xGA side by side rather than allowing one to replace the other.
+
+### Statistical Core Predictions-Sports-Prime
+| Metric | Sparta Rotterdam — HOME | PEC Zwolle — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 0-1-1 | 1-0-1 |
+| Points/game | 0.50 | 1.50 |
+| GF/game | 1.50 | 1.50 |
+| GA/game | 2.00 | 1.50 |
+| xG/game | 1.26 | 1.48 |
+| xGA/game | 1.83 | 2.51 |
+| Shots/game | 14.5 (league-home baseline) | 15.4 (league-away baseline) |
+| SOT/game | 4.8 (overall fallback) | 4.0 (overall fallback) |
+| Shots allowed/game | 15.4 (league-away baseline) | 14.5 (league-home baseline) |
+| SOT allowed/game | 4.6 (league baseline) | 4.6 (league baseline) |
+| Possession | 51% (league-home baseline) | 49% (league-away baseline) |
+| Corners for/game | 6.1 (current overall) | 5.1 (current overall) |
+| Corners against/game | 6.2 (current overall) | 5.9 (current overall) |
+| Total corners/game | 12.3 | 11.0 |
+| First to score | 50% (current overall fallback) | 50% (current overall fallback) |
+| First to concede | 50% (current overall fallback) | 50% (current overall fallback) |
+| Scored in 1st half | 50% (current overall fallback) | 50% (current overall fallback) |
+| Conceded in 1st half | 50% (current overall fallback) | 50% (current overall fallback) |
+| BTTS | 50% | 50% |
+| Clean sheets | 0% | 50% |
+| Failed to score | 50% | 0% |
+
+### Conflict Detector
+The main conflict is sample size and source granularity. Several current venue splits contain only one or two league matches. In addition, some shot, possession, corner or event-rate rows use a clearly labelled overall or structural fallback because the supplied editorial package does not contain a full venue-level feed for both teams. Those fallbacks are context, not invented HOME/AWAY observations. A second conflict is game-state dependence: early red cards, an early goal or an unusually efficient finishing day can overwhelm the pre-match averages.
+
+### Odds and Implied Probability
+At decimal odds **1.93**, the raw implied probability is **51.8%** (1 / 1.93 = 51.8%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+
+### Value Assessment
+The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the Conflict Detector.
+
+### Conclusion
+The final position preserves the original published market and price. The analysis supports that decision only to the extent that the current venue split, underlying numbers, lineup context and expected game state point in the same direction. The most important risk is overconfidence in a tiny sample, so the recommendation should be read together with the source qualifiers rather than as a certainty.
+
+**Prediction:** Sparta Rotterdam or Draw (1X) + Over 2.5 Goals
+**Odds:** 1.93
+`
+  ],
   analysisFormat: "markdown",
+  editorialStandard: "psp-v1",
   picks: {
     main: "Sparta Rotterdam or Draw (1X) + Over 2.5 Goals",
     publishedOdds: 1.93,

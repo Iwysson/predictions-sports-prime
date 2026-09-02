@@ -290,7 +290,7 @@ export const atléticoMineiroVsCruzeiro: EditorialPrediction = {
     }
   },
   matchInfo: {
-    date: "2026-09-02",
+    date: "2026-09-01",
     time: "21:00",
     round: "Quarter-final — Second Leg",
     venue: "Arena MRV"

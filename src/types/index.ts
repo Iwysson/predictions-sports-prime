@@ -170,6 +170,10 @@ export type EditorialPrediction = {
 
   // Opt-in rich rendering for supplied long-form Markdown analyses.
   analysisFormat?: "markdown";
+
+  // Opt-in marker for the strict Predictions-Sports-Prime editorial contract.
+  // New and fully migrated predictions must use psp-v1.
+  editorialStandard?: "psp-v1";
   seoTitle?: string;
 
   // Optional note shown below the analysis.
@@ -225,6 +229,10 @@ export type Match = {
   title: string;
   analysis: string[];
   analysisFormat?: "markdown";
+
+  // Opt-in marker for the strict Predictions-Sports-Prime editorial contract.
+  // New and fully migrated predictions must use psp-v1.
+  editorialStandard?: "psp-v1";
   seoTitle?: string;
   comment?: string;
   predictions: PredictionItem[];

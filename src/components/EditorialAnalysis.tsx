@@ -28,6 +28,27 @@ function MarkdownTable({ lines }: { lines: string[] }) {
   );
 }
 
+
+function stripStructuredStatisticalCore(markdown: string) {
+  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+  const output: string[] = [];
+  let skipping = false;
+
+  for (const line of lines) {
+    if (/^#{1,6}\s+Statistical Core Predictions-Sports-Prime\s*$/i.test(line.trim())) {
+      skipping = true;
+      continue;
+    }
+    if (skipping) {
+      if (!line.trim() || line.trim().startsWith("|")) continue;
+      skipping = false;
+    }
+    output.push(line);
+  }
+
+  return output.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+}
+
 function MarkdownAnalysis({ markdown }: { markdown: string }) {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   const blocks: ReactNode[] = [];
@@ -84,6 +105,8 @@ function MarkdownAnalysis({ markdown }: { markdown: string }) {
 }
 
 export function EditorialAnalysis({ analysis, format }: { analysis: string[]; format?: "markdown" }) {
-  if (format === "markdown") return <MarkdownAnalysis markdown={analysis.join("\n\n")} />;
+  if (format === "markdown") {
+    return <MarkdownAnalysis markdown={stripStructuredStatisticalCore(analysis.join("\n\n"))} />;
+  }
   return <>{analysis.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</>;
 }

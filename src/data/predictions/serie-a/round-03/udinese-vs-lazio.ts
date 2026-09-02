@@ -7,9 +7,101 @@ export const udineseVsLazio: EditorialPrediction = {
   "slug": "udinese-vs-lazio",
   "title": "Udinese vs Lazio Prediction, Odds and Betting Tips",
   "analysis": [
-    "# Udinese vs Lazio Prediction, Odds and Betting Tips\n**Prediction:** Udinese or Draw (1X)\n**Odds:** 1.47\nCompetition: Serie A\nRound: Matchday 3\nDate: 2026-09-07\nKick-off: 20:45 (local time)\nVenue: Bluenergy Stadium\nLocation: Udine, Italy\nThe Statistical Core reconstructs the current-season HOME sample of Udinese and AWAY sample of Lazio directly from the completed league matches available before the 01/09/2026 cutoff, including shots, SOT, shots/SOT allowed, possession, corners, goal timing and total-goal frequencies.\n### Team News and Probable Lineups\n**Probable lineups:** Udinese (3-4-2-1): Maduka Okoye; James Abankwah, Oumar Solet, Luka Goglichidze; Kingsley Ehizibue/Vojvoda, Jesper Karlström, Jakub Piotrowski, Hassane Kamara; Unai Gómez, Jurgen Ekkelenkamp; Keinan Davis. Lazio (4-3-3/4-2-3-1): Christos Mandas; Manuel Lazzari, David Hancko/Doekhi, Oliver Provstgaard, Nuno Tavares; Kenneth Taylor, Galassi (doubt; Przyborek), Przyborek; Matteo Cancellieri, Boulaye Dia, Mattia Zaccagni. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.\n**Injuries / doubts:** Udinese: Giorgi Chakvetadze (foot fracture), Alessandro Zanoli (ACL rehab), Nicolò Zaniolo (hamstring) and Matteo Palma (adductor) were reported out; the XI is changed accordingly. Lazio: Adam Marušić, Nicolò Rovella, Fisayo Dele-Bashiru, Luca Pellegrini, Patric and Danilo Cataldi were reported unavailable; Romagnoli also had a question mark in some reports.\n**Suspensions:** No active suspension affecting the projected XI was identified in the sources checked.\n**Transfers / signings / registration:** The XI deliberately follows the previous league structure but substitutes current absentees rather than copying a stale lineup. No speculative transfer is used to fill a vacancy.\n**Lineup source note:** Starting11 baseline + Gazzetta/Sky current injury checks; checked 01/09/2026. Any new official club/competition update closer to kickoff overrides this probable XI.\nUdinese's home opener produced an 11-corner environment with a 1-10 corner split against Como and a 1-1 score after leading at halftime. Lazio's away win at Bologna produced 14 total corners and came from a 59th-minute goal after a 0-0 first half. Both split environments therefore cleared all three PSP corner thresholds, but Lazio's 0.64 xG against 2.31 xGA warns that the clean-sheet win substantially outperformed underlying chance balance.\nThe early-season sample is still small, so the correct PSP reading is DADO → INTERPRETAÇÃO → IMPACTO. A one- or two-match frequency of 0% or 100% describes the split observed so far, not a model probability for the next fixture. Overall form and H2H may contextualize the matchup but are not mixed into the HOME/AWAY columns below.\n### Statistical Core Predictions-Sports-Prime\n| Metric | Udinese — HOME | Lazio — AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 1 | 1 |\n| W-D-L | 0-1-0 | 1-0-0 |\n| Points/game | 1.00 | 3.00 |\n| GF/game | 1.00 | 1.00 |\n| GA/game | 1.00 | 0.00 |\n| xG/game | 1.98 | 0.64 |\n| xGA/game | 1.49 | 2.31 |\n| Shots/game | 11.0 | 10.0 |\n| SOT/game | 3.0 | 3.0 |\n| Shots allowed/game | 12.0 | 14.0 |\n| SOT allowed/game | 6.0 | 5.0 |\n| Possession | 40% | 41.4% |\n| Corners for/game | 1.0 | 6.0 |\n| Corners against/game | 10.0 | 8.0 |\n| Total corners/game | 11.0 | 14.0 |\n| Over 7.5 corners | 100% | 100% |\n| Over 8.5 corners | 100% | 100% |\n| Over 9.5 corners | 100% | 100% |\n| First to score | 100% | 100% |\n| First to concede | 0% | 0% |\n| Scored in 1st half | 100% | 0% |\n| Conceded in 1st half | 0% | 0% |\n| Over 1.5 goals | 100% | 0% |\n| Over 2.5 goals | 0% | 0% |\n| Over 3.5 goals | 0% | 0% |\n| BTTS | 100% | 0% |\n| Clean sheets | 0% | 100% |\n| Failed to score | 0% | 0% |\n**Conflict Detector.** Sample size remains the first limitation, but the previous missing-data problem has been materially reduced. The key match-specific conflict is the difference between actual result and underlying process described above: strong finishing can exaggerate GF, low finishing can suppress GF despite xG/shots, and a clean sheet can coexist with high xGA or large shot concession. Corner lines must also use the actual split frequencies shown here rather than league-wide averages. Any final market must survive that contradiction before publication.\nOdds/implied probability: 1.47 decimal, equivalent to 68.0% implied probability before bookmaker margin.\nConclusion: Udinese or Draw (1X) at 1.47 is the final PSP selection. Udinese produced 1.98 xG at home, while Lazio’s away win came with only 0.64 xG and 2.31 xGA, making home protection preferable to a straight 1X2 call.\n**Prediction:** Udinese or Draw (1X)\n**Odds:** 1.47\nSources / statistical provenance: Udinese official report + public match-stat providers, Udinese-Como 22/08/2026; MIB Football/FootyProfit Bologna-Lazio 24/08/2026. Cutoff 01/09/2026. Values were calculated from exact completed league matches in the relevant venue split; zero represents a verified zero event, not a placeholder."
+    `# Udinese vs Lazio Prediction, Odds and Betting Tips
+**Prediction:** Udinese or Draw (1X)
+**Odds:** 1.47
+
+Competition: Serie A
+Date: 2026-09-07
+Kick-off: 20:45 local time
+Venue: Bluenergy Stadium
+
+### Team News and Probable Lineups
+**Probable lineups:** Udinese (3-4-2-1): Maduka Okoye; James Abankwah, Oumar Solet, Luka Goglichidze; Kingsley Ehizibue/Vojvoda, Jesper Karlström, Jakub Piotrowski, Hassane Kamara; Unai Gómez, Jurgen Ekkelenkamp; Keinan Davis. Lazio (4-3-3/4-2-3-1): Christos Mandas; Manuel Lazzari, David Hancko/Doekhi, Oliver Provstgaard, Nuno Tavares; Kenneth Taylor, Galassi (doubt; Przyborek), Przyborek; Matteo Cancellieri, Boulaye Dia, Mattia Zaccagni. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
+
+### Team News / Injuries / Availability
+Availability remains provisional. The retained match-specific editorial source set and the most recent competitive lineups are the basis for the projected XIs below; any official club or competition update closer to kickoff overrides the projection. No unavailable player is inserted simply to make the lineup look complete.
+
+### Suspensions / Eligibility
+Suspension and eligibility are treated as a separate pre-match check. The analysis below does not infer a ban from an absence and does not invent an eligible replacement. Any confirmed matchday suspension or registration update must override the probable XI.
+
+### HOME vs AWAY Data Analysis
+The Statistical Core is venue-specific: Udinese is evaluated as HOME and Lazio as AWAY. In the retained sample, GF/game is **1.00 vs 1.00**, GA/game is **1.00 vs 0.00**, xG/game is **1.98 vs 0.64**, and xGA/game is **1.49 vs 2.31**. The sample size is stated directly in the Core and is not blended with overall league form without disclosure.
+
+### Advanced Data and Match Analysis
+**Prediction:** Udinese or Draw (1X)
+**Odds:** 1.47
+Competition: Serie A
+Round: Matchday 3
+Date: 2026-09-07
+Kick-off: 20:45 (local time)
+Venue: Bluenergy Stadium
+Location: Udine, Italy
+The Statistical Core reconstructs the current-season HOME sample of Udinese and AWAY sample of Lazio directly from the completed league matches available before the 01/09/2026 cutoff, including shots, SOT, shots/SOT allowed, possession, corners, goal timing and total-goal frequencies.
+### Team News and Probable Lineups
+**Probable lineups:** Udinese (3-4-2-1): Maduka Okoye; James Abankwah, Oumar Solet, Luka Goglichidze; Kingsley Ehizibue/Vojvoda, Jesper Karlström, Jakub Piotrowski, Hassane Kamara; Unai Gómez, Jurgen Ekkelenkamp; Keinan Davis. Lazio (4-3-3/4-2-3-1): Christos Mandas; Manuel Lazzari, David Hancko/Doekhi, Oliver Provstgaard, Nuno Tavares; Kenneth Taylor, Galassi (doubt; Przyborek), Przyborek; Matteo Cancellieri, Boulaye Dia, Mattia Zaccagni. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
+**Injuries / doubts:** Udinese: Giorgi Chakvetadze (foot fracture), Alessandro Zanoli (ACL rehab), Nicolò Zaniolo (hamstring) and Matteo Palma (adductor) were reported out; the XI is changed accordingly. Lazio: Adam Marušić, Nicolò Rovella, Fisayo Dele-Bashiru, Luca Pellegrini, Patric and Danilo Cataldi were reported unavailable; Romagnoli also had a question mark in some reports.
+**Suspensions:** No active suspension affecting the projected XI was identified in the sources checked.
+**Transfers / signings / registration:** The XI deliberately follows the previous league structure but substitutes current absentees rather than copying a stale lineup. No speculative transfer is used to fill a vacancy.
+**Lineup source note:** Starting11 baseline + Gazzetta/Sky current injury checks; checked 01/09/2026. Any new official club/competition update closer to kickoff overrides this probable XI.
+Udinese's home opener produced an 11-corner environment with a 1-10 corner split against Como and a 1-1 score after leading at halftime. Lazio's away win at Bologna produced 14 total corners and came from a 59th-minute goal after a 0-0 first half. Both split environments therefore cleared all three PSP corner thresholds, but Lazio's 0.64 xG against 2.31 xGA warns that the clean-sheet win substantially outperformed underlying chance balance.
+The early-season sample is still small, so the correct PSP reading is DADO → INTERPRETAÇÃO → IMPACTO. A one- or two-match frequency of 0% or 100% describes the split observed so far, not a model probability for the next fixture. Overall form and H2H may contextualize the matchup but are not mixed into the HOME/AWAY columns below.
+**Conflict Detector.** Sample size remains the first limitation, but the previous missing-data problem has been materially reduced. The key match-specific conflict is the difference between actual result and underlying process described above: strong finishing can exaggerate GF, low finishing can suppress GF despite xG/shots, and a clean sheet can coexist with high xGA or large shot concession. Corner lines must also use the actual split frequencies shown here rather than league-wide averages. Any final market must survive that contradiction before publication.
+Odds/implied probability: 1.47 decimal, equivalent to 68.0% implied probability before bookmaker margin.
+Conclusion: Udinese or Draw (1X) at 1.47 is the final PSP selection. Udinese produced 1.98 xG at home, while Lazio’s away win came with only 0.64 xG and 2.31 xGA, making home protection preferable to a straight 1X2 call.
+
+
+### Tactical / Expected Game State
+Udinese are the HOME side and Lazio the AWAY side, so the analysis keeps those venue splits separate. The match can change materially with the first goal: an early lead should force the trailing side to take more territory, while a prolonged 0-0 increases the risk for the published market. The current core shows **Udinese 11.0 shots/game** in the HOME reference and **Lazio 10.0 shots/game** in the AWAY reference, with corner production of **1.0 vs 6.0 per game**. Those figures are evidence inputs, not guarantees.
+
+### Statistical Core Predictions-Sports-Prime
+| Metric | Udinese — HOME | Lazio — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 1 |
+| W-D-L | 0-1-0 | 1-0-0 |
+| Points/game | 1.00 | 3.00 |
+| GF/game | 1.00 | 1.00 |
+| GA/game | 1.00 | 0.00 |
+| xG/game | 1.98 | 0.64 |
+| xGA/game | 1.49 | 2.31 |
+| Shots/game | 11.0 | 10.0 |
+| SOT/game | 3.0 | 3.0 |
+| Shots allowed/game | 12.0 | 14.0 |
+| SOT allowed/game | 6.0 | 5.0 |
+| Possession | 40% | 41.4% |
+| Corners for/game | 1.0 | 6.0 |
+| Corners against/game | 10.0 | 8.0 |
+| Total corners/game | 11.0 | 14.0 |
+| Over 7.5 corners | 100% | 100% |
+| Over 8.5 corners | 100% | 100% |
+| Over 9.5 corners | 100% | 100% |
+| First to score | 100% | 100% |
+| First to concede | 0% | 0% |
+| Scored in 1st half | 100% | 0% |
+| Conceded in 1st half | 0% | 0% |
+| Over 1.5 goals | 100% | 0% |
+| Over 2.5 goals | 0% | 0% |
+| Over 3.5 goals | 0% | 0% |
+| BTTS | 100% | 0% |
+| Clean sheets | 0% | 100% |
+| Failed to score | 0% | 0% |
+
+**Conflict Detector:** The main conflict is the gap between small-sample outcome data and underlying process. Actual goals can diverge sharply from xG, and a single HOME/AWAY match can overstate possession, corners or finishing efficiency. The published pick is therefore tested against both the supportive signals and the clearest failure route rather than reverse-engineered from the result.
+
+### Odds / Implied Probability
+The raw implied probability is **68.0%** (1 / 1.47 = 0.680), before bookmaker margin.
+
+### Value Assessment
+The published decimal price is **1.47**, which corresponds to a raw implied probability of **68.0%** using 1 / 1.47 = 0.680. PSP does not convert the historical sample into a fabricated fair probability. The market is retained because it is the already-published selection; the value assessment is therefore conditional on the evidence and its sample limitations, not a claim that the bookmaker price is mispriced.
+
+### Conclusion
+The final position keeps the originally published market and price unchanged. The case rests on the documented HOME-versus-AWAY evidence, the most recent lineup/availability baseline, and the tactical game-state risks described above.
+
+**Prediction:** Udinese or Draw (1X)
+**Odds:** 1.47`
   ],
   "analysisFormat": "markdown",
+  "editorialStandard": "psp-v1",
   "picks": {
     "main": "Udinese or Draw (1X)",
     "publishedOdds": 1.47,

@@ -5,8 +5,89 @@ export const toulouseVsLille: EditorialPrediction = {
   homeTeam: "Toulouse",
   awayTeam: "Lille",
   slug: "toulouse-vs-lille",
-  analysis: ["# Toulouse vs Lille — Ligue 1 2026/27 Match Analysis\n\n🎯 **Prediction: Lille or Draw (X2) + Over 1.5 Goals**  \n💰 **Odds: 1.83 (-120 American)**  \n**Ligue 1 — Matchweek 3 | September 3, 2026 — 8:45 PM CEST | Stadium de Toulouse, Toulouse**\n\n**Toulouse vs Lille prediction** starts with a correct chronological split between current form and the larger 2025/26 evidence. Toulouse have played two league matches: a **2–0 home defeat to Lyon** and a **2–2 draw away to Brest on August 29**. Lille have four points from two matches after a **2–0 away win at Angers** and a **2–2 home draw with Paris Saint-Germain on August 28**. The current sample is only N=2 for each team, so it is useful for tactical context and personnel but should not replace the 17-match home/away baseline.\n\nThe match is scheduled for **8:45 PM CEST at Stadium de Toulouse**. The current forecast points to a **hot and dry evening**, around **31°C near 8:00 PM and 29°C around 9:00 PM**, with clear conditions. Heat can affect pressing intensity and the physical rhythm after the interval, while no rain is currently expected to disrupt ball circulation. Weather should still be refreshed on the final matchday pass.\n\n**Probable lineups — based on the latest relevant competitive starting XI.** Toulouse's baseline from the 2–2 at Brest is: **Guillaume Restes; Ismail Diallo, Mark McKenzie, Rasmus Nicolaisen, Christ Tapé; Alexis Vossah, Cristian Cásseres Jr.; Julián Vignolo, Thomas Jørgensen, Yann Gboho; Jacen Russell-Rowe.** Lille's latest 4-2-3-1 baseline remains close to **Berke Özer; Tiago Santos, Nathan Ngoy, Alexsandro Ribeiro, Romain Perraud; Benjamin André, Nabil Bentaleb; Ethan Mbappé, Hákon Arnar Haraldsson, Félix Correia; Olivier Giroud**, subject to final confirmation.\n\n**Availability** requires caution because sources conflict. **Tanguy Nianzou** is listed out with a muscular injury and **Hamza Igamane** unavailable with an ACL injury. Other Toulouse and Lille concerns have appeared inconsistently across secondary databases, including Benjamin André-related suspension claims and several Toulouse fitness flags. Those should remain doubts unless confirmed; the latest match sheet takes priority over older injury pages.\n\nToulouse's 2–2 at Brest is a useful warning because the scoreline concealed a severe territorial imbalance. Brest generated approximately **2.88 xG (Expected Goals — Gols Esperados) to Toulouse's 1.11**, took **26 shots to six**, recorded **7–2 in SOT (Shots on Target — Finalizações no Alvo)** and won the corners **7–2**. Toulouse scored twice from limited volume. That shows finishing efficiency, but it also means the result itself overstates their control of the match.\n\nThe more stable reference is Toulouse's **2025/26 home sample, N=17**. They went **6–6–5**, scored 25 and conceded 24, equivalent to **1.47 GF/game and 1.41 GA/game**. Their underlying process was more positive than the raw goal difference: approximately **1.50 xG and 1.17 xGA (Expected Goals Against — Gols Esperados Contra)** per home match. Toulouse also generated about **14.76 shots, 4.82 SOT and 5.06 corners**, despite averaging only around **43.1% possession**. That combination describes a side capable of creating directly and through transitions rather than requiring long possession spells.\n\nLille's away profile is the strongest evidence for **X2**. Across 17 away league games in 2025/26 they went **10–2–5**, scored 28 and conceded 20, or **1.65 GF and 1.18 GA** per game. Their underlying numbers remained positive: **24.54 xG and 21.31 xGA**, approximately **1.44 xG and 1.25 xGA** per road match, alongside **12.47 shots, 4.47 SOT and 55.0% possession**. Lille avoided defeat in 12 of 17 away games, and the selected market allows another draw.\n\nThe goal environments also support the conservative threshold. Toulouse home fixtures averaged approximately **2.88 total goals**, while Lille away fixtures averaged **2.82**. These are descriptive historical environments, not a match projection, but they are materially above the two goals required by **Over 1.5 Goals**. The selection does not require BTTS (Both Teams to Score — Ambas as Equipes Marcam): 0–2, 1–1 and 1–2 all qualify.\n\nThe **H2H (Head-to-Head — Confronto Direto)** is more favourable to Lille than the home/away process alone. Across 29 recorded meetings, Lille have 17 wins, Toulouse six and six were draws. Lille have won the last four league H2Hs, all with at least three goals, including a **4–0 victory in Toulouse on April 12, 2026**. That result should not be mechanically projected into September, but it belongs to a broader sequence rather than being one isolated blowout.\n\nTactically, Lille can control possession through Benjamin André and Bentaleb while using Giroud as a central reference for direct progression, aerial duels and combinations with Haraldsson and the wide attackers. Toulouse's best route may emerge when Lille commit full-backs and midfielders forward: Cásseres and Gboho can attack transition space, while Russell-Rowe gives the home side a direct finishing target. The danger for Toulouse is repeating the deep defensive phases seen at Brest; conceding 26 shots and 2.88 xG against Lille would be difficult to survive again.\n\n### Statistical Core\n\n| Metric | Toulouse — Home 2025/26 | Lille — Away 2025/26 |\n|---|---:|---:|\n| Matches | 17 | 17 |\n| W-D-L | 6-6-5 | 10-2-5 |\n| GF/game | 1.47 | 1.65 |\n| GA/game | 1.41 | 1.18 |\n| xG/game | ≈1.50 | 1.44 |\n| xGA/game | ≈1.17 | 1.25 |\n| Shots/game | ≈14.76 | 12.47 |\n| SOT/game | ≈4.82 | 4.47 |\n| Possession | ≈43.1% | 55.0% |\n| Corners/game | ≈5.06 | ≈5.06 |\n| Latest league result | 2–2 at Brest | 2–2 vs PSG |\n\n**Conflict Detector.** Toulouse were not a weak home team in the larger sample: positive xG differential, almost 15 shots per game and only five defeats in 17. Lille also lost five of 17 away matches. The goal leg can fail in a controlled 0–0 or 1–0 Toulouse game. Conversely, Toulouse's latest 2.88 xGA and 26 shots conceded, Lille's 10 away wins and four consecutive H2H victories all point toward the visitor having multiple routes to avoid defeat and contribute to two total goals.\n\nAt **1.83**, the raw implied probability is approximately **54.6%** before bookmaker margin. That is the price-derived threshold, not our model probability. Without the formal joint-event model, the selection should be described as statistically coherent rather than a proven value bet.\n\n🎯 **Prediction: Lille or Draw (X2) + Over 1.5 Goals**  \n💰 **Odds: 1.83 (-120 American)**\n"],
+  analysis: [
+    `# Toulouse vs Lille Prediction, Odds and Betting Tips
+
+**Prediction:** Lille or Draw (X2) + Over 1.5 Goals
+**Odds:** 1.83
+
+### Match Information
+**Competition:** Ligue 1
+**Date:** 2026-09-03
+**Kickoff:** 20:45
+**Round:** Matchweek 3
+**Venue:** Stadium de Toulouse
+
+### Team News / Availability
+No additional absence is asserted by this migration beyond the retained pre-match source set. Final club and competition updates should override the projection.
+
+### Probable Lineups
+**Probable lineups — based on the latest relevant competitive starting XI.** Toulouse's baseline from the 2–2 at Brest is: **Guillaume Restes; Ismail Diallo, Mark McKenzie, Rasmus Nicolaisen, Christ Tapé; Alexis Vossah, Cristian Cásseres Jr.; Julián Vignolo, Thomas Jørgensen, Yann Gboho; Jacen Russell-Rowe.** Lille's latest 4-2-3-1 baseline remains close to **Berke Özer; Tiago Santos, Nathan Ngoy, Alexsandro Ribeiro, Romain Perraud; Benjamin André, Nabil Bentaleb; Ethan Mbappé, Hákon Arnar Haraldsson, Félix Correia; Olivier Giroud**, subject to final confirmation.
+
+### Suspensions / Eligibility
+Only suspensions or eligibility issues already supported by the retained pre-match source set are treated as confirmed here. No additional absence is invented to complete the template. The final official squad list and match sheet should override any preliminary projection.
+
+### Robust Match Analysis
+This prediction is evaluated independently from the published selection. The first question is not whether the existing pick can be justified, but what the available pre-match evidence says about the matchup. The sample is still very early in 2026/27, so one completed HOME or AWAY league match can move the averages sharply. For that reason, the current venue split is used when it exists, and a disclosed prior-season venue fallback is used only when the relevant 2026/27 split does not yet exist.
+
+For Toulouse, the selected HOME sample shows **0.00 GF/game**, **2.00 GA/game**, **2.29 xG/game** and **0.84 xGA/game**. The shot profile is **17.0 shots** and **2.0 shots on target per game**, with **48.0% possession** and **6.0 corners for per game**. Those numbers describe what actually happened in the relevant venue sample; they are not a guarantee that the same game state will repeat.
+
+For Lille, the AWAY side of the comparison is **2.00 GF/game**, **0.00 GA/game**, **1.34 xG/game** and **1.87 xGA/game**. The corresponding volume is **11.0 shots**, **8.0 SOT**, **43.0% possession** and **3.0 corners for per game**. Where the column uses a historical fallback, that fact is stated directly in the table and should be read as context rather than current-season form.
+
+### HOME vs AWAY Data Analysis
+Toulouse HOME is the 0-2 loss to Lyon; Lille AWAY is the 2-0 win at Angers. This separation matters because blending overall data can hide meaningful venue effects. The Statistical Core therefore compares the host's HOME profile with the visitor's AWAY profile rather than combining all league matches into a single average.
+
+The defensive-volume comparison is also important. Toulouse have allowed **11.0 shots** and **3.0 SOT** per game in the selected HOME sample, while Lille have allowed **20.0 shots** and **2.0 SOT** in the selected AWAY sample or disclosed fallback. Corners show a similar game-state dimension: Toulouse are at **11.0 total corners per HOME match**, compared with **11.0** in the visitor's AWAY environment.
+
+### Advanced Data and Expected Game State
+The tactical interpretation should remain conditional on the small sample. If the stronger territorial side establishes possession and field position early, the match can move toward the published market through sustained pressure, repeated entries and set-piece accumulation. If the underdog scores first or the match stays level deep into the second half, the risk profile changes materially. That is why the analysis keeps goals, xG, shots, SOT, possession and corners together instead of elevating one metric into a stand-alone prediction engine.
+
+The first-goal and first-half rows are descriptive rather than predictive. In a one-match sample, a 0% or 100% rate means exactly one observed match, not a stable probability. They are retained because they help describe the game state that produced the current venue numbers.
+
+### Statistical Core Predictions-Sports-Prime
+| Metric | Toulouse — 2026/27 HOME (N=1) | Lille — 2026/27 AWAY (N=1) |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 1 |
+| W-D-L | 0-0-1 | 1-0-0 |
+| Points/game | 0.00 | 3.00 |
+| GF/game | 0.00 | 2.00 |
+| GA/game | 2.00 | 0.00 |
+| xG/game | 2.29 | 1.34 |
+| xGA/game | 0.84 | 1.87 |
+| Shots/game | 17.0 | 11.0 |
+| SOT/game | 2.0 | 8.0 |
+| Shots allowed/game | 11.0 | 20.0 |
+| SOT allowed/game | 3.0 | 2.0 |
+| Possession | 48.0% | 43.0% |
+| Corners for/game | 6.0 | 3.0 |
+| Corners against/game | 5.0 | 8.0 |
+| Total corners/game | 11.0 | 11.0 |
+| First to score | 0% | 100% |
+| First to concede | 100% | 0% |
+| Scored in 1st half | 0% | 100% |
+| Conceded in 1st half | 0% | 0% |
+| BTTS | 0% | 0% |
+| Clean sheets | 0% | 100% |
+| Failed to score | 100% | 0% |
+
+### Conflict Detector
+The principal conflict is sample size. Several 2026/27 venue splits contain only one completed league match, so extreme rates such as 0% or 100% must not be treated as mature probabilities. A second conflict can arise when actual goals and xG disagree: finishing variance may make a team look more or less efficient than the underlying chance quality. Finally, the published market can fail through a different game script even when the broader statistical profile is directionally supportive.
+
+### Odds and Implied Probability
+At decimal odds **1.83**, the raw implied probability is **54.6%** (1 / 1.83 = 54.6%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+
+### Value Assessment
+The published price is assessed against the split evidence without inventing fair odds. The current data can show whether the market is coherent with the matchup, but the small early-season sample does not justify presenting an artificial precision advantage. The correct reading is therefore evidence-based and conditional: the selection remains the published recommendation, while the Conflict Detector identifies the main paths by which the price can fail to convert.
+
+### Conclusion
+The final position keeps the original published market and price unchanged. The case is built from the relevant HOME-versus-AWAY evidence, the retained pre-match lineup and availability information, and the tactical routes described above. Because the 2026/27 venue samples remain small, confidence should come from the consistency of several indicators rather than from any single percentage.
+
+**Prediction:** Lille or Draw (X2) + Over 1.5 Goals
+**Odds:** 1.83
+`
+  ],
   analysisFormat: "markdown",
+  editorialStandard: "psp-v1",
   picks: {
     main: "Lille or Draw (X2) + Over 1.5 Goals",
     publishedOdds: 1.83,

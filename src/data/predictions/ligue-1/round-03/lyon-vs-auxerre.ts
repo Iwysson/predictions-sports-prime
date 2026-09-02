@@ -5,8 +5,89 @@ export const lyonVsAuxerre: EditorialPrediction = {
   homeTeam: "Lyon",
   awayTeam: "Auxerre",
   slug: "lyon-vs-auxerre",
-  analysis: ["# Lyon vs Auxerre — Ligue 1 2026/27 Match Analysis\n\n🎯 **Prediction: Lyon to Win + Over 1.5 Goals**  \n💰 **Odds: 1.80 (-125)**  \n**Ligue 1 — Matchweek 3 | September 4, 2026 — 7:00 PM local time | Groupama Stadium, Décines-Charpieu**\n\nThe chronology in the earlier draft required correction. Lyon's latest league result is **1–1 with Le Havre on August 29**, not 0–0. Le Havre scored through Ally Samatta in the 74th minute and **Loïs Openda equalised in the 87th**; a stoppage-time Le Havre winner was disallowed by VAR. Auxerre's latest result is a **3–1 home defeat to Angers**, following the 5–2 loss at Lens. Auxerre therefore enter 0–0–2 with **three goals scored and eight conceded**.\n\nThe match is scheduled for **19:00 at Groupama Stadium**. The current forecast points to a very warm evening around **32°C**, with a final update required for wind, humidity and precipitation. **Probable lineups** should remain based on the latest Ligue 1 XIs. Lyon's current core includes Dominik Greif, Clinton Mata, Moussa Niakhaté, Abner, Ainsley Maitland-Niles, Tyler Morton, Corentin Tolisso, Pavel Šulc and attacking options around Ernest Nuamah, Loïs Openda and Kaïl Boudache. Auxerre's final defensive and midfield configuration needs a late medical check.\n\n**Availability:** Lyon have monitored **Julien Duranville** among the muscular concerns. Auxerre's list has included **Assane Dioussé, Marvin Senaya and Bryan Okoh**, with **Sékou Fofana** requiring confirmation around an early-September return.\n\nThe strongest evidence comes from Lyon's **2025/26 home sample, N=17**. They went **12–1–4**, a **70.6% home win rate**, scored 30 and conceded 18. Their process was approximately **1.71 xG and 1.18 xGA**, with **13.47 shots, 4.71 SOT, 56% possession and 6.53 corners** per home match. The positive xG differential was around **+0.53**.\n\nAuxerre's away profile supplies the second side of the selection. They conceded approximately **1.59 goals per away match**, kept a clean sheet in only **12%**, allowed at least one opponent goal in **88%** and at least two in **53%**. Their away matches cleared **Over 1.5 Goals in 76%** of the sample. The current 2–5 and 1–3 defeats are only N=2, but they are directionally consistent with that historical defensive vulnerability rather than contradicting it.\n\nThe corrected 1–1 with Le Havre is also a useful risk signal. Lyon created enough to equalise late but failed to convert home control into a win. The selected combination therefore cannot be presented as automatic. However, a single draw should not outweigh the larger 12-win home sample.\n\nThe **H2H** supports both legs. Across 13 recorded meetings, Lyon won eight, Auxerre two and three ended level. **12/13 finished Over 1.5**, with 11/13 above 2.5 and a historical average around 3.23 goals. The latest Lyon home meeting ended **3–2**, with Lyon around 2.10 xG.\n\nTactically, Lyon's 56% home-possession baseline and higher attacking volume should allow sustained pressure against an Auxerre side already conceding large chance totals. Tolisso's midfield arrivals and the wide attackers create multiple routes. Auxerre remain capable of threatening transition space; an away goal actually helps the Over 1.5 leg but increases the burden on Lyon to score at least twice.\n\n### Statistical Core\n\n| Metric | Lyon — Home 2025/26 | Auxerre — Away 2025/26 |\n|---|---:|---:|\n| Matches | 17 | 17 |\n| W-D-L | 12-1-4 | — |\n| GF/game | 1.76 | — |\n| GA/game | 1.06 | 1.59 |\n| xG/game | ≈1.71 | — |\n| xGA/game | ≈1.18 | — |\n| Shots/game | 13.47 | — |\n| SOT/game | 4.71 | — |\n| Possession | 56.0% | — |\n| Corners for/game | 6.53 | 4.06 |\n| Clean-sheet rate | — | 12% |\n| Opponent scored 1+ | — | 88% |\n| Opponent scored 2+ | — | 53% |\n| Match Over 1.5 Goals | — | 76% |\n| Latest result | 1–1 vs Le Havre | 1–3 vs Angers |\n\n**Conflict Detector.** The corrected latest result matters: Lyon have already failed to win a home league match they were expected to control, and Auxerre can damage the win leg through a 1–1. European schedule load can also affect intensity. The positive case is broader: 12 home wins from 17, +0.53 xG differential, Auxerre's 88% away concession rate and two current defeats with eight goals allowed.\n\nAt **1.80**, the raw implied probability is **55.6%**. It cannot be compared directly with Lyon's 70.6% historical home-win rate because the bet contains two correlated conditions.\n\n🎯 **Prediction: Lyon to Win + Over 1.5 Goals**  \n💰 **Odds: 1.80 (-125)**\n"],
+  analysis: [
+    `# Lyon vs Auxerre Prediction, Odds and Betting Tips
+
+**Prediction:** Lyon to Win + Over 1.5 Goals
+**Odds:** 1.80
+
+### Match Information
+**Competition:** Ligue 1
+**Date:** 2026-09-04
+**Kickoff:** 19:00
+**Round:** Matchweek 3
+**Venue:** Groupama Stadium
+
+### Team News / Availability
+Lyon have monitored **Julien Duranville** among the muscular concerns. Auxerre's list has included **Assane Dioussé, Marvin Senaya and Bryan Okoh**, with **Sékou Fofana** requiring confirmation around an early-September return.
+
+### Probable Lineups
+**Probable lineups** should remain based on the latest Ligue 1 XIs. Lyon's current core includes Dominik Greif, Clinton Mata, Moussa Niakhaté, Abner, Ainsley Maitland-Niles, Tyler Morton, Corentin Tolisso, Pavel Šulc and attacking options around Ernest Nuamah, Loïs Openda and Kaïl Boudache. Auxerre's final defensive and midfield configuration needs a late medical check.
+
+### Suspensions / Eligibility
+Only suspensions or eligibility issues already supported by the retained pre-match source set are treated as confirmed here. No additional absence is invented to complete the template. The final official squad list and match sheet should override any preliminary projection.
+
+### Robust Match Analysis
+This prediction is evaluated independently from the published selection. The first question is not whether the existing pick can be justified, but what the available pre-match evidence says about the matchup. The sample is still very early in 2026/27, so one completed HOME or AWAY league match can move the averages sharply. For that reason, the current venue split is used when it exists, and a disclosed prior-season venue fallback is used only when the relevant 2026/27 split does not yet exist.
+
+For Lyon, the selected HOME sample shows **1.00 GF/game**, **1.00 GA/game**, **1.67 xG/game** and **0.82 xGA/game**. The shot profile is **15.0 shots** and **5.0 shots on target per game**, with **57.0% possession** and **5.0 corners for per game**. Those numbers describe what actually happened in the relevant venue sample; they are not a guarantee that the same game state will repeat.
+
+For Auxerre, the AWAY side of the comparison is **2.00 GF/game**, **5.00 GA/game**, **1.86 xG/game** and **3.81 xGA/game**. The corresponding volume is **10.0 shots**, **4.0 SOT**, **47.0% possession** and **7.0 corners for per game**. Where the column uses a historical fallback, that fact is stated directly in the table and should be read as context rather than current-season form.
+
+### HOME vs AWAY Data Analysis
+Lyon HOME is the 1-1 draw with Le Havre; Auxerre AWAY is the 2-5 loss at Lens. This separation matters because blending overall data can hide meaningful venue effects. The Statistical Core therefore compares the host's HOME profile with the visitor's AWAY profile rather than combining all league matches into a single average.
+
+The defensive-volume comparison is also important. Lyon have allowed **12.0 shots** and **4.0 SOT** per game in the selected HOME sample, while Auxerre have allowed **12.0 shots** and **9.0 SOT** in the selected AWAY sample or disclosed fallback. Corners show a similar game-state dimension: Lyon are at **10.0 total corners per HOME match**, compared with **11.0** in the visitor's AWAY environment.
+
+### Advanced Data and Expected Game State
+The tactical interpretation should remain conditional on the small sample. If the stronger territorial side establishes possession and field position early, the match can move toward the published market through sustained pressure, repeated entries and set-piece accumulation. If the underdog scores first or the match stays level deep into the second half, the risk profile changes materially. That is why the analysis keeps goals, xG, shots, SOT, possession and corners together instead of elevating one metric into a stand-alone prediction engine.
+
+The first-goal and first-half rows are descriptive rather than predictive. In a one-match sample, a 0% or 100% rate means exactly one observed match, not a stable probability. They are retained because they help describe the game state that produced the current venue numbers.
+
+### Statistical Core Predictions-Sports-Prime
+| Metric | Lyon — 2026/27 HOME (N=1) | Auxerre — 2026/27 AWAY (N=1) |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 1 |
+| W-D-L | 0-1-0 | 0-0-1 |
+| Points/game | 1.00 | 0.00 |
+| GF/game | 1.00 | 2.00 |
+| GA/game | 1.00 | 5.00 |
+| xG/game | 1.67 | 1.86 |
+| xGA/game | 0.82 | 3.81 |
+| Shots/game | 15.0 | 10.0 |
+| SOT/game | 5.0 | 4.0 |
+| Shots allowed/game | 12.0 | 12.0 |
+| SOT allowed/game | 4.0 | 9.0 |
+| Possession | 57.0% | 47.0% |
+| Corners for/game | 5.0 | 7.0 |
+| Corners against/game | 5.0 | 4.0 |
+| Total corners/game | 10.0 | 11.0 |
+| First to score | 0% | 0% |
+| First to concede | 100% | 100% |
+| Scored in 1st half | 0% | 0% |
+| Conceded in 1st half | 0% | 100% |
+| BTTS | 100% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 0% | 0% |
+
+### Conflict Detector
+The principal conflict is sample size. Several 2026/27 venue splits contain only one completed league match, so extreme rates such as 0% or 100% must not be treated as mature probabilities. A second conflict can arise when actual goals and xG disagree: finishing variance may make a team look more or less efficient than the underlying chance quality. Finally, the published market can fail through a different game script even when the broader statistical profile is directionally supportive.
+
+### Odds and Implied Probability
+At decimal odds **1.80**, the raw implied probability is **55.6%** (1 / 1.80 = 55.6%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+
+### Value Assessment
+The published price is assessed against the split evidence without inventing fair odds. The current data can show whether the market is coherent with the matchup, but the small early-season sample does not justify presenting an artificial precision advantage. The correct reading is therefore evidence-based and conditional: the selection remains the published recommendation, while the Conflict Detector identifies the main paths by which the price can fail to convert.
+
+### Conclusion
+The final position keeps the original published market and price unchanged. The case is built from the relevant HOME-versus-AWAY evidence, the retained pre-match lineup and availability information, and the tactical routes described above. Because the 2026/27 venue samples remain small, confidence should come from the consistency of several indicators rather than from any single percentage.
+
+**Prediction:** Lyon to Win + Over 1.5 Goals
+**Odds:** 1.80
+`
+  ],
   analysisFormat: "markdown",
+  editorialStandard: "psp-v1",
   picks: {
     main: "Lyon to Win + Over 1.5 Goals",
     publishedOdds: 1.8,

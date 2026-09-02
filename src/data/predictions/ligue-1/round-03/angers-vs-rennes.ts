@@ -5,8 +5,89 @@ export const angersVsRennes: EditorialPrediction = {
   homeTeam: "Angers",
   awayTeam: "Rennes",
   slug: "angers-vs-rennes",
-  analysis: ["# Angers vs Rennes — Ligue 1 2026/27 Match Analysis\n🎯 **Prediction: Rennes or Draw (X2) + Over 1.5 Goals**\n💰 **Odds: 1.60**\n**Local:** Stade Raymond Kopa, Angers, França\n**Data:** 6 de setembro de 2026\n**Horário:** 17:15, horário local\n**Competição:** **Ligue 1** — 3ª rodada\nO Angers começou a **Ligue 1** com comportamentos diferentes. Perdeu por 2–0 para o Lille em casa e respondeu com vitória por 3–1 sobre o Auxerre fora. São três gols marcados e três sofridos em duas partidas, amostra ainda insuficiente para definir um padrão, mas que mostra capacidade de produção ofensiva quando encontra espaços.\n**Clima previsto:** aproximadamente 27°C no início da partida, tempo seco, sem previsão de chuva e vento próximo de 13 km/h.\nA condição climática, neste momento, não indica obstáculo severo ao desenvolvimento ofensivo. A temperatura elevada pode reduzir o ritmo conforme o jogo avance, mas a previsão atual não aponta chuva ou vento forte.\n**Qualidade dos dados:** moderada/boa. Data, horário, estádio, primeiros resultados e histórico possuem boa confirmação; escalações, situação médica e clima permanecem preliminares.\n**Escalações prováveis:** **Angers (5-3-2)** — Hervé Koffi; Akim Zedadka/Ekomié, Ousmane Camara, Marius Louër, Jordan Lefort, Lilian Rao-Lisoa; Branco van den Boomen, Yassin Belkhdim, Mael Gernigon; Amine Sbaï e Amine El Ouazzani. **Rennes (4-2-3-1/4-4-2)** — N. Lemaitre; Mahamadou Nagida, Abdelhamid Aït Boudlal, Charlie Cresswell, Przemysław Frankowski; Valentin Rongier, Adrien Thomasson; Issa Soumaré, Sebastian Szymański, Mousa Tamari; Esteban Lepaul. Haris Belkebla/Lillian Mouton e as baixas ou suspensões reportadas no Rennes exigem atualização final.\nAs escalações ainda são preliminares. No Angers, Haris Belkebla e Lillian Mouton aparecem entre as baixas. Pelo Rennes, Seko Fofana está listado como indisponível, enquanto Mahdi Camara aparece como suspenso. Outra fonte de projeções também relaciona Mohamed Bamba entre os desfalques do Rennes. Como o confronto ainda está a uma semana de distância, o quadro deve ser atualizado antes da publicação definitiva.\nEm termos de **gols**, o recorte de seis confrontos diretos é especialmente útil porque a linha escolhida é baixa: **Over 1.5 Goals** apareceu em 6/6, enquanto **Over 2.5 Goals** ocorreu em 4/6. Essa diferença importa editorialmente. A aposta não precisa capturar toda a volatilidade ofensiva da série; precisa somente evitar 0–0, 1–0 ou 0–1. Com o Angers vindo de marcar três fora e o Rennes de um 2–2, existem rotas independentes para o segundo gol.\nO componente tático também favorece uma leitura menos binária. Se o Rennes controlar mais território, o Angers pode encontrar transições e bolas diretas; se o Angers conseguir empurrar o jogo para o campo visitante, o Rennes possui qualidade suficiente para responder em contra-ataques. Em ambos os casos, o **game state** pode aumentar a necessidade de progressão depois do primeiro gol. O maior risco aparece se as ausências de meio-campo do Rennes reduzirem sua capacidade de controlar segunda bola e circulação, permitindo ao Angers sustentar pressão por períodos maiores.\nA ausência de um split robusto de **xG/xGA** para as condições exatas deste confronto é uma limitação real. Por isso, a tabela não deve ser artificialmente preenchida. O peso principal permanece nos resultados competitivos recentes, no histórico direto e na construção conservadora do mercado. Esse cuidado é importante porque transformar dados incompletos em falsa precisão reduziria a qualidade da análise.\nO Rennes abriu o campeonato com 2–2 contra o Paris Saint-Germain. Construiu vantagem de 2–0, com gols de Sebastian Szymanski e Esteban Lepaul, mas sofreu a reação no segundo tempo. A partida mostrou duas faces: capacidade ofensiva para marcar duas vezes contra um adversário de alto nível e dificuldade para administrar uma vantagem relevante sob pressão.\nO comportamento recente reforça essa volatilidade. Além do 2–2 contra o PSG, a preparação teve 3–3 contra o Galatasaray e derrota por 4–2 para o Brentford. Amistosos devem receber peso inferior aos jogos oficiais, mas ajudam a contextualizar uma pré-temporada de partidas abertas.\nNo Stade Raymond Kopa, entretanto, o Rennes não deve ser tratado como vencedor automático. O encontro da temporada passada terminou 1–1, enquanto em março de 2025 o Rennes venceu por 3–0. Em períodos anteriores também aparecem Angers 2–0 Rennes e 0–0, mostrando que o mando já produziu dificuldades ao visitante.\nA leitura estatística ganha consistência quando se separa **resultado**, **produção ofensiva** e **proteção do mercado**. O Angers não precisa ser uma equipe fraca para que o X2 tenha lógica; basta reconhecer que o Rennes chega com vantagem clara no **H2H**, enquanto a proteção do empate reduz a necessidade de transformar essa superioridade histórica em vitória obrigatória. Ao mesmo tempo, o 3–1 do Angers sobre o Auxerre impede qualquer leitura simplista de favoritismo visitante. O mandante já mostrou capacidade para marcar múltiplas vezes e, por isso, o cenário de 1–1 ou 1–2 permanece mais coerente com a seleção do que um prognóstico de domínio unilateral.\nNo balanço, a seleção combina uma perna de resultado protegida pelo empate com uma linha de gols que exige somente duas ocorrências. O **Conflict Detector** continua relevante: Angers tem mando, já mostrou reação ofensiva e o Rennes possui baixas. Ainda assim, a sequência de 5 vitórias e 1 empate do Rennes nos seis H2Hs recentes, somada a 6/6 em Over 1.5, oferece convergência suficiente para sustentar o prognóstico sem tratá-lo como certeza.\nO confronto direto oferece vantagem recente clara ao Rennes. No recorte destacado aparecem Rennes 2–1 Angers, Angers 1–1 Rennes, Angers 0–3 Rennes, Rennes 2–0 Angers, Rennes 4–2 Angers e Angers 1–2 Rennes: cinco vitórias do Rennes e um empate.\nA proteção do empate é relevante. O Rennes possui superioridade recente no **H2H**, mas o Angers chega fortalecido pelo 3–1 sobre o Auxerre e atuará diante de sua torcida. Uma partida equilibrada permanece compatível com os dados.\nA temporada ainda oferece uma amostra muito pequena. Médias de gols, **xG** e outros indicadores de 2026/27 não devem receber peso excessivo. Resultados recentes, contexto de elenco, temporada anterior e confronto direto precisam ser combinados.\nO principal risco está na combinação. Uma vitória do Angers derruba o X2, enquanto um 1–0 para qualquer lado derruba o Over 1.5. O mandante já mostrou capacidade de marcar três vezes fora, e o Rennes ainda precisa demonstrar maior estabilidade defensiva. Ao mesmo tempo, a sequência recente do Rennes sem perder o **H2H** e a incidência de pelo menos dois gols nos seis confrontos destacados sustentam a construção.\n**Angers:** a confirmar após a atualização médica e os treinamentos da semana.\n**Rennes:** a confirmar após a atualização médica e os treinamentos da semana.\nA vitória sobre o Auxerre também impede uma leitura excessivamente defensiva do mandante. Marcar três vezes como visitante sugere capacidade para explorar transições e punir perdas de bola, algo relevante diante de um Rennes que tende a assumir mais iniciativa.\nTodos os seis confrontos tiveram pelo menos dois gols, enquanto quatro ultrapassaram 2.5. A aderência histórica é, portanto, mais forte para a linha conservadora de Over 1.5 do que para uma exigência de três gols.\n### Statistical Core\n| Indicador | Angers | Rennes |\n|---|---:|---:|\n| xG/game | — | — |\n| xGA/game | — | — |\n| Jogos de Ligue 1 no recorte | 2 | 1 |\n| Gols marcados | 3 | 2 |\n| Gols sofridos | 3 | 2 |\n| Último resultado | 3–1 vs Auxerre | 2–2 vs PSG |\n| H2H recente — invencibilidade do Rennes | — | 6 jogos |\n| H2H recente — Over 1.5 | 6/6 | 6/6 |\n| H2H recente — Over 2.5 | 4/6 | 4/6 |\n**Conflict Detector.** O principal risco permanece na variância natural do mercado selecionado e na pequena amostra da temporada atual; os dados de 2025/26 e o contexto recente devem ser lidos em conjunto, sem transformar tendência em certeza.\nA odd de 1.60 corresponde a uma **probabilidade implícita** de aproximadamente 62,5%, antes da margem da casa. Esse percentual é o ponto de equilíbrio derivado do preço, não uma probabilidade produzida pelo modelo.\n🎯 **Prediction: Rennes or Draw (X2) + Over 1.5 Goals**\n💰 **Odds: 1.60**\n"],
+  analysis: [
+    `# Angers vs Rennes Prediction, Odds and Betting Tips
+
+**Prediction:** Rennes or Draw (X2) + Over 1.5 Goals
+**Odds:** 1.60
+
+### Match Information
+**Competition:** Ligue 1
+**Date:** 2026-09-06
+**Kickoff:** 17:15
+**Round:** Matchweek 3
+**Venue:** Stade Raymond Kopa
+
+### Team News / Availability
+As escalações ainda são preliminares. No Angers, Haris Belkebla e Lillian Mouton aparecem entre as baixas. Pelo Rennes, Seko Fofana está listado como indisponível, enquanto Mahdi Camara aparece como suspenso. Outra fonte de projeções também relaciona Mohamed Bamba entre os desfalques do Rennes. Como o confronto ainda está a uma semana de distância, o quadro deve ser atualizado antes da publicação definitiva. Em termos de **gols**, o recorte de seis confrontos diretos é especialmente útil porque a linha escolhida é baixa: **Over 1.5 Goals** apareceu em 6/6, enquanto **Over 2.5 Goals** ocorreu em 4/6. Essa diferença importa editorialmente. A aposta não precisa capturar toda a volatilidade ofen
+
+### Probable Lineups
+**Escalações prováveis:** **Angers (5-3-2)** — Hervé Koffi; Akim Zedadka/Ekomié, Ousmane Camara, Marius Louër, Jordan Lefort, Lilian Rao-Lisoa; Branco van den Boomen, Yassin Belkhdim, Mael Gernigon; Amine Sbaï e Amine El Ouazzani. **Rennes (4-2-3-1/4-4-2)** — N. Lemaitre; Mahamadou Nagida, Abdelhamid Aït Boudlal, Charlie Cresswell, Przemysław Frankowski; Valentin Rongier, Adrien Thomasson; Issa Soumaré, Sebastian Szymański, Mousa Tamari; Esteban Lepaul. Haris Belkebla/Lillian Mouton e as baixas ou suspensões reportadas no Rennes exigem atualização final.
+
+### Suspensions / Eligibility
+Only suspensions or eligibility issues already supported by the retained pre-match source set are treated as confirmed here. No additional absence is invented to complete the template. The final official squad list and match sheet should override any preliminary projection.
+
+### Robust Match Analysis
+This prediction is evaluated independently from the published selection. The first question is not whether the existing pick can be justified, but what the available pre-match evidence says about the matchup. The sample is still very early in 2026/27, so one completed HOME or AWAY league match can move the averages sharply. For that reason, the current venue split is used when it exists, and a disclosed prior-season venue fallback is used only when the relevant 2026/27 split does not yet exist.
+
+For Angers, the selected HOME sample shows **0.00 GF/game**, **2.00 GA/game**, **2.28 xG/game** and **0.96 xGA/game**. The shot profile is **20.0 shots** and **2.0 shots on target per game**, with **57.0% possession** and **8.0 corners for per game**. Those numbers describe what actually happened in the relevant venue sample; they are not a guarantee that the same game state will repeat.
+
+For Rennes, the AWAY side of the comparison is **1.71 GF/game**, **1.94 GA/game**, **1.35 xG/game** and **1.76 xGA/game**. The corresponding volume is **12.47 shots**, **4.47 SOT**, **52.5% possession** and **5.53 corners for per game**. Where the column uses a historical fallback, that fact is stated directly in the table and should be read as context rather than current-season form.
+
+### HOME vs AWAY Data Analysis
+Angers HOME is the 0-2 loss to Lille. Rennes had no 2026/27 AWAY league sample before this fixture, so the AWAY column uses the disclosed 2025/26 road baseline; rows explicitly marked overall/rolling are fallback context rather than a fabricated 2026/27 away value. This separation matters because blending overall data can hide meaningful venue effects. The Statistical Core therefore compares the host's HOME profile with the visitor's AWAY profile rather than combining all league matches into a single average.
+
+The defensive-volume comparison is also important. Angers have allowed **11.0 shots** and **8.0 SOT** per game in the selected HOME sample, while Rennes have allowed **13.04 (overall 25/26) shots** and **4.97 (overall 25/26) SOT** in the selected AWAY sample or disclosed fallback. Corners show a similar game-state dimension: Angers are at **11.0 total corners per HOME match**, compared with **10.67 (rolling)** in the visitor's AWAY environment.
+
+### Advanced Data and Expected Game State
+The tactical interpretation should remain conditional on the small sample. If the stronger territorial side establishes possession and field position early, the match can move toward the published market through sustained pressure, repeated entries and set-piece accumulation. If the underdog scores first or the match stays level deep into the second half, the risk profile changes materially. That is why the analysis keeps goals, xG, shots, SOT, possession and corners together instead of elevating one metric into a stand-alone prediction engine.
+
+The first-goal and first-half rows are descriptive rather than predictive. In a one-match sample, a 0% or 100% rate means exactly one observed match, not a stable probability. They are retained because they help describe the game state that produced the current venue numbers.
+
+### Statistical Core Predictions-Sports-Prime
+| Metric | Angers — 2026/27 HOME (N=1) | Rennes — 2025/26 AWAY fallback (N=17) |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 17 |
+| W-D-L | 0-0-1 | 7-4-6 |
+| Points/game | 0.00 | 1.47 |
+| GF/game | 0.00 | 1.71 |
+| GA/game | 2.00 | 1.94 |
+| xG/game | 2.28 | 1.35 |
+| xGA/game | 0.96 | 1.76 |
+| Shots/game | 20.0 | 12.47 |
+| SOT/game | 2.0 | 4.47 |
+| Shots allowed/game | 11.0 | 13.04 (overall 25/26) |
+| SOT allowed/game | 8.0 | 4.97 (overall 25/26) |
+| Possession | 57.0% | 52.5% |
+| Corners for/game | 8.0 | 5.53 |
+| Corners against/game | 3.0 | 5.14 (rolling est.) |
+| Total corners/game | 11.0 | 10.67 (rolling) |
+| First to score | 0% | 71% |
+| First to concede | 100% | 29% |
+| Scored in 1st half | 0% | 59% |
+| Conceded in 1st half | 100% | 47% |
+| BTTS | 0% | 47% |
+| Clean sheets | 0% | 35% |
+| Failed to score | 100% | 18% |
+
+### Conflict Detector
+The principal conflict is sample size. Several 2026/27 venue splits contain only one completed league match, so extreme rates such as 0% or 100% must not be treated as mature probabilities. A second conflict can arise when actual goals and xG disagree: finishing variance may make a team look more or less efficient than the underlying chance quality. Finally, the published market can fail through a different game script even when the broader statistical profile is directionally supportive.
+
+### Odds and Implied Probability
+At decimal odds **1.60**, the raw implied probability is **62.5%** (1 / 1.60 = 62.5%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+
+### Value Assessment
+The published price is assessed against the split evidence without inventing fair odds. The current data can show whether the market is coherent with the matchup, but the small early-season sample does not justify presenting an artificial precision advantage. The correct reading is therefore evidence-based and conditional: the selection remains the published recommendation, while the Conflict Detector identifies the main paths by which the price can fail to convert.
+
+### Conclusion
+The final position keeps the original published market and price unchanged. The case is built from the relevant HOME-versus-AWAY evidence, the retained pre-match lineup and availability information, and the tactical routes described above. Because the 2026/27 venue samples remain small, confidence should come from the consistency of several indicators rather than from any single percentage.
+
+**Prediction:** Rennes or Draw (X2) + Over 1.5 Goals
+**Odds:** 1.60
+`
+  ],
   analysisFormat: "markdown",
+  editorialStandard: "psp-v1",
   seoTitle: "Angers vs Rennes Prediction, Odds & Match Analysis — Ligue 1 2026/27",
   picks: {
     main: "Rennes or Draw (X2) + Over 1.5 Goals",

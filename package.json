@@ -24,7 +24,7 @@
     "audit:sources": "node scripts/audit-editorial-sources.mjs",
     "audit:results": "tsx scripts/audit-results.mjs",
     "audit:content": "node scripts/audit-content-quality.mjs",
-    "audit:editorial-quality": "node scripts/audit-editorial-quality.mjs",
+    "audit:editorial-quality": "tsx scripts/audit-editorial-quality.mjs",
     "audit:content-similarity": "node scripts/audit-content-similarity.mjs",
     "audit:prediction-integrity": "node scripts/audit-prediction-integrity.mjs",
     "audit:site-quality": "node scripts/audit-site-quality.mjs",
@@ -59,7 +59,8 @@
     "audit:baseline:phase4": "node scripts/audit-phase4-baseline.mjs",
     "audit:baseline:trust": "node scripts/audit-site-trust-baseline.mjs",
     "baseline:create": "node scripts/create-editorial-baseline.mjs",
-    "audit:baseline": "node scripts/audit-editorial-baseline.mjs"
+    "audit:baseline": "node scripts/audit-editorial-baseline.mjs",
+    "audit:psp-editorial-standard": "tsx scripts/audit-psp-editorial-standard.mjs"
   },
   "dependencies": {
     "next": "latest",

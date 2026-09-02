@@ -2,6 +2,76 @@ import type { Match } from "@/types";
 
 export type StatisticalCoreRow = { label: string; home: string; away: string };
 
+
+export const REQUIRED_STATISTICAL_CORE_METRICS = [
+  "Matches (N)",
+  "W-D-L",
+  "Points/game",
+  "GF/game",
+  "GA/game",
+  "xG/game",
+  "xGA/game",
+  "Shots/game",
+  "SOT/game",
+  "Shots allowed/game",
+  "SOT allowed/game",
+  "Possession",
+  "Corners for/game",
+  "Corners against/game",
+  "Total corners/game",
+  "First to score",
+  "First to concede",
+  "Scored in 1st half",
+  "Conceded in 1st half",
+  "BTTS",
+  "Clean sheets",
+  "Failed to score",
+] as const;
+
+const INVALID_STATISTICAL_CORE_VALUE = /^(?:—|-|–|n\/?a|na|tbd|pending|unknown|null|undefined)?$/i;
+
+export function isFilledStatisticalCoreValue(value: string) {
+  return !INVALID_STATISTICAL_CORE_VALUE.test(value.trim());
+}
+
+export function validateStatisticalCoreRows(rows: StatisticalCoreRow[]) {
+  const errors: string[] = [];
+  const byLabel = new Map(rows.map((row) => [row.label.trim().toLowerCase(), row]));
+
+  for (const metric of REQUIRED_STATISTICAL_CORE_METRICS) {
+    const row = byLabel.get(metric.toLowerCase());
+    if (!row) {
+      errors.push(`missing required metric: ${metric}`);
+      continue;
+    }
+    if (!isFilledStatisticalCoreValue(row.home)) errors.push(`${metric}: HOME value is missing or a placeholder`);
+    if (!isFilledStatisticalCoreValue(row.away)) errors.push(`${metric}: AWAY value is missing or a placeholder`);
+  }
+
+  return errors;
+}
+
+export function parseStatisticalCoreRows(markdown: string): StatisticalCoreRow[] {
+  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+  const tableLines: string[] = [];
+  let inSection = false;
+
+  for (const line of lines) {
+    if (/^#{1,6}\s*Statistical Core Predictions-Sports-Prime\s*$/i.test(line.trim())) {
+      inSection = true;
+      continue;
+    }
+    if (!inSection) continue;
+    if (line.trim().startsWith("|")) {
+      tableLines.push(line);
+      continue;
+    }
+    if (tableLines.length > 0) break;
+  }
+
+  return tableLines.length ? parseRows(tableLines.join("\n")) : [];
+}
+
 // These are the already-published HOME/AWAY Statistical Core rows whose
 // editorial prose was localized separately. Keeping them here lets every
 // locale render one structured table without copying the table into the body.
@@ -250,27 +320,13 @@ function parseRows(markdown: string): StatisticalCoreRow[] {
 }
 
 export function extractStatisticalCoreRows(match: Match): StatisticalCoreRow[] {
-  const markdown = match.analysis.join("\n\n");
-  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
-  const tableLines: string[] = [];
-  let inSection = false;
+  const sourceRows = parseStatisticalCoreRows(match.analysis.join("\n\n"));
+  if (sourceRows.length) return sourceRows;
 
-  for (const line of lines) {
-    if (/^#{0,3}\s*Statistical Core\b/i.test(line.trim())) {
-      inSection = true;
-      continue;
-    }
-
-    if (!inSection) continue;
-    if (line.trim().startsWith("|")) {
-      tableLines.push(line);
-      continue;
-    }
-    if (tableLines.length > 0) break;
-  }
-
-  if (tableLines.length) return parseRows(tableLines.join("\n"));
+  // Legacy display-only fallback. The strict PSP editorial audit does NOT treat
+  // these fallback rows as proof that the prediction source follows psp-v1.
   const publishedRows = parseRows(publishedCoreTables[match.slug] ?? "");
   if (publishedRows.length) return publishedRows;
   return (match.matchSeo?.statistics?.rows ?? []).map(({ label, home, away }) => ({ label, home, away }));
 }
+
