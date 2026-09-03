@@ -38,6 +38,8 @@ This is one of the reasons 1X + Under 3.5 is structurally different from simply 
 
 ### Suspensions / Eligibility
 Only suspensions, registration restrictions or eligibility issues already supported by the retained pre-match source set are treated as confirmed. No player is removed or inserted merely to complete the template. The official CBF match sheet and final club updates override any preliminary projection.
+The HOME/AWAY split is the primary statistical layer. Where a reliable venue-specific metric is unavailable, the table uses clearly labelled league-average, overall-season or first-leg context only. Those contextual figures are not treated as HOME/AWAY equivalents and are not used as automatic substitutes in the final prediction.
+
 ### Statistical Core Predictions-Sports-Prime
 | Metric | Grêmio — HOME | Internacional — AWAY |
 | --- | ---: | ---: |
@@ -50,19 +52,19 @@ Only suspensions, registration restrictions or eligibility issues already suppor
 | xGA/game | 1.63 | 1.46 |
 | Shots/game | 13.92 | 13.58 |
 | SOT/game | 5.00 | 3.75 |
-| Shots allowed/game | 14.0 (Serie A league-average fallback) | 14.0 (Serie A league-average fallback) |
-| SOT allowed/game | 4.5 (Serie A league-average fallback) | 4.5 (Serie A league-average fallback) |
-| Possession | 50% (league-average fallback) | 50% (league-average fallback) |
-| Corners for/game | 4.42 (current overall fallback) | 6.28 (current overall fallback) |
-| Corners against/game | 5.17 (league-average fallback) | 4.08 (current overall fallback) |
+| Shots allowed/game | 14.0 (Serie A league-average context — not HOME/AWAY specific) | 14.0 (Serie A league-average context — not HOME/AWAY specific) |
+| SOT allowed/game | 4.5 (Serie A league-average context — not HOME/AWAY specific) | 4.5 (Serie A league-average context — not HOME/AWAY specific) |
+| Possession | 50% (league-average context — not HOME/AWAY specific) | 50% (league-average context — not HOME/AWAY specific) |
+| Corners for/game | 4.42 (current overall context — not HOME/AWAY specific) | 6.28 (current overall context — not HOME/AWAY specific) |
+| Corners against/game | 5.17 (league-average context — not HOME/AWAY specific) | 4.08 (current overall context — not HOME/AWAY specific) |
 | Total corners/game | 9.59 | 10.36 |
-| First to score | 0% (first-leg fallback) | 0% (first-leg fallback) |
-| First to concede | 0% (first-leg fallback) | 0% (first-leg fallback) |
-| Scored in 1st half | 0% (first-leg fallback) | 0% (first-leg fallback) |
-| Conceded in 1st half | 0% (first-leg fallback) | 0% (first-leg fallback) |
-| BTTS | 0% (first-leg fallback) | 0% (first-leg fallback) |
-| Clean sheets | 100% (first-leg fallback) | 100% (first-leg fallback) |
-| Failed to score | 100% (first-leg fallback) | 100% (first-leg fallback) |
+| First to score | 0% (first-leg matchup context — single-match sample) | 0% (first-leg matchup context — single-match sample) |
+| First to concede | 0% (first-leg matchup context — single-match sample) | 0% (first-leg matchup context — single-match sample) |
+| Scored in 1st half | 0% (first-leg matchup context — single-match sample) | 0% (first-leg matchup context — single-match sample) |
+| Conceded in 1st half | 0% (first-leg matchup context — single-match sample) | 0% (first-leg matchup context — single-match sample) |
+| BTTS | 0% (first-leg matchup context — single-match sample) | 0% (first-leg matchup context — single-match sample) |
+| Clean sheets | 100% (first-leg matchup context — single-match sample) | 100% (first-leg matchup context — single-match sample) |
+| Failed to score | 100% (first-leg matchup context — single-match sample) | 100% (first-leg matchup context — single-match sample) |
 
 
 **Conflict Detector** is essential here. The strongest evidence supporting the selection is the combination of Grêmio's much better home scoring profile, Internacional's modest 0.91 away goals per game, both relevant splits producing 73% Under 3.5, and a first leg that finished 0–0 after a highly interrupted, low-quality attacking contest. The counter-signals are equally important. Grêmio's home defence is not elite: they concede approximately 1.18 per match, while Internacional still produce nearly 14 shots away. Grêmio themselves have scored 18 in 11 at home, so a match can become more open if the first goal arrives early. A red card would be especially disruptive in a derby that produced 43 fouls in the first leg.
