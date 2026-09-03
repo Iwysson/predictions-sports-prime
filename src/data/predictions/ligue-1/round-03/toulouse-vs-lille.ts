@@ -6,43 +6,36 @@ export const toulouseVsLille: EditorialPrediction = {
   awayTeam: "Lille",
   slug: "toulouse-vs-lille",
   analysis: [
-    `# Toulouse vs Lille Prediction, Odds and Betting Tips
+    `# Toulouse vs Lille Prediction, Odds and Match Analysis
 
 **Prediction:** Lille or Draw (X2) + Over 1.5 Goals
 **Odds:** 1.83
 
 ### Match Information
-**Competition:** Ligue 1
+
+**Competition:** Ligue 1 2026/27
 **Date:** 2026-09-03
-**Kickoff:** 20:45
+**Kickoff:** 20:45 local time
 **Round:** Matchweek 3
 **Venue:** Stadium de Toulouse
 
-### Team News / Availability
-No additional absence is asserted by this migration beyond the retained pre-match source set. Final club and competition updates should override the projection.
+### Match Context
 
-### Probable Lineups
-**Probable lineups — based on the latest relevant competitive starting XI.** Toulouse's baseline from the 2–2 at Brest is: **Guillaume Restes; Ismail Diallo, Mark McKenzie, Rasmus Nicolaisen, Christ Tapé; Alexis Vossah, Cristian Cásseres Jr.; Julián Vignolo, Thomas Jørgensen, Yann Gboho; Jacen Russell-Rowe.** Lille's latest 4-2-3-1 baseline remains close to **Berke Özer; Tiago Santos, Nathan Ngoy, Alexsandro Ribeiro, Romain Perraud; Benjamin André, Nabil Bentaleb; Ethan Mbappé, Hákon Arnar Haraldsson, Félix Correia; Olivier Giroud**, subject to final confirmation.
+Toulouse have one point from two games and return home after a 0-2 defeat to Lyon in their only HOME match. Lille are unbeaten and have already won 2-0 away at Angers, so the result leg of X2 has direct current-season support even before considering the longer away streak noted by Ligue 1.
 
-### Suspensions / Eligibility
-Only suspensions or eligibility issues already supported by the retained pre-match source set are treated as confirmed here. No additional absence is invented to complete the template. The final official squad list and match sheet should override any preliminary projection.
+### Team News and Probable Lineups
 
-### Robust Match Analysis
-This prediction is evaluated independently from the published selection. The first question is not whether the existing pick can be justified, but what the available pre-match evidence says about the matchup. The sample is still very early in 2026/27, so one completed HOME or AWAY league match can move the averages sharply. For that reason, the current venue split is used when it exists, and a disclosed prior-season venue fallback is used only when the relevant 2026/27 split does not yet exist.
+**Availability:** The official Ligue 1 Matchday 3 update lists Yann Gboho, Aron Dønnum and Abu Francis among Toulouse’s principal absentees. Lille are without Hamza Igamane. A same-day French probable-lineup report also places Gboho out and projects Sion Oppong in the attacking line.
 
-For Toulouse, the selected HOME sample shows **0.00 GF/game**, **2.00 GA/game**, **2.29 xG/game** and **0.84 xGA/game**. The shot profile is **17.0 shots** and **2.0 shots on target per game**, with **48.0% possession** and **6.0 corners for per game**. Those numbers describe what actually happened in the relevant venue sample; they are not a guarantee that the same game state will repeat.
+**Suspensions / eligibility:** no suspended player is listed for Toulouse or Lille for this fixture.
 
-For Lille, the AWAY side of the comparison is **2.00 GF/game**, **0.00 GA/game**, **1.34 xG/game** and **1.87 xGA/game**. The corresponding volume is **11.0 shots**, **8.0 SOT**, **43.0% possession** and **3.0 corners for per game**. Where the column uses a historical fallback, that fact is stated directly in the table and should be read as context rather than current-season form.
+**Probable lineups:** **Toulouse (4-2-3-1):** Guillaume Restes; Rafik Messali Sigur, Mark McKenzie, Rasmus Nicolaisen, Christ Tapé; Cristian Cásseres Jr., Alexis Vossah; Julián Vignolo, Thomas Jørgensen, Sion Oppong; Santiago Hidalgo. **Lille (4-2-3-1):** Berke Özer; Tiago Santos, Nathan Ngoy, Alexsandro Ribeiro, Romain Perraud; Benjamin André, Nabil Bentaleb; Ethan Mbappé, Hákon Arnar Haraldsson, Osame Sahraoui; Olivier Giroud.
 
-### HOME vs AWAY Data Analysis
-Toulouse HOME is the 0-2 loss to Lyon; Lille AWAY is the 2-0 win at Angers. This separation matters because blending overall data can hide meaningful venue effects. The Statistical Core therefore compares the host's HOME profile with the visitor's AWAY profile rather than combining all league matches into a single average.
+The XI is a pre-match projection. The official teamsheet released close to kickoff overrides every probable selection.
 
-The defensive-volume comparison is also important. Toulouse have allowed **11.0 shots** and **3.0 SOT** per game in the selected HOME sample, while Lille have allowed **20.0 shots** and **2.0 SOT** in the selected AWAY sample or disclosed fallback. Corners show a similar game-state dimension: Toulouse are at **11.0 total corners per HOME match**, compared with **11.0** in the visitor's AWAY environment.
+### HOME/AWAY Analysis
 
-### Advanced Data and Expected Game State
-The tactical interpretation should remain conditional on the small sample. If the stronger territorial side establishes possession and field position early, the match can move toward the published market through sustained pressure, repeated entries and set-piece accumulation. If the underdog scores first or the match stays level deep into the second half, the risk profile changes materially. That is why the analysis keeps goals, xG, shots, SOT, possession and corners together instead of elevating one metric into a stand-alone prediction engine.
-
-The first-goal and first-half rows are descriptive rather than predictive. In a one-match sample, a 0% or 100% rate means exactly one observed match, not a stable probability. They are retained because they help describe the game state that produced the current venue numbers.
+Toulouse have one point from two games and return home after a 0-2 defeat to Lyon in their only HOME match. Lille are unbeaten and have already won 2-0 away at Angers, so the result leg of X2 has direct current-season support even before considering the longer away streak noted by Ligue 1.
 
 ### Statistical Core Predictions-Sports-Prime
 | Metric | Toulouse — 2026/27 HOME (N=1) | Lille — 2026/27 AWAY (N=1) |
@@ -70,20 +63,46 @@ The first-goal and first-half rows are descriptive rather than predictive. In a 
 | Clean sheets | 0% | 100% |
 | Failed to score | 100% | 0% |
 
-### Conflict Detector
-The principal conflict is sample size. Several 2026/27 venue splits contain only one completed league match, so extreme rates such as 0% or 100% must not be treated as mature probabilities. A second conflict can arise when actual goals and xG disagree: finishing variance may make a team look more or less efficient than the underlying chance quality. Finally, the published market can fail through a different game script even when the broader statistical profile is directionally supportive.
+### Statistical Interpretation
 
-### Odds and Implied Probability
-At decimal odds **1.83**, the raw implied probability is **54.6%** (1 / 1.83 = 54.6%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+The venue split matters because the host and visitor have not produced the same type of game. **The current Statistical Core must be read with its sample size visible**: several columns contain only one 2026/27 league match, while any older fallback is labelled in the table instead of being presented as current-season data.
+
+Toulouse can create through Jørgensen between the lines and Vignolo/Oppong in wide zones, but the absence of Gboho and Dønnum removes two established attacking options. Lille can use Giroud as the reference for second balls while Mbappé and Haraldsson attack around him. If Lille score first, Toulouse will have to commit more numbers forward and the second-goal leg becomes more likely.
+
+### Tactical Matchup and Game State
+
+Toulouse can create through Jørgensen between the lines and Vignolo/Oppong in wide zones, but the absence of Gboho and Dønnum removes two established attacking options. Lille can use Giroud as the reference for second balls while Mbappé and Haraldsson attack around him. If Lille score first, Toulouse will have to commit more numbers forward and the second-goal leg becomes more likely.
+
+### Conflict Detector
+
+The supporting case comes from the HOME/AWAY process, but the counter-signal is material rather than cosmetic. Toulouse generated 2.29 xG in their home defeat, while Lille allowed 1.87 xGA in their away win. Those figures show that the scorelines flatter Lille and underrate Toulouse’s chance creation. A low-conversion 0-1 or a Toulouse first goal are the main threats to the combined market.
+
+That conflict is part of the match analysis and limits confidence where the market requires more than one condition to land.
+
+### Risks and Limitations
+
+Toulouse generated 2.29 xG in their home defeat, while Lille allowed 1.87 xGA in their away win. Those figures show that the scorelines flatter Lille and underrate Toulouse’s chance creation. A low-conversion 0-1 or a Toulouse first goal are the main threats to the combined market.
+
+Early-season venue samples can move sharply after a single match. Injuries, transfers and tactical changes also mean prior-season fallback data should be treated as context, not as a current-form substitute.
+
+### Odds + Implied Probability
+
+At decimal odds **1.83**, the raw implied probability is **54.6%** because **1 / 1.83 = 0.546**, before bookmaker margin.
 
 ### Value Assessment
-The published price is assessed against the split evidence without inventing fair odds. The current data can show whether the market is coherent with the matchup, but the small early-season sample does not justify presenting an artificial precision advantage. The correct reading is therefore evidence-based and conditional: the selection remains the published recommendation, while the Conflict Detector identifies the main paths by which the price can fail to convert.
+
+The price is acceptable only if the sporting evidence supports a probability above that raw **54.6%** break-even point. No artificial fair-odds model is inserted here: the value judgment remains conditional on the HOME/AWAY process, availability, lineup uncertainty and expected game state.
 
 ### Conclusion
-The final position keeps the original published market and price unchanged. The case is built from the relevant HOME-versus-AWAY evidence, the retained pre-match lineup and availability information, and the tactical routes described above. Because the 2026/27 venue samples remain small, confidence should come from the consistency of several indicators rather than from any single percentage.
+
+Lille have the stronger result trend and cleaner away scoring start, while Toulouse’s xG keeps the matchup competitive. X2 is supported more strongly than the total, but the two-goal threshold remains reachable if either side converts closer to the chance quality already created.
 
 **Prediction:** Lille or Draw (X2) + Over 1.5 Goals
 **Odds:** 1.83
+
+### Sources / Statistical Provenance
+
+The Statistical Core keeps the reference window already attached to the fixture and labels historical fallback where relevant. Current absences and suspension status are cross-checked against the official Ligue 1 Matchday 3 update, while probable XIs are checked against current lineup services and same-week French team-news reporting.
 `
   ],
   analysisFormat: "markdown",
@@ -100,12 +119,26 @@ The final position keeps the original published market and price unchanged. The 
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
   sourceStatus: "verified",
-  sources: [{
-    name: "OpenFootball — Ligue 1 2026/27 fixtures",
-    url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/france/2026-27_fr1.txt",
-    description: "Season fixture data supporting the competition, round, date, home team and away team used for publication.",
-    accessedAt: "2026-08-30T10:00:00-03:00",
-  }],
+  sources: [
+    {
+        "name": "Ligue 1 — Matchday 3 team news",
+        "url": "https://ligue1.com/fr/articles/l1_article_5732-mpp-les-infos-de-la-j2-1",
+        "description": "Official Ligue 1 Matchday 3 availability, suspensions and current form reference.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
+    },
+    {
+        "name": "RotoWire — Ligue 1 lineups",
+        "url": "https://www.rotowire.com/soccer/lineups.php?league=FRAN",
+        "description": "Current probable lineups and injury/suspension cross-check for the Matchday 3 window.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
+    },
+    {
+        "name": "L'Équipe — Ligue 1 Round 3 schedule",
+        "url": "https://www.lequipe.fr/Football/ligue-1/page-calendrier-resultats/3e-journee",
+        "description": "Round 3 fixture date and kickoff cross-check.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
+    }
+],
   matchInfo: {
     date: "2026-09-03",
     time: "20:45",

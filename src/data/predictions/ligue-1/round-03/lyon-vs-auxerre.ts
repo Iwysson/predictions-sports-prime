@@ -6,43 +6,36 @@ export const lyonVsAuxerre: EditorialPrediction = {
   awayTeam: "Auxerre",
   slug: "lyon-vs-auxerre",
   analysis: [
-    `# Lyon vs Auxerre Prediction, Odds and Betting Tips
+    `# Lyon vs Auxerre Prediction, Odds and Match Analysis
 
 **Prediction:** Lyon to Win + Over 1.5 Goals
 **Odds:** 1.80
 
 ### Match Information
-**Competition:** Ligue 1
+
+**Competition:** Ligue 1 2026/27
 **Date:** 2026-09-04
-**Kickoff:** 19:00
+**Kickoff:** 19:00 local time
 **Round:** Matchweek 3
 **Venue:** Groupama Stadium
 
-### Team News / Availability
-Lyon have monitored **Julien Duranville** among the muscular concerns. Auxerre's list has included **Assane Dioussé, Marvin Senaya and Bryan Okoh**, with **Sékou Fofana** requiring confirmation around an early-September return.
+### Match Context
 
-### Probable Lineups
-**Probable lineups** should remain based on the latest Ligue 1 XIs. Lyon's current core includes Dominik Greif, Clinton Mata, Moussa Niakhaté, Abner, Ainsley Maitland-Niles, Tyler Morton, Corentin Tolisso, Pavel Šulc and attacking options around Ernest Nuamah, Loïs Openda and Kaïl Boudache. Auxerre's final defensive and midfield configuration needs a late medical check.
+Auxerre have conceded eight goals in two league matches and arrive with a heavily reduced availability list. Lyon have been less explosive but their current HOME sample shows a much better defensive process, which matters more than simply comparing the one-point and zero-point starts.
 
-### Suspensions / Eligibility
-Only suspensions or eligibility issues already supported by the retained pre-match source set are treated as confirmed here. No additional absence is invented to complete the template. The final official squad list and match sheet should override any preliminary projection.
+### Team News and Probable Lineups
 
-### Robust Match Analysis
-This prediction is evaluated independently from the published selection. The first question is not whether the existing pick can be justified, but what the available pre-match evidence says about the matchup. The sample is still very early in 2026/27, so one completed HOME or AWAY league match can move the averages sharply. For that reason, the current venue split is used when it exists, and a disclosed prior-season venue fallback is used only when the relevant 2026/27 split does not yet exist.
+**Availability:** Lyon are without Keito Nakamura, Julien Duranville, Mohamed-Ali Cho Kamara and Kango in the official Matchday 3 update. Auxerre have a longer list including Axel Tuanzebe, Bryan Okoh, Fredrik Oppegård, Assane Dioussé, Marvin Senaya, T. Siwe, Sékou Fofana and Francisco Sierralta.
 
-For Lyon, the selected HOME sample shows **1.00 GF/game**, **1.00 GA/game**, **1.67 xG/game** and **0.82 xGA/game**. The shot profile is **15.0 shots** and **5.0 shots on target per game**, with **57.0% possession** and **5.0 corners for per game**. Those numbers describe what actually happened in the relevant venue sample; they are not a guarantee that the same game state will repeat.
+**Suspensions / eligibility:** no suspended player is listed for Lyon or Auxerre in the official Matchday 3 update.
 
-For Auxerre, the AWAY side of the comparison is **2.00 GF/game**, **5.00 GA/game**, **1.86 xG/game** and **3.81 xGA/game**. The corresponding volume is **10.0 shots**, **4.0 SOT**, **47.0% possession** and **7.0 corners for per game**. Where the column uses a historical fallback, that fact is stated directly in the table and should be read as context rather than current-season form.
+**Probable lineups:** **Lyon (4-2-3-1):** Dominik Greif; Zachary Athekame, Felix Bacher, Moussa Niakhaté, Nicolás Tagliafico; Mads Bidstrup, Tyler Morton; Ernest Nuamah, Corentin Tolisso, Kaïl Boudache; Loïs Openda. **Auxerre (4-1-2-3):** Mamadou Diop; Lamine Sy, Sinaly Diomandé, Elikya Legros, Clément Akpa; Arthur Piedfort; Naouirou Ahamada, Kévin Danois; Romain Faivre, Danny Namaso, Rémy Lascary.
 
-### HOME vs AWAY Data Analysis
-Lyon HOME is the 1-1 draw with Le Havre; Auxerre AWAY is the 2-5 loss at Lens. This separation matters because blending overall data can hide meaningful venue effects. The Statistical Core therefore compares the host's HOME profile with the visitor's AWAY profile rather than combining all league matches into a single average.
+The XI is a pre-match projection. The official teamsheet released close to kickoff overrides every probable selection.
 
-The defensive-volume comparison is also important. Lyon have allowed **12.0 shots** and **4.0 SOT** per game in the selected HOME sample, while Auxerre have allowed **12.0 shots** and **9.0 SOT** in the selected AWAY sample or disclosed fallback. Corners show a similar game-state dimension: Lyon are at **10.0 total corners per HOME match**, compared with **11.0** in the visitor's AWAY environment.
+### HOME/AWAY Analysis
 
-### Advanced Data and Expected Game State
-The tactical interpretation should remain conditional on the small sample. If the stronger territorial side establishes possession and field position early, the match can move toward the published market through sustained pressure, repeated entries and set-piece accumulation. If the underdog scores first or the match stays level deep into the second half, the risk profile changes materially. That is why the analysis keeps goals, xG, shots, SOT, possession and corners together instead of elevating one metric into a stand-alone prediction engine.
-
-The first-goal and first-half rows are descriptive rather than predictive. In a one-match sample, a 0% or 100% rate means exactly one observed match, not a stable probability. They are retained because they help describe the game state that produced the current venue numbers.
+Auxerre have conceded eight goals in two league matches and arrive with a heavily reduced availability list. Lyon have been less explosive but their current HOME sample shows a much better defensive process, which matters more than simply comparing the one-point and zero-point starts.
 
 ### Statistical Core Predictions-Sports-Prime
 | Metric | Lyon — 2026/27 HOME (N=1) | Auxerre — 2026/27 AWAY (N=1) |
@@ -70,20 +63,46 @@ The first-goal and first-half rows are descriptive rather than predictive. In a 
 | Clean sheets | 0% | 0% |
 | Failed to score | 0% | 0% |
 
-### Conflict Detector
-The principal conflict is sample size. Several 2026/27 venue splits contain only one completed league match, so extreme rates such as 0% or 100% must not be treated as mature probabilities. A second conflict can arise when actual goals and xG disagree: finishing variance may make a team look more or less efficient than the underlying chance quality. Finally, the published market can fail through a different game script even when the broader statistical profile is directionally supportive.
+### Statistical Interpretation
 
-### Odds and Implied Probability
-At decimal odds **1.80**, the raw implied probability is **55.6%** (1 / 1.80 = 55.6%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+The venue split matters because the host and visitor have not produced the same type of game. **The current Statistical Core must be read with its sample size visible**: several columns contain only one 2026/27 league match, while any older fallback is labelled in the table instead of being presented as current-season data.
+
+Lyon can use Tolisso between the lines with Nuamah and Boudache stretching the full-backs, while Openda attacks the depth. Auxerre’s depleted back line has to survive repeated transition moments after turnovers. If Lyon score first, the visitors’ need to push higher should open the spaces required for the second-goal leg.
+
+### Tactical Matchup and Game State
+
+Lyon can use Tolisso between the lines with Nuamah and Boudache stretching the full-backs, while Openda attacks the depth. Auxerre’s depleted back line has to survive repeated transition moments after turnovers. If Lyon score first, the visitors’ need to push higher should open the spaces required for the second-goal leg.
+
+### Conflict Detector
+
+The supporting case comes from the HOME/AWAY process, but the counter-signal is material rather than cosmetic. Lyon’s first HOME match finished only 1-1, and Auxerre still generated 1.86 xG in their away sample despite conceding five. That attacking output is a meaningful counter-signal to a comfortable home win, particularly if Lyon fail to control transition defence.
+
+That conflict is part of the match analysis and limits confidence where the market requires more than one condition to land.
+
+### Risks and Limitations
+
+Lyon’s first HOME match finished only 1-1, and Auxerre still generated 1.86 xG in their away sample despite conceding five. That attacking output is a meaningful counter-signal to a comfortable home win, particularly if Lyon fail to control transition defence.
+
+Early-season venue samples can move sharply after a single match. Injuries, transfers and tactical changes also mean prior-season fallback data should be treated as context, not as a current-form substitute.
+
+### Odds + Implied Probability
+
+At decimal odds **1.80**, the raw implied probability is **55.6%** because **1 / 1.80 = 0.556**, before bookmaker margin.
 
 ### Value Assessment
-The published price is assessed against the split evidence without inventing fair odds. The current data can show whether the market is coherent with the matchup, but the small early-season sample does not justify presenting an artificial precision advantage. The correct reading is therefore evidence-based and conditional: the selection remains the published recommendation, while the Conflict Detector identifies the main paths by which the price can fail to convert.
+
+The price is acceptable only if the sporting evidence supports a probability above that raw **55.6%** break-even point. No artificial fair-odds model is inserted here: the value judgment remains conditional on the HOME/AWAY process, availability, lineup uncertainty and expected game state.
 
 ### Conclusion
-The final position keeps the original published market and price unchanged. The case is built from the relevant HOME-versus-AWAY evidence, the retained pre-match lineup and availability information, and the tactical routes described above. Because the 2026/27 venue samples remain small, confidence should come from the consistency of several indicators rather than from any single percentage.
+
+The defensive gap is the clearest separator: Lyon’s 0.82 home xGA contrasts sharply with Auxerre’s 3.81 away xGA. That supports the home result, while Auxerre’s own chance creation keeps Over 1.5 reachable even if the visitors contribute.
 
 **Prediction:** Lyon to Win + Over 1.5 Goals
 **Odds:** 1.80
+
+### Sources / Statistical Provenance
+
+The Statistical Core keeps the reference window already attached to the fixture and labels historical fallback where relevant. Current absences and suspension status are cross-checked against the official Ligue 1 Matchday 3 update, while probable XIs are checked against current lineup services and same-week French team-news reporting.
 `
   ],
   analysisFormat: "markdown",
@@ -100,12 +119,26 @@ The final position keeps the original published market and price unchanged. The 
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
   sourceStatus: "verified",
-  sources: [{
-    name: "OpenFootball — Ligue 1 2026/27 fixtures",
-    url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/france/2026-27_fr1.txt",
-    description: "Season fixture data supporting the competition, round, date, home team and away team used for publication.",
-    accessedAt: "2026-08-30T10:00:00-03:00",
-  }],
+  sources: [
+    {
+        "name": "Ligue 1 — Matchday 3 team news",
+        "url": "https://ligue1.com/fr/articles/l1_article_5732-mpp-les-infos-de-la-j2-1",
+        "description": "Official Ligue 1 Matchday 3 availability, suspensions and current form reference.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
+    },
+    {
+        "name": "RotoWire — Ligue 1 lineups",
+        "url": "https://www.rotowire.com/soccer/lineups.php?league=FRAN",
+        "description": "Current probable lineups and injury/suspension cross-check for the Matchday 3 window.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
+    },
+    {
+        "name": "L'Équipe — Ligue 1 Round 3 schedule",
+        "url": "https://www.lequipe.fr/Football/ligue-1/page-calendrier-resultats/3e-journee",
+        "description": "Round 3 fixture date and kickoff cross-check.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
+    }
+],
   matchInfo: {
     date: "2026-09-04",
     time: "19:00",

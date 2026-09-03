@@ -6,43 +6,36 @@ export const leHavreVsBrest: EditorialPrediction = {
   awayTeam: "Brest",
   slug: "le-havre-vs-brest",
   analysis: [
-    `# Le Havre vs Brest Prediction, Odds and Betting Tips
+    `# Le Havre vs Brest Prediction, Odds and Match Analysis
 
 **Prediction:** Over 1.5 Goals + Over 7.5 Corners
 **Odds:** 1.83
 
 ### Match Information
-**Competition:** Ligue 1
+
+**Competition:** Ligue 1 2026/27
 **Date:** 2026-09-05
-**Kickoff:** 20:45
+**Kickoff:** 20:45 local time
 **Round:** Matchweek 3
 **Venue:** Stade CMA CGM Oceane
 
-### Team News / Availability
-Le Havre have **Yanis Zouaoui** out with a thigh problem, **Felix Mambimbi** with an Achilles injury and **Stephan Zagadou** recovering from an ACL injury. Brest have monitored **Brendan Chardonnet**, while **Hugo Magnetti** and **Justin Bourgault** have appeared as doubts.
+### Match Context
 
-### Probable Lineups
-**Probable lineups — latest competitive XI baseline.** Le Havre's recent base includes **Lionel Mpasi; Timothée Pembélé, Vincent Sasso, Abdoulaye Seko; Samuel Ebonog, Junior Mwanga, Amir Richardson; Fodé Doucouré, Ally Samatta, Rassoul N'Diaye**, with a change required if Yanis Zouaoui remains unavailable. Brest's baseline is **Egil Selvik; Kenny Lala, Joris Chotard, Rémy Le Guen, Bradley Locko; Lucas Tousart, Junior Nonge; Romain Del Castillo, Kamory Doumbia, Pathé Mboup; Ludovic Ajorque**.
+Le Havre have one point from two matches, while Brest have opened with consecutive 2-2 draws and an unusually high shot volume. The relevant venue samples are only one match each, but both produced eleven total corners, which directly matters to the selected market.
 
-### Suspensions / Eligibility
-Only suspensions or eligibility issues already supported by the retained pre-match source set are treated as confirmed here. No additional absence is invented to complete the template. The final official squad list and match sheet should override any preliminary projection.
+### Team News and Probable Lineups
 
-### Robust Match Analysis
-This prediction is evaluated independently from the published selection. The first question is not whether the existing pick can be justified, but what the available pre-match evidence says about the matchup. The sample is still very early in 2026/27, so one completed HOME or AWAY league match can move the averages sharply. For that reason, the current venue split is used when it exists, and a disclosed prior-season venue fallback is used only when the relevant 2026/27 split does not yet exist.
+**Availability:** Le Havre are without Stephan Zagadou and Felix Mambimbi, with Issa Tincres also listed among the principal absentees. Brest are missing Brendan Chardonnet and Justin Bourgault, while Edjouma is an assessment case.
 
-For Le Havre, the selected HOME sample shows **0.00 GF/game**, **1.00 GA/game**, **0.84 xG/game** and **1.62 xGA/game**. The shot profile is **14.0 shots** and **4.0 shots on target per game**, with **50.0% possession** and **7.0 corners for per game**. Those numbers describe what actually happened in the relevant venue sample; they are not a guarantee that the same game state will repeat.
+**Suspensions / eligibility:** no suspension is listed for Le Havre or Brest in the official Matchday 3 update.
 
-For Brest, the AWAY side of the comparison is **2.00 GF/game**, **2.00 GA/game**, **2.62 xG/game** and **0.77 xGA/game**. The corresponding volume is **26.0 shots**, **7.0 SOT**, **50.0% possession** and **10.0 corners for per game**. Where the column uses a historical fallback, that fact is stated directly in the table and should be read as context rather than current-season form.
+**Probable lineups:** **Le Havre (3-4-2-1):** Lionel Mpasi-Nzau; Ayumu Seko, Junior Mwanga, Ahmed Touba; Timothée Pembélé, Simon Ebonog, Amir Richardson, Djibril Ouziad; Rassoul Ndiaye, Kaito Mizuta; Mbwana Samatta. **Brest (4-2-3-1):** Egil Selvik; Kenny Lala, Gautier Lloris, Rémy Le Guen, Bradley Locko; Joris Chotard, Mahdi Diambou; Romain Del Castillo (Axel Camblan), Kamory Doumbia, Pathé Mboup; Ludovic Ajorque.
 
-### HOME vs AWAY Data Analysis
-Le Havre HOME is the 0-1 loss to Monaco; Brest AWAY is the 2-2 draw at Le Mans. This separation matters because blending overall data can hide meaningful venue effects. The Statistical Core therefore compares the host's HOME profile with the visitor's AWAY profile rather than combining all league matches into a single average.
+The XI is a pre-match projection. The official teamsheet released close to kickoff overrides every probable selection.
 
-The defensive-volume comparison is also important. Le Havre have allowed **15.0 shots** and **7.0 SOT** per game in the selected HOME sample, while Brest have allowed **8.0 shots** and **5.0 SOT** in the selected AWAY sample or disclosed fallback. Corners show a similar game-state dimension: Le Havre are at **11.0 total corners per HOME match**, compared with **11.0** in the visitor's AWAY environment.
+### HOME/AWAY Analysis
 
-### Advanced Data and Expected Game State
-The tactical interpretation should remain conditional on the small sample. If the stronger territorial side establishes possession and field position early, the match can move toward the published market through sustained pressure, repeated entries and set-piece accumulation. If the underdog scores first or the match stays level deep into the second half, the risk profile changes materially. That is why the analysis keeps goals, xG, shots, SOT, possession and corners together instead of elevating one metric into a stand-alone prediction engine.
-
-The first-goal and first-half rows are descriptive rather than predictive. In a one-match sample, a 0% or 100% rate means exactly one observed match, not a stable probability. They are retained because they help describe the game state that produced the current venue numbers.
+Le Havre have one point from two matches, while Brest have opened with consecutive 2-2 draws and an unusually high shot volume. The relevant venue samples are only one match each, but both produced eleven total corners, which directly matters to the selected market.
 
 ### Statistical Core Predictions-Sports-Prime
 | Metric | Le Havre — 2026/27 HOME (N=1) | Brest — 2026/27 AWAY (N=1) |
@@ -70,20 +63,46 @@ The first-goal and first-half rows are descriptive rather than predictive. In a 
 | Clean sheets | 0% | 0% |
 | Failed to score | 100% | 0% |
 
-### Conflict Detector
-The principal conflict is sample size. Several 2026/27 venue splits contain only one completed league match, so extreme rates such as 0% or 100% must not be treated as mature probabilities. A second conflict can arise when actual goals and xG disagree: finishing variance may make a team look more or less efficient than the underlying chance quality. Finally, the published market can fail through a different game script even when the broader statistical profile is directionally supportive.
+### Statistical Interpretation
 
-### Odds and Implied Probability
-At decimal odds **1.83**, the raw implied probability is **54.6%** (1 / 1.83 = 54.6%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+The venue split matters because the host and visitor have not produced the same type of game. **The current Statistical Core must be read with its sample size visible**: several columns contain only one 2026/27 league match, while any older fallback is labelled in the table instead of being presented as current-season data.
+
+Le Havre’s back three should try to protect the box and release Pembélé and Ouziad into the wide lanes. Brest can create a numerical advantage behind Ajorque through Doumbia and the wide attackers, and their 26-shot away reference suggests they will not be passive. An early Brest goal would force Le Havre to increase width and crossing volume, helping both the goal and corner components.
+
+### Tactical Matchup and Game State
+
+Le Havre’s back three should try to protect the box and release Pembélé and Ouziad into the wide lanes. Brest can create a numerical advantage behind Ajorque through Doumbia and the wide attackers, and their 26-shot away reference suggests they will not be passive. An early Brest goal would force Le Havre to increase width and crossing volume, helping both the goal and corner components.
+
+### Conflict Detector
+
+The supporting case comes from the HOME/AWAY process, but the counter-signal is material rather than cosmetic. Le Havre failed to score in their first HOME match and Brest have gone eleven league matches without a win. The two one-match samples also contain extreme values that can regress quickly. A slow, low-quality first half is the main threat to Over 1.5.
+
+That conflict is part of the match analysis and limits confidence where the market requires more than one condition to land.
+
+### Risks and Limitations
+
+Le Havre failed to score in their first HOME match and Brest have gone eleven league matches without a win. The two one-match samples also contain extreme values that can regress quickly. A slow, low-quality first half is the main threat to Over 1.5.
+
+Early-season venue samples can move sharply after a single match. Injuries, transfers and tactical changes also mean prior-season fallback data should be treated as context, not as a current-form substitute.
+
+### Odds + Implied Probability
+
+At decimal odds **1.83**, the raw implied probability is **54.6%** because **1 / 1.83 = 0.546**, before bookmaker margin.
 
 ### Value Assessment
-The published price is assessed against the split evidence without inventing fair odds. The current data can show whether the market is coherent with the matchup, but the small early-season sample does not justify presenting an artificial precision advantage. The correct reading is therefore evidence-based and conditional: the selection remains the published recommendation, while the Conflict Detector identifies the main paths by which the price can fail to convert.
+
+The price is acceptable only if the sporting evidence supports a probability above that raw **54.6%** break-even point. No artificial fair-odds model is inserted here: the value judgment remains conditional on the HOME/AWAY process, availability, lineup uncertainty and expected game state.
 
 ### Conclusion
-The final position keeps the original published market and price unchanged. The case is built from the relevant HOME-versus-AWAY evidence, the retained pre-match lineup and availability information, and the tactical routes described above. Because the 2026/27 venue samples remain small, confidence should come from the consistency of several indicators rather than from any single percentage.
+
+The corner leg has unusually direct support because both venue samples finished with eleven corners, while Brest’s away xG and shot volume give the goal leg a credible route. Le Havre’s finishing remains the main weakness in the combined selection.
 
 **Prediction:** Over 1.5 Goals + Over 7.5 Corners
 **Odds:** 1.83
+
+### Sources / Statistical Provenance
+
+The Statistical Core keeps the reference window already attached to the fixture and labels historical fallback where relevant. Current absences and suspension status are cross-checked against the official Ligue 1 Matchday 3 update, while probable XIs are checked against current lineup services and same-week French team-news reporting.
 `
   ],
   analysisFormat: "markdown",
@@ -100,12 +119,26 @@ The final position keeps the original published market and price unchanged. The 
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
   sourceStatus: "verified",
-  sources: [{
-    name: "OpenFootball — Ligue 1 2026/27 fixtures",
-    url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/france/2026-27_fr1.txt",
-    description: "Season fixture data supporting the competition, round, date, home team and away team used for publication.",
-    accessedAt: "2026-08-30T10:00:00-03:00",
-  }],
+  sources: [
+    {
+        "name": "Ligue 1 — Matchday 3 team news",
+        "url": "https://ligue1.com/fr/articles/l1_article_5732-mpp-les-infos-de-la-j2-1",
+        "description": "Official Ligue 1 Matchday 3 availability, suspensions and current form reference.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
+    },
+    {
+        "name": "RotoWire — Ligue 1 lineups",
+        "url": "https://www.rotowire.com/soccer/lineups.php?league=FRAN",
+        "description": "Current probable lineups and injury/suspension cross-check for the Matchday 3 window.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
+    },
+    {
+        "name": "L'Équipe — Ligue 1 Round 3 schedule",
+        "url": "https://www.lequipe.fr/Football/ligue-1/page-calendrier-resultats/3e-journee",
+        "description": "Round 3 fixture date and kickoff cross-check.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
+    }
+],
   matchInfo: {
     date: "2026-09-05",
     time: "20:45",

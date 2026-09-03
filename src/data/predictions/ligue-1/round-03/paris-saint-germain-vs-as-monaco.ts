@@ -8,43 +8,36 @@ export const parisSaintGermainVsAsMonaco: EditorialPrediction = {
   title: "Paris Saint-Germain vs AS Monaco Prediction",
   seoTitle: "Paris Saint-Germain vs AS Monaco Prediction & Match Analysis",
   analysis: [
-    `# Paris Saint-Germain vs AS Monaco Prediction, Odds and Betting Tips
+    `# Paris Saint-Germain vs AS Monaco Prediction, Odds and Match Analysis
 
 **Prediction:** PSG -1.5 Asian Handicap
 **Odds:** 2.10
 
 ### Match Information
-**Competition:** Ligue 1
+
+**Competition:** Ligue 1 2026/27
 **Date:** 2026-09-04
-**Kickoff:** 20:45
+**Kickoff:** 20:45 local time
 **Round:** Matchweek 3
 **Venue:** Parc des Princes
 
-### Team News / Availability
-No PSG, existem mudanças importantes de disponibilidade. **Nuno Mendes está suspenso** para a partida e **João Neves aparece como dúvida por doença**. ([fotmob.com][3]) Matvey Safonov também ficou fora depois de apresentar problema durante o aquecimento contra Lille. ([goal.com][2]) Assim, a projeção deve ser tratada com cautela até o boletim médico final: **PSG — provável escalação (4-3-3): Lucas Chevalier; Achraf Hakimi, Marquinhos, Willian Pacho, Lucas Hernández; João Neves (Warren Zaïre-Emery), Vitinha, Fabián Ruiz; Désiré Doué, Ferran Torres e Maghnes Akliouche.** A suspensão de Nuno Mendes modifica diretamente o corredor esquerdo, enquanto uma eventual ausência de João Neves reduziria
+### Match Context
 
-### Probable Lineups
-**Escalações prováveis:** Mantemos a metodologia das análises anteriores: **o XI competitivo mais recente é a base**, com alterações apenas por suspensão, lesão, retorno ou evidência tática suficientemente forte. No PSG, existem mudanças importantes de disponibilidade. **Nuno Mendes está suspenso** para a partida e **João Neves aparece como dúvida por doença**. ([fotmob.com][3]) Matvey Safonov também ficou fora depois de apresentar problema durante o aquecimento contra Lille. ([goal.com][2]) Assim, a projeção deve ser tratada com cautela até o boletim médico final: **PSG — provável escalação (4-3-3): Lucas Chevalier; Achraf Hakimi, Marquinhos, Willian Pacho, Lucas Hernández; João Neves (Warren Zaïre-Emery), Vitinha, Fabián Ruiz; Désiré Doué, Ferran Torres e Maghnes Akliouche.** A suspensão de Nuno Mendes modifica diretamente o corredor esquerdo, enquanto uma eventual ausência de João Neves reduziria intensidade de pressão e capacidade de recuperar rapidamente a posse.
+PSG have drawn both league matches 2-2, while Monaco are the only side with six points after two rounds and arrive on a four-match winning run in all competitions. The Statistical Core is asymmetric because PSG had no 2026/27 HOME league match before this fixture, so their home column is an explicitly disclosed 2025/26 reference.
 
-### Suspensions / Eligibility
-Only suspensions or eligibility issues already supported by the retained pre-match source set are treated as confirmed here. No additional absence is invented to complete the template. The final official squad list and match sheet should override any preliminary projection.
+### Team News and Probable Lineups
 
-### Robust Match Analysis
-This prediction is evaluated independently from the published selection. The first question is not whether the existing pick can be justified, but what the available pre-match evidence says about the matchup. The sample is still very early in 2026/27, so one completed HOME or AWAY league match can move the averages sharply. For that reason, the current venue split is used when it exists, and a disclosed prior-season venue fallback is used only when the relevant 2026/27 split does not yet exist.
+**Availability:** Paris Saint-Germain are without Nuno Mendes through suspension, while João Neves remains doubtful through illness. Monaco are without Ansu Fati, Takumi Minamino, Mohammed Salisu and Edan Diop, with Folarin Balogun also an assessment case.
 
-For Paris Saint-Germain, the selected HOME sample shows **2.41 GF/game**, **0.71 GA/game**, **2.00 xG/game** and **0.79 xGA/game**. The shot profile is **20.12 shots** and **6.94 shots on target per game**, with **69.4% possession** and **7.47 corners for per game**. Those numbers describe what actually happened in the relevant venue sample; they are not a guarantee that the same game state will repeat.
+**Suspensions / eligibility:** Nuno Mendes is suspended for PSG. No Monaco suspension is listed in the official Matchday 3 update.
 
-For AS Monaco, the AWAY side of the comparison is **1.00 GF/game**, **0.00 GA/game**, **1.62 xG/game** and **0.84 xGA/game**. The corresponding volume is **15.0 shots**, **7.0 SOT**, **50.0% possession** and **4.0 corners for per game**. Where the column uses a historical fallback, that fact is stated directly in the table and should be read as context rather than current-season form.
+**Probable lineups:** **Paris Saint-Germain (4-3-3):** Lucas Chevalier; Achraf Hakimi, Marquinhos, Willian Pacho, Warren Zaïre-Emery; Vitinha, Lucas Beraldo, Fabián Ruiz; Maghnes Akliouche, Ferran Torres, Khvicha Kvaratskhelia. **AS Monaco (4-2-3-1):** Lukáš Hrádecký; Vanderson, Sadibou Sané, Eric Dier, Flávio Nazinho; Lamine Camara, Denis Zakaria; Mamadou Coulibaly, Aleksandr Golovin, Stanis Idumbo; Paris Brunner.
 
-### HOME vs AWAY Data Analysis
-PSG had no 2026/27 HOME league sample before this fixture, so the HOME column uses a disclosed 2025/26 home baseline; rows marked overall/two-season are explicitly fallback context. Monaco AWAY is the 1-0 win at Le Havre. This separation matters because blending overall data can hide meaningful venue effects. The Statistical Core therefore compares the host's HOME profile with the visitor's AWAY profile rather than combining all league matches into a single average.
+The XI is a pre-match projection. The official teamsheet released close to kickoff overrides every probable selection.
 
-The defensive-volume comparison is also important. Paris Saint-Germain have allowed **8.79 (overall 25/26) shots** and **3.24 (overall 25/26) SOT** per game in the selected HOME sample, while AS Monaco have allowed **14.0 shots** and **4.0 SOT** in the selected AWAY sample or disclosed fallback. Corners show a similar game-state dimension: Paris Saint-Germain are at **10.62 total corners per HOME match**, compared with **11.0** in the visitor's AWAY environment.
+### HOME/AWAY Analysis
 
-### Advanced Data and Expected Game State
-The tactical interpretation should remain conditional on the small sample. If the stronger territorial side establishes possession and field position early, the match can move toward the published market through sustained pressure, repeated entries and set-piece accumulation. If the underdog scores first or the match stays level deep into the second half, the risk profile changes materially. That is why the analysis keeps goals, xG, shots, SOT, possession and corners together instead of elevating one metric into a stand-alone prediction engine.
-
-The first-goal and first-half rows are descriptive rather than predictive. In a one-match sample, a 0% or 100% rate means exactly one observed match, not a stable probability. They are retained because they help describe the game state that produced the current venue numbers.
+PSG have drawn both league matches 2-2, while Monaco are the only side with six points after two rounds and arrive on a four-match winning run in all competitions. The Statistical Core is asymmetric because PSG had no 2026/27 HOME league match before this fixture, so their home column is an explicitly disclosed 2025/26 reference.
 
 ### Statistical Core Predictions-Sports-Prime
 | Metric | Paris Saint-Germain — 2025/26 HOME fallback (N=17) | AS Monaco — 2026/27 AWAY (N=1) |
@@ -72,20 +65,46 @@ The first-goal and first-half rows are descriptive rather than predictive. In a 
 | Clean sheets | 65% | 100% |
 | Failed to score | 0% | 0% |
 
-### Conflict Detector
-The principal conflict is sample size. Several 2026/27 venue splits contain only one completed league match, so extreme rates such as 0% or 100% must not be treated as mature probabilities. A second conflict can arise when actual goals and xG disagree: finishing variance may make a team look more or less efficient than the underlying chance quality. Finally, the published market can fail through a different game script even when the broader statistical profile is directionally supportive.
+### Statistical Interpretation
 
-### Odds and Implied Probability
-At decimal odds **2.10**, the raw implied probability is **47.6%** (1 / 2.10 = 47.6%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+The venue split matters because the host and visitor have not produced the same type of game. **The current Statistical Core must be read with its sample size visible**: several columns contain only one 2026/27 league match, while any older fallback is labelled in the table instead of being presented as current-season data.
+
+PSG should dominate the ball through Vitinha and Fabián Ruiz, with Hakimi providing width and Akliouche/Kvaratskhelia attacking the half-spaces. Monaco can threaten behind that advanced structure through Brunner and Golovin. The -1.5 handicap needs PSG not only to control possession but also to prevent Monaco’s first transition wave from producing the opening goal.
+
+### Tactical Matchup and Game State
+
+PSG should dominate the ball through Vitinha and Fabián Ruiz, with Hakimi providing width and Akliouche/Kvaratskhelia attacking the half-spaces. Monaco can threaten behind that advanced structure through Brunner and Golovin. The -1.5 handicap needs PSG not only to control possession but also to prevent Monaco’s first transition wave from producing the opening goal.
+
+### Conflict Detector
+
+The supporting case comes from the HOME/AWAY process, but the counter-signal is material rather than cosmetic. Monaco have won both league games and kept two consecutive clean sheets, while PSG have conceded twice in each league match. The handicap also requires a two-goal winning margin, so a routine one-goal PSG victory is still a losing outcome for the selection.
+
+That conflict is part of the match analysis and limits confidence where the market requires more than one condition to land.
+
+### Risks and Limitations
+
+Monaco have won both league games and kept two consecutive clean sheets, while PSG have conceded twice in each league match. The handicap also requires a two-goal winning margin, so a routine one-goal PSG victory is still a losing outcome for the selection.
+
+Early-season venue samples can move sharply after a single match. Injuries, transfers and tactical changes also mean prior-season fallback data should be treated as context, not as a current-form substitute.
+
+### Odds + Implied Probability
+
+At decimal odds **2.10**, the raw implied probability is **47.6%** because **1 / 2.10 = 0.476**, before bookmaker margin.
 
 ### Value Assessment
-The published price is assessed against the split evidence without inventing fair odds. The current data can show whether the market is coherent with the matchup, but the small early-season sample does not justify presenting an artificial precision advantage. The correct reading is therefore evidence-based and conditional: the selection remains the published recommendation, while the Conflict Detector identifies the main paths by which the price can fail to convert.
+
+The price is acceptable only if the sporting evidence supports a probability above that raw **47.6%** break-even point. No artificial fair-odds model is inserted here: the value judgment remains conditional on the HOME/AWAY process, availability, lineup uncertainty and expected game state.
 
 ### Conclusion
-The final position keeps the original published market and price unchanged. The case is built from the relevant HOME-versus-AWAY evidence, the retained pre-match lineup and availability information, and the tactical routes described above. Because the 2026/27 venue samples remain small, confidence should come from the consistency of several indicators rather than from any single percentage.
+
+PSG’s long-run home attacking baseline supports the possibility of a multi-goal win, but current form and Monaco’s clean-sheet start are substantial counter-signals. The handicap is therefore a high-variance position that requires PSG to translate possession into early score separation.
 
 **Prediction:** PSG -1.5 Asian Handicap
 **Odds:** 2.10
+
+### Sources / Statistical Provenance
+
+The Statistical Core keeps the reference window already attached to the fixture and labels historical fallback where relevant. Current absences and suspension status are cross-checked against the official Ligue 1 Matchday 3 update, while probable XIs are checked against current lineup services and same-week French team-news reporting.
 `
   ],
   analysisFormat: "markdown",
@@ -102,30 +121,24 @@ The final position keeps the original published market and price unchanged. The 
   sourceStatus: "verified",
   sources: [
     {
-      name: "psg",
-      url: "https://www.psg.fr/en/content/fixtures-for-matchday-3-of-ligue-1-2026-2027-paris-saint-germain-as-monaco?utm_source=chatgpt.com",
-      description: "Editorial source cited in the approved supplied analysis.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
+        "name": "Ligue 1 — Matchday 3 team news",
+        "url": "https://ligue1.com/fr/articles/l1_article_5732-mpp-les-infos-de-la-j2-1",
+        "description": "Official Ligue 1 Matchday 3 availability, suspensions and current form reference.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
     },
     {
-      name: "goal",
-      url: "https://www.goal.com/es/noticias/previa-del-paris-saint-germain-vs-monaco-en-la-ligue-1-todo-lo-que-necesitas-saber/blte6aace3494bb1f7b?utm_source=chatgpt.com",
-      description: "Editorial source cited in the approved supplied analysis.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
+        "name": "RotoWire — Ligue 1 lineups",
+        "url": "https://www.rotowire.com/soccer/lineups.php?league=FRAN",
+        "description": "Current probable lineups and injury/suspension cross-check for the Matchday 3 window.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
     },
     {
-      name: "fotmob",
-      url: "https://www.fotmob.com/en-GB/matches/monaco-vs-psg/379cod?utm_source=chatgpt.com",
-      description: "Editorial source cited in the approved supplied analysis.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
-    },
-    {
-      name: "psg",
-      url: "https://www.psg.fr/matchs/football-masculin/20252026/paris-vs-monaco-2026-03-06?utm_source=chatgpt.com",
-      description: "Editorial source cited in the approved supplied analysis.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
+        "name": "L'Équipe — Ligue 1 Round 3 schedule",
+        "url": "https://www.lequipe.fr/Football/ligue-1/page-calendrier-resultats/3e-journee",
+        "description": "Round 3 fixture date and kickoff cross-check.",
+        "accessedAt": "2026-09-03T13:00:00+02:00"
     }
-  ],
+],
   publishedAt: "2026-08-31T12:00:00.000Z",
   published: true,
   matchInfo: {
