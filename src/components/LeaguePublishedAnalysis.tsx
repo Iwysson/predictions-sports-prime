@@ -1,13 +1,23 @@
 import Link from "next/link";
 import type { Match } from "@/types";
+import { localePath, type SeoLocale } from "@/lib/seo-locales";
 
 export function LeaguePublishedAnalysis({
   leagueName,
   matches,
+  locale = "en",
+  localizedMatchSlugs = [],
 }: {
   leagueName: string;
   matches: Match[];
+  locale?: SeoLocale;
+  localizedMatchSlugs?: string[];
 }) {
+  const localizedSet = new Set(localizedMatchSlugs);
+  const matchHref = (slug: string) =>
+    locale !== "en" && localizedSet.has(slug)
+      ? localePath(locale, `/match/${slug}/`)
+      : `/match/${slug}/`;
   if (matches.length === 0) return null;
 
   return (
@@ -31,7 +41,7 @@ export function LeaguePublishedAnalysis({
           <article className="related-prediction-card" key={match.id}>
             <span>{match.date}</span>
             <h3>
-              <Link href={`/match/${match.slug}/`}>
+              <Link href={matchHref(match.slug)}>
                 {match.homeTeam} vs {match.awayTeam}
               </Link>
             </h3>

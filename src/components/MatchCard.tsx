@@ -9,9 +9,22 @@ import { useI18n } from "@/i18n/I18nProvider";
 import { canRenderComingSoon } from "@/lib/fixture-status";
 import { getMatchDisplayTime } from "@/lib/match-time";
 import { isFixtureLiveNow } from "@/lib/fixture-state";
+import { localePath, type SeoLocale } from "@/lib/seo-locales";
 
-export function MatchCard({ match, now = new Date() }: { match: MatchPreview; now?: Date | string }) {
-  const href = `/match/${match.slug}/`;
+export function MatchCard({
+  match,
+  now = new Date(),
+  locale = "en",
+  localized = false,
+}: {
+  match: MatchPreview;
+  now?: Date | string;
+  locale?: SeoLocale;
+  localized?: boolean;
+}) {
+  const href = locale !== "en" && localized
+    ? localePath(locale, `/match/${match.slug}/`)
+    : `/match/${match.slug}/`;
   const league = leagues.find((item) => item.slug === match.league);
   const { t } = useI18n();
   const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");

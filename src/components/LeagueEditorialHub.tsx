@@ -3,6 +3,7 @@ import type { CompetitionRoundSurface } from "@/lib/competition-rounds";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { localTodayISO } from "@/lib/match-feed";
 import type { Match, MatchPreview } from "@/types";
+import { localePath, type SeoLocale } from "@/lib/seo-locales";
 
 function uniqueMatches(matches: MatchPreview[]) {
   return [...new Map(matches.map((match) => [match.slug, match])).values()];
@@ -19,11 +20,19 @@ function isCompleted(match: MatchPreview | Match) {
 function MatchLinks({
   matches,
   context,
+  locale,
+  localizedMatchSlugs,
 }: {
   matches: MatchPreview[];
   context: "today" | "upcoming";
+  locale: SeoLocale;
+  localizedMatchSlugs: Set<string>;
 }) {
   if (!matches.length) return null;
+  const matchHref = (slug: string) =>
+    locale !== "en" && localizedMatchSlugs.has(slug)
+      ? localePath(locale, `/match/${slug}/`)
+      : `/match/${slug}/`;
   return (
     <div className="league-hub-list">
       {matches.map((match) => (
@@ -33,7 +42,7 @@ function MatchLinks({
             <h3>{match.homeTeam} vs {match.awayTeam}</h3>
           </div>
           {match.status === "published" ? (
-            <Link href={`/match/${match.slug}/`}>
+            <Link href={matchHref(match.slug)}>
               {context === "today"
                 ? `${match.homeTeam} vs ${match.awayTeam} prediction`
                 : `Preview ${match.homeTeam} vs ${match.awayTeam}`}
@@ -49,11 +58,20 @@ export function LeagueEditorialHub({
   leagueName,
   publishedMatches,
   surface,
+  locale = "en",
+  localizedMatchSlugs = [],
 }: {
   leagueName: string;
   publishedMatches: Match[];
   surface: CompetitionRoundSurface;
+  locale?: SeoLocale;
+  localizedMatchSlugs?: string[];
 }) {
+  const localizedMatchSet = new Set(localizedMatchSlugs);
+  const matchHref = (slug: string) =>
+    locale !== "en" && localizedMatchSet.has(slug)
+      ? localePath(locale, `/match/${slug}/`)
+      : `/match/${slug}/`;
   const today = localTodayISO();
   const roundMatches = uniqueMatches([
     ...(surface.current?.matches ?? []),
@@ -88,14 +106,14 @@ export function LeagueEditorialHub({
       {todayMatches.length ? (
         <section aria-labelledby="league-today-heading">
           <h2 id="league-today-heading">Today&apos;s {leagueName} Matches</h2>
-          <MatchLinks matches={todayMatches} context="today" />
+          <MatchLinks matches={todayMatches} context="today" locale={locale} localizedMatchSlugs={localizedMatchSet} />
         </section>
       ) : null}
 
       {upcomingMatches.length ? (
         <section aria-labelledby="league-upcoming-heading">
           <h2 id="league-upcoming-heading">Upcoming {leagueName} Matches</h2>
-          <MatchLinks matches={upcomingMatches} context="upcoming" />
+          <MatchLinks matches={upcomingMatches} context="upcoming" locale={locale} localizedMatchSlugs={localizedMatchSet} />
         </section>
       ) : null}
 
@@ -106,8 +124,8 @@ export function LeagueEditorialHub({
             {latest.map((match, index) => (
               <article key={match.slug}>
                 <span>{match.date}</span>
-                <h3><Link href={`/match/${match.slug}/`}>{match.homeTeam} vs {match.awayTeam}</Link></h3>
-                <Link href={`/match/${match.slug}/`}>
+                <h3><Link href={matchHref(match.slug)}>{match.homeTeam} vs {match.awayTeam}</Link></h3>
+                <Link href={matchHref(match.slug)}>
                   {index % 2 === 0
                     ? `${match.homeTeam} vs ${match.awayTeam} prediction`
                     : `Read the ${match.homeTeam} vs ${match.awayTeam} analysis`}
@@ -126,7 +144,7 @@ export function LeagueEditorialHub({
               <article key={match.slug}>
                 <span>{match.date}</span>
                 <strong>{match.homeTeam} {match.homeScore}–{match.awayScore} {match.awayTeam}</strong>
-                <Link href={`/match/${match.slug}/`}>Review the published prediction</Link>
+                <Link href={matchHref(match.slug)}>Review the published prediction</Link>
               </article>
             ))}
           </div>

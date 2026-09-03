@@ -7,8 +7,21 @@ import { canRenderComingSoon } from "@/lib/fixture-status";
 import { getMatchDisplayTime } from "@/lib/match-time";
 import { isFixtureLiveNow } from "@/lib/fixture-state";
 
-export function HomeMatchCard({ match, now }: { match: MatchPreview; now: Date | string }) {
-  const href = `/match/${match.slug}/`;
+export function HomeMatchCard({
+  match,
+  now,
+  href = `/match/${match.slug}/`,
+  viewLabel = "View",
+  predictionAvailableLabel = "Prediction available",
+  comingSoonLabel = "Coming soon",
+}: {
+  match: MatchPreview;
+  now: Date | string;
+  href?: string;
+  viewLabel?: string;
+  predictionAvailableLabel?: string;
+  comingSoonLabel?: string;
+}) {
   const league = leagues.find((item) => item.slug === match.league);
   const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");
   const kickoff = getMatchDisplayTime(match);
@@ -41,11 +54,11 @@ export function HomeMatchCard({ match, now }: { match: MatchPreview; now: Date |
       <div className="compact-match-footer">
         <span className={`prediction-pill prediction-pill--${live ? "live" : match.status}`}>
           <span aria-hidden="true">✓</span>
-          {live ? "LIVE" : match.status === "published" ? "Prediction available" : showComingSoon ? "Coming soon" : match.fixtureStatus?.toUpperCase()}
+          {live ? "LIVE" : match.status === "published" ? predictionAvailableLabel : showComingSoon ? comingSoonLabel : match.fixtureStatus?.toUpperCase()}
         </span>
         {match.status === "published" ? (
           <Link href={href} className="button button--small" aria-label={`${match.homeTeam} vs ${match.awayTeam} Prediction`}>
-            View <span aria-hidden="true">›</span>
+            {viewLabel} <span aria-hidden="true">›</span>
           </Link>
         ) : null}
       </div>

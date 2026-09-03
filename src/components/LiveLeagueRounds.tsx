@@ -3,6 +3,7 @@
 import { MatchCard } from "@/components/MatchCard";
 import type { CompetitionRoundSection, CompetitionRoundSurface } from "@/lib/competition-rounds";
 import { useI18n } from "@/i18n/I18nProvider";
+import type { SeoLocale } from "@/lib/seo-locales";
 
 function roundLabel(round: number | string) {
   return typeof round === "number" ? `Matchday ${round}` : round;
@@ -12,10 +13,14 @@ function RoundFixtures({
   section,
   surfaceName,
   emptyMessage,
+  locale,
+  localizedMatchSlugs,
 }: {
   section: CompetitionRoundSection | null;
   surfaceName: "current" | "next";
   emptyMessage: string;
+  locale: SeoLocale;
+  localizedMatchSlugs: Set<string>;
 }) {
   if (!section?.matches.length) {
     return (
@@ -36,14 +41,23 @@ function RoundFixtures({
           data-home-team={match.homeTeam}
           data-away-team={match.awayTeam}
         >
-          <MatchCard match={match} />
+          <MatchCard match={match} locale={locale} localized={localizedMatchSlugs.has(match.slug)} />
         </div>
       ))}
     </div>
   );
 }
 
-export function LiveLeagueRounds({ surface }: { surface: CompetitionRoundSurface }) {
+export function LiveLeagueRounds({
+  surface,
+  locale = "en",
+  localizedMatchSlugs = [],
+}: {
+  surface: CompetitionRoundSurface;
+  locale?: SeoLocale;
+  localizedMatchSlugs?: string[];
+}) {
+  const localizedMatchSet = new Set(localizedMatchSlugs);
   const { t } = useI18n();
   const sourceLabel = surface.sourceState === "validated"
     ? t("validated")
@@ -71,6 +85,8 @@ export function LiveLeagueRounds({ surface }: { surface: CompetitionRoundSurface
           section={surface.current}
           surfaceName="current"
           emptyMessage={t("awaitingConfirmedData")}
+          locale={locale}
+          localizedMatchSlugs={localizedMatchSet}
         />
       </section>
 
@@ -96,6 +112,8 @@ export function LiveLeagueRounds({ surface }: { surface: CompetitionRoundSurface
           section={surface.next}
           surfaceName="next"
           emptyMessage="Next round fixtures are not available yet."
+          locale={locale}
+          localizedMatchSlugs={localizedMatchSet}
         />
       </section>
     </div>

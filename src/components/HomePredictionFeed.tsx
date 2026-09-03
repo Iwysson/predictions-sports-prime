@@ -18,14 +18,26 @@ import {
 } from "@/lib/match-feed";
 import { getMatchDisplayTime } from "@/lib/match-time";
 import { evaluatePredictionSettlement } from "@/lib/prediction-results";
+import { localePath, type SeoLocale } from "@/lib/seo-locales";
+import { homeFeedCopy } from "@/lib/home-feed-copy";
 
 export function HomePredictionFeed({
   matches,
   beforeHistory,
+  locale = "en",
+  localizedMatchSlugs = [],
 }: {
   matches: MatchPreview[];
   beforeHistory?: ReactNode;
+  locale?: SeoLocale;
+  localizedMatchSlugs?: string[];
 }) {
+  const copy = homeFeedCopy(locale);
+  const localizedMatchSet = new Set(localizedMatchSlugs);
+  const matchHref = (slug: string) =>
+    locale !== "en" && localizedMatchSet.has(slug)
+      ? localePath(locale, `/match/${slug}/`)
+      : `/match/${slug}/`;
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
     const timer = window.setInterval(() => setNow(new Date()), 30_000);
@@ -65,15 +77,15 @@ export function HomePredictionFeed({
     <>
       <section className="section section--compact" id="today">
         <div className="container home-today-layout">
-          <aside className="home-leagues-sidebar" aria-label="Prediction leagues">
+          <aside className="home-leagues-sidebar" aria-label={copy.competitions}>
             <div className="home-leagues-sidebar__heading">
-              <span className="eyebrow">Competitions</span>
-              <h2>Top Prediction Leagues</h2>
+              <span className="eyebrow">{copy.competitions}</span>
+              <h2>{copy.topLeagues}</h2>
             </div>
 
             <div className="home-leagues-sidebar__list">
               {leagues.map((league) => (
-                <Link key={league.slug} href={`/league/${league.slug}/`} className="home-league-link">
+                <Link key={league.slug} href={localePath(locale, `/league/${league.slug}/`)} className="home-league-link">
                   <LeagueBadge slug={league.slug} short={league.short} size="sm" />
                   <span>{league.name}</span>
                 </Link>
@@ -87,10 +99,10 @@ export function HomePredictionFeed({
                 <span className="section-icon" aria-hidden="true">✓</span>
 
                 <div>
-                  <span className="eyebrow">Today</span>
+                  <span className="eyebrow">{copy.todayEyebrow}</span>
 
                   <div className="today-title-row">
-                    <h2>Today&apos;s Football Predictions</h2>
+                    <h2>{copy.todayTitle}</h2>
 
                     {todayMatches.length > 0 ? (
                       <span className="today-count">
@@ -107,15 +119,15 @@ export function HomePredictionFeed({
             {todayMatches.length > 0 ? (
               <div className="match-grid match-grid--compact">
                 {todayMatches.map((match) => (
-                  <HomeMatchCard key={match.id} match={match} now={now} />
+                  <HomeMatchCard key={match.id} match={match} now={now} href={matchHref(match.slug)} viewLabel={copy.view} predictionAvailableLabel={copy.predictionAvailable} comingSoonLabel={copy.comingSoon} />
                 ))}
               </div>
             ) : (
               <div className="empty-state empty-state--compact today-empty-state">
-                <strong>Next predictions available</strong>
-                <p>Explore tomorrow and upcoming match analyses.</p>
+                <strong>{copy.nextAvailable}</strong>
+                <p>{copy.exploreUpcoming}</p>
                 <a className="today-empty-state__cta" href="#tomorrow">
-                  View upcoming predictions
+                  {copy.viewUpcoming}
                 </a>
               </div>
             )}
@@ -130,9 +142,9 @@ export function HomePredictionFeed({
                 <span className="section-icon" aria-hidden="true">↘</span>
 
                 <div>
-                  <span className="eyebrow">Tomorrow</span>
+                  <span className="eyebrow">{copy.tomorrowEyebrow}</span>
                   <div className="today-title-row">
-                    <h2>Tomorrow&apos;s Football Predictions</h2>
+                    <h2>{copy.tomorrowTitle}</h2>
                     {tomorrowMatches.length > 0 ? <span className="today-count">{tomorrowMatches.length}</span> : null}
                   </div>
                 </div>
@@ -143,13 +155,13 @@ export function HomePredictionFeed({
 
             {tomorrowMatches.length > 0 ? <div className="match-grid match-grid--compact">
               {tomorrowMatches.map((match) => (
-                <HomeMatchCard key={match.id} match={match} now={now} />
+                <HomeMatchCard key={match.id} match={match} now={now} href={matchHref(match.slug)} viewLabel={copy.view} predictionAvailableLabel={copy.predictionAvailable} comingSoonLabel={copy.comingSoon} />
               ))}
             </div> : (
               <div className="empty-state empty-state--compact">
-                <strong>No published matches are currently available for tomorrow.</strong>
-                <p>See the upcoming football predictions below.</p>
-                <a href="#upcoming">View upcoming predictions</a>
+                <strong>{copy.noTomorrow}</strong>
+                <p>{copy.seeUpcoming}</p>
+                <a href="#upcoming">{copy.viewUpcoming}</a>
               </div>
             )}
           </div>
@@ -162,8 +174,8 @@ export function HomePredictionFeed({
               <span className="section-icon">↗</span>
 
               <div>
-                <span className="eyebrow">Upcoming</span>
-                <h2>Upcoming Football Predictions</h2>
+                <span className="eyebrow">{copy.upcomingEyebrow}</span>
+                <h2>{copy.upcomingTitle}</h2>
               </div>
             </div>
           </div>
@@ -178,7 +190,7 @@ export function HomePredictionFeed({
 
                 return (
                   <a
-                    href={`/match/${match.slug}/`}
+                    href={matchHref(match.slug)}
                     className="latest-row"
                     key={match.id}
                   >
@@ -198,7 +210,7 @@ export function HomePredictionFeed({
                       <strong>
                         {match.homeTeam} vs {match.awayTeam}
                       </strong>
-                      <span>{["postponed", "canceled"].includes(match.fixtureStatus ?? "") ? match.fixtureStatus!.toUpperCase() : "Prediction available"}</span>
+                      <span>{["postponed", "canceled"].includes(match.fixtureStatus ?? "") ? match.fixtureStatus!.toUpperCase() : copy.predictionAvailable}</span>
                     </div>
 
                     <div className="latest-date">
@@ -213,7 +225,7 @@ export function HomePredictionFeed({
             </div>
           ) : (
             <div className="empty-state empty-state--compact">
-              <strong>No upcoming predictions available.</strong>
+              <strong>{copy.noUpcoming}</strong>
             </div>
           )}
         </div>
@@ -226,7 +238,7 @@ export function HomePredictionFeed({
           <div className="section-heading section-heading--compact">
             <div className="heading-with-icon">
               <span className="section-icon" aria-hidden="true">✓</span>
-              <div><span className="eyebrow">Results</span><h2>Latest Football Prediction Results</h2></div>
+              <div><span className="eyebrow">{copy.resultsEyebrow}</span><h2>{copy.resultsTitle}</h2></div>
             </div>
           </div>
           {historyMatches.length > 0 ? (
@@ -234,29 +246,29 @@ export function HomePredictionFeed({
               {historyMatches.map((match) => {
                 const settlement = evaluatePredictionSettlement(match);
                 const resultLabel = match.homeScore == null || match.awayScore == null
-                  ? "WAITING SCORE"
+                  ? copy.waitingScore
                   : settlement.pendingReason === "EXECUTION_DATA_MISSING"
-                    ? "ENTRY NOT RECORDED"
+                    ? copy.entryNotRecorded
                     : settlement.pendingReason === "MARKET_DATA_MISSING"
-                      ? "AWAITING STATS"
+                      ? copy.awaitingStats
                       : (match.betResult ?? "pending").replace("-", " ").toUpperCase();
-                return <a href={`/match/${match.slug}/`} className="history-row" key={match.id}>
+                return <a href={matchHref(match.slug)} className="history-row" key={match.id}>
                   <div>
                     <strong>{match.homeTeam} vs {match.awayTeam}</strong>
                     <span>{leagues.find((league) => league.slug === match.league)?.name ?? match.league} · {match.date} · {match.mainPrediction}</span>
                   </div>
                   <span className="history-score">
-                    {match.homeScore != null && match.awayScore != null ? `${match.homeScore}–${match.awayScore}` : "WAITING SCORE"}
+                    {match.homeScore != null && match.awayScore != null ? `${match.homeScore}–${match.awayScore}` : copy.waitingScore}
                   </span>
-                  <span className="history-odds">Odds {match.odds ?? "—"}</span>
+                  <span className="history-odds">{copy.odds} {match.odds ?? "—"}</span>
                   <b className={`bet-result bet-result--${match.homeScore == null || match.awayScore == null ? "awaiting-data" : match.betResult ?? "pending"}`}>
                     {resultLabel}
                   </b>
                 </a>
               })}
             </div>
-          ) : <div className="empty-state empty-state--compact"><strong>No completed predictions yet.</strong></div>}
-          <p className="history-all-link"><Link href="/results/">View all results</Link></p>
+          ) : <div className="empty-state empty-state--compact"><strong>{copy.noCompleted}</strong></div>}
+          <p className="history-all-link"><Link href="/results/">{copy.viewAllResults}</Link></p>
         </div>
       </section>
     </>

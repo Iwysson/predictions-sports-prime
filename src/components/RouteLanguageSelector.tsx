@@ -1,49 +1,107 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { localePath, seoLocaleSlugs, seoLocales, type SeoLocale } from "@/lib/seo-locales";
+import {
+  localePath,
+  seoLocaleSlugs,
+  seoLocales,
+  type SeoLocale,
+} from "@/lib/seo-locales";
 
-const localizedPilotPaths = [
-  "/",
-  "/league/premier-league/",
-  "/league/la-liga/",
-  "/match/aston-villa-vs-arsenal/",
-  "/nfl/",
-] as const;
+const fullyLocalizedMatchLocales = new Set<SeoLocale>([
+  "pt-br",
+  "es",
+  "fr",
+  "de",
+  "it",
+]);
 
-function englishPath(pathname: string) {
+function stripLocalePrefix(pathname: string) {
   for (const locale of seoLocaleSlugs) {
     const prefix = `/${locale}`;
+
     if (pathname === prefix || pathname.startsWith(`${prefix}/`)) {
-      return pathname.slice(prefix.length) || "/";
+      return {
+        path: pathname.slice(prefix.length) || "/",
+        sourceLocale: locale as SeoLocale,
+      };
     }
   }
-  return pathname;
+
+  return { path: pathname, sourceLocale: "en" as SeoLocale };
 }
 
-function normalizedPath(pathname: string) {
-  const path = englishPath(pathname);
-  return path === "/" ? path : `${path.replace(/\/+$/, "")}/`;
+function normalizePath(pathname: string) {
+  if (pathname === "/") return "/";
+  return `${pathname.replace(/\/+$/, "")}/`;
 }
 
-export function RouteLanguageSelector({ currentLocale = "en" }: { currentLocale?: SeoLocale }) {
+function isLeaguePath(path: string) {
+  return /^\/league\/[^/]+\/$/.test(path);
+}
+
+function isMatchPath(path: string) {
+  return /^\/match\/[^/]+\/$/.test(path);
+}
+
+function canPreservePath(
+  path: string,
+  sourceLocale: SeoLocale,
+  targetLocale: SeoLocale
+) {
+  if (path === "/" || path === "/nfl/" || isLeaguePath(path)) {
+    return true;
+  }
+
+  if (isMatchPath(path)) {
+    if (targetLocale === "en") return true;
+
+    return (
+      sourceLocale !== "en" &&
+      fullyLocalizedMatchLocales.has(sourceLocale) &&
+      fullyLocalizedMatchLocales.has(targetLocale)
+    );
+  }
+
+  return false;
+}
+
+export function RouteLanguageSelector({
+  currentLocale = "en",
+}: {
+  currentLocale?: SeoLocale;
+}) {
   const pathname = usePathname();
-  const path = normalizedPath(pathname);
-  const hasLocalizedEquivalent = localizedPilotPaths.includes(path as typeof localizedPilotPaths[number]);
+  const { path: unprefixedPath, sourceLocale } = stripLocalePrefix(pathname);
+  const path = normalizePath(unprefixedPath);
 
   function navigate(locale: SeoLocale) {
-    const targetPath = hasLocalizedEquivalent ? path : "/";
-    window.localStorage.setItem("psp-locale", locale === "pt-br" ? "pt-BR" : locale);
+    const targetPath = canPreservePath(path, sourceLocale, locale) ? path : "/";
+
+    try {
+      window.localStorage.setItem(
+        "psp-locale",
+        locale === "pt-br" ? "pt-BR" : locale
+      );
+    } catch {
+      // Navigation must still work if storage is unavailable.
+    }
+
     window.location.assign(localePath(locale, targetPath));
   }
 
   return (
     <label className="language-selector" aria-label="Language" title="Language">
       <span aria-hidden="true">◎</span>
-      <select value={currentLocale} onChange={(event) => navigate(event.target.value as SeoLocale)}>
+      <select
+        value={currentLocale}
+        onChange={(event) => navigate(event.target.value as SeoLocale)}
+      >
         <option value="en">English</option>
         {seoLocaleSlugs.map((locale) => (
-          <option key={locale} value={locale}>{seoLocales[locale].displayName}</option>
+          <option key={locale} value={locale}>
+            {seoLocales[locale].displayName}
+          </option>
         ))}
       </select>
     </label>
