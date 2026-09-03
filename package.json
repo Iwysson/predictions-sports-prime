@@ -54,14 +54,15 @@
     "nfl:standings:sync": "tsx scripts/sync-nfl-standings.mjs",
     "report:editorial-queue": "node --import tsx scripts/report-editorial-queue.mjs",
     "report:seo2-performance": "node scripts/report-seo2-performance.mjs",
-    "validate:production": "npm run typecheck && npm run build && npm run audit:match-freshness && npm run audit:seo2-capabilities && npm run audit:match-seo-zeroes && npm run audit:ads-txt && npm run audit:adsense-quality && npm run audit:seo && npm run audit:search-intent-seo && npm run audit:prediction-first-search-intent && npm run audit:duplicate-seo && npm run audit:structured-data && npm run audit:international-seo && npm run audit:current-round && npm run audit:standings && npm run audit:competition-assets && npm run audit:upcoming-fixtures && npm run audit:related-predictions && npm run report:editorial-queue && npm run audit:match-time && npm run audit:prediction-history && npm run audit:results && npm run audit:render-consistency && npm run audit:production-html",
+    "validate:production": "npm run typecheck && npm run build && npm run audit:match-freshness && npm run audit:seo2-capabilities && npm run audit:match-seo-zeroes && npm run audit:ads-txt && npm run audit:adsense-quality && npm run audit:adsense-content-gate && npm run audit:seo && npm run audit:search-intent-seo && npm run audit:prediction-first-search-intent && npm run audit:duplicate-seo && npm run audit:structured-data && npm run audit:international-seo && npm run audit:current-round && npm run audit:standings && npm run audit:competition-assets && npm run audit:upcoming-fixtures && npm run audit:related-predictions && npm run report:editorial-queue && npm run audit:match-time && npm run audit:prediction-history && npm run audit:results && npm run audit:render-consistency && npm run audit:production-html",
     "baseline:trust:create": "node scripts/create-site-trust-baseline.mjs",
     "audit:baseline:phase4": "node scripts/audit-phase4-baseline.mjs",
     "audit:baseline:trust": "node scripts/audit-site-trust-baseline.mjs",
     "baseline:create": "node scripts/create-editorial-baseline.mjs",
     "audit:baseline": "node scripts/audit-editorial-baseline.mjs",
     "audit:psp-editorial-standard": "tsx scripts/audit-psp-editorial-standard.mjs",
-    "audit:prediction-first-search-intent": "tsx scripts/audit-prediction-first-search-intent.mjs"
+    "audit:prediction-first-search-intent": "tsx scripts/audit-prediction-first-search-intent.mjs",
+    "audit:adsense-content-gate": "tsx scripts/audit-adsense-content-gate.mjs"
   },
   "dependencies": {
     "next": "latest",

@@ -16,6 +16,7 @@ import {
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import { leaguesBySlug } from "@/data/leagues";
 import { matches } from "@/data/matches";
+import { editorialPredictions } from "@/data/predictions";
 import { selectRelatedPredictions } from "@/lib/related-predictions";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
@@ -29,6 +30,7 @@ import {
   hasCompleteLocalizedEditorial,
 } from "@/data/localized-editorial";
 import type { Match } from "@/types";
+import { getAdSenseIndexableSlugs } from "@/lib/adsense-content-quality";
 
 type LocalizedMatchPageContentProps = {
   match: Match;
@@ -182,6 +184,7 @@ export function LocalizedMatchPageContent({
     (item) => item.label === "Latest Observed Odds"
   );
   const selectedRelatedMatches = selectRelatedPredictions(match, matches);
+  const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions);
   const localizedRelatedSlugs = selectedRelatedMatches
     .filter((item) => relatedPathExists(item, locale))
     .map((item) => item.slug);
@@ -375,6 +378,7 @@ export function LocalizedMatchPageContent({
           matches={selectedRelatedMatches}
           locale={locale}
           localizedSlugs={localizedRelatedSlugs}
+          indexableMatchSlugs={indexableMatchSlugs}
         />
       </div>
 

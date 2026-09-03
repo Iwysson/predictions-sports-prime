@@ -16,11 +16,13 @@ export function MatchCard({
   now = new Date(),
   locale = "en",
   localized = false,
+  discoverable = true,
 }: {
   match: MatchPreview;
   now?: Date | string;
   locale?: SeoLocale;
   localized?: boolean;
+  discoverable?: boolean;
 }) {
   const href = locale !== "en" && localized
     ? localePath(locale, `/match/${match.slug}/`)
@@ -72,7 +74,7 @@ export function MatchCard({
             : showComingSoon ? t("comingSoon") : match.fixtureStatus?.toUpperCase()}
         </span>
 
-        {match.status === "published" ? (
+        {match.status === "published" && discoverable ? (
           <Link
             href={href}
             className="button button--small"

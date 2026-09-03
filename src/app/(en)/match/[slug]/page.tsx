@@ -22,6 +22,7 @@ import {
 import { JsonLd } from "@/components/JsonLd";
 import { leagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
+import { editorialPredictions } from "@/data/predictions";
 import {
   articleJsonLd,
   buildMatchMetadata,
@@ -36,6 +37,7 @@ import type { Match } from "@/types";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 import { isRestrictedSearchIntentFixture } from "@/lib/match-search-intent";
+import { getAdSenseIndexableSlugs } from "@/lib/adsense-content-quality";
 
 async function resolveMatchFixture(match: Match): Promise<Match> {
   const fixture = await hydratePrediction(toMatchPreview(match));
@@ -137,6 +139,7 @@ export default async function MatchPage({
     (item) => item.label === "Latest Observed Odds"
   );
   const selectedRelatedMatches = selectRelatedPredictions(match, matches);
+  const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions);
   const hasFinalScore = isHistoryEligibleFixture({
     status: match.fixtureStatus,
     homeScore: match.homeScore,
@@ -308,7 +311,10 @@ export default async function MatchPage({
       </div>
 
       <div className="container related-predictions-area">
-        <RelatedPredictions matches={selectedRelatedMatches} />
+        <RelatedPredictions
+          matches={selectedRelatedMatches}
+          indexableMatchSlugs={indexableMatchSlugs}
+        />
       </div>
 
       <PredictionLeagueCategories />

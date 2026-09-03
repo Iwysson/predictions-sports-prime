@@ -11,6 +11,7 @@ import { LeagueEditorialHub } from "@/components/LeagueEditorialHub";
 import { fullyLocalizedMatchLocales } from "@/components/LocalizedMatchDetails";
 import { leagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
+import { editorialPredictions } from "@/data/predictions";
 import { standingsByLeague } from "@/data/standings";
 import { localizedAlternates } from "@/lib/international-seo";
 import { absoluteUrl } from "@/lib/site-config";
@@ -27,6 +28,7 @@ import {
   seoLocales,
 } from "@/lib/seo-locales";
 import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
+import { getAdSenseIndexableSlugs, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -49,7 +51,9 @@ export async function generateMetadata({
   const title = fullTitle.length <= 70 ? fullTitle : fullTitle.split(" | ")[0];
   const description = copy.leagueDescription(league.name);
   const url = absoluteUrl(localePath(locale, `/league/${slug}/`));
-  const indexable = isIndexableLocalizedHubLocale(locale);
+  const indexable =
+    isIndexableLocalizedHubLocale(locale) &&
+    isAdSenseLeagueIndexable(league.slug, matches, editorialPredictions);
 
   return {
     title: { absolute: title },
@@ -84,8 +88,13 @@ export default async function LocalizedLeague({
   const leagueMatches = matches
     .filter((match) => match.league === league.slug)
     .map(toMatchPreview);
+  const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions);
+  const indexableMatchSet = new Set(indexableMatchSlugs);
   const publishedMatches = matches.filter(
-    (match) => match.league === league.slug && match.status === "published"
+    (match) =>
+      match.league === league.slug &&
+      match.status === "published" &&
+      indexableMatchSet.has(match.slug)
   );
   const standings = standingsByLeague[league.slug];
   const fixtureRounds = await loadLeagueSeason(league.slug);
@@ -182,6 +191,7 @@ export default async function LocalizedLeague({
                 surface={roundSurface}
                 locale={locale}
                 localizedMatchSlugs={localizedMatchSlugs}
+                indexableMatchSlugs={indexableMatchSlugs}
               />
             </LeaguePageText>
 
@@ -190,6 +200,7 @@ export default async function LocalizedLeague({
               matches={publishedAnalysisMatches}
               locale={locale}
               localizedMatchSlugs={localizedMatchSlugs}
+              indexableMatchSlugs={indexableMatchSlugs}
             />
 
             <LeagueEditorialHub
@@ -198,6 +209,7 @@ export default async function LocalizedLeague({
               surface={roundSurface}
               locale={locale}
               localizedMatchSlugs={localizedMatchSlugs}
+              indexableMatchSlugs={indexableMatchSlugs}
             />
 
             <section className="section section--compact">

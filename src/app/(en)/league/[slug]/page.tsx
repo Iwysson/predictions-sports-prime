@@ -7,6 +7,7 @@ import { LiveLeagueRounds } from "@/components/LiveLeagueRounds";
 import { LiveLeagueStandings } from "@/components/LiveLeagueStandings";
 import { leagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
+import { editorialPredictions } from "@/data/predictions";
 import { standingsByLeague } from "@/data/standings";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { LeagueBadge } from "@/components/LeagueBadge";
@@ -30,6 +31,7 @@ import {
 } from "@/lib/league-seo";
 import { localizedAlternates } from "@/lib/international-seo";
 import { indexableLocalizedHubLocaleSlugs } from "@/lib/seo-locales";
+import { getAdSenseIndexableSlugs, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
 
 export const dynamicParams = false;
 
@@ -59,6 +61,9 @@ export async function generateMetadata({
   const publishedMatchCount = matches.filter(
     (match) => match.league === league.slug && match.status === "published"
   ).length;
+  const contentIndexable =
+    isLeagueIndexable(publishedMatchCount) &&
+    isAdSenseLeagueIndexable(league.slug, matches, editorialPredictions);
 
   return {
     title: {
@@ -67,10 +72,12 @@ export async function generateMetadata({
     description,
     keywords: leagueSeoKeywords(league),
 
-    alternates: localizedAlternates("en", leagueCanonicalPath(league), ["en", ...indexableLocalizedHubLocaleSlugs]),
+    alternates: contentIndexable
+      ? localizedAlternates("en", leagueCanonicalPath(league), ["en", ...indexableLocalizedHubLocaleSlugs])
+      : { canonical },
 
     robots: {
-      index: isLeagueIndexable(publishedMatchCount),
+      index: contentIndexable,
       follow: true,
     },
 
@@ -120,8 +127,13 @@ export default async function LeaguePage({
   const leagueMatches = matches
     .filter((match) => match.league === league.slug)
     .map(toMatchPreview);
+  const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions);
+  const indexableMatchSet = new Set(indexableMatchSlugs);
   const publishedMatches = matches.filter(
-    (match) => match.league === league.slug && match.status === "published"
+    (match) =>
+      match.league === league.slug &&
+      match.status === "published" &&
+      indexableMatchSet.has(match.slug)
   );
   const capabilities = leagueSeoCapabilities(league, publishedMatches);
   const standings = standingsByLeague[league.slug];
@@ -203,7 +215,10 @@ export default async function LeaguePage({
         <div className="container league-layout">
           <div className="league-main-column">
             <LeaguePageText matchCount={roundSurface.current?.matches.length ?? 0}>
-              <LiveLeagueRounds surface={roundSurface} />
+              <LiveLeagueRounds
+                surface={roundSurface}
+                indexableMatchSlugs={indexableMatchSlugs}
+              />
             </LeaguePageText>
 
             <LeaguePublishedAnalysis
@@ -211,7 +226,12 @@ export default async function LeaguePage({
               matches={publishedAnalysisMatches}
             />
 
-            <LeagueEditorialHub leagueName={league.name} publishedMatches={publishedMatches} surface={roundSurface} />
+            <LeagueEditorialHub
+              leagueName={league.name}
+              publishedMatches={publishedMatches}
+              surface={roundSurface}
+              indexableMatchSlugs={indexableMatchSlugs}
+            />
 
             <div className="league-bottom-ad">
               <AdSlot placement="league-middle" />

@@ -54,6 +54,8 @@ const minimumWords = { UTILITY: 70, DISCOVERY: 60, SUBSTANTIAL: 90 };
 const allPages = walk(outputRoot)
   .filter((file) => file.endsWith("index.html"))
   .map((file) => ({ file, path: routeFromFile(file), html: readFileSync(file, "utf8") }));
+const allPaths = new Set(allPages.map((page) => page.path));
+const pageByPath = new Map(allPages.map((page) => [page.path, page]));
 const pages = allPages.filter((page) =>
   page.path !== "/404/" &&
   page.path !== "/_not-found/" &&
@@ -62,6 +64,7 @@ const pages = allPages.filter((page) =>
 const paths = new Set(pages.map((page) => page.path));
 const records = [];
 const bodyHashes = new Map();
+let qualityGatedMatchLinksChecked = 0;
 
 for (const page of pages) {
   const mainCount = [...page.html.matchAll(/<main(?:\s[^>]*)?>/g)].length;
@@ -125,7 +128,43 @@ for (const page of pages) {
 
   for (const href of links.filter((href) => href.startsWith("/match/"))) {
     const normalized = href.endsWith("/") ? href : `${href}/`;
-    if (!paths.has(normalized)) errors.push(`${page.path}: draft or broken match link ${href}`);
+    const target = pageByPath.get(normalized);
+
+    if (!allPaths.has(normalized) || !target) {
+      errors.push(`${page.path}: broken match link ${href}`);
+    }
+  }
+
+  /*
+   * Quality-gated acquisition modules explicitly mark their match links.
+   * These links MUST resolve to KEEP/indexable destinations.
+   *
+   * Ordinary navigational/factual links may still point to an existing
+   * noindex,follow historical page. That is intentional preservation, not
+   * a broken link and not an acquisition signal.
+   */
+  const qualityGatedLinks = [
+    ...mainHtml.matchAll(
+      /<a\b(?=[^>]*data-quality-gated-match-link="true")(?=[^>]*href="([^"]+)")[^>]*>/g
+    ),
+  ].map((match) => match[1]);
+
+  qualityGatedMatchLinksChecked += qualityGatedLinks.filter((href) => href.startsWith("/match/")).length;
+
+  for (const href of qualityGatedLinks.filter((href) => href.startsWith("/match/"))) {
+    const normalized = href.endsWith("/") ? href : `${href}/`;
+    const target = pageByPath.get(normalized);
+
+    if (!target) {
+      errors.push(`${page.path}: quality-gated match link is broken ${href}`);
+      continue;
+    }
+
+    const targetNoindex = /<meta name="robots" content="[^"]*noindex/i.test(target.html);
+
+    if (targetNoindex) {
+      errors.push(`${page.path}: quality-gated discovery link points to noindex match ${href}`);
+    }
   }
 
   records.push({ path: page.path, category, wordCount, links: links.length });
@@ -170,6 +209,7 @@ console.log(`League hubs with editorial discovery: ${leaguePages.length}`);
 console.log(`Minimum visible content: ${minimum.path} (${minimum.wordCount} words)`);
 console.log(`Legacy host references in indexable HTML: ${errors.filter((error) => error.includes("legacy host")).length}`);
 console.log(`Official origin: ${officialOrigin}`);
+console.log(`Quality-gated match links checked: ${qualityGatedMatchLinksChecked}`);
 console.log(`Critical errors: ${errors.length}`);
 
 if (errors.length > 0) {

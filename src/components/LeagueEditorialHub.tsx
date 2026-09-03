@@ -22,11 +22,13 @@ function MatchLinks({
   context,
   locale,
   localizedMatchSlugs,
+  indexableMatchSlugs,
 }: {
   matches: MatchPreview[];
   context: "today" | "upcoming";
   locale: SeoLocale;
   localizedMatchSlugs: Set<string>;
+  indexableMatchSlugs: Set<string> | null;
 }) {
   if (!matches.length) return null;
   const matchHref = (slug: string) =>
@@ -41,13 +43,18 @@ function MatchLinks({
             <span>{match.date}{match.time && match.time !== "TBD" ? ` · ${match.time}` : ""}</span>
             <h3>{match.homeTeam} vs {match.awayTeam}</h3>
           </div>
-          {match.status === "published" ? (
-            <Link href={matchHref(match.slug)}>
+          {match.status === "published" &&
+          (indexableMatchSlugs === null || indexableMatchSlugs.has(match.slug)) ? (
+            <Link href={matchHref(match.slug)} data-quality-gated-match-link="true">
               {context === "today"
                 ? `${match.homeTeam} vs ${match.awayTeam} prediction`
                 : `Preview ${match.homeTeam} vs ${match.awayTeam}`}
             </Link>
-          ) : <span className="league-hub-unavailable">Analysis not published</span>}
+          ) : (
+            <span className="league-hub-unavailable">
+              {match.status === "published" ? "Analysis archived" : "Analysis not published"}
+            </span>
+          )}
         </article>
       ))}
     </div>
@@ -60,14 +67,19 @@ export function LeagueEditorialHub({
   surface,
   locale = "en",
   localizedMatchSlugs = [],
+  indexableMatchSlugs,
 }: {
   leagueName: string;
   publishedMatches: Match[];
   surface: CompetitionRoundSurface;
   locale?: SeoLocale;
   localizedMatchSlugs?: string[];
+  indexableMatchSlugs?: string[];
 }) {
   const localizedMatchSet = new Set(localizedMatchSlugs);
+  const indexableMatchSet = indexableMatchSlugs
+    ? new Set(indexableMatchSlugs)
+    : null;
   const matchHref = (slug: string) =>
     locale !== "en" && localizedMatchSet.has(slug)
       ? localePath(locale, `/match/${slug}/`)
@@ -79,11 +91,14 @@ export function LeagueEditorialHub({
   ]);
   const todayMatches = roundMatches.filter((match) => match.date === today && !isCompleted(match));
   const upcomingMatches = roundMatches.filter((match) => match.date > today && !isCompleted(match)).slice(0, 8);
-  const completed = [...publishedMatches]
+  const discoverablePublishedMatches = indexableMatchSet
+    ? publishedMatches.filter((match) => indexableMatchSet.has(match.slug))
+    : publishedMatches;
+  const completed = [...discoverablePublishedMatches]
     .filter(isCompleted)
     .sort((left, right) => right.date.localeCompare(left.date))
     .slice(0, 6);
-  const latest = [...publishedMatches]
+  const latest = [...discoverablePublishedMatches]
     .sort((left, right) =>
       (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") || right.date.localeCompare(left.date)
     )
@@ -106,14 +121,26 @@ export function LeagueEditorialHub({
       {todayMatches.length ? (
         <section aria-labelledby="league-today-heading">
           <h2 id="league-today-heading">Today&apos;s {leagueName} Matches</h2>
-          <MatchLinks matches={todayMatches} context="today" locale={locale} localizedMatchSlugs={localizedMatchSet} />
+          <MatchLinks
+            matches={todayMatches}
+            context="today"
+            locale={locale}
+            localizedMatchSlugs={localizedMatchSet}
+            indexableMatchSlugs={indexableMatchSet}
+          />
         </section>
       ) : null}
 
       {upcomingMatches.length ? (
         <section aria-labelledby="league-upcoming-heading">
           <h2 id="league-upcoming-heading">Upcoming {leagueName} Matches</h2>
-          <MatchLinks matches={upcomingMatches} context="upcoming" locale={locale} localizedMatchSlugs={localizedMatchSet} />
+          <MatchLinks
+            matches={upcomingMatches}
+            context="upcoming"
+            locale={locale}
+            localizedMatchSlugs={localizedMatchSet}
+            indexableMatchSlugs={indexableMatchSet}
+          />
         </section>
       ) : null}
 
@@ -124,8 +151,8 @@ export function LeagueEditorialHub({
             {latest.map((match, index) => (
               <article key={match.slug}>
                 <span>{match.date}</span>
-                <h3><Link href={matchHref(match.slug)}>{match.homeTeam} vs {match.awayTeam}</Link></h3>
-                <Link href={matchHref(match.slug)}>
+                <h3><Link href={matchHref(match.slug)} data-quality-gated-match-link="true">{match.homeTeam} vs {match.awayTeam}</Link></h3>
+                <Link href={matchHref(match.slug)} data-quality-gated-match-link="true">
                   {index % 2 === 0
                     ? `${match.homeTeam} vs ${match.awayTeam} prediction`
                     : `Read the ${match.homeTeam} vs ${match.awayTeam} analysis`}
@@ -144,7 +171,7 @@ export function LeagueEditorialHub({
               <article key={match.slug}>
                 <span>{match.date}</span>
                 <strong>{match.homeTeam} {match.homeScore}–{match.awayScore} {match.awayTeam}</strong>
-                <Link href={matchHref(match.slug)}>Review the published prediction</Link>
+                <Link href={matchHref(match.slug)} data-quality-gated-match-link="true">Review the published prediction</Link>
               </article>
             ))}
           </div>

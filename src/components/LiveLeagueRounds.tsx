@@ -15,12 +15,14 @@ function RoundFixtures({
   emptyMessage,
   locale,
   localizedMatchSlugs,
+  indexableMatchSlugs,
 }: {
   section: CompetitionRoundSection | null;
   surfaceName: "current" | "next";
   emptyMessage: string;
   locale: SeoLocale;
   localizedMatchSlugs: Set<string>;
+  indexableMatchSlugs: Set<string> | null;
 }) {
   if (!section?.matches.length) {
     return (
@@ -41,7 +43,16 @@ function RoundFixtures({
           data-home-team={match.homeTeam}
           data-away-team={match.awayTeam}
         >
-          <MatchCard match={match} locale={locale} localized={localizedMatchSlugs.has(match.slug)} />
+          <MatchCard
+            match={match}
+            locale={locale}
+            localized={localizedMatchSlugs.has(match.slug)}
+            discoverable={
+              match.status !== "published" ||
+              indexableMatchSlugs === null ||
+              indexableMatchSlugs.has(match.slug)
+            }
+          />
         </div>
       ))}
     </div>
@@ -52,12 +63,17 @@ export function LiveLeagueRounds({
   surface,
   locale = "en",
   localizedMatchSlugs = [],
+  indexableMatchSlugs,
 }: {
   surface: CompetitionRoundSurface;
   locale?: SeoLocale;
   localizedMatchSlugs?: string[];
+  indexableMatchSlugs?: string[];
 }) {
   const localizedMatchSet = new Set(localizedMatchSlugs);
+  const indexableMatchSet = indexableMatchSlugs
+    ? new Set(indexableMatchSlugs)
+    : null;
   const { t } = useI18n();
   const sourceLabel = surface.sourceState === "validated"
     ? t("validated")
@@ -87,6 +103,7 @@ export function LiveLeagueRounds({
           emptyMessage={t("awaitingConfirmedData")}
           locale={locale}
           localizedMatchSlugs={localizedMatchSet}
+          indexableMatchSlugs={indexableMatchSet}
         />
       </section>
 
@@ -114,6 +131,7 @@ export function LiveLeagueRounds({
           emptyMessage="Next round fixtures are not available yet."
           locale={locale}
           localizedMatchSlugs={localizedMatchSet}
+          indexableMatchSlugs={indexableMatchSet}
         />
       </section>
     </div>

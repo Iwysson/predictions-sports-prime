@@ -7,18 +7,26 @@ export function LeaguePublishedAnalysis({
   matches,
   locale = "en",
   localizedMatchSlugs = [],
+  indexableMatchSlugs,
 }: {
   leagueName: string;
   matches: Match[];
   locale?: SeoLocale;
   localizedMatchSlugs?: string[];
+  indexableMatchSlugs?: string[];
 }) {
   const localizedSet = new Set(localizedMatchSlugs);
+  const indexableSet = indexableMatchSlugs
+    ? new Set(indexableMatchSlugs)
+    : null;
+  const discoverableMatches = indexableSet
+    ? matches.filter((match) => indexableSet.has(match.slug))
+    : matches;
   const matchHref = (slug: string) =>
     locale !== "en" && localizedSet.has(slug)
       ? localePath(locale, `/match/${slug}/`)
       : `/match/${slug}/`;
-  if (matches.length === 0) return null;
+  if (discoverableMatches.length === 0) return null;
 
   return (
     <section className="league-analysis-archive" aria-labelledby="league-analysis-archive-title">
@@ -37,11 +45,11 @@ export function LeaguePublishedAnalysis({
       </p>
 
       <div className="related-predictions-grid">
-        {matches.map((match) => (
+        {discoverableMatches.map((match) => (
           <article className="related-prediction-card" key={match.id}>
             <span>{match.date}</span>
             <h3>
-              <Link href={matchHref(match.slug)}>
+              <Link href={matchHref(match.slug)} data-quality-gated-match-link="true">
                 {match.homeTeam} vs {match.awayTeam}
               </Link>
             </h3>

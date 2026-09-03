@@ -11,6 +11,8 @@ import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 import { hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { seoLocaleSlugs, type SeoLocale } from "@/lib/seo-locales";
 import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
+import { editorialPredictions } from "@/data/predictions";
+import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
 
 export function matchSeoTitle(match: Match) {
   const hasRichMatchCapability = Boolean(match.matchSeo && Object.keys(match.matchSeo).some((module) => module !== "information"));
@@ -93,6 +95,10 @@ export function buildMatchMetadata(match: Match): Metadata {
   const description = matchSeoDescription(match);
   const canonical = absoluteUrl(matchCanonicalPath(match));
   const intent = buildMatchSearchIntentCopy(match);
+  const contentIndexable = isAdSenseContentIndexable(
+    match.slug,
+    editorialPredictions
+  );
 
   return {
     title: {
@@ -110,6 +116,10 @@ export function buildMatchMetadata(match: Match): Metadata {
     } : {}),
 
     alternates: (() => {
+      if (!contentIndexable) {
+        return { canonical };
+      }
+
       const availableLocalizedLocales = seoLocaleSlugs.filter((locale) =>
         hasCompleteLocalizedEditorial(match.slug, locale)
       );
@@ -125,7 +135,7 @@ export function buildMatchMetadata(match: Match): Metadata {
     })(),
 
     robots: {
-      index: true,
+      index: contentIndexable,
       follow: true,
     },
 

@@ -69,12 +69,21 @@ export function RelatedPredictions({
   matches,
   locale = "en",
   localizedSlugs = [],
+  indexableMatchSlugs,
 }: {
   matches: Match[];
   locale?: SeoLocale;
   localizedSlugs?: string[];
+  indexableMatchSlugs?: string[];
 }) {
-  if (matches.length === 0) return null;
+  const indexableSet = indexableMatchSlugs
+    ? new Set(indexableMatchSlugs)
+    : null;
+  const discoverableMatches = indexableSet
+    ? matches.filter((match) => indexableSet.has(match.slug))
+    : matches;
+
+  if (discoverableMatches.length === 0) return null;
 
   const labels = copy[locale];
   const localizedSet = new Set(localizedSlugs);
@@ -92,13 +101,14 @@ export function RelatedPredictions({
       </div>
 
       <div className="related-predictions-grid">
-        {matches.map((match) => (
+        {discoverableMatches.map((match) => (
           <article className="related-prediction-card" key={match.id}>
             <span>{leaguesBySlug[match.league].name}</span>
             <h3>{match.homeTeam} vs {match.awayTeam}</h3>
             <p>{labels.available}</p>
             <Link
               href={hrefFor(match.slug)}
+              data-quality-gated-match-link="true"
               aria-label={`${labels.read}: ${match.homeTeam} vs ${match.awayTeam}`}
             >
               {labels.read} <span aria-hidden="true">›</span>

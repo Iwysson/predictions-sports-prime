@@ -191,6 +191,7 @@ export function HomePredictionFeed({
                 return (
                   <a
                     href={matchHref(match.slug)}
+                   
                     className="latest-row"
                     key={match.id}
                   >

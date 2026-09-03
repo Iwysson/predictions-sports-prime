@@ -28,6 +28,8 @@ import {
 import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 import { buildSportsEventJsonLd } from "@/lib/sports-event-schema";
 import { getTodayLocalizedEditorial } from "@/data/today-localized-editorial";
+import { editorialPredictions } from "@/data/predictions";
+import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
 
 const intentLocale: Record<
   (typeof fullyLocalizedMatchLocales)[number],
@@ -98,6 +100,41 @@ export async function generateMetadata({
 
   if (!match) {
     return { robots: { index: false, follow: false } };
+  }
+
+  const contentIndexable = isAdSenseContentIndexable(
+    match.slug,
+    editorialPredictions
+  );
+
+  if (!contentIndexable) {
+    const copy = seoLocales[locale];
+    const league = leaguesBySlug[match.league];
+    const path = `/match/${slug}/`;
+    const title = copy.matchTitle(match.homeTeam, match.awayTeam);
+    const description = copy.matchDescription(
+      match.homeTeam,
+      match.awayTeam,
+      league.name
+    );
+
+    return {
+      title: { absolute: title },
+      description,
+      alternates: {
+        canonical: absoluteUrl(localePath(locale, path)),
+      },
+      robots: { index: false, follow: true },
+      openGraph: {
+        type: "article",
+        title,
+        description,
+        url: absoluteUrl(localePath(locale, path)),
+        siteName: "Predictions Sports Prime",
+        locale: copy.htmlLang,
+        images: [absoluteUrl("/og-default.png")],
+      },
+    };
   }
 
   if (legacy) {
