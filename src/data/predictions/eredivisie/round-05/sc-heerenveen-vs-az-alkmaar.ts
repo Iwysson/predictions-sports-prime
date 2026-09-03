@@ -29,19 +29,19 @@ A projeção utiliza o **XI competitivo mais recente como base**, modificando ap
 ### Suspensions / Eligibility
 Only absences already supported by the retained pre-match source set are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
 
-### Robust Match Analysis
+### Match Context
 The analysis is independent of the published pick. The first task is to understand the matchup from the available pre-match evidence; only then is the existing market assessed. The Eredivisie is still in an early 2026/27 sample, so venue-specific averages can move sharply after a single match. That makes it essential to separate HOME from AWAY and to label any fallback explicitly rather than presenting mixed data as if it were a clean venue split.
 
 For SC Heerenveen, the current HOME profile is **1.00 GF/game**, **1.00 GA/game**, **1.36 xG/game** and **1.98 xGA/game**. The selected volume context is **13.0 (current overall) shots**, **5.67 (current overall) SOT**, **55% (overall fallback) possession** and **5.0 (overall fallback) corners for per game**. Because the sample is small, extreme percentages are descriptive observations, not stable probabilities.
 
 For AZ Alkmaar, the AWAY side of the comparison is **3.00 GF/game**, **0.50 GA/game**, **2.67 xG/game** and **0.74 xGA/game**. The accompanying volume is **13.9 (2025/26 away structural) shots**, **4.9 (2025/26 away structural) SOT**, **58% (overall fallback) possession** and **5.1 (2025/26 away structural) corners for per game**. Where a cell says overall fallback, structural fallback or league baseline, that qualifier is part of the data and prevents the table from pretending that a missing venue feed is a verified venue statistic.
 
-### HOME vs AWAY Data Analysis
+### HOME/AWAY Analysis
 Heerenveen are unbeaten in the current HOME sample; AZ have won both away matches with six goals scored and one conceded. Current away xG/xGA strongly favour AZ, while recent H2H at Heerenveen is a counter-signal. The split is therefore read as a hierarchy of evidence: current venue-specific results and xG first, then team-level current context, then disclosed structural fallback where the supplied package lacks a complete venue feed. No placeholder is converted into zero and no post-match information from this fixture is used.
 
 The defensive-volume comparison also matters. SC Heerenveen are listed at **12.0 (overall fallback) shots allowed** and **4.0 (overall fallback) SOT allowed** in the selected context, while AZ Alkmaar are at **9.0 (overall fallback)** and **3.0 (overall fallback)** respectively. Corner environment is **10.0** versus **8.9 total corners per match** in the retained context. These figures are useful for describing pressure and game state, but they should not be turned into a deterministic outcome.
 
-### Advanced Data and Expected Game State
+### Statistical Interpretation and Tactical Game State
 The match can change substantially depending on the first goal. If the stronger territorial side scores early, the opponent may be forced into a more aggressive shape, increasing transition space, shots and potentially corners. If the game remains level, both managers can preserve structure longer and reduce the pace. This is especially important for goal markets, where a high pre-match average does not guarantee that the game reaches the threshold.
 
 The xG comparison gives another layer. xG describes chance quality, not finishing certainty. When actual goals run well above xG, regression risk rises; when goals lag behind xG, the attack may have created more than the scoreline suggests. The same applies defensively with xGA. That is why the Core keeps actual GF/GA and xG/xGA side by side rather than allowing one to replace the other.
@@ -75,11 +75,15 @@ The xG comparison gives another layer. xG describes chance quality, not finishin
 ### Conflict Detector
 The main conflict is sample size and source granularity. Several current venue splits contain only one or two league matches. In addition, some shot, possession, corner or event-rate rows use a clearly labelled overall or structural fallback because the supplied editorial package does not contain a full venue-level feed for both teams. Those fallbacks are context, not invented HOME/AWAY observations. A second conflict is game-state dependence: early red cards, an early goal or an unusually efficient finishing day can overwhelm the pre-match averages.
 
-### Odds and Implied Probability
+### Market Price Context
 At decimal odds **1.93**, the raw implied probability is **51.8%** (1 / 1.93 = 51.8%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
 
 ### Value Assessment
 The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the Conflict Detector.
+
+### Sources / Statistical Provenance
+
+The analysis preserves the supplied pre-match evidence and source scope for this fixture. HOME/AWAY rows are venue-specific where the source package supports that split; any broader current-season, league-baseline or prior-season figures remain explicitly labelled in the Statistical Core and are treated as context rather than as venue-specific observations. Fixture, team-news and lineup information is superseded by later official club or competition updates when available.
 
 ### Conclusion
 The final position preserves the original published market and price. The analysis supports that decision only to the extent that the current venue split, underlying numbers, lineup context and expected game state point in the same direction. The most important risk is overconfidence in a tiny sample, so the recommendation should be read together with the source qualifiers rather than as a certainty.
