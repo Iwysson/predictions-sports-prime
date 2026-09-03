@@ -116,8 +116,8 @@ for (const match of matches.filter((item) => item.status === "published")) {
 const expectedSnapshot = auditedAdSenseContentDecisionCounts();
 
 if (
-  expectedSnapshot.keep !== 62 ||
-  expectedSnapshot.upgrade !== 77 ||
+  expectedSnapshot.keep !== 71 ||
+  expectedSnapshot.upgrade !== 68 ||
   expectedSnapshot.legacyNoindex !== 153 ||
   expectedSnapshot.remove !== 0
 ) {

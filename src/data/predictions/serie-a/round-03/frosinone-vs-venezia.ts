@@ -8,55 +8,38 @@ export const frosinoneVsVenezia: EditorialPrediction = {
   title: "Frosinone vs Venezia Prediction",
   seoTitle: "Frosinone vs Venezia Prediction & Match Analysis",
   analysis: [
-    `# Frosinone vs Venezia Prediction, Odds and Betting Tips
+    `# Frosinone vs Venezia Prediction, Odds and Match Analysis
+
 **Prediction:** Over 1.5 Goals + Over 7.5 Corners
 **Odds:** 1.62
 
-Competition: Serie A
-Date: 2026-09-06
-Kick-off: 15:00 local time
-Venue: Stadio Benito Stirpe
+### Match Information
+
+**Competition:** Serie A
+**Date:** 2026-09-06
+**Kickoff:** 15:00 local time
+**Round:** Matchweek 3
+**Venue:** Stadio Benito Stirpe
+
+### Match Context
+
+Both sides have a weak early scoring record in the relevant venue splits, but the chance and corner data are less quiet than the scorelines. Frosinone's first HOME match produced a large corner environment, while Venezia's AWAY defence has already allowed meaningful chance volume.
 
 ### Team News and Probable Lineups
-**Escalações prováveis:** Massimiliano Alvini utilizou o 4-2-3-1 nas duas primeiras rodadas do Frosinone, inclusive na vitória por 3–0 sobre a Fiorentina.  Mantendo a base competitiva recente, a estrutura provável é: Frosinone — provável escalação (4-2-3-1): Lorenzo Palmisani; Anthony Oyono, Ilario Monterisi, Davide Bettella, Riccardo Marchizza; Isak Vural, Giorgi Kvernadze; Fares Ghedjemis, Gabriele Bracaglia, Farès Ghedjemis/alternativa ofensiva; Antonio Raimondo. A composição definitiva necessita de atualização depois da Coppa Italia. Farès Ghedjemis aparece atualmente como indisponível por lesão na panturrilha, com previsão de retorno apenas em meados de setembro.  Por isso, não deve ser tratado como titular disponível caso o quadro médico permaneça inalterado. No Venezia, a formação também deve preservar a estrutura das primeiras rodadas, embora duas derrotas sem marcar aumentem a possibilidade de mudanças ofensivas.
 
-### Team News / Injuries / Availability
-Availability remains provisional. The retained match-specific editorial source set and the most recent competitive lineups are the basis for the projected XIs below; any official club or competition update closer to kickoff overrides the projection. No unavailable player is inserted simply to make the lineup look complete.
+**Availability:** Frosinone are without Schmid. Venezia remain without Sverko and Adorante, with Moreno and Franjic under assessment. Several deadline-day Venezia arrivals are more likely to start on the bench.
 
-### Suspensions / Eligibility
-Suspension and eligibility are treated as a separate pre-match check. The analysis below does not infer a ban from an absence and does not invent an eligible replacement. Any confirmed matchday suspension or registration update must override the probable XI.
+**Suspensions / eligibility:** Gazzetta lists no suspended player for either Frosinone or Venezia.
 
-### HOME vs AWAY Data Analysis
-The Statistical Core is venue-specific: Frosinone is evaluated as HOME and Venezia as AWAY. In the retained sample, GF/game is **0.00 vs 0.00**, GA/game is **1.00 vs 2.00**, xG/game is **0.55 vs 1.03**, and xGA/game is **1.77 vs 2.44**. The sample size is stated directly in the Core and is not blended with overall league form without disclosure.
+**Probable lineups:** **Frosinone (4-3-3):** Palmisani; Oyono (Amey), Calvani, Monterisi, Bracaglia (Terzić); Hasa (Grillitsch), Calò, Masini (Cichella); Fini, Raimondo, Kvernadze. **Venezia (3-5-2):** Stanković; Schingtienne, Bella-Kotchap, Halal; Hainaut, Kike Pérez, Busio, Bašić, Correia (Haps); Adams, Yeboah.
 
-### Advanced Data and Match Analysis
-Serie A — Matchweek 3 | September 6, 2026 — 15:00 local time | Stadio Benito Stirpe, Frosinone Frosinone vs Venezia será disputado no domingo, 6 de setembro, às 15:00, no Stadio Benito Stirpe. O confronto reúne dois recém-promovidos que começaram a Serie A de maneiras bastante diferentes. O Frosinone tem 3 pontos, 3 gols marcados e apenas 1 sofrido, enquanto o Venezia perdeu as duas primeiras rodadas, ainda não marcou e sofreu quatro gols. A previsão meteorológica específica para o horário da partida ainda não está disponível com confiabilidade suficiente. A base que acompanha o estádio ainda indica que o forecast será incorporado mais próximo do kickoff; portanto, temperatura, vento e possibilidade de chuva devem ser atualizados antes da publicação definitiva.
-Há ainda um compromisso intermediário importante: o Frosinone enfrenta o Sassuolo pela Coppa Italia em 2 de setembro. Esse jogo precisa ser incorporado à atualização final, sobretudo para avaliar escalação, desgaste e eventuais novas lesões.
-**Escalações prováveis:** Massimiliano Alvini utilizou o 4-2-3-1 nas duas primeiras rodadas do Frosinone, inclusive na vitória por 3–0 sobre a Fiorentina.  Mantendo a base competitiva recente, a estrutura provável é: Frosinone — provável escalação (4-2-3-1): Lorenzo Palmisani; Anthony Oyono, Ilario Monterisi, Davide Bettella, Riccardo Marchizza; Isak Vural, Giorgi Kvernadze; Fares Ghedjemis, Gabriele Bracaglia, Farès Ghedjemis/alternativa ofensiva; Antonio Raimondo. A composição definitiva necessita de atualização depois da Coppa Italia. Farès Ghedjemis aparece atualmente como indisponível por lesão na panturrilha, com previsão de retorno apenas em meados de setembro.  Por isso, não deve ser tratado como titular disponível caso o quadro médico permaneça inalterado. No Venezia, a formação também deve preservar a estrutura das primeiras rodadas, embora duas derrotas sem marcar aumentem a possibilidade de mudanças ofensivas.
-Venezia — provável escalação: Filip Stanković; Jay Idzes, Michael Svoboda, Joël Schingtienne; Richie Sagrado, Gianluca Busio, Issa Doumbia, Francesco Zampano; Gaetano Oristanio, John Yeboah; Joel Pohjanpalo/centroavante disponível. A lista médica é mais relevante do lado visitante. Andrea Adorante aparece fora com lesão nas costas e retorno projetado para outubro; Marin Šverko está lesionado na coxa; Matías Moreno apresenta problema físico e é considerado dúvida. Essas ausências merecem atenção principalmente porque o Venezia já começou o campeonato com dificuldade para converter domínio territorial em gols. **Frosinone: a vitória em Florença precisa ser analisada além do 3–0** O resultado mais impactante deste confronto até agora é Fiorentina 0–3 Frosinone, em 29 de agosto. O placar poderia sugerir amplo domínio do Frosinone. Os números mostram algo completamente diferente.
-A Fiorentina teve 59.6% de posse, finalizou 25 vezes contra 12, colocou quatro no alvo contra seis do Frosinone e venceu os **corners** por 8–5. O **xG** (Expected Goals — Gols Esperados) foi aproximadamente 1.99–1.47 para a Fiorentina. A equipe da casa ainda acertou a trave duas vezes e teve 14 finalizações dentro da área contra dez do Frosinone. Portanto, o 3–0 não descreve corretamente a distribuição das oportunidades. O Frosinone foi extremamente eficiente. Foram seis SOT (Shots on Target — Finalizações no Alvo) e três gols. A equipe converteu metade das finalizações que acertaram o gol e marcou três vezes a partir de aproximadamente 1.47 **xG**. Isso não diminui a qualidade da vitória. Pelo contrário: mostra capacidade de atacar verticalmente e punir erros. Mas impede que o resultado seja usado como evidência de que o Frosinone dominou territorialmente a Fiorentina.
-Há outro dado interessante para o mercado de **escanteios**: a partida terminou com 13 **corners** — 8 da Fiorentina e 5 do Frosinone. O Frosinone, portanto, não precisou controlar posse para participar de um jogo com volume elevado de **corners**. Na estreia, o comportamento foi diferente. A equipe perdeu 1–0 para a Juventus no Benito Stirpe, terminando as duas primeiras rodadas com 1 vitória, nenhuma igualdade e 1 derrota, 3 GF e apenas 1 GA. Com somente N=2, porém, a média de 0.50 gol sofrido não pode ser tratada como nível defensivo estabilizado. **Venezia: domínio territorial sem gols** O início do Venezia contém um contraste ainda mais forte. A equipe perdeu 0–2 para o Lecce em casa e depois 2–0 para o Milan em San Siro. São zero pontos, zero gols marcados e quatro sofridos.
-Mas o jogo contra o Lecce é especialmente importante. O Venezia terminou com extraordinários 71% de posse, contra apenas 29% do adversário. Foram 19 finalizações contra 12, 7–5 em SOT e 5–3 em **corners**. Também completou 629 passes, com 87% de precisão, e tentou 27 cruzamentos. Mesmo assim, perdeu 2–0. Esse é exatamente o tipo de partida em que o placar isolado gera uma leitura incompleta. O Venezia não foi simplesmente incapaz de chegar ao ataque. Ele controlou bola e território, colocou sete finalizações no alvo e produziu cinco **corners**, mas terminou com 0% de conversão. A diferença entre criação e finalização é o problema. Sete SOT sem nenhum gol não constituem evidência de um ataque necessariamente incapaz de produzir; mostram, naquele jogo, enorme ineficiência na conclusão.
-Ao mesmo tempo, posse não deve ser confundida com qualidade. O Venezia teve 71% da bola, mas o Lecce encontrou maneiras mais eficientes de atacar e marcou duas vezes. Contra o Milan, a dificuldade naturalmente aumentou e veio outra derrota por 2–0. Assim, o Venezia chega ao terceiro jogo ainda procurando seu primeiro gol na Serie A.
-A tabela mantém deliberadamente os recortes identificados. Frosinone–Fiorentina e Venezia–Lecce são jogos diferentes, portanto não seria correto apresentar esses números como médias equivalentes de temporada. Onde uma métrica comparável e verificável não está disponível, permanece “—”. **O **H2H** fornece uma amostra muito interessante** O **H2H** (Head-to-Head — Confronto Direto) disponível reúne 11 partidas, com 5 vitórias do Frosinone, 3 empates e 3 vitórias do Venezia. A média histórica é de aproximadamente 2.4 gols por confronto. Nos **corners**, a média chega a 9.1 por partida. Quando o Frosinone aparece como mandante, o número indicado cai para aproximadamente 8.0 **corners**. É importante não transformar 9.1 em “Expected **Corners**”. Trata-se simplesmente da média observada nos H2Hs, sem qualquer ajuste por temporada, elenco ou força dos adversários.
-Os quatro confrontos competitivos mais recentes encontrados foram: Frosinone 1–2 Venezia — fevereiro de 2026 Venezia 3–0 Frosinone — outubro de 2025 Frosinone 3–0 Venezia — março de 2023 Venezia 1–3 Frosinone — outubro de 2022. Todos os quatro chegaram a pelo menos três gols. Isso é um dado forte de frequência histórica, mas há uma ressalva enorme: dois desses jogos são de 2022/23 e têm pouco valor para descrever os elencos atuais. Os confrontos de 2025/26, entretanto, são recentes e relevantes. O Venezia venceu ambos: 3–0 em casa e 2–1 no Benito Stirpe. Portanto, apesar do começo muito melhor do Frosinone nesta Serie A, o Venezia venceu os dois H2Hs da temporada passada, com agregado de 5–1.
-Isso impede uma leitura simplista baseada apenas na tabela atual. O último Frosinone–Venezia oferece informações particularmente úteis Em 7 de fevereiro de 2026, no mesmo Benito Stirpe, o Venezia venceu por 2–1. Mas novamente o placar não explica tudo. O Frosinone teve apenas 43% de posse contra 57%, porém finalizou 20 vezes contra 14 e produziu impressionantes 11 finalizações no alvo contra cinco. Nos **corners**, tivemos 6–2 para o Frosinone, exatamente oito no total. Antonio Raimondo colocou o Frosinone em vantagem aos 43 minutos. Venezia empatou aos 63 por um gol contra de Cittadini e virou aos 77 com Issa Doumbia. O jogo teve, portanto: 34 finalizações, 16 no alvo, 3 gols, 8 **corners**. É um conjunto de números muito mais informativo do que simplesmente registrar “1–2”.
-Também demonstra que posse e ameaça ofensiva não necessariamente caminharam juntas: Venezia controlou mais a bola, enquanto Frosinone terminou com mais chutes, mais SOT e mais **corners**. **Escanteios: a linha merece uma análise própria** Para **Over 7.5 Corners**, precisamos de pelo menos oito. O último confronto no Benito Stirpe terminou precisamente com oito — 6–2. O histórico de 11 partidas apresenta 9.1 **corners** em média, enquanto os H2Hs com Frosinone mandante apresentam aproximadamente 8.0. Esses números estão próximos da linha, não enormemente acima dela. Isso significa que existe sustentação histórica, mas margem estatística limitada. Os jogos atuais oferecem sinais adicionais. Contra a Fiorentina, a partida do Frosinone teve 13 **corners**, dos quais cinco produzidos pelo próprio Frosinone.
-Na estreia do Venezia contra Lecce foram oito **corners** — 5–3. Ou seja, nos dois jogos detalhados mais úteis para observar comportamento recente, tivemos 13 e 8. O Venezia também tentou 27 cruzamentos contra o Lecce.  Esse dado é relevante para **corners** porque amplitude, cruzamentos bloqueados e defesas desviando bolas para a linha de fundo constituem mecanismos reais de geração de **escanteios**. Mas não existe relação determinística. Uma equipe pode realizar muitos cruzamentos sem produzir oito **corners** totais, e um gol cedo pode alterar completamente o estado da partida. Gols: o problema está na conversão do Venezia O mercado de gols possui uma contradição clara. Frosinone acaba de marcar três fora contra a Fiorentina. Venezia ainda não marcou nenhum.
-Mas Venezia produziu 19 chutes e sete SOT contra Lecce. O zero, portanto, não veio de ausência completa de volume. Frosinone apresenta o fenômeno inverso. Contra Fiorentina, marcou três vezes com apenas 12 finalizações e aproximadamente 1.47 **xG**. Temos assim uma equipe que recentemente converteu acima de sua produção enfrentando outra que converteu abaixo de seu volume ofensivo. É um excelente exemplo de por que estatísticas de placar não devem ser usadas isoladamente. Além disso, os dois H2Hs da temporada passada terminaram 3–0 e 2–1, ambos acima de 1.5 e 2.5 gols. No entanto, isso não elimina os sinais atuais de baixa produção: Venezia está em 0 gols após 180 minutos, enquanto Frosinone perdeu sua primeira partida em casa por apenas 1–0.
-**Game state** O primeiro gol pode alterar profundamente os dois mercados. Se o Frosinone marcar primeiro, o Venezia será obrigado a aumentar sua presença territorial. A estreia contra Lecce já mostrou capacidade para sustentar 71% de posse, 19 finalizações, 27 cruzamentos e cinco **corners**.  Um Venezia em desvantagem pode gerar volume mesmo sem necessariamente apresentar boa eficiência. Se o Venezia marcar primeiro, o comportamento também tende a mudar. Frosinone estará em casa, possui três pontos depois da vitória em Florença e precisará abandonar qualquer estrutura mais conservadora. Esse cenário pode aumentar finalizações e **corners** do mandante. O cenário de maior conflito é 0–0 prolongado com pouco volume ofensivo. A linha de gols exige somente dois, mas quanto mais tempo o jogo permanece travado, maior a necessidade de uma mudança brusca de ritmo no segundo tempo.
-Nos **corners**, entretanto, um 0–0 não é necessariamente negativo. Uma partida pode acumular pressão, cruzamentos e finalizações bloqueadas sem gols. Por isso, gols e **corners** devem ser tratados como processos correlacionados apenas parcialmente. Qualidade das amostras A temporada atual possui somente N=2. Frosinone apresentar 1.50 gol marcado e 0.50 sofrido por partida não significa que essas sejam suas médias estruturais. Uma vitória por 3–0 representa praticamente toda a amostra. Da mesma maneira, os 0.00 gols do Venezia são influenciados por somente 180 minutos. A temporada passada fornece contexto, mas as equipes estavam na Serie B, enquanto agora enfrentam adversários da Serie A. Não podemos transportar diretamente médias contra clubes de segunda divisão para o novo nível competitivo.
-O **H2H** também precisa ser ponderado. Os confrontos de 2025/26 são relevantes; os de 2022/23 possuem valor muito menor. Esse cuidado com a amostra é especialmente importante para **corners**. A base recente disponível para Venezia chega a apresentar apenas N=1 em alguns cálculos agregados, portanto não deve ser tratada como distribuição estabilizada. Conflict Detector Existem conflitos relevantes nos dois componentes da seleção. No mercado de gols, o maior é Venezia ainda não ter marcado na Serie A. Foram derrotas por 0–2 e 0–2.  Se o Frosinone também voltar ao perfil mais conservador observado no 0–1 contra Juventus, resultados como 0–0 e 1–0 permanecem possíveis. Por outro lado, o zero ofensivo do Venezia esconde os 19 chutes e sete SOT contra Lecce, enquanto os dois H2Hs da temporada passada produziram cinco e três gols.
-No Frosinone ocorre o conflito oposto. O 3–0 sobre a Fiorentina foi excelente, mas veio em um jogo no qual o adversário venceu por 25–12 em finalizações e 1.99–1.47 em **xG**.  Portanto, três gols não devem ser extrapolados como novo patamar ofensivo. Nos **corners**, a média histórica de 9.1 é superior à linha de 7.5, mas os H2Hs no campo do Frosinone apresentam exatamente 8.0 de média.  Isso significa que a diferença para a linha é pequena. O último **H2H** terminou exatamente com oito. Assim, um corner a menos naquele jogo teria mudado completamente o resultado desse componente, apesar de termos observado 34 finalizações. Leitura editorial final Frosinone vs Venezia coloca frente a frente resultados recentes que contam histórias quase opostas. Frosinone chega de um 3–0 sobre a Fiorentina, mas foi superado por 25–12 em chutes, 59.6–40.4% em posse e 1.99–1.47 em **xG**. Venezia chega sem marcar em duas rodadas, embora contra Lecce tenha produzido 71% de posse, 19 finalizações, sete SOT, 27 cruzamentos e cinco **corners**.
-O confronto direto acrescenta outra camada: Frosinone lidera o **H2H** geral por 5–3 em vitórias, com três empates, mas Venezia venceu os dois confrontos de 2025/26, por 3–0 e 2–1. Em fevereiro, no mesmo estádio, tivemos 34 chutes, 16 no alvo, três gols e oito **corners**.  É um dado particularmente útil porque reúne simultaneamente volume ofensivo e o comportamento do mercado de **escanteios** sem precisar inferir uma projeção matemática.
-🎯 **Prediction: **Over 1.5 Goals** + Over 7.5 Corners**
-💰 **Odds: 1.62 (-161)**
-📊 Implied probability: 61.7% A cotação 1.62 corresponde a aproximadamente 61.7% de **probabilidade implícita** bruta, antes da margem da casa. Isso não representa uma probabilidade produzida pelo nosso modelo e, portanto, não é suficiente para classificar a seleção como value. Os dados favoráveis e contrários permanecem visíveis. Os quatro H2Hs competitivos mais recentes ultrapassaram 1.5 gol, os dois encontros de 2025/26 tiveram três ou mais, e o Venezia apresentou volume ofensivo considerável apesar de ainda não marcar. Nos **corners**, a média dos 11 H2Hs é 9.1, Fiorentina–Frosinone produziu 13 e Venezia–Lecce oito. Em sentido contrário, Venezia está há 180 minutos sem marcar, o Frosinone produziu apenas 40% de posse e 12 chutes apesar do 3–0 em Florença, e a média de **corners** dos H2Hs no Benito Stirpe é de exatamente 8.0, praticamente sobre a linha escolhida.
-A fotografia final, portanto, não é de um confronto que obrigatoriamente será aberto. É de duas equipes cujos placares recentes não descrevem integralmente seus processos ofensivos, com um histórico recente de gols mais alto, volume suficiente para gerar **corners** e vários sinais de regressão — positiva para a conversão do Venezia e potencialmente negativa para a eficiência excepcional mostrada pelo Frosinone em Florença.
+These are probable, not confirmed. The official matchday teamsheet overrides every projection.
 
+### HOME/AWAY Analysis
 
-### Tactical / Expected Game State
-Frosinone are the HOME side and Venezia the AWAY side, so the analysis keeps those venue splits separate. The match can change materially with the first goal: an early lead should force the trailing side to take more territory, while a prolonged 0-0 increases the risk for the published market. The current core shows **Frosinone 11.0 shots/game** in the HOME reference and **Venezia 9.0 shots/game** in the AWAY reference, with corner production of **3.0 vs 3.0 per game**. Those figures are evidence inputs, not guarantees.
+For this fixture, the HOME and AWAY cells are the 2026/27 venue samples available before Round 3.
+
+Frosinone's HOME reference has **15.0 total corners** and 11 shots despite no goal, while Venezia's AWAY split allowed 16 shots and 2.44 xGA. Venezia themselves have not scored away in the sample. The combined picture therefore supports territory and set pieces more strongly than it supports either team to finish efficiently.
 
 ### Statistical Core Predictions-Sports-Prime
 | Metric | Frosinone — HOME | Venezia — AWAY |
@@ -86,19 +69,43 @@ Frosinone are the HOME side and Venezia the AWAY side, so the analysis keeps tho
 | Over 1.5 goals | 0% | 100% |
 | Over 2.5 goals | 0% | 0% |
 
-**Conflict Detector:** The main conflict is the gap between small-sample outcome data and underlying process. Actual goals can diverge sharply from xG, and a single HOME/AWAY match can overstate possession, corners or finishing efficiency. The published pick is therefore tested against both the supportive signals and the clearest failure route rather than reverse-engineered from the result.
+### Statistical Interpretation
 
-### Odds / Implied Probability
-The raw implied probability is **61.7%** (1 / 1.62 = 0.617), before bookmaker margin.
+Frosinone's HOME reference has **15.0 total corners** and 11 shots despite no goal, while Venezia's AWAY split allowed 16 shots and 2.44 xGA. Venezia themselves have not scored away in the sample. The combined picture therefore supports territory and set pieces more strongly than it supports either team to finish efficiently.
 
-### Value Assessment
-The published decimal price is **1.62**, which corresponds to a raw implied probability of **61.7%** using 1 / 1.62 = 0.617. PSP does not convert the historical sample into a fabricated fair probability. The market is retained because it is the already-published selection; the value assessment is therefore conditional on the evidence and its sample limitations, not a claim that the bookmaker price is mispriced.
+The core is descriptive evidence, not a probability model. With one-match venue samples in most of this round, finishing, opponent strength and game state can move the numbers sharply. The table is used to identify the matchup rather than to claim statistical certainty.
+
+### Tactical Matchup and Game State
+
+Frosinone should attack through the front three and use the full-backs to create wide overloads against Venezia's wing-backs. Venezia can respond with a five-man midfield and direct access to Adams/Yeboah. An early goal is especially important for the over-1.5 leg because neither side's current venue finishing gives much margin for a slow first half.
+
+### Conflict Detector
+
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: The largest risk is obvious: both relevant venue samples show zero goals scored. Frosinone's 12 corners conceded also inflate the first-match corner environment and should not be treated as a guaranteed repeat. The market needs either better finishing or a game state that forces more aggressive attacking after the opener.
+
+The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
+
+### Risks and Limitations
+
+The largest risk is obvious: both relevant venue samples show zero goals scored. Frosinone's 12 corners conceded also inflate the first-match corner environment and should not be treated as a guaranteed repeat. The market needs either better finishing or a game state that forces more aggressive attacking after the opener.
+
+Most current-season HOME/AWAY samples contain only one league match. Where a current venue sample does not exist, the reference window is disclosed explicitly rather than replaced by an overall or cross-competition average.
+
+### Market Price Context
+
+Implied probability = 1 / decimal odds. At 1.62, 1 / 1.62 = 0.617, or approximately **61.7%** before bookmaker margin. This is only the raw price-derived break-even reference; it is not a PSP fair probability.
 
 ### Conclusion
-The final position keeps the originally published market and price unchanged. The case rests on the documented HOME-versus-AWAY evidence, the most recent lineup/availability baseline, and the tactical game-state risks described above.
+
+The corner leg has clearer support than the goal leg, because Frosinone's HOME match was already high in set-piece volume and Venezia allowed pressure away. Two goals remain reachable, but the current finishing record demands caution.
 
 **Prediction:** Over 1.5 Goals + Over 7.5 Corners
-**Odds:** 1.62`
+**Odds:** 1.62
+
+### Sources / Statistical Provenance
+
+The Statistical Core comes from the verified editorial dataset supplied for this fixture and keeps HOME and AWAY reference windows explicit. Current lineup, injury and suspension information is cross-checked against the latest Serie A probable-lineup reporting before publication.
+`
   ],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
@@ -112,14 +119,27 @@ The final position keeps the originally published market and price unchanged. Th
     }
   },
   sourceStatus: "verified",
+
   sources: [
     {
-      name: "Lega Serie A",
-      url: "https://www.legaseriea.it/",
-      description: "Official competition source used only for competition and fixture context; the supplied editorial package remains the approved article source.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
+        "name": "Lega Serie A",
+        "url": "https://www.legaseriea.it/",
+        "description": "Official competition reference for Serie A fixture context.",
+        "accessedAt": "2026-09-03T14:30:00+02:00"
+    },
+    {
+        "name": "La Gazzetta dello Sport — Probabili Formazioni Serie A",
+        "url": "https://www.gazzetta.it/calcio/prob_form/frosinone-venezia/2638145",
+        "description": "Current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
+        "accessedAt": "2026-09-03T14:30:00+02:00"
+    },
+    {
+        "name": "FBref — Serie A Stats",
+        "url": "https://fbref.com/en/comps/11/Serie-A-Stats",
+        "description": "Public Serie A statistical reference used for competition-level cross-checking.",
+        "accessedAt": "2026-09-03T14:30:00+02:00"
     }
-  ],
+],
   publishedAt: "2026-08-31T12:00:00.000Z",
   published: true,
   matchInfo: {

@@ -7,52 +7,38 @@ export const juventusVsAcMilan: EditorialPrediction = {
   "slug": "juventus-vs-ac-milan",
   "title": "Juventus vs AC Milan Prediction, Odds and Betting Tips",
   "analysis": [
-    `# Juventus vs AC Milan Prediction, Odds and Betting Tips
+    `# Juventus vs AC Milan Prediction, Odds and Match Analysis
+
 **Prediction:** Juventus to win
 **Odds:** 2.14
 
-Competition: Serie A
-Date: 2026-09-06
-Kick-off: 20:45 local time
-Venue: Allianz Stadium
+### Match Information
+
+**Competition:** Serie A
+**Date:** 2026-09-06
+**Kickoff:** 20:45 local time
+**Round:** Matchday 3
+**Venue:** Allianz Stadium
+
+### Match Context
+
+Both teams won their relevant venue openers, so the comparison is about process rather than points. Juventus were cleaner defensively at home, while Milan's away attacking numbers were slightly stronger in xG but came with a goal conceded.
 
 ### Team News and Probable Lineups
-**Probable lineups:** Juventus (3-4-2-1): Guglielmo Vicario; Pierre Kalulu, Bremer, Lloyd Kelly; Zeki Çelik, Manuel Locatelli, Douglas Luiz, Weston McKennie; Francisco Conceição, Kenan Yıldız; Randal Kolo Muani. AC Milan (3-4-2-1): Mike Maignan; Mario Gila, Koni De Winter, Strahinja Pavlović; Samuel Chukwueze, Yunus Musah, Adrien Rabiot, Davide Bartesaghi; Ruben Loftus-Cheek, Cissè; Gonçalo Ramos. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
 
-### Team News / Injuries / Availability
-Availability remains provisional. The retained match-specific editorial source set and the most recent competitive lineups are the basis for the projected XIs below; any official club or competition update closer to kickoff overrides the projection. No unavailable player is inserted simply to make the lineup look complete.
+**Availability:** Juventus remain without Yıldız, Thuram, Ekhator and Cabal; McKennie, Cambiaso and Zhegrova are assessment cases. Milan list Gabbia as unavailable, while several midfield choices depend on recovery after the short turnaround.
 
-### Suspensions / Eligibility
-Suspension and eligibility are treated as a separate pre-match check. The analysis below does not infer a ban from an absence and does not invent an eligible replacement. Any confirmed matchday suspension or registration update must override the probable XI.
+**Suspensions / eligibility:** Gazzetta lists no suspended player for either Juventus or Milan.
 
-### HOME vs AWAY Data Analysis
-The Statistical Core is venue-specific: Juventus is evaluated as HOME and AC Milan as AWAY. In the retained sample, GF/game is **2.00 vs 2.00**, GA/game is **0.00 vs 1.00**, xG/game is **1.64 vs 2.08**, and xGA/game is **0.32 vs 1.17**. The sample size is stated directly in the Core and is not blended with overall league form without disclosure.
+**Probable lineups:** **Juventus (4-2-3-1):** Vicario; Kalulu, Bremer, Lucumí (Kelly), Çelik; Locatelli, Douglas Luiz; Conceição, Nico González, Boga; Kolo Muani. **AC Milan (3-4-2-1):** Maignan; Gila, De Winter, Pavlović; Chukwueze, Modrić, Musah, Estupiñán; Rabiot, Cissé; Gonçalo Ramos.
 
-### Advanced Data and Match Analysis
-**Prediction:** Juventus to win
-**Odds:** 2.14
-Competition: Serie A
-Round: Matchday 3
-Date: 2026-09-06
-Kick-off: 20:45 (local time)
-Venue: Allianz Stadium
-Location: Turin, Italy
-The Statistical Core reconstructs the current-season HOME sample of Juventus and AWAY sample of AC Milan directly from the completed league matches available before the 01/09/2026 cutoff, including shots, SOT, shots/SOT allowed, possession, corners, goal timing and total-goal frequencies.
-### Team News and Probable Lineups
-**Probable lineups:** Juventus (3-4-2-1): Guglielmo Vicario; Pierre Kalulu, Bremer, Lloyd Kelly; Zeki Çelik, Manuel Locatelli, Douglas Luiz, Weston McKennie; Francisco Conceição, Kenan Yıldız; Randal Kolo Muani. AC Milan (3-4-2-1): Mike Maignan; Mario Gila, Koni De Winter, Strahinja Pavlović; Samuel Chukwueze, Yunus Musah, Adrien Rabiot, Davide Bartesaghi; Ruben Loftus-Cheek, Cissè; Gonçalo Ramos. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
-**Injuries / doubts:** No unavailable Milan player was listed in the matchday availability source checked; no material Juventus injury was identified that displaces the projected XI.
-**Suspensions:** No active suspension affecting the projected XI was identified in the sources checked.
-**Transfers / signings / registration:** Juventus projection is unchanged from the previous official XI. Milan revisions bring Rabiot and Bartesaghi into the XI; Luka Modrić was reported out on loan in the lineup tracker.
-**Lineup source note:** Starting11 Serie A Gameweek 3 + Sky availability cross-check; checked 01/09/2026. Any new official club/competition update closer to kickoff overrides this probable XI.
-The venue-specific split sharpens the evaluation: Juventus' home opener against Parma produced 21 shots, six on target and a 10-2 corner advantage, while Milan's away win at Torino produced 19 shots, four on target and a 4-2 corner edge. Juventus' 12 total home corners versus Milan's six away total creates a genuine corner-frequency conflict rather than an unknown.
-The early-season sample is still small, so the correct PSP reading is DADO → INTERPRETAÇÃO → IMPACTO. A one- or two-match frequency of 0% or 100% describes the split observed so far, not a model probability for the next fixture. Overall form and H2H may contextualize the matchup but are not mixed into the HOME/AWAY columns below.
-**Conflict Detector.** Sample size remains the first limitation, but the previous missing-data problem has been materially reduced. The key match-specific conflict is the difference between actual result and underlying process described above: strong finishing can exaggerate GF, low finishing can suppress GF despite xG/shots, and a clean sheet can coexist with high xGA or large shot concession. Corner lines must also use the actual split frequencies shown here rather than league-wide averages. Any final market must survive that contradiction before publication.
-Odds/implied probability: 2.14 decimal, equivalent to 46.7% implied probability before bookmaker margin.
-Conclusion: Juventus to win at 2.14 is the final PSP selection. Juventus’ home process is stronger defensively and territorially, with 21 shots, 10 corners and only 0.32 xGA in the available HOME sample.
+These are probable, not confirmed. The official matchday teamsheet overrides every projection.
 
+### HOME/AWAY Analysis
 
-### Tactical / Expected Game State
-Juventus are the HOME side and AC Milan the AWAY side, so the analysis keeps those venue splits separate. The match can change materially with the first goal: an early lead should force the trailing side to take more territory, while a prolonged 0-0 increases the risk for the published market. The current core shows **Juventus 21.0 shots/game** in the HOME reference and **AC Milan 19.0 shots/game** in the AWAY reference, with corner production of **10.0 vs 4.0 per game**. Those figures are evidence inputs, not guarantees.
+For this fixture, the HOME and AWAY cells are the 2026/27 venue samples available before Round 3.
+
+Juventus' HOME split shows **1.64 xG and 0.32 xGA**, while Milan's AWAY split shows **2.08 xG and 1.17 xGA**. Juventus also generated 21 shots and ten corners at home, compared with Milan's 19 shots and four corners away. That gives Juventus the better defensive platform but does not erase Milan's attacking threat.
 
 ### Statistical Core Predictions-Sports-Prime
 | Metric | Juventus — HOME | AC Milan — AWAY |
@@ -86,19 +72,43 @@ Juventus are the HOME side and AC Milan the AWAY side, so the analysis keeps tho
 | Clean sheets | 100% | 0% |
 | Failed to score | 0% | 0% |
 
-**Conflict Detector:** The main conflict is the gap between small-sample outcome data and underlying process. Actual goals can diverge sharply from xG, and a single HOME/AWAY match can overstate possession, corners or finishing efficiency. The published pick is therefore tested against both the supportive signals and the clearest failure route rather than reverse-engineered from the result.
+### Statistical Interpretation
 
-### Odds / Implied Probability
-The raw implied probability is **46.7%** (1 / 2.14 = 0.467), before bookmaker margin.
+Juventus' HOME split shows **1.64 xG and 0.32 xGA**, while Milan's AWAY split shows **2.08 xG and 1.17 xGA**. Juventus also generated 21 shots and ten corners at home, compared with Milan's 19 shots and four corners away. That gives Juventus the better defensive platform but does not erase Milan's attacking threat.
 
-### Value Assessment
-The published decimal price is **2.14**, which corresponds to a raw implied probability of **46.7%** using 1 / 2.14 = 0.467. PSP does not convert the historical sample into a fabricated fair probability. The market is retained because it is the already-published selection; the value assessment is therefore conditional on the evidence and its sample limitations, not a claim that the bookmaker price is mispriced.
+The core is descriptive evidence, not a probability model. With one-match venue samples in most of this round, finishing, opponent strength and game state can move the numbers sharply. The table is used to identify the matchup rather than to claim statistical certainty.
+
+### Tactical Matchup and Game State
+
+Juventus can use Conceição and Boga to stretch Milan's back three while Nico González operates behind Kolo Muani. Milan's 3-4-2-1 should create central overloads through Rabiot/Cissé and allow Chukwueze to attack wide space. The match is likely to turn on whether Juventus can protect transitions after committing the full-backs and wide attackers forward.
+
+### Conflict Detector
+
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: Milan's away xG is higher than Juventus' home xG in the one-match sample, a meaningful counter-signal to a straight home win. Juventus also have several availability concerns. The result market therefore depends on the home side converting defensive control into enough attacking efficiency.
+
+The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
+
+### Risks and Limitations
+
+Milan's away xG is higher than Juventus' home xG in the one-match sample, a meaningful counter-signal to a straight home win. Juventus also have several availability concerns. The result market therefore depends on the home side converting defensive control into enough attacking efficiency.
+
+Most current-season HOME/AWAY samples contain only one league match. Where a current venue sample does not exist, the reference window is disclosed explicitly rather than replaced by an overall or cross-competition average.
+
+### Market Price Context
+
+Implied probability = 1 / decimal odds. At 2.14, 1 / 2.14 = 0.467, or approximately **46.7%** before bookmaker margin. This is only the raw price-derived break-even reference; it is not a PSP fair probability.
 
 ### Conclusion
-The final position keeps the originally published market and price unchanged. The case rests on the documented HOME-versus-AWAY evidence, the most recent lineup/availability baseline, and the tactical game-state risks described above.
+
+Juventus have the stronger home defensive process and more set-piece volume, while Milan's away attack is the clearest reason for caution. The home-win selection is coherent but not low-risk; it relies on Juventus limiting Milan's transition quality more effectively than Torino did.
 
 **Prediction:** Juventus to win
-**Odds:** 2.14`
+**Odds:** 2.14
+
+### Sources / Statistical Provenance
+
+The Statistical Core comes from the verified editorial dataset supplied for this fixture and keeps HOME and AWAY reference windows explicit. Current lineup, injury and suspension information is cross-checked against the latest Serie A probable-lineup reporting before publication.
+`
   ],
   "analysisFormat": "markdown",
   "editorialStandard": "psp-v1",
@@ -114,14 +124,27 @@ The final position keeps the originally published market and price unchanged. Th
   "published": true,
   "publishedAt": "2026-09-01T12:00:00-03:00",
   "sourceStatus": "verified",
-  "sources": [
+
+  sources: [
     {
-      "name": "OpenFootball — Serie A 2026/27 fixture feed",
-      "url": "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt",
-      "description": "Existing project fixture source used to link the supplied analysis to the correct match.",
-      "accessedAt": "2026-09-01T12:00:00-03:00"
+        "name": "Lega Serie A",
+        "url": "https://www.legaseriea.it/",
+        "description": "Official competition reference for Serie A fixture context.",
+        "accessedAt": "2026-09-03T14:30:00+02:00"
+    },
+    {
+        "name": "La Gazzetta dello Sport — Probabili Formazioni Serie A",
+        "url": "https://www.gazzetta.it/Calcio/prob_form/juventus-milan/2638148",
+        "description": "Current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
+        "accessedAt": "2026-09-03T14:30:00+02:00"
+    },
+    {
+        "name": "FBref — Serie A Stats",
+        "url": "https://fbref.com/en/comps/11/Serie-A-Stats",
+        "description": "Public Serie A statistical reference used for competition-level cross-checking.",
+        "accessedAt": "2026-09-03T14:30:00+02:00"
     }
-  ],
+],
   "matchInfo": {
     "date": "2026-09-06",
     "time": "20:45",

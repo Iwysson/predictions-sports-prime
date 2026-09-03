@@ -7,52 +7,38 @@ export const cagliariVsLecce: EditorialPrediction = {
   "slug": "cagliari-vs-lecce",
   "title": "Cagliari vs Lecce Prediction, Odds and Betting Tips",
   "analysis": [
-    `# Cagliari vs Lecce Prediction, Odds and Betting Tips
+    `# Cagliari vs Lecce Prediction, Odds and Match Analysis
+
 **Prediction:** Over 1.5 Goals
 **Odds:** 1.55
 
-Competition: Serie A
-Date: 2026-09-07
-Kick-off: 18:30 local time
-Venue: Unipol Domus
+### Match Information
+
+**Competition:** Serie A
+**Date:** 2026-09-07
+**Kickoff:** 18:30 local time
+**Round:** Matchday 3
+**Venue:** Unipol Domus
+
+### Match Context
+
+Cagliari's first HOME result was poor offensively, while Lecce's AWAY reference produced a win and a clean sheet. The underlying chance data, however, were much less comfortable for both teams than the scorelines imply.
 
 ### Team News and Probable Lineups
-**Probable lineups:** Cagliari (4-2-3-1): Elia Caprile; Pedro, Alessandro Deiola, Sebastián Rodríguez, Adam Obert; Romano, Harry Winks; Michel Adopo, Daniel Maldini, Jacopo Fazzini; Bafodé Diakité/Mendy. Lecce (4-3-3): Wladimiro Falcone; Danilo Veiga, Jamil Siebert, Kialonda Gaspar, Antonino Gallo; Gorter, Lassana Coulibaly, Ngom; Santiago Pierotti, Willem Geubbels (doubt; Nikola Štulić), Nikola Štulić/central forward option. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
 
-### Team News / Injuries / Availability
-Availability remains provisional. The retained match-specific editorial source set and the most recent competitive lineups are the basis for the projected XIs below; any official club or competition update closer to kickoff overrides the projection. No unavailable player is inserted simply to make the lineup look complete.
+**Availability:** Cagliari are assessing Idrissi, Trepy, Mina and Borrelli. Lecce are without Geubbels after an ankle injury.
 
-### Suspensions / Eligibility
-Suspension and eligibility are treated as a separate pre-match check. The analysis below does not infer a ban from an absence and does not invent an eligible replacement. Any confirmed matchday suspension or registration update must override the probable XI.
+**Suspensions / eligibility:** Gazzetta lists no suspended player for either Cagliari or Lecce.
 
-### HOME vs AWAY Data Analysis
-The Statistical Core is venue-specific: Cagliari is evaluated as HOME and Lecce as AWAY. In the retained sample, GF/game is **0.00 vs 2.00**, GA/game is **1.00 vs 0.00**, xG/game is **0.51 vs 2.38**, and xGA/game is **3.36 vs 2.05**. The sample size is stated directly in the Core and is not blended with overall league form without disclosure.
+**Probable lineups:** **Cagliari (4-3-2-1):** Caprile; Zé Pedro, Deiola, Rodríguez, Obert; Romano, Winks, Fazzini; Adopo, Maldini; Mendy. **Lecce (4-3-3):** Falcone; Veiga, Gaspar, Tiago Gabriel (Siebert), Gallo; Coulibaly, Ngom, Ilić; Pierotti, Štulić, Monteiro.
 
-### Advanced Data and Match Analysis
-**Prediction:** Over 1.5 Goals
-**Odds:** 1.55
-Competition: Serie A
-Round: Matchday 3
-Date: 2026-09-07
-Kick-off: 18:30 (local time)
-Venue: Unipol Domus
-Location: Cagliari, Italy
-The Statistical Core reconstructs the current-season HOME sample of Cagliari and AWAY sample of Lecce directly from the completed league matches available before the 01/09/2026 cutoff, including shots, SOT, shots/SOT allowed, possession, corners, goal timing and total-goal frequencies.
-### Team News and Probable Lineups
-**Probable lineups:** Cagliari (4-2-3-1): Elia Caprile; Pedro, Alessandro Deiola, Sebastián Rodríguez, Adam Obert; Romano, Harry Winks; Michel Adopo, Daniel Maldini, Jacopo Fazzini; Bafodé Diakité/Mendy. Lecce (4-3-3): Wladimiro Falcone; Danilo Veiga, Jamil Siebert, Kialonda Gaspar, Antonino Gallo; Gorter, Lassana Coulibaly, Ngom; Santiago Pierotti, Willem Geubbels (doubt; Nikola Štulić), Nikola Štulić/central forward option. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
-**Injuries / doubts:** Cagliari: Yerry Mina had a calf/fatigue issue under evaluation; Idrissi and Trepy were also unavailable in the latest report. Lecce: Medon Berisha was unavailable and Willem Geubbels carried a significant ankle doubt, hence the parenthetical replacement in the XI.
-**Suspensions:** No active suspension affecting the projected XI was identified in the sources checked.
-**Transfers / signings / registration:** Lecce: N’Dri was reported out on loan; Štulić enters the attacking rotation. Cagliari remains close to the prior league XI.
-**Lineup source note:** Starting11 Serie A Gameweek 3 + Gazzetta/Fantacalcio availability checks; checked 01/09/2026. Any new official club/competition update closer to kickoff overrides this probable XI.
-Cagliari's home loss to Inter was far more one-sided in chance quality than the 0-1 score suggested: 0.51 xG against 3.36, no shot on target and 31 shots allowed, although Cagliari still generated eight corners. Lecce's away win at Venezia was the inverse: only 29% possession but 12 shots, five on target and 2.38 xG, while conceding 19 shots and more than 2 xGA. The result profile therefore hides defensive vulnerability on both sides.
-The early-season sample is still small, so the correct PSP reading is DADO → INTERPRETAÇÃO → IMPACTO. A one- or two-match frequency of 0% or 100% describes the split observed so far, not a model probability for the next fixture. Overall form and H2H may contextualize the matchup but are not mixed into the HOME/AWAY columns below.
-**Conflict Detector.** Sample size remains the first limitation, but the previous missing-data problem has been materially reduced. The key match-specific conflict is the difference between actual result and underlying process described above: strong finishing can exaggerate GF, low finishing can suppress GF despite xG/shots, and a clean sheet can coexist with high xGA or large shot concession. Corner lines must also use the actual split frequencies shown here rather than league-wide averages. Any final market must survive that contradiction before publication.
-Odds/implied probability: 1.55 decimal, equivalent to 64.5% implied probability before bookmaker margin.
-Conclusion: Over 1.5 Goals at 1.55 is the final PSP selection. The combined HOME/AWAY process points to defensive vulnerability: Cagliari allowed 3.36 xGA at home, while Lecce allowed 2.05 xGA away despite winning.
+These are probable, not confirmed. The official matchday teamsheet overrides every projection.
 
+### HOME/AWAY Analysis
 
-### Tactical / Expected Game State
-Cagliari are the HOME side and Lecce the AWAY side, so the analysis keeps those venue splits separate. The match can change materially with the first goal: an early lead should force the trailing side to take more territory, while a prolonged 0-0 increases the risk for the published market. The current core shows **Cagliari 10.0 shots/game** in the HOME reference and **Lecce 12.0 shots/game** in the AWAY reference, with corner production of **8.0 vs 3.0 per game**. Those figures are evidence inputs, not guarantees.
+For this fixture, the HOME and AWAY cells are the 2026/27 venue samples available before Round 3.
+
+Cagliari's HOME xGA is **3.36**, while Lecce's AWAY xGA is **2.05** despite the visitors keeping a clean sheet. Lecce scored twice away from 2.38 xG, whereas Cagliari failed to score from only 0.51 xG. The important point is that both defences allowed substantial chance quality, even though only Cagliari were punished on the scoreboard.
 
 ### Statistical Core Predictions-Sports-Prime
 | Metric | Cagliari — HOME | Lecce — AWAY |
@@ -86,19 +72,43 @@ Cagliari are the HOME side and Lecce the AWAY side, so the analysis keeps those 
 | Clean sheets | 0% | 100% |
 | Failed to score | 100% | 0% |
 
-**Conflict Detector:** The main conflict is the gap between small-sample outcome data and underlying process. Actual goals can diverge sharply from xG, and a single HOME/AWAY match can overstate possession, corners or finishing efficiency. The published pick is therefore tested against both the supportive signals and the clearest failure route rather than reverse-engineered from the result.
+### Statistical Interpretation
 
-### Odds / Implied Probability
-The raw implied probability is **64.5%** (1 / 1.55 = 0.645), before bookmaker margin.
+Cagliari's HOME xGA is **3.36**, while Lecce's AWAY xGA is **2.05** despite the visitors keeping a clean sheet. Lecce scored twice away from 2.38 xG, whereas Cagliari failed to score from only 0.51 xG. The important point is that both defences allowed substantial chance quality, even though only Cagliari were punished on the scoreboard.
 
-### Value Assessment
-The published decimal price is **1.55**, which corresponds to a raw implied probability of **64.5%** using 1 / 1.55 = 0.645. PSP does not convert the historical sample into a fabricated fair probability. The market is retained because it is the already-published selection; the value assessment is therefore conditional on the evidence and its sample limitations, not a claim that the bookmaker price is mispriced.
+The core is descriptive evidence, not a probability model. With one-match venue samples in most of this round, finishing, opponent strength and game state can move the numbers sharply. The table is used to identify the matchup rather than to claim statistical certainty.
+
+### Tactical Matchup and Game State
+
+Cagliari should use Fazzini and Maldini behind Mendy to attack the spaces between Lecce's midfield and back four. Lecce can counter through the wide forwards and use Štulić as the reference point after Geubbels' injury. If Lecce score first, Cagliari will have to open the game; if Cagliari score first, Lecce's away chance creation suggests they can still contribute.
+
+### Conflict Detector
+
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: Lecce's clean sheet and Cagliari's zero home goals are both direct counter-signals to an over market. The underlying xGA numbers are high, but one match can exaggerate defensive weakness. The selection therefore needs a better conversion rate than Cagliari showed in their first home fixture.
+
+The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
+
+### Risks and Limitations
+
+Lecce's clean sheet and Cagliari's zero home goals are both direct counter-signals to an over market. The underlying xGA numbers are high, but one match can exaggerate defensive weakness. The selection therefore needs a better conversion rate than Cagliari showed in their first home fixture.
+
+Most current-season HOME/AWAY samples contain only one league match. Where a current venue sample does not exist, the reference window is disclosed explicitly rather than replaced by an overall or cross-competition average.
+
+### Market Price Context
+
+Implied probability = 1 / decimal odds. At 1.55, 1 / 1.55 = 0.645, or approximately **64.5%** before bookmaker margin. This is only the raw price-derived break-even reference; it is not a PSP fair probability.
 
 ### Conclusion
-The final position keeps the originally published market and price unchanged. The case rests on the documented HOME-versus-AWAY evidence, the most recent lineup/availability baseline, and the tactical game-state risks described above.
+
+The strongest support for two goals comes from the amount of chance quality both defences allowed, not from Cagliari's finishing. Lecce have already shown they can score away, so the line remains reachable even if the home side contributes only one goal.
 
 **Prediction:** Over 1.5 Goals
-**Odds:** 1.55`
+**Odds:** 1.55
+
+### Sources / Statistical Provenance
+
+The Statistical Core comes from the verified editorial dataset supplied for this fixture and keeps HOME and AWAY reference windows explicit. Current lineup, injury and suspension information is cross-checked against the latest Serie A probable-lineup reporting before publication.
+`
   ],
   "analysisFormat": "markdown",
   "editorialStandard": "psp-v1",
@@ -114,14 +124,27 @@ The final position keeps the originally published market and price unchanged. Th
   "published": true,
   "publishedAt": "2026-09-01T12:00:00-03:00",
   "sourceStatus": "verified",
-  "sources": [
+
+  sources: [
     {
-      "name": "OpenFootball — Serie A 2026/27 fixture feed",
-      "url": "https://raw.githubusercontent.com/openfootball/italy/refs/heads/master/2026-27/1-seriea.txt",
-      "description": "Existing project fixture source used to link the supplied analysis to the correct match.",
-      "accessedAt": "2026-09-01T12:00:00-03:00"
+        "name": "Lega Serie A",
+        "url": "https://www.legaseriea.it/",
+        "description": "Official competition reference for Serie A fixture context.",
+        "accessedAt": "2026-09-03T14:30:00+02:00"
+    },
+    {
+        "name": "La Gazzetta dello Sport — Probabili Formazioni Serie A",
+        "url": "https://www.gazzetta.it/Calcio/prob_form/cagliari-lecce/2638143",
+        "description": "Current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
+        "accessedAt": "2026-09-03T14:30:00+02:00"
+    },
+    {
+        "name": "FBref — Serie A Stats",
+        "url": "https://fbref.com/en/comps/11/Serie-A-Stats",
+        "description": "Public Serie A statistical reference used for competition-level cross-checking.",
+        "accessedAt": "2026-09-03T14:30:00+02:00"
     }
-  ],
+],
   "matchInfo": {
     "date": "2026-09-07",
     "time": "18:30",
