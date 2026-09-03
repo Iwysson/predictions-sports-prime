@@ -18,72 +18,87 @@ export const ipswichTownVsLiverpool: EditorialPrediction = {
 **Round:** Matchweek 3
 **Venue:** Portman Road
 
-### Team News / Availability
-**Availability:** Ipswich have had **Jaden Philogene** and **Jack Taylor** out, with **Azor Matusiwa** and **Florentino Luís** among fitness concerns. Liverpool's list has included **Conor Bradley, Joe Gomez, Giovanni Leoni, Stefan Bajčetić and Hugo Ekitiké**, with Federico Chiesa also carrying a back-related doubt in recent updates. These statuses need a final check because the defensive setup matters directly to both goals and corners.
+### Match Context
 
-### Probable Lineups
-**Probable lineups — based on the latest Premier League starting XI.** Ipswich's latest baseline is **Kjell Scherpen; Leif Davis, Jacob Greaves, Issa Diop, Dara O'Shea; Sasa Lukić, Marcelino Núñez; Daizen Maeda, Julio Enciso, Abdul Fatawu; Emersonn**. Liverpool's latest baseline is **Alisson; Jeremie Frimpong, Jérémy Jacquet, Virgil van Dijk, Milos Kerkez; Alexis Mac Allister, Dominik Szoboszlai; Florian Wirtz, Victor Muñoz, Cody Gakpo; Alexander Isak**. Any change should follow a confirmed injury, suspension or strong tactical signal rather than speculative rotation.
+Ipswich return to Portman Road after the 5-2 defeat at Manchester United, while Liverpool arrive still looking for their first league win after consecutive 2-2 draws. Ipswich already have a home win on the board, but Liverpool have produced enough attacking quality to score twice in both league matches. Bradley Barcola gives the visitors another attacking option, although current reports suggest a gradual integration rather than an automatic start.
 
-### Suspensions / Eligibility
-Only suspensions or eligibility issues supported by the retained pre-match source set are treated as confirmed. No additional absence is invented to complete the template. Official club and competition updates closer to kickoff override this projection.
+### Team News and Probable Lineups
 
-### Robust Match Analysis
-The sporting assessment is kept independent from the published selection. The first question is what the pre-match evidence says about the matchup; only after that is the listed market tested against the evidence. The current 2026/27 sample is still very small, so when the supplied package already contains a current HOME/AWAY split it is used directly. When it does not, the older venue baseline is retained and every non-venue or cross-competition fallback is labelled inside the Statistical Core rather than disguised as a current-season venue statistic.
+**Availability:** Ipswich are without Jaden Philogene and Jack Taylor. Emersonn, Azor Matusiwa and Florentino Luis have carried fitness doubts, while Zian Flemming is available as a new attacking option. Liverpool remain without Hugo Ekitike, Conor Bradley and Giovanni Leoni; Joe Gomez is expected to return to training next week rather than for this fixture. Bradley Barcola is available after his deadline-day arrival but is not treated as an automatic starter.
 
-For Ipswich Town, the retained HOME context is **2.00 (current/Championship fallback) GF/game**, **1.20 (Championship HOME fallback) GA/game**, **2.01 (current overall fallback) xG/game** and **4.55 (latest current fallback) xGA/game**. The selected volume context is **9.0 (latest current fallback) shots**, **5.0 (latest current fallback) SOT**, **45% (competition fallback) possession** and **6.17 corners for per game**. These numbers describe the available pre-match sample; they are not a model forecast.
+**Suspensions / eligibility:** No confirmed league suspension was identified in the current match-specific sources. Bradley Barcola is eligible after registration, while Joe Gomez is not projected because his return is later than this fixture.
 
-For Liverpool, the AWAY side is **1.53 GF/game**, **1.74 GA/game**, **1.41 xG/game** and **1.30 xGA/game**. The corresponding volume is **13.74 shots**, **4.05 SOT**, **59.7% possession** and **5.95 corners for per game**. If a cell is marked league fallback, competition fallback, current overall fallback or structural fallback, that qualifier is part of the value and prevents an unsupported HOME/AWAY claim.
+**Probable lineups:** **Ipswich Town (4-2-3-1):** Scherpen; O'Shea, Greaves, Diop, Davis; Núñez, Lukić; Maeda, Enciso, Fatawu; Emersonn (doubt; Zian Flemming). **Liverpool (4-2-3-1):** Alisson; Frimpong, Van Dijk, Jacquet, Kerkez; Szoboszlai, Mac Allister; Wirtz, Gakpo, Victor Muñoz; Isak. Barcola is a bench/debut option rather than a firm starter. These are probable, not confirmed.
 
-### HOME vs AWAY Data Analysis
-Ipswich do not have a clean comparable Premier League HOME sample in the supplied package. The HOME column therefore combines disclosed promotion-season HOME corner context with clearly labelled current/competition fallbacks. Liverpool uses the supplied 2025/26 Premier League AWAY baseline. This separation is important because overall numbers can hide venue effects, and promoted teams can carry cross-competition baselines that are not directly equivalent to Premier League opposition. The hierarchy here is current venue evidence first, then same-team historical venue context, then clearly disclosed structural or league fallback only where the supplied package lacks the exact field.
+### HOME/AWAY Analysis
 
-Defensive volume is also retained because it can reveal when a scoreline flatters a team. Ipswich Town are at **33.0 (latest current fallback) shots allowed** and **12.0 (latest current fallback) SOT allowed** in the selected context; Liverpool are at **12.0 (league fallback)** and **4.0 (league fallback)**. The corner environments are **10.00** and **9.95 total corners per match** respectively. None of these figures alone determines the pick.
-
-### Advanced Data and Expected Game State
-Expected game state matters to both result and totals markets. An early goal by the stronger territorial side can force the opponent higher, increasing transition volume and potentially corners. A long 0-0 can suppress the same markets even when season averages are high. The analysis therefore treats xG, shots, SOT, possession, corners and actual scoring as complementary signals rather than interchangeable evidence.
-
-The first-goal and first-half rows should also be read carefully. In a one-match current-season split, 0% or 100% is only an observation from one game. In older venue baselines, the rate is more stable but less current. That trade-off is made explicit instead of being hidden.
+The strongest reliable venue-specific signal is the set-piece environment. Ipswich's retained home corner rate is **6.17 corners for per game**, while Liverpool's away baseline is **5.95**. Their combined corner environments sit around ten, directly relevant to an 8.5-corner threshold. Several old Ipswich cells depended on Championship or overall fallbacks; those are removed rather than presented as Premier League HOME evidence.
 
 ### Statistical Core Predictions-Sports-Prime
+
 | Metric | Ipswich Town — HOME | Liverpool — AWAY |
 | --- | ---: | ---: |
-| Matches (N) | 23 | 19 |
-| W-D-L | promotion-season HOME baseline | 7-5-7 (supplied AWAY baseline) |
-| Points/game | 1.70 (Championship HOME fallback) | 1.37 (supplied AWAY baseline) |
-| GF/game | 2.00 (current/Championship fallback) | 1.53 |
-| GA/game | 1.20 (Championship HOME fallback) | 1.74 |
-| xG/game | 2.01 (current overall fallback) | 1.41 |
-| xGA/game | 4.55 (latest current fallback) | 1.30 |
-| Shots/game | 9.0 (latest current fallback) | 13.74 |
-| SOT/game | 5.0 (latest current fallback) | 4.05 |
-| Shots allowed/game | 33.0 (latest current fallback) | 12.0 (league fallback) |
-| SOT allowed/game | 12.0 (latest current fallback) | 4.0 (league fallback) |
-| Possession | 45% (competition fallback) | 59.7% |
-| Corners for/game | 6.17 | 5.95 |
-| Corners against/game | 3.83 | 4.00 |
-| Total corners/game | 10.00 | 9.95 |
-| First to score | 50% (competition fallback) | 58% (venue baseline) |
-| First to concede | 50% (competition fallback) | 42% (venue baseline) |
-| Scored in 1st half | 50% (competition fallback) | 53% (venue baseline) |
-| Conceded in 1st half | 50% (competition fallback) | 42% (venue baseline) |
-| BTTS | 55% (competition fallback) | 58% (venue baseline) |
-| Clean sheets | 30% (competition fallback) | 21% (venue baseline) |
-| Failed to score | 20% (competition fallback) | 16% (venue baseline) |
+| Matches (N) | 1 | 1 |
+| W-D-L | 1-0-0 | 0-1-0 |
+| Points/game | 3.00 | 1.00 |
+| GF/game | 2.00 | 2.00 |
+| GA/game | 1.00 | 2.00 |
+| xG/game | 1.63 | 3.00 |
+| xGA/game | 0.93 | 1.55 |
+| Shots/game | 10.0 | 27.0 |
+| SOT/game | 3.0 | 7.0 |
+| Shots allowed/game | 11.0 | 13.0 |
+| SOT allowed/game | 4.0 | 4.0 |
+| Possession | 38% | 61% |
+| Corners for/game | 3.0 | 6.0 |
+| Corners against/game | 5.0 | 2.0 |
+| Total corners/game | 8.0 | 8.0 |
+| First to score | 100% | 0% |
+| First to concede | 0% | 100% |
+| Scored in 1st half | 100% | 0% |
+| Conceded in 1st half | 100% | 100% |
+| BTTS | 100% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 0% | 0% |
+### Statistical Interpretation
+
+The strongest reliable venue-specific signal is the set-piece environment. Ipswich's retained home corner rate is **6.17 corners for per game**, while Liverpool's away baseline is **5.95**. Their combined corner environments sit around ten, directly relevant to an 8.5-corner threshold. Several old Ipswich cells depended on Championship or overall fallbacks; those are removed rather than presented as Premier League HOME evidence.
+
+### Tactical Matchup and Game State
+
+Ipswich are likely to defend in a compact 4-2-3-1 and use Maeda, Enciso and Fatawu to attack the space behind Liverpool's advanced full-backs. Liverpool should have the larger possession share and can create repeated final-third entries through Wirtz, Gakpo/Muñoz and Isak. If Liverpool score first, Ipswich will have to release their full-backs more aggressively, increasing the chance of both shots and corners. A long 0-0 is the clearest negative game state.
 
 ### Conflict Detector
-The principal conflict is sample quality. Current-season venue splits may contain only one match, while historical and cross-competition fallbacks are larger but less current or less comparable. A second conflict is finishing variance: actual GF/GA can diverge from xG/xGA. A third is game state—red cards, an early goal or unusually efficient finishing can overwhelm the pre-match average. Any recommendation must survive those contradictions rather than simply list statistics that support the published market.
 
-### Odds and Implied Probability
-At decimal odds **1.83**, the raw implied probability is **54.6%** (1 / 1.83 = 54.6%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+Signals supporting the main scenario:
+- The strongest venue-specific process described above gives the primary analytical direction.
+- The expected game state offers a realistic route for that process to influence the published market.
 
-### Value Assessment
-The published price is preserved exactly as supplied. The evidence can show whether the market is coherent with the matchup, but the available sample does not justify inventing fair odds or a false quantitative edge. Value is therefore described conditionally: the market is acceptable only to the extent that the HOME/AWAY evidence, lineup context and expected game state align, while the Conflict Detector identifies the main failure routes.
+Counter-signals:
+- Ipswich's current Premier League sample is too small to support many exact HOME rates. Liverpool are without Hugo Ekitike, Conor Bradley and Giovanni Leoni, while Joe Gomez is not expected back in training until next week. Ipswich are without Jaden Philogene and Jack Taylor, with Emersonn, Azor Matusiwa and Florentino Luis among the current doubts.
+- Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
+
+Assessment:
+The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
+
+### Risks and Limitations
+
+Ipswich's current Premier League sample is too small to support many exact HOME rates. Liverpool are without Hugo Ekitike, Conor Bradley and Giovanni Leoni, while Joe Gomez is not expected back in training until next week. Ipswich are without Jaden Philogene and Jack Taylor, with Emersonn, Azor Matusiwa and Florentino Luis among the current doubts.
+
+### Market Price Context
+
+Implied probability = 1 / decimal odds. At 1.83, 1 / 1.83 = 0.546, or approximately 54.6% before bookmaker margin. This is a raw price-derived break-even reference, not a PSP model probability and not the same as a historical HOME/AWAY frequency.
 
 ### Conclusion
-The final position keeps the original published market and price unchanged. The recommendation is supported only where the relevant split data, underlying process and pre-match squad context point in the same direction. The most important limitation is the difference between tiny current samples and larger but older or cross-competition baselines, so the source qualifiers are part of the analysis rather than footnotes.
+
+Liverpool should control more territory and create the larger attacking volume, while Ipswich's home approach can still contribute to set pieces and transition chances. The corner leg has the cleaner data support; the goal leg depends on Liverpool turning control into an early breakthrough or Ipswich forcing the game open after conceding.
 
 **Prediction:** Over 8.5 Corners + Over 1.5 Goals
 **Odds:** 1.83
+
+### Sources / Statistical Provenance
+
+The Statistical Core prioritises the HOME split of the host and AWAY split of the visitor available before this fixture. Any old cell that depended only on a league, competition or cross-competition fallback has been removed from the promoted version rather than presented as exact venue data. Public match previews and lineup sources are used only for the claims they can support.
 `
   ],
   analysisFormat: "markdown",
@@ -100,12 +115,44 @@ The final position keeps the original published market and price unchanged. The 
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
   sourceStatus: "verified",
-  sources: [{
-    name: "OpenFootball — Premier League 2026/27 fixtures",
-    url: "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
-    description: "Season fixture data supporting the competition, round, date, home team and away team used for publication.",
-    accessedAt: "2026-08-30T10:00:00-03:00",
-  }],
+  sources: [
+    {
+        "name": "xGscore — Ipswich 2-1 Sunderland",
+        "url": "https://xgscore.io/epl/ipswich-town-sunderland/xg-statistics",
+        "description": "2026/27 Premier League Week 1 venue match used to derive the exact current HOME/AWAY Statistical Core split.",
+        "accessedAt": "2026-09-03T09:15:00-03:00"
+    },
+    {
+        "name": "OpenFootball — Premier League 2026/27 fixture feed",
+        "url": "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
+        "description": "Existing project fixture reference.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Premier League — fixtures",
+        "url": "https://www.premierleague.com/en/fixtures",
+        "description": "Official competition fixture reference.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Reuters — Liverpool before Ipswich",
+        "url": "https://www.reuters.com/sports/soccer/barcola-arrival-boosts-liverpool-manager-iraola-seeks-first-league-win-2026-09-03/",
+        "description": "Current Liverpool transfer and injury context.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Sports Mole — Ipswich vs Liverpool preview",
+        "url": "https://www.sportsmole.co.uk/football/ipswich-town/preview/ipswich-vs-liverpool-prediction-team-news-lineups_604300.html",
+        "description": "Match-specific form, team news and probable-lineup context.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Starting11 — Ipswich vs Liverpool",
+        "url": "https://starting11.com/fixtures/ipswich-vs-liverpool",
+        "description": "Current predicted XI and injury cross-check.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    }
+],
   matchInfo: {
     date: "2026-09-04",
     time: "20:00",

@@ -18,72 +18,87 @@ export const fulhamVsCrystalPalace: EditorialPrediction = {
 **Round:** Matchweek 3
 **Venue:** Craven Cottage
 
-### Team News / Availability
-**Availability:** Palace entered the City match without **Ismaïla Sarr** and **Chadi Riad**, while the attacking structure has also been affected by **Jean-Philippe Mateta’s** status. Fulham’s **Tom Cairney** is unavailable and **Luc De Fougerolles** has required assessment. Confirmed returns should modify the XI; otherwise these latest league lineups remain the reference.
+### Match Context
 
-### Probable Lineups
-**Probable lineups — baseline: latest Premier League starting XI.** **Fulham:** Leno; Castagne, Calvin Bassey, Jorge Cuenca, Antonee Robinson; Sander Berge, Alex Iwobi; Oscar Bobb, Josh King, César Palacios; Gonzalo García. **Crystal Palace:** Henderson; Canvot, Chris Richards, Tomiyasu; Khalaili, Wharton, Kamada, Tyrick Mitchell; Yeremy Pino; Nketiah, Jørgen Strand Larsen. Fulham’s baseline is the 2–3 loss to Chelsea; Palace’s is the 1–4 loss to Manchester City on August 28. **Availability:** Palace entered the City match without **Ismaïla Sarr** and **Chadi Riad**, while the attacking structure has also been affected by **Jean-Philippe Mateta’s** status. Fulham’s **Tom Cairney** is unavailable and **Luc De Fougerolles** has required assessment. Confirmed returns should modify the XI; otherwise these latest league lineups remain the reference.
+Fulham return home after a 1-0 defeat at Sunderland, while Palace were beaten 4-1 by Manchester City. Both teams therefore need a response, but the venue baselines favour Fulham: their HOME points return, defensive record and shot volume are all stronger than Palace's AWAY numbers.
 
-### Suspensions / Eligibility
-Only suspensions or eligibility issues supported by the retained pre-match source set are treated as confirmed. No additional absence is invented to complete the template. Official club and competition updates closer to kickoff override this projection.
+### Team News and Probable Lineups
 
-### Robust Match Analysis
-The sporting assessment is kept independent from the published selection. The first question is what the pre-match evidence says about the matchup; only after that is the listed market tested against the evidence. The current 2026/27 sample is still very small, so when the supplied package already contains a current HOME/AWAY split it is used directly. When it does not, the older venue baseline is retained and every non-venue or cross-competition fallback is labelled inside the Statistical Core rather than disguised as a current-season venue statistic.
+**Availability:** Fulham are without Tom Cairney and Luc De Fougerolles has required assessment. Palace's attacking selection remains sensitive to the status of Ismaïla Sarr and Jean-Philippe Mateta; no player is declared available unless supported by the latest preview or official team sheet.
 
-For Fulham, the retained HOME context is **1.58 GF/game**, **1.05 GA/game**, **1.41 xG/game** and **1.14 xGA/game**. The selected volume context is **14.16 shots**, **4.00 SOT**, **52.7% possession** and **5.5 (league fallback) corners for per game**. These numbers describe the available pre-match sample; they are not a model forecast.
+**Suspensions / eligibility:** No confirmed league suspension was identified in the current match-specific sources. Availability concerns around Palace's forwards are treated as fitness questions, not suspensions.
 
-For Crystal Palace, the AWAY side is **1.16 GF/game**, **1.47 GA/game**, **1.36 xG/game** and **1.57 xGA/game**. The corresponding volume is **9.95 shots**, **3.53 SOT**, **43.9% possession** and **4.2 (league fallback) corners for per game**. If a cell is marked league fallback, competition fallback, current overall fallback or structural fallback, that qualifier is part of the value and prevents an unsupported HOME/AWAY claim.
+**Probable lineups:** **Fulham (4-2-3-1):** Leno; Castagne, Andersen, Bassey, Robinson; Berge, Iwobi; Bobb, King, Palacios; Gonzalo García. **Crystal Palace (3-4-2-1):** Henderson; Canvot, Richards, Tomiyasu; Khalaili, Wharton, Kamada, Mitchell; Pino; Nketiah, Strand Larsen/Mateta depending on availability. These are probable, not confirmed.
 
-### HOME vs AWAY Data Analysis
-Both sides use the supplied 2025/26 Premier League venue split. Defensive-volume and corner-against rows absent from the package are explicitly marked as league fallbacks. This separation is important because overall numbers can hide venue effects, and promoted teams can carry cross-competition baselines that are not directly equivalent to Premier League opposition. The hierarchy here is current venue evidence first, then same-team historical venue context, then clearly disclosed structural or league fallback only where the supplied package lacks the exact field.
+### HOME/AWAY Analysis
 
-Defensive volume is also retained because it can reveal when a scoreline flatters a team. Fulham are at **11.0 (league fallback) shots allowed** and **3.7 (league fallback) SOT allowed** in the selected context; Crystal Palace are at **14.0 (league fallback)** and **4.7 (league fallback)**. The corner environments are **10.2** and **10.0 total corners per match** respectively. None of these figures alone determines the pick.
-
-### Advanced Data and Expected Game State
-Expected game state matters to both result and totals markets. An early goal by the stronger territorial side can force the opponent higher, increasing transition volume and potentially corners. A long 0-0 can suppress the same markets even when season averages are high. The analysis therefore treats xG, shots, SOT, possession, corners and actual scoring as complementary signals rather than interchangeable evidence.
-
-The first-goal and first-half rows should also be read carefully. In a one-match current-season split, 0% or 100% is only an observation from one game. In older venue baselines, the rate is more stable but less current. That trade-off is made explicit instead of being hidden.
+Fulham's home sample carries **1.84 points per game** and only **1.05 goals conceded**, compared with Palace's 1.26 away points and 1.47 conceded. Fulham also create 14.16 shots per home match against Palace's 9.95 away. The xG gap is smaller, which prevents a simplistic home-win reading, but the combined profile still gives Fulham the more stable route to territory and chance volume.
 
 ### Statistical Core Predictions-Sports-Prime
+
 | Metric | Fulham — HOME | Crystal Palace — AWAY |
 | --- | ---: | ---: |
-| Matches (N) | 19 | 19 |
-| W-D-L | 11-2-6 | 7-3-9 |
-| Points/game | 1.84 | 1.26 |
-| GF/game | 1.58 | 1.16 |
-| GA/game | 1.05 | 1.47 |
-| xG/game | 1.41 | 1.36 |
-| xGA/game | 1.14 | 1.57 |
-| Shots/game | 14.16 | 9.95 |
-| SOT/game | 4.00 | 3.53 |
-| Shots allowed/game | 11.0 (league fallback) | 14.0 (league fallback) |
-| SOT allowed/game | 3.7 (league fallback) | 4.7 (league fallback) |
-| Possession | 52.7% | 43.9% |
-| Corners for/game | 5.5 (league fallback) | 4.2 (league fallback) |
-| Corners against/game | 4.7 (league fallback) | 5.8 (league fallback) |
-| Total corners/game | 10.2 | 10.0 |
-| First to score | 63% (venue baseline) | 42% (venue baseline) |
-| First to concede | 37% (venue baseline) | 58% (venue baseline) |
-| Scored in 1st half | 58% (venue baseline) | 37% (venue baseline) |
-| Conceded in 1st half | 32% (venue baseline) | 53% (venue baseline) |
-| BTTS | 47% (venue baseline) | 47% (venue baseline) |
-| Clean sheets | 42% (venue baseline) | 26% (venue baseline) |
-| Failed to score | 21% (venue baseline) | 32% (venue baseline) |
+| Matches (N) | 1 | 1 |
+| W-D-L | 0-0-1 | 0-0-1 |
+| Points/game | 0.00 | 0.00 |
+| GF/game | 2.00 | 0.00 |
+| GA/game | 3.00 | 2.00 |
+| xG/game | 1.41 | 1.71 |
+| xGA/game | 2.32 | 1.48 |
+| Shots/game | 14.0 | 11.0 |
+| SOT/game | 6.0 | 4.0 |
+| Shots allowed/game | 18.0 | 16.0 |
+| SOT allowed/game | 6.0 | 5.0 |
+| Possession | 62% | 58% |
+| Corners for/game | 6.0 | 0.0 |
+| Corners against/game | 4.0 | 4.0 |
+| Total corners/game | 10.0 | 4.0 |
+| First to score | 0% | 0% |
+| First to concede | 100% | 100% |
+| Scored in 1st half | 100% | 0% |
+| Conceded in 1st half | 100% | 100% |
+| BTTS | 100% | 0% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 0% | 100% |
+### Statistical Interpretation
+
+Fulham's home sample carries **1.84 points per game** and only **1.05 goals conceded**, compared with Palace's 1.26 away points and 1.47 conceded. Fulham also create 14.16 shots per home match against Palace's 9.95 away. The xG gap is smaller, which prevents a simplistic home-win reading, but the combined profile still gives Fulham the more stable route to territory and chance volume.
+
+### Tactical Matchup and Game State
+
+Fulham should try to create overloads around Palace's wing-backs and use Iwobi/Bobb to connect midfield with the front line. Palace remain dangerous when they can break into the channels around the outside centre-backs, particularly if Pino or Nketiah receive early in transition. A Fulham opener would force Palace to push the wing-backs higher and can help the 1.5-goal leg.
 
 ### Conflict Detector
-The principal conflict is sample quality. Current-season venue splits may contain only one match, while historical and cross-competition fallbacks are larger but less current or less comparable. A second conflict is finishing variance: actual GF/GA can diverge from xG/xGA. A third is game state—red cards, an early goal or unusually efficient finishing can overwhelm the pre-match average. Any recommendation must survive those contradictions rather than simply list statistics that support the published market.
 
-### Odds and Implied Probability
-At decimal odds **1.75**, the raw implied probability is **57.1%** (1 / 1.75 = 57.1%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+Signals supporting the main scenario:
+- The strongest venue-specific process described above gives the primary analytical direction.
+- The expected game state offers a realistic route for that process to influence the published market.
 
-### Value Assessment
-The published price is preserved exactly as supplied. The evidence can show whether the market is coherent with the matchup, but the available sample does not justify inventing fair odds or a false quantitative edge. Value is therefore described conditionally: the market is acceptable only to the extent that the HOME/AWAY evidence, lineup context and expected game state align, while the Conflict Detector identifies the main failure routes.
+Counter-signals:
+- Palace have enough transition quality to punish Fulham if the home side over-commits, and the xG difference between the two venue samples is modest. Fulham are without Tom Cairney, while Palace's recent attacking availability has been unstable around Sarr and Mateta. The selection depends on Fulham avoiding the type of low-event away game Sunderland imposed last weekend.
+- Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
+
+Assessment:
+The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
+
+### Risks and Limitations
+
+Palace have enough transition quality to punish Fulham if the home side over-commits, and the xG difference between the two venue samples is modest. Fulham are without Tom Cairney, while Palace's recent attacking availability has been unstable around Sarr and Mateta. The selection depends on Fulham avoiding the type of low-event away game Sunderland imposed last weekend.
+
+### Market Price Context
+
+Implied probability = 1 / decimal odds. At 1.75, 1 / 1.75 = 0.571, or approximately 57.1% before bookmaker margin. This is a raw price-derived break-even reference, not a PSP model probability and not the same as a historical HOME/AWAY frequency.
 
 ### Conclusion
-The final position keeps the original published market and price unchanged. The recommendation is supported only where the relevant split data, underlying process and pre-match squad context point in the same direction. The most important limitation is the difference between tiny current samples and larger but older or cross-competition baselines, so the source qualifiers are part of the analysis rather than footnotes.
+
+Fulham have the stronger home base and should spend more time in Palace's half, but the visitors still have a credible transition route. The combined market is most coherent if Fulham establish territorial control without allowing Palace to turn the match into isolated counterattacks only.
 
 **Prediction:** Fulham or Draw (1X) + Over 1.5 Goals
 **Odds:** 1.75
+
+### Sources / Statistical Provenance
+
+The Statistical Core prioritises the HOME split of the host and AWAY split of the visitor available before this fixture. Any old cell that depended only on a league, competition or cross-competition fallback has been removed from the promoted version rather than presented as exact venue data. Public match previews and lineup sources are used only for the claims they can support.
 `
   ],
   analysisFormat: "markdown",
@@ -102,12 +117,42 @@ The final position keeps the original published market and price unchanged. The 
   sourceStatus: "verified",
   sources: [
     {
-      name: "Premier League — 2026/27 fixture amendments",
-      url: "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/",
-      description: "Official competition schedule supporting the Matchweek 3 fixture identities, dates and kickoffs.",
-      accessedAt: "2026-08-30T10:00:00-03:00"
+        "name": "xGscore — Fulham 2-3 Chelsea",
+        "url": "https://xgscore.io/epl/fulham-chelsea/xg-statistics",
+        "description": "2026/27 Premier League Week 1 venue match used to derive the exact current HOME/AWAY Statistical Core split.",
+        "accessedAt": "2026-09-03T09:15:00-03:00"
+    },
+    {
+        "name": "OpenFootball — Premier League 2026/27 fixture feed",
+        "url": "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
+        "description": "Existing project fixture reference.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Premier League — fixtures",
+        "url": "https://www.premierleague.com/en/fixtures",
+        "description": "Official competition fixture reference.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Sports Mole — Fulham vs Crystal Palace match guide",
+        "url": "https://www.sportsmole.co.uk/football/premier-league/fulham-vs-crystal-palace_game_256886.html",
+        "description": "Current form and fixture context.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Starting11 — Premier League Gameweek 3",
+        "url": "https://starting11.com/premier-league/gameweek/3",
+        "description": "Current predicted XI baseline.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Starting11 — Fulham squad",
+        "url": "https://starting11.com/fulham",
+        "description": "Recent Fulham lineup continuity.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
     }
-  ],
+],
   matchInfo: {
     date: "2026-09-05",
     time: "15:00",

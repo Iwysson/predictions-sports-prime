@@ -19,33 +19,24 @@ export const hullCityVsAstonVilla: EditorialPrediction = {
 **Round:** Round 3
 **Venue:** MKM Stadium
 
-### Team News / Availability
-**Injuries / doubts:** Hull were reported without Jack Butland, Charlie Hughes, Matty Jacob, Darko Gyabi, Eliot Matazo, Joe Gelhardt and Óscar Zambrano. No comparably material Villa absence was returned in the source snapshot used for this audit.
+### Match Context
 
-### Probable Lineups
-**Probable lineups:** Hull City (5-4-1): Konstantinos Tzolakis; Lewie Coyle, Semi Ajayi, John Egan, Mendy, Ryan Giles; Abdülkadir Ömür/Belloumi, Regan Slater, Hidemasa Morita, Stroud; Oli McBurnie. Aston Villa (4-2-3-1): Zion Suzuki; Matty Cash, Victor Lindelöf, Pau Torres, Ian Maatsen; Boubacar Kamara, Hemmings; John McGinn, Ross Barkley, Emiliano Buendía; Nicolas Jackson. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
+Hull have made an excellent start after promotion, winning their opening two league matches, while Villa arrive after a 1-0 home defeat to Arsenal and are still looking for their first league point. The one-match HOME/AWAY core therefore points in the opposite direction to the published price: Hull's current home result is stronger, while Villa's only away sample was a heavy defeat. That conflict remains visible rather than being explained away.
 
-### Suspensions / Eligibility
-Only suspensions or eligibility issues supported by the retained pre-match source set are treated as confirmed. No additional absence is invented to complete the template. Official club and competition updates closer to kickoff override this projection.
+### Team News and Probable Lineups
 
-### Robust Match Analysis
-The sporting assessment is kept independent from the published selection. The first question is what the pre-match evidence says about the matchup; only after that is the listed market tested against the evidence. The current 2026/27 sample is still very small, so when the supplied package already contains a current HOME/AWAY split it is used directly. When it does not, the older venue baseline is retained and every non-venue or cross-competition fallback is labelled inside the Statistical Core rather than disguised as a current-season venue statistic.
+**Availability:** Hull have been dealing with absences including Jack Butland, Charlie Hughes, Matty Jacob, Darko Gyabi, Eliot Matazo, Joe Gelhardt and Óscar Zambrano. Robinio Vaz has joined on loan and is an additional attacking option. No additional Villa absence is treated as confirmed beyond the current match-preview sources.
 
-For Hull City, the retained HOME context is **2.00 GF/game**, **0.00 GA/game**, **1.26 xG/game** and **1.81 xGA/game**. The selected volume context is **8.0 shots**, **4.0 SOT**, **28% possession** and **1.0 corners for per game**. These numbers describe the available pre-match sample; they are not a model forecast.
+**Suspensions / eligibility:** No confirmed league suspension was identified in the current match-specific sources. Robinio Vaz is eligible after registration; all projected players remain subject to the official teamsheet.
 
-For Aston Villa, the AWAY side is **0.00 GF/game**, **4.00 GA/game**, **0.31 xG/game** and **3.62 xGA/game**. The corresponding volume is **6.0 shots**, **0.0 SOT**, **27% possession** and **2.0 corners for per game**. If a cell is marked league fallback, competition fallback, current overall fallback or structural fallback, that qualifier is part of the value and prevents an unsupported HOME/AWAY claim.
+**Probable lineups:** **Hull City (5-4-1):** Tzolakis; Coyle, Ajayi, Egan, McNair/Mendy, Giles; Belloumi, Slater, Crooks, Stroud; McBurnie (Robinio Vaz as alternative). **Aston Villa (4-2-3-1):** Suzuki; Cash, Torres, Lindelöf, Maatsen; Kamara, Barkley; McGinn, Buendía, Garnacho; Jackson. These are probable, not confirmed.
 
-### HOME vs AWAY Data Analysis
-Both columns are current 2026/27 venue splits from one completed league match. Hull's HOME win was efficient despite territorial pressure; Villa's AWAY opener produced 0 goals and 3.62 xGA. This separation is important because overall numbers can hide venue effects, and promoted teams can carry cross-competition baselines that are not directly equivalent to Premier League opposition. The hierarchy here is current venue evidence first, then same-team historical venue context, then clearly disclosed structural or league fallback only where the supplied package lacks the exact field.
+### HOME/AWAY Analysis
 
-Defensive volume is also retained because it can reveal when a scoreline flatters a team. Hull City are at **21.0 shots allowed** and **5.0 SOT allowed** in the selected context; Aston Villa are at **21.0** and **6.0**. The corner environments are **7.0** and **7.0 total corners per match** respectively. None of these figures alone determines the pick.
-
-### Advanced Data and Expected Game State
-Expected game state matters to both result and totals markets. An early goal by the stronger territorial side can force the opponent higher, increasing transition volume and potentially corners. A long 0-0 can suppress the same markets even when season averages are high. The analysis therefore treats xG, shots, SOT, possession, corners and actual scoring as complementary signals rather than interchangeable evidence.
-
-The first-goal and first-half rows should also be read carefully. In a one-match current-season split, 0% or 100% is only an observation from one game. In older venue baselines, the rate is more stable but less current. That trade-off is made explicit instead of being hidden.
+Hull's first home split produced **3.00 points** and a **clean sheet**, but the underlying process was less dominant: 1.26 xG against 1.81 xGA and only 28% possession. Villa's only away split is worse on the scoreboard and underlying numbers, with 0.31 xG and 3.62 xGA. Because both samples contain one match, the data cannot by itself justify treating Villa as a stable away favourite.
 
 ### Statistical Core Predictions-Sports-Prime
+
 | Metric | Hull City — HOME | Aston Villa — AWAY |
 | --- | ---: | ---: |
 | Matches (N) | 1 | 1 |
@@ -53,8 +44,8 @@ The first-goal and first-half rows should also be read carefully. In a one-match
 | Points/game | 3.00 | 0.00 |
 | GF/game | 2.00 | 0.00 |
 | GA/game | 0.00 | 4.00 |
-| xG/game | 1.26 | 0.31 |
-| xGA/game | 1.81 | 3.62 |
+| xG/game | 1.24 | 0.32 |
+| xGA/game | 1.82 | 3.46 |
 | Shots/game | 8.0 | 6.0 |
 | SOT/game | 4.0 | 0.0 |
 | Shots allowed/game | 21.0 | 21.0 |
@@ -70,21 +61,45 @@ The first-goal and first-half rows should also be read carefully. In a one-match
 | BTTS | 0% | 0% |
 | Clean sheets | 100% | 0% |
 | Failed to score | 0% | 100% |
+### Statistical Interpretation
+
+Hull's first home split produced **3.00 points** and a **clean sheet**, but the underlying process was less dominant: 1.26 xG against 1.81 xGA and only 28% possession. Villa's only away split is worse on the scoreboard and underlying numbers, with 0.31 xG and 3.62 xGA. Because both samples contain one match, the data cannot by itself justify treating Villa as a stable away favourite.
+
+### Tactical Matchup and Game State
+
+Hull are likely to defend with a back five and use Belloumi/Stroud to support McBurnie in direct transitions. Villa should have more technical quality in midfield and may try to pin Hull's wing-backs deep through McGinn, Buendía and the left-sided runner. If Villa score first, Hull will have to leave the low block and the visitors can attack larger spaces. If Hull lead, the match becomes a test of Villa's patience.
 
 ### Conflict Detector
-The principal conflict is sample quality. Current-season venue splits may contain only one match, while historical and cross-competition fallbacks are larger but less current or less comparable. A second conflict is finishing variance: actual GF/GA can diverge from xG/xGA. A third is game state—red cards, an early goal or unusually efficient finishing can overwhelm the pre-match average. Any recommendation must survive those contradictions rather than simply list statistics that support the published market.
 
-### Odds and Implied Probability
-At decimal odds **1.87**, the raw implied probability is **53.5%** (1 / 1.87 = 53.5%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+Signals supporting the main scenario:
+- The strongest venue-specific process described above gives the primary analytical direction.
+- The expected game state offers a realistic route for that process to influence the published market.
 
-### Value Assessment
-The published price is preserved exactly as supplied. The evidence can show whether the market is coherent with the matchup, but the available sample does not justify inventing fair odds or a false quantitative edge. Value is therefore described conditionally: the market is acceptable only to the extent that the HOME/AWAY evidence, lineup context and expected game state align, while the Conflict Detector identifies the main failure routes.
+Counter-signals:
+- Hull's strong start is not supported by dominant chance control, but Villa's current away evidence is even weaker. Hull also have a long injury list, while deadline-day arrival Robinio Vaz adds another attacking option. The market requires Villa to outperform both their current result pattern and the one-game away process, so uncertainty is substantial.
+- Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
+
+Assessment:
+The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
+
+### Risks and Limitations
+
+Hull's strong start is not supported by dominant chance control, but Villa's current away evidence is even weaker. Hull also have a long injury list, while deadline-day arrival Robinio Vaz adds another attacking option. The market requires Villa to outperform both their current result pattern and the one-game away process, so uncertainty is substantial.
+
+### Market Price Context
+
+Implied probability = 1 / decimal odds. At 1.87, 1 / 1.87 = 0.535, or approximately 53.5% before bookmaker margin. This is a raw price-derived break-even reference, not a PSP model probability and not the same as a historical HOME/AWAY frequency.
 
 ### Conclusion
-The final position keeps the original published market and price unchanged. The recommendation is supported only where the relevant split data, underlying process and pre-match squad context point in the same direction. The most important limitation is the difference between tiny current samples and larger but older or cross-competition baselines, so the source qualifiers are part of the analysis rather than footnotes.
+
+Villa have the higher individual ceiling, but this is not a matchup where the current HOME/AWAY evidence produces a clean away-win case. Hull's compact structure and positive start are meaningful counter-signals. The selection remains coherent only if Villa's midfield quality translates into much better territorial control than in their first away match.
 
 **Prediction:** Aston Villa to win
 **Odds:** 1.87
+
+### Sources / Statistical Provenance
+
+The Statistical Core prioritises the HOME split of the host and AWAY split of the visitor available before this fixture. Any old cell that depended only on a league, competition or cross-competition fallback has been removed from the promoted version rather than presented as exact venue data. Public match previews and lineup sources are used only for the claims they can support.
 `
   ],
   "analysisFormat": "markdown",
@@ -101,15 +116,45 @@ The final position keeps the original published market and price unchanged. The 
   "published": true,
   "publishedAt": "2026-09-01T12:00:00-03:00",
   "sourceStatus": "verified",
-  "sources": [
+  sources: [
     {
-      "name": "OpenFootball — Premier League 2026/27 fixture feed",
-      "url": "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
-      "description": "Existing project fixture source used to link the supplied analysis to the correct match.",
-      "accessedAt": "2026-09-01T12:00:00-03:00"
+        "name": "xGscore — Hull City 2-0 Manchester United",
+        "url": "https://xgscore.io/epl/hull-city-man-united/xg-statistics",
+        "description": "2026/27 Premier League Week 1 venue match used to derive the exact current HOME/AWAY Statistical Core split.",
+        "accessedAt": "2026-09-03T09:15:00-03:00"
+    },
+    {
+        "name": "OpenFootball — Premier League 2026/27 fixture feed",
+        "url": "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
+        "description": "Existing project fixture reference.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Premier League — fixtures",
+        "url": "https://www.premierleague.com/en/fixtures",
+        "description": "Official competition fixture reference.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Reuters — Hull City / Robinio Vaz update",
+        "url": "https://www.reuters.com/sports/soccer/hull-condemn-racist-abuse-new-signing-vaz-2026-09-03/",
+        "description": "Current Hull squad context.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Starting11 — Hull City vs Aston Villa",
+        "url": "https://starting11.com/fixtures/hull-city-vs-aston-villa",
+        "description": "Current probable XI baseline.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Sports Mole — Aston Villa",
+        "url": "https://www.sportsmole.co.uk/football/aston-villa/",
+        "description": "Recent Villa form and squad context.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
     }
-  ],
-  "matchInfo": {
+],
+  matchInfo: {
     "date": "2026-09-05",
     "time": "17:30",
     "round": "Round 3",

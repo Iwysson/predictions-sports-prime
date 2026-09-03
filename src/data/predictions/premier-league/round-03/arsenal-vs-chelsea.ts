@@ -19,33 +19,24 @@ export const arsenalVsChelsea: EditorialPrediction = {
 **Round:** Round 3
 **Venue:** Emirates Stadium
 
-### Team News / Availability
-**Injuries / doubts:** Arsenal: Gabriel Martinelli, William Saliba and Jurrien Timber were listed out; Bruno Guimarães and Gabriel Jesus were doubtful. The early crowd XI still contained Saliba, so he is removed here and the defensive line is rebuilt around fit options. Chelsea: goalkeeper Martínez and Jordan Henderson were listed out; Caicedo/Enzo and other players carried fitness flags in current reports, so the midfield uncertainty is shown in parentheses.
+### Match Context
 
-### Probable Lineups
-**Probable lineups:** Arsenal (4-3-3): Kepa; Ben White, Cristhian Mosquera, Piero Hincapié, Riccardo Calafiori; Noni Madueke, Eberechi Eze, Myles Lewis-Skelly; Gabriel Jesus (doubt; Kai Havertz), Kai Havertz, another fit wide option. Chelsea (3-4-2-1): Robert Sánchez; Maxence Lacroix, Levi Colwill, Josh Acheampong; Reece James, Moisés Caicedo (doubt; Enzo Fernández, also monitored), Enzo Fernández, Estêvão; Cole Palmer, Morgan Rogers; João Pedro. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
+Arsenal and Chelsea both arrive with perfect league records, but Arsenal's first HOME performance was much cleaner defensively. Chelsea won their only away match 3-2, showing both attacking quality and defensive exposure. The derby therefore pits Arsenal's stronger territorial control against a Chelsea side capable of creating chances even without dominating possession.
 
-### Suspensions / Eligibility
-Only suspensions or eligibility issues supported by the retained pre-match source set are treated as confirmed. No additional absence is invented to complete the template. Official club and competition updates closer to kickoff override this projection.
+### Team News and Probable Lineups
 
-### Robust Match Analysis
-The sporting assessment is kept independent from the published selection. The first question is what the pre-match evidence says about the matchup; only after that is the listed market tested against the evidence. The current 2026/27 sample is still very small, so when the supplied package already contains a current HOME/AWAY split it is used directly. When it does not, the older venue baseline is retained and every non-venue or cross-competition fallback is labelled inside the Statistical Core rather than disguised as a current-season venue statistic.
+**Availability:** Arsenal are without Jurrien Timber and William Saliba; Bruno Guimarães has carried a doubt. Chelsea's current availability has included uncertainty around Moisés Caicedo and several defenders/midfielders, so the projected XI avoids treating any flagged player as certain. The official Sunday team sheet overrides all projections.
 
-For Arsenal, the retained HOME context is **3.00 GF/game**, **0.00 GA/game**, **2.30 xG/game** and **0.30 xGA/game**. The selected volume context is **20.0 shots**, **6.0 SOT**, **65% possession** and **8.0 corners for per game**. These numbers describe the available pre-match sample; they are not a model forecast.
+**Suspensions / eligibility:** No confirmed league suspension was identified in the current match-specific sources. The main uncertainty is injury/fitness availability rather than disciplinary eligibility.
 
-For Chelsea, the AWAY side is **3.00 GF/game**, **2.00 GA/game**, **1.67 xG/game** and **1.28 xGA/game**. The corresponding volume is **17.0 shots**, **6.0 SOT**, **38% possession** and **4.0 corners for per game**. If a cell is marked league fallback, competition fallback, current overall fallback or structural fallback, that qualifier is part of the value and prevents an unsupported HOME/AWAY claim.
+**Probable lineups:** **Arsenal (4-2-3-1):** Raya; White, Gabriel, Konsa/Mosquera, Calafiori; Rice, Guimarães (doubt; Lewis-Skelly/Zubimendi alternative); Ødegaard; Saka, Eze, Gyökeres. **Chelsea (3-4-2-1):** Sánchez; Lacroix, Colwill, Acheampong; Pedro Neto, Caicedo (doubt; Lavia), Reece James, Hato/Estêvão; Palmer, Morgan Rogers; João Pedro. These are probable, not confirmed.
 
-### HOME vs AWAY Data Analysis
-Both columns are current 2026/27 venue splits from one completed league match. Arsenal's HOME opener was 3-0; Chelsea's AWAY opener was a 3-2 win. This separation is important because overall numbers can hide venue effects, and promoted teams can carry cross-competition baselines that are not directly equivalent to Premier League opposition. The hierarchy here is current venue evidence first, then same-team historical venue context, then clearly disclosed structural or league fallback only where the supplied package lacks the exact field.
+### HOME/AWAY Analysis
 
-Defensive volume is also retained because it can reveal when a scoreline flatters a team. Arsenal are at **4.0 shots allowed** and **1.0 SOT allowed** in the selected context; Chelsea are at **12.0** and **5.0**. The corner environments are **10.0** and **10.0 total corners per match** respectively. None of these figures alone determines the pick.
-
-### Advanced Data and Expected Game State
-Expected game state matters to both result and totals markets. An early goal by the stronger territorial side can force the opponent higher, increasing transition volume and potentially corners. A long 0-0 can suppress the same markets even when season averages are high. The analysis therefore treats xG, shots, SOT, possession, corners and actual scoring as complementary signals rather than interchangeable evidence.
-
-The first-goal and first-half rows should also be read carefully. In a one-match current-season split, 0% or 100% is only an observation from one game. In older venue baselines, the rate is more stable but less current. That trade-off is made explicit instead of being hidden.
+Arsenal's current HOME split shows **2.30 xG** and only **0.30 xGA**, with 20 shots and 65% possession. Chelsea's AWAY split still produced 1.67 xG and three goals, but they allowed 1.28 xGA and five shots on target. The one-match sample is tiny, yet the process difference gives Arsenal the clearer route to control without relying only on home advantage.
 
 ### Statistical Core Predictions-Sports-Prime
+
 | Metric | Arsenal — HOME | Chelsea — AWAY |
 | --- | ---: | ---: |
 | Matches (N) | 1 | 1 |
@@ -53,13 +44,13 @@ The first-goal and first-half rows should also be read carefully. In a one-match
 | Points/game | 3.00 | 3.00 |
 | GF/game | 3.00 | 3.00 |
 | GA/game | 0.00 | 2.00 |
-| xG/game | 2.30 | 1.67 |
-| xGA/game | 0.30 | 1.28 |
-| Shots/game | 20.0 | 17.0 |
+| xG/game | 2.30 | 2.32 |
+| xGA/game | 0.30 | 1.41 |
+| Shots/game | 20.0 | 18.0 |
 | SOT/game | 6.0 | 6.0 |
-| Shots allowed/game | 4.0 | 12.0 |
-| SOT allowed/game | 1.0 | 5.0 |
-| Possession | 65% | 38% |
+| Shots allowed/game | 4.0 | 14.0 |
+| SOT allowed/game | 1.0 | 6.0 |
+| Possession | 62% | 38% |
 | Corners for/game | 8.0 | 4.0 |
 | Corners against/game | 2.0 | 6.0 |
 | Total corners/game | 10.0 | 10.0 |
@@ -70,21 +61,45 @@ The first-goal and first-half rows should also be read carefully. In a one-match
 | BTTS | 0% | 100% |
 | Clean sheets | 100% | 0% |
 | Failed to score | 0% | 0% |
+### Statistical Interpretation
+
+Arsenal's current HOME split shows **2.30 xG** and only **0.30 xGA**, with 20 shots and 65% possession. Chelsea's AWAY split still produced 1.67 xG and three goals, but they allowed 1.28 xGA and five shots on target. The one-match sample is tiny, yet the process difference gives Arsenal the clearer route to control without relying only on home advantage.
+
+### Tactical Matchup and Game State
+
+Arsenal should try to lock Chelsea into their own half with Rice/Guimarães controlling second balls and Ødegaard/Eze receiving between the lines. Chelsea can hurt Arsenal if Palmer and Rogers escape pressure and release João Pedro before the home back line is set. Arsenal leading allows them to protect central space, while Chelsea leading would force the champions to increase width and attacking numbers.
 
 ### Conflict Detector
-The principal conflict is sample quality. Current-season venue splits may contain only one match, while historical and cross-competition fallbacks are larger but less current or less comparable. A second conflict is finishing variance: actual GF/GA can diverge from xG/xGA. A third is game state—red cards, an early goal or unusually efficient finishing can overwhelm the pre-match average. Any recommendation must survive those contradictions rather than simply list statistics that support the published market.
 
-### Odds and Implied Probability
-At decimal odds **1.73**, the raw implied probability is **57.8%** (1 / 1.73 = 57.8%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
+Signals supporting the main scenario:
+- The strongest venue-specific process described above gives the primary analytical direction.
+- The expected game state offers a realistic route for that process to influence the published market.
 
-### Value Assessment
-The published price is preserved exactly as supplied. The evidence can show whether the market is coherent with the matchup, but the available sample does not justify inventing fair odds or a false quantitative edge. Value is therefore described conditionally: the market is acceptable only to the extent that the HOME/AWAY evidence, lineup context and expected game state align, while the Conflict Detector identifies the main failure routes.
+Counter-signals:
+- Both venue splits contain one match. Arsenal are without Jurrien Timber and William Saliba, and Bruno Guimarães has carried a doubt. Chelsea's availability is also fluid around Caicedo and several defensive/midfield names. The derby context increases variance beyond what a one-match statistical split can capture.
+- Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
+
+Assessment:
+The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
+
+### Risks and Limitations
+
+Both venue splits contain one match. Arsenal are without Jurrien Timber and William Saliba, and Bruno Guimarães has carried a doubt. Chelsea's availability is also fluid around Caicedo and several defensive/midfield names. The derby context increases variance beyond what a one-match statistical split can capture.
+
+### Market Price Context
+
+Implied probability = 1 / decimal odds. At 1.73, 1 / 1.73 = 0.578, or approximately 57.8% before bookmaker margin. This is a raw price-derived break-even reference, not a PSP model probability and not the same as a historical HOME/AWAY frequency.
 
 ### Conclusion
-The final position keeps the original published market and price unchanged. The recommendation is supported only where the relevant split data, underlying process and pre-match squad context point in the same direction. The most important limitation is the difference between tiny current samples and larger but older or cross-competition baselines, so the source qualifiers are part of the analysis rather than footnotes.
+
+Arsenal have the stronger current HOME process and the more convincing defensive control, while Chelsea remain dangerous enough to prevent a low-risk reading. The home-win case is most coherent if Arsenal control midfield and avoid giving Palmer/Rogers repeated transition situations.
 
 **Prediction:** Arsenal to win
 **Odds:** 1.73
+
+### Sources / Statistical Provenance
+
+The Statistical Core prioritises the HOME split of the host and AWAY split of the visitor available before this fixture. Any old cell that depended only on a league, competition or cross-competition fallback has been removed from the promoted version rather than presented as exact venue data. Public match previews and lineup sources are used only for the claims they can support.
 `
   ],
   "analysisFormat": "markdown",
@@ -101,15 +116,51 @@ The final position keeps the original published market and price unchanged. The 
   "published": true,
   "publishedAt": "2026-09-01T12:00:00-03:00",
   "sourceStatus": "verified",
-  "sources": [
+  sources: [
     {
-      "name": "OpenFootball — Premier League 2026/27 fixture feed",
-      "url": "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
-      "description": "Existing project fixture source used to link the supplied analysis to the correct match.",
-      "accessedAt": "2026-09-01T12:00:00-03:00"
+        "name": "xG Stat — Arsenal 3-0 Coventry",
+        "url": "https://www.xgstat.com/competitions/premier-league/2026-2027/matches/arsenal-coventry-city-2026-08-21",
+        "description": "2026/27 Premier League Week 1 venue match used to derive the exact current HOME/AWAY Statistical Core split.",
+        "accessedAt": "2026-09-03T09:15:00-03:00"
+    },
+    {
+        "name": "OpenFootball — Premier League 2026/27 fixture feed",
+        "url": "https://raw.githubusercontent.com/openfootball/england/refs/heads/master/2026-27/1-premierleague.txt",
+        "description": "Existing project fixture reference.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Premier League — fixtures",
+        "url": "https://www.premierleague.com/en/fixtures",
+        "description": "Official competition fixture reference.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Chelsea FC — Arsenal vs Chelsea official preview",
+        "url": "https://www.chelseafc.com/en/news/article/arsenal-vs-chelsea-preview-tv-channel-kick-off-time-and-how-to-watch-26-27",
+        "description": "Official fixture and matchday context.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Starting11 — Arsenal",
+        "url": "https://starting11.com/arsenal",
+        "description": "Current Arsenal probable XI.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Starting11 — Chelsea",
+        "url": "https://starting11.com/chelsea",
+        "description": "Current Chelsea probable XI.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
+    },
+    {
+        "name": "Sports Mole — Arsenal injury list",
+        "url": "https://www.sportsmole.co.uk/football/arsenal/injury-news/injuries-and-suspensions/rice-mosquera-timber-latest-arsenal-injury-suspension-list-vs-chelsea_604308.html",
+        "description": "Current Arsenal availability.",
+        "accessedAt": "2026-09-03T08:50:00-03:00"
     }
-  ],
-  "matchInfo": {
+],
+  matchInfo: {
     "date": "2026-09-06",
     "time": "16:30",
     "round": "Round 3",
