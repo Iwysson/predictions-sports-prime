@@ -6,8 +6,105 @@ export const sportingCpVsNacional: EditorialPrediction = {
   "awayTeam": "C.D. Nacional",
   "slug": "sporting-cp-vs-nacional",
   "title": "Sporting CP vs CD Nacional Prediction, Odds and Betting Tips",
-  "analysis": [
-    "# Sporting CP vs CD Nacional Prediction, Odds and Betting Tips\n**Prediction:** Sporting CP to win\n**Odds:** 1.23\nCompetition: Liga Portugal Betclic\nRound: Matchday 5\nDate: 2026-09-05\nKick-off: 20:30 (local time)\nVenue: Estádio José Alvalade\nLocation: Lisbon, Portugal\nThe Statistical Core reconstructs the current-season HOME sample of Sporting CP and AWAY sample of CD Nacional directly from the completed league matches available before the 01/09/2026 cutoff, including shots, SOT, shots/SOT allowed, possession, corners, goal timing and total-goal frequencies.\n### Team News and Probable Lineups\n**Probable lineups:** Sporting CP (4-2-3-1): Rui Silva; Georgios Vagiannidis, Eduardo Quaresma, Gonçalo Inácio, Maxi Araújo; Sergi Altimira, Issa Doumbia; Geny Catamo, Rodrigo Zalazar, Flávio Gonçalves; Fotis Ioannidis. CD Nacional (3-4-3): Renato Marin; Léo Santos, Matheus Dias, Zé Vítor; Wesley, Filipe Soares, Liziero, William Kokolo; Miguel Baeza, Pablo Ruan, Daniel. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.\n**Injuries / doubts:** Sporting: João Simões and Nuno Santos were reported injured and remain out of the XI. Nacional had Motez Nourani and José Gomes listed unavailable in the current match feed; Ulisses also carried an ankle-related absence flag in a secondary result.\n**Suspensions:** No active suspension affecting the projected XI was identified in the sources checked.\n**Transfers / signings / registration:** Sporting XI uses the latest league lineup structure available from the Alverca match; Nacional is based on its 30/08 league XI against Estrela da Amadora. No unverified deadline-day signing is inserted.\n**Lineup source note:** FotMob previous Liga Portugal XIs + current availability check; checked 01/09/2026. Any new official club/competition update closer to kickoff overrides this probable XI.\nSporting's two HOME games are now reconstructed match by match: 3-2 over Vitória and 3-1 over Alverca. They average five SOT, **63%** possession and only 0.74 xGA, although six actual goals from 2.80 cumulative xG show strong finishing overperformance. Nacional's two AWAY games—2-2 at Santa Clara and 0-1 at Vitória—average 0.94 xG, 2.16 xGA and 21 shots allowed. This produces a much stronger home-dominance process signal than the earlier incomplete table.\nThe early-season sample is still small, so the correct PSP reading is DADO → INTERPRETAÇÃO → IMPACTO. A one- or two-match frequency of **0%** or 100% describes the split observed so far, not a model probability for the next fixture. Overall form and H2H may contextualize the matchup but are not mixed into the HOME/AWAY columns below.\n### Statistical Core Predictions-Sports-Prime\n| Metric | Sporting CP — HOME | CD Nacional — AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 2 | 2 |\n| W-D-L | 2-0-0 | 0-1-1 |\n| Points/game | 3.00 | 0.50 |\n| GF/game | 3.00 | 1.00 |\n| GA/game | 1.50 | 1.50 |\n| xG/game | 1.40 | 0.94 |\n| xGA/game | 0.74 | 2.16 |\n| Shots/game | 10.0 | 8.5 |\n| SOT/game | 5.0 | 2.0 |\n| Shots allowed/game | 11.0 | 21.0 |\n| SOT allowed/game | 3.0 | 6.0 |\n| Possession | 63.0% | 50.5% |\n| Corners for/game | 4.0 | 3.5 |\n| Corners against/game | 2.5 | 4.0 |\n| Total corners/game | 6.5 | 7.5 |\n| Over 7.5 corners | 0% | 50% |\n| Over 8.5 corners | 0% | 0% |\n| Over 9.5 corners | 0% | 0% |\n| First to score | 100% | 0% |\n| First to concede | 0% | 100% |\n| Scored in 1st half | 100% | 50% |\n| Conceded in 1st half | 0% | 100% |\n| Over 1.5 goals | 100% | 50% |\n| Over 2.5 goals | 100% | 50% |\n| Over 3.5 goals | 100% | 50% |\n| BTTS | 100% | 50% |\n| Clean sheets | 0% | 0% |\n| Failed to score | 0% | 50% |\n**Conflict Detector.** Sample size remains the first limitation, but the previous missing-data problem has been materially reduced. The key match-specific conflict is the difference between actual result and underlying process described above: strong finishing can exaggerate GF, low finishing can suppress GF despite xG/shots, and a clean sheet can coexist with high xGA or large shot concession. Corner lines must also use the actual split frequencies shown here rather than league-wide averages. Any final market must survive that contradiction before publication.\nOdds/implied probability: 1.23 decimal; raw implied probability is **81.3%** (1 / 1.23 = 81.3%), before bookmaker margin.\n### Value Assessment\nThe published price is assessed against the split evidence rather than treated as proof of value. The selection is preserved exactly as published, but no proprietary fair-odds claim is invented; the key question is whether the documented HOME/AWAY profile and tactical path are strong enough to justify accepting the listed market price despite the conflicts described above.\nConclusion: Sporting CP to win at 1.23 is the final PSP selection. Sporting are 2-0-0 at home with 3.00 goals per game, while Nacional are winless away and allow 2.16 xGA plus 21 shots per away match.\n**Prediction:** Sporting CP to win\n**Odds:** 1.23\nSources / statistical provenance: zerozero Sporting-Vitória 14/08/2026; Playmaker Sporting-Alverca 22/08/2026; zerozero Santa Clara-Nacional 10/08/2026; Vitória-Nacional 23/08/2026. Cutoff 01/09/2026. Values were calculated from exact completed league matches in the relevant venue split; zero represents a verified zero event, not a placeholder."
+  analysis: [
+    `# Sporting CP vs C.D. Nacional Prediction, Odds and Match Analysis
+
+**Prediction:** Sporting CP to win
+**Odds:** 1.23
+
+### Match Information
+
+**Competition:** Liga Portugal Betclic
+**Date:** 2026-09-05
+**Kickoff:** 20:30 local time
+**Round:** Matchday 5
+**Venue:** Estádio José Alvalade
+
+### Match Context
+
+Sporting CP's HOME sample shows **3.00 points per game**, 3.00 goals and 1.40 xG, while C.D. Nacional's AWAY sample shows 0.50 points, 1.00 goals and 0.94 xG. Sporting CP produce **10.0 shots per home match**, while C.D. Nacional allow 21.0 away. The corner profile is 4.0 for and 2.5 against for the host versus 3.5 for and 4.0 against for the visitor. For Sporting CP to win, the relevant case is therefore the venue-specific process rather than table position alone.
+
+### Team News and Probable Lineups
+
+**Availability:** Sporting: João Simões, Nuno Santos and Salvador Blopa remain unavailable. Pedro Gonçalves and Daniel Bragança have left the club, while Kaique has joined the squad. Nacional: the previous league XI remains the baseline, with any late medical change to be checked against the official matchday squad.
+
+**Suspensions / eligibility:** No active suspension affecting the projected senior XI is confirmed in the retained Matchweek 5 sources.
+
+**Probable lineups:** Sporting CP (4-2-3-1): Rui Silva; Georgios Vagiannidis, Eduardo Quaresma, Gonçalo Inácio, Maxi Araújo; Sergi Altimira, Issa Doumbia; Geny Catamo, Rodrigo Zalazar, Flávio Gonçalves; Fotis Ioannidis. CD Nacional (3-4-3): Renato Marin; Léo Santos, Matheus Dias, Zé Vítor; Wesley, Filipe Soares, Liziero, William Kokolo; Miguel Baeza, Pablo Ruan, Daniel. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
+
+These are probable, not confirmed. The official teamsheet is the final reference for starters and late availability.
+
+### HOME/AWAY Analysis
+
+Sporting CP's HOME sample shows **3.00 points per game**, 3.00 goals and 1.40 xG, while C.D. Nacional's AWAY sample shows 0.50 points, 1.00 goals and 0.94 xG. Sporting CP produce **10.0 shots per home match**, while C.D. Nacional allow 21.0 away. The corner profile is 4.0 for and 2.5 against for the host versus 3.5 for and 4.0 against for the visitor. For Sporting CP to win, the relevant case is therefore the venue-specific process rather than table position alone.
+
+### Statistical Core Predictions-Sports-Prime
+| Metric | Sporting CP — HOME | CD Nacional — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 2-0-0 | 0-1-1 |
+| Points/game | 3.00 | 0.50 |
+| GF/game | 3.00 | 1.00 |
+| GA/game | 1.50 | 1.50 |
+| xG/game | 1.40 | 0.94 |
+| xGA/game | 0.74 | 2.16 |
+| Shots/game | 10.0 | 8.5 |
+| SOT/game | 5.0 | 2.0 |
+| Shots allowed/game | 11.0 | 21.0 |
+| SOT allowed/game | 3.0 | 6.0 |
+| Possession | 63.0% | 50.5% |
+| Corners for/game | 4.0 | 3.5 |
+| Corners against/game | 2.5 | 4.0 |
+| Total corners/game | 6.5 | 7.5 |
+| Over 7.5 corners | 0% | 50% |
+| Over 8.5 corners | 0% | 0% |
+| Over 9.5 corners | 0% | 0% |
+| First to score | 100% | 0% |
+| First to concede | 0% | 100% |
+| Scored in 1st half | 100% | 50% |
+| Conceded in 1st half | 0% | 100% |
+| Over 1.5 goals | 100% | 50% |
+| Over 2.5 goals | 100% | 50% |
+| Over 3.5 goals | 100% | 50% |
+| BTTS | 100% | 50% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 0% | 50% |
+
+### Statistical Interpretation
+
+The split is descriptive evidence rather than a fixed probability model. The most important matchup-specific contrast is the relationship between Sporting CP's home chance creation and C.D. Nacional's away defensive exposure. A gap between actual goals and xG is treated as a finishing signal rather than assumed to be permanent.
+
+### Tactical Matchup and Game State
+
+Sporting should spend long stretches in the attacking half, using width to pin Nacional and create cut-backs. Nacional need to survive the first wave and attack transition space. A Sporting opener forces the visitors away from their preferred lower block.
+
+### Conflict Detector
+
+The main case comes from the venue-specific process above. The counter-signal is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. A draw remains the simplest way for the selection to fail even if the preferred side controls more territory.
+
+### Risks and Limitations
+
+The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. A draw remains the simplest way for the selection to fail even if the preferred side controls more territory.
+
+### Market Price Context
+
+At published odds of **1.23**, the raw implied probability is **81.3%** because **1 / 1.23 = 0.813**, before bookmaker margin.
+
+### Value Assessment
+
+The market price is assessed against the documented HOME/AWAY profile, current availability and expected game state. No proprietary fair-odds number is invented. The selection only carries value if the sporting case supports a true probability above the raw 81.3% break-even reference.
+
+### Conclusion
+
+Sporting CP to win at 1.23 remains the final PSP selection. The case is supported by the venue-specific balance in points, xG and shot pressure, while the small early-season sample keeps the conclusion conditional rather than definitive.
+
+**Prediction:** Sporting CP to win
+**Odds:** 1.23
+
+### Sources / Statistical Provenance
+
+The Statistical Core preserves the verified match-by-match venue split already supplied for this fixture. Current schedule information is cross-checked against Liga Portugal and recent Portuguese reporting. Team-news statements use the latest retained source available for the specific club and are superseded by later official club or competition updates.
+`
   ],
   "analysisFormat": "markdown",
   "editorialStandard": "psp-v1",
@@ -23,14 +120,38 @@ export const sportingCpVsNacional: EditorialPrediction = {
   "published": true,
   "publishedAt": "2026-09-01T12:00:00-03:00",
   "sourceStatus": "verified",
-  "sources": [
+  sources: [
     {
-      "name": "OpenFootball — Liga Portugal 2026/27 fixture feed",
-      "url": "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/portugal/2026-27_pt1.txt",
-      "description": "Existing project fixture source used to link the supplied analysis to the correct match.",
-      "accessedAt": "2026-09-01T12:00:00-03:00"
+        "name": "Liga Portugal",
+        "url": "https://www.ligaportugal.pt/",
+        "description": "Official competition reference for Matchweek 5 fixture identity and schedule.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
+    },
+    {
+        "name": "A Bola — Matchweek 5 schedule",
+        "url": "https://www.abola.pt/noticias/o-calendario-da-5a-jornada-da-liga-2026082717350594891",
+        "description": "Published Matchweek 5 schedule and kickoff reference.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
+    },
+    {
+        "name": "A Bola — Matchweek 5 referees",
+        "url": "https://www.abola.pt/noticias/ja-sao-conhecidos-os-arbitros-para-a-5a-jornada-da-liga-2026090217311945802",
+        "description": "Matchweek 5 referee appointments and current competition context.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
+    },
+    {
+        "name": "A Bola — Sporting training update",
+        "url": "https://www.abola.pt/noticias/sem-pote-e-braganca-sporting-continua-a-preparar-jogo-com-o-nacional-2026090213031546584",
+        "description": "Latest Sporting training and availability update before Nacional.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
+    },
+    {
+        "name": "Record — Sporting operation Nacional",
+        "url": "https://www.record.pt/futebol/futebol-nacional/liga-betclic/sporting/detalhe/kaique-aplicado-e-duas-baixas-confirmadas-as-ultimas-do-sporting-no-arranque-da-operacao-nacional",
+        "description": "Confirms current Sporting absences and squad context.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
     }
-  ],
+],
   "matchInfo": {
     "date": "2026-09-05",
     "time": "20:30",

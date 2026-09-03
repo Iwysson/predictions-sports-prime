@@ -6,8 +6,105 @@ export const vitoriaScVsCasaPia: EditorialPrediction = {
   "awayTeam": "Casa Pia",
   "slug": "vitoria-sc-vs-casa-pia",
   "title": "Vitória SC vs Casa Pia Prediction, Odds and Betting Tips",
-  "analysis": [
-    "# Vitória SC vs Casa Pia Prediction, Odds and Betting Tips\n**Prediction:** Vitória SC to win\n**Odds:** 1.64\nCompetition: Liga Portugal Betclic\nRound: Matchday 5\nDate: 2026-09-06\nKick-off: 18:00 (local time)\nVenue: Estádio D. Afonso Henriques\nLocation: Guimarães, Portugal\nThe Statistical Core reconstructs the current-season HOME sample of Vitória SC and AWAY sample of Casa Pia directly from the completed league matches available before the 01/09/2026 cutoff, including shots, SOT, shots/SOT allowed, possession, corners, goal timing and total-goal frequencies.\n### Team News and Probable Lineups\n**Probable lineups:** Vitória SC (4-2-3-1): Oliwier Zych; Tony Strata, Óscar Rivas, Thiago Balieiro, João Mendes; Gonçalo Nogueira, Lohann Doucet; Gustavo Silva, Samu, Miguel Nogueira; Alioune Ndoye. Casa Pia (4-3-3): André Gomes; André Geraldes, João Goulart, David Sousa, Abdu Conté; Sebastián Pérez, Lawrence Ofori, Gabi Pereira; Henrique Araújo, Alassana Jatta, Rochinha. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.\n**Injuries / doubts:** Vitória: Gui was reported with an ACL injury and is excluded. The current match-preview source otherwise did not list an absence requiring a change to these XIs.\n**Suspensions:** No active suspension affecting the projected XI was identified in the sources checked.\n**Transfers / signings / registration:** The projected XIs reflect the current 2026/27 squads and recent league usage; no unverified new signing is inserted merely to complete the eleven.\n**Lineup source note:** Current match-preview lineup source + FotMob availability cross-check; checked 01/09/2026. Any new official club/competition update closer to kickoff overrides this probable XI.\nVitória's home process is now one of the clearest regression candidates in this matchup set: across the 0-1 Arouca loss and 1-0 Nacional win they average 2.47 xG, 23.5 shots and only 5.5 shots allowed, yet only 0.5 actual goals. Casa Pia's two away losses produced no goals, 0.71 xG and 11 shots per match. The split data strongly favor Vitória territorially, while low finishing conversion remains the principal conflict.\nThe early-season sample is still small, so the correct PSP reading is DADO → INTERPRETAÇÃO → IMPACTO. A one- or two-match frequency of **0%** or **100%** describes the split observed so far, not a model probability for the next fixture. Overall form and H2H may contextualize the matchup but are not mixed into the HOME/AWAY columns below.\n### Statistical Core Predictions-Sports-Prime\n| Metric | Vitória SC — HOME | Casa Pia — AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 2 | 2 |\n| W-D-L | 1-0-1 | 0-0-2 |\n| Points/game | 1.50 | 0.00 |\n| GF/game | 0.50 | 0.00 |\n| GA/game | 0.50 | 1.50 |\n| xG/game | 2.47 | 0.71 |\n| xGA/game | 0.55 | 1.46 |\n| Shots/game | 23.5 | 11.0 |\n| SOT/game | 4.0 | 3.0 |\n| Shots allowed/game | 5.5 | 12.0 |\n| SOT allowed/game | 1.0 | 4.0 |\n| Possession | 53.0% | 52.5% |\n| Corners for/game | 4.5 | 5.0 |\n| Corners against/game | 2.5 | 2.5 |\n| Total corners/game | 7.0 | 7.5 |\n| Over 7.5 corners | 0% | 50% |\n| Over 8.5 corners | 0% | 0% |\n| Over 9.5 corners | 0% | 0% |\n| First to score | 50% | 0% |\n| First to concede | 50% | 100% |\n| Scored in 1st half | 50% | 0% |\n| Conceded in 1st half | 0% | 50% |\n| Over 1.5 goals | 0% | 50% |\n| Over 2.5 goals | 0% | 0% |\n| Over 3.5 goals | 0% | 0% |\n| BTTS | 0% | 0% |\n| Clean sheets | 50% | 0% |\n| Failed to score | 50% | 100% |\n**Conflict Detector.** Sample size remains the first limitation, but the previous missing-data problem has been materially reduced. The key match-specific conflict is the difference between actual result and underlying process described above: strong finishing can exaggerate GF, low finishing can suppress GF despite xG/shots, and a clean sheet can coexist with high xGA or large shot concession. Corner lines must also use the actual split frequencies shown here rather than league-wide averages. Any final market must survive that contradiction before publication.\nOdds/implied probability: 1.64 decimal; raw implied probability is **61.0%** (1 / 1.64 = 61.0%), before bookmaker margin.\n### Value Assessment\nThe published price is assessed against the split evidence rather than treated as proof of value. The selection is preserved exactly as published, but no proprietary fair-odds claim is invented; the key question is whether the documented HOME/AWAY profile and tactical path are strong enough to justify accepting the listed market price despite the conflicts described above.\nConclusion: Vitória SC to win at 1.64 is the final PSP selection. Vitória average 2.47 xG and 23.5 shots at home, while Casa Pia are 0-0-2 away with no goals scored and 1.46 xGA per match.\n**Prediction:** Vitória SC to win\n**Odds:** 1.64\nSources / statistical provenance: xGscore Vitória-Arouca 08/08/2026; zerozero Vitória-Nacional 23/08/2026; FootballWebPages Marítimo-Casa Pia; zerozero/xGscore Gil Vicente-Casa Pia. Cutoff 01/09/2026. Values were calculated from exact completed league matches in the relevant venue split; zero represents a verified zero event, not a placeholder."
+  analysis: [
+    `# Vitória de Guimaraes vs Casa Pia Prediction, Odds and Match Analysis
+
+**Prediction:** Vitória SC to win
+**Odds:** 1.64
+
+### Match Information
+
+**Competition:** Liga Portugal Betclic
+**Date:** 2026-09-06
+**Kickoff:** 18:00 local time
+**Round:** Matchday 5
+**Venue:** Estádio D. Afonso Henriques
+
+### Match Context
+
+Vitória de Guimaraes's HOME sample shows **1.50 points per game**, 0.50 goals and 2.47 xG, while Casa Pia's AWAY sample shows 0.00 points, 0.00 goals and 0.71 xG. Vitória de Guimaraes produce **23.5 shots per home match**, while Casa Pia allow 12.0 away. The corner profile is 4.5 for and 2.5 against for the host versus 5.0 for and 2.5 against for the visitor. For Vitória SC to win, the relevant case is therefore the venue-specific process rather than table position alone.
+
+### Team News and Probable Lineups
+
+**Availability:** Vitória: Gui was reported with an ACL injury and is excluded. The current match-preview source otherwise did not list an absence requiring a change to these XIs.
+
+**Suspensions / eligibility:** No active suspension affecting the projected XI was identified in the retained pre-match sources. A later official matchday update overrides this status.
+
+**Probable lineups:** Vitória SC (4-2-3-1): Oliwier Zych; Tony Strata, Óscar Rivas, Thiago Balieiro, João Mendes; Gonçalo Nogueira, Lohann Doucet; Gustavo Silva, Samu, Miguel Nogueira; Alioune Ndoye. Casa Pia (4-3-3): André Gomes; André Geraldes, João Goulart, David Sousa, Abdu Conté; Sebastián Pérez, Lawrence Ofori, Gabi Pereira; Henrique Araújo, Alassana Jatta, Rochinha. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
+
+These are probable, not confirmed. The official teamsheet is the final reference for starters and late availability.
+
+### HOME/AWAY Analysis
+
+Vitória de Guimaraes's HOME sample shows **1.50 points per game**, 0.50 goals and 2.47 xG, while Casa Pia's AWAY sample shows 0.00 points, 0.00 goals and 0.71 xG. Vitória de Guimaraes produce **23.5 shots per home match**, while Casa Pia allow 12.0 away. The corner profile is 4.5 for and 2.5 against for the host versus 5.0 for and 2.5 against for the visitor. For Vitória SC to win, the relevant case is therefore the venue-specific process rather than table position alone.
+
+### Statistical Core Predictions-Sports-Prime
+| Metric | Vitória SC — HOME | Casa Pia — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 1-0-1 | 0-0-2 |
+| Points/game | 1.50 | 0.00 |
+| GF/game | 0.50 | 0.00 |
+| GA/game | 0.50 | 1.50 |
+| xG/game | 2.47 | 0.71 |
+| xGA/game | 0.55 | 1.46 |
+| Shots/game | 23.5 | 11.0 |
+| SOT/game | 4.0 | 3.0 |
+| Shots allowed/game | 5.5 | 12.0 |
+| SOT allowed/game | 1.0 | 4.0 |
+| Possession | 53.0% | 52.5% |
+| Corners for/game | 4.5 | 5.0 |
+| Corners against/game | 2.5 | 2.5 |
+| Total corners/game | 7.0 | 7.5 |
+| Over 7.5 corners | 0% | 50% |
+| Over 8.5 corners | 0% | 0% |
+| Over 9.5 corners | 0% | 0% |
+| First to score | 50% | 0% |
+| First to concede | 50% | 100% |
+| Scored in 1st half | 50% | 0% |
+| Conceded in 1st half | 0% | 50% |
+| Over 1.5 goals | 0% | 50% |
+| Over 2.5 goals | 0% | 0% |
+| Over 3.5 goals | 0% | 0% |
+| BTTS | 0% | 0% |
+| Clean sheets | 50% | 0% |
+| Failed to score | 50% | 100% |
+
+### Statistical Interpretation
+
+The split is descriptive evidence rather than a fixed probability model. The most important matchup-specific contrast is the relationship between Vitória de Guimaraes's home chance creation and Casa Pia's away defensive exposure. A gap between actual goals and xG is treated as a finishing signal rather than assumed to be permanent.
+
+### Tactical Matchup and Game State
+
+Vitória de Guimaraes should try to turn the HOME process into sustained territorial pressure, while Casa Pia look for transition space. The first goal is the key game-state hinge.
+
+### Conflict Detector
+
+The main case comes from the venue-specific process above. The counter-signal is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. A draw remains the simplest way for the selection to fail even if the preferred side controls more territory.
+
+### Risks and Limitations
+
+The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. A draw remains the simplest way for the selection to fail even if the preferred side controls more territory.
+
+### Market Price Context
+
+At published odds of **1.64**, the raw implied probability is **61.0%** because **1 / 1.64 = 0.610**, before bookmaker margin.
+
+### Value Assessment
+
+The market price is assessed against the documented HOME/AWAY profile, current availability and expected game state. No proprietary fair-odds number is invented. The selection only carries value if the sporting case supports a true probability above the raw 61.0% break-even reference.
+
+### Conclusion
+
+Vitória SC to win at 1.64 remains the final PSP selection. The case is supported by the venue-specific balance in points, xG and shot pressure, while the small early-season sample keeps the conclusion conditional rather than definitive.
+
+**Prediction:** Vitória SC to win
+**Odds:** 1.64
+
+### Sources / Statistical Provenance
+
+The Statistical Core preserves the verified match-by-match venue split already supplied for this fixture. Current schedule information is cross-checked against Liga Portugal and recent Portuguese reporting. Team-news statements use the latest retained source available for the specific club and are superseded by later official club or competition updates.
+`
   ],
   "analysisFormat": "markdown",
   "editorialStandard": "psp-v1",
@@ -23,14 +120,26 @@ export const vitoriaScVsCasaPia: EditorialPrediction = {
   "published": true,
   "publishedAt": "2026-09-01T12:00:00-03:00",
   "sourceStatus": "verified",
-  "sources": [
+  sources: [
     {
-      "name": "OpenFootball — Liga Portugal 2026/27 fixture feed",
-      "url": "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/portugal/2026-27_pt1.txt",
-      "description": "Existing project fixture source used to link the supplied analysis to the correct match.",
-      "accessedAt": "2026-09-01T12:00:00-03:00"
+        "name": "Liga Portugal",
+        "url": "https://www.ligaportugal.pt/",
+        "description": "Official competition reference for Matchweek 5 fixture identity and schedule.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
+    },
+    {
+        "name": "A Bola — Matchweek 5 schedule",
+        "url": "https://www.abola.pt/noticias/o-calendario-da-5a-jornada-da-liga-2026082717350594891",
+        "description": "Published Matchweek 5 schedule and kickoff reference.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
+    },
+    {
+        "name": "A Bola — Matchweek 5 referees",
+        "url": "https://www.abola.pt/noticias/ja-sao-conhecidos-os-arbitros-para-a-5a-jornada-da-liga-2026090217311945802",
+        "description": "Matchweek 5 referee appointments and current competition context.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
     }
-  ],
+],
   "matchInfo": {
     "date": "2026-09-06",
     "time": "18:00",

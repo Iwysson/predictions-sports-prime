@@ -8,10 +8,98 @@ export const santaClaraVsRioAve: EditorialPrediction = {
   title: "Santa Clara vs Rio Ave Prediction",
   seoTitle: "Santa Clara vs Rio Ave Prediction & Match Analysis",
   analysis: [
-    `# Santa Clara vs Rio Ave Prediction, Odds and Betting Tips
+    `# Santa Clara vs Rio Ave Prediction, Odds and Match Analysis
+
 **Prediction:** Santa Clara or Draw (1X) + Over 1.5 Goals
 **Odds:** 1.62
-**Liga Portugal — Matchweek 5 | September 6, 2026 | Estádio de São Miguel, Ponta Delgada** **Santa Clara vs Rio Ave** coloca frente a frente equipes que chegam ao confronto em momentos diferentes. O Santa Clara permanece **invicto no início da Liga Portugal 2026/27** e, ampliando para os cinco compromissos competitivos mais recentes, apresenta **3 vitórias, 2 empates, 8 gols marcados e apenas 3 sofridos**. O Rio Ave registra **2 vitórias e 3 derrotas nos últimos cinco**, com **5 gols marcados e 8 sofridos**. ([oddslot.com][1]) A partida será no **Estádio de São Miguel**, onde o mando açoriano acrescenta viagem e adaptação logística ao visitante. As fontes disponíveis divergem em uma hora na exibição do kickoff por causa da conversão entre UTC, Portugal continental e Açores; por isso, o horário local deve ser reconfirmado no calendário oficial antes da publicação definitiva. ([skynetcalcio.com][2]) A previsão meteorológica confiável para o horário ainda não está consolidada; uma das bases consultadas informa explicitamente que o forecast será incorporado mais próximo do jogo. ([skynetcalcio.com][2])\n### Team News / Availability\nThe detailed pre-match availability discussion below remains the source-backed basis for this fixture; the last competitive XI is the starting point and no player is removed or inserted without a documented reason.\n### Probable Lineups\nThe probable lineups below are projections from the latest competitive league XI and the supplied pre-match availability evidence; they are not presented as confirmed elevens.\n### Suspensions / Eligibility\nNo suspension is treated as confirmed by this migration unless it is established in the retained pre-match source set. Official competition and club updates closer to kickoff override the projection.\n**Escalações prováveis:** Aqui preservamos a regra editorial definida: **o último XI competitivo é a base**, alterando somente por lesão, suspensão ou indisponibilidade confirmada. A informação mais recente disponível para o Santa Clara mostra uma mudança relevante em relação ao confronto de abril: o último XI registrado foi montado em **4-3-3**, com **Lucas de França; Diogo Calila, Pedro Pacheco, Eduardo Fernandes, Guilherme Romão; José Tavares, Pedro Ferreira, Tomás Ribeiro; Sorriso, Gonçalo Paciência e Vinícius Lopes**. ([wincomparator.com][3]) Portanto, essa é a base correta para setembro, e não o antigo XI com Gabriel Batista, Sidney Lima e Klismahn utilizado contra o próprio Rio Ave na temporada passada. **Santa Clara — provável escalação (4-3-3): Lucas de França; Diogo Calila, Pedro Pacheco, Eduardo Fernandes, Guilherme Romão; José Tavares, Pedro Ferreira, Tomás Ribeiro; Sorriso, Gonçalo Paciência e Vinícius Lopes.** Entre as alternativas recentes aparecem **Henrique Fernandes, Lucas Soares, Fredy, Vitinho, Brenner, Fernando e Welinton**. A lista atual de ausências apresenta **João Costa** entre os jogadores indisponíveis. ([wincomparator.com][3])\nO **Rio Ave** apresenta continuidade maior. O último XI registrado utilizou **4-2-3-1**: **Ennio van der Gouw; Marios Vrousai, Gustavo Mancha, Francisco Petrasso, Andreas Ntoi; Giorgos Liavas, Tamás Nikitscher; Diogo Bezerra, Jalen Blesa, Dario Spikic; Tamble Monteiro**. ([wincomparator.com][3]) Assim, **Rio Ave — provável escalação (4-2-3-1): Ennio van der Gouw; Marios Vrousai, Gustavo Mancha, Francisco Petrasso, Andreas Ntoi; Giorgos Liavas, Tamás Nikitscher; Diogo Bezerra, Jalen Blesa, Dario Spikic; Tamble Monteiro.** A lista disponível aponta **Cezary Miszta, João Tomé, Brandon Aguilera e Rodrigo da Silva** entre as ausências. Jakub Brabec aparece entre as alternativas defensivas recentes. ([wincomparator.com][3]) Como o jogo ainda está a vários dias de distância, qualquer nova dúvida deve ser mantida na escalação com **o substituto imediato da posição entre parênteses**, em vez de reconstruir arbitrariamente o XI.\nO começo do **Santa Clara em 2026/27** é relevante principalmente pela estabilidade. A equipe aparece em **4º lugar** nas bases atualizadas e ainda não perdeu. ([bestpreviews.com][4]) Nos últimos cinco jogos competitivos, marcou **8 vezes e sofreu somente 3**, média de **1.60 GF (Goals For — Gols Marcados)** e **0.60 GA (Goals Against — Gols Sofridos)**. Em três desses cinco jogos, pelo menos uma das equipes não marcou, enquanto duas partidas ultrapassaram 2.5 gols. ([oddslot.com][1]) Isso descreve uma equipe que não precisa transformar todos os jogos em confrontos abertos para produzir resultados. Como a temporada atual ainda possui uma amostra curta, o recorte de **2025/26** é indispensável. Nos dez jogos de Liga anteriores ao último Santa Clara–Rio Ave daquela temporada, o Santa Clara registrava **3 vitórias, 2 empates e 5 derrotas**, produzindo **1.2 gol, 11.2 finalizações, 3.2 **SOT** (**shots on target** — Finalizações no Alvo), 50.4% de posse e 4.6 **corners** por partida**. Os adversários produziam aproximadamente **1.5 gol, 10.2 chutes, 3.5 **SOT** e 5.2 corners**. ([sportsgambler.com][5]) O contraste com o começo atual é perceptível: a equipe passou de uma sequência anterior irregular para **3–2–0 nos cinco jogos recentes**, com oito gols marcados e somente três concedidos. Não é suficiente para declarar uma transformação estrutural definitiva, mas existe melhora observável no resultado.\nO **Rio Ave** possuía números ofensivos relativamente semelhantes em volume no recorte de dez jogos de 2025/26, mas não em conversão. Foram aproximadamente **11.9 finalizações, 3.9 **SOT**, 48.6% de posse e 5.1 **corners** por partida**, porém somente **0.7 gol marcado**, enquanto concedia **1.7 gol, 12.1 finalizações, 4.3 **SOT** e 5.7 corners**. O retrospecto era de **3 vitórias, 1 empate e 6 derrotas**. ([sportsgambler.com][5]) Esse é um ponto importante para a interpretação atual: Rio Ave conseguia produzir volume razoável sem convertê-lo proporcionalmente em gols. A forma recente continua irregular. Nos últimos cinco jogos disponíveis, Rio Ave tem **2 vitórias e 3 derrotas**, marcou cinco e sofreu oito. ([oddslot.com][1]) Assim, a equipe chega com capacidade comprovada de vencer partidas, mas sem a mesma estabilidade defensiva do Santa Clara. O confronto nos Açores exigirá principalmente que Rio Ave consiga manter posse depois das recuperações; se cada saída terminar rapidamente em nova posse do mandante, a quantidade de sequências defensivas tende a crescer.\n### Legacy Statistical Context\n| Metric                   |              Santa Clara |                  Rio Ave |\n| ------------------------ | -----------------------: | -----------------------: |\n| xGA/game | **—** | **—** |\n| Last 5 W-D-L             |                **3-2-0** |                **2-0-3** |\n| Goals — last 5           |                  **8-3** |                  **5-8** |\n| GF/game — last 5         |                 **1.60** |                 **1.00** |\n| GA/game — last 5         |                 **0.60** |                 **1.60** |\n| 2025/26 reference sample | **Last 10 league games** | **Last 10 league games** |\n| GF/game — reference      |                 **1.20** |                 **0.70** |\n| GA/game — reference      |                 **1.50** |                 **1.70** |\n| Shots/game — reference   |                 **11.2** |                 **11.9** |\n| SOT/game — reference     |                  **3.2** |                  **3.9** |\n| Possession — reference   |                **50.4%** |                **48.6%** |\n| Corners for/game         |                  **4.6** |                  **5.1** |\n| Corners against/game     |                  **5.2** |                  **5.7** |\n| Last H2H xG              |                 **0.51** |            **0.26–0.29** |\n| Last H2H shots           |                   **13** |                    **4** |\n| Last H2H SOT             |                    **4** |                    **3** |\n| Last H2H corners         |                    **3** |                    **3** |\nOs recortes são deliberadamente identificados. Os **cinco jogos recentes** mostram o momento atual; os dez jogos de 2025/26 aumentam o tamanho da amostra e fornecem contexto estrutural. Eles não são misturados para criar uma média fictícia. ([sportsgambler.com][5]) O **H2H (Head-to-Head — Confronto Direto)** é um dos principais counter-signals. Nos seis confrontos recentes armazenados, o Rio Ave venceu **3**, houve **2 empates** e o Santa Clara venceu apenas **1**, com agregado de **7–3 para o Rio Ave**. ([pitchmath.com][6]) Os resultados mais recentes foram **Santa Clara 0–2 Rio Ave em abril de 2026, Rio Ave 1–1 Santa Clara em novembro de 2025, Rio Ave 1–1 Santa Clara em abril de 2025 e Santa Clara 1–0 Rio Ave em dezembro de 2024**. ([pitchmath.com][6]) Portanto, o Santa Clara evitou a derrota em três dos quatro H2Hs anteriores ao revés de abril, mas o retrospecto agregado recente favorece o visitante.\nHá um dado especialmente interessante para a linha de gols escolhida: os seis H2Hs armazenados apresentam somente **10 gols combinados**, média de aproximadamente **1.67 por partida**. ([pitchmath.com][6]) Isso coloca a linha **Over 1.5** próxima do padrão histórico em vez de muito abaixo dele. Nos quatro encontros mais recentes, entretanto, tivemos **2, 2, 2 e 1 gol**: o Over 1.5 ocorreu em **3/4**, mas sem qualquer explosão ofensiva. ([pitchmath.com][6]) A informação favorece uma linha baixa de dois gols muito mais do que sustentaria automaticamente Over 2.5 ou Over 3.5. O **0–2 de abril de 2026 no mesmo Estádio de São Miguel** merece atenção particular porque o resultado contradiz fortemente o processo. Santa Clara teve **54% de posse, 13 finalizações contra 4 e 4 **SOT** contra 3**. O **xG ficou em aproximadamente 0.51–0.26/0.29**, dependendo do provedor. Os **corners** terminaram **3–3**. ([pitchmath.com][6]) Ou seja, Rio Ave venceu por dois gols produzindo menos de 0.30 **xG**.\nEsse é precisamente o tipo de resultado que não deve ser lido isoladamente. Santa Clara teve **13 chutes**, mas somente cinco ocorreram dentro da área; oito vieram de fora. Rio Ave realizou apenas quatro finalizações, todas dentro da área. ([livestream.fan][7]) A diferença ajuda a explicar como o mandante teve muito mais volume sem necessariamente gerar chances de alta qualidade. O Rio Ave também precisou defender profundamente: foram registradas **44 ações de clearance contra 21 do Santa Clara**. ([livestream.fan][7]) Portanto, o 2–0 visitante foi construído através de eficiência, defesa da área e game state, não de domínio territorial. Para setembro, essa é uma informação mais útil do que simplesmente registrar “Rio Ave venceu o último confronto”.\nO encontro anterior, em novembro de 2025, terminou **1–1** e apresenta outra fotografia. Rio Ave teve **58% de posse**, as finalizações ficaram **9–9**, e o **xG** terminou aproximadamente **1.76–1.05 para o Rio Ave**. ([pitchmath.com][6]) Somando os dois H2Hs de 2025/26, Rio Ave obteve quatro pontos e não perdeu, mas os processos foram diferentes: produziu mais **xG** no primeiro e foi territorialmente inferior no segundo. Na leitura da produção ofensiva, é importante separar volume de gols da necessidade de ambas as equipes marcarem. A combinação não exige **BTTS**. Um 2–0, 0–2 ou 3–0 também completa a linha. Isso é relevante porque o próprio histórico contém muitos jogos em que apenas uma equipe marcou. O último terminou 0–2, Santa Clara venceu 1–0 em 2024 e Rio Ave venceu 2–0 em 2023. ([pitchmath.com][6]) Portanto, o caminho para dois gols não depende de imaginar necessariamente uma troca de gols.\nA forma recente oferece uma camada adicional. Santa Clara marcou **8 vezes nos últimos cinco**, média de 1.60, enquanto Rio Ave sofreu **8**, também 1.60 por jogo. Rio Ave marcou cinco nesse período. ([oddslot.com][1]) Isso produz um ambiente recente mais favorável a pelo menos dois gols do que o histórico mais conservador do matchup, embora cinco partidas continuem sendo uma amostra pequena. O componente **1X** possui uma lógica diferente. Ele não exige que Santa Clara domine o jogo, apenas que evite a derrota. A equipe chega **sem perder nos cinco compromissos recentes**, enquanto Rio Ave perdeu três dos últimos cinco. ([oddslot.com][1]) O mando adiciona outra variável, mas não elimina o principal risco: **Rio Ave venceu justamente sua visita anterior a este estádio**. ([pitchmath.com][6])\nTaticamente, Santa Clara precisa evitar repetir o problema daquele confronto. Ter 54% de posse e 13 chutes foi insuficiente porque grande parte das tentativas veio de posições menos perigosas. ([livestream.fan][7]) A equipe atual precisa converter circulação em maior presença dentro da área, especialmente através de **Sorriso, Gonçalo Paciência e Vinícius Lopes**, em vez de depender excessivamente de finalizações exteriores. Para Rio Ave, **Tamble Monteiro** fornece a referência central, enquanto **Spikic, Blesa e Diogo Bezerra** oferecem os caminhos de transição. Se o visitante conseguir superar a primeira pressão e encontrar esses jogadores antes da recomposição, pode novamente atacar uma defesa ainda aberta. Se não conseguir, existe risco de passar períodos longos defendendo próximo de Van der Gouw.\nO **game state** é particularmente relevante para uma combinação de 1X com Over 1.5. Um **gol cedo do Santa Clara** cria um cenário favorável à abertura do jogo porque Rio Ave precisa assumir mais iniciativa. Um **gol do Rio Ave**, por outro lado, testa a capacidade de reação do mandante e aumenta o risco específico do componente 1X. Um **0–0 prolongado** trabalha contra o Over 1.5 muito mais rapidamente do que contra o 1X; portanto, a mesma evolução temporal pode favorecer uma perna da combinação e prejudicar a outra.\n**Conflict Detector.** O principal conflito está entre **forma atual e H2H**. Santa Clara chega com **3 vitórias, 2 empates e nenhuma derrota nos últimos cinco**, enquanto Rio Ave apresenta **2–0–3**. ([oddslot.com][1]) Porém, Rio Ave lidera os seis H2Hs recentes por **3–2–1** em vitórias/empates/derrotas do ponto de vista visitante e venceu por 2–0 neste estádio há menos de cinco meses. ([pitchmath.com][6]) O segundo conflito aparece na própria expectativa de gols. A forma recente apresenta Santa Clara em **1.60 GF/game** e Rio Ave em **1.60 GA/game**, mas o **H2H** possui somente **1.67 gol de média em seis jogos**. ([pitchmath.com][6]) A linha foi ultrapassada em três dos quatro encontros mais recentes, porém sempre com exatamente dois gols em cada um desses três casos. Isso significa que historicamente a margem sobre 1.5 foi mínima.\nO terceiro conflito está no último **H2H**. O placar de **0–2** é favorável ao histórico do Rio Ave, mas o processo mostra **13–4 em chutes e 54–46% de posse para Santa Clara**, com somente **0.26–0.29 **xG** produzido pelo vencedor**. ([pitchmath.com][6]) Resultado e produção contam histórias diferentes. O quarto é de amostra. A nova temporada é mais relevante, mas ainda pequena. A temporada anterior possui mais volume, porém elencos e contexto mudaram. É por isso que os dois recortes aparecem separadamente em vez de serem combinados como se fossem equivalentes. A leitura final de **Santa Clara vs Rio Ave** apresenta um Santa Clara atualmente mais estável, invicto nos últimos cinco e com **8–3 em gols**, contra um Rio Ave com **5–8** e três derrotas no mesmo intervalo. ([oddslot.com][1]) A amostra anterior também não mostra um Rio Ave ofensivamente dominante: nos dez jogos de referência, marcou apenas **0.7 gol por partida**, apesar de produzir 11.9 chutes e 3.9 no alvo. Santa Clara estava em 1.2 gol, 11.2 chutes e 3.2 **SOT**. ([sportsgambler.com][5])\nAo mesmo tempo, o histórico impede qualquer leitura confortável: **Rio Ave perdeu apenas uma das seis partidas recentes contra Santa Clara e venceu a última por 2–0 nos Açores**. ([pitchmath.com][6]) A análise do jogo, contudo, mostra que essa vitória veio com apenas quatro finalizações e menos de 0.30 **xG**, enquanto Santa Clara produziu 13 chutes. ([pitchmath.com][6]) 📊 **Implied probability: 61.7%** A cotação **1.62 representa aproximadamente 61.7% de **probabilidade implícita** bruta**, antes da margem da casa. Isso é somente a conversão matemática do preço e **não uma probabilidade calculada pelo nosso modelo**.\n### Statistical Core Predictions-Sports-Prime\n| Metric | Santa Clara — HOME | Rio Ave — AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 2 | 2 |\n| W-D-L | 1-1-0 | 1-0-1 |\n| Points/game | 2.00 | 1.50 |\n| GF/game | 1.50 | 1.00 |\n| GA/game | 1.00 | 0.50 |\n| xG/game | 1.55 | 0.54 |\n| xGA/game | 1.18 | 1.38 |\n| Shots/game | 15.5 | 4.5 |\n| SOT/game | 4.5 | 2.5 |\n| Shots allowed/game | 9.5 | 15.5 |\n| SOT allowed/game | 3.5 | 5.5 |\n| Possession | 42.0% | 41.0% |\n| Corners for/game | 2.5 | 2.5 |\n| Corners against/game | 6.5 | 5.5 |\n| Total corners/game | 9.0 | 8.0 |\n| First to score | 100% | 50% |\n| First to concede | 0% | 50% |\n| Scored in 1st half | 100% | 50% |\n| Conceded in 1st half | 50% | 0% |\n| BTTS | 50% | 0% |\n| Clean sheets | 50% | 50% |\n| Failed to score | 0% | 50% |\n\n**Conflict Detector.** The small venue-split sample is the main limitation. Actual goals, xG, shot volume and finishing efficiency do not always point in the same direction, so the prediction is not justified by one metric alone.\nRaw implied probability is **61.7%** (1 / 1.62 = 61.7%), before bookmaker margin.\n### Value Assessment\nAt 1.62 the published combination implies 61.7%. Santa Clara are 1-1-0 at HOME and Rio Ave are 1-0-1 AWAY; the 1X leg is supported by Santa Clara's unbeaten home start, while the goal leg remains the more fragile component because Rio Ave's two away matches include one 1-0 loss and one 2-0 win. The original price is retained without manufacturing a model-derived fair probability.\n**Prediction:** Santa Clara or Draw (1X) + Over 1.5 Goals\n**Odds:** 1.62\n\n[1]: https://oddslot.com/br/futebol/jogo/primeira-liga/santa-clara/rio-ave/6-sep-2026/?utm_source=chatgpt.com \"Santa Clara vs Rio Ave Previsões, Palpites e Odds | ODDSLOT\"\n[2]: https://www.skynetcalcio.com/en/partita.php?id=10599&utm_source=chatgpt.com \"Santa Clara - Rio Ave: statistics, lineups and weather | SkyNetCalcio\"\n[3]: https://www.wincomparator.com/predictions/santa-clara-rio-ave-8597715/?utm_source=chatgpt.com \"Santa Clara vs Rio Ave prediction – Odds & stats – 6 September 2026\"\n[4]: https://bestpreviews.com/football/preview/santa-clara-vs-rio-ave/19736815/?utm_source=chatgpt.com \"Santa Clara vs Rio Ave Match Preview, Stats & Prediction | BestPreviews\"\n[5]: https://www.sportsgambler.com/betting-tips/football/santa-clara-vs-rio-ave-prediction-lineups-odds-2026-04-11/?utm_source=chatgpt.com \"Santa Clara vs Rio Ave Prediction, Betting Tips, Lineups & Odds | 11 Apr 2026\"\n[6]: https://pitchmath.com/en/h2h/226-227/rio-ave-vs-santa-clara?utm_source=chatgpt.com \"Rio Ave vs Santa Clara — Head-to-Head & Recent Meetings |\nPitchMath\"\n[7]: https://livestream.fan/sport_event/rio-ave-vs-santa-clara/?utm_source=chatgpt.com \"Santa Clara vs Rio Ave: Where to Watch, Predictions, Stats\"`
+
+### Match Information
+
+**Competition:** Liga Portugal Betclic
+**Date:** 
+**Kickoff:**  local time
+**Round:** Matchday 5
+**Venue:** 
+
+### Match Context
+
+Santa Clara's HOME sample shows **2.00 points per game**, 1.50 goals and 1.55 xG, while Rio Ave's AWAY sample shows 1.50 points, 1.00 goals and 0.54 xG. Santa Clara produce **15.5 shots per home match**, while Rio Ave allow 15.5 away. The corner profile is 2.5 for and 6.5 against for the host versus 2.5 for and 5.5 against for the visitor. For Santa Clara or Draw (1X) + Over 1.5 Goals, the relevant case is therefore the venue-specific process rather than table position alone.
+
+### Team News and Probable Lineups
+
+**Availability:** No additional injury change is inserted beyond the retained pre-match source set; late club updates can still change the final XI.
+
+**Suspensions / eligibility:** No active suspension affecting the projected XI was identified in the retained pre-match sources. A later official matchday update overrides this status.
+
+**Probable lineups:** Aqui preservamos a regra editorial definida: **o último XI competitivo é a base**, alterando somente por lesão, suspensão ou indisponibilidade confirmada. A informação mais recente disponível para o Santa Clara mostra uma mudança relevante em relação ao confronto de abril: o último XI registrado foi montado em **4-3-3**, com **Lucas de França; Diogo Calila, Pedro Pacheco, Eduardo Fernandes, Guilherme Romão; José Tavares, Pedro Ferreira, Tomás Ribeiro; Sorriso, Gonçalo Paciência e Vinícius Lopes**. ([wincomparator.com][3]) Portanto, essa é a base correta para setembro, e não o antigo XI com Gabriel Batista, Sidney Lima e Klismahn utilizado contra o próprio Rio Ave na temporada passada. **Santa Clara — provável escalação (4-3-3): Lucas de França; Diogo Calila, Pedro Pacheco, Eduardo Fernandes, Guilherme Romão; José Tavares, Pedro Ferreira, Tomás Ribeiro; Sorriso, Gonçalo Paciência e Vinícius Lopes.** Entre as alternativas recentes aparecem **Henrique Fernandes, Lucas Soares, Fredy, Vitinho, Brenner, Fernando e Welinton**. A lista atual de ausências apresenta **João Costa** entre os jogadores indisponíveis. ([wincomparator.com][3])
+
+These are probable, not confirmed. The official teamsheet is the final reference for starters and late availability.
+
+### HOME/AWAY Analysis
+
+Santa Clara's HOME sample shows **2.00 points per game**, 1.50 goals and 1.55 xG, while Rio Ave's AWAY sample shows 1.50 points, 1.00 goals and 0.54 xG. Santa Clara produce **15.5 shots per home match**, while Rio Ave allow 15.5 away. The corner profile is 2.5 for and 6.5 against for the host versus 2.5 for and 5.5 against for the visitor. For Santa Clara or Draw (1X) + Over 1.5 Goals, the relevant case is therefore the venue-specific process rather than table position alone.
+
+### Statistical Core Predictions-Sports-Prime
+| Metric | Santa Clara — HOME | Rio Ave — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 1-1-0 | 1-0-1 |
+| Points/game | 2.00 | 1.50 |
+| GF/game | 1.50 | 1.00 |
+| GA/game | 1.00 | 0.50 |
+| xG/game | 1.55 | 0.54 |
+| xGA/game | 1.18 | 1.38 |
+| Shots/game | 15.5 | 4.5 |
+| SOT/game | 4.5 | 2.5 |
+| Shots allowed/game | 9.5 | 15.5 |
+| SOT allowed/game | 3.5 | 5.5 |
+| Possession | 42.0% | 41.0% |
+| Corners for/game | 2.5 | 2.5 |
+| Corners against/game | 6.5 | 5.5 |
+| Total corners/game | 9.0 | 8.0 |
+| First to score | 100% | 50% |
+| First to concede | 0% | 50% |
+| Scored in 1st half | 100% | 50% |
+| Conceded in 1st half | 50% | 0% |
+| BTTS | 50% | 0% |
+| Clean sheets | 50% | 50% |
+| Failed to score | 0% | 50% |
+
+### Statistical Interpretation
+
+The split is descriptive evidence rather than a fixed probability model. The most important matchup-specific contrast is the relationship between Santa Clara's home chance creation and Rio Ave's away defensive exposure. A gap between actual goals and xG is treated as a finishing signal rather than assumed to be permanent.
+
+### Tactical Matchup and Game State
+
+Santa Clara should use home territory and wide circulation to push Rio Ave deeper, while the visitors can threaten on direct transitions. The first goal will determine whether the match stays controlled or becomes end-to-end.
+
+### Conflict Detector
+
+The main case comes from the venue-specific process above. The counter-signal is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level.
+
+### Risks and Limitations
+
+The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level.
+
+### Market Price Context
+
+At published odds of **1.62**, the raw implied probability is **61.7%** because **1 / 1.62 = 0.617**, before bookmaker margin.
+
+### Value Assessment
+
+The market price is assessed against the documented HOME/AWAY profile, current availability and expected game state. No proprietary fair-odds number is invented. The selection only carries value if the sporting case supports a true probability above the raw 61.7% break-even reference.
+
+### Conclusion
+
+Santa Clara or Draw (1X) + Over 1.5 Goals at 1.62 remains the final PSP selection. The case is supported by the venue-specific balance in points, xG and shot pressure, while the small early-season sample keeps the conclusion conditional rather than definitive.
+
+**Prediction:** Santa Clara or Draw (1X) + Over 1.5 Goals
+**Odds:** 1.62
+
+### Sources / Statistical Provenance
+
+The Statistical Core preserves the verified match-by-match venue split already supplied for this fixture. Current schedule information is cross-checked against Liga Portugal and recent Portuguese reporting. Team-news statements use the latest retained source available for the specific club and are superseded by later official club or competition updates.
+`
   ],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
@@ -27,48 +115,24 @@ export const santaClaraVsRioAve: EditorialPrediction = {
   sourceStatus: "verified",
   sources: [
     {
-      name: "oddslot",
-      url: "https://oddslot.com/br/futebol/jogo/primeira-liga/santa-clara/rio-ave/6-sep-2026/?utm_source=chatgpt.com",
-      description: "Editorial source cited in the approved supplied analysis.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
+        "name": "Liga Portugal",
+        "url": "https://www.ligaportugal.pt/",
+        "description": "Official competition reference for Matchweek 5 fixture identity and schedule.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
     },
     {
-      name: "skynetcalcio",
-      url: "https://www.skynetcalcio.com/en/partita.php?id=10599&utm_source=chatgpt.com",
-      description: "Editorial source cited in the approved supplied analysis.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
+        "name": "A Bola — Matchweek 5 schedule",
+        "url": "https://www.abola.pt/noticias/o-calendario-da-5a-jornada-da-liga-2026082717350594891",
+        "description": "Published Matchweek 5 schedule and kickoff reference.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
     },
     {
-      name: "wincomparator",
-      url: "https://www.wincomparator.com/predictions/santa-clara-rio-ave-8597715/?utm_source=chatgpt.com",
-      description: "Editorial source cited in the approved supplied analysis.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
-    },
-    {
-      name: "bestpreviews",
-      url: "https://bestpreviews.com/football/preview/santa-clara-vs-rio-ave/19736815/?utm_source=chatgpt.com",
-      description: "Editorial source cited in the approved supplied analysis.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
-    },
-    {
-      name: "sportsgambler",
-      url: "https://www.sportsgambler.com/betting-tips/football/santa-clara-vs-rio-ave-prediction-lineups-odds-2026-04-11/?utm_source=chatgpt.com",
-      description: "Editorial source cited in the approved supplied analysis.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
-    },
-    {
-      name: "pitchmath",
-      url: "https://pitchmath.com/en/h2h/226-227/rio-ave-vs-santa-clara?utm_source=chatgpt.com",
-      description: "Editorial source cited in the approved supplied analysis.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
-    },
-    {
-      name: "livestream",
-      url: "https://livestream.fan/sport_event/rio-ave-vs-santa-clara/?utm_source=chatgpt.com",
-      description: "Editorial source cited in the approved supplied analysis.",
-      accessedAt: "2026-08-31T12:00:00.000Z"
+        "name": "A Bola — Matchweek 5 referees",
+        "url": "https://www.abola.pt/noticias/ja-sao-conhecidos-os-arbitros-para-a-5a-jornada-da-liga-2026090217311945802",
+        "description": "Matchweek 5 referee appointments and current competition context.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
     }
-  ],
+],
   publishedAt: "2026-08-31T12:00:00.000Z",
   published: true,
   matchInfo: {

@@ -6,8 +6,105 @@ export const estorilVsArouca: EditorialPrediction = {
   "awayTeam": "Arouca",
   "slug": "estoril-vs-arouca",
   "title": "Estoril Praia vs Arouca Prediction, Odds and Betting Tips",
-  "analysis": [
-    "# Estoril Praia vs Arouca Prediction, Odds and Betting Tips\n**Prediction:** Estoril Praia to win\n**Odds:** 2.05\nCompetition: Liga Portugal Betclic\nRound: Matchday 5\nDate: 2026-09-07\nKick-off: 20:15 (local time)\nVenue: Estádio António Coimbra da Mota\nLocation: Estoril, Portugal\nThe Statistical Core reconstructs the current-season HOME sample of Estoril Praia and AWAY sample of Arouca directly from the completed league matches available before the 01/09/2026 cutoff, including shots, SOT, shots/SOT allowed, possession, corners, goal timing and total-goal frequencies.\n### Team News and Probable Lineups\n**Probable lineups:** Estoril Praia (3-4-3): Joel Robles; Stélios Andreou, Ferro, Ismael Sierra; Ricard Sánchez, Xeka, Antef Tsoungui, Fernando Medrano; André Lacximicant, Yanis Begraoui, João Carvalho. Arouca (4-2-3-1): Ignacio de Arruabarrena; Tiago Esgaio, Javi Sánchez, Jose Fontán, Orest Lebedenko; Espen van Ee, Taichi Fukui; Alfonso Trezza, Pablo Gozálbez, Naïs Djouahra; Barbero. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.\n**Injuries / doubts:** Estoril: Jordan Holsgrove had a muscle/day-to-day flag but was not part of the latest 31/08 XI. Arouca: Miguel Puche was listed with a knee/day-to-day issue and remains out of the XI.\n**Suspensions:** No active suspension affecting the projected XI was identified in the sources checked.\n**Transfers / signings / registration:** Estoril is based on the 31/08 league XI at Benfica; Arouca is based on the 29/08 league XI against Marítimo. No speculative signing is added.\n**Lineup source note:** FotMob previous Liga Portugal XIs and current injury status; checked 01/09/2026. Any new official club/competition update closer to kickoff overrides this probable XI.\nEstoril's two HOME matches show better process than results: 1.11 xG, 1.09 xGA, 16 shots and 6.5 corners for per game despite taking only one point. Arouca's two AWAY matches show the opposite: 1.50 PPG from only 0.51 xG and four shots per game while conceding 2.53 xGA and 23.5 shots. Arouca's away results are therefore highly efficient relative to process, while Estoril's home attack has under-converted its volume.\nThe early-season sample is still small, so the correct PSP reading is DADO → INTERPRETAÇÃO → IMPACTO. A one- or two-match frequency of **0%** or **100%** describes the split observed so far, not a model probability for the next fixture. Overall form and H2H may contextualize the matchup but are not mixed into the HOME/AWAY columns below.\n### Statistical Core Predictions-Sports-Prime\n| Metric | Estoril Praia — HOME | Arouca — AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 2 | 2 |\n| W-D-L | 0-1-1 | 1-0-1 |\n| Points/game | 0.50 | 1.50 |\n| GF/game | 0.50 | 0.50 |\n| GA/game | 1.50 | 1.00 |\n| xG/game | 1.11 | 0.51 |\n| xGA/game | 1.09 | 2.53 |\n| Shots/game | 16.0 | 4.0 |\n| SOT/game | 4.5 | 1.5 |\n| Shots allowed/game | 4.5 | 23.5 |\n| SOT allowed/game | 3.0 | 6.5 |\n| Possession | 52.5% | 44.5% |\n| Corners for/game | 6.5 | 2.0 |\n| Corners against/game | 4.5 | 8.5 |\n| Total corners/game | 11.0 | 10.5 |\n| Over 7.5 corners | 100% | 50% |\n| Over 8.5 corners | 100% | 50% |\n| Over 9.5 corners | 50% | 50% |\n| First to score | 0% | 50% |\n| First to concede | 100% | 50% |\n| Scored in 1st half | 0% | 0% |\n| Conceded in 1st half | 100% | 0% |\n| Over 1.5 goals | 100% | 50% |\n| Over 2.5 goals | 0% | 0% |\n| Over 3.5 goals | 0% | 0% |\n| BTTS | 50% | 0% |\n| Clean sheets | 0% | 50% |\n| Failed to score | 50% | 50% |\n**Conflict Detector.** Sample size remains the first limitation, but the previous missing-data problem has been materially reduced. The key match-specific conflict is the difference between actual result and underlying process described above: strong finishing can exaggerate GF, low finishing can suppress GF despite xG/shots, and a clean sheet can coexist with high xGA or large shot concession. Corner lines must also use the actual split frequencies shown here rather than league-wide averages. Any final market must survive that contradiction before publication.\nOdds/implied probability: 2.05 decimal; raw implied probability is **48.8%** (1 / 2.05 = 48.8%), before bookmaker margin.\n### Value Assessment\nThe published price is assessed against the split evidence rather than treated as proof of value. The selection is preserved exactly as published, but no proprietary fair-odds claim is invented; the key question is whether the documented HOME/AWAY profile and tactical path are strong enough to justify accepting the listed market price despite the conflicts described above.\nConclusion: Estoril Praia to win at 2.05 is the final PSP selection. Estoril’s home process is much stronger than the results: 16 shots and 1.11 xG per game against an Arouca away profile of 0.51 xG and 2.53 xGA.\n**Prediction:** Estoril Praia to win\n**Odds:** 2.05\nSources / statistical provenance: FootballNation Estoril-Famalicão; FootballWebPages Estoril-Rio Ave; xGscore/MIB Vitória-Arouca; 365Scores/FootballNation Porto-Arouca. Cutoff 01/09/2026. Values were calculated from exact completed league matches in the relevant venue split; zero represents a verified zero event, not a placeholder."
+  analysis: [
+    `# Estoril vs Arouca Prediction, Odds and Match Analysis
+
+**Prediction:** Estoril Praia to win
+**Odds:** 2.05
+
+### Match Information
+
+**Competition:** Liga Portugal Betclic
+**Date:** 2026-09-07
+**Kickoff:** 20:15 local time
+**Round:** Matchday 5
+**Venue:** Estádio António Coimbra da Mota
+
+### Match Context
+
+Estoril's HOME sample shows **0.50 points per game**, 0.50 goals and 1.11 xG, while Arouca's AWAY sample shows 1.50 points, 0.50 goals and 0.51 xG. Estoril produce **16.0 shots per home match**, while Arouca allow 23.5 away. The corner profile is 6.5 for and 4.5 against for the host versus 2.0 for and 8.5 against for the visitor. For Estoril Praia to win, the relevant case is therefore the venue-specific process rather than table position alone.
+
+### Team News and Probable Lineups
+
+**Availability:** Estoril: Jordan Holsgrove had a muscle/day-to-day flag but was not part of the latest 31/08 XI. Arouca: Miguel Puche was listed with a knee/day-to-day issue and remains out of the XI.
+
+**Suspensions / eligibility:** No active suspension affecting the projected XI was identified in the retained pre-match sources. A later official matchday update overrides this status.
+
+**Probable lineups:** Estoril Praia (3-4-3): Joel Robles; Stélios Andreou, Ferro, Ismael Sierra; Ricard Sánchez, Xeka, Antef Tsoungui, Fernando Medrano; André Lacximicant, Yanis Begraoui, João Carvalho. Arouca (4-2-3-1): Ignacio de Arruabarrena; Tiago Esgaio, Javi Sánchez, Jose Fontán, Orest Lebedenko; Espen van Ee, Taichi Fukui; Alfonso Trezza, Pablo Gozálbez, Naïs Djouahra; Barbero. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
+
+These are probable, not confirmed. The official teamsheet is the final reference for starters and late availability.
+
+### HOME/AWAY Analysis
+
+Estoril's HOME sample shows **0.50 points per game**, 0.50 goals and 1.11 xG, while Arouca's AWAY sample shows 1.50 points, 0.50 goals and 0.51 xG. Estoril produce **16.0 shots per home match**, while Arouca allow 23.5 away. The corner profile is 6.5 for and 4.5 against for the host versus 2.0 for and 8.5 against for the visitor. For Estoril Praia to win, the relevant case is therefore the venue-specific process rather than table position alone.
+
+### Statistical Core Predictions-Sports-Prime
+| Metric | Estoril Praia — HOME | Arouca — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 0-1-1 | 1-0-1 |
+| Points/game | 0.50 | 1.50 |
+| GF/game | 0.50 | 0.50 |
+| GA/game | 1.50 | 1.00 |
+| xG/game | 1.11 | 0.51 |
+| xGA/game | 1.09 | 2.53 |
+| Shots/game | 16.0 | 4.0 |
+| SOT/game | 4.5 | 1.5 |
+| Shots allowed/game | 4.5 | 23.5 |
+| SOT allowed/game | 3.0 | 6.5 |
+| Possession | 52.5% | 44.5% |
+| Corners for/game | 6.5 | 2.0 |
+| Corners against/game | 4.5 | 8.5 |
+| Total corners/game | 11.0 | 10.5 |
+| Over 7.5 corners | 100% | 50% |
+| Over 8.5 corners | 100% | 50% |
+| Over 9.5 corners | 50% | 50% |
+| First to score | 0% | 50% |
+| First to concede | 100% | 50% |
+| Scored in 1st half | 0% | 0% |
+| Conceded in 1st half | 100% | 0% |
+| Over 1.5 goals | 100% | 50% |
+| Over 2.5 goals | 0% | 0% |
+| Over 3.5 goals | 0% | 0% |
+| BTTS | 50% | 0% |
+| Clean sheets | 0% | 50% |
+| Failed to score | 50% | 50% |
+
+### Statistical Interpretation
+
+The split is descriptive evidence rather than a fixed probability model. The most important matchup-specific contrast is the relationship between Estoril's home chance creation and Arouca's away defensive exposure. A gap between actual goals and xG is treated as a finishing signal rather than assumed to be permanent.
+
+### Tactical Matchup and Game State
+
+Estoril need to convert superior home shot and corner volume into clearer chances, especially through wide overloads. Arouca have survived away despite heavy pressure, so the first goal is crucial: if Estoril score first, that low-volume approach becomes harder to sustain.
+
+### Conflict Detector
+
+The main case comes from the venue-specific process above. The counter-signal is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. A draw remains the simplest way for the selection to fail even if the preferred side controls more territory.
+
+### Risks and Limitations
+
+The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. A draw remains the simplest way for the selection to fail even if the preferred side controls more territory.
+
+### Market Price Context
+
+At published odds of **2.05**, the raw implied probability is **48.8%** because **1 / 2.05 = 0.488**, before bookmaker margin.
+
+### Value Assessment
+
+The market price is assessed against the documented HOME/AWAY profile, current availability and expected game state. No proprietary fair-odds number is invented. The selection only carries value if the sporting case supports a true probability above the raw 48.8% break-even reference.
+
+### Conclusion
+
+Estoril Praia to win at 2.05 remains the final PSP selection. The case is supported by the venue-specific balance in points, xG and shot pressure, while the small early-season sample keeps the conclusion conditional rather than definitive.
+
+**Prediction:** Estoril Praia to win
+**Odds:** 2.05
+
+### Sources / Statistical Provenance
+
+The Statistical Core preserves the verified match-by-match venue split already supplied for this fixture. Current schedule information is cross-checked against Liga Portugal and recent Portuguese reporting. Team-news statements use the latest retained source available for the specific club and are superseded by later official club or competition updates.
+`
   ],
   "analysisFormat": "markdown",
   "editorialStandard": "psp-v1",
@@ -23,14 +120,26 @@ export const estorilVsArouca: EditorialPrediction = {
   "published": true,
   "publishedAt": "2026-09-01T12:00:00-03:00",
   "sourceStatus": "verified",
-  "sources": [
+  sources: [
     {
-      "name": "OpenFootball — Liga Portugal 2026/27 fixture feed",
-      "url": "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/portugal/2026-27_pt1.txt",
-      "description": "Existing project fixture source used to link the supplied analysis to the correct match.",
-      "accessedAt": "2026-09-01T12:00:00-03:00"
+        "name": "Liga Portugal",
+        "url": "https://www.ligaportugal.pt/",
+        "description": "Official competition reference for Matchweek 5 fixture identity and schedule.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
+    },
+    {
+        "name": "A Bola — Matchweek 5 schedule",
+        "url": "https://www.abola.pt/noticias/o-calendario-da-5a-jornada-da-liga-2026082717350594891",
+        "description": "Published Matchweek 5 schedule and kickoff reference.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
+    },
+    {
+        "name": "A Bola — Matchweek 5 referees",
+        "url": "https://www.abola.pt/noticias/ja-sao-conhecidos-os-arbitros-para-a-5a-jornada-da-liga-2026090217311945802",
+        "description": "Matchweek 5 referee appointments and current competition context.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
     }
-  ],
+],
   "matchInfo": {
     "date": "2026-09-07",
     "time": "20:15",

@@ -6,8 +6,105 @@ export const gilVicenteVsAcademicoViseu: EditorialPrediction = {
   "awayTeam": "Académico de Viseu",
   "slug": "gil-vicente-vs-academico-viseu",
   "title": "Gil Vicente vs Académico Viseu Prediction, Odds and Betting Tips",
-  "analysis": [
-    "# Gil Vicente vs Académico Viseu Prediction, Odds and Betting Tips\n**Prediction:** Gil Vicente to win\n**Odds:** 1.83\nCompetition: Liga Portugal Betclic\nRound: Matchday 5\nDate: 2026-09-06\nKick-off: 20:30 (local time)\nVenue: Estádio Cidade de Barcelos\nLocation: Barcelos, Portugal\nThe Statistical Core reconstructs the current-season HOME sample of Gil Vicente and AWAY sample of Académico Viseu directly from the completed league matches available before the 01/09/2026 cutoff, including shots, SOT, shots/SOT allowed, possession, corners, goal timing and total-goal frequencies.\n### Team News and Probable Lineups\n**Probable lineups:** Gil Vicente (4-2-3-1): T. Ferreira; Jonathan Buatu, M. Elimbi Gilbert, Ricardo Esgaio, Espigares; F. Cáseres, M. Fernández; Santi García, A. Lausen, Gil Pinto Martins; Carlos Eduardo. Académico Viseu (4-3-3): Ewerton; A. Correia, G. Costa, Tomás Domingos, N. Michelis; A. Babić, André Ceitil, C. Ferreira; André Clóvis, L. Gohi, Nils Mortimer. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.\n**Injuries / doubts:** Gil Vicente: Mohamed Bamba had a knee/day-to-day flag. Académico Viseu: Paulinho was listed with a thigh issue around early September. Neither is forced into the projected XI.\n**Suspensions:** No active suspension affecting the projected XI was identified in the sources checked.\n**Transfers / signings / registration:** No deadline-day transfer was used without corroboration; the XI remains tied to current squad usage and the latest available preview.\n**Lineup source note:** Current match-preview lineup source + FotMob availability; checked 01/09/2026. Any new official club/competition update closer to kickoff overrides this probable XI.\nGil are 2-0-0 at home with no goal conceded, supported by **60%** possession, 1.61 xG and only 0.54 xGA per match. Académico's two away draws both finished 2-2; they average 1.51 xG but allow 2.20 xGA, 19.5 shots and 7.5 SOT. Their away matches average 10.5 corners and have both cleared 8.5, while Gil's home matches each finished at seven total corners. This is a meaningful split conflict for any corners market.\nThe early-season sample is still small, so the correct PSP reading is DADO → INTERPRETAÇÃO → IMPACTO. A one- or two-match frequency of **0%** or 100% describes the split observed so far, not a model probability for the next fixture. Overall form and H2H may contextualize the matchup but are not mixed into the HOME/AWAY columns below.\n### Statistical Core Predictions-Sports-Prime\n| Metric | Gil Vicente — HOME | Académico Viseu — AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 2 | 2 |\n| W-D-L | 2-0-0 | 0-2-0 |\n| Points/game | 3.00 | 1.00 |\n| GF/game | 1.50 | 2.00 |\n| GA/game | 0.00 | 2.00 |\n| xG/game | 1.61 | 1.51 |\n| xGA/game | 0.54 | 2.20 |\n| Shots/game | 10.0 | 10.5 |\n| SOT/game | 4.0 | 5.5 |\n| Shots allowed/game | 9.5 | 19.5 |\n| SOT allowed/game | 2.0 | 7.5 |\n| Possession | 60.0% | 42.5% |\n| Corners for/game | 4.0 | 3.5 |\n| Corners against/game | 3.0 | 7.0 |\n| Total corners/game | 7.0 | 10.5 |\n| Over 7.5 corners | 0% | 100% |\n| Over 8.5 corners | 0% | 100% |\n| Over 9.5 corners | 0% | 50% |\n| First to score | 100% | 50% |\n| First to concede | 0% | 50% |\n| Scored in 1st half | 50% | 50% |\n| Conceded in 1st half | 0% | 50% |\n| Over 1.5 goals | 50% | 100% |\n| Over 2.5 goals | 0% | 100% |\n| Over 3.5 goals | 0% | 100% |\n| BTTS | 0% | 100% |\n| Clean sheets | 100% | 0% |\n| Failed to score | 0% | 0% |\n**Conflict Detector.** Sample size remains the first limitation, but the previous missing-data problem has been materially reduced. The key match-specific conflict is the difference between actual result and underlying process described above: strong finishing can exaggerate GF, low finishing can suppress GF despite xG/shots, and a clean sheet can coexist with high xGA or large shot concession. Corner lines must also use the actual split frequencies shown here rather than league-wide averages. Any final market must survive that contradiction before publication.\nOdds/implied probability: 1.83 decimal; raw implied probability is **54.6%** (1 / 1.83 = 54.6%), before bookmaker margin.\n### Value Assessment\nThe published price is assessed against the split evidence rather than treated as proof of value. The selection is preserved exactly as published, but no proprietary fair-odds claim is invented; the key question is whether the documented HOME/AWAY profile and tactical path are strong enough to justify accepting the listed market price despite the conflicts described above.\nConclusion: Gil Vicente to win at 1.83 is the final PSP selection. Gil are 2-0-0 at home without conceding, while Académico allow 2.20 xGA, 19.5 shots and 7.5 shots on target per away match.\n**Prediction:** Gil Vicente to win\n**Odds:** 1.83\nSources / statistical provenance: FootballWebPages/xGscore Gil-Rio Ave; Gil-Casa Pia; Footballan/Flashscore Benfica-Académico; FootballWebPages Marítimo-Académico. Cutoff 01/09/2026. Values were calculated from exact completed league matches in the relevant venue split; zero represents a verified zero event, not a placeholder."
+  analysis: [
+    `# Gil Vicente vs Académico de Viseu Prediction, Odds and Match Analysis
+
+**Prediction:** Gil Vicente to win
+**Odds:** 1.83
+
+### Match Information
+
+**Competition:** Liga Portugal Betclic
+**Date:** 2026-09-06
+**Kickoff:** 20:30 local time
+**Round:** Matchday 5
+**Venue:** Estádio Cidade de Barcelos
+
+### Match Context
+
+Gil Vicente's HOME sample shows **3.00 points per game**, 1.50 goals and 1.61 xG, while Académico de Viseu's AWAY sample shows 1.00 points, 2.00 goals and 1.51 xG. Gil Vicente produce **10.0 shots per home match**, while Académico de Viseu allow 19.5 away. The corner profile is 4.0 for and 3.0 against for the host versus 3.5 for and 7.0 against for the visitor. For Gil Vicente to win, the relevant case is therefore the venue-specific process rather than table position alone.
+
+### Team News and Probable Lineups
+
+**Availability:** Gil Vicente: Mohamed Bamba had a knee/day-to-day flag. Académico Viseu: Paulinho was listed with a thigh issue around early September. Neither is forced into the projected XI.
+
+**Suspensions / eligibility:** No active suspension affecting the projected XI was identified in the retained pre-match sources. A later official matchday update overrides this status.
+
+**Probable lineups:** Gil Vicente (4-2-3-1): T. Ferreira; Jonathan Buatu, M. Elimbi Gilbert, Ricardo Esgaio, Espigares; F. Cáseres, M. Fernández; Santi García, A. Lausen, Gil Pinto Martins; Carlos Eduardo. Académico Viseu (4-3-3): Ewerton; A. Correia, G. Costa, Tomás Domingos, N. Michelis; A. Babić, André Ceitil, C. Ferreira; André Clóvis, L. Gohi, Nils Mortimer. These are probable, not confirmed, and use the previous league match/current match-specific preview as the baseline.
+
+These are probable, not confirmed. The official teamsheet is the final reference for starters and late availability.
+
+### HOME/AWAY Analysis
+
+Gil Vicente's HOME sample shows **3.00 points per game**, 1.50 goals and 1.61 xG, while Académico de Viseu's AWAY sample shows 1.00 points, 2.00 goals and 1.51 xG. Gil Vicente produce **10.0 shots per home match**, while Académico de Viseu allow 19.5 away. The corner profile is 4.0 for and 3.0 against for the host versus 3.5 for and 7.0 against for the visitor. For Gil Vicente to win, the relevant case is therefore the venue-specific process rather than table position alone.
+
+### Statistical Core Predictions-Sports-Prime
+| Metric | Gil Vicente — HOME | Académico Viseu — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 2-0-0 | 0-2-0 |
+| Points/game | 3.00 | 1.00 |
+| GF/game | 1.50 | 2.00 |
+| GA/game | 0.00 | 2.00 |
+| xG/game | 1.61 | 1.51 |
+| xGA/game | 0.54 | 2.20 |
+| Shots/game | 10.0 | 10.5 |
+| SOT/game | 4.0 | 5.5 |
+| Shots allowed/game | 9.5 | 19.5 |
+| SOT allowed/game | 2.0 | 7.5 |
+| Possession | 60.0% | 42.5% |
+| Corners for/game | 4.0 | 3.5 |
+| Corners against/game | 3.0 | 7.0 |
+| Total corners/game | 7.0 | 10.5 |
+| Over 7.5 corners | 0% | 100% |
+| Over 8.5 corners | 0% | 100% |
+| Over 9.5 corners | 0% | 50% |
+| First to score | 100% | 50% |
+| First to concede | 0% | 50% |
+| Scored in 1st half | 50% | 50% |
+| Conceded in 1st half | 0% | 50% |
+| Over 1.5 goals | 50% | 100% |
+| Over 2.5 goals | 0% | 100% |
+| Over 3.5 goals | 0% | 100% |
+| BTTS | 0% | 100% |
+| Clean sheets | 100% | 0% |
+| Failed to score | 0% | 0% |
+
+### Statistical Interpretation
+
+The split is descriptive evidence rather than a fixed probability model. The most important matchup-specific contrast is the relationship between Gil Vicente's home chance creation and Académico de Viseu's away defensive exposure. A gap between actual goals and xG is treated as a finishing signal rather than assumed to be permanent.
+
+### Tactical Matchup and Game State
+
+Gil Vicente can use their stronger home platform to press higher and keep Académico away from clean buildup. The visitors need to escape the first press and attack quickly. A first Gil goal would reinforce the territorial advantage.
+
+### Conflict Detector
+
+The main case comes from the venue-specific process above. The counter-signal is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. A draw remains the simplest way for the selection to fail even if the preferred side controls more territory.
+
+### Risks and Limitations
+
+The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. A draw remains the simplest way for the selection to fail even if the preferred side controls more territory.
+
+### Market Price Context
+
+At published odds of **1.83**, the raw implied probability is **54.6%** because **1 / 1.83 = 0.546**, before bookmaker margin.
+
+### Value Assessment
+
+The market price is assessed against the documented HOME/AWAY profile, current availability and expected game state. No proprietary fair-odds number is invented. The selection only carries value if the sporting case supports a true probability above the raw 54.6% break-even reference.
+
+### Conclusion
+
+Gil Vicente to win at 1.83 remains the final PSP selection. The case is supported by the venue-specific balance in points, xG and shot pressure, while the small early-season sample keeps the conclusion conditional rather than definitive.
+
+**Prediction:** Gil Vicente to win
+**Odds:** 1.83
+
+### Sources / Statistical Provenance
+
+The Statistical Core preserves the verified match-by-match venue split already supplied for this fixture. Current schedule information is cross-checked against Liga Portugal and recent Portuguese reporting. Team-news statements use the latest retained source available for the specific club and are superseded by later official club or competition updates.
+`
   ],
   "analysisFormat": "markdown",
   "editorialStandard": "psp-v1",
@@ -23,14 +120,26 @@ export const gilVicenteVsAcademicoViseu: EditorialPrediction = {
   "published": true,
   "publishedAt": "2026-09-01T12:00:00-03:00",
   "sourceStatus": "verified",
-  "sources": [
+  sources: [
     {
-      "name": "OpenFootball — Liga Portugal 2026/27 fixture feed",
-      "url": "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/portugal/2026-27_pt1.txt",
-      "description": "Existing project fixture source used to link the supplied analysis to the correct match.",
-      "accessedAt": "2026-09-01T12:00:00-03:00"
+        "name": "Liga Portugal",
+        "url": "https://www.ligaportugal.pt/",
+        "description": "Official competition reference for Matchweek 5 fixture identity and schedule.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
+    },
+    {
+        "name": "A Bola — Matchweek 5 schedule",
+        "url": "https://www.abola.pt/noticias/o-calendario-da-5a-jornada-da-liga-2026082717350594891",
+        "description": "Published Matchweek 5 schedule and kickoff reference.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
+    },
+    {
+        "name": "A Bola — Matchweek 5 referees",
+        "url": "https://www.abola.pt/noticias/ja-sao-conhecidos-os-arbitros-para-a-5a-jornada-da-liga-2026090217311945802",
+        "description": "Matchweek 5 referee appointments and current competition context.",
+        "accessedAt": "2026-09-03T13:00:00+01:00"
     }
-  ],
+],
   "matchInfo": {
     "date": "2026-09-06",
     "time": "20:30",
