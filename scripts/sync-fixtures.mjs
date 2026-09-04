@@ -11,6 +11,7 @@ import {
 } from "../src/lib/openfootball.ts";
 import { validateLeagueRounds } from "../src/lib/data-validation.ts";
 import { parsePredictionMarket } from "../src/lib/prediction-results.ts";
+import { normalizeMatchTime } from "../src/lib/match-time.ts";
 
 const outputPath = resolve("src/data/fixtures.snapshot.json");
 const marketResultsPath = resolve("src/data/market-results.snapshot.json");
@@ -79,15 +80,45 @@ function canonicalTeamSlug(value) {
     .replace(/^-|-$/g, "");
 }
 
-async function hydrateMissingFixtureIdFromFotmob(league, fixture, prediction) {
-  if (!fixture || fixture.id || !fixture.date) return fixture;
+function nearbyIsoDates(...values) {
+  const dates = new Set();
+  for (const value of values) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value ?? "")) continue;
+    const base = new Date(`${value}T12:00:00Z`);
+    for (const offset of [0, -1, 1]) {
+      const candidate = new Date(base);
+      candidate.setUTCDate(candidate.getUTCDate() + offset);
+      dates.add(candidate.toISOString().slice(0, 10));
+    }
+  }
+  return [...dates];
+}
 
-  const daily = await fetchFotmobDay(fixture.date);
-  const events = (daily.leagues ?? []).flatMap((item) => item.matches ?? []);
-  const event = events.find((match) =>
-    teamNamesMatch(match.home?.name ?? "", fixture.homeTeam) &&
-    teamNamesMatch(match.away?.name ?? "", fixture.awayTeam)
-  );
+async function hydrateMissingFixtureIdFromFotmob(league, fixture, prediction) {
+  if (!fixture || fixture.id) return fixture;
+
+  // Provider season feeds can place late-evening fixtures on the adjacent
+  // calendar day because of UTC/local-time conversion. Search the fixture and
+  // editorial dates, plus one day either side, but still require an exact
+  // home/away team match before promoting an authoritative FotMob event ID.
+  const searchDates = nearbyIsoDates(fixture.date, prediction.date);
+  let event = null;
+  let matchedDate = null;
+  for (const date of searchDates) {
+    try {
+      const daily = await fetchFotmobDay(date);
+      event = (daily.leagues ?? []).flatMap((item) => item.matches ?? []).find((match) =>
+        teamNamesMatch(match.home?.name ?? "", fixture.homeTeam) &&
+        teamNamesMatch(match.away?.name ?? "", fixture.awayTeam)
+      );
+      if (event?.id) {
+        matchedDate = date;
+        break;
+      }
+    } catch (error) {
+      console.warn(`${prediction.slug}: FotMob ${date} lookup failed: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  }
 
   if (!event?.id) return fixture;
 
@@ -106,14 +137,56 @@ async function hydrateMissingFixtureIdFromFotmob(league, fixture, prediction) {
     return fixture;
   }
 
-  fixture.id = `official:${league.slug}:${canonicalTeamSlug(fixture.homeTeam)}-vs-${canonicalTeamSlug(fixture.awayTeam)}:${fixture.date}`;
+  const canonicalDate = eventKickoffUtc.slice(0, 10);
+  fixture.id = `official:${league.slug}:${canonicalTeamSlug(fixture.homeTeam)}-vs-${canonicalTeamSlug(fixture.awayTeam)}:${canonicalDate}`;
   fixture.fotmobMatchId = Number(event.id);
   fixture.dataSource = "fotmob";
   fixture.sourceAgreement = true;
   fixture.kickoffUtc = eventKickoffUtc;
   fixture.timeConfirmed = true;
 
-  console.log(`${prediction.slug}: linked via FotMob event ${event.id} -> ${fixture.id} @ ${fixture.kickoffUtc}`);
+  console.log(`${prediction.slug}: linked via FotMob event ${event.id} (query ${matchedDate}) -> ${fixture.id} @ ${fixture.kickoffUtc}`);
+  return fixture;
+}
+
+
+function promoteVerifiedMlsEditorialFixture(league, fixture, prediction) {
+  if (league.slug !== "mls" || !fixture || fixture.id) return fixture;
+
+  // MLS is manual-only in this project. When ESPN/TheSportsDB/FotMob's daily
+  // endpoint exposes the exact fixture but omits a usable provider id, keep
+  // the verified editorial fixture rather than aborting the entire snapshot.
+  // This does NOT invent an external provider id: it creates a namespaced,
+  // deterministic manual id and retains the locally verified kickoff.
+  const sameTeams =
+    teamNamesMatch(fixture.homeTeam, prediction.homeTeam) &&
+    teamNamesMatch(fixture.awayTeam, prediction.awayTeam);
+  if (!sameTeams || !prediction.date || !prediction.time || prediction.time === "TBD") {
+    return fixture;
+  }
+
+  const normalized = normalizeMatchTime({
+    league: prediction.league,
+    kickoffUtc: prediction.kickoffUtc,
+    date: prediction.date,
+    time: prediction.time,
+    timeConfirmed: prediction.timeConfirmed,
+    venue: prediction.venue,
+  });
+  if (!normalized?.kickoffUtc) return fixture;
+
+  const manualId = `manual:${league.slug}:${prediction.slug}:${prediction.date}`;
+  fixture.id = manualId;
+  fixture.date = prediction.date;
+  fixture.time = prediction.time;
+  fixture.kickoffUtc = normalized.kickoffUtc;
+  fixture.timeConfirmed = true;
+  fixture.dataSource = "editorial-manual";
+  fixture.sourceAgreement = false;
+
+  console.warn(
+    `${prediction.slug}: provider id unavailable; using verified MLS editorial fixture ${manualId} @ ${fixture.kickoffUtc}`
+  );
   return fixture;
 }
 
@@ -221,6 +294,9 @@ async function syncLeague(league) {
       if (fixture && !fixture.id) {
         fixture = await hydrateMissingFixtureIdFromFotmob(league, fixture, prediction);
       }
+      if (fixture && !fixture.id) {
+        fixture = promoteVerifiedMlsEditorialFixture(league, fixture, prediction);
+      }
 
       if (!fixture?.id) {
         const candidates = rounds.flatMap((round) => round.games)
@@ -285,6 +361,9 @@ async function syncLeague(league) {
       let recoveredFixture = refreshedFixture;
       if (recoveredFixture && !recoveredFixture.id) {
         recoveredFixture = await hydrateMissingFixtureIdFromFotmob(league, recoveredFixture, prediction);
+      }
+      if (recoveredFixture && !recoveredFixture.id) {
+        recoveredFixture = promoteVerifiedMlsEditorialFixture(league, recoveredFixture, prediction);
       }
       const fixtureId = recoveredFixture?.id ?? savedFixture?.id;
       if (fixtureId) {
