@@ -94,12 +94,26 @@ async function hydrateMissingFixtureIdFromFotmob(league, fixture, prediction) {
   // "official:" is the project's existing canonical-id convention for
   // provider-verified fixtures that do not expose an ESPN/TheSportsDB id.
   // The real FotMob event id is retained separately for future result/stats hydration.
+  const eventKickoffUtc =
+    typeof event.status?.utcTime === "string" && Number.isFinite(Date.parse(event.status.utcTime))
+      ? new Date(event.status.utcTime).toISOString()
+      : Number.isFinite(Number(event.timeTS))
+        ? new Date(Number(event.timeTS)).toISOString()
+        : null;
+
+  if (!eventKickoffUtc) {
+    console.warn(`${prediction.slug}: FotMob event ${event.id} matched, but kickoffUtc is unavailable; fixture ID was not promoted.`);
+    return fixture;
+  }
+
   fixture.id = `official:${league.slug}:${canonicalTeamSlug(fixture.homeTeam)}-vs-${canonicalTeamSlug(fixture.awayTeam)}:${fixture.date}`;
   fixture.fotmobMatchId = Number(event.id);
   fixture.dataSource = "fotmob";
   fixture.sourceAgreement = true;
+  fixture.kickoffUtc = eventKickoffUtc;
+  fixture.timeConfirmed = true;
 
-  console.log(`${prediction.slug}: linked via FotMob event ${event.id} -> ${fixture.id}`);
+  console.log(`${prediction.slug}: linked via FotMob event ${event.id} -> ${fixture.id} @ ${fixture.kickoffUtc}`);
   return fixture;
 }
 
