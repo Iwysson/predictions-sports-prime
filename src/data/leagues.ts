@@ -36,6 +36,8 @@ const graphicalLeagueAssets: Partial<
   championship: { src: "/league-badges/championship.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/ty5a681688770169.png" },
   "super-lig": { src: "/league-badges/super-lig.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/dikktz1785779891.png" },
   "scottish-premiership": { src: "/league-badges/scottish-premiership.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/72d3zc1688333496.png", needsDarkBackground: true },
+  eliteserien: { src: "/league-badges/eliteserien.png", sourceUrl: "https://www.eliteserien.no/" },
+  mls: { src: "/league-badges/mls.png", sourceUrl: "https://www.mlssoccer.com/" },
 };
 
 const source = (path: string) => `https://raw.githubusercontent.com/openfootball/${path}`;
