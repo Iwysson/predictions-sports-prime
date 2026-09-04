@@ -17,23 +17,28 @@ export const hullCityVsAstonVilla: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 17:30
 **Round:** Round 3
+**Updated:** 2026-09-04
 **Venue:** MKM Stadium
 
 ### Match Context
 
-Hull have made an excellent start after promotion, winning their opening two league matches, while Villa arrive after a 1-0 home defeat to Arsenal and are still looking for their first league point. The one-match HOME/AWAY core therefore points in the opposite direction to the published price: Hull's current home result is stronger, while Villa's only away sample was a heavy defeat. That conflict remains visible rather than being explained away.
+Hull have made a perfect start after promotion, beating Manchester United 2-0 at home and Coventry 1-0 away. Aston Villa have gone the other way, losing their opening league matches and failing to score. That early contrast is too small a sample to define either team’s season, but it gives Hull a clear confidence base and puts greater pressure on Villa to improve their chance creation at the MKM Stadium.
 
 ### Team News and Probable Lineups
 
-**Availability:** Hull have been dealing with absences including Jack Butland, Charlie Hughes, Matty Jacob, Darko Gyabi, Eliot Matazo, Joe Gelhardt and Óscar Zambrano. Robinio Vaz has joined on loan and is an additional attacking option. No additional Villa absence is treated as confirmed beyond the current match-preview sources.
+**Availability:** Hull are without Jack Butland (shoulder), Óscar Zambrano (hamstring), Elliot Matazo (knee), Darko Gyabi (thigh) and Charlie Hughes (groin); Matt Crooks is doubtful with a quad problem. Aston Villa are without João Gomes through suspension, while Amadou Onana (ACL), Johan Manzambi (knee) and Brian Madjo (ankle) are injured.
 
-**Suspensions / eligibility:** No confirmed league suspension was identified in the current match-specific sources. Robinio Vaz is eligible after registration; all projected players remain subject to the official teamsheet.
+**Suspensions / eligibility:** João Gomes is suspended for Aston Villa. No Hull suspension was listed in the latest 4 September update.
 
-**Probable lineups:** **Hull City (5-4-1):** Tzolakis; Coyle, Ajayi, Egan, McNair/Mendy, Giles; Belloumi, Slater, Crooks, Stroud; McBurnie (Robinio Vaz as alternative). **Aston Villa (4-2-3-1):** Suzuki; Cash, Torres, Lindelöf, Maatsen; Kamara, Barkley; McGinn, Buendía, Garnacho; Jackson. These are probable, not confirmed.
+**Probable lineups:** **Hull City (3-4-2-1):** Tzolakis; Ajayi, Egan, Mendy; Coyle, Slater, Iroegbunam, Giles; Belloumi, Stroud; McBurnie. **Aston Villa (4-2-3-1):** Suzuki; Cash, Lindelöf, Pau Torres, Ruggeri; Kamara, Goretzka; McGinn, Buendía, Mbaye; Nicolas Jackson. These are probable rather than confirmed lineups.
 
 ### HOME/AWAY Analysis
 
-Hull's first home split produced **3.00 points** and a **clean sheet**, but the underlying process was less dominant: 1.26 xG against 1.81 xGA and only 28% possession. Villa's only away split is worse on the scoreboard and underlying numbers, with 0.31 xG and 3.62 xGA. Because both samples contain one match, the data cannot by itself justify treating Villa as a stable away favourite.
+Hull’s only home league sample so far is the 2-0 win over Manchester United: 8 shots, 4 on target and 1.24 xG from just 28% possession. Villa’s only away sample is the 4-0 defeat at Brighton, where they managed 6 shots, none on target, and 0.32 xG while conceding 3.46 xGA. The numbers are stark but come from a single match on each side and should not be projected as season-long rates.
+
+### Current Form and Matchup
+
+Hull have six points from six and have not conceded in the league, following a 2-0 home win over Manchester United with a 1-0 victory at Coventry. Villa have lost both of their opening matches and are still waiting for their first league goal. Historically the matchup has favoured Villa, who have won six of the eight Premier League meetings with Hull and kept five clean sheets in that sequence, but the present game state is very different from those earlier meetings because Hull enter with momentum and Villa with a reshaped midfield.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -63,43 +68,28 @@ Hull's first home split produced **3.00 points** and a **clean sheet**, but the 
 | Failed to score | 0% | 100% |
 ### Statistical Interpretation
 
-Hull's first home split produced **3.00 points** and a **clean sheet**, but the underlying process was less dominant: 1.26 xG against 1.81 xGA and only 28% possession. Villa's only away split is worse on the scoreboard and underlying numbers, with 0.31 xG and 3.62 xGA. Because both samples contain one match, the data cannot by itself justify treating Villa as a stable away favourite.
+Hull’s opening two league games have been built on defensive control rather than volume: three goals scored, none conceded and two wins. Villa’s problem is the opposite, with the attack yet to establish rhythm and the midfield now missing both the suspended João Gomes and injured Onana. The sample is still tiny, so the most relevant question is whether Villa can create higher-quality central entries instead of relying on harmless possession.
 
 ### Tactical Matchup and Game State
 
-Hull are likely to defend with a back five and use Belloumi/Stroud to support McBurnie in direct transitions. Villa should have more technical quality in midfield and may try to pin Hull's wing-backs deep through McGinn, Buendía and the left-sided runner. If Villa score first, Hull will have to leave the low block and the visitors can attack larger spaces. If Hull lead, the match becomes a test of Villa's patience.
+Hull are likely to protect the centre with three centre-backs and ask Coyle and Giles to provide width when possession is recovered. Belloumi and Stroud can then support McBurnie quickly rather than allowing Villa to settle into a long defensive possession phase. Villa need Kamara and Goretzka to move the ball through Hull’s first line and create closer combinations for McGinn, Buendía and Jackson; otherwise the visitors risk circulating around the block without threatening the box.
 
 ### Conflict Detector
 
-Signals supporting the main scenario:
-- The strongest venue-specific process described above gives the primary analytical direction.
-- The expected game state offers a realistic route for that process to influence the published market.
+Their squad still carries greater individual quality, but Hull’s compact back three and strong start make this a genuine test rather than a routine away assignment. Two matches are not enough to assume Hull’s clean-sheet rate will persist, just as Villa’s early scoring drought should not be treated as permanent.
 
-Counter-signals:
-- Hull's strong start is not supported by dominant chance control, but Villa's current away evidence is even weaker. Hull also have a long injury list, while deadline-day arrival Robinio Vaz adds another attacking option. The market requires Villa to outperform both their current result pattern and the one-game away process, so uncertainty is substantial.
-- Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
+### Market Context
 
-Assessment:
-The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
-
-### Risks and Limitations
-
-Hull's strong start is not supported by dominant chance control, but Villa's current away evidence is even weaker. Hull also have a long injury list, while deadline-day arrival Robinio Vaz adds another attacking option. The market requires Villa to outperform both their current result pattern and the one-game away process, so uncertainty is substantial.
-
-### Market Price Context
-
-Implied probability = 1 / decimal odds. At 1.87, 1 / 1.87 = 0.535, or approximately 53.5% before bookmaker margin. This is a raw price-derived break-even reference, not a PSP model probability and not the same as a historical HOME/AWAY frequency.
+At decimal odds of **1.87**, the raw implied probability is **1 / 1.87 = 53.5%**. That percentage reflects the quoted market price before bookmaker margin; it is a pricing reference, not a forecast or guarantee. The price should be read alongside the match data, squad availability and tactical matchup rather than in isolation.
 
 ### Conclusion
 
-Villa have the higher individual ceiling, but this is not a matchup where the current HOME/AWAY evidence produces a clean away-win case. Hull's compact structure and positive start are meaningful counter-signals. The selection remains coherent only if Villa's midfield quality translates into much better territorial control than in their first away match.
+Hull’s start has been organised and efficient, with their wing-backs and back three giving them a stable platform. Villa need a sharper response from Buendía, McGinn and Jackson and cannot rely on reputation to create chances. The visitors have the technical ceiling to change the game, but current form and availability make the matchup substantially tighter than the names alone suggest.
 
 **Prediction:** Aston Villa to win
 **Odds:** 1.87
 
-### Sources / Statistical Provenance
 
-The Statistical Core prioritises the HOME split of the host and AWAY split of the visitor available before this fixture. Any old cell that depended only on a league, competition or cross-competition fallback has been removed from the promoted version rather than presented as exact venue data. Public match previews and lineup sources are used only for the claims they can support.
 `
   ],
   "analysisFormat": "markdown",
@@ -115,6 +105,7 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
   },
   "published": true,
   "publishedAt": "2026-09-01T12:00:00-03:00",
+  "updatedAt": "2026-09-04T18:45:00-03:00",
   "sourceStatus": "verified",
   sources: [
     {
@@ -152,6 +143,12 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
         "url": "https://www.sportsmole.co.uk/football/aston-villa/",
         "description": "Recent Villa form and squad context.",
         "accessedAt": "2026-09-03T08:50:00-03:00"
+    }
+    ,{
+        "name": "Sports Mole — Hull City vs Aston Villa team news (04 Sep 2026)",
+        "url": "https://www.sportsmole.co.uk/football/hull-city/team-news/hull-vs-aston-villa-injury-suspension-list-predicted-xis_604340.html",
+        "description": "Latest match-specific injuries, availability and predicted lineups reviewed on 04/09/2026.",
+        "accessedAt": "2026-09-04T18:30:00-03:00"
     }
 ],
   matchInfo: {

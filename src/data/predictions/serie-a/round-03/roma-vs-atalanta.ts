@@ -11,12 +11,13 @@ export const romaVsAtalanta: EditorialPrediction = {
     `# Roma vs Atalanta Prediction, Odds and Match Analysis
 
 **Prediction:** Roma or Draw (1X) + Over 1.5 Goals
-**Odds:** 1.62
+**Odds:** 1.53
 
 ### Match Information
 
 **Competition:** Serie A
 **Date:** 2026-09-05
+**Updated:** 2026-09-04
 **Kickoff:** 20:45 local time
 **Round:** Matchweek 3
 **Venue:** Stadio Olimpico
@@ -27,13 +28,11 @@ Roma have started with a dominant home performance, while Atalanta's current-sea
 
 ### Team News and Probable Lineups
 
-**Availability:** Roma are assessing Pellegrini, Rensch and Ndicka, with Ndicka considered unlikely after his warm-up injury before Lecce. Atalanta remain without Hien and Kamaldeen Sulemana.
+**Availability:** Roma are monitoring Evan Ndicka after his minor knee problem, with Leonardo Balerdi available as a defensive alternative. Atalanta's injury list includes Thomas Kristensen, Isak Hien and Kamaldeen Sulemana. No new league suspension affects either projected XI.
 
-**Suspensions / eligibility:** Gazzetta lists no suspended player for either Roma or Atalanta.
+**Probable lineups:** **Roma (3-4-2-1):** Svilar; Mancini, Balerdi, Hermoso; Molina, Koné, Cristante, Wesley; Dybala, Mora; Malen. **Atalanta (4-3-3):** Carnesecchi; Zappacosta, Kossounou, Scalvini, Bernasconi; Ederson, Gaetano, Samardžić; De Ketelaere, Scamacca, Rowe.
 
-**Probable lineups:** **Roma (3-4-1-2):** Svilar; Ghilardi, Mancini, Hermoso; Lulli, Cristante, Koné, Wesley; Mora; Dybala, Malen. **Atalanta (4-3-3):** Carnesecchi; Zappacosta, Kossounou, Scalvini, Bernasconi; Samardžić (Pašalić), Gaetano, Ederson; De Ketelaere, Scamacca, Raspadori.
-
-These are probable, not confirmed. The official matchday teamsheet overrides every projection.
+Roma can still adjust the back three depending on Ndicka's final assessment, while Atalanta's late-window additions increase the options around the front line. These remain probable XIs until the official matchday teamsheets.
 
 ### HOME/AWAY Analysis
 
@@ -75,7 +74,7 @@ Roma's current HOME line is emphatic: **4.00 goals**, **3.10 xG** and eight shot
 
 Roma's current HOME line is emphatic: **4.00 goals**, **3.10 xG** and eight shots on target from the available match. Atalanta's 18-match prior-season AWAY reference was much more balanced at 1.39 goals, 1.27 xG and 1.28 xGA per game. The different sample windows matter: Roma's side is current but tiny, while Atalanta's is older but substantially larger.
 
-The core is descriptive evidence, not a probability model. With one-match venue samples in most of this round, finishing, opponent strength and game state can move the numbers sharply. The table is used to identify the matchup rather than to claim statistical certainty.
+The table is descriptive evidence rather than a stand-alone forecast. With one-match venue samples in most of this round, finishing, opponent strength and game state can move the numbers sharply. The table is used to identify the matchup rather than to claim statistical certainty.
 
 ### Tactical Matchup and Game State
 
@@ -85,7 +84,7 @@ Roma can attack through Dybala and Mora between the lines, with Wesley stretchin
 
 The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: The samples are not symmetrical, which is the main statistical limitation. Roma's opening home performance may overstate their normal finishing level, while Atalanta's older away sample can understate tactical changes under the current staff. Roma's defensive availability around Ndicka also matters against Scamacca and the runners around him.
 
-The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
+The evidence is mixed rather than unanimous, so the counter-signals remain part of the match assessment.
 
 ### Risks and Limitations
 
@@ -95,25 +94,20 @@ Most current-season HOME/AWAY samples contain only one league match. Where a cur
 
 ### Market Price Context
 
-Implied probability = 1 / decimal odds. At 1.62, 1 / 1.62 = 0.617, or approximately **61.7%** before bookmaker margin. This is only the raw price-derived break-even reference; it is not a PSP fair probability.
+At odds of **1.53**, the raw implied probability is **1 / 1.53 = 65.4%** before bookmaker margin. This is the break-even level embedded in the decimal price, not a forecast generated from the match data. The **market price** should be considered alongside the HOME/AWAY sample, current availability and tactical matchup rather than in isolation.
 
 ### Conclusion
 
 Roma's home start supports the protection of the 1X leg, while Atalanta's prior-season away numbers still show enough attacking production to keep two total goals realistic. The market works best if Roma control the first phase but Atalanta remain active enough to prevent a low-event match.
 
 **Prediction:** Roma or Draw (1X) + Over 1.5 Goals
-**Odds:** 1.62
-
-### Sources / Statistical Provenance
-
-The Statistical Core comes from the verified editorial dataset supplied for this fixture and keeps HOME and AWAY reference windows explicit. Current lineup, injury and suspension information is cross-checked against the latest Serie A probable-lineup reporting before publication.
-`
+**Odds:** 1.53`
   ],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {
     main: "Roma or Draw (1X) + Over 1.5 Goals",
-    publishedOdds: 1.62,
+    publishedOdds: 1.53,
     oddsProvenance: {
       source: "Author-supplied approved editorial package",
       provenance: "author_attested",
@@ -143,6 +137,7 @@ The Statistical Core comes from the verified editorial dataset supplied for this
     }
 ],
   publishedAt: "2026-08-31T12:00:00.000Z",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   published: true,
   matchInfo: {
     date: "2026-09-05",

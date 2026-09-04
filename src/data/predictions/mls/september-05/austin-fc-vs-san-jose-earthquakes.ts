@@ -103,6 +103,7 @@ San Jose Earthquakes arrive with the stronger venue results, but the underlying 
     },
   },
   publishedAt: "2026-09-04T09:55:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   published: true,
   sourceStatus: "verified",
   sources: [

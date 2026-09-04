@@ -100,6 +100,7 @@ The final position preserves the original published market and price. The analys
   },
   published: true,
   publishedAt: "2026-08-30T12:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [{ name: "OpenFootball — Eredivisie 2026/27 fixtures", url: "https://raw.githubusercontent.com/openfootball/europe/refs/heads/master/netherlands/2026-27_nl1.txt", description: "Season fixture data supporting the competition, round, date, home team and away team used for publication.", accessedAt: "2026-08-30T12:00:00-03:00" }],
   matchInfo: { date: "2026-09-05", time: "16:30", round: "Matchweek 5", venue: "Goffertstadion" },

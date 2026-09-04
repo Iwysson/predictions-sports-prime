@@ -11,12 +11,13 @@ export const fiorentinaVsTorino: EditorialPrediction = {
     `# Fiorentina vs Torino Prediction, Odds and Match Analysis
 
 **Prediction:** Over 1.5 Goals + Over 6.5 Corners
-**Odds:** 1.78
+**Odds:** 1.65
 
 ### Match Information
 
 **Competition:** Serie A
 **Date:** 2026-09-05
+**Updated:** 2026-09-04
 **Kickoff:** 15:00 local time
 **Round:** Matchweek 3
 **Venue:** Stadio Artemio Franchi
@@ -27,13 +28,11 @@ Both sides arrive under early pressure. Fiorentina have produced more attacking 
 
 ### Team News and Probable Lineups
 
-**Availability:** Fiorentina are without Parisi. Torino are monitoring Israel, Pellegri and Casadei. Fiorentina also have several attacking selection decisions after two defeats, while Torino remain under pressure for their first points.
+**Availability:** Fiorentina's confirmed absentee is Fabiano Parisi, while Arthur Atta remains a selection doubt. Torino's latest projected squad has Cesare Casadei as a doubt; no new suspension affects either expected XI.
 
-**Suspensions / eligibility:** Gazzetta lists no suspended player for either Fiorentina or Torino.
+**Probable lineups:** **Fiorentina (4-3-2-1):** De Gea; João Mário, Drăgușin, Ranieri, Valdepeñas; Ndour, Fagioli, Atta; Mastantuono, Njie; Pellegrino. **Torino (3-4-2-1):** Perri; Comuzzo, Coco, Cömert; Belghali, Fitz-Jim, Mandragora, Cacciamani; Vlašić, Adams; Simeone.
 
-**Probable lineups:** **Fiorentina (4-3-2-1):** De Gea; Jiménez (João Mário), Drăgușin, Ranieri (Pongračić), Valdepeñas; Ndour, Oulai, Fagioli; Mastantuono, Atta; Pellegrino (Beto). **Torino (3-4-2-1):** Perri; Comuzzo, Ismajli, Cömert; Belghali, Mandragora, Fitz-Jim, Fortini; Vlašić, Adams; Simeone.
-
-These are probable, not confirmed. The official matchday teamsheet overrides every projection.
+The projections reflect the 4 September team-news update and remain provisional until the official teamsheets are released.
 
 ### HOME/AWAY Analysis
 
@@ -73,7 +72,7 @@ Fiorentina's HOME sample produced **25.0 shots** and 2.28 xG despite failing to 
 
 Fiorentina's HOME sample produced **25.0 shots** and 2.28 xG despite failing to score, while Torino's AWAY split allowed **19.0 shots** and 2.13 xGA. The home side also generated eight corners. Torino's own 1.12 away xG and one away goal prevent the analysis from becoming one-sided, but the volume profile supports a match with repeated final-third actions.
 
-The core is descriptive evidence, not a probability model. With one-match venue samples in most of this round, finishing, opponent strength and game state can move the numbers sharply. The table is used to identify the matchup rather than to claim statistical certainty.
+The table is descriptive evidence rather than a stand-alone forecast. With one-match venue samples in most of this round, finishing, opponent strength and game state can move the numbers sharply. The table is used to identify the matchup rather than to claim statistical certainty.
 
 ### Tactical Matchup and Game State
 
@@ -83,7 +82,7 @@ Fiorentina should try to occupy the half-spaces with Mastantuono and Atta behind
 
 The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: Fiorentina have already shown that high xG and shot volume do not guarantee goals. Torino can also slow the game with a back three and protect central space. The corner component is more robust than a high-goal projection, but the sample remains only one HOME match and one AWAY match.
 
-The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
+The evidence is mixed rather than unanimous, so the counter-signals remain part of the match assessment.
 
 ### Risks and Limitations
 
@@ -93,25 +92,20 @@ Most current-season HOME/AWAY samples contain only one league match. Where a cur
 
 ### Market Price Context
 
-Implied probability = 1 / decimal odds. At 1.78, 1 / 1.78 = 0.562, or approximately **56.2%** before bookmaker margin. This is only the raw price-derived break-even reference; it is not a PSP fair probability.
+At odds of **1.65**, the raw implied probability is **1 / 1.65 = 60.6%** before bookmaker margin. This is the break-even level embedded in the decimal price, not a forecast generated from the match data. The **market price** should be considered alongside the HOME/AWAY sample, current availability and tactical matchup rather than in isolation.
 
 ### Conclusion
 
 The strongest evidence is Fiorentina's ability to generate shots and corners at home against a Torino away defence already allowing volume. The goal threshold remains conservative at two, while the corner threshold sits below Fiorentina's opening home output alone.
 
 **Prediction:** Over 1.5 Goals + Over 6.5 Corners
-**Odds:** 1.78
-
-### Sources / Statistical Provenance
-
-The Statistical Core comes from the verified editorial dataset supplied for this fixture and keeps HOME and AWAY reference windows explicit. Current lineup, injury and suspension information is cross-checked against the latest Serie A probable-lineup reporting before publication.
-`
+**Odds:** 1.65`
   ],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {
     main: "Over 1.5 Goals + Over 6.5 Corners",
-    publishedOdds: 1.78,
+    publishedOdds: 1.65,
     oddsProvenance: {
       source: "Author-supplied approved editorial package",
       provenance: "author_attested",
@@ -141,6 +135,7 @@ The Statistical Core comes from the verified editorial dataset supplied for this
     }
 ],
   publishedAt: "2026-08-31T12:00:00.000Z",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   published: true,
   matchInfo: {
     date: "2026-09-05",

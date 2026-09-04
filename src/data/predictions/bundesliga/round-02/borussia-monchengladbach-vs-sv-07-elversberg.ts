@@ -9,7 +9,7 @@ export const borussiaMonchengladbachVsSv07Elversberg: EditorialPrediction = {
     `# Borussia Mönchengladbach vs SV 07 Elversberg Prediction, Odds and Match Analysis
 
 **Prediction:** Borussia Mönchengladbach to Win
-**Odds:** 1.62
+**Odds:** 1.92
 
 ### Match Information
 
@@ -17,6 +17,7 @@ export const borussiaMonchengladbachVsSv07Elversberg: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 15:30 local time
 **Round:** Matchday 2
+**Updated:** 2026-09-04
 **Venue:** Borussia-Park
 
 ### Match Context
@@ -72,51 +73,40 @@ Borussia Mönchengladbach's HOME reference shows **1.41 points per game** and **
 
 ### Tactical Matchup and Game State
 
-Borussia Mönchengladbach should try to turn the HOME advantages in the core into sustained territorial pressure, while SV 07 Elversberg will look for transition space when the host commits numbers forward. The first goal is the main game-state hinge because it can either reinforce the venue pattern or force the trailing side into a more open structure.
+Gladbach can stretch Elversberg through Honorat and Hack, with Stöger supplying passes between the lines and Kleindienst occupying the centre-backs. Elversberg’s Petkov and Campbell offer counterattacking speed, so Gladbach’s double pivot must protect the spaces left when the full-backs advance. Elversberg will be most comfortable if the game stays level and they can defend in a compact mid-block.
 
 ### Conflict Detector
 
-The supporting case comes from the venue-specific process above. The main counter-signal is also retained: The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. At least one row is explicitly a 2. Bundesliga reference and is not treated as equal-strength Bundesliga evidence.
+Mönchengladbach hold the stronger top-flight HOME profile, but Elversberg’s promotion momentum and willingness to play through pressure make this less straightforward than the division gap suggests. A slow home start or an early transition conceded would materially change the expected game state.
 
-This opposing evidence materially limits confidence and remains part of the final sporting assessment.
+### Market Context
 
-### Risks and Limitations
-
-The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. At least one row is explicitly a 2. Bundesliga reference and is not treated as equal-strength Bundesliga evidence. Current availability is based on the Bundesliga's official Matchday 2 update and remains subject to late training changes.
-
-### Odds + Implied Probability
-
-At published odds of **1.62**, the raw implied probability is **61.7%** because **1 / 1.62 = 0.617**, before bookmaker margin.
-
-### Value Assessment
-
-The price is assessed against the full evidence set. The selection is attractive only if the combined HOME/AWAY process, current availability and expected game state support a probability above the market's raw **61.7%** threshold; otherwise the price should be regarded as fair rather than automatically valuable.
+At odds of **1.92**, the raw implied probability is **1 / 1.92 = 52.1%**. This is the probability embedded in the quoted market price before bookmaker margin and should not be treated as a model prediction. Any value in the selection depends on whether Mönchengladbach can convert their home territorial advantage into enough clear chances against an Elversberg side that may be comfortable attacking space.
 
 ### Conclusion
 
-The original market and odds remain coherent with the documented venue process and the current team-news picture, while the counter-signals above define the principal ways the selection can fail.
+Gladbach have the personnel to establish width and box presence at Borussia-Park, but Elversberg arrive with enough pace behind the ball to make uncontrolled possession dangerous. The hosts’ ability to move the defensive block before finding Kleindienst is more important than simply accumulating the ball.
 
 **Prediction:** Borussia Mönchengladbach to Win
-**Odds:** 1.62
+**Odds:** 1.92
 
-### Sources / Statistical Provenance
 
-The Statistical Core preserves the verified reference window already attached to this fixture. Current probable lineups, injuries, doubts and suspensions are cross-checked against the Bundesliga's official Matchday 2 team-news update. Fixture identity and kickoff information are cross-checked against the official Bundesliga schedule.
 `
   ],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {
     main: "Borussia Mönchengladbach to Win",
-    publishedOdds: 1.62,
+    publishedOdds: 1.92,
     oddsProvenance: {
-      source: "Supplied 20-analysis publication package",
+      source: "PSP author-supplied publication selection — updated 04/09/2026",
       provenance: "author_attested",
       market: "Borussia Mönchengladbach to Win"
     }
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [
     {

@@ -16,23 +16,28 @@ export const nottinghamForestVsTottenhamHotspur: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 15:00
 **Round:** Matchweek 3
+**Updated:** 2026-09-04
 **Venue:** City Ground
 
 ### Match Context
 
-Forest earned their first point with a 2-2 draw at Liverpool, while Tottenham have lost both league matches without scoring. That makes the published over market less obvious than the team names suggest. The deeper venue data offer a possible route: Forest's home shot volume is healthy and Tottenham's away defensive profile allows enough chance quality, but Spurs' own away attack has been modest.
+Nottingham Forest took their first point of the season in a 2-2 draw at Liverpool, twice seeing a lead cancelled out. Tottenham arrive under greater pressure after consecutive defeats and no league goal in their opening two matches, the latest a 2-0 loss to Newcastle. Forest have looked more dangerous when they can release Gibbs-White and Ndoye behind the striker, while Spurs are still searching for a settled attacking combination under Roberto De Zerbi.
 
 ### Team News and Probable Lineups
 
-**Availability:** Morgan Gibbs-White is available and remains Forest's main creative reference. Ibrahim Sangaré has been unavailable. Forest can also integrate Daniel Muñoz after his late-window arrival. Tottenham's attacking selection remains unsettled after two goalless league defeats, so the latest league XI is used as the baseline rather than a speculative overhaul.
+**Availability:** Forest are without Nicolò Savona (knee), while Ibrahim Sangaré is a doubt with a calf problem. Daniel Muñoz is available after his late-window move and is in contention to start at right wing-back. Tottenham are without Wilson Odobert and Xavi Simons because of knee injuries; Dejan Kulusevski is not yet considered ready to start after returning to training. Savio (muscle) and James Maddison (shoulder) are doubts.
 
-**Suspensions / eligibility:** No confirmed league suspension was identified in the current match-specific sources. The projected XI therefore changes only for injury/availability and recent selection evidence.
+**Suspensions / eligibility:** No match-specific league suspension was listed in the latest 4 September team news.
 
-**Probable lineups:** **Nottingham Forest (3-4-2-1):** Sels; Jair Cunha, Milenković, Murillo; Daniel Muñoz, Schlager, McAtee, Neco Williams; Gibbs-White, Ndoye; Igor Jesus. **Tottenham Hotspur (4-2-3-1):** Kinský; Archie Gray, Van Hecke, Van de Ven, Robertson; Bentancur, Tonali; Pedro Porro, Mateus Fernandes, Mathys Tel; Marmoush. These are probable, not confirmed.
+**Probable lineups:** **Nottingham Forest (3-4-2-1):** Sels; Milenković, Jair Cunha, Murillo; Daniel Muñoz, Schlager, McAtee, Neco Williams; Gibbs-White, Ndoye; Igor Jesus. **Tottenham Hotspur (4-2-3-1):** Kinský; Archie Gray, Van Hecke, Van de Ven, Robertson; Tonali, Bentancur; Pedro Porro, Mateus Fernandes, Mathys Tel; Marmoush. These are probable rather than confirmed XIs.
 
 ### HOME/AWAY Analysis
 
-Forest average **15.0 home shots per game** and **1.47 home xG**, while Tottenham's away xGA is 1.41. Spurs create only 1.07 away xG and 10.26 shots, so the three-goal case needs either Forest to do most of the scoring or Tottenham's attack to improve from its current-season start. Old fallback cells for possession and corners are removed rather than used as false venue precision.
+The current venue table is based on one league match each. Forest’s first home game ended without a goal despite 12 shots and 0.71 xG, but they limited the opponent to 0.55 xGA. Tottenham’s first away game was much more damaging: 0 goals, 0.72 xG and 3.76 xGA. The contrast is notable, but one fixture cannot establish a reliable home or away rate.
+
+### Current Form and Matchup
+
+Forest arrive with one point from two games after recovering some attacking rhythm in a 2-2 draw at Liverpool. Tottenham have lost both league matches without scoring, leaving Roberto De Zerbi searching for a more functional attacking combination. Forest have also won the last four meetings between the clubs, which matters less as a prediction than as evidence that their compact shape and direct transitions have repeatedly troubled Spurs. Tottenham's urgency is therefore tactical as well as psychological: they need cleaner progression into the final third without exposing the space behind their full-backs.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -62,43 +67,28 @@ Forest average **15.0 home shots per game** and **1.47 home xG**, while Tottenha
 | Failed to score | 100% | 100% |
 ### Statistical Interpretation
 
-Forest average **15.0 home shots per game** and **1.47 home xG**, while Tottenham's away xGA is 1.41. Spurs create only 1.07 away xG and 10.26 shots, so the three-goal case needs either Forest to do most of the scoring or Tottenham's attack to improve from its current-season start. Old fallback cells for possession and corners are removed rather than used as false venue precision.
+Forest’s early results suggest a side more comfortable attacking space than controlling long spells of possession. Tottenham’s failure to score through two league matches is the clearest short-term warning against assuming an open game, although their personnel still offers pace and technical quality between the lines. With the venue sample still minimal, shot quality and game state matter more here than headline percentages.
 
 ### Tactical Matchup and Game State
 
-Forest can use Gibbs-White and the two inside attackers to exploit the spaces around Tottenham's double pivot, especially if Spurs' full-backs advance. Tottenham need cleaner progression into the final third and more support around the striker than in the first two league matches. An early goal for either side can transform the total because the trailing team will have to move away from the cautious structures seen so far.
+Forest’s 3-4-2-1 gives Gibbs-White and Ndoye freedom to receive behind Tottenham’s midfield while Muñoz and Williams provide width. Spurs need Bentancur and Tonali to progress through the first pressure cleanly and give Mateus Fernandes and Tel touches closer to Marmoush. If Tottenham’s full-backs advance together, Forest’s direct attacks into the channels become especially relevant.
 
 ### Conflict Detector
 
-Signals supporting the main scenario:
-- The strongest venue-specific process described above gives the primary analytical direction.
-- The expected game state offers a realistic route for that process to influence the published market.
+The strongest objection to a high-scoring reading is Tottenham’s blank start: two matches, two defeats and no league goal. Forest have also shown they can defend compactly for stretches. On the other hand, Forest conceded twice after taking the lead at Liverpool, so neither a low-event game nor sustained defensive control can be assumed.
 
-Counter-signals:
-- Tottenham have not scored in either league match, which is the strongest counter-signal to an over-2.5 selection. Forest have also been inconsistent at home in the larger baseline. Sangaré remains an absence concern for Forest, while Tottenham's squad is still being reshaped and the attacking XI has not settled.
-- Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
+### Market Context
 
-Assessment:
-The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
-
-### Risks and Limitations
-
-Tottenham have not scored in either league match, which is the strongest counter-signal to an over-2.5 selection. Forest have also been inconsistent at home in the larger baseline. Sangaré remains an absence concern for Forest, while Tottenham's squad is still being reshaped and the attacking XI has not settled.
-
-### Market Price Context
-
-Implied probability = 1 / decimal odds. At 2.05, 1 / 2.05 = 0.488, or approximately 48.8% before bookmaker margin. This is a raw price-derived break-even reference, not a PSP model probability and not the same as a historical HOME/AWAY frequency.
+At decimal odds of **2.05**, the raw implied probability is **1 / 2.05 = 48.8%**. That percentage reflects the quoted market price before bookmaker margin; it is a pricing reference, not a forecast or guarantee. The price should be read alongside the match data, squad availability and tactical matchup rather than in isolation.
 
 ### Conclusion
 
-Forest have enough home volume to create chances, but the total cannot be justified by Tottenham's current scoring form. The over becomes more credible if the first goal arrives early and forces Spurs to attack with more numbers; otherwise the match can remain below the required tempo.
+Forest enter with the clearer attacking rhythm, especially through Gibbs-White and the wing-backs, while Tottenham need their new-look front line to turn possession into chances rather than sterile circulation. The match can open if either side scores early, but Spurs’ goalless start remains a meaningful restraint on confidence in a high total.
 
 **Prediction:** Over 2.5 Goals
 **Odds:** 2.05
 
-### Sources / Statistical Provenance
 
-The Statistical Core prioritises the HOME split of the host and AWAY split of the visitor available before this fixture. Any old cell that depended only on a league, competition or cross-competition fallback has been removed from the promoted version rather than presented as exact venue data. Public match previews and lineup sources are used only for the claims they can support.
 `
   ],
   analysisFormat: "markdown",
@@ -107,13 +97,14 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
     main: "Over 2.5 Goals",
     publishedOdds: 2.05,
     oddsProvenance: {
-      source: "Supplied 20-analysis publication package",
+      source: "PSP author-supplied publication selection",
       provenance: "author_attested",
       market: "Over 2.5 Goals"
     }
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [
     {
@@ -151,6 +142,12 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
         "url": "https://starting11.com/premier-league/gameweek/3",
         "description": "Current predicted XI baseline.",
         "accessedAt": "2026-09-03T08:50:00-03:00"
+    }
+    ,{
+        "name": "Sports Mole — Nottingham Forest vs Tottenham team news (04 Sep 2026)",
+        "url": "https://www.sportsmole.co.uk/football/spurs/injury-news/team-news/nottingham-forest-vs-tottenham-injury-suspension-list-predicted-xis_604365.html",
+        "description": "Latest match-specific injuries, availability and predicted lineups reviewed on 04/09/2026.",
+        "accessedAt": "2026-09-04T18:30:00-03:00"
     }
 ],
   matchInfo: {

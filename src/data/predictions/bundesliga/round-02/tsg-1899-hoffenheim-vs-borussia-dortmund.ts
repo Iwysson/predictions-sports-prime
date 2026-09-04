@@ -8,8 +8,8 @@ export const tsg1899HoffenheimVsBorussiaDortmund: EditorialPrediction = {
   analysis: [
     `# TSG 1899 Hoffenheim vs Borussia Dortmund Prediction, Odds and Match Analysis
 
-**Prediction:** Hoffenheim or Draw (1X) + Over 7.5 Corners
-**Odds:** 2.02
+**Prediction:** Hoffenheim or Draw (1X)
+**Odds:** 1.67
 
 ### Match Information
 
@@ -17,6 +17,7 @@ export const tsg1899HoffenheimVsBorussiaDortmund: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 15:30 local time
 **Round:** Matchday 2
+**Updated:** 2026-09-04
 **Venue:** SNP Arena
 
 ### Match Context
@@ -72,51 +73,40 @@ TSG 1899 Hoffenheim's HOME reference shows **1.88 points per game** and **2.06 g
 
 ### Tactical Matchup and Game State
 
-Hoffenheim can attack Dortmund’s back three with two forwards and wide support, while Dortmund will look for Guirassy and the runners around him. Inácio’s suspension removes one defensive option. A Dortmund opener threatens the 1X leg but can also drive Hoffenheim’s corner volume upward.
+Hoffenheim’s front two can occupy Dortmund’s back three and create room for Daghim and Conté to attack from the second line. Dortmund will look to release Guirassy centrally while Ryerson and Beier provide width, but the absences in their defensive unit reduce continuity when Hoffenheim break the first press. Avdullahu and Burger are central to keeping the home side connected during those transitions.
 
 ### Conflict Detector
 
-The supporting case comes from the venue-specific process above. The main counter-signal is also retained: The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level.
+Hoffenheim’s home route is credible, but Dortmund still possess enough attacking quality to punish any loss of structure in transition. The main counter-signal is therefore the visitors’ ability to turn a small number of high-quality breaks into decisive chances even if Hoffenheim control more territory.
 
-This opposing evidence materially limits confidence and remains part of the final sporting assessment.
+### Market Context
 
-### Risks and Limitations
-
-The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. Current availability is based on the Bundesliga's official Matchday 2 update and remains subject to late training changes.
-
-### Odds + Implied Probability
-
-At published odds of **2.02**, the raw implied probability is **49.5%** because **1 / 2.02 = 0.495**, before bookmaker margin.
-
-### Value Assessment
-
-The price is assessed against the full evidence set. The selection is attractive only if the combined HOME/AWAY process, current availability and expected game state support a probability above the market's raw **49.5%** threshold; otherwise the price should be regarded as fair rather than automatically valuable.
+At odds of **1.67**, the raw implied probability is **1 / 1.67 = 59.9%**. This is the market-price threshold before bookmaker margin, not a direct estimate of Hoffenheim’s true chance of avoiding defeat. The value question should be considered alongside home-field dynamics, Dortmund’s transition threat and the availability picture rather than from the decimal price alone.
 
 ### Conclusion
 
-The original market and odds remain coherent with the documented venue process and the current team-news picture, while the counter-signals above define the principal ways the selection can fail.
+Hoffenheim’s opening defeat exposed defensive spaces but also showed their capacity to score and create. Dortmund bring greater individual quality in the final third, yet their defensive absences and Hoffenheim’s two-striker structure make the home side capable of turning the game into a physical, transition-heavy contest rather than allowing BVB uninterrupted control.
 
-**Prediction:** Hoffenheim or Draw (1X) + Over 7.5 Corners
-**Odds:** 2.02
+**Prediction:** Hoffenheim or Draw (1X)
+**Odds:** 1.67
 
-### Sources / Statistical Provenance
 
-The Statistical Core preserves the verified reference window already attached to this fixture. Current probable lineups, injuries, doubts and suspensions are cross-checked against the Bundesliga's official Matchday 2 team-news update. Fixture identity and kickoff information are cross-checked against the official Bundesliga schedule.
 `
   ],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {
-    main: "Hoffenheim or Draw (1X) + Over 7.5 Corners",
-    publishedOdds: 2.02,
+    main: "Hoffenheim or Draw (1X)",
+    publishedOdds: 1.67,
     oddsProvenance: {
-      source: "Supplied 20-analysis publication package",
+      source: "PSP author-supplied publication selection — updated 04/09/2026",
       provenance: "author_attested",
-      market: "Hoffenheim or Draw (1X) + Over 7.5 Corners"
+      market: "Hoffenheim or Draw (1X)"
     }
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [
     {

@@ -11,12 +11,13 @@ export const interVsNapoli: EditorialPrediction = {
     `# Inter vs Napoli Prediction, Odds and Match Analysis
 
 **Prediction:** Inter to Win
-**Odds:** 1.72
+**Odds:** 1.67
 
 ### Match Information
 
 **Competition:** Serie A
 **Date:** 2026-09-05
+**Updated:** 2026-09-04
 **Kickoff:** 18:00 local time
 **Round:** Matchweek 3
 **Venue:** Stadio Giuseppe Meazza
@@ -27,13 +28,11 @@ Inter and Napoli both arrive with maximum points from their opening HOME/AWAY re
 
 ### Team News and Probable Lineups
 
-**Availability:** Inter are monitoring Spence. Napoli remain without Buongiorno, Marianucci, McTominay and Giovane; De Bruyne is the leading midfield replacement for McTominay.
+**Availability:** Inter have no confirmed injury absence in the latest 4 September update, although Djed Spence remains outside the projected XI. Napoli are without Alessandro Buongiorno, Luca Marianucci, Scott McTominay and Giovane. There are no league suspensions for either side.
 
-**Suspensions / eligibility:** Gazzetta lists no suspended player for either Inter or Napoli.
+**Probable lineups:** **Inter (3-5-2):** Josep Martínez; Bisseck, Akanji, Bastoni; Diouf, Barella, Çalhanoğlu, Zieliński, Dimarco; Pio Esposito, Lautaro Martínez. **Napoli (4-3-3):** Meret; Di Lorenzo, Rrahmani, Rafa Marín, Spinazzola; Anguissa, Lobotka, De Bruyne; Politano, Højlund, Alisson Santos.
 
-**Probable lineups:** **Inter (3-5-2):** Josep Martínez; Pavard, Bisseck, Bastoni; Diouf, Barella, Çalhanoğlu, Zieliński (Jones), Dimarco; Pio Esposito (Thuram), Lautaro Martínez. **Napoli (4-3-3):** Meret; Di Lorenzo, Rrahmani, Rafa Marín, Spinazzola; Anguissa, Lobotka, De Bruyne; Politano, Højlund, Alisson Santos.
-
-These are probable, not confirmed. The official matchday teamsheet overrides every projection.
+Inter still have live selection calls in defence and midfield, while Pio Esposito is competing with Thuram for the second forward position. Napoli's main midfield change is De Bruyne moving into the starting picture with McTominay unavailable.
 
 ### HOME/AWAY Analysis
 
@@ -73,7 +72,7 @@ Inter's HOME split stands at **4.00 goals per game** from 13 shots, while Napoli
 
 Inter's HOME split stands at **4.00 goals per game** from 13 shots, while Napoli's AWAY reference shows a clean sheet, 0.63 xGA and only two shots on target allowed. Inter's 1.17 home xG is much lower than the four goals actually scored, an important warning against treating the opener's finishing rate as sustainable. Napoli's away xG was 0.92, so the visitors also need improvement if they are to control this match through attack alone.
 
-The core is descriptive evidence, not a probability model. With one-match venue samples in most of this round, finishing, opponent strength and game state can move the numbers sharply. The table is used to identify the matchup rather than to claim statistical certainty.
+The table is descriptive evidence rather than a stand-alone forecast. With one-match venue samples in most of this round, finishing, opponent strength and game state can move the numbers sharply. The table is used to identify the matchup rather than to claim statistical certainty.
 
 ### Tactical Matchup and Game State
 
@@ -83,7 +82,7 @@ Inter should try to pin Napoli's full-backs with the wing-backs and create overl
 
 The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: Napoli's away defensive process is the clearest counter-signal to a home-win selection. Inter's four-goal opener also overperformed xG, so the current scoreline gap is larger than the underlying chance-quality gap. One match per venue is not enough to call either pattern stable.
 
-The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
+The evidence is mixed rather than unanimous, so the counter-signals remain part of the match assessment.
 
 ### Risks and Limitations
 
@@ -93,25 +92,20 @@ Most current-season HOME/AWAY samples contain only one league match. Where a cur
 
 ### Market Price Context
 
-Implied probability = 1 / decimal odds. At 1.72, 1 / 1.72 = 0.581, or approximately **58.1%** before bookmaker margin. This is only the raw price-derived break-even reference; it is not a PSP fair probability.
+At odds of **1.67**, the raw implied probability is **1 / 1.67 = 59.9%** before bookmaker margin. This is the break-even level embedded in the decimal price, not a forecast generated from the match data. The **market price** should be considered alongside the HOME/AWAY sample, current availability and tactical matchup rather than in isolation.
 
 ### Conclusion
 
 Inter have the stronger home scoring start and more routes to create through midfield and wing-back width, but Napoli's away clean-sheet process keeps the margin narrow. The home-win case depends on Inter sustaining pressure without exposing the channels Napoli can attack in transition.
 
 **Prediction:** Inter to Win
-**Odds:** 1.72
-
-### Sources / Statistical Provenance
-
-The Statistical Core comes from the verified editorial dataset supplied for this fixture and keeps HOME and AWAY reference windows explicit. Current lineup, injury and suspension information is cross-checked against the latest Serie A probable-lineup reporting before publication.
-`
+**Odds:** 1.67`
   ],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {
     main: "Inter to Win",
-    publishedOdds: 1.72,
+    publishedOdds: 1.67,
     oddsProvenance: {
       source: "Author-supplied approved editorial package",
       provenance: "author_attested",
@@ -141,6 +135,7 @@ The Statistical Core comes from the verified editorial dataset supplied for this
     }
 ],
   publishedAt: "2026-08-31T12:00:00.000Z",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   published: true,
   matchInfo: {
     date: "2026-09-05",

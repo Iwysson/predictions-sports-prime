@@ -19,6 +19,7 @@ export const scPaderborn07VsScFreiburg: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 15:30 local time
 **Round:** Matchweek 2
+**Updated:** 2026-09-04
 **Venue:** Home Deluxe Arena
 
 ### Match Context
@@ -27,11 +28,11 @@ The useful starting point is the host's HOME reference against the visitor's AWA
 
 ### Team News and Probable Lineups
 
-**Availability:** Paderborn are without Awortwie-Grant, Eickel, Gayret, Klaas and Michel. Freiburg are without Florent Muslija and Patrick Osterhage.
+**Availability:** Paderborn are without Felix Götze (concussion), Nyamekye Awortwie-Grant (knee), Timur Gayret (ACL), Sven Michel (muscle), Sebastian Klaas (groin) and Lasse Eickel (back). Freiburg are without Florent Muslija (ACL) and Patrick Osterhage (muscle), while Rihito Yamamoto is still building match fitness.
 
 **Suspensions / eligibility:** No confirmed suspension is listed for either side.
 
-**Probable lineups:** **SC Paderborn 07 (3-4-3):** Noll; ter Horst, Scheller, Hansen; Curda, Ulrich, Castaneda, Obermair; Marino, Pieringer, Vidović. **SC Freiburg (4-2-3-1):** Backhaus; Treu, Ginter, Rosenfelder, Makengo; Eggestein, Engelhardt; Beste, Suzuki, Grifo; Matanović.
+**Probable lineups:** **SC Paderborn 07 (3-4-3):** Noll; ter Horst, Scheller, Hansen; Curda, Ulrich, Castaneda, Obermair; Marino, Pieringer, Vidović. **SC Freiburg (4-2-3-1):** Backhaus; Treu, Lienhart, Ginter, Makengo; Engelhardt, Eggestein; Beste, Suzuki, Scherhant; Matanović.
 
 These are probable rather than confirmed. The official teamsheet, normally released around one hour before kickoff, overrides every projection.
 
@@ -74,36 +75,24 @@ SC Paderborn 07's HOME reference shows **1.94 points per game** and **1.88 goals
 
 ### Tactical Matchup and Game State
 
-SC Paderborn 07 should try to turn the HOME advantages in the core into sustained territorial pressure, while SC Freiburg will look for transition space when the host commits numbers forward. The first goal is the main game-state hinge because it can either reinforce the venue pattern or force the trailing side into a more open structure.
+Paderborn’s back three and wing-backs can keep the penalty area crowded, but their midfield absences reduce rotation options when Freiburg press. Freiburg can move Beste and Scherhant inside around Suzuki, with Matanović occupying the centre-backs and the full-backs providing the outside lane. Paderborn’s clearest attacking route is to release Marino and Vidović quickly around Pieringer before Freiburg recover their shape.
 
 ### Conflict Detector
 
-The supporting case comes from the venue-specific process above. The main counter-signal is also retained: The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. At least one row is explicitly a 2. Bundesliga reference and is not treated as equal-strength Bundesliga evidence.
+Both sides have routes to chances, but an over-goals reading is vulnerable if either team chooses a conservative early phase or if finishing underperforms the shot volume. Paderborn’s step up in opposition and Freiburg’s ability to manage possession are the clearest reasons the match could stay below its attacking indicators.
 
-This opposing evidence materially limits confidence and remains part of the final sporting assessment.
+### Market Context
 
-### Risks and Limitations
-
-The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. At least one row is explicitly a 2. Bundesliga reference and is not treated as equal-strength Bundesliga evidence. Current availability is based on the Bundesliga's official Matchday 2 update and remains subject to late training changes.
-
-### Odds + Implied Probability
-
-At published odds of **1.67**, the raw implied probability is **59.9%** because **1 / 1.67 = 0.599**, before bookmaker margin.
-
-### Value Assessment
-
-The price is assessed against the full evidence set. The selection is attractive only if the combined HOME/AWAY process, current availability and expected game state support a probability above the market's raw **59.9%** threshold; otherwise the price should be regarded as fair rather than automatically valuable.
+At odds of **1.67**, the raw implied probability is **1 / 1.67 = 59.9%**. This is the threshold contained in the decimal market price before bookmaker margin, not a forecast that three or more goals will occur. The value of the over should be judged against the underlying shot creation, defensive exposure and likely game state for this specific matchup.
 
 ### Conclusion
 
-The original market and odds remain coherent with the documented venue process and the current team-news picture, while the counter-signals above define the principal ways the selection can fail.
+Paderborn showed defensive resilience in a goalless opening draw, but Freiburg arrive after a 4-1 league win and have produced goals across domestic and European fixtures. The hosts can make the game uncomfortable through compact defending, while Freiburg’s variety around Suzuki and Matanović gives them several ways to attack a low block.
 
 **Prediction:** Over 2.5 Goals
 **Odds:** 1.67
 
-### Sources / Statistical Provenance
 
-The Statistical Core preserves the verified reference window already attached to this fixture. Current probable lineups, injuries, doubts and suspensions are cross-checked against the Bundesliga's official Matchday 2 team-news update. Fixture identity and kickoff information are cross-checked against the official Bundesliga schedule.
 `
   ],
   analysisFormat: "markdown",
@@ -139,6 +128,7 @@ The Statistical Core preserves the verified reference window already attached to
     }
 ],
   publishedAt: "2026-08-31T12:00:00.000Z",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   published: true,
   matchInfo: {
     date: "2026-09-05",

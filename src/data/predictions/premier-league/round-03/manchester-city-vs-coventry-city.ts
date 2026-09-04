@@ -16,23 +16,28 @@ export const manchesterCityVsCoventryCity: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 15:00
 **Round:** Matchweek 3
+**Updated:** 2026-09-04
 **Venue:** Etihad Stadium
 
 ### Match Context
 
-Manchester City have opened with two wins and followed the narrow home victory over Bournemouth with a 4-1 win at Crystal Palace. Coventry have lost both matches and are yet to score. The current result gap is already large before considering City's deeper HOME baseline, but promoted-team comparisons must be handled carefully because Coventry's old core included Championship structural values that are not directly equivalent to Premier League away data.
+Manchester City have opened the post-Guardiola league era with maximum points, beating Bournemouth 2-1 before a 4-1 win at Crystal Palace in which Rayan Cherki and Erling Haaland both scored twice. Coventry have lost their first two Premier League matches without scoring. The difference in attacking depth is obvious, but Coventry’s likely five-man defensive line means City may have to work through a crowded penalty-area block rather than simply attack open space.
 
 ### Team News and Probable Lineups
 
-**Availability:** Manchester City can use deadline-day signings Enzo Fernández and Iliman Ndiaye, while Jeremy Doku and Matheus Nunes are the main current injury concerns. Coventry are monitoring Frank Onyeka after a hip problem and Sidiki Cherif's fitness; Haji Wright remains out. Stephen Mfuni is ineligible against his parent club.
+**Availability:** Manchester City are without Jeremy Doku because of a calf injury, while Matheus Nunes is doubtful with a muscle problem. Deadline-day arrivals Enzo Fernández and Iliman Ndiaye are fit and available, giving City additional midfield control and another direct attacking option from the bench or starting XI. Coventry are without Haji Wright (thigh); Frank Onyeka is doubtful with a hip problem and Sidiki Cherif is still being assessed for match fitness.
 
-**Suspensions / eligibility:** Stephen Mfuni is ineligible against his parent club. No additional confirmed league suspension was identified in the current match-specific sources.
+**Suspensions / eligibility:** No match-specific league suspension was reported in the latest update. Coventry’s final midfield selection depends partly on Onyeka’s fitness.
 
-**Probable lineups:** **Manchester City (4-2-3-1):** Donnarumma; Khusanov, Rúben Dias, Guéhi, Gvardiol; Elliot Anderson, Enzo Fernández/Bouaddi; Foden, Cherki, Semenyo/Ndiaye; Haaland. **Coventry City (5-4-1):** Rushworth; Van Ewijk, Bobby Thomas, Amenda, Pinnock/extra centre-back, Dasilva; Tchaouna, Grimes, Rudoni, Mason-Clark; Awoniyi. These are probable, not confirmed.
+**Probable lineups:** **Manchester City (4-2-3-1):** Donnarumma; Khusanov, Rúben Dias, Guéhi, Gvardiol; Elliot Anderson, Bouaddi; Foden, Cherki, Semenyo; Haaland. **Coventry City (5-3-2):** Rushworth; Van Ewijk, Bobby Thomas, Pinnock, Amenda, Dasilva; Yirenkyi, Grimes, Rudoni; Mason-Clark, Awoniyi. These are expected XIs, not confirmed teamsheets.
 
 ### HOME/AWAY Analysis
 
-City's reliable home baseline is strong: **2.37 home goals per game** and **2.37 home points per game**, with 16.42 shots and 6.11 on target. Coventry's old file contained Championship/overall structural values for many away cells, so those are removed rather than presented as Premier League AWAY evidence. Current-season evidence still supports the direction: Coventry have zero points and zero league goals after two matches, while City have scored six.
+City’s first home league game produced 2.29 xG, 13 shots, 6 on target and 66% possession in a 2-1 win. Coventry’s first away sample was far thinner: 0.30 xG, 4 shots and 1 on target while conceding 3 goals and 2.30 xGA. The gap is substantial even before considering squad depth, although both columns still represent only one match.
+
+### Current Form and Matchup
+
+Manchester City have started with two wins, scoring six goals: a 2-1 comeback against Bournemouth at the Etihad and a 4-1 victory at Crystal Palace. Coventry have lost both of their opening league matches and are yet to score, including a 1-0 home defeat to Hull last weekend. This is the first competitive meeting between the clubs since March 2002, so recent head-to-head data has little relevance. The useful comparison is structural: City are already generating high shot volume and sustained final-third possession, while Coventry's first away sample showed difficulty escaping pressure and producing shots from advanced positions.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -62,43 +67,28 @@ City's reliable home baseline is strong: **2.37 home goals per game** and **2.37
 | Failed to score | 0% | 100% |
 ### Statistical Interpretation
 
-City's reliable home baseline is strong: **2.37 home goals per game** and **2.37 home points per game**, with 16.42 shots and 6.11 on target. Coventry's old file contained Championship/overall structural values for many away cells, so those are removed rather than presented as Premier League AWAY evidence. Current-season evidence still supports the direction: Coventry have zero points and zero league goals after two matches, while City have scored six.
+City have already scored six league goals in two matches. Their first home fixture produced 13 shots, six on target, 2.29 xG and eight corners, while Coventry’s first away game yielded only four shots, one on target and 0.30 xG. The contrast is not only finishing: City are sustaining attacks, recovering second balls high and creating from both central combinations and wide overloads rather than depending exclusively on Haaland. Coventry’s first priority is likely to be spacing: keeping the back five connected to midfield and preventing Cherki or Foden from receiving freely between the lines. If that block is forced deeper, second balls and cut-backs become increasingly difficult to defend for ninety minutes.
 
 ### Tactical Matchup and Game State
 
-City should dominate the ball and force Coventry into a very deep block. The main question is how quickly Maresca's side can create central access rather than simply circulating around the box. Coventry may use a five-man defensive line and look for Awoniyi or Cherif in direct transitions. An early City goal is especially important for the handicap because it forces Coventry to choose between defending even deeper or taking more transition risk.
+City will try to pin Coventry’s back five with Haaland occupying the central defenders while Cherki and Foden receive between midfield and defence. Gvardiol and Khusanov can keep the width or step inside depending on the phase, allowing Anderson and Bouaddi to hold the second line and recycle possession around the box. Coventry’s midfield three need to stay close enough to the defence to deny those pockets without leaving every clearance uncontested. Their attacking opportunities are likely to come from Mason-Clark and Awoniyi turning isolated recoveries into territory before City’s rest defence is organised.
 
 ### Conflict Detector
 
-Signals supporting the main scenario:
-- The strongest venue-specific process described above gives the primary analytical direction.
-- The expected game state offers a realistic route for that process to influence the published market.
+Coventry’s most credible route is to compress the central zone, defend crosses with numbers and keep the match scoreless for as long as possible. Coventry can reduce the number of possessions by defending deep and slowing restarts, while an early City lead could also lead to game management rather than continuous attacking risk. The visitors’ lack of a league goal is concerning, but it may encourage an even more conservative setup.
 
-Counter-signals:
-- The -1.5 line requires margin, not just victory. Coventry's promoted-team sample is too small for a reliable Premier League AWAY profile, and a long 0-0 would materially reduce handicap value. City have Jeremy Doku and Matheus Nunes as injury concerns, while Coventry are monitoring Frank Onyeka, Sidiki Cherif and long-term absentee Haji Wright.
-- Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
+### Market Context
 
-Assessment:
-The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
-
-### Risks and Limitations
-
-The -1.5 line requires margin, not just victory. Coventry's promoted-team sample is too small for a reliable Premier League AWAY profile, and a long 0-0 would materially reduce handicap value. City have Jeremy Doku and Matheus Nunes as injury concerns, while Coventry are monitoring Frank Onyeka, Sidiki Cherif and long-term absentee Haji Wright.
-
-### Market Price Context
-
-Implied probability = 1 / decimal odds. At 1.62, 1 / 1.62 = 0.617, or approximately 61.7% before bookmaker margin. This is a raw price-derived break-even reference, not a PSP model probability and not the same as a historical HOME/AWAY frequency.
+At decimal odds of **1.62**, the raw implied probability is **1 / 1.62 = 61.7%**. That percentage reflects the quoted market price before bookmaker margin; it is a pricing reference, not a forecast or guarantee. The price should be read alongside the match data, squad availability and tactical matchup rather than in isolation.
 
 ### Conclusion
 
-City have the clearer route to sustained pressure, more shots and higher-quality chances. Coventry's lack of current Premier League attacking output supports the direction, but the two-goal margin still depends on City converting territorial dominance early enough to prevent a low-tempo exercise in control.
+City should dominate the ball and spend most of the afternoon around Coventry’s defensive third. The key question is not whether the hosts can establish territory, but how efficiently they turn that control into clear chances against a back five. Coventry need disciplined spacing, clean set-piece defending and rare counterattacks to prevent the match from becoming a sustained sequence of City pressure.
 
 **Prediction:** Manchester City -1.5 Asian Handicap
 **Odds:** 1.62
 
-### Sources / Statistical Provenance
 
-The Statistical Core prioritises the HOME split of the host and AWAY split of the visitor available before this fixture. Any old cell that depended only on a league, competition or cross-competition fallback has been removed from the promoted version rather than presented as exact venue data. Public match previews and lineup sources are used only for the claims they can support.
 `
   ],
   analysisFormat: "markdown",
@@ -107,13 +97,14 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
     main: "Manchester City -1.5 Asian Handicap",
     publishedOdds: 1.62,
     oddsProvenance: {
-      source: "Supplied 20-analysis publication package",
+      source: "PSP author-supplied publication selection",
       provenance: "author_attested",
       market: "Manchester City -1.5 Asian Handicap"
     }
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [
     {
@@ -151,6 +142,12 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
         "url": "https://www.sportsmole.co.uk/football/coventry-city/predicted-lineups/onyeka-pinnock-decision-predicted-coventry-lineup-vs-man-city_604326.html",
         "description": "Current Coventry lineup and injury context.",
         "accessedAt": "2026-09-03T08:50:00-03:00"
+    }
+    ,{
+        "name": "Sports Mole — Manchester City vs Coventry team news (04 Sep 2026)",
+        "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/team-news/man-city-vs-coventry-injury-suspension-list-predicted-xis_604327.html",
+        "description": "Latest match-specific injuries, availability and predicted lineups reviewed on 04/09/2026.",
+        "accessedAt": "2026-09-04T18:30:00-03:00"
     }
 ],
   matchInfo: {

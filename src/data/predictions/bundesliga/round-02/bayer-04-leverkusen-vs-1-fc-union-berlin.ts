@@ -9,7 +9,7 @@ export const bayer04LeverkusenVs1FcUnionBerlin: EditorialPrediction = {
     `# Bayer 04 Leverkusen vs 1. FC Union Berlin Prediction, Odds and Match Analysis
 
 **Prediction:** Bayer Leverkusen to Win + Over 1.5 Goals
-**Odds:** 1.65
+**Odds:** 1.57
 
 ### Match Information
 
@@ -17,6 +17,7 @@ export const bayer04LeverkusenVs1FcUnionBerlin: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 15:30 local time
 **Round:** Matchday 2
+**Updated:** 2026-09-04
 **Venue:** BayArena
 
 ### Match Context
@@ -25,7 +26,7 @@ The useful starting point is the host's HOME reference against the visitor's AWA
 
 ### Team News and Probable Lineups
 
-**Availability:** Leverkusen are without Culbreath and Eichhorn; Ben Seghir, Doué and Terrier are doubtful. Union are without Markgraf, Nsoki and Skov, while Burke, Friedrich, Ilić and Rønnow are doubtful.
+**Availability:** Leverkusen are without Culbreath, Eichhorn and Guéla Doué; Ben Seghir and Terrier remain doubts. Union are without Markgraf, Nsoki and Skov, while Burke, Friedrich, Ilić and Rønnow are doubtful.
 
 **Suspensions / eligibility:** No confirmed suspension is listed for either side.
 
@@ -72,51 +73,40 @@ Bayer 04 Leverkusen's HOME reference shows **1.82 points per game** and **2.24 g
 
 ### Tactical Matchup and Game State
 
-Bayer 04 Leverkusen should try to turn the HOME advantages in the core into sustained territorial pressure, while 1. FC Union Berlin will look for transition space when the host commits numbers forward. The first goal is the main game-state hinge because it can either reinforce the venue pattern or force the trailing side into a more open structure.
+Leverkusen can use García and Fernández to circulate around Union’s compact midfield before accelerating through Diaby, Maza and Moreira behind Schick. Union’s two-forward structure gives them an outlet when possession is recovered, particularly if Leverkusen’s full-backs are high. The hosts therefore need territorial pressure without leaving the first defensive pass uncontested.
 
 ### Conflict Detector
 
-The supporting case comes from the venue-specific process above. The main counter-signal is also retained: The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level.
+Leverkusen have the stronger HOME attacking reference, but Union’s direct two-forward outlet and physical midfield remain the main counter-signal. If Union survive the opening pressure and keep the game compact, the hosts may be forced into a slower, less efficient attacking rhythm.
 
-This opposing evidence materially limits confidence and remains part of the final sporting assessment.
+### Market Context
 
-### Risks and Limitations
-
-The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. Current availability is based on the Bundesliga's official Matchday 2 update and remains subject to late training changes.
-
-### Odds + Implied Probability
-
-At published odds of **1.65**, the raw implied probability is **60.6%** because **1 / 1.65 = 0.606**, before bookmaker margin.
-
-### Value Assessment
-
-The price is assessed against the full evidence set. The selection is attractive only if the combined HOME/AWAY process, current availability and expected game state support a probability above the market's raw **60.6%** threshold; otherwise the price should be regarded as fair rather than automatically valuable.
+At odds of **1.57**, the raw implied probability is **1 / 1.57 = 63.7%**. That percentage is the threshold represented by the decimal market price before bookmaker margin, not a forecast of the final result. The value of the price should therefore be read together with Leverkusen’s HOME attacking indicators, Union’s AWAY defensive profile and the current team-news context.
 
 ### Conclusion
 
-The original market and odds remain coherent with the documented venue process and the current team-news picture, while the counter-signals above define the principal ways the selection can fail.
+Leverkusen carry the stronger home attacking reference and should have more sustained possession, but Union’s direct outlet and physical midfield can punish careless rest-defence. The central question is whether Leverkusen can turn territory into repeated high-quality entries without giving Union the transitions that make a compact away plan viable.
 
 **Prediction:** Bayer Leverkusen to Win + Over 1.5 Goals
-**Odds:** 1.65
+**Odds:** 1.57
 
-### Sources / Statistical Provenance
 
-The Statistical Core preserves the verified reference window already attached to this fixture. Current probable lineups, injuries, doubts and suspensions are cross-checked against the Bundesliga's official Matchday 2 team-news update. Fixture identity and kickoff information are cross-checked against the official Bundesliga schedule.
 `
   ],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {
     main: "Bayer Leverkusen to Win + Over 1.5 Goals",
-    publishedOdds: 1.65,
+    publishedOdds: 1.57,
     oddsProvenance: {
-      source: "Supplied 20-analysis publication package",
+      source: "PSP author-supplied publication selection — updated 04/09/2026",
       provenance: "author_attested",
       market: "Bayer Leverkusen to Win + Over 1.5 Goals"
     }
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [
     {

@@ -22,6 +22,7 @@ export const brannVsLillestrom: EditorialPrediction = {
   },
   "published": true,
   "publishedAt": "2026-09-02T20:30:00-03:00",
+  "updatedAt": "2026-09-04T18:45:00-03:00",
   "sourceStatus": "verified",
   "sources": [
     {

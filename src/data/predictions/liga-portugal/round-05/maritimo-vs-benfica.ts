@@ -119,6 +119,7 @@ The Statistical Core preserves the verified match-by-match venue split already s
   },
   "published": true,
   "publishedAt": "2026-09-01T12:00:00-03:00",
+  "updatedAt": "2026-09-04T18:45:00-03:00",
   "sourceStatus": "verified",
   sources: [
     {

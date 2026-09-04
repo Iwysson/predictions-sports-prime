@@ -15,27 +15,28 @@ export const lensVsLorient: EditorialPrediction = {
 
 **Competition:** Ligue 1 2026/27
 **Date:** 2026-09-05
+**Updated:** 2026-09-04
 **Kickoff:** 17:15 local time
 **Round:** Matchweek 3
 **Venue:** Stade Bollaert-Delelis
 
 ### Match Context
 
-Lens scored five in their first HOME game and return to Bollaert after an away defeat at Strasbourg. Lorient’s only AWAY reference is a 0-0 draw at Nice, so the comparison sets a high-output home sample against a low-event away sample.
+Lens return to Bollaert after a 2-1 defeat at Strasbourg, but their opening home match showed how quickly they can turn territorial pressure into chances: the 5-2 win over Auxerre produced nine shots on target from only 12 attempts. Lorient arrive after a 1-2 home loss to Troyes, while their only away league sample remains the 0-0 draw at Nice. The contrast is therefore between Lens' high-efficiency home attack and a Lorient side that has already shown it can defend deep away from home.
 
 ### Team News and Probable Lineups
 
-**Availability:** Lens are without Samson Baidoo and Jhoanner Chávez, while Jonathan Gradit is not yet fully available and Saud Abdulhamid remains doubtful. Lorient are without Bandiougou Fadiga and Formose Mendy, with Mohamed Bamba and several defensive options still under assessment.
+**Availability:** Lens remain without Samson Baidoo and Jhoanner Chávez, while Saud Abdulhamid is doubtful and Jonathan Gradit has returned to training but is not yet a secure starting option. Lorient are without Bandiougou Fadiga and Mohamed Bamba, with Junior Kadile also unavailable in the latest matchday update.
 
-**Suspensions / eligibility:** the official Matchday 3 update lists no suspension for Lens or Lorient.
+**Suspensions / eligibility:** no new league suspension affecting either projected XI was identified in the 4 September update.
 
-**Probable lineups:** **Lens (3-4-2-1):** Robin Risser; Modibo Sagnan, Pierre Ganiou, Maik Nawrocki; Mikkel Skóras, Ismaël Titraoui, Michaël Cuisance, Matthieu Udol; Florian Thauvin, Franjo Ivanović; Abdallah Sima. **Lorient (3-4-2-1):** Yvon Mvogo; Montassar Talbi, Dembo Sylla, Nathaniel Adjei; Arsène Kouassi, Noah Cadiou, Arthur Avom, Théo Le Bris; Jean-Victor Makengo, Gédéon Bernardeau; Mamadou Koné (Mohamed Bamba, doubt).
+**Probable lineups:** **Lens (3-4-2-1):** Robin Risser; Ruben Aguilar, Kyllian Antonio, Ismaëlo Ganiou; Michal Skóras, Yacine Titraoui, Michaël Cuisance, Matthieu Udol; Florian Thauvin, Franjo Ivanović; Abdallah Sima. **Lorient (3-4-2-1):** Yvon Mvogo; Montassar Talbi, Nathaniel Adjei, Dembo Sylla; Arsène Kouassi, Noah Cadiou, Arthur Avom, Théo Le Bris; Jean-Victor Makengo, Gédéon Bernardeau; Mamadou Koné.
 
-The XI is a pre-match projection. The official teamsheet released close to kickoff overrides every probable selection.
+These remain probable lineups until the official teamsheets are released.
 
 ### HOME/AWAY Analysis
 
-Lens scored five in their first HOME game and return to Bollaert after an away defeat at Strasbourg. Lorient’s only AWAY reference is a 0-0 draw at Nice, so the comparison sets a high-output home sample against a low-event away sample.
+Lens' only current home league sample was the 5-2 win over Auxerre, while Lorient's only away sample was the 0-0 draw at Nice. That produces an extreme contrast in goals, but the underlying split is more useful: Lens generated 3.81 xG and nine shots on target; Lorient generated 1.49 xG but only two shots on target. Both samples remain N=1.
 
 ### Statistical Core Predictions-Sports-Prime
 | Metric | Lens — 2026/27 HOME (N=1) | Lorient — 2026/27 AWAY (N=1) |
@@ -65,45 +66,36 @@ Lens scored five in their first HOME game and return to Bollaert after an away d
 
 ### Statistical Interpretation
 
-The venue split matters because the host and visitor have not produced the same type of game. **The current Statistical Core must be read with its sample size visible**: several columns contain only one 2026/27 league match, while any older fallback is labelled in the table instead of being presented as current-season data.
+The venue samples are still only one match each, so the extreme percentages should not be treated as stable rates. Lens' first home game produced **3.81 xG and 9 shots on target**, while Lorient's first away match generated **1.49 xG but only 2 shots on target**. That difference says more about shot quality and penalty-area access than the raw scorelines alone.
 
-Lens should use Thauvin and Ivanović behind Sima to occupy the half-spaces while Udol and Skóras stretch Lorient’s back five. Lorient’s best route is to absorb pressure and counter through the wing-backs. The first goal is decisive: if Lens lead, Lorient must leave their compact shell and the over-1.5 component becomes much easier to reach.
+Lens should be able to create width through Skóras and Udol while Thauvin and Ivanović work between Lorient's midfield and back line. Lorient's route is narrower: defend the box, keep the wing-backs connected to the back three and use Makengo or Bernardeau to launch counters before Lens reset.
 
 ### Tactical Matchup and Game State
 
-Lens should use Thauvin and Ivanović behind Sima to occupy the half-spaces while Udol and Skóras stretch Lorient’s back five. Lorient’s best route is to absorb pressure and counter through the wing-backs. The first goal is decisive: if Lens lead, Lorient must leave their compact shell and the over-1.5 component becomes much easier to reach.
+Lens can create overloads by letting Thauvin and Ivanović drift inside while Skóras and Udol hold the width. That shape can pin Lorient's wing-backs and make clearances difficult to sustain. Lorient need the first pass after recovery to be clean; otherwise they risk defending consecutive attacks with little time to reset. If Lorient score first, the game can stay compact. If Lens lead, the visitors will have to open spaces that are better suited to Lens' attacking rotations.
 
 ### Conflict Detector
 
-The supporting case comes from the HOME/AWAY process, but the counter-signal is material rather than cosmetic. Lorient kept a clean sheet in their only AWAY sample and allowed just one shot on target, so their defensive game plan has already worked once. Lens’ five-goal opener also came from a one-match sample and should not be extrapolated as a normal scoring rate.
-
-That conflict is part of the match analysis and limits confidence where the market requires more than one condition to land.
+Lorient's away clean sheet at Nice is the clearest counter-signal. They allowed 14 shots but only one on target, showing that a low block can reduce the quality of the opponent's final action even when territory is conceded. Lens' five-goal home opener is also a one-match sample, so that finishing rate cannot be treated as normal. The home side carries the stronger attacking profile, but Lorient have already shown a credible route to making the game slower and less efficient.
 
 ### Risks and Limitations
 
-Lorient kept a clean sheet in their only AWAY sample and allowed just one shot on target, so their defensive game plan has already worked once. Lens’ five-goal opener also came from a one-match sample and should not be extrapolated as a normal scoring rate.
-
-Early-season venue samples can move sharply after a single match. Injuries, transfers and tactical changes also mean prior-season fallback data should be treated as context, not as a current-form substitute.
+Both HOME/AWAY columns contain only one current-season match, so a single new result will materially change the rates. Lens also have defensive availability issues, while Lorient's deeper block can reduce the number of clean chances if the game remains level for a long period.
 
 ### Odds + Implied Probability
 
-At decimal odds **1.72**, the raw implied probability is **58.1%** because **1 / 1.72 = 0.581**, before bookmaker margin.
+At decimal odds **1.72**, the raw implied probability is **58.1%**, because **1 / 1.72 = 0.581**, before bookmaker margin. This is the break-even level contained in the quoted price, not a match forecast.
 
 ### Value Assessment
 
-The price is acceptable only if the sporting evidence supports a probability above that raw **58.1%** break-even point. No artificial fair-odds model is inserted here: the value judgment remains conditional on the HOME/AWAY process, availability, lineup uncertainty and expected game state.
+The **market price** should be read alongside the venue sample, current availability and tactical matchup. With only two league rounds completed, the statistical evidence is still too limited for the price alone to be treated as proof of value.
 
 ### Conclusion
 
-Lens have the stronger attacking process, home result and first-goal signal, while Lorient’s away clean sheet is the main counterweight. The home-win plus two-goal threshold is coherent if Lens establish territorial control early.
+Lens have the stronger attacking volume, the more dangerous first-home-game profile and multiple ways to occupy Lorient's back line. Lorient's away clean sheet keeps the matchup from being one-dimensional, but they may need a nearly flawless defensive performance if Lens sustain the same quality of box entries seen against Auxerre.
 
 **Prediction:** Lens to Win + Over 1.5 Goals
-**Odds:** 1.72
-
-### Sources / Statistical Provenance
-
-The Statistical Core keeps the reference window already attached to the fixture and labels historical fallback where relevant. Current absences and suspension status are cross-checked against the official Ligue 1 Matchday 3 update, while probable XIs are checked against current lineup services and same-week French team-news reporting.
-`
+**Odds:** 1.72`
   ],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
@@ -118,25 +110,26 @@ The Statistical Core keeps the reference window already attached to the fixture 
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [
     {
         "name": "Ligue 1 — Matchday 3 team news",
         "url": "https://ligue1.com/fr/articles/l1_article_5732-mpp-les-infos-de-la-j2-1",
         "description": "Official Ligue 1 Matchday 3 availability, suspensions and current form reference.",
-        "accessedAt": "2026-09-03T13:00:00+02:00"
+        "accessedAt": "2026-09-04T20:00:00+02:00"
     },
     {
         "name": "RotoWire — Ligue 1 lineups",
         "url": "https://www.rotowire.com/soccer/lineups.php?league=FRAN",
         "description": "Current probable lineups and injury/suspension cross-check for the Matchday 3 window.",
-        "accessedAt": "2026-09-03T13:00:00+02:00"
+        "accessedAt": "2026-09-04T20:00:00+02:00"
     },
     {
         "name": "L'Équipe — Ligue 1 Round 3 schedule",
         "url": "https://www.lequipe.fr/Football/ligue-1/page-calendrier-resultats/3e-journee",
         "description": "Round 3 fixture date and kickoff cross-check.",
-        "accessedAt": "2026-09-03T13:00:00+02:00"
+        "accessedAt": "2026-09-04T20:00:00+02:00"
     }
 ],
   matchInfo: {

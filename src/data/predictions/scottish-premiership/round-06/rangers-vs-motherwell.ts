@@ -89,7 +89,7 @@ export const rangersVsMotherwell: EditorialPrediction = {
         "accessedAt": "2026-09-04T09:45:00-03:00"
       }
     ],
-    "updatedAt": "2026-09-04T09:45:00-03:00"
+    "updatedAt": "2026-09-04T18:45:00-03:00"
   },
   "availability": {
     "entries": [

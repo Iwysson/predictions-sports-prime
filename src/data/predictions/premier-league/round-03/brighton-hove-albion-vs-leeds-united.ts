@@ -16,23 +16,28 @@ export const brightonHoveAlbionVsLeedsUnited: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 15:00
 **Round:** Matchweek 3
+**Updated:** 2026-09-04
 **Venue:** American Express Stadium
 
 ### Match Context
 
-Brighton's first two league matches have been high-event, while Leeds remain unbeaten after a win at Nottingham Forest and a draw with Brentford. The deeper venue baselines still separate the teams: Brighton have been a materially stronger HOME side than Leeds have been AWAY, especially in points, goals conceded and expected-goal balance.
+Brighton are back at the Amex after a 4-3 defeat at Chelsea, having opened the league season with a 4-0 win over Aston Villa. Leeds have started more cautiously but remain competitive, following their opening win at Nottingham Forest with a 1-1 draw against Brentford. Brighton have produced the greater attacking volume so far, although their growing injury list changes the shape of this matchup considerably.
 
 ### Team News and Probable Lineups
 
-**Availability:** Leeds are without Joe Rodon because of a hamstring injury and Mateo Joseph remains out; Ilia Gruev is a major doubt despite returning to team training. Brighton's attacking selection still has uncertainty around players previously carrying injury flags, so the final official XI remains important.
+**Availability:** Brighton are without Jack Hinshelwood, Yankuba Minteh, Kaoru Mitoma, Stefanos Tzimas, Evan Ferguson and Mats Wieffer. Georginio Rutter and Yasin Ayari are doubts and require late assessments. Leeds have lost Joe Rodon to a hamstring injury expected to keep him out for several weeks; Mateo Joseph is also out, while Ilia Gruev is doubtful.
 
-**Suspensions / eligibility:** No confirmed league suspension was identified in the current preview sources. Joe Rodon and Mateo Joseph are unavailable through injury rather than suspension.
+**Suspensions / eligibility:** No match-specific league suspension was listed for either side in the latest 4 September team news.
 
-**Probable lineups:** **Brighton (4-2-3-1):** Verbruggen; Kadıoğlu, Vušković, Dunk, Boscagli; Wieffer, Ayari; Diego Gómez, Hinshelwood, De Cuyper; Rutter (if fit; alternative attacking option if unavailable). **Leeds (3-4-2-1):** Trafford; Bijol, Muharemović, defensive replacement for Rodon; Bogle, Stach, Ampadu, Justin; Harry Wilson, Aaronson; Calvert-Lewin. These are probable, not confirmed.
+**Probable lineups:** **Brighton (4-2-3-1):** Verbruggen; Costinha, Vušković, Dunk, Kadıoğlu; Ayari, Yalcouyé; Diego Gómez, Groß, De Cuyper; Rutter (Kostoulas if Rutter is not cleared). **Leeds United (3-4-2-1):** Trafford; Elvedi, Bijol, Muharemović; Bogle, Stach, Ampadu, Justin; Harry Wilson, Okafor; Calvert-Lewin. These are projections, with Brighton’s XI particularly dependent on late fitness checks.
 
 ### HOME/AWAY Analysis
 
-Brighton average **1.74 home points per game** and allow **1.05 goals per game**, while Leeds' away baseline is 0.79 points and 1.84 conceded. Brighton also lead the xG comparison 1.53 to 1.22 and the possession comparison 54.9% to 43.8%. Those differences give the home side multiple routes to control the match rather than relying on finishing variance alone.
+Brighton’s first home league match produced 4 goals, 3.46 xG, 21 shots and 73% possession. Leeds’ first away league game was a 1-0 win built on a much smaller attacking return of 0.55 xG and 11 shots, while allowing only 0.71 xGA. That gives Brighton the stronger opening attacking sample, but the comparison covers only one venue fixture per side.
+
+### Current Form and Matchup
+
+Brighton's first two league matches have already shown both sides of their profile: a dominant home performance followed by a 4-3 defeat at Chelsea. Leeds have taken four points, including a 1-1 draw with Brentford last weekend, and have looked comfortable protecting central spaces for long spells. Brighton's home process remains the main reference for this fixture, but the injury list removes several of their usual one-against-one outlets. Leeds therefore have a plausible route to make the game more positional and less chaotic than Brighton would prefer.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -62,43 +67,28 @@ Brighton average **1.74 home points per game** and allow **1.05 goals per game**
 | Failed to score | 0% | 0% |
 ### Statistical Interpretation
 
-Brighton average **1.74 home points per game** and allow **1.05 goals per game**, while Leeds' away baseline is 0.79 points and 1.84 conceded. Brighton also lead the xG comparison 1.53 to 1.22 and the possession comparison 54.9% to 43.8%. Those differences give the home side multiple routes to control the match rather than relying on finishing variance alone.
+Brighton’s first two league matches have already shown both sides of their approach: enough attacking quality to score four against Villa, but also exposure when a game becomes stretched. Leeds have conceded only once across their opening league fixtures and are comfortable defending with three centre-backs before releasing the wing-backs. Brighton still possess more creative routes at home, but the absence of Minteh and Mitoma removes two major sources of width and acceleration.
 
 ### Tactical Matchup and Game State
 
-Brighton should try to overload the half-spaces around Leeds' back three and use wide rotations to pull the wing-backs away from the central defenders. Leeds can make the game uncomfortable by attacking quickly through the outside channels and targeting the space behind Brighton's full-backs. If Brighton score first, Leeds will have to advance the wing-backs and leave more room for second-wave attacks.
+Brighton will still try to create overloads between the lines through Groß and Diego Gómez, with De Cuyper attacking from the left, but the absence of Mitoma and Minteh removes natural wide acceleration. Leeds’ back three can defend the box compactly and use Bogle and Justin to break forward when Brighton commit numbers. Rodon’s absence is important because the visitors must reproduce that spacing with a changed central defensive unit.
 
 ### Conflict Detector
 
-Signals supporting the main scenario:
-- The strongest venue-specific process described above gives the primary analytical direction.
-- The expected game state offers a realistic route for that process to influence the published market.
+Brighton’s injury list is the central counterweight to their home advantage. Six players are ruled out and two more are doubtful, so the attacking structure may be less fluid than the opening results imply. Leeds also lose Rodon, however, forcing a change in a defence that had begun the season with encouraging cohesion.
 
-Counter-signals:
-- Leeds are unbeaten and have already shown they can protect game state away from home. Joe Rodon is out with a hamstring injury, Ilia Gruev remains a major doubt and Mateo Joseph is unavailable. Brighton also have an unsettled availability picture around several attacking players. The historical venue baselines are useful, but they are not a substitute for confirmed team sheets.
-- Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
+### Market Context
 
-Assessment:
-The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
-
-### Risks and Limitations
-
-Leeds are unbeaten and have already shown they can protect game state away from home. Joe Rodon is out with a hamstring injury, Ilia Gruev remains a major doubt and Mateo Joseph is unavailable. Brighton also have an unsettled availability picture around several attacking players. The historical venue baselines are useful, but they are not a substitute for confirmed team sheets.
-
-### Market Price Context
-
-Implied probability = 1 / decimal odds. At 1.88, 1 / 1.88 = 0.532, or approximately 53.2% before bookmaker margin. This is a raw price-derived break-even reference, not a PSP model probability and not the same as a historical HOME/AWAY frequency.
+At decimal odds of **1.88**, the raw implied probability is **1 / 1.88 = 53.2%**. That percentage reflects the quoted market price before bookmaker margin; it is a pricing reference, not a forecast or guarantee. The price should be read alongside the match data, squad availability and tactical matchup rather than in isolation.
 
 ### Conclusion
 
-Brighton's home profile is stronger across points, chance quality and defensive control. Leeds have enough transition threat to make the match competitive, but the home side are better positioned to sustain pressure for longer phases and create the cleaner chances.
+Brighton still have enough technical quality to control territory at the Amex, especially through Groß, Diego Gómez and De Cuyper, but their absences reduce the certainty around how consistently that control becomes clear chances. Leeds have started with defensive discipline and should be difficult to move, making this a more demanding home assignment than Brighton’s opening scorelines might suggest.
 
 **Prediction:** Brighton to Win
 **Odds:** 1.88
 
-### Sources / Statistical Provenance
 
-The Statistical Core prioritises the HOME split of the host and AWAY split of the visitor available before this fixture. Any old cell that depended only on a league, competition or cross-competition fallback has been removed from the promoted version rather than presented as exact venue data. Public match previews and lineup sources are used only for the claims they can support.
 `
   ],
   analysisFormat: "markdown",
@@ -107,13 +97,14 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
     main: "Brighton to Win",
     publishedOdds: 1.88,
     oddsProvenance: {
-      source: "Supplied 20-analysis publication package",
+      source: "PSP author-supplied publication selection",
       provenance: "author_attested",
       market: "Brighton to Win"
     }
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [
     {
@@ -151,6 +142,12 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
         "url": "https://www.sportsmole.co.uk/football/premier-league/brighton-and-hove-albion-vs-leeds-united_game_256887.html",
         "description": "Fixture and current form context.",
         "accessedAt": "2026-09-03T08:50:00-03:00"
+    }
+    ,{
+        "name": "Sports Mole — Brighton vs Leeds team news (04 Sep 2026)",
+        "url": "https://www.sportsmole.co.uk/football/brighton-and-hove-albion/team-news/brighton-vs-leeds-injury-suspension-list-predicted-xis_604336.html",
+        "description": "Latest match-specific injuries, availability and predicted lineups reviewed on 04/09/2026.",
+        "accessedAt": "2026-09-04T18:30:00-03:00"
     }
 ],
   matchInfo: {

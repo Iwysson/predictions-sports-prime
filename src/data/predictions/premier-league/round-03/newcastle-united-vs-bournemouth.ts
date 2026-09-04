@@ -16,23 +16,28 @@ export const newcastleUnitedVsBournemouth: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 12:30
 **Round:** Matchweek 3
+**Updated:** 2026-09-04
 **Venue:** St James’ Park
 
 ### Match Context
 
-Newcastle come home after a 2-0 win at Tottenham, while Bournemouth drew 1-1 with Everton. The deeper venue split is favourable to Newcastle but not overwhelming: the Magpies score more, create more xG and allow less xGA at home than Bournemouth do away, yet Bournemouth's away attack is strong enough to prevent a one-sided reading.
+Newcastle return to St James’ Park unbeaten after following a 2-2 draw with Liverpool with a 2-0 victory at Tottenham. Bournemouth have taken one point from their opening two matches, most recently drawing 1-1 with Everton. The early-season sample is still too small to carry much weight on its own, but Newcastle have already shown they can generate pressure against strong opposition, while Bournemouth remain capable of progressing quickly through midfield and attacking the spaces left by an aggressive home side.
 
 ### Team News and Probable Lineups
 
-**Availability:** Newcastle are currently without Dan Burn, Tino Livramento, William Osula and Joelinton. Bournemouth's current list includes Junior Kroupi, Amine Adli, Veljko Milosavljević and Julián Araujo, while Romain Faivre and Julio Soler remain doubts. Only the official teamsheet confirms final availability.
+**Availability:** Newcastle will be without Dan Burn (ankle), Joelinton (thigh), William Osula (foot) and Tino Livramento (calf). New signing Matias Fernandez-Pardo is available, although the expectation is that he will initially be introduced from the bench. Bournemouth are missing Amine Adli (calf), Eli Junior Kroupi (foot), Veljko Milosavljević (knee) and Julián Araujo (thigh).
 
-**Suspensions / eligibility:** No confirmed league suspension was identified in the current match-specific sources; the listed absences are treated as injury/fitness cases.
+**Suspensions / eligibility:** No match-specific league suspension was reported for either side in the latest 4 September team-news update.
 
-**Probable lineups:** **Newcastle United (4-2-3-1):** Horníček; Dedić, Thiaw, Botman, Hall; Nico González, Miley; Willock, Elanga, Barnes; Wissa. **Bournemouth (4-2-3-1):** Petrović; Smith, Hill, Alexsandro, Truffert; Lewis Cook, Alex Scott; Rayan, Kluivert, Tavernier; Evanilson. These are probable, not confirmed.
+**Probable lineups:** **Newcastle United (4-3-3):** Horníček; Dedić, Thiaw, Botman, Hall; Willock, Nico González, Miley; Elanga, Wissa, Barnes. **Bournemouth (4-2-3-1):** Petrović; Smith, Hill, Alexsandro, Truffert; Lewis Cook, Alex Scott; Rayan, Kluivert, Tavernier; Evanilson. These remain projections until the official teamsheets are released.
 
 ### HOME/AWAY Analysis
 
-Newcastle's HOME baseline shows **2.03 xG per game** and **1.89 goals per game**, while Bournemouth's AWAY xGA is 2.06 and they concede 1.79. Bournemouth still create 1.66 away xG and 1.53 goals, which is why the over-1.5 component is more coherent than a clean-sheet-based result market. Both venue profiles also produce double-digit corner environments.
+The available 2026/27 venue split is only one match per team. Newcastle’s first home game produced 2 goals from 1.55 xG, 13 shots and 4 on target, while allowing 3.00 xGA. Bournemouth’s first away game generated 0.72 xG from only 5 shots, although 4 reached the target. Those figures describe the opening conditions, not a settled season trend.
+
+### Current Form and Matchup
+
+Newcastle opened with a 2-2 draw against Liverpool and then won 2-0 at Tottenham, giving Matthias Jaissle's side four points from two matches. Bournemouth are still looking for their first league win after defeat on the opening weekend and a 1-1 draw with Everton. The recent head-to-head is a genuine warning for the hosts: Bournemouth are unbeaten in the last eight league meetings with Newcastle, including a 2-1 win at St James' Park in April. That sequence gives the visitors evidence that this matchup has suited their transition game even when Newcastle have carried the stronger territorial profile.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -62,43 +67,28 @@ Newcastle's HOME baseline shows **2.03 xG per game** and **1.89 goals per game**
 | Failed to score | 0% | 0% |
 ### Statistical Interpretation
 
-Newcastle's HOME baseline shows **2.03 xG per game** and **1.89 goals per game**, while Bournemouth's AWAY xGA is 2.06 and they concede 1.79. Bournemouth still create 1.66 away xG and 1.53 goals, which is why the over-1.5 component is more coherent than a clean-sheet-based result market. Both venue profiles also produce double-digit corner environments.
+The current HOME/AWAY table contains only one league match for each side, so its percentages should be read as a snapshot rather than a stable trend. Newcastle’s 1.55 xG at home came despite only 39% possession, while Bournemouth’s first away match produced just five shots and 0.72 xG. The more useful contrast is territorial: Newcastle have already shown they can create without monopolising the ball, whereas Bournemouth need a cleaner route from Cook and Scott into their attacking line to avoid spending long periods defending their own third.
 
 ### Tactical Matchup and Game State
 
-Newcastle should attack through the wide runners and use Wissa to pin the centre-backs, while Willock/Barnes can attack the second line. Bournemouth are dangerous if they can break the press through Cook and Scott and release Tavernier or the left-sided runner into space. A Newcastle first goal can stretch Bournemouth and help the total; a Bournemouth opener would force Newcastle into sustained home pressure.
+Newcastle can use Elanga and Barnes to stretch Bournemouth horizontally while Wissa occupies the centre-backs, with Willock arriving from midfield rather than playing as a fixed winger. Bournemouth’s best route is to escape the first press through Cook and Scott and then find Kluivert or Tavernier before Newcastle reset. The absence of Joelinton reduces some of the hosts’ ball-winning power in those transition moments.
 
 ### Conflict Detector
 
-Signals supporting the main scenario:
-- The strongest venue-specific process described above gives the primary analytical direction.
-- The expected game state offers a realistic route for that process to influence the published market.
+Newcastle’s injury list removes experience from the back line and midfield, and Bournemouth have gone eight league meetings unbeaten against the Magpies. That history does not decide Saturday’s game, but it is a relevant warning against treating home advantage as sufficient on its own. The one-match venue sample is also far too small for strong percentage-based conclusions.
 
-Counter-signals:
-- Newcastle are without Dan Burn, Tino Livramento, William Osula and Joelinton. Bournemouth have multiple absences including Junior Kroupi, Amine Adli, Veljko Milosavljević and Julián Araujo, with Faivre and Soler doubtful. The result leg is still vulnerable because Newcastle's home W-D-L baseline includes seven defeats.
-- Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
+### Market Context
 
-Assessment:
-The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
-
-### Risks and Limitations
-
-Newcastle are without Dan Burn, Tino Livramento, William Osula and Joelinton. Bournemouth have multiple absences including Junior Kroupi, Amine Adli, Veljko Milosavljević and Julián Araujo, with Faivre and Soler doubtful. The result leg is still vulnerable because Newcastle's home W-D-L baseline includes seven defeats.
-
-### Market Price Context
-
-Implied probability = 1 / decimal odds. At 1.67, 1 / 1.67 = 0.599, or approximately 59.9% before bookmaker margin. This is a raw price-derived break-even reference, not a PSP model probability and not the same as a historical HOME/AWAY frequency.
+At decimal odds of **1.67**, the raw implied probability is **1 / 1.67 = 59.9%**. That percentage reflects the quoted market price before bookmaker margin; it is a pricing reference, not a forecast or guarantee. The price should be read alongside the match data, squad availability and tactical matchup rather than in isolation.
 
 ### Conclusion
 
-Newcastle have the better venue-specific process and should create the larger volume, but Bournemouth's away attacking numbers make a two-goal match more natural than a low-event home win. The combined market is most plausible if Newcastle control territory without completely suppressing Bournemouth's transition threat.
+Newcastle should spend more time on the front foot at St James’ Park, with Elanga and Barnes giving them direct running around Wissa. Bournemouth’s recent record in this fixture and their ability to counter through Kluivert and Tavernier prevent a simple one-way assessment. The game has credible routes to goals at both ends even if Newcastle establish the stronger territorial position.
 
 **Prediction:** Newcastle or Draw (1X) + Over 1.5 Goals
 **Odds:** 1.67
 
-### Sources / Statistical Provenance
 
-The Statistical Core prioritises the HOME split of the host and AWAY split of the visitor available before this fixture. Any old cell that depended only on a league, competition or cross-competition fallback has been removed from the promoted version rather than presented as exact venue data. Public match previews and lineup sources are used only for the claims they can support.
 `
   ],
   analysisFormat: "markdown",
@@ -107,13 +97,14 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
     main: "Newcastle or Draw (1X) + Over 1.5 Goals",
     publishedOdds: 1.67,
     oddsProvenance: {
-      source: "Supplied 20-analysis publication package",
+      source: "PSP author-supplied publication selection",
       provenance: "author_attested",
       market: "Newcastle or Draw (1X) + Over 1.5 Goals"
     }
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [
     {
@@ -139,6 +130,12 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
         "url": "https://starting11.com/fixtures/newcastle-vs-bournemouth",
         "description": "Current predicted XI, injuries and fixture context.",
         "accessedAt": "2026-09-03T08:50:00-03:00"
+    }
+    ,{
+        "name": "Sports Mole — Newcastle vs Bournemouth team news (04 Sep 2026)",
+        "url": "https://www.sportsmole.co.uk/football/newcastle-united/team-news/newcastle-vs-bournemouth-injury-suspension-list-predicted-xis_604332.html",
+        "description": "Latest match-specific injuries, availability and predicted lineups reviewed on 04/09/2026.",
+        "accessedAt": "2026-09-04T18:30:00-03:00"
     }
 ],
   matchInfo: {

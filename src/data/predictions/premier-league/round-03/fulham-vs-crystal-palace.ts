@@ -16,23 +16,28 @@ export const fulhamVsCrystalPalace: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 15:00
 **Round:** Matchweek 3
+**Updated:** 2026-09-04
 **Venue:** Craven Cottage
 
 ### Match Context
 
-Fulham return home after a 1-0 defeat at Sunderland, while Palace were beaten 4-1 by Manchester City. Both teams therefore need a response, but the venue baselines favour Fulham: their HOME points return, defensive record and shot volume are all stronger than Palace's AWAY numbers.
+Fulham and Crystal Palace meet after difficult second league games: Fulham lost 1-0 at Sunderland, while Palace were beaten 4-1 by Manchester City. Neither side has settled into the season yet. Fulham’s route to control is likely to come through Berge and Shea Charles supporting the attacking midfield line, whereas Palace arrive with important absences in the front line and may rely more heavily on Pino, Dwight McNeil and Jørgen Strand Larsen for progression and finishing.
 
 ### Team News and Probable Lineups
 
-**Availability:** Fulham are without Tom Cairney and Luc De Fougerolles has required assessment. Palace's attacking selection remains sensitive to the status of Ismaïla Sarr and Jean-Philippe Mateta; no player is declared available unless supported by the latest preview or official team sheet.
+**Availability:** Fulham’s only confirmed absentee in the latest update is Tom Cairney, who remains out with a knee injury. Palace will be without Chadi Riad (knee), Jean-Philippe Mateta (thigh) and Ismaïla Sarr (groin). Those attacking absences materially change the visitors’ options compared with earlier projections.
 
-**Suspensions / eligibility:** No confirmed league suspension was identified in the current match-specific sources. Availability concerns around Palace's forwards are treated as fitness questions, not suspensions.
+**Suspensions / eligibility:** No match-specific league suspension was reported for either team in the latest 4 September team news.
 
-**Probable lineups:** **Fulham (4-2-3-1):** Leno; Castagne, Andersen, Bassey, Robinson; Berge, Iwobi; Bobb, King, Palacios; Gonzalo García. **Crystal Palace (3-4-2-1):** Henderson; Canvot, Richards, Tomiyasu; Khalaili, Wharton, Kamada, Mitchell; Pino; Nketiah, Strand Larsen/Mateta depending on availability. These are probable, not confirmed.
+**Probable lineups:** **Fulham (4-2-3-1):** Leno; Castagne, Andersen, Bassey, Robinson; Berge, Shea Charles; Iwobi, Josh King, Palacios; Gonzalo García. **Crystal Palace (3-4-2-1):** Henderson; Canvot, Richards, Tomiyasu; Khalaili, Kamada, Wharton, Mitchell; McNeil, Strand Larsen, Pino. These are probable rather than confirmed lineups.
 
 ### HOME/AWAY Analysis
 
-Fulham's home sample carries **1.84 points per game** and only **1.05 goals conceded**, compared with Palace's 1.26 away points and 1.47 conceded. Fulham also create 14.16 shots per home match against Palace's 9.95 away. The xG gap is smaller, which prevents a simplistic home-win reading, but the combined profile still gives Fulham the more stable route to territory and chance volume.
+The current HOME/AWAY sample consists of one league match for each side. Fulham’s home opener produced 2 goals from 1.41 xG, 14 shots and 62% possession, but they conceded 3. Palace’s first away game ended goalless for them despite 1.71 xG and 11 shots. Those figures show that both sides created more than the final results suggest in parts, but the sample is too small for stable rates.
+
+### Current Form and Matchup
+
+Both sides are still chasing their first league win. Fulham have shown they can create at Craven Cottage but have not controlled defensive transitions consistently, while Palace have opened with two defeats and are dealing with important absences in the front line. The London derby element increases the likelihood of a physically competitive game, but the more important football detail is Palace's reduced attacking depth without Mateta and Sarr. Fulham should have more continuity in possession, while Palace are likely to rely on Wharton and Kamada to move the ball quickly into McNeil, Pino and Strand Larsen.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -62,43 +67,28 @@ Fulham's home sample carries **1.84 points per game** and only **1.05 goals conc
 | Failed to score | 0% | 100% |
 ### Statistical Interpretation
 
-Fulham's home sample carries **1.84 points per game** and only **1.05 goals conceded**, compared with Palace's 1.26 away points and 1.47 conceded. Fulham also create 14.16 shots per home match against Palace's 9.95 away. The xG gap is smaller, which prevents a simplistic home-win reading, but the combined profile still gives Fulham the more stable route to territory and chance volume.
+Fulham have the healthier squad and should be able to field a familiar defensive unit, which matters in a game where Palace’s attacking personnel is depleted. Palace still possess midfield quality through Wharton and Kamada, but losing both Mateta and Sarr removes power, depth running and established finishing from the front line. Fulham’s challenge is to turn possession into enough penalty-area touches after being shut out at Sunderland.
 
 ### Tactical Matchup and Game State
 
-Fulham should try to create overloads around Palace's wing-backs and use Iwobi/Bobb to connect midfield with the front line. Palace remain dangerous when they can break into the channels around the outside centre-backs, particularly if Pino or Nketiah receive early in transition. A Fulham opener would force Palace to push the wing-backs higher and can help the 1.5-goal leg.
+Fulham can use Iwobi and Palacios to move around Palace’s wing-backs while Josh King receives between midfield and defence. Palace are likely to rely more heavily on Pino and McNeil to connect with Strand Larsen because Mateta and Sarr are unavailable. Wharton’s passing under pressure remains crucial: if Fulham prevent him from turning, Palace may struggle to move from their back three into sustained attacking possession.
 
 ### Conflict Detector
 
-Signals supporting the main scenario:
-- The strongest venue-specific process described above gives the primary analytical direction.
-- The expected game state offers a realistic route for that process to influence the published market.
+Fulham have not yet shown consistent attacking efficiency, and Palace’s three-centre-back structure can still make central progression difficult even with absences. Palace, meanwhile, have lost both opening league games, so relying on their historical competitiveness at Craven Cottage without accounting for current form would overstate the visitors’ position.
 
-Counter-signals:
-- Palace have enough transition quality to punish Fulham if the home side over-commits, and the xG difference between the two venue samples is modest. Fulham are without Tom Cairney, while Palace's recent attacking availability has been unstable around Sarr and Mateta. The selection depends on Fulham avoiding the type of low-event away game Sunderland imposed last weekend.
-- Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
+### Market Context
 
-Assessment:
-The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
-
-### Risks and Limitations
-
-Palace have enough transition quality to punish Fulham if the home side over-commits, and the xG difference between the two venue samples is modest. Fulham are without Tom Cairney, while Palace's recent attacking availability has been unstable around Sarr and Mateta. The selection depends on Fulham avoiding the type of low-event away game Sunderland imposed last weekend.
-
-### Market Price Context
-
-Implied probability = 1 / decimal odds. At 1.75, 1 / 1.75 = 0.571, or approximately 57.1% before bookmaker margin. This is a raw price-derived break-even reference, not a PSP model probability and not the same as a historical HOME/AWAY frequency.
+At decimal odds of **1.75**, the raw implied probability is **1 / 1.75 = 57.1%**. That percentage reflects the quoted market price before bookmaker margin; it is a pricing reference, not a forecast or guarantee. The price should be read alongside the match data, squad availability and tactical matchup rather than in isolation.
 
 ### Conclusion
 
-Fulham have the stronger home base and should spend more time in Palace's half, but the visitors still have a credible transition route. The combined market is most coherent if Fulham establish territorial control without allowing Palace to turn the match into isolated counterattacks only.
+Fulham enter with greater continuity and a healthier attacking selection, while Palace must find a new balance without two of their most important forwards. The visitors still have enough midfield quality to compete for territory, but Fulham should have the clearer platform to sustain pressure at Craven Cottage if they move the ball quickly around Palace’s back five.
 
 **Prediction:** Fulham or Draw (1X) + Over 1.5 Goals
 **Odds:** 1.75
 
-### Sources / Statistical Provenance
 
-The Statistical Core prioritises the HOME split of the host and AWAY split of the visitor available before this fixture. Any old cell that depended only on a league, competition or cross-competition fallback has been removed from the promoted version rather than presented as exact venue data. Public match previews and lineup sources are used only for the claims they can support.
 `
   ],
   analysisFormat: "markdown",
@@ -107,13 +97,14 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
     main: "Fulham or Draw (1X) + Over 1.5 Goals",
     publishedOdds: 1.75,
     oddsProvenance: {
-      source: "Supplied 20-analysis publication package",
+      source: "PSP author-supplied publication selection",
       provenance: "author_attested",
       market: "Fulham or Draw (1X) + Over 1.5 Goals"
     }
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [
     {
@@ -151,6 +142,12 @@ The Statistical Core prioritises the HOME split of the host and AWAY split of th
         "url": "https://starting11.com/fulham",
         "description": "Recent Fulham lineup continuity.",
         "accessedAt": "2026-09-03T08:50:00-03:00"
+    }
+    ,{
+        "name": "Sports Mole — Fulham vs Crystal Palace team news (04 Sep 2026)",
+        "url": "https://www.sportsmole.co.uk/football/fulham/injury-news/team-news/fulham-vs-palace-injury-suspension-list-predicted-xis_604398.html",
+        "description": "Latest match-specific injuries, availability and predicted lineups reviewed on 04/09/2026.",
+        "accessedAt": "2026-09-04T18:30:00-03:00"
     }
 ],
   matchInfo: {

@@ -8,8 +8,8 @@ export const schalke04VsBayernMunchen: EditorialPrediction = {
   analysis: [
     `# Schalke 04 vs Bayern München Prediction, Odds and Match Analysis
 
-**Prediction:** Bayern Munich -1 Asian Handicap
-**Odds:** 1.78
+**Prediction:** Bayern Munich -2 Asian Handicap
+**Odds:** 2.02
 
 ### Match Information
 
@@ -17,6 +17,7 @@ export const schalke04VsBayernMunchen: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 18:30 local time
 **Round:** Matchday 2
+**Updated:** 2026-09-04
 **Venue:** VELTINS-Arena
 
 ### Match Context
@@ -72,51 +73,40 @@ Schalke 04's HOME reference shows **2.47 points per game** and **1.71 goals scor
 
 ### Tactical Matchup and Game State
 
-Schalke are likely to protect the centre with a back three and use Džeko as a direct outlet. Bayern can stretch that shape through Olise and Díaz. An early Bayern goal is especially important for the -1 handicap because it forces Schalke to open the wing-back zones.
+Schalke are likely to protect the centre with a back three and use Džeko as the first target when they escape pressure. Bayern can attack that block from several angles: Olise and Díaz can isolate wing-backs, Kane can pin the central defenders and Kimmich can recycle possession around the box. Schalke’s suspended Schallenberg removes one defensive midfield option in a game where protecting second balls will be essential.
 
 ### Conflict Detector
 
-The supporting case comes from the venue-specific process above. The main counter-signal is also retained: The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. At least one row is explicitly a 2. Bundesliga reference and is not treated as equal-strength Bundesliga evidence. The -1 Asian handicap also needs margin, not merely a Bayern win.
+Bayern’s attacking ceiling is clearly higher, but a -2 Asian line demands separation on the scoreboard rather than simply match control. Schalke can reduce that margin by defending the box compactly, slowing restarts and keeping the game within one or two goals for long periods.
 
-This opposing evidence materially limits confidence and remains part of the final sporting assessment.
+### Market Context
 
-### Risks and Limitations
-
-The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. At least one row is explicitly a 2. Bundesliga reference and is not treated as equal-strength Bundesliga evidence. The -1 Asian handicap also needs margin, not merely a Bayern win. Current availability is based on the Bundesliga's official Matchday 2 update and remains subject to late training changes.
-
-### Odds + Implied Probability
-
-At published odds of **1.78**, the raw implied probability is **56.2%** because **1 / 1.78 = 0.562**, before bookmaker margin.
-
-### Value Assessment
-
-The price is assessed against the full evidence set. The selection is attractive only if the combined HOME/AWAY process, current availability and expected game state support a probability above the market's raw **56.2%** threshold; otherwise the price should be regarded as fair rather than automatically valuable.
+At odds of **2.02**, the raw implied probability is **1 / 2.02 = 49.5%**. That figure reflects the quoted market price before bookmaker margin and does not mean Bayern have a 49.5% model probability of clearing the handicap. The value of a -2 Asian Handicap depends on Bayern creating a sufficient scoring margin, which is a stricter requirement than simply controlling or winning the match.
 
 ### Conclusion
 
-The original market and odds remain coherent with the documented venue process and the current team-news picture, while the counter-signals above define the principal ways the selection can fail.
+Schalke’s promoted side face a major step in attacking and defensive intensity after the opening defeat at Augsburg. Bayern arrive with multiple routes to create chances and can force the home block to defend both width and central combinations. Schalke’s route to resistance depends on keeping distances short, surviving the first wave and using Džeko to make clearances stick.
 
-**Prediction:** Bayern Munich -1 Asian Handicap
-**Odds:** 1.78
+**Prediction:** Bayern Munich -2 Asian Handicap
+**Odds:** 2.02
 
-### Sources / Statistical Provenance
 
-The Statistical Core preserves the verified reference window already attached to this fixture. Current probable lineups, injuries, doubts and suspensions are cross-checked against the Bundesliga's official Matchday 2 team-news update. Fixture identity and kickoff information are cross-checked against the official Bundesliga schedule.
 `
   ],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {
-    main: "Bayern Munich -1 Asian Handicap",
-    publishedOdds: 1.78,
+    main: "Bayern Munich -2 Asian Handicap",
+    publishedOdds: 2.02,
     oddsProvenance: {
-      source: "Supplied 20-analysis publication package",
+      source: "PSP author-supplied publication selection — updated 04/09/2026",
       provenance: "author_attested",
-      market: "Bayern Munich -1 Asian Handicap"
+      market: "Bayern Munich -2 Asian Handicap"
     }
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [
     {

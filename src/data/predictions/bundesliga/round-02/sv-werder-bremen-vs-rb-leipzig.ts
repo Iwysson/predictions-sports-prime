@@ -8,7 +8,7 @@ export const svWerderBremenVsRbLeipzig: EditorialPrediction = {
   analysis: [
     `# SV Werder Bremen vs RB Leipzig Prediction, Odds and Match Analysis
 
-**Prediction:** RB Leipzig or Draw (X2) + Over 1.5 Goals
+**Prediction:** RB Leipzig or Draw (X2) + Over 7.5 Corners
 **Odds:** 1.60
 
 ### Match Information
@@ -17,6 +17,7 @@ export const svWerderBremenVsRbLeipzig: EditorialPrediction = {
 **Date:** 2026-09-05
 **Kickoff:** 15:30 local time
 **Round:** Matchday 2
+**Updated:** 2026-09-04
 **Venue:** Weserstadion
 
 ### Match Context
@@ -72,51 +73,40 @@ SV Werder Bremen's HOME reference shows **1.12 points per game** and **1.12 goal
 
 ### Tactical Matchup and Game State
 
-SV Werder Bremen should try to turn the HOME advantages in the core into sustained territorial pressure, while RB Leipzig will look for transition space when the host commits numbers forward. The first goal is the main game-state hinge because it can either reinforce the venue pattern or force the trailing side into a more open structure.
+Bremen can use Füllkrug as a reference point for direct passes and second balls, with Grüll and the midfield runners attacking around him. Leipzig have more speed between the lines and can create overloads through Nusa and their advanced midfielders, but Bremen’s best chance of disrupting that rhythm is to turn the contest into repeated duels and set-piece phases rather than a clean transition game.
 
 ### Conflict Detector
 
-The supporting case comes from the venue-specific process above. The main counter-signal is also retained: The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level.
+Leipzig’s stronger individual quality does not remove Bremen’s ability to create pressure at home, especially through wide attacks and second phases. The corner component also depends on game state: an early goal can either accelerate territorial pressure or reduce the need for repeated wide attacks.
 
-This opposing evidence materially limits confidence and remains part of the final sporting assessment.
+### Market Context
 
-### Risks and Limitations
-
-The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. Current availability is based on the Bundesliga's official Matchday 2 update and remains subject to late training changes.
-
-### Odds + Implied Probability
-
-At published odds of **1.60**, the raw implied probability is **62.5%** because **1 / 1.60 = 0.625**, before bookmaker margin.
-
-### Value Assessment
-
-The price is assessed against the full evidence set. The selection is attractive only if the combined HOME/AWAY process, current availability and expected game state support a probability above the market's raw **62.5%** threshold; otherwise the price should be regarded as fair rather than automatically valuable.
+At odds of **1.60**, the raw implied probability is **1 / 1.60 = 62.5%**. The figure is derived only from the quoted decimal market price and is not a guarantee of the combined outcome. The value of the price depends on both parts of the market holding together: Leipzig avoiding defeat and the match producing at least eight corners.
 
 ### Conclusion
 
-The original market and odds remain coherent with the documented venue process and the current team-news picture, while the counter-signals above define the principal ways the selection can fail.
+Bremen’s home support and direct route through Füllkrug give them a way to compete even after a difficult opening weekend. Leipzig possess the greater transition threat and more individual acceleration in advanced areas, while both teams have routes to generate corners through wide attacks and blocked deliveries. Control of second balls should determine which side spends longer in the attacking third.
 
-**Prediction:** RB Leipzig or Draw (X2) + Over 1.5 Goals
+**Prediction:** RB Leipzig or Draw (X2) + Over 7.5 Corners
 **Odds:** 1.60
 
-### Sources / Statistical Provenance
 
-The Statistical Core preserves the verified reference window already attached to this fixture. Current probable lineups, injuries, doubts and suspensions are cross-checked against the Bundesliga's official Matchday 2 team-news update. Fixture identity and kickoff information are cross-checked against the official Bundesliga schedule.
 `
   ],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {
-    main: "RB Leipzig or Draw (X2) + Over 1.5 Goals",
+    main: "RB Leipzig or Draw (X2) + Over 7.5 Corners",
     publishedOdds: 1.6,
     oddsProvenance: {
-      source: "Supplied 20-analysis publication package",
+      source: "PSP author-supplied publication selection — updated 04/09/2026",
       provenance: "author_attested",
-      market: "RB Leipzig or Draw (X2) + Over 1.5 Goals"
+      market: "RB Leipzig or Draw (X2) + Over 7.5 Corners"
     }
   },
   published: true,
   publishedAt: "2026-08-30T10:00:00-03:00",
+  updatedAt: "2026-09-04T18:45:00-03:00",
   sourceStatus: "verified",
   sources: [
     {

@@ -22,7 +22,7 @@ export const qprVsMiddlesbrough: EditorialPrediction = {
   },
   "published": true,
   "publishedAt": "2026-09-03T11:30:00-03:00",
-  "updatedAt": "2026-09-03T16:00:00-03:00",
+  "updatedAt": "2026-09-04T18:45:00-03:00",
   "sourceStatus": "verified",
   "sources": [
     {
