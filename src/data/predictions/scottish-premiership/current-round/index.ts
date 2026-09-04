@@ -1,27 +1,15 @@
-import { aberdeenVsRangers } from "./aberdeen-vs-rangers";
-import { celticVsAberdeen } from "./celtic-vs-aberdeen";
-import { celticVsFalkirk } from "./celtic-vs-falkirk";
-import { dundeeVsHibernian } from "./dundee-vs-hibernian";
-import { dundeeVsStJohnstone } from "./dundee-vs-st-johnstone";
-import { falkirkVsRangers } from "./falkirk-vs-rangers";
-import { heartsVsStJohnstone } from "./hearts-vs-st-johnstone";
-import { hibernianVsHearts } from "./hibernian-vs-hearts";
-import { kilmarnockVsDundeeUnited } from "./kilmarnock-vs-dundee-united";
-import { kilmarnockVsStMirren } from "./kilmarnock-vs-st-mirren";
-import { motherwellVsDundeeUnited } from "./motherwell-vs-dundee-united";
-import { stMirrenVsMotherwell } from "./st-mirren-vs-motherwell";
+import { aberdeenVsKilmarnock } from "../round-06/aberdeen-vs-kilmarnock";
+import { dundeeUnitedVsFalkirk } from "../round-06/dundee-united-vs-falkirk";
+import { heartsVsDundee } from "../round-06/hearts-vs-dundee";
+import { rangersVsMotherwell } from "../round-06/rangers-vs-motherwell";
+import { stJohnstoneVsHibernian } from "../round-06/st-johnstone-vs-hibernian";
+import { stMirrenVsCeltic } from "../round-06/st-mirren-vs-celtic";
 
 export const currentRoundPredictions = [
-  aberdeenVsRangers,
-  celticVsAberdeen,
-  celticVsFalkirk,
-  dundeeVsHibernian,
-  dundeeVsStJohnstone,
-  falkirkVsRangers,
-  heartsVsStJohnstone,
-  hibernianVsHearts,
-  kilmarnockVsDundeeUnited,
-  kilmarnockVsStMirren,
-  motherwellVsDundeeUnited,
-  stMirrenVsMotherwell,
+  aberdeenVsKilmarnock,
+  dundeeUnitedVsFalkirk,
+  heartsVsDundee,
+  rangersVsMotherwell,
+  stJohnstoneVsHibernian,
+  stMirrenVsCeltic,
 ];

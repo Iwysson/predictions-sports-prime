@@ -162,9 +162,23 @@ export function buildCompetitionRoundSurface(input: {
   publishedMatches: MatchPreview[];
   now?: Date | string;
 }): CompetitionRoundSurface {
-  if (!input.rounds.length) return editorialFallback(input.publishedMatches, input.now ?? new Date());
+  const now = input.now ?? new Date();
 
-  const resolved = resolveCompetitionRounds(input.rounds, input.now);
+  if (!input.rounds.length) return editorialFallback(input.publishedMatches, now);
+
+  const resolved = resolveCompetitionRounds(input.rounds, now);
+
+  // The factual snapshot can legitimately contain only completed/stale rounds
+  // while newer editorial predictions already exist. In that case, keeping the
+  // source in "validated" mode produces an empty Current Round even though the
+  // published predictions are still active. Reuse the existing guarded
+  // editorial fallback rather than weakening fixture validation or inventing
+  // factual schedule data.
+  if (resolved.currentFixtures.length === 0 && resolved.nextFixtures.length === 0) {
+    const fallback = editorialFallback(input.publishedMatches, now);
+    if (fallback.current) return fallback;
+  }
+
   const usedPredictions = new Set<string>();
   return {
     sourceState: "validated",
