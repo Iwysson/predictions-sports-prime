@@ -15,7 +15,8 @@ export type LeagueSlug =
   | "championship"
   | "super-lig"
   | "scottish-premiership"
-  | "eliteserien";
+  | "eliteserien"
+  | "mls";
 
 export type PredictionItem = {
   label: string;

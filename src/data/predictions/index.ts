@@ -12,6 +12,7 @@ import { championshipPredictions } from "./championship";
 import { superLigPredictions } from "./super-lig";
 import { scottishPremiershipPredictions } from "./scottish-premiership";
 import { eliteserienPredictions } from "./eliteserien";
+import { mlsPredictions } from "./mls";
 
 export const editorialPredictions = [
   ...premierLeaguePredictions,
@@ -28,4 +29,5 @@ export const editorialPredictions = [
   ...superLigPredictions,
   ...scottishPremiershipPredictions,
   ...eliteserienPredictions,
+  ...mlsPredictions,
 ];

@@ -18,6 +18,7 @@ const leagueSearchAliases: Partial<Record<LeagueConfig["slug"], readonly string[
   "super-lig": ["Turkish Super Lig", "Trendyol Süper Lig", "Türkiye Süper Lig"],
   "scottish-premiership": ["Scotland Premiership", "SPFL Premiership", "William Hill Premiership"],
   eliteserien: ["Norwegian Eliteserien", "Norway Eliteserien", "Eliteserien Norway"],
+  mls: ["Major League Soccer", "MLS USA", "United States MLS"],
 };
 
 export function leagueSeoKeywords(league: LeagueConfig) {

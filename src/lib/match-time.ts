@@ -30,6 +30,7 @@ const competitionFallbackTimezones: Record<LeagueSlug, string> = {
   "super-lig": "Europe/Istanbul",
   "scottish-premiership": "Europe/London",
   eliteserien: "Europe/Oslo",
+  mls: "America/New_York",
 };
 
 function parseKickoffUtc(match: Pick<Match, "kickoffUtc" | "date" | "time">) {

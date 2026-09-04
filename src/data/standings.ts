@@ -221,6 +221,7 @@ export const standingsByLeague: Record<LeagueSlug, StandingRow[]> = {
     { position: 18, team: "Erzurumspor", played: 2, wins: 0, draws: 0, losses: 2, goalsFor: 0, goalsAgainst: 7, goalDifference: -7, points: 0, zone: "relegation" },
   ],
   eliteserien: [],
+  mls: [],
   "scottish-premiership": [
     { position: 1, team: "Celtic", played: 2, goalDifference: 5, points: 6, zone: "champions" },
     { position: 2, team: "Dundee", played: 3, goalDifference: 3, points: 6, zone: "champions" },
