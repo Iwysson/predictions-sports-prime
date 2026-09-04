@@ -13,7 +13,7 @@ export const newYorkCityFcVsNashvilleSc: EditorialPrediction = {
 
 ### Match Context
 
-Competition: Major League Soccer | Date: September 5, 2026 | Kick-off: 19:30 local time | Venue: Yankee Stadium
+Competition: Major League Soccer | Date: September 4, 2026 | Kick-off: 19:30 local time | Venue: Yankee Stadium
 
 The venue-specific data give this match a more precise shape than the full-season totals alone. New York City FC have produced **1.36 points per HOME match** from a **4-3-4** record, while Nashville SC are at **1.80 PPG AWAY** with a **5-3-2** split. The scoring comparison is 2.27 goals for and 1.64 against at home versus 1.10 scored and 0.50 conceded away. Underneath those results, New York City FC's chance profile sits at 1.55 xG and 1.36 xGA; Nashville SC's away figures are 1.15 xG and 1.27 xGA. That gap between actual goals and expected goals is useful because it separates repeatable chance creation from finishing or goalkeeping swings, without turning the analysis into a justification for the published pick.
 
@@ -110,7 +110,7 @@ Nashville SC arrive with the stronger venue results, but the underlying chance n
     { name: "FootyStats — Nashville SC 2026 MLS stats", url: "https://footystats.org/clubs/nashville-sc-mls-677447" },
     { name: "FBref — 2026 Major League Soccer", url: "https://fbref.com/en/comps/22/" },
     { name: "RotoWire MLS Lineups", url: "https://www.rotowire.com/soccer/lineups.php?league=MLS" },
-    { name: "Official MLS", url: "https://www.mlssoccer.com/" }
+    { name: "Official MLS — NYCFC vs Nashville SC", url: "https://www.mlssoccer.com/competitions/mls-regular-season/2026/matches/nycvsnsh-09-04-2026/clubs" }
   ],
-  matchInfo: { date: "2026-09-05", time: "19:30", venue: "Yankee Stadium" },
+  matchInfo: { date: "2026-09-04", time: "19:30", venue: "Yankee Stadium" },
 };

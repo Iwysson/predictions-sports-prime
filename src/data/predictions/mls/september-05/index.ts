@@ -5,7 +5,6 @@ import { fcCincinnatiVsDcUnited } from "./fc-cincinnati-vs-dc-united";
 import { fcDallasVsSportingKansasCity } from "./fc-dallas-vs-sporting-kansas-city";
 import { interMiamiVsAtlantaUnited } from "./inter-miami-vs-atlanta-united";
 import { laGalaxyVsNewEnglandRevolution } from "./la-galaxy-vs-new-england-revolution";
-import { newYorkCityFcVsNashvilleSc } from "./new-york-city-fc-vs-nashville-sc";
 import { orlandoCityVsSanDiegoFc } from "./orlando-city-vs-san-diego-fc";
 import { philadelphiaUnionVsCfMontreal } from "./philadelphia-union-vs-cf-montreal";
 import { portlandTimbersVsMinnesotaUnited } from "./portland-timbers-vs-minnesota-united";
@@ -22,7 +21,6 @@ export const mlsSeptember05 = [
   fcDallasVsSportingKansasCity,
   interMiamiVsAtlantaUnited,
   laGalaxyVsNewEnglandRevolution,
-  newYorkCityFcVsNashvilleSc,
   orlandoCityVsSanDiegoFc,
   philadelphiaUnionVsCfMontreal,
   portlandTimbersVsMinnesotaUnited,
