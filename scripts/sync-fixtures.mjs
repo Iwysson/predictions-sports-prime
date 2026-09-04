@@ -29,7 +29,7 @@ const snapshot = {
 const changes = [];
 
 function findPredictionFixture(rounds, prediction) {
-  const games = rounds.flatMap((round) => round.games).filter((game) => game.id);
+  const games = rounds.flatMap((round) => round.games);
   const candidates = games.filter((game) =>
     (teamNamesMatch(game.homeTeam, prediction.homeTeam) && teamNamesMatch(game.awayTeam, prediction.awayTeam)) ||
     (teamNamesMatch(game.homeTeam, prediction.awayTeam) && teamNamesMatch(game.awayTeam, prediction.homeTeam))
@@ -68,6 +68,39 @@ function fetchFotmobDay(date) {
     }));
   }
   return fotmobDailyPromises.get(date);
+}
+
+function canonicalTeamSlug(value) {
+  return value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+async function hydrateMissingFixtureIdFromFotmob(league, fixture, prediction) {
+  if (!fixture || fixture.id || !fixture.date) return fixture;
+
+  const daily = await fetchFotmobDay(fixture.date);
+  const events = (daily.leagues ?? []).flatMap((item) => item.matches ?? []);
+  const event = events.find((match) =>
+    teamNamesMatch(match.home?.name ?? "", fixture.homeTeam) &&
+    teamNamesMatch(match.away?.name ?? "", fixture.awayTeam)
+  );
+
+  if (!event?.id) return fixture;
+
+  // "official:" is the project's existing canonical-id convention for
+  // provider-verified fixtures that do not expose an ESPN/TheSportsDB id.
+  // The real FotMob event id is retained separately for future result/stats hydration.
+  fixture.id = `official:${league.slug}:${canonicalTeamSlug(fixture.homeTeam)}-vs-${canonicalTeamSlug(fixture.awayTeam)}:${fixture.date}`;
+  fixture.fotmobMatchId = Number(event.id);
+  fixture.dataSource = "fotmob";
+  fixture.sourceAgreement = true;
+
+  console.log(`${prediction.slug}: linked via FotMob event ${event.id} -> ${fixture.id}`);
+  return fixture;
 }
 
 async function hydrateFotmobFinalScores(rounds) {
@@ -169,7 +202,12 @@ async function syncLeague(league) {
     }
     const linkedIds = new Set();
     for (const prediction of leaguePredictions) {
-      const fixture = findPredictionFixture(rounds, prediction);
+      let fixture = findPredictionFixture(rounds, prediction);
+
+      if (fixture && !fixture.id) {
+        fixture = await hydrateMissingFixtureIdFromFotmob(league, fixture, prediction);
+      }
+
       if (!fixture?.id) {
         const candidates = rounds.flatMap((round) => round.games)
           .filter((game) => game.homeTeam.includes(prediction.homeTeam.split(" ")[0]) || game.awayTeam.includes(prediction.awayTeam.split(" ")[0]))
@@ -177,6 +215,7 @@ async function syncLeague(league) {
           .map((game) => `${game.homeTeam} vs ${game.awayTeam} [${game.id ?? "no id"}]`);
         throw new Error(`${league.name}: no authoritative fixture ID for ${prediction.slug}. Candidates: ${candidates.join(" | ")}`);
       }
+
       snapshot.predictionIds[`${league.slug}:${prediction.slug}`] = fixture.id;
       linkedIds.add(fixture.id);
       if (prediction.date !== fixture.date || prediction.time !== fixture.time) {
@@ -229,14 +268,18 @@ async function syncLeague(league) {
       const savedFixture = refreshedFixture?.id
         ? null
         : findPredictionFixture(savedRounds, prediction);
-      const fixtureId = refreshedFixture?.id ?? savedFixture?.id;
+      let recoveredFixture = refreshedFixture;
+      if (recoveredFixture && !recoveredFixture.id) {
+        recoveredFixture = await hydrateMissingFixtureIdFromFotmob(league, recoveredFixture, prediction);
+      }
+      const fixtureId = recoveredFixture?.id ?? savedFixture?.id;
       if (fixtureId) {
         snapshot.predictionIds[key] = fixtureId;
         const fixtureExistsInSavedRounds = savedRounds
           .flatMap((round) => round.games)
           .some((fixture) => fixture.id === fixtureId);
-        if (refreshedFixture?.id && !fixtureExistsInSavedRounds) {
-          snapshot.manualFixtures[fixtureId] = refreshedFixture;
+        if (recoveredFixture?.id && !fixtureExistsInSavedRounds) {
+          snapshot.manualFixtures[fixtureId] = recoveredFixture;
         }
       }
     }
@@ -346,10 +389,23 @@ const automaticPredictions = matches.filter((match) => {
   const league = leagues.find((item) => item.slug === match.league);
   return Boolean(league?.sources.fixtures || league?.liveDataId);
 });
-if (Object.keys(snapshot.predictionIds).length !== automaticPredictions.length) {
-  const missingPredictionKeys = automaticPredictions
-    .map((prediction) => `${prediction.league}:${prediction.slug}`)
-    .filter((key) => !snapshot.predictionIds[key]);
+const automaticPredictionKeys = automaticPredictions
+  .map((prediction) => `${prediction.league}:${prediction.slug}`);
+const automaticPredictionKeySet = new Set(automaticPredictionKeys);
+
+// Remove orphaned links for predictions that are no longer present in the
+// automatic prediction registry. Keeping them makes raw object counts drift
+// after a league's current-round index is rotated.
+snapshot.predictionIds = Object.fromEntries(
+  Object.entries(snapshot.predictionIds)
+    .filter(([key]) => automaticPredictionKeySet.has(key))
+    .sort(([left], [right]) => left.localeCompare(right))
+);
+
+const missingPredictionKeys = automaticPredictionKeys
+  .filter((key) => !snapshot.predictionIds[key]);
+
+if (missingPredictionKeys.length > 0) {
   throw new Error(
     `Expected ${automaticPredictions.length} automatic prediction links, produced ${Object.keys(snapshot.predictionIds).length}. ` +
     `Missing: ${missingPredictionKeys.join(", ")}.`

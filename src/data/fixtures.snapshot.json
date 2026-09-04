@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-04T05:46:03.680Z",
+  "generatedAt": "2026-09-04T10:16:54.373Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -86,77 +86,77 @@
           {
             "round": 1,
             "date": "2026-08-22",
-            "time": "17:30",
+            "time": "13:30",
             "homeTeam": "Brentford",
             "awayTeam": "Tottenham Hotspur",
             "homeScore": 3,
             "awayScore": 0,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401879321",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-22T16:30Z"
+            "kickoffUtc": "2026-08-22T16:30:00Z"
           },
           {
             "round": 1,
             "date": "2026-08-23",
-            "time": "14:00",
+            "time": "10:00",
             "homeTeam": "Manchester City",
             "awayTeam": "Bournemouth",
             "homeScore": 2,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401879320",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-23T13:00Z"
+            "kickoffUtc": "2026-08-23T13:00:00Z"
           },
           {
             "round": 1,
             "date": "2026-08-23",
-            "time": "TBD",
-            "homeTeam": "Brighton & Hove Albion",
+            "time": "10:00",
+            "homeTeam": "Brighton and Hove Albion",
             "awayTeam": "Aston Villa",
             "homeScore": 4,
             "awayScore": 0,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401879297",
-            "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-08-23T13:00Z"
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-08-23T13:00:00Z"
           },
           {
             "round": 1,
             "date": "2026-08-23",
-            "time": "16:30",
+            "time": "12:30",
             "homeTeam": "Newcastle United",
             "awayTeam": "Liverpool",
             "homeScore": 2,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401879319",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-23T15:30Z"
+            "kickoffUtc": "2026-08-23T15:30:00Z"
           },
           {
             "round": 1,
             "date": "2026-08-24",
-            "time": "20:00",
+            "time": "16:00",
             "homeTeam": "Fulham",
             "awayTeam": "Chelsea",
             "homeScore": 2,
             "awayScore": 3,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401879318",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-24T19:00Z"
+            "kickoffUtc": "2026-08-24T19:00:00Z"
           }
         ]
       },
@@ -166,77 +166,77 @@
           {
             "round": 2,
             "date": "2026-08-28",
-            "time": "20:00",
+            "time": "16:00",
             "homeTeam": "Crystal Palace",
             "awayTeam": "Manchester City",
             "homeScore": 1,
             "awayScore": 4,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401879294",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-28T19:00Z"
+            "kickoffUtc": "2026-08-28T19:00:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-29",
-            "time": "12:30",
+            "time": "08:30",
             "homeTeam": "Liverpool",
             "awayTeam": "Nottingham Forest",
             "homeScore": 2,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401879314",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-29T11:30Z"
+            "kickoffUtc": "2026-08-29T11:30:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-29",
-            "time": "15:00",
+            "time": "11:00",
             "homeTeam": "Bournemouth",
             "awayTeam": "Everton",
             "homeScore": 1,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401879296",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-29T14:00Z"
+            "kickoffUtc": "2026-08-29T14:00:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-29",
-            "time": "TBD",
+            "time": "11:00",
             "homeTeam": "Coventry City",
             "awayTeam": "Hull City",
             "homeScore": 0,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401879316",
-            "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-08-29T14:00Z"
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-08-29T14:00:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-29",
-            "time": "17:30",
+            "time": "13:30",
             "homeTeam": "Tottenham Hotspur",
             "awayTeam": "Newcastle United",
             "homeScore": 0,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401879312",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-29T16:30Z"
+            "kickoffUtc": "2026-08-29T16:30:00Z"
           },
           {
             "round": 2,
@@ -6516,18 +6516,18 @@
         "games": [
           {
             "round": 6,
-            "date": "2026-10-11",
+            "date": "2026-10-12",
             "time": "TBD",
             "homeTeam": "Atalanta",
             "awayTeam": "Venezia",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401875005",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-11T18:00Z"
+            "kickoffUtc": "2026-10-12T16:30Z"
           },
           {
             "round": 6,
@@ -6542,7 +6542,7 @@
             "id": "401874789",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-11T18:00Z"
+            "kickoffUtc": "2026-10-11T16:00Z"
           },
           {
             "round": 6,
@@ -6557,22 +6557,22 @@
             "id": "401874776",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-11T18:00Z"
+            "kickoffUtc": "2026-10-11T13:00Z"
           },
           {
             "round": 6,
-            "date": "2026-10-11",
+            "date": "2026-10-10",
             "time": "TBD",
             "homeTeam": "Internazionale",
             "awayTeam": "Parma",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401875021",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-11T18:00Z"
+            "kickoffUtc": "2026-10-10T16:00Z"
           },
           {
             "round": 6,
@@ -6587,7 +6587,7 @@
             "id": "401874951",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-11T18:00Z"
+            "kickoffUtc": "2026-10-11T13:00Z"
           },
           {
             "round": 6,
@@ -6602,7 +6602,7 @@
             "id": "401874764",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-11T18:00Z"
+            "kickoffUtc": "2026-10-11T18:45Z"
           },
           {
             "round": 6,
@@ -6617,52 +6617,52 @@
             "id": "401874940",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-11T18:00Z"
+            "kickoffUtc": "2026-10-11T10:30Z"
           },
           {
             "round": 6,
-            "date": "2026-10-11",
+            "date": "2026-10-10",
             "time": "TBD",
             "homeTeam": "Napoli",
             "awayTeam": "Frosinone",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874754",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-11T18:00Z"
+            "kickoffUtc": "2026-10-10T18:45Z"
           },
           {
             "round": 6,
-            "date": "2026-10-11",
+            "date": "2026-10-12",
             "time": "TBD",
             "homeTeam": "Torino",
             "awayTeam": "Udinese",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874763",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-11T18:00Z"
+            "kickoffUtc": "2026-10-12T18:45Z"
           },
           {
             "round": 6,
-            "date": "2026-10-11",
+            "date": "2026-10-10",
             "time": "TBD",
             "homeTeam": "Genoa",
             "awayTeam": "Fiorentina",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874947",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-11T18:00Z"
+            "kickoffUtc": "2026-10-10T13:00Z"
           }
         ]
       },
@@ -6682,7 +6682,7 @@
             "id": "401874978",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-18T16:00Z"
           },
           {
             "round": 7,
@@ -6697,52 +6697,52 @@
             "id": "401874765",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-18T18:45Z"
           },
           {
             "round": 7,
-            "date": "2026-10-18",
+            "date": "2026-10-17",
             "time": "TBD",
             "homeTeam": "Bologna",
             "awayTeam": "Internazionale",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874953",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T16:00Z"
           },
           {
             "round": 7,
-            "date": "2026-10-18",
+            "date": "2026-10-17",
             "time": "TBD",
             "homeTeam": "AS Roma",
             "awayTeam": "Genoa",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874935",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T18:45Z"
           },
           {
             "round": 7,
-            "date": "2026-10-18",
+            "date": "2026-10-16",
             "time": "TBD",
             "homeTeam": "Frosinone",
             "awayTeam": "Sassuolo",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874959",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-16T18:45Z"
           },
           {
             "round": 7,
@@ -6757,37 +6757,37 @@
             "id": "401874771",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-18T10:30Z"
           },
           {
             "round": 7,
-            "date": "2026-10-18",
+            "date": "2026-10-17",
             "time": "TBD",
             "homeTeam": "Venezia",
             "awayTeam": "Napoli",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874760",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T13:00Z"
           },
           {
             "round": 7,
-            "date": "2026-10-18",
+            "date": "2026-10-19",
             "time": "TBD",
             "homeTeam": "Monza",
             "awayTeam": "Cagliari",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874762",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-19T16:30Z"
           },
           {
             "round": 7,
@@ -6802,22 +6802,22 @@
             "id": "401874774",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-18T13:00Z"
           },
           {
             "round": 7,
-            "date": "2026-10-18",
+            "date": "2026-10-19",
             "time": "TBD",
             "homeTeam": "Parma",
             "awayTeam": "Torino",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874784",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-19T18:45Z"
           }
         ]
       },
@@ -6837,37 +6837,37 @@
             "id": "401874779",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-25T18:00Z"
+            "kickoffUtc": "2026-10-25T19:45Z"
           },
           {
             "round": 8,
-            "date": "2026-10-25",
+            "date": "2026-10-24",
             "time": "TBD",
             "homeTeam": "Cagliari",
             "awayTeam": "Bologna",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874958",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-25T18:00Z"
+            "kickoffUtc": "2026-10-24T13:00Z"
           },
           {
             "round": 8,
-            "date": "2026-10-25",
+            "date": "2026-10-24",
             "time": "TBD",
             "homeTeam": "Como",
             "awayTeam": "Sassuolo",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874961",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-25T18:00Z"
+            "kickoffUtc": "2026-10-24T13:00Z"
           },
           {
             "round": 8,
@@ -6882,7 +6882,7 @@
             "id": "401874972",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-25T18:00Z"
+            "kickoffUtc": "2026-10-25T14:00Z"
           },
           {
             "round": 8,
@@ -6897,37 +6897,37 @@
             "id": "401875036",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-25T18:00Z"
+            "kickoffUtc": "2026-10-25T11:30Z"
           },
           {
             "round": 8,
-            "date": "2026-10-25",
+            "date": "2026-10-24",
             "time": "TBD",
             "homeTeam": "Napoli",
             "awayTeam": "AS Roma",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874948",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-25T18:00Z"
+            "kickoffUtc": "2026-10-24T16:00Z"
           },
           {
             "round": 8,
-            "date": "2026-10-25",
+            "date": "2026-10-24",
             "time": "TBD",
             "homeTeam": "Lazio",
             "awayTeam": "Parma",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874955",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-25T18:00Z"
+            "kickoffUtc": "2026-10-24T18:45Z"
           },
           {
             "round": 8,
@@ -6942,22 +6942,22 @@
             "id": "401874772",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-25T18:00Z"
+            "kickoffUtc": "2026-10-25T17:00Z"
           },
           {
             "round": 8,
-            "date": "2026-10-25",
+            "date": "2026-10-23",
             "time": "TBD",
             "homeTeam": "Torino",
             "awayTeam": "Monza",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874957",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-25T18:00Z"
+            "kickoffUtc": "2026-10-23T18:45Z"
           },
           {
             "round": 8,
@@ -6972,7 +6972,7 @@
             "id": "401874952",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-25T18:00Z"
+            "kickoffUtc": "2026-10-25T14:00Z"
           }
         ]
       },
@@ -6992,7 +6992,7 @@
             "id": "401874993",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-28T18:00Z"
+            "kickoffUtc": "2026-10-28T17:30Z"
           },
           {
             "round": 9,
@@ -7007,22 +7007,22 @@
             "id": "401874773",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-28T18:00Z"
+            "kickoffUtc": "2026-10-28T17:30Z"
           },
           {
             "round": 9,
-            "date": "2026-10-28",
+            "date": "2026-10-29",
             "time": "TBD",
             "homeTeam": "Fiorentina",
             "awayTeam": "Atalanta",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874969",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-28T18:00Z"
+            "kickoffUtc": "2026-10-29T19:45Z"
           },
           {
             "round": 9,
@@ -7037,7 +7037,7 @@
             "id": "401874988",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-28T18:00Z"
+            "kickoffUtc": "2026-10-28T19:45Z"
           },
           {
             "round": 9,
@@ -7052,7 +7052,7 @@
             "id": "401874965",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-28T18:00Z"
+            "kickoffUtc": "2026-10-28T17:30Z"
           },
           {
             "round": 9,
@@ -7067,67 +7067,67 @@
             "id": "401874799",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-28T18:00Z"
+            "kickoffUtc": "2026-10-28T19:45Z"
           },
           {
             "round": 9,
-            "date": "2026-10-28",
+            "date": "2026-10-27",
             "time": "TBD",
             "homeTeam": "AS Roma",
             "awayTeam": "Cagliari",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874780",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-28T18:00Z"
+            "kickoffUtc": "2026-10-27T19:45Z"
           },
           {
             "round": 9,
-            "date": "2026-10-28",
+            "date": "2026-10-27",
             "time": "TBD",
             "homeTeam": "Sassuolo",
             "awayTeam": "Lazio",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874980",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-28T18:00Z"
+            "kickoffUtc": "2026-10-27T17:30Z"
           },
           {
             "round": 9,
-            "date": "2026-10-28",
+            "date": "2026-10-27",
             "time": "TBD",
             "homeTeam": "Torino",
             "awayTeam": "Como",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874786",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-28T18:00Z"
+            "kickoffUtc": "2026-10-27T19:45Z"
           },
           {
             "round": 9,
-            "date": "2026-10-28",
+            "date": "2026-10-29",
             "time": "TBD",
             "homeTeam": "Frosinone",
             "awayTeam": "Lecce",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874976",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-28T18:00Z"
+            "kickoffUtc": "2026-10-29T17:30Z"
           }
         ]
       },
@@ -7136,18 +7136,18 @@
         "games": [
           {
             "round": 10,
-            "date": "2026-11-01",
+            "date": "2026-10-31",
             "time": "TBD",
             "homeTeam": "Bologna",
             "awayTeam": "Monza",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874798",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-01T20:00Z"
+            "kickoffUtc": "2026-10-31T14:00Z"
           },
           {
             "round": 10,
@@ -7162,37 +7162,37 @@
             "id": "401874968",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-01T20:00Z"
+            "kickoffUtc": "2026-11-01T17:00Z"
           },
           {
             "round": 10,
-            "date": "2026-11-01",
+            "date": "2026-11-02",
             "time": "TBD",
             "homeTeam": "Sassuolo",
             "awayTeam": "Fiorentina",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874963",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-01T20:00Z"
+            "kickoffUtc": "2026-11-02T17:30Z"
           },
           {
             "round": 10,
-            "date": "2026-11-01",
+            "date": "2026-10-31",
             "time": "TBD",
             "homeTeam": "Udinese",
             "awayTeam": "AS Roma",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874990",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-01T20:00Z"
+            "kickoffUtc": "2026-10-31T17:00Z"
           },
           {
             "round": 10,
@@ -7207,7 +7207,7 @@
             "id": "401875002",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-01T20:00Z"
+            "kickoffUtc": "2026-11-01T11:30Z"
           },
           {
             "round": 10,
@@ -7222,22 +7222,22 @@
             "id": "401874782",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-01T20:00Z"
+            "kickoffUtc": "2026-11-01T14:00Z"
           },
           {
             "round": 10,
-            "date": "2026-11-01",
+            "date": "2026-11-02",
             "time": "TBD",
             "homeTeam": "Atalanta",
             "awayTeam": "Parma",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874971",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-01T20:00Z"
+            "kickoffUtc": "2026-11-02T19:45Z"
           },
           {
             "round": 10,
@@ -7252,7 +7252,7 @@
             "id": "401874983",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-01T20:00Z"
+            "kickoffUtc": "2026-11-01T14:00Z"
           },
           {
             "round": 10,
@@ -7267,22 +7267,22 @@
             "id": "401874949",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-01T20:00Z"
+            "kickoffUtc": "2026-11-01T19:45Z"
           },
           {
             "round": 10,
-            "date": "2026-11-01",
+            "date": "2026-10-31",
             "time": "TBD",
             "homeTeam": "AC Milan",
             "awayTeam": "Internazionale",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874795",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-01T20:00Z"
+            "kickoffUtc": "2026-10-31T19:45Z"
           }
         ]
       },
@@ -7302,7 +7302,7 @@
             "id": "401875003",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-08T20:00Z"
+            "kickoffUtc": "2026-11-08T19:45Z"
           },
           {
             "round": 11,
@@ -7317,37 +7317,37 @@
             "id": "401874808",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-08T20:00Z"
+            "kickoffUtc": "2026-11-08T17:00Z"
           },
           {
             "round": 11,
-            "date": "2026-11-08",
+            "date": "2026-11-07",
             "time": "TBD",
             "homeTeam": "AS Roma",
             "awayTeam": "Sassuolo",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874803",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-08T20:00Z"
+            "kickoffUtc": "2026-11-07T19:45Z"
           },
           {
             "round": 11,
-            "date": "2026-11-08",
+            "date": "2026-11-07",
             "time": "TBD",
             "homeTeam": "Torino",
             "awayTeam": "Lecce",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874811",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-08T20:00Z"
+            "kickoffUtc": "2026-11-07T14:00Z"
           },
           {
             "round": 11,
@@ -7362,37 +7362,37 @@
             "id": "401874810",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-08T20:00Z"
+            "kickoffUtc": "2026-11-08T11:30Z"
           },
           {
             "round": 11,
-            "date": "2026-11-08",
+            "date": "2026-11-07",
             "time": "TBD",
             "homeTeam": "Cagliari",
             "awayTeam": "Frosinone",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874791",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-08T20:00Z"
+            "kickoffUtc": "2026-11-07T14:00Z"
           },
           {
             "round": 11,
-            "date": "2026-11-08",
+            "date": "2026-11-07",
             "time": "TBD",
             "homeTeam": "Parma",
             "awayTeam": "Bologna",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874974",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-08T20:00Z"
+            "kickoffUtc": "2026-11-07T17:00Z"
           },
           {
             "round": 11,
@@ -7407,22 +7407,22 @@
             "id": "401875018",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-08T20:00Z"
+            "kickoffUtc": "2026-11-08T14:00Z"
           },
           {
             "round": 11,
-            "date": "2026-11-08",
+            "date": "2026-11-06",
             "time": "TBD",
             "homeTeam": "Venezia",
             "awayTeam": "Udinese",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874815",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-08T20:00Z"
+            "kickoffUtc": "2026-11-06T19:45Z"
           },
           {
             "round": 11,
@@ -7437,7 +7437,7 @@
             "id": "401874800",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-08T20:00Z"
+            "kickoffUtc": "2026-11-08T14:00Z"
           }
         ]
       },
@@ -7446,18 +7446,18 @@
         "games": [
           {
             "round": 12,
-            "date": "2026-11-22",
+            "date": "2026-11-23",
             "time": "TBD",
             "homeTeam": "Monza",
             "awayTeam": "Fiorentina",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401875009",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-22T20:00Z"
+            "kickoffUtc": "2026-11-23T17:30Z"
           },
           {
             "round": 12,
@@ -7472,22 +7472,22 @@
             "id": "401875001",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-22T20:00Z"
+            "kickoffUtc": "2026-11-22T19:45Z"
           },
           {
             "round": 12,
-            "date": "2026-11-22",
+            "date": "2026-11-23",
             "time": "TBD",
             "homeTeam": "Juventus",
             "awayTeam": "Venezia",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401875008",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-22T20:00Z"
+            "kickoffUtc": "2026-11-23T19:45Z"
           },
           {
             "round": 12,
@@ -7502,7 +7502,7 @@
             "id": "401875047",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-22T20:00Z"
+            "kickoffUtc": "2026-11-22T17:00Z"
           },
           {
             "round": 12,
@@ -7517,7 +7517,7 @@
             "id": "401874989",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-22T20:00Z"
+            "kickoffUtc": "2026-11-22T14:00Z"
           },
           {
             "round": 12,
@@ -7532,67 +7532,67 @@
             "id": "401874960",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-22T20:00Z"
+            "kickoffUtc": "2026-11-22T11:30Z"
           },
           {
             "round": 12,
-            "date": "2026-11-22",
+            "date": "2026-11-21",
             "time": "TBD",
             "homeTeam": "Como",
             "awayTeam": "Cagliari",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401875056",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-22T20:00Z"
+            "kickoffUtc": "2026-11-21T14:00Z"
           },
           {
             "round": 12,
-            "date": "2026-11-22",
+            "date": "2026-11-21",
             "time": "TBD",
             "homeTeam": "Parma",
             "awayTeam": "AS Roma",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874967",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-22T20:00Z"
+            "kickoffUtc": "2026-11-21T17:00Z"
           },
           {
             "round": 12,
-            "date": "2026-11-22",
+            "date": "2026-11-21",
             "time": "TBD",
             "homeTeam": "Napoli",
             "awayTeam": "Torino",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401875067",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-22T20:00Z"
+            "kickoffUtc": "2026-11-21T19:45Z"
           },
           {
             "round": 12,
-            "date": "2026-11-22",
+            "date": "2026-11-21",
             "time": "TBD",
             "homeTeam": "Lazio",
             "awayTeam": "Lecce",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401874981",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-22T20:00Z"
+            "kickoffUtc": "2026-11-21T14:00Z"
           }
         ]
       },
@@ -14354,214 +14354,106 @@
     ],
     "scottish-premiership": [
       {
-        "round": 4,
+        "round": 1,
         "games": [
           {
-            "round": 4,
-            "date": "2026-08-29",
+            "round": 1,
+            "date": "2026-09-05",
             "time": "15:00",
-            "homeTeam": "Celtic",
-            "awayTeam": "Falkirk",
-            "homeScore": 2,
-            "awayScore": 1,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "official:scottish-premiership:celtic-vs-falkirk:2026-08-29",
+            "homeTeam": "Aberdeen",
+            "awayTeam": "Kilmarnock",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401878386",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-29T14:00:00.000Z",
-            "fotmobMatchId": 5793917
+            "kickoffUtc": "2026-09-05T14:00Z"
           },
           {
-            "round": 4,
-            "date": "2026-08-29",
+            "round": 1,
+            "date": "2026-09-05",
+            "time": "15:00",
+            "homeTeam": "Dundee United",
+            "awayTeam": "Falkirk",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401878385",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-05T14:00Z"
+          },
+          {
+            "round": 1,
+            "date": "2026-09-06",
             "time": "15:00",
             "homeTeam": "Hearts",
-            "awayTeam": "St Johnstone",
-            "homeScore": 2,
-            "awayScore": 1,
-            "status": "completed",
+            "awayTeam": "Dundee",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
             "dataSource": "fotmob",
-            "id": "official:scottish-premiership:hearts-vs-st-johnstone:2026-08-29",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-29T14:00:00.000Z",
-            "fotmobMatchId": 5793919
+            "id": "official:scottish-premiership:hearts-vs-dundee:2026-09-06",
+            "fotmobMatchId": 5793930,
+            "sourceAgreement": true
           },
           {
-            "round": 4,
-            "date": "2026-08-29",
+            "round": 1,
+            "date": "2026-09-05",
             "time": "15:00",
-            "homeTeam": "Kilmarnock",
-            "awayTeam": "Dundee United",
-            "homeScore": 0,
-            "awayScore": 4,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "official:scottish-premiership:kilmarnock-vs-dundee-united:2026-08-29",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-29T14:00:00.000Z",
-            "fotmobMatchId": 5793920
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "time": "12:00",
-            "homeTeam": "Aberdeen",
-            "awayTeam": "Rangers",
-            "homeScore": 0,
-            "awayScore": 1,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "official:scottish-premiership:aberdeen-vs-rangers:2026-08-30",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-30T11:00:00.000Z",
-            "fotmobMatchId": 5793916
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "time": "15:00",
-            "homeTeam": "Dundee",
-            "awayTeam": "Hibernian",
-            "homeScore": 1,
-            "awayScore": 2,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "official:scottish-premiership:dundee-vs-hibernian:2026-08-30",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-30T14:00:00.000Z",
-            "fotmobMatchId": 5793918
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "time": "15:00",
-            "homeTeam": "St Mirren",
+            "homeTeam": "Rangers",
             "awayTeam": "Motherwell",
-            "homeScore": 3,
-            "awayScore": 3,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "official:scottish-premiership:st-mirren-vs-motherwell:2026-08-30",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401878383",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-30T14:00:00.000Z",
-            "fotmobMatchId": 5793921
-          }
-        ]
-      },
-      {
-        "round": 5,
-        "games": [
-          {
-            "round": 5,
-            "date": "2026-09-02",
-            "time": "19:45",
-            "homeTeam": "Celtic",
-            "awayTeam": "Aberdeen",
-            "homeScore": 3,
-            "awayScore": 0,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "official:scottish-premiership:celtic-vs-aberdeen:2026-09-02",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-02T18:45:00.000Z",
-            "fotmobMatchId": 5793922
+            "kickoffUtc": "2026-09-05T14:00Z"
           },
           {
-            "round": 5,
-            "date": "2026-09-02",
-            "time": "19:45",
-            "homeTeam": "Dundee",
-            "awayTeam": "St Johnstone",
-            "homeScore": 1,
-            "awayScore": 1,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "official:scottish-premiership:dundee-vs-st-johnstone:2026-09-02",
+            "round": 1,
+            "date": "2026-09-06",
+            "time": "15:00",
+            "homeTeam": "St Johnstone",
+            "awayTeam": "Hibernian",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401878382",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-02T18:45:00.000Z",
-            "fotmobMatchId": 5793923
+            "kickoffUtc": "2026-09-06T14:00Z"
           },
           {
-            "round": 5,
-            "date": "2026-09-02",
-            "time": "19:45",
-            "homeTeam": "Kilmarnock",
-            "awayTeam": "St Mirren",
-            "homeScore": 0,
-            "awayScore": 1,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "official:scottish-premiership:kilmarnock-vs-st-mirren:2026-09-02",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-02T18:45:00.000Z",
-            "fotmobMatchId": 5793926
-          },
-          {
-            "round": 5,
-            "date": "2026-09-02",
-            "time": "19:45",
-            "homeTeam": "Motherwell",
-            "awayTeam": "Dundee United",
-            "homeScore": 3,
-            "awayScore": 0,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "official:scottish-premiership:motherwell-vs-dundee-united:2026-09-02",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-02T18:45:00.000Z",
-            "fotmobMatchId": 5793927
-          },
-          {
-            "round": 5,
-            "date": "2026-09-02",
+            "round": 1,
+            "date": "2026-09-05",
             "time": "20:00",
-            "homeTeam": "Falkirk",
-            "awayTeam": "Rangers",
-            "homeScore": 1,
-            "awayScore": 2,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "official:scottish-premiership:falkirk-vs-rangers:2026-09-02",
+            "homeTeam": "St Mirren",
+            "awayTeam": "Celtic",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401878381",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-02T19:00:00.000Z",
-            "fotmobMatchId": 5793924
-          },
-          {
-            "round": 5,
-            "date": "2026-09-03",
-            "time": "19:45",
-            "homeTeam": "Hibernian",
-            "awayTeam": "Hearts",
-            "homeScore": 1,
-            "awayScore": 3,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "official:scottish-premiership:hibernian-vs-hearts:2026-09-03",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-03T18:45:00.000Z",
-            "fotmobMatchId": 5793925
+            "kickoffUtc": "2026-09-05T19:00Z"
           }
         ]
       }
     ],
     "eliteserien": [
       {
-        "round": 20,
+        "round": 1,
         "games": [
           {
-            "round": 20,
+            "round": 1,
             "date": "2026-09-04",
             "time": "19:00",
             "homeTeam": "Fredrikstad",
@@ -14569,14 +14461,13 @@
             "homeScore": null,
             "awayScore": null,
             "status": "scheduled",
-            "dataSource": "snapshot",
-            "id": "official:eliteserien:fredrikstad-vs-bodo-glimt:2026-09-04",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-04T17:00:00Z"
+            "dataSource": "fotmob",
+            "id": "official:eliteserien:fredrikstad-vs-bod-glimt:2026-09-04",
+            "fotmobMatchId": 5104994,
+            "sourceAgreement": true
           },
           {
-            "round": 20,
+            "round": 1,
             "date": "2026-09-04",
             "time": "19:00",
             "homeTeam": "Aalesund",
@@ -14584,14 +14475,13 @@
             "homeScore": null,
             "awayScore": null,
             "status": "scheduled",
-            "dataSource": "snapshot",
+            "dataSource": "fotmob",
             "id": "official:eliteserien:aalesund-vs-start:2026-09-04",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-04T17:00:00Z"
+            "fotmobMatchId": 5104999,
+            "sourceAgreement": true
           },
           {
-            "round": 20,
+            "round": 1,
             "date": "2026-09-04",
             "time": "21:00",
             "homeTeam": "Sandefjord",
@@ -14599,14 +14489,13 @@
             "homeScore": null,
             "awayScore": null,
             "status": "scheduled",
-            "dataSource": "snapshot",
+            "dataSource": "fotmob",
             "id": "official:eliteserien:sandefjord-vs-viking:2026-09-04",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-04T19:00:00Z"
+            "fotmobMatchId": 5104993,
+            "sourceAgreement": true
           },
           {
-            "round": 20,
+            "round": 1,
             "date": "2026-09-05",
             "time": "16:00",
             "homeTeam": "Rosenborg",
@@ -14614,14 +14503,13 @@
             "homeScore": null,
             "awayScore": null,
             "status": "scheduled",
-            "dataSource": "snapshot",
+            "dataSource": "fotmob",
             "id": "official:eliteserien:rosenborg-vs-hamkam:2026-09-05",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-05T14:00:00Z"
+            "fotmobMatchId": 5105000,
+            "sourceAgreement": true
           },
           {
-            "round": 20,
+            "round": 1,
             "date": "2026-09-05",
             "time": "18:00",
             "homeTeam": "Brann",
@@ -14629,14 +14517,13 @@
             "homeScore": null,
             "awayScore": null,
             "status": "scheduled",
-            "dataSource": "snapshot",
-            "id": "official:eliteserien:brann-vs-lillestrom:2026-09-05",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-05T16:00:00Z"
+            "dataSource": "fotmob",
+            "id": "official:eliteserien:brann-vs-lillestr-m:2026-09-05",
+            "fotmobMatchId": 5104995,
+            "sourceAgreement": true
           },
           {
-            "round": 20,
+            "round": 1,
             "date": "2026-09-06",
             "time": "17:00",
             "homeTeam": "Molde",
@@ -14644,14 +14531,14 @@
             "homeScore": null,
             "awayScore": null,
             "status": "scheduled",
-            "dataSource": "snapshot",
-            "id": "official:eliteserien:molde-vs-kfum-oslo:2026-09-06",
+            "dataSource": "espn",
+            "id": "401843431",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-06T15:00:00Z"
+            "kickoffUtc": "2026-09-06T15:00Z"
           },
           {
-            "round": 20,
+            "round": 1,
             "date": "2026-09-06",
             "time": "17:00",
             "homeTeam": "Sarpsborg 08",
@@ -14659,14 +14546,13 @@
             "homeScore": null,
             "awayScore": null,
             "status": "scheduled",
-            "dataSource": "snapshot",
+            "dataSource": "fotmob",
             "id": "official:eliteserien:sarpsborg-08-vs-valerenga:2026-09-06",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-06T15:00:00Z"
+            "fotmobMatchId": 5104998,
+            "sourceAgreement": true
           },
           {
-            "round": 20,
+            "round": 1,
             "date": "2026-09-06",
             "time": "19:15",
             "homeTeam": "Kristiansund",
@@ -14674,11 +14560,10 @@
             "homeScore": null,
             "awayScore": null,
             "status": "scheduled",
-            "dataSource": "snapshot",
-            "id": "official:eliteserien:kristiansund-vs-tromso:2026-09-06",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-06T17:15:00Z"
+            "dataSource": "fotmob",
+            "id": "official:eliteserien:kristiansund-vs-troms:2026-09-06",
+            "fotmobMatchId": 5104996,
+            "sourceAgreement": true
           }
         ]
       }
@@ -14767,10 +14652,10 @@
     "efl-cup:tottenham-hotspur-vs-charlton-athletic": "401908140",
     "efl-cup:watford-vs-peterborough-united": "401907949",
     "eliteserien:aalesund-vs-start": "official:eliteserien:aalesund-vs-start:2026-09-04",
-    "eliteserien:brann-vs-lillestrom": "official:eliteserien:brann-vs-lillestrom:2026-09-05",
-    "eliteserien:fredrikstad-vs-bodo-glimt": "official:eliteserien:fredrikstad-vs-bodo-glimt:2026-09-04",
-    "eliteserien:kristiansund-vs-tromso": "official:eliteserien:kristiansund-vs-tromso:2026-09-06",
-    "eliteserien:molde-vs-kfum-oslo": "official:eliteserien:molde-vs-kfum-oslo:2026-09-06",
+    "eliteserien:brann-vs-lillestrom": "official:eliteserien:brann-vs-lillestr-m:2026-09-05",
+    "eliteserien:fredrikstad-vs-bodo-glimt": "official:eliteserien:fredrikstad-vs-bod-glimt:2026-09-04",
+    "eliteserien:kristiansund-vs-tromso": "official:eliteserien:kristiansund-vs-troms:2026-09-06",
+    "eliteserien:molde-vs-kfum-oslo": "401843431",
     "eliteserien:rosenborg-vs-hamkam": "official:eliteserien:rosenborg-vs-hamkam:2026-09-05",
     "eliteserien:sandefjord-vs-viking": "official:eliteserien:sandefjord-vs-viking:2026-09-04",
     "eliteserien:sarpsborg-08-vs-valerenga": "official:eliteserien:sarpsborg-08-vs-valerenga:2026-09-06",
@@ -14918,18 +14803,12 @@
     "premier-league:nottingham-forest-vs-tottenham-hotspur": "401878780",
     "premier-league:sunderland-vs-fulham": "401879313",
     "premier-league:tottenham-hotspur-vs-newcastle-united": "401879312",
-    "scottish-premiership:aberdeen-vs-rangers": "official:scottish-premiership:aberdeen-vs-rangers:2026-08-30",
-    "scottish-premiership:celtic-vs-aberdeen": "official:scottish-premiership:celtic-vs-aberdeen:2026-09-02",
-    "scottish-premiership:celtic-vs-falkirk": "official:scottish-premiership:celtic-vs-falkirk:2026-08-29",
-    "scottish-premiership:dundee-vs-hibernian": "official:scottish-premiership:dundee-vs-hibernian:2026-08-30",
-    "scottish-premiership:dundee-vs-st-johnstone": "official:scottish-premiership:dundee-vs-st-johnstone:2026-09-02",
-    "scottish-premiership:falkirk-vs-rangers": "official:scottish-premiership:falkirk-vs-rangers:2026-09-02",
-    "scottish-premiership:hearts-vs-st-johnstone": "official:scottish-premiership:hearts-vs-st-johnstone:2026-08-29",
-    "scottish-premiership:hibernian-vs-hearts": "official:scottish-premiership:hibernian-vs-hearts:2026-09-03",
-    "scottish-premiership:kilmarnock-vs-dundee-united": "official:scottish-premiership:kilmarnock-vs-dundee-united:2026-08-29",
-    "scottish-premiership:kilmarnock-vs-st-mirren": "official:scottish-premiership:kilmarnock-vs-st-mirren:2026-09-02",
-    "scottish-premiership:motherwell-vs-dundee-united": "official:scottish-premiership:motherwell-vs-dundee-united:2026-09-02",
-    "scottish-premiership:st-mirren-vs-motherwell": "official:scottish-premiership:st-mirren-vs-motherwell:2026-08-30",
+    "scottish-premiership:aberdeen-vs-kilmarnock": "401878386",
+    "scottish-premiership:dundee-united-vs-falkirk": "401878385",
+    "scottish-premiership:hearts-vs-dundee": "official:scottish-premiership:hearts-vs-dundee:2026-09-06",
+    "scottish-premiership:rangers-vs-motherwell": "401878383",
+    "scottish-premiership:st-johnstone-vs-hibernian": "401878382",
+    "scottish-premiership:st-mirren-vs-celtic": "401878381",
     "serie-a:ac-milan-vs-venezia": "401874758",
     "serie-a:ac-monza-vs-udinese-calcio": "401874749",
     "serie-a:acf-fiorentina-vs-frosinone-calcio": "401874942",
@@ -14979,20 +14858,20 @@
     "super-lig:trabzonspor-vs-genclerbirligi": "401888305"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-09-04T05:46:03.680Z",
-    "la-liga": "2026-09-04T05:46:03.680Z",
-    "bundesliga": "2026-09-04T05:46:03.680Z",
-    "serie-a": "2026-09-04T05:46:03.680Z",
-    "liga-portugal": "2026-09-04T05:46:03.680Z",
-    "ligue-1": "2026-09-04T05:46:03.680Z",
-    "eredivisie": "2026-09-04T05:46:03.680Z",
+    "premier-league": "2026-09-04T10:16:54.373Z",
+    "la-liga": "2026-09-04T10:16:54.373Z",
+    "bundesliga": "2026-09-04T10:16:54.373Z",
+    "serie-a": "2026-09-04T10:16:54.373Z",
+    "liga-portugal": "2026-09-04T10:16:54.373Z",
+    "ligue-1": "2026-09-04T10:16:54.373Z",
+    "eredivisie": "2026-09-04T10:16:54.373Z",
     "brasileirao-serie-a": "2026-09-01T19:00:00-03:00",
     "copa-do-brasil": "2026-08-30T10:44:40.959Z",
-    "efl-cup": "2026-09-04T05:46:03.680Z",
-    "championship": "2026-09-04T05:46:03.680Z",
+    "efl-cup": "2026-09-04T10:16:54.373Z",
+    "championship": "2026-09-04T10:16:54.373Z",
     "super-lig": "2026-08-26T11:54:38.899Z",
-    "scottish-premiership": "2026-08-26T11:54:38.899Z",
-    "eliteserien": "2026-09-02T23:30:00.000Z"
+    "scottish-premiership": "2026-09-04T10:16:54.373Z",
+    "eliteserien": "2026-09-04T10:16:54.373Z"
   },
   "manualFixtures": {
     "401888299": {
