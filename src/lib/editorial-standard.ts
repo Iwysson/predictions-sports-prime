@@ -173,7 +173,7 @@ export function validatePspEditorialStandard(prediction: EditorialPrediction) {
   if (!rows.length) errors.push("Statistical Core table is missing or unreadable");
   else errors.push(...validateStatisticalCoreRows(rows).map((error) => `Statistical Core: ${error}`));
 
-  if (!/Conflict Detector/i.test(markdown)) errors.push("Conflict Detector is required");
+  if (!/(?:Conflict Detector|Risks and Counter-Signals)/i.test(markdown)) errors.push("counter-signal / conflict analysis is required");
   if (!/implied probability/i.test(markdown) || !/1\s*\/\s*(?:odds|decimal|price)|1\s*\/\s*\d/i.test(markdown)) {
     errors.push("raw implied-probability explanation is required");
   }

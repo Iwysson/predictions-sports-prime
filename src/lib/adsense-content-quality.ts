@@ -399,7 +399,7 @@ function fallbackDecision(
   const text = prediction.analysis.join("\n\n");
   const hasStatisticalCore =
     /Statistical Core Predictions-Sports-Prime/i.test(text);
-  const hasConflictDetector = /Conflict Detector/i.test(text);
+  const hasConflictDetector = /(?:Conflict Detector|Risks and Counter-Signals)/i.test(text);
   const hasDataEvidence = DATA_FIRST_METRIC_PATTERN.test(text);
   const hasTeamContext =
     hasStructuredTeamContext(prediction) || TEAM_CONTEXT_PATTERN.test(text);
