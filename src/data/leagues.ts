@@ -38,6 +38,7 @@ const graphicalLeagueAssets: Partial<
   "scottish-premiership": { src: "/league-badges/scottish-premiership.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/72d3zc1688333496.png", needsDarkBackground: true },
   eliteserien: { src: "/league-badges/eliteserien.png", sourceUrl: "https://www.eliteserien.no/" },
   mls: { src: "/league-badges/mls.png", sourceUrl: "https://www.mlssoccer.com/" },
+  "champions-league": { src: "/league-badges/champions-league.png", sourceUrl: "https://commons.wikimedia.org/wiki/File:UEFA_Champions_League_logo_no_text.svg" },
 };
 
 const source = (path: string) => `https://raw.githubusercontent.com/openfootball/${path}`;
@@ -99,6 +100,7 @@ export const leagues: LeagueConfig[] = [
   defineLeague({ slug: "scottish-premiership", name: "Scottish Premiership", country: "Scotland", short: "SCO", featured: false, showOnHome: true, manualOnly: true, expectedClubs: 12, expectedGamesPerRound: 6, artworkId: 4330, timezone: "Europe/London", liveDataId: "sco.1" }),
   defineLeague({ slug: "eliteserien", name: "Eliteserien", country: "Norway", short: "NOR", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, expectedClubs: 16, expectedGamesPerRound: 8, timezone: "Europe/Oslo", liveDataId: "nor.1" }),
   defineLeague({ slug: "mls", name: "Major League Soccer", country: "United States", short: "MLS", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 30, expectedGamesPerRound: 15, timezone: "America/New_York", liveDataId: "usa.1" }),
+  defineLeague({ slug: "champions-league", name: "UEFA Champions League", country: "Europe", short: "UCL", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 36, expectedGamesPerRound: 18, timezone: "Europe/Paris", liveDataId: "uefa.champions" }),
 ];
 
 export const leaguesBySlug = Object.fromEntries(
@@ -125,6 +127,7 @@ export const primaryPredictionLeagueSlugs = [
   "scottish-premiership",
   "eliteserien",
   "mls",
+  "champions-league",
 ] as const satisfies readonly LeagueSlug[];
 
 export const primaryPredictionLeagues = primaryPredictionLeagueSlugs.map(

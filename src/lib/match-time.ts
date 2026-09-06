@@ -31,6 +31,7 @@ const competitionFallbackTimezones: Record<LeagueSlug, string> = {
   "scottish-premiership": "Europe/London",
   eliteserien: "Europe/Oslo",
   mls: "America/New_York",
+  "champions-league": "Europe/Paris",
 };
 
 const mlsVenueTimezones: Record<string, string> = {
@@ -50,6 +51,29 @@ const mlsVenueTimezones: Record<string, string> = {
   "BMO Field": "America/Toronto",
   "BC Place": "America/Vancouver",
 };
+
+const championsLeagueVenueTimezones: Record<string, string> = {
+  "AEK Arena": "Europe/Athens",
+  "OPAP Arena": "Europe/Athens",
+  "Jan Breydel Stadium": "Europe/Brussels",
+  "Signal Iduna Park": "Europe/Berlin",
+  "Estádio do Dragão": "Europe/Lisbon",
+  "Stade Pierre-Mauroy": "Europe/Paris",
+  "Santiago Bernabéu": "Europe/Madrid",
+  "Estadi Olímpic Lluís Companys": "Europe/Madrid",
+  "MHPArena": "Europe/Berlin",
+  "Anfield": "Europe/London",
+  "Parc des Princes": "Europe/Paris",
+  "Estádio José Alvalade": "Europe/Lisbon",
+  "Stadio Diego Armando Maradona": "Europe/Rome",
+  "Şükrü Saracoğlu Stadium": "Europe/Istanbul",
+  "Philips Stadion": "Europe/Amsterdam",
+  "Stadio Giuseppe Sinigaglia": "Europe/Rome",
+  "Allianz Arena": "Europe/Berlin",
+  "Old Trafford": "Europe/London",
+  "Fortuna Arena": "Europe/Prague",
+};
+
 
 function localDateTimeToUtc(date: string, time: string, timeZone: string) {
   const [year, month, day] = date.split("-").map(Number);
@@ -115,6 +139,16 @@ export function resolveMatchTimezone(match: Pick<Match | MatchPreview, "league" 
 } {
   if (match.league === "mls" && match.venue && mlsVenueTimezones[match.venue]) {
     return { timezone: mlsVenueTimezones[match.venue], timezoneSource: "venue" };
+  }
+  if (
+    match.league === "champions-league" &&
+    match.venue &&
+    championsLeagueVenueTimezones[match.venue]
+  ) {
+    return {
+      timezone: championsLeagueVenueTimezones[match.venue],
+      timezoneSource: "venue",
+    };
   }
   const league = leaguesBySlug[match.league];
   if (league?.timezone) {
