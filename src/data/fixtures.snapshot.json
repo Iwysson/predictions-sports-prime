@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-06T05:04:17.488Z",
+  "generatedAt": "2026-09-06T09:18:49.194Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -12158,8 +12158,7 @@
             "id": "401875619",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-05T16:45Z",
-            "fotmobMatchId": 5781733
+            "kickoffUtc": "2026-09-05T16:45Z"
           },
           {
             "round": 5,
@@ -15700,21 +15699,21 @@
     "super-lig:trabzonspor-vs-genclerbirligi": "401888305"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-09-06T05:04:17.488Z",
-    "la-liga": "2026-09-06T05:04:17.488Z",
-    "bundesliga": "2026-09-06T05:04:17.488Z",
-    "serie-a": "2026-09-06T05:04:17.488Z",
-    "liga-portugal": "2026-09-06T05:04:17.488Z",
-    "ligue-1": "2026-09-06T05:04:17.488Z",
-    "eredivisie": "2026-09-06T05:04:17.488Z",
+    "premier-league": "2026-09-06T09:18:49.194Z",
+    "la-liga": "2026-09-06T09:18:49.194Z",
+    "bundesliga": "2026-09-06T09:18:49.194Z",
+    "serie-a": "2026-09-06T09:18:49.194Z",
+    "liga-portugal": "2026-09-06T09:18:49.194Z",
+    "ligue-1": "2026-09-06T09:18:49.194Z",
+    "eredivisie": "2026-09-06T09:18:49.194Z",
     "brasileirao-serie-a": "2026-09-01T19:00:00-03:00",
     "copa-do-brasil": "2026-08-30T10:44:40.959Z",
-    "efl-cup": "2026-09-06T05:04:17.488Z",
-    "championship": "2026-09-06T05:04:17.488Z",
+    "efl-cup": "2026-09-06T09:18:49.194Z",
+    "championship": "2026-09-06T09:18:49.194Z",
     "super-lig": "2026-08-26T11:54:38.899Z",
-    "scottish-premiership": "2026-09-06T05:04:17.488Z",
-    "eliteserien": "2026-09-06T05:04:17.488Z",
-    "mls": "2026-09-06T05:04:17.488Z"
+    "scottish-premiership": "2026-09-06T09:18:49.194Z",
+    "eliteserien": "2026-09-06T09:18:49.194Z",
+    "mls": "2026-09-06T09:18:49.194Z"
   },
   "manualFixtures": {
     "401888299": {
