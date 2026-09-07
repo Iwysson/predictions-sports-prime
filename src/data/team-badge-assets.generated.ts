@@ -13,6 +13,10 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/1-fsv-mainz-05.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=1.%20FSV%20Mainz%2005"
   },
+  "Aalesund": {
+    "src": "/team-badges/aalesund.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Aalesund"
+  },
   "Aberdeen": {
     "src": "/team-badges/aberdeen.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Aberdeen"
@@ -40,6 +44,10 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "ADO Den Haag": {
     "src": "/team-badges/ado-den-haag.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=ADO%20Den%20Haag"
+  },
+  "AEK Athens": {
+    "src": "/team-badges/aek-athens.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=AEK%20Athens"
   },
   "AFC Wimbledon": {
     "src": "/team-badges/afc-wimbledon.png",
@@ -105,9 +113,9 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/athletico-paranaense.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Athletico%20Paranaense"
   },
-  "Atletico Madrid": {
-    "src": "/team-badges/atletico-madrid.png",
-    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Atletico%20Madrid"
+  "Atlanta United": {
+    "src": "/team-badges/atlanta-united.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Atlanta%20United"
   },
   "Atlético Madrid": {
     "src": "/team-badges/atletico-madrid.png",
@@ -117,9 +125,17 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/atletico-mineiro.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Atl%C3%A9tico%20Mineiro"
   },
+  "Atlético-MG": {
+    "src": "/team-badges/atletico-mg.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Atl%C3%A9tico-MG"
+  },
   "Augsburg": {
     "src": "/team-badges/augsburg.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Augsburg"
+  },
+  "Austin FC": {
+    "src": "/team-badges/austin-fc.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Austin%20FC"
   },
   "Auxerre": {
     "src": "/team-badges/auxerre.png",
@@ -157,6 +173,14 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/birmingham-city.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Birmingham%20City"
   },
+  "Blackburn Rovers": {
+    "src": "/team-badges/blackburn-rovers.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Blackburn%20Rovers"
+  },
+  "Bodø/Glimt": {
+    "src": "/team-badges/bod-glimt.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Bod%C3%B8%2FGlimt"
+  },
   "Bologna": {
     "src": "/team-badges/bologna.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Bologna"
@@ -164,6 +188,10 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "Bologna FC 1909": {
     "src": "/team-badges/bologna-fc-1909.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Bologna%20FC%201909"
+  },
+  "Bolton Wanderers": {
+    "src": "/team-badges/bolton-wanderers.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Bolton%20Wanderers"
   },
   "Borussia Dortmund": {
     "src": "/team-badges/borussia-dortmund.png",
@@ -185,6 +213,10 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/braga.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Braga"
   },
+  "Brann": {
+    "src": "/team-badges/brann.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Brann"
+  },
   "Brentford": {
     "src": "/team-badges/brentford.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Brentford"
@@ -197,9 +229,21 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/brighton-hove-albion.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Brighton%20%26%20Hove%20Albion"
   },
+  "Bristol City": {
+    "src": "/team-badges/bristol-city.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Bristol%20City"
+  },
+  "Burnley": {
+    "src": "/team-badges/burnley.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Burnley"
+  },
   "C.D. Nacional": {
     "src": "/team-badges/c-d-nacional.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=C.D.%20Nacional"
+  },
+  "Cagliari": {
+    "src": "/team-badges/cagliari.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Cagliari"
   },
   "Cagliari Calcio": {
     "src": "/team-badges/cagliari-calcio.png",
@@ -229,9 +273,21 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/cf-estrela-da-amadora.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=CF%20Estrela%20da%20Amadora"
   },
+  "CF Montreal": {
+    "src": "/team-badges/cf-montreal.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=CF%20Montreal"
+  },
+  "CF Montréal": {
+    "src": "/team-badges/cf-montreal.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=CF%20Montr%C3%A9al"
+  },
   "Chapecoense": {
     "src": "/team-badges/chapecoense.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Chapecoense"
+  },
+  "Charlotte FC": {
+    "src": "/team-badges/charlotte-fc.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Charlotte%20FC"
   },
   "Charlton Athletic": {
     "src": "/team-badges/charlton-athletic.png",
@@ -240,6 +296,22 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "Chelsea": {
     "src": "/team-badges/chelsea.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Chelsea"
+  },
+  "Chicago Fire": {
+    "src": "/team-badges/chicago-fire.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Chicago%20Fire"
+  },
+  "Club Brugge": {
+    "src": "/team-badges/club-brugge.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Club%20Brugge"
+  },
+  "Colorado Rapids": {
+    "src": "/team-badges/colorado-rapids.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Colorado%20Rapids"
+  },
+  "Columbus Crew": {
+    "src": "/team-badges/columbus-crew.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Columbus%20Crew"
   },
   "Como": {
     "src": "/team-badges/como.png",
@@ -273,25 +345,29 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/crystal-palace.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Crystal%20Palace"
   },
+  "D.C. United": {
+    "src": "/team-badges/d-c-united.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=D.C.%20United"
+  },
+  "DC United": {
+    "src": "/team-badges/dc-united.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=DC%20United"
+  },
   "Deportivo": {
     "src": "/team-badges/deportivo.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Deportivo"
-  },
-  "Deportivo Alaves": {
-    "src": "/team-badges/deportivo-alaves.png",
-    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Deportivo%20Alaves"
   },
   "Deportivo Alavés": {
     "src": "/team-badges/deportivo-alaves.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Deportivo%20Alav%C3%A9s"
   },
-  "Deportivo La Coruna": {
-    "src": "/team-badges/deportivo-la-coruna.png",
-    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Deportivo%20La%20Coruna"
-  },
   "Deportivo La Coruña": {
     "src": "/team-badges/deportivo-la-coruna.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Deportivo%20La%20Coru%C3%B1a"
+  },
+  "Derby County": {
+    "src": "/team-badges/derby-county.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Derby%20County"
   },
   "Doncaster Rovers": {
     "src": "/team-badges/doncaster-rovers.png",
@@ -316,6 +392,10 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "Erzurumspor": {
     "src": "/team-badges/erzurumspor.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Erzurumspor"
+  },
+  "Erzurumspor FK": {
+    "src": "/team-badges/erzurumspor-fk.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Erzurumspor%20FK"
   },
   "Espanyol": {
     "src": "/team-badges/espanyol.png",
@@ -360,6 +440,14 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "FC Alverca": {
     "src": "/team-badges/fc-alverca.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=FC%20Alverca"
+  },
+  "FC Cincinnati": {
+    "src": "/team-badges/fc-cincinnati.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=FC%20Cincinnati"
+  },
+  "FC Dallas": {
+    "src": "/team-badges/fc-dallas.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=FC%20Dallas"
   },
   "FC Famalicão": {
     "src": "/team-badges/fc-famalicao.png",
@@ -409,6 +497,10 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/fortuna-sittard.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Fortuna%20Sittard"
   },
+  "Fredrikstad": {
+    "src": "/team-badges/fredrikstad.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Fredrikstad"
+  },
   "Frosinone": {
     "src": "/team-badges/frosinone.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Frosinone"
@@ -435,7 +527,7 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   },
   "Genoa CFC": {
     "src": "/team-badges/genoa-cfc.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/52s8dn1655553600.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Genoa%20CFC"
   },
   "Getafe": {
     "src": "/team-badges/getafe.png",
@@ -443,7 +535,7 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   },
   "Gil Vicente": {
     "src": "/team-badges/gil-vicente.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/88bsg41626201503.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Gil%20Vicente"
   },
   "Go Ahead Eagles": {
     "src": "/team-badges/go-ahead-eagles.png",
@@ -455,7 +547,7 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   },
   "Grêmio": {
     "src": "/team-badges/gremio.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/uvpwyt1473538089.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Gr%C3%AAmio"
   },
   "Groningen": {
     "src": "/team-badges/groningen.png",
@@ -464,6 +556,10 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "Hamburger SV": {
     "src": "/team-badges/hamburger-sv.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Hamburger%20SV"
+  },
+  "HamKam": {
+    "src": "/team-badges/hamkam.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=HamKam"
   },
   "Hearts": {
     "src": "/team-badges/hearts.png",
@@ -477,25 +573,41 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/hibernian.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Hibernian"
   },
+  "Houston Dynamo": {
+    "src": "/team-badges/houston-dynamo.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Houston%20Dynamo"
+  },
   "Hull City": {
     "src": "/team-badges/hull-city.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/fbqqda1601726113.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Hull%20City"
   },
   "Inter": {
     "src": "/team-badges/inter.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/plo1hz1784764806.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Inter"
+  },
+  "Inter Miami": {
+    "src": "/team-badges/inter-miami.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Inter%20Miami"
+  },
+  "Inter Miami CF": {
+    "src": "/team-badges/inter-miami-cf.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Inter%20Miami%20CF"
+  },
+  "Inter Milan": {
+    "src": "/team-badges/inter-milan.jpg",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Inter%20Milan"
   },
   "Internacional": {
     "src": "/team-badges/internacional.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/yprvxx1473538097.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Internacional"
   },
   "Internazionale Milano": {
     "src": "/team-badges/internazionale-milano.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/ryhu6d1617113103.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Internazionale%20Milano"
   },
   "Ipswich Town": {
     "src": "/team-badges/ipswich-town.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/mdj1ey1634670785.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Ipswich%20Town"
   },
   "İstanbul Başakşehir": {
     "src": "/team-badges/istanbul-basaksehir.png",
@@ -503,11 +615,15 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   },
   "Juventus": {
     "src": "/team-badges/juventus.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/uxf0gr1742983727.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Juventus"
   },
   "Kasımpaşa": {
     "src": "/team-badges/kas-mpasa.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/uryxtp1448203236.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Kas%C4%B1mpa%C5%9Fa"
+  },
+  "KFUM Oslo": {
+    "src": "/team-badges/kfum-oslo.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=KFUM%20Oslo"
   },
   "Kilmarnock": {
     "src": "/team-badges/kilmarnock.png",
@@ -521,17 +637,29 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/konyaspor.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Konyaspor"
   },
+  "Kristiansund": {
+    "src": "/team-badges/kristiansund.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Kristiansund"
+  },
+  "LA Galaxy": {
+    "src": "/team-badges/la-galaxy.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=LA%20Galaxy"
+  },
+  "LASK": {
+    "src": "/team-badges/lask.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=LASK"
+  },
   "Lazio": {
     "src": "/team-badges/lazio.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/rwqyvs1448806608.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Lazio"
   },
   "Le Havre": {
     "src": "/team-badges/le-havre.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/aikowk1546475003.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Le%20Havre"
   },
   "Le Mans": {
     "src": "/team-badges/le-mans.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/wjhziv1700145026.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Le%20Mans"
   },
   "Lecce": {
     "src": "/team-badges/lecce.png",
@@ -539,47 +667,55 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   },
   "Leeds United": {
     "src": "/team-badges/leeds-united.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/jcgrml1756649030.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Leeds%20United"
   },
   "Leicester City": {
     "src": "/team-badges/leicester-city.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/xtxwtu1448813356.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Leicester%20City"
   },
   "Lens": {
     "src": "/team-badges/lens.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/3pxoum1598797195.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Lens"
   },
   "Levante": {
     "src": "/team-badges/levante.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/xwtxsx1473503739.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Levante"
   },
   "Levante UD": {
     "src": "/team-badges/levante-ud.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/xwtxsx1473503739.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Levante%20UD"
   },
   "Lille": {
     "src": "/team-badges/lille.png",
-    "sourceUrl": "https://en.wikipedia.org/wiki/Olympique_Lillois"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Lille"
+  },
+  "Lillestrøm": {
+    "src": "/team-badges/lillestr-m.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Lillestr%C3%B8m"
+  },
+  "Lincoln City": {
+    "src": "/team-badges/lincoln-city.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Lincoln%20City"
   },
   "Liverpool": {
     "src": "/team-badges/liverpool.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/kfaher1737969724.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Liverpool"
   },
   "Lorient": {
     "src": "/team-badges/lorient.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/sxsttw1473504748.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Lorient"
+  },
+  "Los Angeles FC": {
+    "src": "/team-badges/los-angeles-fc.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Los%20Angeles%20FC"
   },
   "Luton Town": {
     "src": "/team-badges/luton-town.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/v977eh1681319466.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Luton%20Town"
   },
   "Lyon": {
     "src": "/team-badges/lyon.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/blk9771656932845.png"
-  },
-  "Malaga": {
-    "src": "/team-badges/malaga.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/upqyvr1473502952.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Lyon"
   },
   "Málaga": {
     "src": "/team-badges/malaga.png",
@@ -587,43 +723,131 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   },
   "Manchester City": {
     "src": "/team-badges/manchester-city.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/vwpvry1467462651.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Manchester%20City"
   },
   "Manchester United": {
     "src": "/team-badges/manchester-united.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/xzqdr11517660252.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Manchester%20United"
   },
   "Maritimo": {
     "src": "/team-badges/maritimo.png",
-    "sourceUrl": "https://r2.thesportsdb.com/images/media/team/badge/xlr0tw1656336618.png"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Maritimo"
   },
   "Marítimo": {
     "src": "/team-badges/maritimo.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Mar%C3%ADtimo"
   },
+  "Middlesbrough": {
+    "src": "/team-badges/middlesbrough.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Middlesbrough"
+  },
   "Milan": {
     "src": "/team-badges/milan.jpg",
-    "sourceUrl": "https://en.wikipedia.org/wiki/Franco_Baresi"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Milan"
+  },
+  "Millwall": {
+    "src": "/team-badges/millwall.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Millwall"
+  },
+  "Minnesota United": {
+    "src": "/team-badges/minnesota-united.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Minnesota%20United"
   },
   "Mirassol": {
     "src": "/team-badges/mirassol.png",
-    "sourceUrl": "https://en.wikipedia.org/wiki/Mirassol_Futebol_Clube"
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Mirassol"
+  },
+  "Molde": {
+    "src": "/team-badges/molde.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Molde"
+  },
+  "Monaco": {
+    "src": "/team-badges/monaco.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Monaco"
+  },
+  "Monza": {
+    "src": "/team-badges/monza.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Monza"
+  },
+  "Moreirense": {
+    "src": "/team-badges/moreirense.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Moreirense"
   },
   "Motherwell": {
     "src": "/team-badges/motherwell.png",
     "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Motherwell"
   },
+  "Napoli": {
+    "src": "/team-badges/napoli.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Napoli"
+  },
+  "Nashville SC": {
+    "src": "/team-badges/nashville-sc.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Nashville%20SC"
+  },
+  "NEC": {
+    "src": "/team-badges/nec.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=NEC"
+  },
   "NEC Nijmegen": {
     "src": "/team-badges/nec-nijmegen.png",
     "sourceUrl": "https://eredivisie.b-cdn.net/production/clubs/nec-nijmegen/NEC_Nijmegen_Logo.png?height=256&quality=90&width=256"
+  },
+  "New England Revolution": {
+    "src": "/team-badges/new-england-revolution.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=New%20England%20Revolution"
+  },
+  "New York City FC": {
+    "src": "/team-badges/new-york-city-fc.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=New%20York%20City%20FC"
+  },
+  "New York Red Bulls": {
+    "src": "/team-badges/new-york-red-bulls.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=New%20York%20Red%20Bulls"
+  },
+  "Newcastle United": {
+    "src": "/team-badges/newcastle-united.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Newcastle%20United"
+  },
+  "Nice": {
+    "src": "/team-badges/nice.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Nice"
+  },
+  "Norwich City": {
+    "src": "/team-badges/norwich-city.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Norwich%20City"
+  },
+  "Olympique de Marseille": {
+    "src": "/team-badges/olympique-de-marseille.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Olympique%20de%20Marseille"
+  },
+  "Orlando City": {
+    "src": "/team-badges/orlando-city.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Orlando%20City"
   },
   "Osasuna": {
     "src": "/team-badges/osasuna.png",
     "sourceUrl": "https://paladarnegro.net/escudoteca/espana/laliga/png/osasuna.png"
   },
+  "Palmeiras": {
+    "src": "/team-badges/palmeiras.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Palmeiras"
+  },
+  "Paris FC": {
+    "src": "/team-badges/paris-fc.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Paris%20FC"
+  },
   "PEC Zwolle": {
     "src": "/team-badges/pec-zwolle.png",
     "sourceUrl": "https://eredivisie.b-cdn.net/production/clubs/pec-zwolle/PECZwolle_Logo.png?height=256&quality=90&width=256"
+  },
+  "Portland Timbers": {
+    "src": "/team-badges/portland-timbers.jpg",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Portland%20Timbers"
+  },
+  "Portsmouth": {
+    "src": "/team-badges/portsmouth.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Portsmouth"
   },
   "PSV Eindhoven": {
     "src": "/team-badges/psv-eindhoven.png",
@@ -653,6 +877,14 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
     "src": "/team-badges/sc-heerenveen.png",
     "sourceUrl": "https://eredivisie.b-cdn.net/production/clubs/sc-heerenveen/scHeerenveen_Logo.png?height=256&quality=90&width=256"
   },
+  "SC Paderborn 07": {
+    "src": "/team-badges/sc-paderborn-07.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=SC%20Paderborn%2007"
+  },
+  "Schalke 04": {
+    "src": "/team-badges/schalke-04.png",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Schalke%2004"
+  },
   "Sparta Rotterdam": {
     "src": "/team-badges/sparta-rotterdam.png",
     "sourceUrl": "https://eredivisie.b-cdn.net/production/clubs/sparta-rotterdam/SpartaRotterdam_Logo.png?height=256&quality=90&width=256"
@@ -676,6 +908,14 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "Twente": {
     "src": "/team-badges/twente.png",
     "sourceUrl": "https://eredivisie.b-cdn.net/production/clubs/fc-twente/FCTwente_Logo.png?height=256&quality=90&width=256"
+  },
+  "Udinese Calcio": {
+    "src": "/team-badges/udinese-calcio.jpg",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Udinese%20Calcio"
+  },
+  "US Lecce": {
+    "src": "/team-badges/us-lecce.jpg",
+    "sourceUrl": "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=US%20Lecce"
   },
   "Utrecht": {
     "src": "/team-badges/utrecht.png",

@@ -4,6 +4,7 @@ import { generatedTeamBadgeAssets } from "@/data/team-badge-assets.generated";
 export type TeamBadgeAsset = { src: string; sourceUrl: string };
 
 export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
+  "Inter Milan": generatedTeamBadgeAssets["Internazionale Milano"],
   "Gençlerbirliği": { src: "/team-badges/genclerbirligi.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/5hnd1c1639569938.png" },
   Galatasaray: { src: "/team-badges/galatasaray.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/io7jk21767941298.png" },
   Samsunspor: { src: "/team-badges/samsunspor.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/vz05y71679456608.png" },
