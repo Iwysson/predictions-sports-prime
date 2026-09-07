@@ -1,5 +1,10 @@
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
+import { leagues } from "../src/data/leagues.ts";
+import { matches } from "../src/data/matches.ts";
+import { editorialPredictions } from "../src/data/predictions/index.ts";
+import { isAdSenseLeagueIndexable } from "../src/lib/adsense-content-quality.ts";
+import { isLeagueIndexable } from "../src/lib/league-seo.ts";
 
 const root = process.cwd();
 const out = join(root, "out");
@@ -59,7 +64,10 @@ if (!homeMarkup.includes("Top Prediction Leagues")) errors.push("Home upper leag
 if (!homeMarkup.includes("Prediction Categories")) errors.push("Home lower competition taxonomy is missing Prediction Categories");
 if ((homeMarkup.match(/Top Prediction Leagues/g) ?? []).length !== 1) errors.push("Home repeats Top Prediction Leagues outside the upper sidebar");
 if ((homeMarkup.match(/Prediction Categories/g) ?? []).length !== 1) errors.push("Home must render Prediction Categories exactly once");
-const leagueSeoPilots = ["premier-league", "la-liga", "bundesliga", "serie-a", "liga-portugal", "ligue-1", "eredivisie", "brasileirao-serie-a", "copa-do-brasil", "efl-cup", "championship", "super-lig", "scottish-premiership", "eliteserien"];
+const leagueSeoPilots = leagues.filter((league) =>
+  isLeagueIndexable(matches.filter((match) => match.league === league.slug && match.status === "published").length) &&
+  isAdSenseLeagueIndexable(league.slug, matches, editorialPredictions)
+).map((league) => league.slug);
 const leagueMetrics = [];
 for (const slug of leagueSeoPilots) {
   const path = `/league/${slug}/`;

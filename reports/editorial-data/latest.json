@@ -1,0 +1,1350 @@
+{
+  "generatedAt": "2026-09-07T20:38:47.585Z",
+  "policy": "integrity-first; disclosed optional gaps do not block a credible fixture and prediction",
+  "totals": {
+    "matches": 31,
+    "ready": 0,
+    "publishableWithGaps": 31,
+    "blocked": 0,
+    "published": 31
+  },
+  "coverageMatrix": [
+    {
+      "slug": "barcelona-vs-feyenoord",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "stuttgart-vs-viking",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "liverpool-vs-atletico-madrid",
+      "fixture": "MISSING_PROVIDER",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "paris-saint-germain-vs-slovan-bratislava",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "napoli-vs-arsenal",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "sporting-cp-vs-galatasaray",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "fenerbahce-vs-roma",
+      "fixture": "MISSING_PROVIDER",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "psv-eindhoven-vs-shakhtar-donetsk",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "como-vs-rb-leipzig",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "bayern-munich-vs-bodo-glimt",
+      "fixture": "MISSING_PROVIDER",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "manchester-united-vs-sabah",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "slavia-praha-vs-lens",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "bournemouth-vs-lincoln-city",
+      "fixture": "MISSING_PROVIDER",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "crystal-palace-vs-middlesbrough",
+      "fixture": "MISSING_PROVIDER",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "sunderland-vs-hull-city",
+      "fixture": "MISSING_PROVIDER",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "millwall-vs-newcastle-united",
+      "fixture": "MISSING_PROVIDER",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "chelsea-vs-leeds-united",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "nec-nijmegen-vs-excelsior",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "fc-twente-vs-telstar",
+      "fixture": "MISSING_PROVIDER",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "independiente-santa-fe-vs-vasco-da-gama",
+      "fixture": "UNSUPPORTED_COMPETITION",
+      "venue": "UNSUPPORTED_COMPETITION",
+      "fixtureProvenanceUrl": "UNSUPPORTED_COMPETITION",
+      "coreHome22": "UNSUPPORTED_COMPETITION",
+      "coreAway22": "UNSUPPORTED_COMPETITION",
+      "homeProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "awayProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "homeTeamNews": "UNSUPPORTED_COMPETITION",
+      "awayTeamNews": "UNSUPPORTED_COMPETITION"
+    },
+    {
+      "slug": "boca-juniors-vs-sao-paulo",
+      "fixture": "UNSUPPORTED_COMPETITION",
+      "venue": "UNSUPPORTED_COMPETITION",
+      "fixtureProvenanceUrl": "UNSUPPORTED_COMPETITION",
+      "coreHome22": "UNSUPPORTED_COMPETITION",
+      "coreAway22": "UNSUPPORTED_COMPETITION",
+      "homeProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "awayProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "homeTeamNews": "UNSUPPORTED_COMPETITION",
+      "awayTeamNews": "UNSUPPORTED_COMPETITION"
+    },
+    {
+      "slug": "santos-vs-atletico-mineiro",
+      "fixture": "UNSUPPORTED_COMPETITION",
+      "venue": "UNSUPPORTED_COMPETITION",
+      "fixtureProvenanceUrl": "UNSUPPORTED_COMPETITION",
+      "coreHome22": "UNSUPPORTED_COMPETITION",
+      "coreAway22": "UNSUPPORTED_COMPETITION",
+      "homeProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "awayProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "homeTeamNews": "UNSUPPORTED_COMPETITION",
+      "awayTeamNews": "UNSUPPORTED_COMPETITION"
+    },
+    {
+      "slug": "cienciano-vs-montevideo-city-torque",
+      "fixture": "UNSUPPORTED_COMPETITION",
+      "venue": "UNSUPPORTED_COMPETITION",
+      "fixtureProvenanceUrl": "UNSUPPORTED_COMPETITION",
+      "coreHome22": "UNSUPPORTED_COMPETITION",
+      "coreAway22": "UNSUPPORTED_COMPETITION",
+      "homeProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "awayProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "homeTeamNews": "UNSUPPORTED_COMPETITION",
+      "awayTeamNews": "UNSUPPORTED_COMPETITION"
+    },
+    {
+      "slug": "fluminense-vs-platense",
+      "fixture": "UNSUPPORTED_COMPETITION",
+      "venue": "UNSUPPORTED_COMPETITION",
+      "fixtureProvenanceUrl": "UNSUPPORTED_COMPETITION",
+      "coreHome22": "UNSUPPORTED_COMPETITION",
+      "coreAway22": "UNSUPPORTED_COMPETITION",
+      "homeProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "awayProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "homeTeamNews": "UNSUPPORTED_COMPETITION",
+      "awayTeamNews": "UNSUPPORTED_COMPETITION"
+    },
+    {
+      "slug": "palmeiras-vs-ldu-quito",
+      "fixture": "UNSUPPORTED_COMPETITION",
+      "venue": "UNSUPPORTED_COMPETITION",
+      "fixtureProvenanceUrl": "UNSUPPORTED_COMPETITION",
+      "coreHome22": "UNSUPPORTED_COMPETITION",
+      "coreAway22": "UNSUPPORTED_COMPETITION",
+      "homeProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "awayProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "homeTeamNews": "UNSUPPORTED_COMPETITION",
+      "awayTeamNews": "UNSUPPORTED_COMPETITION"
+    },
+    {
+      "slug": "estudiantes-vs-corinthians",
+      "fixture": "UNSUPPORTED_COMPETITION",
+      "venue": "UNSUPPORTED_COMPETITION",
+      "fixtureProvenanceUrl": "UNSUPPORTED_COMPETITION",
+      "coreHome22": "UNSUPPORTED_COMPETITION",
+      "coreAway22": "UNSUPPORTED_COMPETITION",
+      "homeProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "awayProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "homeTeamNews": "UNSUPPORTED_COMPETITION",
+      "awayTeamNews": "UNSUPPORTED_COMPETITION"
+    },
+    {
+      "slug": "independiente-del-valle-vs-flamengo",
+      "fixture": "UNSUPPORTED_COMPETITION",
+      "venue": "UNSUPPORTED_COMPETITION",
+      "fixtureProvenanceUrl": "UNSUPPORTED_COMPETITION",
+      "coreHome22": "UNSUPPORTED_COMPETITION",
+      "coreAway22": "UNSUPPORTED_COMPETITION",
+      "homeProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "awayProjectedLineup": "UNSUPPORTED_COMPETITION",
+      "homeTeamNews": "UNSUPPORTED_COMPETITION",
+      "awayTeamNews": "UNSUPPORTED_COMPETITION"
+    },
+    {
+      "slug": "rangers-vs-st-mirren",
+      "fixture": "MISSING_PROVIDER",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "st-johnstone-vs-celtic",
+      "fixture": "MISSING_PROVIDER",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "moreirense-vs-benfica-2026-27",
+      "fixture": "MISSING_FIELD",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    },
+    {
+      "slug": "estrela-da-amadora-vs-braga-2026-27",
+      "fixture": "MISSING_PROVIDER",
+      "venue": "MISSING_PROVIDER",
+      "fixtureProvenanceUrl": "MISSING_PROVIDER",
+      "coreHome22": "MISSING_PROVIDER",
+      "coreAway22": "MISSING_PROVIDER",
+      "homeProjectedLineup": "MISSING_PROVIDER",
+      "awayProjectedLineup": "MISSING_PROVIDER",
+      "homeTeamNews": "MISSING_PROVIDER",
+      "awayTeamNews": "MISSING_PROVIDER"
+    }
+  ],
+  "results": [
+    {
+      "slug": "barcelona-vs-feyenoord",
+      "competition": "champions-league",
+      "home": "Barcelona",
+      "away": "Feyenoord",
+      "season": "2026/27",
+      "pick": "Barcelona -2.5",
+      "odds": 1.67,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "stuttgart-vs-viking",
+      "competition": "champions-league",
+      "home": "Stuttgart",
+      "away": "Viking",
+      "season": "2026/27",
+      "pick": "Stuttgart -1.5",
+      "odds": 1.62,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "liverpool-vs-atletico-madrid",
+      "competition": "champions-league",
+      "home": "Liverpool",
+      "away": "Atlético de Madrid",
+      "season": "2026/27",
+      "pick": "Over 2.5",
+      "odds": 1.62,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "paris-saint-germain-vs-slovan-bratislava",
+      "competition": "champions-league",
+      "home": "Paris Saint-Germain",
+      "away": "Slovan Bratislava",
+      "season": "2026/27",
+      "pick": "PSG -2.5",
+      "odds": 1.5,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "napoli-vs-arsenal",
+      "competition": "champions-league",
+      "home": "Napoli",
+      "away": "Arsenal",
+      "season": "2026/27",
+      "pick": "X2 + Over 7.5 corners",
+      "odds": 1.72,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "sporting-cp-vs-galatasaray",
+      "competition": "champions-league",
+      "home": "Sporting CP",
+      "away": "Galatasaray",
+      "season": "2026/27",
+      "pick": "Over 2.5",
+      "odds": 1.62,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "fenerbahce-vs-roma",
+      "competition": "champions-league",
+      "home": "Fenerbahçe",
+      "away": "Roma",
+      "season": "2026/27",
+      "pick": "X2 + Over 1.5",
+      "odds": 1.72,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "psv-eindhoven-vs-shakhtar-donetsk",
+      "competition": "champions-league",
+      "home": "PSV Eindhoven",
+      "away": "Shakhtar Donetsk",
+      "season": "2026/27",
+      "pick": "PSV to win + Over 2.5",
+      "odds": 1.83,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "como-vs-rb-leipzig",
+      "competition": "champions-league",
+      "home": "Como",
+      "away": "Leipzig",
+      "season": "2026/27",
+      "pick": "Over 2.5",
+      "odds": 1.6,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "bayern-munich-vs-bodo-glimt",
+      "competition": "champions-league",
+      "home": "Bayern München",
+      "away": "Bodø/Glimt",
+      "season": "2026/27",
+      "pick": "Bayern -2.5",
+      "odds": 1.72,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "manchester-united-vs-sabah",
+      "competition": "champions-league",
+      "home": "Manchester United",
+      "away": "Sabah",
+      "season": "2026/27",
+      "pick": "Manchester United -2.5",
+      "odds": 1.88,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "slavia-praha-vs-lens",
+      "competition": "champions-league",
+      "home": "Slavia Praha",
+      "away": "Lens",
+      "season": "2026/27",
+      "pick": "Over 2.5",
+      "odds": 1.8,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "bournemouth-vs-lincoln-city",
+      "competition": "efl-cup",
+      "home": "Bournemouth",
+      "away": "Lincoln City",
+      "season": "2026/27",
+      "pick": "Bournemouth -1.5",
+      "odds": 1.9,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "crystal-palace-vs-middlesbrough",
+      "competition": "efl-cup",
+      "home": "Crystal Palace",
+      "away": "Middlesbrough",
+      "season": "2026/27",
+      "pick": "Over 2.5",
+      "odds": 1.62,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "sunderland-vs-hull-city",
+      "competition": "efl-cup",
+      "home": "Sunderland",
+      "away": "Hull City",
+      "season": "2026/27",
+      "pick": "Sunderland to Win",
+      "odds": 1.7,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "millwall-vs-newcastle-united",
+      "competition": "efl-cup",
+      "home": "Millwall",
+      "away": "Newcastle United",
+      "season": "2026/27",
+      "pick": "Over 2.5",
+      "odds": 1.72,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "chelsea-vs-leeds-united",
+      "competition": "efl-cup",
+      "home": "Chelsea",
+      "away": "Leeds United",
+      "season": "2026/27",
+      "pick": "Chelsea to Win",
+      "odds": 1.6,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "nec-nijmegen-vs-excelsior",
+      "competition": "eredivisie",
+      "home": "NEC Nijmegen",
+      "away": "Excelsior",
+      "season": "2026/27",
+      "pick": "NEC to Win",
+      "odds": 1.55,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "fc-twente-vs-telstar",
+      "competition": "eredivisie",
+      "home": "FC Twente",
+      "away": "Telstar",
+      "season": "2026/27",
+      "pick": "Twente to Win + Over 2.5",
+      "odds": 1.55,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "independiente-santa-fe-vs-vasco-da-gama",
+      "competition": "copa-sudamericana",
+      "home": "Independiente Santa Fe",
+      "away": "Vasco da Gama",
+      "season": "2026",
+      "pick": "1X + Over 1.5",
+      "odds": 1.88,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "boca-juniors-vs-sao-paulo",
+      "competition": "copa-sudamericana",
+      "home": "Boca Juniors",
+      "away": "São Paulo",
+      "season": "2026",
+      "pick": "Boca to Win",
+      "odds": 1.78,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "santos-vs-atletico-mineiro",
+      "competition": "copa-sudamericana",
+      "home": "Santos",
+      "away": "Atlético Mineiro",
+      "season": "2026",
+      "pick": "1X + Over 1.5",
+      "odds": 1.88,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "cienciano-vs-montevideo-city-torque",
+      "competition": "copa-sudamericana",
+      "home": "Cienciano",
+      "away": "Montevideo City Torque",
+      "season": "2026",
+      "pick": "Cienciano to Win",
+      "odds": 1.57,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "fluminense-vs-platense",
+      "competition": "copa-libertadores",
+      "home": "Fluminense",
+      "away": "Platense",
+      "season": "2026",
+      "pick": "Fluminense to Win",
+      "odds": 1.57,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "palmeiras-vs-ldu-quito",
+      "competition": "copa-libertadores",
+      "home": "Palmeiras",
+      "away": "LDU Quito",
+      "season": "2026",
+      "pick": "Palmeiras -1.5",
+      "odds": 1.83,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "estudiantes-vs-corinthians",
+      "competition": "copa-libertadores",
+      "home": "Estudiantes",
+      "away": "Corinthians",
+      "season": "2026",
+      "pick": "Estudiantes to Win",
+      "odds": 2.25,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "independiente-del-valle-vs-flamengo",
+      "competition": "copa-libertadores",
+      "home": "Independiente del Valle",
+      "away": "Flamengo",
+      "season": "2026",
+      "pick": "Over 1.5",
+      "odds": 1.47,
+      "liveEntry": true,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable",
+        "live: runtime verification unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "rangers-vs-st-mirren",
+      "competition": "scottish-premiership",
+      "home": "Rangers",
+      "away": "St Mirren",
+      "season": "2026/27",
+      "pick": "St Mirren +1.5",
+      "odds": 1.98,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "st-johnstone-vs-celtic",
+      "competition": "scottish-premiership",
+      "home": "St Johnstone",
+      "away": "Celtic",
+      "season": "2026/27",
+      "pick": "Over 2.5",
+      "odds": 1.53,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "moreirense-vs-benfica-2026-27",
+      "competition": "liga-portugal",
+      "home": "Moreirense",
+      "away": "Benfica",
+      "season": "2026/27",
+      "pick": "Benfica -1.5",
+      "odds": 1.53,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    },
+    {
+      "slug": "estrela-da-amadora-vs-braga-2026-27",
+      "competition": "liga-portugal",
+      "home": "Estrela da Amadora",
+      "away": "Braga",
+      "season": "2026/27",
+      "pick": "X2 + Over 1.5",
+      "odds": 1.63,
+      "state": "DATA_PUBLISHABLE_WITH_GAPS",
+      "reasons": [
+        "fixture: no provider returned a fresh, sourced fixture matching both teams, competition and date"
+      ],
+      "gaps": [
+        "homeCore: sourced HOME metrics unavailable or partial",
+        "awayCore: sourced AWAY metrics unavailable or partial",
+        "homeLineup: projected lineup unavailable",
+        "awayLineup: projected lineup unavailable",
+        "homeTeamNews: current availability report unavailable",
+        "awayTeamNews: current availability report unavailable"
+      ],
+      "providersTried": [
+        "versioned-fixture-snapshot",
+        "fotmob-fixture",
+        "manual-verified-fixture",
+        "manual-verified-statistical-core",
+        "fotmob-statistical-core",
+        "manual-verified-projected-lineup",
+        "manual-verified-team-news"
+      ],
+      "publication": "PUBLISHED"
+    }
+  ]
+}

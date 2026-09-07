@@ -30,6 +30,10 @@ import { buildSportsEventJsonLd } from "@/lib/sports-event-schema";
 import { getTodayLocalizedEditorial } from "@/data/today-localized-editorial";
 import { editorialPredictions } from "@/data/predictions";
 import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
+import {
+  resolveCanonicalMatch,
+  resolveCanonicalMatches,
+} from "@/lib/canonical-match";
 
 const intentLocale: Record<
   (typeof fullyLocalizedMatchLocales)[number],
@@ -44,28 +48,28 @@ const intentLocale: Record<
 
 const alternateLocales = ["en", ...fullyLocalizedMatchLocales] as const;
 
-function eligible(slug: string) {
-  return matches.find(
-    (match) =>
-      match.slug === slug &&
-      isInternationalMatchExpansionEligible(match)
-  );
-}
-
 export const dynamicParams = false;
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const publishedSlugs = new Set(
+    matches
+      .filter((match) => match.status === "published")
+      .map((match) => match.slug)
+  );
+  const canonicalMatches = await resolveCanonicalMatches(
+    matches.filter((match) => match.status === "published")
+  );
+  const expansionSlugs = canonicalMatches
+    .filter((match) => isInternationalMatchExpansionEligible(match))
+    .map((match) => match.slug);
+
   return seoLocaleSlugs.flatMap((locale) => {
     const slugs = new Set([
       ...Object.keys(localizedEditorialBySlug).filter((slug) =>
-        hasCompleteLocalizedEditorial(slug, locale)
+        publishedSlugs.has(slug) && hasCompleteLocalizedEditorial(slug, locale)
       ),
       ...(isFullyLocalizedMatchLocale(locale)
-        ? matches
-            .filter((match) =>
-              isInternationalMatchExpansionEligible(match)
-            )
-            .map((match) => match.slug)
+        ? expansionSlugs
         : []),
     ]);
 
@@ -90,15 +94,12 @@ export async function generateMetadata({
     return { robots: { index: false, follow: false } };
   }
 
-  const match = legacy
-    ? matches.find(
-        (item) =>
-          item.slug === slug &&
-          item.status === "published"
-      )
-    : eligible(slug);
+  const match = await resolveCanonicalMatch(slug);
 
-  if (!match) {
+  if (
+    !match ||
+    (!legacy && !isInternationalMatchExpansionEligible(match))
+  ) {
     return { robots: { index: false, follow: false } };
   }
 
@@ -222,13 +223,12 @@ export default async function LocalizedMatch({
   const { locale, slug } = await params;
 
   if (!isSeoLocale(locale)) notFound();
+  const internationalEligibleSlugs = (await resolveCanonicalMatches(matches))
+    .filter((item) => isInternationalMatchExpansionEligible(item))
+    .map((item) => item.slug);
 
   if (hasCompleteLocalizedEditorial(slug, locale)) {
-    const match = matches.find(
-      (item) =>
-        item.slug === slug &&
-        item.status === "published"
-    );
+    const match = await resolveCanonicalMatch(slug);
 
     if (!match) notFound();
 
@@ -352,6 +352,7 @@ export default async function LocalizedMatch({
           sourceDescription={
             editorial.sourceDescription
           }
+          internationalEligibleSlugs={internationalEligibleSlugs}
         />
       </>
     );
@@ -361,9 +362,9 @@ export default async function LocalizedMatch({
     notFound();
   }
 
-  const match = eligible(slug);
+  const match = await resolveCanonicalMatch(slug);
 
-  if (!match) notFound();
+  if (!match || !isInternationalMatchExpansionEligible(match)) notFound();
 
   const siteCopy = seoLocales[locale];
   const intent = buildMatchSearchIntentCopy(
@@ -471,6 +472,7 @@ export default async function LocalizedMatch({
           localizedEditorial?.mainPrediction ??
           storedPrediction?.value
         }
+        internationalEligibleSlugs={internationalEligibleSlugs}
       />
     </>
   );

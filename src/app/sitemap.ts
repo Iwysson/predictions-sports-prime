@@ -11,10 +11,12 @@ import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/
 import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 import { editorialPredictions } from "@/data/predictions";
 import { isAdSenseContentIndexable, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
+import { resolveCanonicalMatches } from "@/lib/canonical-match";
 
 export const dynamic = "force-static";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const canonicalMatches = await resolveCanonicalMatches(matches);
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: absoluteUrl("/"),
@@ -40,17 +42,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter(
       (league) =>
         isLeagueIndexable(
-          matches.filter(
+          canonicalMatches.filter(
             (match) => match.league === league.slug && match.status === "published"
           ).length
         ) &&
-        isAdSenseLeagueIndexable(league.slug, matches, editorialPredictions)
+        isAdSenseLeagueIndexable(league.slug, canonicalMatches, editorialPredictions)
     )
     .map((league) => ({
       url: absoluteUrl(`/league/${league.slug}/`),
     }));
 
-  const matchPages: MetadataRoute.Sitemap = matches
+  const matchPages: MetadataRoute.Sitemap = canonicalMatches
     .filter(
       (match) =>
         match.status === "published" &&
@@ -70,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: absoluteUrl(localePath(locale)) },
       ...leagues
         .filter((league) =>
-          isAdSenseLeagueIndexable(league.slug, matches, editorialPredictions)
+          isAdSenseLeagueIndexable(league.slug, canonicalMatches, editorialPredictions)
         )
         .map((league) => ({
           url: absoluteUrl(localePath(locale, `/league/${league.slug}/`)),
@@ -85,7 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       )
       .map((slug) => ({ url: absoluteUrl(localePath(locale, `/match/${slug}/`)) })),
     ...(fullyLocalizedMatchLocales.includes(locale as (typeof fullyLocalizedMatchLocales)[number])
-      ? matches
+      ? canonicalMatches
           .filter(
             (match) =>
               isInternationalMatchExpansionEligible(match) &&

@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-09-07T20:39:16.238Z",
+  "policy": "Only exact repeated editorial boilerplate in future-pre-match records is removed; historical-frozen and unresolved records are immutable.",
+  "p0": 0,
+  "p1Total": 16,
+  "p1LegitFactual": 6,
+  "p1LegitStructural": 10,
+  "p1Editorial": 0,
+  "p1EditorialFixed": 26,
+  "removed": 26,
+  "rewritten": 0,
+  "remaining": 0,
+  "pagesAffected": [
+    "getafe-vs-celta-vigo",
+    "elche-vs-real-sociedad",
+    "cagliari-vs-lecce",
+    "udinese-vs-lazio",
+    "estoril-vs-arouca",
+    "blackburn-rovers-vs-sheffield-united",
+    "bolton-wanderers-vs-west-ham-united",
+    "cardiff-city-vs-stoke-city",
+    "charlton-athletic-vs-queens-park-rangers",
+    "derby-county-vs-west-bromwich-albion",
+    "norwich-city-vs-birmingham-city",
+    "southampton-vs-swansea-city",
+    "watford-vs-preston-north-end",
+    "wrexham-vs-burnley",
+    "goztepe-vs-gaziantep-fk",
+    "caykur-rizespor-vs-alanyaspor",
+    "aek-athens-vs-lask",
+    "club-brugge-vs-aston-villa",
+    "borussia-dortmund-vs-villarreal",
+    "porto-vs-manchester-city",
+    "lille-vs-real-betis",
+    "real-madrid-vs-inter"
+  ],
+  "wordCount": {
+    "before": 30421,
+    "after": 25133
+  },
+  "duplication": {
+    "beforeP1Groups": 41,
+    "afterP1Groups": 16,
+    "beforeP1Editorial": 26,
+    "afterP1Editorial": 0
+  },
+  "audit": {
+    "blockingRule": "P1-EDITORIAL in future KEEP only",
+    "result": "PASS"
+  }
+}

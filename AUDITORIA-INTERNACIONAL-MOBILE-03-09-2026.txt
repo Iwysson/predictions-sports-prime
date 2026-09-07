@@ -1,0 +1,96 @@
+PSP — AUDITORIA COMPLETA DO SRC: INTERNACIONALIZAÇÃO / MOBILE
+Data: 03/09/2026
+
+ESCOPO
+Foi auditado o SRC completo do último ZIP enviado, não apenas os componentes
+isolados.
+
+CAUSA RAIZ CONFIRMADA
+1. O SRC já tinha um SiteHeader compartilhado com:
+   - desktop-nav
+   - menu-button
+   - mobile-nav
+
+2. O LocalizedHeader já chamava SiteHeader, porém o SiteHeader NÃO emitia a
+   classe "localized-site-header".
+
+3. Ao mesmo tempo, globals.css continha regras específicas como:
+   ".localized-site-header .desktop-nav" e
+   ".localized-site-header .menu-button".
+
+4. Como a classe nunca existia no HTML, essas regras NUNCA podiam corresponder
+   ao header localizado. Esse era o defeito estrutural principal.
+
+5. Também havia regras localizadas duplicadas de tentativas anteriores em
+   diferentes pontos de globals.css. Elas foram consolidadas em um único bloco
+   autoritativo no FINAL do arquivo.
+
+6. O viewport NÃO é o problema:
+   tanto src/app/(en)/layout.tsx quanto src/app/[locale]/layout.tsx já exportam
+   width: "device-width" e initialScale: 1.
+
+CORREÇÃO APLICADA
+- Header.tsx:
+  adicionada prop "localized" ao SiteHeader.
+  Quando true, o header emite:
+  class="site-header localized-site-header"
+
+- LocalizedSiteChrome.tsx:
+  LocalizedHeader agora passa explicitamente "localized" ao SiteHeader.
+
+- globals.css:
+  removidas regras localizadas duplicadas/obsoletas;
+  criado um único bloco final de autoridade.
+  Em <=1100px, o header localizado:
+    * esconde desktop-nav;
+    * mostra menu-button;
+    * esconde tagline;
+    * limita o seletor de idioma.
+  Em dispositivo touch (hover:none + pointer:coarse), aplica a mesma proteção.
+  Em <=560px, oculta brand-copy para priorizar logo + idioma + hambúrguer.
+
+ARQUIVOS MODIFICADOS
+- src/components/Header.tsx
+- src/components/LocalizedSiteChrome.tsx
+- src/app/globals.css
+
+ARQUIVO AUDITADO, SEM NECESSIDADE DE ALTERAÇÃO NESTA CORREÇÃO
+- src/components/RouteLanguageSelector.tsx
+
+VERIFICAÇÕES ESTÁTICAS
+- localized_uses_shared_header: PASS
+- localized_variant_enabled: PASS
+- shared_header_has_mobile_button: PASS
+- shared_header_has_mobile_nav: PASS
+- localized_header_class_emitted: PASS
+- localized_viewport_device_width: PASS
+- english_viewport_device_width: PASS
+- localized_layout_uses_localized_header: PASS
+- css_authoritative_rule_present: PASS
+- css_touch_fallback_present: PASS
+- route_selector_is_client_component: PASS
+
+VALIDAÇÃO NO PROJETO
+Depois de substituir o SRC, rode:
+npm run typecheck
+npm run audit:international-seo
+npm run audit:prediction-first-search-intent
+npm run build
+
+TESTE VISUAL REAL
+No celular:
+- /pt-br/
+- /es/
+- /fr/
+- /de/
+- /it/
+- /nl/
+- /tr/
+
+Esperado:
+logo/check + seletor de idioma + hambúrguer.
+Os links de navegação não devem ficar concatenados/sobrepostos no topo.
+
+OBSERVAÇÃO
+Em desktop largo (>1100px) é normal o header localizado continuar exibindo
+a navegação completa. A correção é responsiva e preserva o desktop.

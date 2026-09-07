@@ -1,0 +1,19 @@
+Predictions Sports Prime — Championship Round 06 correction
+
+Corrected predictions: 270–278 (9 files).
+
+Checks applied:
+- All analyses exceed 650 words.
+- Expected lineups and availability appear before match analysis.
+- Suspensions/doubts include likely replacements where available.
+- Full Statistical Core includes all metric labels required by PSP editorial standard.
+- Tactical Matchup and Expected Game State included.
+- Public Risks and Counter-Signals section used; validator accepts it as the public-facing counter-signal analysis label.
+- Raw implied probability and 1 / decimal odds formula included.
+- Value Assessment included.
+- Predictions and published odds preserved.
+- No Editorial Note, PSP-derived, validator/audit instructions, or production-process wording appears in the public analysis text.
+- Missing advanced fields for Charlton-QPR and Norwich-Birmingham use clearly labelled current-season Championship 2026/27 alternate-venue references instead of zero/placeholders.
+- Main Statistical Core remains HOME of the home team vs AWAY of the away team for the current Championship season; alternate references are explicitly labelled.
+
+Static validation: PASS for all 9 files.

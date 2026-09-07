@@ -46,7 +46,11 @@ export function MatchSemanticDetails({ match, forceInformation = false }: { matc
 
       {data?.lineups ? (
         <section className="match-module" aria-labelledby="match-lineups-heading">
-          <h2 id="match-lineups-heading">Team Selection Context</h2>
+          <h2 id="match-lineups-heading">
+            {data.lineups.status === "confirmed"
+              ? `${match.homeTeam} vs ${match.awayTeam} Starting Lineups`
+              : `${match.homeTeam} vs ${match.awayTeam} Probable Lineups`}
+          </h2>
           <p className="match-module-note">{data.lineups.status === "confirmed" ? "Official starting lineups." : "Pre-match projection; check the official team sheets close to kickoff."}</p>
           <div className="match-lineups-grid">
             {(["home", "away"] as const).map((side) => {

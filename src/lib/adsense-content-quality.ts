@@ -1,5 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 import { predictionSlug } from "@/lib/editorial";
+import { isSeoFeatureEnabled } from "@/config/seo-enterprise";
+import { evaluatePredictionIndexQuality, type IndexQualityDecision } from "@/lib/index-quality";
 
 export type AdSenseContentClassification =
   | "KEEP"
@@ -443,6 +445,15 @@ function fallbackDecision(
 
 export function getAdSenseContentQualityDecision(
   prediction: EditorialPrediction
+): AdSenseContentQualityDecision | IndexQualityDecision {
+  const legacyDecision = getLegacyAdSenseContentQualityDecision(prediction);
+  return isSeoFeatureEnabled("quality-gate-v2")
+    ? evaluatePredictionIndexQuality(prediction, legacyDecision)
+    : legacyDecision;
+}
+
+export function getLegacyAdSenseContentQualityDecision(
+  prediction: EditorialPrediction
 ): AdSenseContentQualityDecision {
   const slug =
     prediction.slug ??
@@ -491,7 +502,7 @@ export function getAdSenseContentQualityDecision(
 export function getAdSenseContentQualityDecisionBySlug(
   slug: string,
   predictions: readonly EditorialPrediction[]
-): AdSenseContentQualityDecision | undefined {
+): AdSenseContentQualityDecision | IndexQualityDecision | undefined {
   const prediction = predictions.find((item) => {
     const itemSlug =
       item.slug ??

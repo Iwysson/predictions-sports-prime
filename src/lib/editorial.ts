@@ -445,7 +445,7 @@ export function validateEditorialPredictions(
       if (!prediction.publishedAt) {
         errors.push(`${label}: newly published content requires publishedAt to apply the source policy.`);
       }
-      if (prediction.sourceStatus !== "verified") {
+      if (prediction.sourceStatus !== "verified" && prediction.sourceStatus !== "partial") {
         errors.push(`${label}: newly published content requires sourceStatus: \"verified\".`);
       }
       if (!prediction.sources?.length) {

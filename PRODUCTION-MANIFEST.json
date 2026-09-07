@@ -1,0 +1,103 @@
+{
+  "league": {
+    "slug": "eliteserien",
+    "name": "Eliteserien",
+    "country": "Norway",
+    "season": "2026",
+    "manualOnly": true,
+    "expectedClubs": 16,
+    "expectedGamesPerRound": 8,
+    "timezone": "Europe/Oslo",
+    "liveDataId": "nor.1"
+  },
+  "round": 20,
+  "published_predictions": 8,
+  "modified_files": [
+    "src/types/index.ts",
+    "src/data/leagues.ts",
+    "src/lib/match-time.ts",
+    "src/lib/league-seo.ts",
+    "src/data/standings.ts",
+    "scripts/audit-technical-seo.mjs",
+    "src/data/predictions/eliteserien/round-20/fredrikstad-vs-bodo-glimt.ts",
+    "src/data/predictions/eliteserien/round-20/aalesund-vs-start.ts",
+    "src/data/predictions/eliteserien/round-20/sandefjord-vs-viking.ts",
+    "src/data/predictions/eliteserien/round-20/rosenborg-vs-hamkam.ts",
+    "src/data/predictions/eliteserien/round-20/brann-vs-lillestrom.ts",
+    "src/data/predictions/eliteserien/round-20/molde-vs-kfum-oslo.ts",
+    "src/data/predictions/eliteserien/round-20/sarpsborg-08-vs-valerenga.ts",
+    "src/data/predictions/eliteserien/round-20/kristiansund-vs-tromso.ts",
+    "src/data/predictions/eliteserien/round-20/index.ts",
+    "src/data/predictions/eliteserien/index.ts",
+    "src/data/predictions/index.ts",
+    "src/data/fixtures.snapshot.json"
+  ],
+  "predictions": [
+    {
+      "slug": "fredrikstad-vs-bodo-glimt",
+      "date": "2026-09-04",
+      "time": "19:00",
+      "prediction": "Over 2.5 Goals + Over 7.5 Corners",
+      "odds": 1.8
+    },
+    {
+      "slug": "aalesund-vs-start",
+      "date": "2026-09-04",
+      "time": "19:00",
+      "prediction": "Aalesund X1 + Over 1.5 Goals",
+      "odds": 1.65
+    },
+    {
+      "slug": "sandefjord-vs-viking",
+      "date": "2026-09-04",
+      "time": "21:00",
+      "prediction": "Viking to Win",
+      "odds": 1.67
+    },
+    {
+      "slug": "rosenborg-vs-hamkam",
+      "date": "2026-09-05",
+      "time": "16:00",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.57
+    },
+    {
+      "slug": "brann-vs-lillestrom",
+      "date": "2026-09-05",
+      "time": "18:00",
+      "prediction": "Brann X1 + Under 4.5 Goals",
+      "odds": 1.62
+    },
+    {
+      "slug": "molde-vs-kfum-oslo",
+      "date": "2026-09-06",
+      "time": "17:00",
+      "prediction": "Molde -1.25 Asian Handicap",
+      "odds": 1.7
+    },
+    {
+      "slug": "sarpsborg-08-vs-valerenga",
+      "date": "2026-09-06",
+      "time": "17:00",
+      "prediction": "Sarpsborg 08 X1 + Under 4.5 Goals",
+      "odds": 1.8
+    },
+    {
+      "slug": "kristiansund-vs-tromso",
+      "date": "2026-09-06",
+      "time": "19:15",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.67
+    }
+  ],
+  "validation_commands": [
+    "npm run fixtures:validate",
+    "npm run audit:fixtures",
+    "npm run audit:psp-editorial-standard",
+    "npm run audit:prediction-first-search-intent",
+    "npm run audit:search-intent-seo",
+    "npm run audit:international-seo",
+    "npm run typecheck",
+    "npm run build"
+  ]
+}

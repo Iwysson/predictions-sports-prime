@@ -1,4 +1,4 @@
-import { isFutureFixture } from "@/lib/fixture-state";
+import { getCanonicalMatchLifecycle } from "@/lib/canonical-match-lifecycle";
 import type { Match } from "@/types";
 import { isRestrictedSearchIntentFixture } from "@/lib/match-search-intent";
 
@@ -12,13 +12,13 @@ export function isUpcomingMatch(
   match: UpcomingMatchInput,
   now: Date | string = new Date()
 ) {
-  return isFutureFixture({
+  return getCanonicalMatchLifecycle({
     fixtureStatus: match.fixtureStatus,
     kickoffUtc: match.kickoffUtc,
     date: match.date,
     time: match.time,
     timeConfirmed: match.timeConfirmed,
-  }, now);
+  }, now).isPreMatch;
 }
 
 /**

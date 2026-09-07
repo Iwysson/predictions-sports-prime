@@ -40,6 +40,7 @@ for (const route of englishMatches) {
     const html = pages.get(member);
     if (!html || !isIndexable(html)) { errors.push(`${member}: hreflang target missing or noindex`); continue; }
     const hrefLangs = alternates(html);
+    if (!hrefLangs.some((entry) => entry.href === `${host}${member}`)) errors.push(`${member}: missing self hreflang`);
     for (const required of expectedHreflangs) if (!hrefLangs.some((entry) => entry.lang === required)) errors.push(`${member}: missing hreflang ${required}`);
     const defaultHref = hrefLangs.find((entry) => entry.lang === "x-default")?.href;
     if (defaultHref !== `${host}${route}`) errors.push(`${member}: x-default does not target English`);
@@ -47,8 +48,20 @@ for (const route of englishMatches) {
       const target = new URL(entry.href).pathname;
       const targetHtml = pages.get(target);
       if (!targetHtml || !isIndexable(targetHtml)) errors.push(`${member}: hreflang ${entry.lang} points to missing/noindex ${target}`);
+      else if (!sitemap.includes(`<loc>${host}${target}</loc>`)) errors.push(`${member}: hreflang ${entry.lang} target missing from sitemap`);
       else if (!alternates(targetHtml).some((back) => back.href === `${host}${member}`)) errors.push(`${member}: hreflang ${entry.lang} is not reciprocal`);
     }
+  }
+}
+
+for (const { slug } of matchLocales) {
+  for (const [route, html] of pages) {
+    if (!route.startsWith(`/${slug}/match/`) || !isIndexable(html)) continue;
+    const englishRoute = route.replace(`/${slug}`, "");
+    const englishHtml = pages.get(englishRoute);
+    if (!englishHtml || !isIndexable(englishHtml)) errors.push(`${route}: dangling localized route without indexable English equivalent`);
+    if (!alternates(html).some((entry) => entry.href === `${host}${route}`)) errors.push(`${route}: localized route missing self hreflang`);
+    if (alternates(html).some((entry) => !sitemap.includes(`<loc>${entry.href}</loc>`))) errors.push(`${route}: sitemap/hreflang mismatch`);
   }
 }
 

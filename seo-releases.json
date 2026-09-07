@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "releases": [
+    {
+      "releaseId": "seo-wave-0-2026-09-07",
+      "date": "2026-09-07",
+      "wave": 0,
+      "baseline": "reports/seo-baseline/latest.json",
+      "features": {
+        "quality-gate-v2": false,
+        "prediction-first-v2": false,
+        "title-engine-v2": false,
+        "international-index-v2": false,
+        "intent-hubs-v1": false,
+        "league-hubs-v2": false,
+        "results-trust-v2": false,
+        "freshness-engine-v1": false
+      },
+      "changes": [
+        "Added SEO rollout governance, deterministic baseline reporting and an audit aggregator."
+      ],
+      "risks": [
+        "Existing low-value and international near-duplicate signals remain unchanged until a later wave.",
+        "Fixture freshness can make deployment unsafe even when SEO-specific checks pass."
+      ],
+      "rollback": "Leave every feature flag OFF or unset. Wave 0 does not alter production SEO behavior.",
+      "notes": "Governance-only release. No indexability, metadata, canonical, hreflang or sitemap behavior changed."
+    },
+    {
+      "releaseId": "seo-wave-1-2026-09-07",
+      "date": "2026-09-07",
+      "wave": 1,
+      "baseline": "reports/index-quality/wave-1-dry-run.json",
+      "features": {
+        "quality-gate-v2": true,
+        "prediction-first-v2": false,
+        "title-engine-v2": false,
+        "international-index-v2": false,
+        "intent-hubs-v1": false,
+        "league-hubs-v2": false,
+        "results-trust-v2": false,
+        "freshness-engine-v1": false
+      },
+      "changes": ["Centralized explainable prediction index-quality decisions and separated historical policy from upcoming content."],
+      "risks": ["A stricter current-quality decision can demote pages with incomplete source, fixture, or editorial evidence."],
+      "rollback": "Set SEO_FEATURE_QUALITY_GATE_V2=off to restore the audited 2026-09-03 snapshot behavior.",
+      "notes": "No other Wave 2 feature is enabled. The incomplete batch of 14 analyses remains unpublished."
+    }
+  ]
+}

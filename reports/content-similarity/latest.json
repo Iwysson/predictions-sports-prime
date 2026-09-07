@@ -1,0 +1,4677 @@
+{
+  "generatedAt": "2026-09-07T20:39:16.223Z",
+  "totals": {
+    "substantiveParagraphs": 3500,
+    "exactDuplicateGroups": 96
+  },
+  "duplicateParagraphs": [
+    {
+      "text": "the goals component makes the total scoring range part of the selection while the win component requires the named team to finish ahead ",
+      "paths": [
+        "premier-league/Liverpool-vs-Nottingham Forest",
+        "premier-league/Manchester United-vs-Ipswich Town",
+        "serie-a/AC Milan-vs-Venezia",
+        "liga-portugal/Rio Ave-vs-Sporting CP",
+        "eredivisie/Groningen-vs-Fortuna Sittard"
+      ]
+    },
+    {
+      "text": "the main risk is that the match develops outside the selected market conditions the pick remains a pre match editorial opinion not a guarantee and the supplied odds do not establish the probability of the outcome without a separately documented market capture ",
+      "paths": [
+        "premier-league/Liverpool-vs-Nottingham Forest",
+        "premier-league/Manchester United-vs-Ipswich Town",
+        "premier-league/Sunderland-vs-Fulham",
+        "premier-league/Crystal Palace-vs-Manchester City",
+        "premier-league/Chelsea-vs-Brighton & Hove Albion",
+        "premier-league/Tottenham Hotspur-vs-Newcastle United",
+        "premier-league/Leeds United-vs-Brentford",
+        "premier-league/Bournemouth-vs-Everton",
+        "premier-league/Coventry City-vs-Hull City",
+        "bundesliga/RB Leipzig-vs-Borussia Mönchengladbach",
+        "bundesliga/1. FSV Mainz 05-vs-SC Paderborn 07",
+        "bundesliga/1. FC Union Berlin-vs-Eintracht Frankfurt",
+        "bundesliga/SV 07 Elversberg-vs-Bayer 04 Leverkusen",
+        "bundesliga/Borussia Dortmund-vs-Hamburger SV",
+        "bundesliga/Augsburg-vs-Schalke 04",
+        "bundesliga/1. FC Köln-vs-TSG 1899 Hoffenheim",
+        "bundesliga/SC Freiburg-vs-SV Werder Bremen",
+        "serie-a/Juventus-vs-Parma Calcio 1913",
+        "serie-a/US Sassuolo Calcio-vs-Torino",
+        "serie-a/SS Lazio-vs-Genoa CFC",
+        "serie-a/Cagliari Calcio-vs-Internazionale Milano",
+        "serie-a/AC Milan-vs-Venezia",
+        "serie-a/SSC Napoli-vs-Como 1907",
+        "serie-a/ACF Fiorentina-vs-Frosinone Calcio",
+        "liga-portugal/Académico de Viseu-vs-Porto",
+        "liga-portugal/Alverca-vs-Santa Clara",
+        "liga-portugal/C.D. Nacional-vs-Estrela",
+        "liga-portugal/Rio Ave-vs-Sporting CP",
+        "ligue-1/Lille-vs-Paris Saint-Germain",
+        "eredivisie/AZ Alkmaar-vs-Go Ahead Eagles",
+        "eredivisie/Excelsior-vs-Sparta Rotterdam",
+        "eredivisie/Groningen-vs-Fortuna Sittard",
+        "eredivisie/Utrecht-vs-PSV Eindhoven",
+        "eredivisie/Feyenoord Rotterdam-vs-ADO Den Haag",
+        "eredivisie/PEC Zwolle-vs-NEC Nijmegen",
+        "eredivisie/Telstar-vs-Ajax Amsterdam",
+        "eredivisie/Willem II-vs-Heerenveen"
+      ]
+    },
+    {
+      "text": "the goals component makes the total scoring range part of the selection while the double chance component protects one of the drawn result paths ",
+      "paths": [
+        "premier-league/Sunderland-vs-Fulham",
+        "premier-league/Bournemouth-vs-Everton",
+        "premier-league/Coventry City-vs-Hull City",
+        "bundesliga/SV 07 Elversberg-vs-Bayer 04 Leverkusen",
+        "bundesliga/Augsburg-vs-Schalke 04",
+        "bundesliga/1. FC Köln-vs-TSG 1899 Hoffenheim",
+        "bundesliga/SC Freiburg-vs-SV Werder Bremen",
+        "serie-a/US Sassuolo Calcio-vs-Torino",
+        "serie-a/SS Lazio-vs-Genoa CFC",
+        "serie-a/SSC Napoli-vs-Como 1907",
+        "liga-portugal/Alverca-vs-Santa Clara",
+        "liga-portugal/C.D. Nacional-vs-Estrela",
+        "eredivisie/Utrecht-vs-PSV Eindhoven",
+        "eredivisie/PEC Zwolle-vs-NEC Nijmegen",
+        "eredivisie/Willem II-vs-Heerenveen"
+      ]
+    },
+    {
+      "text": "signals supporting the main scenario the strongest venue specific process described above gives the primary analytical direction the expected game state offers a realistic route for that process to influence the published market ",
+      "paths": [
+        "premier-league/ipswich-town-vs-liverpool",
+        "premier-league/everton-vs-manchester-united",
+        "premier-league/arsenal-vs-chelsea"
+      ]
+    },
+    {
+      "text": "assessment the matchup has a coherent main direction but the opposing evidence is material enough to limit confidence the counter signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer ",
+      "paths": [
+        "premier-league/ipswich-town-vs-liverpool",
+        "premier-league/everton-vs-manchester-united",
+        "premier-league/arsenal-vs-chelsea"
+      ]
+    },
+    {
+      "text": "the statistical core prioritises the home split of the host and away split of the visitor available before this fixture any old cell that depended only on a league competition or cross competition fallback has been removed from the promoted version rather than presented as exact venue data public match previews and lineup sources are used only for the claims they can support ",
+      "paths": [
+        "premier-league/ipswich-town-vs-liverpool",
+        "premier-league/everton-vs-manchester-united",
+        "premier-league/arsenal-vs-chelsea"
+      ]
+    },
+    {
+      "text": "implied probability 1 decimal odds at 1 72 1 1 72 0 581 or approximately 58 1% before bookmaker margin this is a raw price derived break even reference not a psp model probability and not the same as a historical home away frequency ",
+      "paths": [
+        "premier-league/everton-vs-manchester-united",
+        "la-liga/elche-vs-real-sociedad"
+      ]
+    },
+    {
+      "text": "signals supporting the main scenario the venue specific process and game state mechanisms described above provide the strongest analytical support the selected market has a plausible route through the matchup rather than relying on overall season averages alone ",
+      "paths": [
+        "la-liga/real-betis-vs-real-madrid",
+        "la-liga/valencia-vs-barcelona",
+        "la-liga/deportivo-alaves-vs-osasuna",
+        "la-liga/malaga-vs-levante",
+        "la-liga/espanyol-vs-sevilla"
+      ]
+    },
+    {
+      "text": "assessment the evidence is directionally useful but not unanimous the strongest opposing signal remains visible in the analysis and directly limits confidence ",
+      "paths": [
+        "la-liga/real-betis-vs-real-madrid",
+        "la-liga/valencia-vs-barcelona",
+        "la-liga/deportivo-alaves-vs-osasuna",
+        "la-liga/malaga-vs-levante",
+        "la-liga/espanyol-vs-sevilla"
+      ]
+    },
+    {
+      "text": "implied probability 1 decimal odds at 1 80 1 1 80 0 556 or approximately 55 6% before bookmaker margin this is a raw price derived break even reference not a psp model probability and not the same as a historical home away frequency ",
+      "paths": [
+        "la-liga/real-betis-vs-real-madrid",
+        "la-liga/valencia-vs-barcelona",
+        "la-liga/malaga-vs-levante"
+      ]
+    },
+    {
+      "text": "the statistical core uses the home split of the host and away split of the visitor available before this fixture public match reports and lineup availability sources are used only for claims they can support where a venue specific metric cannot be verified it must remain unavailable rather than be replaced with an unrelated overall season proxy ",
+      "paths": [
+        "la-liga/real-betis-vs-real-madrid",
+        "la-liga/valencia-vs-barcelona",
+        "la-liga/deportivo-alaves-vs-osasuna",
+        "la-liga/malaga-vs-levante",
+        "la-liga/espanyol-vs-sevilla",
+        "la-liga/getafe-vs-celta-vigo",
+        "la-liga/elche-vs-real-sociedad"
+      ]
+    },
+    {
+      "text": "the handicap component sets the required scoring margin rather than relying only on the match winner ",
+      "paths": [
+        "bundesliga/Borussia Dortmund-vs-Hamburger SV",
+        "serie-a/Cagliari Calcio-vs-Internazionale Milano",
+        "liga-portugal/Académico de Viseu-vs-Porto",
+        "eredivisie/AZ Alkmaar-vs-Go Ahead Eagles",
+        "eredivisie/Feyenoord Rotterdam-vs-ADO Den Haag"
+      ]
+    },
+    {
+      "text": "the useful starting point is the host s home reference against the visitor s away reference current team news is then used to test whether that older venue process still fits this specific matchday 2 matchup ",
+      "paths": [
+        "bundesliga/sv-werder-bremen-vs-rb-leipzig",
+        "bundesliga/eintracht-frankfurt-vs-augsburg",
+        "bundesliga/tsg-1899-hoffenheim-vs-borussia-dortmund",
+        "bundesliga/hamburger-sv-vs-1-fsv-mainz-05",
+        "bundesliga/schalke-04-vs-bayern-munchen",
+        "bundesliga/bayer-04-leverkusen-vs-1-fc-union-berlin",
+        "bundesliga/vfb-stuttgart-vs-1-fc-koln",
+        "bundesliga/borussia-monchengladbach-vs-sv-07-elversberg",
+        "bundesliga/sc-paderborn-07-vs-sc-freiburg"
+      ]
+    },
+    {
+      "text": " suspensions eligibility no confirmed suspension is listed for either side ",
+      "paths": [
+        "bundesliga/sv-werder-bremen-vs-rb-leipzig",
+        "bundesliga/eintracht-frankfurt-vs-augsburg",
+        "bundesliga/hamburger-sv-vs-1-fsv-mainz-05",
+        "bundesliga/bayer-04-leverkusen-vs-1-fc-union-berlin",
+        "bundesliga/borussia-monchengladbach-vs-sv-07-elversberg",
+        "bundesliga/sc-paderborn-07-vs-sc-freiburg"
+      ]
+    },
+    {
+      "text": "these are probable rather than confirmed the official teamsheet normally released around one hour before kickoff overrides every projection ",
+      "paths": [
+        "bundesliga/sv-werder-bremen-vs-rb-leipzig",
+        "bundesliga/eintracht-frankfurt-vs-augsburg",
+        "bundesliga/tsg-1899-hoffenheim-vs-borussia-dortmund",
+        "bundesliga/hamburger-sv-vs-1-fsv-mainz-05",
+        "bundesliga/schalke-04-vs-bayern-munchen",
+        "bundesliga/bayer-04-leverkusen-vs-1-fc-union-berlin",
+        "bundesliga/vfb-stuttgart-vs-1-fc-koln",
+        "bundesliga/borussia-monchengladbach-vs-sv-07-elversberg",
+        "bundesliga/sc-paderborn-07-vs-sc-freiburg"
+      ]
+    },
+    {
+      "text": "where the statistical core labels a value as 2bl season baseline or season baseline that label is retained because the reference is not a pure bundesliga home away split ",
+      "paths": [
+        "bundesliga/sv-werder-bremen-vs-rb-leipzig",
+        "bundesliga/eintracht-frankfurt-vs-augsburg",
+        "bundesliga/tsg-1899-hoffenheim-vs-borussia-dortmund",
+        "bundesliga/hamburger-sv-vs-1-fsv-mainz-05",
+        "bundesliga/schalke-04-vs-bayern-munchen",
+        "bundesliga/bayer-04-leverkusen-vs-1-fc-union-berlin",
+        "bundesliga/vfb-stuttgart-vs-1-fc-koln",
+        "bundesliga/borussia-monchengladbach-vs-sv-07-elversberg",
+        "bundesliga/sc-paderborn-07-vs-sc-freiburg"
+      ]
+    },
+    {
+      "text": "the supporting case comes from the venue specific process above the main counter signal is also retained the core is a historical venue reference rather than a direct 2026 27 forecast so transfers coaching changes and the opening round can materially change the current level ",
+      "paths": [
+        "bundesliga/eintracht-frankfurt-vs-augsburg",
+        "bundesliga/vfb-stuttgart-vs-1-fc-koln"
+      ]
+    },
+    {
+      "text": "this opposing evidence materially limits confidence and remains part of the final sporting assessment ",
+      "paths": [
+        "bundesliga/eintracht-frankfurt-vs-augsburg",
+        "bundesliga/hamburger-sv-vs-1-fsv-mainz-05",
+        "bundesliga/vfb-stuttgart-vs-1-fc-koln"
+      ]
+    },
+    {
+      "text": "the core is a historical venue reference rather than a direct 2026 27 forecast so transfers coaching changes and the opening round can materially change the current level current availability is based on the bundesliga s official matchday 2 update and remains subject to late training changes ",
+      "paths": [
+        "bundesliga/eintracht-frankfurt-vs-augsburg",
+        "bundesliga/vfb-stuttgart-vs-1-fc-koln"
+      ]
+    },
+    {
+      "text": "the original market and odds remain coherent with the documented venue process and the current team news picture while the counter signals above define the principal ways the selection can fail ",
+      "paths": [
+        "bundesliga/eintracht-frankfurt-vs-augsburg",
+        "bundesliga/hamburger-sv-vs-1-fsv-mainz-05",
+        "bundesliga/vfb-stuttgart-vs-1-fc-koln"
+      ]
+    },
+    {
+      "text": "the statistical core preserves the verified reference window already attached to this fixture current probable lineups injuries doubts and suspensions are cross checked against the bundesliga s official matchday 2 team news update fixture identity and kickoff information are cross checked against the official bundesliga schedule ",
+      "paths": [
+        "bundesliga/eintracht-frankfurt-vs-augsburg",
+        "bundesliga/hamburger-sv-vs-1-fsv-mainz-05",
+        "bundesliga/vfb-stuttgart-vs-1-fc-koln"
+      ]
+    },
+    {
+      "text": "this is marked as a live entry plan so it is not a standard instruction to enter before kick off the stored note defines the intended price conditions if those conditions or the expected match pattern do not appear no entry is required ",
+      "paths": [
+        "serie-a/AC Monza-vs-Udinese Calcio",
+        "liga-portugal/Casa Pia-vs-Moreirense",
+        "liga-portugal/Famalicao-vs-Gil Vicente",
+        "liga-portugal/Arouca-vs-Maritimo"
+      ]
+    },
+    {
+      "text": "for this fixture the home and away cells are the 2026 27 venue samples available before round 3 ",
+      "paths": [
+        "serie-a/fiorentina-vs-torino",
+        "serie-a/inter-vs-napoli",
+        "serie-a/genoa-vs-como",
+        "serie-a/parma-vs-monza",
+        "serie-a/frosinone-vs-venezia",
+        "serie-a/juventus-vs-ac-milan"
+      ]
+    },
+    {
+      "text": "the table is descriptive evidence rather than a stand alone forecast with one match venue samples in most of this round finishing opponent strength and game state can move the numbers sharply the table is used to identify the matchup rather than to claim statistical certainty ",
+      "paths": [
+        "serie-a/fiorentina-vs-torino",
+        "serie-a/inter-vs-napoli",
+        "serie-a/roma-vs-atalanta"
+      ]
+    },
+    {
+      "text": "the evidence is mixed rather than unanimous so the counter signals remain part of the match assessment ",
+      "paths": [
+        "serie-a/fiorentina-vs-torino",
+        "serie-a/inter-vs-napoli",
+        "serie-a/roma-vs-atalanta"
+      ]
+    },
+    {
+      "text": "most current season home away samples contain only one league match where a current venue sample does not exist the reference window is disclosed explicitly rather than replaced by an overall or cross competition average ",
+      "paths": [
+        "serie-a/fiorentina-vs-torino",
+        "serie-a/inter-vs-napoli",
+        "serie-a/genoa-vs-como",
+        "serie-a/roma-vs-atalanta",
+        "serie-a/parma-vs-monza",
+        "serie-a/frosinone-vs-venezia",
+        "serie-a/juventus-vs-ac-milan"
+      ]
+    },
+    {
+      "text": "these are probable not confirmed the official matchday teamsheet overrides every projection ",
+      "paths": [
+        "serie-a/genoa-vs-como",
+        "serie-a/parma-vs-monza",
+        "serie-a/frosinone-vs-venezia",
+        "serie-a/juventus-vs-ac-milan",
+        "serie-a/cagliari-vs-lecce",
+        "serie-a/udinese-vs-lazio"
+      ]
+    },
+    {
+      "text": "the core is descriptive evidence not a probability model with one match venue samples in most of this round finishing opponent strength and game state can move the numbers sharply the table is used to identify the matchup rather than to claim statistical certainty ",
+      "paths": [
+        "serie-a/genoa-vs-como",
+        "serie-a/parma-vs-monza",
+        "serie-a/frosinone-vs-venezia",
+        "serie-a/juventus-vs-ac-milan"
+      ]
+    },
+    {
+      "text": "the evidence is mixed rather than unanimous that matters because the prediction should remain a sporting conclusion not an argument constructed backwards from the market ",
+      "paths": [
+        "serie-a/genoa-vs-como",
+        "serie-a/parma-vs-monza",
+        "serie-a/frosinone-vs-venezia",
+        "serie-a/juventus-vs-ac-milan"
+      ]
+    },
+    {
+      "text": "the statistical core comes from the verified editorial dataset supplied for this fixture and keeps home and away reference windows explicit current lineup injury and suspension information is cross checked against the latest serie a probable lineup reporting before publication ",
+      "paths": [
+        "serie-a/genoa-vs-como",
+        "serie-a/parma-vs-monza",
+        "serie-a/frosinone-vs-venezia",
+        "serie-a/juventus-vs-ac-milan",
+        "serie-a/cagliari-vs-lecce",
+        "serie-a/udinese-vs-lazio"
+      ]
+    },
+    {
+      "text": " competition liga portugal betclic date kickoff local time round matchday 5 venue ",
+      "paths": [
+        "liga-portugal/estrela-da-amadora-vs-famalicao",
+        "liga-portugal/fc-porto-vs-moreirense",
+        "liga-portugal/santa-clara-vs-rio-ave"
+      ]
+    },
+    {
+      "text": " availability no additional injury change is inserted beyond the retained pre match source set late club updates can still change the final xi ",
+      "paths": [
+        "liga-portugal/estrela-da-amadora-vs-famalicao",
+        "liga-portugal/santa-clara-vs-rio-ave"
+      ]
+    },
+    {
+      "text": " suspensions eligibility no active suspension affecting the projected xi was identified in the retained pre match sources a later official matchday update overrides this status ",
+      "paths": [
+        "liga-portugal/estrela-da-amadora-vs-famalicao",
+        "liga-portugal/santa-clara-vs-rio-ave",
+        "liga-portugal/vitoria-sc-vs-casa-pia",
+        "liga-portugal/gil-vicente-vs-academico-viseu",
+        "liga-portugal/estoril-vs-arouca"
+      ]
+    },
+    {
+      "text": "these are probable not confirmed the official teamsheet is the final reference for starters and late availability ",
+      "paths": [
+        "liga-portugal/estrela-da-amadora-vs-famalicao",
+        "liga-portugal/fc-porto-vs-moreirense",
+        "liga-portugal/santa-clara-vs-rio-ave",
+        "liga-portugal/sporting-cp-vs-nacional",
+        "liga-portugal/maritimo-vs-benfica",
+        "liga-portugal/vitoria-sc-vs-casa-pia",
+        "liga-portugal/gil-vicente-vs-academico-viseu",
+        "liga-portugal/estoril-vs-arouca"
+      ]
+    },
+    {
+      "text": "at published odds of 1 62 the raw implied probability is 61 7% because 1 1 62 0 617 before bookmaker margin ",
+      "paths": [
+        "liga-portugal/estrela-da-amadora-vs-famalicao",
+        "liga-portugal/santa-clara-vs-rio-ave"
+      ]
+    },
+    {
+      "text": "the market price is assessed against the documented home away profile current availability and expected game state no proprietary fair odds number is invented the selection only carries value if the sporting case supports a true probability above the raw 61 7% break even reference ",
+      "paths": [
+        "liga-portugal/estrela-da-amadora-vs-famalicao",
+        "liga-portugal/santa-clara-vs-rio-ave"
+      ]
+    },
+    {
+      "text": "the statistical core preserves the verified match by match venue split already supplied for this fixture current schedule information is cross checked against liga portugal and recent portuguese reporting team news statements use the latest retained source available for the specific club and are superseded by later official club or competition updates ",
+      "paths": [
+        "liga-portugal/estrela-da-amadora-vs-famalicao",
+        "liga-portugal/fc-porto-vs-moreirense",
+        "liga-portugal/santa-clara-vs-rio-ave",
+        "liga-portugal/sporting-cp-vs-nacional",
+        "liga-portugal/maritimo-vs-benfica",
+        "liga-portugal/vitoria-sc-vs-casa-pia",
+        "liga-portugal/gil-vicente-vs-academico-viseu",
+        "liga-portugal/estoril-vs-arouca"
+      ]
+    },
+    {
+      "text": " suspensions eligibility no active suspension affecting the projected xi is confirmed in the retained pre match sources ",
+      "paths": [
+        "liga-portugal/fc-porto-vs-moreirense",
+        "liga-portugal/maritimo-vs-benfica"
+      ]
+    },
+    {
+      "text": "the main case comes from the venue specific process above the counter signal is equally important the main limitation is sample size the relevant home away windows contain 2 and 2 matches early season finishing can move faster than xg or shot volume and late window squad changes can alter the true current level a draw remains the simplest way for the selection to fail even if the preferred side controls more territory ",
+      "paths": [
+        "liga-portugal/sporting-cp-vs-nacional",
+        "liga-portugal/vitoria-sc-vs-casa-pia",
+        "liga-portugal/gil-vicente-vs-academico-viseu"
+      ]
+    },
+    {
+      "text": "the main limitation is sample size the relevant home away windows contain 2 and 2 matches early season finishing can move faster than xg or shot volume and late window squad changes can alter the true current level a draw remains the simplest way for the selection to fail even if the preferred side controls more territory ",
+      "paths": [
+        "liga-portugal/sporting-cp-vs-nacional",
+        "liga-portugal/vitoria-sc-vs-casa-pia",
+        "liga-portugal/gil-vicente-vs-academico-viseu"
+      ]
+    },
+    {
+      "text": "the published decimal price is 1 53 raw implied probability is calculated as 1 decimal odds so 1 1 53 65 4% raw implied probability before bookmaker margin the price is an editor supplied publication record no bookmaker name or later market movement has been invented ",
+      "paths": [
+        "liga-portugal/moreirense-vs-benfica-2026-27",
+        "scottish-premiership/st-johnstone-vs-celtic"
+      ]
+    },
+    {
+      "text": "the xi is a pre match projection the official teamsheet released close to kickoff overrides every probable selection ",
+      "paths": [
+        "ligue-1/toulouse-vs-lille",
+        "ligue-1/lyon-vs-auxerre",
+        "ligue-1/angers-vs-rennes",
+        "ligue-1/troyes-vs-strasbourg",
+        "ligue-1/olympique-de-marseille-vs-paris-fc",
+        "ligue-1/paris-saint-germain-vs-as-monaco"
+      ]
+    },
+    {
+      "text": "the venue split matters because the host and visitor have not produced the same type of game the current statistical core must be read with its sample size visible several columns contain only one 2026 27 league match while any older fallback is labelled in the table instead of being presented as current season data ",
+      "paths": [
+        "ligue-1/toulouse-vs-lille",
+        "ligue-1/lyon-vs-auxerre",
+        "ligue-1/angers-vs-rennes",
+        "ligue-1/troyes-vs-strasbourg",
+        "ligue-1/olympique-de-marseille-vs-paris-fc",
+        "ligue-1/paris-saint-germain-vs-as-monaco"
+      ]
+    },
+    {
+      "text": "that conflict is part of the match analysis and limits confidence where the market requires more than one condition to land ",
+      "paths": [
+        "ligue-1/toulouse-vs-lille",
+        "ligue-1/lyon-vs-auxerre",
+        "ligue-1/angers-vs-rennes",
+        "ligue-1/troyes-vs-strasbourg",
+        "ligue-1/olympique-de-marseille-vs-paris-fc",
+        "ligue-1/paris-saint-germain-vs-as-monaco"
+      ]
+    },
+    {
+      "text": "early season venue samples can move sharply after a single match injuries transfers and tactical changes also mean prior season fallback data should be treated as context not as a current form substitute ",
+      "paths": [
+        "ligue-1/toulouse-vs-lille",
+        "ligue-1/lyon-vs-auxerre",
+        "ligue-1/angers-vs-rennes",
+        "ligue-1/troyes-vs-strasbourg",
+        "ligue-1/olympique-de-marseille-vs-paris-fc",
+        "ligue-1/paris-saint-germain-vs-as-monaco"
+      ]
+    },
+    {
+      "text": "the statistical core keeps the reference window already attached to the fixture and labels historical fallback where relevant current absences and suspension status are cross checked against the official ligue 1 matchday 3 update while probable xis are checked against current lineup services and same week french team news reporting ",
+      "paths": [
+        "ligue-1/toulouse-vs-lille",
+        "ligue-1/lyon-vs-auxerre",
+        "ligue-1/angers-vs-rennes",
+        "ligue-1/troyes-vs-strasbourg",
+        "ligue-1/olympique-de-marseille-vs-paris-fc",
+        "ligue-1/paris-saint-germain-vs-as-monaco"
+      ]
+    },
+    {
+      "text": "the market price should be read alongside the venue sample current availability and tactical matchup with only two league rounds completed the statistical evidence is still too limited for the price alone to be treated as proof of value ",
+      "paths": [
+        "ligue-1/lens-vs-lorient",
+        "ligue-1/nice-vs-le-mans",
+        "ligue-1/le-havre-vs-brest"
+      ]
+    },
+    {
+      "text": "the published decimal price is 1 55 raw implied probability is calculated as 1 decimal odds so 1 1 55 64 5% raw implied probability before bookmaker margin the price is an editor supplied publication record no bookmaker name or later market movement has been invented ",
+      "paths": [
+        "eredivisie/nec-nijmegen-vs-excelsior",
+        "eredivisie/fc-twente-vs-telstar"
+      ]
+    },
+    {
+      "text": "suspensions eligibility only absences already supported by the retained pre match source set are treated as confirmed no player is removed or inserted merely to complete the template the official squad list and match sheet override this projection ",
+      "paths": [
+        "eredivisie/sparta-rotterdam-vs-pec-zwolle",
+        "eredivisie/willem-ii-vs-excelsior",
+        "eredivisie/ajax-vs-psv-eindhoven",
+        "eredivisie/fc-utrecht-vs-go-ahead-eagles",
+        "eredivisie/nec-nijmegen-vs-feyenoord",
+        "eredivisie/ado-den-haag-vs-fortuna-sittard",
+        "eredivisie/sc-heerenveen-vs-az-alkmaar",
+        "eredivisie/fc-groningen-vs-fc-twente",
+        "eredivisie/telstar-vs-sc-cambuur"
+      ]
+    },
+    {
+      "text": "match context the analysis is independent of the published pick the first task is to understand the matchup from the available pre match evidence only then is the existing market assessed the eredivisie is still in an early 2026 27 sample so venue specific averages can move sharply after a single match that makes it essential to separate home from away and to label any fallback explicitly rather than presenting mixed data as if it were a clean venue split ",
+      "paths": [
+        "eredivisie/sparta-rotterdam-vs-pec-zwolle",
+        "eredivisie/willem-ii-vs-excelsior",
+        "eredivisie/ajax-vs-psv-eindhoven",
+        "eredivisie/fc-utrecht-vs-go-ahead-eagles",
+        "eredivisie/nec-nijmegen-vs-feyenoord",
+        "eredivisie/ado-den-haag-vs-fortuna-sittard",
+        "eredivisie/sc-heerenveen-vs-az-alkmaar",
+        "eredivisie/fc-groningen-vs-fc-twente",
+        "eredivisie/telstar-vs-sc-cambuur"
+      ]
+    },
+    {
+      "text": "statistical interpretation and tactical game state the match can change substantially depending on the first goal if the stronger territorial side scores early the opponent may be forced into a more aggressive shape increasing transition space shots and potentially corners if the game remains level both managers can preserve structure longer and reduce the pace this is especially important for goal markets where a high pre match average does not guarantee that the game reaches the threshold ",
+      "paths": [
+        "eredivisie/sparta-rotterdam-vs-pec-zwolle",
+        "eredivisie/willem-ii-vs-excelsior",
+        "eredivisie/ajax-vs-psv-eindhoven",
+        "eredivisie/fc-utrecht-vs-go-ahead-eagles",
+        "eredivisie/nec-nijmegen-vs-feyenoord",
+        "eredivisie/ado-den-haag-vs-fortuna-sittard",
+        "eredivisie/sc-heerenveen-vs-az-alkmaar",
+        "eredivisie/fc-groningen-vs-fc-twente",
+        "eredivisie/telstar-vs-sc-cambuur"
+      ]
+    },
+    {
+      "text": "the xg comparison gives another layer xg describes chance quality not finishing certainty when actual goals run well above xg regression risk rises when goals lag behind xg the attack may have created more than the scoreline suggests the same applies defensively with xga that is why the core keeps actual gf ga and xg xga side by side rather than allowing one to replace the other ",
+      "paths": [
+        "eredivisie/sparta-rotterdam-vs-pec-zwolle",
+        "eredivisie/willem-ii-vs-excelsior",
+        "eredivisie/ajax-vs-psv-eindhoven",
+        "eredivisie/fc-utrecht-vs-go-ahead-eagles",
+        "eredivisie/nec-nijmegen-vs-feyenoord",
+        "eredivisie/ado-den-haag-vs-fortuna-sittard",
+        "eredivisie/sc-heerenveen-vs-az-alkmaar",
+        "eredivisie/fc-groningen-vs-fc-twente",
+        "eredivisie/telstar-vs-sc-cambuur"
+      ]
+    },
+    {
+      "text": "conflict detector the main conflict is sample size and source granularity several current venue splits contain only one or two league matches in addition some shot possession corner or event rate rows use a clearly labelled overall or structural fallback because the supplied editorial package does not contain a full venue level feed for both teams those fallbacks are context not invented home away observations a second conflict is game state dependence early red cards an early goal or an unusually efficient finishing day can overwhelm the pre match averages ",
+      "paths": [
+        "eredivisie/sparta-rotterdam-vs-pec-zwolle",
+        "eredivisie/willem-ii-vs-excelsior",
+        "eredivisie/ajax-vs-psv-eindhoven",
+        "eredivisie/fc-utrecht-vs-go-ahead-eagles",
+        "eredivisie/nec-nijmegen-vs-feyenoord",
+        "eredivisie/ado-den-haag-vs-fortuna-sittard",
+        "eredivisie/sc-heerenveen-vs-az-alkmaar",
+        "eredivisie/fc-groningen-vs-fc-twente",
+        "eredivisie/telstar-vs-sc-cambuur"
+      ]
+    },
+    {
+      "text": "market price context at decimal odds 1 93 the raw implied probability is 51 8% 1 1 93 51 8% before bookmaker margin this is a price derived threshold not a proprietary model probability ",
+      "paths": [
+        "eredivisie/sparta-rotterdam-vs-pec-zwolle",
+        "eredivisie/sc-heerenveen-vs-az-alkmaar"
+      ]
+    },
+    {
+      "text": "value assessment the published price is retained exactly as supplied the evidence is strong enough to evaluate whether the market is coherent with the matchup but the small early season sample does not justify inventing fair odds or a false precision edge value therefore remains conditional on the home away evidence the disclosed fallbacks and the specific failure routes identified in the conflict detector ",
+      "paths": [
+        "eredivisie/sparta-rotterdam-vs-pec-zwolle",
+        "eredivisie/willem-ii-vs-excelsior",
+        "eredivisie/ajax-vs-psv-eindhoven",
+        "eredivisie/fc-utrecht-vs-go-ahead-eagles",
+        "eredivisie/nec-nijmegen-vs-feyenoord",
+        "eredivisie/ado-den-haag-vs-fortuna-sittard",
+        "eredivisie/sc-heerenveen-vs-az-alkmaar",
+        "eredivisie/fc-groningen-vs-fc-twente",
+        "eredivisie/telstar-vs-sc-cambuur"
+      ]
+    },
+    {
+      "text": "the analysis preserves the supplied pre match evidence and source scope for this fixture home away rows are venue specific where the source package supports that split any broader current season league baseline or prior season figures remain explicitly labelled in the statistical core and are treated as context rather than as venue specific observations fixture team news and lineup information is superseded by later official club or competition updates when available ",
+      "paths": [
+        "eredivisie/sparta-rotterdam-vs-pec-zwolle",
+        "eredivisie/willem-ii-vs-excelsior",
+        "eredivisie/ajax-vs-psv-eindhoven",
+        "eredivisie/fc-utrecht-vs-go-ahead-eagles",
+        "eredivisie/nec-nijmegen-vs-feyenoord",
+        "eredivisie/ado-den-haag-vs-fortuna-sittard",
+        "eredivisie/sc-heerenveen-vs-az-alkmaar",
+        "eredivisie/fc-groningen-vs-fc-twente",
+        "eredivisie/telstar-vs-sc-cambuur"
+      ]
+    },
+    {
+      "text": "conclusion the final position preserves the original published market and price the analysis supports that decision only to the extent that the current venue split underlying numbers lineup context and expected game state point in the same direction the most important risk is overconfidence in a tiny sample so the recommendation should be read together with the source qualifiers rather than as a certainty ",
+      "paths": [
+        "eredivisie/sparta-rotterdam-vs-pec-zwolle",
+        "eredivisie/willem-ii-vs-excelsior",
+        "eredivisie/ajax-vs-psv-eindhoven",
+        "eredivisie/fc-utrecht-vs-go-ahead-eagles",
+        "eredivisie/nec-nijmegen-vs-feyenoord",
+        "eredivisie/ado-den-haag-vs-fortuna-sittard",
+        "eredivisie/sc-heerenveen-vs-az-alkmaar",
+        "eredivisie/fc-groningen-vs-fc-twente",
+        "eredivisie/telstar-vs-sc-cambuur"
+      ]
+    },
+    {
+      "text": "these are probable not confirmed lineups the official teamsheet overrides every projection ",
+      "paths": [
+        "brasileirao-serie-a/red-bull-bragantino-vs-bahia",
+        "brasileirao-serie-a/sao-paulo-vs-atletico-mg",
+        "brasileirao-serie-a/fluminense-vs-vasco-da-gama",
+        "brasileirao-serie-a/coritiba-vs-mirassol",
+        "brasileirao-serie-a/remo-vs-flamengo",
+        "brasileirao-serie-a/internacional-vs-santos",
+        "brasileirao-serie-a/cruzeiro-vs-athletico-pr",
+        "brasileirao-serie-a/botafogo-vs-palmeiras",
+        "brasileirao-serie-a/corinthians-vs-chapecoense",
+        "brasileirao-serie-a/vitoria-vs-gremio"
+      ]
+    },
+    {
+      "text": "at decimal odds of 1 67 the raw implied probability is 59 9% because 1 1 67 0 599 before bookmaker margin this price derived threshold is not a historical hit rate or a forecast probability ",
+      "paths": [
+        "brasileirao-serie-a/red-bull-bragantino-vs-bahia",
+        "brasileirao-serie-a/sao-paulo-vs-atletico-mg",
+        "brasileirao-serie-a/internacional-vs-santos"
+      ]
+    },
+    {
+      "text": "the price is attractive only if the combined home away evidence current availability and expected game state support a true probability above the raw 59 9% threshold the defensive shot evidence and matchup specific counter signals therefore remain part of the value judgment ",
+      "paths": [
+        "brasileirao-serie-a/red-bull-bragantino-vs-bahia",
+        "brasileirao-serie-a/sao-paulo-vs-atletico-mg",
+        "brasileirao-serie-a/internacional-vs-santos"
+      ]
+    },
+    {
+      "text": "fixture date kickoff and venue are cross checked against the cbf round 26 schedule including the later coritiba mirassol move to 6 september at 11 00 probable teams and availability are supported by current round 26 lineup reporting venue specific defensive shot references replace the previous league wide substitute and recent sot allowed is derived from opponent sot in current 2026 league logs filtered by venue ",
+      "paths": [
+        "brasileirao-serie-a/red-bull-bragantino-vs-bahia",
+        "brasileirao-serie-a/sao-paulo-vs-atletico-mg",
+        "brasileirao-serie-a/fluminense-vs-vasco-da-gama",
+        "brasileirao-serie-a/coritiba-vs-mirassol",
+        "brasileirao-serie-a/remo-vs-flamengo",
+        "brasileirao-serie-a/internacional-vs-santos",
+        "brasileirao-serie-a/cruzeiro-vs-athletico-pr",
+        "brasileirao-serie-a/botafogo-vs-palmeiras",
+        "brasileirao-serie-a/corinthians-vs-chapecoense",
+        "brasileirao-serie-a/vitoria-vs-gremio"
+      ]
+    },
+    {
+      "text": " suspensions eligibility nenhuma suspensão confirmada nas fontes mais recentes consultadas para este confronto ",
+      "paths": [
+        "brasileirao-serie-a/sao-paulo-vs-atletico-mg",
+        "brasileirao-serie-a/botafogo-vs-palmeiras"
+      ]
+    },
+    {
+      "text": "value assessment the published price is retained exactly as supplied the sporting evidence is assessed independently from the market price and no unsupported fair odds estimate is introduced the relevant question is whether the home away evidence knockout game state availability picture and conflict detector make the listed market coherent at the published price ",
+      "paths": [
+        "copa-do-brasil/santos-vs-palmeiras",
+        "copa-do-brasil/vitoria-vs-vasco-da-gama",
+        "copa-do-brasil/gremio-vs-internacional"
+      ]
+    },
+    {
+      "text": "the published decimal price is 1 62 raw implied probability is calculated as 1 decimal odds so 1 1 62 61 7% raw implied probability before bookmaker margin the price is an editor supplied publication record no bookmaker name or later market movement has been invented ",
+      "paths": [
+        "efl-cup/crystal-palace-vs-middlesbrough",
+        "champions-league/stuttgart-vs-viking",
+        "champions-league/liverpool-vs-atletico-madrid",
+        "champions-league/sporting-cp-vs-galatasaray"
+      ]
+    },
+    {
+      "text": "the published decimal price is 1 72 raw implied probability is calculated as 1 decimal odds so 1 1 72 58 1% raw implied probability before bookmaker margin the price is an editor supplied publication record no bookmaker name or later market movement has been invented ",
+      "paths": [
+        "efl-cup/millwall-vs-newcastle-united",
+        "champions-league/napoli-vs-arsenal",
+        "champions-league/fenerbahce-vs-roma",
+        "champions-league/bayern-munich-vs-bodo-glimt"
+      ]
+    },
+    {
+      "text": "the published decimal price is 1 60 raw implied probability is calculated as 1 decimal odds so 1 1 60 62 5% raw implied probability before bookmaker margin the price is an editor supplied publication record no bookmaker name or later market movement has been invented ",
+      "paths": [
+        "efl-cup/chelsea-vs-leeds-united",
+        "champions-league/como-vs-rb-leipzig"
+      ]
+    },
+    {
+      "text": "the advanced rows are built from match level data for matchday 1 4 and averaged over each team s two relevant venue matches so every figure is a real two game sample rather than a projection two matches is a small base and the percentages are observed frequencies not probabilities a 100% or 0% cell describes what happened in both games not what must happen next the value is in the direction chance quality shot volume possession and first goal timing in the specific home or away setting cross read with the latest results and squad availability ",
+      "paths": [
+        "championship/lincoln-vs-southampton",
+        "championship/preston-vs-blackburn",
+        "championship/stoke-city-vs-charlton-athletic",
+        "championship/west-ham-vs-derby-county",
+        "championship/burnley-vs-bristol-city",
+        "championship/sheffield-united-vs-norwich-city",
+        "championship/qpr-vs-middlesbrough",
+        "championship/west-brom-vs-watford",
+        "championship/portsmouth-vs-cardiff-city",
+        "championship/millwall-vs-bolton-wanderers",
+        "championship/swansea-city-vs-wrexham",
+        "championship/birmingham-city-vs-wolverhampton-wanderers"
+      ]
+    },
+    {
+      "text": "matchday 5 still leaves very small home away samples probable lineups are not confirmed lineups and late injuries suspensions deadline day registrations or tactical changes can alter the matchup the statistical core uses each team s home or away split only from a two match sample per side advanced values are averaged from matchday 1 4 match data and can move sharply with one further result ",
+      "paths": [
+        "championship/lincoln-vs-southampton",
+        "championship/preston-vs-blackburn",
+        "championship/stoke-city-vs-charlton-athletic",
+        "championship/west-ham-vs-derby-county",
+        "championship/burnley-vs-bristol-city",
+        "championship/sheffield-united-vs-norwich-city",
+        "championship/qpr-vs-middlesbrough",
+        "championship/west-brom-vs-watford",
+        "championship/portsmouth-vs-cardiff-city",
+        "championship/millwall-vs-bolton-wanderers",
+        "championship/swansea-city-vs-wrexham",
+        "championship/birmingham-city-vs-wolverhampton-wanderers"
+      ]
+    },
+    {
+      "text": "the preferred scenario follows from the matchup rather than from the price alone the decisive variables are the first goal how aggressively the trailing side responds and whether the projected structures create repeated box entries or instead settle into a lower tempo midfield game the counter signals above remain part of the conclusion and reduce certainty where appropriate ",
+      "paths": [
+        "championship/lincoln-vs-southampton",
+        "championship/preston-vs-blackburn",
+        "championship/stoke-city-vs-charlton-athletic",
+        "championship/west-ham-vs-derby-county",
+        "championship/burnley-vs-bristol-city",
+        "championship/sheffield-united-vs-norwich-city",
+        "championship/qpr-vs-middlesbrough",
+        "championship/west-brom-vs-watford",
+        "championship/portsmouth-vs-cardiff-city",
+        "championship/millwall-vs-bolton-wanderers",
+        "championship/swansea-city-vs-wrexham",
+        "championship/birmingham-city-vs-wolverhampton-wanderers"
+      ]
+    },
+    {
+      "text": "home and away statistical core values were built from sofascore match statistics and match incidents for championship matchday 1 4 possession total shots shots on target expected goals corners and goal timings aggregated to each team s two relevant venue matches the results layer w d l goals and points was cross checked against the soccerstats home and away tables probable lineups and availability follow the pre match sources listed above figures reflect data available on 03 09 2026 any confirmed team news after that time takes precedence ",
+      "paths": [
+        "championship/lincoln-vs-southampton",
+        "championship/preston-vs-blackburn",
+        "championship/stoke-city-vs-charlton-athletic",
+        "championship/west-ham-vs-derby-county",
+        "championship/burnley-vs-bristol-city",
+        "championship/sheffield-united-vs-norwich-city",
+        "championship/qpr-vs-middlesbrough",
+        "championship/west-brom-vs-watford",
+        "championship/portsmouth-vs-cardiff-city",
+        "championship/millwall-vs-bolton-wanderers",
+        "championship/swansea-city-vs-wrexham",
+        "championship/birmingham-city-vs-wolverhampton-wanderers"
+      ]
+    },
+    {
+      "text": "at decimal odds 1 82 the raw implied probability is 54 9% 1 1 82 this is a market price conversion not a psp model probability and not a guarantee ",
+      "paths": [
+        "championship/stoke-city-vs-charlton-athletic",
+        "championship/sheffield-united-vs-norwich-city",
+        "championship/qpr-vs-middlesbrough"
+      ]
+    },
+    {
+      "text": "at decimal odds 1 67 the raw implied probability is 59 9% 1 1 67 this is a market price conversion not a psp model probability and not a guarantee ",
+      "paths": [
+        "championship/west-brom-vs-watford",
+        "championship/millwall-vs-bolton-wanderers"
+      ]
+    },
+    {
+      "text": "footymetrics championship 2026 27 standings home away scoring possession corners xg xga and current team statistical context sofascore championship 2026 27 match statistics and incidents used in the match level statistical core fotmob fixture and match stat cross checks including current team and event data soccerstats championship current season home away results layer used as a cross check for w d l goals and points fbref and official club efl pages championship fixture date venue and schedule checks starting11 probable lineups and reported availability before kickoff ",
+      "paths": [
+        "championship/blackburn-rovers-vs-sheffield-united",
+        "championship/bolton-wanderers-vs-west-ham-united",
+        "championship/cardiff-city-vs-stoke-city",
+        "championship/charlton-athletic-vs-queens-park-rangers",
+        "championship/derby-county-vs-west-bromwich-albion",
+        "championship/norwich-city-vs-birmingham-city",
+        "championship/southampton-vs-swansea-city",
+        "championship/watford-vs-preston-north-end",
+        "championship/wrexham-vs-burnley"
+      ]
+    },
+    {
+      "text": "at decimal odds of 1 62 the raw implied probability is 61 7% because 1 1 62 0 617 before bookmaker margin this is a conversion of the market price only it is not a model probability a historical hit rate or a guarantee ",
+      "paths": [
+        "championship/cardiff-city-vs-stoke-city",
+        "championship/charlton-athletic-vs-queens-park-rangers",
+        "championship/wrexham-vs-burnley"
+      ]
+    },
+    {
+      "text": "signals supporting the main scenario the venue specific chance and territorial profile described above gives the main analytical direction the matchup offers a plausible game state route for that advantage to matter ",
+      "paths": [
+        "super-lig/istanbul-basaksehir-vs-galatasaray",
+        "super-lig/erzurumspor-fk-vs-konyaspor",
+        "super-lig/fenerbahce-vs-besiktas",
+        "super-lig/kasimpasa-vs-amed-sk",
+        "super-lig/corum-fk-vs-eyupspor",
+        "super-lig/kocaelispor-vs-samsunspor",
+        "super-lig/trabzonspor-vs-genclerbirligi"
+      ]
+    },
+    {
+      "text": "assessment the evidence is directionally useful but not unanimous the strongest counter signal is retained in the conclusion rather than being removed to defend the published selection ",
+      "paths": [
+        "super-lig/istanbul-basaksehir-vs-galatasaray",
+        "super-lig/erzurumspor-fk-vs-konyaspor",
+        "super-lig/fenerbahce-vs-besiktas",
+        "super-lig/kasimpasa-vs-amed-sk",
+        "super-lig/corum-fk-vs-eyupspor",
+        "super-lig/kocaelispor-vs-samsunspor",
+        "super-lig/trabzonspor-vs-genclerbirligi"
+      ]
+    },
+    {
+      "text": "the statistical core uses the exact home split of the host and away split of the visitor available before this fixture public match reports shooting logs and lineup availability sources are used only for claims they can support where a venue specific value cannot be verified it must remain unavailable rather than be replaced by an overall season proxy ",
+      "paths": [
+        "super-lig/istanbul-basaksehir-vs-galatasaray",
+        "super-lig/erzurumspor-fk-vs-konyaspor",
+        "super-lig/fenerbahce-vs-besiktas",
+        "super-lig/kasimpasa-vs-amed-sk",
+        "super-lig/corum-fk-vs-eyupspor",
+        "super-lig/kocaelispor-vs-samsunspor",
+        "super-lig/trabzonspor-vs-genclerbirligi",
+        "super-lig/goztepe-vs-gaziantep-fk",
+        "super-lig/caykur-rizespor-vs-alanyaspor"
+      ]
+    },
+    {
+      "text": "implied probability 1 decimal odds at 1 60 1 1 60 0 625 or approximately 62 5% before bookmaker margin this is a raw price derived break even reference not a psp model probability and not the same as a historical home away frequency market price assessment the published price is retained as the original editorial market reference the sporting analysis above stands independently of that price ",
+      "paths": [
+        "super-lig/trabzonspor-vs-genclerbirligi",
+        "super-lig/caykur-rizespor-vs-alanyaspor"
+      ]
+    },
+    {
+      "text": "the statistical core uses the current home split of the host and away split of the visitor where available corner and event rows are retained in the same validator facing metric format required by the psp editorial standard the early season sample size is shown explicitly and should be read as descriptive rather than as a long run probability ",
+      "paths": [
+        "scottish-premiership/aberdeen-vs-kilmarnock",
+        "scottish-premiership/dundee-united-vs-falkirk",
+        "scottish-premiership/hearts-vs-dundee",
+        "scottish-premiership/rangers-vs-motherwell",
+        "scottish-premiership/st-johnstone-vs-hibernian",
+        "scottish-premiership/st-mirren-vs-celtic"
+      ]
+    },
+    {
+      "text": "implied probability 1 decimal odds at 1 70 1 1 70 0 588 or approximately 58 8% before bookmaker margin this is a raw price derived break even reference not a psp model probability and not the same as a historical home away frequency market price assessment the published price is retained as the original editorial market reference the sporting analysis above stands independently of that price ",
+      "paths": [
+        "scottish-premiership/aberdeen-vs-kilmarnock",
+        "scottish-premiership/st-mirren-vs-celtic"
+      ]
+    },
+    {
+      "text": " suspensions eligibility no match specific suspension or registration restriction changing the projected xi was identified in the current public pre match sources the official teamsheet remains authoritative ",
+      "paths": [
+        "scottish-premiership/hearts-vs-dundee",
+        "scottish-premiership/rangers-vs-motherwell"
+      ]
+    },
+    {
+      "text": "implied probability 1 decimal odds at 1 67 1 1 67 0 599 or approximately 59 9% before bookmaker margin this is a raw price derived break even reference not a psp model probability and not the same as a historical home away frequency market price assessment the published price is retained as the original editorial market reference the sporting analysis above stands independently of that price ",
+      "paths": [
+        "scottish-premiership/hearts-vs-dundee",
+        "scottish-premiership/st-johnstone-vs-hibernian"
+      ]
+    },
+    {
+      "text": "the current split contains a finite number of league matches a 100% reading means the event occurred in every observed match of that sample not that the next fixture has a 100% probability of repeating it source snapshots can also update between editorial cutoff and kick off final lineups suspensions and corrected provider statistics should override the pre match version when materially different ",
+      "paths": [
+        "eliteserien/fredrikstad-vs-bodo-glimt",
+        "eliteserien/aalesund-vs-start",
+        "eliteserien/sandefjord-vs-viking",
+        "eliteserien/rosenborg-vs-hamkam",
+        "eliteserien/brann-vs-lillestrom",
+        "eliteserien/molde-vs-kfum-oslo",
+        "eliteserien/sarpsborg-08-vs-valerenga",
+        "eliteserien/kristiansund-vs-tromso"
+      ]
+    },
+    {
+      "text": "odds implied probability 1 1 80 55 6% this is the raw implied probability derived from the market price it is not a psp model probability not a historical frequency and not a guarantee of the result the price is reported as editorial market context only and does not drive the football analysis ",
+      "paths": [
+        "eliteserien/fredrikstad-vs-bodo-glimt",
+        "eliteserien/sarpsborg-08-vs-valerenga"
+      ]
+    },
+    {
+      "text": "odds implied probability 1 1 67 59 9% this is the raw implied probability derived from the market price it is not a psp model probability not a historical frequency and not a guarantee of the result the price is reported as editorial market context only and does not drive the football analysis ",
+      "paths": [
+        "eliteserien/sandefjord-vs-viking",
+        "eliteserien/kristiansund-vs-tromso"
+      ]
+    },
+    {
+      "text": "rows labelled as a current domestic league sample identify a verified 2026 27 match log reference where the cited public source does not expose a stable standalone aggregate no previous season or european competition value is substituted ",
+      "paths": [
+        "champions-league/aek-athens-vs-lask",
+        "champions-league/club-brugge-vs-aston-villa",
+        "champions-league/borussia-dortmund-vs-villarreal",
+        "champions-league/porto-vs-manchester-city",
+        "champions-league/lille-vs-real-betis",
+        "champions-league/real-madrid-vs-inter"
+      ]
+    },
+    {
+      "text": "where a public source does not expose a stable standalone aggregate the table identifies the current 2026 27 domestic league match log sample instead of inserting an estimate no previous season or european competition value is substituted ",
+      "paths": [
+        "champions-league/aek-athens-vs-lask",
+        "champions-league/club-brugge-vs-aston-villa",
+        "champions-league/borussia-dortmund-vs-villarreal",
+        "champions-league/porto-vs-manchester-city",
+        "champions-league/lille-vs-real-betis",
+        "champions-league/real-madrid-vs-inter"
+      ]
+    },
+    {
+      "text": "at decimal odds of 1 65 the raw implied probability is 60 6% because 1 1 65 0 606 before bookmaker margin ",
+      "paths": [
+        "champions-league/aek-athens-vs-lask",
+        "champions-league/real-madrid-vs-inter"
+      ]
+    },
+    {
+      "text": " competition uefa champions league 2026 27 date 2026 09 09 kick off 16 45 round matchday 1 venue not available from the sources consulted",
+      "paths": [
+        "champions-league/barcelona-vs-feyenoord",
+        "champions-league/stuttgart-vs-viking"
+      ]
+    },
+    {
+      "text": "the fixture identity teams competition and schedule were checked against uefa champions league fixtures the versioned fixture snapshot independently records the same matchday 1 pairing and kickoff the original editorial selection and price are retained exactly neither has been adjusted to fit the evidence available after the initial market capture ",
+      "paths": [
+        "champions-league/barcelona-vs-feyenoord",
+        "champions-league/stuttgart-vs-viking",
+        "champions-league/liverpool-vs-atletico-madrid",
+        "champions-league/paris-saint-germain-vs-slovan-bratislava",
+        "champions-league/napoli-vs-arsenal",
+        "champions-league/sporting-cp-vs-galatasaray",
+        "champions-league/fenerbahce-vs-roma",
+        "champions-league/psv-eindhoven-vs-shakhtar-donetsk",
+        "champions-league/como-vs-rb-leipzig",
+        "champions-league/bayern-munich-vs-bodo-glimt",
+        "champions-league/manchester-united-vs-sabah",
+        "champions-league/slavia-praha-vs-lens"
+      ]
+    },
+    {
+      "text": " competition uefa champions league 2026 27 date 2026 09 09 kick off 19 00 round matchday 1 venue not available from the sources consulted",
+      "paths": [
+        "champions-league/liverpool-vs-atletico-madrid",
+        "champions-league/paris-saint-germain-vs-slovan-bratislava",
+        "champions-league/napoli-vs-arsenal",
+        "champions-league/sporting-cp-vs-galatasaray"
+      ]
+    },
+    {
+      "text": " competition uefa champions league 2026 27 date 2026 09 10 kick off 16 45 round matchday 1 venue not available from the sources consulted",
+      "paths": [
+        "champions-league/fenerbahce-vs-roma",
+        "champions-league/psv-eindhoven-vs-shakhtar-donetsk"
+      ]
+    },
+    {
+      "text": "the published decimal price is 1 83 raw implied probability is calculated as 1 decimal odds so 1 1 83 54 6% raw implied probability before bookmaker margin the price is an editor supplied publication record no bookmaker name or later market movement has been invented ",
+      "paths": [
+        "champions-league/psv-eindhoven-vs-shakhtar-donetsk",
+        "copa-libertadores/palmeiras-vs-ldu-quito"
+      ]
+    },
+    {
+      "text": " competition uefa champions league 2026 27 date 2026 09 10 kick off 19 00 round matchday 1 venue not available from the sources consulted",
+      "paths": [
+        "champions-league/como-vs-rb-leipzig",
+        "champions-league/bayern-munich-vs-bodo-glimt",
+        "champions-league/manchester-united-vs-sabah",
+        "champions-league/slavia-praha-vs-lens"
+      ]
+    },
+    {
+      "text": "the published decimal price is 1 88 raw implied probability is calculated as 1 decimal odds so 1 1 88 53 2% raw implied probability before bookmaker margin the price is an editor supplied publication record no bookmaker name or later market movement has been invented ",
+      "paths": [
+        "champions-league/manchester-united-vs-sabah",
+        "copa-sudamericana/independiente-santa-fe-vs-vasco-da-gama",
+        "copa-sudamericana/santos-vs-atletico-mineiro"
+      ]
+    },
+    {
+      "text": "the published decimal price is 1 57 raw implied probability is calculated as 1 decimal odds so 1 1 57 63 7% raw implied probability before bookmaker margin the price is an editor supplied publication record no bookmaker name or later market movement has been invented ",
+      "paths": [
+        "copa-libertadores/fluminense-vs-platense",
+        "copa-sudamericana/cienciano-vs-montevideo-city-torque"
+      ]
+    }
+  ],
+  "nearDuplicateParagraphs": [],
+  "repeatedIntros": [],
+  "repeatedConclusions": [],
+  "repeatedTacticalBlocks": [],
+  "duplicateTitles": [],
+  "duplicateLocalizedBodyContent": [],
+  "records": [
+    {
+      "slug": "Arsenal-vs-Coventry City",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T17:59:07.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Hull City-vs-Manchester United",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T19:07:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Ipswich Town-vs-Sunderland",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T19:07:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Nottingham Forest-vs-Leeds United",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T19:07:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Everton-vs-Crystal Palace",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T19:07:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Brentford-vs-Tottenham Hotspur",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T19:07:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Manchester City-vs-Bournemouth",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T19:07:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Brighton & Hove Albion-vs-Aston Villa",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T19:07:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Newcastle United-vs-Liverpool",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T19:07:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Fulham-vs-Chelsea",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T19:07:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Liverpool-vs-Nottingham Forest",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Manchester United-vs-Ipswich Town",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Sunderland-vs-Fulham",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Crystal Palace-vs-Manchester City",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Chelsea-vs-Brighton & Hove Albion",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Aston Villa-vs-Arsenal",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Tottenham Hotspur-vs-Newcastle United",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Leeds United-vs-Brentford",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Bournemouth-vs-Everton",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Coventry City-vs-Hull City",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "newcastle-united-vs-bournemouth",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "brighton-hove-albion-vs-leeds-united",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "manchester-city-vs-coventry-city",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "nottingham-forest-vs-tottenham-hotspur",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fulham-vs-crystal-palace",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "brentford-vs-sunderland",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "ipswich-town-vs-liverpool",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "the strongest reliable venue specific signal is the set piece environment ipswich s retained home corner rate is 6 17 corners for per game while liverpool s away baseline is 5 95 their combined corner environments sit around ten directly relevant to an 8 5 corner threshold several old ipswich cells depended on championship or overall fallbacks those are removed rather than presented as premier league home evidence ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "everton-vs-manchester-united",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "manchester united s away baseline carries 1 53 points per game and 1 58 goals per game compared with everton s 1 21 home points and 1 37 goals the expected goal numbers are almost symmetrical everton sit at 1 35 xg 1 35 xga united at 1 46 1 46 away that supports the x2 protection more clearly than a straight away win call while the over 1 5 leg benefits from both venue profiles averaging above 1 3 goals scored and conceded ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "hull-city-vs-aston-villa",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "arsenal-vs-chelsea",
+      "league": "premier-league",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "arsenal s current home split shows 2 30 xg and only 0 30 xga with 20 shots and 65% possession chelsea s away split still produced 1 67 xg and three goals but they allowed 1 28 xga and five shots on target the one match sample is tiny yet the process difference gives arsenal the clearer route to control without relying only on home advantage ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "Atlético Madrid-vs-Málaga",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T20:43:04.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Barcelona-vs-Athletic Club",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Real Madrid-vs-Real Sociedad",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "RC Deportivo La Coruña-vs-Elche",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-16T20:27:43.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Celta Vigo-vs-Osasuna",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Valencia-vs-Real Betis",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Rayo Vallecano-vs-Deportivo Alavés",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-17T14:51:30.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Osasuna-vs-Levante",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Málaga-vs-Deportivo La Coruña",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Athletic Club-vs-Sevilla",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-17T14:51:30.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Elche-vs-Barcelona",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Valencia-vs-RC Celta de Vigo",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-17T14:51:30.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Getafe-vs-Racing Santander",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "RCD Espanyol de Barcelona-vs-Real Madrid",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-17T14:51:30.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Atlético Madrid-vs-Villarreal",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Real Betis-vs-Real Sociedad",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-17T14:51:30.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Levante-vs-Real Betis",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Real Sociedad-vs-Espanyol",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Sevilla-vs-Atlético Madrid",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Real Madrid-vs-Málaga",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Deportivo-vs-Valencia",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Celta Vigo-vs-Athletic Club",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Osasuna-vs-Getafe",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Barcelona-vs-Rayo Vallecano",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Alavés-vs-Villarreal",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:34:47-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Racing Santander-vs-Elche",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:34:47-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "real-betis-vs-real-madrid",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "betis home process is more competitive than the league table alone suggests they produced 18 home shots and 7 home shots on target although the xg balance was slightly negative at 1 06 for and 1 40 against madrid s away profile is substantially stronger in chance quality 2 36 xg 21 shots and 63% possession the relevant question is not whether madrid should control more of the game but whether betis can keep the margin inside one goal by reproducing their home shot volume and avoiding the defensive collapse seen at levante ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "athletic-club-vs-atletico-madrid",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "athletic s first home match generated 18 shots and 10 corners which confirms that san mamés can produce sustained territorial pressure even when the score moves against them atlético s away process was less dominant in raw shot volume but they scored three times and still had 58% possession the contradiction matters athletic can win the territory battle while atlético may still create the cleaner transitions if the home side commits too many players ahead of the ball ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "rayo-vallecano-vs-racing-santander",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "the corner profile is the most stable common signal in the current samples rayo s home match produced 16 total corners while racing s only away game produced 14 total corners goal creation is less convincing rayo managed 0 43 home xg and racing 1 00 away xg so a result based reading should remain more conservative than the corner data rayo s home edge comes from territory and field position rather than a demonstrated finishing advantage ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "villarreal-vs-deportivo-la-coruna",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "villarreal s rolling home split is the deepest sample in the round 3 40 home goals per game from 2 16 home xg with 14 8 shots and 6 8 on target deportivo s single away game allowed 1 97 xga and 13 shots that gives the home attack a clear process advantage but deportivo s recent scoring form means villarreal cannot assume the game will remain one sided if the visitors survive the opening pressure ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "valencia-vs-barcelona",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "the attacking process gap is enormous barcelona produced 4 13 away xg in their only road match while valencia average just 0 91 home xg across two home games and have yet to score at mestalla in league play the corner split is much less aligned with the result market valencia average 6 5 total corners at home and barcelona s only away match produced four that makes the barcelona win leg far better supported than the corner leg ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "deportivo-alaves-vs-osasuna",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "alavés home record is built on 2 clean sheets from 2 and an average of 11 0 total corners per home match osasuna s only away game produced 2 68 xg but remains a one match sample the double chance case therefore rests more on alavés repeated home defensive control than on assuming osasuna s away attack will regress completely the corner leg is supported by both venue splits clearing 7 5 in the observed sample ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "malaga-vs-levante",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "málaga generated 1 97 home xg and 11 total corners in their only home league match levante s away attack has been much weaker averaging 0 80 xg and only 0 5 shots on target across two matches the corner side is easier to support from the current data than the scoring side málaga s home pressure is real while levante need either better finishing or a game state change to help the total reach two goals ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "espanyol-vs-sevilla",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "espanyol average 2 00 home goals per game and both home matches cleared 1 5 goals sevilla s only away game also cleared comfortably yet their 0 41 xg from seven shots warns against treating the 3 1 score as a repeatable attacking baseline the home protection argument comes from espanyol s larger home sample and the fact that sevilla allowed 18 shots and eight on target in that away win ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "getafe-vs-celta-vigo",
+      "league": "la-liga",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "elche-vs-real-sociedad",
+      "league": "la-liga",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "real-sociedad-vs-celta-vigo",
+      "league": "la-liga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Bayern München-vs-VfB Stuttgart",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "RB Leipzig-vs-Borussia Mönchengladbach",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "1. FSV Mainz 05-vs-SC Paderborn 07",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "1. FC Union Berlin-vs-Eintracht Frankfurt",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "SV 07 Elversberg-vs-Bayer 04 Leverkusen",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Borussia Dortmund-vs-Hamburger SV",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Augsburg-vs-Schalke 04",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "1. FC Köln-vs-TSG 1899 Hoffenheim",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "SC Freiburg-vs-SV Werder Bremen",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "sv-werder-bremen-vs-rb-leipzig",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "eintracht-frankfurt-vs-augsburg",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "tsg-1899-hoffenheim-vs-borussia-dortmund",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "hamburger-sv-vs-1-fsv-mainz-05",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "schalke-04-vs-bayern-munchen",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "bayer-04-leverkusen-vs-1-fc-union-berlin",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "vfb-stuttgart-vs-1-fc-koln",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "borussia-monchengladbach-vs-sv-07-elversberg",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "sc-paderborn-07-vs-sc-freiburg",
+      "league": "bundesliga",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Udinese Calcio-vs-Como 1907",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-17T14:51:30.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Bologna-vs-Lazio",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Genoa CFC-vs-SSC Napoli",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-17T14:51:30.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Internazionale Milano-vs-AC Monza",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-17T14:51:30.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Atalanta-vs-Sassuolo",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Torino-vs-Milan",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Frosinone-vs-Juventus",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Parma Calcio 1913-vs-Cagliari Calcio",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-17T14:51:30.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Venezia-vs-Lecce",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Roma-vs-Fiorentina",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Juventus-vs-Parma Calcio 1913",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "US Sassuolo Calcio-vs-Torino",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "US Lecce-vs-AS Roma",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "SS Lazio-vs-Genoa CFC",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Cagliari Calcio-vs-Internazionale Milano",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "AC Monza-vs-Udinese Calcio",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "AC Milan-vs-Venezia",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "SSC Napoli-vs-Como 1907",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "ACF Fiorentina-vs-Frosinone Calcio",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Atalanta BC-vs-Bologna FC 1909",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fiorentina-vs-torino",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": [
+        {
+          "text": "fiorentina s home sample produced 25 0 shots and 2 28 xg despite failing to score while torino s away split allowed 19 0 shots and 2 13 xga the home side also generated eight corners torino s own 1 12 away xg and one away goal prevent the analysis from becoming one sided but the volume profile supports a match with repeated final third actions ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "inter-vs-napoli",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": [
+        {
+          "text": "inter s home split stands at 4 00 goals per game from 13 shots while napoli s away reference shows a clean sheet 0 63 xga and only two shots on target allowed inter s 1 17 home xg is much lower than the four goals actually scored an important warning against treating the opener s finishing rate as sustainable napoli s away xg was 0 92 so the visitors also need improvement if they are to control this match through attack alone ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "genoa-vs-como",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": [
+        {
+          "text": "genoa s home split has 11 0 shots per game but no goal yet while como s away split carries 20 0 shots per game and 10 0 corners for the xg pair is 0 63 for genoa and 1 53 for como that makes como the more productive attacking side in the current venue sample but genoa s five home corners keep the set piece leg alive even in a match where their finishing has been poor ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "roma-vs-atalanta",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": [
+        {
+          "text": "roma s current home line is emphatic 4 00 goals 3 10 xg and eight shots on target from the available match atalanta s 18 match prior season away reference was much more balanced at 1 39 goals 1 27 xg and 1 28 xga per game the different sample windows matter roma s side is current but tiny while atalanta s is older but substantially larger ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "parma-vs-monza",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": [
+        {
+          "text": "parma s home sample has 0 88 xg and 13 shots while monza s away reference allowed 4 00 goals from 13 opposition shots monza also scored once away and recorded three shots on target the combined expected goal values are not extreme so the over 1 5 case rests on a low threshold rather than an expectation of a shootout ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "frosinone-vs-venezia",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": [
+        {
+          "text": "frosinone s home reference has 15 0 total corners and 11 shots despite no goal while venezia s away split allowed 16 shots and 2 44 xga venezia themselves have not scored away in the sample the combined picture therefore supports territory and set pieces more strongly than it supports either team to finish efficiently ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "juventus-vs-ac-milan",
+      "league": "serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "juventus home split shows 1 64 xg and 0 32 xga while milan s away split shows 2 08 xg and 1 17 xga juventus also generated 21 shots and ten corners at home compared with milan s 19 shots and four corners away that gives juventus the better defensive platform but does not erase milan s attacking threat ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "cagliari-vs-lecce",
+      "league": "serie-a",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "udinese-vs-lazio",
+      "league": "serie-a",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Casa Pia-vs-Benfica",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-17T10:03:49.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Sporting CP-vs-FC Alverca",
+      "league": "liga-portugal",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Estrela da Amadora-vs-SC Braga",
+      "league": "liga-portugal",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Gil Vicente-vs-Casa Pia",
+      "league": "liga-portugal",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Vitoria de Guimaraes-vs-Nacional",
+      "league": "liga-portugal",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Estoril-vs-Rio Ave",
+      "league": "liga-portugal",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "FC Porto-vs-Arouca",
+      "league": "liga-portugal",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Santa Clara-vs-Famalicao",
+      "league": "liga-portugal",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Moreirense-vs-Benfica",
+      "league": "liga-portugal",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Marítimo-vs-Académico Viseu",
+      "league": "liga-portugal",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Académico de Viseu-vs-Porto",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Benfica-vs-Estoril",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Braga-vs-Vitória de Guimaraes",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T09:50:39-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Casa Pia-vs-Moreirense",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Famalicao-vs-Gil Vicente",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Alverca-vs-Santa Clara",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Arouca-vs-Maritimo",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "C.D. Nacional-vs-Estrela",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Rio Ave-vs-Sporting CP",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "estrela-da-amadora-vs-famalicao",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": [
+        {
+          "text": "estrela da amadora s home sample shows 1 00 points per game 2 00 goals and 1 01 xg while famalicão s away sample shows 0 50 points 0 50 goals and 1 20 xg estrela da amadora produce 9 0 shots per home match while famalicão allow 13 0 away the corner profile is 5 0 for and 4 0 against for the host versus 7 5 for and 4 0 against for the visitor for estrela da amadora or draw 1x the relevant case is therefore the venue specific process rather than table position alone ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "fc-porto-vs-moreirense",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": [
+        {
+          "text": "fc porto s home sample shows 3 00 points per game 2 00 goals and 2 55 xg while moreirense s away sample shows 1 50 points 0 50 goals and 0 54 xg fc porto produce 16 0 shots per home match while moreirense allow 14 5 away the corner profile is 9 5 for and 5 5 against for the host versus 2 0 for and 5 0 against for the visitor for fc porto 1 75 asian handicap the relevant case is therefore the venue specific process rather than table position alone ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "santa-clara-vs-rio-ave",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": [
+        {
+          "text": "santa clara s home sample shows 2 00 points per game 1 50 goals and 1 55 xg while rio ave s away sample shows 1 50 points 1 00 goals and 0 54 xg santa clara produce 15 5 shots per home match while rio ave allow 15 5 away the corner profile is 2 5 for and 6 5 against for the host versus 2 5 for and 5 5 against for the visitor for santa clara or draw 1x over 1 5 goals the relevant case is therefore the venue specific process rather than table position alone ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "sporting-cp-vs-nacional",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "sporting cp s home sample shows 3 00 points per game 3 00 goals and 1 40 xg while c d nacional s away sample shows 0 50 points 1 00 goals and 0 94 xg sporting cp produce 10 0 shots per home match while c d nacional allow 21 0 away the corner profile is 4 0 for and 2 5 against for the host versus 3 5 for and 4 0 against for the visitor for sporting cp to win the relevant case is therefore the venue specific process rather than table position alone ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "maritimo-vs-benfica",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "maritimo s home sample shows 2 00 points per game 1 50 goals and 1 27 xg while benfica s away sample shows 3 00 points 7 00 goals and 2 40 xg maritimo produce 13 5 shots per home match while benfica allow 3 0 away the corner profile is 3 0 for and 5 5 against for the host versus 3 0 for and 1 0 against for the visitor for benfica to win the relevant case is therefore the venue specific process rather than table position alone ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "vitoria-sc-vs-casa-pia",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "vitória de guimaraes s home sample shows 1 50 points per game 0 50 goals and 2 47 xg while casa pia s away sample shows 0 00 points 0 00 goals and 0 71 xg vitória de guimaraes produce 23 5 shots per home match while casa pia allow 12 0 away the corner profile is 4 5 for and 2 5 against for the host versus 5 0 for and 2 5 against for the visitor for vitória sc to win the relevant case is therefore the venue specific process rather than table position alone ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "gil-vicente-vs-academico-viseu",
+      "league": "liga-portugal",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "gil vicente s home sample shows 3 00 points per game 1 50 goals and 1 61 xg while académico de viseu s away sample shows 1 00 points 2 00 goals and 1 51 xg gil vicente produce 10 0 shots per home match while académico de viseu allow 19 5 away the corner profile is 4 0 for and 3 0 against for the host versus 3 5 for and 7 0 against for the visitor for gil vicente to win the relevant case is therefore the venue specific process rather than table position alone ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "estoril-vs-arouca",
+      "league": "liga-portugal",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "moreirense-vs-benfica-2026-27",
+      "league": "liga-portugal",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "estrela-da-amadora-vs-braga-2026-27",
+      "league": "liga-portugal",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Olympique de Marseille-vs-Strasbourg",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-17T14:51:30.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Le Mans-vs-Brest",
+      "league": "ligue-1",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Lens-vs-Auxerre",
+      "league": "ligue-1",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Paris Saint-Germain-vs-Rennes",
+      "league": "ligue-1",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Troyes-vs-Paris FC",
+      "league": "ligue-1",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Nice-vs-Lorient",
+      "league": "ligue-1",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Angers-vs-Lille",
+      "league": "ligue-1",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Toulouse-vs-Lyon",
+      "league": "ligue-1",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Le Havre-vs-Monaco",
+      "league": "ligue-1",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T13:58:44.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Auxerre-vs-Angers",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T10:44:24.656Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Brest-vs-Toulouse",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T10:44:25.273Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Lorient-vs-Troyes",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T10:44:25.783Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Lyon-vs-Le Havre",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T10:44:26.373Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Lille-vs-Paris Saint-Germain",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Monaco-vs-Olympique de Marseille",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T10:44:26.956Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Paris FC-vs-Nice",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T10:44:27.523Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Rennes-vs-Le Mans",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T10:44:28.107Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Strasbourg-vs-Lens",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T10:44:28.655Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "toulouse-vs-lille",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "toulouse have one point from two games and return home after a 0 2 defeat to lyon in their only home match lille are unbeaten and have already won 2 0 away at angers so the result leg of x2 has direct current season support even before considering the longer away streak noted by ligue 1 ",
+          "count": 2
+        },
+        {
+          "text": "toulouse can create through jørgensen between the lines and vignolo oppong in wide zones but the absence of gboho and dønnum removes two established attacking options lille can use giroud as the reference for second balls while mbappé and haraldsson attack around him if lille score first toulouse will have to commit more numbers forward and the second goal leg becomes more likely ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "lyon-vs-auxerre",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "auxerre have conceded eight goals in two league matches and arrive with a heavily reduced availability list lyon have been less explosive but their current home sample shows a much better defensive process which matters more than simply comparing the one point and zero point starts ",
+          "count": 2
+        },
+        {
+          "text": "lyon can use tolisso between the lines with nuamah and boudache stretching the full backs while openda attacks the depth auxerre s depleted back line has to survive repeated transition moments after turnovers if lyon score first the visitors need to push higher should open the spaces required for the second goal leg ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "lens-vs-lorient",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "nice-vs-le-mans",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "le-havre-vs-brest",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "angers-vs-rennes",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "angers arrive from a 3 1 away win at auxerre while rennes have taken four points from two home games but have not yet played away in the new league season that makes angers one match home sample current but tiny whereas the rennes away column is a disclosed prior season reference rather than a 2026 27 away sample ",
+          "count": 2
+        },
+        {
+          "text": "angers can use van den boomen to switch play and release the full backs but rennes have more speed between the lines through thomasson szymański and tamari if rennes score first angers will have to advance their wide defenders and the x2 leg becomes structurally stronger if angers control second balls they can keep the game in the low margin zone that protects the home side ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "troyes-vs-strasbourg",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T12:00:00-03:00",
+      "duplicateParagraphs": [
+        {
+          "text": "troyes are unbeaten after two matches and have conceded only once while strasbourg recovered from a 4 0 opening defeat by beating lens 2 1 the current venue samples however are low event troyes home game ended 0 0 and strasbourg s first away game ended 0 4 ",
+          "count": 2
+        },
+        {
+          "text": "troyes can keep a compact 4 2 3 1 and attack through picard and ifnaoui around ripart strasbourg have more creative options between the lines through reyna nanasi and yassine but el mourabet s suspension removes one midfield option the over needs an early disruption to the compact home block a 0 0 first half is a major negative game state ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "olympique-de-marseille-vs-paris-fc",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": [
+        {
+          "text": "marseille s first home match was a 4 0 win with 67% possession and eight shots on target but paris fc s only away match was a 0 0 draw with a clean sheet the goal leg therefore has support from marseille s home production while the corner leg is less comfortable because the two current venue samples produced only seven and five total corners ",
+          "count": 2
+        },
+        {
+          "text": "marseille should have the ball and use weah and emerson to create width around a narrow paris fc midfield the visitors can break through kebbal simon and sinayoko if marseille s full backs are caught high for the corner leg the ideal game state is sustained marseille pressure without an early two goal cushion that slows the tempo ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "paris-saint-germain-vs-as-monaco",
+      "league": "ligue-1",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": [
+        {
+          "text": "psg have drawn both league matches 2 2 while monaco are the only side with six points after two rounds and arrive on a four match winning run in all competitions the statistical core is asymmetric because psg had no 2026 27 home league match before this fixture so their home column is an explicitly disclosed 2025 26 reference ",
+          "count": 2
+        },
+        {
+          "text": "psg should dominate the ball through vitinha and fabián ruiz with hakimi providing width and akliouche kvaratskhelia attacking the half spaces monaco can threaten behind that advanced structure through brunner and golovin the 1 5 handicap needs psg not only to control possession but also to prevent monaco s first transition wave from producing the opening goal ",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "slug": "Fortuna Sittard-vs-AZ Alkmaar",
+      "league": "eredivisie",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Sparta Rotterdam-vs-FC Utrecht",
+      "league": "eredivisie",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "SC Heerenveen-vs-PEC Zwolle",
+      "league": "eredivisie",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Go Ahead Eagles-vs-ADO Den Haag",
+      "league": "eredivisie",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "PSV Eindhoven-vs-FC Groningen",
+      "league": "eredivisie",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "SC Cambuur-vs-Feyenoord",
+      "league": "eredivisie",
+      "lifecycle": "unresolved-quarantine",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-18T21:31:21.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "nec-nijmegen-vs-excelsior",
+      "league": "eredivisie",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fc-twente-vs-telstar",
+      "league": "eredivisie",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "AZ Alkmaar-vs-Go Ahead Eagles",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Excelsior-vs-Sparta Rotterdam",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Groningen-vs-Fortuna Sittard",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Utrecht-vs-PSV Eindhoven",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Feyenoord Rotterdam-vs-ADO Den Haag",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "PEC Zwolle-vs-NEC Nijmegen",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Telstar-vs-Ajax Amsterdam",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Willem II-vs-Heerenveen",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-24T17:38:36.651Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "sparta-rotterdam-vs-pec-zwolle",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "willem-ii-vs-excelsior",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "ajax-vs-psv-eindhoven",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fc-utrecht-vs-go-ahead-eagles",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "nec-nijmegen-vs-feyenoord",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "ado-den-haag-vs-fortuna-sittard",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "sc-heerenveen-vs-az-alkmaar",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fc-groningen-vs-fc-twente",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "telstar-vs-sc-cambuur",
+      "league": "eredivisie",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "flamengo-vs-mirassol",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Fluminense-vs-Remo",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-21T17:57:59.241Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Internacional-vs-Atlético Mineiro",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-21T17:58:00.209Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Cruzeiro-vs-Flamengo",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-21T17:57:58.349Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Palmeiras-vs-Vasco da Gama",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-21T17:58:01.166Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Red Bull Bragantino-vs-Grêmio",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-21T17:58:02.349Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Vitória-vs-Bahia",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-21T17:58:04.200Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Santos-vs-Mirassol",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-21T17:58:03.294Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Chapecoense-vs-São Paulo",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-21T17:57:56.625Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Coritiba-vs-Corinthians",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-21T17:57:57.466Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Botafogo-vs-Athletico Paranaense",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-21T17:57:55.682Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Atlético Mineiro-vs-Vitória",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "São Paulo-vs-Red Bull Bragantino",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Vasco da Gama-vs-Cruzeiro",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Athletico-PR-vs-Fluminense",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Flamengo-vs-Botafogo",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Corinthians-vs-Santos",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Mirassol-vs-Palmeiras",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Grêmio-vs-Chapecoense",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Bahia-vs-Internacional",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Remo-vs-Coritiba",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-25T06:17:27-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "red-bull-bragantino-vs-bahia",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "sao-paulo-vs-atletico-mg",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fluminense-vs-vasco-da-gama",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "coritiba-vs-mirassol",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "remo-vs-flamengo",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "internacional-vs-santos",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "cruzeiro-vs-athletico-pr",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "botafogo-vs-palmeiras",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "corinthians-vs-chapecoense",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "vitoria-vs-gremio",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Cruzeiro-vs-Atlético Mineiro",
+      "league": "copa-do-brasil",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Palmeiras-vs-Santos",
+      "league": "copa-do-brasil",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Vasco da Gama-vs-Vitória",
+      "league": "copa-do-brasil",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Internacional-vs-Grêmio",
+      "league": "copa-do-brasil",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "atletico-mineiro-vs-cruzeiro",
+      "league": "copa-do-brasil",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "santos-vs-palmeiras",
+      "league": "copa-do-brasil",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "vitoria-vs-vasco-da-gama",
+      "league": "copa-do-brasil",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "gremio-vs-internacional",
+      "league": "copa-do-brasil",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Cardiff City-vs-Norwich City",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Doncaster Rovers-vs-Middlesbrough",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Southampton-vs-West Ham",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Sheffield Wednesday-vs-Wolverhampton Wanderers",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Ipswich Town-vs-Leicester City",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Watford-vs-Peterborough United",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Birmingham City-vs-Brentford",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "nottingham-forest-vs-leeds-united-efl-cup",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Newcastle United-vs-West Bromwich Albion",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Tottenham Hotspur-vs-Charlton Athletic",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Chelsea-vs-Luton Town",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Fulham-vs-AFC Wimbledon",
+      "league": "efl-cup",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-22T12:00:00.000-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "bournemouth-vs-lincoln-city",
+      "league": "efl-cup",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "crystal-palace-vs-middlesbrough",
+      "league": "efl-cup",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "sunderland-vs-hull-city",
+      "league": "efl-cup",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "millwall-vs-newcastle-united",
+      "league": "efl-cup",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "chelsea-vs-leeds-united",
+      "league": "efl-cup",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "lincoln-vs-southampton",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "preston-vs-blackburn",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "stoke-city-vs-charlton-athletic",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "west-ham-vs-derby-county",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "burnley-vs-bristol-city",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "sheffield-united-vs-norwich-city",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "qpr-vs-middlesbrough",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "west-brom-vs-watford",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "portsmouth-vs-cardiff-city",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "millwall-vs-bolton-wanderers",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "swansea-city-vs-wrexham",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "birmingham-city-vs-wolverhampton-wanderers",
+      "league": "championship",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "blackburn-rovers-vs-sheffield-united",
+      "league": "championship",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T09:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "bolton-wanderers-vs-west-ham-united",
+      "league": "championship",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T09:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "cardiff-city-vs-stoke-city",
+      "league": "championship",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T09:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "charlton-athletic-vs-queens-park-rangers",
+      "league": "championship",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T09:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "derby-county-vs-west-bromwich-albion",
+      "league": "championship",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T09:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "norwich-city-vs-birmingham-city",
+      "league": "championship",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T09:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "southampton-vs-swansea-city",
+      "league": "championship",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T09:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "watford-vs-preston-north-end",
+      "league": "championship",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T09:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "wrexham-vs-burnley",
+      "league": "championship",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T09:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Amedspor-vs-Trabzonspor",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-26T11:54:38.899Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "İstanbul Başakşehir-vs-Kasımpaşa",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-26T11:54:38.899Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Beşiktaş-vs-Çorum FK",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-26T11:54:38.899Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Eyüpspor-vs-Alanyaspor",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-26T11:54:38.899Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Galatasaray-vs-Göztepe",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-26T11:54:38.899Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Gaziantep FK-vs-Çaykur Rizespor",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-26T11:54:38.899Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Gençlerbirliği-vs-Erzurumspor",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-26T11:54:38.899Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Konyaspor-vs-Kocaelispor",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-26T11:54:38.899Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "Samsunspor-vs-Fenerbahçe",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": false,
+      "editorialStandard": null,
+      "publishedAt": "2026-08-26T11:54:38.899Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "istanbul-basaksehir-vs-galatasaray",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "erzurumspor-fk-vs-konyaspor",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fenerbahce-vs-besiktas",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "kasimpasa-vs-amed-sk",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "corum-fk-vs-eyupspor",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "kocaelispor-vs-samsunspor",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "trabzonspor-vs-genclerbirligi",
+      "league": "super-lig",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "goztepe-vs-gaziantep-fk",
+      "league": "super-lig",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "caykur-rizespor-vs-alanyaspor",
+      "league": "super-lig",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "aberdeen-vs-kilmarnock",
+      "league": "scottish-premiership",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T12:45:00.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "dundee-united-vs-falkirk",
+      "league": "scottish-premiership",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T12:45:00.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "hearts-vs-dundee",
+      "league": "scottish-premiership",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T12:45:00.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "rangers-vs-motherwell",
+      "league": "scottish-premiership",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T12:45:00.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "st-johnstone-vs-hibernian",
+      "league": "scottish-premiership",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T12:45:00.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "st-mirren-vs-celtic",
+      "league": "scottish-premiership",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T12:45:00.000Z",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "rangers-vs-st-mirren",
+      "league": "scottish-premiership",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "st-johnstone-vs-celtic",
+      "league": "scottish-premiership",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fredrikstad-vs-bodo-glimt",
+      "league": "eliteserien",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-02T20:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "aalesund-vs-start",
+      "league": "eliteserien",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-02T20:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "sandefjord-vs-viking",
+      "league": "eliteserien",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-02T20:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "rosenborg-vs-hamkam",
+      "league": "eliteserien",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-02T20:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "brann-vs-lillestrom",
+      "league": "eliteserien",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-02T20:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "molde-vs-kfum-oslo",
+      "league": "eliteserien",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-02T20:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "sarpsborg-08-vs-valerenga",
+      "league": "eliteserien",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-02T20:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "kristiansund-vs-tromso",
+      "league": "eliteserien",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-02T20:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "new-york-city-fc-vs-nashville-sc",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "austin-fc-vs-san-jose-earthquakes",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "charlotte-fc-vs-houston-dynamo",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "columbus-crew-vs-colorado-rapids",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fc-cincinnati-vs-dc-united",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fc-dallas-vs-sporting-kansas-city",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "inter-miami-vs-atlanta-united",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "la-galaxy-vs-new-england-revolution",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "orlando-city-vs-san-diego-fc",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "philadelphia-union-vs-cf-montreal",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "portland-timbers-vs-minnesota-united",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "real-salt-lake-vs-los-angeles-fc",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "seattle-sounders-vs-new-york-red-bulls",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "toronto-fc-vs-chicago-fire",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "vancouver-whitecaps-vs-st-louis-city",
+      "league": "mls",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "aek-athens-vs-lask",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T19:40:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "club-brugge-vs-aston-villa",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T19:40:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "borussia-dortmund-vs-villarreal",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T19:40:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "porto-vs-manchester-city",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T19:40:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "lille-vs-real-betis",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T19:40:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "real-madrid-vs-inter",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "INDEX_PRIME",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-06T19:40:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "barcelona-vs-feyenoord",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "stuttgart-vs-viking",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "liverpool-vs-atletico-madrid",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "paris-saint-germain-vs-slovan-bratislava",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "napoli-vs-arsenal",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "sporting-cp-vs-galatasaray",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fenerbahce-vs-roma",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "psv-eindhoven-vs-shakhtar-donetsk",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "como-vs-rb-leipzig",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "bayern-munich-vs-bodo-glimt",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "manchester-united-vs-sabah",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "slavia-praha-vs-lens",
+      "league": "champions-league",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "fluminense-vs-platense",
+      "league": "copa-libertadores",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "palmeiras-vs-ldu-quito",
+      "league": "copa-libertadores",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "estudiantes-vs-corinthians",
+      "league": "copa-libertadores",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "independiente-del-valle-vs-flamengo",
+      "league": "copa-libertadores",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "independiente-santa-fe-vs-vasco-da-gama",
+      "league": "copa-sudamericana",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "boca-juniors-vs-sao-paulo",
+      "league": "copa-sudamericana",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "santos-vs-atletico-mineiro",
+      "league": "copa-sudamericana",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "cienciano-vs-montevideo-city-torque",
+      "league": "copa-sudamericana",
+      "lifecycle": "future-pre-match",
+      "indexability": "UPGRADE",
+      "indexable": false,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "duplicateParagraphs": []
+    }
+  ]
+}

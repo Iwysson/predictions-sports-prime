@@ -1,5 +1,6 @@
 import { editorialPredictions } from "../src/data/predictions/index.ts";
 import {
+  PSP_NATURAL_RISK_POLICY_EFFECTIVE_AT,
   PSP_EDITORIAL_STANDARD,
   classifyPspEditorialLifecycle,
 } from "../src/lib/editorial-standard.ts";
@@ -8,6 +9,8 @@ const now = process.env.PSP_AUDIT_NOW ? new Date(process.env.PSP_AUDIT_NOW) : ne
 if (Number.isNaN(now.valueOf())) throw new Error("PSP_AUDIT_NOW must be a valid ISO date-time when supplied.");
 
 const boilerplate = /this preview is intentionally limited|retained evidence boundary|verified fixture only/i;
+const forbiddenBoilerplate = /\b(?:counter-signal|mechanically|structured snapshot|published selection|the model sees|our model|this section|as shown above)\b/i;
+const genericTactical = /(?:team|side) (?:will|should|must|is likely to) (?:control|dominate) (?:the )?possession and (?:create|look for) chances/i;
 const pspCore = /Statistical Core Predictions-Sports-Prime/i;
 const contextSignals = [
   /form|recent|last \d|record/i,
@@ -32,6 +35,9 @@ const records = future.map((prediction) => {
   const signals = contextSignals.filter((pattern) => pattern.test(text)).length;
   const reasons = [];
   let status = "good";
+  const naturalQualityPolicyApplies = [prediction.publishedAt, prediction.updatedAt]
+    .filter(Boolean)
+    .some((value) => Date.parse(value) >= Date.parse(PSP_NATURAL_RISK_POLICY_EFFECTIVE_AT));
 
   if (!prediction.picks.main?.trim() || !prediction.analysis.length || /lorem ipsum|placeholder text|add analysis/i.test(text) || /\bTODO\b/.test(text)) {
     status = "critical";
@@ -41,6 +47,11 @@ const records = future.map((prediction) => {
     if (words < 650) reasons.push(`${words} words (<650 PSP target)`);
     if (signals < 4) reasons.push(`${signals} context signals`);
     if (boilerplate.test(text)) reasons.push("evidence-boundary boilerplate");
+    if (naturalQualityPolicyApplies && forbiddenBoilerplate.test(text)) reasons.push("forbidden meta-editorial boilerplate");
+    if (naturalQualityPolicyApplies && genericTactical.test(text)) reasons.push("generic tactical analysis");
+    const bodyParagraphs = text.split(/\n\s*\n/).filter((paragraph) => !/^\s*(?:#|\||\*\*(?:Prediction|Odds|Probable|Expected|Sources))/i.test(paragraph));
+    const shortParagraphs = bodyParagraphs.filter((paragraph) => paragraph.trim().split(/[.!?]+/).filter(Boolean).length <= 2 && paragraph.trim().split(/\s+/).length < 45);
+    if (naturalQualityPolicyApplies && bodyParagraphs.length >= 4 && shortParagraphs.length / bodyParagraphs.length > 0.35) reasons.push("short-paragraph ratio exceeds 35%");
     if (!pspCore.test(text)) reasons.push("missing Statistical Core Predictions-Sports-Prime");
     if (reasons.length) status = "warning";
   }

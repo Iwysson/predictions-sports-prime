@@ -1,0 +1,6 @@
+import { publishableWithGaps as p } from "../../editorial-tools/wave-27/factory";
+const base={league:"scottish-premiership" as const,competition:"Scottish Premiership 2026/27",round:"Matchweek 7",sourceName:"Official club fixture list",sourceUrl:"https://www.rangers.co.uk/matches/mens-fixtures/"};
+export const scottishWave27=[
+p({...base,home:"Rangers",away:"St Mirren",slug:"rangers-vs-st-mirren",date:"2026-09-09",time:"19:45",venue:"Ibrox Stadium",pick:"St Mirren +1.5",odds:1.98,evidence:"Rangers' current fixture list and established schedule coverage identify the pairing on September 9.",tactical:"St Mirren's handicap depends on keeping distances compact at Ibrox and retaining an outlet so Rangers cannot recycle every clearance into immediate pressure."}),
+p({...base,sourceName:"St Johnstone FC",sourceUrl:"https://www.perthstjohnstonefc.co.uk/fixtures/mens/",home:"St Johnstone",away:"Celtic",slug:"st-johnstone-vs-celtic",date:"2026-09-09",time:"20:00",venue:"McDiarmid Park",pick:"Over 2.5",odds:1.53,evidence:"St Johnstone's official fixture page confirms the date, kickoff and venue.",tactical:"Celtic's territorial pressure can support the goal line, but St Johnstone need either transition threat or defensive disruption to stop the match becoming controlled and low-event."}),
+];

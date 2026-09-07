@@ -68,8 +68,8 @@ const counts = decisions.reduce((acc, item) => {
 const errors = [];
 
 for (const { slug, decision } of decisions) {
-  if (decision.indexable !== (decision.classification === "KEEP")) {
-    errors.push(`${slug}: only KEEP may be indexable`);
+  if (["UPGRADE", "REMOVE"].includes(decision.classification) && decision.indexable) {
+    errors.push(`${slug}: ${decision.classification} must not be indexable`);
   }
 }
 
@@ -85,7 +85,7 @@ for (const match of matches.filter((item) => item.status === "published")) {
   }
 }
 
-const generatedSitemap = sitemap();
+const generatedSitemap = await sitemap();
 const sitemapUrls = new Set(generatedSitemap.map((item) => item.url));
 
 for (const match of matches.filter((item) => item.status === "published")) {
@@ -109,7 +109,7 @@ for (const match of matches.filter((item) => item.status === "published")) {
   );
 
   if (expected && !englishUrlPresent) {
-    errors.push(`${match.slug}: KEEP English URL missing from sitemap`);
+    errors.push(`${match.slug}: indexable English URL missing from sitemap`);
   }
 }
 
@@ -145,7 +145,10 @@ fs.writeFileSync(
 
 console.log("AdSense Content Quality Gate");
 console.log(`Published predictions: ${published.length}`);
-console.log(`KEEP / indexable: ${counts.KEEP ?? 0}`);
+console.log(`INDEX_PRIME: ${counts.INDEX_PRIME ?? 0}`);
+console.log(`INDEX_STANDARD: ${counts.INDEX_STANDARD ?? 0}`);
+console.log(`HISTORICAL: ${counts.HISTORICAL ?? 0}`);
+console.log(`KEEP (legacy flag-off): ${counts.KEEP ?? 0}`);
 console.log(`UPGRADE / noindex: ${counts.UPGRADE ?? 0}`);
 console.log(`LEGACY-NOINDEX: ${counts["LEGACY-NOINDEX"] ?? 0}`);
 console.log(`REMOVE: ${counts.REMOVE ?? 0}`);

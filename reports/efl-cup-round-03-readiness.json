@@ -1,0 +1,25 @@
+{
+  "generatedFor": "wave-0.6",
+  "publicationAuthorized": false,
+  "registryUpdated": false,
+  "fixtureInvestigation": {
+    "projectCompetitionMode": "manualOnly",
+    "projectProviderId": "eng.league_cup",
+    "snapshotLastContains": "Round Two fixtures only",
+    "officialSource": "https://www.efl.com/competitions/carabao-cup/",
+    "finding": "The official EFL competition page available during review listed the August Round Two programme but did not verify the five supplied Round Three pairings. The project's fixture sync/provider integration must supply the next verified round before publication."
+  },
+  "commonBlockers": [
+    "fixture absent from the verified fixture snapshot",
+    "Statistical Core has 11 of 22 mandatory metrics",
+    "HOME and AWAY sample types are not recorded in structured provenance",
+    "the cited sources do not independently verify every displayed metric and projected lineup"
+  ],
+  "matches": [
+    { "slug": "bournemouth-vs-lincoln-city", "fixture": { "verified": false, "date": "2026-09-08", "kickoff": "19:45", "venue": "Vitality Stadium", "round": "Third Round" }, "homeCore": { "metrics": "11/22", "sampleType": "unverified", "source": "declared-not-fully-verified" }, "awayCore": { "metrics": "11/22", "sampleType": "unverified", "source": "declared-not-fully-verified" }, "projectedLineup": { "source": "declared", "date": null, "uncertaintyMarked": true }, "teamNews": { "source": "declared", "current": false }, "odds": { "editorSupplied": true, "preserved": true }, "editorial": { "conflictDetectorHeading": false, "shortParagraphs": false, "genericTacticalAnalysis": false, "repetition": false, "internalNotes": false }, "status": "BLOCKED" },
+    { "slug": "crystal-palace-vs-middlesbrough", "fixture": { "verified": false, "date": "2026-09-08", "kickoff": "19:45", "venue": "Selhurst Park", "round": "Third Round" }, "homeCore": { "metrics": "11/22", "sampleType": "unverified", "source": "declared-not-fully-verified" }, "awayCore": { "metrics": "11/22", "sampleType": "unverified", "source": "declared-not-fully-verified" }, "projectedLineup": { "source": "declared", "date": null, "uncertaintyMarked": true }, "teamNews": { "source": "declared", "current": false }, "odds": { "editorSupplied": true, "preserved": true }, "editorial": { "conflictDetectorHeading": false, "shortParagraphs": false, "genericTacticalAnalysis": false, "repetition": false, "internalNotes": false }, "status": "BLOCKED" },
+    { "slug": "sunderland-vs-hull-city", "fixture": { "verified": false, "date": "2026-09-08", "kickoff": "19:45", "venue": "Stadium of Light", "round": "Third Round" }, "homeCore": { "metrics": "11/22", "sampleType": "unverified", "source": "declared-not-fully-verified" }, "awayCore": { "metrics": "11/22", "sampleType": "unverified", "source": "declared-not-fully-verified", "competition": "Premier League 2026/27 — independently confirmed" }, "projectedLineup": { "source": "declared", "date": null, "uncertaintyMarked": true }, "teamNews": { "source": "declared", "current": false }, "odds": { "editorSupplied": true, "preserved": true }, "editorial": { "conflictDetectorHeading": false, "shortParagraphs": false, "genericTacticalAnalysis": false, "repetition": false, "internalNotes": false }, "status": "BLOCKED" },
+    { "slug": "millwall-vs-newcastle-united", "fixture": { "verified": false, "date": "2026-09-08", "kickoff": "20:00", "venue": "The Den", "round": "Third Round" }, "homeCore": { "metrics": "11/22", "sampleType": "unverified", "source": "declared-not-fully-verified" }, "awayCore": { "metrics": "11/22", "sampleType": "unverified", "source": "declared-not-fully-verified" }, "projectedLineup": { "source": "declared", "date": null, "uncertaintyMarked": true }, "teamNews": { "source": "declared", "current": false }, "odds": { "editorSupplied": true, "preserved": true }, "editorial": { "conflictDetectorHeading": false, "shortParagraphs": false, "genericTacticalAnalysis": false, "repetition": false, "internalNotes": false }, "status": "BLOCKED" },
+    { "slug": "chelsea-vs-leeds-united", "fixture": { "verified": false, "date": "2026-09-09", "kickoff": "20:00", "venue": "Stamford Bridge", "round": "Third Round" }, "homeCore": { "metrics": "11/22", "sampleType": "unverified", "source": "declared-not-fully-verified" }, "awayCore": { "metrics": "11/22", "sampleType": "unverified", "source": "declared-not-fully-verified" }, "projectedLineup": { "source": "declared", "date": null, "uncertaintyMarked": true }, "teamNews": { "source": "declared", "current": false }, "odds": { "editorSupplied": true, "preserved": true }, "editorial": { "conflictDetectorHeading": false, "shortParagraphs": false, "genericTacticalAnalysis": false, "repetition": false, "internalNotes": false }, "status": "BLOCKED" }
+  ]
+}

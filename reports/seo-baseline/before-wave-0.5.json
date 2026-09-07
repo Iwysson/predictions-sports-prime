@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "seo-wave-0-2026-09-07",
+  "baselineDate": "2026-09-07",
+  "featureFlags": {
+    "quality-gate-v2": false,
+    "prediction-first-v2": false,
+    "title-engine-v2": false,
+    "international-index-v2": false,
+    "intent-hubs-v1": false,
+    "league-hubs-v2": false,
+    "results-trust-v2": false,
+    "freshness-engine-v1": false
+  },
+  "totals": {
+    "predictions": 331,
+    "publishedPredictions": 316,
+    "indexablePredictions": 148,
+    "noindexPredictions": 168,
+    "classifications": {
+      "KEEP": 148,
+      "UPGRADE": 29,
+      "LEGACY-NOINDEX": 139,
+      "REMOVE": 15
+    },
+    "localizedMatchUrls": 127,
+    "indexableLocalizedMatchUrls": 122,
+    "indexableLeagueHubs": 90,
+    "sitemapUrls": 384,
+    "canonicalVariations": 384,
+    "hreflangEntries": 1782,
+    "duplicateEditorialWarnings": 5,
+    "metadataWarnings": 0,
+    "internalNoteWarnings": 13,
+    "pagesWithoutRelevantInternalLinks": 0,
+    "probableLineups": 19,
+    "statisticalCore": 154,
+    "conflictDetector": 154,
+    "sourceStatusVerified": 280,
+    "editorialStandardPspV1": 144
+  },
+  "fixtureValidation": {
+    "status": "fail",
+    "structuralOnly": true,
+    "snapshotGeneratedAt": "2026-09-06T23:06:46.930Z",
+    "errors": [
+      "la-liga: La Liga: expected 20 clubs, detected 21.",
+      "liga-portugal: Liga Portugal: expected 18 clubs, detected 19.",
+      "super-lig: Süper Lig: expected 18 clubs, detected 26."
+    ]
+  },
+  "pagesByLocale": {
+    "en": 175,
+    "pt-br": 41,
+    "es": 41,
+    "fr": 41,
+    "de": 41,
+    "it": 41,
+    "nl": 2,
+    "tr": 2
+  },
+  "pagesByLeague": {
+    "premier-league": 30,
+    "la-liga": 37,
+    "bundesliga": 18,
+    "serie-a": 29,
+    "liga-portugal": 27,
+    "ligue-1": 27,
+    "eredivisie": 23,
+    "brasileirao-serie-a": 31,
+    "copa-do-brasil": 8,
+    "efl-cup": 12,
+    "championship": 21,
+    "super-lig": 18,
+    "scottish-premiership": 6,
+    "eliteserien": 8,
+    "mls": 15,
+    "champions-league": 6
+  },
+  "definitions": {
+    "deterministic": "No wall-clock timestamp is emitted; baselineDate and releaseId come from versioned defaults or explicit environment values.",
+    "canonicalVariations": "Unique canonical URL candidates currently emitted by the sitemap.",
+    "hreflangEntries": "Expected language-link entries across sitemap route groups, including x-default; this is a structural count, not a crawl result.",
+    "pagesWithoutRelevantInternalLinks": "Indexable match pages without another indexable published match in the same league.",
+    "fixtureValidation": "Structural snapshot validation only; the time-sensitive freshness audit remains part of audit:enterprise-seo."
+  }
+}

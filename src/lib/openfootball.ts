@@ -123,8 +123,37 @@ function isoDate(year: number, month: number, day: number) {
   return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 }
 
+const fromCodePoints = (...points: number[]) => String.fromCodePoint(...points);
+
+const TEAM_NAME_MOJIBAKE_REPLACEMENTS: ReadonlyArray<readonly [string, string]> = [
+  [fromCodePoints(0x00c3, 0x00a9), "é"],
+  [fromCodePoints(0x00c3, 0x00a1), "á"],
+  [fromCodePoints(0x00c3, 0x00b3), "ó"],
+  [fromCodePoints(0x00c3, 0x00a3), "ã"],
+  [fromCodePoints(0x00c3, 0x00aa), "ê"],
+  [fromCodePoints(0x00c3, 0x00a7), "ç"],
+  [fromCodePoints(0x00c3, 0x00b6), "ö"],
+  [fromCodePoints(0x00c3, 0x00bc), "ü"],
+  [fromCodePoints(0x00c3, 0x00b8), "ø"],
+  [fromCodePoints(0x00c3, 0x00a5), "å"],
+  [fromCodePoints(0x00c3, 0x0087), "Ç"],
+  [fromCodePoints(0x00c4, 0x0178), "ğ"],
+  [fromCodePoints(0x00c3, 0x00ad), "í"],
+  [fromCodePoints(0x251c, 0x00ae), "é"],
+  [fromCodePoints(0x251c, 0x00ba), "ç"],
+  [fromCodePoints(0x251c, 0x255d), "ü"],
+  [fromCodePoints(0x251c, 0x00a9), "ø"],
+];
+
+function repairTeamDisplayName(name: string) {
+  return TEAM_NAME_MOJIBAKE_REPLACEMENTS.reduce(
+    (value, [broken, repaired]) => value.replaceAll(broken, repaired),
+    name
+  );
+}
+
 function cleanTeamName(name: string) {
-  return name
+  return repairTeamDisplayName(name)
     .trim()
     .replace(/\s*\[[^\]]+\]\s*$/i, "")
     .replace(/\s*\([^)]+\)\s*$/i, "")
@@ -134,6 +163,17 @@ function cleanTeamName(name: string) {
     .replace(/\s+CF$/i, "")
     .replace(/^FC\s+/i, "")
     .trim();
+}
+
+function cloneSnapshotRounds(rounds: OpenFootballRound[]) {
+  return structuredClone(rounds).map((round) => ({
+    ...round,
+    games: round.games.map((game) => ({
+      ...game,
+      homeTeam: cleanTeamName(game.homeTeam),
+      awayTeam: cleanTeamName(game.awayTeam),
+    })),
+  }));
 }
 
 export function normalizeTeamKey(name: string) {
@@ -212,7 +252,16 @@ export function normalizeTeamKey(name: string) {
     estorilpraia: "estoril",
     cdsantaclara: "santaclara",
     csmaritimo: "maritimo",
+    maratimo: "maritimo",
+    acadamicoviseu: "academicoviseu",
     atleticomg: "atleticomineiro",
+    // A legacy snapshot was once decoded as Latin-1 before being written back
+    // as UTF-8. Keep identity matching stable until a successful provider sync
+    // replaces the mojibake display names.
+    atlaticomg: "atleticomineiro",
+    atlaticomineiro: "atleticomineiro",
+    gramio: "gremio",
+    vitaria: "vitoria",
     athleticopr: "athleticoparanaense",
     rcdeportivolacoruna: "deportivolacoruna",
     deportivo: "deportivolacoruna",
@@ -224,6 +273,9 @@ export function normalizeTeamKey(name: string) {
     caosasuna: "osasuna",
     realracingclubdesantander: "racingsantander",
     deportivoalaves: "alaves",
+    deportivoalavas: "alaves",
+    alavas: "alaves",
+    atlaticomadrid: "atleticomadrid",
     rayovallecanodemadrid: "rayovallecano",
     rayovallecanomadrid: "rayovallecano",
     realbetisbalompie: "realbetis",
@@ -235,6 +287,8 @@ export function normalizeTeamKey(name: string) {
     clubatleticomadrid: "atleticomadrid",
     athleticbilbao: "athleticclub",
     bayernmunchen: "bayernmunich",
+    bodglimt: "bodoglimt",
+    bodoglimt: "bodoglimt",
     vfb1893stuttgart: "stuttgart",
     vfbstuttgart: "stuttgart",
     "1fsvmainz05": "mainz",
@@ -269,6 +323,15 @@ export function normalizeTeamKey(name: string) {
     goaheadeagles: "goaheadeagles",
     adodenhaag: "adodenhaag",
     caykurrizespor: "rizespor",
+    aaykurrizespor: "rizespor",
+    beayiktaay: "besiktas",
+    eyapspor: "eyupspor",
+    fenerbahae: "fenerbahce",
+    genalerbirliayi: "genclerbirligi",
+    gaztepe: "goztepe",
+    kasampaaya: "kasimpasa",
+    aorumfk: "corumfk",
+    astanbulbaayakayehir: "istanbulbasaksehir",
     kasmpasa: "kasimpasa",
     erzurumsporfk: "erzurumspor",
     erzurumbb: "erzurumspor",
@@ -682,7 +745,7 @@ export function loadLeagueSeason(
   const savedRounds = snapshot.leagues[slug];
 
   if (config.manualOnly || !config.source) {
-    return Promise.resolve(savedRounds?.length ? structuredClone(savedRounds) : []);
+    return Promise.resolve(savedRounds?.length ? cloneSnapshotRounds(savedRounds) : []);
   }
 
   if (options.forceRefresh) {
@@ -691,7 +754,7 @@ export function loadLeagueSeason(
 
   if (!promises.has(slug)) {
     if (!options.forceRefresh && !options.ignoreSnapshot && savedRounds?.length) {
-      promises.set(slug, Promise.resolve(structuredClone(savedRounds)));
+      promises.set(slug, Promise.resolve(cloneSnapshotRounds(savedRounds)));
       return promises.get(slug)!;
     }
     promises.set(
@@ -699,7 +762,7 @@ export function loadLeagueSeason(
       fetchSeasonText(config)
         .then(parseFootballSeason)
         .then((rounds) => hydrateLiveResults(slug, rounds).catch(() =>
-          savedRounds?.length ? structuredClone(savedRounds) : rounds
+          savedRounds?.length ? cloneSnapshotRounds(savedRounds) : rounds
         ))
         .then((rounds) => hydrateTheSportsDb(slug, rounds).catch(() => rounds))
     );

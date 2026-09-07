@@ -6,8 +6,7 @@ import { HomePredictionFeed } from "@/components/HomePredictionFeed";
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import { fullyLocalizedMatchLocales } from "@/components/LocalizedMatchDetails";
 import { matches } from "@/data/matches";
-import { hydratePredictions } from "@/lib/live-predictions";
-import { toMatchPreview } from "@/lib/editorial";
+import { resolveCanonicalMatches } from "@/lib/canonical-match";
 import { localizedAlternates } from "@/lib/international-seo";
 import { absoluteUrl } from "@/lib/site-config";
 import {
@@ -71,12 +70,12 @@ export default async function LocalizedHome({
   if (!isSeoLocale(locale)) notFound();
 
   const copy = seoLocales[locale];
-  const resolvedMatches = await hydratePredictions(matches.map(toMatchPreview));
+  const resolvedMatches = await resolveCanonicalMatches(matches);
   const localeSupportsExpandedMatches = fullyLocalizedMatchLocales.includes(
     locale as (typeof fullyLocalizedMatchLocales)[number]
   );
   const localizedMatchSlugs = localeSupportsExpandedMatches
-    ? matches
+    ? resolvedMatches
         .filter((match) => isInternationalMatchExpansionEligible(match))
         .map((match) => match.slug)
     : [];

@@ -6,6 +6,7 @@ const base = join(root, "src", "data", "predictions");
 const files = [];
 const walk = (directory) => readdirSync(directory).forEach((name) => {
   const path = join(directory, name);
+  if (statSync(path).isDirectory() && name === "editorial-tools") return;
   if (statSync(path).isDirectory()) walk(path);
   else if (path.endsWith(".ts") && !path.endsWith(`${sep}index.ts`)) files.push(path);
 });
@@ -41,4 +42,3 @@ console.log(`Prediction integrity: ${published} published / ${oddsRecords} with 
 warnings.forEach((warning) => console.log(`WARNING: ${warning}`));
 errors.forEach((error) => console.error(`ERROR: ${error}`));
 if (errors.length) process.exitCode = 1;
-

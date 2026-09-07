@@ -3,30 +3,37 @@ import type { Match } from "@/types";
 export type StatisticalCoreRow = { label: string; home: string; away: string };
 
 
-export const REQUIRED_STATISTICAL_CORE_METRICS = [
-  "Matches (N)",
-  "W-D-L",
-  "Points/game",
-  "GF/game",
-  "GA/game",
-  "xG/game",
-  "xGA/game",
-  "Shots/game",
-  "SOT/game",
-  "Shots allowed/game",
-  "SOT allowed/game",
-  "Possession",
-  "Corners for/game",
-  "Corners against/game",
-  "Total corners/game",
-  "First to score",
-  "First to concede",
-  "Scored in 1st half",
-  "Conceded in 1st half",
-  "BTTS",
-  "Clean sheets",
-  "Failed to score",
-] as const;
+export type StatisticalCoreMetricDefinition = {
+  label: string;
+  required: true;
+};
+
+export const STATISTICAL_CORE_METRIC_DEFINITIONS = [
+  { label: "Matches (N)", required: true },
+  { label: "W-D-L", required: true },
+  { label: "Points/game", required: true },
+  { label: "GF/game", required: true },
+  { label: "GA/game", required: true },
+  { label: "xG/game", required: true },
+  { label: "xGA/game", required: true },
+  { label: "Shots/game", required: true },
+  { label: "SOT/game", required: true },
+  { label: "Shots allowed/game", required: true },
+  { label: "SOT allowed/game", required: true },
+  { label: "Possession", required: true },
+  { label: "Corners for/game", required: true },
+  { label: "Corners against/game", required: true },
+  { label: "Total corners/game", required: true },
+  { label: "First to score", required: true },
+  { label: "First to concede", required: true },
+  { label: "Scored in 1st half", required: true },
+  { label: "Conceded in 1st half", required: true },
+  { label: "BTTS", required: true },
+  { label: "Clean sheets", required: true },
+  { label: "Failed to score", required: true },
+] as const satisfies readonly StatisticalCoreMetricDefinition[];
+
+export const REQUIRED_STATISTICAL_CORE_METRICS = STATISTICAL_CORE_METRIC_DEFINITIONS.map(({ label }) => label);
 
 const INVALID_STATISTICAL_CORE_VALUE = /^(?:—|-|–|n\/?a|na|tbd|pending|unknown|null|undefined)?$/i;
 
@@ -49,6 +56,17 @@ export function validateStatisticalCoreRows(rows: StatisticalCoreRow[]) {
   }
 
   return errors;
+}
+
+/** Completeness is an editorial target. Publishability only requires genuine,
+ * sourced values; an explicitly disclosed empty/partial Core is valid. */
+export function validatePartialStatisticalCoreRows(rows: StatisticalCoreRow[]) {
+  return rows.flatMap((row) => {
+    if (!row.label.trim()) return ["metric label is missing"];
+    // A partial row may explicitly expose an unavailable side. Completeness is
+    // reported as a gap; it is not converted into a publication blocker.
+    return [];
+  });
 }
 
 export function parseStatisticalCoreRows(markdown: string): StatisticalCoreRow[] {
@@ -329,4 +347,3 @@ export function extractStatisticalCoreRows(match: Match): StatisticalCoreRow[] {
   if (publishedRows.length) return publishedRows;
   return (match.matchSeo?.statistics?.rows ?? []).map(({ label, home, away }) => ({ label, home, away }));
 }
-

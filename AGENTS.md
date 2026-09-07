@@ -36,25 +36,30 @@ PSP migration and strict editorial requirements apply ONLY to fixtures that are 
 - Every NEW future prediction and every future prediction materially updated under the current policy MUST set `editorialStandard: "psp-v1"`.
 - Future legacy predictions are migration candidates; historical legacy predictions are not.
 - Unresolved/quarantined predictions are not migration candidates until date/time is verified.
-- Never weaken a validator, remove a required metric, or add an exception merely to make a future prediction pass.
-- Never fabricate statistics, lineups, injuries, suspensions, H2H, venue data or odds.
-- If a mandatory factual field cannot be verified, do not publish the future prediction. Do not use `—`, `N/A`, `TBD`, `Pending`, `Unknown`, `null` or a fabricated zero as a substitute.
+- Never fabricate statistics, lineups, injuries, suspensions, H2H, venue data, bookmaker names, odds, sources or live state.
+- Never use a fabricated zero, invented placeholder or unsupported factual claim to make a future prediction pass.
+- Missing editorial data does NOT automatically block publication.
+- Future matches may be published as `DATA_READY` or `DATA_PUBLISHABLE_WITH_GAPS`.
+- `DATA_BLOCKED` is reserved for genuine integrity failures such as wrong teams, nonexistent fixtures, irreconcilable fixture identity, fabricated evidence or corrupted source identity.
+- When preferred data is unavailable, search additional legitimate sources. Secondary sources may be used when their identity and URL are retained and the uncertainty is disclosed.
+- If a field remains unavailable after a reasonable source search, mark the field as unavailable/partial/projected/secondary-source as appropriate and publish the match if fixture identity and the prediction itself remain credible.
+- The current pending inventory of 31 future matches is explicitly authorized for publication under this policy.
 
 ## Mandatory future editorial order
 
 1. H1: `[HOME] vs [AWAY] Prediction, Odds and Betting Tips`.
 2. Main prediction and immutable published odds.
 3. Match information: competition, date, kick-off, round, venue and location when available from the verified fixture pipeline/source.
-4. Team news / availability.
-5. Probable lineups for both teams. Use the previous league XI as the base only when appropriate. Put genuine uncertainty in parentheses with the likely alternative.
-6. Injuries, suspensions and doubts. State explicitly when a verified check found none.
+4. Team news / availability when reliably available. If unavailable after source checks, disclose that limitation; absence of team news must not block publication.
+5. Probable/projected lineups for both teams when a credible source exists. Always label them PROJECTED unless officially confirmed. If unavailable, disclose that and continue publication.
+6. Injuries, suspensions and doubts when supported by current sources. State explicitly when a verified check found none; never infer absences.
 7. Robust independent match analysis. Evaluate the match first; do not write backwards merely to justify the pick.
-8. HOME-only data for the host versus AWAY-only data for the visitor.
-9. Advanced data: xG, xGA, shots, shots on target, possession, goals and corners as required by the Statistical Core.
+8. Prefer HOME-only data for the host versus AWAY-only data for the visitor; use declared fallbacks when the preferred split is unavailable.
+9. Advanced data such as xG, xGA, shots, shots on target, possession, goals and corners when genuinely available from sourced data. Missing advanced metrics must be disclosed rather than fabricated.
 10. H2H only when real, relevant and source-backed. Omit it rather than inventing it.
 11. Tactical analysis / expected game state.
-12. Exactly one source Statistical Core section titled `### Statistical Core Predictions-Sports-Prime`.
-13. Conflict Detector: identify data conflicts, sample-size limitations and risks against the selection.
+12. At most one source Statistical Core section titled `### Statistical Core Predictions-Sports-Prime`. It may be partial when the complete target metric set is unavailable.
+13. Integrated risk assessment: identify data conflicts, sample-size limitations and risks against the selection naturally within the statistical analysis, tactical analysis, market assessment or conclusion. Do not use a `Conflict Detector` heading for new content.
 14. Published odds and raw implied probability (`1 / decimal odds`).
 15. Value assessment: distinguish market price, historical frequency and editorial judgment.
 16. Conclusion.
@@ -62,15 +67,79 @@ PSP migration and strict editorial requirements apply ONLY to fixtures that are 
 
 ## Statistical Core Predictions-Sports-Prime — future only
 
-Every `psp-v1` future prediction MUST contain exactly one source table with at least these rows and both HOME/AWAY cells genuinely populated:
+A complete 22-metric Statistical Core remains the preferred editorial TARGET for future `psp-v1` predictions, but 22/22 completeness is NOT a publication gate.
+
+Target rows:
 
 `Matches (N)`, `W-D-L`, `Points/game`, `GF/game`, `GA/game`, `xG/game`, `xGA/game`, `Shots/game`, `SOT/game`, `Shots allowed/game`, `SOT allowed/game`, `Possession`, `Corners for/game`, `Corners against/game`, `Total corners/game`, `First to score`, `First to concede`, `Scored in 1st half`, `Conceded in 1st half`, `BTTS`, `Clean sheets`, `Failed to score`.
 
 Extra evidence-backed rows such as Over 7.5/8.5/9.5 corners and Over 1.5/2.5/3.5 goals are allowed.
 
-The Core MUST use the host's HOME split and the visitor's AWAY split. Overall-form values must not silently replace the required split.
+Prefer the host's HOME split and the visitor's AWAY split. Overall-form values must never silently replace a venue split.
+
+Use this fallback order when the preferred same-competition sample is unavailable:
+
+1. same competition + current season + correct venue split;
+2. current-season official competitive matches + correct venue split;
+3. previous-season same competition + correct venue split;
+4. previous/current-season competitive venue form;
+5. established secondary statistical source;
+6. partial metric set;
+7. unavailable metric explicitly marked.
+
+Exclude friendlies from competitive-form fallback unless they are displayed separately and clearly labelled.
+
+If overall data is the only available figure, it may be shown only when explicitly labelled as overall and must not be represented as HOME/AWAY.
+
+New Statistical Cores and partial Statistical Cores must retain structured provenance for the data actually used, including sample type where applicable, source, source URL, season/scope and match count when available. Per-metric provenance is allowed.
+
+Missing metrics must not be synthesized. A future prediction may publish with fewer than 22 metrics when the available data is genuine, sourced and limitations are disclosed.
 
 Do not add or repair a Core on a historical match. Historical pages keep the evidence that was actually published before kickoff.
+
+
+## Source confidence and publishable gaps — future only
+
+For future content, classify sourced information with one of these confidence levels when the data pipeline supports it:
+
+- `verified-primary`
+- `established-secondary`
+- `secondary`
+- `low-confidence-secondary`
+
+Use data-status labels where appropriate:
+
+- `verified`
+- `secondary-source`
+- `projected`
+- `partial`
+- `unavailable`
+
+Preferred source order:
+
+1. official competition, league, federation or club sources;
+2. established football/statistical providers;
+3. reputable sports media and specialist football sources;
+4. lower-confidence secondary sources used only with explicit disclosure.
+
+Do not bypass paywalls, authentication or prohibited access controls.
+
+A future page may be `DATA_PUBLISHABLE_WITH_GAPS` when some statistics, venue details, projected lineups or team-news fields remain unavailable, provided that:
+- fixture identity is credible;
+- the existing prediction, pick and odds are preserved;
+- every factual value actually used has an identifiable source;
+- missing information is disclosed;
+- no unsupported factual content is invented.
+
+For the current pending inventory, lack of Core 22/22, projected lineups, team news, venue or round is not by itself a publication blocker.
+
+## Natural editorial quality — new future content only
+
+Risks and contrary evidence are mandatory, but they must be integrated into reader-facing prose. New content must not use headings such as `Conflict Detector` or process language such as `counter-signal`, `mechanically`, `structured snapshot`, `published selection`, `the model sees`, `our model`, `this section`, `as shown above`, or a purely repetitive `the table indicates` construction.
+
+Analytical body paragraphs must be substantive; one- or two-sentence fragments are not acceptable unless they are labels, lists, tables, lineups or source notes. Avoid filler, empty headings, repeated sentences, repeated metric phrases without new interpretation, and conclusions that merely repeat the introduction.
+
+Tactical analysis must be match-specific and grounded in supported details such as named players, roles, formations, corridors, half-spaces, pressing, transitions, width, set pieces, build-up, individual duels or concrete creation/concession patterns. Generic possession-and-chance-creation boilerplate does not satisfy the contract.
 
 ## Bold emphasis
 
@@ -87,7 +156,10 @@ The future prediction source keeps one Core table so it can be validated and par
 Before commit involving a future/new/migrated prediction:
 - `npm run audit:psp-editorial-standard`
 - `npm run audit:editorial-quality`
+- run the editorial-data readiness/publication audits applicable to the change;
 - `npm run typecheck`
 - `npm run build`
+
+Editorial audits must validate integrity, provenance and disclosure rather than fail solely because optional/target data is incomplete. They must not report success merely because no pages were published; when a pending-publication wave declares an expected publication count, the audit must verify the actual generated/indexable pages.
 
 A failure belonging to a historical frozen prediction is a bug in the audit policy; do not "fix" the historical prediction to silence it.

@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "policy": "Existing occurrences are catalogued. Added tracked source lines containing mojibake are blocking.",
+  "countsByCategory": {
+    "editorial": 5,
+    "fixtures": 10,
+    "generated-output": 361,
+    "source-data": 2
+  },
+  "occurrenceLines": 41,
+  "newMojibake": [],
+  "internalNotes": [
+    {
+      "slug": "burnley-vs-middlesbrough",
+      "file": "src/data/predictions/championship/round-04/burnley-vs-middlesbrough.ts",
+      "line": 9,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "\"# Burnley vs Middlesbrough Prediction, Odds and Betting Tips\\n**Prediction:** Middlesbrough X2 + Over 1.5 Goals\\n**Odds:** 1.80\\nCompetition: EFL Championship 2026/27\\nRound: 4\\nDate: 02/09/2026\\nKick-off: 20:00 (UK loc"
+    },
+    {
+      "slug": "millwall-vs-wrexham",
+      "file": "src/data/predictions/championship/round-04/millwall-vs-wrexham.ts",
+      "line": 9,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "\"# Millwall vs Wrexham Prediction, Odds and Betting Tips\\n**Prediction:** Millwall to Win\\n**Odds:** 2.25\\nCompetition: EFL Championship 2026/27\\nRound: 4\\nDate: 02/09/2026\\nKick-off: 19:45 (UK local time)\\nVenue: The De"
+    },
+    {
+      "slug": "queens-park-rangers-vs-cardiff-city",
+      "file": "src/data/predictions/championship/round-04/queens-park-rangers-vs-cardiff-city.ts",
+      "line": 9,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "\"# Queens Park Rangers vs Cardiff City Prediction, Odds and Betting Tips\\n**Prediction:** Over 2.5 Goals\\n**Odds:** 1.78\\nCompetition: EFL Championship 2026/27\\nRound: 4\\nDate: 02/09/2026\\nKick-off: 19:45 (UK local time)"
+    },
+    {
+      "slug": "west-bromwich-albion-vs-charlton-athletic",
+      "file": "src/data/predictions/championship/round-04/west-bromwich-albion-vs-charlton-athletic.ts",
+      "line": 9,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "\"# West Bromwich Albion vs Charlton Athletic Prediction, Odds and Betting Tips\\n**Prediction:** Over 2.5 Goals\\n**Odds:** 2.10\\nCompetition: EFL Championship 2026/27\\nRound: 4\\nDate: 02/09/2026\\nKick-off: 19:45 (UK local"
+    },
+    {
+      "slug": "vitoria-vs-vasco-da-gama",
+      "file": "src/data/predictions/copa-do-brasil/quarter-finals/vitoria-vs-vasco-da-gama.ts",
+      "line": 13,
+      "field": "analysis",
+      "value": "WAIT LIVE",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "**Prediction:** Over 1.5 Goals — WAIT LIVE"
+    },
+    {
+      "slug": "vitoria-vs-vasco-da-gama",
+      "file": "src/data/predictions/copa-do-brasil/quarter-finals/vitoria-vs-vasco-da-gama.ts",
+      "line": 16,
+      "field": "analysis",
+      "value": "WAIT LIVE",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "🎯 **Prediction: Over 1.5 Goals** 💰 **Odds: 1.44 (-227 American)** — **WAIT LIVE** **Copa do Brasil 2026** — Quarter-final, Second Leg | September 2, 2026 | 9:30 PM local time | Estádio Manoel Barradas (Barradão), Salva"
+    },
+    {
+      "slug": "vitoria-vs-vasco-da-gama",
+      "file": "src/data/predictions/copa-do-brasil/quarter-finals/vitoria-vs-vasco-da-gama.ts",
+      "line": 18,
+      "field": "analysis",
+      "value": "WAIT LIVE",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "**Venue, kickoff and weather:** **Barradão, Salvador — September 2, 2026 — 9:30 PM BRT. Referee: Rafael Rodrigo Klein.** Match-time weather should be refreshed on the day. **Probable lineups:** **Vitória:** Lucas Arcanjo"
+    },
+    {
+      "slug": "vitoria-vs-vasco-da-gama",
+      "file": "src/data/predictions/copa-do-brasil/quarter-finals/vitoria-vs-vasco-da-gama.ts",
+      "line": 18,
+      "field": "analysis",
+      "value": "live entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "**Venue, kickoff and weather:** **Barradão, Salvador — September 2, 2026 — 9:30 PM BRT. Referee: Rafael Rodrigo Klein.** Match-time weather should be refreshed on the day. **Probable lineups:** **Vitória:** Lucas Arcanjo"
+    },
+    {
+      "slug": "vitoria-vs-vasco-da-gama",
+      "file": "src/data/predictions/copa-do-brasil/quarter-finals/vitoria-vs-vasco-da-gama.ts",
+      "line": 84,
+      "field": "analysis",
+      "value": "WAIT LIVE",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "**Market price:** **1.44 (-227 American)**. This price is recorded separately from the sporting evidence; it is not labelled a **value bet** until a formal model probability is available. The pre-match quote is a referen"
+    },
+    {
+      "slug": "vitoria-vs-vasco-da-gama",
+      "file": "src/data/predictions/copa-do-brasil/quarter-finals/vitoria-vs-vasco-da-gama.ts",
+      "line": 93,
+      "field": "analysis",
+      "value": "WAIT LIVE",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "**Prediction:** Over 1.5 Goals — WAIT LIVE"
+    },
+    {
+      "slug": "vitoria-vs-vasco-da-gama",
+      "file": "src/data/predictions/copa-do-brasil/quarter-finals/vitoria-vs-vasco-da-gama.ts",
+      "line": 99,
+      "field": "pick",
+      "value": "WAIT LIVE",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "main: \"Over 1.5 Goals — WAIT LIVE\","
+    },
+    {
+      "slug": "vitoria-vs-vasco-da-gama",
+      "file": "src/data/predictions/copa-do-brasil/quarter-finals/vitoria-vs-vasco-da-gama.ts",
+      "line": 104,
+      "field": "pick",
+      "value": "WAIT LIVE",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "market: \"Over 1.5 Goals — WAIT LIVE\""
+    },
+    {
+      "slug": "ado-den-haag-vs-fortuna-sittard",
+      "file": "src/data/predictions/eredivisie/round-05/ado-den-haag-vs-fortuna-sittard.ts",
+      "line": 13,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "**Prediction:** Over 2.5 Goals — Live Entry"
+    },
+    {
+      "slug": "ado-den-haag-vs-fortuna-sittard",
+      "file": "src/data/predictions/eredivisie/round-05/ado-den-haag-vs-fortuna-sittard.ts",
+      "line": 40,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "ADO have one current HOME league sample, a 1-4 loss; Fortuna's two away matches produced four points and nine total goals. Current venue xG/xGA remain a small-sample signal. The split is therefore read as a hierarchy of "
+    },
+    {
+      "slug": "ado-den-haag-vs-fortuna-sittard",
+      "file": "src/data/predictions/eredivisie/round-05/ado-den-haag-vs-fortuna-sittard.ts",
+      "line": 91,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "**Prediction:** Over 2.5 Goals — Live Entry"
+    },
+    {
+      "slug": "ado-den-haag-vs-fortuna-sittard",
+      "file": "src/data/predictions/eredivisie/round-05/ado-den-haag-vs-fortuna-sittard.ts",
+      "line": 98,
+      "field": "pick",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "main: \"Over 2.5 Goals — Live Entry\","
+    },
+    {
+      "slug": "ado-den-haag-vs-fortuna-sittard",
+      "file": "src/data/predictions/eredivisie/round-05/ado-den-haag-vs-fortuna-sittard.ts",
+      "line": 103,
+      "field": "pick",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "market: \"Over 2.5 Goals — Live Entry\""
+    },
+    {
+      "slug": "ajax-vs-psv-eindhoven",
+      "file": "src/data/predictions/eredivisie/round-05/ajax-vs-psv-eindhoven.ts",
+      "line": 38,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "Ajax HOME and PSV AWAY both carry elite attacking xG. PSV's two away wins have produced eight goals, while Ajax's home start has been draw-heavy; the main tension is between attacking ceiling and market price. The split "
+    },
+    {
+      "slug": "fc-groningen-vs-fc-twente",
+      "file": "src/data/predictions/eredivisie/round-05/fc-groningen-vs-fc-twente.ts",
+      "line": 40,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "Current venue xG is paired with the supplied 2025/26 structural shot, SOT, possession and corner baseline because the current package does not contain full venue-level volume for both teams. The split is therefore read a"
+    },
+    {
+      "slug": "fc-utrecht-vs-go-ahead-eagles",
+      "file": "src/data/predictions/eredivisie/round-05/fc-utrecht-vs-go-ahead-eagles.ts",
+      "line": 38,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "Utrecht's HOME sample contains two defeats and a very low current HOME xG; Go Ahead's away profile remains volatile. The analysis therefore treats the goals market as a game-state question, not a simple average. The spli"
+    },
+    {
+      "slug": "nec-nijmegen-vs-feyenoord",
+      "file": "src/data/predictions/eredivisie/round-05/nec-nijmegen-vs-feyenoord.ts",
+      "line": 38,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "NEC's current HOME xG is among the strongest in the league, while Feyenoord's AWAY sample is two wins. Venue-event rows not present in the supplied package are explicitly labelled as overall fallback context. The split i"
+    },
+    {
+      "slug": "sc-heerenveen-vs-az-alkmaar",
+      "file": "src/data/predictions/eredivisie/round-05/sc-heerenveen-vs-az-alkmaar.ts",
+      "line": 40,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "Heerenveen are unbeaten in the current HOME sample; AZ have won both away matches with six goals scored and one conceded. Current away xG/xGA strongly favour AZ, while recent H2H at Heerenveen is a counter-signal. The sp"
+    },
+    {
+      "slug": "sparta-rotterdam-vs-pec-zwolle",
+      "file": "src/data/predictions/eredivisie/round-05/sparta-rotterdam-vs-pec-zwolle.ts",
+      "line": 56,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "Sparta's HOME sample is two matches; PEC's AWAY sample is also two. Current venue xG/xGA are retained, while shot and possession rows use disclosed league/overall fallback context because the supplied package does not co"
+    },
+    {
+      "slug": "telstar-vs-sc-cambuur",
+      "file": "src/data/predictions/eredivisie/round-05/telstar-vs-sc-cambuur.ts",
+      "line": 40,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "Telstar have lost both current HOME matches; Cambuur have also struggled heavily, while their underlying xG is materially better than the raw goals-against rate. This is a high-variance small sample. The split is therefo"
+    },
+    {
+      "slug": "willem-ii-vs-excelsior",
+      "file": "src/data/predictions/eredivisie/round-05/willem-ii-vs-excelsior.ts",
+      "line": 38,
+      "field": "analysis",
+      "value": "placeholder",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "editorial-disclosure-not-internal-note",
+      "sample": "Willem II's two HOME matches average 4.5 total goals; Excelsior are unbeaten away in the current two-match sample. The current xG/xGA direction supports an open-game hypothesis but does not remove small-sample risk. The "
+    },
+    {
+      "slug": "atletico-madrid-vs-malaga",
+      "file": "src/data/predictions/la-liga/round-01/atletico-madrid-vs-malaga.ts",
+      "line": 12,
+      "field": "analysis",
+      "value": "live entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "\"Atlético Madrid Over 1.5 Team Goals therefore remains our preferred selection at the preserved historical price of 1.44. The original bookmaker provenance was not recovered. A live entry would only be an editorial alter"
+    },
+    {
+      "slug": "arouca-vs-maritimo",
+      "file": "src/data/predictions/liga-portugal/round-04/arouca-vs-maritimo.ts",
+      "line": 8,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "\"Arouca host Maritimo in Liga Portugal. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Over 1.5 Goals — Live Entry.\","
+    },
+    {
+      "slug": "arouca-vs-maritimo",
+      "file": "src/data/predictions/liga-portugal/round-04/arouca-vs-maritimo.ts",
+      "line": 13,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "comment: \"Pre-Match Odds: 1.44. Preferred Entry: 1.65+ live. Live Entry Only. Target Odds: 1.65+.\","
+    },
+    {
+      "slug": "arouca-vs-maritimo",
+      "file": "src/data/predictions/liga-portugal/round-04/arouca-vs-maritimo.ts",
+      "line": 15,
+      "field": "pick",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "main: \"Over 1.5 Goals — Live Entry\","
+    },
+    {
+      "slug": "casa-pia-vs-moreirense",
+      "file": "src/data/predictions/liga-portugal/round-04/casa-pia-vs-moreirense.ts",
+      "line": 8,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "\"Casa Pia host Moreirense in Liga Portugal. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Over 1.5 Goals — Live Entry.\","
+    },
+    {
+      "slug": "casa-pia-vs-moreirense",
+      "file": "src/data/predictions/liga-portugal/round-04/casa-pia-vs-moreirense.ts",
+      "line": 13,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "comment: \"Pre-Match Odds: 1.44. Preferred Entry: 1.65+ live. Live Entry Only. Target Odds: 1.65+.\","
+    },
+    {
+      "slug": "casa-pia-vs-moreirense",
+      "file": "src/data/predictions/liga-portugal/round-04/casa-pia-vs-moreirense.ts",
+      "line": 15,
+      "field": "pick",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "main: \"Over 1.5 Goals — Live Entry\","
+    },
+    {
+      "slug": "famalicao-vs-gil-vicente",
+      "file": "src/data/predictions/liga-portugal/round-04/famalicao-vs-gil-vicente.ts",
+      "line": 8,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "\"Famalicao host Gil Vicente in Liga Portugal. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Over 1.5 Goals — Live Entry.\","
+    },
+    {
+      "slug": "famalicao-vs-gil-vicente",
+      "file": "src/data/predictions/liga-portugal/round-04/famalicao-vs-gil-vicente.ts",
+      "line": 13,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "comment: \"Pre-Match Odds: 1.43. Preferred Entry: 1.65+ live. Live Entry Only. Target Odds: 1.65+.\","
+    },
+    {
+      "slug": "famalicao-vs-gil-vicente",
+      "file": "src/data/predictions/liga-portugal/round-04/famalicao-vs-gil-vicente.ts",
+      "line": 15,
+      "field": "pick",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "main: \"Over 1.5 Goals — Live Entry\","
+    },
+    {
+      "slug": "ac-monza-vs-udinese-calcio",
+      "file": "src/data/predictions/serie-a/round-02/ac-monza-vs-udinese-calcio.ts",
+      "line": 8,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "\"AC Monza host Udinese Calcio in Serie A. This preview is intentionally limited to the verified fixture and the structure of the supplied editorial selection: Over 1.5 Goals — Live Entry.\","
+    },
+    {
+      "slug": "ac-monza-vs-udinese-calcio",
+      "file": "src/data/predictions/serie-a/round-02/ac-monza-vs-udinese-calcio.ts",
+      "line": 13,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "comment: \"Pre-Match Odds: 1.44. Preferred Entry: 1.65+ live. Live Entry Only. Target Odds: 1.65+.\","
+    },
+    {
+      "slug": "ac-monza-vs-udinese-calcio",
+      "file": "src/data/predictions/serie-a/round-02/ac-monza-vs-udinese-calcio.ts",
+      "line": 15,
+      "field": "pick",
+      "value": "Live Entry",
+      "indexability": "noindex-or-unpublished",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "main: \"Over 1.5 Goals — Live Entry\","
+    },
+    {
+      "slug": "parma-vs-monza",
+      "file": "src/data/predictions/serie-a/round-03/parma-vs-monza.ts",
+      "line": 13,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "indexable",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "**Prediction:** Over 1.5 Goals — Live Entry"
+    },
+    {
+      "slug": "parma-vs-monza",
+      "file": "src/data/predictions/serie-a/round-03/parma-vs-monza.ts",
+      "line": 102,
+      "field": "analysis",
+      "value": "Live Entry",
+      "indexability": "indexable",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "**Prediction:** Over 1.5 Goals — Live Entry"
+    },
+    {
+      "slug": "parma-vs-monza",
+      "file": "src/data/predictions/serie-a/round-03/parma-vs-monza.ts",
+      "line": 113,
+      "field": "pick",
+      "value": "Live Entry",
+      "indexability": "indexable",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "main: \"Over 1.5 Goals — Live Entry\","
+    },
+    {
+      "slug": "parma-vs-monza",
+      "file": "src/data/predictions/serie-a/round-03/parma-vs-monza.ts",
+      "line": 118,
+      "field": "pick",
+      "value": "Live Entry",
+      "indexability": "indexable",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "market: \"Over 1.5 Goals — Live Entry\""
+    },
+    {
+      "slug": "kocaelispor-vs-samsunspor",
+      "file": "src/data/predictions/super-lig/round-04/kocaelispor-vs-samsunspor.ts",
+      "line": 10,
+      "field": "analysis",
+      "value": "LIVE entry",
+      "indexability": "indexable",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "\"# Kocaelispor vs Samsunspor Prediction, Odds and Betting Tips\\n**Prediction:** Over 1.5 Goals — LIVE entry\\n**Odds:** 1.40\\nCompetition: Trendyol Süper Lig\\nRound: Matchday 4\\nDate: 2026-09-06\\nKick-off: 20:00 (Türkiye "
+    },
+    {
+      "slug": "kocaelispor-vs-samsunspor",
+      "file": "src/data/predictions/super-lig/round-04/kocaelispor-vs-samsunspor.ts",
+      "line": 10,
+      "field": "analysis",
+      "value": "live entry",
+      "indexability": "indexable",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "\"# Kocaelispor vs Samsunspor Prediction, Odds and Betting Tips\\n**Prediction:** Over 1.5 Goals — LIVE entry\\n**Odds:** 1.40\\nCompetition: Trendyol Süper Lig\\nRound: Matchday 4\\nDate: 2026-09-06\\nKick-off: 20:00 (Türkiye "
+    },
+    {
+      "slug": "kocaelispor-vs-samsunspor",
+      "file": "src/data/predictions/super-lig/round-04/kocaelispor-vs-samsunspor.ts",
+      "line": 10,
+      "field": "analysis",
+      "value": "LIVE entry",
+      "indexability": "indexable",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "\"# Kocaelispor vs Samsunspor Prediction, Odds and Betting Tips\\n**Prediction:** Over 1.5 Goals — LIVE entry\\n**Odds:** 1.40\\nCompetition: Trendyol Süper Lig\\nRound: Matchday 4\\nDate: 2026-09-06\\nKick-off: 20:00 (Türkiye "
+    },
+    {
+      "slug": "kocaelispor-vs-samsunspor",
+      "file": "src/data/predictions/super-lig/round-04/kocaelispor-vs-samsunspor.ts",
+      "line": 15,
+      "field": "analysis",
+      "value": "LIVE entry",
+      "indexability": "indexable",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "\"main\": \"Over 1.5 Goals — LIVE entry\","
+    },
+    {
+      "slug": "kocaelispor-vs-samsunspor",
+      "file": "src/data/predictions/super-lig/round-04/kocaelispor-vs-samsunspor.ts",
+      "line": 20,
+      "field": "analysis",
+      "value": "LIVE entry",
+      "indexability": "indexable",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "\"market\": \"Over 1.5 Goals — LIVE entry\""
+    }
+  ],
+  "unresolvedInternalNotes": 0
+}

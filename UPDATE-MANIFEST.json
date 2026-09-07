@@ -1,0 +1,399 @@
+{
+  "matchDate": "2026-09-05",
+  "updatedDate": "2026-09-04",
+  "updatedAt": "2026-09-04T18:45:00-03:00",
+  "totalMatches": 65,
+  "note": "Original publishedAt values were preserved; only updatedAt was added or refreshed.",
+  "files": [
+    {
+      "file": "la-liga/round-04/athletic-club-vs-atletico-madrid.ts",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "la-liga/round-04/rayo-vallecano-vs-racing-santander.ts",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "la-liga/round-04/villarreal-vs-deportivo-la-coruna.ts",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "ligue-1/round-03/lens-vs-lorient.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "ligue-1/round-03/le-havre-vs-brest.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "ligue-1/round-03/nice-vs-le-mans.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "eliteserien/round-20/rosenborg-vs-hamkam.ts",
+      "publishedAt": "2026-09-02T20:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "eliteserien/round-20/brann-vs-lillestrom.ts",
+      "publishedAt": "2026-09-02T20:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "super-lig/round-04/erzurumspor-fk-vs-konyaspor.ts",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "super-lig/round-04/fenerbahce-vs-besiktas.ts",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "brasileirao-serie-a/round-26/red-bull-bragantino-vs-bahia.ts",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "brasileirao-serie-a/round-26/sao-paulo-vs-atletico-mg.ts",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "brasileirao-serie-a/round-26/fluminense-vs-vasco-da-gama.ts",
+      "publishedAt": "2026-09-01T19:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "serie-a/round-03/roma-vs-atalanta.ts",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "serie-a/round-03/inter-vs-napoli.ts",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "serie-a/round-03/fiorentina-vs-torino.ts",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "premier-league/round-03/newcastle-united-vs-bournemouth.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "premier-league/round-03/fulham-vs-crystal-palace.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "premier-league/round-03/hull-city-vs-aston-villa.ts",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "premier-league/round-03/manchester-city-vs-coventry-city.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "premier-league/round-03/nottingham-forest-vs-tottenham-hotspur.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "premier-league/round-03/brentford-vs-sunderland.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "premier-league/round-03/brighton-hove-albion-vs-leeds-united.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "eredivisie/round-05/fc-utrecht-vs-go-ahead-eagles.ts",
+      "publishedAt": "2026-08-30T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "eredivisie/round-05/ajax-vs-psv-eindhoven.ts",
+      "publishedAt": "2026-08-30T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "eredivisie/round-05/willem-ii-vs-excelsior.ts",
+      "publishedAt": "2026-08-30T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "eredivisie/round-05/nec-nijmegen-vs-feyenoord.ts",
+      "publishedAt": "2026-08-30T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/austin-fc-vs-san-jose-earthquakes.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/portland-timbers-vs-minnesota-united.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/toronto-fc-vs-chicago-fire.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/columbus-crew-vs-colorado-rapids.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/la-galaxy-vs-new-england-revolution.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/philadelphia-union-vs-cf-montreal.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/fc-cincinnati-vs-dc-united.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/fc-dallas-vs-sporting-kansas-city.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/inter-miami-vs-atlanta-united.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/charlotte-fc-vs-houston-dynamo.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/real-salt-lake-vs-los-angeles-fc.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/seattle-sounders-vs-new-york-red-bulls.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/orlando-city-vs-san-diego-fc.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "mls/september-05/vancouver-whitecaps-vs-st-louis-city.ts",
+      "publishedAt": "2026-09-04T09:55:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "bundesliga/round-02/bayer-04-leverkusen-vs-1-fc-union-berlin.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "bundesliga/round-02/sc-paderborn-07-vs-sc-freiburg.ts",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "bundesliga/round-02/borussia-monchengladbach-vs-sv-07-elversberg.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "bundesliga/round-02/sv-werder-bremen-vs-rb-leipzig.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "bundesliga/round-02/tsg-1899-hoffenheim-vs-borussia-dortmund.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "bundesliga/round-02/schalke-04-vs-bayern-munchen.ts",
+      "publishedAt": "2026-08-30T10:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "championship/round-05/stoke-city-vs-charlton-athletic.ts",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "championship/round-05/burnley-vs-bristol-city.ts",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "championship/round-05/preston-vs-blackburn.ts",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "championship/round-05/lincoln-vs-southampton.ts",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "championship/round-05/portsmouth-vs-cardiff-city.ts",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "championship/round-05/west-ham-vs-derby-county.ts",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "championship/round-05/swansea-city-vs-wrexham.ts",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "championship/round-05/qpr-vs-middlesbrough.ts",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "championship/round-05/sheffield-united-vs-norwich-city.ts",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "championship/round-05/west-brom-vs-watford.ts",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "championship/round-05/millwall-vs-bolton-wanderers.ts",
+      "publishedAt": "2026-09-03T11:30:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "scottish-premiership/round-06/rangers-vs-motherwell.ts",
+      "publishedAt": "2026-09-04T12:45:00.000Z",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-04T09:45:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "scottish-premiership/round-06/dundee-united-vs-falkirk.ts",
+      "publishedAt": "2026-09-04T12:45:00.000Z",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-04T09:45:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "scottish-premiership/round-06/aberdeen-vs-kilmarnock.ts",
+      "publishedAt": "2026-09-04T12:45:00.000Z",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-04T09:45:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "scottish-premiership/round-06/st-mirren-vs-celtic.ts",
+      "publishedAt": "2026-09-04T12:45:00.000Z",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt 2026-09-04T09:45:00-03:00 -> 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "liga-portugal/round-05/estrela-da-amadora-vs-famalicao.ts",
+      "publishedAt": "2026-08-31T12:00:00.000Z",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "liga-portugal/round-05/maritimo-vs-benfica.ts",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    },
+    {
+      "file": "liga-portugal/round-05/sporting-cp-vs-nacional.ts",
+      "publishedAt": "2026-09-01T12:00:00-03:00",
+      "updatedAt": "2026-09-04T18:45:00-03:00",
+      "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
+    }
+  ]
+}

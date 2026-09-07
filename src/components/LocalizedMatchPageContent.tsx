@@ -20,7 +20,6 @@ import { editorialPredictions } from "@/data/predictions";
 import { selectRelatedPredictions } from "@/lib/related-predictions";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
-import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 import {
   localePath,
   seoLocales,
@@ -41,6 +40,7 @@ type LocalizedMatchPageContentProps = {
   analysisFormat?: "markdown";
   mainPrediction?: string;
   sourceDescription?: string;
+  internationalEligibleSlugs: readonly string[];
 };
 
 const extraCopy: Record<
@@ -145,11 +145,15 @@ function formatEditorialDate(value: string, locale: SeoLocaleSlug) {
   }).format(new Date(value));
 }
 
-function relatedPathExists(match: Match, locale: SeoLocaleSlug) {
+function relatedPathExists(
+  match: Match,
+  locale: SeoLocaleSlug,
+  internationalEligibleSlugs: ReadonlySet<string>
+) {
   if (hasCompleteLocalizedEditorial(match.slug, locale)) return true;
   return (
     isFullyLocalizedMatchLocale(locale) &&
-    isInternationalMatchExpansionEligible(match)
+    internationalEligibleSlugs.has(match.slug)
   );
 }
 
@@ -173,6 +177,7 @@ export function LocalizedMatchPageContent({
   analysisFormat,
   mainPrediction,
   sourceDescription,
+  internationalEligibleSlugs,
 }: LocalizedMatchPageContentProps) {
   const copy = seoLocales[locale];
   const extra = extraCopy[locale];
@@ -185,8 +190,9 @@ export function LocalizedMatchPageContent({
   );
   const selectedRelatedMatches = selectRelatedPredictions(match, matches);
   const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions);
+  const internationalEligibleSet = new Set(internationalEligibleSlugs);
   const localizedRelatedSlugs = selectedRelatedMatches
-    .filter((item) => relatedPathExists(item, locale))
+    .filter((item) => relatedPathExists(item, locale, internationalEligibleSet))
     .map((item) => item.slug);
   const hasFinalScore = isHistoryEligibleFixture({
     status: match.fixtureStatus,

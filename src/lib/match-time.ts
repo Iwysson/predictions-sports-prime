@@ -32,6 +32,8 @@ const competitionFallbackTimezones: Record<LeagueSlug, string> = {
   eliteserien: "Europe/Oslo",
   mls: "America/New_York",
   "champions-league": "Europe/Paris",
+  "copa-libertadores": "America/Sao_Paulo",
+  "copa-sudamericana": "America/Sao_Paulo",
 };
 
 const mlsVenueTimezones: Record<string, string> = {

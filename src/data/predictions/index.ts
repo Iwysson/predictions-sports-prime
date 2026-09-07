@@ -14,8 +14,11 @@ import { scottishPremiershipPredictions } from "./scottish-premiership";
 import { eliteserienPredictions } from "./eliteserien";
 import { mlsPredictions } from "./mls";
 import { championsLeaguePredictions } from "./champions-league";
+import { copaLibertadoresPredictions } from "./copa-libertadores";
+import { copaSudamericanaPredictions } from "./copa-sudamericana";
+import { applyWave08EditorialDebtRemediation } from "./editorial-debt-remediation";
 
-export const editorialPredictions = [
+export const editorialPredictionsRaw = [
   ...premierLeaguePredictions,
   ...laLigaPredictions,
   ...bundesligaPredictions,
@@ -32,4 +35,8 @@ export const editorialPredictions = [
   ...eliteserienPredictions,
   ...mlsPredictions,
   ...championsLeaguePredictions,
+  ...copaLibertadoresPredictions,
+  ...copaSudamericanaPredictions,
 ];
+
+export const editorialPredictions = editorialPredictionsRaw.map(applyWave08EditorialDebtRemediation);

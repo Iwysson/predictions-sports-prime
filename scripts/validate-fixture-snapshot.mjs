@@ -16,6 +16,9 @@ const ids = new Set();
 for (const league of leagues) {
   if (!league.sources.fixtures && !league.liveDataId) continue;
   const rounds = snapshot.leagues[league.slug];
+  // A manual-only competition may publish from an auditable editorial fixture
+  // source before it is supported by the shared snapshot provider.
+  if (league.manualOnly && !rounds?.length) continue;
   const sourceUpdatedAt = snapshot.leagueUpdatedAt?.[league.slug] ?? snapshot.generatedAt;
   assert.ok(Number.isFinite(Date.parse(sourceUpdatedAt)), `${league.name}: invalid source freshness metadata.`);
   if (Date.now() - Date.parse(sourceUpdatedAt) >= 48 * 60 * 60 * 1000) {
@@ -42,12 +45,19 @@ for (const league of leagues) {
 for (const match of matches) {
   const league = leagues.find((item) => item.slug === match.league);
   if (!league?.sources.fixtures && !league?.liveDataId) continue;
-  assert.ok(snapshot.predictionIds[`${match.league}:${match.slug}`], `${match.slug}: prediction is not linked to a provider fixture ID.`);
+  if (league.manualOnly && !snapshot.leagues[match.league]?.length) continue;
+  const fixtureId = snapshot.predictionIds[`${match.league}:${match.slug}`];
+  if (!fixtureId) {
+    assert.ok(match.sources?.some((item) => /^https:\/\//.test(item.url)), `${match.slug}: manual fixture lacks an auditable HTTPS source.`);
+    assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(match.date) && /^\d{2}:\d{2}$/.test(match.time), `${match.slug}: manual fixture lacks a valid date/time.`);
+    continue;
+  }
+  assert.ok(fixtureId, `${match.slug}: prediction is not linked to a provider fixture ID.`);
   const hydrated = await hydratePrediction(toMatchPreview(match));
   const providerFixture = snapshot.leagues[match.league]
     .flatMap((round) => round.games)
-    .find((game) => game.id === snapshot.predictionIds[`${match.league}:${match.slug}`])
-    ?? snapshot.manualFixtures?.[snapshot.predictionIds[`${match.league}:${match.slug}`]];
+    .find((game) => game.id === fixtureId)
+    ?? snapshot.manualFixtures?.[fixtureId];
   assert.ok(providerFixture, `${match.slug}: linked fixture data is unavailable.`);
   assert.equal(hydrated.date, providerFixture.date, `${match.slug}: reliable provider date was not retained.`);
   assert.equal(hydrated.time, providerFixture.time, `${match.slug}: reliable provider kickoff was not retained.`);

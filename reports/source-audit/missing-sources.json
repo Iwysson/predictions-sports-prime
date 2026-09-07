@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-09-07T20:37:22.503Z",
+  "rootCause": {
+    "classification": "D",
+    "detail": "The former failure compared rendered source sections with source-bearing prediction records; these are different populations because rendering can derive/shared module provenance.",
+    "correction": "Per-record provenance remains blocking for current content; rendered section count is diagnostic only."
+  },
+  "cases": []
+}

@@ -1,12 +1,13 @@
 import type { EditorialPrediction, PredictionResultStatus } from "@/types";
 import {
   parseStatisticalCoreRows,
-  validateStatisticalCoreRows,
+  validatePartialStatisticalCoreRows,
 } from "@/lib/statistical-core";
 
 export const PSP_EDITORIAL_STANDARD = "psp-v1" as const;
 export const PSP_EDITORIAL_POLICY_EFFECTIVE_AT = "2026-09-02T00:00:00-03:00";
 export const PSP_EDITORIAL_TIME_ZONE = "America/Sao_Paulo";
+export const PSP_NATURAL_RISK_POLICY_EFFECTIVE_AT = "2026-09-07T12:00:00-03:00";
 
 const PLACEHOLDER_FIELD = /^(?:—|-|–|n\/?a|na|tbd|pending|unknown|null|undefined)?$/i;
 const FINAL_RESULT_STATUSES = new Set<PredictionResultStatus>([
@@ -117,6 +118,24 @@ export function isPspPolicyEnforcedForPrediction(
 export function validatePspEditorialStandard(prediction: EditorialPrediction) {
   const errors: string[] = [];
   const markdown = prediction.analysis.join("\n\n").replace(/\r\n/g, "\n");
+  const naturalRiskPolicyApplies = [prediction.publishedAt, prediction.updatedAt]
+    .filter((value): value is string => Boolean(value))
+    .some((value) => Date.parse(value) >= Date.parse(PSP_NATURAL_RISK_POLICY_EFFECTIVE_AT));
+
+  if (naturalRiskPolicyApplies && /^#{1,6}\s*(?:Conflict Detector|Risks and Counter-Signals)\s*$/im.test(markdown)) {
+    errors.push("new content must integrate risks into natural prose without an artificial risk heading");
+  }
+  if (naturalRiskPolicyApplies) {
+    const provenance = prediction.statisticalCoreProvenance;
+    if (provenance) {
+      if (provenance.home.sampleType !== "home") errors.push("host Statistical Core must use sampleType: home");
+      if (provenance.away.sampleType !== "away") errors.push("visitor Statistical Core must use sampleType: away");
+      for (const [side, sample] of [["home", provenance.home], ["away", provenance.away]] as const) {
+        if (!sample.source || !sample.competition || sample.matches < 1) errors.push(`${side} Statistical Core provenance is incomplete`);
+      }
+      if (!/^\d{4}\/\d{2}$/.test(provenance.season)) errors.push("Statistical Core provenance season must use YYYY/YY");
+    }
+  }
 
   if (prediction.analysisFormat !== "markdown") errors.push("analysisFormat must be markdown");
   if (!/^#\s+.+Prediction.+(?:Odds|Betting Tips)/im.test(markdown)) errors.push("missing PSP H1 with Prediction and Odds/Betting Tips");
@@ -137,8 +156,8 @@ export function validatePspEditorialStandard(prediction: EditorialPrediction) {
   if (!nonPlaceholder(info?.date)) errors.push("matchInfo.date is required");
   if (!nonPlaceholder(info?.time)) errors.push("matchInfo.time is required");
 
-  if (!/probable lineups|expected lineups|confirmed lineups/i.test(markdown) && !prediction.matchSeo?.lineups) {
-    errors.push("probable/confirmed lineups for both teams are required");
+  if (!/probable lineups|expected lineups|confirmed lineups|projected lineup was not available/i.test(markdown) && !prediction.matchSeo?.lineups) {
+    errors.push("lineup status or an explicit unavailability disclosure is required");
   }
   if (prediction.matchSeo?.lineups) {
     if (prediction.matchSeo.lineups.home.players.length !== 11 || prediction.matchSeo.lineups.away.players.length !== 11) {
@@ -146,8 +165,8 @@ export function validatePspEditorialStandard(prediction: EditorialPrediction) {
     }
   }
 
-  if (!/team news|injur(?:y|ies)|fitness|availability/i.test(markdown) && !prediction.matchSeo?.availability && !prediction.matchSeo?.teamNews) {
-    errors.push("team news / injuries / availability coverage is required");
+  if (!/team news|injur(?:y|ies)|fitness|availability|team-availability report was found/i.test(markdown) && !prediction.matchSeo?.availability && !prediction.matchSeo?.teamNews) {
+    errors.push("team-news status or an explicit unavailability disclosure is required");
   }
   if (!/suspension|suspended|eligibility/i.test(markdown)) errors.push("suspensions/eligibility check is required");
 
@@ -170,10 +189,13 @@ export function validatePspEditorialStandard(prediction: EditorialPrediction) {
   const coreHeadings = occurrences(markdown, /^#{1,6}\s*Statistical Core Predictions-Sports-Prime\s*$/gim);
   if (coreHeadings !== 1) errors.push(`exactly one Statistical Core source section is required (found ${coreHeadings})`);
   const rows = parseStatisticalCoreRows(markdown);
-  if (!rows.length) errors.push("Statistical Core table is missing or unreadable");
-  else errors.push(...validateStatisticalCoreRows(rows).map((error) => `Statistical Core: ${error}`));
+  if (rows.length) errors.push(...validatePartialStatisticalCoreRows(rows).map((error) => `Statistical Core: ${error}`));
+  else if (!/metrics?[\s\S]{0,120}(?:remain|were|was|are) unavailable|no sourced home.*away split/i.test(markdown)) errors.push("partial Statistical Core needs an explicit missing-data disclosure");
 
-  if (!/(?:Conflict Detector|Risks and Counter-Signals)/i.test(markdown)) errors.push("counter-signal / conflict analysis is required");
+  if (!/\b(?:risk|concern|danger|limitation|uncertain|however|although|despite|against the (?:bet|pick|selection))\b/i.test(markdown) &&
+      !(!naturalRiskPolicyApplies && /(?:Conflict Detector|Risks and Counter-Signals)/i.test(markdown))) {
+    errors.push("integrated risk / contrary-evidence analysis is required");
+  }
   if (!/implied probability/i.test(markdown) || !/1\s*\/\s*(?:odds|decimal|price)|1\s*\/\s*\d/i.test(markdown)) {
     errors.push("raw implied-probability explanation is required");
   }

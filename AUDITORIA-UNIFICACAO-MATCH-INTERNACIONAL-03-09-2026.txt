@@ -1,0 +1,50 @@
+PSP — UNIFICAÇÃO DAS PÁGINAS DE JOGO INTERNACIONAIS
+Data: 03/09/2026
+
+OBJETIVO
+Dar às páginas /[locale]/match/[slug] a mesma densidade estrutural da página inglesa,
+sem remover metadata, hreflang, Search Intent, SportsEvent ou editorial localizado.
+
+IMPLEMENTAÇÃO
+- Novo LocalizedMatchPageContent reutiliza a arquitetura visual/funcional do match inglês.
+- Topo agora inclui LeagueBadge, LiveMatchMeta, TeamBadge e placar final quando disponível.
+- Conteúdo inclui datas editoriais, autoria, metodologia, detalhes localizados, ads,
+  análise editorial, fontes, comentários, prediction sidebar, odds, resultado,
+  relacionados e categorias de ligas.
+- RelatedPredictions agora aceita locale e preserva links localizados quando a rota existe.
+- ArticleSources agora aceita locale e heading/label de acesso localizados.
+- O Statistical Core/lineups/availability continuam sendo renderizados pelo
+  LocalizedMatchDetails existente para pt-br/es/fr/de/it.
+- nl/tr continuam sem expansão indiscriminada de matches; rotas legacy continuam
+  respeitando o conjunto já existente.
+
+ARQUIVOS ALTERADOS
+src/app/[locale]/match/[slug]/page.tsx
+src/components/LocalizedMatchPageContent.tsx (novo)
+src/components/RelatedPredictions.tsx
+src/components/ArticleSources.tsx
+
+VALIDAÇÕES ESTÁTICAS
+- localized_page_uses_shared_body: PASS
+- team_badges_present: PASS
+- league_badge_present: PASS
+- live_match_meta_present: PASS
+- localized_semantic_details_present: PASS
+- article_byline_present: PASS
+- methodology_present: PASS
+- ads_present: PASS
+- sources_present: PASS
+- comments_present: PASS
+- related_present: PASS
+- league_categories_present: PASS
+- localized_related_links: PASS
+- sports_event_preserved: PASS
+- hreflang_preserved: PASS
+- search_intent_preserved: PASS
+
+VALIDAR NO PROJETO
+npm run typecheck
+npm run audit:international-seo
+npm run audit:prediction-first-search-intent
+npm run audit:search-intent-seo
+npm run build

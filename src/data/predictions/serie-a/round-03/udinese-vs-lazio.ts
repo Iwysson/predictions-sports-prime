@@ -36,9 +36,7 @@ These are probable, not confirmed. The official matchday teamsheet overrides eve
 
 ### HOME/AWAY Analysis
 
-For this fixture, the HOME and AWAY cells are the 2026/27 venue samples available before Round 3.
-
-Udinese's HOME line shows **1.98 xG** and 11 shots, while Lazio's AWAY line shows only 0.64 xG but a clean-sheet win. Lazio allowed **2.31 xGA** and 14 shots away, compared with Udinese's 1.49 home xGA. The result data therefore favour Lazio, but the chance-quality data give Udinese a credible route to avoid defeat.
+The table isolates Udinese at home and Lazio away; the chance-quality contrast in those pre-Round 3 venue samples is interpreted immediately afterward.
 
 ### Statistical Core Predictions-Sports-Prime
 | Metric | Udinese — HOME | Lazio — AWAY |

@@ -22,7 +22,7 @@ export const estorilVsArouca: EditorialPrediction = {
 
 ### Match Context
 
-Estoril's HOME sample shows **0.50 points per game**, 0.50 goals and 1.11 xG, while Arouca's AWAY sample shows 1.50 points, 0.50 goals and 0.51 xG. Estoril produce **16.0 shots per home match**, while Arouca allow 23.5 away. The corner profile is 6.5 for and 4.5 against for the host versus 2.0 for and 8.5 against for the visitor. For Estoril Praia to win, the relevant case is therefore the venue-specific process rather than table position alone.
+The HOME/AWAY table below isolates the venue samples used for the matchup; the interpretation follows the data instead of repeating it in both sections.
 
 ### Team News and Probable Lineups
 

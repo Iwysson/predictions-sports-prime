@@ -1,0 +1,6490 @@
+{
+  "schemaVersion": 1,
+  "snapshotGeneratedAt": "2026-09-06T23:06:46.930Z",
+  "competitions": {
+    "premier-league": {
+      "expectedClubs": 20,
+      "detectedCanonicalClubs": 20,
+      "rounds": 14,
+      "fixtures": 140,
+      "identities": [
+        {
+          "rawName": "Arsenal",
+          "normalizedKey": "arsenal",
+          "canonicalClubMapping": "arsenal",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Aston Villa",
+          "normalizedKey": "astonvilla",
+          "canonicalClubMapping": "astonvilla",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Bournemouth",
+          "normalizedKey": "bournemouth",
+          "canonicalClubMapping": "bournemouth",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Brentford",
+          "normalizedKey": "brentford",
+          "canonicalClubMapping": "brentford",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Brighton & Hove Albion",
+          "normalizedKey": "brightonandhovealbion",
+          "canonicalClubMapping": "brightonandhovealbion",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Chelsea",
+          "normalizedKey": "chelsea",
+          "canonicalClubMapping": "chelsea",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Coventry City",
+          "normalizedKey": "coventrycity",
+          "canonicalClubMapping": "coventrycity",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Crystal Palace",
+          "normalizedKey": "crystalpalace",
+          "canonicalClubMapping": "crystalpalace",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Everton",
+          "normalizedKey": "everton",
+          "canonicalClubMapping": "everton",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Fulham",
+          "normalizedKey": "fulham",
+          "canonicalClubMapping": "fulham",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Hull City",
+          "normalizedKey": "hullcity",
+          "canonicalClubMapping": "hullcity",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Ipswich Town",
+          "normalizedKey": "ipswichtown",
+          "canonicalClubMapping": "ipswichtown",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Leeds United",
+          "normalizedKey": "leedsunited",
+          "canonicalClubMapping": "leedsunited",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Liverpool",
+          "normalizedKey": "liverpool",
+          "canonicalClubMapping": "liverpool",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Manchester City",
+          "normalizedKey": "manchestercity",
+          "canonicalClubMapping": "manchestercity",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Manchester United",
+          "normalizedKey": "manchesterunited",
+          "canonicalClubMapping": "manchesterunited",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Newcastle United",
+          "normalizedKey": "newcastleunited",
+          "canonicalClubMapping": "newcastleunited",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Nottingham Forest",
+          "normalizedKey": "nottinghamforest",
+          "canonicalClubMapping": "nottinghamforest",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Sunderland",
+          "normalizedKey": "sunderland",
+          "canonicalClubMapping": "sunderland",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Tottenham Hotspur",
+          "normalizedKey": "tottenhamhotspur",
+          "canonicalClubMapping": "tottenhamhotspur",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "la-liga": {
+      "expectedClubs": 20,
+      "detectedCanonicalClubs": 20,
+      "rounds": 14,
+      "fixtures": 140,
+      "identities": [
+        {
+          "rawName": "Alavés",
+          "normalizedKey": "alaves",
+          "canonicalClubMapping": "alaves",
+          "appearances": 13,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Deportivo Alavés"
+          ]
+        },
+        {
+          "rawName": "Deportivo Alavés",
+          "normalizedKey": "alaves",
+          "canonicalClubMapping": "alaves",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Alavés"
+          ]
+        },
+        {
+          "rawName": "Athletic Club",
+          "normalizedKey": "athletic",
+          "canonicalClubMapping": "athletic",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Atlético Madrid",
+          "normalizedKey": "atleticomadrid",
+          "canonicalClubMapping": "atleticomadrid",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Barcelona",
+          "normalizedKey": "barcelona",
+          "canonicalClubMapping": "barcelona",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Celta Vigo",
+          "normalizedKey": "celtavigo",
+          "canonicalClubMapping": "celtavigo",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Deportivo",
+          "normalizedKey": "deportivolacoruna",
+          "canonicalClubMapping": "deportivolacoruna",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Elche",
+          "normalizedKey": "elche",
+          "canonicalClubMapping": "elche",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Espanyol",
+          "normalizedKey": "espanyol",
+          "canonicalClubMapping": "espanyol",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Getafe",
+          "normalizedKey": "getafe",
+          "canonicalClubMapping": "getafe",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Levante",
+          "normalizedKey": "levante",
+          "canonicalClubMapping": "levante",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Málaga",
+          "normalizedKey": "malaga",
+          "canonicalClubMapping": "malaga",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Osasuna",
+          "normalizedKey": "osasuna",
+          "canonicalClubMapping": "osasuna",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Racing de Santander",
+          "normalizedKey": "racingsantander",
+          "canonicalClubMapping": "racingsantander",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Racing Santander"
+          ]
+        },
+        {
+          "rawName": "Racing Santander",
+          "normalizedKey": "racingsantander",
+          "canonicalClubMapping": "racingsantander",
+          "appearances": 13,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Racing de Santander"
+          ]
+        },
+        {
+          "rawName": "Rayo Vallecano",
+          "normalizedKey": "rayovallecano",
+          "canonicalClubMapping": "rayovallecano",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Real Betis",
+          "normalizedKey": "realbetis",
+          "canonicalClubMapping": "realbetis",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Real Madrid",
+          "normalizedKey": "realmadrid",
+          "canonicalClubMapping": "realmadrid",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Real Sociedad",
+          "normalizedKey": "realsociedad",
+          "canonicalClubMapping": "realsociedad",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Sevilla",
+          "normalizedKey": "sevilla",
+          "canonicalClubMapping": "sevilla",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Valencia",
+          "normalizedKey": "valencia",
+          "canonicalClubMapping": "valencia",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Villarreal",
+          "normalizedKey": "villarreal",
+          "canonicalClubMapping": "villarreal",
+          "appearances": 14,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "bundesliga": {
+      "expectedClubs": 18,
+      "detectedCanonicalClubs": 18,
+      "rounds": 12,
+      "fixtures": 108,
+      "identities": [
+        {
+          "rawName": "Augsburg",
+          "normalizedKey": "augsburg",
+          "canonicalClubMapping": "augsburg",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Bayer Leverkusen",
+          "normalizedKey": "bayerleverkusen",
+          "canonicalClubMapping": "bayerleverkusen",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Bayern Munich",
+          "normalizedKey": "bayernmunich",
+          "canonicalClubMapping": "bayernmunich",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Cologne",
+          "normalizedKey": "cologne",
+          "canonicalClubMapping": "cologne",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Borussia Dortmund",
+          "normalizedKey": "dortmund",
+          "canonicalClubMapping": "dortmund",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "SV Elversberg",
+          "normalizedKey": "elversberg",
+          "canonicalClubMapping": "elversberg",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Eintracht Frankfurt",
+          "normalizedKey": "frankfurt",
+          "canonicalClubMapping": "frankfurt",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "SC Freiburg",
+          "normalizedKey": "freiburg",
+          "canonicalClubMapping": "freiburg",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Hamburg",
+          "normalizedKey": "hamburg",
+          "canonicalClubMapping": "hamburg",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Hamburg SV"
+          ]
+        },
+        {
+          "rawName": "Hamburg SV",
+          "normalizedKey": "hamburg",
+          "canonicalClubMapping": "hamburg",
+          "appearances": 11,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Hamburg"
+          ]
+        },
+        {
+          "rawName": "TSG Hoffenheim",
+          "normalizedKey": "hoffenheim",
+          "canonicalClubMapping": "hoffenheim",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "RB Leipzig",
+          "normalizedKey": "leipzig",
+          "canonicalClubMapping": "leipzig",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Mainz",
+          "normalizedKey": "mainz",
+          "canonicalClubMapping": "mainz",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Borussia Mönchengladbach",
+          "normalizedKey": "monchengladbach",
+          "canonicalClubMapping": "monchengladbach",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Paderborn",
+          "normalizedKey": "paderborn",
+          "canonicalClubMapping": "paderborn",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "SC Paderborn 07"
+          ]
+        },
+        {
+          "rawName": "SC Paderborn 07",
+          "normalizedKey": "paderborn",
+          "canonicalClubMapping": "paderborn",
+          "appearances": 11,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Paderborn"
+          ]
+        },
+        {
+          "rawName": "Schalke 04",
+          "normalizedKey": "schalke",
+          "canonicalClubMapping": "schalke",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Stuttgart",
+          "normalizedKey": "stuttgart",
+          "canonicalClubMapping": "stuttgart",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "VfB Stuttgart"
+          ]
+        },
+        {
+          "rawName": "VfB Stuttgart",
+          "normalizedKey": "stuttgart",
+          "canonicalClubMapping": "stuttgart",
+          "appearances": 11,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Stuttgart"
+          ]
+        },
+        {
+          "rawName": "1. FC Union Berlin",
+          "normalizedKey": "unionberlin",
+          "canonicalClubMapping": "unionberlin",
+          "appearances": 11,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Union Berlin"
+          ]
+        },
+        {
+          "rawName": "Union Berlin",
+          "normalizedKey": "unionberlin",
+          "canonicalClubMapping": "unionberlin",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "1. FC Union Berlin"
+          ]
+        },
+        {
+          "rawName": "Werder Bremen",
+          "normalizedKey": "werderbremen",
+          "canonicalClubMapping": "werderbremen",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "serie-a": {
+      "expectedClubs": 20,
+      "detectedCanonicalClubs": 20,
+      "rounds": 13,
+      "fixtures": 130,
+      "identities": [
+        {
+          "rawName": "Atalanta",
+          "normalizedKey": "atalanta",
+          "canonicalClubMapping": "atalanta",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Bologna",
+          "normalizedKey": "bologna",
+          "canonicalClubMapping": "bologna",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Cagliari",
+          "normalizedKey": "cagliari",
+          "canonicalClubMapping": "cagliari",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Como",
+          "normalizedKey": "como",
+          "canonicalClubMapping": "como",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Fiorentina",
+          "normalizedKey": "fiorentina",
+          "canonicalClubMapping": "fiorentina",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Frosinone",
+          "normalizedKey": "frosinone",
+          "canonicalClubMapping": "frosinone",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Genoa",
+          "normalizedKey": "genoa",
+          "canonicalClubMapping": "genoa",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Inter Milan",
+          "normalizedKey": "internazionale",
+          "canonicalClubMapping": "internazionale",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Internazionale"
+          ]
+        },
+        {
+          "rawName": "Internazionale",
+          "normalizedKey": "internazionale",
+          "canonicalClubMapping": "internazionale",
+          "appearances": 12,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Inter Milan"
+          ]
+        },
+        {
+          "rawName": "Juventus",
+          "normalizedKey": "juventus",
+          "canonicalClubMapping": "juventus",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Lazio",
+          "normalizedKey": "lazio",
+          "canonicalClubMapping": "lazio",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Lecce",
+          "normalizedKey": "lecce",
+          "canonicalClubMapping": "lecce",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "AC Milan",
+          "normalizedKey": "milan",
+          "canonicalClubMapping": "milan",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Monza",
+          "normalizedKey": "monza",
+          "canonicalClubMapping": "monza",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Napoli",
+          "normalizedKey": "napoli",
+          "canonicalClubMapping": "napoli",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Parma",
+          "normalizedKey": "parma",
+          "canonicalClubMapping": "parma",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "AS Roma",
+          "normalizedKey": "roma",
+          "canonicalClubMapping": "roma",
+          "appearances": 12,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Roma"
+          ]
+        },
+        {
+          "rawName": "Roma",
+          "normalizedKey": "roma",
+          "canonicalClubMapping": "roma",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "AS Roma"
+          ]
+        },
+        {
+          "rawName": "Sassuolo",
+          "normalizedKey": "sassuolo",
+          "canonicalClubMapping": "sassuolo",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Torino",
+          "normalizedKey": "torino",
+          "canonicalClubMapping": "torino",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Udinese",
+          "normalizedKey": "udinese",
+          "canonicalClubMapping": "udinese",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Venezia",
+          "normalizedKey": "venezia",
+          "canonicalClubMapping": "venezia",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "liga-portugal": {
+      "expectedClubs": 18,
+      "detectedCanonicalClubs": 18,
+      "rounds": 12,
+      "fixtures": 108,
+      "identities": [
+        {
+          "rawName": "Académico de Viseu",
+          "normalizedKey": "academicoviseu",
+          "canonicalClubMapping": "academicoviseu",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Alverca",
+          "normalizedKey": "alverca",
+          "canonicalClubMapping": "alverca",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Arouca",
+          "normalizedKey": "arouca",
+          "canonicalClubMapping": "arouca",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Benfica",
+          "normalizedKey": "benfica",
+          "canonicalClubMapping": "benfica",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Braga",
+          "normalizedKey": "braga",
+          "canonicalClubMapping": "braga",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Casa Pia",
+          "normalizedKey": "casapia",
+          "canonicalClubMapping": "casapia",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Estoril",
+          "normalizedKey": "estoril",
+          "canonicalClubMapping": "estoril",
+          "appearances": 11,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Estoril Praia"
+          ]
+        },
+        {
+          "rawName": "Estoril Praia",
+          "normalizedKey": "estoril",
+          "canonicalClubMapping": "estoril",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Estoril"
+          ]
+        },
+        {
+          "rawName": "Estrela",
+          "normalizedKey": "estreladaamadora",
+          "canonicalClubMapping": "estreladaamadora",
+          "appearances": 11,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Estrela Amadora"
+          ]
+        },
+        {
+          "rawName": "Estrela Amadora",
+          "normalizedKey": "estreladaamadora",
+          "canonicalClubMapping": "estreladaamadora",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Estrela"
+          ]
+        },
+        {
+          "rawName": "Famalicao",
+          "normalizedKey": "famalicao",
+          "canonicalClubMapping": "famalicao",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Gil Vicente",
+          "normalizedKey": "gilvicente",
+          "canonicalClubMapping": "gilvicente",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Maritimo",
+          "normalizedKey": "maritimo",
+          "canonicalClubMapping": "maritimo",
+          "appearances": 11,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Marítimo"
+          ]
+        },
+        {
+          "rawName": "Marítimo",
+          "normalizedKey": "maritimo",
+          "canonicalClubMapping": "maritimo",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Maritimo"
+          ]
+        },
+        {
+          "rawName": "Moreirense",
+          "normalizedKey": "moreirense",
+          "canonicalClubMapping": "moreirense",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "C.D. Nacional",
+          "normalizedKey": "nacional",
+          "canonicalClubMapping": "nacional",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Porto",
+          "normalizedKey": "porto",
+          "canonicalClubMapping": "porto",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Rio Ave",
+          "normalizedKey": "rioave",
+          "canonicalClubMapping": "rioave",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Santa Clara",
+          "normalizedKey": "santaclara",
+          "canonicalClubMapping": "santaclara",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Sporting CP",
+          "normalizedKey": "sportingcp",
+          "canonicalClubMapping": "sportingcp",
+          "appearances": 12,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Vitória de Guimaraes",
+          "normalizedKey": "vitoriaguimaraes",
+          "canonicalClubMapping": "vitoriaguimaraes",
+          "appearances": 11,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Vitória de Guimarães"
+          ]
+        },
+        {
+          "rawName": "Vitória de Guimarães",
+          "normalizedKey": "vitoriaguimaraes",
+          "canonicalClubMapping": "vitoriaguimaraes",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Vitória de Guimaraes"
+          ]
+        }
+      ]
+    },
+    "ligue-1": {
+      "expectedClubs": 18,
+      "detectedCanonicalClubs": 18,
+      "rounds": 13,
+      "fixtures": 117,
+      "identities": [
+        {
+          "rawName": "Angers",
+          "normalizedKey": "angers",
+          "canonicalClubMapping": "angers",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "AJ Auxerre",
+          "normalizedKey": "auxerre",
+          "canonicalClubMapping": "auxerre",
+          "appearances": 12,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Auxerre"
+          ]
+        },
+        {
+          "rawName": "Auxerre",
+          "normalizedKey": "auxerre",
+          "canonicalClubMapping": "auxerre",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "AJ Auxerre"
+          ]
+        },
+        {
+          "rawName": "Brest",
+          "normalizedKey": "brest",
+          "canonicalClubMapping": "brest",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Le Havre AC",
+          "normalizedKey": "lehavre",
+          "canonicalClubMapping": "lehavre",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Le Mans",
+          "normalizedKey": "lemans",
+          "canonicalClubMapping": "lemans",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Lens",
+          "normalizedKey": "lens",
+          "canonicalClubMapping": "lens",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Lille",
+          "normalizedKey": "lille",
+          "canonicalClubMapping": "lille",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Lorient",
+          "normalizedKey": "lorient",
+          "canonicalClubMapping": "lorient",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Lyon",
+          "normalizedKey": "lyon",
+          "canonicalClubMapping": "lyon",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Marseille",
+          "normalizedKey": "marseille",
+          "canonicalClubMapping": "marseille",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "AS Monaco",
+          "normalizedKey": "monaco",
+          "canonicalClubMapping": "monaco",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Nice",
+          "normalizedKey": "nice",
+          "canonicalClubMapping": "nice",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Paris",
+          "normalizedKey": "paris",
+          "canonicalClubMapping": "paris",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Paris Saint-Germain",
+          "normalizedKey": "parissaintgermain",
+          "canonicalClubMapping": "parissaintgermain",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Stade Rennais",
+          "normalizedKey": "rennes",
+          "canonicalClubMapping": "rennes",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Strasbourg",
+          "normalizedKey": "strasbourg",
+          "canonicalClubMapping": "strasbourg",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Toulouse",
+          "normalizedKey": "toulouse",
+          "canonicalClubMapping": "toulouse",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Troyes",
+          "normalizedKey": "troyes",
+          "canonicalClubMapping": "troyes",
+          "appearances": 13,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "eredivisie": {
+      "expectedClubs": 18,
+      "detectedCanonicalClubs": 18,
+      "rounds": 15,
+      "fixtures": 135,
+      "identities": [
+        {
+          "rawName": "ADO Den Haag",
+          "normalizedKey": "adodenhaag",
+          "canonicalClubMapping": "adodenhaag",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Ajax Amsterdam",
+          "normalizedKey": "ajax",
+          "canonicalClubMapping": "ajax",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "AZ Alkmaar",
+          "normalizedKey": "azalkmaar",
+          "canonicalClubMapping": "azalkmaar",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Cambuur",
+          "normalizedKey": "cambuur",
+          "canonicalClubMapping": "cambuur",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "SC Cambuur"
+          ]
+        },
+        {
+          "rawName": "SC Cambuur",
+          "normalizedKey": "cambuur",
+          "canonicalClubMapping": "cambuur",
+          "appearances": 14,
+          "rounds": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Cambuur"
+          ]
+        },
+        {
+          "rawName": "Excelsior",
+          "normalizedKey": "excelsior",
+          "canonicalClubMapping": "excelsior",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Feyenoord Rotterdam",
+          "normalizedKey": "feyenoord",
+          "canonicalClubMapping": "feyenoord",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Fortuna Sittard",
+          "normalizedKey": "fortunasittard",
+          "canonicalClubMapping": "fortunasittard",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Go Ahead Eagles",
+          "normalizedKey": "goaheadeagles",
+          "canonicalClubMapping": "goaheadeagles",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn",
+            "fotmob",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Groningen",
+          "normalizedKey": "groningen",
+          "canonicalClubMapping": "groningen",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Heerenveen",
+          "normalizedKey": "heerenveen",
+          "canonicalClubMapping": "heerenveen",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "NEC Nijmegen",
+          "normalizedKey": "nec",
+          "canonicalClubMapping": "nec",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "PEC Zwolle",
+          "normalizedKey": "peczwolle",
+          "canonicalClubMapping": "peczwolle",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "PSV Eindhoven",
+          "normalizedKey": "psv",
+          "canonicalClubMapping": "psv",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Sparta Rotterdam",
+          "normalizedKey": "spartarotterdam",
+          "canonicalClubMapping": "spartarotterdam",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Telstar",
+          "normalizedKey": "telstar",
+          "canonicalClubMapping": "telstar",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Twente",
+          "normalizedKey": "twente",
+          "canonicalClubMapping": "twente",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Utrecht",
+          "normalizedKey": "utrecht",
+          "canonicalClubMapping": "utrecht",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Willem II",
+          "normalizedKey": "willemii",
+          "canonicalClubMapping": "willemii",
+          "appearances": 15,
+          "rounds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "sources": [
+            "espn",
+            "thesportsdb"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "brasileirao-serie-a": {
+      "expectedClubs": 20,
+      "detectedCanonicalClubs": 20,
+      "rounds": 3,
+      "fixtures": 30,
+      "identities": [
+        {
+          "rawName": "Athletico-PR",
+          "normalizedKey": "athleticoparanaense",
+          "canonicalClubMapping": "athleticoparanaense",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Atlético-MG",
+          "normalizedKey": "atleticomineiro",
+          "canonicalClubMapping": "atleticomineiro",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Bahia",
+          "normalizedKey": "bahia",
+          "canonicalClubMapping": "bahia",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "editorial-package",
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Botafogo",
+          "normalizedKey": "botafogo",
+          "canonicalClubMapping": "botafogo",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "editorial-package",
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Chapecoense",
+          "normalizedKey": "chapecoense",
+          "canonicalClubMapping": "chapecoense",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "editorial-package",
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Corinthians",
+          "normalizedKey": "corinthians",
+          "canonicalClubMapping": "corinthians",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "editorial-package",
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Coritiba",
+          "normalizedKey": "coritiba",
+          "canonicalClubMapping": "coritiba",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Cruzeiro",
+          "normalizedKey": "cruzeiro",
+          "canonicalClubMapping": "cruzeiro",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Flamengo",
+          "normalizedKey": "flamengo",
+          "canonicalClubMapping": "flamengo",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Fluminense",
+          "normalizedKey": "fluminense",
+          "canonicalClubMapping": "fluminense",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "editorial-package",
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Grêmio",
+          "normalizedKey": "gremio",
+          "canonicalClubMapping": "gremio",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "editorial-package",
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Internacional",
+          "normalizedKey": "internacional",
+          "canonicalClubMapping": "internacional",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Mirassol",
+          "normalizedKey": "mirassol",
+          "canonicalClubMapping": "mirassol",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Palmeiras",
+          "normalizedKey": "palmeiras",
+          "canonicalClubMapping": "palmeiras",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "editorial-package",
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Red Bull Bragantino",
+          "normalizedKey": "redbullbragantino",
+          "canonicalClubMapping": "redbullbragantino",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "editorial-package",
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Remo",
+          "normalizedKey": "remo",
+          "canonicalClubMapping": "remo",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Santos",
+          "normalizedKey": "santos",
+          "canonicalClubMapping": "santos",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "São Paulo",
+          "normalizedKey": "saopaulo",
+          "canonicalClubMapping": "saopaulo",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Vasco da Gama",
+          "normalizedKey": "vascodagama",
+          "canonicalClubMapping": "vascodagama",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "editorial-package",
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Vitória",
+          "normalizedKey": "vitoria",
+          "canonicalClubMapping": "vitoria",
+          "appearances": 3,
+          "rounds": [
+            24,
+            25,
+            26
+          ],
+          "sources": [
+            "editorial-package",
+            "espn"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "copa-do-brasil": {
+      "expectedClubs": 8,
+      "detectedCanonicalClubs": 8,
+      "rounds": 2,
+      "fixtures": 8,
+      "identities": [
+        {
+          "rawName": "Atlético Mineiro",
+          "normalizedKey": "atleticomineiro",
+          "canonicalClubMapping": "atleticomineiro",
+          "appearances": 1,
+          "rounds": [
+            2
+          ],
+          "sources": [
+            "cbf"
+          ],
+          "possibleAliases": [
+            "Atlético-MG"
+          ]
+        },
+        {
+          "rawName": "Atlético-MG",
+          "normalizedKey": "atleticomineiro",
+          "canonicalClubMapping": "atleticomineiro",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Atlético Mineiro"
+          ]
+        },
+        {
+          "rawName": "Cruzeiro",
+          "normalizedKey": "cruzeiro",
+          "canonicalClubMapping": "cruzeiro",
+          "appearances": 2,
+          "rounds": [
+            1,
+            2
+          ],
+          "sources": [
+            "cbf",
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Grêmio",
+          "normalizedKey": "gremio",
+          "canonicalClubMapping": "gremio",
+          "appearances": 2,
+          "rounds": [
+            1,
+            2
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Internacional",
+          "normalizedKey": "internacional",
+          "canonicalClubMapping": "internacional",
+          "appearances": 2,
+          "rounds": [
+            1,
+            2
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Palmeiras",
+          "normalizedKey": "palmeiras",
+          "canonicalClubMapping": "palmeiras",
+          "appearances": 2,
+          "rounds": [
+            1,
+            2
+          ],
+          "sources": [
+            "cbf",
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Santos",
+          "normalizedKey": "santos",
+          "canonicalClubMapping": "santos",
+          "appearances": 2,
+          "rounds": [
+            1,
+            2
+          ],
+          "sources": [
+            "cbf",
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Vasco da Gama",
+          "normalizedKey": "vascodagama",
+          "canonicalClubMapping": "vascodagama",
+          "appearances": 2,
+          "rounds": [
+            1,
+            2
+          ],
+          "sources": [
+            "cbf",
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Vitória",
+          "normalizedKey": "vitoria",
+          "canonicalClubMapping": "vitoria",
+          "appearances": 2,
+          "rounds": [
+            1,
+            2
+          ],
+          "sources": [
+            "cbf",
+            "espn"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "efl-cup": {
+      "expectedClubs": 24,
+      "detectedCanonicalClubs": 24,
+      "rounds": 1,
+      "fixtures": 12,
+      "identities": [
+        {
+          "rawName": "Birmingham City",
+          "normalizedKey": "birminghamcity",
+          "canonicalClubMapping": "birminghamcity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Brentford",
+          "normalizedKey": "brentford",
+          "canonicalClubMapping": "brentford",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Cardiff City",
+          "normalizedKey": "cardiffcity",
+          "canonicalClubMapping": "cardiffcity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Charlton Athletic",
+          "normalizedKey": "charltonathletic",
+          "canonicalClubMapping": "charltonathletic",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Chelsea",
+          "normalizedKey": "chelsea",
+          "canonicalClubMapping": "chelsea",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Doncaster Rovers",
+          "normalizedKey": "doncasterrovers",
+          "canonicalClubMapping": "doncasterrovers",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Fulham",
+          "normalizedKey": "fulham",
+          "canonicalClubMapping": "fulham",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Ipswich Town",
+          "normalizedKey": "ipswichtown",
+          "canonicalClubMapping": "ipswichtown",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Leeds United",
+          "normalizedKey": "leedsunited",
+          "canonicalClubMapping": "leedsunited",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Leicester City",
+          "normalizedKey": "leicestercity",
+          "canonicalClubMapping": "leicestercity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Luton Town",
+          "normalizedKey": "lutontown",
+          "canonicalClubMapping": "lutontown",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Middlesbrough",
+          "normalizedKey": "middlesbrough",
+          "canonicalClubMapping": "middlesbrough",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Newcastle United",
+          "normalizedKey": "newcastleunited",
+          "canonicalClubMapping": "newcastleunited",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Norwich City",
+          "normalizedKey": "norwichcity",
+          "canonicalClubMapping": "norwichcity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Nottingham Forest",
+          "normalizedKey": "nottinghamforest",
+          "canonicalClubMapping": "nottinghamforest",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Peterborough United",
+          "normalizedKey": "peterboroughunited",
+          "canonicalClubMapping": "peterboroughunited",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Sheffield Wednesday",
+          "normalizedKey": "sheffieldwednesday",
+          "canonicalClubMapping": "sheffieldwednesday",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Southampton",
+          "normalizedKey": "southampton",
+          "canonicalClubMapping": "southampton",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Tottenham Hotspur",
+          "normalizedKey": "tottenhamhotspur",
+          "canonicalClubMapping": "tottenhamhotspur",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Watford",
+          "normalizedKey": "watford",
+          "canonicalClubMapping": "watford",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "West Bromwich Albion",
+          "normalizedKey": "westbromwichalbion",
+          "canonicalClubMapping": "westbromwichalbion",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "West Ham United",
+          "normalizedKey": "westham",
+          "canonicalClubMapping": "westham",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Wimbledon",
+          "normalizedKey": "wimbledon",
+          "canonicalClubMapping": "wimbledon",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Wolverhampton Wanderers",
+          "normalizedKey": "wolverhamptonwanderers",
+          "canonicalClubMapping": "wolverhamptonwanderers",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "championship": {
+      "expectedClubs": 24,
+      "detectedCanonicalClubs": 24,
+      "rounds": 1,
+      "fixtures": 12,
+      "identities": [
+        {
+          "rawName": "Birmingham City",
+          "normalizedKey": "birminghamcity",
+          "canonicalClubMapping": "birminghamcity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Blackburn Rovers",
+          "normalizedKey": "blackburnrovers",
+          "canonicalClubMapping": "blackburnrovers",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Bolton Wanderers",
+          "normalizedKey": "boltonwanderers",
+          "canonicalClubMapping": "boltonwanderers",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Bristol City",
+          "normalizedKey": "bristolcity",
+          "canonicalClubMapping": "bristolcity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Burnley",
+          "normalizedKey": "burnley",
+          "canonicalClubMapping": "burnley",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Cardiff City",
+          "normalizedKey": "cardiffcity",
+          "canonicalClubMapping": "cardiffcity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Charlton Athletic",
+          "normalizedKey": "charltonathletic",
+          "canonicalClubMapping": "charltonathletic",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Derby County",
+          "normalizedKey": "derbycounty",
+          "canonicalClubMapping": "derbycounty",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Lincoln City",
+          "normalizedKey": "lincolncity",
+          "canonicalClubMapping": "lincolncity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Middlesbrough",
+          "normalizedKey": "middlesbrough",
+          "canonicalClubMapping": "middlesbrough",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Millwall",
+          "normalizedKey": "millwall",
+          "canonicalClubMapping": "millwall",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Norwich City",
+          "normalizedKey": "norwichcity",
+          "canonicalClubMapping": "norwichcity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Portsmouth",
+          "normalizedKey": "portsmouth",
+          "canonicalClubMapping": "portsmouth",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Preston North End",
+          "normalizedKey": "prestonnorthend",
+          "canonicalClubMapping": "prestonnorthend",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Queens Park Rangers",
+          "normalizedKey": "queensparkrangers",
+          "canonicalClubMapping": "queensparkrangers",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Sheffield United",
+          "normalizedKey": "sheffieldunited",
+          "canonicalClubMapping": "sheffieldunited",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Southampton",
+          "normalizedKey": "southampton",
+          "canonicalClubMapping": "southampton",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Stoke City",
+          "normalizedKey": "stokecity",
+          "canonicalClubMapping": "stokecity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Swansea City",
+          "normalizedKey": "swanseacity",
+          "canonicalClubMapping": "swanseacity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Watford",
+          "normalizedKey": "watford",
+          "canonicalClubMapping": "watford",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "West Bromwich Albion",
+          "normalizedKey": "westbromwichalbion",
+          "canonicalClubMapping": "westbromwichalbion",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "West Ham United",
+          "normalizedKey": "westham",
+          "canonicalClubMapping": "westham",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Wolverhampton Wanderers",
+          "normalizedKey": "wolverhamptonwanderers",
+          "canonicalClubMapping": "wolverhamptonwanderers",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Wrexham",
+          "normalizedKey": "wrexham",
+          "canonicalClubMapping": "wrexham",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "super-lig": {
+      "expectedClubs": 18,
+      "detectedCanonicalClubs": 18,
+      "rounds": 2,
+      "fixtures": 18,
+      "identities": [
+        {
+          "rawName": "Alanyaspor",
+          "normalizedKey": "alanyaspor",
+          "canonicalClubMapping": "alanyaspor",
+          "appearances": 2,
+          "rounds": [
+            3,
+            4
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Amedspor",
+          "normalizedKey": "amedsk",
+          "canonicalClubMapping": "amedsk",
+          "appearances": 2,
+          "rounds": [
+            3,
+            4
+          ],
+          "sources": [
+            "espn",
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "BeÅŸiktaÅŸ",
+          "normalizedKey": "besiktas",
+          "canonicalClubMapping": "besiktas",
+          "appearances": 1,
+          "rounds": [
+            3
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "Besiktas"
+          ]
+        },
+        {
+          "rawName": "Besiktas",
+          "normalizedKey": "besiktas",
+          "canonicalClubMapping": "besiktas",
+          "appearances": 1,
+          "rounds": [
+            4
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "BeÅŸiktaÅŸ"
+          ]
+        },
+        {
+          "rawName": "Çorum FK",
+          "normalizedKey": "corumfk",
+          "canonicalClubMapping": "corumfk",
+          "appearances": 2,
+          "rounds": [
+            3,
+            4
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Erzurum BB",
+          "normalizedKey": "erzurumspor",
+          "canonicalClubMapping": "erzurumspor",
+          "appearances": 1,
+          "rounds": [
+            4
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "Erzurumspor"
+          ]
+        },
+        {
+          "rawName": "Erzurumspor",
+          "normalizedKey": "erzurumspor",
+          "canonicalClubMapping": "erzurumspor",
+          "appearances": 1,
+          "rounds": [
+            3
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "Erzurum BB"
+          ]
+        },
+        {
+          "rawName": "Eyupspor",
+          "normalizedKey": "eyupspor",
+          "canonicalClubMapping": "eyupspor",
+          "appearances": 1,
+          "rounds": [
+            4
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "Eyüpspor"
+          ]
+        },
+        {
+          "rawName": "Eyüpspor",
+          "normalizedKey": "eyupspor",
+          "canonicalClubMapping": "eyupspor",
+          "appearances": 1,
+          "rounds": [
+            3
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "Eyupspor"
+          ]
+        },
+        {
+          "rawName": "Fenerbahce",
+          "normalizedKey": "fenerbahce",
+          "canonicalClubMapping": "fenerbahce",
+          "appearances": 1,
+          "rounds": [
+            4
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "Fenerbahçe"
+          ]
+        },
+        {
+          "rawName": "Fenerbahçe",
+          "normalizedKey": "fenerbahce",
+          "canonicalClubMapping": "fenerbahce",
+          "appearances": 1,
+          "rounds": [
+            3
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "Fenerbahce"
+          ]
+        },
+        {
+          "rawName": "Galatasaray",
+          "normalizedKey": "galatasaray",
+          "canonicalClubMapping": "galatasaray",
+          "appearances": 2,
+          "rounds": [
+            3,
+            4
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Gaziantep FK",
+          "normalizedKey": "gaziantepfk",
+          "canonicalClubMapping": "gaziantepfk",
+          "appearances": 2,
+          "rounds": [
+            3,
+            4
+          ],
+          "sources": [
+            "espn",
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Genclerbirligi",
+          "normalizedKey": "genclerbirligi",
+          "canonicalClubMapping": "genclerbirligi",
+          "appearances": 1,
+          "rounds": [
+            4
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "Gençlerbirliği"
+          ]
+        },
+        {
+          "rawName": "Gençlerbirliği",
+          "normalizedKey": "genclerbirligi",
+          "canonicalClubMapping": "genclerbirligi",
+          "appearances": 1,
+          "rounds": [
+            3
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "Genclerbirligi"
+          ]
+        },
+        {
+          "rawName": "Goztepe",
+          "normalizedKey": "goztepe",
+          "canonicalClubMapping": "goztepe",
+          "appearances": 1,
+          "rounds": [
+            4
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Göztepe"
+          ]
+        },
+        {
+          "rawName": "Göztepe",
+          "normalizedKey": "goztepe",
+          "canonicalClubMapping": "goztepe",
+          "appearances": 1,
+          "rounds": [
+            3
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "Goztepe"
+          ]
+        },
+        {
+          "rawName": "Ä°stanbul BaÅŸakÅŸehir",
+          "normalizedKey": "istanbulbasaksehir",
+          "canonicalClubMapping": "istanbulbasaksehir",
+          "appearances": 1,
+          "rounds": [
+            3
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": [
+            "Istanbul Basaksehir"
+          ]
+        },
+        {
+          "rawName": "Istanbul Basaksehir",
+          "normalizedKey": "istanbulbasaksehir",
+          "canonicalClubMapping": "istanbulbasaksehir",
+          "appearances": 1,
+          "rounds": [
+            4
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Ä°stanbul BaÅŸakÅŸehir"
+          ]
+        },
+        {
+          "rawName": "KasÄ±mpaÅŸa",
+          "normalizedKey": "kasimpasa",
+          "canonicalClubMapping": "kasimpasa",
+          "appearances": 1,
+          "rounds": [
+            3
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": [
+            "Kasimpasa"
+          ]
+        },
+        {
+          "rawName": "Kasimpasa",
+          "normalizedKey": "kasimpasa",
+          "canonicalClubMapping": "kasimpasa",
+          "appearances": 1,
+          "rounds": [
+            4
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "KasÄ±mpaÅŸa"
+          ]
+        },
+        {
+          "rawName": "Kocaelispor",
+          "normalizedKey": "kocaelispor",
+          "canonicalClubMapping": "kocaelispor",
+          "appearances": 2,
+          "rounds": [
+            3,
+            4
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Konyaspor",
+          "normalizedKey": "konyaspor",
+          "canonicalClubMapping": "konyaspor",
+          "appearances": 2,
+          "rounds": [
+            3,
+            4
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Caykur Rizespor",
+          "normalizedKey": "rizespor",
+          "canonicalClubMapping": "rizespor",
+          "appearances": 1,
+          "rounds": [
+            4
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": [
+            "Çaykur Rizespor"
+          ]
+        },
+        {
+          "rawName": "Çaykur Rizespor",
+          "normalizedKey": "rizespor",
+          "canonicalClubMapping": "rizespor",
+          "appearances": 1,
+          "rounds": [
+            3
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": [
+            "Caykur Rizespor"
+          ]
+        },
+        {
+          "rawName": "Samsunspor",
+          "normalizedKey": "samsunspor",
+          "canonicalClubMapping": "samsunspor",
+          "appearances": 2,
+          "rounds": [
+            3,
+            4
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Trabzonspor",
+          "normalizedKey": "trabzonspor",
+          "canonicalClubMapping": "trabzonspor",
+          "appearances": 2,
+          "rounds": [
+            3,
+            4
+          ],
+          "sources": [
+            "fotmob",
+            "snapshot"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "scottish-premiership": {
+      "expectedClubs": 12,
+      "detectedCanonicalClubs": 12,
+      "rounds": 1,
+      "fixtures": 6,
+      "identities": [
+        {
+          "rawName": "Aberdeen",
+          "normalizedKey": "aberdeen",
+          "canonicalClubMapping": "aberdeen",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Celtic",
+          "normalizedKey": "celtic",
+          "canonicalClubMapping": "celtic",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Dundee",
+          "normalizedKey": "dundee",
+          "canonicalClubMapping": "dundee",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Dundee United",
+          "normalizedKey": "dundeeunited",
+          "canonicalClubMapping": "dundeeunited",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Falkirk",
+          "normalizedKey": "falkirk",
+          "canonicalClubMapping": "falkirk",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Hearts",
+          "normalizedKey": "hearts",
+          "canonicalClubMapping": "hearts",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Hibernian",
+          "normalizedKey": "hibernian",
+          "canonicalClubMapping": "hibernian",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Kilmarnock",
+          "normalizedKey": "kilmarnock",
+          "canonicalClubMapping": "kilmarnock",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Motherwell",
+          "normalizedKey": "motherwell",
+          "canonicalClubMapping": "motherwell",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Rangers",
+          "normalizedKey": "rangers",
+          "canonicalClubMapping": "rangers",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "St Johnstone",
+          "normalizedKey": "stjohnstone",
+          "canonicalClubMapping": "stjohnstone",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "St Mirren",
+          "normalizedKey": "stmirren",
+          "canonicalClubMapping": "stmirren",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "eliteserien": {
+      "expectedClubs": 16,
+      "detectedCanonicalClubs": 16,
+      "rounds": 1,
+      "fixtures": 8,
+      "identities": [
+        {
+          "rawName": "Aalesund",
+          "normalizedKey": "aalesund",
+          "canonicalClubMapping": "aalesund",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Bodø/Glimt",
+          "normalizedKey": "bodoglimt",
+          "canonicalClubMapping": "bodoglimt",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Brann",
+          "normalizedKey": "brann",
+          "canonicalClubMapping": "brann",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Fredrikstad",
+          "normalizedKey": "fredrikstad",
+          "canonicalClubMapping": "fredrikstad",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "HamKam",
+          "normalizedKey": "hamkam",
+          "canonicalClubMapping": "hamkam",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "KFUM Oslo",
+          "normalizedKey": "kfumoslo",
+          "canonicalClubMapping": "kfumoslo",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Kristiansund",
+          "normalizedKey": "kristiansund",
+          "canonicalClubMapping": "kristiansund",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Lillestrøm",
+          "normalizedKey": "lillestrm",
+          "canonicalClubMapping": "lillestrm",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Molde",
+          "normalizedKey": "molde",
+          "canonicalClubMapping": "molde",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Rosenborg",
+          "normalizedKey": "rosenborg",
+          "canonicalClubMapping": "rosenborg",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Sandefjord",
+          "normalizedKey": "sandefjord",
+          "canonicalClubMapping": "sandefjord",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Sarpsborg 08",
+          "normalizedKey": "sarpsborg08",
+          "canonicalClubMapping": "sarpsborg08",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Start",
+          "normalizedKey": "start",
+          "canonicalClubMapping": "start",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Tromsø",
+          "normalizedKey": "troms",
+          "canonicalClubMapping": "troms",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Vålerenga",
+          "normalizedKey": "valerenga",
+          "canonicalClubMapping": "valerenga",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Viking",
+          "normalizedKey": "viking",
+          "canonicalClubMapping": "viking",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "fotmob"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "mls": {
+      "expectedClubs": 30,
+      "detectedCanonicalClubs": 30,
+      "rounds": 1,
+      "fixtures": 15,
+      "identities": [
+        {
+          "rawName": "Atlanta United",
+          "normalizedKey": "atlantaunited",
+          "canonicalClubMapping": "atlantaunited",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Austin",
+          "normalizedKey": "austin",
+          "canonicalClubMapping": "austin",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "CF Montréal",
+          "normalizedKey": "cfmontreal",
+          "canonicalClubMapping": "cfmontreal",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Charlotte",
+          "normalizedKey": "charlotte",
+          "canonicalClubMapping": "charlotte",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Chicago Fire",
+          "normalizedKey": "chicagofire",
+          "canonicalClubMapping": "chicagofire",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Cincinnati",
+          "normalizedKey": "cincinnati",
+          "canonicalClubMapping": "cincinnati",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Colorado Rapids",
+          "normalizedKey": "coloradorapids",
+          "canonicalClubMapping": "coloradorapids",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Columbus Crew",
+          "normalizedKey": "columbuscrew",
+          "canonicalClubMapping": "columbuscrew",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Dallas",
+          "normalizedKey": "dallas",
+          "canonicalClubMapping": "dallas",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "D.C. United",
+          "normalizedKey": "dcunited",
+          "canonicalClubMapping": "dcunited",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Houston Dynamo",
+          "normalizedKey": "houstondynamo",
+          "canonicalClubMapping": "houstondynamo",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Inter Miami",
+          "normalizedKey": "intermiami",
+          "canonicalClubMapping": "intermiami",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "LA Galaxy",
+          "normalizedKey": "lagalaxy",
+          "canonicalClubMapping": "lagalaxy",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Los Angeles FC",
+          "normalizedKey": "losangeles",
+          "canonicalClubMapping": "losangeles",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "editorial-manual"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Minnesota United",
+          "normalizedKey": "minnesotaunited",
+          "canonicalClubMapping": "minnesotaunited",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Nashville SC",
+          "normalizedKey": "nashvillesc",
+          "canonicalClubMapping": "nashvillesc",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "New England Revolution",
+          "normalizedKey": "newenglandrevolution",
+          "canonicalClubMapping": "newenglandrevolution",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "New York City",
+          "normalizedKey": "newyorkcity",
+          "canonicalClubMapping": "newyorkcity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "New York Red Bulls",
+          "normalizedKey": "newyorkredbulls",
+          "canonicalClubMapping": "newyorkredbulls",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "editorial-manual"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Orlando City",
+          "normalizedKey": "orlandocity",
+          "canonicalClubMapping": "orlandocity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "editorial-manual"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Philadelphia Union",
+          "normalizedKey": "philadelphiaunion",
+          "canonicalClubMapping": "philadelphiaunion",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Portland Timbers",
+          "normalizedKey": "portlandtimbers",
+          "canonicalClubMapping": "portlandtimbers",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Real Salt Lake",
+          "normalizedKey": "realsaltlake",
+          "canonicalClubMapping": "realsaltlake",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "editorial-manual"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "San Diego FC",
+          "normalizedKey": "sandiego",
+          "canonicalClubMapping": "sandiego",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "editorial-manual"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "San Jose Earthquakes",
+          "normalizedKey": "sanjoseearthquakes",
+          "canonicalClubMapping": "sanjoseearthquakes",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Seattle Sounders",
+          "normalizedKey": "seattlesounders",
+          "canonicalClubMapping": "seattlesounders",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "editorial-manual"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Sporting Kansas City",
+          "normalizedKey": "sportingkansascity",
+          "canonicalClubMapping": "sportingkansascity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "St. Louis City",
+          "normalizedKey": "stlouiscity",
+          "canonicalClubMapping": "stlouiscity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "editorial-manual"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Toronto",
+          "normalizedKey": "toronto",
+          "canonicalClubMapping": "toronto",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "espn"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Vancouver Whitecaps",
+          "normalizedKey": "vancouverwhitecaps",
+          "canonicalClubMapping": "vancouverwhitecaps",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "editorial-manual"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "champions-league": {
+      "expectedClubs": 36,
+      "detectedCanonicalClubs": 36,
+      "rounds": 1,
+      "fixtures": 18,
+      "identities": [
+        {
+          "rawName": "AEK Athens",
+          "normalizedKey": "aekathens",
+          "canonicalClubMapping": "aekathens",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Arsenal",
+          "normalizedKey": "arsenal",
+          "canonicalClubMapping": "arsenal",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Aston Villa",
+          "normalizedKey": "astonvilla",
+          "canonicalClubMapping": "astonvilla",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Atlético de Madrid",
+          "normalizedKey": "atleticomadrid",
+          "canonicalClubMapping": "atleticomadrid",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Barcelona",
+          "normalizedKey": "barcelona",
+          "canonicalClubMapping": "barcelona",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Bayern München",
+          "normalizedKey": "bayernmunich",
+          "canonicalClubMapping": "bayernmunich",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Bodø/Glimt",
+          "normalizedKey": "bodoglimt",
+          "canonicalClubMapping": "bodoglimt",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Club Brugge",
+          "normalizedKey": "brugge",
+          "canonicalClubMapping": "brugge",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Como",
+          "normalizedKey": "como",
+          "canonicalClubMapping": "como",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Borussia Dortmund",
+          "normalizedKey": "dortmund",
+          "canonicalClubMapping": "dortmund",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Fenerbahçe",
+          "normalizedKey": "fenerbahce",
+          "canonicalClubMapping": "fenerbahce",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Feyenoord",
+          "normalizedKey": "feyenoord",
+          "canonicalClubMapping": "feyenoord",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Galatasaray",
+          "normalizedKey": "galatasaray",
+          "canonicalClubMapping": "galatasaray",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Inter",
+          "normalizedKey": "internazionale",
+          "canonicalClubMapping": "internazionale",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "LASK",
+          "normalizedKey": "lask",
+          "canonicalClubMapping": "lask",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Leipzig",
+          "normalizedKey": "leipzig",
+          "canonicalClubMapping": "leipzig",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Lens",
+          "normalizedKey": "lens",
+          "canonicalClubMapping": "lens",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Lille",
+          "normalizedKey": "lille",
+          "canonicalClubMapping": "lille",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Liverpool",
+          "normalizedKey": "liverpool",
+          "canonicalClubMapping": "liverpool",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Manchester City",
+          "normalizedKey": "manchestercity",
+          "canonicalClubMapping": "manchestercity",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Manchester United",
+          "normalizedKey": "manchesterunited",
+          "canonicalClubMapping": "manchesterunited",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Napoli",
+          "normalizedKey": "napoli",
+          "canonicalClubMapping": "napoli",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Paris Saint-Germain",
+          "normalizedKey": "parissaintgermain",
+          "canonicalClubMapping": "parissaintgermain",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Porto",
+          "normalizedKey": "porto",
+          "canonicalClubMapping": "porto",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "PSV Eindhoven",
+          "normalizedKey": "psv",
+          "canonicalClubMapping": "psv",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Real Betis",
+          "normalizedKey": "realbetis",
+          "canonicalClubMapping": "realbetis",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Real Madrid",
+          "normalizedKey": "realmadrid",
+          "canonicalClubMapping": "realmadrid",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Roma",
+          "normalizedKey": "roma",
+          "canonicalClubMapping": "roma",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Sabah",
+          "normalizedKey": "sabah",
+          "canonicalClubMapping": "sabah",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Shakhtar Donetsk",
+          "normalizedKey": "shakhtardonetsk",
+          "canonicalClubMapping": "shakhtardonetsk",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Slavia Praha",
+          "normalizedKey": "slaviapraha",
+          "canonicalClubMapping": "slaviapraha",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Slovan Bratislava",
+          "normalizedKey": "slovanbratislava",
+          "canonicalClubMapping": "slovanbratislava",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Sporting CP",
+          "normalizedKey": "sportingcp",
+          "canonicalClubMapping": "sportingcp",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Stuttgart",
+          "normalizedKey": "stuttgart",
+          "canonicalClubMapping": "stuttgart",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Viking",
+          "normalizedKey": "viking",
+          "canonicalClubMapping": "viking",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        },
+        {
+          "rawName": "Villarreal",
+          "normalizedKey": "villarreal",
+          "canonicalClubMapping": "villarreal",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "snapshot"
+          ],
+          "possibleAliases": []
+        }
+      ]
+    },
+    "copa-libertadores": {
+      "expectedClubs": 32,
+      "detectedCanonicalClubs": 0,
+      "rounds": 0,
+      "fixtures": 0,
+      "identities": [],
+      "sourceMode": "manual-editorial"
+    },
+    "copa-sudamericana": {
+      "expectedClubs": 32,
+      "detectedCanonicalClubs": 0,
+      "rounds": 0,
+      "fixtures": 0,
+      "identities": [],
+      "sourceMode": "manual-editorial"
+    }
+  },
+  "errors": []
+}

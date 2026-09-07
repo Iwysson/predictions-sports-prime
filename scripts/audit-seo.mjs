@@ -1,5 +1,9 @@
 import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join, relative, sep } from "node:path";
+import { editorialPredictions as runtimePredictions } from "../src/data/predictions/index.ts";
+import { getAdSenseContentQualityDecision } from "../src/lib/adsense-content-quality.ts";
+import { matches as runtimeMatches } from "../src/data/matches.ts";
+import { materialMatchUpdatedAt } from "../src/lib/match-freshness.ts";
 
 const root = process.cwd();
 const outDir = join(root, "out");
@@ -96,6 +100,13 @@ const pages = new Map(
   htmlFiles.map((file) => [routeForFile(file), readFileSync(file, "utf8")])
 );
 const matchRoutes = [...pages.keys()].filter((route) => route.startsWith("/match/"));
+const qualityDecisionByRoute = new Map(runtimePredictions
+  .filter((prediction) => prediction.published === true)
+  .map((prediction) => [
+    `/match/${prediction.slug ?? `${prediction.homeTeam}-vs-${prediction.awayTeam}`.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}/`,
+    getAdSenseContentQualityDecision(prediction),
+  ]));
+const indexableMatchRoutes = matchRoutes.filter((route) => qualityDecisionByRoute.get(route)?.indexable === true);
 const leagueRoutes = [...pages.keys()].filter((route) => route.startsWith("/league/"));
 const indexableLeagueRoutes = leagueRoutes.filter(
   (route) => !/<meta name="robots" content="[^"]*noindex/i.test(pages.get(route) ?? "")
@@ -130,6 +141,7 @@ for (const [route, html] of pages) {
 
 for (const route of matchRoutes) {
   const html = pages.get(route);
+  const routeDecision = qualityDecisionByRoute.get(route);
   const canonical = `${siteUrl}${route}`;
   const title = html.match(/<title>([^<]+)<\/title>/i)?.[1] ?? "";
   const description = html.match(/<meta name="description" content="([^"]+)"/i)?.[1] ?? "";
@@ -152,14 +164,16 @@ for (const route of matchRoutes) {
     }
     if (
       relatedRoute?.startsWith("/match/") &&
-      !/aria-label="[^"]+(?:prediction|match analysis)"/i.test(relatedLink[0])
+      !/aria-label="[^"]*(?:prediction|match analysis)[^"]*"/i.test(relatedLink[0])
     ) {
       errors.push(`${route}: related link lacks meaningful accessible anchor text`);
     }
   }
 
-  titles.set(title, [...(titles.get(title) ?? []), route]);
-  descriptions.set(description, [...(descriptions.get(description) ?? []), route]);
+  if (routeDecision?.indexable) {
+    titles.set(title, [...(titles.get(title) ?? []), route]);
+    descriptions.set(description, [...(descriptions.get(description) ?? []), route]);
+  }
   canonicalUrls.set(canonicalUrl, [...(canonicalUrls.get(canonicalUrl) ?? []), route]);
 
   const bodyKey = analysisText.toLowerCase();
@@ -171,13 +185,16 @@ for (const route of matchRoutes) {
   if (/\b(?:lorem ipsum|todo|add analysis|placeholder text|coming soon)\b/i.test(analysisText)) {
     errors.push(`${route}: published analysis contains placeholder text`);
   }
-  if (bodyKey) editorialBodies.set(bodyKey, [...(editorialBodies.get(bodyKey) ?? []), route]);
+  if (bodyKey && routeDecision?.indexable) editorialBodies.set(bodyKey, [...(editorialBodies.get(bodyKey) ?? []), route]);
 
   if (count(html, /<h1(?:\s|>)/gi) !== 1) errors.push(`${route}: expected one H1`);
   if (count(html, /<title>/gi) !== 1) errors.push(`${route}: expected one title`);
   if (!/<meta name="description" content="[^"]+"/i.test(html)) errors.push(`${route}: missing description`);
   if (!html.includes(`<link rel="canonical" href="${canonical}"`)) errors.push(`${route}: invalid canonical`);
-  if (!/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(html)) errors.push(`${route}: missing index, follow`);
+  const decision = routeDecision;
+  if (!decision) errors.push(`${route}: missing runtime quality-gate decision`);
+  else if (decision.indexable && !/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(html)) errors.push(`${route}: KEEP page missing index, follow`);
+  else if (!decision.indexable && !/<meta name="robots" content="[^"]*noindex/i.test(html)) errors.push(`${route}: ${decision.classification} page missing noindex`);
   if (!leagueHref) errors.push(`${route}: missing league link`);
   if (links === 0 || links > 4) errors.push(`${route}: expected 1-4 related links, found ${links}`);
   if (!html.includes('class="match-seo-intro"')) errors.push(`${route}: missing static match introduction`);
@@ -323,15 +340,15 @@ for (const [route, lastmod] of sitemapEntries) {
   }
 }
 
-const publishedEditorial = editorialPredictions.filter((prediction) => prediction.published);
+// Runtime registry is authoritative for publication and indexability. The
+// source-file scan above remains useful for timestamp syntax diagnostics, but
+// it must not recreate the application registry with regular expressions.
+const publishedEditorial = runtimePredictions.filter((prediction) => prediction.published === true);
 if (matchRoutes.length !== publishedEditorial.length) {
   errors.push(`generated match count (${matchRoutes.length}) does not equal published editorial count (${publishedEditorial.length}); possible draft leakage`);
 }
 
-const sourceDatePairs = publishedEditorial
-  .map((prediction) => `${prediction.publishedAt ?? ""}|${prediction.updatedAt ?? ""}`)
-  .sort();
-const renderedDatePairs = [];
+const runtimeMatchByRoute = new Map(runtimeMatches.map((match) => [`/match/${match.slug}/`, match]));
 
 for (const route of matchRoutes) {
   const html = pages.get(route);
@@ -339,23 +356,24 @@ for (const route of matchRoutes) {
   const schemaModified = html.match(/"dateModified":"([^"]+)"/)?.[1];
   const expectedLastmod = schemaModified ?? schemaPublished;
   const sitemapLastmod = sitemapEntries.get(route);
-  renderedDatePairs.push(`${schemaPublished ?? ""}|${schemaModified ?? ""}`);
+  const runtimeMatch = runtimeMatchByRoute.get(route);
+  const runtimeModified = runtimeMatch ? materialMatchUpdatedAt(runtimeMatch) : undefined;
+  if (schemaPublished !== runtimeMatch?.publishedAt || schemaModified !== runtimeModified) {
+    errors.push(`${route}: Article dates do not match the runtime match registry`);
+  }
 
-  if (!sitemapEntries.has(route)) errors.push(`${route}: published prediction missing from sitemap`);
-  if (expectedLastmod) {
+  const shouldBeIndexable = qualityDecisionByRoute.get(route)?.indexable === true;
+  if (shouldBeIndexable && !sitemapEntries.has(route)) errors.push(`${route}: KEEP prediction missing from sitemap`);
+  if (!shouldBeIndexable && sitemapEntries.has(route)) errors.push(`${route}: noindex prediction leaked into sitemap`);
+  if (shouldBeIndexable && expectedLastmod) {
     if (!sitemapLastmod || Date.parse(sitemapLastmod) !== Date.parse(expectedLastmod)) {
       errors.push(`${route}: sitemap lastmod does not match Article dateModified ?? datePublished`);
     }
-  } else if (sitemapLastmod) {
+  } else if (shouldBeIndexable && sitemapLastmod) {
     errors.push(`${route}: sitemap contains a timestamp with no Article editorial date`);
   }
   if (schemaPublished && !html.includes("Published:")) errors.push(`${route}: trustworthy publication date is not visible`);
   if (schemaModified && !html.includes("Updated:")) errors.push(`${route}: trustworthy update date is not visible`);
-}
-
-renderedDatePairs.sort();
-if (JSON.stringify(renderedDatePairs) !== JSON.stringify(sourceDatePairs)) {
-  errors.push("Article datePublished/dateModified values do not agree with published editorial data");
 }
 
 for (const route of sitemapEntries.keys()) {
@@ -369,7 +387,7 @@ for (const [route, lastmod] of sitemapEntries) {
     errors.push(`${route}: non-editorial sitemap URL has an unexplained lastmod`);
   }
 }
-for (const route of [...matchRoutes, ...indexableLeagueRoutes]) {
+for (const route of [...indexableMatchRoutes, ...indexableLeagueRoutes]) {
   if (!sitemapRoutes.has(route)) errors.push(`${route}: missing from sitemap`);
 }
 for (const route of noindexLeagueRoutes) {

@@ -31,40 +31,11 @@ import {
   matchIntroduction,
 } from "@/lib/seo";
 import { selectRelatedPredictions } from "@/lib/related-predictions";
-import { hydratePrediction } from "@/lib/live-predictions";
-import { toMatchPreview } from "@/lib/editorial";
-import type { Match } from "@/types";
+import { resolveCanonicalMatch } from "@/lib/canonical-match";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 import { isRestrictedSearchIntentFixture } from "@/lib/match-search-intent";
 import { getAdSenseIndexableSlugs } from "@/lib/adsense-content-quality";
-
-async function resolveMatchFixture(match: Match): Promise<Match> {
-  const fixture = await hydratePrediction(toMatchPreview(match));
-  const completed = isHistoryEligibleFixture({
-    status: fixture.fixtureStatus,
-    homeScore: fixture.homeScore,
-    awayScore: fixture.awayScore,
-  });
-  return {
-    ...match,
-    title: match.title,
-    fixtureId: fixture.fixtureId,
-    kickoffUtc: fixture.kickoffUtc,
-    timeConfirmed: fixture.timeConfirmed,
-    round: fixture.round,
-    homeTeam: fixture.homeTeam,
-    awayTeam: fixture.awayTeam,
-    date: fixture.date,
-    time: fixture.time,
-    venue: fixture.venue ?? match.venue,
-    fixtureStatus: fixture.fixtureStatus,
-    homeScore: fixture.homeScore,
-    awayScore: fixture.awayScore,
-    betResult: completed ? fixture.betResult : match.betResult,
-    betResultSource: completed ? fixture.betResultSource : match.betResultSource,
-  };
-}
 
 function formatEditorialDate(value: string) {
   return new Intl.DateTimeFormat("en", {
@@ -89,11 +60,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const match = matches.find(
-    (item) =>
-      item.slug === slug &&
-      item.status === "published"
-  );
+  const match = await resolveCanonicalMatch(slug);
 
   if (!match) {
     return {
@@ -105,7 +72,7 @@ export async function generateMetadata({
     };
   }
 
-  return buildMatchMetadata(await resolveMatchFixture(match));
+  return buildMatchMetadata(match);
 }
 
 export default async function MatchPage({
@@ -115,17 +82,13 @@ export default async function MatchPage({
 }) {
   const { slug } = await params;
 
-  const storedMatch = matches.find(
-    (item) =>
-      item.slug === slug &&
-      item.status === "published"
-  );
+  const storedMatch = await resolveCanonicalMatch(slug);
 
   if (!storedMatch) {
     notFound();
   }
 
-  const match = await resolveMatchFixture(storedMatch);
+  const match = storedMatch;
   const league = leagues.find(
     (item) => item.slug === match.league
   );

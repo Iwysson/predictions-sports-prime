@@ -13,8 +13,14 @@ import { seoLocaleSlugs, type SeoLocale } from "@/lib/seo-locales";
 import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 import { editorialPredictions } from "@/data/predictions";
 import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
+import { isSeoFeatureEnabled } from "@/config/seo-enterprise";
+import { buildMatchMetadataV2 } from "@/lib/title-engine-v2";
+import { isMatchSearchIntentV2Eligible } from "@/lib/search-intent-v2";
 
 export function matchSeoTitle(match: Match) {
+  if (isSeoFeatureEnabled("title-engine-v2") && isMatchSearchIntentV2Eligible(match)) {
+    return buildMatchMetadataV2(match).title;
+  }
   const hasRichMatchCapability = Boolean(match.matchSeo && Object.keys(match.matchSeo).some((module) => module !== "information"));
   if (hasRichMatchCapability && shouldApplySearchIntentSEO(match)) {
     return buildMatchSearchIntentCopy(match).title;
@@ -37,6 +43,9 @@ export function matchSeoTitle(match: Match) {
 }
 
 export function matchSeoDescription(match: Match) {
+  if (isSeoFeatureEnabled("prediction-first-v2") && isMatchSearchIntentV2Eligible(match)) {
+    return buildMatchMetadataV2(match).description;
+  }
   if (shouldApplySearchIntentSEO(match)) {
     return buildMatchSearchIntentCopy(match).description;
   }
@@ -55,6 +64,9 @@ export function matchSeoDescription(match: Match) {
 }
 
 export function matchIntroduction(match: Match) {
+  if (isSeoFeatureEnabled("prediction-first-v2") && isMatchSearchIntentV2Eligible(match)) {
+    return buildMatchMetadataV2(match).intro;
+  }
   if (shouldApplySearchIntentSEO(match)) {
     return buildMatchSearchIntentCopy(match).intro;
   }
@@ -80,6 +92,9 @@ export function matchIntroduction(match: Match) {
 }
 
 export function matchHeading(match: Match) {
+  if (isSeoFeatureEnabled("prediction-first-v2") && isMatchSearchIntentV2Eligible(match)) {
+    return buildMatchMetadataV2(match).h1;
+  }
   if (shouldApplySearchIntentSEO(match)) {
     return buildMatchSearchIntentCopy(match).h1;
   }
@@ -105,7 +120,7 @@ export function buildMatchMetadata(match: Match): Metadata {
       absolute: title,
     },
     description,
-    ...(shouldApplySearchIntentSEO(match) ? {
+    ...(!isSeoFeatureEnabled("prediction-first-v2") && shouldApplySearchIntentSEO(match) ? {
       keywords: [
         intent.primaryQuery,
         ...intent.secondaryQueries,
@@ -114,6 +129,12 @@ export function buildMatchMetadata(match: Match): Metadata {
         ...intent.competitionQueries,
       ].slice(0, 24),
     } : {}),
+
+    other: {
+      "metadata-variant": isSeoFeatureEnabled("prediction-first-v2") && isMatchSearchIntentV2Eligible(match)
+        ? "prediction-first-v2"
+        : "legacy",
+    },
 
     alternates: (() => {
       if (!contentIndexable) {

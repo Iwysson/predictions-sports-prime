@@ -17,7 +17,9 @@ export type LeagueSlug =
   | "scottish-premiership"
   | "eliteserien"
   | "mls"
-  | "champions-league";
+  | "champions-league"
+  | "copa-libertadores"
+  | "copa-sudamericana";
 
 export type PredictionItem = {
   label: string;
@@ -200,6 +202,12 @@ export type EditorialPrediction = {
   // Required for content first published after the Phase 2 source-policy cutoff.
   sourceStatus?: "verified" | "partial" | "incomplete";
   sources?: EditorialSource[];
+
+  statisticalCoreProvenance?: {
+    season: string;
+    home: { sampleType: "home"; source: string; competition: string; matches: number };
+    away: { sampleType: "away"; source: string; competition: string; matches: number };
+  };
 
   // Optional, source-backed semantic modules for Match SEO 2.0.
   matchSeo?: MatchSeoData;

@@ -36,9 +36,7 @@ These are probable, not confirmed. The official matchday teamsheet overrides eve
 
 ### HOME/AWAY Analysis
 
-For this fixture, the HOME and AWAY cells are the 2026/27 venue samples available before Round 3.
-
-Cagliari's HOME xGA is **3.36**, while Lecce's AWAY xGA is **2.05** despite the visitors keeping a clean sheet. Lecce scored twice away from 2.38 xG, whereas Cagliari failed to score from only 0.51 xG. The important point is that both defences allowed substantial chance quality, even though only Cagliari were punished on the scoreboard.
+Cagliari's home defensive exposure and Lecce's away chance profile are interpreted after the table, using the venue samples available before Round 3.
 
 ### Statistical Core Predictions-Sports-Prime
 | Metric | Cagliari — HOME | Lecce — AWAY |

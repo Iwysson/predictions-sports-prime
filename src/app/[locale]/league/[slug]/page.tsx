@@ -29,6 +29,7 @@ import {
 } from "@/lib/seo-locales";
 import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 import { getAdSenseIndexableSlugs, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
+import { resolveCanonicalMatches } from "@/lib/canonical-match";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -90,12 +91,12 @@ export default async function LocalizedLeague({
     .map(toMatchPreview);
   const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions);
   const indexableMatchSet = new Set(indexableMatchSlugs);
-  const publishedMatches = matches.filter(
+  const publishedMatches = await resolveCanonicalMatches(matches.filter(
     (match) =>
       match.league === league.slug &&
       match.status === "published" &&
       indexableMatchSet.has(match.slug)
-  );
+  ));
   const standings = standingsByLeague[league.slug];
   const fixtureRounds = await loadLeagueSeason(league.slug);
   const roundSurface = buildCompetitionRoundSurface({

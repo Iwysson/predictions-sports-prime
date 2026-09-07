@@ -1,0 +1,47 @@
+PSP — INTERNACIONALIZAÇÃO: CORREÇÃO ESTRUTURAL
+
+Implementado sobre o SRC completo enviado pelo usuário.
+
+FASE IMPLEMENTADA
+- Home localizada agora reutiliza a mesma HomePredictionFeed do inglês.
+- Sidebar de ligas, Today, Tomorrow, Upcoming, Results e categorias passam a existir nos idiomas.
+- Links de liga preservam o locale.
+- Links de partidas preservam o locale somente quando a página localizada realmente existe; caso contrário, usam o inglês, evitando 404.
+- Localized layout agora injeta I18nProvider com o locale correto, permitindo reutilização dos componentes compartilhados.
+- Páginas localizadas de liga passam a reutilizar a mesma estrutura principal da página inglesa: rodada atual, próxima rodada, análises publicadas, hub editorial, standings e ads.
+- MatchCard, LiveLeagueRounds, LeaguePublishedAnalysis e LeagueEditorialHub agora aceitam contexto de locale sem quebrar o inglês.
+
+NÃO ALTERADO NESTA FASE
+- O template localizado de /match/[slug] permanece como estava. Ele já possui conteúdo localizado específico e LocalizedMatchDetails. A unificação visual integral do match deve ser tratada separadamente para não quebrar metadata, editorial legado ou SportsEvent schema.
+
+ARQUIVOS MODIFICADOS
+- src/app/[locale]/layout.tsx
+- src/app/[locale]/page.tsx
+- src/app/[locale]/league/[slug]/page.tsx
+- src/i18n/I18nProvider.tsx
+- src/lib/home-feed-copy.ts (novo)
+- src/components/HomePredictionFeed.tsx
+- src/components/HomeMatchCard.tsx
+- src/components/PredictionLeagueCategories.tsx
+- src/components/LeagueCard.tsx
+- src/components/MatchCard.tsx
+- src/components/LiveLeagueRounds.tsx
+- src/components/LeaguePublishedAnalysis.tsx
+- src/components/LeagueEditorialHub.tsx
+
+VALIDAÇÃO RECOMENDADA
+npm run typecheck
+npm run audit:international-seo
+npm run audit:prediction-first-search-intent
+npm run build
+
+TESTE LOCAL
+/pt-br/
+/es/
+/fr/
+/de/
+/it/
+/pt-br/league/premier-league/
+/es/league/la-liga/
+
+A Home localizada deve agora ter a mesma densidade e os mesmos módulos da Home inglesa.

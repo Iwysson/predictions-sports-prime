@@ -1,0 +1,3211 @@
+{
+  "generatedAt": "2026-09-07T19:00:39.314Z",
+  "flagsDuringDryRun": {
+    "predictionFirstV2": false,
+    "titleEngineV2": false
+  },
+  "pages": 148,
+  "cohorts": {
+    "legacy": 130,
+    "predictionFirstV2": 18
+  },
+  "guardrails": {
+    "status": "PASS",
+    "errors": [],
+    "largestDuplicateGroup": 1
+  },
+  "rows": [
+    {
+      "slug": "aston-villa-vs-arsenal",
+      "league": "premier-league",
+      "lifecycle": "FINAL",
+      "titleBefore": "Aston Villa vs Arsenal Prediction, Betting Tips & Odds",
+      "titleAfter": "Aston Villa vs Arsenal Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Aston Villa vs Arsenal prediction for the completed match, Over 2.5 Goals at odds of 1.82. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Aston Villa vs Arsenal prediction for the completed match, Over 2.5 Goals at odds of 1.82. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Aston Villa vs Arsenal Prediction & Match Analysis",
+      "h1After": "Aston Villa vs Arsenal Prediction & Match Analysis",
+      "primaryIntent": "aston villa vs arsenal prediction",
+      "supportingIntents": [
+        "aston villa vs arsenal betting tips",
+        "aston villa vs arsenal odds",
+        "aston villa vs arsenal probable lineups",
+        "aston villa vs arsenal team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 54,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "newcastle-united-vs-bournemouth",
+      "league": "premier-league",
+      "lifecycle": "FINAL",
+      "titleBefore": "Newcastle United vs Bournemouth Prediction, Betting Tips & Odds",
+      "titleAfter": "Newcastle United vs Bournemouth Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Newcastle United vs Bournemouth prediction for the completed match and betting analysis for Premier League.",
+      "descriptionAfter": "Newcastle United vs Bournemouth prediction for the completed match and betting analysis for Premier League.",
+      "h1Before": "Newcastle United vs Bournemouth Prediction & Match Analysis",
+      "h1After": "Newcastle United vs Bournemouth Prediction & Match Analysis",
+      "primaryIntent": "newcastle united vs bournemouth prediction",
+      "supportingIntents": [
+        "newcastle united vs bournemouth betting tips",
+        "newcastle united vs bournemouth odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 63,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "brighton-hove-albion-vs-leeds-united",
+      "league": "premier-league",
+      "lifecycle": "FINAL",
+      "titleBefore": "Brighton & Hove Albion vs Leeds United Prediction, Betting Tips & Odds",
+      "titleAfter": "Brighton & Hove Albion vs Leeds United Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Brighton & Hove Albion vs Leeds United prediction for the completed match: Brighton to Win at odds of 1.88. Full betting analysis for Premier League.",
+      "descriptionAfter": "Brighton & Hove Albion vs Leeds United prediction for the completed match: Brighton to Win at odds of 1.88. Full betting analysis for Premier League.",
+      "h1Before": "Brighton & Hove Albion vs Leeds United Prediction & Match Analysis",
+      "h1After": "Brighton & Hove Albion vs Leeds United Prediction & Match Analysis",
+      "primaryIntent": "brighton & hove albion vs leeds united prediction",
+      "supportingIntents": [
+        "brighton & hove albion vs leeds united betting tips",
+        "brighton & hove albion vs leeds united odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 70,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "manchester-city-vs-coventry-city",
+      "league": "premier-league",
+      "lifecycle": "FINAL",
+      "titleBefore": "Manchester City vs Coventry City Prediction, Betting Tips & Odds",
+      "titleAfter": "Manchester City vs Coventry City Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Manchester City vs Coventry City prediction for the completed match and betting analysis for Premier League.",
+      "descriptionAfter": "Manchester City vs Coventry City prediction for the completed match and betting analysis for Premier League.",
+      "h1Before": "Manchester City vs Coventry City Prediction & Match Analysis",
+      "h1After": "Manchester City vs Coventry City Prediction & Match Analysis",
+      "primaryIntent": "manchester city vs coventry city prediction",
+      "supportingIntents": [
+        "manchester city vs coventry city betting tips",
+        "manchester city vs coventry city odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 64,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "nottingham-forest-vs-tottenham-hotspur",
+      "league": "premier-league",
+      "lifecycle": "FINAL",
+      "titleBefore": "Nottingham Forest vs Tottenham Hotspur Prediction, Betting Tips & Odds",
+      "titleAfter": "Nottingham Forest vs Tottenham Hotspur Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Nottingham Forest vs Tottenham Hotspur prediction for the completed match: Over 2.5 Goals at odds of 2.05. Full betting analysis for Premier League.",
+      "descriptionAfter": "Nottingham Forest vs Tottenham Hotspur prediction for the completed match: Over 2.5 Goals at odds of 2.05. Full betting analysis for Premier League.",
+      "h1Before": "Nottingham Forest vs Tottenham Hotspur Prediction & Match Analysis",
+      "h1After": "Nottingham Forest vs Tottenham Hotspur Prediction & Match Analysis",
+      "primaryIntent": "nottingham forest vs tottenham hotspur prediction",
+      "supportingIntents": [
+        "nottingham forest vs tottenham hotspur betting tips",
+        "nottingham forest vs tottenham hotspur odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 70,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "fulham-vs-crystal-palace",
+      "league": "premier-league",
+      "lifecycle": "FINAL",
+      "titleBefore": "Fulham vs Crystal Palace Prediction, Betting Tips & Odds",
+      "titleAfter": "Fulham vs Crystal Palace Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Fulham vs Crystal Palace prediction for the completed match: Fulham or Draw (1X) + Over 1.5 Goals at odds of 1.75. Full betting analysis for Premier League.",
+      "descriptionAfter": "Fulham vs Crystal Palace prediction for the completed match: Fulham or Draw (1X) + Over 1.5 Goals at odds of 1.75. Full betting analysis for Premier League.",
+      "h1Before": "Fulham vs Crystal Palace Prediction & Match Analysis",
+      "h1After": "Fulham vs Crystal Palace Prediction & Match Analysis",
+      "primaryIntent": "fulham vs crystal palace prediction",
+      "supportingIntents": [
+        "fulham vs crystal palace betting tips",
+        "fulham vs crystal palace odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 56,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "brentford-vs-sunderland",
+      "league": "premier-league",
+      "lifecycle": "FINAL",
+      "titleBefore": "Brentford vs Sunderland Prediction, Betting Tips & Odds",
+      "titleAfter": "Brentford vs Sunderland Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Brentford vs Sunderland prediction for the completed match, Over 2.5 Goals at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Brentford vs Sunderland prediction for the completed match, Over 2.5 Goals at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Brentford vs Sunderland Prediction & Match Analysis",
+      "h1After": "Brentford vs Sunderland Prediction & Match Analysis",
+      "primaryIntent": "brentford vs sunderland prediction",
+      "supportingIntents": [
+        "brentford vs sunderland betting tips",
+        "brentford vs sunderland odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 55,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "ipswich-town-vs-liverpool",
+      "league": "premier-league",
+      "lifecycle": "FINAL",
+      "titleBefore": "Ipswich Town vs Liverpool Prediction, Betting Tips & Odds",
+      "titleAfter": "Ipswich Town vs Liverpool Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Ipswich Town vs Liverpool prediction for the completed match: Over 8.5 Corners + Over 1.5 Goals at odds of 1.83. Full betting analysis for Premier League.",
+      "descriptionAfter": "Ipswich Town vs Liverpool prediction for the completed match: Over 8.5 Corners + Over 1.5 Goals at odds of 1.83. Full betting analysis for Premier League.",
+      "h1Before": "Ipswich Town vs Liverpool Prediction & Match Analysis",
+      "h1After": "Ipswich Town vs Liverpool Prediction & Match Analysis",
+      "primaryIntent": "ipswich town vs liverpool prediction",
+      "supportingIntents": [
+        "ipswich town vs liverpool betting tips",
+        "ipswich town vs liverpool odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 57,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "everton-vs-manchester-united",
+      "league": "premier-league",
+      "lifecycle": "FINAL",
+      "titleBefore": "Everton vs Manchester United Prediction, Betting Tips & Odds",
+      "titleAfter": "Everton vs Manchester United Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Everton vs Manchester United prediction for the completed match and betting analysis for Premier League.",
+      "descriptionAfter": "Everton vs Manchester United prediction for the completed match and betting analysis for Premier League.",
+      "h1Before": "Everton vs Manchester United Prediction & Match Analysis",
+      "h1After": "Everton vs Manchester United Prediction & Match Analysis",
+      "primaryIntent": "everton vs manchester united prediction",
+      "supportingIntents": [
+        "everton vs manchester united betting tips",
+        "everton vs manchester united odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 60,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "hull-city-vs-aston-villa",
+      "league": "premier-league",
+      "lifecycle": "FINAL",
+      "titleBefore": "Hull City vs Aston Villa Prediction, Betting Tips & Odds",
+      "titleAfter": "Hull City vs Aston Villa Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Hull City vs Aston Villa prediction for the completed match, Aston Villa to win at odds of 1.87. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Hull City vs Aston Villa prediction for the completed match, Aston Villa to win at odds of 1.87. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Hull City vs Aston Villa Prediction & Match Analysis",
+      "h1After": "Hull City vs Aston Villa Prediction & Match Analysis",
+      "primaryIntent": "hull city vs aston villa prediction",
+      "supportingIntents": [
+        "hull city vs aston villa betting tips",
+        "hull city vs aston villa odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 56,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "arsenal-vs-chelsea",
+      "league": "premier-league",
+      "lifecycle": "FINAL",
+      "titleBefore": "Arsenal vs Chelsea Prediction, Betting Tips & Odds",
+      "titleAfter": "Arsenal vs Chelsea Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Arsenal vs Chelsea prediction for the completed match, Arsenal to win at odds of 1.73. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Arsenal vs Chelsea prediction for the completed match, Arsenal to win at odds of 1.73. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Arsenal vs Chelsea Prediction & Match Analysis",
+      "h1After": "Arsenal vs Chelsea Prediction & Match Analysis",
+      "primaryIntent": "arsenal vs chelsea prediction",
+      "supportingIntents": [
+        "arsenal vs chelsea betting tips",
+        "arsenal vs chelsea odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 50,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "osasuna-vs-getafe",
+      "league": "la-liga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Osasuna vs Getafe Prediction, Betting Tips & Odds",
+      "titleAfter": "Osasuna vs Getafe Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Osasuna vs Getafe prediction for the completed match, Over 1.5 Goals at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Osasuna vs Getafe prediction for the completed match, Over 1.5 Goals at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Osasuna vs Getafe Prediction & Match Analysis",
+      "h1After": "Osasuna vs Getafe Prediction & Match Analysis",
+      "primaryIntent": "osasuna vs getafe prediction",
+      "supportingIntents": [
+        "osasuna vs getafe betting tips",
+        "osasuna vs getafe odds",
+        "osasuna vs getafe probable lineups",
+        "osasuna vs getafe team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 49,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "barcelona-vs-rayo-vallecano",
+      "league": "la-liga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Barcelona vs Rayo Vallecano Prediction, Betting Tips & Odds",
+      "titleAfter": "Barcelona vs Rayo Vallecano Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Barcelona vs Rayo Vallecano prediction for the completed match: Over 8.5 Corners + Over 2.5 Goals at odds of 1.7. Full betting analysis for La Liga.",
+      "descriptionAfter": "Barcelona vs Rayo Vallecano prediction for the completed match: Over 8.5 Corners + Over 2.5 Goals at odds of 1.7. Full betting analysis for La Liga.",
+      "h1Before": "Barcelona vs Rayo Vallecano Prediction & Match Analysis",
+      "h1After": "Barcelona vs Rayo Vallecano Prediction & Match Analysis",
+      "primaryIntent": "barcelona vs rayo vallecano prediction",
+      "supportingIntents": [
+        "barcelona vs rayo vallecano betting tips",
+        "barcelona vs rayo vallecano odds",
+        "barcelona vs rayo vallecano probable lineups",
+        "barcelona vs rayo vallecano team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 59,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "real-betis-vs-real-madrid",
+      "league": "la-liga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Real Betis vs Real Madrid Prediction, Betting Tips & Odds",
+      "titleAfter": "Real Betis vs Real Madrid Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Real Betis vs Real Madrid prediction for the completed match: Real Betis +1.5 Asian Handicap at odds of 1.8. Full betting analysis for La Liga.",
+      "descriptionAfter": "Real Betis vs Real Madrid prediction for the completed match: Real Betis +1.5 Asian Handicap at odds of 1.8. Full betting analysis for La Liga.",
+      "h1Before": "Real Betis vs Real Madrid Prediction & Match Analysis",
+      "h1After": "Real Betis vs Real Madrid Prediction & Match Analysis",
+      "primaryIntent": "real betis vs real madrid prediction",
+      "supportingIntents": [
+        "real betis vs real madrid betting tips",
+        "real betis vs real madrid odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 57,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "athletic-club-vs-atletico-madrid",
+      "league": "la-liga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Athletic Club vs AtlÃ©tico Madrid Prediction, Betting Tips & Odds",
+      "titleAfter": "Athletic Club vs AtlÃ©tico Madrid Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Athletic Club vs AtlÃ©tico Madrid prediction for the completed match: Atlético Madrid X2 + Over 7.5 Corners at odds of 1.85. Full betting analysis for La Liga.",
+      "descriptionAfter": "Athletic Club vs AtlÃ©tico Madrid prediction for the completed match: Atlético Madrid X2 + Over 7.5 Corners at odds of 1.85. Full betting analysis for La Liga.",
+      "h1Before": "Athletic Club vs AtlÃ©tico Madrid Prediction & Match Analysis",
+      "h1After": "Athletic Club vs AtlÃ©tico Madrid Prediction & Match Analysis",
+      "primaryIntent": "athletic club vs atlã©tico madrid prediction",
+      "supportingIntents": [
+        "athletic club vs atlã©tico madrid betting tips",
+        "athletic club vs atlã©tico madrid odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 65,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "rayo-vallecano-vs-racing-santander",
+      "league": "la-liga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Rayo Vallecano vs Racing Santander Prediction, Betting Tips & Odds",
+      "titleAfter": "Rayo Vallecano vs Racing Santander Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Rayo Vallecano vs Racing Santander prediction for the completed match: Rayo Vallecano X1 + Over 1.5 Goals at odds of 1.78. Full betting analysis for La Liga.",
+      "descriptionAfter": "Rayo Vallecano vs Racing Santander prediction for the completed match: Rayo Vallecano X1 + Over 1.5 Goals at odds of 1.78. Full betting analysis for La Liga.",
+      "h1Before": "Rayo Vallecano vs Racing Santander Prediction & Match Analysis",
+      "h1After": "Rayo Vallecano vs Racing Santander Prediction & Match Analysis",
+      "primaryIntent": "rayo vallecano vs racing santander prediction",
+      "supportingIntents": [
+        "rayo vallecano vs racing santander betting tips",
+        "rayo vallecano vs racing santander odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 66,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "villarreal-vs-deportivo-la-coruna",
+      "league": "la-liga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Villarreal vs Deportivo Prediction, Betting Tips & Odds",
+      "titleAfter": "Villarreal vs Deportivo Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Villarreal vs Deportivo prediction for the completed match, Over 2.5 Goals at odds of 1.75. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Villarreal vs Deportivo prediction for the completed match, Over 2.5 Goals at odds of 1.75. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Villarreal vs Deportivo Prediction & Match Analysis",
+      "h1After": "Villarreal vs Deportivo Prediction & Match Analysis",
+      "primaryIntent": "villarreal vs deportivo prediction",
+      "supportingIntents": [
+        "villarreal vs deportivo betting tips",
+        "villarreal vs deportivo odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 55,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "valencia-vs-barcelona",
+      "league": "la-liga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Valencia vs Barcelona Prediction, Betting Tips & Odds",
+      "titleAfter": "Valencia vs Barcelona Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Valencia vs Barcelona prediction for the completed match: Barcelona to Win + Over 8.5 Corners at odds of 1.8. Full betting analysis for La Liga.",
+      "descriptionAfter": "Valencia vs Barcelona prediction for the completed match: Barcelona to Win + Over 8.5 Corners at odds of 1.8. Full betting analysis for La Liga.",
+      "h1Before": "Valencia vs Barcelona Prediction & Match Analysis",
+      "h1After": "Valencia vs Barcelona Prediction & Match Analysis",
+      "primaryIntent": "valencia vs barcelona prediction",
+      "supportingIntents": [
+        "valencia vs barcelona betting tips",
+        "valencia vs barcelona odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 53,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "deportivo-alaves-vs-osasuna",
+      "league": "la-liga",
+      "lifecycle": "FINAL",
+      "titleBefore": "AlavÃ©s vs Osasuna Prediction, Betting Tips & Odds",
+      "titleAfter": "AlavÃ©s vs Osasuna Prediction, Betting Tips & Odds",
+      "descriptionBefore": "AlavÃ©s vs Osasuna prediction for the completed match: Alavés X1 + Over 7.5 Corners at odds of 1.65. Full betting analysis for La Liga.",
+      "descriptionAfter": "AlavÃ©s vs Osasuna prediction for the completed match: Alavés X1 + Over 7.5 Corners at odds of 1.65. Full betting analysis for La Liga.",
+      "h1Before": "AlavÃ©s vs Osasuna Prediction & Match Analysis",
+      "h1After": "AlavÃ©s vs Osasuna Prediction & Match Analysis",
+      "primaryIntent": "alavã©s vs osasuna prediction",
+      "supportingIntents": [
+        "alavã©s vs osasuna betting tips",
+        "alavã©s vs osasuna odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 50,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "malaga-vs-levante",
+      "league": "la-liga",
+      "lifecycle": "FINAL",
+      "titleBefore": "MÃ¡laga vs Levante Prediction, Betting Tips & Odds",
+      "titleAfter": "MÃ¡laga vs Levante Prediction, Betting Tips & Odds",
+      "descriptionBefore": "MÃ¡laga vs Levante prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.8. Full betting analysis for La Liga.",
+      "descriptionAfter": "MÃ¡laga vs Levante prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.8. Full betting analysis for La Liga.",
+      "h1Before": "MÃ¡laga vs Levante Prediction & Match Analysis",
+      "h1After": "MÃ¡laga vs Levante Prediction & Match Analysis",
+      "primaryIntent": "mã¡laga vs levante prediction",
+      "supportingIntents": [
+        "mã¡laga vs levante betting tips",
+        "mã¡laga vs levante odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 50,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "espanyol-vs-sevilla",
+      "league": "la-liga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Espanyol vs Sevilla Prediction, Betting Tips & Odds",
+      "titleAfter": "Espanyol vs Sevilla Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Espanyol vs Sevilla prediction for the completed match: Espanyol X1 + Over 1.5 Goals at odds of 2.03. Full betting analysis for La Liga.",
+      "descriptionAfter": "Espanyol vs Sevilla prediction for the completed match: Espanyol X1 + Over 1.5 Goals at odds of 2.03. Full betting analysis for La Liga.",
+      "h1Before": "Espanyol vs Sevilla Prediction & Match Analysis",
+      "h1After": "Espanyol vs Sevilla Prediction & Match Analysis",
+      "primaryIntent": "espanyol vs sevilla prediction",
+      "supportingIntents": [
+        "espanyol vs sevilla betting tips",
+        "espanyol vs sevilla odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 51,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "getafe-vs-celta-vigo",
+      "league": "la-liga",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Getafe vs Celta Vigo Prediction, Betting Tips & Odds",
+      "titleAfter": "Getafe vs Celta Vigo Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Getafe vs Celta Vigo prediction for the completed match, Over 1.5 Goals at odds of 1.6. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Getafe vs Celta Vigo prediction for the completed match, Over 1.5 Goals at odds of 1.6. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Getafe vs Celta Vigo Prediction & Match Analysis",
+      "h1After": "Getafe vs Celta Vigo Prediction & Match Analysis",
+      "primaryIntent": "getafe vs celta vigo prediction",
+      "supportingIntents": [
+        "getafe vs celta vigo betting tips",
+        "getafe vs celta vigo odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 52,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "elche-vs-real-sociedad",
+      "league": "la-liga",
+      "lifecycle": "TODAY",
+      "titleBefore": "Elche vs Real Sociedad Prediction, Betting Tips & Odds",
+      "titleAfter": "Elche vs Real Sociedad Prediction & Betting tips - La Liga",
+      "descriptionBefore": "Elche vs Real Sociedad prediction for today, Real Sociedad X2 + Over 6.5 Corners at odds of 1.72. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Elche vs Real Sociedad prediction for La Liga: Real Sociedad X2 + Over 6.5 Corners at odds of 1.72. Betting tips, analysis and supporting match context.",
+      "h1Before": "Elche vs Real Sociedad Prediction & Match Analysis",
+      "h1After": "Elche vs Real Sociedad Prediction & Betting tips",
+      "primaryIntent": "elche vs real sociedad prediction",
+      "supportingIntents": [
+        "elche vs real sociedad betting tips",
+        "elche vs real sociedad odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 58,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "sv-werder-bremen-vs-rb-leipzig",
+      "league": "bundesliga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Werder Bremen vs RB Leipzig Prediction, Betting Tips & Odds",
+      "titleAfter": "Werder Bremen vs RB Leipzig Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Werder Bremen vs RB Leipzig prediction for the completed match: RB Leipzig or Draw (X2) + Over 7.5 Corners at odds of 1.6. Full betting analysis for Bundesliga.",
+      "descriptionAfter": "Werder Bremen vs RB Leipzig prediction for the completed match: RB Leipzig or Draw (X2) + Over 7.5 Corners at odds of 1.6. Full betting analysis for Bundesliga.",
+      "h1Before": "Werder Bremen vs RB Leipzig Prediction & Match Analysis",
+      "h1After": "Werder Bremen vs RB Leipzig Prediction & Match Analysis",
+      "primaryIntent": "werder bremen vs rb leipzig prediction",
+      "supportingIntents": [
+        "werder bremen vs rb leipzig betting tips",
+        "werder bremen vs rb leipzig odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 59,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "eintracht-frankfurt-vs-augsburg",
+      "league": "bundesliga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Eintracht Frankfurt vs Augsburg Prediction, Betting Tips & Odds",
+      "titleAfter": "Eintracht Frankfurt vs Augsburg Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Eintracht Frankfurt vs Augsburg prediction for the completed match: Eintracht Frankfurt to Win at odds of 1.93. Full betting analysis for Bundesliga.",
+      "descriptionAfter": "Eintracht Frankfurt vs Augsburg prediction for the completed match: Eintracht Frankfurt to Win at odds of 1.93. Full betting analysis for Bundesliga.",
+      "h1Before": "Eintracht Frankfurt vs Augsburg Prediction & Match Analysis",
+      "h1After": "Eintracht Frankfurt vs Augsburg Prediction & Match Analysis",
+      "primaryIntent": "eintracht frankfurt vs augsburg prediction",
+      "supportingIntents": [
+        "eintracht frankfurt vs augsburg betting tips",
+        "eintracht frankfurt vs augsburg odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 63,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "tsg-1899-hoffenheim-vs-borussia-dortmund",
+      "league": "bundesliga",
+      "lifecycle": "FINAL",
+      "titleBefore": "TSG Hoffenheim vs Borussia Dortmund Prediction, Betting Tips & Odds",
+      "titleAfter": "TSG Hoffenheim vs Borussia Dortmund Prediction, Betting Tips & Odds",
+      "descriptionBefore": "TSG Hoffenheim vs Borussia Dortmund prediction for the completed match: Hoffenheim or Draw (1X) at odds of 1.67. Full betting analysis for Bundesliga.",
+      "descriptionAfter": "TSG Hoffenheim vs Borussia Dortmund prediction for the completed match: Hoffenheim or Draw (1X) at odds of 1.67. Full betting analysis for Bundesliga.",
+      "h1Before": "TSG Hoffenheim vs Borussia Dortmund Prediction & Match Analysis",
+      "h1After": "TSG Hoffenheim vs Borussia Dortmund Prediction & Match Analysis",
+      "primaryIntent": "tsg hoffenheim vs borussia dortmund prediction",
+      "supportingIntents": [
+        "tsg hoffenheim vs borussia dortmund betting tips",
+        "tsg hoffenheim vs borussia dortmund odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 67,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "hamburger-sv-vs-1-fsv-mainz-05",
+      "league": "bundesliga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Hamburg SV vs Mainz Prediction, Betting Tips & Odds",
+      "titleAfter": "Hamburg SV vs Mainz Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Hamburg SV vs Mainz prediction for the completed match, Over 2.5 Goals at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Hamburg SV vs Mainz prediction for the completed match, Over 2.5 Goals at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Hamburg SV vs Mainz Prediction & Match Analysis",
+      "h1After": "Hamburg SV vs Mainz Prediction & Match Analysis",
+      "primaryIntent": "hamburg sv vs mainz prediction",
+      "supportingIntents": [
+        "hamburg sv vs mainz betting tips",
+        "hamburg sv vs mainz odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 51,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "schalke-04-vs-bayern-munchen",
+      "league": "bundesliga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Schalke 04 vs Bayern Munich Prediction, Betting Tips & Odds",
+      "titleAfter": "Schalke 04 vs Bayern Munich Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Schalke 04 vs Bayern Munich prediction for the completed match: Bayern Munich -2 Asian Handicap at odds of 2.02. Full betting analysis for Bundesliga.",
+      "descriptionAfter": "Schalke 04 vs Bayern Munich prediction for the completed match: Bayern Munich -2 Asian Handicap at odds of 2.02. Full betting analysis for Bundesliga.",
+      "h1Before": "Schalke 04 vs Bayern Munich Prediction & Match Analysis",
+      "h1After": "Schalke 04 vs Bayern Munich Prediction & Match Analysis",
+      "primaryIntent": "schalke 04 vs bayern munich prediction",
+      "supportingIntents": [
+        "schalke 04 vs bayern munich betting tips",
+        "schalke 04 vs bayern munich odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 59,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "bayer-04-leverkusen-vs-1-fc-union-berlin",
+      "league": "bundesliga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Bayer Leverkusen vs 1. FC Union Berlin Prediction, Betting Tips & Odds",
+      "titleAfter": "Bayer Leverkusen vs 1. FC Union Berlin Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Bayer Leverkusen vs 1. FC Union Berlin prediction for the completed match and betting analysis for Bundesliga.",
+      "descriptionAfter": "Bayer Leverkusen vs 1. FC Union Berlin prediction for the completed match and betting analysis for Bundesliga.",
+      "h1Before": "Bayer Leverkusen vs 1. FC Union Berlin Prediction & Match Analysis",
+      "h1After": "Bayer Leverkusen vs 1. FC Union Berlin Prediction & Match Analysis",
+      "primaryIntent": "bayer leverkusen vs 1. fc union berlin prediction",
+      "supportingIntents": [
+        "bayer leverkusen vs 1. fc union berlin betting tips",
+        "bayer leverkusen vs 1. fc union berlin odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 70,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "vfb-stuttgart-vs-1-fc-koln",
+      "league": "bundesliga",
+      "lifecycle": "FINAL",
+      "titleBefore": "VfB Stuttgart vs Cologne Prediction, Betting Tips & Odds",
+      "titleAfter": "VfB Stuttgart vs Cologne Prediction, Betting Tips & Odds",
+      "descriptionBefore": "VfB Stuttgart vs Cologne prediction for the completed match: Stuttgart to Win + Over 7.5 Corners at odds of 1.7. Full betting analysis for Bundesliga.",
+      "descriptionAfter": "VfB Stuttgart vs Cologne prediction for the completed match: Stuttgart to Win + Over 7.5 Corners at odds of 1.7. Full betting analysis for Bundesliga.",
+      "h1Before": "VfB Stuttgart vs Cologne Prediction & Match Analysis",
+      "h1After": "VfB Stuttgart vs Cologne Prediction & Match Analysis",
+      "primaryIntent": "vfb stuttgart vs cologne prediction",
+      "supportingIntents": [
+        "vfb stuttgart vs cologne betting tips",
+        "vfb stuttgart vs cologne odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 56,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "borussia-monchengladbach-vs-sv-07-elversberg",
+      "league": "bundesliga",
+      "lifecycle": "FINAL",
+      "titleBefore": "Borussia MÃ¶nchengladbach vs SV Elversberg Prediction | Bundesliga",
+      "titleAfter": "Borussia MÃ¶nchengladbach vs SV Elversberg Prediction | Bundesliga",
+      "descriptionBefore": "Borussia MÃ¶nchengladbach vs SV Elversberg prediction for the completed match and betting analysis for Bundesliga.",
+      "descriptionAfter": "Borussia MÃ¶nchengladbach vs SV Elversberg prediction for the completed match and betting analysis for Bundesliga.",
+      "h1Before": "Borussia MÃ¶nchengladbach vs SV Elversberg Prediction & Match Analysis",
+      "h1After": "Borussia MÃ¶nchengladbach vs SV Elversberg Prediction & Match Analysis",
+      "primaryIntent": "borussia mã¶nchengladbach vs sv elversberg prediction",
+      "supportingIntents": [
+        "borussia mã¶nchengladbach vs sv elversberg betting tips",
+        "borussia mã¶nchengladbach vs sv elversberg odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 66,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "sc-paderborn-07-vs-sc-freiburg",
+      "league": "bundesliga",
+      "lifecycle": "FINAL",
+      "titleBefore": "SC Paderborn 07 vs SC Freiburg Prediction, Betting Tips & Odds",
+      "titleAfter": "SC Paderborn 07 vs SC Freiburg Prediction, Betting Tips & Odds",
+      "descriptionBefore": "SC Paderborn 07 vs SC Freiburg prediction for the completed match, Over 2.5 Goals at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "SC Paderborn 07 vs SC Freiburg prediction for the completed match, Over 2.5 Goals at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "SC Paderborn 07 vs SC Freiburg Prediction & Match Analysis",
+      "h1After": "SC Paderborn 07 vs SC Freiburg Prediction & Match Analysis",
+      "primaryIntent": "sc paderborn 07 vs sc freiburg prediction",
+      "supportingIntents": [
+        "sc paderborn 07 vs sc freiburg betting tips",
+        "sc paderborn 07 vs sc freiburg odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 62,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "us-lecce-vs-as-roma",
+      "league": "serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Lecce vs AS Roma Prediction, Betting Tips & Odds",
+      "titleAfter": "Lecce vs AS Roma Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Lecce vs AS Roma prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.8. Full betting analysis for Serie A.",
+      "descriptionAfter": "Lecce vs AS Roma prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.8. Full betting analysis for Serie A.",
+      "h1Before": "Lecce vs AS Roma Prediction & Match Analysis",
+      "h1After": "Lecce vs AS Roma Prediction & Match Analysis",
+      "primaryIntent": "lecce vs as roma prediction",
+      "supportingIntents": [
+        "lecce vs as roma betting tips",
+        "lecce vs as roma odds",
+        "lecce vs as roma probable lineups",
+        "lecce vs as roma team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 48,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "atalanta-bc-vs-bologna-fc-1909",
+      "league": "serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Atalanta vs Bologna Prediction, Betting Tips & Odds",
+      "titleAfter": "Atalanta vs Bologna Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Atalanta vs Bologna prediction for the completed match, Over 2.5 Goals at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Atalanta vs Bologna prediction for the completed match, Over 2.5 Goals at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Atalanta vs Bologna Prediction & Match Analysis",
+      "h1After": "Atalanta vs Bologna Prediction & Match Analysis",
+      "primaryIntent": "atalanta vs bologna prediction",
+      "supportingIntents": [
+        "atalanta vs bologna betting tips",
+        "atalanta vs bologna odds",
+        "atalanta vs bologna probable lineups",
+        "atalanta vs bologna team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 51,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "fiorentina-vs-torino",
+      "league": "serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Fiorentina vs Torino Prediction, Betting Tips & Odds",
+      "titleAfter": "Fiorentina vs Torino Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Fiorentina vs Torino prediction for the completed match: Over 1.5 Goals + Over 6.5 Corners at odds of 1.65. Full betting analysis for Serie A.",
+      "descriptionAfter": "Fiorentina vs Torino prediction for the completed match: Over 1.5 Goals + Over 6.5 Corners at odds of 1.65. Full betting analysis for Serie A.",
+      "h1Before": "Fiorentina vs Torino Prediction & Match Analysis",
+      "h1After": "Fiorentina vs Torino Prediction & Match Analysis",
+      "primaryIntent": "fiorentina vs torino prediction",
+      "supportingIntents": [
+        "fiorentina vs torino betting tips",
+        "fiorentina vs torino odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 52,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "inter-vs-napoli",
+      "league": "serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Internazionale vs Napoli Prediction, Betting Tips & Odds",
+      "titleAfter": "Internazionale vs Napoli Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Internazionale vs Napoli prediction for the completed match, Inter to Win at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Internazionale vs Napoli prediction for the completed match, Inter to Win at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Internazionale vs Napoli Prediction & Match Analysis",
+      "h1After": "Internazionale vs Napoli Prediction & Match Analysis",
+      "primaryIntent": "internazionale vs napoli prediction",
+      "supportingIntents": [
+        "internazionale vs napoli betting tips",
+        "internazionale vs napoli odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 56,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "genoa-vs-como",
+      "league": "serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Genoa vs Como Prediction, Betting Tips & Odds",
+      "titleAfter": "Genoa vs Como Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Genoa vs Como prediction for the completed match, Over 1.5 Goals + Over 6.5 Corners at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Genoa vs Como prediction for the completed match, Over 1.5 Goals + Over 6.5 Corners at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Genoa vs Como Prediction & Match Analysis",
+      "h1After": "Genoa vs Como Prediction & Match Analysis",
+      "primaryIntent": "genoa vs como prediction",
+      "supportingIntents": [
+        "genoa vs como betting tips",
+        "genoa vs como odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 45,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "roma-vs-atalanta",
+      "league": "serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "AS Roma vs Atalanta Prediction, Betting Tips & Odds",
+      "titleAfter": "AS Roma vs Atalanta Prediction, Betting Tips & Odds",
+      "descriptionBefore": "AS Roma vs Atalanta prediction for the completed match: Roma or Draw (1X) + Over 1.5 Goals at odds of 1.53. Full betting analysis for Serie A.",
+      "descriptionAfter": "AS Roma vs Atalanta prediction for the completed match: Roma or Draw (1X) + Over 1.5 Goals at odds of 1.53. Full betting analysis for Serie A.",
+      "h1Before": "AS Roma vs Atalanta Prediction & Match Analysis",
+      "h1After": "AS Roma vs Atalanta Prediction & Match Analysis",
+      "primaryIntent": "as roma vs atalanta prediction",
+      "supportingIntents": [
+        "as roma vs atalanta betting tips",
+        "as roma vs atalanta odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 51,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "parma-vs-monza",
+      "league": "serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Parma vs Monza Prediction, Betting Tips & Odds",
+      "titleAfter": "Parma vs Monza Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Parma vs Monza prediction for the completed match, Over 1.5 Goals — Live Entry at odds of 1.44. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Parma vs Monza prediction for the completed match, Over 1.5 Goals — Live Entry at odds of 1.44. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Parma vs Monza Prediction & Match Analysis",
+      "h1After": "Parma vs Monza Prediction & Match Analysis",
+      "primaryIntent": "parma vs monza prediction",
+      "supportingIntents": [
+        "parma vs monza betting tips",
+        "parma vs monza odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 46,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "frosinone-vs-venezia",
+      "league": "serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Frosinone vs Venezia Prediction, Betting Tips & Odds",
+      "titleAfter": "Frosinone vs Venezia Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Frosinone vs Venezia prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.62. Full betting analysis for Serie A.",
+      "descriptionAfter": "Frosinone vs Venezia prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.62. Full betting analysis for Serie A.",
+      "h1Before": "Frosinone vs Venezia Prediction & Match Analysis",
+      "h1After": "Frosinone vs Venezia Prediction & Match Analysis",
+      "primaryIntent": "frosinone vs venezia prediction",
+      "supportingIntents": [
+        "frosinone vs venezia betting tips",
+        "frosinone vs venezia odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 52,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "juventus-vs-ac-milan",
+      "league": "serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Juventus vs AC Milan Prediction, Betting Tips & Odds",
+      "titleAfter": "Juventus vs AC Milan Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Juventus vs AC Milan prediction for the completed match, Juventus to win at odds of 2.14. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Juventus vs AC Milan prediction for the completed match, Juventus to win at odds of 2.14. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Juventus vs AC Milan Prediction & Match Analysis",
+      "h1After": "Juventus vs AC Milan Prediction & Match Analysis",
+      "primaryIntent": "juventus vs ac milan prediction",
+      "supportingIntents": [
+        "juventus vs ac milan betting tips",
+        "juventus vs ac milan odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 52,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "cagliari-vs-lecce",
+      "league": "serie-a",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Cagliari vs Lecce Prediction, Betting Tips & Odds",
+      "titleAfter": "Cagliari vs Lecce Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Cagliari vs Lecce prediction for the completed match, Over 1.5 Goals at odds of 1.55. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Cagliari vs Lecce prediction for the completed match, Over 1.5 Goals at odds of 1.55. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Cagliari vs Lecce Prediction & Match Analysis",
+      "h1After": "Cagliari vs Lecce Prediction & Match Analysis",
+      "primaryIntent": "cagliari vs lecce prediction",
+      "supportingIntents": [
+        "cagliari vs lecce betting tips",
+        "cagliari vs lecce odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 49,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "udinese-vs-lazio",
+      "league": "serie-a",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Udinese vs Lazio Prediction, Betting Tips & Odds",
+      "titleAfter": "Udinese vs Lazio Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Udinese vs Lazio prediction for today, Udinese or Draw (1X) at odds of 1.47. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Udinese vs Lazio prediction for today, Udinese or Draw (1X) at odds of 1.47. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Udinese vs Lazio Prediction & Match Analysis",
+      "h1After": "Udinese vs Lazio Prediction & Match Analysis",
+      "primaryIntent": "udinese vs lazio prediction",
+      "supportingIntents": [
+        "udinese vs lazio betting tips",
+        "udinese vs lazio odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 48,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "estrela-da-amadora-vs-famalicao",
+      "league": "liga-portugal",
+      "lifecycle": "FINAL",
+      "titleBefore": "Estrela vs Famalicao Prediction, Betting Tips & Odds",
+      "titleAfter": "Estrela vs Famalicao Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Estrela vs Famalicao prediction for the completed match: Estrela da Amadora or Draw (1X) at odds of 1.62. Full betting analysis for Liga Portugal.",
+      "descriptionAfter": "Estrela vs Famalicao prediction for the completed match: Estrela da Amadora or Draw (1X) at odds of 1.62. Full betting analysis for Liga Portugal.",
+      "h1Before": "Estrela vs Famalicao Prediction & Match Analysis",
+      "h1After": "Estrela vs Famalicao Prediction & Match Analysis",
+      "primaryIntent": "estrela vs famalicao prediction",
+      "supportingIntents": [
+        "estrela vs famalicao betting tips",
+        "estrela vs famalicao odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 52,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "fc-porto-vs-moreirense",
+      "league": "liga-portugal",
+      "lifecycle": "FINAL",
+      "titleBefore": "Porto vs Moreirense Prediction, Betting Tips & Odds",
+      "titleAfter": "Porto vs Moreirense Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Porto vs Moreirense prediction for the completed match: FC Porto -1.75 Asian Handicap at odds of 1.75. Full betting analysis for Liga Portugal.",
+      "descriptionAfter": "Porto vs Moreirense prediction for the completed match: FC Porto -1.75 Asian Handicap at odds of 1.75. Full betting analysis for Liga Portugal.",
+      "h1Before": "Porto vs Moreirense Prediction & Match Analysis",
+      "h1After": "Porto vs Moreirense Prediction & Match Analysis",
+      "primaryIntent": "porto vs moreirense prediction",
+      "supportingIntents": [
+        "porto vs moreirense betting tips",
+        "porto vs moreirense odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 51,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "santa-clara-vs-rio-ave",
+      "league": "liga-portugal",
+      "lifecycle": "FINAL",
+      "titleBefore": "Santa Clara vs Rio Ave Prediction, Betting Tips & Odds",
+      "titleAfter": "Santa Clara vs Rio Ave Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Santa Clara vs Rio Ave prediction for the completed match: Santa Clara or Draw (1X) + Over 1.5 Goals at odds of 1.62. Full betting analysis for Liga Portugal.",
+      "descriptionAfter": "Santa Clara vs Rio Ave prediction for the completed match: Santa Clara or Draw (1X) + Over 1.5 Goals at odds of 1.62. Full betting analysis for Liga Portugal.",
+      "h1Before": "Santa Clara vs Rio Ave Prediction & Match Analysis",
+      "h1After": "Santa Clara vs Rio Ave Prediction & Match Analysis",
+      "primaryIntent": "santa clara vs rio ave prediction",
+      "supportingIntents": [
+        "santa clara vs rio ave betting tips",
+        "santa clara vs rio ave odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 54,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "sporting-cp-vs-nacional",
+      "league": "liga-portugal",
+      "lifecycle": "FINAL",
+      "titleBefore": "Sporting CP vs C.D. Nacional Prediction, Betting Tips & Odds",
+      "titleAfter": "Sporting CP vs C.D. Nacional Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Sporting CP vs C.D. Nacional prediction for the completed match: Sporting CP to win at odds of 1.23. Full betting analysis for Liga Portugal.",
+      "descriptionAfter": "Sporting CP vs C.D. Nacional prediction for the completed match: Sporting CP to win at odds of 1.23. Full betting analysis for Liga Portugal.",
+      "h1Before": "Sporting CP vs C.D. Nacional Prediction & Match Analysis",
+      "h1After": "Sporting CP vs C.D. Nacional Prediction & Match Analysis",
+      "primaryIntent": "sporting cp vs c.d. nacional prediction",
+      "supportingIntents": [
+        "sporting cp vs c.d. nacional betting tips",
+        "sporting cp vs c.d. nacional odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 60,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "maritimo-vs-benfica",
+      "league": "liga-portugal",
+      "lifecycle": "FINAL",
+      "titleBefore": "Maritimo vs Benfica Prediction, Betting Tips & Odds",
+      "titleAfter": "Maritimo vs Benfica Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Maritimo vs Benfica prediction for the completed match, Benfica to win at odds of 1.28. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Maritimo vs Benfica prediction for the completed match, Benfica to win at odds of 1.28. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Maritimo vs Benfica Prediction & Match Analysis",
+      "h1After": "Maritimo vs Benfica Prediction & Match Analysis",
+      "primaryIntent": "maritimo vs benfica prediction",
+      "supportingIntents": [
+        "maritimo vs benfica betting tips",
+        "maritimo vs benfica odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 51,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "vitoria-sc-vs-casa-pia",
+      "league": "liga-portugal",
+      "lifecycle": "FINAL",
+      "titleBefore": "VitÃ³ria de Guimaraes vs Casa Pia Prediction, Betting Tips & Odds",
+      "titleAfter": "VitÃ³ria de Guimaraes vs Casa Pia Prediction, Betting Tips & Odds",
+      "descriptionBefore": "VitÃ³ria de Guimaraes vs Casa Pia prediction for the completed match: Vitória SC to win at odds of 1.64. Full betting analysis for Liga Portugal.",
+      "descriptionAfter": "VitÃ³ria de Guimaraes vs Casa Pia prediction for the completed match: Vitória SC to win at odds of 1.64. Full betting analysis for Liga Portugal.",
+      "h1Before": "VitÃ³ria de Guimaraes vs Casa Pia Prediction & Match Analysis",
+      "h1After": "VitÃ³ria de Guimaraes vs Casa Pia Prediction & Match Analysis",
+      "primaryIntent": "vitã³ria de guimaraes vs casa pia prediction",
+      "supportingIntents": [
+        "vitã³ria de guimaraes vs casa pia betting tips",
+        "vitã³ria de guimaraes vs casa pia odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 65,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "gil-vicente-vs-academico-viseu",
+      "league": "liga-portugal",
+      "lifecycle": "FINAL",
+      "titleBefore": "Gil Vicente vs AcadÃ©mico de Viseu Prediction, Betting Tips & Odds",
+      "titleAfter": "Gil Vicente vs AcadÃ©mico de Viseu Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Gil Vicente vs AcadÃ©mico de Viseu prediction for the completed match: Gil Vicente to win at odds of 1.83. Full betting analysis for Liga Portugal.",
+      "descriptionAfter": "Gil Vicente vs AcadÃ©mico de Viseu prediction for the completed match: Gil Vicente to win at odds of 1.83. Full betting analysis for Liga Portugal.",
+      "h1Before": "Gil Vicente vs AcadÃ©mico de Viseu Prediction & Match Analysis",
+      "h1After": "Gil Vicente vs AcadÃ©mico de Viseu Prediction & Match Analysis",
+      "primaryIntent": "gil vicente vs acadã©mico de viseu prediction",
+      "supportingIntents": [
+        "gil vicente vs acadã©mico de viseu betting tips",
+        "gil vicente vs acadã©mico de viseu odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 66,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "estoril-vs-arouca",
+      "league": "liga-portugal",
+      "lifecycle": "TODAY",
+      "titleBefore": "Estoril vs Arouca Prediction, Betting Tips & Odds",
+      "titleAfter": "Estoril vs Arouca Prediction & Betting tips - Liga Portugal",
+      "descriptionBefore": "Estoril vs Arouca prediction for today, Estoril Praia to win at odds of 2.05. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Estoril vs Arouca prediction for Liga Portugal: Estoril Praia to win at odds of 2.05. Betting tips, analysis and supporting match context.",
+      "h1Before": "Estoril vs Arouca Prediction & Match Analysis",
+      "h1After": "Estoril vs Arouca Prediction & Betting tips",
+      "primaryIntent": "estoril vs arouca prediction",
+      "supportingIntents": [
+        "estoril vs arouca betting tips",
+        "estoril vs arouca odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 59,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "toulouse-vs-lille",
+      "league": "ligue-1",
+      "lifecycle": "FINAL",
+      "titleBefore": "Toulouse vs Lille Prediction, Betting Tips & Odds",
+      "titleAfter": "Toulouse vs Lille Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Toulouse vs Lille prediction for the completed match: Lille or Draw (X2) + Over 1.5 Goals at odds of 1.83. Full betting analysis for Ligue 1.",
+      "descriptionAfter": "Toulouse vs Lille prediction for the completed match: Lille or Draw (X2) + Over 1.5 Goals at odds of 1.83. Full betting analysis for Ligue 1.",
+      "h1Before": "Toulouse vs Lille Prediction & Match Analysis",
+      "h1After": "Toulouse vs Lille Prediction & Match Analysis",
+      "primaryIntent": "toulouse vs lille prediction",
+      "supportingIntents": [
+        "toulouse vs lille betting tips",
+        "toulouse vs lille odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 49,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "lyon-vs-auxerre",
+      "league": "ligue-1",
+      "lifecycle": "FINAL",
+      "titleBefore": "Lyon vs AJ Auxerre Prediction, Betting Tips & Odds",
+      "titleAfter": "Lyon vs AJ Auxerre Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Lyon vs AJ Auxerre prediction for the completed match, Lyon to Win + Over 1.5 Goals at odds of 1.8. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Lyon vs AJ Auxerre prediction for the completed match, Lyon to Win + Over 1.5 Goals at odds of 1.8. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Lyon vs AJ Auxerre Prediction & Match Analysis",
+      "h1After": "Lyon vs AJ Auxerre Prediction & Match Analysis",
+      "primaryIntent": "lyon vs aj auxerre prediction",
+      "supportingIntents": [
+        "lyon vs aj auxerre betting tips",
+        "lyon vs aj auxerre odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 50,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "lens-vs-lorient",
+      "league": "ligue-1",
+      "lifecycle": "FINAL",
+      "titleBefore": "Lens vs Lorient Prediction, Betting Tips & Odds",
+      "titleAfter": "Lens vs Lorient Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Lens vs Lorient prediction for the completed match, Lens to Win + Over 1.5 Goals at odds of 1.72. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Lens vs Lorient prediction for the completed match, Lens to Win + Over 1.5 Goals at odds of 1.72. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Lens vs Lorient Prediction & Match Analysis",
+      "h1After": "Lens vs Lorient Prediction & Match Analysis",
+      "primaryIntent": "lens vs lorient prediction",
+      "supportingIntents": [
+        "lens vs lorient betting tips",
+        "lens vs lorient odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 47,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "nice-vs-le-mans",
+      "league": "ligue-1",
+      "lifecycle": "FINAL",
+      "titleBefore": "Nice vs Le Mans Prediction, Betting Tips & Odds",
+      "titleAfter": "Nice vs Le Mans Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Nice vs Le Mans prediction for the completed match, Nice to Win at odds of 1.78. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Nice vs Le Mans prediction for the completed match, Nice to Win at odds of 1.78. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Nice vs Le Mans Prediction & Match Analysis",
+      "h1After": "Nice vs Le Mans Prediction & Match Analysis",
+      "primaryIntent": "nice vs le mans prediction",
+      "supportingIntents": [
+        "nice vs le mans betting tips",
+        "nice vs le mans odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 47,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "le-havre-vs-brest",
+      "league": "ligue-1",
+      "lifecycle": "FINAL",
+      "titleBefore": "Le Havre AC vs Brest Prediction, Betting Tips & Odds",
+      "titleAfter": "Le Havre AC vs Brest Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Le Havre AC vs Brest prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.83. Full betting analysis for Ligue 1.",
+      "descriptionAfter": "Le Havre AC vs Brest prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.83. Full betting analysis for Ligue 1.",
+      "h1Before": "Le Havre AC vs Brest Prediction & Match Analysis",
+      "h1After": "Le Havre AC vs Brest Prediction & Match Analysis",
+      "primaryIntent": "le havre ac vs brest prediction",
+      "supportingIntents": [
+        "le havre ac vs brest betting tips",
+        "le havre ac vs brest odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 52,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "angers-vs-rennes",
+      "league": "ligue-1",
+      "lifecycle": "FINAL",
+      "titleBefore": "Angers vs Stade Rennais Prediction, Betting Tips & Odds",
+      "titleAfter": "Angers vs Stade Rennais Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Angers vs Stade Rennais prediction for the completed match: Rennes or Draw (X2) + Over 1.5 Goals at odds of 1.6. Full betting analysis for Ligue 1.",
+      "descriptionAfter": "Angers vs Stade Rennais prediction for the completed match: Rennes or Draw (X2) + Over 1.5 Goals at odds of 1.6. Full betting analysis for Ligue 1.",
+      "h1Before": "Angers vs Stade Rennais Prediction & Match Analysis",
+      "h1After": "Angers vs Stade Rennais Prediction & Match Analysis",
+      "primaryIntent": "angers vs stade rennais prediction",
+      "supportingIntents": [
+        "angers vs stade rennais betting tips",
+        "angers vs stade rennais odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 55,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "troyes-vs-strasbourg",
+      "league": "ligue-1",
+      "lifecycle": "FINAL",
+      "titleBefore": "Troyes vs Strasbourg Prediction, Betting Tips & Odds",
+      "titleAfter": "Troyes vs Strasbourg Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Troyes vs Strasbourg prediction for the completed match, Over 2.5 Goals at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Troyes vs Strasbourg prediction for the completed match, Over 2.5 Goals at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Troyes vs Strasbourg Prediction & Match Analysis",
+      "h1After": "Troyes vs Strasbourg Prediction & Match Analysis",
+      "primaryIntent": "troyes vs strasbourg prediction",
+      "supportingIntents": [
+        "troyes vs strasbourg betting tips",
+        "troyes vs strasbourg odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 52,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "olympique-de-marseille-vs-paris-fc",
+      "league": "ligue-1",
+      "lifecycle": "FINAL",
+      "titleBefore": "Marseille vs Paris Prediction, Betting Tips & Odds",
+      "titleAfter": "Marseille vs Paris Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Marseille vs Paris prediction for the completed match: Over 8.5 corners + Over 1.5 Goals at odds of 1.85. Full betting analysis for Ligue 1.",
+      "descriptionAfter": "Marseille vs Paris prediction for the completed match: Over 8.5 corners + Over 1.5 Goals at odds of 1.85. Full betting analysis for Ligue 1.",
+      "h1Before": "Marseille vs Paris Prediction & Match Analysis",
+      "h1After": "Marseille vs Paris Prediction & Match Analysis",
+      "primaryIntent": "marseille vs paris prediction",
+      "supportingIntents": [
+        "marseille vs paris betting tips",
+        "marseille vs paris odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 50,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "paris-saint-germain-vs-as-monaco",
+      "league": "ligue-1",
+      "lifecycle": "FINAL",
+      "titleBefore": "Paris Saint-Germain vs AS Monaco Prediction, Betting Tips & Odds",
+      "titleAfter": "Paris Saint-Germain vs AS Monaco Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Paris Saint-Germain vs AS Monaco prediction for the completed match: PSG -1.5 Asian Handicap at odds of 2.1. Full betting analysis for Ligue 1.",
+      "descriptionAfter": "Paris Saint-Germain vs AS Monaco prediction for the completed match: PSG -1.5 Asian Handicap at odds of 2.1. Full betting analysis for Ligue 1.",
+      "h1Before": "Paris Saint-Germain vs AS Monaco Prediction & Match Analysis",
+      "h1After": "Paris Saint-Germain vs AS Monaco Prediction & Match Analysis",
+      "primaryIntent": "paris saint-germain vs as monaco prediction",
+      "supportingIntents": [
+        "paris saint-germain vs as monaco betting tips",
+        "paris saint-germain vs as monaco odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 64,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "sparta-rotterdam-vs-pec-zwolle",
+      "league": "eredivisie",
+      "lifecycle": "FINAL",
+      "titleBefore": "Sparta Rotterdam vs PEC Zwolle Prediction, Betting Tips & Odds",
+      "titleAfter": "Sparta Rotterdam vs PEC Zwolle Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Sparta Rotterdam vs PEC Zwolle prediction for the completed match and betting analysis for VriendenLoterij Eredivisie.",
+      "descriptionAfter": "Sparta Rotterdam vs PEC Zwolle prediction for the completed match and betting analysis for VriendenLoterij Eredivisie.",
+      "h1Before": "Sparta Rotterdam vs PEC Zwolle Prediction & Match Analysis",
+      "h1After": "Sparta Rotterdam vs PEC Zwolle Prediction & Match Analysis",
+      "primaryIntent": "sparta rotterdam vs pec zwolle prediction",
+      "supportingIntents": [
+        "sparta rotterdam vs pec zwolle betting tips",
+        "sparta rotterdam vs pec zwolle odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 62,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "willem-ii-vs-excelsior",
+      "league": "eredivisie",
+      "lifecycle": "FINAL",
+      "titleBefore": "Willem II vs Excelsior Prediction, Betting Tips & Odds",
+      "titleAfter": "Willem II vs Excelsior Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Willem II vs Excelsior prediction for the completed match, Over 2.5 Goals at odds of 1.7. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Willem II vs Excelsior prediction for the completed match, Over 2.5 Goals at odds of 1.7. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Willem II vs Excelsior Prediction & Match Analysis",
+      "h1After": "Willem II vs Excelsior Prediction & Match Analysis",
+      "primaryIntent": "willem ii vs excelsior prediction",
+      "supportingIntents": [
+        "willem ii vs excelsior betting tips",
+        "willem ii vs excelsior odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 54,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "ajax-vs-psv-eindhoven",
+      "league": "eredivisie",
+      "lifecycle": "FINAL",
+      "titleBefore": "Ajax Amsterdam vs PSV Eindhoven Prediction, Betting Tips & Odds",
+      "titleAfter": "Ajax Amsterdam vs PSV Eindhoven Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Ajax Amsterdam vs PSV Eindhoven prediction for the completed match, Over 3.5 Goals at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Ajax Amsterdam vs PSV Eindhoven prediction for the completed match, Over 3.5 Goals at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Ajax Amsterdam vs PSV Eindhoven Prediction & Match Analysis",
+      "h1After": "Ajax Amsterdam vs PSV Eindhoven Prediction & Match Analysis",
+      "primaryIntent": "ajax amsterdam vs psv eindhoven prediction",
+      "supportingIntents": [
+        "ajax amsterdam vs psv eindhoven betting tips",
+        "ajax amsterdam vs psv eindhoven odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 63,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "fc-utrecht-vs-go-ahead-eagles",
+      "league": "eredivisie",
+      "lifecycle": "FINAL",
+      "titleBefore": "Utrecht vs Go Ahead Eagles Prediction, Betting Tips & Odds",
+      "titleAfter": "Utrecht vs Go Ahead Eagles Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Utrecht vs Go Ahead Eagles prediction for the completed match, Over 2.5 Goals at odds of 1.52. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Utrecht vs Go Ahead Eagles prediction for the completed match, Over 2.5 Goals at odds of 1.52. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Utrecht vs Go Ahead Eagles Prediction & Match Analysis",
+      "h1After": "Utrecht vs Go Ahead Eagles Prediction & Match Analysis",
+      "primaryIntent": "utrecht vs go ahead eagles prediction",
+      "supportingIntents": [
+        "utrecht vs go ahead eagles betting tips",
+        "utrecht vs go ahead eagles odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 58,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "nec-nijmegen-vs-feyenoord",
+      "league": "eredivisie",
+      "lifecycle": "FINAL",
+      "titleBefore": "NEC Nijmegen vs Feyenoord Rotterdam Prediction, Betting Tips & Odds",
+      "titleAfter": "NEC Nijmegen vs Feyenoord Rotterdam Prediction, Betting Tips & Odds",
+      "descriptionBefore": "NEC Nijmegen vs Feyenoord Rotterdam prediction for the completed match and betting analysis for VriendenLoterij Eredivisie.",
+      "descriptionAfter": "NEC Nijmegen vs Feyenoord Rotterdam prediction for the completed match and betting analysis for VriendenLoterij Eredivisie.",
+      "h1Before": "NEC Nijmegen vs Feyenoord Rotterdam Prediction & Match Analysis",
+      "h1After": "NEC Nijmegen vs Feyenoord Rotterdam Prediction & Match Analysis",
+      "primaryIntent": "nec nijmegen vs feyenoord rotterdam prediction",
+      "supportingIntents": [
+        "nec nijmegen vs feyenoord rotterdam betting tips",
+        "nec nijmegen vs feyenoord rotterdam odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 67,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "ado-den-haag-vs-fortuna-sittard",
+      "league": "eredivisie",
+      "lifecycle": "FINAL",
+      "titleBefore": "ADO Den Haag vs Fortuna Sittard Prediction, Betting Tips & Odds",
+      "titleAfter": "ADO Den Haag vs Fortuna Sittard Prediction, Betting Tips & Odds",
+      "descriptionBefore": "ADO Den Haag vs Fortuna Sittard prediction for the completed match and betting analysis for VriendenLoterij Eredivisie.",
+      "descriptionAfter": "ADO Den Haag vs Fortuna Sittard prediction for the completed match and betting analysis for VriendenLoterij Eredivisie.",
+      "h1Before": "ADO Den Haag vs Fortuna Sittard Prediction & Match Analysis",
+      "h1After": "ADO Den Haag vs Fortuna Sittard Prediction & Match Analysis",
+      "primaryIntent": "ado den haag vs fortuna sittard prediction",
+      "supportingIntents": [
+        "ado den haag vs fortuna sittard betting tips",
+        "ado den haag vs fortuna sittard odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 63,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "sc-heerenveen-vs-az-alkmaar",
+      "league": "eredivisie",
+      "lifecycle": "FINAL",
+      "titleBefore": "Heerenveen vs AZ Alkmaar Prediction, Betting Tips & Odds",
+      "titleAfter": "Heerenveen vs AZ Alkmaar Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Heerenveen vs AZ Alkmaar prediction for the completed match and betting analysis for VriendenLoterij Eredivisie.",
+      "descriptionAfter": "Heerenveen vs AZ Alkmaar prediction for the completed match and betting analysis for VriendenLoterij Eredivisie.",
+      "h1Before": "Heerenveen vs AZ Alkmaar Prediction & Match Analysis",
+      "h1After": "Heerenveen vs AZ Alkmaar Prediction & Match Analysis",
+      "primaryIntent": "heerenveen vs az alkmaar prediction",
+      "supportingIntents": [
+        "heerenveen vs az alkmaar betting tips",
+        "heerenveen vs az alkmaar odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 56,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "fc-groningen-vs-fc-twente",
+      "league": "eredivisie",
+      "lifecycle": "FINAL",
+      "titleBefore": "Groningen vs Twente Prediction, Betting Tips & Odds",
+      "titleAfter": "Groningen vs Twente Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Groningen vs Twente prediction for the completed match, Over 2.5 Goals at odds of 1.6. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Groningen vs Twente prediction for the completed match, Over 2.5 Goals at odds of 1.6. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Groningen vs Twente Prediction & Match Analysis",
+      "h1After": "Groningen vs Twente Prediction & Match Analysis",
+      "primaryIntent": "groningen vs twente prediction",
+      "supportingIntents": [
+        "groningen vs twente betting tips",
+        "groningen vs twente odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 51,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "telstar-vs-sc-cambuur",
+      "league": "eredivisie",
+      "lifecycle": "FINAL",
+      "titleBefore": "Telstar vs SC Cambuur Prediction, Betting Tips & Odds",
+      "titleAfter": "Telstar vs SC Cambuur Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Telstar vs SC Cambuur prediction for the completed match, Telstar to Win at odds of 1.62. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Telstar vs SC Cambuur prediction for the completed match, Telstar to Win at odds of 1.62. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Telstar vs SC Cambuur Prediction & Match Analysis",
+      "h1After": "Telstar vs SC Cambuur Prediction & Match Analysis",
+      "primaryIntent": "telstar vs sc cambuur prediction",
+      "supportingIntents": [
+        "telstar vs sc cambuur betting tips",
+        "telstar vs sc cambuur odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 53,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "flamengo-vs-mirassol",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Flamengo vs Mirassol Prediction, Betting Tips & Odds",
+      "titleAfter": "Flamengo vs Mirassol Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Flamengo vs Mirassol prediction for the completed match: Flamengo -1.5 Asian Handicap at odds of 1.82. Full betting analysis for Brasileirão Série A.",
+      "descriptionAfter": "Flamengo vs Mirassol prediction for the completed match: Flamengo -1.5 Asian Handicap at odds of 1.82. Full betting analysis for Brasileirão Série A.",
+      "h1Before": "Flamengo vs Mirassol Prediction & Match Analysis",
+      "h1After": "Flamengo vs Mirassol Prediction & Match Analysis",
+      "primaryIntent": "flamengo vs mirassol prediction",
+      "supportingIntents": [
+        "flamengo vs mirassol betting tips",
+        "flamengo vs mirassol odds",
+        "flamengo vs mirassol probable lineups",
+        "flamengo vs mirassol team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 52,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "red-bull-bragantino-vs-bahia",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Red Bull Bragantino vs Bahia Prediction, Betting Tips & Odds",
+      "titleAfter": "Red Bull Bragantino vs Bahia Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Red Bull Bragantino vs Bahia prediction for the completed match and betting analysis for Brasileirão Série A.",
+      "descriptionAfter": "Red Bull Bragantino vs Bahia prediction for the completed match and betting analysis for Brasileirão Série A.",
+      "h1Before": "Red Bull Bragantino vs Bahia Prediction & Match Analysis",
+      "h1After": "Red Bull Bragantino vs Bahia Prediction & Match Analysis",
+      "primaryIntent": "red bull bragantino vs bahia prediction",
+      "supportingIntents": [
+        "red bull bragantino vs bahia betting tips",
+        "red bull bragantino vs bahia odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 60,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "sao-paulo-vs-atletico-mg",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "SÃ£o Paulo vs AtlÃ©tico-MG Prediction, Betting Tips & Odds",
+      "titleAfter": "SÃ£o Paulo vs AtlÃ©tico-MG Prediction, Betting Tips & Odds",
+      "descriptionBefore": "SÃ£o Paulo vs AtlÃ©tico-MG prediction for the completed match: São Paulo X1 + Over 8.5 Corners at odds of 1.67. Full betting analysis for Brasileirão Série A.",
+      "descriptionAfter": "SÃ£o Paulo vs AtlÃ©tico-MG prediction for the completed match: São Paulo X1 + Over 8.5 Corners at odds of 1.67. Full betting analysis for Brasileirão Série A.",
+      "h1Before": "SÃ£o Paulo vs AtlÃ©tico-MG Prediction & Match Analysis",
+      "h1After": "SÃ£o Paulo vs AtlÃ©tico-MG Prediction & Match Analysis",
+      "primaryIntent": "sã£o paulo vs atlã©tico-mg prediction",
+      "supportingIntents": [
+        "sã£o paulo vs atlã©tico-mg betting tips",
+        "sã£o paulo vs atlã©tico-mg odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 58,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "fluminense-vs-vasco-da-gama",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Fluminense vs Vasco da Gama Prediction, Betting Tips & Odds",
+      "titleAfter": "Fluminense vs Vasco da Gama Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Fluminense vs Vasco da Gama prediction for the completed match, Fluminense to Win at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Fluminense vs Vasco da Gama prediction for the completed match, Fluminense to Win at odds of 1.9. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Fluminense vs Vasco da Gama Prediction & Match Analysis",
+      "h1After": "Fluminense vs Vasco da Gama Prediction & Match Analysis",
+      "primaryIntent": "fluminense vs vasco da gama prediction",
+      "supportingIntents": [
+        "fluminense vs vasco da gama betting tips",
+        "fluminense vs vasco da gama odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 59,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "coritiba-vs-mirassol",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Coritiba vs Mirassol Prediction, Betting Tips & Odds",
+      "titleAfter": "Coritiba vs Mirassol Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Coritiba vs Mirassol prediction for the completed match, Over 1.5 Goals at odds of 1.44. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Coritiba vs Mirassol prediction for the completed match, Over 1.5 Goals at odds of 1.44. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Coritiba vs Mirassol Prediction & Match Analysis",
+      "h1After": "Coritiba vs Mirassol Prediction & Match Analysis",
+      "primaryIntent": "coritiba vs mirassol prediction",
+      "supportingIntents": [
+        "coritiba vs mirassol betting tips",
+        "coritiba vs mirassol odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 52,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "remo-vs-flamengo",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Remo vs Flamengo Prediction, Betting Tips & Odds",
+      "titleAfter": "Remo vs Flamengo Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Remo vs Flamengo prediction for the completed match: Flamengo to Win + Over 1.5 Goals at odds of 1.88. Full betting analysis for Brasileirão Série A.",
+      "descriptionAfter": "Remo vs Flamengo prediction for the completed match: Flamengo to Win + Over 1.5 Goals at odds of 1.88. Full betting analysis for Brasileirão Série A.",
+      "h1Before": "Remo vs Flamengo Prediction & Match Analysis",
+      "h1After": "Remo vs Flamengo Prediction & Match Analysis",
+      "primaryIntent": "remo vs flamengo prediction",
+      "supportingIntents": [
+        "remo vs flamengo betting tips",
+        "remo vs flamengo odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 48,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "internacional-vs-santos",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Internacional vs Santos Prediction, Betting Tips & Odds",
+      "titleAfter": "Internacional vs Santos Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Internacional vs Santos prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.67. Full betting analysis for Brasileirão Série A.",
+      "descriptionAfter": "Internacional vs Santos prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.67. Full betting analysis for Brasileirão Série A.",
+      "h1Before": "Internacional vs Santos Prediction & Match Analysis",
+      "h1After": "Internacional vs Santos Prediction & Match Analysis",
+      "primaryIntent": "internacional vs santos prediction",
+      "supportingIntents": [
+        "internacional vs santos betting tips",
+        "internacional vs santos odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 55,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "cruzeiro-vs-athletico-pr",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "FINAL",
+      "titleBefore": "Cruzeiro vs Athletico-PR Prediction, Betting Tips & Odds",
+      "titleAfter": "Cruzeiro vs Athletico-PR Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Cruzeiro vs Athletico-PR prediction for the completed match and betting analysis for Brasileirão Série A.",
+      "descriptionAfter": "Cruzeiro vs Athletico-PR prediction for the completed match and betting analysis for Brasileirão Série A.",
+      "h1Before": "Cruzeiro vs Athletico-PR Prediction & Match Analysis",
+      "h1After": "Cruzeiro vs Athletico-PR Prediction & Match Analysis",
+      "primaryIntent": "cruzeiro vs athletico-pr prediction",
+      "supportingIntents": [
+        "cruzeiro vs athletico-pr betting tips",
+        "cruzeiro vs athletico-pr odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 56,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "botafogo-vs-palmeiras",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Botafogo vs Palmeiras Prediction, Betting Tips & Odds",
+      "titleAfter": "Botafogo vs Palmeiras Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Botafogo vs Palmeiras prediction for the completed match: Over 1.5 Goals + Over 8.5 Corners at odds of 1.7. Full betting analysis for Brasileirão Série A.",
+      "descriptionAfter": "Botafogo vs Palmeiras prediction for the completed match: Over 1.5 Goals + Over 8.5 Corners at odds of 1.7. Full betting analysis for Brasileirão Série A.",
+      "h1Before": "Botafogo vs Palmeiras Prediction & Match Analysis",
+      "h1After": "Botafogo vs Palmeiras Prediction & Match Analysis",
+      "primaryIntent": "botafogo vs palmeiras prediction",
+      "supportingIntents": [
+        "botafogo vs palmeiras betting tips",
+        "botafogo vs palmeiras odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 53,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "corinthians-vs-chapecoense",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Corinthians vs Chapecoense Prediction, Betting Tips & Odds",
+      "titleAfter": "Corinthians vs Chapecoense Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Corinthians vs Chapecoense prediction for the completed match: Corinthians -1.5 Handicap at odds of 2.2. Full betting analysis for Brasileirão Série A.",
+      "descriptionAfter": "Corinthians vs Chapecoense prediction for the completed match: Corinthians -1.5 Handicap at odds of 2.2. Full betting analysis for Brasileirão Série A.",
+      "h1Before": "Corinthians vs Chapecoense Prediction & Match Analysis",
+      "h1After": "Corinthians vs Chapecoense Prediction & Match Analysis",
+      "primaryIntent": "corinthians vs chapecoense prediction",
+      "supportingIntents": [
+        "corinthians vs chapecoense betting tips",
+        "corinthians vs chapecoense odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 58,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "vitoria-vs-gremio",
+      "league": "brasileirao-serie-a",
+      "lifecycle": "TODAY",
+      "titleBefore": "VitÃ³ria vs GrÃªmio Prediction, Betting Tips & Odds",
+      "titleAfter": "VitÃ³ria vs GrÃªmio Prediction & Betting tips - Brasileirão Série A",
+      "descriptionBefore": "VitÃ³ria vs GrÃªmio prediction for today, Over 1.5 Goals + Over 7.5 Corners at odds of 1.78. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "VitÃ³ria vs GrÃªmio prediction for Brasileirão Série A: Over 1.5 Goals + Over 7.5 Corners at odds of 1.78. Betting tips, analysis and supporting match context.",
+      "h1Before": "VitÃ³ria vs GrÃªmio Prediction & Match Analysis",
+      "h1After": "VitÃ³ria vs GrÃªmio Prediction & Betting tips",
+      "primaryIntent": "vitã³ria vs grãªmio prediction",
+      "supportingIntents": [
+        "vitã³ria vs grãªmio betting tips",
+        "vitã³ria vs grãªmio odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 67,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "santos-vs-palmeiras",
+      "league": "copa-do-brasil",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Santos vs Palmeiras Prediction, Betting Tips & Odds",
+      "titleAfter": "Santos vs Palmeiras Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Santos vs Palmeiras prediction for the completed match: Santos +2 Asian Handicap + Over 1.5 Goals at odds of 1.75. Full betting analysis for Copa do Brasil.",
+      "descriptionAfter": "Santos vs Palmeiras prediction for the completed match: Santos +2 Asian Handicap + Over 1.5 Goals at odds of 1.75. Full betting analysis for Copa do Brasil.",
+      "h1Before": "Santos vs Palmeiras Prediction & Match Analysis",
+      "h1After": "Santos vs Palmeiras Prediction & Match Analysis",
+      "primaryIntent": "santos vs palmeiras prediction",
+      "supportingIntents": [
+        "santos vs palmeiras betting tips",
+        "santos vs palmeiras odds",
+        "santos vs palmeiras probable lineups",
+        "santos vs palmeiras team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 51,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "vitoria-vs-vasco-da-gama",
+      "league": "copa-do-brasil",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "VitÃ³ria vs Vasco da Gama Prediction, Betting Tips & Odds",
+      "titleAfter": "VitÃ³ria vs Vasco da Gama Prediction, Betting Tips & Odds",
+      "descriptionBefore": "VitÃ³ria vs Vasco da Gama prediction for the completed match: Over 1.5 Goals — WAIT LIVE at odds of 1.44. Full betting analysis for Copa do Brasil.",
+      "descriptionAfter": "VitÃ³ria vs Vasco da Gama prediction for the completed match: Over 1.5 Goals — WAIT LIVE at odds of 1.44. Full betting analysis for Copa do Brasil.",
+      "h1Before": "VitÃ³ria vs Vasco da Gama Prediction & Match Analysis",
+      "h1After": "VitÃ³ria vs Vasco da Gama Prediction & Match Analysis",
+      "primaryIntent": "vitã³ria vs vasco da gama prediction",
+      "supportingIntents": [
+        "vitã³ria vs vasco da gama betting tips",
+        "vitã³ria vs vasco da gama odds",
+        "vitã³ria vs vasco da gama probable lineups",
+        "vitã³ria vs vasco da gama team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 57,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "gremio-vs-internacional",
+      "league": "copa-do-brasil",
+      "lifecycle": "FINAL",
+      "titleBefore": "GrÃªmio vs Internacional Prediction, Betting Tips & Odds",
+      "titleAfter": "GrÃªmio vs Internacional Prediction, Betting Tips & Odds",
+      "descriptionBefore": "GrÃªmio vs Internacional prediction for the completed match: Grêmio or Draw (1X) + Under 3.5 Goals at odds of 1.65. Full betting analysis for Copa do Brasil.",
+      "descriptionAfter": "GrÃªmio vs Internacional prediction for the completed match: Grêmio or Draw (1X) + Under 3.5 Goals at odds of 1.65. Full betting analysis for Copa do Brasil.",
+      "h1Before": "GrÃªmio vs Internacional Prediction & Match Analysis",
+      "h1After": "GrÃªmio vs Internacional Prediction & Match Analysis",
+      "primaryIntent": "grãªmio vs internacional prediction",
+      "supportingIntents": [
+        "grãªmio vs internacional betting tips",
+        "grãªmio vs internacional odds",
+        "grãªmio vs internacional probable lineups",
+        "grãªmio vs internacional team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 56,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "lincoln-vs-southampton",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "Lincoln City vs Southampton Prediction, Betting Tips & Odds",
+      "titleAfter": "Lincoln City vs Southampton Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Lincoln City vs Southampton prediction for the completed match: Over 1.5 Goals + Over 8.5 Corners at odds of 1.7. Full betting analysis for EFL Championship.",
+      "descriptionAfter": "Lincoln City vs Southampton prediction for the completed match: Over 1.5 Goals + Over 8.5 Corners at odds of 1.7. Full betting analysis for EFL Championship.",
+      "h1Before": "Lincoln City vs Southampton Prediction & Match Analysis",
+      "h1After": "Lincoln City vs Southampton Prediction & Match Analysis",
+      "primaryIntent": "lincoln city vs southampton prediction",
+      "supportingIntents": [
+        "lincoln city vs southampton betting tips",
+        "lincoln city vs southampton odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 59,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "preston-vs-blackburn",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "Preston North End vs Blackburn Rovers Prediction, Betting Tips & Odds",
+      "titleAfter": "Preston North End vs Blackburn Rovers Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Preston North End vs Blackburn Rovers prediction for the completed match: Over 1.5 Goals at odds of 1.38. Full betting analysis for EFL Championship.",
+      "descriptionAfter": "Preston North End vs Blackburn Rovers prediction for the completed match: Over 1.5 Goals at odds of 1.38. Full betting analysis for EFL Championship.",
+      "h1Before": "Preston North End vs Blackburn Rovers Prediction & Match Analysis",
+      "h1After": "Preston North End vs Blackburn Rovers Prediction & Match Analysis",
+      "primaryIntent": "preston north end vs blackburn rovers prediction",
+      "supportingIntents": [
+        "preston north end vs blackburn rovers betting tips",
+        "preston north end vs blackburn rovers odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 69,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "stoke-city-vs-charlton-athletic",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "Stoke City vs Charlton Athletic Prediction, Betting Tips & Odds",
+      "titleAfter": "Stoke City vs Charlton Athletic Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Stoke City vs Charlton Athletic prediction for the completed match and betting analysis for EFL Championship.",
+      "descriptionAfter": "Stoke City vs Charlton Athletic prediction for the completed match and betting analysis for EFL Championship.",
+      "h1Before": "Stoke City vs Charlton Athletic Prediction & Match Analysis",
+      "h1After": "Stoke City vs Charlton Athletic Prediction & Match Analysis",
+      "primaryIntent": "stoke city vs charlton athletic prediction",
+      "supportingIntents": [
+        "stoke city vs charlton athletic betting tips",
+        "stoke city vs charlton athletic odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 63,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "west-ham-vs-derby-county",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "West Ham United vs Derby County Prediction, Betting Tips & Odds",
+      "titleAfter": "West Ham United vs Derby County Prediction, Betting Tips & Odds",
+      "descriptionBefore": "West Ham United vs Derby County prediction for the completed match and betting analysis for EFL Championship.",
+      "descriptionAfter": "West Ham United vs Derby County prediction for the completed match and betting analysis for EFL Championship.",
+      "h1Before": "West Ham United vs Derby County Prediction & Match Analysis",
+      "h1After": "West Ham United vs Derby County Prediction & Match Analysis",
+      "primaryIntent": "west ham united vs derby county prediction",
+      "supportingIntents": [
+        "west ham united vs derby county betting tips",
+        "west ham united vs derby county odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 63,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "burnley-vs-bristol-city",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "Burnley vs Bristol City Prediction, Betting Tips & Odds",
+      "titleAfter": "Burnley vs Bristol City Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Burnley vs Bristol City prediction for the completed match, Over 2.5 Goals at odds of 1.87. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Burnley vs Bristol City prediction for the completed match, Over 2.5 Goals at odds of 1.87. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Burnley vs Bristol City Prediction & Match Analysis",
+      "h1After": "Burnley vs Bristol City Prediction & Match Analysis",
+      "primaryIntent": "burnley vs bristol city prediction",
+      "supportingIntents": [
+        "burnley vs bristol city betting tips",
+        "burnley vs bristol city odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 55,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "sheffield-united-vs-norwich-city",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "Sheffield United vs Norwich City Prediction, Betting Tips & Odds",
+      "titleAfter": "Sheffield United vs Norwich City Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Sheffield United vs Norwich City prediction for the completed match: Over 2.5 Goals at odds of 1.82. Full betting analysis for EFL Championship.",
+      "descriptionAfter": "Sheffield United vs Norwich City prediction for the completed match: Over 2.5 Goals at odds of 1.82. Full betting analysis for EFL Championship.",
+      "h1Before": "Sheffield United vs Norwich City Prediction & Match Analysis",
+      "h1After": "Sheffield United vs Norwich City Prediction & Match Analysis",
+      "primaryIntent": "sheffield united vs norwich city prediction",
+      "supportingIntents": [
+        "sheffield united vs norwich city betting tips",
+        "sheffield united vs norwich city odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 64,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "qpr-vs-middlesbrough",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "Queens Park Rangers vs Middlesbrough Prediction, Betting Tips & Odds",
+      "titleAfter": "Queens Park Rangers vs Middlesbrough Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Queens Park Rangers vs Middlesbrough prediction for the completed match: Over 2.5 Goals at odds of 1.82. Full betting analysis for EFL Championship.",
+      "descriptionAfter": "Queens Park Rangers vs Middlesbrough prediction for the completed match: Over 2.5 Goals at odds of 1.82. Full betting analysis for EFL Championship.",
+      "h1Before": "Queens Park Rangers vs Middlesbrough Prediction & Match Analysis",
+      "h1After": "Queens Park Rangers vs Middlesbrough Prediction & Match Analysis",
+      "primaryIntent": "queens park rangers vs middlesbrough prediction",
+      "supportingIntents": [
+        "queens park rangers vs middlesbrough betting tips",
+        "queens park rangers vs middlesbrough odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 68,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "west-brom-vs-watford",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "West Bromwich Albion vs Watford Prediction, Betting Tips & Odds",
+      "titleAfter": "West Bromwich Albion vs Watford Prediction, Betting Tips & Odds",
+      "descriptionBefore": "West Bromwich Albion vs Watford prediction for the completed match and betting analysis for EFL Championship.",
+      "descriptionAfter": "West Bromwich Albion vs Watford prediction for the completed match and betting analysis for EFL Championship.",
+      "h1Before": "West Bromwich Albion vs Watford Prediction & Match Analysis",
+      "h1After": "West Bromwich Albion vs Watford Prediction & Match Analysis",
+      "primaryIntent": "west bromwich albion vs watford prediction",
+      "supportingIntents": [
+        "west bromwich albion vs watford betting tips",
+        "west bromwich albion vs watford odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 63,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "portsmouth-vs-cardiff-city",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "Portsmouth vs Cardiff City Prediction, Betting Tips & Odds",
+      "titleAfter": "Portsmouth vs Cardiff City Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Portsmouth vs Cardiff City prediction for the completed match and betting analysis for EFL Championship.",
+      "descriptionAfter": "Portsmouth vs Cardiff City prediction for the completed match and betting analysis for EFL Championship.",
+      "h1Before": "Portsmouth vs Cardiff City Prediction & Match Analysis",
+      "h1After": "Portsmouth vs Cardiff City Prediction & Match Analysis",
+      "primaryIntent": "portsmouth vs cardiff city prediction",
+      "supportingIntents": [
+        "portsmouth vs cardiff city betting tips",
+        "portsmouth vs cardiff city odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 58,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "millwall-vs-bolton-wanderers",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "Millwall vs Bolton Wanderers Prediction, Betting Tips & Odds",
+      "titleAfter": "Millwall vs Bolton Wanderers Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Millwall vs Bolton Wanderers prediction for the completed match and betting analysis for EFL Championship.",
+      "descriptionAfter": "Millwall vs Bolton Wanderers prediction for the completed match and betting analysis for EFL Championship.",
+      "h1Before": "Millwall vs Bolton Wanderers Prediction & Match Analysis",
+      "h1After": "Millwall vs Bolton Wanderers Prediction & Match Analysis",
+      "primaryIntent": "millwall vs bolton wanderers prediction",
+      "supportingIntents": [
+        "millwall vs bolton wanderers betting tips",
+        "millwall vs bolton wanderers odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 60,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "swansea-city-vs-wrexham",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "Swansea City vs Wrexham Prediction, Betting Tips & Odds",
+      "titleAfter": "Swansea City vs Wrexham Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Swansea City vs Wrexham prediction for the completed match and betting analysis for EFL Championship.",
+      "descriptionAfter": "Swansea City vs Wrexham prediction for the completed match and betting analysis for EFL Championship.",
+      "h1Before": "Swansea City vs Wrexham Prediction & Match Analysis",
+      "h1After": "Swansea City vs Wrexham Prediction & Match Analysis",
+      "primaryIntent": "swansea city vs wrexham prediction",
+      "supportingIntents": [
+        "swansea city vs wrexham betting tips",
+        "swansea city vs wrexham odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 55,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "birmingham-city-vs-wolverhampton-wanderers",
+      "league": "championship",
+      "lifecycle": "FINAL",
+      "titleBefore": "Birmingham City vs Wolverhampton Wanderers Prediction",
+      "titleAfter": "Birmingham City vs Wolverhampton Wanderers Prediction",
+      "descriptionBefore": "Birmingham City vs Wolverhampton Wanderers prediction for the completed match: Over 2.5 Goals at odds of 2.1. Full betting analysis for EFL Championship.",
+      "descriptionAfter": "Birmingham City vs Wolverhampton Wanderers prediction for the completed match: Over 2.5 Goals at odds of 2.1. Full betting analysis for EFL Championship.",
+      "h1Before": "Birmingham City vs Wolverhampton Wanderers Prediction & Match Analysis",
+      "h1After": "Birmingham City vs Wolverhampton Wanderers Prediction & Match Analysis",
+      "primaryIntent": "birmingham city vs wolverhampton wanderers prediction",
+      "supportingIntents": [
+        "birmingham city vs wolverhampton wanderers betting tips",
+        "birmingham city vs wolverhampton wanderers odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 53,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "blackburn-rovers-vs-sheffield-united",
+      "league": "championship",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "Blackburn Rovers vs Sheffield United Prediction, Betting Tips & Odds",
+      "titleAfter": "Blackburn Rovers vs Sheffield United Prediction - EFL Championship",
+      "descriptionBefore": "Blackburn Rovers vs Sheffield United prediction for tomorrow: Over 1.5 Goals + Over 8.5 Corners at odds of 1.75. Full betting analysis for EFL Championship.",
+      "descriptionAfter": "Blackburn Rovers vs Sheffield United prediction for EFL Championship, with published odds of 1.75. Betting tips and match analysis.",
+      "h1Before": "Blackburn Rovers vs Sheffield United Prediction & Match Analysis",
+      "h1After": "Blackburn Rovers vs Sheffield United Prediction & Betting tips",
+      "primaryIntent": "blackburn rovers vs sheffield united prediction",
+      "supportingIntents": [
+        "blackburn rovers vs sheffield united betting tips",
+        "blackburn rovers vs sheffield united odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 66,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "bolton-wanderers-vs-west-ham-united",
+      "league": "championship",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "Bolton Wanderers vs West Ham United Prediction, Betting Tips & Odds",
+      "titleAfter": "Bolton Wanderers vs West Ham United Prediction - EFL Championship",
+      "descriptionBefore": "Bolton Wanderers vs West Ham United prediction for tomorrow, Over 2.5 Goals at odds of 1.65. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Bolton Wanderers vs West Ham United prediction for EFL Championship: Over 2.5 Goals at odds of 1.65. Betting tips, analysis and supporting match context.",
+      "h1Before": "Bolton Wanderers vs West Ham United Prediction & Match Analysis",
+      "h1After": "Bolton Wanderers vs West Ham United Prediction & Betting tips",
+      "primaryIntent": "bolton wanderers vs west ham united prediction",
+      "supportingIntents": [
+        "bolton wanderers vs west ham united betting tips",
+        "bolton wanderers vs west ham united odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 65,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "cardiff-city-vs-stoke-city",
+      "league": "championship",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "Cardiff City vs Stoke City Prediction, Betting Tips & Odds",
+      "titleAfter": "Cardiff City vs Stoke City Prediction, Odds & Tips - EFL Championship",
+      "descriptionBefore": "Cardiff City vs Stoke City prediction for tomorrow, Over 2.5 Goals at odds of 1.62. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Cardiff City vs Stoke City prediction for EFL Championship: Over 2.5 Goals at odds of 1.62. Betting tips, analysis and supporting match context.",
+      "h1Before": "Cardiff City vs Stoke City Prediction & Match Analysis",
+      "h1After": "Cardiff City vs Stoke City Prediction & Betting tips",
+      "primaryIntent": "cardiff city vs stoke city prediction",
+      "supportingIntents": [
+        "cardiff city vs stoke city betting tips",
+        "cardiff city vs stoke city odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 69,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "charlton-athletic-vs-queens-park-rangers",
+      "league": "championship",
+      "lifecycle": "UPCOMING_72H",
+      "titleBefore": "Charlton Athletic vs Queens Park Rangers Prediction | EFL Championship",
+      "titleAfter": "Charlton Athletic vs Queens Park Rangers Prediction - EFL Championship",
+      "descriptionBefore": "Charlton Athletic vs Queens Park Rangers prediction for 2026-09-09: Charlton Athletic or Draw (1X) at odds of 1.62. Full betting analysis for EFL Championship.",
+      "descriptionAfter": "Charlton Athletic vs Queens Park Rangers prediction for EFL Championship, with published odds of 1.62. Betting tips and match analysis.",
+      "h1Before": "Charlton Athletic vs Queens Park Rangers Prediction & Match Analysis",
+      "h1After": "Charlton Athletic vs Queens Park Rangers Prediction & Betting tips",
+      "primaryIntent": "charlton athletic vs queens park rangers prediction",
+      "supportingIntents": [
+        "charlton athletic vs queens park rangers betting tips",
+        "charlton athletic vs queens park rangers odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 70,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "derby-county-vs-west-bromwich-albion",
+      "league": "championship",
+      "lifecycle": "UPCOMING_72H",
+      "titleBefore": "Derby County vs West Bromwich Albion Prediction, Betting Tips & Odds",
+      "titleAfter": "Derby County vs West Bromwich Albion Prediction - EFL Championship",
+      "descriptionBefore": "Derby County vs West Bromwich Albion prediction for 2026-09-09 and betting analysis for EFL Championship.",
+      "descriptionAfter": "Derby County vs West Bromwich Albion prediction for EFL Championship, with published odds of 1.91. Betting tips and match analysis.",
+      "h1Before": "Derby County vs West Bromwich Albion Prediction & Match Analysis",
+      "h1After": "Derby County vs West Bromwich Albion Prediction & Betting tips",
+      "primaryIntent": "derby county vs west bromwich albion prediction",
+      "supportingIntents": [
+        "derby county vs west bromwich albion betting tips",
+        "derby county vs west bromwich albion odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 66,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "norwich-city-vs-birmingham-city",
+      "league": "championship",
+      "lifecycle": "UPCOMING_72H",
+      "titleBefore": "Norwich City vs Birmingham City Prediction, Betting Tips & Odds",
+      "titleAfter": "Norwich City vs Birmingham City Prediction - EFL Championship",
+      "descriptionBefore": "Norwich City vs Birmingham City prediction for 2026-09-09, Over 2.5 Goals at odds of 1.82. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Norwich City vs Birmingham City prediction for EFL Championship: Over 2.5 Goals at odds of 1.82. Betting tips, analysis and supporting match context.",
+      "h1Before": "Norwich City vs Birmingham City Prediction & Match Analysis",
+      "h1After": "Norwich City vs Birmingham City Prediction & Betting tips",
+      "primaryIntent": "norwich city vs birmingham city prediction",
+      "supportingIntents": [
+        "norwich city vs birmingham city betting tips",
+        "norwich city vs birmingham city odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 61,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "southampton-vs-swansea-city",
+      "league": "championship",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "Southampton vs Swansea City Prediction, Betting Tips & Odds",
+      "titleAfter": "Southampton vs Swansea City Prediction, Odds & Tips - EFL Championship",
+      "descriptionBefore": "Southampton vs Swansea City prediction for tomorrow, Swansea City or Draw (X2) at odds of 1.93. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Southampton vs Swansea City prediction for EFL Championship: Swansea City or Draw (X2) at odds of 1.93. Betting tips, analysis and supporting match context.",
+      "h1Before": "Southampton vs Swansea City Prediction & Match Analysis",
+      "h1After": "Southampton vs Swansea City Prediction & Betting tips",
+      "primaryIntent": "southampton vs swansea city prediction",
+      "supportingIntents": [
+        "southampton vs swansea city betting tips",
+        "southampton vs swansea city odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 70,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "watford-vs-preston-north-end",
+      "league": "championship",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "Watford vs Preston North End Prediction, Betting Tips & Odds",
+      "titleAfter": "Watford vs Preston North End Prediction - EFL Championship",
+      "descriptionBefore": "Watford vs Preston North End prediction for tomorrow: Watford or Draw (1X) + Over 1.5 Goals at odds of 1.67. Full betting analysis for EFL Championship.",
+      "descriptionAfter": "Watford vs Preston North End prediction for EFL Championship, with published odds of 1.67. Betting tips and match analysis.",
+      "h1Before": "Watford vs Preston North End Prediction & Match Analysis",
+      "h1After": "Watford vs Preston North End Prediction & Betting tips",
+      "primaryIntent": "watford vs preston north end prediction",
+      "supportingIntents": [
+        "watford vs preston north end betting tips",
+        "watford vs preston north end odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 58,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "wrexham-vs-burnley",
+      "league": "championship",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "Wrexham vs Burnley Prediction, Betting Tips & Odds",
+      "titleAfter": "Wrexham vs Burnley Prediction & Betting tips - EFL Championship",
+      "descriptionBefore": "Wrexham vs Burnley prediction for tomorrow, Wrexham or Draw (1X) + Over 1.5 Goals at odds of 1.62. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Wrexham vs Burnley prediction for EFL Championship: Wrexham or Draw (1X) + Over 1.5 Goals at odds of 1.62. Betting tips, analysis and supporting match context.",
+      "h1Before": "Wrexham vs Burnley Prediction & Match Analysis",
+      "h1After": "Wrexham vs Burnley Prediction & Betting tips",
+      "primaryIntent": "wrexham vs burnley prediction",
+      "supportingIntents": [
+        "wrexham vs burnley betting tips",
+        "wrexham vs burnley odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 63,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "istanbul-basaksehir-vs-galatasaray",
+      "league": "super-lig",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Istanbul Basaksehir vs Galatasaray Prediction, Betting Tips & Odds",
+      "titleAfter": "Istanbul Basaksehir vs Galatasaray Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Istanbul Basaksehir vs Galatasaray prediction for the completed match: Over 2.5 Goals at odds of 1.57. Full betting analysis for Süper Lig.",
+      "descriptionAfter": "Istanbul Basaksehir vs Galatasaray prediction for the completed match: Over 2.5 Goals at odds of 1.57. Full betting analysis for Süper Lig.",
+      "h1Before": "Istanbul Basaksehir vs Galatasaray Prediction & Match Analysis",
+      "h1After": "Istanbul Basaksehir vs Galatasaray Prediction & Match Analysis",
+      "primaryIntent": "istanbul basaksehir vs galatasaray prediction",
+      "supportingIntents": [
+        "istanbul basaksehir vs galatasaray betting tips",
+        "istanbul basaksehir vs galatasaray odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 66,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "erzurumspor-fk-vs-konyaspor",
+      "league": "super-lig",
+      "lifecycle": "FINAL",
+      "titleBefore": "Erzurum BB vs Konyaspor Prediction, Betting Tips & Odds",
+      "titleAfter": "Erzurum BB vs Konyaspor Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Erzurum BB vs Konyaspor prediction for the completed match, Over 2.5 Goals at odds of 2.02. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Erzurum BB vs Konyaspor prediction for the completed match, Over 2.5 Goals at odds of 2.02. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Erzurum BB vs Konyaspor Prediction & Match Analysis",
+      "h1After": "Erzurum BB vs Konyaspor Prediction & Match Analysis",
+      "primaryIntent": "erzurum bb vs konyaspor prediction",
+      "supportingIntents": [
+        "erzurum bb vs konyaspor betting tips",
+        "erzurum bb vs konyaspor odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 55,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "fenerbahce-vs-besiktas",
+      "league": "super-lig",
+      "lifecycle": "FINAL",
+      "titleBefore": "Fenerbahce vs Besiktas Prediction, Betting Tips & Odds",
+      "titleAfter": "Fenerbahce vs Besiktas Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Fenerbahce vs Besiktas prediction for the completed match, Fenerbahçe to Win at odds of 1.82. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Fenerbahce vs Besiktas prediction for the completed match, Fenerbahçe to Win at odds of 1.82. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Fenerbahce vs Besiktas Prediction & Match Analysis",
+      "h1After": "Fenerbahce vs Besiktas Prediction & Match Analysis",
+      "primaryIntent": "fenerbahce vs besiktas prediction",
+      "supportingIntents": [
+        "fenerbahce vs besiktas betting tips",
+        "fenerbahce vs besiktas odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 54,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "kasimpasa-vs-amed-sk",
+      "league": "super-lig",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Kasimpasa vs Amedspor Prediction, Betting Tips & Odds",
+      "titleAfter": "Kasimpasa vs Amedspor Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Kasimpasa vs Amedspor prediction for the completed match: Kasımpaşa X1 + Over 1.5 Goals at odds of 1.85. Full betting analysis for Süper Lig.",
+      "descriptionAfter": "Kasimpasa vs Amedspor prediction for the completed match: Kasımpaşa X1 + Over 1.5 Goals at odds of 1.85. Full betting analysis for Süper Lig.",
+      "h1Before": "Kasimpasa vs Amedspor Prediction & Match Analysis",
+      "h1After": "Kasimpasa vs Amedspor Prediction & Match Analysis",
+      "primaryIntent": "kasimpasa vs amedspor prediction",
+      "supportingIntents": [
+        "kasimpasa vs amedspor betting tips",
+        "kasimpasa vs amedspor odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 53,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "corum-fk-vs-eyupspor",
+      "league": "super-lig",
+      "lifecycle": "FINAL",
+      "titleBefore": "Ã‡orum FK vs Eyupspor Prediction, Betting Tips & Odds",
+      "titleAfter": "Ã‡orum FK vs Eyupspor Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Ã‡orum FK vs Eyupspor prediction for the completed match, Çorum FK to Win at odds of 1.75. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Ã‡orum FK vs Eyupspor prediction for the completed match, Çorum FK to Win at odds of 1.75. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Ã‡orum FK vs Eyupspor Prediction & Match Analysis",
+      "h1After": "Ã‡orum FK vs Eyupspor Prediction & Match Analysis",
+      "primaryIntent": "ã‡orum fk vs eyupspor prediction",
+      "supportingIntents": [
+        "ã‡orum fk vs eyupspor betting tips",
+        "ã‡orum fk vs eyupspor odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 53,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "kocaelispor-vs-samsunspor",
+      "league": "super-lig",
+      "lifecycle": "FINAL",
+      "titleBefore": "Kocaelispor vs Samsunspor Prediction, Betting Tips & Odds",
+      "titleAfter": "Kocaelispor vs Samsunspor Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Kocaelispor vs Samsunspor prediction for the completed match: Over 1.5 Goals — LIVE entry at odds of 1.4. Full betting analysis for Süper Lig.",
+      "descriptionAfter": "Kocaelispor vs Samsunspor prediction for the completed match: Over 1.5 Goals — LIVE entry at odds of 1.4. Full betting analysis for Süper Lig.",
+      "h1Before": "Kocaelispor vs Samsunspor Prediction & Match Analysis",
+      "h1After": "Kocaelispor vs Samsunspor Prediction & Match Analysis",
+      "primaryIntent": "kocaelispor vs samsunspor prediction",
+      "supportingIntents": [
+        "kocaelispor vs samsunspor betting tips",
+        "kocaelispor vs samsunspor odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 57,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "trabzonspor-vs-genclerbirligi",
+      "league": "super-lig",
+      "lifecycle": "FINAL",
+      "titleBefore": "Trabzonspor vs Genclerbirligi Prediction, Betting Tips & Odds",
+      "titleAfter": "Trabzonspor vs Genclerbirligi Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Trabzonspor vs Genclerbirligi prediction for the completed match: Trabzonspor to Win at odds of 1.6. Full betting analysis for Süper Lig.",
+      "descriptionAfter": "Trabzonspor vs Genclerbirligi prediction for the completed match: Trabzonspor to Win at odds of 1.6. Full betting analysis for Süper Lig.",
+      "h1Before": "Trabzonspor vs Genclerbirligi Prediction & Match Analysis",
+      "h1After": "Trabzonspor vs Genclerbirligi Prediction & Match Analysis",
+      "primaryIntent": "trabzonspor vs genclerbirligi prediction",
+      "supportingIntents": [
+        "trabzonspor vs genclerbirligi betting tips",
+        "trabzonspor vs genclerbirligi odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 61,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "goztepe-vs-gaziantep-fk",
+      "league": "super-lig",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Goztepe vs Gaziantep FK Prediction, Betting Tips & Odds",
+      "titleAfter": "Goztepe vs Gaziantep FK Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Goztepe vs Gaziantep FK prediction for the completed match, Over 2.5 Goals at odds of 1.83. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Goztepe vs Gaziantep FK prediction for the completed match, Over 2.5 Goals at odds of 1.83. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Goztepe vs Gaziantep FK Prediction & Match Analysis",
+      "h1After": "Goztepe vs Gaziantep FK Prediction & Match Analysis",
+      "primaryIntent": "goztepe vs gaziantep fk prediction",
+      "supportingIntents": [
+        "goztepe vs gaziantep fk betting tips",
+        "goztepe vs gaziantep fk odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 55,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "caykur-rizespor-vs-alanyaspor",
+      "league": "super-lig",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Caykur Rizespor vs Alanyaspor Prediction, Betting Tips & Odds",
+      "titleAfter": "Caykur Rizespor vs Alanyaspor Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Caykur Rizespor vs Alanyaspor prediction for the completed match: Rizespor X1 + Over 1.5 Goals at odds of 1.6. Full betting analysis for Süper Lig.",
+      "descriptionAfter": "Caykur Rizespor vs Alanyaspor prediction for the completed match: Rizespor X1 + Over 1.5 Goals at odds of 1.6. Full betting analysis for Süper Lig.",
+      "h1Before": "Caykur Rizespor vs Alanyaspor Prediction & Match Analysis",
+      "h1After": "Caykur Rizespor vs Alanyaspor Prediction & Match Analysis",
+      "primaryIntent": "caykur rizespor vs alanyaspor prediction",
+      "supportingIntents": [
+        "caykur rizespor vs alanyaspor betting tips",
+        "caykur rizespor vs alanyaspor odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 61,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "aberdeen-vs-kilmarnock",
+      "league": "scottish-premiership",
+      "lifecycle": "FINAL",
+      "titleBefore": "Aberdeen vs Kilmarnock Prediction, Betting Tips & Odds",
+      "titleAfter": "Aberdeen vs Kilmarnock Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Aberdeen vs Kilmarnock prediction for the completed match, Over 2.5 Goals at odds of 1.7. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Aberdeen vs Kilmarnock prediction for the completed match, Over 2.5 Goals at odds of 1.7. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Aberdeen vs Kilmarnock Prediction & Match Analysis",
+      "h1After": "Aberdeen vs Kilmarnock Prediction & Match Analysis",
+      "primaryIntent": "aberdeen vs kilmarnock prediction",
+      "supportingIntents": [
+        "aberdeen vs kilmarnock betting tips",
+        "aberdeen vs kilmarnock odds",
+        "aberdeen vs kilmarnock probable lineups",
+        "aberdeen vs kilmarnock team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 54,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "dundee-united-vs-falkirk",
+      "league": "scottish-premiership",
+      "lifecycle": "FINAL",
+      "titleBefore": "Dundee United vs Falkirk Prediction, Betting Tips & Odds",
+      "titleAfter": "Dundee United vs Falkirk Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Dundee United vs Falkirk prediction for the completed match, Over 2.5 Goals at odds of 1.72. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Dundee United vs Falkirk prediction for the completed match, Over 2.5 Goals at odds of 1.72. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Dundee United vs Falkirk Prediction & Match Analysis",
+      "h1After": "Dundee United vs Falkirk Prediction & Match Analysis",
+      "primaryIntent": "dundee united vs falkirk prediction",
+      "supportingIntents": [
+        "dundee united vs falkirk betting tips",
+        "dundee united vs falkirk odds",
+        "dundee united vs falkirk probable lineups",
+        "dundee united vs falkirk team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 56,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "hearts-vs-dundee",
+      "league": "scottish-premiership",
+      "lifecycle": "FINAL",
+      "titleBefore": "Hearts vs Dundee Prediction, Betting Tips & Odds",
+      "titleAfter": "Hearts vs Dundee Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Hearts vs Dundee prediction for the completed match: Over 1.5 Goals + Over 8.5 Corners at odds of 1.67. Full betting analysis for Scottish Premiership.",
+      "descriptionAfter": "Hearts vs Dundee prediction for the completed match: Over 1.5 Goals + Over 8.5 Corners at odds of 1.67. Full betting analysis for Scottish Premiership.",
+      "h1Before": "Hearts vs Dundee Prediction & Match Analysis",
+      "h1After": "Hearts vs Dundee Prediction & Match Analysis",
+      "primaryIntent": "hearts vs dundee prediction",
+      "supportingIntents": [
+        "hearts vs dundee betting tips",
+        "hearts vs dundee odds",
+        "hearts vs dundee probable lineups",
+        "hearts vs dundee team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 48,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "rangers-vs-motherwell",
+      "league": "scottish-premiership",
+      "lifecycle": "FINAL",
+      "titleBefore": "Rangers vs Motherwell Prediction, Betting Tips & Odds",
+      "titleAfter": "Rangers vs Motherwell Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Rangers vs Motherwell prediction for the completed match, Over 2.5 Goals at odds of 1.62. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Rangers vs Motherwell prediction for the completed match, Over 2.5 Goals at odds of 1.62. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Rangers vs Motherwell Prediction & Match Analysis",
+      "h1After": "Rangers vs Motherwell Prediction & Match Analysis",
+      "primaryIntent": "rangers vs motherwell prediction",
+      "supportingIntents": [
+        "rangers vs motherwell betting tips",
+        "rangers vs motherwell odds",
+        "rangers vs motherwell probable lineups",
+        "rangers vs motherwell team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 53,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "st-johnstone-vs-hibernian",
+      "league": "scottish-premiership",
+      "lifecycle": "FINAL",
+      "titleBefore": "St Johnstone vs Hibernian Prediction, Betting Tips & Odds",
+      "titleAfter": "St Johnstone vs Hibernian Prediction, Betting Tips & Odds",
+      "descriptionBefore": "St Johnstone vs Hibernian prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.67. Full betting analysis for Scottish Premiership.",
+      "descriptionAfter": "St Johnstone vs Hibernian prediction for the completed match: Over 1.5 Goals + Over 7.5 Corners at odds of 1.67. Full betting analysis for Scottish Premiership.",
+      "h1Before": "St Johnstone vs Hibernian Prediction & Match Analysis",
+      "h1After": "St Johnstone vs Hibernian Prediction & Match Analysis",
+      "primaryIntent": "st johnstone vs hibernian prediction",
+      "supportingIntents": [
+        "st johnstone vs hibernian betting tips",
+        "st johnstone vs hibernian odds",
+        "st johnstone vs hibernian probable lineups",
+        "st johnstone vs hibernian team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 57,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "st-mirren-vs-celtic",
+      "league": "scottish-premiership",
+      "lifecycle": "FINAL",
+      "titleBefore": "St Mirren vs Celtic Prediction, Betting Tips & Odds",
+      "titleAfter": "St Mirren vs Celtic Prediction, Betting Tips & Odds",
+      "descriptionBefore": "St Mirren vs Celtic prediction for the completed match: St Mirren +1.5 Asian Handicap at odds of 1.7. Full betting analysis for Scottish Premiership.",
+      "descriptionAfter": "St Mirren vs Celtic prediction for the completed match: St Mirren +1.5 Asian Handicap at odds of 1.7. Full betting analysis for Scottish Premiership.",
+      "h1Before": "St Mirren vs Celtic Prediction & Match Analysis",
+      "h1After": "St Mirren vs Celtic Prediction & Match Analysis",
+      "primaryIntent": "st mirren vs celtic prediction",
+      "supportingIntents": [
+        "st mirren vs celtic betting tips",
+        "st mirren vs celtic odds",
+        "st mirren vs celtic probable lineups",
+        "st mirren vs celtic team news"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 51,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "fredrikstad-vs-bodo-glimt",
+      "league": "eliteserien",
+      "lifecycle": "FINAL",
+      "titleBefore": "Fredrikstad vs BodÃ¸/Glimt Prediction, Betting Tips & Odds",
+      "titleAfter": "Fredrikstad vs BodÃ¸/Glimt Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Fredrikstad vs BodÃ¸/Glimt prediction for the completed match: Over 2.5 Goals + Over 7.5 Corners at odds of 1.8. Full betting analysis for Eliteserien.",
+      "descriptionAfter": "Fredrikstad vs BodÃ¸/Glimt prediction for the completed match: Over 2.5 Goals + Over 7.5 Corners at odds of 1.8. Full betting analysis for Eliteserien.",
+      "h1Before": "Fredrikstad vs BodÃ¸/Glimt Prediction & Match Analysis",
+      "h1After": "Fredrikstad vs BodÃ¸/Glimt Prediction & Match Analysis",
+      "primaryIntent": "fredrikstad vs bodã¸/glimt prediction",
+      "supportingIntents": [
+        "fredrikstad vs bodã¸/glimt betting tips",
+        "fredrikstad vs bodã¸/glimt odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 58,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "aalesund-vs-start",
+      "league": "eliteserien",
+      "lifecycle": "FINAL",
+      "titleBefore": "Aalesund vs Start Prediction, Betting Tips & Odds",
+      "titleAfter": "Aalesund vs Start Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Aalesund vs Start prediction for the completed match, Aalesund X1 + Over 1.5 Goals at odds of 1.65. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Aalesund vs Start prediction for the completed match, Aalesund X1 + Over 1.5 Goals at odds of 1.65. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Aalesund vs Start Prediction & Match Analysis",
+      "h1After": "Aalesund vs Start Prediction & Match Analysis",
+      "primaryIntent": "aalesund vs start prediction",
+      "supportingIntents": [
+        "aalesund vs start betting tips",
+        "aalesund vs start odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 49,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "sandefjord-vs-viking",
+      "league": "eliteserien",
+      "lifecycle": "FINAL",
+      "titleBefore": "Sandefjord vs Viking Prediction, Betting Tips & Odds",
+      "titleAfter": "Sandefjord vs Viking Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Sandefjord vs Viking prediction for the completed match, Viking to Win at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Sandefjord vs Viking prediction for the completed match, Viking to Win at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Sandefjord vs Viking Prediction & Match Analysis",
+      "h1After": "Sandefjord vs Viking Prediction & Match Analysis",
+      "primaryIntent": "sandefjord vs viking prediction",
+      "supportingIntents": [
+        "sandefjord vs viking betting tips",
+        "sandefjord vs viking odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 52,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "rosenborg-vs-hamkam",
+      "league": "eliteserien",
+      "lifecycle": "FINAL",
+      "titleBefore": "Rosenborg vs HamKam Prediction, Betting Tips & Odds",
+      "titleAfter": "Rosenborg vs HamKam Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Rosenborg vs HamKam prediction for the completed match, Over 2.5 Goals at odds of 1.57. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Rosenborg vs HamKam prediction for the completed match, Over 2.5 Goals at odds of 1.57. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Rosenborg vs HamKam Prediction & Match Analysis",
+      "h1After": "Rosenborg vs HamKam Prediction & Match Analysis",
+      "primaryIntent": "rosenborg vs hamkam prediction",
+      "supportingIntents": [
+        "rosenborg vs hamkam betting tips",
+        "rosenborg vs hamkam odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 51,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "brann-vs-lillestrom",
+      "league": "eliteserien",
+      "lifecycle": "FINAL",
+      "titleBefore": "Brann vs LillestrÃ¸m Prediction, Betting Tips & Odds",
+      "titleAfter": "Brann vs LillestrÃ¸m Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Brann vs LillestrÃ¸m prediction for the completed match: Brann X1 + Under 4.5 Goals at odds of 1.62. Full betting analysis for Eliteserien.",
+      "descriptionAfter": "Brann vs LillestrÃ¸m prediction for the completed match: Brann X1 + Under 4.5 Goals at odds of 1.62. Full betting analysis for Eliteserien.",
+      "h1Before": "Brann vs LillestrÃ¸m Prediction & Match Analysis",
+      "h1After": "Brann vs LillestrÃ¸m Prediction & Match Analysis",
+      "primaryIntent": "brann vs lillestrã¸m prediction",
+      "supportingIntents": [
+        "brann vs lillestrã¸m betting tips",
+        "brann vs lillestrã¸m odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 52,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "molde-vs-kfum-oslo",
+      "league": "eliteserien",
+      "lifecycle": "FINAL",
+      "titleBefore": "Molde vs KFUM Oslo Prediction, Betting Tips & Odds",
+      "titleAfter": "Molde vs KFUM Oslo Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Molde vs KFUM Oslo prediction for the completed match, Molde -1.25 Asian Handicap at odds of 1.7. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Molde vs KFUM Oslo prediction for the completed match, Molde -1.25 Asian Handicap at odds of 1.7. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Molde vs KFUM Oslo Prediction & Match Analysis",
+      "h1After": "Molde vs KFUM Oslo Prediction & Match Analysis",
+      "primaryIntent": "molde vs kfum oslo prediction",
+      "supportingIntents": [
+        "molde vs kfum oslo betting tips",
+        "molde vs kfum oslo odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 50,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "sarpsborg-08-vs-valerenga",
+      "league": "eliteserien",
+      "lifecycle": "FINAL",
+      "titleBefore": "Sarpsborg 08 vs VÃ¥lerenga Prediction, Betting Tips & Odds",
+      "titleAfter": "Sarpsborg 08 vs VÃ¥lerenga Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Sarpsborg 08 vs VÃ¥lerenga prediction for the completed match: Sarpsborg 08 X1 + Under 4.5 Goals at odds of 1.8. Full betting analysis for Eliteserien.",
+      "descriptionAfter": "Sarpsborg 08 vs VÃ¥lerenga prediction for the completed match: Sarpsborg 08 X1 + Under 4.5 Goals at odds of 1.8. Full betting analysis for Eliteserien.",
+      "h1Before": "Sarpsborg 08 vs VÃ¥lerenga Prediction & Match Analysis",
+      "h1After": "Sarpsborg 08 vs VÃ¥lerenga Prediction & Match Analysis",
+      "primaryIntent": "sarpsborg 08 vs vã¥lerenga prediction",
+      "supportingIntents": [
+        "sarpsborg 08 vs vã¥lerenga betting tips",
+        "sarpsborg 08 vs vã¥lerenga odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 58,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "kristiansund-vs-tromso",
+      "league": "eliteserien",
+      "lifecycle": "FINAL",
+      "titleBefore": "Kristiansund vs TromsÃ¸ Prediction, Betting Tips & Odds",
+      "titleAfter": "Kristiansund vs TromsÃ¸ Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Kristiansund vs TromsÃ¸ prediction for the completed match, Over 2.5 Goals at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Kristiansund vs TromsÃ¸ prediction for the completed match, Over 2.5 Goals at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Kristiansund vs TromsÃ¸ Prediction & Match Analysis",
+      "h1After": "Kristiansund vs TromsÃ¸ Prediction & Match Analysis",
+      "primaryIntent": "kristiansund vs tromsã¸ prediction",
+      "supportingIntents": [
+        "kristiansund vs tromsã¸ betting tips",
+        "kristiansund vs tromsã¸ odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 55,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "new-york-city-fc-vs-nashville-sc",
+      "league": "mls",
+      "lifecycle": "FINAL",
+      "titleBefore": "New York City vs Nashville SC Prediction, Betting Tips & Odds",
+      "titleAfter": "New York City vs Nashville SC Prediction, Betting Tips & Odds",
+      "descriptionBefore": "New York City vs Nashville SC prediction for the completed match and betting analysis for Major League Soccer.",
+      "descriptionAfter": "New York City vs Nashville SC prediction for the completed match and betting analysis for Major League Soccer.",
+      "h1Before": "New York City vs Nashville SC Prediction & Match Analysis",
+      "h1After": "New York City vs Nashville SC Prediction & Match Analysis",
+      "primaryIntent": "new york city vs nashville sc prediction",
+      "supportingIntents": [
+        "new york city vs nashville sc betting tips",
+        "new york city vs nashville sc odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 61,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "austin-fc-vs-san-jose-earthquakes",
+      "league": "mls",
+      "lifecycle": "FINAL",
+      "titleBefore": "Austin vs San Jose Earthquakes Prediction, Betting Tips & Odds",
+      "titleAfter": "Austin vs San Jose Earthquakes Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Austin vs San Jose Earthquakes prediction for the completed match and betting analysis for Major League Soccer.",
+      "descriptionAfter": "Austin vs San Jose Earthquakes prediction for the completed match and betting analysis for Major League Soccer.",
+      "h1Before": "Austin vs San Jose Earthquakes Prediction & Match Analysis",
+      "h1After": "Austin vs San Jose Earthquakes Prediction & Match Analysis",
+      "primaryIntent": "austin vs san jose earthquakes prediction",
+      "supportingIntents": [
+        "austin vs san jose earthquakes betting tips",
+        "austin vs san jose earthquakes odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 62,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "charlotte-fc-vs-houston-dynamo",
+      "league": "mls",
+      "lifecycle": "FINAL",
+      "titleBefore": "Charlotte vs Houston Dynamo Prediction, Betting Tips & Odds",
+      "titleAfter": "Charlotte vs Houston Dynamo Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Charlotte vs Houston Dynamo prediction for the completed match, Over 2.5 Goals at odds of 1.7. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Charlotte vs Houston Dynamo prediction for the completed match, Over 2.5 Goals at odds of 1.7. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Charlotte vs Houston Dynamo Prediction & Match Analysis",
+      "h1After": "Charlotte vs Houston Dynamo Prediction & Match Analysis",
+      "primaryIntent": "charlotte vs houston dynamo prediction",
+      "supportingIntents": [
+        "charlotte vs houston dynamo betting tips",
+        "charlotte vs houston dynamo odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 59,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "columbus-crew-vs-colorado-rapids",
+      "league": "mls",
+      "lifecycle": "FINAL",
+      "titleBefore": "Columbus Crew vs Colorado Rapids Prediction, Betting Tips & Odds",
+      "titleAfter": "Columbus Crew vs Colorado Rapids Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Columbus Crew vs Colorado Rapids prediction for the completed match: Colorado Rapids or Draw (X2) at odds of 1.8. Full betting analysis for Major League Soccer.",
+      "descriptionAfter": "Columbus Crew vs Colorado Rapids prediction for the completed match: Colorado Rapids or Draw (X2) at odds of 1.8. Full betting analysis for Major League Soccer.",
+      "h1Before": "Columbus Crew vs Colorado Rapids Prediction & Match Analysis",
+      "h1After": "Columbus Crew vs Colorado Rapids Prediction & Match Analysis",
+      "primaryIntent": "columbus crew vs colorado rapids prediction",
+      "supportingIntents": [
+        "columbus crew vs colorado rapids betting tips",
+        "columbus crew vs colorado rapids odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 64,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "fc-cincinnati-vs-dc-united",
+      "league": "mls",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Cincinnati vs D.C. United Prediction, Betting Tips & Odds",
+      "titleAfter": "Cincinnati vs D.C. United Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Cincinnati vs D.C. United prediction for 2026-09-05, FC Cincinnati to Win at odds of 1.6. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Cincinnati vs D.C. United prediction for 2026-09-05, FC Cincinnati to Win at odds of 1.6. Read our betting analysis and the data behind the main pick.",
+      "h1Before": "Cincinnati vs D.C. United Prediction & Match Analysis",
+      "h1After": "Cincinnati vs D.C. United Prediction & Match Analysis",
+      "primaryIntent": "cincinnati vs d.c. united prediction",
+      "supportingIntents": [
+        "cincinnati vs d.c. united betting tips",
+        "cincinnati vs d.c. united odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 57,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "fc-dallas-vs-sporting-kansas-city",
+      "league": "mls",
+      "lifecycle": "FINAL",
+      "titleBefore": "Dallas vs Sporting Kansas City Prediction, Betting Tips & Odds",
+      "titleAfter": "Dallas vs Sporting Kansas City Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Dallas vs Sporting Kansas City prediction for the completed match and betting analysis for Major League Soccer.",
+      "descriptionAfter": "Dallas vs Sporting Kansas City prediction for the completed match and betting analysis for Major League Soccer.",
+      "h1Before": "Dallas vs Sporting Kansas City Prediction & Match Analysis",
+      "h1After": "Dallas vs Sporting Kansas City Prediction & Match Analysis",
+      "primaryIntent": "dallas vs sporting kansas city prediction",
+      "supportingIntents": [
+        "dallas vs sporting kansas city betting tips",
+        "dallas vs sporting kansas city odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 62,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "inter-miami-vs-atlanta-united",
+      "league": "mls",
+      "lifecycle": "FINAL",
+      "titleBefore": "Inter Miami vs Atlanta United Prediction, Betting Tips & Odds",
+      "titleAfter": "Inter Miami vs Atlanta United Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Inter Miami vs Atlanta United prediction for the completed match and betting analysis for Major League Soccer.",
+      "descriptionAfter": "Inter Miami vs Atlanta United prediction for the completed match and betting analysis for Major League Soccer.",
+      "h1Before": "Inter Miami vs Atlanta United Prediction & Match Analysis",
+      "h1After": "Inter Miami vs Atlanta United Prediction & Match Analysis",
+      "primaryIntent": "inter miami vs atlanta united prediction",
+      "supportingIntents": [
+        "inter miami vs atlanta united betting tips",
+        "inter miami vs atlanta united odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 61,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "la-galaxy-vs-new-england-revolution",
+      "league": "mls",
+      "lifecycle": "FINAL",
+      "titleBefore": "LA Galaxy vs New England Revolution Prediction, Betting Tips & Odds",
+      "titleAfter": "LA Galaxy vs New England Revolution Prediction, Betting Tips & Odds",
+      "descriptionBefore": "LA Galaxy vs New England Revolution prediction for the completed match and betting analysis for Major League Soccer.",
+      "descriptionAfter": "LA Galaxy vs New England Revolution prediction for the completed match and betting analysis for Major League Soccer.",
+      "h1Before": "LA Galaxy vs New England Revolution Prediction & Match Analysis",
+      "h1After": "LA Galaxy vs New England Revolution Prediction & Match Analysis",
+      "primaryIntent": "la galaxy vs new england revolution prediction",
+      "supportingIntents": [
+        "la galaxy vs new england revolution betting tips",
+        "la galaxy vs new england revolution odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 67,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "orlando-city-vs-san-diego-fc",
+      "league": "mls",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Orlando City vs San Diego FC Prediction, Betting Tips & Odds",
+      "titleAfter": "Orlando City vs San Diego FC Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Orlando City vs San Diego FC prediction for the completed match and betting analysis for Major League Soccer.",
+      "descriptionAfter": "Orlando City vs San Diego FC prediction for the completed match and betting analysis for Major League Soccer.",
+      "h1Before": "Orlando City vs San Diego FC Prediction & Match Analysis",
+      "h1After": "Orlando City vs San Diego FC Prediction & Match Analysis",
+      "primaryIntent": "orlando city vs san diego fc prediction",
+      "supportingIntents": [
+        "orlando city vs san diego fc betting tips",
+        "orlando city vs san diego fc odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 60,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "philadelphia-union-vs-cf-montreal",
+      "league": "mls",
+      "lifecycle": "FINAL",
+      "titleBefore": "Philadelphia Union vs CF MontrÃ©al Prediction, Betting Tips & Odds",
+      "titleAfter": "Philadelphia Union vs CF MontrÃ©al Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Philadelphia Union vs CF MontrÃ©al prediction for the completed match and betting analysis for Major League Soccer.",
+      "descriptionAfter": "Philadelphia Union vs CF MontrÃ©al prediction for the completed match and betting analysis for Major League Soccer.",
+      "h1Before": "Philadelphia Union vs CF MontrÃ©al Prediction & Match Analysis",
+      "h1After": "Philadelphia Union vs CF MontrÃ©al Prediction & Match Analysis",
+      "primaryIntent": "philadelphia union vs cf montrã©al prediction",
+      "supportingIntents": [
+        "philadelphia union vs cf montrã©al betting tips",
+        "philadelphia union vs cf montrã©al odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 66,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "portland-timbers-vs-minnesota-united",
+      "league": "mls",
+      "lifecycle": "FINAL",
+      "titleBefore": "Portland Timbers vs Minnesota United Prediction, Betting Tips & Odds",
+      "titleAfter": "Portland Timbers vs Minnesota United Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Portland Timbers vs Minnesota United prediction for the completed match and betting analysis for Major League Soccer.",
+      "descriptionAfter": "Portland Timbers vs Minnesota United prediction for the completed match and betting analysis for Major League Soccer.",
+      "h1Before": "Portland Timbers vs Minnesota United Prediction & Match Analysis",
+      "h1After": "Portland Timbers vs Minnesota United Prediction & Match Analysis",
+      "primaryIntent": "portland timbers vs minnesota united prediction",
+      "supportingIntents": [
+        "portland timbers vs minnesota united betting tips",
+        "portland timbers vs minnesota united odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 68,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "real-salt-lake-vs-los-angeles-fc",
+      "league": "mls",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Real Salt Lake vs Los Angeles FC Prediction, Betting Tips & Odds",
+      "titleAfter": "Real Salt Lake vs Los Angeles FC Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Real Salt Lake vs Los Angeles FC prediction for the completed match: Over 2.5 Goals at odds of 1.67. Full betting analysis for Major League Soccer.",
+      "descriptionAfter": "Real Salt Lake vs Los Angeles FC prediction for the completed match: Over 2.5 Goals at odds of 1.67. Full betting analysis for Major League Soccer.",
+      "h1Before": "Real Salt Lake vs Los Angeles FC Prediction & Match Analysis",
+      "h1After": "Real Salt Lake vs Los Angeles FC Prediction & Match Analysis",
+      "primaryIntent": "real salt lake vs los angeles fc prediction",
+      "supportingIntents": [
+        "real salt lake vs los angeles fc betting tips",
+        "real salt lake vs los angeles fc odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 64,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "seattle-sounders-vs-new-york-red-bulls",
+      "league": "mls",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Seattle Sounders vs New York Red Bulls Prediction, Betting Tips & Odds",
+      "titleAfter": "Seattle Sounders vs New York Red Bulls Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Seattle Sounders vs New York Red Bulls prediction for the completed match and betting analysis for Major League Soccer.",
+      "descriptionAfter": "Seattle Sounders vs New York Red Bulls prediction for the completed match and betting analysis for Major League Soccer.",
+      "h1Before": "Seattle Sounders vs New York Red Bulls Prediction & Match Analysis",
+      "h1After": "Seattle Sounders vs New York Red Bulls Prediction & Match Analysis",
+      "primaryIntent": "seattle sounders vs new york red bulls prediction",
+      "supportingIntents": [
+        "seattle sounders vs new york red bulls betting tips",
+        "seattle sounders vs new york red bulls odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 70,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "toronto-fc-vs-chicago-fire",
+      "league": "mls",
+      "lifecycle": "FINAL",
+      "titleBefore": "Toronto vs Chicago Fire Prediction, Betting Tips & Odds",
+      "titleAfter": "Toronto vs Chicago Fire Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Toronto vs Chicago Fire prediction for the completed match and betting analysis for Major League Soccer.",
+      "descriptionAfter": "Toronto vs Chicago Fire prediction for the completed match and betting analysis for Major League Soccer.",
+      "h1Before": "Toronto vs Chicago Fire Prediction & Match Analysis",
+      "h1After": "Toronto vs Chicago Fire Prediction & Match Analysis",
+      "primaryIntent": "toronto vs chicago fire prediction",
+      "supportingIntents": [
+        "toronto vs chicago fire betting tips",
+        "toronto vs chicago fire odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 55,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "vancouver-whitecaps-vs-st-louis-city",
+      "league": "mls",
+      "lifecycle": "HISTORICAL",
+      "titleBefore": "Vancouver Whitecaps vs St. Louis City Prediction, Betting Tips & Odds",
+      "titleAfter": "Vancouver Whitecaps vs St. Louis City Prediction, Betting Tips & Odds",
+      "descriptionBefore": "Vancouver Whitecaps vs St. Louis City prediction for the completed match: Over 2.5 Goals at odds of 1.47. Full betting analysis for Major League Soccer.",
+      "descriptionAfter": "Vancouver Whitecaps vs St. Louis City prediction for the completed match: Over 2.5 Goals at odds of 1.47. Full betting analysis for Major League Soccer.",
+      "h1Before": "Vancouver Whitecaps vs St. Louis City Prediction & Match Analysis",
+      "h1After": "Vancouver Whitecaps vs St. Louis City Prediction & Match Analysis",
+      "primaryIntent": "vancouver whitecaps vs st. louis city prediction",
+      "supportingIntents": [
+        "vancouver whitecaps vs st. louis city betting tips",
+        "vancouver whitecaps vs st. louis city odds"
+      ],
+      "metadataVariant": "legacy",
+      "titleLength": 69,
+      "reasons": [
+        "historical_freeze_preserved"
+      ]
+    },
+    {
+      "slug": "aek-athens-vs-lask",
+      "league": "champions-league",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "AEK Athens vs LASK Prediction, Betting Tips & Odds",
+      "titleAfter": "AEK Athens vs LASK Prediction & Betting tips - UEFA Champions League",
+      "descriptionBefore": "AEK Athens vs LASK prediction for tomorrow: AEK Athens or Draw (1X) + Over 7.5 Corners at odds of 1.65. Full betting analysis for UEFA Champions League.",
+      "descriptionAfter": "AEK Athens vs LASK prediction for UEFA Champions League, with published odds of 1.65. Betting tips and match analysis.",
+      "h1Before": "AEK Athens vs LASK Prediction & Match Analysis",
+      "h1After": "AEK Athens vs LASK Prediction & Betting tips",
+      "primaryIntent": "aek athens vs lask prediction",
+      "supportingIntents": [
+        "aek athens vs lask betting tips",
+        "aek athens vs lask odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 68,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "club-brugge-vs-aston-villa",
+      "league": "champions-league",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "Club Brugge vs Aston Villa Prediction, Betting Tips & Odds",
+      "titleAfter": "Club Brugge vs Aston Villa Prediction - UEFA Champions League",
+      "descriptionBefore": "Club Brugge vs Aston Villa prediction for tomorrow, Aston Villa or Draw (X2) at odds of 1.5. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Club Brugge vs Aston Villa prediction for UEFA Champions League: Aston Villa or Draw (X2) at odds of 1.5. Betting tips, analysis and supporting match context.",
+      "h1Before": "Club Brugge vs Aston Villa Prediction & Match Analysis",
+      "h1After": "Club Brugge vs Aston Villa Prediction & Betting tips",
+      "primaryIntent": "club brugge vs aston villa prediction",
+      "supportingIntents": [
+        "club brugge vs aston villa betting tips",
+        "club brugge vs aston villa odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 61,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "borussia-dortmund-vs-villarreal",
+      "league": "champions-league",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "Borussia Dortmund vs Villarreal Prediction, Betting Tips & Odds",
+      "titleAfter": "Borussia Dortmund vs Villarreal Prediction - UEFA Champions League",
+      "descriptionBefore": "Borussia Dortmund vs Villarreal prediction for tomorrow, Borussia Dortmund to Win at odds of 1.8. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Borussia Dortmund vs Villarreal prediction for UEFA Champions League, with published odds of 1.8. Betting tips and match analysis.",
+      "h1Before": "Borussia Dortmund vs Villarreal Prediction & Match Analysis",
+      "h1After": "Borussia Dortmund vs Villarreal Prediction & Betting tips",
+      "primaryIntent": "borussia dortmund vs villarreal prediction",
+      "supportingIntents": [
+        "borussia dortmund vs villarreal betting tips",
+        "borussia dortmund vs villarreal odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 66,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "porto-vs-manchester-city",
+      "league": "champions-league",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "Porto vs Manchester City Prediction, Betting Tips & Odds",
+      "titleAfter": "Porto vs Manchester City Prediction - UEFA Champions League",
+      "descriptionBefore": "Porto vs Manchester City prediction for tomorrow, Over 2.5 Goals at odds of 1.67. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Porto vs Manchester City prediction for UEFA Champions League: Over 2.5 Goals at odds of 1.67. Betting tips, analysis and supporting match context.",
+      "h1Before": "Porto vs Manchester City Prediction & Match Analysis",
+      "h1After": "Porto vs Manchester City Prediction & Betting tips",
+      "primaryIntent": "porto vs manchester city prediction",
+      "supportingIntents": [
+        "porto vs manchester city betting tips",
+        "porto vs manchester city odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 59,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "lille-vs-real-betis",
+      "league": "champions-league",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "Lille vs Real Betis Prediction, Betting Tips & Odds",
+      "titleAfter": "Lille vs Real Betis Prediction & Betting tips - UEFA Champions League",
+      "descriptionBefore": "Lille vs Real Betis prediction for tomorrow, Lille or Draw (1X) + Over 1.5 Goals at odds of 1.7. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Lille vs Real Betis prediction for UEFA Champions League, with published odds of 1.7. Betting tips and match analysis.",
+      "h1Before": "Lille vs Real Betis Prediction & Match Analysis",
+      "h1After": "Lille vs Real Betis Prediction & Betting tips",
+      "primaryIntent": "lille vs real betis prediction",
+      "supportingIntents": [
+        "lille vs real betis betting tips",
+        "lille vs real betis odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 69,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    },
+    {
+      "slug": "real-madrid-vs-inter",
+      "league": "champions-league",
+      "lifecycle": "TOMORROW",
+      "titleBefore": "Real Madrid vs Inter Prediction, Betting Tips & Odds",
+      "titleAfter": "Real Madrid vs Inter Prediction & Betting tips - UEFA Champions League",
+      "descriptionBefore": "Real Madrid vs Inter prediction for tomorrow, Real Madrid to Win at odds of 1.65. Read our betting analysis and the data behind the main pick.",
+      "descriptionAfter": "Real Madrid vs Inter prediction for UEFA Champions League: Real Madrid to Win at odds of 1.65. Betting tips, analysis and supporting match context.",
+      "h1Before": "Real Madrid vs Inter Prediction & Match Analysis",
+      "h1After": "Real Madrid vs Inter Prediction & Betting tips",
+      "primaryIntent": "real madrid vs inter prediction",
+      "supportingIntents": [
+        "real madrid vs inter betting tips",
+        "real madrid vs inter odds"
+      ],
+      "metadataVariant": "prediction-first-v2",
+      "titleLength": 70,
+      "reasons": [
+        "prediction_primary",
+        "pre_match_metadata",
+        "competition_context_included",
+        "no_lineup_intent"
+      ]
+    }
+  ]
+}
