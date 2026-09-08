@@ -1,0 +1,1114 @@
+{
+  "generatedAt": "2026-09-08T01:40:34.164Z",
+  "policy": "Future/pre-match only. Historical and unresolved records are excluded from scoring.",
+  "thresholds": {
+    "A": "90-100",
+    "B": "75-89",
+    "C": "60-74",
+    "D": "below 60"
+  },
+  "before": {
+    "pages": 60,
+    "average": 93.3,
+    "grades": {
+      "A": 51,
+      "B": 9,
+      "C": 0,
+      "D": 0
+    },
+    "rows": [
+      {
+        "league": "liga-portugal",
+        "slug": "moreirense-vs-benfica-2026-27",
+        "score": 95,
+        "grade": "A",
+        "words": 950,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "liga-portugal",
+        "slug": "estrela-da-amadora-vs-braga-2026-27",
+        "score": 95,
+        "grade": "A",
+        "words": 990,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "eredivisie",
+        "slug": "nec-nijmegen-vs-excelsior",
+        "score": 95,
+        "grade": "A",
+        "words": 966,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "eredivisie",
+        "slug": "fc-twente-vs-telstar",
+        "score": 95,
+        "grade": "A",
+        "words": 974,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "efl-cup",
+        "slug": "bournemouth-vs-lincoln-city",
+        "score": 95,
+        "grade": "A",
+        "words": 957,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "efl-cup",
+        "slug": "crystal-palace-vs-middlesbrough",
+        "score": 95,
+        "grade": "A",
+        "words": 956,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "efl-cup",
+        "slug": "sunderland-vs-hull-city",
+        "score": 95,
+        "grade": "A",
+        "words": 962,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "efl-cup",
+        "slug": "millwall-vs-newcastle-united",
+        "score": 95,
+        "grade": "A",
+        "words": 959,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "efl-cup",
+        "slug": "chelsea-vs-leeds-united",
+        "score": 95,
+        "grade": "A",
+        "words": 961,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "championship",
+        "slug": "blackburn-rovers-vs-sheffield-united",
+        "score": 100,
+        "grade": "A",
+        "words": 1475,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "bolton-wanderers-vs-west-ham-united",
+        "score": 100,
+        "grade": "A",
+        "words": 1451,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "cardiff-city-vs-stoke-city",
+        "score": 100,
+        "grade": "A",
+        "words": 1446,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "charlton-athletic-vs-queens-park-rangers",
+        "score": 100,
+        "grade": "A",
+        "words": 1451,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "derby-county-vs-west-bromwich-albion",
+        "score": 100,
+        "grade": "A",
+        "words": 1471,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "norwich-city-vs-birmingham-city",
+        "score": 100,
+        "grade": "A",
+        "words": 1505,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "southampton-vs-swansea-city",
+        "score": 100,
+        "grade": "A",
+        "words": 1435,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "watford-vs-preston-north-end",
+        "score": 100,
+        "grade": "A",
+        "words": 1441,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "wrexham-vs-burnley",
+        "score": 100,
+        "grade": "A",
+        "words": 1431,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "scottish-premiership",
+        "slug": "rangers-vs-st-mirren",
+        "score": 95,
+        "grade": "A",
+        "words": 965,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "scottish-premiership",
+        "slug": "st-johnstone-vs-celtic",
+        "score": 95,
+        "grade": "A",
+        "words": 961,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "atlanta-united-vs-orlando-city",
+        "score": 90,
+        "grade": "A",
+        "words": 686,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "austin-fc-vs-colorado-rapids",
+        "score": 78,
+        "grade": "B",
+        "words": 606,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "cf-montreal-vs-charlotte-fc",
+        "score": 90,
+        "grade": "A",
+        "words": 676,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "chicago-fire-vs-inter-miami-cf",
+        "score": 90,
+        "grade": "A",
+        "words": 652,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "dc-united-vs-columbus-crew",
+        "score": 90,
+        "grade": "A",
+        "words": 678,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "houston-dynamo-vs-real-salt-lake",
+        "score": 78,
+        "grade": "B",
+        "words": 637,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "los-angeles-fc-vs-new-york-red-bulls",
+        "score": 78,
+        "grade": "B",
+        "words": 599,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "minnesota-united-vs-fc-dallas",
+        "score": 85,
+        "grade": "B",
+        "words": 629,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "new-york-city-fc-vs-new-england-revolution",
+        "score": 83,
+        "grade": "B",
+        "words": 674,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "philadelphia-union-vs-fc-cincinnati",
+        "score": 90,
+        "grade": "A",
+        "words": 671,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "portland-timbers-vs-st-louis-city-sc",
+        "score": 85,
+        "grade": "B",
+        "words": 633,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "san-diego-fc-vs-san-jose-earthquakes",
+        "score": 83,
+        "grade": "B",
+        "words": 657,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "toronto-fc-vs-nashville-sc",
+        "score": 83,
+        "grade": "B",
+        "words": 719,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "vancouver-whitecaps-vs-la-galaxy",
+        "score": 83,
+        "grade": "B",
+        "words": 704,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "aek-athens-vs-lask",
+        "score": 95,
+        "grade": "A",
+        "words": 874,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "club-brugge-vs-aston-villa",
+        "score": 95,
+        "grade": "A",
+        "words": 891,
+        "sourceCount": 3,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "borussia-dortmund-vs-villarreal",
+        "score": 95,
+        "grade": "A",
+        "words": 872,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "porto-vs-manchester-city",
+        "score": 95,
+        "grade": "A",
+        "words": 854,
+        "sourceCount": 3,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "lille-vs-real-betis",
+        "score": 95,
+        "grade": "A",
+        "words": 882,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "real-madrid-vs-inter",
+        "score": 95,
+        "grade": "A",
+        "words": 893,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "barcelona-vs-feyenoord",
+        "score": 95,
+        "grade": "A",
+        "words": 949,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "stuttgart-vs-viking",
+        "score": 95,
+        "grade": "A",
+        "words": 954,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "liverpool-vs-atletico-madrid",
+        "score": 95,
+        "grade": "A",
+        "words": 982,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "paris-saint-germain-vs-slovan-bratislava",
+        "score": 95,
+        "grade": "A",
+        "words": 976,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "napoli-vs-arsenal",
+        "score": 95,
+        "grade": "A",
+        "words": 968,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "sporting-cp-vs-galatasaray",
+        "score": 95,
+        "grade": "A",
+        "words": 969,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "fenerbahce-vs-roma",
+        "score": 95,
+        "grade": "A",
+        "words": 961,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "psv-eindhoven-vs-shakhtar-donetsk",
+        "score": 95,
+        "grade": "A",
+        "words": 992,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "como-vs-rb-leipzig",
+        "score": 95,
+        "grade": "A",
+        "words": 968,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "bayern-munich-vs-bodo-glimt",
+        "score": 95,
+        "grade": "A",
+        "words": 964,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "manchester-united-vs-sabah",
+        "score": 95,
+        "grade": "A",
+        "words": 964,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "slavia-praha-vs-lens",
+        "score": 95,
+        "grade": "A",
+        "words": 966,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-libertadores",
+        "slug": "fluminense-vs-platense",
+        "score": 95,
+        "grade": "A",
+        "words": 942,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-libertadores",
+        "slug": "palmeiras-vs-ldu-quito",
+        "score": 95,
+        "grade": "A",
+        "words": 958,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-libertadores",
+        "slug": "estudiantes-vs-corinthians",
+        "score": 95,
+        "grade": "A",
+        "words": 949,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-libertadores",
+        "slug": "independiente-del-valle-vs-flamengo",
+        "score": 95,
+        "grade": "A",
+        "words": 1013,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-sudamericana",
+        "slug": "independiente-santa-fe-vs-vasco-da-gama",
+        "score": 95,
+        "grade": "A",
+        "words": 1007,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-sudamericana",
+        "slug": "boca-juniors-vs-sao-paulo",
+        "score": 95,
+        "grade": "A",
+        "words": 972,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-sudamericana",
+        "slug": "santos-vs-atletico-mineiro",
+        "score": 95,
+        "grade": "A",
+        "words": 968,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-sudamericana",
+        "slug": "cienciano-vs-montevideo-city-torque",
+        "score": 95,
+        "grade": "A",
+        "words": 979,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      }
+    ]
+  },
+  "after": {
+    "pages": 60,
+    "average": 93.3,
+    "grades": {
+      "A": 51,
+      "B": 9,
+      "C": 0,
+      "D": 0
+    },
+    "rows": [
+      {
+        "league": "liga-portugal",
+        "slug": "moreirense-vs-benfica-2026-27",
+        "score": 95,
+        "grade": "A",
+        "words": 950,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "liga-portugal",
+        "slug": "estrela-da-amadora-vs-braga-2026-27",
+        "score": 95,
+        "grade": "A",
+        "words": 990,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "eredivisie",
+        "slug": "nec-nijmegen-vs-excelsior",
+        "score": 95,
+        "grade": "A",
+        "words": 966,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "eredivisie",
+        "slug": "fc-twente-vs-telstar",
+        "score": 95,
+        "grade": "A",
+        "words": 974,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "efl-cup",
+        "slug": "bournemouth-vs-lincoln-city",
+        "score": 95,
+        "grade": "A",
+        "words": 957,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "efl-cup",
+        "slug": "crystal-palace-vs-middlesbrough",
+        "score": 95,
+        "grade": "A",
+        "words": 956,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "efl-cup",
+        "slug": "sunderland-vs-hull-city",
+        "score": 95,
+        "grade": "A",
+        "words": 962,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "efl-cup",
+        "slug": "millwall-vs-newcastle-united",
+        "score": 95,
+        "grade": "A",
+        "words": 959,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "efl-cup",
+        "slug": "chelsea-vs-leeds-united",
+        "score": 95,
+        "grade": "A",
+        "words": 961,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "championship",
+        "slug": "blackburn-rovers-vs-sheffield-united",
+        "score": 100,
+        "grade": "A",
+        "words": 1475,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "bolton-wanderers-vs-west-ham-united",
+        "score": 100,
+        "grade": "A",
+        "words": 1451,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "cardiff-city-vs-stoke-city",
+        "score": 100,
+        "grade": "A",
+        "words": 1446,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "charlton-athletic-vs-queens-park-rangers",
+        "score": 100,
+        "grade": "A",
+        "words": 1451,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "derby-county-vs-west-bromwich-albion",
+        "score": 100,
+        "grade": "A",
+        "words": 1471,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "norwich-city-vs-birmingham-city",
+        "score": 100,
+        "grade": "A",
+        "words": 1505,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "southampton-vs-swansea-city",
+        "score": 100,
+        "grade": "A",
+        "words": 1435,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "watford-vs-preston-north-end",
+        "score": 100,
+        "grade": "A",
+        "words": 1441,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "championship",
+        "slug": "wrexham-vs-burnley",
+        "score": 100,
+        "grade": "A",
+        "words": 1431,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "scottish-premiership",
+        "slug": "rangers-vs-st-mirren",
+        "score": 95,
+        "grade": "A",
+        "words": 965,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "scottish-premiership",
+        "slug": "st-johnstone-vs-celtic",
+        "score": 95,
+        "grade": "A",
+        "words": 961,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "atlanta-united-vs-orlando-city",
+        "score": 90,
+        "grade": "A",
+        "words": 686,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "austin-fc-vs-colorado-rapids",
+        "score": 78,
+        "grade": "B",
+        "words": 606,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "cf-montreal-vs-charlotte-fc",
+        "score": 90,
+        "grade": "A",
+        "words": 676,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "chicago-fire-vs-inter-miami-cf",
+        "score": 90,
+        "grade": "A",
+        "words": 652,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "dc-united-vs-columbus-crew",
+        "score": 90,
+        "grade": "A",
+        "words": 678,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "houston-dynamo-vs-real-salt-lake",
+        "score": 78,
+        "grade": "B",
+        "words": 637,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "los-angeles-fc-vs-new-york-red-bulls",
+        "score": 78,
+        "grade": "B",
+        "words": 599,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "minnesota-united-vs-fc-dallas",
+        "score": 85,
+        "grade": "B",
+        "words": 629,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "new-york-city-fc-vs-new-england-revolution",
+        "score": 83,
+        "grade": "B",
+        "words": 674,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "philadelphia-union-vs-fc-cincinnati",
+        "score": 90,
+        "grade": "A",
+        "words": 671,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "portland-timbers-vs-st-louis-city-sc",
+        "score": 85,
+        "grade": "B",
+        "words": 633,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "san-diego-fc-vs-san-jose-earthquakes",
+        "score": 83,
+        "grade": "B",
+        "words": 657,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "toronto-fc-vs-nashville-sc",
+        "score": 83,
+        "grade": "B",
+        "words": 719,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "mls",
+        "slug": "vancouver-whitecaps-vs-la-galaxy",
+        "score": 83,
+        "grade": "B",
+        "words": 704,
+        "sourceCount": 4,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "aek-athens-vs-lask",
+        "score": 95,
+        "grade": "A",
+        "words": 874,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "club-brugge-vs-aston-villa",
+        "score": 95,
+        "grade": "A",
+        "words": 891,
+        "sourceCount": 3,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "borussia-dortmund-vs-villarreal",
+        "score": 95,
+        "grade": "A",
+        "words": 872,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "porto-vs-manchester-city",
+        "score": 95,
+        "grade": "A",
+        "words": 854,
+        "sourceCount": 3,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "lille-vs-real-betis",
+        "score": 95,
+        "grade": "A",
+        "words": 882,
+        "sourceCount": 4,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "real-madrid-vs-inter",
+        "score": 95,
+        "grade": "A",
+        "words": 893,
+        "sourceCount": 5,
+        "sourceStatus": "verified"
+      },
+      {
+        "league": "champions-league",
+        "slug": "barcelona-vs-feyenoord",
+        "score": 95,
+        "grade": "A",
+        "words": 949,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "stuttgart-vs-viking",
+        "score": 95,
+        "grade": "A",
+        "words": 954,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "liverpool-vs-atletico-madrid",
+        "score": 95,
+        "grade": "A",
+        "words": 982,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "paris-saint-germain-vs-slovan-bratislava",
+        "score": 95,
+        "grade": "A",
+        "words": 976,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "napoli-vs-arsenal",
+        "score": 95,
+        "grade": "A",
+        "words": 968,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "sporting-cp-vs-galatasaray",
+        "score": 95,
+        "grade": "A",
+        "words": 969,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "fenerbahce-vs-roma",
+        "score": 95,
+        "grade": "A",
+        "words": 961,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "psv-eindhoven-vs-shakhtar-donetsk",
+        "score": 95,
+        "grade": "A",
+        "words": 992,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "como-vs-rb-leipzig",
+        "score": 95,
+        "grade": "A",
+        "words": 968,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "bayern-munich-vs-bodo-glimt",
+        "score": 95,
+        "grade": "A",
+        "words": 964,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "manchester-united-vs-sabah",
+        "score": 95,
+        "grade": "A",
+        "words": 964,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "champions-league",
+        "slug": "slavia-praha-vs-lens",
+        "score": 95,
+        "grade": "A",
+        "words": 966,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-libertadores",
+        "slug": "fluminense-vs-platense",
+        "score": 95,
+        "grade": "A",
+        "words": 942,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-libertadores",
+        "slug": "palmeiras-vs-ldu-quito",
+        "score": 95,
+        "grade": "A",
+        "words": 958,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-libertadores",
+        "slug": "estudiantes-vs-corinthians",
+        "score": 95,
+        "grade": "A",
+        "words": 949,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-libertadores",
+        "slug": "independiente-del-valle-vs-flamengo",
+        "score": 95,
+        "grade": "A",
+        "words": 1013,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-sudamericana",
+        "slug": "independiente-santa-fe-vs-vasco-da-gama",
+        "score": 95,
+        "grade": "A",
+        "words": 1007,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-sudamericana",
+        "slug": "boca-juniors-vs-sao-paulo",
+        "score": 95,
+        "grade": "A",
+        "words": 972,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-sudamericana",
+        "slug": "santos-vs-atletico-mineiro",
+        "score": 95,
+        "grade": "A",
+        "words": 968,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      },
+      {
+        "league": "copa-sudamericana",
+        "slug": "cienciano-vs-montevideo-city-torque",
+        "score": 95,
+        "grade": "A",
+        "words": 979,
+        "sourceCount": 1,
+        "sourceStatus": "partial"
+      }
+    ]
+  }
+}

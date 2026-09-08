@@ -53,12 +53,18 @@ if (!cagliari || !canonicalCagliari) {
 } else if (!canonicalCagliari.kickoffUtc) {
   errors.push("cagliari-vs-lecce: canonical fixture has no kickoffUtc");
 } else {
-  const beforeKickoff = new Date(Date.parse(canonicalCagliari.kickoffUtc) - 60_000);
-  const atKickoff = new Date(canonicalCagliari.kickoffUtc);
-  if (!isInternationalMatchExpansionEligible(canonicalCagliari, beforeKickoff)) {
+  const scheduledBoundaryFixture = {
+    ...canonicalCagliari,
+    fixtureStatus: "scheduled",
+    homeScore: undefined,
+    awayScore: undefined,
+  };
+  const beforeKickoff = new Date(Date.parse(scheduledBoundaryFixture.kickoffUtc) - 60_000);
+  const atKickoff = new Date(scheduledBoundaryFixture.kickoffUtc);
+  if (!isInternationalMatchExpansionEligible(scheduledBoundaryFixture, beforeKickoff)) {
     errors.push("cagliari-vs-lecce: expected eligibility before kickoff");
   }
-  if (isInternationalMatchExpansionEligible(canonicalCagliari, atKickoff)) {
+  if (isInternationalMatchExpansionEligible(scheduledBoundaryFixture, atKickoff)) {
     errors.push("cagliari-vs-lecce: eligibility did not close at kickoff");
   }
 }

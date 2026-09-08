@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T19:35:43.720Z",
+  "generatedAt": "2026-09-08T01:37:27.860Z",
   "featureFlags": {
     "quality-gate-v2": true,
     "prediction-first-v2": true,
@@ -11,35 +11,36 @@
     "freshness-engine-v1": false
   },
   "before": {
-    "published": 316,
+    "published": 361,
     "classifications": {
       "KEEP": 148,
       "LEGACY-NOINDEX": 139,
       "REMOVE": 15,
-      "UPGRADE": 29
+      "UPGRADE": 74
     },
     "indexable": 148,
-    "noindex": 183,
+    "noindex": 228,
     "sitemapUrls": 384
   },
   "after": {
     "classifications": {
-      "HISTORICAL": 270,
-      "INDEX_PRIME": 22,
+      "HISTORICAL": 278,
+      "INDEX_PRIME": 14,
+      "INDEX_STANDARD": 35,
       "REMOVE": 15,
-      "UPGRADE": 24
+      "UPGRADE": 34
     },
-    "indexable": 147,
-    "noindex": 184,
-    "netIndexableChange": -1,
-    "sitemapUrls": 337
+    "indexable": 182,
+    "noindex": 194,
+    "netIndexableChange": 34,
+    "sitemapUrls": 471
   },
   "quality": {
-    "promoted": 10,
+    "promoted": 45,
     "demoted": 11,
-    "unchanged": 310,
-    "historical": 270,
-    "historicalIndexable": 125,
+    "unchanged": 320,
+    "historical": 278,
+    "historicalIndexable": 133,
     "historicalNoindex": 145,
     "topReasons": [
       {
@@ -47,16 +48,32 @@
         "count": 145
       },
       {
-        "reason": "content_incomplete",
-        "count": 125
+        "reason": "historical_quality_minimum_passed",
+        "count": 133
       },
       {
-        "reason": "historical_quality_minimum_passed",
-        "count": 125
+        "reason": "content_incomplete",
+        "count": 130
       },
       {
         "reason": "paragraph_quality_insufficient",
         "count": 83
+      },
+      {
+        "reason": "metadata_valid",
+        "count": 49
+      },
+      {
+        "reason": "unique_content",
+        "count": 49
+      },
+      {
+        "reason": "essential_quality_gate_passed",
+        "count": 35
+      },
+      {
+        "reason": "sources_acceptable",
+        "count": 35
       },
       {
         "reason": "lifecycle_unresolved",
@@ -67,32 +84,24 @@
         "count": 23
       },
       {
+        "reason": "remove_sovereign",
+        "count": 15
+      },
+      {
         "reason": "editorial_complete",
-        "count": 22
+        "count": 14
       },
       {
         "reason": "sources_verified",
-        "count": 22
-      },
-      {
-        "reason": "metadata_valid",
-        "count": 22
-      },
-      {
-        "reason": "unique_content",
-        "count": 22
+        "count": 14
       },
       {
         "reason": "statistical_core_complete",
-        "count": 22
+        "count": 14
       },
       {
         "reason": "provenance_complete",
-        "count": 22
-      },
-      {
-        "reason": "remove_sovereign",
-        "count": 15
+        "count": 14
       },
       {
         "reason": "internal_notes_present",
@@ -103,17 +112,29 @@
         "count": 9
       },
       {
+        "reason": "tactical_quality_insufficient",
+        "count": 7
+      },
+      {
         "reason": "result_pick_integrity_invalid",
         "count": 5
       },
       {
         "reason": "editorial_duplication_blocking",
-        "count": 1
+        "count": 2
       }
     ],
     "promotionsByLeague": {
       "brasileirao-serie-a": 8,
-      "la-liga": 2
+      "champions-league": 12,
+      "copa-libertadores": 4,
+      "copa-sudamericana": 4,
+      "efl-cup": 5,
+      "eredivisie": 2,
+      "la-liga": 2,
+      "liga-portugal": 2,
+      "mls": 4,
+      "scottish-premiership": 2
     },
     "demotionsByLeague": {
       "championship": 1,
@@ -126,7 +147,7 @@
     "keepDemotionLimit": 0.2,
     "legacyPromotions": 9,
     "legacyPromotionLimit": 100,
-    "sitemapNetChange": -47,
+    "sitemapNetChange": 87,
     "sitemapNetChangeLimit": 100,
     "internationalExpansion": 0,
     "triggered": []
@@ -2303,21 +2324,16 @@
       "league": "la-liga",
       "slug": "getafe-vs-celta-vigo",
       "publishedAt": "2026-09-01T12:00:00-03:00",
-      "lifecycle": "future-pre-match",
+      "lifecycle": "historical-frozen",
       "currentClassification": "KEEP",
-      "proposedClassification": "INDEX_PRIME",
+      "proposedClassification": "HISTORICAL",
       "currentIndexable": true,
       "proposedIndexable": true,
-      "historicalIndexability": null,
+      "historicalIndexability": "HISTORICAL_INDEXABLE",
       "localizationQuality": "NOT_EVALUATED",
       "change": "UNCHANGED",
       "reasons": [
-        "editorial_complete",
-        "sources_verified",
-        "metadata_valid",
-        "unique_content",
-        "statistical_core_complete",
-        "provenance_complete"
+        "historical_quality_minimum_passed"
       ],
       "checks": {
         "contentComplete": true,
@@ -2339,21 +2355,16 @@
       "league": "la-liga",
       "slug": "elche-vs-real-sociedad",
       "publishedAt": "2026-09-01T12:00:00-03:00",
-      "lifecycle": "future-pre-match",
+      "lifecycle": "historical-frozen",
       "currentClassification": "KEEP",
-      "proposedClassification": "INDEX_PRIME",
+      "proposedClassification": "HISTORICAL",
       "currentIndexable": true,
       "proposedIndexable": true,
-      "historicalIndexability": null,
+      "historicalIndexability": "HISTORICAL_INDEXABLE",
       "localizationQuality": "NOT_EVALUATED",
       "change": "UNCHANGED",
       "reasons": [
-        "editorial_complete",
-        "sources_verified",
-        "metadata_valid",
-        "unique_content",
-        "statistical_core_complete",
-        "provenance_complete"
+        "historical_quality_minimum_passed"
       ],
       "checks": {
         "contentComplete": true,
@@ -3845,21 +3856,16 @@
       "league": "serie-a",
       "slug": "cagliari-vs-lecce",
       "publishedAt": "2026-09-01T12:00:00-03:00",
-      "lifecycle": "future-pre-match",
+      "lifecycle": "historical-frozen",
       "currentClassification": "KEEP",
-      "proposedClassification": "INDEX_PRIME",
+      "proposedClassification": "HISTORICAL",
       "currentIndexable": true,
       "proposedIndexable": true,
-      "historicalIndexability": null,
+      "historicalIndexability": "HISTORICAL_INDEXABLE",
       "localizationQuality": "NOT_EVALUATED",
       "change": "UNCHANGED",
       "reasons": [
-        "editorial_complete",
-        "sources_verified",
-        "metadata_valid",
-        "unique_content",
-        "statistical_core_complete",
-        "provenance_complete"
+        "historical_quality_minimum_passed"
       ],
       "checks": {
         "contentComplete": true,
@@ -3881,21 +3887,16 @@
       "league": "serie-a",
       "slug": "udinese-vs-lazio",
       "publishedAt": "2026-09-01T12:00:00-03:00",
-      "lifecycle": "future-pre-match",
+      "lifecycle": "historical-frozen",
       "currentClassification": "KEEP",
-      "proposedClassification": "INDEX_PRIME",
+      "proposedClassification": "HISTORICAL",
       "currentIndexable": true,
       "proposedIndexable": true,
-      "historicalIndexability": null,
+      "historicalIndexability": "HISTORICAL_INDEXABLE",
       "localizationQuality": "NOT_EVALUATED",
       "change": "UNCHANGED",
       "reasons": [
-        "editorial_complete",
-        "sources_verified",
-        "metadata_valid",
-        "unique_content",
-        "statistical_core_complete",
-        "provenance_complete"
+        "historical_quality_minimum_passed"
       ],
       "checks": {
         "contentComplete": true,
@@ -5010,21 +5011,84 @@
       "league": "liga-portugal",
       "slug": "estoril-vs-arouca",
       "publishedAt": "2026-09-01T12:00:00-03:00",
-      "lifecycle": "future-pre-match",
+      "lifecycle": "historical-frozen",
       "currentClassification": "KEEP",
-      "proposedClassification": "INDEX_PRIME",
+      "proposedClassification": "HISTORICAL",
       "currentIndexable": true,
       "proposedIndexable": true,
-      "historicalIndexability": null,
+      "historicalIndexability": "HISTORICAL_INDEXABLE",
       "localizationQuality": "NOT_EVALUATED",
       "change": "UNCHANGED",
       "reasons": [
-        "editorial_complete",
-        "sources_verified",
+        "historical_quality_minimum_passed"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "liga-portugal",
+      "slug": "moreirense-vs-benfica-2026-27",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
         "metadata_valid",
-        "unique_content",
-        "statistical_core_complete",
-        "provenance_complete"
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "liga-portugal",
+      "slug": "estrela-da-amadora-vs-braga-2026-27",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
       ],
       "checks": {
         "contentComplete": true,
@@ -6202,6 +6266,74 @@
         "factualConsistency": true,
         "tacticalQuality": true,
         "paragraphQuality": false
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "eredivisie",
+      "slug": "nec-nijmegen-vs-excelsior",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "eredivisie",
+      "slug": "fc-twente-vs-telstar",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
       },
       "runtimeMatchesProposed": true
     },
@@ -7701,21 +7833,16 @@
       "league": "brasileirao-serie-a",
       "slug": "vitoria-vs-gremio",
       "publishedAt": "2026-09-01T19:00:00-03:00",
-      "lifecycle": "future-pre-match",
+      "lifecycle": "historical-frozen",
       "currentClassification": "KEEP",
-      "proposedClassification": "INDEX_PRIME",
+      "proposedClassification": "HISTORICAL",
       "currentIndexable": true,
       "proposedIndexable": true,
-      "historicalIndexability": null,
+      "historicalIndexability": "HISTORICAL_INDEXABLE",
       "localizationQuality": "NOT_EVALUATED",
       "change": "UNCHANGED",
       "reasons": [
-        "editorial_complete",
-        "sources_verified",
-        "metadata_valid",
-        "unique_content",
-        "statistical_core_complete",
-        "provenance_complete"
+        "historical_quality_minimum_passed"
       ],
       "checks": {
         "contentComplete": true,
@@ -8368,6 +8495,176 @@
         "factualConsistency": true,
         "tacticalQuality": true,
         "paragraphQuality": false
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "efl-cup",
+      "slug": "bournemouth-vs-lincoln-city",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "efl-cup",
+      "slug": "crystal-palace-vs-middlesbrough",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "efl-cup",
+      "slug": "sunderland-vs-hull-city",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "efl-cup",
+      "slug": "millwall-vs-newcastle-united",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "efl-cup",
+      "slug": "chelsea-vs-leeds-united",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
       },
       "runtimeMatchesProposed": true
     },
@@ -9575,21 +9872,16 @@
       "league": "super-lig",
       "slug": "goztepe-vs-gaziantep-fk",
       "publishedAt": "2026-09-01T12:00:00-03:00",
-      "lifecycle": "future-pre-match",
+      "lifecycle": "historical-frozen",
       "currentClassification": "KEEP",
-      "proposedClassification": "INDEX_PRIME",
+      "proposedClassification": "HISTORICAL",
       "currentIndexable": true,
       "proposedIndexable": true,
-      "historicalIndexability": null,
+      "historicalIndexability": "HISTORICAL_INDEXABLE",
       "localizationQuality": "NOT_EVALUATED",
       "change": "UNCHANGED",
       "reasons": [
-        "editorial_complete",
-        "sources_verified",
-        "metadata_valid",
-        "unique_content",
-        "statistical_core_complete",
-        "provenance_complete"
+        "historical_quality_minimum_passed"
       ],
       "checks": {
         "contentComplete": true,
@@ -9611,21 +9903,16 @@
       "league": "super-lig",
       "slug": "caykur-rizespor-vs-alanyaspor",
       "publishedAt": "2026-09-01T12:00:00-03:00",
-      "lifecycle": "future-pre-match",
+      "lifecycle": "historical-frozen",
       "currentClassification": "KEEP",
-      "proposedClassification": "INDEX_PRIME",
+      "proposedClassification": "HISTORICAL",
       "currentIndexable": true,
       "proposedIndexable": true,
-      "historicalIndexability": null,
+      "historicalIndexability": "HISTORICAL_INDEXABLE",
       "localizationQuality": "NOT_EVALUATED",
       "change": "UNCHANGED",
       "reasons": [
-        "editorial_complete",
-        "sources_verified",
-        "metadata_valid",
-        "unique_content",
-        "statistical_core_complete",
-        "provenance_complete"
+        "historical_quality_minimum_passed"
       ],
       "checks": {
         "contentComplete": true,
@@ -9812,6 +10099,74 @@
       "change": "UNCHANGED",
       "reasons": [
         "historical_quality_minimum_passed"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "scottish-premiership",
+      "slug": "rangers-vs-st-mirren",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "scottish-premiership",
+      "slug": "st-johnstone-vs-celtic",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
       ],
       "checks": {
         "contentComplete": true,
@@ -10543,6 +10898,455 @@
       "runtimeMatchesProposed": true
     },
     {
+      "league": "mls",
+      "slug": "atlanta-united-vs-orlando-city",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "austin-fc-vs-colorado-rapids",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "UPGRADE",
+      "currentIndexable": false,
+      "proposedIndexable": false,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "UNCHANGED",
+      "reasons": [
+        "content_incomplete",
+        "tactical_quality_insufficient"
+      ],
+      "checks": {
+        "contentComplete": false,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": false,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "cf-montreal-vs-charlotte-fc",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "chicago-fire-vs-inter-miami-cf",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "dc-united-vs-columbus-crew",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "houston-dynamo-vs-real-salt-lake",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "UPGRADE",
+      "currentIndexable": false,
+      "proposedIndexable": false,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "UNCHANGED",
+      "reasons": [
+        "content_incomplete",
+        "tactical_quality_insufficient"
+      ],
+      "checks": {
+        "contentComplete": false,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": false,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "los-angeles-fc-vs-new-york-red-bulls",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "UPGRADE",
+      "currentIndexable": false,
+      "proposedIndexable": false,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "UNCHANGED",
+      "reasons": [
+        "content_incomplete",
+        "tactical_quality_insufficient"
+      ],
+      "checks": {
+        "contentComplete": false,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": false,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "minnesota-united-vs-fc-dallas",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "UPGRADE",
+      "currentIndexable": false,
+      "proposedIndexable": false,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "UNCHANGED",
+      "reasons": [
+        "content_incomplete"
+      ],
+      "checks": {
+        "contentComplete": false,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "new-york-city-fc-vs-new-england-revolution",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "UPGRADE",
+      "currentIndexable": false,
+      "proposedIndexable": false,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "UNCHANGED",
+      "reasons": [
+        "tactical_quality_insufficient"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": false,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "philadelphia-union-vs-fc-cincinnati",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "UPGRADE",
+      "currentIndexable": false,
+      "proposedIndexable": false,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "UNCHANGED",
+      "reasons": [
+        "editorial_duplication_blocking"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": false,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "portland-timbers-vs-st-louis-city-sc",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "UPGRADE",
+      "currentIndexable": false,
+      "proposedIndexable": false,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "UNCHANGED",
+      "reasons": [
+        "content_incomplete"
+      ],
+      "checks": {
+        "contentComplete": false,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "san-diego-fc-vs-san-jose-earthquakes",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "UPGRADE",
+      "currentIndexable": false,
+      "proposedIndexable": false,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "UNCHANGED",
+      "reasons": [
+        "tactical_quality_insufficient"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": false,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "toronto-fc-vs-nashville-sc",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "UPGRADE",
+      "currentIndexable": false,
+      "proposedIndexable": false,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "UNCHANGED",
+      "reasons": [
+        "tactical_quality_insufficient"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": false,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "mls",
+      "slug": "vancouver-whitecaps-vs-la-galaxy",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "UPGRADE",
+      "currentIndexable": false,
+      "proposedIndexable": false,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "UNCHANGED",
+      "reasons": [
+        "tactical_quality_insufficient"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": false,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
       "league": "champions-league",
       "slug": "aek-athens-vs-lask",
       "publishedAt": "2026-09-06T19:40:00-03:00",
@@ -10741,6 +11545,686 @@
         "unique_content",
         "statistical_core_complete",
         "provenance_complete"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "barcelona-vs-feyenoord",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "stuttgart-vs-viking",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "liverpool-vs-atletico-madrid",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "paris-saint-germain-vs-slovan-bratislava",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "napoli-vs-arsenal",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "sporting-cp-vs-galatasaray",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "fenerbahce-vs-roma",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "psv-eindhoven-vs-shakhtar-donetsk",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "como-vs-rb-leipzig",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "bayern-munich-vs-bodo-glimt",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "manchester-united-vs-sabah",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "champions-league",
+      "slug": "slavia-praha-vs-lens",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "copa-libertadores",
+      "slug": "fluminense-vs-platense",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "copa-libertadores",
+      "slug": "palmeiras-vs-ldu-quito",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "copa-libertadores",
+      "slug": "estudiantes-vs-corinthians",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "copa-libertadores",
+      "slug": "independiente-del-valle-vs-flamengo",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "copa-sudamericana",
+      "slug": "independiente-santa-fe-vs-vasco-da-gama",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "copa-sudamericana",
+      "slug": "boca-juniors-vs-sao-paulo",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "copa-sudamericana",
+      "slug": "santos-vs-atletico-mineiro",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
+      ],
+      "checks": {
+        "contentComplete": true,
+        "sourcesComplete": true,
+        "statisticalCoreComplete": true,
+        "provenanceComplete": true,
+        "metadataValid": true,
+        "internalNotesClean": true,
+        "editorialUnique": true,
+        "fixtureValid": true,
+        "resultPickIntegrity": true,
+        "factualConsistency": true,
+        "tacticalQuality": true,
+        "paragraphQuality": true
+      },
+      "runtimeMatchesProposed": true
+    },
+    {
+      "league": "copa-sudamericana",
+      "slug": "cienciano-vs-montevideo-city-torque",
+      "publishedAt": "2026-09-07T18:30:00-03:00",
+      "lifecycle": "future-pre-match",
+      "currentClassification": "UPGRADE",
+      "proposedClassification": "INDEX_STANDARD",
+      "currentIndexable": false,
+      "proposedIndexable": true,
+      "historicalIndexability": null,
+      "localizationQuality": "NOT_EVALUATED",
+      "change": "PROMOTED",
+      "reasons": [
+        "essential_quality_gate_passed",
+        "sources_acceptable",
+        "metadata_valid",
+        "unique_content"
       ],
       "checks": {
         "contentComplete": true,

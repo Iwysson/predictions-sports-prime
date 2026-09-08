@@ -1,14 +1,14 @@
 # Wave 0.8 — editorial uniqueness
 
 - P0: **0**
-- P1 total: **16**
-- P1-LEGIT-FACTUAL: **6**
-- P1-LEGIT-STRUCTURAL: **10**
+- P1 total: **21**
+- P1-LEGIT-FACTUAL: **13**
+- P1-LEGIT-STRUCTURAL: **8**
 - P1-EDITORIAL: **0**
 - P1-EDITORIAL fixed: **26** (26 removed, 0 synonym rewrites)
-- Pages changed at render/data-export boundary: **22**
-- Word count on changed future pages: **30421 → 25133**
-- P1 duplication: **41 → 16** groups; problematic editorial duplication: **26 → 0**
+- Pages changed at render/data-export boundary: **15**
+- Word count on changed future pages: **23104 → 18372**
+- P1 duplication: **41 → 21** groups; problematic editorial duplication: **26 → 0**
 
 ## Deterministic policy
 
@@ -16,11 +16,6 @@ P1-LEGIT-FACTUAL covers unavoidable factual conversions and short verified statu
 
 ## Changed future pages
 
-- la-liga/getafe-vs-celta-vigo
-- la-liga/elche-vs-real-sociedad
-- serie-a/cagliari-vs-lecce
-- serie-a/udinese-vs-lazio
-- liga-portugal/estoril-vs-arouca
 - championship/blackburn-rovers-vs-sheffield-united
 - championship/bolton-wanderers-vs-west-ham-united
 - championship/cardiff-city-vs-stoke-city
@@ -30,8 +25,6 @@ P1-LEGIT-FACTUAL covers unavoidable factual conversions and short verified statu
 - championship/southampton-vs-swansea-city
 - championship/watford-vs-preston-north-end
 - championship/wrexham-vs-burnley
-- super-lig/goztepe-vs-gaziantep-fk
-- super-lig/caykur-rizespor-vs-alanyaspor
 - champions-league/aek-athens-vs-lask
 - champions-league/club-brugge-vs-aston-villa
 - champions-league/borussia-dortmund-vs-villarreal

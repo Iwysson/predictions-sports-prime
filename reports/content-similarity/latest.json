@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-07T20:39:16.223Z",
+  "generatedAt": "2026-09-08T01:38:06.104Z",
   "totals": {
-    "substantiveParagraphs": 3500,
-    "exactDuplicateGroups": 96
+    "substantiveParagraphs": 3580,
+    "exactDuplicateGroups": 99
   },
   "duplicateParagraphs": [
     {
@@ -115,7 +115,9 @@
         "la-liga/valencia-vs-barcelona",
         "la-liga/deportivo-alaves-vs-osasuna",
         "la-liga/malaga-vs-levante",
-        "la-liga/espanyol-vs-sevilla"
+        "la-liga/espanyol-vs-sevilla",
+        "la-liga/getafe-vs-celta-vigo",
+        "la-liga/elche-vs-real-sociedad"
       ]
     },
     {
@@ -125,7 +127,9 @@
         "la-liga/valencia-vs-barcelona",
         "la-liga/deportivo-alaves-vs-osasuna",
         "la-liga/malaga-vs-levante",
-        "la-liga/espanyol-vs-sevilla"
+        "la-liga/espanyol-vs-sevilla",
+        "la-liga/getafe-vs-celta-vigo",
+        "la-liga/elche-vs-real-sociedad"
       ]
     },
     {
@@ -294,7 +298,9 @@
         "serie-a/roma-vs-atalanta",
         "serie-a/parma-vs-monza",
         "serie-a/frosinone-vs-venezia",
-        "serie-a/juventus-vs-ac-milan"
+        "serie-a/juventus-vs-ac-milan",
+        "serie-a/cagliari-vs-lecce",
+        "serie-a/udinese-vs-lazio"
       ]
     },
     {
@@ -314,7 +320,9 @@
         "serie-a/genoa-vs-como",
         "serie-a/parma-vs-monza",
         "serie-a/frosinone-vs-venezia",
-        "serie-a/juventus-vs-ac-milan"
+        "serie-a/juventus-vs-ac-milan",
+        "serie-a/cagliari-vs-lecce",
+        "serie-a/udinese-vs-lazio"
       ]
     },
     {
@@ -323,7 +331,9 @@
         "serie-a/genoa-vs-como",
         "serie-a/parma-vs-monza",
         "serie-a/frosinone-vs-venezia",
-        "serie-a/juventus-vs-ac-milan"
+        "serie-a/juventus-vs-ac-milan",
+        "serie-a/cagliari-vs-lecce",
+        "serie-a/udinese-vs-lazio"
       ]
     },
     {
@@ -414,7 +424,8 @@
       "paths": [
         "liga-portugal/sporting-cp-vs-nacional",
         "liga-portugal/vitoria-sc-vs-casa-pia",
-        "liga-portugal/gil-vicente-vs-academico-viseu"
+        "liga-portugal/gil-vicente-vs-academico-viseu",
+        "liga-portugal/estoril-vs-arouca"
       ]
     },
     {
@@ -422,7 +433,8 @@
       "paths": [
         "liga-portugal/sporting-cp-vs-nacional",
         "liga-portugal/vitoria-sc-vs-casa-pia",
-        "liga-portugal/gil-vicente-vs-academico-viseu"
+        "liga-portugal/gil-vicente-vs-academico-viseu",
+        "liga-portugal/estoril-vs-arouca"
       ]
     },
     {
@@ -821,7 +833,9 @@
         "super-lig/kasimpasa-vs-amed-sk",
         "super-lig/corum-fk-vs-eyupspor",
         "super-lig/kocaelispor-vs-samsunspor",
-        "super-lig/trabzonspor-vs-genclerbirligi"
+        "super-lig/trabzonspor-vs-genclerbirligi",
+        "super-lig/goztepe-vs-gaziantep-fk",
+        "super-lig/caykur-rizespor-vs-alanyaspor"
       ]
     },
     {
@@ -833,7 +847,9 @@
         "super-lig/kasimpasa-vs-amed-sk",
         "super-lig/corum-fk-vs-eyupspor",
         "super-lig/kocaelispor-vs-samsunspor",
-        "super-lig/trabzonspor-vs-genclerbirligi"
+        "super-lig/trabzonspor-vs-genclerbirligi",
+        "super-lig/goztepe-vs-gaziantep-fk",
+        "super-lig/caykur-rizespor-vs-alanyaspor"
       ]
     },
     {
@@ -914,6 +930,28 @@
       "paths": [
         "eliteserien/sandefjord-vs-viking",
         "eliteserien/kristiansund-vs-tromso"
+      ]
+    },
+    {
+      "text": "at published odds of 1 78 the raw implied probability is 56 2% because 1 1 78 0 562 before bookmaker margin this is a market price reference not a forecast probability or guarantee value depends on whether the match specific evidence supports a true chance above that threshold with the risks identified in the analysis kept fully visible ",
+      "paths": [
+        "mls/atlanta-united-vs-orlando-city",
+        "mls/houston-dynamo-vs-real-salt-lake"
+      ]
+    },
+    {
+      "text": "at published odds of 1 75 the raw implied probability is 57 1% because 1 1 75 0 571 before bookmaker margin this is a market price reference not a forecast probability or guarantee value depends on whether the match specific evidence supports a true chance above that threshold with the risks identified in the analysis kept fully visible ",
+      "paths": [
+        "mls/chicago-fire-vs-inter-miami-cf",
+        "mls/new-york-city-fc-vs-new-england-revolution"
+      ]
+    },
+    {
+      "text": "at published odds of 1 72 the raw implied probability is 58 1% because 1 1 72 0 581 before bookmaker margin this is a market price reference not a forecast probability or guarantee value depends on whether the match specific evidence supports a true chance above that threshold with the risks identified in the analysis kept fully visible ",
+      "paths": [
+        "mls/dc-united-vs-columbus-crew",
+        "mls/philadelphia-union-vs-fc-cincinnati",
+        "mls/toronto-fc-vs-nashville-sc"
       ]
     },
     {
@@ -1722,8 +1760,8 @@
     {
       "slug": "getafe-vs-celta-vigo",
       "league": "la-liga",
-      "lifecycle": "future-pre-match",
-      "indexability": "INDEX_PRIME",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
       "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-01T12:00:00-03:00",
@@ -1732,8 +1770,8 @@
     {
       "slug": "elche-vs-real-sociedad",
       "league": "la-liga",
-      "lifecycle": "future-pre-match",
-      "indexability": "INDEX_PRIME",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
       "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-01T12:00:00-03:00",
@@ -2237,8 +2275,8 @@
     {
       "slug": "cagliari-vs-lecce",
       "league": "serie-a",
-      "lifecycle": "future-pre-match",
-      "indexability": "INDEX_PRIME",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
       "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-01T12:00:00-03:00",
@@ -2247,8 +2285,8 @@
     {
       "slug": "udinese-vs-lazio",
       "league": "serie-a",
-      "lifecycle": "future-pre-match",
-      "indexability": "INDEX_PRIME",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
       "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-01T12:00:00-03:00",
@@ -2552,8 +2590,8 @@
     {
       "slug": "estoril-vs-arouca",
       "league": "liga-portugal",
-      "lifecycle": "future-pre-match",
-      "indexability": "INDEX_PRIME",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
       "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-01T12:00:00-03:00",
@@ -2563,8 +2601,8 @@
       "slug": "moreirense-vs-benfica-2026-27",
       "league": "liga-portugal",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -2573,8 +2611,8 @@
       "slug": "estrela-da-amadora-vs-braga-2026-27",
       "league": "liga-portugal",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -2967,8 +3005,8 @@
       "slug": "nec-nijmegen-vs-excelsior",
       "league": "eredivisie",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -2977,8 +3015,8 @@
       "slug": "fc-twente-vs-telstar",
       "league": "eredivisie",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -3456,8 +3494,8 @@
     {
       "slug": "vitoria-vs-gremio",
       "league": "brasileirao-serie-a",
-      "lifecycle": "future-pre-match",
-      "indexability": "INDEX_PRIME",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
       "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-01T19:00:00-03:00",
@@ -3667,8 +3705,8 @@
       "slug": "bournemouth-vs-lincoln-city",
       "league": "efl-cup",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -3677,8 +3715,8 @@
       "slug": "crystal-palace-vs-middlesbrough",
       "league": "efl-cup",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -3687,8 +3725,8 @@
       "slug": "sunderland-vs-hull-city",
       "league": "efl-cup",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -3697,8 +3735,8 @@
       "slug": "millwall-vs-newcastle-united",
       "league": "efl-cup",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -3707,8 +3745,8 @@
       "slug": "chelsea-vs-leeds-united",
       "league": "efl-cup",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4086,8 +4124,8 @@
     {
       "slug": "goztepe-vs-gaziantep-fk",
       "league": "super-lig",
-      "lifecycle": "future-pre-match",
-      "indexability": "INDEX_PRIME",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
       "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-01T12:00:00-03:00",
@@ -4096,8 +4134,8 @@
     {
       "slug": "caykur-rizespor-vs-alanyaspor",
       "league": "super-lig",
-      "lifecycle": "future-pre-match",
-      "indexability": "INDEX_PRIME",
+      "lifecycle": "historical-frozen",
+      "indexability": "HISTORICAL",
       "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-01T12:00:00-03:00",
@@ -4167,8 +4205,8 @@
       "slug": "rangers-vs-st-mirren",
       "league": "scottish-premiership",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4177,8 +4215,8 @@
       "slug": "st-johnstone-vs-celtic",
       "league": "scottish-premiership",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4414,6 +4452,146 @@
       "duplicateParagraphs": []
     },
     {
+      "slug": "atlanta-united-vs-orlando-city",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "austin-fc-vs-colorado-rapids",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "cf-montreal-vs-charlotte-fc",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "chicago-fire-vs-inter-miami-cf",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "dc-united-vs-columbus-crew",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "houston-dynamo-vs-real-salt-lake",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "los-angeles-fc-vs-new-york-red-bulls",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "minnesota-united-vs-fc-dallas",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "new-york-city-fc-vs-new-england-revolution",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "philadelphia-union-vs-fc-cincinnati",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "portland-timbers-vs-st-louis-city-sc",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "san-diego-fc-vs-san-jose-earthquakes",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "toronto-fc-vs-nashville-sc",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
+      "slug": "vancouver-whitecaps-vs-la-galaxy",
+      "league": "mls",
+      "lifecycle": "future-pre-match",
+      "indexability": "KEEP",
+      "indexable": true,
+      "editorialStandard": "psp-v1",
+      "publishedAt": "2026-09-07T20:00:00-03:00",
+      "duplicateParagraphs": []
+    },
+    {
       "slug": "aek-athens-vs-lask",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
@@ -4477,8 +4655,8 @@
       "slug": "barcelona-vs-feyenoord",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4487,8 +4665,8 @@
       "slug": "stuttgart-vs-viking",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4497,8 +4675,8 @@
       "slug": "liverpool-vs-atletico-madrid",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4507,8 +4685,8 @@
       "slug": "paris-saint-germain-vs-slovan-bratislava",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4517,8 +4695,8 @@
       "slug": "napoli-vs-arsenal",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4527,8 +4705,8 @@
       "slug": "sporting-cp-vs-galatasaray",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4537,8 +4715,8 @@
       "slug": "fenerbahce-vs-roma",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4547,8 +4725,8 @@
       "slug": "psv-eindhoven-vs-shakhtar-donetsk",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4557,8 +4735,8 @@
       "slug": "como-vs-rb-leipzig",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4567,8 +4745,8 @@
       "slug": "bayern-munich-vs-bodo-glimt",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4577,8 +4755,8 @@
       "slug": "manchester-united-vs-sabah",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4587,8 +4765,8 @@
       "slug": "slavia-praha-vs-lens",
       "league": "champions-league",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4597,8 +4775,8 @@
       "slug": "fluminense-vs-platense",
       "league": "copa-libertadores",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4607,8 +4785,8 @@
       "slug": "palmeiras-vs-ldu-quito",
       "league": "copa-libertadores",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4617,8 +4795,8 @@
       "slug": "estudiantes-vs-corinthians",
       "league": "copa-libertadores",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4627,8 +4805,8 @@
       "slug": "independiente-del-valle-vs-flamengo",
       "league": "copa-libertadores",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4637,8 +4815,8 @@
       "slug": "independiente-santa-fe-vs-vasco-da-gama",
       "league": "copa-sudamericana",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4647,8 +4825,8 @@
       "slug": "boca-juniors-vs-sao-paulo",
       "league": "copa-sudamericana",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4657,8 +4835,8 @@
       "slug": "santos-vs-atletico-mineiro",
       "league": "copa-sudamericana",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []
@@ -4667,8 +4845,8 @@
       "slug": "cienciano-vs-montevideo-city-torque",
       "league": "copa-sudamericana",
       "lifecycle": "future-pre-match",
-      "indexability": "UPGRADE",
-      "indexable": false,
+      "indexability": "INDEX_STANDARD",
+      "indexable": true,
       "editorialStandard": "psp-v1",
       "publishedAt": "2026-09-07T18:30:00-03:00",
       "duplicateParagraphs": []

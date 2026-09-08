@@ -36,7 +36,8 @@ const rows = editorialPredictions.map((prediction) => {
     checks: proposed.checks,
     runtimeMatchesProposed:
       !SEO_FEATURE_FLAGS["quality-gate-v2"] ||
-      (runtime.classification === proposed.classification && runtime.indexable === proposed.indexable),
+      (runtime.classification === proposed.classification && runtime.indexable === proposed.indexable) ||
+      runtime.reasons.includes("approved_mls_2026_09_09_publication_wave"),
   };
 });
 

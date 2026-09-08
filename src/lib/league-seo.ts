@@ -21,6 +21,21 @@ const leagueSearchAliases: Partial<Record<LeagueConfig["slug"], readonly string[
   mls: ["Major League Soccer", "MLS USA", "United States MLS"],
 };
 
+const leagueEditorialIntros: Partial<Record<LeagueConfig["slug"], string>> = {
+  "champions-league": "Track Champions League predictions through the league phase and knockout rounds, with each pick tied to the matchup, price and available team evidence.",
+  "premier-league": "Compare Premier League predictions through home and away performance, current availability and the tactical matchup behind each published pick.",
+  mls: "Explore MLS predictions across the Eastern and Western Conferences, with travel, venue form and the league's open game states considered before each selection.",
+  "copa-libertadores": "Follow Copa Libertadores predictions built for two-leg South American ties, where venue, altitude, travel and aggregate score can reshape the market.",
+  "copa-sudamericana": "Review Copa Sudamericana predictions with knockout context, first-leg or second-leg incentives and the evidence available for each pairing.",
+  "la-liga": "Read La Liga predictions that separate possession from chance quality and compare the host's home evidence with the visitor's away profile.",
+  "serie-a": "Find Serie A predictions focused on matchup structure, defensive trade-offs and the price required for each published selection.",
+  bundesliga: "Use Bundesliga predictions that account for transition pace, pressing risk and venue-specific attacking and defensive records.",
+  "liga-portugal": "Browse Liga Portugal predictions with current venue splits, squad context and explicit limits where early-season samples remain small.",
+  "efl-cup": "Assess EFL Cup predictions with rotation, knockout incentives and divisional context treated separately from ordinary league form.",
+  championship: "Compare Championship predictions through demanding schedules, home-away splits and the small margins that shape each market.",
+  "scottish-premiership": "Review Scottish Premiership predictions using current venue evidence, team availability and the tactical route behind the pick.",
+};
+
 export function leagueSeoKeywords(league: LeagueConfig) {
   const names = [league.name, ...(leagueSearchAliases[league.slug] ?? [])];
   return [...new Set(names.flatMap((name) => [
@@ -107,7 +122,9 @@ export function leagueIntro(league: LeagueConfig, publishedCount: number) {
     ? "validated league standings when data is available"
     : "the current knockout schedule";
 
-  return `Follow the latest ${league.name} match analysis, predictions and betting tips for the current round in ${league.country}. ${availability} Review the available picks and odds alongside ${context}.`;
+  const editorialLead = leagueEditorialIntros[league.slug]
+    ?? `Follow ${league.name} predictions through the current round, with the match evidence and price considered together.`;
+  return `${editorialLead} ${availability} Review the available picks and odds alongside ${context}.`;
 }
 
 export function leagueBreadcrumbJsonLd(league: LeagueConfig) {
