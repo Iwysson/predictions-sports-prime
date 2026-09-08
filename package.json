@@ -72,6 +72,7 @@
     "dry-run:search-intent-v2": "node --import tsx scripts/create-wave-2-title-dry-run.mjs",
     "audit:adsense-content-gate": "tsx scripts/audit-adsense-content-gate.mjs",
     "audit:enterprise-seo": "node scripts/audit-enterprise-seo.mjs",
+    "audit:mls-hub": "node --import tsx scripts/audit-mls-hub.mjs",
     "baseline:enterprise-seo": "tsx scripts/create-seo-enterprise-baseline.mjs",
     "audit:data-integrity": "tsx scripts/audit-data-integrity.mjs",
     "audit:text-encoding": "tsx scripts/audit-text-encoding.mjs",

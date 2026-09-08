@@ -44,12 +44,13 @@ export function validateLeagueRounds(
   }
 
   const allTeams = new Set<string>();
+  const fixtureIdentities = new Set<string>();
 
   for (const round of rounds) {
     const seenTeams = new Set<string>();
 
     if (round.games.length !== config.expectedGamesPerRound) {
-      errors.push(
+      warnings.push(
         `Matchday ${round.round}: expected ${config.expectedGamesPerRound} games, received ${round.games.length}.`
       );
     }
@@ -72,8 +73,16 @@ export function validateLeagueRounds(
       }
 
       if (seenTeams.has(home) || seenTeams.has(away)) {
-        errors.push(`Matchday ${round.round}: duplicated club in fixtures.`);
+        warnings.push(`Matchday ${round.round}: club appears more than once in provider fixtures.`);
       }
+
+      const fixtureIdentity = `${game.date}:${home}:${away}`;
+      if (fixtureIdentities.has(fixtureIdentity)) {
+        errors.push(
+          `Matchday ${round.round}: duplicate fixture identity after normalization for ${game.homeTeam} vs ${game.awayTeam}.`
+        );
+      }
+      fixtureIdentities.add(fixtureIdentity);
 
       seenTeams.add(home);
       seenTeams.add(away);
@@ -98,7 +107,7 @@ export function validateLeagueRounds(
   }
 
   if (allTeams.size !== config.expectedClubs) {
-    errors.push(
+    warnings.push(
       `${config.label}: expected ${config.expectedClubs} clubs, detected ${allTeams.size}.`
     );
   }

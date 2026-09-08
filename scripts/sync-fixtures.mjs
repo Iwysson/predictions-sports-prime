@@ -29,6 +29,9 @@ const snapshot = {
 };
 const changes = [];
 
+class FixtureIntegrityError extends Error {}
+class PartialSourceError extends Error {}
+
 function findPredictionFixture(rounds, prediction) {
   const games = rounds.flatMap((round) => round.games);
   const candidates = games.filter((game) =>
@@ -285,10 +288,14 @@ async function syncLeague(league) {
       label: league.name,
     });
     if (!validation.valid) {
-      throw new Error(`${league.name}: ${validation.errors.join(" | ")}`);
+      throw new FixtureIntegrityError(`${league.name}: ${validation.errors.join(" | ")}`);
+    }
+    if (validation.warnings.length > 0) {
+      throw new PartialSourceError(`${league.name}: ${validation.warnings.join(" | ")}`);
     }
     const linkedIds = new Set();
     for (const prediction of leaguePredictions) {
+      const predictionKey = `${league.slug}:${prediction.slug}`;
       let fixture = findPredictionFixture(rounds, prediction);
 
       if (fixture && !fixture.id) {
@@ -306,7 +313,16 @@ async function syncLeague(league) {
         throw new Error(`${league.name}: no authoritative fixture ID for ${prediction.slug}. Candidates: ${candidates.join(" | ")}`);
       }
 
-      snapshot.predictionIds[`${league.slug}:${prediction.slug}`] = fixture.id;
+      const previousId = previous.predictionIds?.[predictionKey];
+      const previousIdStillResolvable = previousId && (
+        previousGames.some((game) => game.id === previousId) ||
+        Boolean(previous.manualFixtures?.[previousId])
+      );
+      snapshot.predictionIds[predictionKey] = previousIdStillResolvable ? previousId : fixture.id;
+      if (previousIdStillResolvable && !rounds.flatMap((round) => round.games).some((game) => game.id === previousId)) {
+        const preservedFixture = previousGames.find((game) => game.id === previousId) ?? previous.manualFixtures?.[previousId];
+        if (preservedFixture) snapshot.manualFixtures[previousId] = structuredClone(preservedFixture);
+      }
       linkedIds.add(fixture.id);
       if (prediction.date !== fixture.date || prediction.time !== fixture.time) {
         changes.push({
@@ -331,10 +347,20 @@ async function syncLeague(league) {
     snapshot.leagueUpdatedAt[league.slug] = snapshot.generatedAt;
     console.log(`${league.name}: ${rounds.flatMap((round) => round.games).length} fixtures, ${leaguePredictions.length} predictions linked`);
   } catch (error) {
+    if (error instanceof FixtureIntegrityError) throw error;
     const savedRounds = previous.leagues?.[league.slug];
-    if (!savedRounds?.length) throw error;
-    snapshot.leagues[league.slug] = await hydrateFotmobFinalScores(structuredClone(savedRounds));
-    snapshot.leagueUpdatedAt[league.slug] = previous.leagueUpdatedAt?.[league.slug] ?? previous.generatedAt;
+    if (savedRounds?.length) {
+      const preservedRounds = structuredClone(savedRounds);
+      try {
+        snapshot.leagues[league.slug] = await hydrateFotmobFinalScores(preservedRounds);
+      } catch (fallbackError) {
+        snapshot.leagues[league.slug] = preservedRounds;
+        console.warn(
+          `SOURCE_REFRESH_FAILED ${league.slug}: snapshot result refresh unavailable: ${fallbackError instanceof Error ? fallbackError.message : String(fallbackError)}`
+        );
+      }
+      snapshot.leagueUpdatedAt[league.slug] = previous.leagueUpdatedAt?.[league.slug] ?? previous.generatedAt;
+    }
     for (const [key, id] of Object.entries(previous.predictionIds ?? {})) {
       if (key.startsWith(`${league.slug}:`)) snapshot.predictionIds[key] = id;
     }
@@ -346,7 +372,7 @@ async function syncLeague(league) {
       const key = `${league.slug}:${prediction.slug}`;
       const existingId = snapshot.predictionIds[key];
       const existingFixtureAvailable = existingId && (
-        savedRounds.flatMap((round) => round.games).some((fixture) => fixture.id === existingId) ||
+        (savedRounds ?? []).flatMap((round) => round.games).some((fixture) => fixture.id === existingId) ||
         Boolean(snapshot.manualFixtures[existingId])
       );
       if (existingFixtureAvailable) continue;
@@ -357,7 +383,7 @@ async function syncLeague(league) {
         : null;
       const savedFixture = refreshedFixture?.id
         ? null
-        : findPredictionFixture(savedRounds, prediction);
+        : savedRounds?.length ? findPredictionFixture(savedRounds, prediction) : null;
       let recoveredFixture = refreshedFixture;
       if (recoveredFixture && !recoveredFixture.id) {
         recoveredFixture = await hydrateMissingFixtureIdFromFotmob(league, recoveredFixture, prediction);
@@ -368,7 +394,7 @@ async function syncLeague(league) {
       const fixtureId = recoveredFixture?.id ?? savedFixture?.id;
       if (fixtureId) {
         snapshot.predictionIds[key] = fixtureId;
-        const fixtureExistsInSavedRounds = savedRounds
+        const fixtureExistsInSavedRounds = (savedRounds ?? [])
           .flatMap((round) => round.games)
           .some((fixture) => fixture.id === fixtureId);
         if (recoveredFixture?.id && !fixtureExistsInSavedRounds) {
@@ -376,7 +402,8 @@ async function syncLeague(league) {
         }
       }
     }
-    console.error(`SOURCE_REFRESH_FAILED ${league.slug}: ${error instanceof Error ? error.message : String(error)}`);
+    const refreshStatus = error instanceof PartialSourceError ? "PARTIAL" : "SOURCE_REFRESH_FAILED";
+    console.warn(`${refreshStatus} ${league.slug}: ${error instanceof Error ? error.message : String(error)}; previous valid snapshot preserved`);
   }
 }
 
@@ -480,7 +507,10 @@ await Promise.all(cornerPredictions.map(async (prediction) => {
 
 const automaticPredictions = matches.filter((match) => {
   const league = leagues.find((item) => item.slug === match.league);
-  return Boolean(league?.sources.fixtures || league?.liveDataId);
+  // Manual competitions can legitimately publish from auditable editorial
+  // fixture sources before a provider assigns an event ID. Their existing IDs
+  // remain preserved, but provider incompleteness must not make the sync fatal.
+  return Boolean(!league?.manualOnly && (league?.sources.fixtures || league?.liveDataId));
 });
 const automaticPredictionKeys = automaticPredictions
   .map((prediction) => `${prediction.league}:${prediction.slug}`);
@@ -491,7 +521,7 @@ const automaticPredictionKeySet = new Set(automaticPredictionKeys);
 // after a league's current-round index is rotated.
 snapshot.predictionIds = Object.fromEntries(
   Object.entries(snapshot.predictionIds)
-    .filter(([key]) => automaticPredictionKeySet.has(key))
+    .filter(([key]) => matches.some((match) => key === `${match.league}:${match.slug}`))
     .sort(([left], [right]) => left.localeCompare(right))
 );
 

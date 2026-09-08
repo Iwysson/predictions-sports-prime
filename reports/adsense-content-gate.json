@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-09-07T22:55:48.949Z",
+  "generatedAt": "2026-09-08T01:28:55.803Z",
   "publishedPredictions": 361,
   "counts": {
-    "HISTORICAL": 272,
-    "INDEX_PRIME": 20,
-    "UPGRADE": 34,
-    "INDEX_STANDARD": 35
+    "HISTORICAL": 278,
+    "UPGRADE": 24,
+    "INDEX_STANDARD": 31,
+    "INDEX_PRIME": 14,
+    "KEEP": 14
   },
   "auditedSnapshot": {
     "keep": 110,
@@ -13,6 +14,6 @@
     "legacyNoindex": 153,
     "remove": 0
   },
-  "sitemapUrls": 416,
+  "sitemapUrls": 471,
   "errors": []
 }

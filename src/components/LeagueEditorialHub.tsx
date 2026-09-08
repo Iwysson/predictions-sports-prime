@@ -85,20 +85,23 @@ export function LeagueEditorialHub({
       ? localePath(locale, `/match/${slug}/`)
       : `/match/${slug}/`;
   const today = localTodayISO();
-  const roundMatches = uniqueMatches([
-    ...(surface.current?.matches ?? []),
-    ...(surface.next?.matches ?? []),
-  ]);
-  const todayMatches = roundMatches.filter((match) => match.date === today && !isCompleted(match));
-  const upcomingMatches = roundMatches.filter((match) => match.date > today && !isCompleted(match)).slice(0, 8);
   const discoverablePublishedMatches = indexableMatchSet
     ? publishedMatches.filter((match) => indexableMatchSet.has(match.slug))
     : publishedMatches;
+  const roundMatches = uniqueMatches([
+    ...(surface.current?.matches ?? []),
+    ...(surface.next?.matches ?? []),
+    ...discoverablePublishedMatches,
+  ]);
+  const todayMatches = roundMatches.filter((match) => match.date === today && !isCompleted(match));
+  const upcomingMatches = roundMatches.filter((match) => match.date > today && !isCompleted(match));
+  const activeSlugs = new Set([...todayMatches, ...upcomingMatches].map((match) => match.slug));
   const completed = [...discoverablePublishedMatches]
     .filter(isCompleted)
     .sort((left, right) => right.date.localeCompare(left.date))
     .slice(0, 6);
   const latest = [...discoverablePublishedMatches]
+    .filter((match) => !activeSlugs.has(match.slug) && !isCompleted(match))
     .sort((left, right) =>
       (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") || right.date.localeCompare(left.date)
     )
@@ -144,9 +147,9 @@ export function LeagueEditorialHub({
         </section>
       ) : null}
 
-      {latest.length ? (
-        <section aria-labelledby="league-latest-analysis-heading">
-          <h2 id="league-latest-analysis-heading">Latest {leagueName} Predictions</h2>
+      <section aria-labelledby="league-latest-analysis-heading">
+        <h2 id="league-latest-analysis-heading">Latest {leagueName} Predictions</h2>
+        {latest.length ? (
           <div className="league-hub-analysis-grid">
             {latest.map((match, index) => (
               <article key={match.slug}>
@@ -160,8 +163,10 @@ export function LeagueEditorialHub({
               </article>
             ))}
           </div>
-        </section>
-      ) : null}
+        ) : (
+          <p>All current predictions are listed in the upcoming matches above.</p>
+        )}
+      </section>
 
       {completed.length ? (
         <section aria-labelledby="league-results-heading">

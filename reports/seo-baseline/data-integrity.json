@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "snapshotGeneratedAt": "2026-09-06T23:06:46.930Z",
+  "snapshotGeneratedAt": "2026-09-08T01:20:32.763Z",
   "competitions": {
     "premier-league": {
       "expectedClubs": 20,
@@ -543,8 +543,8 @@
     "la-liga": {
       "expectedClubs": 20,
       "detectedCanonicalClubs": 20,
-      "rounds": 14,
-      "fixtures": 140,
+      "rounds": 15,
+      "fixtures": 150,
       "identities": [
         {
           "rawName": "Alavés",
@@ -552,7 +552,6 @@
           "canonicalClubMapping": "alaves",
           "appearances": 13,
           "rounds": [
-            2,
             3,
             4,
             5,
@@ -564,7 +563,8 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
             "espn"
@@ -577,9 +577,10 @@
           "rawName": "Deportivo Alavés",
           "normalizedKey": "alaves",
           "canonicalClubMapping": "alaves",
-          "appearances": 1,
+          "appearances": 2,
           "rounds": [
-            1
+            1,
+            2
           ],
           "sources": [
             "thesportsdb"
@@ -592,7 +593,7 @@
           "rawName": "Athletic Club",
           "normalizedKey": "athletic",
           "canonicalClubMapping": "athletic",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -607,7 +608,8 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
             "espn"
@@ -618,7 +620,7 @@
           "rawName": "Atlético Madrid",
           "normalizedKey": "atleticomadrid",
           "canonicalClubMapping": "atleticomadrid",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -633,10 +635,12 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -644,7 +648,7 @@
           "rawName": "Barcelona",
           "normalizedKey": "barcelona",
           "canonicalClubMapping": "barcelona",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -659,10 +663,12 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -670,7 +676,7 @@
           "rawName": "Celta Vigo",
           "normalizedKey": "celtavigo",
           "canonicalClubMapping": "celtavigo",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -685,10 +691,12 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -696,7 +704,7 @@
           "rawName": "Deportivo",
           "normalizedKey": "deportivolacoruna",
           "canonicalClubMapping": "deportivolacoruna",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -711,7 +719,8 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
             "espn"
@@ -722,7 +731,7 @@
           "rawName": "Elche",
           "normalizedKey": "elche",
           "canonicalClubMapping": "elche",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -737,10 +746,12 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -748,7 +759,7 @@
           "rawName": "Espanyol",
           "normalizedKey": "espanyol",
           "canonicalClubMapping": "espanyol",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -763,7 +774,8 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
             "espn",
@@ -775,7 +787,7 @@
           "rawName": "Getafe",
           "normalizedKey": "getafe",
           "canonicalClubMapping": "getafe",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -790,7 +802,8 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
             "espn",
@@ -802,7 +815,7 @@
           "rawName": "Levante",
           "normalizedKey": "levante",
           "canonicalClubMapping": "levante",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -817,7 +830,8 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
             "espn",
@@ -829,7 +843,7 @@
           "rawName": "Málaga",
           "normalizedKey": "malaga",
           "canonicalClubMapping": "malaga",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -844,10 +858,12 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -855,7 +871,7 @@
           "rawName": "Osasuna",
           "normalizedKey": "osasuna",
           "canonicalClubMapping": "osasuna",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -870,7 +886,8 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
             "espn"
@@ -881,9 +898,10 @@
           "rawName": "Racing de Santander",
           "normalizedKey": "racingsantander",
           "canonicalClubMapping": "racingsantander",
-          "appearances": 1,
+          "appearances": 2,
           "rounds": [
-            1
+            1,
+            2
           ],
           "sources": [
             "thesportsdb"
@@ -898,7 +916,6 @@
           "canonicalClubMapping": "racingsantander",
           "appearances": 13,
           "rounds": [
-            2,
             3,
             4,
             5,
@@ -910,7 +927,8 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
             "espn"
@@ -923,7 +941,7 @@
           "rawName": "Rayo Vallecano",
           "normalizedKey": "rayovallecano",
           "canonicalClubMapping": "rayovallecano",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -938,7 +956,8 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
             "espn",
@@ -950,7 +969,7 @@
           "rawName": "Real Betis",
           "normalizedKey": "realbetis",
           "canonicalClubMapping": "realbetis",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -965,10 +984,12 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -976,7 +997,7 @@
           "rawName": "Real Madrid",
           "normalizedKey": "realmadrid",
           "canonicalClubMapping": "realmadrid",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -991,10 +1012,12 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -1002,7 +1025,7 @@
           "rawName": "Real Sociedad",
           "normalizedKey": "realsociedad",
           "canonicalClubMapping": "realsociedad",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -1017,10 +1040,12 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -1028,7 +1053,7 @@
           "rawName": "Sevilla",
           "normalizedKey": "sevilla",
           "canonicalClubMapping": "sevilla",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -1043,7 +1068,8 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
             "espn",
@@ -1055,7 +1081,7 @@
           "rawName": "Valencia",
           "normalizedKey": "valencia",
           "canonicalClubMapping": "valencia",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -1070,10 +1096,12 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -1081,7 +1109,7 @@
           "rawName": "Villarreal",
           "normalizedKey": "villarreal",
           "canonicalClubMapping": "villarreal",
-          "appearances": 14,
+          "appearances": 15,
           "rounds": [
             1,
             2,
@@ -1096,7 +1124,8 @@
             11,
             12,
             13,
-            14
+            14,
+            15
           ],
           "sources": [
             "espn",
@@ -1619,14 +1648,14 @@
     "serie-a": {
       "expectedClubs": 20,
       "detectedCanonicalClubs": 20,
-      "rounds": 13,
-      "fixtures": 130,
+      "rounds": 14,
+      "fixtures": 140,
       "identities": [
         {
           "rawName": "Atalanta",
           "normalizedKey": "atalanta",
           "canonicalClubMapping": "atalanta",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1640,7 +1669,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1652,7 +1682,7 @@
           "rawName": "Bologna",
           "normalizedKey": "bologna",
           "canonicalClubMapping": "bologna",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1666,7 +1696,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1678,7 +1709,7 @@
           "rawName": "Cagliari",
           "normalizedKey": "cagliari",
           "canonicalClubMapping": "cagliari",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1692,7 +1723,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1704,7 +1736,7 @@
           "rawName": "Como",
           "normalizedKey": "como",
           "canonicalClubMapping": "como",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1718,7 +1750,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1730,7 +1763,7 @@
           "rawName": "Fiorentina",
           "normalizedKey": "fiorentina",
           "canonicalClubMapping": "fiorentina",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1744,7 +1777,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1756,7 +1790,7 @@
           "rawName": "Frosinone",
           "normalizedKey": "frosinone",
           "canonicalClubMapping": "frosinone",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1770,7 +1804,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1782,7 +1817,7 @@
           "rawName": "Genoa",
           "normalizedKey": "genoa",
           "canonicalClubMapping": "genoa",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1796,7 +1831,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1823,7 +1859,7 @@
           "rawName": "Internazionale",
           "normalizedKey": "internazionale",
           "canonicalClubMapping": "internazionale",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             2,
             3,
@@ -1836,7 +1872,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn"
@@ -1849,7 +1886,7 @@
           "rawName": "Juventus",
           "normalizedKey": "juventus",
           "canonicalClubMapping": "juventus",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1863,7 +1900,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1875,7 +1913,7 @@
           "rawName": "Lazio",
           "normalizedKey": "lazio",
           "canonicalClubMapping": "lazio",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1889,7 +1927,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1901,7 +1940,7 @@
           "rawName": "Lecce",
           "normalizedKey": "lecce",
           "canonicalClubMapping": "lecce",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1915,7 +1954,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1927,7 +1967,7 @@
           "rawName": "AC Milan",
           "normalizedKey": "milan",
           "canonicalClubMapping": "milan",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1941,7 +1981,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1953,7 +1994,7 @@
           "rawName": "Monza",
           "normalizedKey": "monza",
           "canonicalClubMapping": "monza",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1967,7 +2008,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -1979,7 +2021,7 @@
           "rawName": "Napoli",
           "normalizedKey": "napoli",
           "canonicalClubMapping": "napoli",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -1993,7 +2035,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -2005,7 +2048,7 @@
           "rawName": "Parma",
           "normalizedKey": "parma",
           "canonicalClubMapping": "parma",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -2019,7 +2062,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -2031,7 +2075,7 @@
           "rawName": "AS Roma",
           "normalizedKey": "roma",
           "canonicalClubMapping": "roma",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             2,
             3,
@@ -2044,7 +2088,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn"
@@ -2072,7 +2117,7 @@
           "rawName": "Sassuolo",
           "normalizedKey": "sassuolo",
           "canonicalClubMapping": "sassuolo",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -2086,7 +2131,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -2098,7 +2144,7 @@
           "rawName": "Torino",
           "normalizedKey": "torino",
           "canonicalClubMapping": "torino",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -2112,7 +2158,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -2124,7 +2171,7 @@
           "rawName": "Udinese",
           "normalizedKey": "udinese",
           "canonicalClubMapping": "udinese",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -2138,7 +2185,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -2150,7 +2198,7 @@
           "rawName": "Venezia",
           "normalizedKey": "venezia",
           "canonicalClubMapping": "venezia",
-          "appearances": 13,
+          "appearances": 14,
           "rounds": [
             1,
             2,
@@ -2164,7 +2212,8 @@
             10,
             11,
             12,
-            13
+            13,
+            14
           ],
           "sources": [
             "espn",
@@ -2177,14 +2226,14 @@
     "liga-portugal": {
       "expectedClubs": 18,
       "detectedCanonicalClubs": 18,
-      "rounds": 12,
-      "fixtures": 108,
+      "rounds": 13,
+      "fixtures": 117,
       "identities": [
         {
           "rawName": "Académico de Viseu",
           "normalizedKey": "academicoviseu",
           "canonicalClubMapping": "academicoviseu",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2197,7 +2246,8 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
             "espn",
@@ -2209,7 +2259,7 @@
           "rawName": "Alverca",
           "normalizedKey": "alverca",
           "canonicalClubMapping": "alverca",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2222,10 +2272,12 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -2233,7 +2285,7 @@
           "rawName": "Arouca",
           "normalizedKey": "arouca",
           "canonicalClubMapping": "arouca",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2246,7 +2298,8 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
             "espn",
@@ -2258,7 +2311,7 @@
           "rawName": "Benfica",
           "normalizedKey": "benfica",
           "canonicalClubMapping": "benfica",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2271,7 +2324,8 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
             "espn",
@@ -2283,7 +2337,7 @@
           "rawName": "Braga",
           "normalizedKey": "braga",
           "canonicalClubMapping": "braga",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2296,10 +2350,12 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -2307,7 +2363,7 @@
           "rawName": "Casa Pia",
           "normalizedKey": "casapia",
           "canonicalClubMapping": "casapia",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2320,7 +2376,8 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
             "espn",
@@ -2332,7 +2389,7 @@
           "rawName": "Estoril",
           "normalizedKey": "estoril",
           "canonicalClubMapping": "estoril",
-          "appearances": 11,
+          "appearances": 12,
           "rounds": [
             2,
             3,
@@ -2344,7 +2401,8 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
             "espn"
@@ -2374,7 +2432,6 @@
           "canonicalClubMapping": "estreladaamadora",
           "appearances": 11,
           "rounds": [
-            2,
             3,
             4,
             5,
@@ -2384,7 +2441,8 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
             "espn"
@@ -2397,9 +2455,10 @@
           "rawName": "Estrela Amadora",
           "normalizedKey": "estreladaamadora",
           "canonicalClubMapping": "estreladaamadora",
-          "appearances": 1,
+          "appearances": 2,
           "rounds": [
-            1
+            1,
+            2
           ],
           "sources": [
             "thesportsdb"
@@ -2412,7 +2471,7 @@
           "rawName": "Famalicao",
           "normalizedKey": "famalicao",
           "canonicalClubMapping": "famalicao",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2425,7 +2484,8 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
             "espn",
@@ -2437,7 +2497,7 @@
           "rawName": "Gil Vicente",
           "normalizedKey": "gilvicente",
           "canonicalClubMapping": "gilvicente",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2450,10 +2510,12 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -2461,7 +2523,7 @@
           "rawName": "Maritimo",
           "normalizedKey": "maritimo",
           "canonicalClubMapping": "maritimo",
-          "appearances": 11,
+          "appearances": 12,
           "rounds": [
             2,
             3,
@@ -2473,7 +2535,8 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
             "espn"
@@ -2501,7 +2564,7 @@
           "rawName": "Moreirense",
           "normalizedKey": "moreirense",
           "canonicalClubMapping": "moreirense",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2514,10 +2577,12 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -2525,7 +2590,7 @@
           "rawName": "C.D. Nacional",
           "normalizedKey": "nacional",
           "canonicalClubMapping": "nacional",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2538,7 +2603,8 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
             "espn"
@@ -2549,7 +2615,7 @@
           "rawName": "Porto",
           "normalizedKey": "porto",
           "canonicalClubMapping": "porto",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2562,10 +2628,12 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -2573,7 +2641,7 @@
           "rawName": "Rio Ave",
           "normalizedKey": "rioave",
           "canonicalClubMapping": "rioave",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2586,10 +2654,12 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -2597,7 +2667,7 @@
           "rawName": "Santa Clara",
           "normalizedKey": "santaclara",
           "canonicalClubMapping": "santaclara",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2610,10 +2680,12 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -2621,7 +2693,7 @@
           "rawName": "Sporting CP",
           "normalizedKey": "sportingcp",
           "canonicalClubMapping": "sportingcp",
-          "appearances": 12,
+          "appearances": 13,
           "rounds": [
             1,
             2,
@@ -2634,7 +2706,8 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
             "espn",
@@ -2648,7 +2721,6 @@
           "canonicalClubMapping": "vitoriaguimaraes",
           "appearances": 11,
           "rounds": [
-            2,
             3,
             4,
             5,
@@ -2658,7 +2730,8 @@
             9,
             10,
             11,
-            12
+            12,
+            13
           ],
           "sources": [
             "espn"
@@ -2671,9 +2744,10 @@
           "rawName": "Vitória de Guimarães",
           "normalizedKey": "vitoriaguimaraes",
           "canonicalClubMapping": "vitoriaguimaraes",
-          "appearances": 1,
+          "appearances": 2,
           "rounds": [
-            1
+            1,
+            2
           ],
           "sources": [
             "thesportsdb"
@@ -2711,7 +2785,8 @@
             13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -2719,9 +2794,8 @@
           "rawName": "AJ Auxerre",
           "normalizedKey": "auxerre",
           "canonicalClubMapping": "auxerre",
-          "appearances": 12,
+          "appearances": 11,
           "rounds": [
-            2,
             3,
             4,
             5,
@@ -2745,9 +2819,10 @@
           "rawName": "Auxerre",
           "normalizedKey": "auxerre",
           "canonicalClubMapping": "auxerre",
-          "appearances": 1,
+          "appearances": 2,
           "rounds": [
-            1
+            1,
+            2
           ],
           "sources": [
             "thesportsdb"
@@ -2777,18 +2852,33 @@
             13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
+        },
+        {
+          "rawName": "Le Havre",
+          "normalizedKey": "lehavre",
+          "canonicalClubMapping": "lehavre",
+          "appearances": 2,
+          "rounds": [
+            1,
+            2
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Le Havre AC"
+          ]
         },
         {
           "rawName": "Le Havre AC",
           "normalizedKey": "lehavre",
           "canonicalClubMapping": "lehavre",
-          "appearances": 13,
+          "appearances": 11,
           "rounds": [
-            1,
-            2,
             3,
             4,
             5,
@@ -2804,7 +2894,9 @@
           "sources": [
             "espn"
           ],
-          "possibleAliases": []
+          "possibleAliases": [
+            "Le Havre"
+          ]
         },
         {
           "rawName": "Le Mans",
@@ -2827,7 +2919,8 @@
             13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -2878,7 +2971,8 @@
             13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -2964,9 +3058,8 @@
           "rawName": "AS Monaco",
           "normalizedKey": "monaco",
           "canonicalClubMapping": "monaco",
-          "appearances": 13,
+          "appearances": 12,
           "rounds": [
-            1,
             2,
             3,
             4,
@@ -2983,7 +3076,24 @@
           "sources": [
             "espn"
           ],
-          "possibleAliases": []
+          "possibleAliases": [
+            "Monaco"
+          ]
+        },
+        {
+          "rawName": "Monaco",
+          "normalizedKey": "monaco",
+          "canonicalClubMapping": "monaco",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "AS Monaco"
+          ]
         },
         {
           "rawName": "Nice",
@@ -3058,17 +3168,32 @@
             13
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
+        },
+        {
+          "rawName": "Rennes",
+          "normalizedKey": "rennes",
+          "canonicalClubMapping": "rennes",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Stade Rennais"
+          ]
         },
         {
           "rawName": "Stade Rennais",
           "normalizedKey": "rennes",
           "canonicalClubMapping": "rennes",
-          "appearances": 13,
+          "appearances": 12,
           "rounds": [
-            1,
             2,
             3,
             4,
@@ -3085,7 +3210,9 @@
           "sources": [
             "espn"
           ],
-          "possibleAliases": []
+          "possibleAliases": [
+            "Rennes"
+          ]
         },
         {
           "rawName": "Strasbourg",
@@ -3202,12 +3329,26 @@
           "possibleAliases": []
         },
         {
+          "rawName": "Ajax",
+          "normalizedKey": "ajax",
+          "canonicalClubMapping": "ajax",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Ajax Amsterdam"
+          ]
+        },
+        {
           "rawName": "Ajax Amsterdam",
           "normalizedKey": "ajax",
           "canonicalClubMapping": "ajax",
-          "appearances": 15,
+          "appearances": 14,
           "rounds": [
-            1,
             2,
             3,
             4,
@@ -3226,7 +3367,9 @@
           "sources": [
             "espn"
           ],
-          "possibleAliases": []
+          "possibleAliases": [
+            "Ajax"
+          ]
         },
         {
           "rawName": "AZ Alkmaar",
@@ -3260,9 +3403,10 @@
           "rawName": "Cambuur",
           "normalizedKey": "cambuur",
           "canonicalClubMapping": "cambuur",
-          "appearances": 1,
+          "appearances": 2,
           "rounds": [
-            1
+            1,
+            2
           ],
           "sources": [
             "thesportsdb"
@@ -3275,9 +3419,8 @@
           "rawName": "SC Cambuur",
           "normalizedKey": "cambuur",
           "canonicalClubMapping": "cambuur",
-          "appearances": 14,
+          "appearances": 13,
           "rounds": [
-            2,
             3,
             4,
             5,
@@ -3328,12 +3471,26 @@
           "possibleAliases": []
         },
         {
+          "rawName": "Feyenoord",
+          "normalizedKey": "feyenoord",
+          "canonicalClubMapping": "feyenoord",
+          "appearances": 1,
+          "rounds": [
+            1
+          ],
+          "sources": [
+            "thesportsdb"
+          ],
+          "possibleAliases": [
+            "Feyenoord Rotterdam"
+          ]
+        },
+        {
           "rawName": "Feyenoord Rotterdam",
           "normalizedKey": "feyenoord",
           "canonicalClubMapping": "feyenoord",
-          "appearances": 15,
+          "appearances": 14,
           "rounds": [
-            1,
             2,
             3,
             4,
@@ -3352,7 +3509,9 @@
           "sources": [
             "espn"
           ],
-          "possibleAliases": []
+          "possibleAliases": [
+            "Feyenoord"
+          ]
         },
         {
           "rawName": "Fortuna Sittard",
@@ -3434,7 +3593,8 @@
             15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -3461,7 +3621,8 @@
             15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -3516,7 +3677,8 @@
             15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -3571,7 +3733,8 @@
             15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -3626,7 +3789,8 @@
             15
           ],
           "sources": [
-            "espn"
+            "espn",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -3654,7 +3818,8 @@
           ],
           "sources": [
             "espn",
-            "fotmob"
+            "fotmob",
+            "thesportsdb"
           ],
           "possibleAliases": []
         },
@@ -3754,7 +3919,6 @@
             26
           ],
           "sources": [
-            "editorial-package",
             "espn",
             "fotmob"
           ],
@@ -3771,7 +3935,6 @@
             26
           ],
           "sources": [
-            "editorial-package",
             "espn",
             "fotmob"
           ],
@@ -3788,7 +3951,6 @@
             26
           ],
           "sources": [
-            "editorial-package",
             "espn",
             "fotmob"
           ],
@@ -3870,7 +4032,6 @@
             26
           ],
           "sources": [
-            "editorial-package",
             "espn",
             "fotmob"
           ],
@@ -3919,7 +4080,6 @@
             26
           ],
           "sources": [
-            "editorial-package",
             "espn",
             "fotmob"
           ],
@@ -4016,8 +4176,8 @@
             26
           ],
           "sources": [
-            "editorial-package",
-            "espn"
+            "espn",
+            "fotmob"
           ],
           "possibleAliases": []
         }
@@ -4822,7 +4982,6 @@
             4
           ],
           "sources": [
-            "espn",
             "fotmob"
           ],
           "possibleAliases": []
@@ -5001,7 +5160,6 @@
             4
           ],
           "sources": [
-            "espn",
             "fotmob"
           ],
           "possibleAliases": []
@@ -5045,7 +5203,7 @@
             4
           ],
           "sources": [
-            "espn"
+            "fotmob"
           ],
           "possibleAliases": [
             "Göztepe"
@@ -5163,7 +5321,7 @@
             4
           ],
           "sources": [
-            "espn"
+            "fotmob"
           ],
           "possibleAliases": [
             "Çaykur Rizespor"
@@ -5399,7 +5557,7 @@
           "possibleAliases": []
         },
         {
-          "rawName": "Bodø/Glimt",
+          "rawName": "Bodo/Glimt",
           "normalizedKey": "bodoglimt",
           "canonicalClubMapping": "bodoglimt",
           "appearances": 1,
@@ -5407,7 +5565,7 @@
             1
           ],
           "sources": [
-            "fotmob"
+            "espn"
           ],
           "possibleAliases": []
         },
@@ -5433,7 +5591,7 @@
             1
           ],
           "sources": [
-            "fotmob"
+            "espn"
           ],
           "possibleAliases": []
         },
