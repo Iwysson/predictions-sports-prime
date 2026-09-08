@@ -32,7 +32,10 @@ for (const [route, html] of pages) {
   if (!sitemap.includes(`<loc>${host}${route}</loc>`)) errors.push(`${route}: indexable page missing from sitemap`);
 }
 
-const englishMatches = [...pages.keys()].filter((route) => /^\/match\/[^/]+\/$/.test(route) && isIndexable(pages.get(route)) && matchLocales.every(({ slug }) => pages.has(`/${slug}${route}`)));
+const englishMatches = [...pages.keys()].filter((route) => /^\/match\/[^/]+\/$/.test(route) && isIndexable(pages.get(route)) && matchLocales.every(({ slug }) => {
+  const localizedHtml = pages.get(`/${slug}${route}`);
+  return localizedHtml && isIndexable(localizedHtml);
+}));
 for (const route of englishMatches) {
   clusters += 1;
   const clusterRoutes = [route, ...matchLocales.map(({ slug }) => `/${slug}${route}`)];

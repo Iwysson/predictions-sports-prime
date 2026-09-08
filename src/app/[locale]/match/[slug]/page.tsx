@@ -46,25 +46,27 @@ const intentLocale: Record<
   de: "de",
 };
 
-const alternateLocales = ["en", ...fullyLocalizedMatchLocales] as const;
-
 export const dynamicParams = false;
 
-export async function generateStaticParams() {
-  const publishedSlugs = new Set(
-    matches
-      .filter((match) => match.status === "published")
-      .map((match) => match.slug)
+export function generateStaticParams() {
+  const requiredFallbackParams = fullyLocalizedMatchLocales.flatMap((locale) =>
+    matches.map((match) => ({ locale, slug: match.slug }))
   );
-  return seoLocaleSlugs.flatMap((locale) => {
-    const slugs = new Set([
-      ...Object.keys(localizedEditorialBySlug).filter((slug) =>
-        publishedSlugs.has(slug) && hasCompleteLocalizedEditorial(slug, locale)
-      ),
-    ]);
+  const publishedSlugs = new Set(matches.map((match) => match.slug));
+  const existingTranslatedParams = seoLocaleSlugs.flatMap((locale) =>
+    Object.keys(localizedEditorialBySlug)
+      .filter((slug) => publishedSlugs.has(slug) && hasCompleteLocalizedEditorial(slug, locale))
+      .map((slug) => ({ locale, slug }))
+  );
 
-    return [...slugs].map((slug) => ({ locale, slug }));
-  });
+  return [
+    ...new Map(
+      [...requiredFallbackParams, ...existingTranslatedParams].map((param) => [
+        `${param.locale}:${param.slug}`,
+        param,
+      ])
+    ).values(),
+  ];
 }
 
 export async function generateMetadata({
@@ -86,11 +88,38 @@ export async function generateMetadata({
 
   const match = await resolveCanonicalMatch(slug);
 
-  if (
-    !match ||
-    (!legacy && !isInternationalMatchExpansionEligible(match))
-  ) {
+  if (!match) {
     return { robots: { index: false, follow: false } };
+  }
+
+  if (!legacy) {
+    const copy = seoLocales[locale];
+    const league = leaguesBySlug[match.league];
+    const path = `/match/${slug}/`;
+    const title = copy.matchTitle(match.homeTeam, match.awayTeam);
+    const description = copy.matchDescription(
+      match.homeTeam,
+      match.awayTeam,
+      league.name
+    );
+
+    return {
+      title: { absolute: title },
+      description,
+      alternates: {
+        canonical: absoluteUrl(localePath(locale, path)),
+      },
+      robots: { index: false, follow: true },
+      openGraph: {
+        type: "article",
+        title,
+        description,
+        url: absoluteUrl(localePath(locale, path)),
+        siteName: "Predictions Sports Prime",
+        locale: copy.htmlLang,
+        images: [absoluteUrl("/og-default.png")],
+      },
+    };
   }
 
   const contentIndexable = isAdSenseContentIndexable(
@@ -128,78 +157,40 @@ export async function generateMetadata({
     };
   }
 
-  if (legacy) {
-    const copy = seoLocales[locale];
-    const league = leaguesBySlug[match.league];
-    const fullTitle = copy.matchTitle(
-      match.homeTeam,
-      match.awayTeam
-    );
-    const title =
-      fullTitle.length <= 70
-        ? fullTitle
-        : fullTitle.replace(" | Predictions Sports Prime", "");
-    const description = copy.matchDescription(
-      match.homeTeam,
-      match.awayTeam,
-      league.name
-    );
-    const legacyAlternateLocales: SeoLocale[] = [
-      "en",
-      ...seoLocaleSlugs.filter((candidate) =>
-        hasCompleteLocalizedEditorial(slug, candidate)
-      ),
-    ];
-
-    return {
-      title: { absolute: title },
-      description,
-      alternates: localizedAlternates(
-        locale,
-        `/match/${slug}/`,
-        legacyAlternateLocales
-      ),
-      robots: { index: true, follow: true },
-      openGraph: {
-        type: "article",
-        title,
-        description,
-        url: absoluteUrl(
-          localePath(locale, `/match/${slug}/`)
-        ),
-        siteName: "Predictions Sports Prime",
-        locale: copy.htmlLang,
-        images: [absoluteUrl("/og-default.png")],
-      },
-    };
-  }
-
-  if (!isFullyLocalizedMatchLocale(locale)) {
-    return { robots: { index: false, follow: false } };
-  }
-
-  const copy = buildMatchSearchIntentCopy(
-    match,
-    intentLocale[locale]
+  const copy = seoLocales[locale];
+  const league = leaguesBySlug[match.league];
+  const fullTitle = copy.matchTitle(
+    match.homeTeam,
+    match.awayTeam
   );
-  const path = `/match/${slug}/`;
+  const title =
+    fullTitle.length <= 70
+      ? fullTitle
+      : fullTitle.replace(" | Predictions Sports Prime", "");
+  const description = copy.matchDescription(
+    match.homeTeam,
+    match.awayTeam,
+    league.name
+  );
+  const legacyAlternateLocales: SeoLocale[] = [
+    "en",
+    ...seoLocaleSlugs.filter((candidate) =>
+      hasCompleteLocalizedEditorial(slug, candidate)
+    ),
+  ];
 
   return {
-    title: { absolute: copy.title },
-    description: copy.description,
-    alternates: localizedAlternates(
-      locale,
-      path,
-      alternateLocales
-    ),
+    title: { absolute: title },
+    description,
+    alternates: localizedAlternates(locale, `/match/${slug}/`, legacyAlternateLocales),
     robots: { index: true, follow: true },
     openGraph: {
       type: "article",
-      title: copy.title,
-      description: copy.description,
-      url: absoluteUrl(localePath(locale, path)),
+      title,
+      description,
+      url: absoluteUrl(localePath(locale, `/match/${slug}/`)),
       siteName: "Predictions Sports Prime",
-      locale: seoLocales[locale].htmlLang,
+      locale: copy.htmlLang,
       images: [absoluteUrl("/og-default.png")],
     },
   };
@@ -354,7 +345,7 @@ export default async function LocalizedMatch({
 
   const match = await resolveCanonicalMatch(slug);
 
-  if (!match || !isInternationalMatchExpansionEligible(match)) notFound();
+  if (!match) notFound();
 
   const siteCopy = seoLocales[locale];
   const intent = buildMatchSearchIntentCopy(
