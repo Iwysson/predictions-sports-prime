@@ -33,6 +33,8 @@
     "audit:site-quality": "node scripts/audit-site-quality.mjs",
     "audit:technical-seo": "tsx scripts/audit-technical-seo.mjs",
     "audit:international-seo": "node scripts/audit-international-seo.mjs",
+    "audit:language-contamination": "node scripts/audit-language-contamination.mjs",
+    "audit:locale-internal-links": "node scripts/audit-locale-internal-links.mjs",
     "audit:localized-quality": "tsx scripts/audit-localized-page-quality.mjs",
     "audit:future-eligibility": "tsx scripts/audit-future-match-eligibility.mjs",
     "audit:structured-data": "node scripts/audit-structured-data.mjs",

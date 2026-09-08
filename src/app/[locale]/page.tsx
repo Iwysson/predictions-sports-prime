@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ads";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
-import { fullyLocalizedMatchLocales } from "@/components/LocalizedMatchDetails";
+import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { matches } from "@/data/matches";
 import { resolveCanonicalMatches } from "@/lib/canonical-match";
 import { localizedAlternates } from "@/lib/international-seo";
@@ -17,7 +17,6 @@ import {
   seoLocaleSlugs,
   seoLocales,
 } from "@/lib/seo-locales";
-import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -71,14 +70,8 @@ export default async function LocalizedHome({
 
   const copy = seoLocales[locale];
   const resolvedMatches = await resolveCanonicalMatches(matches);
-  const localeSupportsExpandedMatches = fullyLocalizedMatchLocales.includes(
-    locale as (typeof fullyLocalizedMatchLocales)[number]
-  );
-  const localizedMatchSlugs = localeSupportsExpandedMatches
-    ? resolvedMatches
-        .filter((match) => isInternationalMatchExpansionEligible(match))
-        .map((match) => match.slug)
-    : [];
+  const localizedMatchSlugs = Object.keys(localizedEditorialBySlug)
+    .filter((slug) => hasCompleteLocalizedEditorial(slug, locale));
 
   return (
     <>

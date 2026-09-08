@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useI18n } from "@/i18n/I18nProvider";
 
 const labels: Record<string, string> = {
-  pt: "Nossa metodologia",
+  "pt-BR": "Nossa metodologia",
   es: "Nuestra metodología",
   fr: "Notre méthodologie",
   de: "Unsere Methodik",

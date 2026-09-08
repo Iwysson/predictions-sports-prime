@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   if (!isSeoLocale(locale)) return { robots: { index: false, follow: false } };
   const copy = getNFLCopy(locale); const url = absoluteUrl(localePath(locale, "/nfl/"));
   const title = copy.title.length <= 70 ? copy.title : copy.title.split(" | ")[0];
-  return { title: { absolute: title }, description: copy.description, alternates: localizedAlternates(locale, "/nfl/"), robots: { index: true, follow: true }, openGraph: { type: "website", title, description: copy.description, url, siteName: "Predictions Sports Prime", locale: seoLocales[locale].htmlLang, images: [{ url: absoluteUrl("/nfl/nfl-logo.png"), width: 500, height: 500, alt: "NFL" }] }, twitter: { card: "summary", title, description: copy.description, images: [absoluteUrl("/nfl/nfl-logo.png")] } };
+  return { title: { absolute: title }, description: copy.description, alternates: { canonical: absoluteUrl("/nfl/") }, robots: { index: false, follow: true }, openGraph: { type: "website", title, description: copy.description, url, siteName: "Predictions Sports Prime", locale: seoLocales[locale].htmlLang, images: [{ url: absoluteUrl("/nfl/nfl-logo.png"), width: 500, height: 500, alt: "NFL" }] }, twitter: { card: "summary", title, description: copy.description, images: [absoluteUrl("/nfl/nfl-logo.png")] } };
 }
 
 export default async function LocalizedNFL({ params }: { params: Promise<{ locale: string }> }) {

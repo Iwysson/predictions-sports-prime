@@ -56,21 +56,11 @@ export async function generateStaticParams() {
       .filter((match) => match.status === "published")
       .map((match) => match.slug)
   );
-  const canonicalMatches = await resolveCanonicalMatches(
-    matches.filter((match) => match.status === "published")
-  );
-  const expansionSlugs = canonicalMatches
-    .filter((match) => isInternationalMatchExpansionEligible(match))
-    .map((match) => match.slug);
-
   return seoLocaleSlugs.flatMap((locale) => {
     const slugs = new Set([
       ...Object.keys(localizedEditorialBySlug).filter((slug) =>
         publishedSlugs.has(slug) && hasCompleteLocalizedEditorial(slug, locale)
       ),
-      ...(isFullyLocalizedMatchLocale(locale)
-        ? expansionSlugs
-        : []),
     ]);
 
     return [...slugs].map((slug) => ({ locale, slug }));

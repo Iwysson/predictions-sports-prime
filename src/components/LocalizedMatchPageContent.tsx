@@ -145,16 +145,8 @@ function formatEditorialDate(value: string, locale: SeoLocaleSlug) {
   }).format(new Date(value));
 }
 
-function relatedPathExists(
-  match: Match,
-  locale: SeoLocaleSlug,
-  internationalEligibleSlugs: ReadonlySet<string>
-) {
-  if (hasCompleteLocalizedEditorial(match.slug, locale)) return true;
-  return (
-    isFullyLocalizedMatchLocale(locale) &&
-    internationalEligibleSlugs.has(match.slug)
-  );
+function relatedPathExists(match: Match, locale: SeoLocaleSlug) {
+  return hasCompleteLocalizedEditorial(match.slug, locale);
 }
 
 function resultLabel(
@@ -190,9 +182,8 @@ export function LocalizedMatchPageContent({
   );
   const selectedRelatedMatches = selectRelatedPredictions(match, matches);
   const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions);
-  const internationalEligibleSet = new Set(internationalEligibleSlugs);
   const localizedRelatedSlugs = selectedRelatedMatches
-    .filter((item) => relatedPathExists(item, locale, internationalEligibleSet))
+    .filter((item) => relatedPathExists(item, locale))
     .map((item) => item.slug);
   const hasFinalScore = isHistoryEligibleFixture({
     status: match.fixtureStatus,
@@ -368,7 +359,7 @@ export function LocalizedMatchPageContent({
               </p>
             ) : null}
 
-            <Link className="match-results-link" href="/results/">
+            <Link className="match-results-link" href={localePath(locale, "/") }>
               {extra.history}
             </Link>
           </aside>

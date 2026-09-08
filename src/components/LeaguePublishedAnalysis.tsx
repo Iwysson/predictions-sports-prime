@@ -15,6 +15,16 @@ export function LeaguePublishedAnalysis({
   localizedMatchSlugs?: string[];
   indexableMatchSlugs?: string[];
 }) {
+  const text = {
+    en: ["Editorial archive", "Published analysis", "Read published match analysis preserved separately from the active fixture rounds.", "Published prediction and pre-match reasoning."],
+    "pt-br": ["Arquivo editorial", "Análises publicadas", "Leia análises publicadas preservadas separadamente das rodadas ativas.", "Palpite publicado e análise pré-jogo."],
+    es: ["Archivo editorial", "Análisis publicados", "Consulta análisis publicados conservados por separado de las jornadas activas.", "Pronóstico publicado y razonamiento previo al partido."],
+    it: ["Archivio editoriale", "Analisi pubblicate", "Consulta le analisi pubblicate conservate separatamente dalle giornate attive.", "Pronostico pubblicato e analisi pre-partita."],
+    fr: ["Archives éditoriales", "Analyses publiées", "Consultez les analyses publiées, conservées séparément des journées en cours.", "Pronostic publié et analyse d'avant-match."],
+    de: ["Redaktionelles Archiv", "Veröffentlichte Analysen", "Lesen Sie veröffentlichte Analysen, getrennt von den aktuellen Spieltagen aufbewahrt.", "Veröffentlichte Prognose und Vorbericht."],
+    nl: ["Redactioneel archief", "Gepubliceerde analyses", "Lees gepubliceerde wedstrijdanalyses.", "Gepubliceerde voorspelling."],
+    tr: ["Editoryal arşiv", "Yayımlanan analizler", "Yayımlanmış maç analizlerini okuyun.", "Yayımlanan tahmin."],
+  }[locale];
   const localizedSet = new Set(localizedMatchSlugs);
   const indexableSet = indexableMatchSlugs
     ? new Set(indexableMatchSlugs)
@@ -34,14 +44,14 @@ export function LeaguePublishedAnalysis({
         <div className="heading-with-icon">
           <span className="section-icon" aria-hidden="true">+</span>
           <div>
-            <span className="eyebrow">Editorial archive</span>
-            <h2 id="league-analysis-archive-title">Published {leagueName} Analysis</h2>
+            <span className="eyebrow">{text[0]}</span>
+            <h2 id="league-analysis-archive-title">{leagueName}: {text[1]}</h2>
           </div>
         </div>
       </div>
 
       <p className="league-analysis-archive__intro">
-        Read published match analysis preserved separately from the active fixture rounds.
+        {text[2]}
       </p>
 
       <div className="related-predictions-grid">
@@ -53,7 +63,7 @@ export function LeaguePublishedAnalysis({
                 {match.homeTeam} vs {match.awayTeam}
               </Link>
             </h3>
-            <p>Published prediction and pre-match reasoning.</p>
+            <p>{text[3]}</p>
           </article>
         ))}
       </div>

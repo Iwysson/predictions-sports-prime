@@ -8,7 +8,7 @@ import { LeagueBadge } from "@/components/LeagueBadge";
 import { LeaguePageText } from "@/components/LeaguePageText";
 import { LeaguePublishedAnalysis } from "@/components/LeaguePublishedAnalysis";
 import { LeagueEditorialHub } from "@/components/LeagueEditorialHub";
-import { fullyLocalizedMatchLocales } from "@/components/LocalizedMatchDetails";
+import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { leagues } from "@/data/leagues";
 import { matches } from "@/data/matches";
 import { editorialPredictions } from "@/data/predictions";
@@ -27,7 +27,6 @@ import {
   seoLocaleSlugs,
   seoLocales,
 } from "@/lib/seo-locales";
-import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 import { getAdSenseIndexableSlugs, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
 import { resolveCanonicalMatches } from "@/lib/canonical-match";
 
@@ -146,14 +145,8 @@ export default async function LocalizedLeague({
     ...archivedPublishedMatches,
   ];
 
-  const localeSupportsExpandedMatches = fullyLocalizedMatchLocales.includes(
-    locale as (typeof fullyLocalizedMatchLocales)[number]
-  );
-  const localizedMatchSlugs = localeSupportsExpandedMatches
-    ? publishedMatches
-        .filter((match) => isInternationalMatchExpansionEligible(match))
-        .map((match) => match.slug)
-    : [];
+  const localizedMatchSlugs = Object.keys(localizedEditorialBySlug)
+    .filter((matchSlug) => hasCompleteLocalizedEditorial(matchSlug, locale));
 
   return (
     <>

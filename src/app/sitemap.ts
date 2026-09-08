@@ -6,9 +6,7 @@ import { matchCanonicalPath } from "@/lib/seo";
 import { isLeagueIndexable } from "@/lib/league-seo";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 import { isIndexableLocalizedHubLocale, localePath, seoLocaleSlugs } from "@/lib/seo-locales";
-import { fullyLocalizedMatchLocales } from "@/components/LocalizedMatchDetails";
 import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
-import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 import { editorialPredictions } from "@/data/predictions";
 import { isAdSenseContentIndexable, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
 import { resolveCanonicalMatches } from "@/lib/canonical-match";
@@ -78,7 +76,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           url: absoluteUrl(localePath(locale, `/league/${league.slug}/`)),
         })),
     ] : []),
-    { url: absoluteUrl(localePath(locale, "/nfl/")) },
     ...Object.keys(localizedEditorialBySlug)
       .filter(
         (slug) =>
@@ -86,16 +83,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           isAdSenseContentIndexable(slug, editorialPredictions)
       )
       .map((slug) => ({ url: absoluteUrl(localePath(locale, `/match/${slug}/`)) })),
-    ...(fullyLocalizedMatchLocales.includes(locale as (typeof fullyLocalizedMatchLocales)[number])
-      ? canonicalMatches
-          .filter(
-            (match) =>
-              isInternationalMatchExpansionEligible(match) &&
-              !hasCompleteLocalizedEditorial(match.slug, locale) &&
-              isAdSenseContentIndexable(match.slug, editorialPredictions)
-          )
-          .map((match) => ({ url: absoluteUrl(localePath(locale, `/match/${match.slug}/`)) }))
-      : []),
   ]);
 
   return [
