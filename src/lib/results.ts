@@ -66,3 +66,39 @@ export function buildPredictionHistoryState(matches: MatchPreview[], now: Date |
     entries,
   };
 }
+
+/**
+ * Reproducible, presentation-only performance summary. One published record is
+ * always one observation, including combined selections with multiple legs.
+ */
+export function buildHistoricalPerformance(matches: MatchPreview[], now: Date | string = new Date()) {
+  const history = buildPredictionHistoryState(matches, now);
+  const decided = history.won + history.lost;
+  const unresolvedPending = history.entries.filter((match) =>
+    (match.betResult ?? "pending") === "pending" &&
+    evaluatePredictionSettlement(match).pendingReason !== "NOT_COMPLETED"
+  ).length;
+  const unresolved = history.awaitingData + unresolvedPending;
+
+  return {
+    ...history,
+    historical: history.entries.length,
+    decided,
+    unresolved,
+    pushOrVoid: history.push + history.void,
+    winRate: decided > 0 ? history.won / decided : null,
+    winRateDenominator: "wins + losses" as const,
+  };
+}
+
+export function buildLeaguePerformanceBreakdown(matches: MatchPreview[], now: Date | string = new Date()) {
+  const history = buildPredictionHistoryState(matches, now);
+  const leagues = new Map<MatchPreview["league"], MatchPreview[]>();
+  for (const match of history.entries) {
+    leagues.set(match.league, [...(leagues.get(match.league) ?? []), match]);
+  }
+  return [...leagues.entries()]
+    .map(([league, entries]) => ({ league, ...buildHistoricalPerformance(entries, now) }))
+    .filter((entry) => entry.decided > 0)
+    .sort((left, right) => right.decided - left.decided || left.league.localeCompare(right.league));
+}

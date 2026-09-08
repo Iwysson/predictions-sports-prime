@@ -48,7 +48,7 @@ function balancedValue(source, property, open, close, label) {
       else if (character === quote) quote = null;
       continue;
     }
-    if (character === '"' || character === "'") {
+    if (character === '"' || character === "'" || character === "`") {
       quote = character;
       continue;
     }
@@ -62,9 +62,11 @@ function balancedValue(source, property, open, close, label) {
 
 function parseAnalysis(source, label) {
   const block = balancedValue(source, "analysis", "[", "]", label);
-  const values = [...block.matchAll(/"(?:\\.|[^"\\])*"/g)].map((match) =>
-    decodeString(match[0], label)
-  );
+  const values = [...block.matchAll(/"(?:\\.|[^"\\])*"|`(?:\\.|[^`\\])*`/g)].map((match) => {
+    if (match[0].startsWith('"')) return decodeString(match[0], label);
+    if (match[0].includes("${")) throw new Error(`${label}: interpolated analysis templates are not supported by the freeze collector.`);
+    return Function(`"use strict"; return (${match[0]});`)();
+  });
   if (values.length === 0) throw new Error(`${label}: published analysis is empty.`);
   return values;
 }
@@ -103,7 +105,7 @@ function parseResult(picks, label) {
 export function collectEditorialState(root = process.cwd()) {
   const predictionsDirectory = join(root, "src", "data", "predictions");
   const files = walk(predictionsDirectory)
-    .filter((file) => file.endsWith(".ts") && !file.endsWith(`${sep}index.ts`))
+    .filter((file) => file.endsWith(".ts") && !file.endsWith(`${sep}index.ts`) && !file.includes(`${sep}editorial-tools${sep}`))
     .sort();
   const entries = [];
   let drafts = 0;

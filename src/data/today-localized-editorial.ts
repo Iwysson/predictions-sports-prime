@@ -2,8 +2,9 @@ import type { FullyLocalizedMatchLocale } from "@/components/LocalizedMatchDetai
 import type { Match } from "@/types";
 
 type LocalizedTodayEditorial = { analysis: string[]; mainPrediction: string };
+type LegacyLocalizedTodayLocale = Exclude<FullyLocalizedMatchLocale, "nl" | "tr">;
 
-const predictions: Record<string, Record<FullyLocalizedMatchLocale, string>> = {
+const predictions: Record<string, Record<LegacyLocalizedTodayLocale, string>> = {
   "lincoln-city-vs-blackburn-rovers": { "pt-br": "Lincoln ou empate (1X) + mais de 1,5 gols", es: "Lincoln o empate (1X) + más de 1,5 goles", it: "Lincoln o pareggio (1X) + più di 1,5 gol", fr: "Lincoln ou nul (1X) + plus de 1,5 but", de: "Lincoln oder Unentschieden (1X) + über 1,5 Tore" },
   "portsmouth-vs-derby-county": { "pt-br": "Portsmouth ou empate (1X) + menos de 3,5 gols", es: "Portsmouth o empate (1X) + menos de 3,5 goles", it: "Portsmouth o pareggio (1X) + meno di 3,5 gol", fr: "Portsmouth ou nul (1X) + moins de 3,5 buts", de: "Portsmouth oder Unentschieden (1X) + unter 3,5 Tore" },
   "preston-north-end-vs-bristol-city": { "pt-br": "Menos de 3,5 gols + mais de 8,5 escanteios", es: "Menos de 3,5 goles + más de 8,5 córners", it: "Meno di 3,5 gol + più di 8,5 calci d'angolo", fr: "Moins de 3,5 buts + plus de 8,5 corners", de: "Unter 3,5 Tore + über 8,5 Ecken" },
@@ -14,7 +15,7 @@ const predictions: Record<string, Record<FullyLocalizedMatchLocale, string>> = {
   "atletico-mineiro-vs-cruzeiro": { "pt-br": "Atlético Mineiro ou empate (1X) + menos de 3,5 gols", es: "Atlético Mineiro o empate (1X) + menos de 3,5 goles", it: "Atlético Mineiro o pareggio (1X) + meno di 3,5 gol", fr: "Atlético Mineiro ou nul (1X) + moins de 3,5 buts", de: "Atlético Mineiro oder Unentschieden (1X) + unter 3,5 Tore" },
 };
 
-export function getTodayLocalizedEditorial(match: Match, locale: FullyLocalizedMatchLocale): LocalizedTodayEditorial | undefined {
+export function getTodayLocalizedEditorial(match: Match, locale: LegacyLocalizedTodayLocale): LocalizedTodayEditorial | undefined {
   const mainPrediction = predictions[match.slug]?.[locale];
   if (!mainPrediction) return undefined;
   const teams = `${match.homeTeam} – ${match.awayTeam}`;

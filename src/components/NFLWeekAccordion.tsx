@@ -4,6 +4,27 @@ import { Fragment, useEffect, useState } from "react";
 import type { NFLGame } from "@/types/nfl";
 import type { SeoLocale } from "@/lib/seo-locales";
 import { getNFLCopy } from "@/lib/nfl-i18n";
+import { localizePredictionText } from "@/lib/localized-presentation";
+
+const localizedAnalysisNotice: Record<Exclude<SeoLocale, "en">, string> = {
+  "pt-br": "A análise detalhada deste confronto ainda não está disponível em português. O palpite e as odds abaixo preservam o registro editorial publicado.",
+  es: "El análisis detallado de este encuentro aún no está disponible en español. El pronóstico y las cuotas siguientes conservan el registro editorial publicado.",
+  it: "L'analisi dettagliata di questo incontro non è ancora disponibile in italiano. Il pronostico e le quote seguenti conservano il dato editoriale pubblicato.",
+  fr: "L'analyse détaillée de cette rencontre n'est pas encore disponible en français. Le pronostic et les cotes ci-dessous conservent le dossier éditorial publié.",
+  de: "Die ausführliche Analyse dieser Partie ist noch nicht auf Deutsch verfügbar. Die folgende Prognose und die Quoten bewahren den veröffentlichten redaktionellen Datensatz.",
+  nl: "De uitgebreide analyse van deze wedstrijd is nog niet in het Nederlands beschikbaar. De voorspelling en odds hieronder bewaren het gepubliceerde redactionele dossier.",
+  tr: "Bu karşılaşmanın ayrıntılı analizi henüz Türkçe sunulmuyor. Aşağıdaki tahmin ve oranlar yayımlanan editoryal kaydı korur.",
+};
+
+const localizedConditionNotice: Record<Exclude<SeoLocale, "en">, string> = {
+  "pt-br": "Seleção válida somente com a confirmação da disponibilidade do jogador.",
+  es: "Selección válida solo si se confirma la disponibilidad del jugador.",
+  it: "Selezione valida solo con la conferma della disponibilità del giocatore.",
+  fr: "Sélection valable uniquement si la disponibilité du joueur est confirmée.",
+  de: "Die Auswahl gilt nur bei bestätigter Verfügbarkeit des Spielers.",
+  nl: "De selectie geldt alleen wanneer de beschikbaarheid van de speler is bevestigd.",
+  tr: "Seçim yalnızca oyuncunun oynayabileceği doğrulanırsa geçerlidir.",
+};
 
 function MarkdownText({ text }: { text: string }) {
   return text.split(/(\*\*[^*]+\*\*)/g).map((part, index) =>
@@ -51,12 +72,15 @@ export function NFLWeekAccordion({ games, locale }: { games: NFLGame[]; locale: 
           <section className="nfl-detail nfl-detail--prediction">
             <h4>{copy.prediction}</h4>
             {game.predictions.map((prediction) => <div className="nfl-pick" key={prediction.selection}>
-              <strong>{prediction.selection}</strong>
+              <strong>{locale === "en" ? prediction.selection : localizePredictionText(prediction.selection, locale)}</strong>
               <dl><div><dt>{copy.odds}</dt><dd>{prediction.odds.toFixed(2)}</dd></div><div><dt>{copy.americanOdds}</dt><dd>{prediction.americanOdds > 0 ? "+" : ""}{prediction.americanOdds}</dd></div></dl>
-              {prediction.condition ? <p>{prediction.condition}</p> : null}
+              {prediction.condition ? <p>{locale === "en" ? prediction.condition : localizedConditionNotice[locale]}</p> : null}
             </div>)}
           </section>
-          <section className="nfl-detail"><h4>{copy.analysis}</h4>{game.analysis.map((paragraph, index) => <p key={index}><MarkdownText text={paragraph} /></p>)}</section>
+          <section className="nfl-detail"><h4>{copy.analysis}</h4>{locale === "en"
+            ? game.analysis.map((paragraph, index) => <p key={index}><MarkdownText text={paragraph} /></p>)
+            : <p>{localizedAnalysisNotice[locale]}</p>}
+          </section>
           <section className="nfl-detail"><h4>{copy.venueKickoff}</h4><dl className="nfl-venue"><div><dt>{copy.venue}</dt><dd>{game.stadium ?? "TBA"}{game.city ? ` — ${game.city}${game.state ? `, ${game.state}` : ""}` : ""}</dd></div><div><dt>{copy.kickoff}</dt><dd>{game.kickoff}{game.timezone ? ` ${game.timezone}` : ""}</dd></div></dl></section>
         </div>
       </article>;

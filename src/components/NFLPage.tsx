@@ -28,9 +28,9 @@ export function NFLPage({ locale }: { locale: SeoLocale }) {
   const standingsMetadata = getNFLStandingsMetadata();
   return <>
     <JsonLd data={nflSportsEvents(locale)} />
-    <section className="nfl-hero"><div className="container nfl-hero__inner"><Image src="/nfl/nfl-logo.png" alt="NFL league logo" width={92} height={92} priority /><div><p className="eyebrow">{copy.season}</p><h1>{copy.h1}</h1><p>{copy.subheading}</p></div></div></section>
+    <section className="nfl-hero"><div className="container nfl-hero__inner"><Image src="/nfl/nfl-logo.png" alt="NFL" width={92} height={92} priority /><div><p className="eyebrow">{copy.season}</p><h1>{copy.h1}</h1><p>{copy.subheading}</p></div></div></section>
     <section className="section section--compact"><div className="container nfl-content">
-      <nav className="nfl-week-nav" aria-label="NFL week"><button disabled aria-label={copy.previous}>‹</button><span>{copy.week}</span><button disabled aria-label={copy.next}>›</button></nav>
+      <nav className="nfl-week-nav" aria-label={copy.weekHeading}><button disabled aria-label={copy.previous}>‹</button><span>{copy.week}</span><button disabled aria-label={copy.next}>›</button></nav>
       <h2>{copy.weekHeading}</h2>
       <NFLWeekAccordion games={nflWeek1Games} locale={locale} />
       <NFLStandings standings={getNFLStandings()} generatedAt={standingsMetadata.generatedAt} seasonPhase={standingsMetadata.seasonPhase} locale={locale} />

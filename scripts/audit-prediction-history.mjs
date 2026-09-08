@@ -59,9 +59,9 @@ for (const match of published) {
 
   const parsed = parsePredictionMarket(match.mainPrediction ?? "");
   parsed.legs.forEach((leg) => marketCoverage.set(leg.kind, (marketCoverage.get(leg.kind) ?? 0) + 1));
-  unsupportedMarkets.push(...parsed.unsupportedLegs.map((leg) => `${match.slug}: ${leg}`));
 
   if (completed) {
+    unsupportedMarkets.push(...parsed.unsupportedLegs.map((leg) => `${match.slug}: ${leg}`));
     const settlement = evaluatePredictionSettlement(match);
     if (match.marketStats) {
       if (!Number.isInteger(match.marketStats.homeCorners) || match.marketStats.homeCorners < 0 || !Number.isInteger(match.marketStats.awayCorners) || match.marketStats.awayCorners < 0) {

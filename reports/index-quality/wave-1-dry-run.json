@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T01:37:27.860Z",
+  "generatedAt": "2026-09-08T21:37:59.454Z",
   "featureFlags": {
     "quality-gate-v2": true,
     "prediction-first-v2": true,
@@ -24,23 +24,23 @@
   },
   "after": {
     "classifications": {
-      "HISTORICAL": 278,
-      "INDEX_PRIME": 14,
-      "INDEX_STANDARD": 35,
+      "HISTORICAL": 281,
+      "INDEX_PRIME": 12,
+      "INDEX_STANDARD": 34,
       "REMOVE": 15,
       "UPGRADE": 34
     },
     "indexable": 182,
     "noindex": 194,
     "netIndexableChange": 34,
-    "sitemapUrls": 471
+    "sitemapUrls": 334
   },
   "quality": {
     "promoted": 45,
     "demoted": 11,
     "unchanged": 320,
-    "historical": 278,
-    "historicalIndexable": 133,
+    "historical": 281,
+    "historicalIndexable": 136,
     "historicalNoindex": 145,
     "topReasons": [
       {
@@ -49,7 +49,7 @@
       },
       {
         "reason": "historical_quality_minimum_passed",
-        "count": 133
+        "count": 136
       },
       {
         "reason": "content_incomplete",
@@ -61,19 +61,19 @@
       },
       {
         "reason": "metadata_valid",
-        "count": 49
+        "count": 46
       },
       {
         "reason": "unique_content",
-        "count": 49
+        "count": 46
       },
       {
         "reason": "essential_quality_gate_passed",
-        "count": 35
+        "count": 34
       },
       {
         "reason": "sources_acceptable",
-        "count": 35
+        "count": 34
       },
       {
         "reason": "lifecycle_unresolved",
@@ -89,19 +89,19 @@
       },
       {
         "reason": "editorial_complete",
-        "count": 14
+        "count": 12
       },
       {
         "reason": "sources_verified",
-        "count": 14
+        "count": 12
       },
       {
         "reason": "statistical_core_complete",
-        "count": 14
+        "count": 12
       },
       {
         "reason": "provenance_complete",
-        "count": 14
+        "count": 12
       },
       {
         "reason": "internal_notes_present",
@@ -147,7 +147,7 @@
     "keepDemotionLimit": 0.2,
     "legacyPromotions": 9,
     "legacyPromotionLimit": 100,
-    "sitemapNetChange": 87,
+    "sitemapNetChange": -50,
     "sitemapNetChangeLimit": 100,
     "internationalExpansion": 0,
     "triggered": []
@@ -11350,21 +11350,16 @@
       "league": "champions-league",
       "slug": "aek-athens-vs-lask",
       "publishedAt": "2026-09-06T19:40:00-03:00",
-      "lifecycle": "future-pre-match",
+      "lifecycle": "historical-frozen",
       "currentClassification": "KEEP",
-      "proposedClassification": "INDEX_PRIME",
+      "proposedClassification": "HISTORICAL",
       "currentIndexable": true,
       "proposedIndexable": true,
-      "historicalIndexability": null,
+      "historicalIndexability": "HISTORICAL_INDEXABLE",
       "localizationQuality": "NOT_EVALUATED",
       "change": "UNCHANGED",
       "reasons": [
-        "editorial_complete",
-        "sources_verified",
-        "metadata_valid",
-        "unique_content",
-        "statistical_core_complete",
-        "provenance_complete"
+        "historical_quality_minimum_passed"
       ],
       "checks": {
         "contentComplete": true,
@@ -11386,21 +11381,16 @@
       "league": "champions-league",
       "slug": "club-brugge-vs-aston-villa",
       "publishedAt": "2026-09-06T19:40:00-03:00",
-      "lifecycle": "future-pre-match",
+      "lifecycle": "historical-frozen",
       "currentClassification": "KEEP",
-      "proposedClassification": "INDEX_PRIME",
+      "proposedClassification": "HISTORICAL",
       "currentIndexable": true,
       "proposedIndexable": true,
-      "historicalIndexability": null,
+      "historicalIndexability": "HISTORICAL_INDEXABLE",
       "localizationQuality": "NOT_EVALUATED",
       "change": "UNCHANGED",
       "reasons": [
-        "editorial_complete",
-        "sources_verified",
-        "metadata_valid",
-        "unique_content",
-        "statistical_core_complete",
-        "provenance_complete"
+        "historical_quality_minimum_passed"
       ],
       "checks": {
         "contentComplete": true,
@@ -12110,19 +12100,16 @@
       "league": "copa-sudamericana",
       "slug": "independiente-santa-fe-vs-vasco-da-gama",
       "publishedAt": "2026-09-07T18:30:00-03:00",
-      "lifecycle": "future-pre-match",
+      "lifecycle": "historical-frozen",
       "currentClassification": "UPGRADE",
-      "proposedClassification": "INDEX_STANDARD",
+      "proposedClassification": "HISTORICAL",
       "currentIndexable": false,
       "proposedIndexable": true,
-      "historicalIndexability": null,
+      "historicalIndexability": "HISTORICAL_INDEXABLE",
       "localizationQuality": "NOT_EVALUATED",
       "change": "PROMOTED",
       "reasons": [
-        "essential_quality_gate_passed",
-        "sources_acceptable",
-        "metadata_valid",
-        "unique_content"
+        "historical_quality_minimum_passed"
       ],
       "checks": {
         "contentComplete": true,

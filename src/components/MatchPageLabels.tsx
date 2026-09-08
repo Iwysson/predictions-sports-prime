@@ -13,7 +13,18 @@ export function MainPredictionLabel() {
 }
 
 export function OddsLabel() {
-  return <>Published odds</>;
+  const { locale } = useI18n();
+  const labels = {
+    en: "Published odds",
+    "pt-br": "Odd publicada",
+    es: "Cuota publicada",
+    fr: "Cote publiée",
+    de: "Veröffentlichte Quote",
+    it: "Quota pubblicata",
+    nl: "Gepubliceerde odds",
+    tr: "Yayımlanan oran",
+  } as const;
+  return <>{labels[locale as keyof typeof labels] ?? labels.en}</>;
 }
 
 export function ResponsibleText() {

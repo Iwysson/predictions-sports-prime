@@ -10,6 +10,7 @@ import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/
 import { editorialPredictions } from "@/data/predictions";
 import { isAdSenseContentIndexable, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
 import { resolveCanonicalMatches } from "@/lib/canonical-match";
+import { intentHubSlugs } from "@/lib/intent-hubs";
 
 export const dynamic = "force-static";
 
@@ -31,6 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       "/terms/",
       "/responsible-gambling/",
       "/author/iwysson-nascimento/",
+      ...intentHubSlugs.map((slug) => `/${slug}/`),
     ].map((path) => ({
       url: absoluteUrl(path),
     })),

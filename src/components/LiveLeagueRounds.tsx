@@ -4,10 +4,23 @@ import { MatchCard } from "@/components/MatchCard";
 import type { CompetitionRoundSection, CompetitionRoundSurface } from "@/lib/competition-rounds";
 import { useI18n } from "@/i18n/I18nProvider";
 import type { SeoLocale } from "@/lib/seo-locales";
+import { localizeRoundText } from "@/lib/localized-presentation";
 
-function roundLabel(round: number | string) {
-  return typeof round === "number" ? `Matchday ${round}` : round;
+function roundLabel(round: number | string, locale: SeoLocale) {
+  const value = typeof round === "number" ? `Matchday ${round}` : round;
+  return locale === "en" ? value : localizeRoundText(value, locale);
 }
+
+const roundCopy: Record<SeoLocale, { unavailable: string; count: string }> = {
+  en: { unavailable: "Next round fixtures are not available yet.", count: "fixtures" },
+  "pt-br": { unavailable: "Os jogos da próxima rodada ainda não estão disponíveis.", count: "jogos" },
+  es: { unavailable: "Los partidos de la próxima jornada aún no están disponibles.", count: "partidos" },
+  fr: { unavailable: "Les matchs de la prochaine journée ne sont pas encore disponibles.", count: "matchs" },
+  de: { unavailable: "Die Spiele des nächsten Spieltags sind noch nicht verfügbar.", count: "Spiele" },
+  it: { unavailable: "Le partite del prossimo turno non sono ancora disponibili.", count: "partite" },
+  nl: { unavailable: "De wedstrijden van de volgende speelronde zijn nog niet beschikbaar.", count: "wedstrijden" },
+  tr: { unavailable: "Sonraki haftanın maçları henüz mevcut değil.", count: "maç" },
+};
 
 function RoundFixtures({
   section,
@@ -75,6 +88,7 @@ export function LiveLeagueRounds({
     ? new Set(indexableMatchSlugs)
     : null;
   const { t } = useI18n();
+  const copy = roundCopy[locale];
   const sourceLabel = surface.sourceState === "validated"
     ? t("validated")
     : surface.sourceState === "editorial-fallback"
@@ -91,7 +105,7 @@ export function LiveLeagueRounds({
       <section className="league-round-section" aria-labelledby="current-round-data-heading">
         <div className="round-source-line">
           <span id="current-round-data-heading">
-            {surface.current ? roundLabel(surface.current.round) : t("awaitingConfirmedData")}
+            {surface.current ? roundLabel(surface.current.round, locale) : t("awaitingConfirmedData")}
           </span>
           <span className={`round-source-status round-source-status--${sourceClass}`}>
             <i /> {sourceLabel}
@@ -115,12 +129,12 @@ export function LiveLeagueRounds({
               <span className="eyebrow">{t("fixtures")}</span>
               <h2 id="next-round-heading">{t("nextRound")}</h2>
               <span className="section-subtitle">
-                {surface.next ? roundLabel(surface.next.round) : "Factual fixtures not available yet"}
+                {surface.next ? roundLabel(surface.next.round, locale) : copy.unavailable}
               </span>
             </div>
           </div>
           {surface.next ? (
-            <span className="league-match-count" aria-label={`${surface.next.matches.length} fixtures`}>
+            <span className="league-match-count" aria-label={`${surface.next.matches.length} ${copy.count}`}>
               {surface.next.matches.length}
             </span>
           ) : null}
@@ -128,7 +142,7 @@ export function LiveLeagueRounds({
         <RoundFixtures
           section={surface.next}
           surfaceName="next"
-          emptyMessage="Next round fixtures are not available yet."
+          emptyMessage={copy.unavailable}
           locale={locale}
           localizedMatchSlugs={localizedMatchSet}
           indexableMatchSlugs={indexableMatchSet}

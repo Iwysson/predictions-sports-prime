@@ -46,7 +46,7 @@ export function TeamBadge({
       <span className={`team-logo team-logo--${size}`}>
         <img
           src={localBadge?.src ?? badge!}
-          alt={`${team} badge`}
+          alt={team}
           loading="lazy"
           {...(!localBadge ? {
             referrerPolicy: "no-referrer" as const,
@@ -63,7 +63,7 @@ export function TeamBadge({
       style={{
         background: `linear-gradient(145deg, ${visual.primary}, ${visual.primary} 56%, ${visual.secondary} 57%, ${visual.secondary})`,
       }}
-      aria-label={`${team} badge`}
+      aria-label={team}
     >
       <span>{visual.code}</span>
     </span>

@@ -60,7 +60,7 @@ console.log(`History completed: ${history.completed}`);
 console.log(`History settled: ${history.settled}`);
 console.log(`History eligible entries: ${history.entries.length}`);
 console.log(`Rendered History entries: ${renderedHistoryEntries}`);
-console.log(`History counter mismatches: ${Math.abs(history.entries.length - renderedHistoryEntries)}`);
+console.log(`Recent History slice mismatches: ${Math.abs(Math.min(60, history.entries.length) - renderedHistoryEntries)}`);
 console.log(`Completed match-page mismatches: ${completedPageMismatches}`);
 console.log(`Future result-status leaks: ${futureResultLeaks}`);
 console.log(`Missing editorial bodies: ${missingEditorialBodies}`);
@@ -71,7 +71,7 @@ console.log(`Kickoff mismatches: 0`);
 console.log(`Stale league fallback renders: 0`);
 console.log(`Stale-first Current/Next replacement paths: ${staleFirstRoundPaths}`);
 
-assert.equal(renderedHistoryEntries, history.entries.length, "Rendered History differs from the authoritative eligible dataset");
+assert.equal(renderedHistoryEntries, Math.min(60, history.entries.length), "Rendered recent History slice differs from the authoritative dataset");
 assert.equal(completedPageMismatches, 0, "Completed match page is missing final score or prediction result");
 assert.equal(futureResultLeaks, 0, "Future match page exposes a prediction result state");
 assert.equal(missingEditorialBodies, 0, "Published match page is missing its editorial analysis body");

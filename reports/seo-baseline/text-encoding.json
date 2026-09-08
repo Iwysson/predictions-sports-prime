@@ -4,10 +4,10 @@
   "countsByCategory": {
     "editorial": 5,
     "fixtures": 10,
-    "generated-output": 369,
-    "source-data": 2
+    "generated-output": 2322,
+    "source-data": 3
   },
-  "occurrenceLines": 41,
+  "occurrenceLines": 125,
   "newMojibake": [],
   "internalNotes": [
     {

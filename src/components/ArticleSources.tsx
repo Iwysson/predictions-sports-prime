@@ -1,5 +1,6 @@
 import type { EditorialSource } from "@/types";
 import { seoLocales, type SeoLocale } from "@/lib/seo-locales";
+import { localizedSourceDescription, localizePresentationText } from "@/lib/localized-presentation";
 
 const accessedLabels: Record<SeoLocale, string> = {
   en: "Accessed",
@@ -32,9 +33,11 @@ export function ArticleSources({
       <ul>
         {sources.map((source) => (
           <li key={source.url}>
-            <a href={source.url}>{source.name}</a>
-            {source.description ? (
+            <a href={source.url}>{locale === "en" ? source.name : localizePresentationText(source.name, locale)}</a>
+            {locale === "en" && source.description ? (
               <span>{source.description}</span>
+            ) : locale !== "en" ? (
+              <span>{fallbackDescription ?? localizedSourceDescription(locale)}</span>
             ) : fallbackDescription ? (
               <span>{fallbackDescription}</span>
             ) : null}

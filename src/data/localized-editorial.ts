@@ -1,4 +1,5 @@
 import type { SeoLocaleSlug } from "@/lib/seo-locales";
+import { wave3LocalizedEditorial } from "@/data/wave-3-localized-editorial";
 
 export type LocalizedEditorial = {
   analysis: string[];
@@ -147,6 +148,7 @@ const swanseaCityVsWatford: Partial<Record<SeoLocaleSlug, LocalizedEditorial>> =
 export const localizedEditorialBySlug: Record<string, Record<SeoLocaleSlug, LocalizedEditorial>> = {
   "aston-villa-vs-arsenal": astonVillaArsenal,
   "swansea-city-vs-watford": swanseaCityVsWatford as Record<SeoLocaleSlug, LocalizedEditorial>,
+  ...wave3LocalizedEditorial as Record<string, Record<SeoLocaleSlug, LocalizedEditorial>>,
 };
 
 export function getLocalizedEditorial(slug: string, locale: SeoLocaleSlug) {

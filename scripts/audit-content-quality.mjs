@@ -1,5 +1,5 @@
 import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
-import { join, relative, sep } from "node:path";
+import { basename, extname, join, relative, sep } from "node:path";
 import { createHash } from "node:crypto";
 
 const root = process.cwd();
@@ -52,12 +52,13 @@ const editorialPattern = /\b(?:we prefer|our (?:pick|selection|view)|looks? (?:a
 const prohibitedPattern = /\b(?:guaranteed (?:win|winner|profit|return)|risk[- ]free profit|certain (?:win|profit))\b/i;
 
 const records = [];
-for (const file of walk(predictionRoot).filter((path) => path.endsWith(".ts") && !path.endsWith(`${sep}index.ts`))) {
+for (const file of walk(predictionRoot).filter((path) => path.endsWith(".ts") && !path.endsWith(`${sep}index.ts`) && !path.includes(`${sep}editorial-tools${sep}`))) {
   const source = readFileSync(file, "utf8");
   if (!/^\s*published:\s*true/m.test(source)) continue;
   const home = quoted(source, "homeTeam");
   const away = quoted(source, "awayTeam");
-  const slug = quoted(source, "slug") ?? `${slugify(home)}-vs-${slugify(away)}`;
+  const slug = quoted(source, "slug")
+    ?? (home && away ? `${slugify(home)}-vs-${slugify(away)}` : basename(file, extname(file)));
   const analysisBlock = block(source, "analysis", "[", "]");
   const paragraphs = [...analysisBlock.matchAll(/"(?:\\.|[^"\\])*"/g)].map((match) => JSON.parse(match[0]));
   const allSentences = sentences(paragraphs);

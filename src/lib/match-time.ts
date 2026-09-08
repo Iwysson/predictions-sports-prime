@@ -182,16 +182,27 @@ export function normalizeMatchTime(match: Pick<Match | MatchPreview, "league" | 
   };
 }
 
-export function getMatchDisplayTime(match: Pick<Match | MatchPreview, "league" | "kickoffUtc" | "date" | "time" | "timeConfirmed" | "venue">, locale = "en") {
+const kickoffCopy = {
+  en: { local: "Local time", unavailable: "Kickoff time unavailable", kickoff: "Kickoff", inWord: "in" },
+  "pt-br": { local: "Hora local", unavailable: "Horário de início indisponível", kickoff: "Início", inWord: "em" },
+  es: { local: "Hora local", unavailable: "Hora de inicio no disponible", kickoff: "Inicio", inWord: "en" },
+  fr: { local: "Heure locale", unavailable: "Heure du coup d’envoi indisponible", kickoff: "Coup d’envoi", inWord: "à" },
+  de: { local: "Ortszeit", unavailable: "Anstoßzeit nicht verfügbar", kickoff: "Anstoß", inWord: "in" },
+  it: { local: "Ora locale", unavailable: "Orario d'inizio non disponibile", kickoff: "Inizio", inWord: "in" },
+  nl: { local: "Lokale tijd", unavailable: "Aftraptijd niet beschikbaar", kickoff: "Aftrap", inWord: "in" },
+  tr: { local: "Yerel saat", unavailable: "Başlama saati kullanılamıyor", kickoff: "Başlama", inWord: "konum" },
+} as const;
+
+export function getMatchDisplayTime(match: Pick<Match | MatchPreview, "league" | "kickoffUtc" | "date" | "time" | "timeConfirmed" | "venue">, locale: keyof typeof kickoffCopy = "en") {
+  const copy = kickoffCopy[locale] ?? kickoffCopy.en;
   const normalized = normalizeMatchTime(match);
-  if (!normalized) return { display: "TBD", sublabel: "", ariaLabel: "Kickoff time unavailable" };
+  if (!normalized) return { display: "TBD", sublabel: "", ariaLabel: copy.unavailable };
   const label = normalized.localTime ?? "TBD";
   const place = normalized.timezoneSource === "competition" || normalized.timezoneSource === "venue" ? normalized.timezone : null;
-  const localLabel = locale === "en" ? "Local time" : "Hora local";
   return {
     display: label,
-    sublabel: place ? localLabel : "Local time",
-    ariaLabel: `Kickoff: ${label} local time${place ? ` in ${place}` : ""}`,
+    sublabel: copy.local,
+    ariaLabel: `${copy.kickoff}: ${label} — ${copy.local}${place ? ` (${copy.inWord} ${place})` : ""}`,
     normalized,
   };
 }

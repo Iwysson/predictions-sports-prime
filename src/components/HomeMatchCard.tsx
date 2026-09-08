@@ -6,6 +6,8 @@ import { leagues } from "@/data/leagues";
 import { canRenderComingSoon } from "@/lib/fixture-status";
 import { getMatchDisplayTime } from "@/lib/match-time";
 import { isFixtureLiveNow } from "@/lib/fixture-state";
+import { seoLocales, type SeoLocale } from "@/lib/seo-locales";
+import { localizedFixtureStatus, localizedLive } from "@/lib/localized-ui";
 
 export function HomeMatchCard({
   match,
@@ -14,6 +16,7 @@ export function HomeMatchCard({
   viewLabel = "View",
   predictionAvailableLabel = "Prediction available",
   comingSoonLabel = "Coming soon",
+  locale = "en",
 }: {
   match: MatchPreview;
   now: Date | string;
@@ -21,10 +24,11 @@ export function HomeMatchCard({
   viewLabel?: string;
   predictionAvailableLabel?: string;
   comingSoonLabel?: string;
+  locale?: SeoLocale;
 }) {
   const league = leagues.find((item) => item.slug === match.league);
   const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");
-  const kickoff = getMatchDisplayTime(match);
+  const kickoff = getMatchDisplayTime(match, locale);
   const live = isFixtureLiveNow(match, now);
   const displayDate = match.date
     ? match.date.split("-").reverse().join("/")
@@ -47,17 +51,17 @@ export function HomeMatchCard({
 
       <div className="compact-teams">
         <div className="compact-team"><HomeTeamBadge team={match.homeTeam} /><strong>{match.homeTeam}</strong></div>
-        <span className="compact-vs">VS</span>
+        <span className="compact-vs">{locale === "en" ? "VS" : seoLocales[locale].separator}</span>
         <div className="compact-team"><HomeTeamBadge team={match.awayTeam} /><strong>{match.awayTeam}</strong></div>
       </div>
 
       <div className="compact-match-footer">
         <span className={`prediction-pill prediction-pill--${live ? "live" : match.status}`}>
           <span aria-hidden="true">✓</span>
-          {live ? "LIVE" : match.status === "published" ? predictionAvailableLabel : showComingSoon ? comingSoonLabel : match.fixtureStatus?.toUpperCase()}
+          {live ? localizedLive(locale) : match.status === "published" ? predictionAvailableLabel : showComingSoon ? comingSoonLabel : localizedFixtureStatus(match.fixtureStatus, locale)}
         </span>
         {match.status === "published" ? (
-          <Link href={href} className="button button--small" aria-label={`${match.homeTeam} vs ${match.awayTeam} Prediction`}>
+          <Link href={href} className="button button--small" aria-label={`${match.homeTeam} ${locale === "en" ? "vs" : seoLocales[locale].separator} ${match.awayTeam} — ${predictionAvailableLabel}`}>
             {viewLabel} <span aria-hidden="true">›</span>
           </Link>
         ) : null}

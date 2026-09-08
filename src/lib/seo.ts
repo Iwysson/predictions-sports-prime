@@ -292,7 +292,7 @@ export function homePageJsonLd() {
 }
 
 export function institutionalPageJsonLd(
-  type: "WebPage" | "AboutPage" | "ContactPage",
+  type: "WebPage" | "AboutPage" | "ContactPage" | "CollectionPage",
   name: string,
   path: string,
   description: string

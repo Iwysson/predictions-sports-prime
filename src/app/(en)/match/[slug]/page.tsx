@@ -36,6 +36,7 @@ import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 import { isRestrictedSearchIntentFixture } from "@/lib/match-search-intent";
 import { getAdSenseIndexableSlugs } from "@/lib/adsense-content-quality";
+import { isFixtureHistoryEligible } from "@/lib/fixture-state";
 
 function formatEditorialDate(value: string) {
   return new Intl.DateTimeFormat("en", {
@@ -109,6 +110,7 @@ export default async function MatchPage({
     awayScore: match.awayScore,
   });
   const modifiedAt = materialMatchUpdatedAt(match);
+  const isHistorical = isFixtureHistoryEligible(match);
 
   return (
     <>
@@ -197,6 +199,13 @@ export default async function MatchPage({
               </div>
             </div>
 
+            {isHistorical ? (
+              <aside className="historical-context" aria-label="Historical prediction status">
+                <strong>Historical prediction</strong>
+                <span>Published pre-match{match.publishedAt ? ` on ${formatEditorialDate(match.publishedAt)}` : ""}. The original analysis, selection and published odds are preserved below.</span>
+              </aside>
+            ) : null}
+
             <p className="match-seo-intro">{matchIntroduction(match)}</p>
 
             <MatchSemanticDetails match={match} forceInformation={isRestrictedSearchIntentFixture(match)} />
@@ -228,9 +237,7 @@ export default async function MatchPage({
           <aside className="compact-predictions-card">
             <div className="compact-card-heading">
               <div>
-                <span className="eyebrow">
-                  <MainPredictionLabel />
-                </span>
+                <span className="eyebrow">{isHistorical ? "Published prediction" : <MainPredictionLabel />}</span>
                 {isRestrictedSearchIntentFixture(match) ? (
                   <h2>Prediction and Betting Tips</h2>
                 ) : null}

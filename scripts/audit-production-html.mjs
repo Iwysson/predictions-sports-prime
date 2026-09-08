@@ -1,6 +1,6 @@
 import { spawnSync } from "node:child_process";
 
-const result = spawnSync(process.execPath, ["scripts/audit-technical-seo.mjs"], {
+const result = spawnSync(process.execPath, ["--import", "tsx", "scripts/audit-technical-seo.mjs"], {
   stdio: "inherit",
 });
 

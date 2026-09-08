@@ -53,9 +53,14 @@ function settleHandicap(goalDifference: number, line: number): PredictionResultS
 }
 
 function selectedTeamIsHome(label: string, match: MatchPreview) {
-  const selected = normalizeTeamKey(label);
-  const home = normalizeTeamKey(match.homeTeam);
-  const away = normalizeTeamKey(match.awayTeam);
+  const settlementTeamKey = (value: string) => {
+    const normalized = normalizeTeamKey(value);
+    if (normalized === "vitoriasc" || normalized === "vitoriaguimaraes") return "vitoriaguimaraes";
+    return normalized;
+  };
+  const selected = settlementTeamKey(label);
+  const home = settlementTeamKey(match.homeTeam);
+  const away = settlementTeamKey(match.awayTeam);
   if (selected === home || home.includes(selected) || selected.includes(home)) return true;
   if (selected === away || away.includes(selected) || selected.includes(away)) return false;
   return null;

@@ -1,0 +1,530 @@
+{
+  "phase": "baseline",
+  "generatedAt": "2026-09-08T10:02:12.021Z",
+  "scope": {
+    "locales": [
+      "pt-br",
+      "es",
+      "it",
+      "fr",
+      "de"
+    ],
+    "claimsOrganicGain": false
+  },
+  "byLocale": {
+    "pt-br": {
+      "totalMatchPages": 361,
+      "indexable": 1,
+      "noindexFallback": 360,
+      "completeEditorialAvailable": 1,
+      "completePages": 1,
+      "fallbackPages": 360,
+      "indexableLeagueHubs": 18
+    },
+    "es": {
+      "totalMatchPages": 361,
+      "indexable": 1,
+      "noindexFallback": 360,
+      "completeEditorialAvailable": 1,
+      "completePages": 1,
+      "fallbackPages": 360,
+      "indexableLeagueHubs": 18
+    },
+    "it": {
+      "totalMatchPages": 361,
+      "indexable": 1,
+      "noindexFallback": 360,
+      "completeEditorialAvailable": 1,
+      "completePages": 1,
+      "fallbackPages": 360,
+      "indexableLeagueHubs": 18
+    },
+    "fr": {
+      "totalMatchPages": 361,
+      "indexable": 1,
+      "noindexFallback": 360,
+      "completeEditorialAvailable": 1,
+      "completePages": 1,
+      "fallbackPages": 360,
+      "indexableLeagueHubs": 18
+    },
+    "de": {
+      "totalMatchPages": 361,
+      "indexable": 1,
+      "noindexFallback": 360,
+      "completeEditorialAvailable": 1,
+      "completePages": 1,
+      "fallbackPages": 360,
+      "indexableLeagueHubs": 18
+    }
+  },
+  "totals": {
+    "localizedMatchPages": 1805,
+    "indexable": 5,
+    "noindex": 1800,
+    "complete": 5,
+    "fallback": 1800
+  },
+  "distribution": {
+    "pt-br": {
+      "brasileirao-serie-a": {
+        "total": 31,
+        "indexable": 0,
+        "complete": 0
+      },
+      "bundesliga": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      },
+      "champions-league": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      },
+      "championship": {
+        "total": 21,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-do-brasil": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-libertadores": {
+        "total": 4,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-sudamericana": {
+        "total": 4,
+        "indexable": 0,
+        "complete": 0
+      },
+      "efl-cup": {
+        "total": 17,
+        "indexable": 0,
+        "complete": 0
+      },
+      "eliteserien": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "eredivisie": {
+        "total": 25,
+        "indexable": 0,
+        "complete": 0
+      },
+      "la-liga": {
+        "total": 37,
+        "indexable": 0,
+        "complete": 0
+      },
+      "liga-portugal": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "ligue-1": {
+        "total": 27,
+        "indexable": 0,
+        "complete": 0
+      },
+      "mls": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "premier-league": {
+        "total": 30,
+        "indexable": 1,
+        "complete": 1
+      },
+      "scottish-premiership": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "serie-a": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "super-lig": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      }
+    },
+    "es": {
+      "brasileirao-serie-a": {
+        "total": 31,
+        "indexable": 0,
+        "complete": 0
+      },
+      "bundesliga": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      },
+      "champions-league": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      },
+      "championship": {
+        "total": 21,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-do-brasil": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-libertadores": {
+        "total": 4,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-sudamericana": {
+        "total": 4,
+        "indexable": 0,
+        "complete": 0
+      },
+      "efl-cup": {
+        "total": 17,
+        "indexable": 0,
+        "complete": 0
+      },
+      "eliteserien": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "eredivisie": {
+        "total": 25,
+        "indexable": 0,
+        "complete": 0
+      },
+      "la-liga": {
+        "total": 37,
+        "indexable": 0,
+        "complete": 0
+      },
+      "liga-portugal": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "ligue-1": {
+        "total": 27,
+        "indexable": 0,
+        "complete": 0
+      },
+      "mls": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "premier-league": {
+        "total": 30,
+        "indexable": 1,
+        "complete": 1
+      },
+      "scottish-premiership": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "serie-a": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "super-lig": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      }
+    },
+    "it": {
+      "brasileirao-serie-a": {
+        "total": 31,
+        "indexable": 0,
+        "complete": 0
+      },
+      "bundesliga": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      },
+      "champions-league": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      },
+      "championship": {
+        "total": 21,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-do-brasil": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-libertadores": {
+        "total": 4,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-sudamericana": {
+        "total": 4,
+        "indexable": 0,
+        "complete": 0
+      },
+      "efl-cup": {
+        "total": 17,
+        "indexable": 0,
+        "complete": 0
+      },
+      "eliteserien": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "eredivisie": {
+        "total": 25,
+        "indexable": 0,
+        "complete": 0
+      },
+      "la-liga": {
+        "total": 37,
+        "indexable": 0,
+        "complete": 0
+      },
+      "liga-portugal": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "ligue-1": {
+        "total": 27,
+        "indexable": 0,
+        "complete": 0
+      },
+      "mls": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "premier-league": {
+        "total": 30,
+        "indexable": 1,
+        "complete": 1
+      },
+      "scottish-premiership": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "serie-a": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "super-lig": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      }
+    },
+    "fr": {
+      "brasileirao-serie-a": {
+        "total": 31,
+        "indexable": 0,
+        "complete": 0
+      },
+      "bundesliga": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      },
+      "champions-league": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      },
+      "championship": {
+        "total": 21,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-do-brasil": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-libertadores": {
+        "total": 4,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-sudamericana": {
+        "total": 4,
+        "indexable": 0,
+        "complete": 0
+      },
+      "efl-cup": {
+        "total": 17,
+        "indexable": 0,
+        "complete": 0
+      },
+      "eliteserien": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "eredivisie": {
+        "total": 25,
+        "indexable": 0,
+        "complete": 0
+      },
+      "la-liga": {
+        "total": 37,
+        "indexable": 0,
+        "complete": 0
+      },
+      "liga-portugal": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "ligue-1": {
+        "total": 27,
+        "indexable": 0,
+        "complete": 0
+      },
+      "mls": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "premier-league": {
+        "total": 30,
+        "indexable": 1,
+        "complete": 1
+      },
+      "scottish-premiership": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "serie-a": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "super-lig": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      }
+    },
+    "de": {
+      "brasileirao-serie-a": {
+        "total": 31,
+        "indexable": 0,
+        "complete": 0
+      },
+      "bundesliga": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      },
+      "champions-league": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      },
+      "championship": {
+        "total": 21,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-do-brasil": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-libertadores": {
+        "total": 4,
+        "indexable": 0,
+        "complete": 0
+      },
+      "copa-sudamericana": {
+        "total": 4,
+        "indexable": 0,
+        "complete": 0
+      },
+      "efl-cup": {
+        "total": 17,
+        "indexable": 0,
+        "complete": 0
+      },
+      "eliteserien": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "eredivisie": {
+        "total": 25,
+        "indexable": 0,
+        "complete": 0
+      },
+      "la-liga": {
+        "total": 37,
+        "indexable": 0,
+        "complete": 0
+      },
+      "liga-portugal": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "ligue-1": {
+        "total": 27,
+        "indexable": 0,
+        "complete": 0
+      },
+      "mls": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "premier-league": {
+        "total": 30,
+        "indexable": 1,
+        "complete": 1
+      },
+      "scottish-premiership": {
+        "total": 8,
+        "indexable": 0,
+        "complete": 0
+      },
+      "serie-a": {
+        "total": 29,
+        "indexable": 0,
+        "complete": 0
+      },
+      "super-lig": {
+        "total": 18,
+        "indexable": 0,
+        "complete": 0
+      }
+    }
+  }
+}

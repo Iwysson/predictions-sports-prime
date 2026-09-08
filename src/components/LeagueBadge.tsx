@@ -18,7 +18,7 @@ export function LeagueBadge({
       <span className={`league-logo league-logo--${size}${asset.needsDarkBackground ? " league-logo--dark-surface" : ""}`}>
         <img
           src={asset.src}
-          alt={`${league.name} competition badge`}
+          alt={league.name}
           loading="lazy"
         />
       </span>

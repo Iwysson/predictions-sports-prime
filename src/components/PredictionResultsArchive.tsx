@@ -1,15 +1,10 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
-import type { MatchPreview, PredictionResultStatus } from "@/types";
+import type { MatchPreview } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
-import { buildPredictionHistoryState, resultStatusPresentation } from "@/lib/results";
+import { buildHistoricalPerformance, buildLeaguePerformanceBreakdown, resultStatusPresentation } from "@/lib/results";
 import { evaluatePredictionSettlement } from "@/lib/prediction-results";
-import { isWaitingForFixtureData } from "@/lib/fixture-state";
 
-type ResultFilter = "all" | "awaiting-market-data" | "awaiting-execution-data" | PredictionResultStatus;
-const filters: ResultFilter[] = ["all", "awaiting-market-data", "awaiting-execution-data", "green", "red", "push", "half-green", "half-red", "void"];
+export const RESULTS_VISIBLE_LIMIT = 60;
 
 function formatDate(value?: string) {
   if (!value) return "Not available";
@@ -17,51 +12,51 @@ function formatDate(value?: string) {
 }
 
 export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] }) {
-  const [filter, setFilter] = useState<ResultFilter>("all");
-  const [now, setNow] = useState(() => new Date());
-  useEffect(() => {
-    const timer = window.setInterval(() => setNow(new Date()), 30_000);
-    return () => window.clearInterval(timer);
-  }, []);
-  const historyState = useMemo(() => buildPredictionHistoryState(matches, now), [matches, now]);
-  const history = historyState.entries;
-  const counts = historyState;
-  const visible = filter === "all" ? history : history.filter((match) => {
-    if (filter === "awaiting-market-data") return evaluatePredictionSettlement(match).pendingReason === "MARKET_DATA_MISSING";
-    if (filter === "awaiting-execution-data") return evaluatePredictionSettlement(match).pendingReason === "EXECUTION_DATA_MISSING";
-    return (match.betResult ?? "pending") === filter;
-  });
+  const performance = buildHistoricalPerformance(matches);
+  const visible = performance.entries.slice(0, RESULTS_VISIBLE_LIMIT);
+  const leagueBreakdown = buildLeaguePerformanceBreakdown(matches);
+  const winRate = performance.winRate === null ? "Not available" : `${(performance.winRate * 100).toFixed(1)}%`;
 
   return (
-    <div className="results-archive" data-default-filter="all">
+    <div className="results-archive" data-results-total={performance.historical} data-results-visible={visible.length}>
       <div className="results-summary" aria-label="Prediction result counts">
-        <span><b>{counts.published}</b> Published</span>
-        <span><b>{counts.completed}</b> Completed</span>
-        <span><b>{counts.awaitingResult}</b> Waiting Result</span>
-        <span><b>{counts.settled}</b> Settled</span>
-        <span><b>{counts.won}</b> Won</span>
-        <span><b>{counts.lost}</b> Lost</span>
-        <span><b>{counts.push}</b> Push</span>
-        <span><b>{counts.awaitingMarketData}</b> Awaiting Market Data</span>
-        <span><b>{counts.awaitingExecutionData}</b> Awaiting Execution Data</span>
+        <span><b>{performance.published}</b> Published</span>
+        <span><b>{performance.historical}</b> Historical</span>
+        <span><b>{performance.settled}</b> Settled</span>
+        <span><b>{performance.won}</b> Won</span>
+        <span><b>{performance.lost}</b> Lost</span>
+        <span><b>{performance.pushOrVoid}</b> Push / void</span>
+        <span><b>{performance.awaitingResult}</b> Waiting result</span>
+        <span><b>{performance.unresolved}</b> Unresolved</span>
+        <span><b>{winRate}</b> Win rate</span>
       </div>
 
-      <div className="results-filters" role="group" aria-label="Filter prediction history">
-        {filters.map((status) => (
-          <button key={status} type="button" aria-pressed={filter === status} onClick={() => setFilter(status)}>
-            {status === "all" ? "ALL" : status === "awaiting-market-data" ? "AWAITING MARKET DATA" : status === "awaiting-execution-data" ? "AWAITING EXECUTION DATA" : resultStatusPresentation[status].label}
-          </button>
-        ))}
-      </div>
+      <p className="results-metric-note"><strong>{performance.won} wins from {performance.decided} decided predictions.</strong> The {winRate} win rate uses wins + losses only. Pushes, voids, half-results, pending fixtures and unresolved records are excluded from that denominator. No ROI or profit is calculated because the archive does not record stakes.</p>
 
-      <div className="results-list" aria-live="polite">
+      <section className="results-breakdown" aria-labelledby="league-performance-heading">
+        <h2 id="league-performance-heading">Results by competition</h2>
+        <p>Every row includes losses and uses the same wins-plus-losses denominator. Small samples should not be treated as forecasts.</p>
+        <div className="results-breakdown__grid">
+          {leagueBreakdown.map((entry) => (
+            <Link href={`/league/${entry.league}/`} key={entry.league}>
+              <strong>{leaguesBySlug[entry.league].name}</strong>
+              <span>{entry.won}-{entry.lost} from {entry.decided} decided</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <h2 className="results-list-heading">Latest historical predictions</h2>
+      <p className="results-list-intro">Showing the {visible.length} most recent of {performance.historical} historical records. The summary above is calculated from the full archive.</p>
+
+      <div className="results-list">
         {visible.map((match) => {
           const status = match.betResult ?? "pending";
           const presentation = resultStatusPresentation[status];
           const settlement = evaluatePredictionSettlement(match);
-          const waitingForResult = isWaitingForFixtureData(match, now);
-          const awaitingLabel = waitingForResult ? "WAITING RESULT" : settlement.pendingReason === "EXECUTION_DATA_MISSING" ? "AWAITING EXECUTION DATA" : "AWAITING MARKET DATA";
-          const displayedAsAwaiting = waitingForResult || status === "awaiting-data";
+          const waitingForResult = settlement.pendingReason === "NOT_COMPLETED";
+          const awaitingLabel = waitingForResult ? "WAITING RESULT" : settlement.pendingReason === "EXECUTION_DATA_MISSING" ? "AWAITING EXECUTION DATA" : status === "pending" ? "UNRESOLVED" : "AWAITING MARKET DATA";
+          const displayedAsAwaiting = waitingForResult || status === "awaiting-data" || status === "pending";
           const finalScore = match.homeScore !== undefined && match.homeScore !== null && match.awayScore !== undefined && match.awayScore !== null
             ? `${match.homeScore}–${match.awayScore}` : "Not available";
           return (
@@ -92,7 +87,7 @@ export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] 
               <dl className="result-card__details">
                 <div><dt>Match date</dt><dd>{match.date || "Not available"}</dd></div>
                 <div><dt>Published</dt><dd>{formatDate(match.publishedAt)}</dd></div>
-                <div><dt>Main prediction</dt><dd>{match.mainPrediction ?? "Not available"}</dd></div>
+                <div><dt>Published prediction</dt><dd>{match.mainPrediction ?? "Not available"}</dd></div>
                 <div><dt>Published odds</dt><dd>{match.odds ?? "Not available"}</dd></div>
                 <div><dt>Final score</dt><dd>{finalScore}</dd></div>
               </dl>

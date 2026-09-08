@@ -4,6 +4,7 @@ import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { localTodayISO } from "@/lib/match-feed";
 import type { Match, MatchPreview } from "@/types";
 import { localePath, type SeoLocale } from "@/lib/seo-locales";
+import { localizeRoundText } from "@/lib/localized-presentation";
 
 function uniqueMatches(matches: MatchPreview[]) {
   return [...new Map(matches.map((match) => [match.slug, match])).values()];
@@ -129,7 +130,7 @@ export function LeagueEditorialHub({
       <section className="league-hub-overview" aria-labelledby="league-overview-heading">
         <h2 id="league-overview-heading">{leagueName}: {c.overview}</h2>
         <p>
-          {surface.current ? `${surface.current.round}: ${currentCount} ${c.fixtures}.` : c.awaiting}
+          {surface.current ? `${locale === "en" ? surface.current.round : localizeRoundText(String(surface.current.round), locale)}: ${currentCount} ${c.fixtures}.` : c.awaiting}
           {` ${currentPublished} ${c.published}`}{currentCompleted ? `; ${currentCompleted} ${c.completed}.` : "."}
         </p>
       </section>

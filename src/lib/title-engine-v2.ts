@@ -32,6 +32,11 @@ export function buildMatchMetadataV2(
   const oddsLabel = sentenceCase(research.odds);
   const league = leaguesBySlug[match.league]?.name ?? match.league;
   const intent = getMatchSearchIntent(match, locale, now);
+  const temporalQualifier = intent.temporalIntent === "TODAY"
+    ? ` ${research.temporal.today}`
+    : intent.temporalIntent === "TOMORROW"
+      ? ` ${research.temporal.tomorrow}`
+      : "";
   const odds = match.predictions.find((item) => item.label === "Published Odds" || item.label === "Odds")?.value;
   const pick = match.predictions.find((item) => item.label === "Main Prediction")?.value;
   const historical = intent.temporalIntent === "FINAL" || intent.temporalIntent === "HISTORICAL";
@@ -41,22 +46,24 @@ export function buildMatchMetadataV2(
         `${fixture} - ${prediction} Result`,
       ], 70)
     : fit([
-        `${fixture} ${prediction} & ${betting} - ${league}`,
-        `${fixture} ${prediction}, ${oddsLabel} & Tips - ${league}`,
+        ...(odds ? [`${fixture} ${prediction}, ${oddsLabel} & ${betting}`] : []),
+        `${fixture} ${prediction} & ${betting}`,
         `${fixture} ${prediction} - ${league}`,
         `${fixture} ${prediction}`,
       ], 70);
   const h1 = historical
     ? `${fixture} - ${prediction} Result & Match Analysis`
-    : `${fixture} ${prediction} & ${betting}`;
+    : odds
+      ? `${fixture} ${prediction}, ${oddsLabel} and ${betting}`
+      : `${fixture} ${prediction} and ${betting}`;
   const description = historical
     ? fit([
         `${fixture} ${prediction.toLocaleLowerCase()} result and match analysis for ${league}, preserving the original pick${odds ? ` and published odds of ${odds}` : ""}.`,
         `${fixture} result, original ${prediction.toLocaleLowerCase()} and match analysis for ${league}.`,
       ], 160)
     : fit([
-        `${fixture} ${prediction.toLocaleLowerCase()} for ${league}: ${pick ?? "our main pick"}${odds ? ` at odds of ${odds}` : ""}. ${betting}, analysis and supporting match context.`,
-        `${fixture} ${prediction.toLocaleLowerCase()} for ${league}${odds ? `, with published odds of ${odds}` : ""}. ${betting} and match analysis.`,
+        `${fixture} ${prediction.toLocaleLowerCase()}${temporalQualifier} for ${league}: ${pick ?? "see the published selection"}${odds ? ` at published odds of ${odds}` : ""}. Read the matchup analysis and risks.`,
+        `${fixture} ${prediction.toLocaleLowerCase()}${temporalQualifier}: ${pick ?? `match analysis for ${league}`}${odds ? ` at published odds of ${odds}` : ""}.`,
       ], 160);
   const intro = historical
     ? `${fixture} is preserved as a completed ${league} prediction record, including the original selection and the analysis published before kickoff.`
@@ -71,7 +78,9 @@ export function buildMatchMetadataV2(
     reasons: [
       "prediction_primary",
       historical ? "historical_metadata" : "pre_match_metadata",
+      historical ? "stable_archive_copy" : "match_acquisition_v3",
       title.includes(league) ? "competition_context_included" : "competition_omitted_for_length",
+      odds ? (title.includes(oddsLabel) ? "odds_in_title" : "odds_omitted_for_length") : "no_published_odds",
       match.matchSeo?.lineups ? "lineups_supporting_only" : "no_lineup_intent",
     ],
   };

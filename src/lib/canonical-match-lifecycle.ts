@@ -9,8 +9,12 @@ export function getCanonicalMatchLifecycle(
   >,
   now: Date | string = new Date()
 ) {
+  const fixture = {
+    ...match,
+    status: match.fixtureStatus ?? "scheduled",
+  };
   return {
-    state: classifyFixture(match, now),
-    isPreMatch: isFutureFixture(match, now),
+    state: classifyFixture(fixture, now),
+    isPreMatch: isFutureFixture(fixture, now),
   };
 }

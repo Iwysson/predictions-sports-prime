@@ -18,7 +18,9 @@ import {
 } from "@/lib/match-feed";
 import { getMatchDisplayTime } from "@/lib/match-time";
 import { evaluatePredictionSettlement } from "@/lib/prediction-results";
-import { localePath, type SeoLocale } from "@/lib/seo-locales";
+import { localePath, seoLocales, type SeoLocale } from "@/lib/seo-locales";
+import { localizePredictionText } from "@/lib/localized-presentation";
+import { localizedFixtureStatus, localizedResult } from "@/lib/localized-ui";
 import { homeFeedCopy } from "@/lib/home-feed-copy";
 
 export function HomePredictionFeed({
@@ -33,11 +35,10 @@ export function HomePredictionFeed({
   localizedMatchSlugs?: string[];
 }) {
   const copy = homeFeedCopy(locale);
-  const localizedMatchSet = new Set(localizedMatchSlugs);
+  void localizedMatchSlugs;
   const matchHref = (slug: string) =>
-    locale !== "en" && localizedMatchSet.has(slug)
-      ? localePath(locale, `/match/${slug}/`)
-      : `/match/${slug}/`;
+    locale !== "en" ? localePath(locale, `/match/${slug}/`) : `/match/${slug}/`;
+  const separator = locale === "en" ? "vs" : seoLocales[locale].separator;
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
     const timer = window.setInterval(() => setNow(new Date()), 30_000);
@@ -119,7 +120,7 @@ export function HomePredictionFeed({
             {todayMatches.length > 0 ? (
               <div className="match-grid match-grid--compact">
                 {todayMatches.map((match) => (
-                  <HomeMatchCard key={match.id} match={match} now={now} href={matchHref(match.slug)} viewLabel={copy.view} predictionAvailableLabel={copy.predictionAvailable} comingSoonLabel={copy.comingSoon} />
+                  <HomeMatchCard key={match.id} match={match} now={now} href={matchHref(match.slug)} viewLabel={copy.view} predictionAvailableLabel={copy.predictionAvailable} comingSoonLabel={copy.comingSoon} locale={locale} />
                 ))}
               </div>
             ) : (
@@ -155,7 +156,7 @@ export function HomePredictionFeed({
 
             {tomorrowMatches.length > 0 ? <div className="match-grid match-grid--compact">
               {tomorrowMatches.map((match) => (
-                <HomeMatchCard key={match.id} match={match} now={now} href={matchHref(match.slug)} viewLabel={copy.view} predictionAvailableLabel={copy.predictionAvailable} comingSoonLabel={copy.comingSoon} />
+                <HomeMatchCard key={match.id} match={match} now={now} href={matchHref(match.slug)} viewLabel={copy.view} predictionAvailableLabel={copy.predictionAvailable} comingSoonLabel={copy.comingSoon} locale={locale} />
               ))}
             </div> : (
               <div className="empty-state empty-state--compact">
@@ -186,7 +187,7 @@ export function HomePredictionFeed({
                 const league = leagues.find(
                   (item) => item.slug === match.league
                 );
-                const kickoff = getMatchDisplayTime(match);
+                const kickoff = getMatchDisplayTime(match, locale);
 
                 return (
                   <a
@@ -209,9 +210,9 @@ export function HomePredictionFeed({
 
                     <div className="latest-match">
                       <strong>
-                        {match.homeTeam} vs {match.awayTeam}
+                        {match.homeTeam} {separator} {match.awayTeam}
                       </strong>
-                      <span>{["postponed", "canceled"].includes(match.fixtureStatus ?? "") ? match.fixtureStatus!.toUpperCase() : copy.predictionAvailable}</span>
+                      <span>{["postponed", "canceled", "cancelled"].includes(match.fixtureStatus ?? "") ? localizedFixtureStatus(match.fixtureStatus, locale) : copy.predictionAvailable}</span>
                     </div>
 
                     <div className="latest-date">
@@ -252,11 +253,11 @@ export function HomePredictionFeed({
                     ? copy.entryNotRecorded
                     : settlement.pendingReason === "MARKET_DATA_MISSING"
                       ? copy.awaitingStats
-                      : (match.betResult ?? "pending").replace("-", " ").toUpperCase();
+                      : localizedResult(match.betResult, locale);
                 return <a href={matchHref(match.slug)} className="history-row" key={match.id}>
                   <div>
-                    <strong>{match.homeTeam} vs {match.awayTeam}</strong>
-                    <span>{leagues.find((league) => league.slug === match.league)?.name ?? match.league} · {match.date} · {match.mainPrediction}</span>
+                    <strong>{match.homeTeam} {separator} {match.awayTeam}</strong>
+                    <span>{leagues.find((league) => league.slug === match.league)?.name ?? match.league} · {match.date} · {locale === "en" ? match.mainPrediction : localizePredictionText(match.mainPrediction, locale)}</span>
                   </div>
                   <span className="history-score">
                     {match.homeScore != null && match.awayScore != null ? `${match.homeScore}–${match.awayScore}` : copy.waitingScore}

@@ -171,7 +171,9 @@ if (!lifecycleBase) {
   if (upcomingDescriptions.some((description) => description.includes("today") || description.includes("tomorrow"))) errors.push("T-7/T-3 regression: incorrect near-term wording");
   if (!historicalDescription.includes("completed match")) errors.push("Completed regression: historical wording is missing");
 
-  const titles = new Set(generated.map((item) => matchSeoTitle(item.match)));
+  // Historical metadata has its own frozen/result lifecycle. Stability applies
+  // across pre-match buckets; transitioning into history is tested separately.
+  const titles = new Set(generated.filter((item) => item.state !== "historical").map((item) => matchSeoTitle(item.match)));
   const canonicals = new Set(generated.map((item) => matchCanonicalPath(item.match)));
   if (titles.size !== 1) errors.push("Lifecycle regression: stable title changed across temporal states");
   if (canonicals.size !== 1) errors.push("Lifecycle regression: canonical changed across temporal states");

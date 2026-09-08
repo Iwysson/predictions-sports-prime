@@ -25,9 +25,6 @@ import {
   seoLocales,
   type SeoLocaleSlug,
 } from "@/lib/seo-locales";
-import {
-  hasCompleteLocalizedEditorial,
-} from "@/data/localized-editorial";
 import type { Match } from "@/types";
 import { getAdSenseIndexableSlugs } from "@/lib/adsense-content-quality";
 
@@ -145,8 +142,8 @@ function formatEditorialDate(value: string, locale: SeoLocaleSlug) {
   }).format(new Date(value));
 }
 
-function relatedPathExists(match: Match, locale: SeoLocaleSlug) {
-  return hasCompleteLocalizedEditorial(match.slug, locale);
+function relatedPathExists(_match: Match, _locale: SeoLocaleSlug) {
+  return true;
 }
 
 function resultLabel(
@@ -229,6 +226,7 @@ export function LocalizedMatchPageContent({
                   fallbackDate={match.date}
                   fallbackTime={match.time}
                   venue={match.venue}
+                  locale={locale}
                 />
               </div>
             </div>
@@ -299,13 +297,6 @@ export function LocalizedMatchPageContent({
                 format={analysisFormat}
               />
             </div>
-
-            {match.comment ? (
-              <aside className="editorial-comment">
-                <strong>{copy.matchAnalysis}</strong>
-                <p>{match.comment}</p>
-              </aside>
-            ) : null}
 
             <ArticleSources
               sources={match.sources}

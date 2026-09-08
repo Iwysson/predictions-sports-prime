@@ -27,9 +27,14 @@ import {
 } from "@/data/localized-editorial";
 import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 import { buildSportsEventJsonLd } from "@/lib/sports-event-schema";
-import { getTodayLocalizedEditorial } from "@/data/today-localized-editorial";
 import { editorialPredictions } from "@/data/predictions";
 import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
+import {
+  getAutomaticLocalizedPresentation,
+  localizePredictionText,
+  localizePresentationText,
+  sanitizeLocalizedAnalysis,
+} from "@/lib/localized-presentation";
 import {
   resolveCanonicalMatch,
   resolveCanonicalMatches,
@@ -44,6 +49,8 @@ const intentLocale: Record<
   it: "it",
   fr: "fr",
   de: "de",
+  nl: "nl",
+  tr: "tr",
 };
 
 export const dynamicParams = false;
@@ -214,6 +221,7 @@ export default async function LocalizedMatch({
     if (!match) notFound();
 
     const editorial = getLocalizedEditorial(slug, locale)!;
+    const automaticPresentation = getAutomaticLocalizedPresentation(match, locale);
     const copy = seoLocales[locale];
     const league = leaguesBySlug[match.league];
     const url = absoluteUrl(
@@ -324,14 +332,16 @@ export default async function LocalizedMatch({
             match.awayTeam,
             league.name
           )}
-          analysis={editorial.analysis}
+          analysis={sanitizeLocalizedAnalysis(editorial.analysis, match, locale)}
           analysisFormat={match.analysisFormat}
-          mainPrediction={
-            editorial.mainPrediction ||
-            storedPrediction?.value
-          }
+          mainPrediction={localizePredictionText(
+            editorial.mainPrediction || storedPrediction?.value,
+            locale
+          ) || automaticPresentation.mainPrediction}
           sourceDescription={
             editorial.sourceDescription
+              ? localizePresentationText(editorial.sourceDescription, locale)
+              : automaticPresentation.sourceDescription
           }
           internationalEligibleSlugs={internationalEligibleSlugs}
         />
@@ -359,8 +369,7 @@ export default async function LocalizedMatch({
   const storedPrediction = match.predictions.find(
     (item) => item.label === "Main Prediction"
   );
-  const localizedEditorial =
-    getTodayLocalizedEditorial(match, locale);
+  const localizedPresentation = getAutomaticLocalizedPresentation(match, locale);
 
   const article = {
     "@context": "https://schema.org",
@@ -444,15 +453,10 @@ export default async function LocalizedMatch({
         locale={locale}
         h1={intent.h1}
         intro={intent.intro}
-        analysis={
-          localizedEditorial?.analysis ??
-          match.analysis
-        }
+        analysis={localizedPresentation.analysis}
         analysisFormat={match.analysisFormat}
-        mainPrediction={
-          localizedEditorial?.mainPrediction ??
-          storedPrediction?.value
-        }
+        mainPrediction={localizedPresentation.mainPrediction || localizePredictionText(storedPrediction?.value, locale)}
+        sourceDescription={localizedPresentation.sourceDescription}
         internationalEligibleSlugs={internationalEligibleSlugs}
       />
     </>

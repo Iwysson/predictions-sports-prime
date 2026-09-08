@@ -11,14 +11,14 @@ function diff(value = 0) { return value > 0 ? `+${value}` : String(value); }
 
 export function NFLPlayoffLegend({ locale }: { locale: SeoLocale }) {
   const copy = nflStandingsCopies[locale];
-  return <div className="nfl-playoff-legend" aria-label="Playoff status legend">
+  return <div className="nfl-playoff-legend" aria-label={copy.playoffPicture}>
     <span className="status-clinched">● {copy.divisionLeader}</span><span className="status-playoff">● {copy.wildCard}</span><span className="status-hunt">● {copy.inTheHunt}</span><span className="status-eliminated">● {copy.eliminated}</span>
   </div>;
 }
 
 export function NFLDivisionStandings({ division, rows, locale }: { division: NFLDivision; rows: NFLStanding[]; locale: SeoLocale }) {
   const copy = nflStandingsCopies[locale];
-  return <section className="nfl-division"><h3>{division} Standings</h3><div className="nfl-standings-table" role="table" aria-label={`${division} Standings`}>
+  return <section className="nfl-division"><h3>{division} — {copy.title}</h3><div className="nfl-standings-table" role="table" aria-label={`${division} — ${copy.title}`}>
     <div className="nfl-standing-row nfl-standing-row--head" role="row"><span role="columnheader">#</span><span role="columnheader">{copy.team}</span><abbr title={copy.wins}>W</abbr><abbr title={copy.losses}>L</abbr><abbr title={copy.ties}>T</abbr><abbr title={copy.winPct}>PCT</abbr><abbr title={copy.pointsFor}>PF</abbr><abbr title={copy.pointsAgainst}>PA</abbr><abbr title={copy.differential}>DIFF</abbr><abbr title={copy.streak}>STRK</abbr></div>
     {rows.map((row) => <div className={`nfl-standing-row status-${row.playoffStatus}`} role="row" key={row.id}>
       <span className="nfl-standing-rank" role="cell">{row.divisionRank ?? "—"}</span><span className="nfl-standing-team" role="cell"><img src={row.logo} width="30" height="30" alt="" loading="lazy" /><span><strong>{row.name}</strong>{row.playoffStatus !== "none" ? <small>{playoffStatusLabel(row.playoffStatus, copy)}</small> : null}<small className="nfl-standing-mobile-stats">PF {row.pointsFor ?? "—"} · PA {row.pointsAgainst ?? "—"} · {diff(row.pointDifferential)}</small></span></span>
@@ -28,7 +28,8 @@ export function NFLDivisionStandings({ division, rows, locale }: { division: NFL
 }
 
 export function NFLConferenceStandings({ conference, standings, locale }: { conference: NFLConference; standings: NFLStanding[]; locale: SeoLocale }) {
-  return <div className="nfl-conference"><h2 className="sr-only">{conference} Standings</h2>{NFL_DIVISIONS[conference].map((division) => <NFLDivisionStandings key={division} division={division} rows={standings.filter((row) => row.division === division).sort((a, b) => (a.divisionRank ?? 99) - (b.divisionRank ?? 99) || a.name.localeCompare(b.name))} locale={locale} />)}</div>;
+  const copy = nflStandingsCopies[locale];
+  return <div className="nfl-conference"><h2 className="sr-only">{conference} — {copy.title}</h2>{NFL_DIVISIONS[conference].map((division) => <NFLDivisionStandings key={division} division={division} rows={standings.filter((row) => row.division === division).sort((a, b) => (a.divisionRank ?? 99) - (b.divisionRank ?? 99) || a.name.localeCompare(b.name))} locale={locale} />)}</div>;
 }
 
 export function NFLPlayoffPicture({ standings, locale }: { standings: NFLStanding[]; locale: SeoLocale }) {

@@ -12,6 +12,7 @@ const baseline = JSON.parse(readFileSync(join(root, "editorial-baseline.json"), 
 const current = collectEditorialState(root);
 const published = await hydratePredictions(matches.filter((match) => match.status === "published").map(toMatchPreview));
 const history = buildPredictionHistoryState(published);
+const expectedVisible = history.entries.slice(0, 60);
 const errors = [];
 const allowedStatuses = new Set(["pending", "awaiting-data", "green", "red", "push", "half-green", "half-red", "void"]);
 
@@ -56,11 +57,11 @@ for (const row of rows) {
   }
 }
 
-for (const entry of history.entries) {
+for (const entry of expectedVisible) {
   if (!rowBySlug.has(entry.slug)) errors.push(`${entry.slug}: eligible result is missing from History`);
 }
-if (!html.includes('data-default-filter="all"')) errors.push("complete ALL history is not the default");
-if (!html.includes('aria-pressed="true">ALL')) errors.push("ALL filter is not visibly selected by default");
+if (rows.length !== expectedVisible.length) errors.push(`recent history slice mismatch: ${rows.length}/${expectedVisible.length}`);
+if (!html.includes(`data-results-total="${history.entries.length}"`)) errors.push("full historical sample size is not visible");
 if (!html.includes('aria-label="Prediction result:')) errors.push("accessible result-status text is missing");
 if (baseline.publishedCount !== current.entries.length || baseline.draftCount !== current.drafts) {
   console.warn(`WARNING: legacy editorial baseline counts differ (baseline ${baseline.publishedCount}/${baseline.draftCount}, current ${current.entries.length}/${current.drafts}); result integrity is validated against current published source records`);
@@ -70,16 +71,17 @@ const counts = Object.fromEntries([...allowedStatuses].map((status) => [status, 
 const awaitingMarketData = rows.filter((row) => row.status === "awaiting-data" && row.settlementReason === "MARKET_DATA_MISSING").length;
 const awaitingExecutionData = rows.filter((row) => row.status === "awaiting-data" && row.settlementReason === "EXECUTION_DATA_MISSING").length;
 console.log(`Published predictions: ${published.length}`);
-console.log(`Completed History entries: ${rows.length}`);
-console.log(`Pending: ${counts.pending}`);
-console.log(`Awaiting Market Data: ${awaitingMarketData}`);
-console.log(`Awaiting Execution Data: ${awaitingExecutionData}`);
-console.log(`Won: ${counts.green}`);
-console.log(`Lost: ${counts.red}`);
-console.log(`Push: ${counts.push}`);
-console.log(`Half won: ${counts["half-green"]}`);
-console.log(`Half lost: ${counts["half-red"]}`);
-console.log(`Void: ${counts.void}`);
+console.log(`Historical entries: ${history.entries.length}`);
+console.log(`Recent entries rendered: ${rows.length}`);
+console.log(`Pending result: ${history.awaitingResult}`);
+console.log(`Awaiting Market Data: ${history.awaitingMarketData}`);
+console.log(`Awaiting Execution Data: ${history.awaitingExecutionData}`);
+console.log(`Won: ${history.won}`);
+console.log(`Lost: ${history.lost}`);
+console.log(`Push: ${history.push}`);
+console.log(`Half won: ${history.halfWon}`);
+console.log(`Half lost: ${history.halfLost}`);
+console.log(`Void: ${history.void}`);
 const completedPending = rows.filter((row) => row.status === "pending" && editorialBySlug.get(row.slug)?.fixtureStatus === "completed").length;
 if (completedPending > 0) errors.push(`${completedPending} completed matches are still marked ordinary PENDING`);
 if (errors.length) {

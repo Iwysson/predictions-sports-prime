@@ -3542,6 +3542,15 @@ html[dir="rtl"] .latest-match {
 .results-settlement-note { margin-top: 20px; padding: 17px; border: 1px solid var(--line); border-radius: 11px; background: var(--panel); }
 .results-settlement-note h2 { margin: 0 0 8px; font-size: 18px; }
 .results-settlement-note p { margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.results-metric-note, .results-list-intro, .results-breakdown p { color: var(--muted); line-height: 1.6; }
+.results-metric-note { margin: 0 0 20px; padding: 14px; border-left: 3px solid var(--accent); background: var(--panel); }
+.results-breakdown { margin: 24px 0; }
+.results-breakdown h2, .results-list-heading { margin: 0 0 8px; font-size: 21px; }
+.results-breakdown__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.results-breakdown__grid a { display: grid; gap: 4px; padding: 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
+.results-breakdown__grid span { color: var(--muted); font-size: 12px; }
+.historical-context { display: grid; gap: 4px; margin: 0 0 18px; padding: 14px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; background: var(--panel); }
+.historical-context span { color: var(--muted); font-size: 13px; line-height: 1.5; }
 
 .article-sources { margin-top: 18px; padding-top: 15px; border-top: 1px solid var(--line); }
 .article-sources h2 { margin: 0 0 9px; font-size: 15px; }
@@ -3576,6 +3585,7 @@ html[dir="rtl"] .footer-links { direction: rtl; }
   .result-card__heading { align-items: flex-start; }
   .result-card__details { grid-template-columns: 1fr 1fr; }
   .result-card__details div:nth-child(3) { grid-column: 1 / -1; }
+  .results-breakdown__grid { grid-template-columns: 1fr; }
 }
 
 /* Static league-hub and related-prediction navigation. */
@@ -4364,5 +4374,41 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
     min-width: 96px;
     max-width: 48vw;
   }
+}
+
+/* Wave 4 intent hubs */
+.intent-hub-hero .container { max-width: 980px; }
+.intent-hub-hero p { max-width: 780px; }
+.intent-hub-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.intent-picks-list { display: grid; gap: 12px; }
+.intent-match-card { min-width: 0; padding: 20px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow-sm); }
+.intent-match-card__meta, .intent-match-card__meta > span, .intent-match-card__fixture, .intent-match-card dl > div { display: flex; align-items: center; }
+.intent-match-card__meta { justify-content: space-between; gap: 12px; color: var(--text-muted); font-size: 12px; }
+.intent-match-card__meta > span { gap: 7px; font-weight: 700; }
+.intent-match-card__fixture { justify-content: center; gap: 12px; margin: 18px 0; text-align: center; }
+.intent-match-card__fixture h3 { margin: 0; font-size: 17px; }
+.intent-match-card__fixture h3 span { color: var(--text-muted); font-size: 12px; font-weight: 600; text-transform: uppercase; }
+.intent-match-card dl { display: grid; gap: 8px; margin: 0 0 16px; }
+.intent-match-card dl > div { justify-content: space-between; gap: 14px; padding-top: 8px; border-top: 1px solid var(--border); }
+.intent-match-card dt { color: var(--text-muted); font-size: 12px; }
+.intent-match-card dd { margin: 0; text-align: right; font-weight: 750; }
+.intent-match-card--compact { display: grid; grid-template-columns: minmax(240px, 1.2fr) minmax(250px, 1fr) auto; align-items: center; gap: 16px; }
+.intent-match-card--compact .intent-match-card__meta { display: none; }
+.intent-match-card--compact .intent-match-card__fixture { justify-content: flex-start; margin: 0; }
+.intent-match-card--compact dl { margin: 0; }
+.intent-hub-editorial { display: grid; grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr); gap: 40px; }
+.intent-hub-editorial aside { padding: 20px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); }
+.intent-hub-editorial aside h2 { margin-top: 0; font-size: 18px; }
+.intent-hub-editorial aside ul { display: grid; gap: 9px; margin: 0; padding-left: 20px; }
+.intent-hub-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.intent-hub-nav a { padding: 8px 12px; border: 1px solid var(--border); border-radius: 999px; font-weight: 700; }
+.intent-hub-empty { max-width: 760px; }
+
+@media (max-width: 760px) {
+  .intent-hub-grid, .intent-hub-editorial { grid-template-columns: 1fr; }
+  .intent-match-card--compact { grid-template-columns: 1fr; }
+  .intent-match-card--compact .intent-match-card__meta { display: flex; }
+  .intent-match-card__meta { align-items: flex-start; flex-direction: column; }
+  .intent-match-card__fixture { justify-content: flex-start; }
 }
 

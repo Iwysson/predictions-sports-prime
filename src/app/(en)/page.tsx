@@ -91,6 +91,13 @@ export default async function Home() {
             <Link href="/author/iwysson-nascimento/"> its author</Link>. Learn more
             <Link href="/about/"> about Predictions Sports Prime</Link>.
           </p>
+          <nav className="intent-hub-nav" aria-label="Prediction hubs">
+            <Link href="/football-predictions/">Football predictions</Link>
+            <Link href="/soccer-predictions/">Soccer predictions</Link>
+            <Link href="/betting-tips/">Betting tips</Link>
+            <Link href="/picks/">Football picks</Link>
+            <Link href="/today-predictions/">Today's predictions</Link>
+          </nav>
         </div>
       </section>
     </>

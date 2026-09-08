@@ -57,6 +57,9 @@ export type LeagueSeoCapabilities = {
   hasResults: boolean;
   hasStandings: boolean;
   hasAnalysis: boolean;
+  hasOdds: boolean;
+  publishedCount: number;
+  upcomingCount: number;
 };
 
 export function leagueSeoCapabilities(league: LeagueConfig, publishedMatches: Match[]): LeagueSeoCapabilities {
@@ -65,17 +68,19 @@ export function leagueSeoCapabilities(league: LeagueConfig, publishedMatches: Ma
     hasResults: publishedMatches.some((match) => match.fixtureStatus === "completed" && match.homeScore != null && match.awayScore != null),
     hasStandings: league.display.showStandings,
     hasAnalysis: publishedMatches.length > 0,
+    hasOdds: publishedMatches.some((match) => match.predictions.some((item) => item.label === "Published Odds" || item.label === "Odds")),
+    publishedCount: publishedMatches.length,
+    upcomingCount: publishedMatches.filter((match) => match.fixtureStatus !== "completed").length,
   };
 }
 
 export function leagueSeoTitle(league: LeagueConfig, capabilities?: LeagueSeoCapabilities) {
   if (capabilities) {
-    const suffix = capabilities.hasFixtures && capabilities.hasResults
-      ? "Predictions, Fixtures & Results"
-      : capabilities.hasAnalysis
-        ? "Predictions & Match Analysis"
-        : "Predictions";
-    return `${league.name} ${suffix}`;
+    const full = capabilities.hasFixtures
+      ? `${league.name} Predictions & Betting Tips${capabilities.hasOdds ? " with Odds" : ""}`
+      : `${league.name} Predictions & Match Analysis`;
+    const branded = `${full} | ${siteConfig.name}`;
+    return branded.length <= 70 ? branded : full.length <= 70 ? full : `${league.name} Predictions`;
   }
   const full = `${league.name} Predictions & Betting Tips | ${siteConfig.name}`;
   const compact = `${league.name} Predictions | ${siteConfig.name}`;
@@ -84,15 +89,16 @@ export function leagueSeoTitle(league: LeagueConfig, capabilities?: LeagueSeoCap
 
 export function leagueSeoDescription(league: LeagueConfig, capabilities?: LeagueSeoCapabilities) {
   if (capabilities) {
-    const features = [
-      "predictions",
-      capabilities.hasFixtures ? "upcoming fixtures" : "",
-      capabilities.hasResults ? "recent results" : "",
-      capabilities.hasStandings ? "standings" : "",
-      capabilities.hasAnalysis ? "match analysis" : "",
-    ].filter(Boolean);
-    const format = league.display.showStandings ? "league table coverage" : "knockout-round coverage";
-    return `${league.name} ${features.join(", ")} for ${league.country}, with ${format} from ${siteConfig.name}.`;
+    const inventory = capabilities.upcomingCount > 0
+      ? `${capabilities.upcomingCount} current or upcoming match ${capabilities.upcomingCount === 1 ? "prediction" : "predictions"}`
+      : `${capabilities.publishedCount} published ${capabilities.publishedCount === 1 ? "analysis" : "analyses"}`;
+    const context = league.display.showStandings
+      ? "current-round and table context"
+      : "current-stage knockout context";
+    const full = `${league.name} predictions for ${league.country}: ${inventory}, published picks, available odds and ${context}.`;
+    return full.length <= 160
+      ? full
+      : `${league.name} predictions: ${inventory}, published picks, available odds and ${context}.`;
   }
   const index = league.slug.length % 4;
   const standings = league.display.showStandings
@@ -167,6 +173,16 @@ export function leagueCollectionJsonLd(
     },
     ...(publishedMatches.length > 0
       ? {
+          mainEntity: {
+            "@type": "ItemList",
+            numberOfItems: publishedMatches.length,
+            itemListElement: publishedMatches.map((match, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              name: `${match.homeTeam} vs ${match.awayTeam}`,
+              url: absoluteUrl(matchCanonicalPath(match)),
+            })),
+          },
           hasPart: publishedMatches.map((match) => ({
             "@type": "Article",
             name: `${match.homeTeam} vs ${match.awayTeam}`,

@@ -65,7 +65,7 @@ type MatchIntentFacts = {
   hasBroadcastInfo: boolean;
 };
 
-type TodaySeoLocale = "en" | "pt-BR" | "es" | "it" | "fr" | "de";
+type TodaySeoLocale = "en" | "pt-BR" | "es" | "it" | "fr" | "de" | "nl" | "tr";
 type TodaySeoIntent = "stats" | "odds" | "goals" | "corners" | "handicap" | "xg" | "shots" | "btts" | "recentMeeting" | "secondLeg" | "aggregate" | "competition";
 
 type TodaySeoProfile = {
@@ -199,7 +199,9 @@ const todaySeoTerms: Record<TodaySeoLocale, Record<TodaySeoIntent, string>> = {
   es: { stats: "Estadísticas", odds: "Cuotas", goals: "Goles", corners: "Córners", handicap: "Hándicap Asiático", xg: "xG y xGA", shots: "Tiros a Puerta", btts: "Ambos Marcan", recentMeeting: "Duelo Reciente", secondLeg: "Partido de Vuelta", aggregate: "Marcador Global", competition: "Copa do Brasil" },
   it: { stats: "Statistiche", odds: "Quote", goals: "Gol", corners: "Corner", handicap: "Handicap Asiatico", xg: "xG e xGA", shots: "Tiri in Porta", btts: "Gol di Entrambe", recentMeeting: "Precedente Recente", secondLeg: "Gara di Ritorno", aggregate: "Risultato Aggregato", competition: "Copa do Brasil" },
   fr: { stats: "Statistiques", odds: "Cotes", goals: "Buts", corners: "Corners", handicap: "Handicap Asiatique", xg: "xG et xGA", shots: "Tirs Cadrés", btts: "Les Deux Équipes Marquent", recentMeeting: "Duel Récent", secondLeg: "Match Retour", aggregate: "Score Cumulé", competition: "Copa do Brasil" },
-  de: { stats: "Statistik", odds: "Quoten", goals: "Tore", corners: "Ecken", handicap: "Asian Handicap", xg: "xG und xGA", shots: "Torschüsse", btts: "Beide Teams Treffen", recentMeeting: "Letztes Duell", secondLeg: "Rückspiel", aggregate: "Gesamtergebnis", competition: "Copa do Brasil" },
+  de: { stats: "Statistik", odds: "Quoten", goals: "Tore", corners: "Ecken", handicap: "Asiatisches Handicap", xg: "xG und xGA", shots: "Torschüsse", btts: "Beide Teams Treffen", recentMeeting: "Letztes Duell", secondLeg: "Rückspiel", aggregate: "Gesamtergebnis", competition: "Copa do Brasil" },
+  nl: { stats: "Statistieken", odds: "Odds", goals: "Doelpunten", corners: "Hoekschoppen", handicap: "Aziatische handicap", xg: "xG en xGA", shots: "Schoten op doel", btts: "Beide teams scoren", recentMeeting: "Recent duel", secondLeg: "Terugwedstrijd", aggregate: "Totaalscore", competition: "Copa do Brasil" },
+  tr: { stats: "İstatistikler", odds: "Oranlar", goals: "Goller", corners: "Kornerler", handicap: "Asya handikabı", xg: "xG ve xGA", shots: "İsabetli şutlar", btts: "Karşılıklı gol", recentMeeting: "Son karşılaşma", secondLeg: "Rövanş", aggregate: "Toplam skor", competition: "Copa do Brasil" },
 };
 
 function structuredCoreLabels(match: Match) {
@@ -246,7 +248,7 @@ function isProfileIntentSupported(
 }
 
 function isTodaySeoLocale(locale: SearchLocale): locale is TodaySeoLocale {
-  return locale === "en" || locale === "pt-BR" || locale === "es" || locale === "it" || locale === "fr" || locale === "de";
+  return locale === "en" || locale === "pt-BR" || locale === "es" || locale === "it" || locale === "fr" || locale === "de" || locale === "nl" || locale === "tr";
 }
 
 function todaySeoTeams(profile: TodaySeoProfile, locale: TodaySeoLocale) {
@@ -308,6 +310,8 @@ function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale, facts: M
     it: { today: "di oggi", tomorrow: "di domani" },
     fr: { today: "du jour", tomorrow: "de demain" },
     de: { today: "heute", tomorrow: "für morgen" },
+    nl: { today: "vandaag", tomorrow: "voor morgen" },
+    tr: { today: "bugün", tomorrow: "yarın" },
   } as const;
   const when = temporalPhrases[locale][temporal];
   const odds = facts.odds;
@@ -337,6 +341,14 @@ function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale, facts: M
     de: [
       `${teams}: Prognose ${when}${odds ? `, Quoten ${odds}` : ""}. Wett-Tipps, Spielanalyse und Daten zur Begründung des Haupttipps.`,
       `${teams}: Prognose ${when}. Wett-Tipps, Analyse und Quoten zum Haupttipp.`,
+    ],
+    nl: [
+      `${teams}: voorspelling ${when}${odds ? `, odds ${odds}` : ""}. Wedtips, wedstrijdanalyse en gegevens die de hoofdkeuze ondersteunen.`,
+      `${teams}: voorspelling ${when}. Wedtips, analyse en odds voor de hoofdkeuze.`,
+    ],
+    tr: [
+      `${teams}: maç tahmini ${when}${odds ? `, oranlar ${odds}` : ""}. Bahis ipuçları, maç analizi ve ana seçimi destekleyen veriler.`,
+      `${teams}: maç tahmini ${when}. Bahis ipuçları, analiz ve ana seçim oranları.`,
     ],
   }[locale];
 
@@ -634,7 +646,7 @@ function buildH1(match: Match, locale: SearchLocale) {
   if (locale === "en") {
     return `${matchTeams(match, locale)} Prediction & Match Analysis`;
   }
-  const connector = { "pt-BR": "e", es: "y", it: "e", fr: "et", de: "und" }[locale as "pt-BR" | "es" | "it" | "fr" | "de"] ?? "&";
+  const connector = { "pt-BR": "e", es: "y", it: "e", fr: "et", de: "und", nl: "en", tr: "ve" }[locale as Exclude<SearchLocale, "en" | "id" | "vi" | "ar" | "ja" | "ko" | "th">] ?? "&";
   return `${matchTeams(match, locale)} ${sentenceCase(research.prediction)} ${connector} ${sentenceCase(research.analysis)}`;
 }
 
