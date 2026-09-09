@@ -8,8 +8,8 @@ import { leagues } from "@/data/leagues";
 import { useI18n } from "@/i18n/I18nProvider";
 import { canRenderComingSoon } from "@/lib/fixture-status";
 import { getMatchDisplayTime } from "@/lib/match-time";
-import { isFixtureLiveNow } from "@/lib/fixture-state";
-import { localePath, seoLocales, type SeoLocale } from "@/lib/seo-locales";
+import { isFixtureLiveNow, isFutureFixture } from "@/lib/fixture-state";
+import { localePath, matchPredictionAnchor, seoLocales, type SeoLocale } from "@/lib/seo-locales";
 import { localizedFixtureStatus, localizedLive } from "@/lib/localized-ui";
 
 export function MatchCard({
@@ -33,6 +33,7 @@ export function MatchCard({
   const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");
   const kickoff = getMatchDisplayTime(match, locale);
   const live = isFixtureLiveNow(match, now);
+  const future = isFutureFixture(match, now);
 
   return (
     <article className="match-card">
@@ -81,7 +82,7 @@ export function MatchCard({
             className="button button--small"
             aria-label={`${match.homeTeam} ${locale === "en" ? "vs" : seoLocales[locale].separator} ${match.awayTeam} — ${t("predictionAvailable")}`}
           >
-            {t("view")} <span aria-hidden="true">›</span>
+            {future ? matchPredictionAnchor(match.homeTeam, match.awayTeam, locale) : t("view")} <span aria-hidden="true">›</span>
           </Link>
         ) : null}
       </div>

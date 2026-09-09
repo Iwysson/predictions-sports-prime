@@ -3,8 +3,9 @@ import type { CompetitionRoundSurface } from "@/lib/competition-rounds";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { localTodayISO } from "@/lib/match-feed";
 import type { Match, MatchPreview } from "@/types";
-import { localePath, type SeoLocale } from "@/lib/seo-locales";
+import { localePath, matchPredictionAnchor, type SeoLocale } from "@/lib/seo-locales";
 import { localizeRoundText } from "@/lib/localized-presentation";
+import { isFutureFixture } from "@/lib/fixture-state";
 
 function uniqueMatches(matches: MatchPreview[]) {
   return [...new Map(matches.map((match) => [match.slug, match])).values()];
@@ -31,14 +32,12 @@ const hubCopy: Record<SeoLocale, { overview: string; awaiting: string; fixtures:
 
 function MatchLinks({
   matches,
-  context,
   locale,
   localizedMatchSlugs,
   indexableMatchSlugs,
   labels,
 }: {
   matches: MatchPreview[];
-  context: "today" | "upcoming";
   locale: SeoLocale;
   localizedMatchSlugs: Set<string>;
   indexableMatchSlugs: Set<string> | null;
@@ -60,9 +59,9 @@ function MatchLinks({
           {match.status === "published" &&
           (indexableMatchSlugs === null || indexableMatchSlugs.has(match.slug)) ? (
             <Link href={matchHref(match.slug)} data-quality-gated-match-link="true">
-              {context === "today"
-                ? `${match.homeTeam} vs ${match.awayTeam}: ${labels.prediction}`
-                : `${labels.preview}: ${match.homeTeam} vs ${match.awayTeam}`}
+              {isFutureFixture(match)
+                ? matchPredictionAnchor(match.homeTeam, match.awayTeam, locale)
+                : `${match.homeTeam} vs ${match.awayTeam}`}
             </Link>
           ) : (
             <span className="league-hub-unavailable">
@@ -140,7 +139,6 @@ export function LeagueEditorialHub({
         <h2 id="league-today-heading">{leagueName}: {c.today}</h2>
           <MatchLinks
             matches={todayMatches}
-            context="today"
             locale={locale}
             localizedMatchSlugs={localizedMatchSet}
             indexableMatchSlugs={indexableMatchSet}
@@ -154,7 +152,6 @@ export function LeagueEditorialHub({
         <h2 id="league-upcoming-heading">{leagueName}: {c.upcoming}</h2>
           <MatchLinks
             matches={upcomingMatches}
-            context="upcoming"
             locale={locale}
             localizedMatchSlugs={localizedMatchSet}
             indexableMatchSlugs={indexableMatchSet}
@@ -172,9 +169,11 @@ export function LeagueEditorialHub({
                 <span>{match.date}</span>
                 <h3><Link href={matchHref(match.slug)} data-quality-gated-match-link="true">{match.homeTeam} vs {match.awayTeam}</Link></h3>
                 <Link href={matchHref(match.slug)} data-quality-gated-match-link="true">
-                  {index % 2 === 0
-                    ? `${match.homeTeam} vs ${match.awayTeam}: ${c.prediction}`
-                    : `${c.read}: ${match.homeTeam} vs ${match.awayTeam}`}
+                  {isFutureFixture(match)
+                    ? matchPredictionAnchor(match.homeTeam, match.awayTeam, locale)
+                    : index % 2 === 0
+                      ? `${match.homeTeam} vs ${match.awayTeam}: ${c.prediction}`
+                      : `${c.read}: ${match.homeTeam} vs ${match.awayTeam}`}
                 </Link>
               </article>
             ))}

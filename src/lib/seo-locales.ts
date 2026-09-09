@@ -9,6 +9,17 @@ export function isIndexableLocalizedHubLocale(locale: SeoLocaleSlug) {
 }
 export type SeoLocale = "en" | SeoLocaleSlug;
 
+const matchPredictionTerms: Record<SeoLocale, string> = {
+  en: "prediction",
+  "pt-br": "palpite",
+  es: "pronóstico",
+  fr: "pronostic",
+  de: "Prognose",
+  it: "pronostico",
+  nl: "voorspelling",
+  tr: "tahmin",
+};
+
 type LocaleCopy = {
   htmlLang: string;
   displayName: string;
@@ -175,6 +186,15 @@ export const seoLocales: Record<SeoLocaleSlug, LocaleCopy> = {
     separator: "vs",
   },
 };
+
+export function matchPredictionAnchor(
+  homeTeam: string,
+  awayTeam: string,
+  locale: SeoLocale = "en"
+) {
+  const separator = locale === "en" ? "vs" : seoLocales[locale].separator;
+  return `${homeTeam} ${separator} ${awayTeam} ${matchPredictionTerms[locale]}`;
+}
 
 export function isSeoLocale(value: string): value is SeoLocaleSlug {
   return seoLocaleSlugs.includes(value as SeoLocaleSlug);

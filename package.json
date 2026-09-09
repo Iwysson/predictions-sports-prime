@@ -81,6 +81,7 @@
     "audit:temporal-intent": "node --import tsx scripts/audit-temporal-intent.mjs",
     "audit:intent-hubs": "node --import tsx scripts/audit-intent-hubs.mjs",
     "audit:intent-hub-html": "node scripts/audit-intent-hub-html.mjs",
+    "audit:match-anchor-links": "node --import tsx scripts/audit-match-anchor-links.mjs",
     "audit:match-acquisition": "node --import tsx scripts/audit-match-acquisition.mjs",
     "audit:league-prediction-engine": "node --import tsx scripts/audit-league-prediction-engine.mjs",
     "dry-run:search-intent-v2": "node --import tsx scripts/create-wave-2-title-dry-run.mjs",

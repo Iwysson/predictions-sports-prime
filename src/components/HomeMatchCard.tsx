@@ -5,8 +5,8 @@ import { HomeTeamBadge } from "@/components/HomeTeamBadge";
 import { leagues } from "@/data/leagues";
 import { canRenderComingSoon } from "@/lib/fixture-status";
 import { getMatchDisplayTime } from "@/lib/match-time";
-import { isFixtureLiveNow } from "@/lib/fixture-state";
-import { seoLocales, type SeoLocale } from "@/lib/seo-locales";
+import { isFixtureLiveNow, isFutureFixture } from "@/lib/fixture-state";
+import { matchPredictionAnchor, seoLocales, type SeoLocale } from "@/lib/seo-locales";
 import { localizedFixtureStatus, localizedLive } from "@/lib/localized-ui";
 
 export function HomeMatchCard({
@@ -30,6 +30,7 @@ export function HomeMatchCard({
   const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");
   const kickoff = getMatchDisplayTime(match, locale);
   const live = isFixtureLiveNow(match, now);
+  const future = isFutureFixture(match, now);
   const displayDate = match.date
     ? match.date.split("-").reverse().join("/")
     : "TBD";
@@ -62,7 +63,7 @@ export function HomeMatchCard({
         </span>
         {match.status === "published" ? (
           <Link href={href} className="button button--small" aria-label={`${match.homeTeam} ${locale === "en" ? "vs" : seoLocales[locale].separator} ${match.awayTeam} — ${predictionAvailableLabel}`}>
-            {viewLabel} <span aria-hidden="true">›</span>
+            {future ? matchPredictionAnchor(match.homeTeam, match.awayTeam, locale) : viewLabel} <span aria-hidden="true">›</span>
           </Link>
         ) : null}
       </div>

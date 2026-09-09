@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { Match } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
-import { localePath, type SeoLocale } from "@/lib/seo-locales";
+import { localePath, matchPredictionAnchor, type SeoLocale } from "@/lib/seo-locales";
+import { isFutureFixture } from "@/lib/fixture-state";
 
 const copy: Record<
   SeoLocale,
@@ -111,7 +112,7 @@ export function RelatedPredictions({
               data-quality-gated-match-link="true"
               aria-label={`${labels.read}: ${match.homeTeam} vs ${match.awayTeam}`}
             >
-              {labels.read} <span aria-hidden="true">›</span>
+              {isFutureFixture(match) ? matchPredictionAnchor(match.homeTeam, match.awayTeam, locale) : labels.read} <span aria-hidden="true">›</span>
             </Link>
           </article>
         ))}

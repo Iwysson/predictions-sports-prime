@@ -8,6 +8,8 @@ import { hydratePredictions } from "@/lib/live-predictions";
 import { getMatchDisplayTime } from "@/lib/match-time";
 import { leagues } from "@/data/leagues";
 import { intentHubDefinitions, intentHubJsonLd, intentHubLeagueLinks, selectIntentHubMatches, type IntentHubSlug } from "@/lib/intent-hubs";
+import { isFutureFixture } from "@/lib/fixture-state";
+import { matchPredictionAnchor } from "@/lib/seo-locales";
 
 export async function IntentHubPage({ slug }: { slug: IntentHubSlug }) {
   const hub = intentHubDefinitions[slug];
@@ -38,7 +40,9 @@ export async function IntentHubPage({ slug }: { slug: IntentHubSlug }) {
               <div className="intent-match-card__meta"><span><LeagueBadge slug={match.league} short={league?.short ?? "•"} size="sm" />{league?.name ?? match.league}</span><time dateTime={match.kickoffUtc ?? match.date}>{match.date} · {kickoff.display}</time></div>
               <div className="intent-match-card__fixture"><TeamBadge team={match.homeTeam} /><h3>{match.homeTeam} <span>vs</span> {match.awayTeam}</h3><TeamBadge team={match.awayTeam} /></div>
               <dl><div><dt>Main prediction</dt><dd>{match.mainPrediction}</dd></div>{match.odds != null ? <div><dt>Published odds</dt><dd>{match.odds.toFixed(2)}</dd></div> : null}</dl>
-              <Link className="button button--small" href={`/match/${match.slug}/`}>Read full analysis <span aria-hidden="true">›</span></Link>
+              <Link className="button button--small" href={`/match/${match.slug}/`}>
+                {isFutureFixture(match) ? matchPredictionAnchor(match.homeTeam, match.awayTeam) : "Read full analysis"} <span aria-hidden="true">›</span>
+              </Link>
             </article>;
           })}
         </div> : <div className="empty-state intent-hub-empty"><strong>No published predictions are available for this time window.</strong><p>The broader football hub remains available for later fixtures and complete pre-match analysis.</p><Link href="/football-predictions/">Browse current football predictions</Link></div>}
