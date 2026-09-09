@@ -275,6 +275,15 @@ async function syncLeague(league) {
         fixture.awayScore = saved.awayScore;
         fixture.id = saved.id;
         fixture.dataSource = saved.dataSource;
+        // Restoring an immutable final result also has to restore its fixture
+        // identity metadata. The season feed does not carry kickoffUtc, so a
+        // stale scheduled provider response previously produced a completed
+        // fixture with an ID but no UTC kickoff in the new snapshot.
+        fixture.date = saved.date;
+        fixture.time = saved.time;
+        fixture.kickoffUtc = saved.kickoffUtc;
+        fixture.timeConfirmed = saved.timeConfirmed;
+        fixture.sourceAgreement = saved.sourceAgreement;
       }
       if (fixture.status === "scheduled" && (saved?.status === "rescheduled" || dateChanged)) {
         fixture.status = "rescheduled";
@@ -292,6 +301,15 @@ async function syncLeague(league) {
     }
     if (validation.warnings.length > 0) {
       throw new PartialSourceError(`${league.name}: ${validation.warnings.join(" | ")}`);
+    }
+    const invalidSnapshotFixture = rounds.flatMap((round) => round.games).find((fixture) =>
+      !fixture.id || !fixture.kickoffUtc || !Number.isFinite(Date.parse(fixture.kickoffUtc))
+    );
+    if (invalidSnapshotFixture) {
+      throw new Error(
+        `${league.name}: incomplete normalized fixture ${invalidSnapshotFixture.homeTeam} vs ${invalidSnapshotFixture.awayTeam} ` +
+        `(id=${invalidSnapshotFixture.id ?? "missing"}, kickoffUtc=${invalidSnapshotFixture.kickoffUtc ?? "missing"})`
+      );
     }
     const linkedIds = new Set();
     for (const prediction of leaguePredictions) {
