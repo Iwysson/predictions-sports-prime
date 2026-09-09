@@ -16852,7 +16852,7 @@
     "761791": {
       "round": 1,
       "date": "2026-09-09",
-      "time": "19:30",
+      "time": "20:30",
       "homeTeam": "Houston Dynamo",
       "awayTeam": "Real Salt Lake",
       "homeScore": null,
@@ -16862,12 +16862,12 @@
       "id": "761791",
       "sourceAgreement": false,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-09-09T23:30:00.000Z"
+      "kickoffUtc": "2026-09-10T00:30:00.000Z"
     },
     "761792": {
       "round": 1,
       "date": "2026-09-09",
-      "time": "19:30",
+      "time": "20:30",
       "homeTeam": "Chicago Fire",
       "awayTeam": "Inter Miami",
       "homeScore": null,
@@ -16877,12 +16877,12 @@
       "id": "761792",
       "sourceAgreement": false,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-09-09T23:30:00.000Z"
+      "kickoffUtc": "2026-09-10T00:30:00.000Z"
     },
     "761793": {
       "round": 1,
       "date": "2026-09-09",
-      "time": "19:30",
+      "time": "20:30",
       "homeTeam": "Minnesota United",
       "awayTeam": "Dallas",
       "homeScore": null,
@@ -16892,12 +16892,12 @@
       "id": "761793",
       "sourceAgreement": false,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-09-09T23:30:00.000Z"
+      "kickoffUtc": "2026-09-10T00:30:00.000Z"
     },
     "761794": {
       "round": 1,
       "date": "2026-09-09",
-      "time": "19:30",
+      "time": "20:30",
       "homeTeam": "Austin",
       "awayTeam": "Colorado Rapids",
       "homeScore": null,
@@ -16907,12 +16907,12 @@
       "id": "761794",
       "sourceAgreement": false,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-09-09T23:30:00.000Z"
+      "kickoffUtc": "2026-09-10T00:30:00.000Z"
     },
     "761796": {
       "round": 1,
       "date": "2026-09-09",
-      "time": "19:30",
+      "time": "22:30",
       "homeTeam": "Portland Timbers",
       "awayTeam": "St. Louis CITY SC",
       "homeScore": null,
@@ -16922,12 +16922,12 @@
       "id": "761796",
       "sourceAgreement": false,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-09-09T23:30:00.000Z"
+      "kickoffUtc": "2026-09-10T02:30:00.000Z"
     },
     "761797": {
       "round": 1,
       "date": "2026-09-09",
-      "time": "19:30",
+      "time": "22:30",
       "homeTeam": "San Diego",
       "awayTeam": "San Jose Earthquakes",
       "homeScore": null,
@@ -16937,12 +16937,12 @@
       "id": "761797",
       "sourceAgreement": false,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-09-09T23:30:00.000Z"
+      "kickoffUtc": "2026-09-10T02:30:00.000Z"
     },
     "761799": {
       "round": 1,
       "date": "2026-09-09",
-      "time": "19:30",
+      "time": "22:30",
       "homeTeam": "Vancouver Whitecaps",
       "awayTeam": "LA Galaxy",
       "homeScore": null,
@@ -16952,7 +16952,7 @@
       "id": "761799",
       "sourceAgreement": false,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-09-09T23:30:00.000Z"
+      "kickoffUtc": "2026-09-10T02:30:00.000Z"
     },
     "401878399": {
       "round": 1,
@@ -17699,15 +17699,15 @@
     "manual:mls:los-angeles-fc-vs-new-york-red-bulls:2026-09-09": {
       "round": 1,
       "date": "2026-09-09",
-      "time": "19:30",
+      "time": "22:30",
       "homeTeam": "Los Angeles FC",
       "awayTeam": "New York Red Bulls",
       "homeScore": null,
       "awayScore": null,
       "status": "scheduled",
-      "dataSource": "editorial-manual",
+      "dataSource": "espn",
       "id": "manual:mls:los-angeles-fc-vs-new-york-red-bulls:2026-09-09",
-      "kickoffUtc": "2026-09-09T23:30:00.000Z",
+      "kickoffUtc": "2026-09-10T02:30:00.000Z",
       "timeConfirmed": true,
       "sourceAgreement": false
     },
