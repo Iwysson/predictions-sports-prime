@@ -258,6 +258,12 @@ export type Match = {
     source: string;
     capturedAt: string;
   };
+  historicalResolution?: {
+    status: "true-unresolved";
+    missingFact: string;
+    reason: string;
+    sourcesChecked: Array<{ name: string; url: string; checkedAt: string }>;
+  };
   publishedAt?: string;
   updatedAt?: string;
   freshness?: MatchFreshness;

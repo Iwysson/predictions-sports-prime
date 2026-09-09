@@ -12,6 +12,7 @@ export type SettlementPendingReason =
   | "MARKET_DATA_MISSING"
   | "EXECUTION_DATA_MISSING"
   | "TEAM_NOT_RESOLVED"
+  | "EVIDENCE_UNAVAILABLE"
   | "MANUAL_PENDING";
 
 export type ParsedPredictionLeg =
@@ -85,6 +86,9 @@ function parseLeg(source: string): ParsedPredictionLeg | null {
   const total = source.match(/^(Over|Under) (\d+(?:\.\d+)?) Goals$/i);
   if (total) return { kind: "total-goals", selection: total[1].toLowerCase() as "over" | "under", line: Number(total[2]), source };
 
+  const compactTotal = source.match(/^(Over|Under) (\d+(?:\.\d+)?)$/i);
+  if (compactTotal) return { kind: "total-goals", selection: compactTotal[1].toLowerCase() as "over" | "under", line: Number(compactTotal[2]), source };
+
   const btts = source.match(/^Both Teams to Score\s*[-\u2014]\s*(Yes|No)$/i);
   if (btts) return { kind: "btts", selection: btts[1].toLowerCase() as "yes" | "no", source };
 
@@ -102,6 +106,9 @@ function parseLeg(source: string): ParsedPredictionLeg | null {
 
   const handicap = source.match(/^(.+?) ([+-]\d+(?:\.\d+)?) (?:Asian )?Handicap$/i);
   if (handicap) return { kind: "handicap", team: handicap[1], line: Number(handicap[2]), source };
+
+  const compactHandicap = source.match(/^(.+?) ([+-]\d+(?:\.\d+)?)$/i);
+  if (compactHandicap) return { kind: "handicap", team: compactHandicap[1], line: Number(compactHandicap[2]), source };
 
   const win = source.match(/^(.+?) to Win$/i);
   if (win) return { kind: "win", team: win[1], source };
@@ -184,6 +191,14 @@ export function evaluatePredictionSettlement(match: MatchPreview): SettlementEva
     };
   }
   if (!match.mainPrediction) return { status: "pending", pendingReason: "PICK_MISSING", missingFields: [], ...parsed };
+  if (match.historicalResolution?.status === "true-unresolved") {
+    return {
+      status: "pending",
+      pendingReason: "EVIDENCE_UNAVAILABLE",
+      missingFields: [match.historicalResolution.missingFact],
+      ...parsed,
+    };
+  }
   if (!isCompletedFixture(match.fixtureStatus)) return { status: "pending", pendingReason: "NOT_COMPLETED", missingFields: [], ...parsed };
   if (!isValidFinalScore(match.homeScore, match.awayScore)) {
     return { status: "awaiting-data", pendingReason: "FINAL_SCORE_MISSING", missingFields: ["final score"], ...parsed };

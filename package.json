@@ -53,6 +53,7 @@
     "audit:supplied-10": "node scripts/audit-supplied-10-publication.mjs",
     "audit:supplied-15": "node scripts/audit-supplied-15-publication.mjs",
     "audit:prediction-history": "tsx scripts/audit-prediction-history.mjs",
+    "audit:historical-resolution": "node --import tsx scripts/audit-historical-resolution.mjs",
     "audit:render-consistency": "tsx scripts/audit-render-consistency.mjs",
     "audit:related-predictions": "tsx scripts/audit-related-predictions.ts",
     "audit:production-html": "node scripts/audit-production-html.mjs",
