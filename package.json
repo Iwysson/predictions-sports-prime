@@ -18,6 +18,7 @@
     "audit:search-intent-seo": "tsx scripts/audit-search-intent-seo.mjs",
     "audit:restricted-search-intent": "tsx scripts/audit-restricted-search-intent.mjs",
     "audit:match-seo-zeroes": "tsx scripts/audit-match-seo-zeroes.mjs",
+    "audit:snippet-privacy": "node --import tsx scripts/audit-snippet-privacy.mjs",
     "audit:match-freshness": "tsx scripts/audit-match-freshness.mjs",
     "audit:freshness-engine": "node --import tsx scripts/audit-freshness-engine.mjs",
     "audit:seo2-capabilities": "tsx scripts/audit-seo2-capabilities.mjs",

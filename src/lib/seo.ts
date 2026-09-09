@@ -41,24 +41,9 @@ export function matchSeoTitle(match: Match) {
 }
 
 export function matchSeoDescription(match: Match) {
-  if (isSeoFeatureEnabled("prediction-first-v2") && isMatchSearchIntentV2Eligible(match)) {
-    return buildMatchMetadataV2(match).description;
-  }
-  if (shouldApplySearchIntentSEO(match)) {
-    return buildMatchSearchIntentCopy(match).description;
-  }
   const league = leagues.find((item) => item.slug === match.league);
-  const teams = `${match.homeTeam} vs ${match.awayTeam}`;
   const competition = league?.name ?? "the competition";
-  const mainPick = match.predictions.find((item) => item.label === "Main Prediction")?.value ?? "our main pick";
-  const odds = match.predictions.find((item) => item.label === "Published Odds" || item.label === "Odds")?.value;
-  const oddsText = odds ? ` at odds of ${odds}` : "";
-  const dateText = match.date ? ` for ${match.date}` : "";
-  const description = `${teams} prediction and match analysis${dateText} in ${competition}. Our main pick is ${mainPick}${oddsText}, supported by the fixture context and available data.`;
-
-  if (description.length <= 160) return description;
-
-  return `${teams} prediction and match analysis in ${competition}. Main pick: ${mainPick}${oddsText}.`;
+  return `${match.homeTeam} vs ${match.awayTeam} prediction for ${competition}, with match analysis, supporting data, market context and the final pick.`;
 }
 
 export function matchIntroduction(match: Match) {

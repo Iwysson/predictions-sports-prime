@@ -27,6 +27,7 @@ import {
 } from "@/lib/seo-locales";
 import type { Match } from "@/types";
 import { getAdSenseIndexableSlugs } from "@/lib/adsense-content-quality";
+import { isFixtureHistoryEligible } from "@/lib/fixture-state";
 
 type LocalizedMatchPageContentProps = {
   match: Match;
@@ -188,6 +189,7 @@ export function LocalizedMatchPageContent({
     awayScore: match.awayScore,
   });
   const modifiedAt = materialMatchUpdatedAt(match);
+  const isHistorical = isFixtureHistoryEligible(match);
 
   return (
     <>
@@ -295,6 +297,7 @@ export function LocalizedMatchPageContent({
               <EditorialAnalysis
                 analysis={analysis}
                 format={analysisFormat}
+                hideSensitiveSnippets={!isHistorical}
               />
             </div>
 
@@ -319,7 +322,7 @@ export function LocalizedMatchPageContent({
               </div>
             </div>
 
-            <div className="main-prediction-block">
+            <div className="main-prediction-block" data-nosnippet={isHistorical ? undefined : ""}>
               <strong>{mainPrediction}</strong>
 
               {odds ? (

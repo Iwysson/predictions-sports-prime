@@ -215,7 +215,7 @@ export default async function MatchPage({
             </div>
 
             <div className="compact-analysis-copy">
-              <EditorialAnalysis analysis={match.analysis} format={match.analysisFormat} />
+              <EditorialAnalysis analysis={match.analysis} format={match.analysisFormat} hideSensitiveSnippets={!isHistorical} />
             </div>
 
             {match.comment ? (
@@ -244,7 +244,7 @@ export default async function MatchPage({
               </div>
             </div>
 
-            <div className="main-prediction-block">
+            <div className="main-prediction-block" data-nosnippet={isHistorical ? undefined : ""}>
               <strong>{mainPrediction?.value}</strong>
 
               {odds ? (

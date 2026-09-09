@@ -49,7 +49,7 @@ function stripStructuredStatisticalCore(markdown: string) {
   return output.join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
-function MarkdownAnalysis({ markdown }: { markdown: string }) {
+function MarkdownAnalysis({ markdown, hideSensitiveSnippets = false }: { markdown: string; hideSensitiveSnippets?: boolean }) {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   const blocks: ReactNode[] = [];
   let paragraph: string[] = [];
@@ -60,7 +60,8 @@ function MarkdownAnalysis({ markdown }: { markdown: string }) {
     if (text === "**Statistical Core**") {
       blocks.push(<h2 key={`block-${blocks.length}`}>{inlineMarkdown(text)}</h2>);
     } else {
-      blocks.push(<p key={`block-${blocks.length}`}>{inlineMarkdown(text)}</p>);
+      const sensitive = hideSensitiveSnippets && /\*\*(?:Final )?Prediction:\*\*|\*\*(?:Published )?Odds:\*\*/i.test(text);
+      blocks.push(<p key={`block-${blocks.length}`} data-nosnippet={sensitive ? "" : undefined}>{inlineMarkdown(text)}</p>);
     }
     paragraph = [];
   };
@@ -104,9 +105,9 @@ function MarkdownAnalysis({ markdown }: { markdown: string }) {
   return <>{blocks}</>;
 }
 
-export function EditorialAnalysis({ analysis, format }: { analysis: string[]; format?: "markdown" }) {
+export function EditorialAnalysis({ analysis, format, hideSensitiveSnippets = false }: { analysis: string[]; format?: "markdown"; hideSensitiveSnippets?: boolean }) {
   if (format === "markdown") {
-    return <MarkdownAnalysis markdown={stripStructuredStatisticalCore(analysis.join("\n\n"))} />;
+    return <MarkdownAnalysis markdown={stripStructuredStatisticalCore(analysis.join("\n\n"))} hideSensitiveSnippets={hideSensitiveSnippets} />;
   }
-  return <>{analysis.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</>;
+  return <>{analysis.map((paragraph, index) => <p key={index} data-nosnippet={hideSensitiveSnippets && /prediction|odds/i.test(paragraph) ? "" : undefined}>{paragraph}</p>)}</>;
 }
