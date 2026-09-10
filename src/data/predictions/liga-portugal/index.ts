@@ -3,6 +3,7 @@ import { ligaPortugalRound01 } from "./round-01";
 import { ligaPortugalRound02 } from "./round-02";
 import { ligaPortugalRound03 } from "./round-03";
 import { ligaPortugalRound05 } from "./round-05";
+import { ligaPortugalRound06 } from "./round-06";
 import { ligaPortugalWave27 } from "./round-06/wave-27";
 
 export const ligaPortugalPredictions = [
@@ -11,5 +12,6 @@ export const ligaPortugalPredictions = [
   ...ligaPortugalRound03,
   ...ligaPortugalRound04,
   ...ligaPortugalRound05,
+  ...ligaPortugalRound06,
   ...ligaPortugalWave27,
 ];

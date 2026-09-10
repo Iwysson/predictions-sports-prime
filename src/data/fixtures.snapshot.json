@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-10T06:33:14.307Z",
+  "generatedAt": "2026-09-10T07:20:00-03:00",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -15450,6 +15450,146 @@
             "fotmobMatchId": 5904735
           }
         ]
+      },
+      {
+        "round": 5,
+        "games": [
+          {
+            "round": 5,
+            "date": "2026-09-12",
+            "time": "20:00",
+            "homeTeam": "Alanyaspor",
+            "awayTeam": "Goztepe",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "tff",
+            "id": "official:super-lig:alanyaspor-vs-goztepe:2026-09-12",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-12T17:00:00.000Z"
+          },
+          {
+            "round": 5,
+            "date": "2026-09-13",
+            "time": "20:00",
+            "homeTeam": "Amedspor",
+            "awayTeam": "Basaksehir",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "tff",
+            "id": "official:super-lig:amedspor-vs-istanbul-basaksehir:2026-09-13",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-13T17:00:00.000Z"
+          },
+          {
+            "round": 5,
+            "date": "2026-09-11",
+            "time": "20:00",
+            "homeTeam": "Besiktas",
+            "awayTeam": "Erzurumspor",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "tff",
+            "id": "official:super-lig:besiktas-vs-erzurumspor:2026-09-11",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-11T17:00:00.000Z"
+          },
+          {
+            "round": 5,
+            "date": "2026-09-12",
+            "time": "17:00",
+            "homeTeam": "Eyupspor",
+            "awayTeam": "Rizespor",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "tff",
+            "id": "official:super-lig:eyupspor-vs-caykur-rizespor:2026-09-12",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-12T14:00:00.000Z"
+          },
+          {
+            "round": 5,
+            "date": "2026-09-13",
+            "time": "20:00",
+            "homeTeam": "Galatasaray",
+            "awayTeam": "Kocaelispor",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "tff",
+            "id": "official:super-lig:galatasaray-vs-kocaelispor:2026-09-13",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-13T17:00:00.000Z"
+          },
+          {
+            "round": 5,
+            "date": "2026-09-14",
+            "time": "20:00",
+            "homeTeam": "Gaziantep FK",
+            "awayTeam": "Fenerbahce",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "tff",
+            "id": "official:super-lig:gaziantep-fk-vs-fenerbahce:2026-09-14",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-14T17:00:00.000Z"
+          },
+          {
+            "round": 5,
+            "date": "2026-09-13",
+            "time": "17:00",
+            "homeTeam": "Genclerbirligi",
+            "awayTeam": "Kasimpasa",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "tff",
+            "id": "official:super-lig:genclerbirligi-vs-kasimpasa:2026-09-13",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-13T14:00:00.000Z"
+          },
+          {
+            "round": 5,
+            "date": "2026-09-12",
+            "time": "20:00",
+            "homeTeam": "Konyaspor",
+            "awayTeam": "Trabzonspor",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "tff",
+            "id": "official:super-lig:konyaspor-vs-trabzonspor:2026-09-12",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-12T17:00:00.000Z"
+          },
+          {
+            "round": 5,
+            "date": "2026-09-12",
+            "time": "17:00",
+            "homeTeam": "Samsunspor",
+            "awayTeam": "Corum FK",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "tff",
+            "id": "official:super-lig:samsunspor-vs-corum-fk:2026-09-12",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-09-12T14:00:00.000Z"
+          }
+        ]
       }
     ],
     "scottish-premiership": [
@@ -16617,7 +16757,16 @@
     "super-lig:kocaelispor-vs-samsunspor": "401888300",
     "super-lig:konyaspor-vs-kocaelispor": "official:super-lig:konyaspor-vs-kocaelispor:2026-08-29",
     "super-lig:samsunspor-vs-fenerbahce": "official:super-lig:samsunspor-vs-fenerbahce:2026-08-30",
-    "super-lig:trabzonspor-vs-genclerbirligi": "401888305"
+    "super-lig:trabzonspor-vs-genclerbirligi": "401888305",
+    "super-lig:alanyaspor-vs-goztepe": "official:super-lig:alanyaspor-vs-goztepe:2026-09-12",
+    "super-lig:amedspor-vs-istanbul-basaksehir": "official:super-lig:amedspor-vs-istanbul-basaksehir:2026-09-13",
+    "super-lig:besiktas-vs-erzurumspor": "official:super-lig:besiktas-vs-erzurumspor:2026-09-11",
+    "super-lig:eyupspor-vs-caykur-rizespor": "official:super-lig:eyupspor-vs-caykur-rizespor:2026-09-12",
+    "super-lig:galatasaray-vs-kocaelispor": "official:super-lig:galatasaray-vs-kocaelispor:2026-09-13",
+    "super-lig:gaziantep-fk-vs-fenerbahce": "official:super-lig:gaziantep-fk-vs-fenerbahce:2026-09-14",
+    "super-lig:genclerbirligi-vs-kasimpasa": "official:super-lig:genclerbirligi-vs-kasimpasa:2026-09-13",
+    "super-lig:konyaspor-vs-trabzonspor": "official:super-lig:konyaspor-vs-trabzonspor:2026-09-12",
+    "super-lig:samsunspor-vs-corum-fk": "official:super-lig:samsunspor-vs-corum-fk:2026-09-12"
   },
   "leagueUpdatedAt": {
     "premier-league": "2026-09-10T06:33:14.307Z",
@@ -16631,7 +16780,7 @@
     "copa-do-brasil": "2026-08-30T10:44:40.959Z",
     "efl-cup": "2026-09-06T23:06:46.930Z",
     "championship": "2026-09-09T11:26:01-03:00",
-    "super-lig": "2026-08-26T11:54:38.899Z",
+    "super-lig": "2026-09-10T07:20:00-03:00",
     "scottish-premiership": "2026-09-06T23:06:46.930Z",
     "eliteserien": "2026-09-09T09:28:45.447Z",
     "mls": "2026-09-06T23:06:46.930Z",
