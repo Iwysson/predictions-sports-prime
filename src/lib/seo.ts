@@ -97,6 +97,7 @@ export function buildMatchMetadata(match: Match): Metadata {
     match.slug,
     editorialPredictions
   );
+  const modifiedAt = materialMatchUpdatedAt(match);
 
   return {
     title: {
@@ -145,6 +146,8 @@ export function buildMatchMetadata(match: Match): Metadata {
       description,
       url: canonical,
       siteName: siteConfig.name,
+      ...(match.publishedAt ? { publishedTime: match.publishedAt } : {}),
+      ...(modifiedAt ? { modifiedTime: modifiedAt } : {}),
       images: [
         {
           url: absoluteUrl("/og-default.png"),

@@ -545,13 +545,18 @@ snapshot.predictionIds = Object.fromEntries(
 
 const missingPredictionKeys = automaticPredictionKeys
   .filter((key) => !snapshot.predictionIds[key]);
+const producedAutomaticPredictionLinks = automaticPredictionKeys.length - missingPredictionKeys.length;
 
 if (missingPredictionKeys.length > 0) {
   throw new Error(
-    `Expected ${automaticPredictions.length} automatic prediction links, produced ${Object.keys(snapshot.predictionIds).length}. ` +
+    `Expected ${automaticPredictions.length} automatic prediction links, produced ${producedAutomaticPredictionLinks}. ` +
     `Missing: ${missingPredictionKeys.join(", ")}.`
   );
 }
+
+console.log(
+  `Automatic prediction links: ${automaticPredictions.length} expected, ${producedAutomaticPredictionLinks} produced; missing links: 0`
+);
 
 // Frequent polling is important around full time, but generatedAt alone must
 // not trigger a commit and deployment every 15 minutes. Persist immediately

@@ -285,7 +285,7 @@ export function normalizeTeamKey(name: string) {
     racingsantander: "racingsantander",
     levanteud: "levante",
     clubatleticomadrid: "atleticomadrid",
-    athleticbilbao: "athleticclub",
+    athleticbilbao: "athletic",
     bayernmunchen: "bayernmunich",
     bodglimt: "bodoglimt",
     bodoglimt: "bodoglimt",

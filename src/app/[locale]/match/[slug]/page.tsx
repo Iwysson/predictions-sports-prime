@@ -99,6 +99,12 @@ export async function generateMetadata({
     return { robots: { index: false, follow: false } };
   }
 
+  const modifiedAt = materialMatchUpdatedAt(match);
+  const articleTimes = {
+    ...(match.publishedAt ? { publishedTime: match.publishedAt } : {}),
+    ...(modifiedAt ? { modifiedTime: modifiedAt } : {}),
+  };
+
   if (!legacy) {
     const copy = seoLocales[locale];
     const league = leaguesBySlug[match.league];
@@ -119,6 +125,7 @@ export async function generateMetadata({
       robots: { index: false, follow: true },
       openGraph: {
         type: "article",
+        ...articleTimes,
         title,
         description,
         url: absoluteUrl(localePath(locale, path)),
@@ -154,6 +161,7 @@ export async function generateMetadata({
       robots: { index: false, follow: true },
       openGraph: {
         type: "article",
+        ...articleTimes,
         title,
         description,
         url: absoluteUrl(localePath(locale, path)),
@@ -193,6 +201,7 @@ export async function generateMetadata({
     robots: { index: true, follow: true },
     openGraph: {
       type: "article",
+      ...articleTimes,
       title,
       description,
       url: absoluteUrl(localePath(locale, `/match/${slug}/`)),
