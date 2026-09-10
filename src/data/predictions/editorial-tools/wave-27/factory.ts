@@ -17,10 +17,27 @@ export type PublishableGapInput = {
   evidence: string;
   tactical: string;
   liveEntry?: boolean;
+  latestObservedOdds?: number;
+  selectionChanged?: boolean;
+  refreshedAt?: string;
+  teamNews?: string;
+  projectedLineups?: string;
+  refreshSources?: Array<{ name: string; url: string; description: string }>;
 };
+
+function structuredProjectedLineups(value?: string) {
+  if (!value) return undefined;
+  const teams = [...value.matchAll(/\*\*PROJECTED [^:]+:\*\*\s*([^*]+?)(?=\s*\*\*PROJECTED|\s*These are)/g)]
+    .map((match) => match[1].replace(/\.$/, "").split(/[;,]/).map((player) => player.trim()).filter(Boolean));
+  return teams.length === 2 && teams.every((players) => players.length === 11)
+    ? { home: { players: teams[0] }, away: { players: teams[1] } }
+    : undefined;
+}
 
 export function publishableWithGaps(input: PublishableGapInput): EditorialPrediction {
   const probability = (100 / input.odds).toFixed(1);
+  const latestProbability = input.latestObservedOdds === undefined ? undefined : (100 / input.latestObservedOdds).toFixed(1);
+  const expectedLineups = structuredProjectedLineups(input.projectedLineups);
   const fixtureDetails = [
     `**Competition:** ${input.competition}`,
     `**Date:** ${input.date}`,
@@ -41,15 +58,15 @@ export function publishableWithGaps(input: PublishableGapInput): EditorialPredic
 
 ${fixtureDetails}
 
-The fixture identity, teams, competition and schedule were checked against ${input.sourceName}. ${input.evidence} The original editorial selection and price are retained exactly; neither has been adjusted to fit the evidence available after the initial market capture.
+The fixture identity, teams, competition and schedule were checked against ${input.sourceName}. ${input.evidence} ${input.selectionChanged ? "The main selection was expressly updated by the editor while the fixture remained pre-match; the original published price remains preserved separately from the new selection's latest observed price." : "The original editorial selection and price are retained exactly; neither has been adjusted to fit the evidence available after the initial market capture."}
 
 ### Team News and Availability
 
-No sufficiently reliable current team-availability report was found for ${input.home} vs ${input.away} at the time of publication. That means this preview does not claim that either squad is complete, and it does not infer injuries, suspensions, doubts or returns from silence. Confirmed club communications and the official teamsheet should take priority if they appear closer to kick-off.
+${input.teamNews ? `${input.teamNews} Eligibility and suspension status were checked against the cited matchday source; an omission is not treated as proof of availability.` : `No sufficiently reliable current team-availability report was found for ${input.home} vs ${input.away} at the time of publication. That means this preview does not claim that either squad is complete, and it does not infer injuries, suspensions, doubts or returns from silence. Confirmed club communications and the official teamsheet should take priority if they appear closer to kick-off.`}
 
 ### Projected Lineups
 
-Projected lineup was not available for ${input.home} or ${input.away} from the sources consulted at the time of publication. No eleven, formation or individual availability status has been reconstructed from an older match. This gap matters because personnel can change the pressing height, width, set-piece roles and defensive matchups, so confidence must remain lower than it would be with current team-specific reporting.
+${input.projectedLineups ?? `Projected lineup was not available for ${input.home} or ${input.away} from the sources consulted at the time of publication. No eleven, formation or individual availability status has been reconstructed from an older match. This gap matters because personnel can change the pressing height, width, set-piece roles and defensive matchups, so confidence must remain lower than it would be with current team-specific reporting.`}
 
 ### Independent Match Analysis
 
@@ -77,13 +94,13 @@ Game state can overturn the pre-match shape of ${input.home} vs ${input.away} qu
 
 ### Odds, Implied Probability and Value
 
-The published decimal price is **${input.odds.toFixed(2)}**. Raw implied probability is calculated as 1 / decimal odds, so 1 / ${input.odds.toFixed(2)} = **${probability}% raw implied probability** before bookmaker margin. The price is an editor-supplied publication record; no bookmaker name or later market movement has been invented.
+The published decimal price is **${input.odds.toFixed(2)}**. Raw implied probability is calculated as 1 / decimal odds, so 1 / ${input.odds.toFixed(2)} = **${probability}% raw implied probability** before bookmaker margin. ${input.latestObservedOdds === undefined ? "The price is an editor-supplied publication record; no bookmaker name or later market movement has been invented." : `The price is an editor-supplied publication record and no bookmaker name has been invented. The latest editor-attested pre-match price is **${input.latestObservedOdds.toFixed(2)}**, equivalent to **${latestProbability}% raw implied probability**. It is kept separate from the immutable opening publication price.`}
 
-For ${input.home} vs ${input.away}, that threshold is not the same as historical frequency or editorial confidence. With venue-split metrics, lineups and current team news unavailable, there is not enough evidence to publish a numerical fair price. The value assessment is therefore conditional: the market may be attractive only if the expected game state develops in the direction described above, while the missing inputs materially widen uncertainty.${liveNote}
+For ${input.home} vs ${input.away}, that threshold is not the same as historical frequency or editorial confidence. ${input.teamNews || input.projectedLineups ? "Even with current availability reporting, the missing venue-split metrics leave insufficient evidence to publish a numerical fair price." : "With venue-split metrics, lineups and current team news unavailable, there is not enough evidence to publish a numerical fair price."} The value assessment is therefore conditional: the market may be attractive only if the expected game state develops in the direction described above, while the missing inputs materially widen uncertainty.${liveNote}
 
 ### Conclusion
 
-${input.home} vs ${input.away} is published with a verified fixture reference, the preserved selection and transparent evidence gaps. The available material supports a reasoned pre-match discussion, but not a fabricated full Statistical Core, projected lineup or availability list. Readers should recheck official fixture and team information near kick-off and treat the quoted price as the original publication snapshot.
+${input.home} vs ${input.away} is published with a verified fixture reference, ${input.selectionChanged ? "the editor-authorized updated selection" : "the preserved selection"} and transparent evidence gaps. ${input.teamNews || input.projectedLineups ? "The available material supports a reasoned pre-match discussion and sourced projected personnel context, but not a fabricated full Statistical Core or confirmed teamsheet." : "The available material supports a reasoned pre-match discussion, but not a fabricated full Statistical Core, projected lineup or availability list."} Readers should recheck official fixture and team information near kick-off and treat the quoted price as the original publication snapshot.
 
 **Prediction:** ${input.pick}  
 **Odds:** ${input.odds.toFixed(2)}`;
@@ -100,22 +117,36 @@ ${input.home} vs ${input.away} is published with a verified fixture reference, t
     picks: {
       main: input.pick,
       publishedOdds: input.odds,
+      ...(input.latestObservedOdds === undefined ? {} : { latestObservedOdds: input.latestObservedOdds }),
       oddsProvenance: {
-        source: "Editor-supplied Wave 2.7 publication record",
+        source: input.latestObservedOdds === undefined ? "Editor-supplied Wave 2.7 publication record" : "Editor-attested pre-match refresh on 2026-09-10",
         provenance: "author_attested",
+        ...(input.latestObservedOdds === undefined || !input.refreshedAt ? {} : { capturedAt: input.refreshedAt }),
         market: input.pick,
       },
     },
     published: true,
     publishedAt: "2026-09-07T18:30:00-03:00",
-    updatedAt: "2026-09-07T18:30:00-03:00",
+    updatedAt: input.refreshedAt ?? "2026-09-07T18:30:00-03:00",
+    ...(input.refreshedAt ? { freshness: { editorialUpdatedAt: input.refreshedAt, teamNewsUpdatedAt: input.refreshedAt, lineupUpdatedAt: input.refreshedAt, statisticsUpdatedAt: input.refreshedAt } } : {}),
     sourceStatus: "partial",
     sources: [{
       name: input.sourceName,
       url: input.sourceUrl,
       description: "Fixture identity and schedule reference; optional editorial fields are disclosed when unavailable.",
-      accessedAt: "2026-09-07T18:30:00-03:00",
-    }],
+      accessedAt: input.refreshedAt ?? "2026-09-07T18:30:00-03:00",
+    }, ...(input.refreshSources ?? []).map((source) => ({ ...source, accessedAt: input.refreshedAt }))],
+    ...(expectedLineups && input.refreshedAt && input.refreshSources?.length ? {
+      matchSeo: {
+        lineups: {
+          status: "expected" as const,
+          home: expectedLineups.home,
+          away: expectedLineups.away,
+          sources: input.refreshSources.map((source) => ({ name: source.name, url: source.url, accessedAt: input.refreshedAt })),
+          updatedAt: input.refreshedAt,
+        },
+      },
+    } : {}),
     matchInfo: {
       date: input.date,
       time: input.time,

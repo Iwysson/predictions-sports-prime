@@ -5,13 +5,12 @@ import { matches } from "../src/data/matches.ts";
 import { fixtureKickoffMillis, isFixtureHistoryEligible } from "../src/lib/fixture-state.ts";
 
 const root = process.cwd();
-const selected = [
-  "palmeiras-vs-ldu-quito",
-  "palmeiras-vs-sao-paulo",
-  "chelsea-vs-hull-city",
-  "fc-twente-vs-ado-den-haag",
-  "botafogo-vs-red-bull-bragantino",
-  "aston-villa-vs-nottingham-forest",
+const representativeMarkets = [
+  { name: "standard handicap", matches: (pick) => /\s[+-]\d+(?:\.\d+)?$/i.test(pick) && !/asian handicap/i.test(pick) },
+  { name: "Asian Handicap", matches: (pick) => /asian handicap/i.test(pick) },
+  { name: "win", matches: (pick) => /\bto win\b/i.test(pick) },
+  { name: "goals total", matches: (pick) => /^(?:over|under)\s+\d+(?:\.\d+)?\s+goals?$/i.test(pick) },
+  { name: "combined market", matches: (pick) => /\+/.test(pick) },
 ];
 
 const future = matches.filter((match) => {
@@ -35,5 +34,12 @@ for (const match of future) {
   checked += 1;
 }
 
-for (const slug of selected) assert(future.some((match) => match.slug === slug), `${slug}: requested representative fixture is not future`);
-console.log(`Snippet privacy audit: PASS (${checked} future match pages; ${selected.length} representative selections present).`);
+const representatives = representativeMarkets.map(({ name, matches: matchesMarket }) => {
+  const match = future.find((candidate) => {
+    const pick = candidate.predictions.find((item) => item.label === "Main Prediction")?.value ?? "";
+    return matchesMarket(pick);
+  });
+  assert(match, `${name}: no compatible future representative fixture found`);
+  return match.slug;
+});
+console.log(`Snippet privacy audit: PASS (${checked} future match pages; dynamic representatives: ${representatives.join(", ")}).`);
