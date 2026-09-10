@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-10T11:55:16.781Z",
+  "generatedAt": "2026-09-10T15:10:49.763Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -2258,17 +2258,17 @@
           {
             "round": 1,
             "date": "2026-08-19",
-            "time": "21:00",
+            "time": "16:00",
             "homeTeam": "Atlético Madrid",
             "awayTeam": "Málaga",
             "homeScore": 2,
             "awayScore": 0,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401882925",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-19T19:00Z"
+            "kickoffUtc": "2026-08-19T19:00:00Z"
           },
           {
             "round": 1,
@@ -2338,122 +2338,122 @@
           {
             "round": 2,
             "date": "2026-08-20",
-            "time": "21:00",
+            "time": "16:00",
             "homeTeam": "Rayo Vallecano",
-            "awayTeam": "Alavés",
+            "awayTeam": "Deportivo Alavés",
             "homeScore": 1,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401882908",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-20T19:00Z"
+            "kickoffUtc": "2026-08-20T19:00:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-21",
-            "time": "21:00",
+            "time": "16:00",
             "homeTeam": "Real Betis",
             "awayTeam": "Real Sociedad",
             "homeScore": 1,
             "awayScore": 0,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401882914",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-21T19:00Z"
+            "kickoffUtc": "2026-08-21T19:00:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-22",
-            "time": "17:00",
-            "homeTeam": "Athletic Club",
+            "time": "12:00",
+            "homeTeam": "Athletic Bilbao",
             "awayTeam": "Sevilla",
             "homeScore": 1,
             "awayScore": 3,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401882916",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-22T15:00Z"
+            "kickoffUtc": "2026-08-22T15:00:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-22",
-            "time": "19:30",
+            "time": "14:30",
             "homeTeam": "Valencia",
             "awayTeam": "Celta Vigo",
             "homeScore": 0,
             "awayScore": 0,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401882907",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-22T17:30Z"
+            "kickoffUtc": "2026-08-22T17:30:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-22",
-            "time": "21:30",
+            "time": "16:30",
             "homeTeam": "Espanyol",
             "awayTeam": "Real Madrid",
             "homeScore": 1,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401882912",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-22T19:30Z"
+            "kickoffUtc": "2026-08-22T19:30:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-23",
-            "time": "17:00",
+            "time": "12:00",
             "homeTeam": "Atlético Madrid",
             "awayTeam": "Villarreal",
             "homeScore": 2,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401882915",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-23T15:00Z"
+            "kickoffUtc": "2026-08-23T15:00:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-23",
-            "time": "19:30",
+            "time": "14:30",
             "homeTeam": "Getafe",
-            "awayTeam": "Racing Santander",
+            "awayTeam": "Racing de Santander",
             "homeScore": 1,
             "awayScore": 0,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401882911",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-23T17:30Z"
+            "kickoffUtc": "2026-08-23T17:30:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-23",
-            "time": "21:30",
+            "time": "16:30",
             "homeTeam": "Elche",
             "awayTeam": "Barcelona",
             "homeScore": 0,
             "awayScore": 5,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401882913",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-23T19:30Z"
+            "kickoffUtc": "2026-08-23T19:30:00Z"
           },
           {
             "round": 2,
@@ -4570,32 +4570,32 @@
           {
             "round": 1,
             "date": "2026-08-29",
-            "time": "10:30",
-            "homeTeam": "Elversberg",
+            "time": "TBD",
+            "homeTeam": "SV Elversberg",
             "awayTeam": "Bayer Leverkusen",
             "homeScore": 3,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401884809",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-29T13:30:00Z"
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2026-08-29T13:30Z"
           },
           {
             "round": 1,
             "date": "2026-08-29",
-            "time": "10:30",
-            "homeTeam": "Köln",
-            "awayTeam": "Hoffenheim",
+            "time": "TBD",
+            "homeTeam": "Cologne",
+            "awayTeam": "TSG Hoffenheim",
             "homeScore": 3,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401884810",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-29T13:30:00Z"
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2026-08-29T13:30Z"
           },
           {
             "round": 1,
@@ -4615,32 +4615,32 @@
           {
             "round": 1,
             "date": "2026-08-30",
-            "time": "10:30",
-            "homeTeam": "Freiburg",
+            "time": "15:30",
+            "homeTeam": "SC Freiburg",
             "awayTeam": "Werder Bremen",
             "homeScore": 4,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401884814",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-30T13:30:00Z"
+            "kickoffUtc": "2026-08-30T13:30Z"
           },
           {
             "round": 1,
             "date": "2026-08-30",
-            "time": "12:30",
+            "time": "17:30",
             "homeTeam": "Augsburg",
             "awayTeam": "Schalke 04",
             "homeScore": 3,
             "awayScore": 0,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401884813",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-30T15:30:00Z"
+            "kickoffUtc": "2026-08-30T15:30Z"
           }
         ]
       },
@@ -4650,77 +4650,77 @@
           {
             "round": 2,
             "date": "2026-09-04",
-            "time": "15:30",
-            "homeTeam": "Stuttgart",
-            "awayTeam": "Köln",
+            "time": "20:30",
+            "homeTeam": "VfB Stuttgart",
+            "awayTeam": "Cologne",
             "homeScore": 4,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401884808",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-04T18:30:00Z"
+            "kickoffUtc": "2026-09-04T18:30Z"
           },
           {
             "round": 2,
             "date": "2026-09-05",
-            "time": "10:30",
+            "time": "15:30",
             "homeTeam": "Werder Bremen",
             "awayTeam": "RB Leipzig",
             "homeScore": 3,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401884802",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-05T13:30:00Z"
+            "kickoffUtc": "2026-09-05T13:30Z"
           },
           {
             "round": 2,
             "date": "2026-09-05",
-            "time": "10:30",
-            "homeTeam": "Hoffenheim",
+            "time": "TBD",
+            "homeTeam": "TSG Hoffenheim",
             "awayTeam": "Borussia Dortmund",
             "homeScore": 2,
             "awayScore": 3,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401884807",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-05T13:30:00Z"
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2026-09-05T13:30Z"
           },
           {
             "round": 2,
             "date": "2026-09-05",
-            "time": "10:30",
+            "time": "TBD",
             "homeTeam": "Bayer Leverkusen",
-            "awayTeam": "Union Berlin",
+            "awayTeam": "1. FC Union Berlin",
             "homeScore": 4,
             "awayScore": 0,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401884806",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-05T13:30:00Z"
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2026-09-05T13:30Z"
           },
           {
             "round": 2,
             "date": "2026-09-05",
-            "time": "10:30",
+            "time": "TBD",
             "homeTeam": "Borussia Mönchengladbach",
-            "awayTeam": "Elversberg",
+            "awayTeam": "SV Elversberg",
             "homeScore": 3,
             "awayScore": 4,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401884804",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-05T13:30:00Z"
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2026-09-05T13:30Z"
           },
           {
             "round": 2,
@@ -4740,17 +4740,17 @@
           {
             "round": 2,
             "date": "2026-09-05",
-            "time": "13:30",
+            "time": "18:30",
             "homeTeam": "Schalke 04",
             "awayTeam": "Bayern Munich",
             "homeScore": 0,
             "awayScore": 0,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401884801",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-05T16:30:00Z"
+            "kickoffUtc": "2026-09-05T16:30Z"
           },
           {
             "round": 2,
@@ -5080,7 +5080,7 @@
             "id": "401884776",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-10T13:30Z"
           },
           {
             "round": 5,
@@ -5095,22 +5095,22 @@
             "id": "401884773",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-10T13:30Z"
           },
           {
             "round": 5,
-            "date": "2026-10-10",
+            "date": "2026-10-11",
             "time": "TBD",
             "homeTeam": "Cologne",
             "awayTeam": "Borussia Mönchengladbach",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884774",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-11T13:30Z"
           },
           {
             "round": 5,
@@ -5125,22 +5125,22 @@
             "id": "401884780",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-10T16:30Z"
           },
           {
             "round": 5,
-            "date": "2026-10-10",
+            "date": "2026-10-11",
             "time": "TBD",
             "homeTeam": "SC Freiburg",
             "awayTeam": "Schalke 04",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884778",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-11T15:30Z"
           },
           {
             "round": 5,
@@ -5155,7 +5155,7 @@
             "id": "401884775",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-10T13:30Z"
           },
           {
             "round": 5,
@@ -5170,7 +5170,7 @@
             "id": "401884779",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-10T13:30Z"
           },
           {
             "round": 5,
@@ -5185,22 +5185,22 @@
             "id": "401884777",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-10T13:30Z"
           },
           {
             "round": 5,
-            "date": "2026-10-10",
+            "date": "2026-10-09",
             "time": "TBD",
             "homeTeam": "Borussia Dortmund",
             "awayTeam": "Werder Bremen",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884781",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T18:00Z"
+            "kickoffUtc": "2026-10-09T18:30Z"
           }
         ]
       },
@@ -5220,7 +5220,7 @@
             "id": "401884769",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T13:30Z"
           },
           {
             "round": 6,
@@ -5235,7 +5235,7 @@
             "id": "401884767",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T13:30Z"
           },
           {
             "round": 6,
@@ -5250,7 +5250,7 @@
             "id": "401884766",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T13:30Z"
           },
           {
             "round": 6,
@@ -5265,7 +5265,7 @@
             "id": "401884764",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T13:30Z"
           },
           {
             "round": 6,
@@ -5280,52 +5280,52 @@
             "id": "401884772",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T16:30Z"
           },
           {
             "round": 6,
-            "date": "2026-10-17",
+            "date": "2026-10-18",
             "time": "TBD",
             "homeTeam": "Borussia Mönchengladbach",
             "awayTeam": "TSG Hoffenheim",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884768",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-18T15:30Z"
           },
           {
             "round": 6,
-            "date": "2026-10-17",
+            "date": "2026-10-18",
             "time": "TBD",
             "homeTeam": "Bayer Leverkusen",
             "awayTeam": "SC Freiburg",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884771",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-18T13:30Z"
           },
           {
             "round": 6,
-            "date": "2026-10-17",
+            "date": "2026-10-16",
             "time": "TBD",
             "homeTeam": "Eintracht Frankfurt",
             "awayTeam": "Cologne",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884770",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-16T18:30Z"
           },
           {
             "round": 6,
@@ -5340,7 +5340,7 @@
             "id": "401884765",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T13:30Z"
           }
         ]
       },
@@ -5360,7 +5360,7 @@
             "id": "401884757",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-24T13:30Z"
           },
           {
             "round": 7,
@@ -5375,7 +5375,7 @@
             "id": "401884756",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-24T13:30Z"
           },
           {
             "round": 7,
@@ -5390,22 +5390,22 @@
             "id": "401884762",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-24T13:30Z"
           },
           {
             "round": 7,
-            "date": "2026-10-24",
+            "date": "2026-10-23",
             "time": "TBD",
             "homeTeam": "VfB Stuttgart",
             "awayTeam": "Borussia Mönchengladbach",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884761",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-23T18:30Z"
           },
           {
             "round": 7,
@@ -5420,37 +5420,37 @@
             "id": "401884755",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-24T13:30Z"
           },
           {
             "round": 7,
-            "date": "2026-10-24",
+            "date": "2026-10-25",
             "time": "TBD",
             "homeTeam": "TSG Hoffenheim",
             "awayTeam": "Bayer Leverkusen",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884760",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-25T14:30Z"
           },
           {
             "round": 7,
-            "date": "2026-10-24",
+            "date": "2026-10-25",
             "time": "TBD",
             "homeTeam": "SC Freiburg",
             "awayTeam": "Bayern Munich",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884759",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-25T16:30Z"
           },
           {
             "round": 7,
@@ -5465,7 +5465,7 @@
             "id": "401884763",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-24T16:30Z"
           },
           {
             "round": 7,
@@ -5480,7 +5480,7 @@
             "id": "401884758",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-24T18:00Z"
+            "kickoffUtc": "2026-10-24T13:30Z"
           }
         ]
       },
@@ -5500,7 +5500,7 @@
             "id": "401884749",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-31T18:00Z"
+            "kickoffUtc": "2026-10-31T14:30Z"
           },
           {
             "round": 8,
@@ -5515,22 +5515,22 @@
             "id": "401884747",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-31T18:00Z"
+            "kickoffUtc": "2026-10-31T14:30Z"
           },
           {
             "round": 8,
-            "date": "2026-10-31",
+            "date": "2026-11-01",
             "time": "TBD",
             "homeTeam": "1. FC Union Berlin",
             "awayTeam": "Cologne",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884750",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-31T18:00Z"
+            "kickoffUtc": "2026-11-01T14:30Z"
           },
           {
             "round": 8,
@@ -5545,7 +5545,7 @@
             "id": "401884751",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-31T18:00Z"
+            "kickoffUtc": "2026-10-31T14:30Z"
           },
           {
             "round": 8,
@@ -5560,22 +5560,22 @@
             "id": "401884748",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-31T18:00Z"
+            "kickoffUtc": "2026-10-31T14:30Z"
           },
           {
             "round": 8,
-            "date": "2026-10-31",
+            "date": "2026-11-01",
             "time": "TBD",
             "homeTeam": "Eintracht Frankfurt",
             "awayTeam": "Hamburg SV",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884752",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-31T18:00Z"
+            "kickoffUtc": "2026-11-01T16:30Z"
           },
           {
             "round": 8,
@@ -5590,22 +5590,22 @@
             "id": "401884754",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-31T18:00Z"
+            "kickoffUtc": "2026-10-31T17:30Z"
           },
           {
             "round": 8,
-            "date": "2026-10-31",
+            "date": "2026-10-30",
             "time": "TBD",
             "homeTeam": "SV Elversberg",
             "awayTeam": "Mainz",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884746",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-31T18:00Z"
+            "kickoffUtc": "2026-10-30T19:30Z"
           },
           {
             "round": 8,
@@ -5620,7 +5620,7 @@
             "id": "401884753",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-31T18:00Z"
+            "kickoffUtc": "2026-10-31T14:30Z"
           }
         ]
       },
@@ -5640,7 +5640,7 @@
             "id": "401884744",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-07T20:00Z"
+            "kickoffUtc": "2026-11-07T14:30Z"
           },
           {
             "round": 9,
@@ -5655,7 +5655,7 @@
             "id": "401884743",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-07T20:00Z"
+            "kickoffUtc": "2026-11-07T17:30Z"
           },
           {
             "round": 9,
@@ -5670,7 +5670,7 @@
             "id": "401884745",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-07T20:00Z"
+            "kickoffUtc": "2026-11-07T14:30Z"
           },
           {
             "round": 9,
@@ -5685,22 +5685,22 @@
             "id": "401884740",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-07T20:00Z"
+            "kickoffUtc": "2026-11-07T14:30Z"
           },
           {
             "round": 9,
-            "date": "2026-11-07",
+            "date": "2026-11-06",
             "time": "TBD",
             "homeTeam": "Hamburg SV",
             "awayTeam": "Borussia Mönchengladbach",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884739",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-07T20:00Z"
+            "kickoffUtc": "2026-11-06T19:30Z"
           },
           {
             "round": 9,
@@ -5715,52 +5715,52 @@
             "id": "401884737",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-07T20:00Z"
+            "kickoffUtc": "2026-11-07T14:30Z"
           },
           {
             "round": 9,
-            "date": "2026-11-07",
+            "date": "2026-11-08",
             "time": "TBD",
             "homeTeam": "SC Freiburg",
             "awayTeam": "1. FC Union Berlin",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884741",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-07T20:00Z"
+            "kickoffUtc": "2026-11-08T16:30Z"
           },
           {
             "round": 9,
-            "date": "2026-11-07",
+            "date": "2026-11-08",
             "time": "TBD",
             "homeTeam": "Cologne",
             "awayTeam": "Bayer Leverkusen",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884738",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-07T20:00Z"
+            "kickoffUtc": "2026-11-08T14:30Z"
           },
           {
             "round": 9,
-            "date": "2026-11-07",
+            "date": "2026-11-08",
             "time": "TBD",
             "homeTeam": "TSG Hoffenheim",
             "awayTeam": "Schalke 04",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884742",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-07T20:00Z"
+            "kickoffUtc": "2026-11-08T18:30Z"
           }
         ]
       },
@@ -5780,7 +5780,7 @@
             "id": "401884735",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-21T20:00Z"
+            "kickoffUtc": "2026-11-21T14:30Z"
           },
           {
             "round": 10,
@@ -5795,22 +5795,22 @@
             "id": "401884732",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-21T20:00Z"
+            "kickoffUtc": "2026-11-21T14:30Z"
           },
           {
             "round": 10,
-            "date": "2026-11-21",
+            "date": "2026-11-20",
             "time": "TBD",
             "homeTeam": "Bayern Munich",
             "awayTeam": "Cologne",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884736",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-21T20:00Z"
+            "kickoffUtc": "2026-11-20T19:30Z"
           },
           {
             "round": 10,
@@ -5825,7 +5825,7 @@
             "id": "401884728",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-21T20:00Z"
+            "kickoffUtc": "2026-11-21T14:30Z"
           },
           {
             "round": 10,
@@ -5840,7 +5840,7 @@
             "id": "401884729",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-21T20:00Z"
+            "kickoffUtc": "2026-11-21T17:30Z"
           },
           {
             "round": 10,
@@ -5855,37 +5855,37 @@
             "id": "401884731",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-21T20:00Z"
+            "kickoffUtc": "2026-11-21T14:30Z"
           },
           {
             "round": 10,
-            "date": "2026-11-21",
+            "date": "2026-11-22",
             "time": "TBD",
             "homeTeam": "Werder Bremen",
             "awayTeam": "Hamburg SV",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884730",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-21T20:00Z"
+            "kickoffUtc": "2026-11-22T16:30Z"
           },
           {
             "round": 10,
-            "date": "2026-11-21",
+            "date": "2026-11-22",
             "time": "TBD",
             "homeTeam": "Augsburg",
             "awayTeam": "Mainz",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884733",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-21T20:00Z"
+            "kickoffUtc": "2026-11-22T14:30Z"
           },
           {
             "round": 10,
@@ -5900,7 +5900,7 @@
             "id": "401884734",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-21T20:00Z"
+            "kickoffUtc": "2026-11-21T14:30Z"
           }
         ]
       },
@@ -5920,7 +5920,7 @@
             "id": "401884721",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-28T20:00Z"
+            "kickoffUtc": "2026-11-28T14:30Z"
           },
           {
             "round": 11,
@@ -5935,7 +5935,7 @@
             "id": "401884723",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-28T20:00Z"
+            "kickoffUtc": "2026-11-28T14:30Z"
           },
           {
             "round": 11,
@@ -5950,22 +5950,22 @@
             "id": "401884719",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-28T20:00Z"
+            "kickoffUtc": "2026-11-28T14:30Z"
           },
           {
             "round": 11,
-            "date": "2026-11-28",
+            "date": "2026-11-27",
             "time": "TBD",
             "homeTeam": "Werder Bremen",
             "awayTeam": "Borussia Mönchengladbach",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884720",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-28T20:00Z"
+            "kickoffUtc": "2026-11-27T19:30Z"
           },
           {
             "round": 11,
@@ -5980,7 +5980,7 @@
             "id": "401884726",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-28T20:00Z"
+            "kickoffUtc": "2026-11-28T17:30Z"
           },
           {
             "round": 11,
@@ -5999,33 +5999,33 @@
           },
           {
             "round": 11,
-            "date": "2026-11-28",
+            "date": "2026-11-29",
             "time": "TBD",
             "homeTeam": "Borussia Dortmund",
             "awayTeam": "Bayer Leverkusen",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884727",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-28T20:00Z"
+            "kickoffUtc": "2026-11-29T18:30Z"
           },
           {
             "round": 11,
-            "date": "2026-11-28",
+            "date": "2026-11-29",
             "time": "TBD",
             "homeTeam": "SC Freiburg",
             "awayTeam": "RB Leipzig",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401884724",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-28T20:00Z"
+            "kickoffUtc": "2026-11-29T14:30Z"
           },
           {
             "round": 11,
@@ -6040,7 +6040,7 @@
             "id": "401884722",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-11-28T20:00Z"
+            "kickoffUtc": "2026-11-28T14:30Z"
           }
         ]
       },
@@ -8364,67 +8364,67 @@
           {
             "round": 2,
             "date": "2026-08-14",
-            "time": "20:15",
+            "time": "16:15",
             "homeTeam": "Sporting CP",
-            "awayTeam": "Vitória de Guimaraes",
+            "awayTeam": "Vitória de Guimarães",
             "homeScore": 3,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401885475",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-14T19:15Z"
+            "kickoffUtc": "2026-08-14T19:15:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-15",
-            "time": "15:30",
+            "time": "11:30",
             "homeTeam": "Alverca",
-            "awayTeam": "Estrela",
+            "awayTeam": "Estrela Amadora",
             "homeScore": 2,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401885482",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-15T14:30Z"
+            "kickoffUtc": "2026-08-15T14:30:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-15",
-            "time": "18:00",
+            "time": "14:00",
             "homeTeam": "Académico de Viseu",
             "awayTeam": "Santa Clara",
             "homeScore": 0,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401885483",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-15T17:00Z"
+            "kickoffUtc": "2026-08-15T17:00:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-15",
-            "time": "20:30",
+            "time": "16:30",
             "homeTeam": "Rio Ave",
             "awayTeam": "Porto",
             "homeScore": 0,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "espn",
+            "dataSource": "thesportsdb",
             "id": "401885476",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-15T19:30Z"
+            "kickoffUtc": "2026-08-15T19:30:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-16",
-            "time": "TBD",
+            "time": "16:30",
             "homeTeam": "Braga",
             "awayTeam": "Gil Vicente",
             "homeScore": null,
@@ -8432,9 +8432,9 @@
             "status": "postponed",
             "dataSource": "espn",
             "id": "401885480",
-            "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-08-16T19:30Z"
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-08-16T19:30:00Z"
           },
           {
             "round": 2,
@@ -16788,13 +16788,13 @@
     "super-lig:trabzonspor-vs-genclerbirligi": "401888305"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-09-10T11:55:16.781Z",
-    "la-liga": "2026-09-10T11:55:16.781Z",
-    "bundesliga": "2026-09-10T11:55:16.781Z",
-    "serie-a": "2026-09-10T11:55:16.781Z",
-    "liga-portugal": "2026-09-10T11:55:16.781Z",
-    "ligue-1": "2026-09-10T11:55:16.781Z",
-    "eredivisie": "2026-09-10T11:55:16.781Z",
+    "premier-league": "2026-09-10T15:10:49.763Z",
+    "la-liga": "2026-09-10T15:10:49.763Z",
+    "bundesliga": "2026-09-10T15:10:49.763Z",
+    "serie-a": "2026-09-10T15:10:49.763Z",
+    "liga-portugal": "2026-09-10T15:10:49.763Z",
+    "ligue-1": "2026-09-10T15:10:49.763Z",
+    "eredivisie": "2026-09-10T15:10:49.763Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "copa-do-brasil": "2026-08-30T10:44:40.959Z",
     "efl-cup": "2026-09-06T23:06:46.930Z",
