@@ -23,6 +23,7 @@ export const sevillaVsValencia: EditorialPrediction = {
   },
   "published": true,
   "publishedAt": "2026-09-10T07:20:00-03:00",
+  "updatedAt": "2026-09-10T14:26:47-03:00",
   "sourceStatus": "partial",
   "sources": [
     {
@@ -50,11 +51,25 @@ export const sevillaVsValencia: EditorialPrediction = {
       "accessedAt": "2026-09-10T07:20:00-03:00"
     }
   ],
+  "matchSeo": {
+    "lineups": {
+      "status": "expected",
+      "home": { "players": ["Vlachodimos", "Juan Iglesias", "Kike Salas", "Castrin", "Suazo", "Agoume", "Fofana", "Sierra", "Guridi", "Stassin", "Robbie Ure"] },
+      "away": { "players": ["Dimitrievski", "Arnau Martinez", "Tarrega", "Pepelu", "Gaya", "Javi Guerra", "Ugrinic", "Elliott", "Otorbi", "Sato", "Hugo Duro"] },
+      "sources": [{ "name": "Cadena SER projected lineups", "url": "https://cadenaser.com/nacional/2026/09/10/laliga-fantasy-alineaciones-probables-de-los-partidos-de-la-jornada-5-de-laliga-ea-sports-cadena-ser/", "accessedAt": "2026-09-10T14:26:47-03:00" }],
+      "updatedAt": "2026-09-10T14:26:47-03:00"
+    },
+    "teamNews": {
+      "entries": [{ "team": "away", "text": "De Haas returns to the travelling squad. Copete, Sadiq, Foulquier, Rioja and Diakhaby remain out, while Guido Rodriguez travelled without medical clearance to play." }],
+      "sources": [{ "name": "AS Valencia travelling squad update", "url": "https://as.com/futbol/primera/guido-viaja-a-sevilla-para-hacer-pina-f202609-n/", "accessedAt": "2026-09-10T14:26:47-03:00" }],
+      "updatedAt": "2026-09-10T14:26:47-03:00"
+    }
+  },
   "freshness": {
-    "editorialUpdatedAt": "2026-09-10T07:20:00-03:00",
-    "teamNewsUpdatedAt": "2026-09-10T07:20:00-03:00",
-    "lineupUpdatedAt": "2026-09-10T07:20:00-03:00",
-    "statisticsUpdatedAt": "2026-09-10T07:20:00-03:00"
+    "editorialUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "teamNewsUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "lineupUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "statisticsUpdatedAt": "2026-09-10T14:26:47-03:00"
   },
   "matchInfo": {
     "date": "2026-09-11",

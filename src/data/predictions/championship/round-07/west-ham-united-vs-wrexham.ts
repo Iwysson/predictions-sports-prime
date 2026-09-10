@@ -21,6 +21,7 @@ export const westHamUnitedVsWrexham: EditorialPrediction = {
   },
   "published": true,
   "publishedAt": "2026-09-09T11:26:01-03:00",
+  "updatedAt": "2026-09-10T14:26:47-03:00",
   "sourceStatus": "partial",
   "sources": [
     {
@@ -42,6 +43,29 @@ export const westHamUnitedVsWrexham: EditorialPrediction = {
       "accessedAt": "2026-09-09T11:26:01-03:00"
     }
   ],
+  "matchSeo": {
+    "lineups": {
+      "status": "expected",
+      "home": { "players": ["Hermansen", "Walker-Peters", "Mavropanos", "Kilman", "Scarles", "Bowen", "Mukasa", "Engels", "Solomon", "Kante", "Piroe"] },
+      "away": { "players": ["Patterson", "Doyle", "Hyam", "Vyner", "Imray", "Whiteman", "O'Brien", "Ekomie", "Broadhead", "Windass", "Smith"] },
+      "sources": [{ "name": "Sports Mole match preview", "url": "https://www.sportsmole.co.uk/football/west-ham-united/preview/west-ham-vs-wrexham-prediction-team-news-lineups_604766.html", "accessedAt": "2026-09-10T14:26:47-03:00" }],
+      "updatedAt": "2026-09-10T14:26:47-03:00"
+    },
+    "teamNews": {
+      "entries": [
+        { "team": "home", "text": "Taty Castellanos is not expected to be risked after a hamstring issue; Joel Veltman, Manor Solomon and Joel Piroe are options to return." },
+        { "team": "away", "text": "Max Cleworth's injury makes Zak Vyner or Joe Worrall the likely replacement, with rotation possible after the short turnaround." }
+      ],
+      "sources": [{ "name": "Sports Mole match preview", "url": "https://www.sportsmole.co.uk/football/west-ham-united/preview/west-ham-vs-wrexham-prediction-team-news-lineups_604766.html", "accessedAt": "2026-09-10T14:26:47-03:00" }],
+      "updatedAt": "2026-09-10T14:26:47-03:00"
+    }
+  },
+  "freshness": {
+    "editorialUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "teamNewsUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "lineupUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "statisticsUpdatedAt": "2026-09-10T14:26:47-03:00"
+  },
   "matchInfo": {
     "date": "2026-09-11",
     "time": "20:00",

@@ -14,15 +14,17 @@ export const veneziaVsFiorentina: EditorialPrediction = {
   "picks": {
     "main": "Over 2.5 Goals",
     "publishedOdds": 1.8,
+    "latestObservedOdds": 1.96,
     "oddsProvenance": {
-      "source": "Author-supplied September 10, 2026 editorial package",
-      "provenance": "author_attested",
-      "capturedAt": "2026-09-10T13:30:00-03:00",
+      "source": "https://www.sportytrader.com/en/odds/venezia-fiorentina-8522132/",
+      "provenance": "external_verified",
+      "capturedAt": "2026-09-10T14:26:47-03:00",
       "market": "Over 2.5 Goals"
     }
   },
   "published": true,
   "publishedAt": "2026-09-10T13:30:00-03:00",
+  "updatedAt": "2026-09-10T14:26:47-03:00",
   "sourceStatus": "partial",
   "sources": [
     {
@@ -51,10 +53,10 @@ export const veneziaVsFiorentina: EditorialPrediction = {
     }
   ],
   "freshness": {
-    "editorialUpdatedAt": "2026-09-10T13:30:00-03:00",
-    "teamNewsUpdatedAt": "2026-09-10T13:30:00-03:00",
-    "lineupUpdatedAt": "2026-09-10T13:30:00-03:00",
-    "statisticsUpdatedAt": "2026-09-10T13:30:00-03:00"
+    "editorialUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "teamNewsUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "lineupUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "statisticsUpdatedAt": "2026-09-10T14:26:47-03:00"
   },
   "matchInfo": {
     "date": "2026-09-11",

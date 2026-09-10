@@ -23,6 +23,7 @@ export const besiktasVsErzurumspor: EditorialPrediction = {
   },
   "published": true,
   "publishedAt": "2026-09-10T07:20:00-03:00",
+  "updatedAt": "2026-09-10T14:26:47-03:00",
   "sourceStatus": "partial",
   "sources": [
     {
@@ -51,10 +52,10 @@ export const besiktasVsErzurumspor: EditorialPrediction = {
     }
   ],
   "freshness": {
-    "editorialUpdatedAt": "2026-09-10T07:20:00-03:00",
-    "teamNewsUpdatedAt": "2026-09-10T07:20:00-03:00",
-    "lineupUpdatedAt": "2026-09-10T07:20:00-03:00",
-    "statisticsUpdatedAt": "2026-09-10T07:20:00-03:00"
+    "editorialUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "teamNewsUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "lineupUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "statisticsUpdatedAt": "2026-09-10T14:26:47-03:00"
   },
   "matchInfo": {
     "date": "2026-09-11",

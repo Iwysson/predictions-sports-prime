@@ -13,14 +13,18 @@ export const coritibaVsAthleticoParanaense: EditorialPrediction = {
   "picks": {
     "main": "Coritiba or Draw (1X)",
     "publishedOdds": 1.52,
+    "latestObservedOdds": 1.48,
     "oddsProvenance": {
-      "source": "Author-supplied September 9, 2026 editorial package",
-      "provenance": "author_attested",
+      "source": "https://sports.caliente.mx/es_MX/e/32966620/Coritiba-PR-vs-Athletico-Paranaense?mkt_grp_code=TMWIN",
+      "provenance": "external_verified",
+      "capturedAt": "2026-09-10T14:26:47-03:00",
+      "bookmaker": "Caliente.mx",
       "market": "Coritiba or Draw (1X)"
     }
   },
   "published": true,
   "publishedAt": "2026-09-09T11:26:01-03:00",
+  "updatedAt": "2026-09-10T14:26:47-03:00",
   "sourceStatus": "partial",
   "sources": [
     {
@@ -48,6 +52,12 @@ export const coritibaVsAthleticoParanaense: EditorialPrediction = {
       "accessedAt": "2026-09-09T11:26:01-03:00"
     }
   ],
+  "freshness": {
+    "editorialUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "teamNewsUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "lineupUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "statisticsUpdatedAt": "2026-09-10T14:26:47-03:00"
+  },
   "matchInfo": {
     "date": "2026-09-11",
     "time": "21:00",

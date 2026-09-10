@@ -21,6 +21,7 @@ export const azVsWillemIi: EditorialPrediction = {
   },
   "published": true,
   "publishedAt": "2026-09-09T11:26:01-03:00",
+  "updatedAt": "2026-09-10T14:26:47-03:00",
   "sourceStatus": "partial",
   "sources": [
     {
@@ -48,6 +49,12 @@ export const azVsWillemIi: EditorialPrediction = {
       "accessedAt": "2026-09-09T11:26:01-03:00"
     }
   ],
+  "freshness": {
+    "editorialUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "teamNewsUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "lineupUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "statisticsUpdatedAt": "2026-09-10T14:26:47-03:00"
+  },
   "matchInfo": {
     "date": "2026-09-11",
     "time": "20:00",

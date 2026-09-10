@@ -23,6 +23,7 @@ export const rennesVsMarseille: EditorialPrediction = {
   },
   "published": true,
   "publishedAt": "2026-09-10T13:30:00-03:00",
+  "updatedAt": "2026-09-10T14:26:47-03:00",
   "sourceStatus": "partial",
   "sources": [
     {
@@ -56,11 +57,28 @@ export const rennesVsMarseille: EditorialPrediction = {
       "accessedAt": "2026-09-10T13:30:00-03:00"
     }
   ],
+  "matchSeo": {
+    "lineups": {
+      "status": "expected",
+      "home": { "players": ["Samba", "Frankowski", "Cresswell", "Ait Boudlal", "Merlin", "Rongier", "Blas", "Szymanski", "Camara", "Tamari", "Lepaul"] },
+      "away": { "players": ["De Lange", "Weah", "Egan-Riley", "Aguerd", "Emerson", "Hojbjerg", "Harit", "Abdelli", "Gomes", "Paixao", "Gouiri"] },
+      "sources": [{ "name": "Sports Mole match preview", "url": "https://www.sportsmole.co.uk/football/rennes/preview/rennes-vs-marseille-prediction-team-news-lineups_604753.html", "accessedAt": "2026-09-10T14:26:47-03:00" }],
+      "updatedAt": "2026-09-10T14:26:47-03:00"
+    },
+    "teamNews": {
+      "entries": [
+        { "team": "home", "text": "Brice Samba has returned and Abdelhamid Ait Boudlal is expected back; Djaoui Cisse remains unavailable." },
+        { "team": "away", "text": "Geoffrey Kondogbia and Tochukwu Nnadi are sidelined, while Igor Paixao returned to the squad last week." }
+      ],
+      "sources": [{ "name": "Sports Mole match preview", "url": "https://www.sportsmole.co.uk/football/rennes/preview/rennes-vs-marseille-prediction-team-news-lineups_604753.html", "accessedAt": "2026-09-10T14:26:47-03:00" }],
+      "updatedAt": "2026-09-10T14:26:47-03:00"
+    }
+  },
   "freshness": {
-    "editorialUpdatedAt": "2026-09-10T13:30:00-03:00",
-    "teamNewsUpdatedAt": "2026-09-10T13:30:00-03:00",
-    "lineupUpdatedAt": "2026-09-10T13:30:00-03:00",
-    "statisticsUpdatedAt": "2026-09-10T13:30:00-03:00"
+    "editorialUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "teamNewsUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "lineupUpdatedAt": "2026-09-10T14:26:47-03:00",
+    "statisticsUpdatedAt": "2026-09-10T14:26:47-03:00"
   },
   "matchInfo": {
     "date": "2026-09-11",
