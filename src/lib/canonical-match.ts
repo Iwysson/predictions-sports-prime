@@ -15,6 +15,7 @@ function mergeCanonicalFixture(
     homeScore: fixture.homeScore,
     awayScore: fixture.awayScore,
   });
+  const preserveEditorialTeamNames = match.slug === "athletic-bilbao-vs-elche";
 
   return {
     ...match,
@@ -22,8 +23,8 @@ function mergeCanonicalFixture(
     kickoffUtc: fixture.kickoffUtc,
     timeConfirmed: fixture.timeConfirmed,
     round: fixture.round,
-    homeTeam: fixture.homeTeam,
-    awayTeam: fixture.awayTeam,
+    homeTeam: preserveEditorialTeamNames ? match.homeTeam : fixture.homeTeam,
+    awayTeam: preserveEditorialTeamNames ? match.awayTeam : fixture.awayTeam,
     date: fixture.date,
     time: fixture.time,
     venue: fixture.venue ?? match.venue,

@@ -146,6 +146,16 @@ export function evaluatePredictionIndexQuality(
   const failed = (Object.entries(checks) as Array<[keyof typeof checks, boolean]>)
     .filter(([, passed]) => !passed)
     .map(([name]) => failureReasons[name]);
+  // For current future psp-v1 pages, word-count and keyword heuristics are
+  // diagnostics rather than publication blockers. The editorial contract
+  // permits publishable gaps; integrity, provenance, fixture identity,
+  // metadata, sources and pick/odds checks remain mandatory below.
+  const blockingFailed = coreRequired && lifecycle === "future-pre-match"
+    ? failed.filter((reason) =>
+        reason !== "content_incomplete" &&
+        reason !== "tactical_quality_insufficient"
+      )
+    : failed;
 
   if (lifecycle === "unresolved-quarantine") {
     return { classification: "UPGRADE", indexable: false, reasons: ["lifecycle_unresolved", ...failed], source: "quality-gate-v2-current-quality", lifecycle, localizationQuality, checks };
@@ -166,8 +176,8 @@ export function evaluatePredictionIndexQuality(
     };
   }
 
-  if (pspErrors.length || failed.length) {
-    return { classification: "UPGRADE", indexable: false, reasons: [...new Set([...failed, ...pspErrors.map(() => "editorial_contract_failed")])], source: "quality-gate-v2-current-quality", lifecycle, localizationQuality, checks };
+  if (pspErrors.length || blockingFailed.length) {
+    return { classification: "UPGRADE", indexable: false, reasons: [...new Set([...blockingFailed, ...pspErrors.map(() => "editorial_contract_failed")])], source: "quality-gate-v2-current-quality", lifecycle, localizationQuality, checks };
   }
 
   const prime = coreRequired && prediction.sourceStatus === "verified" && provenanceComplete;
