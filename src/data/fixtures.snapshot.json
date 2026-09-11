@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-10T22:57:09.766Z",
+  "generatedAt": "2026-09-11T00:45:28.322Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -8364,67 +8364,67 @@
           {
             "round": 2,
             "date": "2026-08-14",
-            "time": "16:15",
+            "time": "20:15",
             "homeTeam": "Sporting CP",
-            "awayTeam": "Vitória de Guimarães",
+            "awayTeam": "Vitória de Guimaraes",
             "homeScore": 3,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401885475",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-14T19:15:00Z"
+            "kickoffUtc": "2026-08-14T19:15Z"
           },
           {
             "round": 2,
             "date": "2026-08-15",
-            "time": "11:30",
+            "time": "15:30",
             "homeTeam": "Alverca",
-            "awayTeam": "Estrela Amadora",
+            "awayTeam": "Estrela",
             "homeScore": 2,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401885482",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-15T14:30:00Z"
+            "kickoffUtc": "2026-08-15T14:30Z"
           },
           {
             "round": 2,
             "date": "2026-08-15",
-            "time": "14:00",
+            "time": "18:00",
             "homeTeam": "Académico de Viseu",
             "awayTeam": "Santa Clara",
             "homeScore": 0,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401885483",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-15T17:00:00Z"
+            "kickoffUtc": "2026-08-15T17:00Z"
           },
           {
             "round": 2,
             "date": "2026-08-15",
-            "time": "16:30",
+            "time": "20:30",
             "homeTeam": "Rio Ave",
             "awayTeam": "Porto",
             "homeScore": 0,
             "awayScore": 2,
             "status": "completed",
-            "dataSource": "thesportsdb",
+            "dataSource": "espn",
             "id": "401885476",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-08-15T19:30:00Z"
+            "kickoffUtc": "2026-08-15T19:30Z"
           },
           {
             "round": 2,
             "date": "2026-08-16",
-            "time": "16:30",
+            "time": "TBD",
             "homeTeam": "Braga",
             "awayTeam": "Gil Vicente",
             "homeScore": null,
@@ -8432,9 +8432,9 @@
             "status": "postponed",
             "dataSource": "espn",
             "id": "401885480",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-16T19:30:00Z"
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2026-08-16T19:30Z"
           },
           {
             "round": 2,
@@ -8630,12 +8630,11 @@
             "homeScore": 2,
             "awayScore": 1,
             "status": "completed",
-            "dataSource": "fotmob",
+            "dataSource": "espn",
             "id": "401885474",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-10T19:15Z",
-            "fotmobMatchId": 5887600
+            "kickoffUtc": "2026-09-10T19:15Z"
           }
         ]
       },
@@ -16812,13 +16811,13 @@
     "super-lig:trabzonspor-vs-genclerbirligi": "401888305"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-09-10T22:57:09.766Z",
-    "la-liga": "2026-09-10T22:57:09.766Z",
-    "bundesliga": "2026-09-10T22:57:09.766Z",
-    "serie-a": "2026-09-10T22:57:09.766Z",
-    "liga-portugal": "2026-09-10T22:57:09.766Z",
-    "ligue-1": "2026-09-10T22:57:09.766Z",
-    "eredivisie": "2026-09-10T22:57:09.766Z",
+    "premier-league": "2026-09-11T00:45:28.322Z",
+    "la-liga": "2026-09-11T00:45:28.322Z",
+    "bundesliga": "2026-09-11T00:45:28.322Z",
+    "serie-a": "2026-09-11T00:45:28.322Z",
+    "liga-portugal": "2026-09-11T00:45:28.322Z",
+    "ligue-1": "2026-09-11T00:45:28.322Z",
+    "eredivisie": "2026-09-11T00:45:28.322Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "copa-do-brasil": "2026-08-30T10:44:40.959Z",
     "efl-cup": "2026-09-06T23:06:46.930Z",
