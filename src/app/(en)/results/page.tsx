@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import { PredictionResultsArchive } from "@/components/PredictionResultsArchive";
 import { matches } from "@/data/matches";
 import { toMatchPreview } from "@/lib/editorial";

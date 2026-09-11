@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import { SiteHeader } from "@/components/Header";
 import { ResponsibleGamblingNoticeContent } from "@/components/ResponsibleGamblingNoticeContent";
 import { responsibleCopyForSeoLocale } from "@/lib/responsible-gambling-copy";

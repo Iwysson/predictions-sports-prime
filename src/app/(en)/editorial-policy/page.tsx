@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import { LegalPage } from "@/components/LegalPage";
 import { buildLegalMetadata } from "@/lib/legal-pages";
 import { JsonLd } from "@/components/JsonLd";

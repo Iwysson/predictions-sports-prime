@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import { LeagueBadge } from "@/components/LeagueBadge";
 
 type Props = {

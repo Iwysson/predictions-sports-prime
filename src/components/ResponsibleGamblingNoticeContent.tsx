@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import type { ResponsibleGamblingCopy } from "@/lib/responsible-gambling-copy";
 
 export function ResponsibleGamblingNoticeContent({ copy }: { copy: ResponsibleGamblingCopy }) {

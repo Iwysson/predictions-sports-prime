@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/prune-static-route-payloads.mjs",
     "fixtures:sync": "tsx scripts/sync-fixtures.mjs",
     "fixtures:validate": "tsx scripts/validate-fixture-snapshot.mjs",
     "start": "next dev",

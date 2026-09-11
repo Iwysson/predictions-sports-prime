@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import type { Match } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
 import { localePath, matchPredictionAnchor, type SeoLocale } from "@/lib/seo-locales";

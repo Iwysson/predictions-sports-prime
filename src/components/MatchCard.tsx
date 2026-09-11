@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import { MatchPreview } from "@/types";
 import { TeamBadge } from "@/components/TeamBadge";
 import { LeagueBadge } from "@/components/LeagueBadge";

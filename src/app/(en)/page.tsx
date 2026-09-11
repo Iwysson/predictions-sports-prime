@@ -6,7 +6,7 @@ import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategor
 import { matches } from "@/data/matches";
 import { toMatchPreview } from "@/lib/editorial";
 import { hydratePredictions } from "@/lib/live-predictions";
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import { homePageJsonLd } from "@/lib/seo";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { localizedAlternates } from "@/lib/international-seo";

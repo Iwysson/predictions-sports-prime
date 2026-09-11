@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import type { Match } from "@/types";
 import { localePath, type SeoLocale } from "@/lib/seo-locales";
 

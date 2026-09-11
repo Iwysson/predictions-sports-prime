@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import type { MatchPreview } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
 import { buildHistoricalPerformance, buildLeaguePerformanceBreakdown, resultStatusPresentation } from "@/lib/results";

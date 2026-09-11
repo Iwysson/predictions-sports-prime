@@ -1,6 +1,6 @@
 import { LegalPage } from "@/components/LegalPage";
 import { buildLegalMetadata } from "@/lib/legal-pages";
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import { editorialAuthor } from "@/lib/editorial-identity";
 import { JsonLd } from "@/components/JsonLd";
 import { institutionalPageJsonLd } from "@/lib/seo";

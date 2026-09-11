@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ads";
 import { LeagueBadge } from "@/components/LeagueBadge";

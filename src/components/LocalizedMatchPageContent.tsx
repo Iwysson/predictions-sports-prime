@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import { AdSlot } from "@/components/ads";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { TeamBadge } from "@/components/TeamBadge";

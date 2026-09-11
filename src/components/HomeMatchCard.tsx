@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import type { MatchPreview } from "@/types";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { HomeTeamBadge } from "@/components/HomeTeamBadge";

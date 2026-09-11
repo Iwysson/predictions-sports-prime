@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import { MatchPreview } from "@/types";
 import { HomeMatchCard } from "@/components/HomeMatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";

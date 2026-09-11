@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import { JsonLd } from "@/components/JsonLd";
 import { LegalPage } from "@/components/LegalPage";
 import { matches } from "@/data/matches";

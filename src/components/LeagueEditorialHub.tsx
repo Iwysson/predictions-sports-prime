@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/DocumentLink";
 import type { CompetitionRoundSurface } from "@/lib/competition-rounds";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { localTodayISO } from "@/lib/match-feed";
