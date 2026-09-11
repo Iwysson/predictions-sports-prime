@@ -3976,6 +3976,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 }
 .compact-analysis-card, .compact-predictions-card {
   border-radius: 12px; padding: clamp(20px, 3vw, 30px);
+  min-width: 0;
 }
 .compact-analysis-card { box-shadow: 0 6px 22px rgba(23, 26, 24, .045); }
 .compact-card-heading { border-bottom-color: var(--border); }
@@ -3988,6 +3989,21 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .compact-predictions-card { border-top: 4px solid var(--accent); box-shadow: none; }
 .main-prediction-block { background: transparent; border-color: var(--border); }
 .main-prediction-block > strong { color: var(--text-primary); font-size: 20px; line-height: 1.4; }
+.compact-card-heading > div,
+.compact-analysis-copy,
+.main-prediction-block,
+.compact-responsible-note {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.compact-card-heading h1,
+.compact-card-heading h2,
+.main-prediction-block > strong {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
 .prediction-odds {
   color: var(--text-secondary); background: var(--surface-subtle); border-color: var(--border);
 }
@@ -4042,6 +4058,26 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   color: var(--text-primary); background: var(--surface); border-color: var(--border); font-size: 14px;
 }
 .comment-list p { color: var(--text-secondary); background: var(--surface-subtle); }
+
+@media (max-width: 760px) {
+  .compact-match-team strong {
+    max-width: min(40vw, 160px);
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.2;
+  }
+
+  .compact-card-heading h1 {
+    font-size: clamp(25px, 8vw, 34px);
+    line-height: 1.08;
+  }
+
+  .main-prediction-block > strong {
+    font-size: clamp(18px, 5.6vw, 22px);
+  }
+}
 
 .standings-card, .round-card, .league-round-card, .league-main-card,
 .league-side-card, .league-match-card, .compact-standings, .live-standings, .live-round-block {
