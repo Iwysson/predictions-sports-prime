@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-10T16:31:24.946Z",
-  "publishedPredictions": 458,
+  "generatedAt": "2026-09-12T10:22:55.566Z",
+  "publishedPredictions": 503,
   "counts": {
-    "HISTORICAL": 314,
-    "INDEX_STANDARD": 107,
+    "HISTORICAL": 332,
+    "INDEX_STANDARD": 134,
     "UPGRADE": 23,
     "KEEP": 14
   },
@@ -13,6 +13,6 @@
     "legacyNoindex": 153,
     "remove": 0
   },
-  "sitemapUrls": 432,
+  "sitemapUrls": 482,
   "errors": []
 }

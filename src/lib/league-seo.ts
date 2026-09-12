@@ -19,10 +19,12 @@ const leagueSearchAliases: Partial<Record<LeagueConfig["slug"], readonly string[
   "scottish-premiership": ["Scotland Premiership", "SPFL Premiership", "William Hill Premiership"],
   eliteserien: ["Norwegian Eliteserien", "Norway Eliteserien", "Eliteserien Norway"],
   mls: ["Major League Soccer", "MLS USA", "United States MLS"],
+  "uefa-europa-league": ["Europa League", "UEL", "UEFA Cup"],
 };
 
 const leagueEditorialIntros: Partial<Record<LeagueConfig["slug"], string>> = {
   "champions-league": "Track Champions League predictions through the league phase and knockout rounds, with each pick tied to the matchup, price and available team evidence.",
+  "uefa-europa-league": "Track Europa League predictions through the league phase and knockout rounds, with each pick tied to the matchup, price and available team evidence.",
   "premier-league": "Compare Premier League predictions through home and away performance, current availability and the tactical matchup behind each published pick.",
   mls: "Explore MLS predictions across the Eastern and Western Conferences, with travel, venue form and the league's open game states considered before each selection.",
   "copa-libertadores": "Follow Copa Libertadores predictions built for two-leg South American ties, where venue, altitude, travel and aggregate score can reshape the market.",

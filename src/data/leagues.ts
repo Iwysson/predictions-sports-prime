@@ -39,6 +39,7 @@ const graphicalLeagueAssets: Partial<
   eliteserien: { src: "/league-badges/eliteserien.png", sourceUrl: "https://www.eliteserien.no/" },
   mls: { src: "/league-badges/mls.png", sourceUrl: "https://www.mlssoccer.com/" },
   "champions-league": { src: "/league-badges/champions-league.png", sourceUrl: "https://commons.wikimedia.org/wiki/File:UEFA_Champions_League_logo_no_text.svg" },
+  "uefa-europa-league": { src: "/league-badges/uefa-europa-league.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/mlsr7d1718774547.png" },
   "copa-libertadores": { src: "/league-badges/copa-libertadores.png", sourceUrl: "https://commons.wikimedia.org/wiki/File:Conmebol-libertadores.svg" },
   "copa-sudamericana": { src: "/league-badges/copa-sudamericana.png", sourceUrl: "https://commons.wikimedia.org/wiki/File:Conmebol-sudamericana.svg" },
 };
@@ -103,6 +104,7 @@ export const leagues: LeagueConfig[] = [
   defineLeague({ slug: "eliteserien", name: "Eliteserien", country: "Norway", short: "NOR", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, expectedClubs: 16, expectedGamesPerRound: 8, timezone: "Europe/Oslo", liveDataId: "nor.1" }),
   defineLeague({ slug: "mls", name: "Major League Soccer", country: "United States", short: "MLS", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 30, expectedGamesPerRound: 15, timezone: "America/New_York", liveDataId: "usa.1" }),
   defineLeague({ slug: "champions-league", name: "UEFA Champions League", country: "Europe", short: "UCL", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 36, expectedGamesPerRound: 18, timezone: "Europe/Paris", liveDataId: "uefa.champions" }),
+  defineLeague({ slug: "uefa-europa-league", name: "UEFA Europa League", country: "Europe", short: "UEL", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 36, expectedGamesPerRound: 18, artworkId: 4481, timezone: "Europe/Paris", liveDataId: "uefa.europa" }),
   defineLeague({ slug: "copa-libertadores", name: "CONMEBOL Libertadores", country: "South America", short: "LIB", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 32, expectedGamesPerRound: 4, timezone: "America/Sao_Paulo", liveDataId: "conmebol.libertadores" }),
   defineLeague({ slug: "copa-sudamericana", name: "CONMEBOL Sudamericana", country: "South America", short: "SUD", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 32, expectedGamesPerRound: 4, timezone: "America/Sao_Paulo", liveDataId: "conmebol.sudamericana" }),
 ];
@@ -132,6 +134,7 @@ export const primaryPredictionLeagueSlugs = [
   "eliteserien",
   "mls",
   "champions-league",
+  "uefa-europa-league",
   "copa-libertadores",
   "copa-sudamericana",
 ] as const satisfies readonly LeagueSlug[];

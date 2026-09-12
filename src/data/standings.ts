@@ -201,6 +201,7 @@ export const standingsByLeague: Record<LeagueSlug, StandingRow[]> = {
   "efl-cup": [],
   championship: [],
   "champions-league": [],
+  "uefa-europa-league": [],
   "copa-libertadores": [],
   "copa-sudamericana": [],
   "super-lig": [

@@ -240,6 +240,7 @@ type FotMobMatchLike = {
 
 const COMPETITION_ALIASES: Record<string, string[]> = {
   "champions-league": ["champions league", "uefa champions league"],
+  "uefa-europa-league": ["europa league", "uefa europa league", "uefa cup"],
   "efl-cup": ["efl cup", "carabao cup", "league cup"],
   "eredivisie": ["eredivisie"],
   "scottish-premiership": ["scottish premiership", "premiership"],

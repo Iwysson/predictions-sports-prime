@@ -18,6 +18,7 @@ export type LeagueSlug =
   | "eliteserien"
   | "mls"
   | "champions-league"
+  | "uefa-europa-league"
   | "copa-libertadores"
   | "copa-sudamericana";
 

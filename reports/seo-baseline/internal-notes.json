@@ -422,6 +422,16 @@
       "sample": "market: \"Over 1.5 Goals — Live Entry\""
     },
     {
+      "slug": "lecce-vs-monza",
+      "file": "src/data/predictions/serie-a/round-04/lecce-vs-monza.ts",
+      "line": 10,
+      "field": "analysis",
+      "value": "live entry",
+      "indexability": "indexable",
+      "resolution": "historical-data-warning-preserved",
+      "sample": "\"# Lecce vs Monza Prediction, Odds and Betting Tips\\n\\n- **Competition:** Serie A 2026/27\\n- **Round:** Matchday 4\\n- **Date:** 2026-09-13\\n- **Kick-off:** 15:00 CEST\\n- **Venue:** Stadio Via del Mare\\n- **Location:** Le"
+    },
+    {
       "slug": "kocaelispor-vs-samsunspor",
       "file": "src/data/predictions/super-lig/round-04/kocaelispor-vs-samsunspor.ts",
       "line": 10,
