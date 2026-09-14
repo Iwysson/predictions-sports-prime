@@ -6,6 +6,7 @@ import {
 } from "@/lib/localized-presentation";
 import type { SeoLocaleSlug } from "@/lib/seo-locales";
 import type { Match } from "@/types";
+import { PredictionSensitiveContent } from "@/components/PredictionReveal";
 
 const labels = {
   "pt-br": { info: "Contexto da partida", competition: "Competição", round: "Rodada", date: "Data", time: "Horário", venue: "Estádio", city: "Cidade", lineups: "Contexto de seleção das equipes", confirmed: "Escalações confirmadas", availability: "Disponibilidade do elenco", stats: "Core Estatístico Predictions-Sports-Prime", metric: "Métrica", sources: "Fontes", home: "Mandante", away: "Visitante" },
@@ -84,7 +85,12 @@ export function LocalizedMatchDetails({ match, locale, forceInformation = false 
     </dl></section>
     {data?.lineups ? <section className="match-module"><h2>{data.lineups.status === "confirmed" ? copy.confirmed : copy.lineups}</h2><div className="match-lineups-grid">{(["home", "away"] as const).map((side) => <div key={side}><h3>{side === "home" ? match.homeTeam : match.awayTeam}</h3><ol>{data.lineups![side].players.map((player) => <li key={player}>{player}</li>)}</ol></div>)}</div></section> : null}
     {data?.availability ? <section className="match-module"><h2>{copy.availability}</h2><ul className="match-availability-list">{data.availability.entries.map((entry) => <li key={`${entry.team}-${entry.player}`}><strong>{entry.player}</strong> ({entry.team === "home" ? match.homeTeam : match.awayTeam}) — {statusLabels[locale][entry.status] ?? localizePresentationText(entry.status, locale)}</li>)}</ul></section> : null}
-    {data?.statistics || coreRows.length ? <section className="match-module"><h2>{copy.stats}</h2><div className="match-stats" role="table" aria-label={`${copy.stats}: ${teams}`}><div className="match-stats-row match-stats-header" role="row"><span role="columnheader">{copy.metric}</span><span role="columnheader">{copy.home}</span><span role="columnheader">{copy.away}</span></div>{statisticalRows.map((row) => <div className="match-stats-row" role="row" key={row.label}><span role="rowheader">{localizedMetric(locale, row.label)}</span><span role="cell">{localizePresentationText(row.home, locale)}</span><span role="cell">{localizePresentationText(row.away, locale)}</span></div>)}</div></section> : null}
+    {data?.statistics || coreRows.length ? <section className="match-module"><h2>{copy.stats}</h2><div className="match-stats" role="table" aria-label={`${copy.stats}: ${teams}`}><div className="match-stats-row match-stats-header" role="row"><span role="columnheader">{copy.metric}</span><span role="columnheader">{copy.home}</span><span role="columnheader">{copy.away}</span></div>{statisticalRows.map((row) => {
+      const cells = <><span role="rowheader">{localizedMetric(locale, row.label)}</span><span role="cell">{localizePresentationText(row.home, locale)}</span><span role="cell">{localizePresentationText(row.away, locale)}</span></>;
+      return /odds|implied probability/i.test(row.label)
+        ? <PredictionSensitiveContent className="match-stats-row" role="row" key={row.label}>{cells}</PredictionSensitiveContent>
+        : <div className="match-stats-row" role="row" key={row.label}>{cells}</div>;
+    })}</div></section> : null}
     <SourceLinks match={match} locale={locale} />
   </div>;
 }

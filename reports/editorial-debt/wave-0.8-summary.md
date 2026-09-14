@@ -1,14 +1,14 @@
 # Wave 0.8 — editorial uniqueness
 
 - P0: **0**
-- P1 total: **21**
-- P1-LEGIT-FACTUAL: **13**
-- P1-LEGIT-STRUCTURAL: **8**
-- P1-EDITORIAL: **0**
+- P1 total: **23**
+- P1-LEGIT-FACTUAL: **0**
+- P1-LEGIT-STRUCTURAL: **5**
+- P1-EDITORIAL: **18**
 - P1-EDITORIAL fixed: **26** (26 removed, 0 synonym rewrites)
-- Pages changed at render/data-export boundary: **15**
-- Word count on changed future pages: **23104 → 18372**
-- P1 duplication: **41 → 21** groups; problematic editorial duplication: **26 → 0**
+- Pages changed at render/data-export boundary: **0**
+- Word count on changed future pages: **0 → 0**
+- P1 duplication: **41 → 23** groups; problematic editorial duplication: **26 → 18**
 
 ## Deterministic policy
 
@@ -16,22 +16,8 @@ P1-LEGIT-FACTUAL covers unavoidable factual conversions and short verified statu
 
 ## Changed future pages
 
-- championship/blackburn-rovers-vs-sheffield-united
-- championship/bolton-wanderers-vs-west-ham-united
-- championship/cardiff-city-vs-stoke-city
-- championship/charlton-athletic-vs-queens-park-rangers
-- championship/derby-county-vs-west-bromwich-albion
-- championship/norwich-city-vs-birmingham-city
-- championship/southampton-vs-swansea-city
-- championship/watford-vs-preston-north-end
-- championship/wrexham-vs-burnley
-- champions-league/aek-athens-vs-lask
-- champions-league/club-brugge-vs-aston-villa
-- champions-league/borussia-dortmund-vs-villarreal
-- champions-league/porto-vs-manchester-city
-- champions-league/lille-vs-real-betis
-- champions-league/real-madrid-vs-inter
+
 
 ## Result
 
-Editorial uniqueness: **PASS**. Wave 1 remains a separate decision and was not started.
+Editorial uniqueness: **FAIL**. Wave 1 remains a separate decision and was not started.

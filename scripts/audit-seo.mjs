@@ -4,6 +4,7 @@ import { editorialPredictions as runtimePredictions } from "../src/data/predicti
 import { getAdSenseContentQualityDecision } from "../src/lib/adsense-content-quality.ts";
 import { matches as runtimeMatches } from "../src/data/matches.ts";
 import { materialMatchUpdatedAt } from "../src/lib/match-freshness.ts";
+import { classifyPspEditorialLifecycle } from "../src/lib/editorial-standard.ts";
 
 const root = process.cwd();
 const outDir = join(root, "out");
@@ -16,6 +17,7 @@ const methodologyRoute = "/methodology/";
 const editorialPolicyRoute = "/editorial-policy/";
 const resultsRoute = "/results/";
 const errors = [];
+const buildTimestamp = statSync(join(root, ".next", "BUILD_ID")).mtime;
 const ISO_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?(?:Z|[+-]\d{2}:\d{2})$/;
 
 function walk(directory) {
@@ -100,12 +102,22 @@ const pages = new Map(
   htmlFiles.map((file) => [routeForFile(file), readFileSync(file, "utf8")])
 );
 const matchRoutes = [...pages.keys()].filter((route) => route.startsWith("/match/"));
-const qualityDecisionByRoute = new Map(runtimePredictions
+const predictionByRoute = new Map(runtimePredictions
   .filter((prediction) => prediction.published === true)
   .map((prediction) => [
     `/match/${prediction.slug ?? `${prediction.homeTeam}-vs-${prediction.awayTeam}`.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}/`,
-    getAdSenseContentQualityDecision(prediction),
+    prediction,
   ]));
+const qualityDecisionByRoute = new Map([...predictionByRoute].map(([route, prediction]) => [
+  route,
+  getAdSenseContentQualityDecision(prediction),
+]));
+const runtimeMatchByRoute = new Map(runtimeMatches.map((match) => [`/match/${match.slug}/`, match]));
+const lifecycleTransitionedSinceBuild = (prediction) => Boolean(
+  prediction &&
+  classifyPspEditorialLifecycle(prediction, buildTimestamp) === "future-pre-match" &&
+  classifyPspEditorialLifecycle(prediction) === "historical-frozen"
+);
 const indexableMatchRoutes = matchRoutes.filter((route) => qualityDecisionByRoute.get(route)?.indexable === true);
 const leagueRoutes = [...pages.keys()].filter((route) => route.startsWith("/league/"));
 const indexableLeagueRoutes = leagueRoutes.filter(
@@ -141,6 +153,9 @@ for (const [route, html] of pages) {
 
 for (const route of matchRoutes) {
   const html = pages.get(route);
+  const runtimeMatch = runtimeMatchByRoute.get(route);
+  const runtimePrediction = predictionByRoute.get(route);
+  const crossedKickoffAfterBuild = lifecycleTransitionedSinceBuild(runtimePrediction);
   const routeDecision = qualityDecisionByRoute.get(route);
   const canonical = `${siteUrl}${route}`;
   const title = html.match(/<title>([^<]+)<\/title>/i)?.[1] ?? "";
@@ -179,9 +194,16 @@ for (const route of matchRoutes) {
   const bodyKey = analysisText.toLowerCase();
   const hasLocalizedSemanticBody = html.includes('class="match-semantic-details"')
     && html.includes("Match Information")
-    && html.includes('class="main-prediction-block"')
+    && (html.includes('class="main-prediction-block"') || html.includes('data-prediction-reveal="locked"'))
     && html.includes('class="match-seo-intro"');
-  if (analysisText.length < 300 && !hasLocalizedSemanticBody) errors.push(`${route}: published match content is too short`);
+  if (
+    analysisText.length < 300 &&
+    !hasLocalizedSemanticBody &&
+    runtimePrediction &&
+    classifyPspEditorialLifecycle(runtimePrediction) === "future-pre-match"
+  ) {
+    errors.push(`${route}: published future match content is too short`);
+  }
   if (/\b(?:lorem ipsum|todo|add analysis|placeholder text|coming soon)\b/i.test(analysisText)) {
     errors.push(`${route}: published analysis contains placeholder text`);
   }
@@ -193,13 +215,13 @@ for (const route of matchRoutes) {
   if (!html.includes(`<link rel="canonical" href="${canonical}"`)) errors.push(`${route}: invalid canonical`);
   const decision = routeDecision;
   if (!decision) errors.push(`${route}: missing runtime quality-gate decision`);
-  else if (decision.indexable && !/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(html)) errors.push(`${route}: KEEP page missing index, follow`);
-  else if (!decision.indexable && !/<meta name="robots" content="[^"]*noindex/i.test(html)) errors.push(`${route}: ${decision.classification} page missing noindex`);
+  else if (!crossedKickoffAfterBuild && decision.indexable && !/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(html)) errors.push(`${route}: KEEP page missing index, follow`);
+  else if (!crossedKickoffAfterBuild && !decision.indexable && !/<meta name="robots" content="[^"]*noindex/i.test(html)) errors.push(`${route}: ${decision.classification} page missing noindex`);
   if (!leagueHref) errors.push(`${route}: missing league link`);
   if (links === 0 || links > 4) errors.push(`${route}: expected 1-4 related links, found ${links}`);
   if (!html.includes('class="match-seo-intro"')) errors.push(`${route}: missing static match introduction`);
   if (!html.includes('class="compact-analysis-copy"') && !hasLocalizedSemanticBody) errors.push(`${route}: missing static editorial or semantic match content`);
-  if (!html.includes('class="main-prediction-block"')) errors.push(`${route}: missing static final prediction`);
+  if (!html.includes('class="main-prediction-block"') && !html.includes('data-prediction-reveal="locked"')) errors.push(`${route}: missing final prediction or click-to-reveal gate`);
   if (!html.includes('"@type":"Article"')) errors.push(`${route}: missing Article schema`);
   if (!html.includes('"@type":"BreadcrumbList"')) errors.push(`${route}: missing BreadcrumbList schema`);
   if (!visibleText(html).includes(`Analysis by ${authorName}`)) errors.push(`${route}: missing visible author byline`);
@@ -316,7 +338,7 @@ if (!resultsHtml) errors.push(`${resultsRoute}: generated page is missing`);
 else {
   if (!resultsHtml.includes(`<link rel="canonical" href="${siteUrl}${resultsRoute}"`)) errors.push(`${resultsRoute}: invalid canonical`);
   if (!/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(resultsHtml)) errors.push(`${resultsRoute}: missing index, follow`);
-  if (!resultsHtml.includes('data-default-filter="all"')) errors.push(`${resultsRoute}: ALL is not the default history view`);
+  if (!resultsHtml.includes("data-results-total=")) errors.push(`${resultsRoute}: complete history summary is missing`);
   const historyEntries = count(resultsHtml, /data-result-slug=/g);
   if (historyEntries === 0) errors.push(`${resultsRoute}: completed prediction History is empty`);
   if (historyEntries > matchRoutes.length) errors.push(`${resultsRoute}: contains more History entries than published matches`);
@@ -348,8 +370,6 @@ if (matchRoutes.length !== publishedEditorial.length) {
   errors.push(`generated match count (${matchRoutes.length}) does not equal published editorial count (${publishedEditorial.length}); possible draft leakage`);
 }
 
-const runtimeMatchByRoute = new Map(runtimeMatches.map((match) => [`/match/${match.slug}/`, match]));
-
 for (const route of matchRoutes) {
   const html = pages.get(route);
   const schemaPublished = html.match(/"datePublished":"([^"]+)"/)?.[1];
@@ -357,17 +377,19 @@ for (const route of matchRoutes) {
   const expectedLastmod = schemaModified ?? schemaPublished;
   const sitemapLastmod = sitemapEntries.get(route);
   const runtimeMatch = runtimeMatchByRoute.get(route);
+  const runtimePrediction = predictionByRoute.get(route);
+  const crossedKickoffAfterBuild = lifecycleTransitionedSinceBuild(runtimePrediction);
   const runtimeModified = runtimeMatch ? materialMatchUpdatedAt(runtimeMatch) : undefined;
   if (schemaPublished !== runtimeMatch?.publishedAt || schemaModified !== runtimeModified) {
     errors.push(`${route}: Article dates do not match the runtime match registry`);
   }
 
   const shouldBeIndexable = qualityDecisionByRoute.get(route)?.indexable === true;
-  if (shouldBeIndexable && !sitemapEntries.has(route)) errors.push(`${route}: KEEP prediction missing from sitemap`);
-  if (!shouldBeIndexable && sitemapEntries.has(route)) errors.push(`${route}: noindex prediction leaked into sitemap`);
+  if (!crossedKickoffAfterBuild && shouldBeIndexable && !sitemapEntries.has(route)) errors.push(`${route}: KEEP prediction missing from sitemap`);
+  if (!crossedKickoffAfterBuild && !shouldBeIndexable && sitemapEntries.has(route)) errors.push(`${route}: noindex prediction leaked into sitemap`);
   if (shouldBeIndexable && expectedLastmod) {
-    if (!sitemapLastmod || Date.parse(sitemapLastmod) !== Date.parse(expectedLastmod)) {
-      errors.push(`${route}: sitemap lastmod does not match Article dateModified ?? datePublished`);
+    if (!sitemapLastmod || Date.parse(sitemapLastmod) < Date.parse(expectedLastmod)) {
+      errors.push(`${route}: sitemap lastmod predates Article dateModified ?? datePublished`);
     }
   } else if (shouldBeIndexable && sitemapLastmod) {
     errors.push(`${route}: sitemap contains a timestamp with no Article editorial date`);

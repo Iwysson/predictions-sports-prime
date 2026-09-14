@@ -2,6 +2,7 @@ import type { Match, MatchModuleSource, MatchTeamSide } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
 import { extractStatisticalCoreRows } from "@/lib/statistical-core";
 import { isUpcomingMatch } from "@/lib/upcoming-match";
+import { PredictionSensitiveContent } from "@/components/PredictionReveal";
 
 function Sources({ sources }: { sources: MatchModuleSource[] }) {
   return (
@@ -99,11 +100,12 @@ export function MatchSemanticDetails({ match, forceInformation = false }: { matc
             <div className="match-stats-row match-stats-header" role="row">
               <span role="columnheader">Metric</span><span role="columnheader">{match.homeTeam}</span><span role="columnheader">{match.awayTeam}</span>
             </div>
-            {(coreRows.length ? coreRows : data?.statistics?.rows ?? []).map((row) => (
-              <div className="match-stats-row" role="row" key={row.label}>
-                <span role="rowheader">{row.label}</span><span role="cell">{row.home}</span><span role="cell">{row.away}</span>
-              </div>
-            ))}
+            {(coreRows.length ? coreRows : data?.statistics?.rows ?? []).map((row) => {
+              const cells = <><span role="rowheader">{row.label}</span><span role="cell">{row.home}</span><span role="cell">{row.away}</span></>;
+              return /odds|implied probability/i.test(row.label)
+                ? <PredictionSensitiveContent className="match-stats-row" role="row" key={row.label}>{cells}</PredictionSensitiveContent>
+                : <div className="match-stats-row" role="row" key={row.label}>{cells}</div>;
+            })}
           </div>
           {data?.statistics ? <Sources sources={data.statistics.sources} /> : null}
         </section>

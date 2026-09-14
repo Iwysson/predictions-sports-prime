@@ -58,16 +58,16 @@ export function buildMatchMetadataV2(
       : `${fixture} ${prediction} and ${betting}`;
   const description = historical
     ? fit([
-        `${fixture} ${prediction.toLocaleLowerCase()} result and match analysis for ${league}, preserving the original pick${odds ? ` and published odds of ${odds}` : ""}.`,
-        `${fixture} result, original ${prediction.toLocaleLowerCase()} and match analysis for ${league}.`,
+        `${fixture} ${prediction.toLocaleLowerCase()} result and match analysis for ${league}, preserving the pre-match record without exposing the pick in search snippets.`,
+        `${fixture} result and original match analysis for ${league}.`,
       ], 160)
     : fit([
-        `${fixture} ${prediction.toLocaleLowerCase()}${temporalQualifier} for ${league}: ${pick ?? "see the published selection"}${odds ? ` at published odds of ${odds}` : ""}. Read the matchup analysis and risks.`,
-        `${fixture} ${prediction.toLocaleLowerCase()}${temporalQualifier}: ${pick ?? `match analysis for ${league}`}${odds ? ` at published odds of ${odds}` : ""}.`,
+        `${fixture} ${prediction.toLocaleLowerCase()}${temporalQualifier} for ${league}. Read the matchup evidence and risks, then reveal the pick and odds on the page.`,
+        `${fixture} ${prediction.toLocaleLowerCase()}${temporalQualifier}: match analysis with a click-to-reveal pick and odds.`,
       ], 160);
   const intro = historical
     ? `${fixture} is preserved as a completed ${league} prediction record, including the original selection and the analysis published before kickoff.`
-    : `${fixture} meet in ${league}. The primary selection is ${pick ?? "shown below"}${odds ? ` at published odds of ${odds}` : ""}, supported by the match analysis and relevant team context.`;
+    : `${fixture} meet in ${league}. Review the match analysis and relevant team context, then use the reveal control to view the prediction and published odds.`;
 
   return {
     title,

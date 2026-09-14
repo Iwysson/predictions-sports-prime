@@ -100,7 +100,7 @@ for (const page of pages) {
     if (!page.html.includes("article-sources") || !page.html.includes('rel="author"')) {
       errors.push(`${page.path}: published match lacks source or author transparency`);
     }
-    if (!page.html.includes('href="/methodology/"') || !page.html.includes("main-prediction-block")) {
+    if (!page.html.includes('href="/methodology/"') || (!page.html.includes("main-prediction-block") && !page.html.includes('data-prediction-reveal="locked"'))) {
       errors.push(`${page.path}: published match lacks methodology or prediction context`);
     }
   }

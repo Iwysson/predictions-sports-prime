@@ -1570,6 +1570,30 @@ html[dir="rtl"] .league-match-list .compact-team:last-child strong {
   font-size: 14px;
 }
 
+.prediction-reveal {
+  display: grid;
+  gap: 14px;
+  padding-top: 12px;
+}
+
+.prediction-reveal p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.prediction-reveal__button {
+  width: 100%;
+  min-height: 46px;
+  cursor: pointer;
+}
+
+.prediction-reveal__button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 3px;
+}
+
 @media (max-width: 430px) {
   .main-prediction-block { padding-top: 10px; }
 }

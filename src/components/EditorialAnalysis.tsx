@@ -1,4 +1,8 @@
 import { Fragment, type ReactNode } from "react";
+import {
+  PredictionSensitiveContent,
+  PredictionSensitiveParagraph,
+} from "@/components/PredictionReveal";
 
 function inlineMarkdown(text: string): ReactNode[] {
   const parts = text.replace(/\s+\|\s+/g, " · ").split("**");
@@ -49,7 +53,15 @@ function stripStructuredStatisticalCore(markdown: string) {
   return output.join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
-function MarkdownAnalysis({ markdown, hideSensitiveSnippets = false }: { markdown: string; hideSensitiveSnippets?: boolean }) {
+function MarkdownAnalysis({
+  markdown,
+  hideSensitiveSnippets = false,
+  sensitiveValues = [],
+}: {
+  markdown: string;
+  hideSensitiveSnippets?: boolean;
+  sensitiveValues?: string[];
+}) {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   const blocks: ReactNode[] = [];
   let paragraph: string[] = [];
@@ -60,8 +72,13 @@ function MarkdownAnalysis({ markdown, hideSensitiveSnippets = false }: { markdow
     if (text === "**Statistical Core**") {
       blocks.push(<h2 key={`block-${blocks.length}`}>{inlineMarkdown(text)}</h2>);
     } else {
-      const sensitive = hideSensitiveSnippets && /\*\*(?:Final )?Prediction:\*\*|\*\*(?:Published )?Odds:\*\*/i.test(text);
-      blocks.push(<p key={`block-${blocks.length}`} data-nosnippet={sensitive ? "" : undefined}>{inlineMarkdown(text)}</p>);
+      const sensitive = hideSensitiveSnippets && (
+        /\*\*(?:Final )?Prediction:\*\*|\*\*(?:Published )?Odds:\*\*/i.test(text) ||
+        sensitiveValues.some((value) => value && text.toLocaleLowerCase().includes(value.toLocaleLowerCase()))
+      );
+      blocks.push(sensitive
+        ? <PredictionSensitiveParagraph key={`block-${blocks.length}`}>{inlineMarkdown(text)}</PredictionSensitiveParagraph>
+        : <p key={`block-${blocks.length}`}>{inlineMarkdown(text)}</p>);
     }
     paragraph = [];
   };
@@ -84,7 +101,12 @@ function MarkdownAnalysis({ markdown, hideSensitiveSnippets = false }: { markdow
         index += 1;
       }
       index -= 1;
-      blocks.push(<MarkdownTable key={`block-${blocks.length}`} lines={table} />);
+      const sensitive = hideSensitiveSnippets && sensitiveValues.some((value) =>
+        value && table.join(" ").toLocaleLowerCase().includes(value.toLocaleLowerCase())
+      );
+      blocks.push(sensitive
+        ? <PredictionSensitiveContent key={`block-${blocks.length}`}><MarkdownTable lines={table} /></PredictionSensitiveContent>
+        : <MarkdownTable key={`block-${blocks.length}`} lines={table} />);
       continue;
     }
     const heading = line.match(/^(#{1,6})\s+(.+)$/);
@@ -105,9 +127,28 @@ function MarkdownAnalysis({ markdown, hideSensitiveSnippets = false }: { markdow
   return <>{blocks}</>;
 }
 
-export function EditorialAnalysis({ analysis, format, hideSensitiveSnippets = false }: { analysis: string[]; format?: "markdown"; hideSensitiveSnippets?: boolean }) {
+export function EditorialAnalysis({
+  analysis,
+  format,
+  hideSensitiveSnippets = false,
+  sensitiveValues = [],
+}: {
+  analysis: string[];
+  format?: "markdown";
+  hideSensitiveSnippets?: boolean;
+  sensitiveValues?: Array<string | undefined>;
+}) {
+  const protectedValues = sensitiveValues.filter((value): value is string => Boolean(value?.trim()));
   if (format === "markdown") {
-    return <MarkdownAnalysis markdown={stripStructuredStatisticalCore(analysis.join("\n\n"))} hideSensitiveSnippets={hideSensitiveSnippets} />;
+    return <MarkdownAnalysis markdown={stripStructuredStatisticalCore(analysis.join("\n\n"))} hideSensitiveSnippets={hideSensitiveSnippets} sensitiveValues={protectedValues} />;
   }
-  return <>{analysis.map((paragraph, index) => <p key={index} data-nosnippet={hideSensitiveSnippets && /prediction|odds/i.test(paragraph) ? "" : undefined}>{paragraph}</p>)}</>;
+  return <>{analysis.map((paragraph, index) => {
+    const sensitive = hideSensitiveSnippets && (
+      /prediction|odds/i.test(paragraph) ||
+      protectedValues.some((value) => paragraph.toLocaleLowerCase().includes(value.toLocaleLowerCase()))
+    );
+    return sensitive
+      ? <PredictionSensitiveParagraph key={index}>{paragraph}</PredictionSensitiveParagraph>
+      : <p key={index}>{paragraph}</p>;
+  })}</>;
 }

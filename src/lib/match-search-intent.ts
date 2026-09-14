@@ -314,41 +314,38 @@ function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale, facts: M
     tr: { today: "bugün", tomorrow: "yarın" },
   } as const;
   const when = temporalPhrases[locale][temporal];
-  const odds = facts.odds;
-  const pick = facts.mainPick;
-
   const candidates = {
     en: [
-      `${teams} prediction ${when}${pick ? `: ${pick}` : ""}${odds ? ` at odds ${odds}` : ""}. Betting tips and match analysis with the key data behind the pick.`,
-      `${teams} prediction ${when}${odds ? `, odds ${odds}` : ""}. Betting tips, match analysis and the data behind our main pick.`,
+      `${teams} prediction ${when}. Betting tips and match analysis with the key data behind a click-to-reveal pick and odds.`,
+      `${teams} prediction ${when}. Match analysis, risks and on-page prediction reveal.`,
     ],
     "pt-BR": [
-      `${teams}: palpite ${when}${odds ? `, odds ${odds}` : ""}. Análise do jogo, dicas de apostas e dados que sustentam a seleção principal.`,
-      `${teams}: palpite ${when}. Prognóstico, análise e odds para a seleção principal.`,
+      `${teams}: palpite ${when}. Análise do jogo, riscos e botão para revelar palpite e odds na página.`,
+      `${teams}: palpite ${when}. Prognóstico e análise com revelação das odds por clique.`,
     ],
     es: [
-      `${teams}: pronóstico ${when}${odds ? `, cuotas ${odds}` : ""}. Apuestas, análisis del partido y datos que respaldan la selección principal.`,
-      `${teams}: pronóstico ${when}. Apuestas, análisis y cuotas de la selección principal.`,
+      `${teams}: pronóstico ${when}. Análisis del partido y control para revelar pronóstico y cuotas.`,
+      `${teams}: pronóstico ${when}. Apuestas y análisis con cuotas visibles tras un clic.`,
     ],
     it: [
-      `${teams}: pronostico ${when}${odds ? `, quote ${odds}` : ""}. Scommesse, analisi della partita e dati a supporto della scelta principale.`,
-      `${teams}: pronostico ${when}. Scommesse, analisi e quote della scelta principale.`,
+      `${teams}: pronostico ${when}. Analisi della partita e controllo per mostrare pronostico e quote.`,
+      `${teams}: pronostico ${when}. Analisi e quote disponibili dopo un clic.`,
     ],
     fr: [
-      `${teams} : pronostic ${when}${odds ? `, cotes ${odds}` : ""}. Conseils paris, analyse du match et données qui soutiennent le choix principal.`,
-      `${teams} : pronostic ${when}. Conseils paris, analyse et cotes du choix principal.`,
+      `${teams} : pronostic ${when}. Analyse du match et commande pour afficher le pronostic et les cotes.`,
+      `${teams} : pronostic ${when}. Analyse et cotes disponibles après un clic.`,
     ],
     de: [
-      `${teams}: Prognose ${when}${odds ? `, Quoten ${odds}` : ""}. Wett-Tipps, Spielanalyse und Daten zur Begründung des Haupttipps.`,
-      `${teams}: Prognose ${when}. Wett-Tipps, Analyse und Quoten zum Haupttipp.`,
+      `${teams}: Prognose ${when}. Spielanalyse und Schaltfläche zum Anzeigen von Prognose und Quoten.`,
+      `${teams}: Prognose ${when}. Analyse und Quoten nach einem Klick.`,
     ],
     nl: [
-      `${teams}: voorspelling ${when}${odds ? `, odds ${odds}` : ""}. Wedtips, wedstrijdanalyse en gegevens die de hoofdkeuze ondersteunen.`,
-      `${teams}: voorspelling ${when}. Wedtips, analyse en odds voor de hoofdkeuze.`,
+      `${teams}: voorspelling ${when}. Wedstrijdanalyse en knop om voorspelling en odds te tonen.`,
+      `${teams}: voorspelling ${when}. Analyse en odds beschikbaar na een klik.`,
     ],
     tr: [
-      `${teams}: maç tahmini ${when}${odds ? `, oranlar ${odds}` : ""}. Bahis ipuçları, maç analizi ve ana seçimi destekleyen veriler.`,
-      `${teams}: maç tahmini ${when}. Bahis ipuçları, analiz ve ana seçim oranları.`,
+      `${teams}: maç tahmini ${when}. Maç analizi ile tahmin ve oranları gösterme denetimi.`,
+      `${teams}: maç tahmini ${when}. Analiz ve oranlar bir tıklamadan sonra görünür.`,
     ],
   }[locale];
 
@@ -557,27 +554,24 @@ function buildEnglishDescription(
   if (todayDescription) return todayDescription;
   const teams = matchTeams(match, "en");
   const when = descriptionDateQualifier(match, temporal);
-  const odds = facts.odds ? ` at odds of ${facts.odds}` : "";
-  const pick = facts.mainPick || "the main prediction";
   if (match.matchSeo) {
     return fitDescription([
-      `${teams} prediction${when}: ${pick}${odds}. Betting tips and match analysis with the key statistical evidence behind the selection.`,
-      `${teams} prediction${when}, ${pick}${odds}. Read our betting analysis and the data behind the main pick.`,
-      `${teams} prediction${when}: ${pick}${odds}. Full betting analysis for ${facts.leagueName}.`,
+      `${teams} prediction${when}. Betting tips and match analysis with statistical evidence, risks and a click-to-reveal pick and odds.`,
+      `${teams} prediction${when}. Read the betting analysis, then reveal the main pick and odds on the page.`,
       `${teams} prediction${when} and betting analysis for ${facts.leagueName}.`,
     ]);
   }
   const detailed = [
-    `${teams} prediction${when} in ${facts.leagueName}. Our main pick is ${pick}${odds}, with match analysis and relevant betting context.`,
-    `Read the ${teams} match analysis${when}, including ${pick}${odds} and the key context for this ${facts.leagueName} fixture.`,
-    `${facts.leagueName}: ${teams}. View our prediction${when}, ${pick}${odds}, plus match analysis and the reasoning behind the selection.`,
-    `Our ${teams} match analysis${when} covers ${pick}${odds}, betting context and the relevant ${facts.leagueName} data.`,
+    `${teams} prediction${when} in ${facts.leagueName}, with match analysis and a click-to-reveal pick and odds.`,
+    `Read the ${teams} match analysis${when} and reveal the prediction and odds on the page.`,
+    `${facts.leagueName}: ${teams}. View the analysis${when}, then reveal the prediction and odds.`,
+    `${teams} match analysis${when} with betting context and a click-to-reveal prediction.`,
   ][stableVariant(match.slug)];
 
   return fitDescription([
     detailed,
-    `${teams} prediction${when}: ${pick}${odds}. Read the match analysis for ${facts.leagueName}.`,
-    `${teams} prediction${when}. Read our ${facts.leagueName} match analysis and main pick.`,
+    `${teams} prediction${when}. Read the match analysis for ${facts.leagueName} and reveal the pick on the page.`,
+    `${teams} prediction${when}. Read our ${facts.leagueName} match analysis.`,
   ]);
 }
 
@@ -596,7 +590,6 @@ function buildLocalizedDescription(
   const research = localeSearchResearch[locale];
   const teams = matchTeams(match, locale);
   const when = temporal ? ` ${research.temporal[temporal]}` : match.date ? ` ${match.date}` : "";
-  const odds = facts.odds ? `, ${research.odds} ${facts.odds}` : "";
 
   const modules = [];
   if (facts.hasStatistics) modules.push(research.statistics);
@@ -604,8 +597,8 @@ function buildLocalizedDescription(
   const moduleStr = modules.slice(0, 2).join(", ") || research.analysis;
 
   return fitDescription([
-    `${teams}: ${research.prediction}${when}. ${sentenceCase(moduleStr)}, ${research.analysis}${odds} - ${facts.leagueName}.`,
-    `${teams}: ${research.prediction}${when}, ${research.analysis}${odds}.`,
+    `${teams}: ${research.prediction}${when}. ${sentenceCase(moduleStr)}, ${research.analysis}, ${research.odds} - ${facts.leagueName}.`,
+    `${teams}: ${research.prediction}${when}, ${research.analysis}, ${research.odds}.`,
     `${teams}: ${research.prediction} - ${facts.leagueName}.`,
   ]);
 }
@@ -657,11 +650,7 @@ function buildIntro(match: Match, locale: SearchLocale, facts: MatchIntentFacts)
     return `${teams}: ${research.analysis}, ${research.prediction} - ${facts.leagueName}.`;
   }
 
-  const odds = facts.odds ? ` at published odds of ${facts.odds}` : "";
-  if (!facts.mainPick) {
-    return `${teams} meet in ${facts.leagueName}. This preview outlines the match context, analysis and key considerations.`;
-  }
-  return `${teams} meet in ${facts.leagueName}. This preview explains the reasoning behind ${facts.mainPick}${odds} and the main risks considered.`;
+  return `${teams} meet in ${facts.leagueName}. This preview explains the match evidence and main risks; the prediction and published odds require an explicit reveal.`;
 }
 
 export function buildMatchSearchIntent(

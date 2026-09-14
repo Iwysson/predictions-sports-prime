@@ -10,6 +10,10 @@ import { MethodologyLink } from "@/components/MethodologyLink";
 import { ArticleSources } from "@/components/ArticleSources";
 import { EditorialAnalysis } from "@/components/EditorialAnalysis";
 import {
+  PredictionRevealPanel,
+  PredictionRevealProvider,
+} from "@/components/PredictionReveal";
+import {
   LocalizedMatchDetails,
   isFullyLocalizedMatchLocale,
 } from "@/components/LocalizedMatchDetails";
@@ -192,7 +196,7 @@ export function LocalizedMatchPageContent({
   const isHistorical = isFixtureHistoryEligible(match);
 
   return (
-    <>
+    <PredictionRevealProvider>
       <section className="compact-match-top">
         <div className="container">
           <nav className="compact-match-breadcrumb" aria-label="Breadcrumb">
@@ -297,7 +301,12 @@ export function LocalizedMatchPageContent({
               <EditorialAnalysis
                 analysis={analysis}
                 format={analysisFormat}
-                hideSensitiveSnippets={!isHistorical}
+                hideSensitiveSnippets
+                sensitiveValues={[
+                  mainPrediction,
+                  odds?.value,
+                  latestObservedOdds?.value,
+                ]}
               />
             </div>
 
@@ -322,23 +331,12 @@ export function LocalizedMatchPageContent({
               </div>
             </div>
 
-            <div className="main-prediction-block" data-nosnippet={isHistorical ? undefined : ""}>
-              <strong>{mainPrediction}</strong>
-
-              {odds ? (
-                <div className="prediction-odds">
-                  <span>{copy.odds}</span>
-                  <b>{odds.value}</b>
-                </div>
-              ) : null}
-
-              {latestObservedOdds ? (
-                <div className="prediction-odds">
-                  <span>{extra.latestOdds}</span>
-                  <b>{latestObservedOdds.value}</b>
-                </div>
-              ) : null}
-            </div>
+            <PredictionRevealPanel
+              prediction={mainPrediction}
+              odds={odds?.value}
+              latestObservedOdds={latestObservedOdds?.value}
+              locale={locale}
+            />
 
             <p className="compact-responsible-note">
               {copy.responsible}
@@ -374,6 +372,6 @@ export function LocalizedMatchPageContent({
       </div>
 
       <PredictionLeagueCategories locale={locale} />
-    </>
+    </PredictionRevealProvider>
   );
 }

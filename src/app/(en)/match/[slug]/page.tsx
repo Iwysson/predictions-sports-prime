@@ -11,12 +11,15 @@ import { ArticleByline } from "@/components/ArticleByline";
 import { MethodologyLink } from "@/components/MethodologyLink";
 import { ArticleSources } from "@/components/ArticleSources";
 import { EditorialAnalysis } from "@/components/EditorialAnalysis";
+import {
+  PredictionRevealPanel,
+  PredictionRevealProvider,
+} from "@/components/PredictionReveal";
 import { MatchSemanticDetails } from "@/components/MatchSemanticDetails";
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import {
   MatchAnalysisLabel,
   MainPredictionLabel,
-  OddsLabel,
   ResponsibleText,
 } from "@/components/MatchPageLabels";
 import { JsonLd } from "@/components/JsonLd";
@@ -113,7 +116,7 @@ export default async function MatchPage({
   const isHistorical = isFixtureHistoryEligible(match);
 
   return (
-    <>
+    <PredictionRevealProvider>
       <JsonLd data={articleJsonLd(match)} />
       <JsonLd data={matchBreadcrumbJsonLd(match)} />
 
@@ -215,7 +218,16 @@ export default async function MatchPage({
             </div>
 
             <div className="compact-analysis-copy">
-              <EditorialAnalysis analysis={match.analysis} format={match.analysisFormat} hideSensitiveSnippets={!isHistorical} />
+              <EditorialAnalysis
+                analysis={match.analysis}
+                format={match.analysisFormat}
+                hideSensitiveSnippets
+                sensitiveValues={[
+                  mainPrediction?.value,
+                  odds?.value,
+                  latestObservedOdds?.value,
+                ]}
+              />
             </div>
 
             {match.comment ? (
@@ -244,24 +256,11 @@ export default async function MatchPage({
               </div>
             </div>
 
-            <div className="main-prediction-block" data-nosnippet={isHistorical ? undefined : ""}>
-              <strong>{mainPrediction?.value}</strong>
-
-              {odds ? (
-                <div className="prediction-odds">
-                  <span><OddsLabel /></span>
-                  <b>
-                    {odds.value}
-                  </b>
-                </div>
-              ) : null}
-              {latestObservedOdds ? (
-                <div className="prediction-odds">
-                  <span>Latest observed odds</span>
-                  <b>{latestObservedOdds.value}</b>
-                </div>
-              ) : null}
-            </div>
+            <PredictionRevealPanel
+              prediction={mainPrediction?.value}
+              odds={odds?.value}
+              latestObservedOdds={latestObservedOdds?.value}
+            />
 
             <p className="compact-responsible-note">
               <ResponsibleText />
@@ -288,6 +287,6 @@ export default async function MatchPage({
       </div>
 
       <PredictionLeagueCategories />
-    </>
+    </PredictionRevealProvider>
   );
 }

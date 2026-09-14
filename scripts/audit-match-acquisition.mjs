@@ -25,10 +25,11 @@ for (const match of future) {
   assert.ok(metadata.title.length <= 70, `${match.slug}: title exceeds 70 characters`);
   assert.ok(metadata.description.length <= 160, `${match.slug}: description exceeds 160 characters`);
   assert.ok(metadata.description.includes(match.homeTeam) && metadata.description.includes(match.awayTeam), `${match.slug}: fixture identity missing from description`);
-  if (pick) assert.ok(metadata.description.includes(pick), `${match.slug}: real main pick missing from description`);
+  if (pick) assert.ok(!metadata.description.toLowerCase().includes(pick.toLowerCase()), `${match.slug}: real main pick leaked into description`);
   if (odds) {
     assert.match(metadata.h1, /Odds/, `${match.slug}: available odds intent missing from H1`);
     assert.ok(metadata.title.includes("Odds") || metadata.reasons.includes("odds_omitted_for_length"), `${match.slug}: odds title decision is unexplained`);
+    assert.ok(!metadata.description.includes(`published odds of ${odds}`), `${match.slug}: exact odds leaked into description`);
   }
   assert.ok(!titles.has(metadata.title), `${match.slug}: duplicate title`);
   assert.ok(!h1s.has(metadata.h1), `${match.slug}: duplicate H1`);

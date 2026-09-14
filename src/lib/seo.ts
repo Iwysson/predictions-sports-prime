@@ -41,6 +41,13 @@ export function matchSeoTitle(match: Match) {
 }
 
 export function matchSeoDescription(match: Match) {
+  if (isSeoFeatureEnabled("title-engine-v2") && isMatchSearchIntentV2Eligible(match)) {
+    return buildMatchMetadataV2(match).description;
+  }
+  const hasRichMatchCapability = Boolean(match.matchSeo && Object.keys(match.matchSeo).some((module) => module !== "information"));
+  if (hasRichMatchCapability && shouldApplySearchIntentSEO(match)) {
+    return buildMatchSearchIntentCopy(match).description;
+  }
   const league = leagues.find((item) => item.slug === match.league);
   const competition = league?.name ?? "the competition";
   return `${match.homeTeam} vs ${match.awayTeam} prediction for ${competition}, with match analysis, supporting data, market context and the final pick.`;
@@ -54,24 +61,13 @@ export function matchIntroduction(match: Match) {
     return buildMatchSearchIntentCopy(match).intro;
   }
   const league = leagues.find((item) => item.slug === match.league);
-  const mainPick = match.predictions.find(
-    (item) => item.label === "Main Prediction"
-  )?.value;
-  const odds = match.predictions.find(
-    (item) => item.label === "Published Odds" || item.label === "Odds"
-  )?.value;
   const date = match.date ? ` on ${match.date}` : "";
   const kickoff = match.time && match.time !== "TBD"
     ? ` at ${match.time}`
     : "";
   const competition = league?.name ?? "this competition";
 
-  if (!mainPick) {
-    return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}${kickoff}. This preview outlines the match context, analysis and key considerations.`;
-  }
-
-  const price = odds ? ` at published odds of ${odds}` : "";
-  return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}${kickoff}. This preview covers the match context, available data and our published pick ${mainPick}${price}, without treating the analysis as justification for the selection.`;
+  return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}${kickoff}. This preview outlines the match context, available evidence and key risks; the prediction and odds require an explicit reveal.`;
 }
 
 export function matchHeading(match: Match) {
