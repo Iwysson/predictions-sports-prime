@@ -11,6 +11,10 @@ export const middlesbroughVsMillwall: EditorialPrediction = {
 **Prediction:** Over 2.5 Goals  
 **Odds:** 1.64
 
+### Latest team update — 15 September 2026
+
+The teamsheets remain unconfirmed. **Projected Middlesbrough XI:** Vitek; Brittain, Phillips, Malanda, Borges; Berhalter, Morris; Cozier-Duberry, McGree, Conway; Lankshear. **Projected Millwall XI:** Crocombe; Osei-Tutu, Taylor, Cooper, Sturge; Mazou-Sacko, Metcalfe; Esse, Arconte, Neghli; Dykes. Alfie Jones is a doubt for Boro after a minor knock. Millwall's reported unavailable list is **Casper De Norre, Josh Coburn, Lukas Jensen, Tristan Crama, Alfie Doughty, Mathis Servais, Luke Cundle, Massimo Luongo and Mihailo Ivanovic**.
+
 Middlesbrough enter after a 4-3 Championship win over Norwich, while Millwall’s recent league sequence has swung between large wins and heavy defeats. The evidence supports volatility, but cup games are excluded from the competition-specific reading. Boro’s current league results include 2-1 against Lincoln, 3-1 against West Brom, 1-1 at Burnley, 1-0 at QPR and the 4-3 Norwich game. Millwall have recorded 2-0 and 3-0 wins, then 5-1 and 3-0 defeats, a 4-0 win over Bolton and a 3-1 loss at Blackburn. Those results show how sharply Millwall's matches can change once the first goal alters their defensive plan, without proving another shootout. Millwall can still compress central space and Middlesbrough have shown they can win 1-0.
 
 Middlesbrough have the home setting at Riverside Stadium, but territory will only matter if their attacks finish with pressure instead of easy turnovers. Millwall can accept periods without the ball if the visitors remain compact and then use the next possession to move the game away from their own box. That tension between Middlesbrough's repeat attacks and Millwall's first outlet should define much of the first half.
@@ -63,6 +67,7 @@ For Middlesbrough against Millwall, the case for the bet rests on the match-spec
   publishedAt: "2026-09-14T06:30:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "Sports Mole — Middlesbrough vs Millwall team news", url: "https://www.sportsmole.co.uk/football/middlesbrough/preview/middlesbrough-vs-millwall-prediction-team-news-lineups_605058.html", description: "Current secondary-source projected XIs and availability report checked on matchday.", accessedAt: "2026-09-15T07:25:00-03:00" },
     { name: "Current match source", url: "https://www.skysports.com/football/middlesbrough-vs-millwall/5905386310495054232", description: "Verified current competition context/results.", accessedAt: "2026-09-14T06:30:00-03:00" },
     { name: "Fixture schedule", url: "https://www.efl.com/competitions/efl-championship", description: "Verified fixture date/time schedule.", accessedAt: "2026-09-14T06:30:00-03:00" }
   ],

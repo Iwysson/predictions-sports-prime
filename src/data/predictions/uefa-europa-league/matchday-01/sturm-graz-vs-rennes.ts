@@ -12,6 +12,10 @@ export const sturmGrazVsRennes: EditorialPrediction = {
 **Prediction:** Rennes or Draw (X2) + Over 1.5 Goals
 **Odds:** 1.62
 
+### Latest team update — 15 September 2026
+
+No official XI has been released. Sturm Graz are reported without **Leon Grgic (knee) and Emran Soglo (hamstring)**; Niklas Geyrhofer, Szymon Wlodarczyk and Axel Kayombo are not in the registered league-phase squad. The available match preview does not establish a verified Rennes absence, so none is inferred.
+
 ### Match Information
 
 **Competition:** UEFA Europa League 2026/27
@@ -112,6 +116,7 @@ The final view is based on how these squads can interact, not on a generic claim
   publishedAt: "2026-09-12T06:17:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "Sports Mole — Sturm Graz vs Rennes team news", url: "https://www.sportsmole.co.uk/football/sturm-graz/europa-league/preview/sturm-graz-vs-rennes-prediction-team-news-lineups_605097.html", description: "Current secondary-source availability and registration report.", accessedAt: "2026-09-15T07:25:00-03:00" },
     {
       name: "UEFA Europa League — official fixture / squad context",
       url: "https://www.uefa.com/uefaeuropaleague/clubs/55031/matches/",

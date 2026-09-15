@@ -12,6 +12,10 @@ export const ajaxVsWillemIi: EditorialPrediction = {
 
 **Odds:** 1.93
 
+### Latest team update — 15 September 2026
+
+The teamsheets are not official. **Projected Ajax XI:** Ter Stegen; Henrique, Baas, Kehrer, Gaaei; Brandt, Amrabat, Mokio; Edvardsen, Arokodare, Berghuis. **Projected Willem II XI:** Delanghe; Tjoe-A-On, Dekker, Stam, Ter Avest; Vilhena, Twigt; Slory, Van Aalst, Van Loon; Haen. Ajax are expected to be without **Simon Adingra, Daley Blind and Aaron Bouwman**. Willem II's reported unavailable group includes **Jari Schuurman, Anass Zarrouk, Amine Lachkar, Thomas Didillon, Justin Hoogma, Armin Culum and Vito van Crooy**.
+
 **Competition:** Eredivisie 2026/27 | **Date:** 2026-09-15 | **Kick-off:** 20:00 local time | **Venue:** Johan Cruijff ArenA
 
 Ajax host Willem II in the rescheduled third matchday at the Johan Cruijff ArenA. The market supplied for publication is demanding because it combines two independent requirements: Ajax must win by at least two goals and the match must reach eight corners. The handicap is about scoreboard separation; the corner leg is about territorial volume. Treating those as one argument would hide the main risk of the bet.
@@ -72,6 +76,7 @@ This market has two failure points, which the analysis keeps distinct. Ajax can 
   publishedAt: "2026-09-12T06:55:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "Sports Mole — Ajax vs Willem II team news", url: "https://www.sportsmole.co.uk/football/ajax/preview/ajax-vs-willem-ii-prediction-team-news-lineups_605062.html", description: "Current secondary-source projected XIs and availability report checked on matchday.", accessedAt: "2026-09-15T07:25:00-03:00" },
     { name: "KNVB \u2014 Eredivisie schedule", url: "https://www.knvb.nl/competities/eredivisie/programma", description: "Current fixture/statistical context used in this analysis.", accessedAt: "2026-09-12T06:55:00-03:00" },
     { name: "Ajax \u2014 official fixtures", url: "https://www.ajax.nl/wedstrijden/", description: "Current fixture/statistical context used in this analysis.", accessedAt: "2026-09-12T06:55:00-03:00" },
     { name: "SoccerStats \u2014 Ajax vs Willem II 2026/27", url: "https://www.soccerstats.com/pmatch.asp?league=netherlands&stats=54-14-6-2027", description: "Current fixture/statistical context used in this analysis.", accessedAt: "2026-09-12T06:55:00-03:00" }

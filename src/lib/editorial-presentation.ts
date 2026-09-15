@@ -44,8 +44,47 @@ export function dedupeEditorialMarkdown(markdown: string) {
   return dedupeEditorialBlocks(blocks).join("\n\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
+const repeatedMatchMetaLabel =
+  /^(?:competition|phase|round|date|kick-?off|time|venue|location|fixture|season|matchday|status|home|away)$/i;
+
+function isRepeatedMatchMetaLine(line: string) {
+  const trimmed = line.trim();
+  if (!trimmed) return false;
+
+  const labels = [...trimmed.matchAll(/\*\*([^*:]+):?\*\*/g)].map((match) => match[1].trim());
+  return labels.length > 0 && labels.every((label) => repeatedMatchMetaLabel.test(label));
+}
+
+/**
+ * The match header is the single public source for competition, round, date,
+ * kickoff and venue. Older editorial records can retain those facts in their
+ * source markdown, while this presentation-only pass prevents a second
+ * "Match Information" card/table from being rendered below the header.
+ */
+export function stripRepeatedMatchMetadata(markdown: string) {
+  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+  const output: string[] = [];
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+    const trimmed = line.trim();
+
+    if (/^#{1,6}\s+match information\s*$/i.test(trimmed)) continue;
+
+    if (/^\|\s*match information\s*\|/i.test(trimmed)) {
+      while (index + 1 < lines.length && /^\s*\|/.test(lines[index + 1])) index += 1;
+      continue;
+    }
+
+    if (isRepeatedMatchMetaLine(line)) continue;
+    output.push(line);
+  }
+
+  return output.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+}
+
 export function editorialPresentationText(analysis: readonly string[], format?: "markdown") {
   return format === "markdown"
-    ? dedupeEditorialMarkdown(analysis.join("\n\n"))
+    ? stripRepeatedMatchMetadata(dedupeEditorialMarkdown(analysis.join("\n\n")))
     : dedupeEditorialBlocks(analysis).join("\n\n");
 }

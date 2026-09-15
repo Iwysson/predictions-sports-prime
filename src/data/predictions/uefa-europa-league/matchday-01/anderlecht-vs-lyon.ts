@@ -12,6 +12,10 @@ export const anderlechtVsLyon: EditorialPrediction = {
 **Prediction:** Anderlecht or Draw (1X)
 **Odds:** 1.83
 
+### Latest team update — 15 September 2026
+
+The teamsheets are not official. **Projected Anderlecht XI:** Coosemans; Maamar, Biancone, Petrot, Augustinsson; Winkler, Koutsoupias, Kana, Antman; Bentayeb, Sikan. **Projected Lyon XI:** Greif; Athekame, Bacher, Niakhaté, Abner; Bidstrup, Morton; Nuamah, Šulc, Tolisso; Openda. Anderlecht are reported without **Killian Sardella and Lucas Hey**, while Ilay Camara is doubtful. Lyon are without **Julien Duranville**.
+
 ### Match Information
 
 **Competition:** UEFA Europa League 2026/27
@@ -112,6 +116,7 @@ This preview is strongest where the evidence is strongest: verified fixture iden
   publishedAt: "2026-09-12T06:17:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "Sports Mole — Anderlecht vs Lyon team news", url: "https://www.sportsmole.co.uk/football/anderlecht/europa-league/preview/anderlecht-vs-lyon-prediction-team-news-lineups_605133.html", description: "Current secondary-source projected XIs and availability report.", accessedAt: "2026-09-15T07:25:00-03:00" },
     {
       name: "UEFA Europa League — official fixture / squad context",
       url: "https://www.uefa.com/uefaeuropaleague/match/2050060--anderlecht-vs-lyon/lineups/",

@@ -12,6 +12,10 @@ export const levanteVsAthleticClub: EditorialPrediction = {
 
 **Odds:** 1.62
 
+### Latest team update — 15 September 2026
+
+The XIs are projected, not confirmed. **Levante:** Ryan; Nacho Pérez, Mandi, De la Fuente, Manu Sánchez; Oriol Rey, Olasagasti, Bardeli; Brugui, Thiago, Iván Romero. **Athletic Club:** Unai Simón; Rincón, Paredes, Laporte, Johaneko; Ruiz de Galarreta, Gerenabarrena, Sancet; Robert Navarro, Nico Williams, Berenguer. The official teamsheets take precedence when released.
+
 **Competition:** LaLiga 2026/27 | **Round:** Matchday 6 | **Date:** 2026-09-16 | **Kick-off:** 21:30 local time | **Venue:** Estadio Ciutat de València
 
 Levante versus Athletic Club offers direct current-season evidence for both legs of the market. The goals threshold is only two, while the corner threshold is eight. Levante have scored five and conceded five; Athletic have scored six and conceded five. The overall profiles are balanced, but the corner splits are much more aggressive than the requested line.
@@ -78,6 +82,7 @@ The venue corner samples are encouraging but small. Eight corners can arrive wit
   publishedAt: "2026-09-13T16:54:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "Cadena SER — LaLiga Matchday 6 projected lineups", url: "https://cadenaser.com/nacional/2026/09/14/laliga-fantasy-alineaciones-probables-de-los-partidos-de-la-jornada-6-de-laliga-ea-sports-cadena-ser/", description: "Current projected XIs for Levante and Athletic Club.", accessedAt: "2026-09-15T07:25:00-03:00" },
     {"name": "LALIGA", "url": "https://www.laliga.com/en-CA/match/temporada-2026-2027-laliga-ea-sports-levante-ud-athletic-club-6", "description": "Official Matchday 6 fixture and current-season comparison.", "accessedAt": "2026-09-13T16:54:00-03:00"},
     {"name": "Statistical source", "url": "https://www.soccerstats.com/teamstats.asp?league=spain&stats=u1309", "description": "Current 2026/27 venue or corner context with explicit scope.", "accessedAt": "2026-09-13T16:54:00-03:00"},
     {"name": "Statistical source", "url": "https://www.soccerstats.com/teamstats.asp?league=spain&stats=17-elche", "description": "Current 2026/27 venue or corner context with explicit scope.", "accessedAt": "2026-09-13T16:54:00-03:00"}

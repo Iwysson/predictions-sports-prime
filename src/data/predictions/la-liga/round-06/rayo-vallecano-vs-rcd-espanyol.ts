@@ -12,6 +12,10 @@ export const rayoVallecanoVsRcdEspanyol: EditorialPrediction = {
 
 **Odds:** 1.78
 
+### Latest team update — 15 September 2026
+
+The XIs remain projected. Espanyol are expected to be without **Jofre Carreras** because of groin discomfort and the injured **Kike García**; Javi Puado and Andoni Gorosabel are still rebuilding match fitness. For Rayo, **Jorge de Frutos and Fran Pérez are suspended**. No projected player is presented as confirmed before the official teamsheets.
+
 **Competition:** LaLiga 2026/27 | **Round:** Matchday 6 | **Date:** 2026-09-15 | **Kick-off:** 19:00 local time | **Venue:** Estadio Ontime Butarque
 
 Rayo and Espanyol meet with two independent thresholds in the same market: at least two goals and at least eight corners. Rayo have opened with seven goals scored and ten conceded, while Espanyol have six scored and five conceded. That scoring profile gives the goals leg several routes, but the corner requirement depends much more on whether Rayo can reproduce the territorial pressure already seen in their home split.
@@ -78,6 +82,8 @@ The selection has two independent failure points. Rayo can generate enough corne
   publishedAt: "2026-09-13T16:54:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "AS — Espanyol projected XI against Rayo", url: "https://as.com/futbol/alineacion-posible-del-espanyol-ante-el-rayo-vallecano-en-laliga-ea-sports-f202609-n/", description: "Matchday projected-selection and availability report.", accessedAt: "2026-09-15T07:25:00-03:00" },
+    { name: "AS — Rayo suspensions", url: "https://as.com/futbol/primera/de-frutos-y-fran-perez-no-estaran-en-el-bernabeu-f202609-n/", description: "Suspension report covering the Espanyol fixture.", accessedAt: "2026-09-15T07:25:00-03:00" },
     {"name": "LALIGA", "url": "https://www.laliga.com/en-AR/match/temporada-2026-2027-laliga-ea-sports-rayo-vallecano-rcd-espanyol-de-barcelona-6", "description": "Official Matchday 6 fixture and current-season comparison.", "accessedAt": "2026-09-13T16:54:00-03:00"},
     {"name": "Statistical source", "url": "https://www.soccerstats.com/teamstats.asp?league=spain&stats=u1347-rayo-vallecano", "description": "Current 2026/27 venue or corner context with explicit scope.", "accessedAt": "2026-09-13T16:54:00-03:00"},
     {"name": "Statistical source", "url": "https://as.com/resultados/futbol/primera/2026_2027/ranking/equipos/saques-de-esquina/", "description": "Current 2026/27 venue or corner context with explicit scope.", "accessedAt": "2026-09-13T16:54:00-03:00"}

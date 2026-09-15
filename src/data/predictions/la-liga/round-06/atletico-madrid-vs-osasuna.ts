@@ -12,6 +12,10 @@ export const atleticoMadridVsOsasuna: EditorialPrediction = {
 
 **Odds:** 1.72
 
+### Latest team update — 15 September 2026
+
+No official XI has been released. Atlético trained without **Alexander Sørloth, Julián Álvarez and Pablo Barrios**, who remain injury absences. The current projected Atlético XI is Oblak; Marcos Llorente, Pubill, Romero, Hancko, Grimaldo; Koke, Kang-In Lee, Álex Baena; Giuliano, Lookman. Osasuna's projected XI is Herrera; Osambela, Boyomo, Catena, Bretones; Lucas Torró, Moncayola, Dubasin; Del Castillo, Raúl Moro, Budimir.
+
 **Competition:** LaLiga 2026/27 | **Round:** Matchday 6 | **Date:** 2026-09-16 | **Kick-off:** 19:00 local time | **Venue:** Riyadh Air Metropolitano
 
 Atlético and Osasuna were level on seven points in the official preview snapshot, but Atlético had produced more shots and more goals. The requested selection combines a home victory with at least two total goals, which means the classic 1-0 Atlético result is the most obvious failure route even if the match is otherwise controlled by the favourite.
@@ -68,6 +72,8 @@ The most obvious failure is a narrow Atlético win. A 1-0 result gets the favour
   publishedAt: "2026-09-13T16:54:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "Cadena SER — LaLiga Matchday 6 projected lineups", url: "https://cadenaser.com/nacional/2026/09/14/laliga-fantasy-alineaciones-probables-de-los-partidos-de-la-jornada-6-de-laliga-ea-sports-cadena-ser/", description: "Current projected XIs for Atlético Madrid and Osasuna.", accessedAt: "2026-09-15T07:25:00-03:00" },
+    { name: "AS — Atlético training and absences", url: "https://as.com/futbol/primera/arnau-conquista-a-simeone-f202609-n/", description: "Latest training report supporting Atlético injury absences.", accessedAt: "2026-09-15T07:25:00-03:00" },
     {"name": "LALIGA", "url": "https://www.laliga.com/en-AR/match/temporada-2026-2027-laliga-ea-sports-atletico-de-madrid-ca-osasuna-6", "description": "Official Matchday 6 fixture and current-season comparison.", "accessedAt": "2026-09-13T16:54:00-03:00"}
   ],
   matchInfo: { date: "2026-09-16", time: "19:00", round: "Matchday 6", venue: "Riyadh Air Metropolitano" }

@@ -12,6 +12,10 @@ export const rcDeportivoVsSevilla: EditorialPrediction = {
 
 **Odds:** 1.44
 
+### Latest team update — 15 September 2026
+
+The XIs are projected, not confirmed. **RC Deportivo:** Leo Román; Ximo Navarro, Noubi, Giménez, Quagliata; Amatucci, Casadó, Mario Soriano; Adama Traoré, Yeremay, Aubameyang. **Sevilla:** Vlachodimos; Juan Iglesias, Castrín, Kike Salas, Suazo; Agoumé, Kochorashvili, Guridi; Sierra, Ejuke, Robbie Ure. The official teamsheets take precedence when released.
+
 **Competition:** LaLiga 2026/27 | **Round:** Matchday 6 | **Date:** 2026-09-16 | **Kick-off:** 19:00 local time | **Venue:** Estadio ABANCA-RIAZOR
 
 RC Deportivo and Sevilla have both started with positive scoring returns: eight goals each in the official preview, although Sevilla have played one extra match. Deportivo were unbeaten through four, while Sevilla had ten points from five. Over 1.5 sits below the total-goal environment produced by both teams so far, but the short odds already price in much of that expectation.
@@ -68,6 +72,7 @@ Both clubs' early scoring totals support a second goal, yet Deportivo's efficien
   publishedAt: "2026-09-13T16:54:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "Cadena SER — LaLiga Matchday 6 projected lineups", url: "https://cadenaser.com/nacional/2026/09/14/laliga-fantasy-alineaciones-probables-de-los-partidos-de-la-jornada-6-de-laliga-ea-sports-cadena-ser/", description: "Current projected XIs for Deportivo and Sevilla.", accessedAt: "2026-09-15T07:25:00-03:00" },
     {"name": "LALIGA", "url": "https://www.laliga.com/en-ES/match/temporada-2026-2027-laliga-ea-sports-rc-deportivo-sevilla-fc-6", "description": "Official Matchday 6 fixture and current-season comparison.", "accessedAt": "2026-09-13T16:54:00-03:00"}
   ],
   matchInfo: { date: "2026-09-16", time: "19:00", round: "Matchday 6", venue: "Estadio ABANCA-RIAZOR" }

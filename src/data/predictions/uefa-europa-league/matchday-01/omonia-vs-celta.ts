@@ -12,6 +12,10 @@ export const omoniaVsCelta: EditorialPrediction = {
 **Prediction:** Celta or Draw (X2) + Over 1.5 Goals
 **Odds:** 1.67
 
+### Latest team update — 15 September 2026
+
+The teamsheets remain unconfirmed. Celta travel with a materially reduced availability picture: **Iago Aspas** has a suspected left-thigh muscle tear, **Borja Iglesias** has not fully recovered from a soleus injury, Antañón has an ankle sprain, Jones is unavailable with physical discomfort and Aleix Febas remains under assessment after a rib contusion. No Omonia absence is added without equivalent current confirmation.
+
 ### Match Information
 
 **Competition:** UEFA Europa League 2026/27
@@ -112,6 +116,7 @@ The matchup has enough specific tactical tension to stand on its own without inv
   publishedAt: "2026-09-12T06:17:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "La Voz de Galicia — Celta availability before Omonia", url: "https://galego.lavozdegalicia.es/noticia/gradario/2026/09/15/estreno-europa-victorias-tiempo-enfermeria-llena/0003_202609V15P33991.htm", description: "Current matchday report on Celta injuries and doubts before travel.", accessedAt: "2026-09-15T07:25:00-03:00" },
     {
       name: "UEFA Europa League — official fixture / squad context",
       url: "https://www.uefa.com/uefaeuropaleague/match/2050063--omonia-vs-celta/lineups/",

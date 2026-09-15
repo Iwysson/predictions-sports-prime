@@ -11,6 +11,10 @@ export const saoPauloVsBocaJuniors: EditorialPrediction = {
 **Prediction:** São Paulo Over 5.5 Team Corners  
 **Odds:** 1.88
 
+### Latest team update — 15 September 2026
+
+São Paulo's XI is still projected, not confirmed: **Rafael; Domingos Duarte, Arboleda, Sabino; Lucas Ramon, Danielzinho, Marcos Antônio, Iago; Artur, Luciano (André Silva), Gustavo Santana**. Luciano has recovered from a left-thigh oedema and is expected to be available, with a final starting decision due on matchday. **Calleri is suspended**, and Gustavo Santana is the expected replacement.
+
 São Paulo return from La Bombonera one goal behind after Boca won the first leg 1-0. CONMEBOL noted that São Paulo started that match positively before Boca took greater control, and the aggregate now changes the second-leg incentives completely. The home side cannot qualify by protecting a draw; at some stage they must sustain pressure. Six corners can come from territorial repetition even if finishing remains inefficient: blocked deliveries, defensive headers, shots deflected behind and restarts after wide attacks. Boca have a reason to defend longer phases because they lead the tie, but they can also press higher to prevent São Paulo reaching crossing zones. A Boca goal, by contrast, would force São Paulo to attack in waves for the remainder of the match.
 
 At MorumBIS, the aggregate context makes patience a tactical decision rather than a passive one. São Paulo need to know when to commit extra players and when to keep protection behind the ball, because Boca Juniors can turn one loose possession into a major swing in the tie. The tactical picture between São Paulo and Boca Juniors may turn on small sequences rather than one dominant pattern, especially when a clearance, rebound or short transition changes who controls territory.
@@ -63,6 +67,7 @@ For São Paulo against Boca Juniors, the case for the bet rests on the match-spe
   publishedAt: "2026-09-14T06:30:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "ge — São Paulo prepares change against Boca Juniors", url: "https://ge.globo.com/futebol/times/sao-paulo/noticia/2026/09/14/escalacao-sao-paulo-prepara-mudanca-no-ataque-para-enfrentar-o-boca.ghtml", description: "Matchday projected XI, Luciano return status and Calleri suspension.", accessedAt: "2026-09-15T07:25:00-03:00" },
     { name: "Current match source", url: "https://gol.conmebol.com/sudamericana/pt-br/news/os-mandantes-fizeram-valer-forca-de-casa-assim-foram-os-jogos-de-ida-das-quartas-de-final", description: "Verified current competition context/results.", accessedAt: "2026-09-14T06:30:00-03:00" },
     { name: "Fixture schedule", url: "https://ge.globo.com/futebol/copa-sul-americana/noticia/2026/08/27/quartas-de-final-da-sul-americana-2026-veja-datas-e-horarios-dos-confrontos.ghtml", description: "Verified fixture date/time schedule.", accessedAt: "2026-09-14T06:30:00-03:00" }
   ],

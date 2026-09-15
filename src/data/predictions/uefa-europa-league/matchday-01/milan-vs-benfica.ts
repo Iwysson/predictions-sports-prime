@@ -12,6 +12,10 @@ export const milanVsBenfica: EditorialPrediction = {
 **Prediction:** Milan or Draw (1X) + Over 1.5 Goals
 **Odds:** 1.60
 
+### Latest team update — 15 September 2026
+
+The teamsheets remain projected. **Projected Milan XI:** Maignan; De Winter, Gabbia, Pavlović; Chukwueze, Modrić, Musah, Moreira; Pulisic, Cissé; Gonçalo Ramos. Benfica are reported without **Alexander Bah** because of a shoulder injury, with Daniel Banjaqui or Fredrik Aursnes the possible replacement at right-back.
+
 ### Match Information
 
 **Competition:** UEFA Europa League 2026/27
@@ -112,6 +116,7 @@ There is no need to disguise the uncertainty of an opening European round. The t
   publishedAt: "2026-09-12T06:17:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "Sports Mole — Milan vs Benfica team news", url: "https://www.sportsmole.co.uk/football/ac-milan/europa-league/preview/ac-milan-vs-benfica-prediction-team-news-lineups_605127.html", description: "Current secondary-source projected XI and availability report.", accessedAt: "2026-09-15T07:25:00-03:00" },
     {
       name: "UEFA Europa League — official fixture / squad context",
       url: "https://www.uefa.com/uefaeuropaleague/match/2050058--milan-vs-benfica/lineups/",

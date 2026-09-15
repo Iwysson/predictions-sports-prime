@@ -11,6 +11,10 @@ export const bristolCityVsLincolnCity: EditorialPrediction = {
 **Prediction:** Bristol City or Draw (1X) + Over 1.5 Goals  
 **Odds:** 1.65
 
+### Latest team update — 15 September 2026
+
+The teamsheets remain unconfirmed. **Projected Bristol City XI:** Tickle; Cardines, Dickie, Eissat, Pring; Williams, Knight; Hirakawa, Ballard, Twine; Tolaj. **Projected Lincoln City XI:** Wickens; Elerewe, Bradley, Coubis; Jefferies, Bayliss, McGrandles, Reach; Hackett, Street, House. Bristol City's continuing concern is **Luke McNally**. Lincoln are expected to be without **Daniel Oyegoke, Tom Hamer, Tendayi Darikwa and Mason Melia**, with Dom Jefferies the reported possible replacement for Oyegoke.
+
 Bristol City host Lincoln in the rescheduled Championship fixture at Ashton Gate. Bristol’s early league games have produced several multi-goal scorelines, while Lincoln’s recent sequence has been notably tighter. Lincoln, however, have recently produced 1-0, 0-0, 1-1 and 1-0 results, evidence that they can keep matches compressed. Bristol need patience against that structure rather than sterile possession. Lincoln's recent form shows why Bristol may need patience: the visitors have repeatedly kept matches compressed even when they concede territory. Their 0-0 with Blackburn and consecutive 1-0 results show that they are comfortable in matches where territory does not turn into repeated high-value chances. Bristol need to avoid feeding that pattern with slow circulation in front of a set block. The home side's better route is to create movement behind the first pressure line, attack the space around the full-backs and force Lincoln to defend while moving toward their own goal. A scoreless match deep into the second half is the clearest warning sign. If the score is still level and low deep into the second half, Bristol may become more aggressive, but Lincoln's compact shape can still keep the game compressed.
 
 At Ashton Gate, Bristol City should have more opportunities to set the starting position of the game, but Lincoln City can still decide its speed. A key detail in Bristol City versus Lincoln City is what happens immediately after the obvious action: the recovery run, supporting pass or second duel can determine whether pressure continues or the field resets. For Bristol City, the key is to make each spell around the box end with another recoverable ball rather than an uncontested clearance.
@@ -63,6 +67,7 @@ For Bristol City against Lincoln City, the case for the bet rests on the match-s
   publishedAt: "2026-09-14T06:30:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "Sports Mole — Bristol City vs Lincoln City team news", url: "https://www.sportsmole.co.uk/football/bristol-city/preview/bristol-city-vs-lincoln-prediction-team-news-lineups_605123.html", description: "Current secondary-source projected XIs and availability report checked on matchday.", accessedAt: "2026-09-15T07:25:00-03:00" },
     { name: "Current match source", url: "https://bristolcitynews.co.uk/fixtures", description: "Verified current competition context/results.", accessedAt: "2026-09-14T06:30:00-03:00" },
     { name: "Fixture schedule", url: "https://www.efl.com/competitions/efl-championship", description: "Verified fixture date/time schedule.", accessedAt: "2026-09-14T06:30:00-03:00" }
   ],

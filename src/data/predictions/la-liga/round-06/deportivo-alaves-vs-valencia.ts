@@ -12,6 +12,10 @@ export const deportivoAlavesVsValencia: EditorialPrediction = {
 
 **Odds:** 1.44
 
+### Latest team update — 15 September 2026
+
+The lineups remain unconfirmed. Valencia travel under interim coach Óscar Sánchez and are reported without **Sergi Canós, Diego López, José Copete, Guido Rodríguez, Umar Sadiq, Mouctar Diakhaby, Luis Rioja, Dimitri Foulquier and César Tárrega**. The official LaLiga listing confirms the fixture at Mendizorroza; no player is upgraded from probable to confirmed before the teamsheets.
+
 **Competition:** LaLiga 2026/27 | **Round:** Matchday 6 | **Date:** 2026-09-15 | **Kick-off:** 20:00 local time | **Venue:** Mendizorroza
 
 Alavés and Valencia arrive from opposite ends of the early table. The official comparison has Alavés on ten points with ten goals scored and only three conceded, while Valencia have one point, one goal and ten conceded. For Over 1.5, that matters because the home side have already shown enough production to create a two-goal match without requiring Valencia to contribute.
@@ -66,6 +70,7 @@ Alavés' scoring start is the strongest support, while Valencia's potential to s
   publishedAt: "2026-09-13T16:54:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "Goal España — Alavés vs Valencia team news", url: "https://www.goal.com/es/noticias/streaming-en-vivo-alave%CC%81s-v-valencia/blt631c8c22d7cfbf63", description: "Current secondary-source Valencia availability and interim-coach report.", accessedAt: "2026-09-15T07:25:00-03:00" },
     {"name": "LALIGA", "url": "https://www.laliga.com/en-US/match/temporada-2026-2027-laliga-ea-sports-deportivo-alaves-valencia-cf-6", "description": "Official Matchday 6 fixture and current-season comparison.", "accessedAt": "2026-09-13T16:54:00-03:00"}
   ],
   matchInfo: { date: "2026-09-15", time: "20:00", round: "Matchday 6", venue: "Mendizorroza" }

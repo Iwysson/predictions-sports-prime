@@ -12,6 +12,10 @@ export const fcBarcelonaVsRacingSantander: EditorialPrediction = {
 
 **Odds:** 1.57
 
+### Latest team update — 15 September 2026
+
+The XIs are projected, not confirmed. **Barcelona:** Joan García; Koundé, Christensen, Gerard Martín, Cancelo; Bernal, Pedri, Dani Olmo; Lamine Yamal, Adeyemi, Raphinha. **Racing Santander:** Agirrezabala; Mantilla, Pablo Ramón, Belocian, Salinas; Iván Martín, Prati, Canales; Pablo García, Iñigo Vicente, Zabiri. The official teamsheets take precedence when released.
+
 **Competition:** LaLiga 2026/27 | **Round:** Matchday 6 | **Date:** 2026-09-16 | **Kick-off:** 21:30 local time | **Venue:** Spotify Camp Nou
 
 Barcelona’s -2.5 handicap requires a win by at least three goals, so this page separates dominance from margin. The official LaLiga preview snapshot showed Barcelona with four wins, seventeen goals and only two conceded; Racing had seven goals scored but eight conceded. Those numbers explain why Barcelona are a heavy favourite, but they do not guarantee the necessary three-goal separation.
@@ -69,6 +73,7 @@ The handicap is lost by any Barcelona win of one or two goals. Racing therefore 
   publishedAt: "2026-09-13T16:54:00-03:00",
   sourceStatus: "partial",
   sources: [
+    { name: "Cadena SER — LaLiga Matchday 6 projected lineups", url: "https://cadenaser.com/nacional/2026/09/14/laliga-fantasy-alineaciones-probables-de-los-partidos-de-la-jornada-6-de-laliga-ea-sports-cadena-ser/", description: "Current projected XIs for Barcelona and Racing Santander.", accessedAt: "2026-09-15T07:25:00-03:00" },
     {"name": "LALIGA", "url": "https://www.laliga.com/en-AR/match/temporada-2026-2027-laliga-ea-sports-fc-barcelona-r-racing-club-6", "description": "Official Matchday 6 fixture and current-season comparison.", "accessedAt": "2026-09-13T16:54:00-03:00"},
     {"name": "Statistical source", "url": "https://www.soccerstats.com/teamstats.asp?league=spain&stats=u7141", "description": "Current 2026/27 venue or corner context with explicit scope.", "accessedAt": "2026-09-13T16:54:00-03:00"}
   ],
