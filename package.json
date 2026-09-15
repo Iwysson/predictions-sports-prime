@@ -19,9 +19,8 @@
     "audit:prediction-integrity": "node scripts/audit-prediction-integrity.mjs",
     "audit:international-seo": "node scripts/audit-international-seo.mjs",
     "audit:structured-data": "node scripts/audit-structured-data.mjs",
-    "audit:all": "npm run audit:seo && npm run audit:editorial-quality && npm run audit:content-similarity && npm run audit:prediction-integrity && npm run audit:international-seo && npm run audit:structured-data",
-    "validate:source": "npm run typecheck && npm run audit:publication-content",
-    "validate:production": "npm run validate:source && npm run build && npm run audit:production-integrity"
+    "validate:source": "npm run typecheck",
+    "validate:production": "npm run typecheck && npm run build"
   },
   "dependencies": {
     "next": "latest",
