@@ -195,6 +195,7 @@ export function normalizeTeamKey(name: string) {
     sportingclubeportugal: "sportingcp",
     sportlisboaebenfica: "benfica",
     vitoriascguimaraes: "vitoriaguimaraes",
+    vitoriasc: "vitoriaguimaraes",
     olympiquemarseille: "marseille",
     psg: "parissaintgermain",
     om: "marseille",
