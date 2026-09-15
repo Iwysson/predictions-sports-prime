@@ -80,7 +80,7 @@ function parseLeg(source: string): ParsedPredictionLeg | null {
   const totalCorners = source.match(/^(Over|Under) (\d+(?:\.\d+)?) Corners?$/i);
   if (totalCorners) return { kind: "corners", selection: totalCorners[1].toLowerCase() as "over" | "under", line: Number(totalCorners[2]), source };
 
-  const teamCorners = source.match(/^(.+?) (Over|Under) (\d+(?:\.\d+)?) Corners?$/i);
+  const teamCorners = source.match(/^(.+?) (Over|Under) (\d+(?:\.\d+)?) (?:Team )?Corners?$/i);
   if (teamCorners) return { kind: "corners", team: teamCorners[1], selection: teamCorners[2].toLowerCase() as "over" | "under", line: Number(teamCorners[3]), source };
 
   const total = source.match(/^(Over|Under) (\d+(?:\.\d+)?) Goals$/i);
@@ -99,6 +99,12 @@ function parseLeg(source: string): ParsedPredictionLeg | null {
   if (compactDoubleChance) {
     const side = compactDoubleChance[2].toUpperCase() === "X2" ? "X2" : "1X";
     return { kind: "double-chance", team: compactDoubleChance[1], side, source };
+  }
+
+  const bareDoubleChance = source.match(/^(1X|X1|X2)$/i);
+  if (bareDoubleChance) {
+    const side = bareDoubleChance[1].toUpperCase() === "X2" ? "X2" : "1X";
+    return { kind: "double-chance", team: "", side, source };
   }
 
   const teamTotal = source.match(/^(.+?) (Over|Under) (\d+(?:\.\d+)?) Team Goals$/i);

@@ -23,7 +23,7 @@ import {
   ResponsibleText,
 } from "@/components/MatchPageLabels";
 import { JsonLd } from "@/components/JsonLd";
-import { leagues } from "@/data/leagues";
+import { leaguesBySlug } from "@/data/leagues";
 import { matches } from "@/data/matches";
 import { editorialPredictions } from "@/data/predictions";
 import {
@@ -93,9 +93,7 @@ export default async function MatchPage({
   }
 
   const match = storedMatch;
-  const league = leagues.find(
-    (item) => item.slug === match.league
-  );
+  const league = leaguesBySlug[match.league];
   const mainPrediction = match.predictions.find(
     (item) => item.label === "Main Prediction"
   );

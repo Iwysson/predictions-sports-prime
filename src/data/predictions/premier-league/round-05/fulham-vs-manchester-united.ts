@@ -1,0 +1,68 @@
+import type { EditorialPrediction } from "@/types";
+
+export const fulhamVsManchesterUnited: EditorialPrediction = {
+  league: "premier-league",
+  homeTeam: "Fulham",
+  awayTeam: "Manchester United",
+  slug: "fulham-vs-manchester-united",
+  title: "Fulham vs Manchester United Prediction, Odds and Betting Tips",
+  analysis: [`# Fulham vs Manchester United Prediction, Odds and Betting Tips
+
+**Prediction:** Over 2.5 Goals  
+**Odds:** 1.6
+
+Fulham arrive from a 0-0 draw at Liverpool after earlier league scores of 2-3, 1-0 and 2-3. Manchester United have 4 points from four matches and lost 1-0 at home to Manchester City on 13 September. Fulham have produced 2-3 against Chelsea, 1-0 at Sunderland, 2-3 against Crystal Palace and most recently 0-0 at Liverpool. Manchester United have already played a 5-2 win over Ipswich and a 2-2 draw at Everton, but lost 1-0 to Manchester City on 13 September. Fulham have twice been involved in five-goal matches and have also just held Liverpool to 0-0. United have shown a seven-goal ceiling against Ipswich but were restricted to no goals in the derby.
+
+Craven Cottage gives Fulham the setting to take initiative, but the first twenty minutes should be judged by the quality of that initiative. Fulham need to create movement around Manchester United's defensive line, not just accumulate touches in front of it. When Manchester United recover the ball, the visitors can make the home pressure costly by finding the free player before Fulham restore their balance.
+
+The first goal should determine which side is allowed to stay patient. Fulham in front can keep more players behind the ball during risky possessions, while Manchester United in front can make the hosts attack a narrower space. If the game is still level after an hour, neither team has a reason to turn every possession into a gamble, so the decisive moment may come from a short burst rather than constant pressure.
+
+Fresh players can alter this matchup without a dramatic formation switch. Fulham may seek more running around the box, whereas Manchester United can use a substitute to secure possession and move the block higher. If Fulham are controlling territory without creating enough threat, a fresher runner can change the timing of attacks; if Manchester United are being pinned back, a substitute who can hold the first pass can move the entire team forward. The tactical picture between Fulham and Manchester United may turn on small sequences rather than one dominant pattern, especially when a clearance, rebound or short transition changes who controls territory.
+
+| Match information | Detail |
+| --- | --- |
+| Competition | Premier League 2026/27 only |
+| Fixture | Fulham vs Manchester United |
+| Date | 2026-09-20 |
+| Kickoff | 16:30 |
+| Round | Matchweek 5 |
+| Venue | Craven Cottage |
+| Current evidence | Fulham have produced 2-3 against Chelsea, 1-0 at Sunderland, 2-3 against Crystal Palace and most recently 0-0 at Liverpool. Manchester United have already played a 5-2 win over Ipswich and a 2-2 draw at Everton, but lost 1-0 to Manchester City on 13 September. |
+
+### Pre-match data status
+
+Any lineup named for Fulham or Manchester United in the analysis is an expected or projected XI, not a confirmed teamsheet. Where no lineup is named, a reliable match-specific projection was unavailable at the editorial cutoff. The retained sources likewise do not establish a complete current injury, fitness, suspension and eligibility report for both clubs; those items remain unavailable unless stated above, and the official teamsheet must take precedence.
+
+### Statistical Core Predictions-Sports-Prime
+
+Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Fulham HOME versus Manchester United AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+
+The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 2.5 Goals is that Fulham and Manchester United produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
+
+### Market price and value
+
+At decimal odds of **1.6**, the raw **implied probability is 62.5%**, calculated as **1 / 1.6** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
+
+### Conclusion
+
+For Fulham against Manchester United, the case for the bet rests on the match-specific analysis above, while the missing HOME/AWAY metrics and pre-match availability gaps limit confidence. The price does not replace the football evidence and does not remove the identified failure path.
+
+**Prediction:** Over 2.5 Goals  
+**Odds:** 1.6`],
+  analysisFormat: "markdown",
+  editorialStandard: "psp-v1",
+  picks: {
+    main: "Over 2.5 Goals",
+    publishedOdds: 1.6,
+    oddsProvenance: { source: "PSP author-supplied publication selection — 14/09/2026", provenance: "author_attested", market: "Over 2.5 Goals" }
+  },
+  published: true,
+  publishedAt: "2026-09-14T08:25:00-03:00",
+  sourceStatus: "partial",
+  sources: [
+    { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },
+    { "name": "NBC Sports", "url": "https://www.nbcsports.com/soccer/news/premier-league-schedule-for-2026-27-season-released" },
+    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" }
+  ],
+  matchInfo: { date: "2026-09-20", time: "16:30", round: "Matchweek 5", venue: "Craven Cottage" }
+};

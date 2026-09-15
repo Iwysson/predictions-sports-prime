@@ -144,6 +144,19 @@ export function localizePresentationText(text: string, locale: SeoLocaleSlug) {
   let value = replaceMarketLine(text, locale);
 
   const replacements: Array<[RegExp, string]> = [
+    [/Not yet published in a verified venue sample/gi, {
+      "pt-br": "Ainda não publicado em uma amostra verificada por mando",
+      es: "Aún no publicado en una muestra verificada por localía",
+      it: "Non ancora pubblicato in un campione verificato per sede",
+      fr: "Pas encore publié dans un échantillon vérifié selon le lieu",
+      de: "Noch nicht in einer geprüften Heim-/Auswärtsstichprobe veröffentlicht",
+      nl: "Nog niet gepubliceerd in een geverifieerde thuis-/uitsteekproef",
+      tr: "Doğrulanmış iç saha/deplasman örnekleminde henüz yayımlanmadı",
+    }[locale]],
+    [/Same-competition/gi, {
+      "pt-br": "Na mesma competição", es: "En la misma competición", it: "Nella stessa competizione",
+      fr: "Dans la même compétition", de: "Im selben Wettbewerb", nl: "In dezelfde competitie", tr: "Aynı turnuvada",
+    }[locale]],
     [/\bPublished Odds\b/gi, copy.publishedOdds],
     [/\bMain Prediction\b/gi, copy.mainPrediction],
     [/\bStatistical Core(?: Predictions-Sports-Prime)?\b/gi, copy.statisticalCore],

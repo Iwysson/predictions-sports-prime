@@ -7,3 +7,18 @@ out
 
 .idea/
 tsconfig.tsbuildinfo
+
+# Local handoff / diagnostic artifacts. Never publish these deployment inputs.
+/.github.zip
+/functions.zip
+/public.zip
+/reports.zip
+/scripts.zip
+/src.zip
+/current-work.patch
+/git-state.txt
+/psg-rennes-history.txt
+/*.zip
+/*.patch
+*.log
+/reports/

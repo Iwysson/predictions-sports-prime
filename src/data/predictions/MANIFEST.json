@@ -1,0 +1,425 @@
+[
+  {
+    "group": "29-analyses",
+    "file": "ado-den-haag-vs-sc-cambuur.ts",
+    "home": "ADO Den Haag",
+    "away": "SC Cambuur",
+    "prediction": "ADO Den Haag or Draw (1X) + Over 8.5 Corners",
+    "odds": 1.75,
+    "words": 380
+  },
+  {
+    "group": "29-analyses",
+    "file": "ajax-vs-excelsior-rotterdam.ts",
+    "home": "Ajax",
+    "away": "Excelsior Rotterdam",
+    "prediction": "Over 3.5 Goals",
+    "odds": 1.72,
+    "words": 354
+  },
+  {
+    "group": "29-analyses",
+    "file": "az-vs-telstar.ts",
+    "home": "AZ",
+    "away": "Telstar",
+    "prediction": "AZ -1.5 Handicap",
+    "odds": 1.72,
+    "words": 383
+  },
+  {
+    "group": "29-analyses",
+    "file": "fc-groningen-vs-pec-zwolle.ts",
+    "home": "FC Groningen",
+    "away": "PEC Zwolle",
+    "prediction": "FC Groningen to Win",
+    "odds": 1.67,
+    "words": 397
+  },
+  {
+    "group": "29-analyses",
+    "file": "fc-twente-vs-psv.ts",
+    "home": "FC Twente",
+    "away": "PSV",
+    "prediction": "PSV or Draw (X2) + Over 8.5 Corners",
+    "odds": 2.05,
+    "words": 384
+  },
+  {
+    "group": "29-analyses",
+    "file": "feyenoord-vs-fc-utrecht.ts",
+    "home": "Feyenoord",
+    "away": "FC Utrecht",
+    "prediction": "Over 3.5 Goals",
+    "odds": 1.83,
+    "words": 349
+  },
+  {
+    "group": "29-analyses",
+    "file": "nec-nijmegen-vs-go-ahead-eagles.ts",
+    "home": "NEC Nijmegen",
+    "away": "Go Ahead Eagles",
+    "prediction": "NEC or Draw (1X) + Over 2.5 Goals",
+    "odds": 1.67,
+    "words": 355
+  },
+  {
+    "group": "29-analyses",
+    "file": "sparta-rotterdam-vs-sc-heerenveen.ts",
+    "home": "Sparta Rotterdam",
+    "away": "SC Heerenveen",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.52,
+    "words": 436
+  },
+  {
+    "group": "29-analyses",
+    "file": "willem-ii-vs-fortuna-sittard.ts",
+    "home": "Willem II",
+    "away": "Fortuna Sittard",
+    "prediction": "Fortuna Sittard or Draw (X2)",
+    "odds": 1.5,
+    "words": 374
+  },
+  {
+    "group": "29-analyses",
+    "file": "bournemouth-vs-liverpool.ts",
+    "home": "AFC Bournemouth",
+    "away": "Liverpool",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.47,
+    "words": 350
+  },
+  {
+    "group": "29-analyses",
+    "file": "brentford-vs-chelsea.ts",
+    "home": "Brentford",
+    "away": "Chelsea",
+    "prediction": "Chelsea or Draw (X2) + Over 1.5 Goals",
+    "odds": 1.67,
+    "words": 386
+  },
+  {
+    "group": "29-analyses",
+    "file": "brighton-vs-arsenal.ts",
+    "home": "Brighton & Hove Albion",
+    "away": "Arsenal",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.82,
+    "words": 413
+  },
+  {
+    "group": "29-analyses",
+    "file": "everton-vs-ipswich-town.ts",
+    "home": "Everton",
+    "away": "Ipswich Town",
+    "prediction": "Everton or Draw (1X) + Over 1.5 Goals",
+    "odds": 1.5,
+    "words": 337
+  },
+  {
+    "group": "29-analyses",
+    "file": "fulham-vs-manchester-united.ts",
+    "home": "Fulham",
+    "away": "Manchester United",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.6,
+    "words": 425
+  },
+  {
+    "group": "29-analyses",
+    "file": "leeds-united-vs-crystal-palace.ts",
+    "home": "Leeds United",
+    "away": "Crystal Palace",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.87,
+    "words": 372
+  },
+  {
+    "group": "29-analyses",
+    "file": "manchester-city-vs-sunderland.ts",
+    "home": "Manchester City",
+    "away": "Sunderland",
+    "prediction": "Manchester City -1.5 Handicap",
+    "odds": 1.85,
+    "words": 390
+  },
+  {
+    "group": "29-analyses",
+    "file": "newcastle-united-vs-hull-city.ts",
+    "home": "Newcastle United",
+    "away": "Hull City",
+    "prediction": "Newcastle United to Win",
+    "odds": 1.52,
+    "words": 365
+  },
+  {
+    "group": "29-analyses",
+    "file": "nottingham-forest-vs-coventry-city.ts",
+    "home": "Nottingham Forest",
+    "away": "Coventry City",
+    "prediction": "Nottingham Forest or Draw (1X) + Over 1.5 Goals",
+    "odds": 1.5,
+    "words": 401
+  },
+  {
+    "group": "29-analyses",
+    "file": "tottenham-hotspur-vs-aston-villa.ts",
+    "home": "Tottenham Hotspur",
+    "away": "Aston Villa",
+    "prediction": "Tottenham or Draw (1X) + Over 1.5 Goals",
+    "odds": 1.57,
+    "words": 440
+  },
+  {
+    "group": "29-analyses",
+    "file": "atletico-mineiro-vs-santos.ts",
+    "home": "Atlético Mineiro",
+    "away": "Santos",
+    "prediction": "Atlético Mineiro to Win",
+    "odds": 1.88,
+    "words": 330
+  },
+  {
+    "group": "29-analyses",
+    "file": "bristol-city-vs-lincoln-city.ts",
+    "home": "Bristol City",
+    "away": "Lincoln City",
+    "prediction": "Bristol City or Draw (1X) + Over 1.5 Goals",
+    "odds": 1.65,
+    "words": 483
+  },
+  {
+    "group": "29-analyses",
+    "file": "corinthians-vs-estudiantes.ts",
+    "home": "Corinthians",
+    "away": "Estudiantes",
+    "prediction": "Over 1.5 Goals",
+    "odds": 1.6,
+    "words": 351
+  },
+  {
+    "group": "29-analyses",
+    "file": "flamengo-vs-independiente-del-valle.ts",
+    "home": "Flamengo",
+    "away": "Independiente del Valle",
+    "prediction": "Flamengo to Win + Over 1.5 Goals",
+    "odds": 1.6,
+    "words": 355
+  },
+  {
+    "group": "29-analyses",
+    "file": "ldu-quito-vs-palmeiras.ts",
+    "home": "LDU Quito",
+    "away": "Palmeiras",
+    "prediction": "Palmeiras or Draw (X2)",
+    "odds": 1.5,
+    "words": 493
+  },
+  {
+    "group": "29-analyses",
+    "file": "middlesbrough-vs-millwall.ts",
+    "home": "Middlesbrough",
+    "away": "Millwall",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.64,
+    "words": 357
+  },
+  {
+    "group": "29-analyses",
+    "file": "montevideo-city-torque-vs-cienciano.ts",
+    "home": "Montevideo City Torque",
+    "away": "Cienciano",
+    "prediction": "Over 1.5 Goals + Over 8.5 Corners",
+    "odds": 1.65,
+    "words": 337
+  },
+  {
+    "group": "29-analyses",
+    "file": "platense-vs-fluminense.ts",
+    "home": "Platense",
+    "away": "Fluminense",
+    "prediction": "Over 1.5 Goals",
+    "odds": 1.42,
+    "words": 417
+  },
+  {
+    "group": "29-analyses",
+    "file": "sao-paulo-vs-boca-juniors.ts",
+    "home": "São Paulo",
+    "away": "Boca Juniors",
+    "prediction": "São Paulo Over 5.5 Team Corners",
+    "odds": 1.88,
+    "words": 406
+  },
+  {
+    "group": "29-analyses",
+    "file": "vasco-da-gama-vs-independiente-santa-fe.ts",
+    "home": "Vasco da Gama",
+    "away": "Independiente Santa Fe",
+    "prediction": "Over 1.5 Goals + Over 7.5 Corners",
+    "odds": 1.91,
+    "words": 483
+  },
+  {
+    "group": "bundesliga",
+    "file": "bayer-leverkusen-vs-rb-leipzig.ts",
+    "home": "Bayer Leverkusen",
+    "away": "RB Leipzig",
+    "prediction": "Bayer Leverkusen or Draw (1X) + Under 4.5 Goals",
+    "odds": 1.85,
+    "words": 408
+  },
+  {
+    "group": "bundesliga",
+    "file": "bayern-munich-vs-union-berlin.ts",
+    "home": "Bayern Munich",
+    "away": "Union Berlin",
+    "prediction": "Bayern Munich -2.5 Handicap",
+    "odds": 1.65,
+    "words": 434
+  },
+  {
+    "group": "bundesliga",
+    "file": "borussia-monchengladbach-vs-mainz-05.ts",
+    "home": "Borussia Mönchengladbach",
+    "away": "Mainz 05",
+    "prediction": "Over 8.5 Corners",
+    "odds": 1.62,
+    "words": 409
+  },
+  {
+    "group": "bundesliga",
+    "file": "eintracht-frankfurt-vs-sc-freiburg.ts",
+    "home": "Eintracht Frankfurt",
+    "away": "SC Freiburg",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.5,
+    "words": 393
+  },
+  {
+    "group": "bundesliga",
+    "file": "hamburger-sv-vs-fc-koln.ts",
+    "home": "Hamburger SV",
+    "away": "1. FC Köln",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.64,
+    "words": 425
+  },
+  {
+    "group": "bundesliga",
+    "file": "sc-paderborn-07-vs-tsg-hoffenheim.ts",
+    "home": "SC Paderborn 07",
+    "away": "TSG Hoffenheim",
+    "prediction": "TSG Hoffenheim or Draw (X2) + Over 2.5 Goals",
+    "odds": 1.78,
+    "words": 412
+  },
+  {
+    "group": "bundesliga",
+    "file": "schalke-04-vs-sv-elversberg.ts",
+    "home": "Schalke 04",
+    "away": "SV Elversberg",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.6,
+    "words": 393
+  },
+  {
+    "group": "bundesliga",
+    "file": "vfb-stuttgart-vs-borussia-dortmund.ts",
+    "home": "VfB Stuttgart",
+    "away": "Borussia Dortmund",
+    "prediction": "VfB Stuttgart or Draw (1X) + Over 7.5 Corners",
+    "odds": 1.91,
+    "words": 364
+  },
+  {
+    "group": "bundesliga",
+    "file": "werder-bremen-vs-augsburg.ts",
+    "home": "Werder Bremen",
+    "away": "Augsburg",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.5,
+    "words": 349
+  },
+  {
+    "group": "ligue-1",
+    "file": "angers-vs-troyes.ts",
+    "home": "Angers SCO",
+    "away": "ESTAC Troyes",
+    "prediction": "Over 2.5 Goals",
+    "odds": 2.1,
+    "words": 371
+  },
+  {
+    "group": "ligue-1",
+    "file": "auxerre-vs-brest.ts",
+    "home": "AJ Auxerre",
+    "away": "Stade Brestois 29",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.85,
+    "words": 472
+  },
+  {
+    "group": "ligue-1",
+    "file": "le-mans-vs-lorient.ts",
+    "home": "Le Mans FC",
+    "away": "FC Lorient",
+    "prediction": "Over 1.5 Goals + Over 7.5 Corners",
+    "odds": 1.67,
+    "words": 455
+  },
+  {
+    "group": "ligue-1",
+    "file": "lyon-vs-rennes.ts",
+    "home": "Olympique Lyonnais",
+    "away": "Stade Rennais",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.52,
+    "words": 496
+  },
+  {
+    "group": "ligue-1",
+    "file": "marseille-vs-psg.ts",
+    "home": "Olympique Marseille",
+    "away": "Paris Saint-Germain",
+    "prediction": "Over 8.5 Corners",
+    "odds": 1.88,
+    "words": 439
+  },
+  {
+    "group": "ligue-1",
+    "file": "monaco-vs-lens.ts",
+    "home": "AS Monaco",
+    "away": "RC Lens",
+    "prediction": "AS Monaco or Draw (1X) + Over 7.5 Corners",
+    "odds": 1.65,
+    "words": 390
+  },
+  {
+    "group": "ligue-1",
+    "file": "nice-vs-lille.ts",
+    "home": "OGC Nice",
+    "away": "Lille OSC",
+    "prediction": "Lille or Draw (X2) + Over 1.5 Goals",
+    "odds": 1.72,
+    "words": 454
+  },
+  {
+    "group": "ligue-1",
+    "file": "paris-fc-vs-strasbourg.ts",
+    "home": "Paris FC",
+    "away": "RC Strasbourg",
+    "prediction": "Over 2.5 Goals",
+    "odds": 1.67,
+    "words": 439
+  },
+  {
+    "group": "ligue-1",
+    "file": "toulouse-vs-le-havre.ts",
+    "home": "Toulouse FC",
+    "away": "Le Havre AC",
+    "prediction": "Toulouse or Draw (1X) + Over 1.5 Goals",
+    "odds": 1.6,
+    "words": 446
+  }
+]

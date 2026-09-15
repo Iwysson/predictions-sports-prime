@@ -264,7 +264,9 @@ export function normalizeTeamKey(name: string) {
     vitaria: "vitoria",
     athleticopr: "athleticoparanaense",
     rcdeportivolacoruna: "deportivolacoruna",
+    rcdeportivo: "deportivolacoruna",
     deportivo: "deportivolacoruna",
+    rcdespanyol: "espanyol",
     rcdespanyoldebarcelona: "espanyol",
     rcdespanyolbarcelona: "espanyol",
     espanyolbarcelona: "espanyol",
@@ -282,6 +284,7 @@ export function normalizeTeamKey(name: string) {
     realsociedadfutbol: "realsociedad",
     realracingclubsantander: "racingsantander",
     realracingsantander: "racingsantander",
+    rracing: "racingsantander",
     racingsantander: "racingsantander",
     levanteud: "levante",
     clubatleticomadrid: "atleticomadrid",
@@ -559,6 +562,16 @@ function localKickoffToUtc(date: string, time: string, timeZone: string) {
   return new Date(candidate).toISOString();
 }
 
+export function findProviderFixture(games: OpenFootballGame[], home: string, away: string, date: string) {
+  const matching = games.filter((game) => teamNamesMatch(game.homeTeam, home) && teamNamesMatch(game.awayTeam, away));
+  const exact = matching.filter((game) => game.date === date);
+  // Allow only the adjacent UTC/local calendar date when no exact date exists.
+  // A distant same-team event needs a stable provider identity, not proximity.
+  const candidates = exact.length ? exact : matching.filter((game) => Math.abs(Date.parse(game.date) - Date.parse(date)) <= 86_400_000);
+  if (candidates.length > 1) throw new Error(`Ambiguous provider fixture: ${home} vs ${away} on ${date}`);
+  return candidates[0];
+}
+
 export async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[]) {
   const league = leaguesBySlug[slug];
   const dates = league.season.includes("/")
@@ -593,17 +606,7 @@ export async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballR
     if (!home || !away) continue;
 
     const eventDate = eventKickoffInSiteTimezone(event.date, league.timezone).date;
-    const fixture = rounds
-      .flatMap((round) => round.games)
-      .filter((game) => !game.id)
-      .filter((game) =>
-        (teamNamesMatch(game.homeTeam, home.team.displayName) && teamNamesMatch(game.awayTeam, away.team.displayName)) ||
-        (teamNamesMatch(game.homeTeam, away.team.displayName) && teamNamesMatch(game.awayTeam, home.team.displayName))
-      )
-      .sort((left, right) =>
-        Math.abs(Date.parse(`${left.date}T12:00:00Z`) - Date.parse(`${eventDate}T12:00:00Z`)) -
-        Math.abs(Date.parse(`${right.date}T12:00:00Z`) - Date.parse(`${eventDate}T12:00:00Z`))
-      )[0];
+    const fixture = findProviderFixture(rounds.flatMap((round) => round.games).filter((game) => !game.id), home.team.displayName, away.team.displayName, eventDate);
     if (!fixture) continue;
 
     const competition = event.competitions[0];
@@ -632,8 +635,8 @@ export async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballR
     fixture.dataSource = "espn";
 
     if (fixture.status === "completed") {
-      const homeScore = Number(home.score);
-      const awayScore = Number(away.score);
+      const homeScore = home.score == null || String(home.score).trim() === "" ? NaN : Number(home.score);
+      const awayScore = away.score == null || String(away.score).trim() === "" ? NaN : Number(away.score);
       fixture.homeScore = Number.isFinite(homeScore) ? homeScore : null;
       fixture.awayScore = Number.isFinite(awayScore) ? awayScore : null;
     }
@@ -685,16 +688,8 @@ export async function hydrateTheSportsDb(slug: LeagueSlug, rounds: OpenFootballR
     if (!event.strTimestamp) continue;
     const kickoffUtc = `${event.strTimestamp.replace(/Z$/, "")}Z`;
     if (!Number.isFinite(Date.parse(kickoffUtc))) continue;
-    const kickoff = eventKickoffInSiteTimezone(kickoffUtc);
-    const fixture = rounds.flatMap((round) => round.games)
-      .filter((game) =>
-        (teamNamesMatch(game.homeTeam, event.strHomeTeam) && teamNamesMatch(game.awayTeam, event.strAwayTeam)) ||
-        (teamNamesMatch(game.homeTeam, event.strAwayTeam) && teamNamesMatch(game.awayTeam, event.strHomeTeam))
-      )
-      .sort((left, right) =>
-        Math.abs(Date.parse(`${left.date}T12:00:00Z`) - Date.parse(`${kickoff.date}T12:00:00Z`)) -
-        Math.abs(Date.parse(`${right.date}T12:00:00Z`) - Date.parse(`${kickoff.date}T12:00:00Z`))
-      )[0];
+    const kickoff = eventKickoffInSiteTimezone(kickoffUtc, league.timezone);
+    const fixture = findProviderFixture(rounds.flatMap((round) => round.games), event.strHomeTeam, event.strAwayTeam, kickoff.date);
     if (!fixture) continue;
 
     // Keep ESPN's event id when both providers matched the same fixture. It is
@@ -726,8 +721,8 @@ export async function hydrateTheSportsDb(slug: LeagueSlug, rounds: OpenFootballR
       fixture.status = incomingStatus;
       fixture.dataSource = "thesportsdb";
     }
-    const homeScore = Number(event.intHomeScore);
-    const awayScore = Number(event.intAwayScore);
+    const homeScore = event.intHomeScore == null || String(event.intHomeScore).trim() === "" ? NaN : Number(event.intHomeScore);
+    const awayScore = event.intAwayScore == null || String(event.intAwayScore).trim() === "" ? NaN : Number(event.intAwayScore);
     if (incomingStatus === "completed" && event.intHomeScore !== null && event.intAwayScore !== null &&
         Number.isFinite(homeScore) && Number.isFinite(awayScore)) {
       fixture.homeScore = homeScore;

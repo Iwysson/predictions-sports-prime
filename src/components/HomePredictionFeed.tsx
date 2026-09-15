@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
+import { useClientNow } from "@/lib/use-client-now";
+import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import Link from "@/components/DocumentLink";
 import { MatchPreview } from "@/types";
 import { HomeMatchCard } from "@/components/HomeMatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
-import { leagues } from "@/data/leagues";
+import { leagues, leaguesBySlug } from "@/data/leagues";
 import {
   filterCompletedPredictions,
   filterTodaysPublishedPredictions,
@@ -23,31 +25,73 @@ import { localizePredictionText } from "@/lib/localized-presentation";
 import { localizedFixtureStatus, localizedResult } from "@/lib/localized-ui";
 import { homeFeedCopy } from "@/lib/home-feed-copy";
 
+
+function HomeLeagueTaxonomy({
+  copy,
+  locale,
+}: {
+  copy: ReturnType<typeof homeFeedCopy>;
+  locale: SeoLocale;
+}) {
+  return (
+    <aside className="home-leagues-sidebar" aria-label={copy.competitions}>
+      <div className="home-leagues-sidebar__heading">
+        <span className="eyebrow">{copy.competitions}</span>
+        <h2>{copy.topLeagues}</h2>
+      </div>
+
+      <div className="home-leagues-sidebar__list">
+        {leagues.map((league) => (
+          <Link
+            key={league.slug}
+            href={localePath(locale, `/league/${league.slug}/`)}
+            className="home-league-link"
+          >
+            <LeagueBadge slug={league.slug} short={league.short} size="sm" />
+            <span>{league.name}</span>
+          </Link>
+        ))}
+      </div>
+    </aside>
+  );
+}
+
 export function HomePredictionFeed({
   matches,
   beforeHistory,
   locale = "en",
   localizedMatchSlugs = [],
+  discovery,
 }: {
   matches: MatchPreview[];
   beforeHistory?: ReactNode;
   locale?: SeoLocale;
   localizedMatchSlugs?: string[];
+  discovery?: ReactNode;
 }) {
   const copy = homeFeedCopy(locale);
   void localizedMatchSlugs;
   const matchHref = (slug: string) =>
     locale !== "en" ? localePath(locale, `/match/${slug}/`) : `/match/${slug}/`;
   const separator = locale === "en" ? "vs" : seoLocales[locale].separator;
-  const [now, setNow] = useState(() => new Date());
-  useEffect(() => {
-    const timer = window.setInterval(() => setNow(new Date()), 30_000);
-    return () => window.clearInterval(timer);
-  }, []);
+  const now = useClientNow();
+  if (!now) {
+    return (
+      <>
+        <section className="section section--compact" data-static-home-discovery="true">
+          <div className="container home-today-layout">
+            <HomeLeagueTaxonomy copy={copy} locale={locale} />
+          </div>
+        </section>
+        {discovery ?? <PublishedMatchDirectory matches={matches} locale={locale} localizedMatchSlugs={localizedMatchSlugs} />}
+        {beforeHistory}
+      </>
+    );
+  }
   const today = localTodayISO(now);
   const tomorrow = localTomorrowISO(today);
   const todayMatches = filterTodaysPublishedPredictions(matches, today, now);
-  const tomorrowMatches = filterTomorrowPublishedPredictions(matches, today);
+  const tomorrowMatches = filterTomorrowPublishedPredictions(matches, today, now);
   const latestMatches = selectLatestPublishedPredictions(matches, today, 10);
   const omittedMatches = findOmittedCurrentPredictions(matches, today);
   const historyMatches = filterCompletedPredictions(matches, now)
@@ -78,21 +122,7 @@ export function HomePredictionFeed({
     <>
       <section className="section section--compact" id="today">
         <div className="container home-today-layout">
-          <aside className="home-leagues-sidebar" aria-label={copy.competitions}>
-            <div className="home-leagues-sidebar__heading">
-              <span className="eyebrow">{copy.competitions}</span>
-              <h2>{copy.topLeagues}</h2>
-            </div>
-
-            <div className="home-leagues-sidebar__list">
-              {leagues.map((league) => (
-                <Link key={league.slug} href={localePath(locale, `/league/${league.slug}/`)} className="home-league-link">
-                  <LeagueBadge slug={league.slug} short={league.short} size="sm" />
-                  <span>{league.name}</span>
-                </Link>
-              ))}
-            </div>
-          </aside>
+          <HomeLeagueTaxonomy copy={copy} locale={locale} />
 
           <div className="home-today-main">
             <div className="section-heading section-heading--compact">
@@ -184,9 +214,7 @@ export function HomePredictionFeed({
           {latestMatches.length > 0 ? (
             <div className="latest-list">
               {latestMatches.map((match) => {
-                const league = leagues.find(
-                  (item) => item.slug === match.league
-                );
+                const league = leaguesBySlug[match.league];
                 const kickoff = getMatchDisplayTime(match, locale);
 
                 return (
@@ -257,7 +285,7 @@ export function HomePredictionFeed({
                 return <a href={matchHref(match.slug)} className="history-row" key={match.id}>
                   <div>
                     <strong>{match.homeTeam} {separator} {match.awayTeam}</strong>
-                    <span>{leagues.find((league) => league.slug === match.league)?.name ?? match.league} · {match.date} · {locale === "en" ? match.mainPrediction : localizePredictionText(match.mainPrediction, locale)}</span>
+                    <span>{leaguesBySlug[match.league]?.name ?? match.league} · {match.date} · {locale === "en" ? match.mainPrediction : localizePredictionText(match.mainPrediction, locale)}</span>
                   </div>
                   <span className="history-score">
                     {match.homeScore != null && match.awayScore != null ? `${match.homeScore}–${match.awayScore}` : copy.waitingScore}

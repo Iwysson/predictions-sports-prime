@@ -1,4 +1,6 @@
 import type { FixtureStatus } from "@/lib/fixture-status";
+import type { LeagueSlug } from "@/types";
+import { leaguesBySlug } from "@/data/leagues";
 
 // If every provider misses a state transition, move the fixture out of the
 // active feed 110 minutes after kickoff and wait for authoritative result data.
@@ -24,7 +26,34 @@ export type FixtureStateInput = {
   date?: string;
   time?: string;
   timeConfirmed?: boolean;
+  league?: LeagueSlug;
 };
+
+function localWallClockToUtcMillis(date: string, time: string, timeZone: string) {
+  const [year, month, day] = date.split("-").map(Number);
+  const [hour, minute] = time.split(":").map(Number);
+  if (![year, month, day, hour, minute].every(Number.isFinite)) return null;
+
+  let utcMs = Date.UTC(year, month - 1, day, hour, minute);
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const parts = new Intl.DateTimeFormat("en-CA", {
+      timeZone,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hourCycle: "h23",
+    }).formatToParts(new Date(utcMs));
+    const fields = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+    const representedMs = Date.UTC(
+      Number(fields.year), Number(fields.month) - 1, Number(fields.day),
+      Number(fields.hour), Number(fields.minute),
+    );
+    utcMs += Date.UTC(year, month - 1, day, hour, minute) - representedMs;
+  }
+  return utcMs;
+}
 
 export function fixtureKickoffMillis(fixture: FixtureStateInput) {
   if (fixture.kickoffUtc && Number.isFinite(Date.parse(fixture.kickoffUtc))) {
@@ -32,6 +61,10 @@ export function fixtureKickoffMillis(fixture: FixtureStateInput) {
   }
   if (!fixture.date || !/^\d{4}-\d{2}-\d{2}$/.test(fixture.date)) return null;
   if (!fixture.time || !/^\d{1,2}:\d{2}$/.test(fixture.time)) return null;
+
+  const competitionTimezone = fixture.league ? leaguesBySlug[fixture.league]?.timezone : undefined;
+  if (competitionTimezone) return localWallClockToUtcMillis(fixture.date, fixture.time, competitionTimezone);
+
   const parsed = Date.parse(`${fixture.date}T${fixture.time}:00Z`);
   return Number.isFinite(parsed) ? parsed : null;
 }
@@ -110,8 +143,7 @@ export function dateInTimeZone(value: Date | string, timeZone = SITE_FIXTURE_TIM
 }
 
 export function fixtureDateInTimeZone(fixture: FixtureStateInput, timeZone = SITE_FIXTURE_TIME_ZONE) {
-  if (fixture.kickoffUtc && Number.isFinite(Date.parse(fixture.kickoffUtc))) {
-    return dateInTimeZone(fixture.kickoffUtc, timeZone);
-  }
+  const kickoff = fixtureKickoffMillis(fixture);
+  if (kickoff !== null) return dateInTimeZone(new Date(kickoff), timeZone);
   return fixture.date || null;
 }

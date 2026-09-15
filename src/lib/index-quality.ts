@@ -3,6 +3,7 @@ import {
   classifyPspEditorialLifecycle,
   validatePspEditorialStandard,
 } from "@/lib/editorial-standard";
+import { editorialPresentationText } from "@/lib/editorial-presentation";
 
 export type IndexQualityClassification =
   | "INDEX_PRIME"
@@ -38,6 +39,7 @@ export type IndexQualityDecision = {
     factualConsistency: boolean;
     tacticalQuality: boolean;
     paragraphQuality: boolean;
+    contentLanguageValid: boolean;
   };
 };
 
@@ -48,6 +50,24 @@ type CurrentDecision = {
 
 const INTERNAL_NOTE = /\b(?:WAIT LIVE|TODO|FIXME|TBD|PLACEHOLDER|internal note|editorial note|do not publish|undefined|null)\b/i;
 const TRACEABLE_SOURCE = /^https:\/\//i;
+
+function hasInternalNotes(markdown: string) {
+  // This exact retained disclosure describes missing data; it is not an
+  // unfilled placeholder. Other placeholder occurrences still block.
+  const readerText = markdown.replace(/No placeholder is converted into zero and no post-match information from this fixture is used\./g, "");
+  return INTERNAL_NOTE.test(readerText) || /Supercomputador|O modelo deve/i.test(readerText);
+}
+
+function hasEnglishAnalysis(markdown: string) {
+  // Canonical analyses are English. Detect sustained Portuguese prose rather
+  // than proper names or source titles; no frozen copy is translated here.
+  return !markdown.replace(/^#{1,6}[^\n]*\n/gm, "\n").split(/\n\s*\n/).some((paragraph) => {
+    if (words(paragraph) < 50 || /^\s*(?:#|\||[-*]\s)/.test(paragraph)) return false;
+    return [/\ba equipe\b/i, /\bo confronto\b/i, /\ba partida\b/i, /\bnão\b/i, /\btambém\b/i, /\bgols\b/i,
+      /\blesão\b/i, /\bprojeção\b/i, /\brecuperação\b/i, /\bprováveis\b/i, /\benquanto\b/i, /\bescalações\b/i, /\belencos\b/i, /\bpré-jogo\b/i]
+      .filter((pattern) => pattern.test(paragraph)).length >= 3;
+  });
+}
 
 function words(value: string) {
   return value.trim().split(/\s+/).filter(Boolean).length;
@@ -72,7 +92,12 @@ function hasCompleteProvenance(prediction: EditorialPrediction) {
 function hasParagraphQuality(markdown: string) {
   const analytical = markdown
     .split(/\n\s*\n/)
-    .filter((item) => !/^\s*(?:#|\||[-*]\s|\*\*(?:Prediction|Odds):)/.test(item));
+    .filter((item) => !/^\s*(?:#|\||[-*]\s|\*\*(?:Prediction|Odds):)/.test(item))
+    // Legacy pick/price labels may start with emoji. They are labels, not
+    // analytical paragraphs; every line must match to exempt the block.
+    .filter((item) => !item.trim().split(/\n/).every((line) =>
+      /^\s*(?:🎯|💰)?\s*\*\*(?:Prediction|Odds):\s*[^*]+\*\*\s*$/.test(line)
+    ));
   return analytical.every((item) => words(item) >= 20);
 }
 
@@ -80,7 +105,10 @@ function hasEditorialUniqueness(markdown: string) {
   const paragraphs = markdown
     .split(/\n\s*\n/)
     .map((item) => item.toLowerCase().replace(/\s+/g, " ").trim())
-    .filter((item) => item.length >= 80 && !item.startsWith("|"));
+    .filter((item) => item.length >= 80 && !item.startsWith("|"))
+    // Repeating the final pick and price is part of the editorial contract.
+    // Exempt only the complete label block, never surrounding analysis.
+    .filter((item) => !/^\*\*prediction:\*\* [^*]+ \*\*odds:\*\* \d+(?:\.\d+)?$/.test(item));
   return new Set(paragraphs).size === paragraphs.length;
 }
 
@@ -89,7 +117,7 @@ export function evaluatePredictionIndexQuality(
   current: CurrentDecision
 ): IndexQualityDecision {
   const lifecycle = classifyPspEditorialLifecycle(prediction);
-  const markdown = prediction.analysis.join("\n\n");
+  const markdown = editorialPresentationText(prediction.analysis, prediction.analysisFormat);
   const sourceCount = (prediction.sources ?? []).filter((source) =>
     TRACEABLE_SOURCE.test(source.url)
   ).length;
@@ -109,7 +137,8 @@ export function evaluatePredictionIndexQuality(
     statisticalCoreComplete,
     provenanceComplete,
     metadataValid: Boolean(prediction.homeTeam && prediction.awayTeam && prediction.picks.main),
-    internalNotesClean: !INTERNAL_NOTE.test(markdown),
+    internalNotesClean: !hasInternalNotes(markdown),
+    contentLanguageValid: hasEnglishAnalysis(markdown),
     editorialUnique: hasEditorialUniqueness(markdown),
     fixtureValid: Boolean(
       prediction.matchInfo?.date?.match(/^\d{4}-\d{2}-\d{2}$/) &&
@@ -142,6 +171,7 @@ export function evaluatePredictionIndexQuality(
     factualConsistency: "factual_consistency_invalid",
     tacticalQuality: "tactical_quality_insufficient",
     paragraphQuality: "paragraph_quality_insufficient",
+    contentLanguageValid: "canonical_analysis_language_mismatch",
   };
   const failed = (Object.entries(checks) as Array<[keyof typeof checks, boolean]>)
     .filter(([, passed]) => !passed)
@@ -162,8 +192,12 @@ export function evaluatePredictionIndexQuality(
   }
 
   if (lifecycle === "historical-frozen") {
+    // Historical pages remain preserved, but indexing is earned by the current
+    // quality checks rather than by a legacy allow decision. This prevents old
+    // pages with internal duplication, thin prose or incomplete source/fixture
+    // evidence from lowering the quality of the indexable corpus during review.
     const historicalSafetyPassed = checks.metadataValid && checks.internalNotesClean && checks.resultPickIntegrity && checks.factualConsistency;
-    const historicalIndexable = historicalSafetyPassed && (current.indexable || failed.length === 0);
+    const historicalIndexable = historicalSafetyPassed && failed.length === 0;
     return {
       classification: "HISTORICAL",
       indexable: historicalIndexable,

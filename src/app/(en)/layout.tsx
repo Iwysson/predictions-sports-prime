@@ -116,10 +116,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <ConsentIntegration />
         <AdSenseScript />
       </head>
       <body>
-        <ConsentIntegration />
         <JsonLd data={websiteJsonLd()} />
         <JsonLd data={organizationJsonLd()} />
 

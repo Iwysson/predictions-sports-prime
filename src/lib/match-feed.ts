@@ -1,5 +1,5 @@
 import type { MatchPreview } from "@/types";
-import { isCompletedFixture, isHistoryEligibleFixture, isLiveFixture, isNonPlayableFixture } from "@/lib/fixture-status";
+import { isCompletedFixture, isHistoryEligibleFixture, isLiveFixture } from "@/lib/fixture-status";
 import { classifyFixture, dateInTimeZone, fixtureDateInTimeZone, isActiveFixtureState, isFixtureHistoryEligible, isFutureFixture } from "@/lib/fixture-state";
 
 export type HomeTemporalBucket = "today" | "tomorrow" | "upcoming" | "historical" | "none";
@@ -91,24 +91,26 @@ export function filterTodaysPublishedPredictions(
 
 export function filterFuturePublishedPredictions(
   matches: MatchPreview[],
-  today = localTodayISO()
+  today = localTodayISO(),
+  now: Date | string = new Date()
 ) {
   return sortMatchesByKickoff(
     uniqueMatches(matches).filter(
       (match) =>
-        resolveHomeTemporalBucket(match, today) === "upcoming"
+        resolveHomeTemporalBucket(match, today, now) === "upcoming"
     )
   );
 }
 
 export function filterTomorrowPublishedPredictions(
   matches: MatchPreview[],
-  today = localTodayISO()
+  today = localTodayISO(),
+  now: Date | string = new Date()
 ) {
   return sortMatchesByKickoff(
     uniqueMatches(matches).filter(
       (match) =>
-        resolveHomeTemporalBucket(match, today) === "tomorrow"
+        resolveHomeTemporalBucket(match, today, now) === "tomorrow"
     )
   );
 }
@@ -212,4 +214,26 @@ export function findOmittedCurrentPredictions(
       resolveHomeTemporalBucket(match, today) === "upcoming" &&
       !eligible.has(match.slug)
   );
+}
+
+export function selectTemporalClientMatches(
+  matches: MatchPreview[],
+  includeRecentHistory = false,
+  now: Date | string = new Date()
+) {
+  const today = localTodayISO(now);
+  const active: MatchPreview[] = [];
+  const history: MatchPreview[] = [];
+
+  for (const match of uniqueMatches(matches)) {
+    const bucket = resolveHomeTemporalBucket(match, today, now);
+    if (bucket === "today" || bucket === "tomorrow" || bucket === "upcoming") {
+      active.push(match);
+    } else if (includeRecentHistory && bucket === "historical" && match.betResult === "green") {
+      history.push(match);
+    }
+  }
+
+  history.sort((left, right) => right.date.localeCompare(left.date));
+  return [...active, ...history.slice(0, 10)];
 }

@@ -126,8 +126,8 @@ function currentInventory(matches: MatchPreview[], now: Date | string) {
   const today = localTodayISO(now);
   const combined = [
     ...filterTodaysPublishedPredictions(matches, today, now),
-    ...filterTomorrowPublishedPredictions(matches, today),
-    ...filterFuturePublishedPredictions(matches, today),
+    ...filterTomorrowPublishedPredictions(matches, today, now),
+    ...filterFuturePublishedPredictions(matches, today, now),
   ];
   return [...new Map(combined.map((match) => [match.slug, match])).values()];
 }

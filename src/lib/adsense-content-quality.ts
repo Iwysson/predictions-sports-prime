@@ -3,6 +3,11 @@ import { predictionSlug } from "@/lib/editorial";
 import { isSeoFeatureEnabled } from "@/config/seo-enterprise";
 import { evaluatePredictionIndexQuality, type IndexQualityDecision } from "@/lib/index-quality";
 
+const predictionIndexCache = new WeakMap<
+  readonly EditorialPrediction[],
+  Map<string, EditorialPrediction>
+>();
+
 export type AdSenseContentClassification =
   | "KEEP"
   | "UPGRADE"
@@ -321,27 +326,6 @@ const AUDITED_REMOVE = new Set<string>([
 
 ]);
 
-// This publication wave was explicitly approved after editorial/data review.
-// Keep the approval scoped to the exact MLS inventory; the general quality
-// gate continues to evaluate every other prediction normally.
-const APPROVED_MLS_2026_09_09 = new Set<string>([
-  "atlanta-united-vs-orlando-city",
-  "austin-fc-vs-colorado-rapids",
-  "cf-montreal-vs-charlotte-fc",
-  "chicago-fire-vs-inter-miami-cf",
-  "dc-united-vs-columbus-crew",
-  "houston-dynamo-vs-real-salt-lake",
-  "los-angeles-fc-vs-new-york-red-bulls",
-  "minnesota-united-vs-fc-dallas",
-  "new-york-city-fc-vs-new-england-revolution",
-  "philadelphia-union-vs-fc-cincinnati",
-  "portland-timbers-vs-st-louis-city-sc",
-  "san-diego-fc-vs-san-jose-earthquakes",
-  "toronto-fc-vs-nashville-sc",
-  "vancouver-whitecaps-vs-la-galaxy",
-]);
-
-
 const AUDITED_SLUG_ALIASES = new Map<string, string>([
   ["arsenal-vs-coventry-city", "arsenal-vs-coventry"],
   ["hull-city-vs-manchester-united", "hull-vs-man-united"],
@@ -467,15 +451,6 @@ export function getAdSenseContentQualityDecision(
   prediction: EditorialPrediction
 ): AdSenseContentQualityDecision | IndexQualityDecision {
   const legacyDecision = getLegacyAdSenseContentQualityDecision(prediction);
-  const slug = prediction.slug ?? predictionSlug(prediction.homeTeam, prediction.awayTeam);
-  if (APPROVED_MLS_2026_09_09.has(slug)) {
-    return {
-      classification: "KEEP",
-      indexable: true,
-      source: "automatic-fallback",
-      reasons: ["approved_mls_2026_09_09_publication_wave"],
-    };
-  }
   return isSeoFeatureEnabled("quality-gate-v2")
     ? evaluatePredictionIndexQuality(prediction, legacyDecision)
     : legacyDecision;
@@ -532,12 +507,15 @@ export function getAdSenseContentQualityDecisionBySlug(
   slug: string,
   predictions: readonly EditorialPrediction[]
 ): AdSenseContentQualityDecision | IndexQualityDecision | undefined {
-  const prediction = predictions.find((item) => {
-    const itemSlug =
-      item.slug ??
-      predictionSlug(item.homeTeam, item.awayTeam);
-    return itemSlug === slug;
-  });
+  let index = predictionIndexCache.get(predictions);
+  if (!index) {
+    index = new Map(predictions.map((item) => [
+      item.slug ?? predictionSlug(item.homeTeam, item.awayTeam),
+      item,
+    ]));
+    predictionIndexCache.set(predictions, index);
+  }
+  const prediction = index.get(slug);
 
   return prediction
     ? getAdSenseContentQualityDecision(prediction)

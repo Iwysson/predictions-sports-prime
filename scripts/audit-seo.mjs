@@ -388,8 +388,8 @@ for (const route of matchRoutes) {
   if (!crossedKickoffAfterBuild && shouldBeIndexable && !sitemapEntries.has(route)) errors.push(`${route}: KEEP prediction missing from sitemap`);
   if (!crossedKickoffAfterBuild && !shouldBeIndexable && sitemapEntries.has(route)) errors.push(`${route}: noindex prediction leaked into sitemap`);
   if (shouldBeIndexable && expectedLastmod) {
-    if (!sitemapLastmod || Date.parse(sitemapLastmod) < Date.parse(expectedLastmod)) {
-      errors.push(`${route}: sitemap lastmod predates Article dateModified ?? datePublished`);
+    if (!sitemapLastmod || Date.parse(sitemapLastmod) !== Date.parse(expectedLastmod)) {
+      errors.push(`${route}: sitemap lastmod must equal Article dateModified ?? datePublished`);
     }
   } else if (shouldBeIndexable && sitemapLastmod) {
     errors.push(`${route}: sitemap contains a timestamp with no Article editorial date`);
@@ -405,7 +405,46 @@ for (const route of sitemapEntries.keys()) {
 }
 
 for (const [route, lastmod] of sitemapEntries) {
-  if (lastmod && !route.startsWith("/match/")) {
+  if (!lastmod) continue;
+
+  // English match routes are validated above. Localized match routes are also
+  // editorial pages and may legitimately share the fixture's material
+  // published/updated timestamp. Validate them against both the generated
+  // Article schema and the authoritative runtime registry instead of treating
+  // every non-/match/ URL as non-editorial.
+  const localizedMatch = route.match(/^\/[^/]+\/match\/([^/]+)\/$/);
+  if (localizedMatch) {
+    const baseRoute = `/match/${localizedMatch[1]}/`;
+    const runtimeMatch = runtimeMatchByRoute.get(baseRoute);
+    const html = pages.get(route);
+
+    if (!runtimeMatch || !matchRoutes.includes(baseRoute) || !html) {
+      errors.push(`${route}: localized sitemap lastmod has no published editorial match`);
+      continue;
+    }
+
+    const schemaPublished = html.match(/"datePublished":"([^"]+)"/)?.[1];
+    const schemaModified = html.match(/"dateModified":"([^"]+)"/)?.[1];
+    const runtimeModified = materialMatchUpdatedAt(runtimeMatch);
+    const expectedLastmod = schemaModified ?? schemaPublished;
+
+    if (schemaPublished !== runtimeMatch.publishedAt || schemaModified !== runtimeModified) {
+      errors.push(`${route}: localized Article dates do not match the runtime match registry`);
+      continue;
+    }
+
+    if (!expectedLastmod) {
+      errors.push(`${route}: localized sitemap contains a timestamp with no Article editorial date`);
+      continue;
+    }
+
+    if (Date.parse(lastmod) !== Date.parse(expectedLastmod)) {
+      errors.push(`${route}: localized sitemap lastmod must equal Article dateModified ?? datePublished`);
+    }
+    continue;
+  }
+
+  if (!route.startsWith("/match/")) {
     errors.push(`${route}: non-editorial sitemap URL has an unexplained lastmod`);
   }
 }

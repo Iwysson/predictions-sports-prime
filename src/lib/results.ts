@@ -47,6 +47,9 @@ export function buildPredictionHistoryState(matches: MatchPreview[], now: Date |
   const awaitingExecutionData = entries.filter((match) =>
     evaluatePredictionSettlement(match).pendingReason === "EXECUTION_DATA_MISSING"
   ).length;
+  const awaitingFinalScore = entries.filter((match) =>
+    evaluatePredictionSettlement(match).pendingReason === "FINAL_SCORE_MISSING"
+  ).length;
 
   return {
     published: matches.filter((match) => match.status === "published").length,
@@ -62,6 +65,7 @@ export function buildPredictionHistoryState(matches: MatchPreview[], now: Date |
     awaitingData: counts["awaiting-data"],
     awaitingMarketData,
     awaitingExecutionData,
+    awaitingFinalScore,
     pending: counts.pending,
     entries,
   };
@@ -78,12 +82,14 @@ export function buildHistoricalPerformance(matches: MatchPreview[], now: Date | 
     (match.betResult ?? "pending") === "pending" &&
     evaluatePredictionSettlement(match).pendingReason !== "NOT_COMPLETED"
   ).length;
-  const unresolved = history.awaitingData + unresolvedPending;
+  const awaitingVerifiedData = history.awaitingData;
+  const unresolved = unresolvedPending;
 
   return {
     ...history,
     historical: history.entries.length,
     decided,
+    awaitingVerifiedData,
     unresolved,
     pushOrVoid: history.push + history.void,
     winRate: decided > 0 ? history.won / decided : null,

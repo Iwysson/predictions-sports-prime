@@ -49,7 +49,7 @@ const records = future.map((prediction) => {
     if (boilerplate.test(text)) reasons.push("evidence-boundary boilerplate");
     if (naturalQualityPolicyApplies && forbiddenBoilerplate.test(text)) reasons.push("forbidden meta-editorial boilerplate");
     if (naturalQualityPolicyApplies && genericTactical.test(text)) reasons.push("generic tactical analysis");
-    const bodyParagraphs = text.split(/\n\s*\n/).filter((paragraph) => !/^\s*(?:#|\||\*\*(?:Prediction|Odds|Probable|Expected|Sources|Competition|Date|Kick-off|Round|Venue)|(?:FBref|Fixture schedule cross-check:))/i.test(paragraph));
+    const bodyParagraphs = text.split(/\n\s*\n/).filter((paragraph) => !/^\s*(?:#|\||[-*]\s+(?:\*\*)?(?:Competition|Date|Kick-off|Round|Venue|Location)|\*\*(?:Prediction|Odds|Probable|Projected|Expected|Lineup|Sources|Competition|Date|Kick-off|Round|Venue)|\*\*[^*\n]{1,100}(?:projected|results):\*\*|The overall league context is|The (?:Statistical )?Core is restricted|The figures below use|All figures below are restricted|Statistical coverage is partial|At \*\*?\d|Decimal odds:|Odds implied probability|\*Statistics updated|(?:FBref|Fixture schedule cross-check:))/i.test(paragraph));
     const shortParagraphs = bodyParagraphs.filter((paragraph) => paragraph.trim().split(/[.!?]+/).filter(Boolean).length <= 2 && paragraph.trim().split(/\s+/).length < 45);
     if (naturalQualityPolicyApplies && bodyParagraphs.length >= 4 && shortParagraphs.length / bodyParagraphs.length > 0.35) reasons.push("short-paragraph ratio exceeds 35%");
     if (!pspCore.test(text)) reasons.push("missing Statistical Core Predictions-Sports-Prime");

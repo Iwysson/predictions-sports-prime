@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { AdSlot } from "@/components/ads";
 import { JsonLd } from "@/components/JsonLd";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
+import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import { matches } from "@/data/matches";
 import { toMatchPreview } from "@/lib/editorial";
@@ -11,6 +12,7 @@ import { homePageJsonLd } from "@/lib/seo";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { localizedAlternates } from "@/lib/international-seo";
 import { indexableLocalizedHubLocaleSlugs } from "@/lib/seo-locales";
+import { selectTemporalClientMatches } from "@/lib/match-feed";
 
 const homeTitle = "Football Predictions Today & Betting Tips";
 const homeDescription = "Football predictions, betting tips and match analysis for today's, tomorrow's and upcoming fixtures across major leagues.";
@@ -43,6 +45,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const resolvedMatches = await hydratePredictions(matches.map(toMatchPreview));
+  const clientMatches = selectTemporalClientMatches(resolvedMatches, true);
 
   return (
     <>
@@ -59,7 +62,8 @@ export default async function Home() {
         </div>
       </section>
       <HomePredictionFeed
-        matches={resolvedMatches}
+        matches={clientMatches}
+        discovery={<PublishedMatchDirectory matches={resolvedMatches} />}
         beforeHistory={
           <>
             <div className="container inline-ad-space">

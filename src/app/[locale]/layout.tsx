@@ -39,9 +39,11 @@ export default async function LocalizedRootLayout({ children, params }: Readonly
   const copy = seoLocales[locale];
   return (
     <html lang={copy.htmlLang} suppressHydrationWarning>
-      <head><AdSenseScript /></head>
-      <body>
+      <head>
         <ConsentIntegration />
+        <AdSenseScript />
+      </head>
+      <body>
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={localizedWebsiteJsonLd(locale)} />
         <I18nProvider initialLocale={dictionaryLocale(locale)}>

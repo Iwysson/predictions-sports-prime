@@ -1,4 +1,5 @@
 import { Fragment, type ReactNode } from "react";
+import { dedupeEditorialBlocks, dedupeEditorialMarkdown } from "@/lib/editorial-presentation";
 import {
   PredictionSensitiveContent,
   PredictionSensitiveParagraph,
@@ -140,9 +141,10 @@ export function EditorialAnalysis({
 }) {
   const protectedValues = sensitiveValues.filter((value): value is string => Boolean(value?.trim()));
   if (format === "markdown") {
-    return <MarkdownAnalysis markdown={stripStructuredStatisticalCore(analysis.join("\n\n"))} hideSensitiveSnippets={hideSensitiveSnippets} sensitiveValues={protectedValues} />;
+    return <MarkdownAnalysis markdown={stripStructuredStatisticalCore(dedupeEditorialMarkdown(analysis.join("\n\n")))} hideSensitiveSnippets={hideSensitiveSnippets} sensitiveValues={protectedValues} />;
   }
-  return <>{analysis.map((paragraph, index) => {
+  const presentedAnalysis = dedupeEditorialBlocks(analysis);
+  return <>{presentedAnalysis.map((paragraph, index) => {
     const sensitive = hideSensitiveSnippets && (
       /prediction|odds/i.test(paragraph) ||
       protectedValues.some((value) => paragraph.toLocaleLowerCase().includes(value.toLocaleLowerCase()))

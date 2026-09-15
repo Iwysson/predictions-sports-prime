@@ -1,0 +1,83 @@
+[
+  {
+    "home": "FC Groningen",
+    "away": "PEC Zwolle",
+    "slug": "fc-groningen-vs-pec-zwolle",
+    "date": "2026-09-18",
+    "time": "20:00",
+    "pick": "FC Groningen to Win",
+    "odds": 1.67
+  },
+  {
+    "home": "ADO Den Haag",
+    "away": "SC Cambuur",
+    "slug": "ado-den-haag-vs-sc-cambuur",
+    "date": "2026-09-19",
+    "time": "16:30",
+    "pick": "ADO Den Haag or Draw (1X) + Over 8.5 Corners",
+    "odds": 1.75
+  },
+  {
+    "home": "Sparta Rotterdam",
+    "away": "SC Heerenveen",
+    "slug": "sparta-rotterdam-vs-sc-heerenveen",
+    "date": "2026-09-19",
+    "time": "18:45",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.52
+  },
+  {
+    "home": "Ajax",
+    "away": "Excelsior Rotterdam",
+    "slug": "ajax-vs-excelsior-rotterdam",
+    "date": "2026-09-19",
+    "time": "20:00",
+    "pick": "Over 3.5 Goals",
+    "odds": 1.72
+  },
+  {
+    "home": "Willem II",
+    "away": "Fortuna Sittard",
+    "slug": "willem-ii-vs-fortuna-sittard",
+    "date": "2026-09-19",
+    "time": "21:00",
+    "pick": "Fortuna Sittard or Draw (X2)",
+    "odds": 1.5
+  },
+  {
+    "home": "Feyenoord",
+    "away": "FC Utrecht",
+    "slug": "feyenoord-vs-fc-utrecht",
+    "date": "2026-09-20",
+    "time": "12:15",
+    "pick": "Over 3.5 Goals",
+    "odds": 1.83
+  },
+  {
+    "home": "AZ",
+    "away": "Telstar",
+    "slug": "az-vs-telstar",
+    "date": "2026-09-20",
+    "time": "14:30",
+    "pick": "AZ -1.5 Handicap",
+    "odds": 1.72
+  },
+  {
+    "home": "FC Twente",
+    "away": "PSV",
+    "slug": "fc-twente-vs-psv",
+    "date": "2026-09-20",
+    "time": "14:30",
+    "pick": "PSV or Draw (X2) + Over 8.5 Corners",
+    "odds": 2.05
+  },
+  {
+    "home": "NEC Nijmegen",
+    "away": "Go Ahead Eagles",
+    "slug": "nec-nijmegen-vs-go-ahead-eagles",
+    "date": "2026-09-20",
+    "time": "16:45",
+    "pick": "NEC or Draw (1X) + Over 2.5 Goals",
+    "odds": 1.67
+  }
+]

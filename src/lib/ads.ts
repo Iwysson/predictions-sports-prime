@@ -14,14 +14,17 @@ export type AdFormat = "horizontal" | "rectangle" | "auto";
 
 const enabled = process.env.NEXT_PUBLIC_ADS_ENABLED === "true";
 const clientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID?.trim() ?? "";
+const certifiedCmpReady = process.env.NEXT_PUBLIC_ADSENSE_CMP_READY === "true";
 
 export const adsConfig: {
   enabled: boolean;
   clientId: string;
+  certifiedCmpReady: boolean;
   slots: Record<AdPlacement, string>;
 } = {
   enabled,
   clientId,
+  certifiedCmpReady,
   slots: {
     "home-middle": process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME_MIDDLE?.trim() ?? "",
     "home-bottom": process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME_BOTTOM?.trim() ?? "",
@@ -42,8 +45,18 @@ export function isValidAdSenseSlot(value: string) {
   return /^\d+$/.test(value);
 }
 
+/**
+ * Fail closed: ad delivery is enabled only after the publisher deliberately
+ * enables ads, supplies a valid client id and confirms that a Google-certified
+ * CMP is configured in production. The static AdSense account meta tag remains
+ * available for site verification while ad delivery is disabled.
+ */
 export function canLoadAdSense() {
-  return adsConfig.enabled && isValidAdSenseClientId(adsConfig.clientId);
+  return (
+    adsConfig.enabled &&
+    adsConfig.certifiedCmpReady &&
+    isValidAdSenseClientId(adsConfig.clientId)
+  );
 }
 
 export function canRenderPlacement(placement: AdPlacement) {

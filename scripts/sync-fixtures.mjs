@@ -3,7 +3,6 @@ import { resolve } from "node:path";
 import { leagues } from "../src/data/leagues.ts";
 import { matches } from "../src/data/matches.ts";
 import {
-  findFixtureByTeams,
   hydrateLiveResults,
   hydrateTheSportsDb,
   parseFootballSeason,
@@ -12,6 +11,7 @@ import {
 import { validateLeagueRounds } from "../src/lib/data-validation.ts";
 import { parsePredictionMarket } from "../src/lib/prediction-results.ts";
 import { normalizeMatchTime } from "../src/lib/match-time.ts";
+import { findPredictionFixture, normalizeFixtureRounds, isCompleteFixture, fixtureIdentityMatchesPrediction } from "../src/lib/fixture-sync-integrity.ts";
 
 const outputPath = resolve("src/data/fixtures.snapshot.json");
 const marketResultsPath = resolve("src/data/market-results.snapshot.json");
@@ -31,20 +31,6 @@ const changes = [];
 
 class FixtureIntegrityError extends Error {}
 class PartialSourceError extends Error {}
-
-function findPredictionFixture(rounds, prediction) {
-  const games = rounds.flatMap((round) => round.games);
-  const candidates = games.filter((game) =>
-    (teamNamesMatch(game.homeTeam, prediction.homeTeam) && teamNamesMatch(game.awayTeam, prediction.awayTeam)) ||
-    (teamNamesMatch(game.homeTeam, prediction.awayTeam) && teamNamesMatch(game.awayTeam, prediction.homeTeam))
-  );
-  const referenceDate = prediction.date || prediction.publishedAt?.slice(0, 10) || "0000-00-00";
-  const referenceTime = Date.parse(`${referenceDate}T12:00:00Z`);
-  return candidates.sort((left, right) =>
-    Math.abs(Date.parse(`${left.date}T12:00:00Z`) - referenceTime) -
-    Math.abs(Date.parse(`${right.date}T12:00:00Z`) - referenceTime)
-  )[0];
-}
 
 async function sourceText(source) {
   if (typeof source !== "string" || source.trim() === "") {
@@ -229,14 +215,18 @@ async function syncLeague(league) {
       console.log(`${league.name}: skipped (no automatic fixture feed configured)`);
       return;
     }
-    // Knockout competitions do not have a compatible season registry. Their
-    // published editorial fixtures provide the matching base while ESPN remains
-    // authoritative for kickoff state, provider ID and final score.
+    // Editorial inventories can span several matchdays. Retain their declared
+    // round instead of putting every article into a synthetic Matchday 1.
     const base = text === null
-      ? [{
-          round: 1,
-          games: leaguePredictions.map((prediction) => ({
-            round: 1,
+      ? normalizeFixtureRounds([{
+          round: 0,
+          games: leaguePredictions.map((prediction) => {
+            const suppliedRound = prediction.round?.match(/(?:Matchday|Round|Week)\s+(\d+)/i)?.[1];
+            const savedFixture = findPredictionFixture(previous.leagues?.[league.slug] ?? [], prediction);
+            const round = suppliedRound ? Number(suppliedRound) : savedFixture?.round;
+            if (!round) throw new PartialSourceError(`${prediction.slug}: round unavailable; cannot construct a complete round feed`);
+            return {
+            round,
             date: prediction.date,
             time: prediction.time,
             homeTeam: prediction.homeTeam,
@@ -245,11 +235,13 @@ async function syncLeague(league) {
             awayScore: null,
             status: "scheduled",
             dataSource: "snapshot",
-          })),
-        }]
+          }; }),
+        }])
       : parseFootballSeason(text);
     const espnRounds = await hydrateLiveResults(league.slug, base);
-    const rounds = await hydrateFotmobFinalScores(await hydrateTheSportsDb(league.slug, espnRounds));
+    refreshedRounds = espnRounds;
+    refreshedRounds = await hydrateTheSportsDb(league.slug, espnRounds);
+    const rounds = normalizeFixtureRounds(await hydrateFotmobFinalScores(refreshedRounds));
     // Keep the hydrated feed available to the recovery path. A provider can
     // return valid fixture IDs while the season source has malformed round
     // grouping; in that case we retain the last display-safe rounds but can
@@ -268,8 +260,7 @@ async function syncLeague(league) {
       // Provider feeds are occasionally updated out of order. Once a valid
       // final score has been observed it is immutable and must never be rolled
       // back by a stale scheduled/live response from another provider.
-      if (saved?.status === "completed" && Number.isInteger(saved.homeScore) && Number.isInteger(saved.awayScore) &&
-          (fixture.status !== "completed" || !Number.isInteger(fixture.homeScore) || !Number.isInteger(fixture.awayScore))) {
+      if (saved?.status === "completed" && Number.isInteger(saved.homeScore) && Number.isInteger(saved.awayScore)) {
         fixture.status = "completed";
         fixture.homeScore = saved.homeScore;
         fixture.awayScore = saved.awayScore;
@@ -410,7 +401,7 @@ async function syncLeague(league) {
         recoveredFixture = promoteVerifiedMlsEditorialFixture(league, recoveredFixture, prediction);
       }
       const fixtureId = recoveredFixture?.id ?? savedFixture?.id;
-      if (fixtureId) {
+      if (fixtureId && isCompleteFixture(recoveredFixture?.id === fixtureId ? recoveredFixture : savedFixture)) {
         snapshot.predictionIds[key] = fixtureId;
         const fixtureExistsInSavedRounds = (savedRounds ?? [])
           .flatMap((round) => round.games)
@@ -532,7 +523,6 @@ const automaticPredictions = matches.filter((match) => {
 });
 const automaticPredictionKeys = automaticPredictions
   .map((prediction) => `${prediction.league}:${prediction.slug}`);
-const automaticPredictionKeySet = new Set(automaticPredictionKeys);
 
 // Remove orphaned links for predictions that are no longer present in the
 // automatic prediction registry. Keeping them makes raw object counts drift
@@ -544,7 +534,13 @@ snapshot.predictionIds = Object.fromEntries(
 );
 
 const missingPredictionKeys = automaticPredictionKeys
-  .filter((key) => !snapshot.predictionIds[key]);
+  .filter((key) => {
+    const id = snapshot.predictionIds[key];
+    const league = key.slice(0, key.indexOf(":"));
+    const fixture = (snapshot.leagues[league] ?? []).flatMap((round) => round.games).find((game) => game.id === id)
+      ?? snapshot.manualFixtures[id];
+    return !isCompleteFixture(fixture);
+  });
 const producedAutomaticPredictionLinks = automaticPredictionKeys.length - missingPredictionKeys.length;
 
 if (missingPredictionKeys.length > 0) {
@@ -557,6 +553,19 @@ if (missingPredictionKeys.length > 0) {
 console.log(
   `Automatic prediction links: ${automaticPredictions.length} expected, ${producedAutomaticPredictionLinks} produced; missing links: 0`
 );
+
+// A resolvable ID is insufficient: legacy snapshots can contain a reverse-leg
+// association. Do not rewrite a settled historical record or guess its date.
+// Reject the candidate snapshot before either data file can be persisted.
+const conflictingPredictionKeys = automaticPredictions.filter((prediction) => {
+  const id = snapshot.predictionIds[`${prediction.league}:${prediction.slug}`];
+  const fixture = (snapshot.leagues[prediction.league] ?? []).flatMap((round) => round.games).find((game) => game.id === id)
+    ?? snapshot.manualFixtures[id];
+  return !fixtureIdentityMatchesPrediction(prediction, fixture);
+}).map((prediction) => `${prediction.league}:${prediction.slug}`);
+if (conflictingPredictionKeys.length) {
+  throw new FixtureIntegrityError(`Prediction fixture identity conflicts (teams/home-away): ${conflictingPredictionKeys.join(", ")}. Snapshot write blocked; only an explicit documented fixture reconciliation may permit a post-publication home/away change.`);
+}
 
 // Frequent polling is important around full time, but generatedAt alone must
 // not trigger a commit and deployment every 15 minutes. Persist immediately

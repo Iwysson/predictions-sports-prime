@@ -1,5 +1,5 @@
 import { leaguesBySlug } from "@/data/leagues";
-import type { LeagueSlug, Match, MatchPreview } from "@/types";
+import type { Match, MatchPreview } from "@/types";
 import { classifyFixture, isActiveFixtureState } from "@/lib/fixture-state";
 
 export type MatchTimezoneSource = "venue" | "city" | "competition" | "home-team" | "fallback" | "unknown";
@@ -13,28 +13,6 @@ export type NormalizedMatchTime = {
   localDateTime: string | null;
   timezoneSource: MatchTimezoneSource;
   confidence: MatchTimeConfidence;
-};
-
-const competitionFallbackTimezones: Record<LeagueSlug, string> = {
-  "premier-league": "Europe/London",
-  "la-liga": "Europe/Madrid",
-  bundesliga: "Europe/Berlin",
-  "serie-a": "Europe/Rome",
-  "liga-portugal": "Europe/Lisbon",
-  "ligue-1": "Europe/Paris",
-  eredivisie: "Europe/Amsterdam",
-  "brasileirao-serie-a": "America/Sao_Paulo",
-  "copa-do-brasil": "America/Sao_Paulo",
-  "efl-cup": "Europe/London",
-  championship: "Europe/London",
-  "super-lig": "Europe/Istanbul",
-  "scottish-premiership": "Europe/London",
-  eliteserien: "Europe/Oslo",
-  mls: "America/New_York",
-  "champions-league": "Europe/Paris",
-  "uefa-europa-league": "Europe/Paris",
-  "copa-libertadores": "America/Sao_Paulo",
-  "copa-sudamericana": "America/Sao_Paulo",
 };
 
 const mlsVenueTimezones: Record<string, string> = {
@@ -109,9 +87,10 @@ function localDateTimeToUtc(date: string, time: string, timeZone: string) {
   return new Date(utcMs).toISOString();
 }
 
-function parseKickoffUtc(match: Pick<Match, "kickoffUtc" | "date" | "time">) {
+function parseKickoffUtc(match: Pick<Match, "kickoffUtc" | "date" | "time">, timeZone: string | null) {
   if (match.kickoffUtc && !Number.isNaN(Date.parse(match.kickoffUtc))) return match.kickoffUtc;
   if (match.date && match.time && match.time !== "TBD") {
+    if (timeZone) return localDateTimeToUtc(match.date, match.time, timeZone);
     const candidate = `${match.date}T${match.time}:00Z`;
     if (!Number.isNaN(Date.parse(candidate))) return candidate;
   }
@@ -165,11 +144,7 @@ export function resolveMatchTimezone(match: Pick<Match | MatchPreview, "league" 
 
 export function normalizeMatchTime(match: Pick<Match | MatchPreview, "league" | "kickoffUtc" | "date" | "time" | "timeConfirmed" | "venue">): NormalizedMatchTime | null {
   const { timezone, timezoneSource } = resolveMatchTimezone(match);
-  const kickoffUtc = match.kickoffUtc && !Number.isNaN(Date.parse(match.kickoffUtc))
-    ? match.kickoffUtc
-    : match.league === "mls" && timezone && match.date && match.time && match.time !== "TBD"
-      ? localDateTimeToUtc(match.date, match.time, timezone)
-      : parseKickoffUtc(match);
+  const kickoffUtc = parseKickoffUtc(match, timezone);
   if (!kickoffUtc) return null;
   const formatted = timezone ? formatInTimeZone(kickoffUtc, timezone) : { localDate: null, localTime: null };
   return {

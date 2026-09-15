@@ -1,4 +1,5 @@
 import type { EditorialPrediction, PredictionResultStatus } from "@/types";
+import fixtureSnapshot from "@/data/fixtures.snapshot.json";
 import {
   parseStatisticalCoreRows,
   validatePartialStatisticalCoreRows,
@@ -18,6 +19,20 @@ const FINAL_RESULT_STATUSES = new Set<PredictionResultStatus>([
   "half-red",
   "void",
 ]);
+
+type SnapshotFixture = { id?: string; kickoffUtc?: string };
+const snapshot = fixtureSnapshot as unknown as {
+  leagues: Record<string, Array<{ games: SnapshotFixture[] }> | undefined>;
+  predictionIds: Record<string, string>;
+  manualFixtures?: Record<string, SnapshotFixture>;
+};
+const snapshotFixturesById = new Map<string, SnapshotFixture>([
+  ...Object.values(snapshot.leagues).flatMap((rounds) =>
+    (rounds ?? []).flatMap((round) => round.games)
+  ),
+  ...Object.values(snapshot.manualFixtures ?? {}),
+].filter((fixture): fixture is SnapshotFixture & { id: string } => Boolean(fixture.id))
+  .map((fixture) => [fixture.id, fixture]));
 
 export type PspEditorialLifecycle =
   | "historical-frozen"
@@ -69,6 +84,14 @@ function hasFinalResult(prediction: EditorialPrediction) {
   return typeof result === "object" && Boolean(result?.finalScore);
 }
 
+function verifiedKickoffMillis(prediction: EditorialPrediction) {
+  if (!prediction.slug) return null;
+  const fixtureId = snapshot.predictionIds[`${prediction.league}:${prediction.slug}`];
+  const kickoffUtc = fixtureId ? snapshotFixturesById.get(fixtureId)?.kickoffUtc : undefined;
+  const value = kickoffUtc ? Date.parse(kickoffUtc) : Number.NaN;
+  return Number.isFinite(value) ? value : null;
+}
+
 /**
  * Editorial lifecycle only. Historical means "do not rewrite/migrate editorial content".
  * Result ingestion may still finalize score/betResult through the existing result pipeline.
@@ -78,6 +101,11 @@ export function classifyPspEditorialLifecycle(
   now: Date = new Date()
 ): PspEditorialLifecycle {
   if (hasFinalResult(prediction)) return "historical-frozen";
+
+  // A verified absolute kickoff is authoritative. MatchInfo times are displayed
+  // in competition-local time and must never be compared as if they were BRT.
+  const kickoff = verifiedKickoffMillis(prediction);
+  if (kickoff !== null && now.valueOf() >= kickoff) return "historical-frozen";
 
   const date = prediction.matchInfo?.date?.trim();
   if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return "unresolved-quarantine";

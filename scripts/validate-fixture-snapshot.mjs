@@ -5,6 +5,7 @@ import { matches } from "../src/data/matches.ts";
 import { validateLeagueRounds } from "../src/lib/data-validation.ts";
 import { hydratePrediction } from "../src/lib/live-predictions.ts";
 import { toMatchPreview } from "../src/lib/editorial.ts";
+import { fixtureIdentityMatchesPrediction } from "../src/lib/fixture-sync-integrity.ts";
 
 assert.equal(snapshot.version, 1, "Unsupported fixture snapshot version.");
 assert.equal(snapshot.siteTimezone, "America/Fortaleza", "Unexpected fixture timezone.");
@@ -48,6 +49,7 @@ for (const match of matches) {
   if (league.manualOnly && !snapshot.leagues[match.league]?.length) continue;
   const fixtureId = snapshot.predictionIds[`${match.league}:${match.slug}`];
   if (!fixtureId) {
+    assert.ok(league.manualOnly, `${match.slug}: automatic prediction is not linked to a provider fixture ID.`);
     assert.ok(match.sources?.some((item) => /^https:\/\//.test(item.url)), `${match.slug}: manual fixture lacks an auditable HTTPS source.`);
     assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(match.date) && /^\d{2}:\d{2}$/.test(match.time), `${match.slug}: manual fixture lacks a valid date/time.`);
     continue;
@@ -59,6 +61,7 @@ for (const match of matches) {
     .find((game) => game.id === fixtureId)
     ?? snapshot.manualFixtures?.[fixtureId];
   assert.ok(providerFixture, `${match.slug}: linked fixture data is unavailable.`);
+  assert.ok(fixtureIdentityMatchesPrediction(match, providerFixture), `${match.slug}: linked fixture teams/home-away differ from the prediction and no documented reconciliation applies.`);
   assert.equal(hydrated.date, providerFixture.date, `${match.slug}: reliable provider date was not retained.`);
   assert.equal(hydrated.time, providerFixture.time, `${match.slug}: reliable provider kickoff was not retained.`);
 }

@@ -1,0 +1,83 @@
+[
+  {
+    "home": "Bayern Munich",
+    "away": "Union Berlin",
+    "slug": "bayern-munich-vs-union-berlin",
+    "date": "2026-09-18",
+    "time": "20:30",
+    "pick": "Bayern Munich -2.5 Handicap",
+    "odds": 1.65
+  },
+  {
+    "home": "Eintracht Frankfurt",
+    "away": "SC Freiburg",
+    "slug": "eintracht-frankfurt-vs-sc-freiburg",
+    "date": "2026-09-19",
+    "time": "15:30",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.5
+  },
+  {
+    "home": "Werder Bremen",
+    "away": "Augsburg",
+    "slug": "werder-bremen-vs-augsburg",
+    "date": "2026-09-19",
+    "time": "15:30",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.5
+  },
+  {
+    "home": "Borussia M\u00f6nchengladbach",
+    "away": "Mainz 05",
+    "slug": "borussia-monchengladbach-vs-mainz-05",
+    "date": "2026-09-19",
+    "time": "15:30",
+    "pick": "Over 8.5 Corners",
+    "odds": 1.62
+  },
+  {
+    "home": "Hamburger SV",
+    "away": "1. FC K\u00f6ln",
+    "slug": "hamburger-sv-vs-fc-koln",
+    "date": "2026-09-19",
+    "time": "15:30",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.64
+  },
+  {
+    "home": "VfB Stuttgart",
+    "away": "Borussia Dortmund",
+    "slug": "vfb-stuttgart-vs-borussia-dortmund",
+    "date": "2026-09-19",
+    "time": "18:30",
+    "pick": "VfB Stuttgart or Draw (1X) + Over 7.5 Corners",
+    "odds": 1.91
+  },
+  {
+    "home": "Bayer Leverkusen",
+    "away": "RB Leipzig",
+    "slug": "bayer-leverkusen-vs-rb-leipzig",
+    "date": "2026-09-20",
+    "time": "15:30",
+    "pick": "Bayer Leverkusen or Draw (1X) + Under 4.5 Goals",
+    "odds": 1.85
+  },
+  {
+    "home": "Schalke 04",
+    "away": "SV Elversberg",
+    "slug": "schalke-04-vs-sv-elversberg",
+    "date": "2026-09-20",
+    "time": "17:30",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.6
+  },
+  {
+    "home": "SC Paderborn 07",
+    "away": "TSG Hoffenheim",
+    "slug": "sc-paderborn-07-vs-tsg-hoffenheim",
+    "date": "2026-09-20",
+    "time": "19:30",
+    "pick": "TSG Hoffenheim or Draw (X2) + Over 2.5 Goals",
+    "odds": 1.78
+  }
+]

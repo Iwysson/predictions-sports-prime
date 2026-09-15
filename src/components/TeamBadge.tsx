@@ -1,8 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { getTeamBadgeAsset, getTeamVisual } from "@/data/teams";
-import { fetchTeamBadge } from "@/lib/artwork";
 
 export function TeamBadge({
   team,
@@ -13,45 +9,13 @@ export function TeamBadge({
 }) {
   const visual = getTeamVisual(team);
   const localBadge = getTeamBadgeAsset(team);
-  const [badge, setBadge] = useState<string | null>(null);
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    if (localBadge) {
-      setLoaded(true);
-      return;
-    }
-
-    let cancelled = false;
-
-    fetchTeamBadge(team)
-      .then((url) => {
-        if (!cancelled) {
-          setBadge(url);
-        }
-      })
-      .finally(() => {
-        if (!cancelled) {
-          setLoaded(true);
-        }
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [localBadge, team]);
-
-  if (localBadge || badge) {
+  if (localBadge) {
     return (
       <span className={`team-logo team-logo--${size}`}>
         <img
-          src={localBadge?.src ?? badge!}
+          src={localBadge.src}
           alt={team}
           loading="lazy"
-          {...(!localBadge ? {
-            referrerPolicy: "no-referrer" as const,
-            onError: () => setBadge(null),
-          } : {})}
         />
       </span>
     );
@@ -59,7 +23,7 @@ export function TeamBadge({
 
   return (
     <span
-      className={`team-badge team-badge--${size} ${loaded ? "team-badge--fallback" : ""}`}
+      className={`team-badge team-badge--${size} team-badge--fallback`}
       style={{
         background: `linear-gradient(145deg, ${visual.primary}, ${visual.primary} 56%, ${visual.secondary} 57%, ${visual.secondary})`,
       }}

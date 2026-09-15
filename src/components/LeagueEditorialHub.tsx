@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "@/components/DocumentLink";
+import { useClientNow } from "@/lib/use-client-now";
+import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import type { CompetitionRoundSurface } from "@/lib/competition-rounds";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
-import { localTodayISO } from "@/lib/match-feed";
+import { localTodayISO, resolveHomeTemporalBucket } from "@/lib/match-feed";
 import type { Match, MatchPreview } from "@/types";
 import { localePath, matchPredictionAnchor, type SeoLocale } from "@/lib/seo-locales";
 import { localizeRoundText } from "@/lib/localized-presentation";
@@ -98,32 +102,116 @@ export function LeagueEditorialHub({
     locale !== "en" && localizedMatchSet.has(slug)
       ? localePath(locale, `/match/${slug}/`)
       : `/match/${slug}/`;
-  const today = localTodayISO();
+  const now = useClientNow();
   const discoverablePublishedMatches = indexableMatchSet
     ? publishedMatches.filter((match) => indexableMatchSet.has(match.slug))
     : publishedMatches;
+  const completed = [...discoverablePublishedMatches]
+    .filter(isCompleted)
+    .sort((left, right) => right.date.localeCompare(left.date))
+    .slice(0, 6);
+  const currentCount = surface.current?.matches.length ?? 0;
+  const currentPublished = surface.current?.matches.filter((match) => match.status === "published").length ?? 0;
+  const currentCompleted = surface.current?.matches.filter(isCompleted).length ?? 0;
+
+  if (!now) {
+    const staticLatest = [...discoverablePublishedMatches]
+      .filter((match) => !isCompleted(match))
+      .sort((left, right) =>
+        (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") ||
+        right.date.localeCompare(left.date)
+      )
+      .slice(0, 6);
+    const staticLatestSlugs = new Set(staticLatest.map((match) => match.slug));
+    const completedSlugs = new Set(completed.map((match) => match.slug));
+
+    return (
+      <div className="league-editorial-hub" data-static-league-discovery="true">
+        <section className="league-hub-overview" aria-labelledby="league-overview-heading">
+          <h2 id="league-overview-heading">{leagueName}: {c.overview}</h2>
+          <p>
+            {surface.current
+              ? `${locale === "en" ? surface.current.round : localizeRoundText(String(surface.current.round), locale)}: ${currentCount} ${c.fixtures}.`
+              : c.awaiting}
+            {` ${currentPublished} ${c.published}`}
+            {currentCompleted ? `; ${currentCompleted} ${c.completed}.` : "."}
+          </p>
+        </section>
+
+        <section aria-labelledby="league-latest-analysis-heading">
+          <h2 id="league-latest-analysis-heading">{leagueName}: {c.latest}</h2>
+          {staticLatest.length ? (
+            <div className="league-hub-analysis-grid">
+              {staticLatest.map((match, index) => (
+                <article key={match.slug}>
+                  <span>{match.date}</span>
+                  <h3>
+                    <Link href={matchHref(match.slug)} data-quality-gated-match-link="true">
+                      {match.homeTeam} vs {match.awayTeam}
+                    </Link>
+                  </h3>
+                  <Link href={matchHref(match.slug)} data-quality-gated-match-link="true">
+                    {isFutureFixture(match)
+                      ? matchPredictionAnchor(match.homeTeam, match.awayTeam, locale)
+                      : index % 2 === 0
+                        ? `${match.homeTeam} vs ${match.awayTeam}: ${c.prediction}`
+                        : `${c.read}: ${match.homeTeam} vs ${match.awayTeam}`}
+                  </Link>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p>{c.allListed}</p>
+          )}
+        </section>
+
+        {completed.length ? (
+          <section aria-labelledby="league-results-heading">
+            <h2 id="league-results-heading">{leagueName}: {c.recent}</h2>
+            <div className="league-hub-results">
+              {completed.map((match) => (
+                <article key={match.slug}>
+                  <span>{match.date}</span>
+                  <strong>{match.homeTeam} {match.homeScore}–{match.awayScore} {match.awayTeam}</strong>
+                  <Link href={matchHref(match.slug)} data-quality-gated-match-link="true">{c.review}</Link>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        <PublishedMatchDirectory
+          matches={discoverablePublishedMatches.filter(
+            (match) => !staticLatestSlugs.has(match.slug) && !completedSlugs.has(match.slug)
+          )}
+          locale={locale}
+          localizedMatchSlugs={localizedMatchSlugs}
+        />
+      </div>
+    );
+  }
+
+  const today = localTodayISO(now);
   const roundMatches = uniqueMatches([
     ...(surface.current?.matches ?? []),
     ...(surface.next?.matches ?? []),
     ...discoverablePublishedMatches,
   ]);
-  const todayMatches = roundMatches.filter((match) => match.date === today && !isCompleted(match));
-  const upcomingMatches = roundMatches.filter((match) => match.date > today && !isCompleted(match));
+  const todayMatches = roundMatches.filter(
+    (match) => !isCompleted(match) && resolveHomeTemporalBucket(match, today, now) === "today",
+  );
+  const upcomingMatches = roundMatches.filter((match) => {
+    if (isCompleted(match)) return false;
+    const bucket = resolveHomeTemporalBucket(match, today, now);
+    return bucket === "tomorrow" || bucket === "upcoming";
+  });
   const activeSlugs = new Set([...todayMatches, ...upcomingMatches].map((match) => match.slug));
-  const completed = [...discoverablePublishedMatches]
-    .filter(isCompleted)
-    .sort((left, right) => right.date.localeCompare(left.date))
-    .slice(0, 6);
   const latest = [...discoverablePublishedMatches]
     .filter((match) => !activeSlugs.has(match.slug) && !isCompleted(match))
     .sort((left, right) =>
       (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") || right.date.localeCompare(left.date)
     )
     .slice(0, 6);
-  const currentCount = surface.current?.matches.length ?? 0;
-  const currentPublished = surface.current?.matches.filter((match) => match.status === "published").length ?? 0;
-  const currentCompleted = surface.current?.matches.filter(isCompleted).length ?? 0;
-
   return (
     <div className="league-editorial-hub">
       <section className="league-hub-overview" aria-labelledby="league-overview-heading">
@@ -197,6 +285,13 @@ export function LeagueEditorialHub({
           </div>
         </section>
       ) : null}
+      <PublishedMatchDirectory
+        matches={discoverablePublishedMatches.filter((match) =>
+          !activeSlugs.has(match.slug) && !latest.some((item) => item.slug === match.slug) && !completed.some((item) => item.slug === match.slug)
+        )}
+        locale={locale}
+        localizedMatchSlugs={localizedMatchSlugs}
+      />
     </div>
   );
 }

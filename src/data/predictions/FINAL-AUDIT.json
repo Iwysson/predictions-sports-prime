@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "analysis_files_original": 47,
+    "analysis_files_final": 47,
+    "prediction_changes": 0,
+    "odds_changes": 0,
+    "published_changes": 0,
+    "internal_hits": 0,
+    "bold_hits": 0,
+    "embedded_urls": 0,
+    "prediction_blocks_in_analysis": 0,
+    "missing_sources": 0,
+    "incomplete_matchinfo": 0,
+    "missing_required_fields": 0,
+    "exact_repeated_substantive_sentences": 0,
+    "min_words": 330,
+    "max_words": 496,
+    "avg_words": 401.1,
+    "min_paragraphs": 4,
+    "max_paragraphs": 4,
+    "max_raw_tf_cosine": 0.661,
+    "max_pair": [
+      "29-analyses/sudamericana-libertadores-championship/corinthians-vs-estudiantes.ts",
+      "29-analyses/sudamericana-libertadores-championship/platense-vs-fluminense.ts"
+    ]
+  },
+  "errors": [],
+  "warnings": [],
+  "publication_status": "PASS",
+  "typescript_compile": "PASS",
+  "tfidf_cosine_1_2_grams": 0.276,
+  "tfidf_most_similar_pair": [
+    "29-analyses/premier-league/fulham-vs-manchester-united.ts",
+    "29-analyses/premier-league/manchester-city-vs-sunderland.ts"
+  ]
+}

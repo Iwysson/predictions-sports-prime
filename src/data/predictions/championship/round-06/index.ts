@@ -18,4 +18,8 @@ export const championshipRound06 = [
   southamptonVsSwanseaCity,
   watfordVsPrestonNorthEnd,
   wrexhamVsBurnley,
+  middlesbroughVsMillwall,
+  bristolCityVsLincolnCity,
 ];
+import { middlesbroughVsMillwall } from "./middlesbrough-vs-millwall";
+import { bristolCityVsLincolnCity } from "./bristol-city-vs-lincoln-city";

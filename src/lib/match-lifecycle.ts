@@ -1,4 +1,4 @@
-import type { OpenFootballRound, OpenFootballGame } from "@/lib/openfootball";
+import type { OpenFootballGame } from "@/lib/openfootball";
 import { isCompletedFixture, isNonPlayableFixture } from "@/lib/fixture-status";
 import { classifyFixture, fixtureKickoffMillis, isActiveFixtureState } from "@/lib/fixture-state";
 

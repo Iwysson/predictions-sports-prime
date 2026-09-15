@@ -11,6 +11,7 @@ import {
   isPspPolicyEnforcedForPrediction,
   validatePspEditorialStandard,
 } from "@/lib/editorial-standard";
+import { parsePredictionMarket } from "@/lib/prediction-results";
 
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
@@ -400,6 +401,11 @@ export function validateEditorialPredictions(
 
       if (!prediction.picks.main.trim()) {
         errors.push(`${label}: main prediction is required.`);
+      }
+
+      const market = parsePredictionMarket(prediction.picks.main);
+      if (market.unsupportedLegs.length > 0) {
+        errors.push(`${label}: main prediction contains unsupported settlement leg(s): ${market.unsupportedLegs.join(", ")}.`);
       }
 
       const analysisText = prediction.analysis.join(" ").replace(/\s+/g, " ").trim();

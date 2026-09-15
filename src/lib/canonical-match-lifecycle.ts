@@ -5,7 +5,7 @@ import type { Match } from "@/types";
 export function getCanonicalMatchLifecycle(
   match: Pick<
     Match,
-    "fixtureStatus" | "kickoffUtc" | "date" | "time" | "timeConfirmed"
+    "fixtureStatus" | "kickoffUtc" | "date" | "time" | "timeConfirmed" | "league"
   >,
   now: Date | string = new Date()
 ) {

@@ -14,12 +14,6 @@ import { intentHubSlugs } from "@/lib/intent-hubs";
 
 export const dynamic = "force-static";
 
-// These URLs received a real presentation update in this release. Keep this
-// separate from editorial timestamps: the prediction copy and evidence were
-// not rewritten, but crawlers can still see when the rendered page changed.
-const MOBILE_TEXT_PRESENTATION_RELEASE_AT = new Date("2026-09-11T12:55:00-03:00");
-const MOBILE_TEXT_PRESENTATION_RELEASE_DATE = "2026-09-11";
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const canonicalMatches = await resolveCanonicalMatches(matches);
   const staticPages: MetadataRoute.Sitemap = [
@@ -66,11 +60,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     )
     .map((match) => {
       const modifiedAt = materialMatchUpdatedAt(match);
-      const pageLastModified = match.date === MOBILE_TEXT_PRESENTATION_RELEASE_DATE
-        ? MOBILE_TEXT_PRESENTATION_RELEASE_AT
-        : modifiedAt || match.publishedAt
-          ? new Date(modifiedAt ?? match.publishedAt!)
-          : undefined;
+      const pageLastModified = modifiedAt || match.publishedAt
+        ? new Date(modifiedAt ?? match.publishedAt!)
+        : undefined;
       return ({
       url: absoluteUrl(matchCanonicalPath(match)),
       ...(pageLastModified ? { lastModified: pageLastModified } : {}),
@@ -93,7 +85,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           hasCompleteLocalizedEditorial(slug, locale) &&
           isAdSenseContentIndexable(slug, editorialPredictions)
       )
-      .map((slug) => ({ url: absoluteUrl(localePath(locale, `/match/${slug}/`)) })),
+      .map((slug) => {
+        const match = canonicalMatches.find((item) => item.slug === slug);
+        // Locale pages share this fixture's published material data. Never use
+        // the build clock as a lastmod or imply an editorial rewrite.
+        const modifiedAt = match && (materialMatchUpdatedAt(match) ?? match.publishedAt);
+        return {
+          url: absoluteUrl(localePath(locale, `/match/${slug}/`)),
+          ...(modifiedAt ? { lastModified: new Date(modifiedAt) } : {}),
+        };
+      }),
   ]);
 
   return [

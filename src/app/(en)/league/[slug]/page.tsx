@@ -5,8 +5,8 @@ import { AdSlot } from "@/components/ads";
 import { JsonLd } from "@/components/JsonLd";
 import { LiveLeagueRounds } from "@/components/LiveLeagueRounds";
 import { LiveLeagueStandings } from "@/components/LiveLeagueStandings";
-import { leagues } from "@/data/leagues";
-import { matches } from "@/data/matches";
+import { leagues, leaguesBySlug } from "@/data/leagues";
+import { matches, matchesByLeague } from "@/data/matches";
 import { editorialPredictions } from "@/data/predictions";
 import { standingsByLeague } from "@/data/standings";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
@@ -41,7 +41,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const league = leagues.find((item) => item.slug === slug);
+  const league = leaguesBySlug[slug as keyof typeof leaguesBySlug];
 
   if (!league) {
     return {
@@ -53,17 +53,16 @@ export async function generateMetadata({
     };
   }
 
-  const publishedLeagueMatches = matches.filter((match) => match.league === league.slug && match.status === "published");
+  const leagueSource = matchesByLeague.get(league.slug) ?? [];
+  const publishedLeagueMatches = leagueSource.filter((match) => match.status === "published");
   const capabilities = leagueSeoCapabilities(league, publishedLeagueMatches);
   const title = leagueSeoTitle(league, capabilities);
   const description = leagueSeoDescription(league, capabilities);
   const canonical = absoluteUrl(leagueCanonicalPath(league));
-  const publishedMatchCount = matches.filter(
-    (match) => match.league === league.slug && match.status === "published"
-  ).length;
+  const publishedMatchCount = publishedLeagueMatches.length;
   const contentIndexable =
     isLeagueIndexable(publishedMatchCount) &&
-    isAdSenseLeagueIndexable(league.slug, matches, editorialPredictions);
+    isAdSenseLeagueIndexable(league.slug, leagueSource, editorialPredictions);
 
   return {
     title: {
@@ -118,20 +117,18 @@ export default async function LeaguePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const league = leagues.find((item) => item.slug === slug);
+  const league = leaguesBySlug[slug as keyof typeof leaguesBySlug];
 
   if (!league) {
     notFound();
   }
 
-  const leagueMatches = matches
-    .filter((match) => match.league === league.slug)
-    .map(toMatchPreview);
+  const leagueSource = matchesByLeague.get(league.slug) ?? [];
+  const leagueMatches = leagueSource.map(toMatchPreview);
   const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions);
   const indexableMatchSet = new Set(indexableMatchSlugs);
-  const publishedMatches = matches.filter(
+  const publishedMatches = leagueSource.filter(
     (match) =>
-      match.league === league.slug &&
       match.status === "published" &&
       indexableMatchSet.has(match.slug)
   );

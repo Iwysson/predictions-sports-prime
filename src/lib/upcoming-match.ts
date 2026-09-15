@@ -4,7 +4,7 @@ import { isRestrictedSearchIntentFixture } from "@/lib/match-search-intent";
 
 export type UpcomingMatchInput = Pick<
   Match,
-  "fixtureStatus" | "kickoffUtc" | "date" | "time" | "timeConfirmed"
+  "fixtureStatus" | "kickoffUtc" | "date" | "time" | "timeConfirmed" | "league"
 >;
 
 /** Single source of truth for optimizations that may only target pre-match pages. */
@@ -18,6 +18,7 @@ export function isUpcomingMatch(
     date: match.date,
     time: match.time,
     timeConfirmed: match.timeConfirmed,
+    league: match.league,
   }, now).isPreMatch;
 }
 

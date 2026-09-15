@@ -1,7 +1,8 @@
 import { leaguesBySlug } from "@/data/leagues";
 import { getCanonicalMatchLifecycle } from "@/lib/canonical-match-lifecycle";
-import { dateInTimeZone, fixtureKickoffMillis } from "@/lib/fixture-state";
+import { dateInTimeZone, fixtureDateInTimeZone, fixtureKickoffMillis } from "@/lib/fixture-state";
 import { localeSearchResearch, type SearchLocale } from "@/lib/search-intent-research";
+import { isCompletedFixture, isNonPlayableFixture } from "@/lib/fixture-status";
 import type { Match } from "@/types";
 
 export type TemporalIntent =
@@ -93,6 +94,17 @@ export function isMatchSearchIntentV2Eligible(
   match: Match,
   now: Date | string = new Date()
 ) {
+  // Metadata ownership must not flip merely because kickoff passed while the
+  // provider is still waiting to publish the final lifecycle state. Keep the
+  // prediction-first title engine stable for the whole fixture date, but stop
+  // using it immediately when an authoritative terminal status is available.
+  if (isCompletedFixture(match.fixtureStatus) || isNonPlayableFixture(match.fixtureStatus)) {
+    return false;
+  }
+
+  const fixtureDate = fixtureDateInTimeZone(match);
+  if (fixtureDate) return fixtureDate >= dateInTimeZone(now);
+
   return ["UPCOMING_LONG", "UPCOMING_72H", "TOMORROW", "TODAY"].includes(
     getMatchTemporalIntent(match, now)
   );

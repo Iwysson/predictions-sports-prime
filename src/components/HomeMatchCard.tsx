@@ -1,8 +1,8 @@
 import Link from "@/components/DocumentLink";
 import type { MatchPreview } from "@/types";
 import { LeagueBadge } from "@/components/LeagueBadge";
-import { HomeTeamBadge } from "@/components/HomeTeamBadge";
-import { leagues } from "@/data/leagues";
+import { TeamBadge } from "@/components/TeamBadge";
+import { leaguesBySlug } from "@/data/leagues";
 import { canRenderComingSoon } from "@/lib/fixture-status";
 import { getMatchDisplayTime } from "@/lib/match-time";
 import { isFixtureLiveNow, isFutureFixture } from "@/lib/fixture-state";
@@ -26,7 +26,7 @@ export function HomeMatchCard({
   comingSoonLabel?: string;
   locale?: SeoLocale;
 }) {
-  const league = leagues.find((item) => item.slug === match.league);
+  const league = leaguesBySlug[match.league];
   const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");
   const kickoff = getMatchDisplayTime(match, locale);
   const live = isFixtureLiveNow(match, now);
@@ -51,9 +51,9 @@ export function HomeMatchCard({
       </div>
 
       <div className="compact-teams">
-        <div className="compact-team"><HomeTeamBadge team={match.homeTeam} /><strong>{match.homeTeam}</strong></div>
+        <div className="compact-team"><TeamBadge team={match.homeTeam} /><strong>{match.homeTeam}</strong></div>
         <span className="compact-vs">{locale === "en" ? "VS" : seoLocales[locale].separator}</span>
-        <div className="compact-team"><HomeTeamBadge team={match.awayTeam} /><strong>{match.awayTeam}</strong></div>
+        <div className="compact-team"><TeamBadge team={match.awayTeam} /><strong>{match.awayTeam}</strong></div>
       </div>
 
       <div className="compact-match-footer">

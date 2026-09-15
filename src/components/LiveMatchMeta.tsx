@@ -1,5 +1,3 @@
-"use client";
-
 import type { LeagueSlug } from "@/types";
 import { localizeRoundText } from "@/lib/localized-presentation";
 import { seoLocales, type SeoLocale } from "@/lib/seo-locales";

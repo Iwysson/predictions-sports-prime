@@ -1,0 +1,83 @@
+[
+  {
+    "home": "AS Monaco",
+    "away": "RC Lens",
+    "slug": "monaco-vs-lens",
+    "date": "2026-09-18",
+    "time": "20:45",
+    "pick": "AS Monaco or Draw (1X) + Over 7.5 Corners",
+    "odds": 1.65
+  },
+  {
+    "home": "Paris FC",
+    "away": "RC Strasbourg",
+    "slug": "paris-fc-vs-strasbourg",
+    "date": "2026-09-19",
+    "time": "17:15",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.67
+  },
+  {
+    "home": "Olympique Lyonnais",
+    "away": "Stade Rennais",
+    "slug": "lyon-vs-rennes",
+    "date": "2026-09-19",
+    "time": "20:45",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.52
+  },
+  {
+    "home": "Le Mans FC",
+    "away": "FC Lorient",
+    "slug": "le-mans-vs-lorient",
+    "date": "2026-09-19",
+    "time": "20:45",
+    "pick": "Over 1.5 Goals + Over 7.5 Corners",
+    "odds": 1.67
+  },
+  {
+    "home": "Toulouse FC",
+    "away": "Le Havre AC",
+    "slug": "toulouse-vs-le-havre",
+    "date": "2026-09-19",
+    "time": "20:45",
+    "pick": "Toulouse or Draw (1X) + Over 1.5 Goals",
+    "odds": 1.6
+  },
+  {
+    "home": "Angers SCO",
+    "away": "ESTAC Troyes",
+    "slug": "angers-vs-troyes",
+    "date": "2026-09-19",
+    "time": "20:45",
+    "pick": "Over 2.5 Goals",
+    "odds": 2.1
+  },
+  {
+    "home": "AJ Auxerre",
+    "away": "Stade Brestois 29",
+    "slug": "auxerre-vs-brest",
+    "date": "2026-09-20",
+    "time": "15:00",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.85
+  },
+  {
+    "home": "OGC Nice",
+    "away": "Lille OSC",
+    "slug": "nice-vs-lille",
+    "date": "2026-09-20",
+    "time": "17:15",
+    "pick": "Lille or Draw (X2) + Over 1.5 Goals",
+    "odds": 1.72
+  },
+  {
+    "home": "Olympique Marseille",
+    "away": "Paris Saint-Germain",
+    "slug": "marseille-vs-psg",
+    "date": "2026-09-20",
+    "time": "20:45",
+    "pick": "Over 8.5 Corners",
+    "odds": 1.88
+  }
+]

@@ -31,7 +31,6 @@ import {
 } from "@/lib/seo-locales";
 import type { Match } from "@/types";
 import { getAdSenseIndexableSlugs } from "@/lib/adsense-content-quality";
-import { isFixtureHistoryEligible } from "@/lib/fixture-state";
 
 type LocalizedMatchPageContentProps = {
   match: Match;
@@ -42,7 +41,6 @@ type LocalizedMatchPageContentProps = {
   analysisFormat?: "markdown";
   mainPrediction?: string;
   sourceDescription?: string;
-  internationalEligibleSlugs: readonly string[];
 };
 
 const extraCopy: Record<
@@ -171,7 +169,6 @@ export function LocalizedMatchPageContent({
   analysisFormat,
   mainPrediction,
   sourceDescription,
-  internationalEligibleSlugs,
 }: LocalizedMatchPageContentProps) {
   const copy = seoLocales[locale];
   const extra = extraCopy[locale];
@@ -193,7 +190,6 @@ export function LocalizedMatchPageContent({
     awayScore: match.awayScore,
   });
   const modifiedAt = materialMatchUpdatedAt(match);
-  const isHistorical = isFixtureHistoryEligible(match);
 
   return (
     <PredictionRevealProvider>

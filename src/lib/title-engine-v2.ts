@@ -1,5 +1,8 @@
 import { leaguesBySlug } from "@/data/leagues";
 import { getMatchSearchIntent, type MatchSearchIntentV2 } from "@/lib/search-intent-v2";
+import { dateInTimeZone, fixtureDateInTimeZone } from "@/lib/fixture-state";
+import { isCompletedFixture } from "@/lib/fixture-status";
+import { resolveHomeTemporalBucket } from "@/lib/match-feed";
 import { localeSearchResearch, type SearchLocale } from "@/lib/search-intent-research";
 import type { Match } from "@/types";
 
@@ -32,14 +35,21 @@ export function buildMatchMetadataV2(
   const oddsLabel = sentenceCase(research.odds);
   const league = leaguesBySlug[match.league]?.name ?? match.league;
   const intent = getMatchSearchIntent(match, locale, now);
-  const temporalQualifier = intent.temporalIntent === "TODAY"
+  const today = dateInTimeZone(now);
+  const fixtureDate = fixtureDateInTimeZone(match);
+  const temporalBucket = resolveHomeTemporalBucket(match, today, now);
+  // Keep date-owned metadata stable for the full fixture date. A scheduled
+  // fixture can enter the LIVE lifecycle before its provider status refreshes,
+  // but it is still the match listed for today in search and home-page intent.
+  const temporalQualifier = temporalBucket === "today"
     ? ` ${research.temporal.today}`
-    : intent.temporalIntent === "TOMORROW"
+    : temporalBucket === "tomorrow"
       ? ` ${research.temporal.tomorrow}`
       : "";
   const odds = match.predictions.find((item) => item.label === "Published Odds" || item.label === "Odds")?.value;
-  const pick = match.predictions.find((item) => item.label === "Main Prediction")?.value;
-  const historical = intent.temporalIntent === "FINAL" || intent.temporalIntent === "HISTORICAL";
+  const historical = isCompletedFixture(match.fixtureStatus) ||
+    temporalBucket === "historical" ||
+    Boolean(fixtureDate && fixtureDate < today);
   const title = historical
     ? fit([
         `${fixture} - ${prediction} Result & Match Analysis`,

@@ -1,0 +1,92 @@
+[
+  {
+    "home": "Brentford",
+    "away": "Chelsea",
+    "slug": "brentford-vs-chelsea",
+    "date": "2026-09-18",
+    "time": "20:00",
+    "pick": "Chelsea or Draw (X2) + Over 1.5 Goals",
+    "odds": 1.67
+  },
+  {
+    "home": "Tottenham Hotspur",
+    "away": "Aston Villa",
+    "slug": "tottenham-hotspur-vs-aston-villa",
+    "date": "2026-09-19",
+    "time": "12:30",
+    "pick": "Tottenham or Draw (1X) + Over 1.5 Goals",
+    "odds": 1.57
+  },
+  {
+    "home": "Newcastle United",
+    "away": "Hull City",
+    "slug": "newcastle-united-vs-hull-city",
+    "date": "2026-09-19",
+    "time": "15:00",
+    "pick": "Newcastle United to Win",
+    "odds": 1.52
+  },
+  {
+    "home": "Brighton & Hove Albion",
+    "away": "Arsenal",
+    "slug": "brighton-vs-arsenal",
+    "date": "2026-09-19",
+    "time": "15:00",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.82
+  },
+  {
+    "home": "Everton",
+    "away": "Ipswich Town",
+    "slug": "everton-vs-ipswich-town",
+    "date": "2026-09-19",
+    "time": "15:00",
+    "pick": "Everton or Draw (1X) + Over 1.5 Goals",
+    "odds": 1.5
+  },
+  {
+    "home": "Nottingham Forest",
+    "away": "Coventry City",
+    "slug": "nottingham-forest-vs-coventry-city",
+    "date": "2026-09-19",
+    "time": "17:30",
+    "pick": "Nottingham Forest or Draw (1X) + Over 1.5 Goals",
+    "odds": 1.5
+  },
+  {
+    "home": "AFC Bournemouth",
+    "away": "Liverpool",
+    "slug": "bournemouth-vs-liverpool",
+    "date": "2026-09-20",
+    "time": "14:00",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.47
+  },
+  {
+    "home": "Manchester City",
+    "away": "Sunderland",
+    "slug": "manchester-city-vs-sunderland",
+    "date": "2026-09-20",
+    "time": "14:00",
+    "pick": "Manchester City -1.5 Handicap",
+    "odds": 1.85
+  },
+  {
+    "home": "Leeds United",
+    "away": "Crystal Palace",
+    "slug": "leeds-united-vs-crystal-palace",
+    "date": "2026-09-20",
+    "time": "14:00",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.87
+  },
+  {
+    "home": "Fulham",
+    "away": "Manchester United",
+    "slug": "fulham-vs-manchester-united",
+    "date": "2026-09-20",
+    "time": "16:30",
+    "pick": "Over 2.5 Goals",
+    "odds": 1.6
+  }
+]

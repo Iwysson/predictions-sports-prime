@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Match } from "@/types";
-import { leagues } from "@/data/leagues";
+import { leaguesBySlug } from "@/data/leagues";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { editorialAuthorPersonJsonLd } from "@/lib/editorial-identity";
 import { buildMatchSearchIntentCopy, shouldApplySearchIntentSEO } from "@/lib/match-search-intent";
@@ -48,7 +48,7 @@ export function matchSeoDescription(match: Match) {
   if (hasRichMatchCapability && shouldApplySearchIntentSEO(match)) {
     return buildMatchSearchIntentCopy(match).description;
   }
-  const league = leagues.find((item) => item.slug === match.league);
+  const league = leaguesBySlug[match.league];
   const competition = league?.name ?? "the competition";
   return `${match.homeTeam} vs ${match.awayTeam} prediction for ${competition}, with match analysis, supporting data, market context and the final pick.`;
 }
@@ -60,7 +60,7 @@ export function matchIntroduction(match: Match) {
   if (shouldApplySearchIntentSEO(match)) {
     return buildMatchSearchIntentCopy(match).intro;
   }
-  const league = leagues.find((item) => item.slug === match.league);
+  const league = leaguesBySlug[match.league];
   const date = match.date ? ` on ${match.date}` : "";
   const kickoff = match.time && match.time !== "TBD"
     ? ` at ${match.time}`
@@ -164,7 +164,7 @@ export function buildMatchMetadata(match: Match): Metadata {
 }
 
 export function matchBreadcrumbJsonLd(match: Match) {
-  const league = leagues.find((item) => item.slug === match.league);
+  const league = leaguesBySlug[match.league];
 
   return {
     "@context": "https://schema.org",
@@ -193,7 +193,7 @@ export function matchBreadcrumbJsonLd(match: Match) {
 }
 
 export function articleJsonLd(match: Match) {
-  const league = leagues.find((item) => item.slug === match.league);
+  const league = leaguesBySlug[match.league];
   const url = absoluteUrl(matchCanonicalPath(match));
   const description = matchSeoDescription(match);
   const sportsEvent = buildSportsEventJsonLd(match, { url, description });

@@ -5,7 +5,6 @@ import { detectPickMarkets, normalizeMainPick } from "@/lib/match-market";
 import {
   getTeamSearchAliases,
   localeSearchResearch,
-  searchIntentLocales,
   type SearchIntentCategory,
   type SearchLocale,
 } from "@/lib/search-intent-research";
@@ -81,7 +80,7 @@ type TodaySeoProfile = {
  * from surviving after kickoff.
  */
 type RestrictedSearchIntentFixtureInput = Pick<Match, "date" | "status">
-  & Partial<Pick<Match, "slug" | "fixtureStatus" | "kickoffUtc" | "time" | "timeConfirmed">>;
+  & Partial<Pick<Match, "slug" | "fixtureStatus" | "kickoffUtc" | "time" | "timeConfirmed" | "league">>;
 
 export function isRestrictedSearchIntentFixture(match: RestrictedSearchIntentFixtureInput) {
   if (match.status !== "published" || !match.slug || !todaySeoProfiles[match.slug]) return false;
@@ -91,6 +90,7 @@ export function isRestrictedSearchIntentFixture(match: RestrictedSearchIntentFix
     date: match.date,
     time: match.time,
     timeConfirmed: match.timeConfirmed,
+    league: match.league,
   })) return false;
   const temporal = resolveHomeTemporalBucket(match as Match, localTodayISO());
   return temporal === "today" || temporal === "tomorrow";
@@ -293,7 +293,7 @@ function buildTodaySeoTitle(match: Match, locale: TodaySeoLocale) {
   return candidates.find((title) => title.length <= 70) ?? candidates.at(-1)!;
 }
 
-function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale, facts: MatchIntentFacts) {
+function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale) {
   if (!isRestrictedSearchIntentFixture(match)) return "";
   const profile = todaySeoProfiles[match.slug];
   if (!profile) return "";
@@ -302,7 +302,6 @@ function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale, facts: M
   if (temporal !== "today" && temporal !== "tomorrow") return "";
 
   const teams = todaySeoTeams(profile, locale);
-  const research = localeSearchResearch[locale];
   const temporalPhrases = {
     en: { today: "for today", tomorrow: "for tomorrow" },
     "pt-BR": { today: "de hoje", tomorrow: "de amanhã" },
@@ -412,9 +411,10 @@ function readMatchFacts(match: Match): MatchIntentFacts {
 
 export function resolveMatchTemporalState(
   match: Match,
-  today = localTodayISO()
+  today = localTodayISO(),
+  now: Date | string = new Date()
 ): MatchTemporalState | null {
-  const bucket = resolveHomeTemporalBucket(match, today);
+  const bucket = resolveHomeTemporalBucket(match, today, now);
   return bucket === "today" || bucket === "tomorrow" || bucket === "upcoming" || bucket === "historical"
     ? bucket
     : null;
@@ -550,7 +550,7 @@ function buildEnglishDescription(
   facts: MatchIntentFacts,
   temporal: MatchTemporalState | null
 ) {
-  const todayDescription = buildTodaySeoDescription(match, "en", facts);
+  const todayDescription = buildTodaySeoDescription(match, "en");
   if (todayDescription) return todayDescription;
   const teams = matchTeams(match, "en");
   const when = descriptionDateQualifier(match, temporal);
@@ -583,7 +583,7 @@ function buildLocalizedDescription(
 ) {
   if (locale === "en") return buildEnglishDescription(match, facts, temporal);
   if (isTodaySeoLocale(locale)) {
-    const todayDescription = buildTodaySeoDescription(match, locale, facts);
+    const todayDescription = buildTodaySeoDescription(match, locale);
     if (todayDescription) return todayDescription;
   }
 
@@ -591,7 +591,7 @@ function buildLocalizedDescription(
   const teams = matchTeams(match, locale);
   const when = temporal ? ` ${research.temporal[temporal]}` : match.date ? ` ${match.date}` : "";
 
-  const modules = [];
+  const modules: string[] = [];
   if (facts.hasStatistics) modules.push(research.statistics);
 
   const moduleStr = modules.slice(0, 2).join(", ") || research.analysis;
@@ -656,12 +656,13 @@ function buildIntro(match: Match, locale: SearchLocale, facts: MatchIntentFacts)
 export function buildMatchSearchIntent(
   match: Match,
   locale: SearchLocale = "en",
-  today = localTodayISO()
+  today = localTodayISO(),
+  now: Date | string = new Date()
 ): MatchSearchIntent {
   const research = localeSearchResearch[locale];
   const teams = matchTeams(match, locale);
   const facts = readMatchFacts(match);
-  const temporalState = resolveMatchTemporalState(match, today);
+  const temporalState = resolveMatchTemporalState(match, today, now);
   const markets = detectPickMarkets(facts.mainPick);
   const alternateMatchQueries = buildAlternateMatchQueries(match, locale);
   const predictionQueries = unique([
@@ -734,9 +735,10 @@ export function buildMatchSearchIntent(
 export function buildMatchSearchIntentCopy(
   match: Match,
   locale: SearchLocale = "en",
-  today = localTodayISO()
+  today = localTodayISO(),
+  now: Date | string = new Date()
 ) {
-  const intent = buildMatchSearchIntent(match, locale, today);
+  const intent = buildMatchSearchIntent(match, locale, today, now);
   const facts = readMatchFacts(match);
 
   return {

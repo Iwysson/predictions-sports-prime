@@ -4,7 +4,7 @@ import Link from "@/components/DocumentLink";
 import { MatchPreview } from "@/types";
 import { TeamBadge } from "@/components/TeamBadge";
 import { LeagueBadge } from "@/components/LeagueBadge";
-import { leagues } from "@/data/leagues";
+import { leaguesBySlug } from "@/data/leagues";
 import { useI18n } from "@/i18n/I18nProvider";
 import { canRenderComingSoon } from "@/lib/fixture-status";
 import { getMatchDisplayTime } from "@/lib/match-time";
@@ -16,19 +16,17 @@ export function MatchCard({
   match,
   now = new Date(),
   locale = "en",
-  localized = false,
   discoverable = true,
 }: {
   match: MatchPreview;
   now?: Date | string;
   locale?: SeoLocale;
-  localized?: boolean;
   discoverable?: boolean;
 }) {
   const href = locale !== "en"
     ? localePath(locale, `/match/${match.slug}/`)
     : `/match/${match.slug}/`;
-  const league = leagues.find((item) => item.slug === match.league);
+  const league = leaguesBySlug[match.league];
   const { t } = useI18n();
   const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");
   const kickoff = getMatchDisplayTime(match, locale);

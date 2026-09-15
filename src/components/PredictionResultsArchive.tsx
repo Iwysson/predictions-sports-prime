@@ -27,11 +27,12 @@ export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] 
         <span><b>{performance.lost}</b> Lost</span>
         <span><b>{performance.pushOrVoid}</b> Push / void</span>
         <span><b>{performance.awaitingResult}</b> Waiting result</span>
+        <span><b>{performance.awaitingVerifiedData}</b> Awaiting verified data</span>
         <span><b>{performance.unresolved}</b> Unresolved</span>
         <span><b>{winRate}</b> Win rate</span>
       </div>
 
-      <p className="results-metric-note"><strong>{performance.won} wins from {performance.decided} decided predictions.</strong> The {winRate} win rate uses wins + losses only. Pushes, voids, half-results, pending fixtures and unresolved records are excluded from that denominator. No ROI or profit is calculated because the archive does not record stakes.</p>
+      <p className="results-metric-note"><strong>{performance.won} wins from {performance.decided} decided predictions.</strong> The {winRate} win rate uses wins + losses only. Pushes, voids, half-results, fixtures awaiting verified facts and unresolved records are excluded from that denominator. Missing market facts are kept visibly pending instead of being estimated. No ROI or profit is calculated because the archive does not record stakes.</p>
 
       <section className="results-breakdown" aria-labelledby="league-performance-heading">
         <h2 id="league-performance-heading">Results by competition</h2>

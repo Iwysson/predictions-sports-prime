@@ -25,7 +25,6 @@ import {
   hasCompleteLocalizedEditorial,
   localizedEditorialBySlug,
 } from "@/data/localized-editorial";
-import { isInternationalMatchExpansionEligible } from "@/lib/upcoming-match";
 import { buildSportsEventJsonLd } from "@/lib/sports-event-schema";
 import { editorialPredictions } from "@/data/predictions";
 import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
@@ -35,10 +34,7 @@ import {
   localizePresentationText,
   sanitizeLocalizedAnalysis,
 } from "@/lib/localized-presentation";
-import {
-  resolveCanonicalMatch,
-  resolveCanonicalMatches,
-} from "@/lib/canonical-match";
+import { resolveCanonicalMatch } from "@/lib/canonical-match";
 
 const intentLocale: Record<
   (typeof fullyLocalizedMatchLocales)[number],
@@ -220,10 +216,6 @@ export default async function LocalizedMatch({
   const { locale, slug } = await params;
 
   if (!isSeoLocale(locale)) notFound();
-  const internationalEligibleSlugs = (await resolveCanonicalMatches(matches))
-    .filter((item) => isInternationalMatchExpansionEligible(item))
-    .map((item) => item.slug);
-
   if (hasCompleteLocalizedEditorial(slug, locale)) {
     const match = await resolveCanonicalMatch(slug);
 
@@ -352,7 +344,6 @@ export default async function LocalizedMatch({
               ? localizePresentationText(editorial.sourceDescription, locale)
               : automaticPresentation.sourceDescription
           }
-          internationalEligibleSlugs={internationalEligibleSlugs}
         />
       </>
     );
@@ -466,7 +457,6 @@ export default async function LocalizedMatch({
         analysisFormat={match.analysisFormat}
         mainPrediction={localizedPresentation.mainPrediction || localizePredictionText(storedPrediction?.value, locale)}
         sourceDescription={localizedPresentation.sourceDescription}
-        internationalEligibleSlugs={internationalEligibleSlugs}
       />
     </>
   );

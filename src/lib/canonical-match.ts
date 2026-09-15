@@ -5,6 +5,12 @@ import { hydratePrediction } from "@/lib/live-predictions";
 import type { Match } from "@/types";
 
 const canonicalMatches = new Map<string, Promise<Match | undefined>>();
+let allCanonicalMatches: Promise<Match[]> | undefined;
+const publishedMatchesBySlug = new Map(
+  matches
+    .filter((match) => match.status === "published")
+    .map((match) => [match.slug, match])
+);
 
 function mergeCanonicalFixture(
   match: Match,
@@ -40,9 +46,7 @@ function mergeCanonicalFixture(
 export function resolveCanonicalMatch(slug: string) {
   if (!canonicalMatches.has(slug)) {
     canonicalMatches.set(slug, (async () => {
-      const match = matches.find(
-        (item) => item.slug === slug && item.status === "published"
-      );
+      const match = publishedMatchesBySlug.get(slug);
       if (!match) return undefined;
       return mergeCanonicalFixture(
         match,
@@ -56,7 +60,11 @@ export function resolveCanonicalMatch(slug: string) {
 
 export async function resolveCanonicalMatches(
   source: readonly Match[] = matches
-) {
+): Promise<Match[]> {
+  if (source === matches) {
+    allCanonicalMatches ??= resolveCanonicalMatches([...matches]);
+    return allCanonicalMatches;
+  }
   const resolved = await Promise.all(
     source.map((match) => resolveCanonicalMatch(match.slug))
   );

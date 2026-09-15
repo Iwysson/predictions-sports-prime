@@ -19,3 +19,10 @@ if (editorialErrors.length > 0) {
 export const matches = buildPublishedMatches(
   editorialPredictions
 );
+
+export const matchesByLeague = new Map<string, (typeof matches)[number][]>();
+for (const match of matches) {
+  const leagueMatches = matchesByLeague.get(match.league) ?? [];
+  leagueMatches.push(match);
+  matchesByLeague.set(match.league, leagueMatches);
+}

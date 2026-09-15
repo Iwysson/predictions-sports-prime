@@ -1,5 +1,7 @@
+"use client";
+
+import { useAdConsent } from "@/lib/use-ad-consent";
 import { AdSenseUnit } from "@/components/ads/AdSenseUnit";
-import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
 import {
   adsConfig,
   canRenderPlacement,
@@ -14,7 +16,9 @@ export function AdSlot({
   placement: AdPlacement;
   format?: AdFormat;
 }) {
-  const configured = canRenderPlacement(placement);
+  const consentGranted = useAdConsent();
+  if (!canRenderPlacement(placement)) return null;
+  if (!consentGranted) return null;
 
   return (
     <aside
@@ -22,16 +26,12 @@ export function AdSlot({
       aria-label="Advertisement"
       data-ad-placement={placement}
     >
-      {configured ? (
-        <AdSenseUnit
-          clientId={adsConfig.clientId}
-          slot={adsConfig.slots[placement]}
-          format={format}
-          placement={placement}
-        />
-      ) : (
-        <AdPlaceholder format={format} />
-      )}
+      <AdSenseUnit
+        clientId={adsConfig.clientId}
+        slot={adsConfig.slots[placement]}
+        format={format}
+        placement={placement}
+      />
     </aside>
   );
 }

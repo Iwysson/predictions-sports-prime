@@ -3,6 +3,7 @@ import Link from "@/components/DocumentLink";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ads";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
+import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { matches } from "@/data/matches";
@@ -17,6 +18,7 @@ import {
   seoLocaleSlugs,
   seoLocales,
 } from "@/lib/seo-locales";
+import { selectTemporalClientMatches } from "@/lib/match-feed";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -72,6 +74,7 @@ export default async function LocalizedHome({
   const resolvedMatches = await resolveCanonicalMatches(matches);
   const localizedMatchSlugs = Object.keys(localizedEditorialBySlug)
     .filter((slug) => hasCompleteLocalizedEditorial(slug, locale));
+  const clientMatches = selectTemporalClientMatches(resolvedMatches, true);
 
   return (
     <>
@@ -84,9 +87,10 @@ export default async function LocalizedHome({
       </section>
 
       <HomePredictionFeed
-        matches={resolvedMatches}
+        matches={clientMatches}
         locale={locale}
         localizedMatchSlugs={localizedMatchSlugs}
+        discovery={<PublishedMatchDirectory matches={resolvedMatches} locale={locale} localizedMatchSlugs={localizedMatchSlugs} />}
         beforeHistory={
           <>
             <div className="container inline-ad-space">

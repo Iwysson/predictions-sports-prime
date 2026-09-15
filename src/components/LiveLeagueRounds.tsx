@@ -27,14 +27,12 @@ function RoundFixtures({
   surfaceName,
   emptyMessage,
   locale,
-  localizedMatchSlugs,
   indexableMatchSlugs,
 }: {
   section: CompetitionRoundSection | null;
   surfaceName: "current" | "next";
   emptyMessage: string;
   locale: SeoLocale;
-  localizedMatchSlugs: Set<string>;
   indexableMatchSlugs: Set<string> | null;
 }) {
   if (!section?.matches.length) {
@@ -59,7 +57,6 @@ function RoundFixtures({
           <MatchCard
             match={match}
             locale={locale}
-            localized={localizedMatchSlugs.has(match.slug)}
             discoverable={
               match.status !== "published" ||
               indexableMatchSlugs === null ||
@@ -75,15 +72,12 @@ function RoundFixtures({
 export function LiveLeagueRounds({
   surface,
   locale = "en",
-  localizedMatchSlugs = [],
   indexableMatchSlugs,
 }: {
   surface: CompetitionRoundSurface;
   locale?: SeoLocale;
-  localizedMatchSlugs?: string[];
   indexableMatchSlugs?: string[];
 }) {
-  const localizedMatchSet = new Set(localizedMatchSlugs);
   const indexableMatchSet = indexableMatchSlugs
     ? new Set(indexableMatchSlugs)
     : null;
@@ -116,7 +110,6 @@ export function LiveLeagueRounds({
           surfaceName="current"
           emptyMessage={t("awaitingConfirmedData")}
           locale={locale}
-          localizedMatchSlugs={localizedMatchSet}
           indexableMatchSlugs={indexableMatchSet}
         />
       </section>
@@ -144,7 +137,6 @@ export function LiveLeagueRounds({
           surfaceName="next"
           emptyMessage={copy.unavailable}
           locale={locale}
-          localizedMatchSlugs={localizedMatchSet}
           indexableMatchSlugs={indexableMatchSet}
         />
       </section>

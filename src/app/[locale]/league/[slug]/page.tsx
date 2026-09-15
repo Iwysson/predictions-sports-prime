@@ -9,8 +9,8 @@ import { LeaguePageText } from "@/components/LeaguePageText";
 import { LeaguePublishedAnalysis } from "@/components/LeaguePublishedAnalysis";
 import { LeagueEditorialHub } from "@/components/LeagueEditorialHub";
 import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
-import { leagues } from "@/data/leagues";
-import { matches } from "@/data/matches";
+import { leagues, leaguesBySlug } from "@/data/leagues";
+import { matches, matchesByLeague } from "@/data/matches";
 import { editorialPredictions } from "@/data/predictions";
 import { standingsByLeague } from "@/data/standings";
 import { localizedAlternates } from "@/lib/international-seo";
@@ -43,7 +43,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const league = leagues.find((item) => item.slug === slug);
+  const league = leaguesBySlug[slug as keyof typeof leaguesBySlug];
   if (!isSeoLocale(locale) || !league) return { robots: { index: false, follow: false } };
 
   const copy = seoLocales[locale];
@@ -53,7 +53,7 @@ export async function generateMetadata({
   const url = absoluteUrl(localePath(locale, `/league/${slug}/`));
   const indexable =
     isIndexableLocalizedHubLocale(locale) &&
-    isAdSenseLeagueIndexable(league.slug, matches, editorialPredictions);
+    isAdSenseLeagueIndexable(league.slug, matchesByLeague.get(league.slug) ?? [], editorialPredictions);
 
   return {
     title: { absolute: title },
@@ -81,18 +81,16 @@ export default async function LocalizedLeague({
   const { locale, slug } = await params;
   if (!isSeoLocale(locale)) notFound();
 
-  const league = leagues.find((item) => item.slug === slug);
+  const league = leaguesBySlug[slug as keyof typeof leaguesBySlug];
   if (!league) notFound();
 
   const copy = seoLocales[locale];
-  const leagueMatches = matches
-    .filter((match) => match.league === league.slug)
-    .map(toMatchPreview);
+  const leagueSource = matchesByLeague.get(league.slug) ?? [];
+  const leagueMatches = leagueSource.map(toMatchPreview);
   const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions);
   const indexableMatchSet = new Set(indexableMatchSlugs);
-  const publishedMatches = await resolveCanonicalMatches(matches.filter(
+  const publishedMatches = await resolveCanonicalMatches(leagueSource.filter(
     (match) =>
-      match.league === league.slug &&
       match.status === "published" &&
       indexableMatchSet.has(match.slug)
   ));
@@ -184,7 +182,6 @@ export default async function LocalizedLeague({
               <LiveLeagueRounds
                 surface={roundSurface}
                 locale={locale}
-                localizedMatchSlugs={localizedMatchSlugs}
                 indexableMatchSlugs={indexableMatchSlugs}
               />
             </LeaguePageText>

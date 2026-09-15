@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NFLPage } from "@/components/NFLPage";
 import { getNFLCopy } from "@/lib/nfl-i18n";
-import { localizedAlternates } from "@/lib/international-seo";
 import { absoluteUrl } from "@/lib/site-config";
 import { isSeoLocale, localePath, seoLocaleSlugs, seoLocales } from "@/lib/seo-locales";
 
