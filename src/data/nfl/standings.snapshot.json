@@ -1,29 +1,11 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-09-14T04:53:06.160Z",
+  "generatedAt": "2026-09-15T11:42:09.819Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
   "standings": [
-    {
-      "teamId": "den",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "winPct": 0,
-      "conferenceRank": 0,
-      "playoffStatus": "none"
-    },
-    {
-      "teamId": "kc",
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "winPct": 0,
-      "conferenceRank": 0,
-      "playoffStatus": "none"
-    },
     {
       "teamId": "bal",
       "wins": 1,
@@ -52,7 +34,7 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "lv",
+      "teamId": "kc",
       "wins": 1,
       "losses": 0,
       "ties": 0,
@@ -61,7 +43,7 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "nyj",
+      "teamId": "lv",
       "wins": 1,
       "losses": 0,
       "ties": 0,
@@ -70,7 +52,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "cin",
+      "teamId": "nyj",
       "wins": 1,
       "losses": 0,
       "ties": 0,
@@ -79,7 +61,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "pit",
+      "teamId": "cin",
       "wins": 1,
       "losses": 0,
       "ties": 0,
@@ -88,12 +70,21 @@
       "playoffStatus": "wild-card"
     },
     {
+      "teamId": "pit",
+      "wins": 1,
+      "losses": 0,
+      "ties": 0,
+      "winPct": 1,
+      "conferenceRank": 8,
+      "playoffStatus": "none"
+    },
+    {
       "teamId": "hou",
       "wins": 0,
       "losses": 1,
       "ties": 0,
       "winPct": 0,
-      "conferenceRank": 10,
+      "conferenceRank": 9,
       "playoffStatus": "none"
     },
     {
@@ -102,7 +93,7 @@
       "losses": 1,
       "ties": 0,
       "winPct": 0,
-      "conferenceRank": 11,
+      "conferenceRank": 10,
       "playoffStatus": "none"
     },
     {
@@ -111,11 +102,20 @@
       "losses": 1,
       "ties": 0,
       "winPct": 0,
-      "conferenceRank": 12,
+      "conferenceRank": 11,
       "playoffStatus": "none"
     },
     {
       "teamId": "ten",
+      "wins": 0,
+      "losses": 1,
+      "ties": 0,
+      "winPct": 0,
+      "conferenceRank": 12,
+      "playoffStatus": "none"
+    },
+    {
+      "teamId": "den",
       "wins": 0,
       "losses": 1,
       "ties": 0,
