@@ -1,5 +1,6 @@
 import { matches } from "@/data/matches";
-import { toMatchPreview } from "@/lib/editorial";
+import { editorialPredictions } from "@/data/predictions";
+import { buildPublishedMatches, toMatchPreview } from "@/lib/editorial";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { hydratePrediction } from "@/lib/live-predictions";
 import type { Match } from "@/types";
@@ -10,6 +11,10 @@ const publishedMatchesBySlug = new Map(
   matches
     .filter((match) => match.status === "published")
     .map((match) => [match.slug, match])
+);
+
+const publishedEditorialMatchBySlug = new Map(
+  buildPublishedMatches(editorialPredictions).map((match) => [match.slug, match])
 );
 
 function mergeCanonicalFixture(
@@ -46,7 +51,9 @@ function mergeCanonicalFixture(
 export function resolveCanonicalMatch(slug: string) {
   if (!canonicalMatches.has(slug)) {
     canonicalMatches.set(slug, (async () => {
-      const match = publishedMatchesBySlug.get(slug);
+      const match =
+        publishedMatchesBySlug.get(slug) ??
+        publishedEditorialMatchBySlug.get(slug);
       if (!match) return undefined;
       return mergeCanonicalFixture(
         match,

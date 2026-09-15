@@ -53,9 +53,19 @@ function formatEditorialDate(value: string) {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return matches.map((match) => ({
-    slug: match.slug,
-  }));
+  // Keep the route inventory tied to both the rendered match collection and the
+  // published editorial registry. This makes newly published manual articles
+  // available to static generation immediately, even before any secondary
+  // match projection/cache is refreshed.
+  const publishedSlugs = new Set(matches.map((match) => match.slug));
+
+  for (const prediction of editorialPredictions) {
+    if (prediction.published === true && prediction.slug) {
+      publishedSlugs.add(prediction.slug);
+    }
+  }
+
+  return [...publishedSlugs].map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
