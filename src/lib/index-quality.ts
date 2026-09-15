@@ -176,14 +176,16 @@ export function evaluatePredictionIndexQuality(
   const failed = (Object.entries(checks) as Array<[keyof typeof checks, boolean]>)
     .filter(([, passed]) => !passed)
     .map(([name]) => failureReasons[name]);
-  // For current future psp-v1 pages, word-count and keyword heuristics are
-  // diagnostics rather than publication blockers. The editorial contract
-  // permits publishable gaps; integrity, provenance, fixture identity,
+  // For current future pre-match pages, editorial style/length/similarity
+  // heuristics are diagnostics rather than publication/index blockers. Content
+  // filtering is performed before integration; integrity, fixture identity,
   // metadata, sources and pick/odds checks remain mandatory below.
-  const blockingFailed = coreRequired && lifecycle === "future-pre-match"
+  const blockingFailed = lifecycle === "future-pre-match"
     ? failed.filter((reason) =>
         reason !== "content_incomplete" &&
-        reason !== "tactical_quality_insufficient"
+        reason !== "tactical_quality_insufficient" &&
+        reason !== "paragraph_quality_insufficient" &&
+        reason !== "editorial_duplication_blocking"
       )
     : failed;
 

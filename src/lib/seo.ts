@@ -67,7 +67,7 @@ export function matchIntroduction(match: Match) {
     : "";
   const competition = league?.name ?? "this competition";
 
-  return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}${kickoff}. This preview outlines the match context, available evidence and key risks; the prediction and odds require an explicit reveal.`;
+  return `${match.homeTeam} meet ${match.awayTeam} in ${competition}${date}${kickoff}. This preview outlines the match context, available evidence and key risks; the prediction and published odds are shown directly on the page.`;
 }
 
 export function matchHeading(match: Match) {

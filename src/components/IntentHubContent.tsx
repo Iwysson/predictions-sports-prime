@@ -42,7 +42,7 @@ export function IntentHubContent({ slug, matches, discovery }: { slug: IntentHub
             return <article className={`intent-match-card${compact ? " intent-match-card--compact" : ""}`} key={match.slug}>
               <div className="intent-match-card__meta"><span><LeagueBadge slug={match.league} short={league?.short ?? "•"} size="sm" />{league?.name ?? match.league}</span><time dateTime={match.kickoffUtc ?? match.date}>{match.date} · {kickoff.display}</time></div>
               <div className="intent-match-card__fixture"><TeamBadge team={match.homeTeam} /><h3>{match.homeTeam} <span>vs</span> {match.awayTeam}</h3><TeamBadge team={match.awayTeam} /></div>
-              <dl><div><dt>Main prediction</dt><dd>Available after opening the match page</dd></div>{match.odds != null ? <div><dt>Published odds</dt><dd>Revealed with the prediction</dd></div> : null}</dl>
+              <dl><div><dt>Main prediction</dt><dd>Visible on the match page</dd></div>{match.odds != null ? <div><dt>Published odds</dt><dd>Shown with the prediction</dd></div> : null}</dl>
               <Link className="button button--small" href={`/match/${match.slug}/`}>
                 {isFutureFixture(match) ? matchPredictionAnchor(match.homeTeam, match.awayTeam) : "Read full analysis"} <span aria-hidden="true">›</span>
               </Link>

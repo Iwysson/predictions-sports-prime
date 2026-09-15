@@ -315,36 +315,36 @@ function buildTodaySeoDescription(match: Match, locale: TodaySeoLocale) {
   const when = temporalPhrases[locale][temporal];
   const candidates = {
     en: [
-      `${teams} prediction ${when}. Betting tips and match analysis with the key data behind a click-to-reveal pick and odds.`,
-      `${teams} prediction ${when}. Match analysis, risks and on-page prediction reveal.`,
+      `${teams} prediction ${when}. Betting tips and match analysis with the main pick and published odds shown on the match page.`,
+      `${teams} prediction ${when}. Match analysis, risks, main pick and published odds on the match page.`,
     ],
     "pt-BR": [
-      `${teams}: palpite ${when}. Análise do jogo, riscos e botão para revelar palpite e odds na página.`,
-      `${teams}: palpite ${when}. Prognóstico e análise com revelação das odds por clique.`,
+      `${teams}: palpite ${when}. Análise do jogo, riscos, palpite e odds publicados diretamente na página.`,
+      `${teams}: palpite ${when}. Prognóstico, análise e odds visíveis diretamente na página.`,
     ],
     es: [
-      `${teams}: pronóstico ${when}. Análisis del partido y control para revelar pronóstico y cuotas.`,
-      `${teams}: pronóstico ${when}. Apuestas y análisis con cuotas visibles tras un clic.`,
+      `${teams}: pronóstico ${when}. Análisis del partido con pronóstico y cuotas visibles directamente en la página.`,
+      `${teams}: pronóstico ${when}. Apuestas, análisis y cuotas visibles directamente en la página.`,
     ],
     it: [
-      `${teams}: pronostico ${when}. Analisi della partita e controllo per mostrare pronostico e quote.`,
-      `${teams}: pronostico ${when}. Analisi e quote disponibili dopo un clic.`,
+      `${teams}: pronostico ${when}. Analisi della partita con pronostico e quote visibili direttamente nella pagina.`,
+      `${teams}: pronostico ${when}. Analisi e quote disponibili direttamente nella pagina.`,
     ],
     fr: [
-      `${teams} : pronostic ${when}. Analyse du match et commande pour afficher le pronostic et les cotes.`,
-      `${teams} : pronostic ${when}. Analyse et cotes disponibles après un clic.`,
+      `${teams} : pronostic ${when}. Analyse du match avec pronostic et cotes affichés directement sur la page.`,
+      `${teams} : pronostic ${when}. Analyse et cotes disponibles directement sur la page.`,
     ],
     de: [
-      `${teams}: Prognose ${when}. Spielanalyse und Schaltfläche zum Anzeigen von Prognose und Quoten.`,
-      `${teams}: Prognose ${when}. Analyse und Quoten nach einem Klick.`,
+      `${teams}: Prognose ${when}. Spielanalyse mit Prognose und Quoten direkt auf der Seite.`,
+      `${teams}: Prognose ${when}. Analyse und Quoten direkt auf der Seite.`,
     ],
     nl: [
-      `${teams}: voorspelling ${when}. Wedstrijdanalyse en knop om voorspelling en odds te tonen.`,
-      `${teams}: voorspelling ${when}. Analyse en odds beschikbaar na een klik.`,
+      `${teams}: voorspelling ${when}. Wedstrijdanalyse met voorspelling en odds direct op de pagina.`,
+      `${teams}: voorspelling ${when}. Analyse en odds direct beschikbaar op de pagina.`,
     ],
     tr: [
-      `${teams}: maç tahmini ${when}. Maç analizi ile tahmin ve oranları gösterme denetimi.`,
-      `${teams}: maç tahmini ${when}. Analiz ve oranlar bir tıklamadan sonra görünür.`,
+      `${teams}: maç tahmini ${when}. Maç analizi ile tahmin ve oranlar doğrudan sayfada gösterilir.`,
+      `${teams}: maç tahmini ${when}. Analiz ve oranlar doğrudan sayfada görünür.`,
     ],
   }[locale];
 
@@ -556,21 +556,21 @@ function buildEnglishDescription(
   const when = descriptionDateQualifier(match, temporal);
   if (match.matchSeo) {
     return fitDescription([
-      `${teams} prediction${when}. Betting tips and match analysis with statistical evidence, risks and a click-to-reveal pick and odds.`,
-      `${teams} prediction${when}. Read the betting analysis, then reveal the main pick and odds on the page.`,
+      `${teams} prediction${when}. Betting tips and match analysis with statistical evidence, risks, the main pick and published odds on the page.`,
+      `${teams} prediction${when}. Read the betting analysis with the main pick and published odds shown directly on the page.`,
       `${teams} prediction${when} and betting analysis for ${facts.leagueName}.`,
     ]);
   }
   const detailed = [
-    `${teams} prediction${when} in ${facts.leagueName}, with match analysis and a click-to-reveal pick and odds.`,
-    `Read the ${teams} match analysis${when} and reveal the prediction and odds on the page.`,
-    `${facts.leagueName}: ${teams}. View the analysis${when}, then reveal the prediction and odds.`,
-    `${teams} match analysis${when} with betting context and a click-to-reveal prediction.`,
+    `${teams} prediction${when} in ${facts.leagueName}, with match analysis, the main pick and published odds on the page.`,
+    `Read the ${teams} match analysis${when}, with the prediction and published odds shown directly on the page.`,
+    `${facts.leagueName}: ${teams}. View the analysis${when}, prediction and published odds on the match page.`,
+    `${teams} match analysis${when} with betting context and the prediction shown directly on the page.`,
   ][stableVariant(match.slug)];
 
   return fitDescription([
     detailed,
-    `${teams} prediction${when}. Read the match analysis for ${facts.leagueName} and reveal the pick on the page.`,
+    `${teams} prediction${when}. Read the match analysis for ${facts.leagueName} with the pick shown directly on the page.`,
     `${teams} prediction${when}. Read our ${facts.leagueName} match analysis.`,
   ]);
 }
@@ -650,7 +650,7 @@ function buildIntro(match: Match, locale: SearchLocale, facts: MatchIntentFacts)
     return `${teams}: ${research.analysis}, ${research.prediction} - ${facts.leagueName}.`;
   }
 
-  return `${teams} meet in ${facts.leagueName}. This preview explains the match evidence and main risks; the prediction and published odds require an explicit reveal.`;
+  return `${teams} meet in ${facts.leagueName}. This preview explains the match evidence and main risks; the prediction and published odds are shown directly on the page.`;
 }
 
 export function buildMatchSearchIntent(

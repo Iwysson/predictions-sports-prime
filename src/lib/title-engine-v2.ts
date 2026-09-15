@@ -72,12 +72,12 @@ export function buildMatchMetadataV2(
         `${fixture} result and original match analysis for ${league}.`,
       ], 160)
     : fit([
-        `${fixture} ${prediction.toLocaleLowerCase()}${temporalQualifier} for ${league}. Read the matchup evidence and risks, then reveal the pick and odds on the page.`,
-        `${fixture} ${prediction.toLocaleLowerCase()}${temporalQualifier}: match analysis with a click-to-reveal pick and odds.`,
+        `${fixture} ${prediction.toLocaleLowerCase()}${temporalQualifier} for ${league}. Read the matchup evidence and risks; the pick and published odds are shown on the match page.`,
+        `${fixture} ${prediction.toLocaleLowerCase()}${temporalQualifier}: match analysis with the pick and published odds shown on the match page.`,
       ], 160);
   const intro = historical
     ? `${fixture} is preserved as a completed ${league} prediction record, including the original selection and the analysis published before kickoff.`
-    : `${fixture} meet in ${league}. Review the match analysis and relevant team context, then use the reveal control to view the prediction and published odds.`;
+    : `${fixture} meet in ${league}. Review the match analysis and relevant team context; the prediction and published odds are shown directly on the page.`;
 
   return {
     title,

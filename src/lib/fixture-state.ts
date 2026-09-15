@@ -74,7 +74,14 @@ export function classifyFixture(
   now: Date | string = new Date(),
   staleGraceMs = DEFAULT_STALE_SCHEDULE_GRACE_MS
 ): CanonicalFixtureState {
-  const status = fixture.fixtureStatus ?? fixture.status;
+  // `status` on a Match describes publication state (for example `published`),
+  // while `fixtureStatus` describes the sporting lifecycle. Do not let a
+  // publication status turn a dated future fixture into an `unknown` fixture.
+  const fallbackStatus =
+    fixture.status === "published" || fixture.status === "coming-soon"
+      ? undefined
+      : fixture.status;
+  const status = fixture.fixtureStatus ?? fallbackStatus;
   if (status === "completed" || status === "awarded") return "completed";
   if (status === "postponed") return "postponed";
   if (status === "canceled" || status === "cancelled") return "cancelled";

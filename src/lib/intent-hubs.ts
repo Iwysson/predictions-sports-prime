@@ -77,7 +77,7 @@ export const intentHubDefinitions: Record<IntentHubSlug, IntentHubDefinition> = 
     h1: "Football Betting Tips",
     description: "Football betting tips focused on the published market, selection, available odds, supporting rationale and material risks for upcoming fixtures.",
     eyebrow: "Market-focused analysis",
-    intro: "Review current editorial selections through a market-focused lens. Cards confirm when a pick and published odds are available; the linked match page contains the reasoning, risks and click-to-reveal control.",
+    intro: "Review current editorial selections through a market-focused lens. Cards confirm when a pick and published odds are available; the linked match page contains the reasoning, risks, prediction and published odds directly.",
     feedTitle: "Published betting selections",
     feedIntro: "Selections with a recorded price are presented first, followed by valid current predictions whose market analysis is available without a displayed price.",
     guideTitle: "How to read these betting tips",
