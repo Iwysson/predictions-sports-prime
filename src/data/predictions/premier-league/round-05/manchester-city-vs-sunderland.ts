@@ -35,9 +35,33 @@ Any lineup named for Manchester City or Sunderland in the analysis is an expecte
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Manchester City HOME versus Sunderland AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Manchester City — HOME | Sunderland — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 2-0-0 | 0-1-1 |
+| Points/game | 3.00 | 0.50 |
+| GF/game | 1.50 | 1.00 |
+| GA/game | 0.50 | 1.50 |
+| xG/game | 2.19 | 1.19 |
+| xGA/game | 1.01 | 1.50 |
+| Shots/game | 14.00 | 12.50 |
+| SOT/game | 5.00 | 4.50 |
+| Shots allowed/game | 8.50 | 11.00 |
+| SOT allowed/game | 3.50 | 2.50 |
+| Possession | 72.0% | 56.5% |
+| Corners for/game | 6.00 | 4.00 |
+| Corners against/game | 4.00 | 3.50 |
+| Total corners/game | 10.00 | 7.50 |
+| First to score | 50% | 0% |
+| First to concede | 50% | 100% |
+| Scored in 1st half | 50% | 50% |
+| Conceded in 1st half | 50% | 50% |
+| BTTS | 50% | 100% |
+| Clean sheets | 50% | 0% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Manchester City -1.5 Handicap is that Manchester City and Sunderland produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
+The margin evidence for **Manchester City -1.5 Handicap**: Manchester City average a **1.00**-goal HOME difference over 2 games; Sunderland average **-0.50** AWAY over 2. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
+
 
 ### Market price and value
 
@@ -58,6 +82,7 @@ For Manchester City against Sunderland, the case for the bet rests on the match-
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
+  "updatedAt": "2026-09-15T14:00:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },

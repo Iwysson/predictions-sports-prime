@@ -35,10 +35,32 @@ Any lineup named for ADO Den Haag or SC Cambuur in the analysis is an expected o
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season ADO Den Haag HOME versus SC Cambuur AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | ADO Den Haag — HOME | SC Cambuur — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 0-0-2 | 0-1-1 |
+| Points/game | 0.00 | 0.50 |
+| GF/game | 1.50 | 1.50 |
+| GA/game | 3.50 | 2.50 |
+| xG/game | 0.78 | 1.74 |
+| xGA/game | 1.96 | 2.02 |
+| Shots/game | 10.50 | 13.50 |
+| SOT/game | 3.50 | 5.00 |
+| Shots allowed/game | 12.50 | 14.00 |
+| SOT allowed/game | 9.50 | 4.50 |
+| Possession | 56.5% | 60.5% |
+| Corners for/game | 3.50 | 4.50 |
+| Corners against/game | 1.00 | 5.00 |
+| Total corners/game | 4.50 | 9.50 |
+| First to score | 0% | 50% |
+| First to concede | 100% | 50% |
+| Scored in 1st half | 0% | 50% |
+| Conceded in 1st half | 100% | 50% |
+| BTTS | 100% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to ADO Den Haag or Draw (1X) + Over 8.5 Corners is that ADO Den Haag and SC Cambuur produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+ADO Den Haag's HOME corner numbers run **3.50 for / 1.00 against** (total 4.50) over 2 matches; SC Cambuur's AWAY split is **4.50 for / 5.00 against** (total 9.50) over 2, for a venue-blended total near **7.0** per game. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.75**, the raw **implied probability is 57.1%**, calculated as **1 / 1.75** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For ADO Den Haag against SC Cambuur, the case for the bet rests on the match-spe
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
+  "updatedAt": "2026-09-15T16:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "OddAlerts", "url": "https://www.oddalerts.com/leagues/netherlands/eredivisie/corners"}],
   matchInfo: { date: "2026-09-19", time: "16:30", round: "Matchday 7", venue: "Bingoal Stadion" }

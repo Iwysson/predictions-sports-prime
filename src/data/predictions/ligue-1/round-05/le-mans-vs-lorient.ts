@@ -35,10 +35,32 @@ Any lineup named for Le Mans FC or FC Lorient in the analysis is an expected or 
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Le Mans FC HOME versus FC Lorient AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Le Mans FC — HOME | FC Lorient — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 0-2-0 | 1-1-0 |
+| Points/game | 1.00 | 2.00 |
+| GF/game | 2.00 | 0.50 |
+| GA/game | 2.00 | 0.00 |
+| xG/game | 1.61 | 1.41 |
+| xGA/game | 2.17 | 1.15 |
+| Shots/game | 10.00 | 9.00 |
+| SOT/game | 4.50 | 2.50 |
+| Shots allowed/game | 21.00 | 15.50 |
+| SOT allowed/game | 6.50 | 3.50 |
+| Possession | 51.5% | 41.5% |
+| Corners for/game | 2.00 | 1.50 |
+| Corners against/game | 9.50 | 8.50 |
+| Total corners/game | 11.50 | 10.00 |
+| First to score | 50% | 50% |
+| First to concede | 50% | 0% |
+| Scored in 1st half | 100% | 0% |
+| Conceded in 1st half | 100% | 0% |
+| BTTS | 100% | 0% |
+| Clean sheets | 0% | 100% |
+| Failed to score | 0% | 50% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 1.5 Goals + Over 7.5 Corners is that Le Mans FC and FC Lorient produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Corners are the driver of **Over 1.5 Goals + Over 7.5 Corners**: Le Mans FC produce **11.50 total corners per HOME game** (2 sample), FC Lorient **10.00 per AWAY game** (2 sample) — a combination that supports the line. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.67**, the raw **implied probability is 59.9%**, calculated as **1 / 1.67** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Le Mans FC against FC Lorient, the case for the bet rests on the match-speci
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
+  "updatedAt": "2026-09-15T15:45:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

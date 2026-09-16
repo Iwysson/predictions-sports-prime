@@ -35,10 +35,32 @@ Any lineup named for Schalke 04 or SV Elversberg in the analysis is an expected 
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Schalke 04 HOME versus SV Elversberg AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Schalke 04 — HOME | SV Elversberg — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 1 |
+| W-D-L | 0-1-0 | 1-0-0 |
+| Points/game | 1.00 | 3.00 |
+| GF/game | 0.00 | 4.00 |
+| GA/game | 0.00 | 3.00 |
+| xG/game | 0.21 | 2.31 |
+| xGA/game | 1.94 | 2.36 |
+| Shots/game | 4.00 | 14.00 |
+| SOT/game | 1.00 | 10.00 |
+| Shots allowed/game | 15.00 | 25.00 |
+| SOT allowed/game | 5.00 | 6.00 |
+| Possession | 17.0% | 49.0% |
+| Corners for/game | 0.00 | 4.00 |
+| Corners against/game | 11.00 | 13.00 |
+| Total corners/game | 11.00 | 17.00 |
+| First to score | 0% | 0% |
+| First to concede | 0% | 100% |
+| Scored in 1st half | 0% | 100% |
+| Conceded in 1st half | 0% | 100% |
+| BTTS | 0% | 100% |
+| Clean sheets | 100% | 0% |
+| Failed to score | 100% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 2.5 Goals is that Schalke 04 and SV Elversberg produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Schalke 04 average **0.00 goals for** at home (1 games, 100% failed to score); SV Elversberg average **4.00 for / 3.00 against** away (1 games). The combined scoring rate is consistent with **Over 2.5 Goals**. The sample is still 1-1 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.6**, the raw **implied probability is 62.5%**, calculated as **1 / 1.6** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Schalke 04 against SV Elversberg, the case for the bet rests on the match-sp
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
+  "updatedAt": "2026-09-15T15:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
   matchInfo: { date: "2026-09-20", time: "17:30", round: "Matchday 4", venue: "Veltins-Arena" }

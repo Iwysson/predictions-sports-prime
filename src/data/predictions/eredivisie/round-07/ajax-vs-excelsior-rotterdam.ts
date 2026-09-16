@@ -35,10 +35,32 @@ Any lineup named for Ajax or Excelsior Rotterdam in the analysis is an expected 
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Ajax HOME versus Excelsior Rotterdam AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Ajax — HOME | Excelsior Rotterdam — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 3 | 3 |
+| W-D-L | 1-1-1 | 2-1-0 |
+| Points/game | 1.33 | 2.33 |
+| GF/game | 2.67 | 3.00 |
+| GA/game | 2.00 | 0.67 |
+| xG/game | 2.73 | 2.14 |
+| xGA/game | 1.87 | 1.08 |
+| Shots/game | 25.00 | 15.33 |
+| SOT/game | 7.33 | 6.67 |
+| Shots allowed/game | 12.33 | 12.67 |
+| SOT allowed/game | 5.67 | 2.33 |
+| Possession | 59.0% | 41.7% |
+| Corners for/game | 7.33 | 6.00 |
+| Corners against/game | 1.67 | 4.67 |
+| Total corners/game | 9.00 | 10.67 |
+| First to score | 67% | 67% |
+| First to concede | 33% | 33% |
+| Scored in 1st half | 100% | 100% |
+| Conceded in 1st half | 67% | 33% |
+| BTTS | 100% | 33% |
+| Clean sheets | 0% | 67% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 3.5 Goals is that Ajax and Excelsior Rotterdam produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Ajax's HOME split this season shows **2.67 goals for** and **2.00 against per game** across 3 matches; Excelsior Rotterdam's AWAY split adds **3.00 for** and **0.67 against** across 3, putting the combined venue baseline near **5.67 goals per game**. The sample is still 3-3 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.72**, the raw **implied probability is 58.1%**, calculated as **1 / 1.72** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Ajax against Excelsior Rotterdam, the case for the bet rests on the match-sp
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
+  "updatedAt": "2026-09-15T16:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
   matchInfo: { date: "2026-09-19", time: "20:00", round: "Matchday 7", venue: "Johan Cruijff ArenA" }

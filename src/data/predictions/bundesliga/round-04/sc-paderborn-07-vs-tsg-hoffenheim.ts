@@ -35,10 +35,32 @@ Any lineup named for SC Paderborn 07 or TSG Hoffenheim in the analysis is an exp
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season SC Paderborn 07 HOME versus TSG Hoffenheim AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | SC Paderborn 07 — HOME | TSG Hoffenheim — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 1 |
+| W-D-L | 0-0-1 | 0-0-1 |
+| Points/game | 0.00 | 0.00 |
+| GF/game | 0.00 | 2.00 |
+| GA/game | 1.00 | 3.00 |
+| xG/game | 0.77 | 1.88 |
+| xGA/game | 1.24 | 1.95 |
+| Shots/game | 14.00 | 15.00 |
+| SOT/game | 3.00 | 4.00 |
+| Shots allowed/game | 16.00 | 18.00 |
+| SOT allowed/game | 5.00 | 6.00 |
+| Possession | 59.0% | 59.0% |
+| Corners for/game | 5.00 | 7.00 |
+| Corners against/game | 4.00 | 6.00 |
+| Total corners/game | 9.00 | 13.00 |
+| First to score | 0% | 100% |
+| First to concede | 100% | 0% |
+| Scored in 1st half | 0% | 100% |
+| Conceded in 1st half | 100% | 0% |
+| BTTS | 0% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 100% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to TSG Hoffenheim or Draw (X2) + Over 2.5 Goals is that SC Paderborn 07 and TSG Hoffenheim produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+The HOME/AWAY goal record is the base evidence here: SC Paderborn 07 0.00/1.00 at home over 1 games, TSG Hoffenheim 2.00/3.00 away over 1. That is a **2.00**-goal combined venue rate against a market that needs it to clear the published line. The sample is still 1-1 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.78**, the raw **implied probability is 56.2%**, calculated as **1 / 1.78** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For SC Paderborn 07 against TSG Hoffenheim, the case for the bet rests on the ma
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
+  "updatedAt": "2026-09-15T15:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
   matchInfo: { date: "2026-09-20", time: "19:30", round: "Matchday 4", venue: "Home Deluxe Arena" }

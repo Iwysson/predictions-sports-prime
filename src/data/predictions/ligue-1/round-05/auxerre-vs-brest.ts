@@ -35,10 +35,32 @@ Any lineup named for AJ Auxerre or Stade Brestois 29 in the analysis is an expec
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season AJ Auxerre HOME versus Stade Brestois 29 AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | AJ Auxerre — HOME | Stade Brestois 29 — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 1-0-1 | 1-1-0 |
+| Points/game | 1.50 | 2.00 |
+| GF/game | 1.00 | 2.00 |
+| GA/game | 1.50 | 1.50 |
+| xG/game | 1.77 | 2.54 |
+| xGA/game | 1.31 | 1.34 |
+| Shots/game | 15.50 | 22.50 |
+| SOT/game | 7.00 | 8.00 |
+| Shots allowed/game | 13.50 | 13.00 |
+| SOT allowed/game | 5.00 | 4.50 |
+| Possession | 45.0% | 47.0% |
+| Corners for/game | 5.00 | 7.50 |
+| Corners against/game | 9.00 | 3.00 |
+| Total corners/game | 14.00 | 10.50 |
+| First to score | 50% | 100% |
+| First to concede | 50% | 0% |
+| Scored in 1st half | 50% | 100% |
+| Conceded in 1st half | 50% | 50% |
+| BTTS | 50% | 100% |
+| Clean sheets | 50% | 0% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 2.5 Goals is that AJ Auxerre and Stade Brestois 29 produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+The HOME/AWAY goal record is the base evidence here: AJ Auxerre 1.00/1.50 at home over 2 games, Stade Brestois 29 2.00/1.50 away over 2. That is a **3.00**-goal combined venue rate against a market that needs it to clear the published line. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.85**, the raw **implied probability is 54.1%**, calculated as **1 / 1.85** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For AJ Auxerre against Stade Brestois 29, the case for the bet rests on the matc
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
+  "updatedAt": "2026-09-15T15:45:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

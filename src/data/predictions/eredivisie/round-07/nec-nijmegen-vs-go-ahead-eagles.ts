@@ -35,10 +35,32 @@ Any lineup named for NEC Nijmegen or Go Ahead Eagles in the analysis is an expec
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season NEC Nijmegen HOME versus Go Ahead Eagles AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | NEC Nijmegen — HOME | Go Ahead Eagles — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 3 | 3 |
+| W-D-L | 0-1-2 | 0-2-1 |
+| Points/game | 0.33 | 0.67 |
+| GF/game | 1.33 | 2.33 |
+| GA/game | 2.33 | 3.33 |
+| xG/game | 1.51 | 1.77 |
+| xGA/game | 1.61 | 2.55 |
+| Shots/game | 16.67 | 12.33 |
+| SOT/game | 3.00 | 5.67 |
+| Shots allowed/game | 11.00 | 22.33 |
+| SOT allowed/game | 4.33 | 6.67 |
+| Possession | 67.3% | 47.7% |
+| Corners for/game | 5.33 | 5.00 |
+| Corners against/game | 2.67 | 7.00 |
+| Total corners/game | 8.00 | 12.00 |
+| First to score | 33% | 33% |
+| First to concede | 67% | 67% |
+| Scored in 1st half | 33% | 67% |
+| Conceded in 1st half | 67% | 67% |
+| BTTS | 100% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to NEC or Draw (1X) + Over 2.5 Goals is that NEC Nijmegen and Go Ahead Eagles produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+The HOME/AWAY goal record is the base evidence here: NEC Nijmegen 1.33/2.33 at home over 3 games, Go Ahead Eagles 2.33/3.33 away over 3. That is a **3.66**-goal combined venue rate against a market that needs it to clear the published line. The sample is still 3-3 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.67**, the raw **implied probability is 59.9%**, calculated as **1 / 1.67** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For NEC Nijmegen against Go Ahead Eagles, the case for the bet rests on the matc
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
+  "updatedAt": "2026-09-15T16:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
   matchInfo: { date: "2026-09-20", time: "16:45", round: "Matchday 7", venue: "Goffertstadion" }

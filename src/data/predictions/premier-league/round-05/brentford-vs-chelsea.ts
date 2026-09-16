@@ -35,9 +35,33 @@ Any lineup named for Brentford or Chelsea in the analysis is an expected or proj
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Brentford HOME versus Chelsea AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Brentford — HOME | Chelsea — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 1-1-0 | 1-0-1 |
+| Points/game | 2.00 | 1.50 |
+| GF/game | 2.00 | 2.00 |
+| GA/game | 0.50 | 2.00 |
+| xG/game | 2.54 | 1.32 |
+| xGA/game | 1.14 | 1.69 |
+| Shots/game | 19.00 | 15.50 |
+| SOT/game | 5.00 | 5.50 |
+| Shots allowed/game | 11.50 | 15.00 |
+| SOT allowed/game | 4.50 | 7.50 |
+| Possession | 44.5% | 41.5% |
+| Corners for/game | 5.50 | 3.50 |
+| Corners against/game | 3.00 | 5.50 |
+| Total corners/game | 8.50 | 9.00 |
+| First to score | 100% | 100% |
+| First to concede | 0% | 0% |
+| Scored in 1st half | 50% | 100% |
+| Conceded in 1st half | 0% | 100% |
+| BTTS | 50% | 100% |
+| Clean sheets | 50% | 0% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Chelsea or Draw (X2) + Over 1.5 Goals is that Brentford and Chelsea produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
+Brentford average **2.00 goals for** at home (2 games, 0% failed to score); Chelsea average **2.00 for / 2.00 against** away (2 games). The combined scoring rate is consistent with **Chelsea or Draw (X2) + Over 1.5 Goals**. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
+
 
 ### Market price and value
 
@@ -58,6 +82,7 @@ For Brentford against Chelsea, the case for the bet rests on the match-specific 
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
+  "updatedAt": "2026-09-15T14:00:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },

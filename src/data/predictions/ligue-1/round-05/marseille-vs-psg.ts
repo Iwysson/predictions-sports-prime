@@ -35,10 +35,32 @@ Any lineup named for Olympique Marseille or Paris Saint-Germain in the analysis 
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Olympique Marseille HOME versus Paris Saint-Germain AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Olympique Marseille — HOME | Paris Saint-Germain — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 3 |
+| W-D-L | 1-0-1 | 1-2-0 |
+| Points/game | 1.50 | 1.67 |
+| GF/game | 3.00 | 1.67 |
+| GA/game | 1.50 | 1.33 |
+| xG/game | 1.64 | 1.55 |
+| xGA/game | 1.74 | 1.16 |
+| Shots/game | 14.00 | 17.33 |
+| SOT/game | 6.50 | 5.33 |
+| Shots allowed/game | 11.50 | 11.33 |
+| SOT allowed/game | 4.50 | 3.67 |
+| Possession | 64.0% | 67.0% |
+| Corners for/game | 4.00 | 5.67 |
+| Corners against/game | 4.00 | 1.00 |
+| Total corners/game | 8.00 | 6.67 |
+| First to score | 50% | 33% |
+| First to concede | 50% | 67% |
+| Scored in 1st half | 50% | 33% |
+| Conceded in 1st half | 50% | 67% |
+| BTTS | 50% | 67% |
+| Clean sheets | 50% | 33% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 8.5 Corners is that Olympique Marseille and Paris Saint-Germain produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Olympique Marseille's HOME corner numbers run **4.00 for / 4.00 against** (total 8.00) over 2 matches; Paris Saint-Germain's AWAY split is **5.67 for / 1.00 against** (total 6.67) over 3, for a venue-blended total near **7.3** per game. The sample is still 2-3 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.88**, the raw **implied probability is 53.2%**, calculated as **1 / 1.88** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Olympique Marseille against Paris Saint-Germain, the case for the bet rests 
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
+  "updatedAt": "2026-09-15T15:45:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

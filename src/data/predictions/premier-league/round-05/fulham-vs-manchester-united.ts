@@ -35,9 +35,33 @@ Any lineup named for Fulham or Manchester United in the analysis is an expected 
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Fulham HOME versus Manchester United AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Fulham — HOME | Manchester United — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 0-0-2 | 0-1-1 |
+| Points/game | 0.00 | 0.50 |
+| GF/game | 2.00 | 1.00 |
+| GA/game | 3.00 | 2.00 |
+| xG/game | 2.24 | 1.26 |
+| xGA/game | 2.10 | 1.01 |
+| Shots/game | 19.50 | 17.50 |
+| SOT/game | 6.00 | 4.00 |
+| Shots allowed/game | 14.00 | 13.00 |
+| SOT allowed/game | 5.50 | 5.00 |
+| Possession | 63.0% | 63.5% |
+| Corners for/game | 6.50 | 4.50 |
+| Corners against/game | 2.50 | 2.50 |
+| Total corners/game | 9.00 | 7.00 |
+| First to score | 50% | 50% |
+| First to concede | 50% | 50% |
+| Scored in 1st half | 100% | 0% |
+| Conceded in 1st half | 100% | 50% |
+| BTTS | 100% | 50% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 0% | 50% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 2.5 Goals is that Fulham and Manchester United produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
+Fulham's HOME split this season shows **2.00 goals for** and **3.00 against per game** across 2 matches; Manchester United's AWAY split adds **1.00 for** and **2.00 against** across 2, putting the combined venue baseline near **3.00 goals per game**. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
+
 
 ### Market price and value
 
@@ -58,6 +82,7 @@ For Fulham against Manchester United, the case for the bet rests on the match-sp
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
+  "updatedAt": "2026-09-15T14:00:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },

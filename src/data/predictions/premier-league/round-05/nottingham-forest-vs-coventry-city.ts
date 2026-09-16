@@ -35,9 +35,33 @@ Any lineup named for Nottingham Forest or Coventry City in the analysis is an ex
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Nottingham Forest HOME versus Coventry City AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Nottingham Forest — HOME | Coventry City — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 0-1-1 | 0-0-2 |
+| Points/game | 0.50 | 0.00 |
+| GF/game | 0.00 | 0.00 |
+| GA/game | 0.50 | 2.00 |
+| xG/game | 0.79 | 0.79 |
+| xGA/game | 0.77 | 2.00 |
+| Shots/game | 12.00 | 8.00 |
+| SOT/game | 2.00 | 2.00 |
+| Shots allowed/game | 11.00 | 17.50 |
+| SOT allowed/game | 1.50 | 5.00 |
+| Possession | 48.5% | 29.0% |
+| Corners for/game | 2.50 | 3.50 |
+| Corners against/game | 6.00 | 6.00 |
+| Total corners/game | 8.50 | 9.50 |
+| First to score | 0% | 0% |
+| First to concede | 50% | 100% |
+| Scored in 1st half | 0% | 0% |
+| Conceded in 1st half | 0% | 100% |
+| BTTS | 0% | 0% |
+| Clean sheets | 50% | 0% |
+| Failed to score | 100% | 100% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Nottingham Forest or Draw (1X) + Over 1.5 Goals is that Nottingham Forest and Coventry City produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
+Nottingham Forest's HOME split this season shows **0.00 goals for** and **0.50 against per game** across 2 matches; Coventry City's AWAY split adds **0.00 for** and **2.00 against** across 2, putting the combined venue baseline near **0.00 goals per game**. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
+
 
 ### Market price and value
 
@@ -58,6 +82,7 @@ For Nottingham Forest against Coventry City, the case for the bet rests on the m
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
+  "updatedAt": "2026-09-15T14:00:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },

@@ -35,10 +35,32 @@ Any lineup named for Eintracht Frankfurt or SC Freiburg in the analysis is an ex
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Eintracht Frankfurt HOME versus SC Freiburg AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Eintracht Frankfurt — HOME | SC Freiburg — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 1 |
+| W-D-L | 0-0-1 | 1-0-0 |
+| Points/game | 0.00 | 3.00 |
+| GF/game | 1.00 | 1.00 |
+| GA/game | 4.00 | 0.00 |
+| xG/game | 2.22 | 1.24 |
+| xGA/game | 1.13 | 0.77 |
+| Shots/game | 22.00 | 16.00 |
+| SOT/game | 8.00 | 5.00 |
+| Shots allowed/game | 17.00 | 14.00 |
+| SOT allowed/game | 7.00 | 3.00 |
+| Possession | 60.0% | 41.0% |
+| Corners for/game | 9.00 | 4.00 |
+| Corners against/game | 4.00 | 5.00 |
+| Total corners/game | 13.00 | 9.00 |
+| First to score | 100% | 100% |
+| First to concede | 0% | 0% |
+| Scored in 1st half | 100% | 100% |
+| Conceded in 1st half | 0% | 0% |
+| BTTS | 100% | 0% |
+| Clean sheets | 0% | 100% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 2.5 Goals is that Eintracht Frankfurt and SC Freiburg produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Eintracht Frankfurt average **1.00 goals for** at home (1 games, 0% failed to score); SC Freiburg average **1.00 for / 0.00 against** away (1 games). The combined scoring rate runs below what would ideally support **Over 2.5 Goals**. The sample is still 1-1 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.5**, the raw **implied probability is 66.7%**, calculated as **1 / 1.5** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Eintracht Frankfurt against SC Freiburg, the case for the bet rests on the m
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
+  "updatedAt": "2026-09-15T15:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
   matchInfo: { date: "2026-09-19", time: "15:30", round: "Matchday 4", venue: "Deutsche Bank Park" }

@@ -35,10 +35,32 @@ Any lineup named for Olympique Lyonnais or Stade Rennais in the analysis is an e
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Olympique Lyonnais HOME versus Stade Rennais AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Olympique Lyonnais — HOME | Stade Rennais — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 1 |
+| W-D-L | 1-1-0 | 1-0-0 |
+| Points/game | 2.00 | 3.00 |
+| GF/game | 2.00 | 2.00 |
+| GA/game | 1.00 | 1.00 |
+| xG/game | 2.30 | 1.54 |
+| xGA/game | 0.70 | 1.66 |
+| Shots/game | 18.00 | 17.00 |
+| SOT/game | 6.00 | 5.00 |
+| Shots allowed/game | 10.00 | 19.00 |
+| SOT allowed/game | 3.50 | 3.00 |
+| Possession | 60.5% | 56.0% |
+| Corners for/game | 7.00 | 6.00 |
+| Corners against/game | 5.00 | 12.00 |
+| Total corners/game | 12.00 | 18.00 |
+| First to score | 50% | 100% |
+| First to concede | 50% | 0% |
+| Scored in 1st half | 50% | 100% |
+| Conceded in 1st half | 50% | 100% |
+| BTTS | 100% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 2.5 Goals is that Olympique Lyonnais and Stade Rennais produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Olympique Lyonnais's HOME split this season shows **2.00 goals for** and **1.00 against per game** across 2 matches; Stade Rennais's AWAY split adds **2.00 for** and **1.00 against** across 1, putting the combined venue baseline near **4.00 goals per game**. The sample is still 1-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.52**, the raw **implied probability is 65.8%**, calculated as **1 / 1.52** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Olympique Lyonnais against Stade Rennais, the case for the bet rests on the 
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
+  "updatedAt": "2026-09-15T15:45:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

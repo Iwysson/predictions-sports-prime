@@ -35,10 +35,32 @@ Any lineup named for VfB Stuttgart or Borussia Dortmund in the analysis is an ex
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season VfB Stuttgart HOME versus Borussia Dortmund AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | VfB Stuttgart — HOME | Borussia Dortmund — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 1 |
+| W-D-L | 1-0-0 | 1-0-0 |
+| Points/game | 3.00 | 3.00 |
+| GF/game | 4.00 | 3.00 |
+| GA/game | 1.00 | 2.00 |
+| xG/game | 3.47 | 2.04 |
+| xGA/game | 2.79 | 1.76 |
+| Shots/game | 22.00 | 11.00 |
+| SOT/game | 8.00 | 4.00 |
+| Shots allowed/game | 17.00 | 18.00 |
+| SOT allowed/game | 3.00 | 6.00 |
+| Possession | 58.0% | 40.0% |
+| Corners for/game | 10.00 | 3.00 |
+| Corners against/game | 8.00 | 10.00 |
+| Total corners/game | 18.00 | 13.00 |
+| First to score | 100% | 0% |
+| First to concede | 0% | 100% |
+| Scored in 1st half | 100% | 0% |
+| Conceded in 1st half | 0% | 100% |
+| BTTS | 100% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to VfB Stuttgart or Draw (1X) + Over 7.5 Corners is that VfB Stuttgart and Borussia Dortmund produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+VfB Stuttgart's HOME corner output (**10.00 for**, **8.00 against**, 1 games) sits alongside Borussia Dortmund's AWAY corner output (**3.00 for**, **10.00 against**, 1 games); the venue-blended total of **15.5** is the evidence base for the corners leg. The sample is still 1-1 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.91**, the raw **implied probability is 52.4%**, calculated as **1 / 1.91** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For VfB Stuttgart against Borussia Dortmund, the case for the bet rests on the m
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
+  "updatedAt": "2026-09-15T15:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "FotMob team corners", "url": "https://www.fotmob.com/leagues/54/stats/season/40040/teams/corner_taken_team/bundesliga-teams"}],
   matchInfo: { date: "2026-09-19", time: "18:30", round: "Matchday 4", venue: "MHPArena" }

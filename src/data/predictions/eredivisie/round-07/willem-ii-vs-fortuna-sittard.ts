@@ -35,10 +35,32 @@ Any lineup named for Willem II or Fortuna Sittard in the analysis is an expected
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Willem II HOME versus Fortuna Sittard AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Willem II — HOME | Fortuna Sittard — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 3 | 3 |
+| W-D-L | 0-1-2 | 2-1-0 |
+| Points/game | 0.33 | 2.33 |
+| GF/game | 1.00 | 2.67 |
+| GA/game | 3.00 | 2.00 |
+| xG/game | 1.39 | 0.80 |
+| xGA/game | 2.21 | 1.66 |
+| Shots/game | 12.33 | 8.33 |
+| SOT/game | 3.00 | 5.33 |
+| Shots allowed/game | 15.67 | 18.33 |
+| SOT allowed/game | 6.67 | 3.67 |
+| Possession | 43.3% | 32.7% |
+| Corners for/game | 5.67 | 0.67 |
+| Corners against/game | 5.00 | 6.00 |
+| Total corners/game | 10.67 | 6.67 |
+| First to score | 33% | 100% |
+| First to concede | 67% | 0% |
+| Scored in 1st half | 0% | 100% |
+| Conceded in 1st half | 67% | 33% |
+| BTTS | 67% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 33% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Fortuna Sittard or Draw (X2) is that Willem II and Fortuna Sittard produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Willem II's HOME record is **0-1-2** (0.33 points/game, 3 matches) with **1.00 scored / 3.00 conceded**; Fortuna Sittard travel with an AWAY record of **2-1-0** (2.33 points/game) and **2.67 scored / 2.00 conceded**. The sample is still 3-3 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.5**, the raw **implied probability is 66.7%**, calculated as **1 / 1.5** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Willem II against Fortuna Sittard, the case for the bet rests on the match-s
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
+  "updatedAt": "2026-09-15T16:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
   matchInfo: { date: "2026-09-19", time: "21:00", round: "Matchday 7", venue: "Koning Willem II Stadion" }

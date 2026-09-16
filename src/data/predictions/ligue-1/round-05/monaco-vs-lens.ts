@@ -35,10 +35,32 @@ Any lineup named for AS Monaco or RC Lens in the analysis is an expected or proj
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season AS Monaco HOME versus RC Lens AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | AS Monaco — HOME | RC Lens — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 2 |
+| W-D-L | 1-0-0 | 0-1-1 |
+| Points/game | 3.00 | 0.50 |
+| GF/game | 2.00 | 1.50 |
+| GA/game | 0.00 | 2.00 |
+| xG/game | 1.72 | 2.27 |
+| xGA/game | 1.40 | 2.19 |
+| Shots/game | 11.00 | 16.50 |
+| SOT/game | 5.00 | 6.50 |
+| Shots allowed/game | 13.00 | 14.00 |
+| SOT allowed/game | 2.00 | 5.50 |
+| Possession | 36.0% | 47.5% |
+| Corners for/game | 5.00 | 7.50 |
+| Corners against/game | 7.00 | 3.00 |
+| Total corners/game | 12.00 | 10.50 |
+| First to score | 100% | 50% |
+| First to concede | 0% | 50% |
+| Scored in 1st half | 100% | 100% |
+| Conceded in 1st half | 0% | 50% |
+| BTTS | 0% | 100% |
+| Clean sheets | 100% | 0% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to AS Monaco or Draw (1X) + Over 7.5 Corners is that AS Monaco and RC Lens produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+AS Monaco's HOME corner output (**5.00 for**, **7.00 against**, 1 games) sits alongside RC Lens's AWAY corner output (**7.50 for**, **3.00 against**, 2 games); the venue-blended total of **11.3** is the evidence base for the corners leg. The sample is still 1-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.65**, the raw **implied probability is 60.6%**, calculated as **1 / 1.65** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For AS Monaco against RC Lens, the case for the bet rests on the match-specific 
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
+  "updatedAt": "2026-09-15T15:45:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

@@ -35,10 +35,32 @@ Any lineup named for Sparta Rotterdam or SC Heerenveen in the analysis is an exp
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Sparta Rotterdam HOME versus SC Heerenveen AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Sparta Rotterdam — HOME | SC Heerenveen — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 3 | 2 |
+| W-D-L | 0-2-1 | 0-2-0 |
+| Points/game | 0.67 | 1.00 |
+| GF/game | 1.67 | 2.00 |
+| GA/game | 2.00 | 2.00 |
+| xG/game | 1.81 | 1.45 |
+| xGA/game | 2.15 | 2.06 |
+| Shots/game | 15.00 | 13.00 |
+| SOT/game | 4.33 | 6.00 |
+| Shots allowed/game | 17.67 | 17.50 |
+| SOT allowed/game | 5.33 | 4.50 |
+| Possession | 50.7% | 53.5% |
+| Corners for/game | 8.33 | 4.50 |
+| Corners against/game | 7.00 | 8.00 |
+| Total corners/game | 15.33 | 12.50 |
+| First to score | 0% | 0% |
+| First to concede | 100% | 100% |
+| Scored in 1st half | 67% | 50% |
+| Conceded in 1st half | 100% | 50% |
+| BTTS | 67% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 33% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 2.5 Goals is that Sparta Rotterdam and SC Heerenveen produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Across 3 HOME games, Sparta Rotterdam have produced **1.67 goals per game** (BTTS 67%); SC Heerenveen's 2 AWAY games read **2.00 for / 2.00 against** (BTTS 100%), evidence that leans toward the goals line backing **Over 2.5 Goals**. The sample is still 2-3 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.52**, the raw **implied probability is 65.8%**, calculated as **1 / 1.52** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Sparta Rotterdam against SC Heerenveen, the case for the bet rests on the ma
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
+  "updatedAt": "2026-09-15T16:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
   matchInfo: { date: "2026-09-19", time: "18:45", round: "Matchday 7", venue: "Sparta Stadion Het Kasteel" }

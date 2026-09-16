@@ -35,10 +35,32 @@ Any lineup named for AZ or Telstar in the analysis is an expected or projected X
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season AZ HOME versus Telstar AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | AZ — HOME | Telstar — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 3 | 3 |
+| W-D-L | 2-1-0 | 1-1-1 |
+| Points/game | 2.33 | 1.33 |
+| GF/game | 2.67 | 0.67 |
+| GA/game | 1.00 | 0.67 |
+| xG/game | 2.75 | 0.99 |
+| xGA/game | 1.25 | 2.18 |
+| Shots/game | 18.33 | 7.67 |
+| SOT/game | 5.67 | 2.33 |
+| Shots allowed/game | 9.33 | 24.00 |
+| SOT allowed/game | 2.33 | 6.00 |
+| Possession | 57.7% | 34.0% |
+| Corners for/game | 9.33 | 3.67 |
+| Corners against/game | 4.33 | 10.00 |
+| Total corners/game | 13.67 | 13.67 |
+| First to score | 100% | 33% |
+| First to concede | 0% | 33% |
+| Scored in 1st half | 67% | 33% |
+| Conceded in 1st half | 33% | 0% |
+| BTTS | 67% | 33% |
+| Clean sheets | 33% | 33% |
+| Failed to score | 0% | 67% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to AZ -1.5 Handicap is that AZ and Telstar produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+The margin evidence for **AZ -1.5 Handicap**: AZ average a **1.67**-goal HOME difference over 3 games; Telstar average **0.00** AWAY over 3. The sample is still 3-3 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.72**, the raw **implied probability is 58.1%**, calculated as **1 / 1.72** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For AZ against Telstar, the case for the bet rests on the match-specific analysi
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
+  "updatedAt": "2026-09-15T16:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
   matchInfo: { date: "2026-09-20", time: "14:30", round: "Matchday 7", venue: "AFAS Stadion" }

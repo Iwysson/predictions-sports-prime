@@ -34,9 +34,33 @@ Any lineup named for Newcastle United or Hull City in the analysis is an expecte
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Newcastle United HOME versus Hull City AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Newcastle United — HOME | Hull City — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 0-2-0 | 1-1-0 |
+| Points/game | 1.00 | 2.00 |
+| GF/game | 2.00 | 1.50 |
+| GA/game | 2.00 | 1.00 |
+| xG/game | 1.15 | 1.05 |
+| xGA/game | 2.17 | 1.10 |
+| Shots/game | 10.50 | 10.00 |
+| SOT/game | 3.00 | 3.50 |
+| Shots allowed/game | 22.00 | 11.50 |
+| SOT allowed/game | 6.00 | 5.00 |
+| Possession | 48.5% | 31.5% |
+| Corners for/game | 3.00 | 3.00 |
+| Corners against/game | 4.50 | 8.00 |
+| Total corners/game | 7.50 | 11.00 |
+| First to score | 50% | 50% |
+| First to concede | 50% | 50% |
+| Scored in 1st half | 100% | 50% |
+| Conceded in 1st half | 50% | 50% |
+| BTTS | 100% | 50% |
+| Clean sheets | 0% | 50% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Newcastle United to Win is that Newcastle United and Hull City produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
+Newcastle United have taken **1.00 points per HOME game** (0-2-0, 2 sample) while conceding **2.00 per game**; Hull City's AWAY record reads **1-1-0** at **2.00 points per game**, with **1.00 conceded per game** on the road. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
+
 
 ### Market price and value
 
@@ -57,6 +81,7 @@ For Newcastle United against Hull City, the case for the bet rests on the match-
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
+  "updatedAt": "2026-09-15T14:00:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },

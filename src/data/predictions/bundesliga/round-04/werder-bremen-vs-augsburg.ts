@@ -35,10 +35,32 @@ Any lineup named for Werder Bremen or Augsburg in the analysis is an expected or
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Werder Bremen HOME versus Augsburg AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Werder Bremen — HOME | Augsburg — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 1 |
+| W-D-L | 1-0-0 | 1-0-0 |
+| Points/game | 3.00 | 3.00 |
+| GF/game | 3.00 | 4.00 |
+| GA/game | 1.00 | 1.00 |
+| xG/game | 0.95 | 1.13 |
+| xGA/game | 1.50 | 2.22 |
+| Shots/game | 12.00 | 17.00 |
+| SOT/game | 7.00 | 7.00 |
+| Shots allowed/game | 19.00 | 22.00 |
+| SOT allowed/game | 5.00 | 8.00 |
+| Possession | 29.0% | 40.0% |
+| Corners for/game | 2.00 | 4.00 |
+| Corners against/game | 7.00 | 9.00 |
+| Total corners/game | 9.00 | 13.00 |
+| First to score | 100% | 0% |
+| First to concede | 0% | 100% |
+| Scored in 1st half | 100% | 0% |
+| Conceded in 1st half | 0% | 100% |
+| BTTS | 100% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 2.5 Goals is that Werder Bremen and Augsburg produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Werder Bremen average **3.00 goals for** at home (1 games, 0% failed to score); Augsburg average **4.00 for / 1.00 against** away (1 games). The combined scoring rate is consistent with **Over 2.5 Goals**. The sample is still 1-1 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.5**, the raw **implied probability is 66.7%**, calculated as **1 / 1.5** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Werder Bremen against Augsburg, the case for the bet rests on the match-spec
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
+  "updatedAt": "2026-09-15T15:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
   matchInfo: { date: "2026-09-19", time: "15:30", round: "Matchday 4", venue: "Weserstadion" }

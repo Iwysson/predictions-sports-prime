@@ -35,10 +35,32 @@ Any lineup named for FC Groningen or PEC Zwolle in the analysis is an expected o
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season FC Groningen HOME versus PEC Zwolle AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | FC Groningen — HOME | PEC Zwolle — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 3 | 3 |
+| W-D-L | 1-1-1 | 1-1-1 |
+| Points/game | 1.33 | 1.33 |
+| GF/game | 2.00 | 1.67 |
+| GA/game | 2.00 | 1.67 |
+| xG/game | 1.72 | 1.17 |
+| xGA/game | 1.76 | 2.10 |
+| Shots/game | 20.00 | 14.33 |
+| SOT/game | 3.67 | 5.33 |
+| Shots allowed/game | 13.00 | 22.00 |
+| SOT allowed/game | 5.67 | 7.67 |
+| Possession | 57.7% | 37.3% |
+| Corners for/game | 6.67 | 3.33 |
+| Corners against/game | 1.67 | 8.67 |
+| Total corners/game | 8.33 | 12.00 |
+| First to score | 33% | 100% |
+| First to concede | 67% | 0% |
+| Scored in 1st half | 100% | 67% |
+| Conceded in 1st half | 67% | 67% |
+| BTTS | 100% | 67% |
+| Clean sheets | 0% | 33% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to FC Groningen to Win is that FC Groningen and PEC Zwolle produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+FC Groningen have taken **1.33 points per HOME game** (1-1-1, 3 sample) while conceding **2.00 per game**; PEC Zwolle's AWAY record reads **1-1-1** at **1.33 points per game**, with **1.67 conceded per game** on the road. The sample is still 3-3 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.67**, the raw **implied probability is 59.9%**, calculated as **1 / 1.67** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For FC Groningen against PEC Zwolle, the case for the bet rests on the match-spe
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
+  "updatedAt": "2026-09-15T16:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
   matchInfo: { date: "2026-09-18", time: "20:00", round: "Matchday 7", venue: "Euroborg" }

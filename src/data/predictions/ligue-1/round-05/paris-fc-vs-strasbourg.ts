@@ -35,10 +35,32 @@ Any lineup named for Paris FC or RC Strasbourg in the analysis is an expected or
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Paris FC HOME versus RC Strasbourg AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Paris FC — HOME | RC Strasbourg — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 1-1-0 | 1-0-1 |
+| Points/game | 2.00 | 1.50 |
+| GF/game | 1.50 | 3.00 |
+| GA/game | 0.00 | 3.00 |
+| xG/game | 1.34 | 1.57 |
+| xGA/game | 0.63 | 2.40 |
+| Shots/game | 10.50 | 12.00 |
+| SOT/game | 4.00 | 7.00 |
+| Shots allowed/game | 10.00 | 20.50 |
+| SOT allowed/game | 2.50 | 7.00 |
+| Possession | 50.5% | 44.0% |
+| Corners for/game | 3.00 | 2.00 |
+| Corners against/game | 3.50 | 7.00 |
+| Total corners/game | 6.50 | 9.00 |
+| First to score | 50% | 0% |
+| First to concede | 0% | 100% |
+| Scored in 1st half | 50% | 50% |
+| Conceded in 1st half | 0% | 50% |
+| BTTS | 0% | 50% |
+| Clean sheets | 100% | 0% |
+| Failed to score | 50% | 50% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 2.5 Goals is that Paris FC and RC Strasbourg produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Paris FC's HOME split this season shows **1.50 goals for** and **0.00 against per game** across 2 matches; RC Strasbourg's AWAY split adds **3.00 for** and **3.00 against** across 2, putting the combined venue baseline near **4.50 goals per game**. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.67**, the raw **implied probability is 59.9%**, calculated as **1 / 1.67** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Paris FC against RC Strasbourg, the case for the bet rests on the match-spec
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
+  "updatedAt": "2026-09-15T15:45:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

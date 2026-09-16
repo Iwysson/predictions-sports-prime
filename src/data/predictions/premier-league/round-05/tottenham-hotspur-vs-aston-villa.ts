@@ -35,9 +35,33 @@ Any lineup named for Tottenham Hotspur or Aston Villa in the analysis is an expe
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Tottenham Hotspur HOME versus Aston Villa AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Tottenham Hotspur — HOME | Aston Villa — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 0-1-1 | 0-1-1 |
+| Points/game | 0.50 | 0.50 |
+| GF/game | 0.00 | 0.00 |
+| GA/game | 1.00 | 2.00 |
+| xG/game | 0.91 | 1.11 |
+| xGA/game | 0.92 | 2.17 |
+| Shots/game | 15.50 | 9.50 |
+| SOT/game | 4.00 | 0.50 |
+| Shots allowed/game | 11.50 | 16.00 |
+| SOT allowed/game | 2.50 | 5.00 |
+| Possession | 60.0% | 50.5% |
+| Corners for/game | 7.00 | 3.00 |
+| Corners against/game | 6.50 | 4.00 |
+| Total corners/game | 13.50 | 7.00 |
+| First to score | 0% | 0% |
+| First to concede | 50% | 50% |
+| Scored in 1st half | 0% | 0% |
+| Conceded in 1st half | 0% | 50% |
+| BTTS | 0% | 0% |
+| Clean sheets | 50% | 50% |
+| Failed to score | 100% | 100% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Tottenham or Draw (1X) + Over 1.5 Goals is that Tottenham Hotspur and Aston Villa produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
+The HOME/AWAY goal record is the base evidence here: Tottenham Hotspur 0.00/1.00 at home over 2 games, Aston Villa 0.00/2.00 away over 2. That is a **0.00**-goal combined venue rate against a market that needs it to clear the published line. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
+
 
 ### Market price and value
 
@@ -58,6 +82,7 @@ For Tottenham Hotspur against Aston Villa, the case for the bet rests on the mat
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
+  "updatedAt": "2026-09-15T14:00:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },

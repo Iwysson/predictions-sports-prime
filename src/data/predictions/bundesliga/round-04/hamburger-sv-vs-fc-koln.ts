@@ -35,10 +35,32 @@ Any lineup named for Hamburger SV or 1. FC K\u00f6ln in the analysis is an expec
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Hamburger SV HOME versus 1. FC K\u00f6ln AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Hamburger SV — HOME | 1. FC Köln — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 1 |
+| W-D-L | 0-0-1 | 0-0-1 |
+| Points/game | 0.00 | 0.00 |
+| GF/game | 0.00 | 1.00 |
+| GA/game | 5.00 | 4.00 |
+| xG/game | 0.19 | 2.79 |
+| xGA/game | 2.77 | 3.47 |
+| Shots/game | 8.00 | 17.00 |
+| SOT/game | 1.00 | 3.00 |
+| Shots allowed/game | 17.00 | 22.00 |
+| SOT allowed/game | 8.00 | 8.00 |
+| Possession | 55.0% | 42.0% |
+| Corners for/game | 4.00 | 8.00 |
+| Corners against/game | 5.00 | 10.00 |
+| Total corners/game | 9.00 | 18.00 |
+| First to score | 0% | 0% |
+| First to concede | 100% | 100% |
+| Scored in 1st half | 0% | 0% |
+| Conceded in 1st half | 100% | 100% |
+| BTTS | 0% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 100% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 2.5 Goals is that Hamburger SV and 1. FC K\u00f6ln produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Hamburger SV's HOME split this season shows **0.00 goals for** and **5.00 against per game** across 1 matches; 1. FC Köln's AWAY split adds **1.00 for** and **4.00 against** across 1, putting the combined venue baseline near **1.00 goals per game**. The sample is still 1-1 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.64**, the raw **implied probability is 61.0%**, calculated as **1 / 1.64** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Hamburger SV against 1. FC K\u00f6ln, the case for the bet rests on the matc
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
+  "updatedAt": "2026-09-15T15:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
   matchInfo: { date: "2026-09-19", time: "15:30", round: "Matchday 4", venue: "Volksparkstadion" }

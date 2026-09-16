@@ -35,10 +35,32 @@ Any lineup named for Toulouse FC or Le Havre AC in the analysis is an expected o
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Toulouse FC HOME versus Le Havre AC AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Toulouse FC — HOME | Le Havre AC — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 1 |
+| W-D-L | 0-0-2 | 0-1-0 |
+| Points/game | 0.00 | 1.00 |
+| GF/game | 0.00 | 1.00 |
+| GA/game | 1.50 | 1.00 |
+| xG/game | 3.12 | 0.69 |
+| xGA/game | 0.95 | 1.75 |
+| Shots/game | 20.50 | 12.00 |
+| SOT/game | 6.00 | 4.00 |
+| Shots allowed/game | 10.50 | 15.00 |
+| SOT allowed/game | 4.50 | 5.00 |
+| Possession | 51.0% | 43.0% |
+| Corners for/game | 6.00 | 5.00 |
+| Corners against/game | 3.50 | 5.00 |
+| Total corners/game | 9.50 | 10.00 |
+| First to score | 0% | 100% |
+| First to concede | 100% | 0% |
+| Scored in 1st half | 0% | 0% |
+| Conceded in 1st half | 0% | 0% |
+| BTTS | 0% | 100% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 100% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Toulouse or Draw (1X) + Over 1.5 Goals is that Toulouse FC and Le Havre AC produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+The HOME/AWAY goal record is the base evidence here: Toulouse FC 0.00/1.50 at home over 2 games, Le Havre AC 1.00/1.00 away over 1. That is a **1.00**-goal combined venue rate against a market that needs it to clear the published line. The sample is still 1-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.6**, the raw **implied probability is 62.5%**, calculated as **1 / 1.6** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Toulouse FC against Le Havre AC, the case for the bet rests on the match-spe
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
+  "updatedAt": "2026-09-15T15:45:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

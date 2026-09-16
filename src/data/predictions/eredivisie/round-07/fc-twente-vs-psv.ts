@@ -35,10 +35,32 @@ Any lineup named for FC Twente or PSV in the analysis is an expected or projecte
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season FC Twente HOME versus PSV AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | FC Twente — HOME | PSV — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 3 | 3 |
+| W-D-L | 3-0-0 | 3-0-0 |
+| Points/game | 3.00 | 3.00 |
+| GF/game | 2.00 | 3.67 |
+| GA/game | 0.33 | 1.00 |
+| xG/game | 2.75 | 2.78 |
+| xGA/game | 0.66 | 0.92 |
+| Shots/game | 24.33 | 21.00 |
+| SOT/game | 10.00 | 9.00 |
+| Shots allowed/game | 7.33 | 8.33 |
+| SOT allowed/game | 3.33 | 3.00 |
+| Possession | 64.0% | 57.3% |
+| Corners for/game | 9.00 | 7.00 |
+| Corners against/game | 2.33 | 0.67 |
+| Total corners/game | 11.33 | 7.67 |
+| First to score | 67% | 67% |
+| First to concede | 33% | 33% |
+| Scored in 1st half | 33% | 100% |
+| Conceded in 1st half | 33% | 67% |
+| BTTS | 33% | 100% |
+| Clean sheets | 67% | 0% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to PSV or Draw (X2) + Over 8.5 Corners is that FC Twente and PSV produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+Corners are the driver of **PSV or Draw (X2) + Over 8.5 Corners**: FC Twente produce **11.33 total corners per HOME game** (3 sample), PSV **7.67 per AWAY game** (3 sample) — a combination that leaves the line without a clear edge. The sample is still 3-3 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **2.05**, the raw **implied probability is 48.8%**, calculated as **1 / 2.05** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For FC Twente against PSV, the case for the bet rests on the match-specific anal
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
+  "updatedAt": "2026-09-15T16:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "OddAlerts", "url": "https://www.oddalerts.com/leagues/netherlands/eredivisie/corners"}],
   matchInfo: { date: "2026-09-20", time: "14:30", round: "Matchday 7", venue: "De Grolsch Veste" }

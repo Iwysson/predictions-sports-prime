@@ -35,9 +35,33 @@ Any lineup named for Brighton & Hove Albion or Arsenal in the analysis is an exp
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Brighton & Hove Albion HOME versus Arsenal AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Brighton & Hove Albion — HOME | Arsenal — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 1-1-0 | 2-0-0 |
+| Points/game | 2.00 | 3.00 |
+| GF/game | 2.50 | 1.50 |
+| GA/game | 0.50 | 0.00 |
+| xG/game | 2.98 | 1.46 |
+| xGA/game | 1.39 | 1.06 |
+| Shots/game | 20.50 | 9.00 |
+| SOT/game | 5.50 | 3.50 |
+| Shots allowed/game | 8.00 | 9.50 |
+| SOT allowed/game | 2.50 | 1.50 |
+| Possession | 70.0% | 59.0% |
+| Corners for/game | 6.00 | 3.00 |
+| Corners against/game | 4.00 | 3.00 |
+| Total corners/game | 10.00 | 6.00 |
+| First to score | 50% | 100% |
+| First to concede | 50% | 0% |
+| Scored in 1st half | 50% | 0% |
+| Conceded in 1st half | 50% | 0% |
+| BTTS | 50% | 0% |
+| Clean sheets | 50% | 100% |
+| Failed to score | 0% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 2.5 Goals is that Brighton & Hove Albion and Arsenal produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
+Brighton & Hove Albion average **2.50 goals for** at home (2 games, 0% failed to score); Arsenal average **1.50 for / 0.00 against** away (2 games). The combined scoring rate is consistent with **Over 2.5 Goals**. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
+
 
 ### Market price and value
 
@@ -58,6 +82,7 @@ For Brighton & Hove Albion against Arsenal, the case for the bet rests on the ma
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
+  "updatedAt": "2026-09-15T14:00:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },

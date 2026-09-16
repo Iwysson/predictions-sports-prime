@@ -35,10 +35,32 @@ Any lineup named for OGC Nice or Lille OSC in the analysis is an expected or pro
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season OGC Nice HOME versus Lille OSC AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | OGC Nice — HOME | Lille OSC — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 2 | 2 |
+| W-D-L | 0-2-0 | 2-0-0 |
+| Points/game | 1.00 | 3.00 |
+| GF/game | 0.50 | 1.50 |
+| GA/game | 0.50 | 0.00 |
+| xG/game | 1.08 | 1.23 |
+| xGA/game | 1.28 | 2.73 |
+| Shots/game | 11.00 | 10.50 |
+| SOT/game | 1.50 | 7.00 |
+| Shots allowed/game | 9.00 | 22.00 |
+| SOT allowed/game | 2.50 | 6.00 |
+| Possession | 59.0% | 44.5% |
+| Corners for/game | 7.00 | 2.50 |
+| Corners against/game | 2.50 | 7.00 |
+| Total corners/game | 9.50 | 9.50 |
+| First to score | 0% | 100% |
+| First to concede | 50% | 0% |
+| Scored in 1st half | 50% | 50% |
+| Conceded in 1st half | 50% | 0% |
+| BTTS | 50% | 0% |
+| Clean sheets | 50% | 100% |
+| Failed to score | 50% | 0% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Lille or Draw (X2) + Over 1.5 Goals is that OGC Nice and Lille OSC produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+OGC Nice's HOME split this season shows **0.50 goals for** and **0.50 against per game** across 2 matches; Lille OSC's AWAY split adds **1.50 for** and **0.00 against** across 2, putting the combined venue baseline near **2.00 goals per game**. The sample is still 2-2 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.72**, the raw **implied probability is 58.1%**, calculated as **1 / 1.72** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For OGC Nice against Lille OSC, the case for the bet rests on the match-specific
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
+  "updatedAt": "2026-09-15T15:45:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

@@ -35,10 +35,32 @@ Any lineup named for Bayern Munich or Union Berlin in the analysis is an expecte
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Bayern Munich HOME versus Union Berlin AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+| Metric | Bayern Munich — HOME | Union Berlin — AWAY |
+| --- | ---: | ---: |
+| Matches (N) | 1 | 1 |
+| W-D-L | 1-0-0 | 0-0-1 |
+| Points/game | 3.00 | 0.00 |
+| GF/game | 5.00 | 0.00 |
+| GA/game | 1.00 | 4.00 |
+| xG/game | 4.06 | 0.39 |
+| xGA/game | 0.79 | 3.11 |
+| Shots/game | 21.00 | 5.00 |
+| SOT/game | 9.00 | 0.00 |
+| Shots allowed/game | 11.00 | 21.00 |
+| SOT allowed/game | 4.00 | 10.00 |
+| Possession | 59.0% | 36.0% |
+| Corners for/game | 9.00 | 1.00 |
+| Corners against/game | 3.00 | 11.00 |
+| Total corners/game | 12.00 | 12.00 |
+| First to score | 100% | 0% |
+| First to concede | 0% | 100% |
+| Scored in 1st half | 100% | 0% |
+| Conceded in 1st half | 0% | 100% |
+| BTTS | 100% | 0% |
+| Clean sheets | 0% | 0% |
+| Failed to score | 0% | 100% |
 
-The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Bayern Munich -2.5 Handicap is that Bayern Munich and Union Berlin produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
-
+The margin evidence for **Bayern Munich -2.5 Handicap**: Bayern Munich average a **4.00**-goal HOME difference over 1 games; Union Berlin average **-4.00** AWAY over 1. The sample is still 1-1 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
 ### Market price and value
 
 At decimal odds of **1.65**, the raw **implied probability is 60.6%**, calculated as **1 / 1.65** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -58,6 +80,7 @@ For Bayern Munich against Union Berlin, the case for the bet rests on the match-
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
+  "updatedAt": "2026-09-15T15:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
   matchInfo: { date: "2026-09-18", time: "20:30", round: "Matchday 4", venue: "Allianz Arena" }
