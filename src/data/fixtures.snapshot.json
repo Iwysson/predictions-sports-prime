@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-16T12:03:25.159Z",
+  "generatedAt": "2026-09-16T19:42:01.179Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -3195,14 +3195,15 @@
             "time": "TBD",
             "homeTeam": "Atlético Madrid",
             "awayTeam": "Osasuna",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 4,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401882875",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-16T17:00Z"
+            "kickoffUtc": "2026-09-16T17:00Z",
+            "fotmobMatchId": 5868062
           },
           {
             "round": 6,
