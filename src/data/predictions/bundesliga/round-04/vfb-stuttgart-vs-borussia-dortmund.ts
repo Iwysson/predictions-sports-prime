@@ -31,7 +31,7 @@ Neither team can rely only on the first plan. If VfB Stuttgart struggle to progr
 
 ### Pre-match data status
 
-Any lineup named for VfB Stuttgart or Borussia Dortmund in the analysis is an expected or projected XI, not a confirmed teamsheet. Where no lineup is named, a reliable match-specific projection was unavailable at the editorial cutoff. The retained sources likewise do not establish a complete current injury, fitness, suspension and eligibility report for both clubs; those items remain unavailable unless stated above, and the official teamsheet must take precedence.
+Confirmed lineups are not available yet for this fixture. Official teamsheets are usually released closer to kickoff, so this preview does not invent a projected XI without reliable source support; the official lineup takes precedence once it is published. Any lineup named for VfB Stuttgart or Borussia Dortmund in the analysis is an expected or projected XI, not a confirmed teamsheet. Where no lineup is named, a reliable match-specific projection was unavailable at the editorial cutoff. The retained sources likewise do not establish a complete current injury, fitness, suspension and eligibility report for both clubs; those items remain unavailable unless stated above, and the official teamsheet must take precedence.
 
 ### Statistical Core Predictions-Sports-Prime
 

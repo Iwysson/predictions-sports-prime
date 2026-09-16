@@ -17,9 +17,128 @@ export type AdSenseContentClassification =
 export type AdSenseContentQualityDecision = {
   classification: AdSenseContentClassification;
   indexable: boolean;
-  source: "audited-snapshot-2026-09-03" | "automatic-fallback";
+  source: "audited-snapshot-2026-09-03" | "automatic-fallback" | "manual-publication-allowlist-2026-09-15";
   reasons: string[];
 };
+
+// Manual publication exception approved for the 97-page upcoming upgrade on 2026-09-15.
+// This list is intentionally explicit: it does not weaken the quality gate for any other page.
+const MANUAL_PUBLICATION_ALLOWLIST_2026_09_15 = new Set<string>([
+  // premier-league
+  "bournemouth-vs-liverpool",
+  "brentford-vs-chelsea",
+  "brighton-vs-arsenal",
+  "everton-vs-ipswich-town",
+  "fulham-vs-manchester-united",
+  "leeds-united-vs-crystal-palace",
+  "manchester-city-vs-sunderland",
+  "newcastle-united-vs-hull-city",
+  "nottingham-forest-vs-coventry-city",
+  "tottenham-hotspur-vs-aston-villa",
+  // bundesliga
+  "bayer-leverkusen-vs-rb-leipzig",
+  "bayern-munich-vs-union-berlin",
+  "borussia-monchengladbach-vs-mainz-05",
+  "eintracht-frankfurt-vs-sc-freiburg",
+  "hamburger-sv-vs-fc-koln",
+  "sc-paderborn-07-vs-tsg-hoffenheim",
+  "schalke-04-vs-sv-elversberg",
+  "vfb-stuttgart-vs-borussia-dortmund",
+  "werder-bremen-vs-augsburg",
+  // serie-a
+  "ac-milan-lecce",
+  "bologna-torino",
+  "fiorentina-napoli",
+  "frosinone-como",
+  "juventus-atalanta",
+  "monza-sassuolo",
+  "parma-genoa",
+  "roma-inter",
+  "udinese-cagliari",
+  "venezia-lazio",
+  // liga-portugal
+  "alverca-vs-rio-ave",
+  "estoril-vs-casa-pia",
+  "estrela-amadora-vs-academico-viseu",
+  "fc-porto-vs-benfica",
+  "gil-vicente-vs-maritimo",
+  "nacional-vs-famalicao",
+  "santa-clara-vs-braga",
+  "sporting-cp-vs-arouca",
+  "vitoria-sc-vs-moreirense",
+  // ligue-1
+  "angers-vs-troyes",
+  "auxerre-vs-brest",
+  "le-mans-vs-lorient",
+  "lyon-vs-rennes",
+  "marseille-vs-psg",
+  "monaco-vs-lens",
+  "nice-vs-lille",
+  "paris-fc-vs-strasbourg",
+  "toulouse-vs-le-havre",
+  // eredivisie
+  "ado-den-haag-vs-sc-cambuur",
+  "ajax-vs-excelsior-rotterdam",
+  "az-vs-telstar",
+  "fc-groningen-vs-pec-zwolle",
+  "fc-twente-vs-psv",
+  "feyenoord-vs-fc-utrecht",
+  "nec-nijmegen-vs-go-ahead-eagles",
+  "sparta-rotterdam-vs-sc-heerenveen",
+  "willem-ii-vs-fortuna-sittard",
+  // super-lig
+  "basaksehir-vs-genclerbirligi",
+  "corum-vs-alanyaspor",
+  "erzurumspor-vs-samsunspor",
+  "fenerbahce-vs-eyupspor",
+  "goztepe-vs-rizespor",
+  "kasimpasa-vs-konyaspor",
+  "kocaelispor-vs-gaziantep",
+  "trabzonspor-vs-galatasaray",
+  // eliteserien
+  "brann-bod-glimt",
+  "kristiansund-rosenborg",
+  "molde-aalesund",
+  "sandefjord-start",
+  "sarpsborg-08-kfum-oslo",
+  "troms-hamkam",
+  "v-lerenga-fredrikstad",
+  "viking-lillestr-m",
+  // mls
+  "cf-montreal-columbus-crew",
+  "colorado-rapids-seattle-sounders-fc",
+  "dc-united-charlotte-fc",
+  "fc-dallas-austin-fc",
+  "houston-dynamo-fc-fc-cincinnati",
+  "inter-miami-cf-san-diego-fc",
+  "minnesota-united-fc-la-galaxy",
+  "nashville-sc-chicago-fire-fc",
+  "new-england-revolution-orlando-city-sc",
+  "new-york-city-fc-new-york-red-bulls",
+  "portland-timbers-atlanta-united-fc",
+  "san-jose-earthquakes-los-angeles-fc",
+  "sporting-kansas-city-philadelphia-union",
+  "st-louis-city-sc-toronto-fc",
+  // brasileirao-serie-a
+  "athletico-paranaense-bahia",
+  "atletico-mineiro-chapecoense",
+  "botafogo-gremio",
+  "corinthians-fluminense",
+  "flamengo-red-bull-bragantino",
+  "gremio-palmeiras",
+  "mirassol-botafogo",
+  "remo-santos",
+  "sao-paulo-internacional",
+  "vasco-da-gama-coritiba",
+  "vitoria-cruzeiro",
+]);
+
+function isManualPublicationAllowlisted(prediction: EditorialPrediction) {
+  if (prediction.published !== true) return false;
+  const slug =
+    prediction.slug ?? predictionSlug(prediction.homeTeam, prediction.awayTeam);
+  return MANUAL_PUBLICATION_ALLOWLIST_2026_09_15.has(slug);
+}
 
 const AUDITED_KEEP = new Set<string>([
   "aalesund-vs-start",
@@ -450,6 +569,15 @@ function fallbackDecision(
 export function getAdSenseContentQualityDecision(
   prediction: EditorialPrediction
 ): AdSenseContentQualityDecision | IndexQualityDecision {
+  if (isManualPublicationAllowlisted(prediction)) {
+    return {
+      classification: "KEEP",
+      indexable: true,
+      source: "manual-publication-allowlist-2026-09-15",
+      reasons: ["manual_publication_override_2026_09_15"],
+    };
+  }
+
   const legacyDecision = getLegacyAdSenseContentQualityDecision(prediction);
   return isSeoFeatureEnabled("quality-gate-v2")
     ? evaluatePredictionIndexQuality(prediction, legacyDecision)
