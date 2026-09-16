@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-16T19:42:01.179Z",
+  "generatedAt": "2026-09-16T22:19:04.333Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -3226,14 +3226,15 @@
             "time": "TBD",
             "homeTeam": "Barcelona",
             "awayTeam": "Racing Santander",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 7,
+            "awayScore": 2,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401882871",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-16T19:30Z"
+            "kickoffUtc": "2026-09-16T19:30Z",
+            "fotmobMatchId": 5868066
           },
           {
             "round": 6,
