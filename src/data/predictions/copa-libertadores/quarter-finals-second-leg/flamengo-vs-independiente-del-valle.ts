@@ -30,7 +30,7 @@ In the final part of this second leg, Flamengo's need for progress and Independi
 
 ### Pre-match data status
 
-Any lineup named for Flamengo or Independiente del Valle in the analysis is an expected or projected XI, not a confirmed teamsheet. Where no lineup is named, a reliable match-specific projection was unavailable at the editorial cutoff. The retained sources likewise do not establish a complete current injury, fitness, suspension and eligibility report for both clubs; those items remain unavailable unless stated above, and the official teamsheet must take precedence.
+No confirmed lineup for Flamengo or Independiente del Valle was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 

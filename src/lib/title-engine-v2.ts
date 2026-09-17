@@ -4,6 +4,7 @@ import { dateInTimeZone, fixtureDateInTimeZone } from "@/lib/fixture-state";
 import { isCompletedFixture } from "@/lib/fixture-status";
 import { resolveHomeTemporalBucket } from "@/lib/match-feed";
 import { localeSearchResearch, type SearchLocale } from "@/lib/search-intent-research";
+import { getMatchIntentCapabilities } from "@/lib/match-search-intent";
 import type { Match } from "@/types";
 
 export type MatchMetadataV2 = {
@@ -21,6 +22,31 @@ function sentenceCase(value: string) {
 
 function fit(candidates: string[], max: number) {
   return candidates.find((candidate) => candidate.length <= max) ?? candidates.at(-1)!;
+}
+
+// Assembled from real per-match facts (round, venue, kickoff, data depth) so
+// pages published in the same batch don't read as one duplicated template.
+// Historical fixtures use the fixed archive sentence above instead — the
+// Historical Freeze Policy forbids rewriting published SEO wording once a
+// match has kicked off.
+function buildFutureIntroV2(match: Match, fixture: string, league: string) {
+  const capabilities = getMatchIntentCapabilities(match);
+  const round = match.round && match.round !== "Current Round" ? match.round : null;
+  const context = round ? `${league}, ${round}` : league;
+  const venuePart = capabilities.hasVenue ? ` at ${match.venue}` : "";
+  const kickoffPart = capabilities.hasKickOff && match.date
+    ? ` on ${match.date} at ${match.time}`
+    : match.date
+      ? ` on ${match.date}`
+      : "";
+
+  const coverage = capabilities.hasStatistics || capabilities.hasForm || capabilities.hasStandingsContext
+    ? "the statistical and form context behind the pick"
+    : capabilities.hasLineups || capabilities.hasTeamNews || capabilities.hasAvailability
+      ? "the team-news picture ahead of kickoff"
+      : "the available pre-match evidence";
+
+  return `${fixture} meet in ${context}${venuePart}${kickoffPart}. This preview reviews ${coverage}; the prediction and published odds are shown directly on the page.`;
 }
 
 export function buildMatchMetadataV2(
@@ -77,7 +103,7 @@ export function buildMatchMetadataV2(
       ], 160);
   const intro = historical
     ? `${fixture} is preserved as a completed ${league} prediction record, including the original selection and the analysis published before kickoff.`
-    : `${fixture} meet in ${league}. Review the match analysis and relevant team context; the prediction and published odds are shown directly on the page.`;
+    : buildFutureIntroV2(match, fixture, league);
 
   return {
     title,

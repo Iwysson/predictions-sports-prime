@@ -31,7 +31,7 @@ Late in the match, Brentford's main decision is whether an extra runner is worth
 
 ### Pre-match data status
 
-Confirmed lineups are not available yet for this fixture. Official teamsheets are usually released closer to kickoff, so this preview does not invent a projected XI without reliable source support; the official lineup takes precedence once it is published. Any lineup named for Brentford or Chelsea in the analysis is an expected or projected XI, not a confirmed teamsheet. Where no lineup is named, a reliable match-specific projection was unavailable at the editorial cutoff. The retained sources likewise do not establish a complete current injury, fitness, suspension and eligibility report for both clubs; those items remain unavailable unless stated above, and the official teamsheet must take precedence.
+No confirmed lineup for Brentford or Chelsea was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 

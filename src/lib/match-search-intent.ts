@@ -1,6 +1,6 @@
 import { leaguesBySlug } from "@/data/leagues";
 import { localTodayISO, resolveHomeTemporalBucket } from "@/lib/match-feed";
-import { isFutureFixture } from "@/lib/fixture-state";
+import { isFixtureHistoryEligible, isFutureFixture } from "@/lib/fixture-state";
 import { detectPickMarkets, normalizeMainPick } from "@/lib/match-market";
 import {
   getTeamSearchAliases,
@@ -643,6 +643,30 @@ function buildH1(match: Match, locale: SearchLocale) {
   return `${matchTeams(match, locale)} ${sentenceCase(research.prediction)} ${connector} ${sentenceCase(research.analysis)}`;
 }
 
+// Future fixtures get an intro assembled from real per-match facts (round,
+// venue, kickoff, data depth) so pages published in the same batch don't
+// read as one duplicated template. Historical fixtures keep the original
+// fixed sentence untouched — the Historical Freeze Policy forbids rewriting
+// published SEO wording once a match has kicked off.
+function buildFutureEnglishIntro(match: Match, facts: MatchIntentFacts, teams: string) {
+  const round = match.round && match.round !== "Current Round" ? match.round : null;
+  const context = round ? `${facts.leagueName}, ${round}` : facts.leagueName;
+  const venuePart = facts.hasVenue ? ` at ${match.venue}` : "";
+  const kickoffPart = facts.hasKickOff && match.date
+    ? ` on ${match.date} at ${match.time}`
+    : match.date
+      ? ` on ${match.date}`
+      : "";
+
+  const coverage = facts.hasStatistics || facts.hasForm || facts.hasStandingsContext
+    ? "This preview sets out the statistical and form context behind the pick"
+    : facts.hasLineups || facts.hasTeamNews || facts.hasAvailability
+      ? "This preview covers the team-news picture ahead of kickoff"
+      : "This preview outlines the available pre-match evidence";
+
+  return `${teams} meet in ${context}${venuePart}${kickoffPart}. ${coverage}; the prediction and published odds are shown directly on the page.`;
+}
+
 function buildIntro(match: Match, locale: SearchLocale, facts: MatchIntentFacts) {
   const teams = matchTeams(match, locale);
   if (locale !== "en") {
@@ -650,7 +674,11 @@ function buildIntro(match: Match, locale: SearchLocale, facts: MatchIntentFacts)
     return `${teams}: ${research.analysis}, ${research.prediction} - ${facts.leagueName}.`;
   }
 
-  return `${teams} meet in ${facts.leagueName}. This preview explains the match evidence and main risks; the prediction and published odds are shown directly on the page.`;
+  if (isFixtureHistoryEligible(match)) {
+    return `${teams} meet in ${facts.leagueName}. This preview explains the match evidence and main risks; the prediction and published odds are shown directly on the page.`;
+  }
+
+  return buildFutureEnglishIntro(match, facts, teams);
 }
 
 export function buildMatchSearchIntent(
