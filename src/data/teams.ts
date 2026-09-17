@@ -4,14 +4,17 @@ import { generatedTeamBadgeAssets } from "@/data/team-badge-assets.generated";
 export type TeamBadgeAsset = { src: string; sourceUrl: string };
 
 export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
+  // Canonical overrides (correct badge file when generated table has wrong path)
   "Inter Milan": generatedTeamBadgeAssets["Internazionale Milano"],
+  "Kasımpaşa": { src: "/team-badges/kasimpasa.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/uryxtp1448203236.png" },
+
+  // Turkish clubs
   "Gençlerbirliği": { src: "/team-badges/genclerbirligi.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/5hnd1c1639569938.png" },
   Galatasaray: { src: "/team-badges/galatasaray.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/io7jk21767941298.png" },
   Samsunspor: { src: "/team-badges/samsunspor.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/vz05y71679456608.png" },
   Trabzonspor: { src: "/team-badges/trabzonspor.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/96s34o1776827629.png" },
   Alanyaspor: { src: "/team-badges/alanyaspor.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/9fr3071601667898.png" },
   "Gaziantep FK": { src: "/team-badges/gaziantep-fk.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/54j6ik1579458093.png" },
-  "Kasımpaşa": { src: "/team-badges/kasimpasa.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/uryxtp1448203236.png" },
   "Fenerbahçe": { src: "/team-badges/fenerbahce.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/twxxvs1448199691.png" },
   Amedspor: { src: "/team-badges/amedspor.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/4fqdgh1783788571.png" },
   "İstanbul Başakşehir": { src: "/team-badges/istanbul-basaksehir.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/895mqt1685993958.png" },
@@ -23,6 +26,8 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "Eyüpspor": { src: "/team-badges/eyupspor.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/7fb0ub1626445710.png" },
   Konyaspor: { src: "/team-badges/konyaspor.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/rxwptr1448203413.png" },
   Erzurumspor: { src: "/team-badges/erzurumspor.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/7sepx01783701613.png" },
+
+  // Scottish clubs
   Celtic: { src: "/team-badges/celtic.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/3uv1641758780002.png" },
   Dundee: { src: "/team-badges/dundee.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/tlei9x1750743461.png" },
   "St Mirren": { src: "/team-badges/st-mirren.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/xvtuvv1447604452.png" },
@@ -35,6 +40,96 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   Falkirk: { src: "/team-badges/falkirk.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/w37ucy1685023169.png" },
   "Dundee United": { src: "/team-badges/dundee-united.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/orfh821655722356.png" },
   Kilmarnock: { src: "/team-badges/kilmarnock.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/ihxzq71785820059.png" },
+
+  // Display-name aliases: team name as stored in match data → canonical badge asset
+  // English clubs
+  "AFC Bournemouth": generatedTeamBadgeAssets["Bournemouth"],
+
+  // Spanish clubs
+  "Atlético de Madrid": generatedTeamBadgeAssets["Atlético Madrid"],
+  "CA Osasuna": generatedTeamBadgeAssets["Osasuna"],
+  "Celta": generatedTeamBadgeAssets["Celta Vigo"],
+  "Elche CF": generatedTeamBadgeAssets["Elche"],
+  "FC Barcelona": generatedTeamBadgeAssets["Barcelona"],
+  "Getafe CF": generatedTeamBadgeAssets["Getafe"],
+  "Málaga CF": generatedTeamBadgeAssets["Málaga"],
+  "RC Celta de Vigo": generatedTeamBadgeAssets["Celta Vigo"],
+  "RC Deportivo": generatedTeamBadgeAssets["Deportivo"],
+  "RC Deportivo La Coruña": generatedTeamBadgeAssets["Deportivo La Coruña"],
+  "RC Lens": generatedTeamBadgeAssets["Lens"],
+  "RCD Espanyol": generatedTeamBadgeAssets["Espanyol"],
+  "RCD Espanyol de Barcelona": generatedTeamBadgeAssets["Espanyol"],
+  "Rayo Vallecano de Madrid": generatedTeamBadgeAssets["Rayo Vallecano"],
+  "Athletic Bilbao": generatedTeamBadgeAssets["Athletic Club"],
+
+  // German clubs
+  "Bayer Leverkusen": generatedTeamBadgeAssets["Bayer 04 Leverkusen"],
+  "Bayern Munich": generatedTeamBadgeAssets["Bayern München"],
+  "FC Augsburg": generatedTeamBadgeAssets["Augsburg"],
+  "FC Schalke 04": generatedTeamBadgeAssets["Schalke 04"],
+  "Leverkusen": generatedTeamBadgeAssets["Bayer 04 Leverkusen"],
+  "Mainz 05": generatedTeamBadgeAssets["1. FSV Mainz 05"],
+  "Union Berlin": generatedTeamBadgeAssets["1. FC Union Berlin"],
+
+  // Italian clubs
+  "Frosinone Calcio": generatedTeamBadgeAssets["Frosinone"],
+  "Roma": generatedTeamBadgeAssets["AS Roma"],
+  "SS Lazio": generatedTeamBadgeAssets["Lazio"],
+  "SSC Napoli": generatedTeamBadgeAssets["Napoli"],
+  "Udinese": generatedTeamBadgeAssets["Udinese Calcio"],
+
+  // French clubs
+  "AJ Auxerre": generatedTeamBadgeAssets["Auxerre"],
+  "Angers SCO": generatedTeamBadgeAssets["Angers"],
+  "AS Monaco": generatedTeamBadgeAssets["Monaco"],
+  "FC Lorient": generatedTeamBadgeAssets["Lorient"],
+  "Lille OSC": generatedTeamBadgeAssets["Lille"],
+  "Marseille": generatedTeamBadgeAssets["Olympique de Marseille"],
+  "OGC Nice": generatedTeamBadgeAssets["Nice"],
+  "Olympique Lyonnais": generatedTeamBadgeAssets["Lyon"],
+  "Olympique Marseille": generatedTeamBadgeAssets["Olympique de Marseille"],
+  "Stade Brestois 29": generatedTeamBadgeAssets["Brest"],
+
+  // Dutch clubs
+  "AZ": generatedTeamBadgeAssets["AZ Alkmaar"],
+  "Excelsior Rotterdam": generatedTeamBadgeAssets["Excelsior"],
+  "N.E.C.": generatedTeamBadgeAssets["NEC Nijmegen"],
+  "sc Heerenveen": generatedTeamBadgeAssets["SC Heerenveen"],
+
+  // Portuguese clubs
+  "Estoril": generatedTeamBadgeAssets["Estoril Praia"],
+  "Porto": generatedTeamBadgeAssets["FC Porto"],
+  "SC Braga": generatedTeamBadgeAssets["Braga"],
+
+  // Scottish aliases (without accent / alternative spellings)
+  "Dundee FC": generatedTeamBadgeAssets["Dundee"],
+  "Heart of Midlothian": generatedTeamBadgeAssets["Hearts"],
+
+  // Turkish aliases (without special characters)
+  "Basaksehir": { src: "/team-badges/istanbul-basaksehir.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/895mqt1685993958.png" },
+  "Besiktas": { src: "/team-badges/besiktas.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/svo05k1776827439.png" },
+  "Corum FK": { src: "/team-badges/corum-fk.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/ivoq4l1679510278.png" },
+  "Eyupspor": generatedTeamBadgeAssets["Eyüpspor"],
+  "Fenerbahce": generatedTeamBadgeAssets["Fenerbahçe"],
+  "Genclerbirligi": generatedTeamBadgeAssets["Gençlerbirliği"],
+  "Goztepe": generatedTeamBadgeAssets["Göztepe"],
+  "Kasimpasa": { src: "/team-badges/kasimpasa.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/uryxtp1448203236.png" },
+  "Rizespor": generatedTeamBadgeAssets["Çaykur Rizespor"],
+
+  // MLS clubs
+  "Atlanta United FC": generatedTeamBadgeAssets["Atlanta United"],
+  "Chicago Fire FC": generatedTeamBadgeAssets["Chicago Fire"],
+  "Houston Dynamo FC": generatedTeamBadgeAssets["Houston Dynamo"],
+  "Minnesota United FC": generatedTeamBadgeAssets["Minnesota United"],
+  "Orlando City SC": generatedTeamBadgeAssets["Orlando City"],
+
+  // Brazilian clubs
+  "Athletico-PR": generatedTeamBadgeAssets["Athletico Paranaense"],
+
+  // Other
+  "Le Havre AC": generatedTeamBadgeAssets["Le Havre"],
+  "Le Mans FC": generatedTeamBadgeAssets["Le Mans"],
+  "PSV": generatedTeamBadgeAssets["PSV Eindhoven"],
 };
 
 export function getTeamBadgeAsset(team: string) {
