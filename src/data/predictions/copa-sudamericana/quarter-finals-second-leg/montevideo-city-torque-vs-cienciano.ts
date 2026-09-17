@@ -30,7 +30,7 @@ Another key phase is the moment after a clearance. If Montevideo City Torque rec
 
 ### Pre-match data status
 
-Any lineup named for Montevideo City Torque or Cienciano in the analysis is an expected or projected XI, not a confirmed teamsheet. Where no lineup is named, a reliable match-specific projection was unavailable at the editorial cutoff. The retained sources likewise do not establish a complete current injury, fitness, suspension and eligibility report for both clubs; those items remain unavailable unless stated above, and the official teamsheet must take precedence.
+No confirmed lineup for Montevideo City Torque or Cienciano was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
