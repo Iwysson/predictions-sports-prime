@@ -1,11 +1,12 @@
-import { leagueSitemapPaths, serializeSitemapIndex } from "@/lib/sitemap-data";
+import { leagueSitemapEntries, serializeSitemapIndex } from "@/lib/sitemap-data";
 
 export const dynamic = "force-static";
 
 export async function GET() {
   const xml = serializeSitemapIndex([
     "/sitemap.xml",
-    ...leagueSitemapPaths(),
+    "/sitemaps/upcoming-matches/sitemap.xml",
+    ...leagueSitemapEntries(),
   ]);
 
   return new Response(xml, {

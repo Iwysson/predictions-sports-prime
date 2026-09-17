@@ -120,12 +120,18 @@ export function serializeUrlSet(entries: MetadataRoute.Sitemap) {
   ].join("\n");
 }
 
-export function serializeSitemapIndex(paths: readonly string[]) {
-  const sitemaps = paths
-    .map(
-      (path) =>
-        `  <sitemap>\n    <loc>${escapeXml(absoluteUrl(path))}</loc>\n  </sitemap>`
-    )
+type SitemapIndexEntry = string | { path: string; lastmod?: Date };
+
+export function serializeSitemapIndex(entries: readonly SitemapIndexEntry[]) {
+  const sitemaps = entries
+    .map((entry) => {
+      const path = typeof entry === "string" ? entry : entry.path;
+      const lastmodLine =
+        typeof entry !== "string" && entry.lastmod
+          ? `\n    <lastmod>${escapeXml(entry.lastmod.toISOString())}</lastmod>`
+          : "";
+      return `  <sitemap>\n    <loc>${escapeXml(absoluteUrl(path))}</loc>${lastmodLine}\n  </sitemap>`;
+    })
     .join("\n");
 
   return [
@@ -135,4 +141,48 @@ export function serializeSitemapIndex(paths: readonly string[]) {
     "</sitemapindex>",
     "",
   ].join("\n");
+}
+
+function leagueSitemapLastmod(leagueSlug: LeagueSlug): Date | undefined {
+  let latest: Date | undefined;
+  for (const match of matches) {
+    if (match.league !== leagueSlug || match.status !== "published") continue;
+    if (!isAdSenseContentIndexable(match.slug, editorialPredictions)) continue;
+    const raw = materialMatchUpdatedAt(match) ?? match.publishedAt;
+    if (!raw) continue;
+    const d = new Date(raw);
+    if (Number.isNaN(d.getTime())) continue;
+    if (!latest || d > latest) latest = d;
+  }
+  return latest;
+}
+
+export function leagueSitemapEntries(): SitemapIndexEntry[] {
+  return leagues.map((league) => ({
+    path: `/sitemaps/${league.slug}/sitemap.xml`,
+    lastmod: leagueSitemapLastmod(league.slug),
+  }));
+}
+
+export function buildUpcomingMatchesSitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+  const cutLo = new Date(now);
+  cutLo.setDate(cutLo.getDate() - 1);
+  const cutHi = new Date(now);
+  cutHi.setDate(cutHi.getDate() + 7);
+  const recentCut = new Date(now);
+  recentCut.setDate(recentCut.getDate() - 7);
+
+  return matches
+    .filter((match) => {
+      if (match.status !== "published") return false;
+      if (!isAdSenseContentIndexable(match.slug, editorialPredictions)) return false;
+      const matchDate = match.date ? new Date(match.date) : null;
+      const inWindow = matchDate && matchDate >= cutLo && matchDate <= cutHi;
+      if (inWindow) return true;
+      const modifiedAt = materialMatchUpdatedAt(match);
+      return Boolean(modifiedAt && new Date(modifiedAt) >= recentCut);
+    })
+    .sort((a, b) => (a.date ?? "").localeCompare(b.date ?? ""))
+    .map((match) => matchSitemapEntry(match, matchCanonicalPath(match)));
 }
