@@ -2,7 +2,7 @@ import Image from "next/image";
 import { JsonLd } from "@/components/JsonLd";
 import { NFLWeekAccordion } from "@/components/NFLWeekAccordion";
 import { NFLStandings } from "@/components/NFLStandings";
-import { nflWeek1Games } from "@/data/nfl/week-1";
+import { nflWeek2Games } from "@/data/nfl/week-2";
 import { getNFLCopy } from "@/lib/nfl-i18n";
 import { buildNFLSearchIntent } from "@/lib/nfl-search-intent";
 import { absoluteUrl } from "@/lib/site-config";
@@ -11,7 +11,7 @@ import { getNFLStandings, getNFLStandingsMetadata } from "@/lib/nfl-standings-pr
 
 function nflSportsEvents(locale: SeoLocale) {
   const copy = getNFLCopy(locale);
-  return nflWeek1Games.filter((game) => game.kickoff !== "TBA" && game.stadium && game.city).map((game) => ({
+  return nflWeek2Games.filter((game) => game.kickoff !== "TBA" && game.stadium && game.city).map((game) => ({
     "@context": "https://schema.org", "@type": "SportsEvent", "@id": `${absoluteUrl(localePath(locale, "/nfl/"))}#${game.id}`,
     name: `${game.awayTeam} vs ${game.homeTeam}`, sport: "American Football",
     startDate: `${game.date}T${game.kickoff.replace(/(\d+):(\d+) (AM|PM)/, (_, h, m, ap) => `${String((Number(h) % 12) + (ap === "PM" ? 12 : 0)).padStart(2, "0")}:${m}:00`)}`,
@@ -32,7 +32,7 @@ export function NFLPage({ locale }: { locale: SeoLocale }) {
     <section className="section section--compact"><div className="container nfl-content">
       <nav className="nfl-week-nav" aria-label={copy.weekHeading}><button disabled aria-label={copy.previous}>‹</button><span>{copy.week}</span><button disabled aria-label={copy.next}>›</button></nav>
       <h2>{copy.weekHeading}</h2>
-      <NFLWeekAccordion games={nflWeek1Games} locale={locale} />
+      <NFLWeekAccordion games={nflWeek2Games} locale={locale} />
       <NFLStandings standings={getNFLStandings()} generatedAt={standingsMetadata.generatedAt} seasonPhase={standingsMetadata.seasonPhase} locale={locale} />
     </div></section>
   </>;
