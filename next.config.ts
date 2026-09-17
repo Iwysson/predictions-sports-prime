@@ -6,12 +6,12 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  productionBrowserSourceMaps: false,
   experimental: {
-    parallelServerCompiles: true,
-    parallelServerBuildTraces: true,
-    workerThreads: true,
-    webpackBuildWorker: true,
+    // Parallel static page generation — effective with Turbopack (Next.js 16 default bundler)
+    staticGenerationMaxConcurrency: 8,
+    staticGenerationMinPagesPerWorker: 25,
+    // Cloudflare Pages never preserves .next/cache between builds; skip writing it
+    turbopackFileSystemCacheForBuild: process.env.CF_PAGES !== "1",
   },
 };
 

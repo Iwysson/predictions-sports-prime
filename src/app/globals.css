@@ -4472,7 +4472,17 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   .intent-match-card__fixture { justify-content: flex-start; }
 }
 
-/* Hide the pre-hydration match directory list — visible only before JS loads.
-   After hydration HomePredictionFeed re-renders without this element. */
-[data-published-match-directory="true"] { display: none; }
+/* Visually-hidden pre-hydration match list: present in HTML for crawlers and
+   screen readers, invisible to sighted users during the brief pre-hydration
+   window. After JS hydrates, HomePredictionFeed re-renders without this element. */
+[data-published-match-directory="true"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 
