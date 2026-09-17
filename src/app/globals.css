@@ -4472,3 +4472,7 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   .intent-match-card__fixture { justify-content: flex-start; }
 }
 
+/* Hide the pre-hydration match directory list — visible only before JS loads.
+   After hydration HomePredictionFeed re-renders without this element. */
+[data-published-match-directory="true"] { display: none; }
+

@@ -6,6 +6,13 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  productionBrowserSourceMaps: false,
+  experimental: {
+    parallelServerCompiles: true,
+    parallelServerBuildTraces: true,
+    workerThreads: true,
+    webpackBuildWorker: true,
+  },
 };
 
 export default nextConfig;
