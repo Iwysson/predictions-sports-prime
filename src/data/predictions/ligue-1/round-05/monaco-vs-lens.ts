@@ -11,7 +11,7 @@ export const monacoVsLens: EditorialPrediction = {
 **Prediction:** AS Monaco or Draw (1X) + Over 7.5 Corners  
 **Odds:** 1.65
 
-Monaco have 10 points from four Ligue 1 matches after a 1-1 draw at Strasbourg. Lens have 4 points after coming from 2-0 down to draw 2-2 at Le Mans on 13 September. Lens also arrive with a useful resilience signal: their comeback at Le Mans required sustained second-half pressure after a poor first half. Eight total corners can be reached through territorial pressure from Monaco, through Lens chasing the score, or through a balanced game with both sides attacking wide areas. It should not be inferred from goals or table position.
+Monaco have 10 points from four Ligue 1 matches after a 1-1 draw at Strasbourg. Lens have 4 points after coming from 2-0 down to draw 2-2 at Le Mans on 13 September — but **Lens sacked manager Dino Toppmöller on or around 17 September**, replacing him with Yannick Cahuzac. A mid-week managerial change ahead of a road game at the league leaders is a significant disruption: the new manager has no match-day connection built with the squad, and players may be responding to a changed atmosphere in training. Eight total corners can be reached through territorial pressure from Monaco, through Lens chasing the score, or through a balanced game with both sides attacking wide areas.
 
 The first phase at Stade Louis II is likely to revolve around how AS Monaco handle the space behind their own attacks. Sustained pressure can pin RC Lens back, but only if AS Monaco are ready for the clearance and the next ball. RC Lens do not need long spells of possession to alter the rhythm; a few controlled exits can stop the home side from building wave after wave.
 
@@ -27,7 +27,7 @@ Neither team can rely only on the first plan. If AS Monaco struggle to progress 
 | Kickoff | 20:45 |
 | Round | Matchday 5 |
 | Venue | Stade Louis II |
-| Current evidence | Monaco enter Matchday 5 unbeaten on 10 points after three wins and a 1-1 draw at Strasbourg. Lens have four points after recovering from 2-0 down to draw 2-2 at Le Mans. |
+| Current evidence | Monaco enter Matchday 5 unbeaten on 10 points after three wins and a 1-1 draw at Strasbourg. Lens have four points after recovering from 2-0 down to draw 2-2 at Le Mans. Lens sacked manager Toppmöller on 17 September; Yannick Cahuzac takes charge. |
 
 ### Pre-match data status
 
@@ -80,7 +80,7 @@ For AS Monaco against RC Lens, the case for the bet rests on the match-specific 
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
-  "updatedAt": "2026-09-15T15:45:00-03:00",
+  updatedAt: "2026-09-17T10:00:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

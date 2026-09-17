@@ -11,7 +11,7 @@ export const fcGroningenVsPecZwolle: EditorialPrediction = {
 **Prediction:** FC Groningen to Win  
 **Odds:** 1.67
 
-FC Groningen are ninth after six matches with 8 points and a 12-13 goal record. PEC Zwolle are 13th after five with 4 points and a 6-10 record. Groningen have produced the stronger attacking output, but thirteen goals conceded prevents the match from being framed as routine. Zwolle's six goals show less output, yet Groningen's defensive record leaves the visitors a credible transition route. Groningen can control territory without separating on the scoreboard, as their recent 1-1 with Go Ahead Eagles illustrates. Groningen's stronger attacking output is balanced by a defensive record that still gives Zwolle a credible way into the game.
+FC Groningen are ninth after six matches with **8 points and a 12-13 goal record**. PEC Zwolle are 16th after six matches with **4 points and a 6-17 goal record** — their defensive situation has deteriorated since their last verified preview, with seventeen conceded in six games. Groningen have produced the stronger attacking output, but thirteen goals conceded prevents the match from being framed as routine. Zwolle's continued lack of goals limits the threat they can pose in open play, and their worsening defensive record makes it harder to hold a lead long enough to become competitive.
 
 Euroborg gives FC Groningen the setting to take initiative, but the first twenty minutes should be judged by the quality of that initiative. FC Groningen need to create movement around PEC Zwolle's defensive line, not just accumulate touches in front of it. When PEC Zwolle recover the ball, the visitors can make the home pressure costly by finding the free player before FC Groningen restore their balance.
 
@@ -27,7 +27,7 @@ The final stretch should test the structure of both teams. FC Groningen need att
 | Kickoff | 20:00 |
 | Round | Matchday 7 |
 | Venue | Euroborg |
-| Current evidence | Groningen sit ninth after six games: 8 points, 12 goals scored and 13 conceded. Zwolle are 13th after five: 4 points, 6 scored and 10 conceded. |
+| Current evidence | Groningen sit ninth after six games: 8 points, 12 scored and 13 conceded. Zwolle are 16th after six games: 4 points, 6 scored and 17 conceded. |
 
 ### Pre-match data status
 
@@ -60,7 +60,7 @@ Confirmed lineups are not available yet for this fixture. Official teamsheets ar
 | Clean sheets | 0% | 33% |
 | Failed to score | 0% | 0% |
 
-FC Groningen have taken **1.33 points per HOME game** (1-1-1, 3 sample) while conceding **2.00 per game**; PEC Zwolle's AWAY record reads **1-1-1** at **1.33 points per game**, with **1.67 conceded per game** on the road. The sample is still 3-3 matches per side at this stage of the season, so the split can move with one more result; that is the main limitation on how much weight the table above should carry.
+FC Groningen have taken **1.33 points per HOME game** (1-1-1, 3 sample) while conceding **2.00 per game**; PEC Zwolle's AWAY split here is sourced from Matchday 5 data (3 games, 1-1-1). Zwolle's overall record has since extended to 6 games with 17 conceded (FotMob, 2026-09-17), suggesting at least one additional heavy away defeat since this split was captured. The per-game averages for Zwolle may understate their current defensive vulnerability. The sample is still 3 HOME matches for Groningen; the Zwolle AWAY split should be treated with caution given the updated overall record.
 ### Market price and value
 
 At decimal odds of **1.67**, the raw **implied probability is 59.9%**, calculated as **1 / 1.67** before bookmaker margin. This is market-price context only. It is not a historical frequency or a PSP forecast; the value assessment remains an editorial judgement based on the match analysis and its disclosed data limits.
@@ -80,7 +80,7 @@ For FC Groningen against PEC Zwolle, the case for the bet rests on the match-spe
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  "updatedAt": "2026-09-15T16:00:00-03:00",
+  updatedAt: "2026-09-17T10:00:00-03:00",
   sourceStatus: "partial",
   sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
   matchInfo: { date: "2026-09-18", time: "20:00", round: "Matchday 7", venue: "Euroborg" }

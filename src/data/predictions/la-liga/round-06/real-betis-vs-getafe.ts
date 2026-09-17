@@ -14,9 +14,9 @@ export const realBetisVsGetafe: EditorialPrediction = {
 
 **Competition:** LaLiga 2026/27 | **Round:** Matchday 6 | **Date:** 2026-09-17 | **Kick-off:** 19:00 local time | **Venue:** Estadio Benito Villamarín
 
-Real Betis host Getafe after a stronger early run in results and attacking volume. Betis had nine points and 49 shots in the official comparison; Getafe had four points and 30 shots. The home-win case is therefore built more on sustained control and chance creation than on expecting a high-scoring mismatch.
+Real Betis host Getafe after the stronger early run in the table. Betis have **twelve points from five matches** — four wins including a 2-1 away win at Villarreal on 14 September — while Getafe have **five points from five**, with just three goals scored. The home-win case is built on sustained control and chance creation rather than an expected high-scoring mismatch.
 
-Betis have won three of their first four league matches and the current home split shows a perfect record from two home games. The sample is small, but it agrees with the broader pattern: more possession, more shots and better results. Getafe’s two goals in four matches make it harder for the visitors to recover if Betis score first.
+Betis have won four of their first five league matches and the current home split shows a strong record. Their attacking volume is higher, with 49 shots in the first four matches compared to Getafe’s 30. Getafe’s three goals from five matches make it harder for the visitors to recover if Betis score first.
 
 Getafe’s defensive record is not catastrophic, which is why the match can still become awkward. Their route is to compress the centre, disrupt rhythm and prevent Betis from receiving cleanly between midfield and defence. Betis benefit from moving the block laterally and attacking the spaces that open after multiple phases rather than forcing early crosses.
 
@@ -34,15 +34,15 @@ Getafe's limited scoring output also changes how Betis can manage the match afte
 
 | Metric | Real Betis — OVERALL | Getafe CF — OVERALL |
 | --- | ---: | ---: |
-| Played | 4 | 4 |
-| Points | 9 | 4 |
-| League position | 4 | 15 |
-| Goals scored | 5 | 2 |
-| Goals conceded | 5 | 5 |
-| Shots | 49 | 30 |
-| Passes | 2006 | 1380 |
+| Played | 5 | 5 |
+| Points | 12 | 5 |
+| League position | 5 | 15 |
+| Goals scored | 7 | 3 |
+| Goals conceded | 6 | 6 |
+| Shots | 49* | 30* |
+| Passes | 2006* | 1380* |
 
-Betis and Getafe's Core is an **OVERALL** current-season comparison from the official league preview. The home setting at Benito Villamarín is part of the tactical assessment, not a reason to rename overall totals as home data. Betis' advantage in points, shots and passes is therefore presented exactly at the scope in which it was collected.
+Betis and Getafe's Core is an **OVERALL** current-season comparison. Points and goals updated to Matchday 5 (FotMob, 2026-09-17). Shots and passes (*) are from the Matchday 4 official preview and have not been updated due to source availability. The home setting at Benito Villamarín is part of the tactical assessment, not a reason to rename overall totals as home data.
 
 Statistical coverage is partial for Betis versus Getafe: a verified Getafe AWAY split, xG, xGA and corner metrics not shown above remain unavailable and have not been estimated.
 
@@ -66,6 +66,7 @@ Betis' stronger start is balanced by a clear low-event risk. Getafe can compress
   picks: { main: "Real Betis to Win", publishedOdds: 1.78, oddsProvenance: { source: "PSP author-supplied publication selection — 13/09/2026", provenance: "author_attested", market: "Real Betis to Win" } },
   published: true,
   publishedAt: "2026-09-13T16:54:00-03:00",
+  updatedAt: "2026-09-17T10:00:00-03:00",
   sourceStatus: "partial",
   sources: [
     {"name": "LALIGA", "url": "https://www.laliga.com/partido/temporada-2026-2027-laliga-ea-sports-real-betis-getafe-cf-6", "description": "Official Matchday 6 fixture and current-season comparison.", "accessedAt": "2026-09-13T16:54:00-03:00"},
