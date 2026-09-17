@@ -52,8 +52,6 @@ const intentLocale: Record<
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  // Build static routes from both match projections and the source-of-truth
-  // published editorial registry so manual publications cannot be omitted.
   const publishedSlugs = new Set(matches.map((match) => match.slug));
 
   for (const prediction of editorialPredictions) {
@@ -62,23 +60,11 @@ export function generateStaticParams() {
     }
   }
 
-  const requiredFallbackParams = fullyLocalizedMatchLocales.flatMap((locale) =>
-    [...publishedSlugs].map((slug) => ({ locale, slug }))
-  );
-  const existingTranslatedParams = seoLocaleSlugs.flatMap((locale) =>
+  return seoLocaleSlugs.flatMap((locale) =>
     Object.keys(localizedEditorialBySlug)
       .filter((slug) => publishedSlugs.has(slug) && hasCompleteLocalizedEditorial(slug, locale))
       .map((slug) => ({ locale, slug }))
   );
-
-  return [
-    ...new Map(
-      [...requiredFallbackParams, ...existingTranslatedParams].map((param) => [
-        `${param.locale}:${param.slug}`,
-        param,
-      ])
-    ).values(),
-  ];
 }
 
 export async function generateMetadata({
