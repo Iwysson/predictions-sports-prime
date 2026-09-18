@@ -31,7 +31,7 @@ Restarts can become a useful pressure valve for both teams. Willem II can turn a
 
 ### Pre-match data status
 
-No confirmed lineup for Willem II or Fortuna Sittard was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+Sources were re-checked on 2026-09-18 and both squads carry longer absence lists than were confirmed at initial publication. Sports Mole reports Willem II are missing six players: Thomas Didillon-Hodl (hamstring), Vito van Crooij (ankle), Justin Hoogma (knee), Amine Lachkar (groin), Armin Culum (foot) and Thijs Muller (toe), leaving Devin Haen — already responsible for half the team's six league goals — as the central attacking focus. Fortuna Sittard are without five: Kristoffer Peterson, Ivan Marquez, Yassin Oukili (groin), Sven Simons (hamstring) and Siebe Wylin, though Mohamed Ihattaren and Lequincio Zeefuik (three goals each) remain available to lead the attack. Neither club has issued an official team sheet yet, so these remain source-reported absences rather than confirmed exclusions, and the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For Willem II against Fortuna Sittard, the case for the bet rests on the match-s
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  "updatedAt": "2026-09-15T16:00:00-03:00",
+  "updatedAt": "2026-09-18T17:55:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
+  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "Sports Mole", "url": "https://www.sportsmole.co.uk/football/willem-ii/preview/willem-ii-vs-sittard-prediction-team-news-lineups_605308.html"}],
   matchInfo: { date: "2026-09-19", time: "21:00", round: "Matchday 7", venue: "Koning Willem II Stadion" }
 };

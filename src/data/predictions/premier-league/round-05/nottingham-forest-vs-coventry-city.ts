@@ -31,7 +31,7 @@ A separate detail is what happens after the first defensive action. Nottingham F
 
 ### Pre-match data status
 
-No confirmed lineup for Nottingham Forest or Coventry City was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+Sources re-checked on 18 September confirm specific absences rather than a full teamsheet. Nottingham Forest are missing Nicolo Savona (knee), Nikola Milenkovic (thigh) and Jair Cunha (thigh) from the back line, though the forward line of Morgan Gibbs-White, Liam Delap and Igor Jesus remains available. Coventry City's list is more severe: Taiwo Awoniyi is suspended, Haji Wright, Kaine Kesler-Hayden, Josh Eccles and Luke Woolfenden are injured, and Frank Onyeka is a doubt with a wrist problem. These are PROJECTED absences from pre-match reporting, not a confirmed teamsheet, and the official lineup at kick-off takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -82,12 +82,14 @@ For Nottingham Forest against Coventry City, the case for the bet rests on the m
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
-  "updatedAt": "2026-09-15T14:00:00-03:00",
+  "updatedAt": "2026-09-18T18:55:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },
     { "name": "NBC Sports", "url": "https://www.nbcsports.com/soccer/news/premier-league-schedule-for-2026-27-season-released" },
-    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" }
+    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" },
+    { "name": "OneFootball — Nottingham Forest could be without three for Coventry City visit", "url": "https://onefootball.com/en/news/nottingham-forest-could-be-without-three-for-coventry-city-visit-43456992" },
+    { "name": "Yahoo Sports — Nottingham Forest vs Coventry City preview and team news", "url": "https://sports.yahoo.com/articles/preview-nottingham-forest-vs-coventry-164000061.html" }
   ],
   matchInfo: { date: "2026-09-19", time: "17:30", round: "Matchweek 5", venue: "The City Ground" }
 };

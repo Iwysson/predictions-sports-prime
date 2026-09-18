@@ -31,7 +31,7 @@ One of the less visible battles will be control after possession changes. Ajax n
 
 ### Pre-match data status
 
-No confirmed lineup for Ajax or Excelsior Rotterdam was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+Sources were re-checked on 2026-09-18 and now show specific pre-match absences for both clubs. Sports Mole reports Ajax will be without Aaron Bouwman (bruised lung sustained in the De Topper meeting), Daley Blind and Simon Adingra (ankle), leaving Michel with a selection call up front between Tolu Arokodare and Kasper Dolberg. Excelsior's main concern is Noah Naujoks, described as touch-and-go after not featuring since his matchday-one brace, with no other absentee flagged for the visitors. Neither club has issued an official team sheet yet, so these remain source-reported absences rather than confirmed exclusions, and the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For Ajax against Excelsior Rotterdam, the case for the bet rests on the match-sp
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  "updatedAt": "2026-09-15T16:00:00-03:00",
+  "updatedAt": "2026-09-18T17:45:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
+  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "Sports Mole", "url": "https://www.sportsmole.co.uk/football/ajax/preview/ajax-vs-excelsior-prediction-team-news-lineups_605307.html"}],
   matchInfo: { date: "2026-09-19", time: "20:00", round: "Matchday 7", venue: "Johan Cruijff ArenA" }
 };

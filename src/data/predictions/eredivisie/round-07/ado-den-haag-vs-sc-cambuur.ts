@@ -31,7 +31,7 @@ The benches may have a larger influence than the starting formations suggest. If
 
 ### Pre-match data status
 
-No confirmed lineup for ADO Den Haag or SC Cambuur was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+A re-check of team-news sources on 2026-09-18 turned up specific pre-match absences for both sides. Sports Mole reports ADO Den Haag will be without midfielder Mylian Jimenez and forward Cameron Peupion, with goalkeeper Kilian Nikiema expected to retain his place after a strong display at FC Twente and free-agent arrival Alex Pozo providing fresh cover on the right flank. SC Cambuur are missing Wout Asselman and Daan Visser, while Rafik El Arguioui (four goals) remains the visitors' central creative outlet after Ilyes Hamache's brace against NEC lifted his own tally to three. Neither club has issued an official team sheet yet, so these are source-reported absences rather than confirmed exclusions, and the projected elevens implied above still yield to the official teamsheet once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For ADO Den Haag against SC Cambuur, the case for the bet rests on the match-spe
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  "updatedAt": "2026-09-15T16:00:00-03:00",
+  "updatedAt": "2026-09-18T17:40:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "OddAlerts", "url": "https://www.oddalerts.com/leagues/netherlands/eredivisie/corners"}],
+  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "OddAlerts", "url": "https://www.oddalerts.com/leagues/netherlands/eredivisie/corners"}, {"name": "Sports Mole", "url": "https://www.sportsmole.co.uk/football/ado-den-haag/preview/ado-den-haag-vs-cambuur-prediction-team-news-lineups_605372.html"}],
   matchInfo: { date: "2026-09-19", time: "16:30", round: "Matchday 7", venue: "Bingoal Stadion" }
 };

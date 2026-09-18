@@ -31,7 +31,7 @@ Neither team can rely only on the first plan. If VfB Stuttgart struggle to progr
 
 ### Pre-match data status
 
-No confirmed lineup for VfB Stuttgart or Borussia Dortmund was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+Team-news coverage re-checked on 2026-09-18 disagrees on the extent of VfB Stuttgart's absentee list: one preview names Dan-Axel Zagadou as the squad's only firm injury absence, while another lists a longer list of unavailable players plus fitness doubts over Nikolas Nartey and Angelo Stiller. For Dortmund, Emre Can and Filippo Mane are consistently reported as sidelined by injury across sources. Because the reports on Stuttgart conflict and neither club had published an official teamsheet at this recheck, both squads' full availability remains unconfirmed; the official lineup takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For VfB Stuttgart against Borussia Dortmund, the case for the bet rests on the m
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-15T15:00:00-03:00",
+  "updatedAt": "2026-09-18T18:55:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "FotMob team corners", "url": "https://www.fotmob.com/leagues/54/stats/season/40040/teams/corner_taken_team/bundesliga-teams"}],
+  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "FotMob team corners", "url": "https://www.fotmob.com/leagues/54/stats/season/40040/teams/corner_taken_team/bundesliga-teams"}, {"name": "Khelnow — VfB Stuttgart vs Borussia Dortmund preview", "url": "https://khelnow.com/football/vfb-stuttgart-vs-borussia-dortmund-preview-bundesliga-202609"}, {"name": "Bulinews — VfB Stuttgart vs Borussia Dortmund preview", "url": "https://bulinews.com/vfb-stuttgart-borussia-dortmund-preview-feisty-foes-reunite-once-more"}],
   matchInfo: { date: "2026-09-19", time: "18:30", round: "Matchday 4", venue: "MHPArena" }
 };
