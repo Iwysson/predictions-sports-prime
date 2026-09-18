@@ -20,7 +20,8 @@ export type LeagueSlug =
   | "champions-league"
   | "uefa-europa-league"
   | "copa-libertadores"
-  | "copa-sudamericana";
+  | "copa-sudamericana"
+  | "uefa-nations-league";
 
 export type PredictionItem = {
   label: string;

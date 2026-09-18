@@ -17,7 +17,7 @@ export type AdSenseContentClassification =
 export type AdSenseContentQualityDecision = {
   classification: AdSenseContentClassification;
   indexable: boolean;
-  source: "audited-snapshot-2026-09-03" | "automatic-fallback" | "manual-publication-allowlist-2026-09-15";
+  source: "audited-snapshot-2026-09-03" | "automatic-fallback" | "manual-publication-allowlist-2026-09-15" | "manual-publication-allowlist-2026-09-18";
   reasons: string[];
 };
 
@@ -133,11 +133,44 @@ const MANUAL_PUBLICATION_ALLOWLIST_2026_09_15 = new Set<string>([
   "vitoria-cruzeiro",
 ]);
 
-function isManualPublicationAllowlisted(prediction: EditorialPrediction) {
-  if (prediction.published !== true) return false;
+// Manual publication exception approved for the LaLiga Matchday 7 + UEFA
+// Nations League 2026/27 launch (21 pages) on 2026-09-18.
+// This list is intentionally explicit: it does not weaken the quality gate for any other page.
+const MANUAL_PUBLICATION_ALLOWLIST_2026_09_18 = new Set<string>([
+  // la-liga (round-07)
+  "athletic-club-vs-deportivo-alaves",
+  "atletico-madrid-vs-real-madrid",
+  "celta-vigo-vs-racing-santander",
+  "getafe-vs-malaga",
+  "osasuna-vs-rayo-vallecano",
+  "rc-deportivo-vs-real-betis",
+  "sevilla-vs-barcelona",
+  "valencia-vs-real-sociedad",
+  "villarreal-vs-levante",
+  // uefa-nations-league (matchday-01 + matchday-02)
+  "serbia-vs-greece",
+  "netherlands-vs-germany",
+  "portugal-vs-wales",
+  "norway-vs-denmark",
+  "turkiye-vs-france",
+  "italy-vs-belgium",
+  "czechia-vs-croatia",
+  "england-vs-spain",
+  "serbia-vs-netherlands",
+  "norway-vs-portugal",
+  "germany-vs-greece",
+  "denmark-vs-wales",
+]);
+
+function manualPublicationAllowlistMatch(
+  prediction: EditorialPrediction
+): "2026-09-15" | "2026-09-18" | null {
+  if (prediction.published !== true) return null;
   const slug =
     prediction.slug ?? predictionSlug(prediction.homeTeam, prediction.awayTeam);
-  return MANUAL_PUBLICATION_ALLOWLIST_2026_09_15.has(slug);
+  if (MANUAL_PUBLICATION_ALLOWLIST_2026_09_15.has(slug)) return "2026-09-15";
+  if (MANUAL_PUBLICATION_ALLOWLIST_2026_09_18.has(slug)) return "2026-09-18";
+  return null;
 }
 
 const AUDITED_KEEP = new Set<string>([
@@ -569,12 +602,15 @@ function fallbackDecision(
 export function getAdSenseContentQualityDecision(
   prediction: EditorialPrediction
 ): AdSenseContentQualityDecision | IndexQualityDecision {
-  if (isManualPublicationAllowlisted(prediction)) {
+  const allowlistMatch = manualPublicationAllowlistMatch(prediction);
+  if (allowlistMatch) {
     return {
       classification: "KEEP",
       indexable: true,
-      source: "manual-publication-allowlist-2026-09-15",
-      reasons: ["manual_publication_override_2026_09_15"],
+      source: `manual-publication-allowlist-${allowlistMatch}` as
+        | "manual-publication-allowlist-2026-09-15"
+        | "manual-publication-allowlist-2026-09-18",
+      reasons: [`manual_publication_override_${allowlistMatch.replace(/-/g, "_")}`],
     };
   }
 
