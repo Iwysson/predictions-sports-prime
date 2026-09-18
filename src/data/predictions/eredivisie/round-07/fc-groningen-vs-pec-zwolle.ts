@@ -31,7 +31,7 @@ The final stretch should test the structure of both teams. FC Groningen need att
 
 ### Pre-match data status
 
-No confirmed lineup for FC Groningen or PEC Zwolle was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+Confirmed starting lineups for this fixture (Voetbalwedden.net, 18 September): **FC Groningen** — Vaessen; Prins, Csinger, Blokzijl, Schreuders; de Jonge, Land; van der Werff, van Bergen, Clement; Andersen Willumsson. **PEC Zwolle** — Schendelaar; van der Haar, Viergever, Graves, Aertssen; Sommer, Fichtinger; Mbayo, Velanas, Soerensen; Kostons. FC Groningen are further without R. Janse, T. Hernes, T. Mercera, N. Brandis, R. Metu and M. Jeng through injury; PEC Zwolle are without S. Floranus, F. Krastev, R. Thomas and Y. Namli.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For FC Groningen against PEC Zwolle, the case for the bet rests on the match-spe
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  updatedAt: "2026-09-17T10:00:00-03:00",
+  updatedAt: "2026-09-18T13:45:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
+  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "Voetbalwedden.net — FC Groningen vs PEC Zwolle lineups", "url": "https://www.voetbalwedden.net/wedstrijden/fc-groningen-pec-zwolle/opstellingen"}],
   matchInfo: { date: "2026-09-18", time: "20:00", round: "Matchday 7", venue: "Euroborg" }
 };

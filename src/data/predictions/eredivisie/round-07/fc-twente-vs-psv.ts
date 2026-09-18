@@ -31,7 +31,7 @@ Another useful indicator is how often each side can end an attack without becomi
 
 ### Pre-match data status
 
-No confirmed lineup for FC Twente or PSV was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+PSV are missing six players through injury for this fixture — **Jerdy Schouten, Kilian Sildillia, Sami Ouaissa, Alassane Pléa, Mikkel Bro and Sam Lammers** — per FotMob's team-news feed for the match. FC Twente have two confirmed absentees, **Kristian Hlynsson and Stav Lemkin**, both injured. No official starting lineup for either club was available at the editorial cutoff; the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For FC Twente against PSV, the case for the bet rests on the match-specific anal
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  "updatedAt": "2026-09-15T16:00:00-03:00",
+  "updatedAt": "2026-09-18T13:42:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "OddAlerts", "url": "https://www.oddalerts.com/leagues/netherlands/eredivisie/corners"}],
+  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "OddAlerts", "url": "https://www.oddalerts.com/leagues/netherlands/eredivisie/corners"}, {"name": "FotMob — FC Twente vs PSV team news", "url": "https://www.fotmob.com/en-GB/matches/twente-vs-psv-eindhoven/2glmza"}],
   matchInfo: { date: "2026-09-20", time: "14:30", round: "Matchday 7", venue: "De Grolsch Veste" }
 };

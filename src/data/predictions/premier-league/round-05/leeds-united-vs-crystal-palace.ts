@@ -31,7 +31,7 @@ Discipline around the ball should matter more as the game wears on. Leeds United
 
 ### Pre-match data status
 
-No confirmed lineup for Leeds United or Crystal Palace was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for Leeds United or Crystal Palace was available at the editorial cutoff. Injury and suspension reporting has since firmed up: Leeds have Joe Rodon and Mateo Joseph sidelined, with Ilia Gruev improving from a long-term injury but not yet ready to feature. Crystal Palace are missing Dean Henderson (foot), Jean-Philippe Mateta (thigh) and Chadi Riad (knee, reported out for the season), and defender Axel Disasi is serving a three-match suspension after a straight red card against Ipswich Town that covers this fixture. The official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -82,12 +82,14 @@ For Leeds United against Crystal Palace, the case for the bet rests on the match
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
-  "updatedAt": "2026-09-15T14:00:00-03:00",
+  "updatedAt": "2026-09-18T13:41:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },
     { "name": "NBC Sports", "url": "https://www.nbcsports.com/soccer/news/premier-league-schedule-for-2026-27-season-released" },
-    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" }
+    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" },
+    { "name": "ReadCrystalPalace — Axel Disasi suspension details", "url": "https://readcrystalpalace.com/2026/09/16/axel-disasi-suspension-crystal-palace-games-missed/" },
+    { "name": "MOT Leeds News — Ilia Gruev injury update", "url": "https://motleedsnews.com/injuries/daniel-farke-shares-ilia-greuv-injury-update-ahead-of-leeds-united-vs-crystal-palace" }
   ],
   matchInfo: { date: "2026-09-20", time: "14:00", round: "Matchweek 5", venue: "Elland Road" }
 };

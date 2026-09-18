@@ -31,7 +31,7 @@ Corners and free kicks may become a useful territorial tool in this fixture, esp
 
 ### Pre-match data status
 
-No confirmed lineup for OGC Nice or Lille OSC was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for OGC Nice or Lille OSC was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released. A later injury check (18 September) lists Morgan Sanson and Laurent Abergel as unavailable through injury for Nice, and Tanguy Nianzou Kouassi, Loun Srdanovic and Hamza Igamane as unavailable through injury for Lille, narrowing squad options on both sides relative to the original editorial cutoff.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,11 +80,12 @@ For OGC Nice against Lille OSC, the case for the bet rests on the match-specific
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
-  "updatedAt": "2026-09-15T15:45:00-03:00",
+  "updatedAt": "2026-09-18T13:46:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },
-    { "name":"Ligue 1 season calendar","url":"https://ligue1.com/en/articles/l1_article_5292-" }
+    { "name":"Ligue 1 season calendar","url":"https://ligue1.com/en/articles/l1_article_5292-" },
+    { "name":"FotMob — Nice vs Lille match preview and injury list", "url":"https://www.fotmob.com/matches/lille-vs-nice/2tkbpo" }
   ],
   matchInfo: { date:"2026-09-20", time:"17:15", round:"Matchday 5", venue:"Allianz Riviera" }
 };

@@ -31,7 +31,7 @@ Restarts can become a useful pressure valve for both teams. SC Paderborn 07 can 
 
 ### Pre-match data status
 
-No confirmed lineup for SC Paderborn 07 or TSG Hoffenheim was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for SC Paderborn 07 or TSG Hoffenheim was available at the editorial cutoff. Preview coverage (bulinews.com, September 2026) lists **Nyamekye Awortwie-Grant, Sebastian Klaas, Sven Michel and Timur Gayret as injury absences for SC Paderborn 07** — Gayret is out long-term with an ACL tear, while the other three are expected back within weeks — and reports **TSG Hoffenheim as having a fully fit squad available** for this trip. This is preview-stage reporting rather than the official confirmed teamsheet, which still takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For SC Paderborn 07 against TSG Hoffenheim, the case for the bet rests on the ma
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-15T15:00:00-03:00",
+  "updatedAt": "2026-09-18T13:38:29-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
+  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "bulinews.com — SC Paderborn vs. TSG Hoffenheim preview: team news", "url": "https://bulinews.com/paderborn-tsg-hoffenheim-preview-hosts-search-for-first-bundesliga-goal"}],
   matchInfo: { date: "2026-09-20", time: "19:30", round: "Matchday 4", venue: "Home Deluxe Arena" }
 };

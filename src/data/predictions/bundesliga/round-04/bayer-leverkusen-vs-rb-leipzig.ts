@@ -31,7 +31,7 @@ Restarts can become a useful pressure valve for both teams. Bayer Leverkusen can
 
 ### Pre-match data status
 
-No confirmed lineup for Bayer Leverkusen or RB Leipzig was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for Bayer Leverkusen or RB Leipzig was available at the editorial cutoff. Preview coverage from Sports Mole (whoscored.com/sportsmole.co.uk network, September 2026) lists **Guéla Doué, Ibrahim Maza, Kennet Eichhorn, Nathan Tella and Montrell Culbreath as unavailable through injury for Bayer Leverkusen**, and **Assan Ouédraogo, Christoph Baumgartner and Rocco Reitz as unavailable through injury for RB Leipzig**. These are preview-stage reports rather than the official confirmed teamsheet, which still takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For Bayer Leverkusen against RB Leipzig, the case for the bet rests on the match
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-15T15:00:00-03:00",
+  "updatedAt": "2026-09-18T13:38:29-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
+  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "Sports Mole — Bayer Leverkusen vs RB Leipzig preview, team news", "url": "https://www.sportsmole.co.uk/football/bayer-leverkusen/preview/b-leverkusen-vs-rb-leipzig-prediction-team-news-lineups_596667.html"}],
   matchInfo: { date: "2026-09-20", time: "15:30", round: "Matchday 4", venue: "BayArena" }
 };

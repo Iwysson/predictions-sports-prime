@@ -31,7 +31,7 @@ Late in the match, Brentford's main decision is whether an extra runner is worth
 
 ### Pre-match data status
 
-No confirmed lineup for Brentford or Chelsea was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for Brentford or Chelsea was available at the editorial cutoff. Injury reporting has since firmed up: Brentford are without Joshua Dasilva (thigh), Antoni Milambo (knee), Nathan Collins (calf), Sepp van den Berg (groin), Kafe Furo and Mathias Jensen. Chelsea have no players ruled out, but Moises Caicedo (calf), Marco Palestra, Emmanuel Emegha and Jordan Henderson are fitness doubts, and Joao Pedro withdrew from Brazil duty with a knee problem; final decisions on those doubts were due close to kickoff. The official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -82,12 +82,13 @@ For Brentford against Chelsea, the case for the bet rests on the match-specific 
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
-  "updatedAt": "2026-09-15T14:00:00-03:00",
+  "updatedAt": "2026-09-18T13:43:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },
     { "name": "NBC Sports", "url": "https://www.nbcsports.com/soccer/news/premier-league-schedule-for-2026-27-season-released" },
-    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" }
+    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" },
+    { "name": "Sports Mole — Brentford vs Chelsea injury, suspension list", "url": "https://www.sportsmole.co.uk/football/chelsea/west-london-derby/team-news/brentford-vs-chelsea-injury-suspension-list-predicted-xis_605221.html" }
   ],
   matchInfo: { date: "2026-09-18", time: "20:00", round: "Matchweek 5", venue: "Gtech Community Stadium" }
 };

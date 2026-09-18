@@ -31,7 +31,7 @@ The final layer is physical rather than purely tactical. If Bayern Munich spend 
 
 ### Pre-match data status
 
-No confirmed lineup for Bayern Munich or Union Berlin was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No officially confirmed starting XI for Bayern Munich or Union Berlin was available at the editorial cutoff; the official teamsheet takes precedence once released. Pre-match reporting (Sports Mole, TheHardTackle) projects Serge Gnabry as fit to feature after recovering from an adductor issue and Luis Díaz as available, with Tarek Buchmann the club's only listed long-term absentee following surgery. Union Berlin's coverage discloses that the club have conceded seven goals across their last two Bundesliga matches and that their defensive options have been further reduced by injuries, though a specific Union absentee list was not independently confirmed by the retained sources. These items are projected/secondary-source team news, not an official release, and are disclosed accordingly.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For Bayern Munich against Union Berlin, the case for the bet rests on the match-
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-15T15:00:00-03:00",
+  "updatedAt": "2026-09-18T13:42:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
+  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "Sports Mole — Bayern Munich vs Union Berlin preview", "url": "https://www.sportsmole.co.uk/football/bayern-munich/preview/bayern-vs-union-berlin-prediction-team-news-lineups_605268.html"}, {"name": "TheHardTackle — Bayern Munich vs Union Berlin preview", "url": "https://thehardtackle.com/round-up/2026/09/17/bayern-munich-vs-union-berlin-preview-prediction-probable-lineups-tactics-team-news-key-stats-2/"}],
   matchInfo: { date: "2026-09-18", time: "20:30", round: "Matchday 4", venue: "Allianz Arena" }
 };

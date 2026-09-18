@@ -31,7 +31,7 @@ Fresh players can alter this matchup without a dramatic formation switch. Fulham
 
 ### Pre-match data status
 
-No confirmed lineup for Fulham or Manchester United was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for Fulham or Manchester United was available at the editorial cutoff. Team news has since firmed up: Fulham's Tom Cairney remains out with a knee problem, while Ryan Sessegnon carries a minor groin knock. Manchester United have Matthijs de Ligt, Amad Diallo and Manuel Ugarte sidelined (Ugarte long-term), with Luke Shaw a fitness doubt manager Michael Carrick described as "not totally 100 per cent"; Patrick Dorgu, who missed the midweek Carabao Cup squad, is expected back in contention. The official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -82,12 +82,14 @@ For Fulham against Manchester United, the case for the bet rests on the match-sp
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
-  "updatedAt": "2026-09-15T14:00:00-03:00",
+  "updatedAt": "2026-09-18T13:41:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },
     { "name": "NBC Sports", "url": "https://www.nbcsports.com/soccer/news/premier-league-schedule-for-2026-27-season-released" },
-    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" }
+    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" },
+    { "name": "RotoWire — Fulham vs Manchester United team news", "url": "https://www.rotowire.com/soccer/article/fulham-vs-manchester-united-prediction-predicted-lineups-team-news-134884" },
+    { "name": "ManUtdNews — Michael Carrick injury update", "url": "https://manutdnews.com/michael-carrick-provides-double-injury-update-three-players-set-to-miss-fulham-clash" }
   ],
   matchInfo: { date: "2026-09-20", time: "16:30", round: "Matchweek 5", venue: "Craven Cottage" }
 };
