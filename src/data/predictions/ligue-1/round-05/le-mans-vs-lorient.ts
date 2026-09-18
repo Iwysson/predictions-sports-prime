@@ -31,7 +31,7 @@ As fatigue increases, Le Mans FC and FC Lorient may find it harder to keep the s
 
 ### Pre-match data status
 
-No confirmed lineup for Le Mans FC or FC Lorient was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for Le Mans FC or FC Lorient was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released. Sources were rechecked on 18 September 2026, the day before kickoff, and no verified confirmed lineup, new injury news or suspension update had surfaced for either club from official or established outlets since the prior check, so this remains disclosed as a gap rather than an assumption.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,7 +80,7 @@ For Le Mans FC against FC Lorient, the case for the bet rests on the match-speci
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
-  "updatedAt": "2026-09-15T15:45:00-03:00",
+  "updatedAt": "2026-09-18T18:25:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

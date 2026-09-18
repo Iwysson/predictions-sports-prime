@@ -31,7 +31,7 @@ Late personnel changes matter here because Sparta Rotterdam and SC Heerenveen ma
 
 ### Pre-match data status
 
-No confirmed lineup for Sparta Rotterdam or SC Heerenveen was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+A source re-check on 2026-09-18 adds concrete availability detail for both sides. Sports Mole reports Sparta Rotterdam remain without Japan international Shunsuke Mito, an absence that had already forced the switch to a 3-4-3 shape in the previous match. SC Heerenveen are considerably more depleted: Marcus Linday and Mees Hilgers are both out with knee injuries (Hilgers still awaiting his first appearance in 13 months), while Dirk Proper (hamstring) misses a second consecutive match and Mats Egbring (ankle) is also unavailable. Neither club has issued an official team sheet yet, so these remain source-reported absences rather than confirmed exclusions, and the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For Sparta Rotterdam against SC Heerenveen, the case for the bet rests on the ma
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  "updatedAt": "2026-09-15T16:00:00-03:00",
+  "updatedAt": "2026-09-18T17:50:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
+  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "Sports Mole", "url": "https://www.sportsmole.co.uk/football/sparta-rotterdam/preview/sparta-vs-heerenveen-prediction-team-news-lineups_605349.html"}],
   matchInfo: { date: "2026-09-19", time: "18:45", round: "Matchday 7", venue: "Sparta Stadion Het Kasteel" }
 };

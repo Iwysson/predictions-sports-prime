@@ -31,7 +31,7 @@ Dead-ball situations give Hamburger SV and 1. FC K\u00f6ln a way to move the mat
 
 ### Pre-match data status
 
-No confirmed lineup for Hamburger SV or 1. FC K\u00f6ln was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+A Bundesliga matchday-4 lineup round-up re-checked on 2026-09-18 reports K\u00f6ln forward Said El Mala as fit and available after a recent fitness update, though it stopped short of publishing a confirmed starting eleven for either club. No further verified injury or suspension list for Hamburger SV was located beyond the season-opening absences already on record, so both lineups remain PROJECTED at best; the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For Hamburger SV against 1. FC K\u00f6ln, the case for the bet rests on the matc
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-15T15:00:00-03:00",
+  "updatedAt": "2026-09-18T18:50:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
+  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "Bulinews — Predicted Bundesliga lineups: Matchday 4", "url": "https://bulinews.com/predicted-bundesliga-lineups-matchday-4-starting-xis"}],
   matchInfo: { date: "2026-09-19", time: "15:30", round: "Matchday 4", venue: "Volksparkstadion" }
 };

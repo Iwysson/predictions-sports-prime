@@ -31,7 +31,7 @@ Corners and free kicks may become a useful territorial tool in this fixture, esp
 
 ### Pre-match data status
 
-No confirmed lineup for Paris FC or RC Strasbourg was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for Paris FC or RC Strasbourg was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released. Sources were rechecked on 18 September 2026, the day before kickoff, and no verified confirmed lineup, new injury news or suspension update had surfaced for either club from official or established outlets since the prior check, so this remains disclosed as a gap rather than an assumption.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,7 +80,7 @@ For Paris FC against RC Strasbourg, the case for the bet rests on the match-spec
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
-  "updatedAt": "2026-09-15T15:45:00-03:00",
+  "updatedAt": "2026-09-18T18:35:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

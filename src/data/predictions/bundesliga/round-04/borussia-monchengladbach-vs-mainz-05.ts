@@ -31,7 +31,7 @@ The match also depends on the quality of second balls. Borussia M\u00f6nchenglad
 
 ### Pre-match data status
 
-No confirmed lineup for Borussia M\u00f6nchengladbach or Mainz 05 was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+A Bundesliga-focused preview re-checked on 2026-09-18 lists Tim Kleindienst as Borussia M\u00f6nchengladbach's only reported absence, while Mainz 05 are missing several squad members including Robin Zentner, Jae-Sung Lee, Silas and Maxim Leitsch. Neither club had published an official teamsheet at that recheck, so any starting eleven drawn from that preview remains PROJECTED rather than confirmed; the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For Borussia M\u00f6nchengladbach against Mainz 05, the case for the bet rests o
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-15T15:00:00-03:00",
+  "updatedAt": "2026-09-18T18:40:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "FotMob team corners", "url": "https://www.fotmob.com/leagues/54/stats/season/40040/teams/corner_taken_team/bundesliga-teams"}],
+  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "FotMob team corners", "url": "https://www.fotmob.com/leagues/54/stats/season/40040/teams/corner_taken_team/bundesliga-teams"}, {"name": "Bulinews — Gladbach vs Mainz preview", "url": "https://bulinews.com/borussia-monchengladbach-1-fsv-mainz-05-preview-die-fohlen-looking-ease-relegation-concerns-borussia-park"}],
   matchInfo: { date: "2026-09-19", time: "15:30", round: "Matchday 4", venue: "Borussia-Park" }
 };

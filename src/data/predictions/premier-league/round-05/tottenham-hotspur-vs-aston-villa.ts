@@ -31,7 +31,7 @@ Loose balls after turnovers should be especially important. Tottenham can sustai
 
 ### Pre-match data status
 
-No confirmed lineup for Tottenham Hotspur or Aston Villa was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+Sources re-checked on 18 September narrow the availability picture without a confirmed teamsheet. Tottenham are missing Dejan Kulusevski, Xavi Simons, Mykhaylo Mudryk and Wilson Odobert through injury, while Sandro Tonali is a doubt after a knock and Pedro Porro is expected to be available again in some capacity. Aston Villa are without Amadou Onana, Leon Goretzka, Brian Madjo, Pau Torres and Ian Maatsen, with Joao Gomes also a doubt over physical discomfort. These are PROJECTED absences from pre-match reporting, not a confirmed teamsheet, and the official lineup at kick-off takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -82,12 +82,14 @@ For Tottenham Hotspur against Aston Villa, the case for the bet rests on the mat
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
-  "updatedAt": "2026-09-15T14:00:00-03:00",
+  "updatedAt": "2026-09-18T19:00:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },
     { "name": "NBC Sports", "url": "https://www.nbcsports.com/soccer/news/premier-league-schedule-for-2026-27-season-released" },
-    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" }
+    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" },
+    { "name": "Sports Mole — Tottenham Hotspur injury and suspension list vs Aston Villa", "url": "https://www.sportsmole.co.uk/football/spurs/injury-news/injuries-and-suspensions/tonali-status-kulusevski-update-spurs-injury-suspension-list-vs-villa_605247.html" },
+    { "name": "3added minutes — Aston Villa predicted line-up vs Tottenham", "url": "https://www.3addedminutes.com/sport/football/aston-villa/aston-villa-predicted-lineup-tottenham-five-changes-injury-worries-9074777" }
   ],
   matchInfo: { date: "2026-09-19", time: "12:30", round: "Matchweek 5", venue: "Tottenham Hotspur Stadium" }
 };

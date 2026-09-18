@@ -31,7 +31,7 @@ Possession changes may decide the territorial battle between Everton and Ipswich
 
 ### Pre-match data status
 
-No confirmed lineup for Everton or Ipswich Town was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+Sources were re-checked on 18 September and the availability picture has firmed up slightly since the editorial cutoff. Everton are without the injured Christian Norgaard (groin), with Merlin Rohl also a doubt; James Tarkowski, Jarrad Branthwaite, Tyrique George and Brennan Johnson could return to the starting eleven after being used as substitutes midweek. Ipswich Town are missing Jack Taylor (knee) and carry a doubt over Azor Matusiwa (thigh), though Matusiwa and Emersonn are reported closer to fitness and may be available for limited minutes. These remain PROJECTED, pre-match reports rather than a confirmed teamsheet, and the official lineup at kick-off takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -82,12 +82,13 @@ For Everton against Ipswich Town, the case for the bet rests on the match-specif
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
-  "updatedAt": "2026-09-15T14:00:00-03:00",
+  "updatedAt": "2026-09-18T18:45:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },
     { "name": "NBC Sports", "url": "https://www.nbcsports.com/soccer/news/premier-league-schedule-for-2026-27-season-released" },
-    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" }
+    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" },
+    { "name": "Sports Mole — Everton vs Ipswich Town preview and team news", "url": "https://www.sportsmole.co.uk/football/everton/preview/everton-vs-ipswich-prediction-team-news-lineups_605292.html" }
   ],
   matchInfo: { date: "2026-09-19", time: "15:00", round: "Matchweek 5", venue: "Hill Dickinson Stadium" }
 };

@@ -31,7 +31,7 @@ The final layer is physical rather than purely tactical. If Brighton & Hove Albi
 
 ### Pre-match data status
 
-No confirmed lineup for Brighton & Hove Albion or Arsenal was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+A confirmed matchday-18 teamsheet is still not available, but pre-match reporting on 18 September narrows the availability picture on both sides. William Saliba (back) remains out long-term for Arsenal and is not expected back until late November, with Ben White and Cristhian Mosquera also described as major fitness doubts and Piero Hincapie unlikely to feature; Jurrien Timber is a lesser doubt after being rested as a precaution and is projected to start at right-back. For Brighton, Stefanos Tzimas, Yankuba Minteh, Kaoru Mitoma, Jack Hinshelwood, Mats Wieffer, Zadok Yohanna and Evan Ferguson are all reported out, while Georginio Rutter and Femi Azeez are described as closer to a 50-50 call. These are PROJECTED absences drawn from pre-match reporting rather than confirmed teamsheets, and the official lineup at kick-off takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -82,12 +82,14 @@ For Brighton & Hove Albion against Arsenal, the case for the bet rests on the ma
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
-  "updatedAt": "2026-09-15T14:00:00-03:00",
+  "updatedAt": "2026-09-18T18:40:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },
     { "name": "NBC Sports", "url": "https://www.nbcsports.com/soccer/news/premier-league-schedule-for-2026-27-season-released" },
-    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" }
+    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" },
+    { "name": "Sports Mole — Arsenal injury/suspension list vs Brighton", "url": "https://www.sportsmole.co.uk/football/arsenal/injury-news/injuries-and-suspensions/timber-hincapie-saliba-latest-arsenal-injury-suspension-list-vs-brighton_605266.html" },
+    { "name": "RotoWire — Brighton vs Arsenal team news", "url": "https://www.rotowire.com/soccer/article/brighton-vs-arsenal-prediction-predicted-lineups-team-news-134871" }
   ],
   matchInfo: { date: "2026-09-19", time: "15:00", round: "Matchweek 5", venue: "Amex Stadium" }
 };

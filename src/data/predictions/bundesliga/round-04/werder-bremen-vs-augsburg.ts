@@ -31,7 +31,7 @@ Restarts can become a useful pressure valve for both teams. Werder Bremen can tu
 
 ### Pre-match data status
 
-No confirmed lineup for Werder Bremen or Augsburg was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+Team-news coverage re-checked on 2026-09-18 lists Werder Bremen missing several players through injury, including midfielders Jens Stage (thigh) and Senne Lynen (groin), plus doubts around Justin Njinmah and Moussa N'Diaye; for Augsburg, Tim Breithaupt (toe) and Anton Kade (muscle, fitness doubt) are the main items flagged. Neither club had published an official teamsheet at this recheck, so both lineups remain PROJECTED rather than confirmed; the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For Werder Bremen against Augsburg, the case for the bet rests on the match-spec
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-15T15:00:00-03:00",
+  "updatedAt": "2026-09-18T19:00:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
+  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "Sports Mole — Werder Bremen vs Augsburg preview", "url": "https://www.sportsmole.co.uk/football/werder-bremen/preview/werder-bremen-vs-augsburg-prediction-team-news-lineups_605365.html"}],
   matchInfo: { date: "2026-09-19", time: "15:30", round: "Matchday 4", venue: "Weserstadion" }
 };

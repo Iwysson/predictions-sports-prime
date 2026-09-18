@@ -31,7 +31,7 @@ Neither team can rely only on the first plan. If Eintracht Frankfurt struggle to
 
 ### Pre-match data status
 
-No confirmed lineup for Eintracht Frankfurt or SC Freiburg was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+Eintracht Frankfurt's own matchday preview, re-checked on 2026-09-18, carried pre-match remarks from Sebastian Rode and Jonathan Burkardt on facing an unbeaten Freiburg side but did not publish a formal injury, suspension or lineup list for either club. No independent confirmation of team news was found beyond that preview, so both starting elevens remain undisclosed at this recheck; the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For Eintracht Frankfurt against SC Freiburg, the case for the bet rests on the m
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-15T15:00:00-03:00",
+  "updatedAt": "2026-09-18T18:45:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
+  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "Eintracht Frankfurt — Vorschau SGE vs SC Freiburg", "url": "https://en.eintracht.de/news/vorschau-freiburg-vor-der-brust-179307/"}],
   matchInfo: { date: "2026-09-19", time: "15:30", round: "Matchday 4", venue: "Deutsche Bank Park" }
 };

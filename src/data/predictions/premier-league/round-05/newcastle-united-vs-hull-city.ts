@@ -30,7 +30,7 @@ Set pieces offer both Newcastle United and Hull City a different route to pressu
 
 ### Pre-match data status
 
-No confirmed lineup for Newcastle United or Hull City was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+Sources re-checked on 18 September point to a significant Newcastle United injury list rather than a settled teamsheet. Head coach Matthias Jaissle has confirmed Dan Burn, Ewen Jaouen, Joelinton and William Osula remain sidelined, Jacob Ramsey and Amar Dedic add to the absentees, Nico Gonzalez is out under concussion protocols after Monday's defeat at Leeds, and Anthony Elanga was omitted from that squad with an issue still being scanned. Hull City's list is longer still, with Eliot Matazo, Darko Gyabi, Jack Butland, Ilyas Ansah, Charlie Hughes, Nobel Mendy and Hidemasa Morita all out and Paddy McNair a doubt. These are PROJECTED absences from pre-match reporting, not a confirmed teamsheet, and the official lineup at kick-off takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -81,12 +81,14 @@ For Newcastle United against Hull City, the case for the bet rests on the match-
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
-  "updatedAt": "2026-09-15T14:00:00-03:00",
+  "updatedAt": "2026-09-18T18:50:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },
     { "name": "NBC Sports", "url": "https://www.nbcsports.com/soccer/news/premier-league-schedule-for-2026-27-season-released" },
-    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" }
+    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" },
+    { "name": "Newcastle United — Matthias Jaissle's team news update ahead of Hull visit", "url": "https://www.newcastleunited.com/en/news/matthias-jaissles-team-news-update-elanga-latest-ahead-of-hull-visit" },
+    { "name": "Shields Gazette — Newcastle injury crisis ahead of Hull City", "url": "https://www.shieldsgazette.com/sport/football/newcastle-united/newcastle-united-injuries-hull-9078360" }
   ],
   matchInfo: { date: "2026-09-19", time: "15:00", round: "Matchweek 5", venue: "St James' Park" }
 };

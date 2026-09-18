@@ -31,7 +31,7 @@ A separate detail is what happens after the first defensive action. Angers SCO c
 
 ### Pre-match data status
 
-No confirmed lineup for Angers SCO or ESTAC Troyes was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for Angers SCO or ESTAC Troyes was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released. Sources were rechecked on 18 September 2026, the day before kickoff, and neither club's official channels nor the established outlets monitored for this fixture had published confirmed lineups, fresh injury news or suspension updates since the prior check, so the gap above still stands rather than being filled by assumption.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,7 +80,7 @@ For Angers SCO against ESTAC Troyes, the case for the bet rests on the match-spe
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
-  "updatedAt": "2026-09-15T15:45:00-03:00",
+  "updatedAt": "2026-09-18T18:20:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

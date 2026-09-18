@@ -31,7 +31,7 @@ Set pieces offer both Toulouse FC and Le Havre AC a different route to pressure,
 
 ### Pre-match data status
 
-No confirmed lineup for Toulouse FC or Le Havre AC was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for Toulouse FC or Le Havre AC was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released. Sources were rechecked on 18 September 2026, the day before kickoff, and neither club's official channels nor the established outlets monitored for this fixture had published a confirmed lineup, new injury news or a suspension update since the prior check, so the gap above still stands rather than being filled by assumption.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,7 +80,7 @@ For Toulouse FC against Le Havre AC, the case for the bet rests on the match-spe
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
-  "updatedAt": "2026-09-15T15:45:00-03:00",
+  "updatedAt": "2026-09-18T18:40:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },
