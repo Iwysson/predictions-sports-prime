@@ -107,6 +107,7 @@ export const leagues: LeagueConfig[] = [
   defineLeague({ slug: "uefa-europa-league", name: "UEFA Europa League", country: "Europe", short: "UEL", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 36, expectedGamesPerRound: 18, artworkId: 4481, timezone: "Europe/Paris", liveDataId: "uefa.europa" }),
   defineLeague({ slug: "copa-libertadores", name: "CONMEBOL Libertadores", country: "South America", short: "LIB", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 32, expectedGamesPerRound: 4, timezone: "America/Sao_Paulo", liveDataId: "conmebol.libertadores" }),
   defineLeague({ slug: "copa-sudamericana", name: "CONMEBOL Sudamericana", country: "South America", short: "SUD", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 32, expectedGamesPerRound: 4, timezone: "America/Sao_Paulo", liveDataId: "conmebol.sudamericana" }),
+  defineLeague({ slug: "uefa-nations-league", name: "UEFA Nations League", country: "Europe", short: "UNL", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 16, expectedGamesPerRound: 8, timezone: "Europe/Paris", liveDataId: "uefa.nations" }),
 ];
 
 export const leaguesBySlug = Object.fromEntries(
@@ -137,6 +138,7 @@ export const primaryPredictionLeagueSlugs = [
   "uefa-europa-league",
   "copa-libertadores",
   "copa-sudamericana",
+  "uefa-nations-league",
 ] as const satisfies readonly LeagueSlug[];
 
 export const primaryPredictionLeagues = primaryPredictionLeagueSlugs.map(
