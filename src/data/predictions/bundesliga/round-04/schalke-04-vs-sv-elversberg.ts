@@ -31,7 +31,7 @@ A separate detail is what happens after the first defensive action. Schalke 04 c
 
 ### Pre-match data status
 
-No confirmed lineup for Schalke 04 or SV Elversberg was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for Schalke 04 or SV Elversberg was available at the editorial cutoff. Preview coverage (Sports Mole / RotoWire, September 2026) reports **Francis Onyeka managing a knock picked up against Bayern Munich, with Luca Schnellbacher doubtful with a cold and Tom Zimmerschied also doubtful for SV Elversberg**; for Schalke 04, **forward Sylla is expected to be available again after a brief absence, and Adrian Gantenbein has rejoined full training** after his own fitness issue. This is preview-stage reporting rather than the official confirmed teamsheet, which still takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For Schalke 04 against SV Elversberg, the case for the bet rests on the match-sp
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-15T15:00:00-03:00",
+  "updatedAt": "2026-09-18T13:38:29-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}],
+  sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "Sports Mole — Schalke 04 vs Elversberg preview, team news", "url": "https://www.sportsmole.co.uk/football/schalke-04/preview/schalke-vs-elversberg-prediction-team-news-lineups_605376.html"}],
   matchInfo: { date: "2026-09-20", time: "17:30", round: "Matchday 4", venue: "Veltins-Arena" }
 };

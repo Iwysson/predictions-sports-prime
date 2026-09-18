@@ -31,7 +31,7 @@ The closing stages are likely to reward the side that keeps its distances under 
 
 ### Pre-match data status
 
-No confirmed lineup for AZ or Telstar was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+AZ are confirmed without **Hobie Verhulst (suspension)**, **Stije Resink (injury)** and **Denso Kasius (injury)** for this fixture, per Pouletips' AZ availability tracker. No injury or suspension has been confirmed for Telstar from the sources checked, and no official starting lineup for either club was available at the editorial cutoff; the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For AZ against Telstar, the case for the bet rests on the match-specific analysi
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  "updatedAt": "2026-09-15T16:00:00-03:00",
+  "updatedAt": "2026-09-18T13:42:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
+  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "Pouletips — AZ availability tracker", "url": "https://pouletips.nl/eredivisie/az/opstelling/"}],
   matchInfo: { date: "2026-09-20", time: "14:30", round: "Matchday 7", venue: "AFAS Stadion" }
 };

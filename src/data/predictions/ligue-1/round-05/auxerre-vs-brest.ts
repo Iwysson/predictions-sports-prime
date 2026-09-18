@@ -31,7 +31,7 @@ Concentration with and without the ball should become more valuable as fatigue g
 
 ### Pre-match data status
 
-No confirmed lineup for AJ Auxerre or Stade Brestois 29 was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for AJ Auxerre or Stade Brestois 29 was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released. A later check (18 September) found Brest missing at least four confirmed absentees for this trip, including midfielder Hugo Magnetti and defender Mamady Diambou, which narrows Julien Lachuer's midfield options after the 1-0 loss to PSG; no equivalent confirmed absence list for Auxerre has surfaced from the sources checked, so that side is treated as unconfirmed rather than assumed fully fit.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,11 +80,12 @@ For AJ Auxerre against Stade Brestois 29, the case for the bet rests on the matc
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
-  "updatedAt": "2026-09-15T15:45:00-03:00",
+  "updatedAt": "2026-09-18T13:44:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },
-    { "name":"Ligue 1 season calendar","url":"https://ligue1.com/en/articles/l1_article_5292-" }
+    { "name":"Ligue 1 season calendar","url":"https://ligue1.com/en/articles/l1_article_5292-" },
+    { "name":"Yahoo Sports — Auxerre vs Brest preview, team news", "url":"https://sports.yahoo.com/articles/preview-auxerre-vs-brest-team-130500183.html" }
   ],
   matchInfo: { date:"2026-09-20", time:"15:00", round:"Matchday 5", venue:"Stade de l'Abbé-Deschamps" }
 };

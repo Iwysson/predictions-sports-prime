@@ -31,7 +31,7 @@ The longer the contest remains close, the more important clean execution becomes
 
 ### Pre-match data status
 
-No confirmed lineup for Manchester City or Sunderland was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for Manchester City or Sunderland was available at the editorial cutoff. Team news has since firmed up: Phil Foden is confirmed suspended for this match after a straight red card for violent conduct in the Manchester derby, a three-game ban that also covers the Carabao Cup tie with Norwich and the trip to Liverpool. Jeremy Doku remains a fitness doubt after missing City's opening four league games with a calf issue, though manager Enzo Maresca has not ruled out a squad return. Sunderland are without Habib Diarra and Romaine Mundle through injury. The official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -82,12 +82,13 @@ For Manchester City against Sunderland, the case for the bet rests on the match-
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
-  "updatedAt": "2026-09-15T14:00:00-03:00",
+  "updatedAt": "2026-09-18T13:41:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },
     { "name": "NBC Sports", "url": "https://www.nbcsports.com/soccer/news/premier-league-schedule-for-2026-27-season-released" },
-    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" }
+    { "name": "Reuters", "url": "https://www.reuters.com/sports/soccer/liverpool-chelsea-held-wins-forest-ipswich-2026-09-12/" },
+    { "name": "Sports Mole — Foden and Doku latest for Sunderland clash", "url": "https://www.sportsmole.co.uk/football/man-city/injury-news/injuries-and-suspensions/foden-doku-latest-man-city-injury-list-for-sunderland-clash_605275.html" }
   ],
   matchInfo: { date: "2026-09-20", time: "14:00", round: "Matchweek 5", venue: "Etihad Stadium" }
 };

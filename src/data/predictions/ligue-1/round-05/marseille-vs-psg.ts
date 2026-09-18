@@ -31,7 +31,7 @@ How the teams manage fouls and restarts can also affect the rhythm. Olympique Ma
 
 ### Pre-match data status
 
-No confirmed lineup for Olympique Marseille or Paris Saint-Germain was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for Olympique Marseille or Paris Saint-Germain was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released. A later preview check (18 September) reports Achraf Hakimi as unavailable for PSG through a thigh problem, which removes one of Luis Enrique's first-choice wide options for this trip; no equivalent confirmed absence has surfaced for Marseille from the sources checked, so the hosts are treated as unconfirmed rather than assumed fully fit.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,11 +80,12 @@ For Olympique Marseille against Paris Saint-Germain, the case for the bet rests 
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
-  "updatedAt": "2026-09-15T15:45:00-03:00",
+  "updatedAt": "2026-09-18T13:45:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },
-    { "name":"Ligue 1 season calendar","url":"https://ligue1.com/en/articles/l1_article_5292-" }
+    { "name":"Ligue 1 season calendar","url":"https://ligue1.com/en/articles/l1_article_5292-" },
+    { "name":"OneFootball — Marseille vs PSG preview, team news and lineups", "url":"https://onefootball.com/en/news/preview-marseille-vs-psg-team-news-lineups-predictions-41688904" }
   ],
   matchInfo: { date:"2026-09-20", time:"20:45", round:"Matchday 5", venue:"Orange Vélodrome" }
 };

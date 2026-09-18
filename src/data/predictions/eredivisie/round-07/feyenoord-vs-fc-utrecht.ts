@@ -31,7 +31,7 @@ The match also depends on the quality of second balls. Feyenoord may spend more 
 
 ### Pre-match data status
 
-No confirmed lineup for Feyenoord or FC Utrecht was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+Feyenoord are without **Jordan Bos, Gijs Smal, Thomas Beelen, Bart Nieuwkoop and Jakub Moder** through injury, with Gonçalo Borges and Reiss Nelson listed as doubtful (the club is hopeful Nelson will be fit for this match). FC Utrecht remain without **Noah Ohio, Alonzo Engwanda, Kevin Paredes, Miliano Jonathans and Victor Jensen**. No official starting lineup for either club was available at the editorial cutoff; the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For Feyenoord against FC Utrecht, the case for the bet rests on the match-specif
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  "updatedAt": "2026-09-15T16:00:00-03:00",
+  "updatedAt": "2026-09-18T13:42:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
+  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "FCUpdate — Feyenoord vs FC Utrecht team news", "url": "https://www.fcupdate.nl/voetbalnieuws/2026/02/van-persie-staat-onder-druk-maar-kan-weinig-veranderen-tegen-fc-utrecht"}],
   matchInfo: { date: "2026-09-20", time: "12:15", round: "Matchday 7", venue: "De Kuip" }
 };

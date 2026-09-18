@@ -31,7 +31,7 @@ The final layer is physical rather than purely tactical. If NEC Nijmegen spend l
 
 ### Pre-match data status
 
-No confirmed lineup for NEC Nijmegen or Go Ahead Eagles was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+NEC Nijmegen are without **Emre Mor (groin, expected mid-October)**, **Deveron Fonville (ankle, expected early October)** and **Ahmetcan Kaplan (knee, day-to-day)**. Go Ahead Eagles are missing **Gerrit Nauber (leg, day-to-day)** and **Pim Saathof (knee, day-to-day)**. No official starting lineup for either club was available at the editorial cutoff; the official teamsheet takes precedence once released.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,8 +80,8 @@ For NEC Nijmegen against Go Ahead Eagles, the case for the bet rests on the matc
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  "updatedAt": "2026-09-15T16:00:00-03:00",
+  "updatedAt": "2026-09-18T13:42:00-03:00",
   sourceStatus: "partial",
-  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}],
+  sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "FotMob — NEC Nijmegen vs Go Ahead Eagles team news", "url": "https://www.fotmob.com/matches/go-ahead-eagles-vs-nec-nijmegen/1u2lsp"}],
   matchInfo: { date: "2026-09-20", time: "16:45", round: "Matchday 7", venue: "Goffertstadion" }
 };

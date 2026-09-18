@@ -31,7 +31,7 @@ Neither team can rely only on the first plan. If AS Monaco struggle to progress 
 
 ### Pre-match data status
 
-No confirmed lineup for AS Monaco or RC Lens was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released.
+No confirmed lineup for AS Monaco or RC Lens was available at the editorial cutoff, and the retained sources do not establish a full injury, suspension and availability report for either club; the official teamsheet takes precedence once released. A later matchday check (18 September) fills in more of that picture. New Lens boss Yannick Cahuzac named his 22-player travelling squad for his first match in charge; Lens are missing Samson Baidoo, Saud Abdulhamid, Jhoanner Chavez, Yassine Titraoui and Maik Nawrocki, while Souleymane Sagnan returns from suspension and Ismaëlo Ganiou is available despite an earlier hip concern. For Monaco, Takumi Minamino remains out with a cruciate ligament injury, and Ansu Fati (calf) and Anis Sobeir (ankle) are both doubts, which is a more specific fitness picture than was available at the original editorial cutoff and adds real uncertainty to Monaco's attacking options for a match already shaped by Lens's abrupt coaching change.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -80,11 +80,13 @@ For AS Monaco against RC Lens, the case for the bet rests on the match-specific 
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
-  updatedAt: "2026-09-17T10:00:00-03:00",
+  updatedAt: "2026-09-18T13:47:00-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },
-    { "name":"Ligue 1 season calendar","url":"https://ligue1.com/en/articles/l1_article_5292-" }
+    { "name":"Ligue 1 season calendar","url":"https://ligue1.com/en/articles/l1_article_5292-" },
+    { "name":"Sports Mole — Monaco vs Lens preview, team news and lineups", "url":"https://www.sportsmole.co.uk/football/as-monaco/preview/monaco-vs-lens-prediction-team-news-lineups_605206.html" },
+    { "name":"Lensois.com — Lens squad convoked by Yannick Cahuzac for Monaco trip", "url":"https://www.lensois.com/monaco-rc-lens-le-groupe-lensois-convoque-par-yannick-cahuzac/" }
   ],
   matchInfo: { date:"2026-09-18", time:"20:45", round:"Matchday 5", venue:"Stade Louis II" }
 };
