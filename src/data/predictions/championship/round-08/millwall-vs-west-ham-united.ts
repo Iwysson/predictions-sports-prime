@@ -58,13 +58,13 @@ export const millwallVsWestHamUnited: EditorialPrediction = {
       "name": "Southwark News — Millwall injury update",
       "url": "https://southwarknews.co.uk/sport/football/millwall/millwall-head-coach-provides-injury-update-with-key-duo-confirmed-to-miss-west-ham-united-derby/",
       "description": "Team news update checked for this edit: Millwall injury list including Ryan Leonard, Mihailo Ivanovic, Mathis Servais.",
-      "accessedAt": "2026-09-18T18:40:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     },
     {
       "name": "Read West Ham — Millwall vs West Ham team news",
       "url": "https://readwestham.com/2026/09/17/millwall-west-ham-team-news-injuries/",
       "description": "Team news update checked for this edit: West Ham injuries to Joël Veltman and Tomáš Souček.",
-      "accessedAt": "2026-09-18T18:40:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -75,10 +75,10 @@ export const millwallVsWestHamUnited: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "The Den"
   },
-  "updatedAt": "2026-09-18T18:40:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T18:40:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T18:40:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

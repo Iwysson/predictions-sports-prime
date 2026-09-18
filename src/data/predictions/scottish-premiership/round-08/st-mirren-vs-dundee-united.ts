@@ -52,7 +52,7 @@ export const stMirrenVsDundeeUnited: EditorialPrediction = {
       "name": "Sports Mole — St Mirren vs Dundee United preview and team news",
       "url": "https://www.sportsmole.co.uk/football/st-mirren/preview/st-mirren-vs-dundee-utd-prediction-team-news-lineups_605317.html",
       "description": "Re-checked on 18 September for updated injury news.",
-      "accessedAt": "2026-09-18T19:35:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -63,10 +63,10 @@ export const stMirrenVsDundeeUnited: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "Marbill Coaches Stadium"
   },
-  "updatedAt": "2026-09-18T19:35:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T19:35:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T19:35:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

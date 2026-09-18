@@ -12,7 +12,7 @@ const prediction: EditorialPrediction = {
   "analysisFormat": "markdown",
   "published": true,
   "publishedAt": "2026-09-15T08:53:00-03:00",
-  "updatedAt": "2026-09-18T18:20:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   "picks": {
     "main": "Atlético Mineiro to Win",
     "publishedOdds": 1.47,

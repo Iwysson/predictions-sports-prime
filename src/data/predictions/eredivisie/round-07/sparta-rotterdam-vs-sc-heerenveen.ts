@@ -80,7 +80,7 @@ For Sparta Rotterdam against SC Heerenveen, the case for the bet rests on the ma
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  "updatedAt": "2026-09-18T17:50:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   sourceStatus: "partial",
   sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "Sports Mole", "url": "https://www.sportsmole.co.uk/football/sparta-rotterdam/preview/sparta-vs-heerenveen-prediction-team-news-lineups_605349.html"}],
   matchInfo: { date: "2026-09-19", time: "18:45", round: "Matchday 7", venue: "Sparta Stadion Het Kasteel" }

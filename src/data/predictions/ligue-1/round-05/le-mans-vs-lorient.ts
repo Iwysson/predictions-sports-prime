@@ -80,7 +80,7 @@ For Le Mans FC against FC Lorient, the case for the bet rests on the match-speci
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
-  "updatedAt": "2026-09-18T18:25:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },

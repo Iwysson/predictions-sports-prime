@@ -52,7 +52,7 @@ export const portsmouthVsBlackburnRovers: EditorialPrediction = {
       "name": "Portsmouth News — Portsmouth vs Blackburn injury news",
       "url": "https://www.portsmouth.co.uk/sport/football/portsmouth-fc/portsmouth-fc-early-team-injury-news-blackburn-relegation-championship-conor-shaughnessy-hayden-carter-josh-muprhy-todd-cantwell-5623233",
       "description": "Team news update checked for this edit: Portsmouth injury list and Marko Milovanovic fitness race.",
-      "accessedAt": "2026-09-18T18:45:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -63,10 +63,10 @@ export const portsmouthVsBlackburnRovers: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "Fratton Park"
   },
-  "updatedAt": "2026-09-18T18:45:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T18:45:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T18:45:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

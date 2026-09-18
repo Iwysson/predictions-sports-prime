@@ -52,7 +52,7 @@ export const burnleyVsDerbyCounty: EditorialPrediction = {
       "name": "Burnley Express — Derby County v Burnley early team news",
       "url": "https://www.burnleyexpress.net/sport/football/derby-county-v-burnley-early-team-news-15-to-miss-out-through-injury-and-2-fitness-doubts-gallery-5069741",
       "description": "Team news update checked for this edit: Derby County injuries to Matthew Clarke, Derry Murkin and Jacob Zetterstrom.",
-      "accessedAt": "2026-09-18T18:25:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -63,10 +63,10 @@ export const burnleyVsDerbyCounty: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "Turf Moor"
   },
-  "updatedAt": "2026-09-18T18:25:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T18:25:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T18:25:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

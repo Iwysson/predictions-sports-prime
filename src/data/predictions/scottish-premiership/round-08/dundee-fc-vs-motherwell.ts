@@ -52,13 +52,13 @@ export const dundeeFcVsMotherwell: EditorialPrediction = {
       "name": "Motherwell FC — Dundee: A final push before a 3-week pause",
       "url": "https://www.motherwellfc.co.uk/2026/09/16/dundee-a-final-push-before-a-3-week-pause/",
       "description": "Club preview confirming Dundee team-news detail (Besir suspension, Hay/Murray/Wright/Reilly injuries).",
-      "accessedAt": "2026-09-18T19:15:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     },
     {
       "name": "Sports Mole — Dundee vs Motherwell preview and team news",
       "url": "https://www.sportsmole.co.uk/football/dundee/preview/dundee-vs-motherwell-prediction-team-news-lineups_605272.html",
       "description": "Re-checked on 18 September for updated team news.",
-      "accessedAt": "2026-09-18T19:15:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -69,10 +69,10 @@ export const dundeeFcVsMotherwell: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "Dens Park"
   },
-  "updatedAt": "2026-09-18T19:15:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T19:15:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T19:15:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

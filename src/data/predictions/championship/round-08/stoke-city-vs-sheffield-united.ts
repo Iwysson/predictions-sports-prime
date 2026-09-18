@@ -52,7 +52,7 @@ export const stokeCityVsSheffieldUnited: EditorialPrediction = {
       "name": "The Star — Stoke City targeting triple injury boost vs Sheffield United",
       "url": "https://www.thestar.co.uk/sport/football/sheffield-united/sheffield-united-news-stoke-championship-fixture-9076006",
       "description": "Team news update checked for this edit: Sheffield United absences and Stoke fitness returns/doubts.",
-      "accessedAt": "2026-09-18T18:55:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -63,10 +63,10 @@ export const stokeCityVsSheffieldUnited: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "bet365 Stadium"
   },
-  "updatedAt": "2026-09-18T18:55:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T18:55:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T18:55:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

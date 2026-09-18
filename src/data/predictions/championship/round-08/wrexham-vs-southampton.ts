@@ -52,7 +52,7 @@ export const wrexhamVsSouthampton: EditorialPrediction = {
       "name": "The Football Faithful — Wrexham vs Southampton preview and team news",
       "url": "https://thefootballfaithful.com/wrexham-vs-southampton-match-preview-and-team-news/",
       "description": "Team news update checked for this edit: Wrexham and Southampton injury lists.",
-      "accessedAt": "2026-09-18T19:00:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -63,10 +63,10 @@ export const wrexhamVsSouthampton: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "STōK Cae Ras"
   },
-  "updatedAt": "2026-09-18T19:00:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T19:00:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T19:00:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

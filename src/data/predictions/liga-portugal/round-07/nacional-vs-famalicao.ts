@@ -12,7 +12,7 @@ export const nacionalVsFamalicao: EditorialPrediction = {
   "analysisFormat": "markdown",
   "published": true,
   "publishedAt": "2026-09-15T06:30:00-03:00",
-  "updatedAt": "2026-09-18T18:15:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   "picks": {
     "main": "Over 1.5 Goals + Over 7.5 Corners",
     "publishedOdds": 1.9

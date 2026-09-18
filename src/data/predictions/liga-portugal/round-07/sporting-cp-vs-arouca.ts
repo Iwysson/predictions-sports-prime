@@ -12,7 +12,7 @@ export const sportingCpVsArouca: EditorialPrediction = {
   "analysisFormat": "markdown",
   "published": true,
   "publishedAt": "2026-09-15T06:30:00-03:00",
-  "updatedAt": "2026-09-18T18:20:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   "picks": {
     "main": "Sporting CP -1.5 Handicap",
     "publishedOdds": 1.57

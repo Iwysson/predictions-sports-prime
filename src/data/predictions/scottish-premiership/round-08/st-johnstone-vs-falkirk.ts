@@ -52,7 +52,7 @@ export const stJohnstoneVsFalkirk: EditorialPrediction = {
       "name": "Sports Mole — St Johnstone vs Falkirk preview and team news",
       "url": "https://www.sportsmole.co.uk/football/st-johnstone/preview/st-johnstone-vs-falkirk-prediction-team-news-lineups_605336.html",
       "description": "Re-checked on 18 September; confirms Falkirk's 2-1 win over Hearts and Jamie Gullan fitness update.",
-      "accessedAt": "2026-09-18T19:30:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -63,10 +63,10 @@ export const stJohnstoneVsFalkirk: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "McDiarmid Park"
   },
-  "updatedAt": "2026-09-18T19:30:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T19:30:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T19:30:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

@@ -58,13 +58,13 @@ export const cardiffCityVsCharltonAthletic: EditorialPrediction = {
       "name": "Sports Mole — Cardiff City vs Charlton Athletic preview",
       "url": "https://www.sportsmole.co.uk/football/cardiff-city/preview/cardiff-vs-charlton-prediction-team-news-lineups_605216.html",
       "description": "Team news update checked for this edit: Cardiff injuries to Rubin Colwill, Isaak Davies, Calum Chambers and Will Fish.",
-      "accessedAt": "2026-09-18T18:30:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     },
     {
       "name": "SportsDunia — Charlton Athletic injuries",
       "url": "https://www.sportsdunia.com/football-teams/charlton-athletic-injuries",
       "description": "Team news update checked for this edit: Collins Sichenje ACL injury, long-term absence.",
-      "accessedAt": "2026-09-18T18:30:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -75,10 +75,10 @@ export const cardiffCityVsCharltonAthletic: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "Cardiff City Stadium"
   },
-  "updatedAt": "2026-09-18T18:30:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T18:30:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T18:30:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

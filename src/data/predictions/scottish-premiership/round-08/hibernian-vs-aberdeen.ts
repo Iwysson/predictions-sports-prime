@@ -58,7 +58,7 @@ export const hibernianVsAberdeen: EditorialPrediction = {
       "name": "Sports Mole — Hibernian vs Aberdeen preview and team news",
       "url": "https://www.sportsmole.co.uk/football/hibernian/preview/hibernian-vs-aberdeen-prediction-team-news-lineups_605332.html",
       "description": "Re-checked on 18 September for updated injury and squad news.",
-      "accessedAt": "2026-09-18T19:20:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -69,10 +69,10 @@ export const hibernianVsAberdeen: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "Easter Road"
   },
-  "updatedAt": "2026-09-18T19:20:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T19:20:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T19:20:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

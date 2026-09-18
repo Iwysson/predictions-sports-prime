@@ -58,7 +58,7 @@ export const lincolnCityVsSwanseaCity: EditorialPrediction = {
       "name": "The Stacey West — Lincoln City injury update",
       "url": "https://staceywest.net/2026/09/17/lincoln-city-injury-update-ahead-of-swansea-city-clash/",
       "description": "Team news update checked for this edit: Lincoln City absences (Darikwa, Hamer, Melia, Elder) and Swansea's Cameron Burgess injury.",
-      "accessedAt": "2026-09-18T18:35:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -69,10 +69,10 @@ export const lincolnCityVsSwanseaCity: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "LNER Stadium"
   },
-  "updatedAt": "2026-09-18T18:35:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T18:35:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T18:35:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

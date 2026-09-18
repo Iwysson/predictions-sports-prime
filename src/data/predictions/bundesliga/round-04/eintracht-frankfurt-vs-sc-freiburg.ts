@@ -80,7 +80,7 @@ For Eintracht Frankfurt against SC Freiburg, the case for the bet rests on the m
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-18T18:45:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   sourceStatus: "partial",
   sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "Eintracht Frankfurt — Vorschau SGE vs SC Freiburg", "url": "https://en.eintracht.de/news/vorschau-freiburg-vor-der-brust-179307/"}],
   matchInfo: { date: "2026-09-19", time: "15:30", round: "Matchday 4", venue: "Deutsche Bank Park" }

@@ -12,7 +12,7 @@ const prediction: EditorialPrediction = {
   "analysisFormat": "markdown",
   "published": true,
   "publishedAt": "2026-09-15T08:53:00-03:00",
-  "updatedAt": "2026-09-18T18:40:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   "picks": {
     "main": "Over 2.5 Goals",
     "publishedOdds": 1.88,
