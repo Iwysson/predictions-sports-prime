@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-18T20:56:51.408Z",
+  "generatedAt": "2026-09-18T22:56:49.851Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -3280,14 +3280,15 @@
             "time": "21:00",
             "homeTeam": "Espanyol",
             "awayTeam": "Elche",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 1,
+            "awayScore": 3,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401882862",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-18T19:00Z"
+            "kickoffUtc": "2026-09-18T19:00Z",
+            "fotmobMatchId": 5868075
           },
           {
             "round": 7,
