@@ -12,7 +12,7 @@ export const gilVicenteVsMaritimo: EditorialPrediction = {
   "analysisFormat": "markdown",
   "published": true,
   "publishedAt": "2026-09-15T06:30:00-03:00",
-  "updatedAt": "2026-09-18T18:10:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   "picks": {
     "main": "Over 1.5 Goals",
     "publishedOdds": 1.47

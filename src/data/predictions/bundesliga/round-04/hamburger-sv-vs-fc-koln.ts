@@ -80,7 +80,7 @@ For Hamburger SV against 1. FC K\u00f6ln, the case for the bet rests on the matc
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-18T18:50:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   sourceStatus: "partial",
   sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "Bulinews — Predicted Bundesliga lineups: Matchday 4", "url": "https://bulinews.com/predicted-bundesliga-lineups-matchday-4-starting-xis"}],
   matchInfo: { date: "2026-09-19", time: "15:30", round: "Matchday 4", venue: "Volksparkstadion" }

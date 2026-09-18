@@ -80,7 +80,7 @@ For Borussia M\u00f6nchengladbach against Mainz 05, the case for the bet rests o
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-18T18:40:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   sourceStatus: "partial",
   sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "FotMob team corners", "url": "https://www.fotmob.com/leagues/54/stats/season/40040/teams/corner_taken_team/bundesliga-teams"}, {"name": "Bulinews — Gladbach vs Mainz preview", "url": "https://bulinews.com/borussia-monchengladbach-1-fsv-mainz-05-preview-die-fohlen-looking-ease-relegation-concerns-borussia-park"}],
   matchInfo: { date: "2026-09-19", time: "15:30", round: "Matchday 4", venue: "Borussia-Park" }

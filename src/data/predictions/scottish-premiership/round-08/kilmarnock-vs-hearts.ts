@@ -58,7 +58,7 @@ export const kilmarnockVsHearts: EditorialPrediction = {
       "name": "Sports Mole — Kilmarnock vs Hearts preview and team news",
       "url": "https://www.sportsmole.co.uk/football/kilmarnock/preview/kilmarnock-vs-hearts-prediction-team-news-lineups_605342.html",
       "description": "Re-checked on 18 September; no new confirmed absences reported at time of check.",
-      "accessedAt": "2026-09-18T19:25:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -69,10 +69,10 @@ export const kilmarnockVsHearts: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "BBSP Stadium Rugby Park"
   },
-  "updatedAt": "2026-09-18T19:25:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T19:25:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T19:25:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

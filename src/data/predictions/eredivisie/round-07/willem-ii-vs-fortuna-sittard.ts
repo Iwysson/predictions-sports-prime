@@ -80,7 +80,7 @@ For Willem II against Fortuna Sittard, the case for the bet rests on the match-s
   },
   published: true,
   publishedAt: "2026-09-14T08:15:00-03:00",
-  "updatedAt": "2026-09-18T17:55:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   sourceStatus: "partial",
   sources: [{"name": "KNVB", "url": "https://www.knvb.nl/competities/eredivisie/programma"}, {"name": "Voetbal International", "url": "https://www.vi.nl/competities/eredivisie/2026-2027/stand"}, {"name": "Sports Mole", "url": "https://www.sportsmole.co.uk/football/willem-ii/preview/willem-ii-vs-sittard-prediction-team-news-lineups_605308.html"}],
   matchInfo: { date: "2026-09-19", time: "21:00", round: "Matchday 7", venue: "Koning Willem II Stadion" }

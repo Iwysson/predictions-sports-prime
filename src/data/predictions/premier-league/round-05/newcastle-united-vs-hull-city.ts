@@ -81,7 +81,7 @@ For Newcastle United against Hull City, the case for the bet rests on the match-
   },
   published: true,
   publishedAt: "2026-09-14T08:25:00-03:00",
-  "updatedAt": "2026-09-18T18:50:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   sourceStatus: "partial",
   sources: [
     { "name": "Premier League", "url": "https://www.premierleague.com/en/news/4678381/fixture-amendments-for-premier-league-matches-in-august-and-september/" },

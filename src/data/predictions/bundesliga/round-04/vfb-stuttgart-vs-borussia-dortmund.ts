@@ -80,7 +80,7 @@ For VfB Stuttgart against Borussia Dortmund, the case for the bet rests on the m
   },
   published: true,
   publishedAt: "2026-09-14T09:20:00-03:00",
-  "updatedAt": "2026-09-18T18:55:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   sourceStatus: "partial",
   sources: [{"name": "Bundesliga Matchday 4", "url": "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/4/"}, {"name": "Bundesliga Table", "url": "https://www.bundesliga.com/en/bundesliga/table"}, {"name": "FotMob team corners", "url": "https://www.fotmob.com/leagues/54/stats/season/40040/teams/corner_taken_team/bundesliga-teams"}, {"name": "Khelnow — VfB Stuttgart vs Borussia Dortmund preview", "url": "https://khelnow.com/football/vfb-stuttgart-vs-borussia-dortmund-preview-bundesliga-202609"}, {"name": "Bulinews — VfB Stuttgart vs Borussia Dortmund preview", "url": "https://bulinews.com/vfb-stuttgart-borussia-dortmund-preview-feisty-foes-reunite-once-more"}],
   matchInfo: { date: "2026-09-19", time: "18:30", round: "Matchday 4", venue: "MHPArena" }

@@ -52,13 +52,13 @@ export const birminghamCityVsMiddlesbrough: EditorialPrediction = {
       "name": "Sports Mole — Birmingham City vs Middlesbrough preview",
       "url": "https://www.sportsmole.co.uk/football/birmingham-city/preview/birmingham-vs-middlesbrough-prediction-team-news-lineups_605329.html",
       "description": "Team news update checked for this edit: Patrick Roberts fitness doubt, Adilson Malanda injury boost.",
-      "accessedAt": "2026-09-18T18:20:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     },
     {
       "name": "The72 — Birmingham City injury latest",
       "url": "https://the72.co.uk/2026/09/14/birmingham-city-patrick-roberts-injury-latest-pre-middlesbrough/",
       "description": "Team news update checked for this edit: Marc Leonard unavailable, Paik Seung-Ho recall.",
-      "accessedAt": "2026-09-18T18:20:00.000Z"
+      "accessedAt": "2026-09-18T09:46:37.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",
@@ -69,10 +69,10 @@ export const birminghamCityVsMiddlesbrough: EditorialPrediction = {
     "round": "Matchday 8",
     "venue": "St Andrew's @ Knighthead Park"
   },
-  "updatedAt": "2026-09-18T18:20:00.000Z",
+  "updatedAt": "2026-09-18T09:46:37.000Z",
   "freshness": {
-    "editorialUpdatedAt": "2026-09-18T18:20:00.000Z",
-    "teamNewsUpdatedAt": "2026-09-18T18:20:00.000Z",
+    "editorialUpdatedAt": "2026-09-18T09:46:37.000Z",
+    "teamNewsUpdatedAt": "2026-09-18T09:46:37.000Z",
     "lineupUpdatedAt": "2026-09-15T21:47:44.000Z",
     "statisticsUpdatedAt": "2026-09-15T21:47:44.000Z"
   }

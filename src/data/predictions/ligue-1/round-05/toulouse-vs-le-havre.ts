@@ -80,7 +80,7 @@ For Toulouse FC against Le Havre AC, the case for the bet rests on the match-spe
   },
   published: true,
   publishedAt: "2026-09-14T09:08:00-03:00",
-  "updatedAt": "2026-09-18T18:40:00-03:00",
+  "updatedAt": "2026-09-18T06:46:37-03:00",
   sourceStatus: "partial",
   sources: [
     { "name":"Ligue 1 official calendar","url":"https://ligue1.com/en/calendar/ligue1" },
