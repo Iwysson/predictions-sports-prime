@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T16:31:42.189Z",
+  "generatedAt": "2026-09-19T18:46:40.649Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -714,14 +714,15 @@
             "time": "17:30",
             "homeTeam": "Nottingham Forest",
             "awayTeam": "Coventry City",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 0,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401879270",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-19T16:30Z"
+            "kickoffUtc": "2026-09-19T16:30Z",
+            "fotmobMatchId": 5795463
           },
           {
             "round": 5,
@@ -3332,14 +3333,15 @@
             "time": "18:30",
             "homeTeam": "Celta Vigo",
             "awayTeam": "Racing Santander",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 5,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401882864",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-19T16:30Z"
+            "kickoffUtc": "2026-09-19T16:30Z",
+            "fotmobMatchId": 5868073
           },
           {
             "round": 7,
@@ -5339,14 +5341,15 @@
             "time": "18:30",
             "homeTeam": "VfB Stuttgart",
             "awayTeam": "Borussia Dortmund",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 0,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401884789",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-19T16:30Z"
+            "kickoffUtc": "2026-09-19T16:30Z",
+            "fotmobMatchId": 5881177
           },
           {
             "round": 4,
@@ -7334,14 +7337,15 @@
             "time": "18:00",
             "homeTeam": "AS Roma",
             "awayTeam": "Internazionale",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 2,
+            "awayScore": 2,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401874753",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-19T16:00Z"
+            "kickoffUtc": "2026-09-19T16:00Z",
+            "fotmobMatchId": 5749681
           },
           {
             "round": 5,
@@ -11399,14 +11403,15 @@
             "time": "17:15",
             "homeTeam": "Paris",
             "awayTeam": "Strasbourg",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 2,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401876451",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-19T15:15Z"
+            "kickoffUtc": "2026-09-19T15:15Z",
+            "fotmobMatchId": 5802943
           },
           {
             "round": 5,
@@ -13659,14 +13664,15 @@
             "time": "18:45",
             "homeTeam": "Sparta Rotterdam",
             "awayTeam": "Heerenveen",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 0,
+            "awayScore": 4,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401875601",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-19T16:45Z"
+            "kickoffUtc": "2026-09-19T16:45Z",
+            "fotmobMatchId": 5781756
           },
           {
             "round": 7,
