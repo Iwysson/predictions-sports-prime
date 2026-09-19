@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T21:03:59.528Z",
+  "generatedAt": "2026-09-19T22:53:47.779Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -9753,14 +9753,15 @@
             "time": "20:30",
             "homeTeam": "Sporting CP",
             "awayTeam": "Arouca",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 2,
+            "awayScore": 2,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401885431",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-19T19:30Z"
+            "kickoffUtc": "2026-09-19T19:30Z",
+            "fotmobMatchId": 5887643
           },
           {
             "round": 7,
