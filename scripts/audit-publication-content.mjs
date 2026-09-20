@@ -7,8 +7,8 @@ const future = editorialPredictions.filter(
 const failures = [];
 const paragraphs = [];
 
-const structural = /^(?:#{1,6}\s|\|.*\||[-*]\s+(?:\*\*)?(?:competition|date|kick-off|round|venue|location|prediction|odds|sources)|(?:prediction|odds|sources|match information|expected lineups|responsible gambling)\s*:)/i;
-const routineEditorial = /(?:raw implied probability|calculated as \*\*?1\s*\/|market-price context only|team-news status remains provisional|no suspension or eligibility issue is stated unless)/i;
+const structural = /^(?:#{1,6}\s|\|.*\||[-*]\s+(?:\*\*)?(?:competition|date|kick-off|round|venue|location|prediction|odds|sources)|\*{0,2}(?:competition|date|kick-off|round|venue|location|prediction|odds|sources|match information|expected lineups|responsible gambling)\*{0,2}\s*:)/i;
+const routineEditorial = /(?:raw implied probability|calculated as \*\*?1\s*\/|market-price context only|team-news status remains provisional|no suspension or eligibility issue is stated unless|^\*\*[^*]+ call-up:|^statistical coverage is partial|^the core is intentionally limited)/i;
 const internal = [
   /\b(?:TODO|FIXME|DEBUG|INTERNAL)\b/i,
   /\b(?:internal note|developer note|editorial note interna|system message|audit status|review required|needs review|AI draft|draft generated|manual approval required|pending research|needs verification|insert data|replace this|as an AI)\b/i,

@@ -1,6 +1,6 @@
 import { LegalPage } from "@/components/LegalPage";
 import { buildLegalMetadata } from "@/lib/legal-pages";
-import { publicContactEmail } from "@/lib/editorial-identity";
+import { publicContactEmail, siteResponsibleName } from "@/lib/editorial-identity";
 import { JsonLd } from "@/components/JsonLd";
 import { institutionalPageJsonLd } from "@/lib/seo";
 
@@ -26,7 +26,7 @@ export default function ContactPage() {
         },
         {
           title: "Contact details",
-          content: <p>The public contact for Predictions Sports Prime is <a className="legal-link" href={`mailto:${publicContactEmail}`}>{publicContactEmail}</a>.</p>,
+          content: <p>The person responsible for Predictions Sports Prime is {siteResponsibleName}. For general enquiries and privacy requests, email <a className="legal-link" href={`mailto:${publicContactEmail}`}>{publicContactEmail}</a>. See our <a className="legal-link" href="/privacy/">Privacy Policy</a> for details of data handling and your choices.</p>,
         },
         {
           title: "Response and scope",

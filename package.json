@@ -12,6 +12,7 @@
     "nfl:standings:sync": "tsx scripts/sync-nfl-standings.mjs",
     "audit:nfl-standings": "tsx scripts/audit-nfl-standings.mjs",
     "audit:publication-content": "node --import tsx scripts/audit-publication-content.mjs",
+    "audit:psp-editorial-standard": "node --import tsx scripts/audit-psp-editorial-standard.mjs",
     "audit:production-integrity": "node scripts/audit-production-integrity.mjs",
     "audit:seo": "tsx scripts/audit-seo.mjs",
     "audit:editorial-quality": "tsx scripts/audit-editorial-quality.mjs",

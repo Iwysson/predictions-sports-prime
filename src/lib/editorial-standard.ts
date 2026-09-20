@@ -222,7 +222,7 @@ export function validatePspEditorialStandard(prediction: EditorialPrediction) {
   if (rows.length) errors.push(...validatePartialStatisticalCoreRows(rows).map((error) => `Statistical Core: ${error}`));
   else if (!/metrics?[\s\S]{0,120}(?:remain|were|was|are) unavailable|no sourced home.*away split/i.test(markdown)) errors.push("partial Statistical Core needs an explicit missing-data disclosure");
 
-  if (!/\b(?:risk|concern|danger|limitation|uncertain|however|although|despite|threat|failure|fragile|resistance|counter-evidence|against the (?:bet|pick|selection))\b/i.test(markdown) &&
+  if (!/\b(?:risk|concern|danger|limitation|uncertain|however|although|despite|threat|failure|fragile|resistance|vulnerable|warning|stricter demand|harder to justify|counter-evidence|against the (?:bet|pick|selection))\b/i.test(markdown) &&
       !(!naturalRiskPolicyApplies && /(?:Conflict Detector|Risks and Counter-Signals)/i.test(markdown))) {
     errors.push("integrated risk / contrary-evidence analysis is required");
   }

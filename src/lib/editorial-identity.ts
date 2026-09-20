@@ -6,7 +6,9 @@ export const editorialAuthor = {
   path: "/author/iwysson-nascimento/",
 } as const;
 
-export const publicContactEmail = "iwysson.wesklley1995@gmail.com";
+export const publicContactEmail = "iwysson.wesklley.1995@gmail.com";
+
+export const siteResponsibleName = "Iwysson Wesklley Francisco do Nascimento";
 
 export function editorialAuthorUrl() {
   return absoluteUrl(editorialAuthor.path);

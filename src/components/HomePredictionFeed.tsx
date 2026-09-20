@@ -70,9 +70,11 @@ export function HomePredictionFeed({
   discovery?: ReactNode;
 }) {
   const copy = homeFeedCopy(locale);
-  void localizedMatchSlugs;
+  const localizedMatchSet = new Set(localizedMatchSlugs);
   const matchHref = (slug: string) =>
-    locale !== "en" ? localePath(locale, `/match/${slug}/`) : `/match/${slug}/`;
+    locale !== "en" && localizedMatchSet.has(slug)
+      ? localePath(locale, `/match/${slug}/`)
+      : `/match/${slug}/`;
   const separator = locale === "en" ? "vs" : seoLocales[locale].separator;
   const now = useClientNow();
   if (!now) {

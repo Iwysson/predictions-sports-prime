@@ -17,15 +17,17 @@ export function MatchCard({
   now = new Date(),
   locale = "en",
   discoverable = true,
+  href,
 }: {
   match: MatchPreview;
   now?: Date | string;
   locale?: SeoLocale;
   discoverable?: boolean;
+  href?: string;
 }) {
-  const href = locale !== "en"
+  const matchHref = href ?? (locale !== "en"
     ? localePath(locale, `/match/${match.slug}/`)
-    : `/match/${match.slug}/`;
+    : `/match/${match.slug}/`);
   const league = leaguesBySlug[match.league];
   const { t } = useI18n();
   const showComingSoon = canRenderComingSoon(match.fixtureStatus, match.status === "published");
@@ -76,7 +78,7 @@ export function MatchCard({
 
         {match.status === "published" && discoverable ? (
           <Link
-            href={href}
+            href={matchHref}
             className="button button--small"
             aria-label={`${match.homeTeam} ${locale === "en" ? "vs" : seoLocales[locale].separator} ${match.awayTeam} — ${t("predictionAvailable")}`}
           >

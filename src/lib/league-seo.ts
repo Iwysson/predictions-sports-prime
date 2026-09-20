@@ -20,6 +20,7 @@ const leagueSearchAliases: Partial<Record<LeagueConfig["slug"], readonly string[
   eliteserien: ["Norwegian Eliteserien", "Norway Eliteserien", "Eliteserien Norway"],
   mls: ["Major League Soccer", "MLS USA", "United States MLS"],
   "uefa-europa-league": ["Europa League", "UEL", "UEFA Cup"],
+  "uefa-nations-league-b": ["Nations League B", "UNL League B", "UEFA Nations League Division B"],
 };
 
 const leagueEditorialIntros: Partial<Record<LeagueConfig["slug"], string>> = {
@@ -36,6 +37,7 @@ const leagueEditorialIntros: Partial<Record<LeagueConfig["slug"], string>> = {
   "efl-cup": "Assess EFL Cup predictions with rotation, knockout incentives and divisional context treated separately from ordinary league form.",
   championship: "Compare Championship predictions through demanding schedules, home-away splits and the small margins that shape each market.",
   "scottish-premiership": "Review Scottish Premiership predictions using current venue evidence, team availability and the tactical route behind the pick.",
+  "uefa-nations-league-b": "Follow UEFA Nations League B predictions across the 2026/27 groups, with squad availability, projected lineups and match-specific tactical evidence kept alongside each published price.",
 };
 
 export function leagueSeoKeywords(league: LeagueConfig) {

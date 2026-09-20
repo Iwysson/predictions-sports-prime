@@ -183,6 +183,7 @@ export default async function LocalizedLeague({
                 surface={roundSurface}
                 locale={locale}
                 indexableMatchSlugs={indexableMatchSlugs}
+                localizedMatchSlugs={localizedMatchSlugs}
               />
             </LeaguePageText>
 

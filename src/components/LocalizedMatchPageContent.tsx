@@ -21,6 +21,7 @@ import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategor
 import { leaguesBySlug } from "@/data/leagues";
 import { matches } from "@/data/matches";
 import { editorialPredictions } from "@/data/predictions";
+import { hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { selectRelatedPredictions } from "@/lib/related-predictions";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
@@ -145,10 +146,6 @@ function formatEditorialDate(value: string, locale: SeoLocaleSlug) {
   }).format(new Date(value));
 }
 
-function relatedPathExists(_match: Match, _locale: SeoLocaleSlug) {
-  return true;
-}
-
 function resultLabel(
   result: NonNullable<Match["betResult"]>,
   locale: SeoLocaleSlug
@@ -182,7 +179,7 @@ export function LocalizedMatchPageContent({
   const selectedRelatedMatches = selectRelatedPredictions(match, matches);
   const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions);
   const localizedRelatedSlugs = selectedRelatedMatches
-    .filter((item) => relatedPathExists(item, locale))
+    .filter((item) => hasCompleteLocalizedEditorial(item.slug, locale))
     .map((item) => item.slug);
   const hasFinalScore = isHistoryEligibleFixture({
     status: match.fixtureStatus,
