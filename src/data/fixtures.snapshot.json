@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T22:53:47.779Z",
+  "generatedAt": "2026-09-20T13:42:43.601Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -7370,14 +7370,15 @@
             "time": "12:30",
             "homeTeam": "Fiorentina",
             "awayTeam": "Napoli",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 1,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401874934",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T10:30Z"
+            "kickoffUtc": "2026-09-20T10:30Z",
+            "fotmobMatchId": 5749683
           },
           {
             "round": 5,
@@ -13720,14 +13721,15 @@
             "time": "12:15",
             "homeTeam": "Feyenoord Rotterdam",
             "awayTeam": "Utrecht",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 5,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401875596",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T10:15Z"
+            "kickoffUtc": "2026-09-20T10:15Z",
+            "fotmobMatchId": 5781750
           },
           {
             "round": 7,
