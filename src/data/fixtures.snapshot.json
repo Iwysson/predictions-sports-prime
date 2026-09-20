@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-20T19:15:56.583Z",
+  "generatedAt": "2026-09-20T21:35:25.109Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -3432,14 +3432,15 @@
             "time": "21:00",
             "homeTeam": "Valencia",
             "awayTeam": "Real Sociedad",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 2,
+            "awayScore": 3,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401882858",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T19:00Z"
+            "kickoffUtc": "2026-09-20T19:00Z",
+            "fotmobMatchId": 5868079
           }
         ]
       },
@@ -5397,14 +5398,15 @@
             "time": "19:30",
             "homeTeam": "SC Paderborn 07",
             "awayTeam": "TSG Hoffenheim",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 3,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401884782",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T17:30Z"
+            "kickoffUtc": "2026-09-20T17:30Z",
+            "fotmobMatchId": 5881175
           }
         ]
       },
@@ -7443,14 +7445,15 @@
             "time": "20:45",
             "homeTeam": "AC Milan",
             "awayTeam": "Lecce",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 3,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401874944",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T18:45Z"
+            "kickoffUtc": "2026-09-20T18:45Z",
+            "fotmobMatchId": 5749680
           }
         ]
       },
@@ -9846,14 +9849,15 @@
             "time": "20:30",
             "homeTeam": "Porto",
             "awayTeam": "Benfica",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 3,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401885433",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T19:30Z"
+            "kickoffUtc": "2026-09-20T19:30Z",
+            "fotmobMatchId": 5887641
           }
         ]
       },
@@ -11536,14 +11540,15 @@
             "time": "20:45",
             "homeTeam": "Marseille",
             "awayTeam": "Paris Saint-Germain",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 1,
+            "awayScore": 2,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401876449",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T18:45Z"
+            "kickoffUtc": "2026-09-20T18:45Z",
+            "fotmobMatchId": 5802945
           }
         ]
       },
