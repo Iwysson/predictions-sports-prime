@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-20T13:42:43.601Z",
+  "generatedAt": "2026-09-20T17:00:31.680Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -730,14 +730,15 @@
             "time": "14:00",
             "homeTeam": "Bournemouth",
             "awayTeam": "Liverpool",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 0,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401879276",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T13:00Z"
+            "kickoffUtc": "2026-09-20T13:00Z",
+            "fotmobMatchId": 5795455
           },
           {
             "round": 5,
@@ -745,14 +746,15 @@
             "time": "TBD",
             "homeTeam": "Leeds United",
             "awayTeam": "Crystal Palace",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 0,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401879273",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-20T13:00Z"
+            "kickoffUtc": "2026-09-20T13:00Z",
+            "fotmobMatchId": 5795460
           },
           {
             "round": 5,
@@ -760,14 +762,15 @@
             "time": "TBD",
             "homeTeam": "Manchester City",
             "awayTeam": "Sunderland",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 5,
+            "awayScore": 3,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401879272",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-20T13:00Z"
+            "kickoffUtc": "2026-09-20T13:00Z",
+            "fotmobMatchId": 5795461
           },
           {
             "round": 5,
@@ -3365,14 +3368,15 @@
             "time": "14:00",
             "homeTeam": "Getafe",
             "awayTeam": "Málaga",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 1,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401882861",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T12:00Z"
+            "kickoffUtc": "2026-09-20T12:00Z",
+            "fotmobMatchId": 5868076
           },
           {
             "round": 7,
@@ -3380,14 +3384,15 @@
             "time": "16:15",
             "homeTeam": "Atlético Madrid",
             "awayTeam": "Real Madrid",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 2,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401882865",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T14:15Z"
+            "kickoffUtc": "2026-09-20T14:15Z",
+            "fotmobMatchId": 5868072
           },
           {
             "round": 7,
@@ -5358,14 +5363,15 @@
             "time": "15:30",
             "homeTeam": "Bayer Leverkusen",
             "awayTeam": "RB Leipzig",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 2,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401884788",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T13:30Z"
+            "kickoffUtc": "2026-09-20T13:30Z",
+            "fotmobMatchId": 5881170
           },
           {
             "round": 4,
@@ -7386,14 +7392,15 @@
             "time": "15:00",
             "homeTeam": "Frosinone",
             "awayTeam": "Como",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 2,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401874752",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T13:00Z"
+            "kickoffUtc": "2026-09-20T13:00Z",
+            "fotmobMatchId": 5749684
           },
           {
             "round": 5,
@@ -7401,14 +7408,15 @@
             "time": "TBD",
             "homeTeam": "Parma",
             "awayTeam": "Genoa",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 2,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401874801",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-20T13:00Z"
+            "kickoffUtc": "2026-09-20T13:00Z",
+            "fotmobMatchId": 5749687
           },
           {
             "round": 5,
@@ -9770,14 +9778,15 @@
             "time": "15:30",
             "homeTeam": "Vitória de Guimaraes",
             "awayTeam": "Moreirense",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 1,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401885430",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T14:30Z"
+            "kickoffUtc": "2026-09-20T14:30Z",
+            "fotmobMatchId": 5887644
           },
           {
             "round": 7,
@@ -9785,14 +9794,15 @@
             "time": "TBD",
             "homeTeam": "Estrela",
             "awayTeam": "Académico de Viseu",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 0,
+            "awayScore": 2,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401885437",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-20T14:30Z"
+            "kickoffUtc": "2026-09-20T14:30Z",
+            "fotmobMatchId": 5887637
           },
           {
             "round": 7,
@@ -11488,14 +11498,15 @@
             "time": "15:00",
             "homeTeam": "AJ Auxerre",
             "awayTeam": "Brest",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 2,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401876456",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T13:00Z"
+            "kickoffUtc": "2026-09-20T13:00Z",
+            "fotmobMatchId": 5802938
           },
           {
             "round": 5,
@@ -13737,14 +13748,15 @@
             "time": "14:30",
             "homeTeam": "Twente",
             "awayTeam": "PSV Eindhoven",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 3,
+            "awayScore": 2,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401875593",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T12:30Z"
+            "kickoffUtc": "2026-09-20T12:30Z",
+            "fotmobMatchId": 5781753
           },
           {
             "round": 7,
@@ -13752,14 +13764,15 @@
             "time": "TBD",
             "homeTeam": "AZ Alkmaar",
             "awayTeam": "Telstar",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 1,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401875595",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-20T12:30Z"
+            "kickoffUtc": "2026-09-20T12:30Z",
+            "fotmobMatchId": 5781752
           },
           {
             "round": 7,
@@ -13767,14 +13780,15 @@
             "time": "16:45",
             "homeTeam": "NEC Nijmegen",
             "awayTeam": "Go Ahead Eagles",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 1,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401875594",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T14:45Z"
+            "kickoffUtc": "2026-09-20T14:45Z",
+            "fotmobMatchId": 5781751
           }
         ]
       },
