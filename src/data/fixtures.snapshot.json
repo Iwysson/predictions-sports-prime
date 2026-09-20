@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-20T17:00:31.680Z",
+  "generatedAt": "2026-09-20T19:15:56.583Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -778,14 +778,15 @@
             "time": "16:30",
             "homeTeam": "Fulham",
             "awayTeam": "Manchester United",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 1,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401878777",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T15:30Z"
+            "kickoffUtc": "2026-09-20T15:30Z",
+            "fotmobMatchId": 5795459
           }
         ]
       },
@@ -3415,14 +3416,15 @@
             "time": "TBD",
             "homeTeam": "Villarreal",
             "awayTeam": "Levante",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 3,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401882857",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-20T16:30Z"
+            "kickoffUtc": "2026-09-20T16:30Z",
+            "fotmobMatchId": 5868080
           },
           {
             "round": 7,
@@ -5379,14 +5381,15 @@
             "time": "17:30",
             "homeTeam": "Schalke 04",
             "awayTeam": "SV Elversberg",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 0,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401884783",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T15:30Z"
+            "kickoffUtc": "2026-09-20T15:30Z",
+            "fotmobMatchId": 5881176
           },
           {
             "round": 4,
@@ -7424,14 +7427,15 @@
             "time": "18:00",
             "homeTeam": "Juventus",
             "awayTeam": "Atalanta",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "scheduled",
-            "dataSource": "espn",
+            "homeScore": 2,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401874757",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T16:00Z"
+            "kickoffUtc": "2026-09-20T16:00Z",
+            "fotmobMatchId": 5749685
           },
           {
             "round": 5,
@@ -9810,14 +9814,15 @@
             "time": "18:00",
             "homeTeam": "Santa Clara",
             "awayTeam": "Braga",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 0,
+            "awayScore": 0,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401885432",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T17:00Z"
+            "kickoffUtc": "2026-09-20T17:00Z",
+            "fotmobMatchId": 5887642
           },
           {
             "round": 7,
@@ -9825,14 +9830,15 @@
             "time": "TBD",
             "homeTeam": "Estoril",
             "awayTeam": "Casa Pia",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 1,
+            "awayScore": 2,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401885436",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-09-20T17:00Z"
+            "kickoffUtc": "2026-09-20T17:00Z",
+            "fotmobMatchId": 5887638
           },
           {
             "round": 7,
@@ -11514,14 +11520,15 @@
             "time": "17:15",
             "homeTeam": "Nice",
             "awayTeam": "Lille",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "rescheduled",
-            "dataSource": "espn",
+            "homeScore": 2,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401876452",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-09-20T15:15Z"
+            "kickoffUtc": "2026-09-20T15:15Z",
+            "fotmobMatchId": 5802942
           },
           {
             "round": 5,
