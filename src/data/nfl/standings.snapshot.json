@@ -1,7 +1,7 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-09-18T04:41:11.023Z",
+  "generatedAt": "2026-09-20T20:47:32.519Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
@@ -16,8 +16,8 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "bal",
-      "wins": 1,
+      "teamId": "cin",
+      "wins": 2,
       "losses": 0,
       "ties": 0,
       "winPct": 1,
@@ -52,48 +52,39 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "nyj",
+      "teamId": "ne",
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "winPct": 1,
+      "winPct": 0.5,
       "conferenceRank": 6,
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "cin",
+      "teamId": "bal",
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "winPct": 1,
+      "winPct": 0.5,
       "conferenceRank": 7,
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "pit",
+      "teamId": "nyj",
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "winPct": 1,
+      "winPct": 0.5,
       "conferenceRank": 8,
       "playoffStatus": "none"
     },
     {
-      "teamId": "hou",
-      "wins": 0,
+      "teamId": "pit",
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "winPct": 0,
+      "winPct": 0.5,
       "conferenceRank": 9,
-      "playoffStatus": "none"
-    },
-    {
-      "teamId": "ind",
-      "wins": 0,
-      "losses": 1,
-      "ties": 0,
-      "winPct": 0,
-      "conferenceRank": 10,
       "playoffStatus": "none"
     },
     {
@@ -102,16 +93,7 @@
       "losses": 1,
       "ties": 0,
       "winPct": 0,
-      "conferenceRank": 11,
-      "playoffStatus": "none"
-    },
-    {
-      "teamId": "ten",
-      "wins": 0,
-      "losses": 1,
-      "ties": 0,
-      "winPct": 0,
-      "conferenceRank": 12,
+      "conferenceRank": 10,
       "playoffStatus": "none"
     },
     {
@@ -120,7 +102,7 @@
       "losses": 1,
       "ties": 0,
       "winPct": 0,
-      "conferenceRank": 13,
+      "conferenceRank": 11,
       "playoffStatus": "none"
     },
     {
@@ -129,7 +111,7 @@
       "losses": 1,
       "ties": 0,
       "winPct": 0,
-      "conferenceRank": 14,
+      "conferenceRank": 12,
       "playoffStatus": "none"
     },
     {
@@ -138,13 +120,31 @@
       "losses": 1,
       "ties": 0,
       "winPct": 0,
+      "conferenceRank": 13,
+      "playoffStatus": "none"
+    },
+    {
+      "teamId": "ind",
+      "wins": 0,
+      "losses": 1,
+      "ties": 0,
+      "winPct": 0,
+      "conferenceRank": 14,
+      "playoffStatus": "none"
+    },
+    {
+      "teamId": "hou",
+      "wins": 0,
+      "losses": 2,
+      "ties": 0,
+      "winPct": 0,
       "conferenceRank": 15,
       "playoffStatus": "none"
     },
     {
-      "teamId": "ne",
+      "teamId": "ten",
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
       "winPct": 0,
       "conferenceRank": 16,
@@ -152,7 +152,7 @@
     },
     {
       "teamId": "min",
-      "wins": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0,
       "winPct": 1,
@@ -160,8 +160,8 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "nyg",
-      "wins": 1,
+      "teamId": "phi",
+      "wins": 2,
       "losses": 0,
       "ties": 0,
       "winPct": 1,
@@ -179,15 +179,15 @@
     },
     {
       "teamId": "car",
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "winPct": 0,
+      "winPct": 0.5,
       "conferenceRank": 4,
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "chi",
+      "teamId": "nyg",
       "wins": 1,
       "losses": 0,
       "ties": 0,
@@ -196,7 +196,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "phi",
+      "teamId": "sea",
       "wins": 1,
       "losses": 0,
       "ties": 0,
@@ -214,16 +214,16 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "sea",
+      "teamId": "det",
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "winPct": 1,
+      "winPct": 0.5,
       "conferenceRank": 8,
       "playoffStatus": "none"
     },
     {
-      "teamId": "det",
+      "teamId": "chi",
       "wins": 1,
       "losses": 1,
       "ties": 0,
@@ -232,25 +232,25 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "wsh",
-      "wins": 0,
+      "teamId": "gb",
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "winPct": 0,
+      "winPct": 0.5,
       "conferenceRank": 10,
       "playoffStatus": "none"
     },
     {
-      "teamId": "gb",
-      "wins": 0,
+      "teamId": "no",
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "winPct": 0,
+      "winPct": 0.5,
       "conferenceRank": 11,
       "playoffStatus": "none"
     },
     {
-      "teamId": "dal",
+      "teamId": "wsh",
       "wins": 0,
       "losses": 1,
       "ties": 0,
@@ -259,7 +259,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "lar",
+      "teamId": "dal",
       "wins": 0,
       "losses": 1,
       "ties": 0,
@@ -268,7 +268,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "tb",
+      "teamId": "lar",
       "wins": 0,
       "losses": 1,
       "ties": 0,
@@ -277,7 +277,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "atl",
+      "teamId": "tb",
       "wins": 0,
       "losses": 1,
       "ties": 0,
@@ -286,9 +286,9 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "no",
+      "teamId": "atl",
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
       "winPct": 0,
       "conferenceRank": 16,
