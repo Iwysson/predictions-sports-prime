@@ -17,7 +17,11 @@ function isIndexable(html) { return /content="index, follow"[^>]*name="robots"|n
 function alternates(html) { return [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"\/>/g)].map((match) => ({ lang: match[1], href: match[2] })); }
 
 const pages = new Map(walk(root).filter((file) => file.endsWith(".html")).map((file) => [routeForFile(file), fs.readFileSync(file, "utf8")]));
-const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
+const sitemapFiles = walk(root).filter((file) => file.endsWith(`${path.sep}sitemap.xml`));
+const sitemapLocations = new Set(sitemapFiles.flatMap((file) =>
+  [...fs.readFileSync(file, "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1])
+));
+const inSitemap = (url) => sitemapLocations.has(url);
 
 for (const [route, html] of pages) {
   if (!isIndexable(html)) continue;
@@ -29,7 +33,7 @@ for (const [route, html] of pages) {
     localizedPages += 1;
     if (lang !== locale.lang) errors.push(`${route}: html lang ${lang} != ${locale.lang}`);
   }
-  if (!sitemap.includes(`<loc>${host}${route}</loc>`)) errors.push(`${route}: indexable page missing from sitemap`);
+  if (!inSitemap(`${host}${route}`)) errors.push(`${route}: indexable page missing from sitemap`);
 }
 
 const englishMatches = [...pages.keys()].filter((route) => /^\/match\/[^/]+\/$/.test(route) && isIndexable(pages.get(route)) && matchLocales.every(({ slug }) => {
@@ -51,7 +55,7 @@ for (const route of englishMatches) {
       const target = new URL(entry.href).pathname;
       const targetHtml = pages.get(target);
       if (!targetHtml || !isIndexable(targetHtml)) errors.push(`${member}: hreflang ${entry.lang} points to missing/noindex ${target}`);
-      else if (!sitemap.includes(`<loc>${host}${target}</loc>`)) errors.push(`${member}: hreflang ${entry.lang} target missing from sitemap`);
+      else if (!inSitemap(`${host}${target}`)) errors.push(`${member}: hreflang ${entry.lang} target missing from sitemap`);
       else if (!alternates(targetHtml).some((back) => back.href === `${host}${member}`)) errors.push(`${member}: hreflang ${entry.lang} is not reciprocal`);
     }
   }
@@ -64,7 +68,7 @@ for (const { slug } of matchLocales) {
     const englishHtml = pages.get(englishRoute);
     if (!englishHtml || !isIndexable(englishHtml)) errors.push(`${route}: dangling localized route without indexable English equivalent`);
     if (!alternates(html).some((entry) => entry.href === `${host}${route}`)) errors.push(`${route}: localized route missing self hreflang`);
-    if (alternates(html).some((entry) => !sitemap.includes(`<loc>${entry.href}</loc>`))) errors.push(`${route}: sitemap/hreflang mismatch`);
+    if (alternates(html).some((entry) => !inSitemap(entry.href))) errors.push(`${route}: sitemap/hreflang mismatch`);
   }
 }
 
@@ -72,7 +76,7 @@ for (const { slug } of rolloutLocales) {
   for (const route of [`/${slug}/`, ...[...pages.keys()].filter((item) => item.startsWith(`/${slug}/league/`))]) {
     const html = pages.get(route); if (!html) continue;
     if (isIndexable(html)) errors.push(`${route}: rollout hub must remain noindex`);
-    if (sitemap.includes(`<loc>${host}${route}</loc>`)) errors.push(`${route}: noindex rollout hub leaked into sitemap`);
+    if (inSitemap(`${host}${route}`)) errors.push(`${route}: noindex rollout hub leaked into sitemap`);
   }
 }
 

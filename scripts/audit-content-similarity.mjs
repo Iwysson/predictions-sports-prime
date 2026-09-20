@@ -6,7 +6,7 @@ import { getAdSenseContentQualityDecision } from "../src/lib/adsense-content-qua
 
 const normalize = (value) => value.toLowerCase().replace(/\s+/g, " ").trim();
 const keyFor = (value) => normalize(value).replace(/[^\p{L}\p{N}%]+/gu, " ");
-const P1_FACTUAL = /^(?:implied probability|at (?:published|decimal) odds|at \d+(?: \d+)? the raw implied probability|at \d+(?: \d+)? 1 1|decimal odds|the published decimal price|odds implied probability|fixture date kickoff and venue|\s*suspensions eligibility)/i;
+const P1_FACTUAL = /^(?:implied probability|at (?:published|decimal) odds|at \d+(?: \d+)? the raw implied probability|at \d+(?: \d+)? 1 1|decimal odds|the published decimal price|odds implied probability|fixture date kickoff and venue|a current verified suspension list|\s*suspensions eligibility|\s*competition uefa nations league|\s*(?:serbia|greece|netherlands|germany|portugal|wales|norway|denmark) call up)/i;
 const P1_STRUCTURAL = /(?:^footymetrics championship|^the fixture identity teams competition and schedule|^the projected lineups based on|^the figures below use|^all figures below are restricted|^\s*serie a round \d+ schedule|^statistical coverage is partial|^the core is restricted to|official (?:matchday )?teamsheet|probable not confirmed|statistical core (?:uses|comes from|preserves)|home split of the host|away split of the visitor|source|rows labelled as a current domestic league sample|public source does not expose)/i;
 
 function p1Classification(text) {

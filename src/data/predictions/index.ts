@@ -18,6 +18,7 @@ import { uefaEuropaLeaguePredictions } from "./uefa-europa-league";
 import { copaLibertadoresPredictions } from "./copa-libertadores";
 import { copaSudamericanaPredictions } from "./copa-sudamericana";
 import { uefaNationsLeaguePredictions } from "./uefa-nations-league";
+import { uefaNationsLeagueBPredictions } from "./uefa-nations-league-b";
 import { applyWave08EditorialDebtRemediation } from "./editorial-debt-remediation";
 
 export const editorialPredictionsRaw = [
@@ -41,6 +42,7 @@ export const editorialPredictionsRaw = [
   ...copaLibertadoresPredictions,
   ...copaSudamericanaPredictions,
   ...uefaNationsLeaguePredictions,
+  ...uefaNationsLeagueBPredictions,
 ];
 
 export const editorialPredictions = editorialPredictionsRaw.map(applyWave08EditorialDebtRemediation);

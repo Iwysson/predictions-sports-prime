@@ -22,8 +22,6 @@ The Over 2.5 line has a striking split between the two venue samples. Valencia h
 
 Real Sociedad have enough technical players between the lines to create sustained attacks, and their away scoring rate of 1.33 shows they can contribute. Valencia's route is less certain. Hugo Duro and Danjuma can attack space, but a HOME scoring rate of 0.00 is the clearest piece of contrary evidence in the entire match. If Sociedad score first, Valencia have to abandon some of the caution that has kept games lower; if Valencia score first, Sociedad's need to respond can create the most favorable end-to-end state.
 
-### Risks and Counter-Signals
-
 The match can still fail the line even with a clear winner. A 0-2 Sociedad victory stays under, as does a 1-1 draw. Valencia's large absence list also creates uncertainty around attacking continuity, while Sociedad have defensive availability issues of their own, including Jon Martín's suspension. The main risk is that those defensive absences increase mistakes without improving finishing quality, so the market must be assessed through the actual venue data rather than a generic expectation of an open Sunday-night fixture.
 
 ### Statistical Core Predictions-Sports-Prime

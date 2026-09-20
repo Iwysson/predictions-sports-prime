@@ -3,7 +3,7 @@
 import { MatchCard } from "@/components/MatchCard";
 import type { CompetitionRoundSection, CompetitionRoundSurface } from "@/lib/competition-rounds";
 import { useI18n } from "@/i18n/I18nProvider";
-import type { SeoLocale } from "@/lib/seo-locales";
+import { localePath, type SeoLocale } from "@/lib/seo-locales";
 import { localizeRoundText } from "@/lib/localized-presentation";
 
 function roundLabel(round: number | string, locale: SeoLocale) {
@@ -28,12 +28,14 @@ function RoundFixtures({
   emptyMessage,
   locale,
   indexableMatchSlugs,
+  localizedMatchSlugs,
 }: {
   section: CompetitionRoundSection | null;
   surfaceName: "current" | "next";
   emptyMessage: string;
   locale: SeoLocale;
   indexableMatchSlugs: Set<string> | null;
+  localizedMatchSlugs: Set<string>;
 }) {
   if (!section?.matches.length) {
     return (
@@ -57,6 +59,11 @@ function RoundFixtures({
           <MatchCard
             match={match}
             locale={locale}
+            href={
+              locale !== "en" && localizedMatchSlugs.has(match.slug)
+                ? localePath(locale, `/match/${match.slug}/`)
+                : `/match/${match.slug}/`
+            }
             discoverable={
               match.status !== "published" ||
               indexableMatchSlugs === null ||
@@ -73,14 +80,17 @@ export function LiveLeagueRounds({
   surface,
   locale = "en",
   indexableMatchSlugs,
+  localizedMatchSlugs = [],
 }: {
   surface: CompetitionRoundSurface;
   locale?: SeoLocale;
   indexableMatchSlugs?: string[];
+  localizedMatchSlugs?: string[];
 }) {
   const indexableMatchSet = indexableMatchSlugs
     ? new Set(indexableMatchSlugs)
     : null;
+  const localizedMatchSet = new Set(localizedMatchSlugs);
   const { t } = useI18n();
   const copy = roundCopy[locale];
   const sourceLabel = surface.sourceState === "validated"
@@ -111,6 +121,7 @@ export function LiveLeagueRounds({
           emptyMessage={t("awaitingConfirmedData")}
           locale={locale}
           indexableMatchSlugs={indexableMatchSet}
+          localizedMatchSlugs={localizedMatchSet}
         />
       </section>
 
@@ -138,6 +149,7 @@ export function LiveLeagueRounds({
           emptyMessage={copy.unavailable}
           locale={locale}
           indexableMatchSlugs={indexableMatchSet}
+          localizedMatchSlugs={localizedMatchSet}
         />
       </section>
     </div>

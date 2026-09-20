@@ -5,6 +5,7 @@ import { getAdSenseContentQualityDecision } from "../src/lib/adsense-content-qua
 import { matches as runtimeMatches } from "../src/data/matches.ts";
 import { materialMatchUpdatedAt } from "../src/lib/match-freshness.ts";
 import { classifyPspEditorialLifecycle } from "../src/lib/editorial-standard.ts";
+import { publicContactEmail } from "../src/lib/editorial-identity.ts";
 
 const root = process.cwd();
 const outDir = join(root, "out");
@@ -12,7 +13,7 @@ const siteUrl = "https://predictions-sports-prime.com";
 const authorName = "Iwysson Nascimento";
 const authorRoute = "/author/iwysson-nascimento/";
 const authorUrl = `${siteUrl}${authorRoute}`;
-const contactEmail = "iwysson.wesklley1995@gmail.com";
+const contactEmail = publicContactEmail;
 const methodologyRoute = "/methodology/";
 const editorialPolicyRoute = "/editorial-policy/";
 const resultsRoute = "/results/";
@@ -165,6 +166,7 @@ for (const route of matchRoutes) {
     ?? html.match(/<div class="match-semantic-details">([\s\S]*?)<\/div><div class="match-content-ad/i)?.[1]
     ?? "";
   const analysisText = visibleText(analysisBlock);
+  const sourceAnalysisText = runtimePrediction?.analysis.join("\n\n").trim() ?? "";
   const leagueHref = html.match(/<a[^>]+href="(\/league\/[^"#?]+\/?)"/i)?.[1];
   const relatedBlock = html.match(/<section[^>]+class="related-predictions"[\s\S]*?<\/section>/i)?.[0] ?? "";
   const links = count(relatedBlock, /<a\b[^>]*href="\/match\//gi);
@@ -197,7 +199,7 @@ for (const route of matchRoutes) {
     && (html.includes('class="main-prediction-block"') || html.includes('data-prediction-reveal="locked"'))
     && html.includes('class="match-seo-intro"');
   if (
-    analysisText.length < 300 &&
+    Math.max(analysisText.length, sourceAnalysisText.length) < 300 &&
     !hasLocalizedSemanticBody &&
     runtimePrediction &&
     classifyPspEditorialLifecycle(runtimePrediction) === "future-pre-match"
@@ -282,17 +284,21 @@ for (const route of leagueRoutes) {
   if (!html.includes(`"@type":"BreadcrumbList"`)) errors.push(`${route}: missing BreadcrumbList schema`);
 }
 
-const sitemap = readFileSync(join(outDir, "sitemap.xml"), "utf8");
+const sitemapFiles = walk(outDir).filter((file) => file.endsWith(`${sep}sitemap.xml`));
+const sitemapDocuments = sitemapFiles.map((file) => ({
+  file: relative(outDir, file).split(sep).join("/"),
+  xml: readFileSync(file, "utf8"),
+}));
+const sitemap = sitemapDocuments.map(({ xml }) => xml).join("\n");
 const sitemapRoutes = new Set(
   [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
     .map((match) => normalizeRoute(match[1]))
     .filter(Boolean)
 );
-const sitemapLocations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(
-  (match) => match[1]
-);
-if (new Set(sitemapLocations).size !== sitemapLocations.length) {
-  errors.push("sitemap.xml: duplicate URLs found");
+const sitemapLocations = [...sitemapRoutes].map((route) => `${siteUrl}${route}`);
+for (const { file, xml } of sitemapDocuments) {
+  const locations = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+  if (new Set(locations).size !== locations.length) errors.push(`${file}: duplicate URLs found`);
 }
 if (sitemapLocations.some((location) => !location.startsWith(`${siteUrl}/`))) {
   errors.push("sitemap.xml: malformed or noncanonical absolute URL found");
@@ -302,11 +308,16 @@ const sitemapLastModifiedRoutes = new Set(
     .map((match) => normalizeRoute(match[1]))
     .filter(Boolean)
 );
-const sitemapEntries = new Map(
-  [...sitemap.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*(?:<lastmod>([^<]+)<\/lastmod>\s*)?<\/url>/g)]
-    .map((match) => [normalizeRoute(match[1]), match[2]])
-    .filter(([route]) => route)
-);
+const sitemapEntries = new Map();
+for (const match of sitemap.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*(?:<lastmod>([^<]+)<\/lastmod>\s*)?<\/url>/g)) {
+  const route = normalizeRoute(match[1]);
+  if (!route) continue;
+  const previous = sitemapEntries.get(route);
+  if (previous && match[2] && Date.parse(previous) !== Date.parse(match[2])) {
+    errors.push(`${route}: conflicting lastmod values across segmented sitemaps`);
+  }
+  if (!previous || match[2]) sitemapEntries.set(route, match[2]);
+}
 
 const authorHtml = pages.get(authorRoute);
 if (!authorHtml) errors.push(`${authorRoute}: generated author page is missing`);

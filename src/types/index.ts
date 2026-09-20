@@ -21,7 +21,8 @@ export type LeagueSlug =
   | "uefa-europa-league"
   | "copa-libertadores"
   | "copa-sudamericana"
-  | "uefa-nations-league";
+  | "uefa-nations-league"
+  | "uefa-nations-league-b";
 
 export type PredictionItem = {
   label: string;
