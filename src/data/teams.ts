@@ -6,6 +6,21 @@ export type TeamBadgeAsset = { src: string; sourceUrl: string };
 export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   // Canonical overrides (correct badge file when generated table has wrong path)
   "Inter Milan": generatedTeamBadgeAssets["Internazionale Milano"],
+  // MLS badges added from verified league/provider assets.
+  "Seattle Sounders": { src: "/team-badges/seattle-sounders.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/2dy5cx1706711036.png" },
+  "Seattle Sounders FC": { src: "/team-badges/seattle-sounders.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/2dy5cx1706711036.png" },
+  "Real Salt Lake": { src: "/team-badges/real-salt-lake.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/kkjlfa1556488022.png" },
+  "Philadelphia Union": { src: "/team-badges/philadelphia-union.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/gyznyo1602103682.png" },
+  "St. Louis City": { src: "/team-badges/st-louis-city-sc.svg", sourceUrl: "https://images.mlssoccer.com/image/upload/v1610563329/assets/logos/STL.svg" },
+  "St. Louis City SC": { src: "/team-badges/st-louis-city-sc.svg", sourceUrl: "https://images.mlssoccer.com/image/upload/v1610563329/assets/logos/STL.svg" },
+  "St. Louis CITY SC": { src: "/team-badges/st-louis-city-sc.svg", sourceUrl: "https://images.mlssoccer.com/image/upload/v1610563329/assets/logos/STL.svg" },
+  "Sporting Kansas City": { src: "/team-badges/sporting-kansas-city.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/tqupxw1473536504.png" },
+  "Toronto FC": { src: "/team-badges/toronto-fc.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/rsxyrr1473536512.png" },
+  "San Diego FC": { src: "/team-badges/san-diego-fc.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/7ka2xd1734621068.png" },
+  "Vancouver Whitecaps": { src: "/team-badges/vancouver-whitecaps.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/tpwxpy1473536521.png" },
+  "Vancouver Whitecaps FC": { src: "/team-badges/vancouver-whitecaps.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/tpwxpy1473536521.png" },
+  "San Jose Earthquakes": { src: "/team-badges/san-jose-earthquakes.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/xyrqqt1420781048.png" },
+  "Portland Timbers": { src: "/team-badges/portland-timbers.svg", sourceUrl: "https://images.mlssoccer.com/image/upload/v1626094359/assets/logos/POR-Logo_wviuqh.svg" },
   // UEFA Nations League national teams
   Netherlands: { src: "/team-badges/netherlands.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Netherlands" },
   Germany: { src: "/team-badges/germany.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Germany" },
