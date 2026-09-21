@@ -16,6 +16,13 @@ export type NormalizedMatchTime = {
 };
 
 const mlsVenueTimezones: Record<string, string> = {
+  "Mercedes-Benz Stadium": "America/New_York",
+  "Stade Saputo": "America/Toronto",
+  "Lower.com Field": "America/New_York",
+  "Shell Energy Stadium": "America/Chicago",
+  "GEODIS Park": "America/Chicago",
+  "Sports Illustrated Stadium": "America/New_York",
+  "PayPal Park": "America/Los_Angeles",
   "Yankee Stadium": "America/New_York",
   "Q2 Stadium": "America/Chicago",
   "Bank of America Stadium": "America/New_York",
