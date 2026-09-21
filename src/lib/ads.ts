@@ -7,6 +7,9 @@ export const adPlacements = [
   "match-top",
   "match-content",
   "match-bottom",
+  "home-before-today",
+  "home-before-tomorrow",
+  "home-upcoming",
 ] as const;
 
 export type AdPlacement = (typeof adPlacements)[number];
@@ -34,6 +37,9 @@ export const adsConfig: {
     "match-top": process.env.NEXT_PUBLIC_ADSENSE_SLOT_MATCH_TOP?.trim() ?? "",
     "match-content": process.env.NEXT_PUBLIC_ADSENSE_SLOT_MATCH_CONTENT?.trim() ?? "",
     "match-bottom": process.env.NEXT_PUBLIC_ADSENSE_SLOT_MATCH_BOTTOM?.trim() ?? "",
+    "home-before-today": process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME_BEFORE_TODAY?.trim() ?? "",
+    "home-before-tomorrow": process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME_BEFORE_TOMORROW?.trim() ?? "",
+    "home-upcoming": process.env.NEXT_PUBLIC_ADSENSE_SLOT_HOME_UPCOMING?.trim() ?? "",
   },
 };
 

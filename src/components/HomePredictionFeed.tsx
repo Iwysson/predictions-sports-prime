@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import { useClientNow } from "@/lib/use-client-now";
 import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import Link from "@/components/DocumentLink";
@@ -59,12 +59,18 @@ function HomeLeagueTaxonomy({
 export function HomePredictionFeed({
   matches,
   beforeHistory,
+  beforeToday,
+  beforeTomorrow,
+  beforeUpcoming,
   locale = "en",
   localizedMatchSlugs = [],
   discovery,
 }: {
   matches: MatchPreview[];
   beforeHistory?: ReactNode;
+  beforeToday?: ReactNode;
+  beforeTomorrow?: ReactNode;
+  beforeUpcoming?: ReactNode;
   locale?: SeoLocale;
   localizedMatchSlugs?: string[];
   discovery?: ReactNode;
@@ -122,6 +128,8 @@ export function HomePredictionFeed({
 
   return (
     <>
+      <Fragment key="home-before-today">{beforeToday}</Fragment>
+
       <section className="section section--compact" id="today">
         <div className="container home-today-layout">
           <HomeLeagueTaxonomy copy={copy} locale={locale} />
@@ -168,6 +176,8 @@ export function HomePredictionFeed({
         </div>
       </section>
 
+      <Fragment key="home-before-tomorrow">{beforeTomorrow}</Fragment>
+
       <section className="section section--compact" id="tomorrow">
           <div className="container">
             <div className="section-heading section-heading--compact">
@@ -199,6 +209,8 @@ export function HomePredictionFeed({
             )}
           </div>
         </section>
+
+      <Fragment key="home-upcoming">{beforeUpcoming}</Fragment>
 
       <section className="section section--compact" id="upcoming">
         <div className="container">

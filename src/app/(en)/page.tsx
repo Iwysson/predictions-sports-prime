@@ -64,20 +64,11 @@ export default async function Home() {
       <HomePredictionFeed
         matches={clientMatches}
         discovery={<PublishedMatchDirectory matches={resolvedMatches} />}
-        beforeHistory={
-          <>
-            <div className="container inline-ad-space">
-              <AdSlot placement="home-middle" />
-            </div>
-
-            <PredictionLeagueCategories id="leagues" muted />
-          </>
-        }
+        beforeToday={<AdSlot placement="home-before-today" showLabel compact wrapperClassName="container home-ad-space home-ad-space--compact" />}
+        beforeTomorrow={<AdSlot placement="home-before-tomorrow" showLabel wrapperClassName="container home-ad-space" />}
+        beforeUpcoming={<AdSlot placement="home-upcoming" showLabel wrapperClassName="container home-ad-space" />}
+        beforeHistory={<PredictionLeagueCategories id="leagues" muted />}
       />
-
-      <div className="container bottom-ad-space">
-        <AdSlot placement="home-bottom" />
-      </div>
 
       <section className="section section--compact" aria-labelledby="trust-links-title">
         <div className="container">

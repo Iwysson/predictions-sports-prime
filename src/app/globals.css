@@ -4527,3 +4527,21 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   white-space: nowrap;
 }
 
+
+/* AdSense positions: label, compact size, match prediction column, home spacing */
+.ad-slot { flex-direction: column; }
+.ad-slot__label { display: block; margin: 6px 0 2px; text-align: center; color: var(--text-muted, #8395a5); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.ad-slot--compact { min-height: 50px; max-height: 140px; }
+.compact-predictions-column { display: grid; gap: 14px; min-width: 0; align-content: start; }
+.match-ad-above-prediction { min-width: 0; max-width: 100%; overflow-x: hidden; }
+.match-ad-above-prediction .ad-slot { min-height: 120px; }
+@media (min-width: 761px) {
+  .compact-predictions-column { position: sticky; top: 76px; }
+  .compact-predictions-column .compact-predictions-card { position: static; }
+}
+.home-ad-space { padding-block: 12px; }
+.home-ad-space--compact { padding-block: 8px; }
+@media (max-width: 560px) {
+  .home-ad-space { padding-block: 8px; }
+  .home-ad-space .ad-slot { min-height: 60px; }
+}
