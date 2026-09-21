@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "../globals.css";
 import { notFound } from "next/navigation";
 import { AdSenseScript } from "@/components/ads";
+import { AdsterraSocialBar } from "@/components/ads/AdsterraSocialBar";
 import { ConsentIntegration } from "@/components/consent/ConsentIntegration";
 import { JsonLd } from "@/components/JsonLd";
 import { I18nProvider } from "@/i18n/I18nProvider";
@@ -51,6 +52,7 @@ export default async function LocalizedRootLayout({ children, params }: Readonly
           <main>{children}</main>
           <LocalizedFooter locale={locale} />
         </I18nProvider>
+        <AdsterraSocialBar />
       </body>
     </html>
   );
