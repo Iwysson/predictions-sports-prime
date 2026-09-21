@@ -12,20 +12,27 @@ import {
 export function AdSlot({
   placement,
   format = "horizontal",
+  showLabel = false,
+  compact = false,
+  wrapperClassName,
 }: {
   placement: AdPlacement;
   format?: AdFormat;
+  showLabel?: boolean;
+  compact?: boolean;
+  wrapperClassName?: string;
 }) {
   const consentGranted = useAdConsent();
   if (!canRenderPlacement(placement)) return null;
   if (!consentGranted) return null;
 
-  return (
+  const slot = (
     <aside
-      className={`ad-slot ad-slot--${format}`}
+      className={`ad-slot ad-slot--${format}${compact ? " ad-slot--compact" : ""}`}
       aria-label="Advertisement"
       data-ad-placement={placement}
     >
+      {showLabel ? <span className="ad-slot__label">Advertisement</span> : null}
       <AdSenseUnit
         clientId={adsConfig.clientId}
         slot={adsConfig.slots[placement]}
@@ -34,4 +41,6 @@ export function AdSlot({
       />
     </aside>
   );
+
+  return wrapperClassName ? <div className={wrapperClassName}>{slot}</div> : slot;
 }

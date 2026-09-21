@@ -222,10 +222,6 @@ export default async function MatchPage({
 
             <MatchSemanticDetails match={match} forceInformation={isRestrictedSearchIntentFixture(match)} />
 
-            <div className="match-content-ad match-content-ad--early">
-              <AdSlot placement="match-top" />
-            </div>
-
             <div className="compact-analysis-copy">
               <EditorialAnalysis
                 analysis={match.analysis}
@@ -249,12 +245,10 @@ export default async function MatchPage({
             <ArticleSources sources={match.sources} />
 
             <MatchComments matchSlug={match.slug} />
-
-            <div className="match-content-ad">
-              <AdSlot placement="match-content" />
-            </div>
           </article>
 
+          <div className="compact-predictions-column">
+          <AdSlot placement="match-content" showLabel wrapperClassName="match-ad-above-prediction" />
           <aside className="compact-predictions-card">
             <div className="compact-card-heading">
               <div>
@@ -281,12 +275,9 @@ export default async function MatchPage({
             ) : null}
             <Link className="match-results-link" href="/results/">View prediction history</Link>
           </aside>
+          </div>
         </div>
       </section>
-
-      <div className="container compact-match-bottom-area">
-        <AdSlot placement="match-bottom" format="rectangle" />
-      </div>
 
       <div className="container related-predictions-area">
         <RelatedPredictions
