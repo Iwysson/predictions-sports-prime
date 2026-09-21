@@ -12,7 +12,7 @@ export const frosinoneVsJuventus: EditorialPrediction = {
 
   "For Frosinone-Juventus, Italy 2025/26 final tables supports only broad season-record context and is not stretched into evidence about transfers, availability or either team's match plan.",
 
-  "Frosinone versus Juventus retains the published selection, Both Teams to Score — Yes, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick.",
+  "Frosinone versus Juventus retains the published selection, Both Teams to Score — Yes, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick.",
 
   "Frosinone-Juventus loses Both Teams to Score — Yes if either side keeps a clean sheet; that two-sided dependency is the central risk, and the available table cannot turn it into a verified probability."
 ],

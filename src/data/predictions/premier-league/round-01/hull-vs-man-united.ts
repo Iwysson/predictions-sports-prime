@@ -14,7 +14,7 @@ export const hullVsManUnited: EditorialPrediction = {
 
   "Both Teams to Score — Yes needs a goal from both Hull City and Manchester United; one clean sheet defeats the position even if the match otherwise follows the expected balance.",
 
-  "Hull City versus Manchester United retains the published selection, Both Teams to Score — Yes, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Hull City versus Manchester United retains the published selection, Both Teams to Score — Yes, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

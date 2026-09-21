@@ -82,15 +82,13 @@ The core is descriptive evidence, not a probability model. With one-match venue 
 
 Juventus can use Conceição and Boga to stretch Milan's back three while Nico González operates behind Kolo Muani. Milan's 3-4-2-1 should create central overloads through Rabiot/Cissé and allow Chukwueze to attack wide space. The match is likely to turn on whether Juventus can protect transitions after committing the full-backs and wide attackers forward.
 
-### Conflict Detector
-
-The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: Milan's away xG is higher than Juventus' home xG in the one-match sample, a meaningful counter-signal to a straight home win. Juventus also have several availability concerns. The result market therefore depends on the home side converting defensive control into enough attacking efficiency.
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counterpoint remains visible: Milan's away xG is higher than Juventus' home xG in the one-match sample, a meaningful counterpoint to a straight home win. Juventus also have several availability concerns. The result market therefore depends on the home side converting defensive control into enough attacking efficiency.
 
 The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
 
 ### Risks and Limitations
 
-Milan's away xG is higher than Juventus' home xG in the one-match sample, a meaningful counter-signal to a straight home win. Juventus also have several availability concerns. The result market therefore depends on the home side converting defensive control into enough attacking efficiency.
+Milan's away xG is higher than Juventus' home xG in the one-match sample, a meaningful counterpoint to a straight home win. Juventus also have several availability concerns. The result market therefore depends on the home side converting defensive control into enough attacking efficiency.
 
 Most current-season HOME/AWAY samples contain only one league match. Where a current venue sample does not exist, the reference window is disclosed explicitly rather than replaced by an overall or cross-competition average.
 
@@ -130,12 +128,6 @@ The Statistical Core comes from the verified editorial dataset supplied for this
         "name": "Lega Serie A",
         "url": "https://www.legaseriea.it/",
         "description": "Official competition reference for Serie A fixture context.",
-        "accessedAt": "2026-09-03T14:30:00+02:00"
-    },
-    {
-        "name": "La Gazzetta dello Sport — Probabili Formazioni Serie A",
-        "url": "https://www.gazzetta.it/Calcio/prob_form/juventus-milan/2638148",
-        "description": "Current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
         "accessedAt": "2026-09-03T14:30:00+02:00"
     },
     {

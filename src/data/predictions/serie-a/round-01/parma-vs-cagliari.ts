@@ -11,7 +11,7 @@ analysis: [
 
   "Parma Calcio 1913-Cagliari Calcio uses Italy 2025/26 final tables as a final-table reference; xG, personnel, detailed head-to-head and venue-percentage claims were removed because that source does not verify them.",
 
-  "Parma Calcio 1913 versus Cagliari Calcio retains the published selection, Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick.",
+  "Parma Calcio 1913 versus Cagliari Calcio retains the published selection, Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick.",
 
   "Parma Calcio 1913-Cagliari Calcio needs two total goals for Over 1.5 Goals; 0-0 and 1-0 lose, and the cited table is insufficient for a fixture-level goals probability."
 ],

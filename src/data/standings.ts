@@ -113,6 +113,7 @@ export const standingsByLeague: Record<LeagueSlug, StandingRow[]> = {
   "uefa-nations-league": [],
   "uefa-nations-league-b": [],
   "international-friendlies": [],
+  "africa-cup-of-nations-qualifying": [],
   "super-lig": [],
   eliteserien: [],
   mls: [],

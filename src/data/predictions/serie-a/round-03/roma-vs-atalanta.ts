@@ -80,11 +80,9 @@ The table is descriptive evidence rather than a stand-alone forecast. With one-m
 
 Roma can attack through Dybala and Mora between the lines, with Wesley stretching the left side and Malen threatening the depth. Atalanta's 4-3-3 gives them natural width, while De Ketelaere and Raspadori can attack the spaces outside Roma's central defenders. A Roma first goal is favourable to the 1X component but can also draw Atalanta into a more open second half.
 
-### Conflict Detector
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counterpoint remains visible: The samples are not symmetrical, which is the main statistical limitation. Roma's opening home performance may overstate their normal finishing level, while Atalanta's older away sample can understate tactical changes under the current staff. Roma's defensive availability around Ndicka also matters against Scamacca and the runners around him.
 
-The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: The samples are not symmetrical, which is the main statistical limitation. Roma's opening home performance may overstate their normal finishing level, while Atalanta's older away sample can understate tactical changes under the current staff. Roma's defensive availability around Ndicka also matters against Scamacca and the runners around him.
-
-The evidence is mixed rather than unanimous, so the counter-signals remain part of the match assessment.
+The evidence is mixed rather than unanimous, so the counterpoints remain part of the match assessment.
 
 ### Risks and Limitations
 

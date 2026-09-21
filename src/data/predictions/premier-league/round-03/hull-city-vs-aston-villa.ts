@@ -74,8 +74,6 @@ Hull’s opening two league games have been built on defensive control rather th
 
 Hull are likely to protect the centre with three centre-backs and ask Coyle and Giles to provide width when possession is recovered. Belloumi and Stroud can then support McBurnie quickly rather than allowing Villa to settle into a long defensive possession phase. Villa need Kamara and Goretzka to move the ball through Hull’s first line and create closer combinations for McGinn, Buendía and Jackson; otherwise the visitors risk circulating around the block without threatening the box.
 
-### Conflict Detector
-
 Their squad still carries greater individual quality, but Hull’s compact back three and strong start make this a genuine test rather than a routine away assignment. Two matches are not enough to assume Hull’s clean-sheet rate will persist, just as Villa’s early scoring drought should not be treated as permanent.
 
 ### Market Context

@@ -16,13 +16,11 @@ export const celtaVigoVsRacingSantander: EditorialPrediction = {
 
 Celta's projected 3-4-2-1 is Radu; Cáceres, Lago, Alonso; Galán, Moriba, Febas, Rueda; Swedberg, González; Jutglà. Racing's projected 4-2-3-1 is Agirrezabala; Mantilla, Pablo Ramón, Belocian, Salinas; Iván Martín, Prati; Pablo García, Canales, Íñigo Vicente; Zabiri.
 
-The current Racing preview identifies Andrés Martín as unavailable, reducing one of the visitors' wide options. Celta's final matchday availability was not fully resolved in the source set used here, so no additional absence is promoted to confirmed status without support.
+The current Racing preview identifies Andrés Martín as unavailable, reducing one of the visitors' wide options. Celta's final matchday availability was not fully resolved in the sources consulted used here, so no additional absence is promoted to confirmed status without support.
 
 The goals market is driven by two very different venue profiles. Celta have scored only two goals in three HOME matches and have not won a league game, while Racing's three AWAY matches have produced four goals for and eleven against. That means Racing away games are running at 5.00 total goals per match, compared with 2.33 in Celta home games. The Over 2.5 line therefore depends on whether Racing's road openness can pull Celta above their own low attacking baseline.
 
 Celta's 3-4-2-1 should give them two players between Racing's midfield and defensive lines, with the wing-backs responsible for creating width. Racing's 4-2-3-1 offers more natural transition outlets, particularly through the three behind Zabiri. If Celta dominate possession but move the ball slowly, the home side can still create a low-event match. If Racing break the first pressure line, however, the visitors have already shown enough away scoring to make both penalty areas relevant.
-
-### Risks and Counter-Signals
 
 The first goal is especially important. A Celta opener would force a Racing side that has conceded 3.67 per AWAY match to take more risks and could turn the contest into the open state the goal line needs. A Racing opener has a similar effect because Celta would have to chase, but that script asks a home attack averaging only 0.67 goals to contribute. The clearest failure route is a controlled 1-0 or 1-1 in which Celta keep Racing's transitions away from the centre.
 

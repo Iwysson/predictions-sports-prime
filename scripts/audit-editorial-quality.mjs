@@ -9,7 +9,7 @@ const now = process.env.PSP_AUDIT_NOW ? new Date(process.env.PSP_AUDIT_NOW) : ne
 if (Number.isNaN(now.valueOf())) throw new Error("PSP_AUDIT_NOW must be a valid ISO date-time when supplied.");
 
 const boilerplate = /this preview is intentionally limited|retained evidence boundary|verified fixture only/i;
-const forbiddenBoilerplate = /\b(?:counter-signal|mechanically|structured snapshot|published selection|the model sees|our model|this section|as shown above)\b/i;
+const forbiddenBoilerplate = /\b(?:counter-signals?|mechanically|structured snapshot|published selection|the model sees|our model|this section|as shown above)\b/i;
 const genericTactical = /(?:team|side) (?:will|should|must|is likely to) (?:control|dominate) (?:the )?possession and (?:create|look for) chances/i;
 const pspCore = /Statistical Core Predictions-Sports-Prime/i;
 const contextSignals = [

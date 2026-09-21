@@ -34,7 +34,7 @@ Any lineup named for Corinthians or Estudiantes in the analysis is an expected o
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained source set. No sourced current-season Corinthians HOME versus Estudiantes AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
+Statistical coverage is partial: the complete 22/22 Statistical Core was unavailable from the retained sources. No sourced current-season Corinthians HOME versus Estudiantes AWAY split was available for xG/xGA, shots or shots on target, possession, goals and corners beyond any figures expressly reported in the analysis above. Unavailable target metrics remain unavailable rather than being represented by invented zeroes or an overall-form substitute.
 
 The home-versus-away evidence is therefore limited to the fixture-specific facts already cited. That limitation matters tactically: the first goal, the response of the trailing side and the space available in transition can change the game state without a complete venue-split sample. The principal risk to Over 1.5 Goals is that Corinthians and Estudiantes produce a different tempo or scoring sequence from the route described above; this uncertainty keeps the contrary match path visible.
 

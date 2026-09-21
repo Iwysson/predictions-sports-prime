@@ -26,7 +26,7 @@ The creative talent is concentrated around Gloukh and Solomon. Abada can stretch
 
 Ireland are also playing their second game in four days after beginning away to Kosovo. Heimir Hallgrímsson's 26-man squad contains Caoimhin Kelleher, Max O'Leary and Gavin Bazunu in goal; Dara O'Shea, Jake O'Brien, Liam Scales, John Egan, Jimmy Dunne, Liam Kitching, James Abankwah, Ryan Manning and Joel Bagan in defence; and Finn Azaz, Jason Knight, Jayson Molumby, Conor Coventry, Jamie McGrath, Harvey Vale and Bosun Lawal in midfield. Troy Parrott, Adam Idah, Chiedozie Ogbene, Tom Cannon, Rocco Vata, Jack Moylan and Owen Elding are the attacking options.
 
-Captain Nathan Collins is ruled out of the entire window through injury, with Kitching called into the senior squad for the first time. Vata is back after a long injury absence. McGrath and Vale have had late club fitness concerns that require a final check. Ireland nevertheless enter the camp after a sequence described in the latest team coverage as a seven-match unbeaten run, and the defensive approach is likely to remain compact away from Ireland.
+Captain Nathan Collins is ruled out of the entire window through injury, with Kitching called into the senior squad for the first time. Vata is back after a long injury absence. McGrath and Vale have since withdrawn after picking up injuries in club warm-ups, and St Mirren midfielder Killian Phillips has been called up in their place. Ireland nevertheless enter the camp after a sequence described in the latest team coverage as a seven-match unbeaten run, and the defensive approach is likely to remain compact away from Ireland.
 
 ### Projected lineups
 
@@ -46,7 +46,7 @@ For Israel, playing the second match in a rapid sequence can also influence the 
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The sourced rows below preserve the package's current squad, schedule, recent-form and H2H context.
+Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The rows below show the squad, head-to-head and current-status context that is available.
 
 | Current indicator | Israel | Republic of Ireland |
 |---|---:|---:|
@@ -81,15 +81,16 @@ The neutral venue and Ireland's likely compact shape point toward control rather
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-20T18:49:50-03:00",
+  updatedAt: "2026-09-21T16:17:17-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-20T18:49:50-03:00",
-    teamNewsUpdatedAt: "2026-09-20T18:49:50-03:00",
-    lineupUpdatedAt: "2026-09-20T18:49:50-03:00",
+    editorialUpdatedAt: "2026-09-21T16:17:17-03:00",
+    teamNewsUpdatedAt: "2026-09-21T16:17:17-03:00",
+    lineupUpdatedAt: "2026-09-21T16:17:17-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    {"name":"The Irish Times — Killian Phillips called into Ireland squad","url":"https://www.irishtimes.com/sport/soccer/2026/09/21/killian-phillips-called-into-ireland-squad-for-nations-league-matches/","description":"Ireland withdrawals and replacement.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"Israel Football Association — September Nations League squad","url":"https://www.football.org.il/?itemid=%7BE29F4A20-B9AC-4C40-8669-630CE1C685C3%7D","description":"Official 27-player Israel squad.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"FAI — Republic of Ireland Nations League squad","url":"https://www.fai.ie/latest/hallgrimsson-names-26-man-squad-uefa-nations-league-fixtures/","description":"Official Ireland squad, absences and Debrecen fixture details.","accessedAt":"2026-09-20T18:49:50-03:00"},

@@ -71,9 +71,7 @@ The broader season context is Orlando City at **7-4-11** with **37 scored and 54
 
 The core numbers do not need to be forced into a single verdict. Orlando City produce 1.47 xG from 13.27 home shots, while San Diego FC produce 1.25 xG from 10.60 away shots; that makes the chance-quality comparison favour the host even before actual finishing is considered. At the other end, the xGA comparison of 1.69 to 1.55 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. Orlando City's 1.73 home goals per game sit beside 1.47 xG, while San Diego FC's 1.00 away goals sit beside 1.25 xG; defensively, the corresponding pairs are 1.55/1.69 and 1.70/1.55. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. Orlando City's 1.73 home goals per game sit beside 1.47 xG, while San Diego FC's 1.00 away goals sit beside 1.25 xG; defensively, the corresponding pairs are 1.55/1.69 and 1.70/1.55. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 

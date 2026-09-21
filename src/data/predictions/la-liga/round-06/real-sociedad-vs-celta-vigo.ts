@@ -79,7 +79,7 @@ If Celta score first, the bet becomes more fragile but not immediately dead. Soc
 | Clean sheets | 0% | 100% |
 | Failed to score | 0% | 100% |
 
-**Conflict Detector.** The split samples point in opposite directions. Sociedad's only home match finished 2-1 and generated a high-volume attacking profile, while Celta's only away match finished **0-0** with only three total corners. The goals leg is therefore the main conflict: it needs Sociedad's home process to dominate Celta's low-event away precedent. The 1X leg is supported by the venue and home shot volume, but Sociedad's own defensive transition issues leave a Celta upset route open.
+The split samples point in opposite directions. Sociedad's only home match finished 2-1 and generated a high-volume attacking profile, while Celta's only away match finished **0-0** with only three total corners. The goals leg is therefore the main conflict: it needs Sociedad's home process to dominate Celta's low-event away precedent. The 1X leg is supported by the venue and home shot volume, but Sociedad's own defensive transition issues leave a Celta upset route open.
 
 ### Odds and Implied Probability
 At **1.70**, the raw implied probability is **58.8%** (1 / 1.70 = 58.8%), before bookmaker margin. This is a price-derived probability only; it is not a PSP model probability and it is not interchangeable with any one-match HOME/AWAY frequency.
@@ -93,7 +93,7 @@ Real Sociedad's first home league match showed **17 shots**, **10 SOT** and enou
 **Prediction:** Real Sociedad or Draw (1X) + Over 1.5 Goals
 **Odds:** 1.70
 
-Sources: LALIGA official fixture information; StatMuse 2026/27 venue-split and match-stat pages; Mundo Deportivo confirmed Celta XI vs Athletic Club on 30/08/2026; existing PSP pre-match injury/availability source set. Cutoff: 02/09/2026. Different xG providers can vary slightly; the Statistical Core keeps one provider context instead of averaging incompatible models.
+Sources: LALIGA official fixture information; StatMuse 2026/27 venue-split and match-stat pages; Mundo Deportivo confirmed Celta XI vs Athletic Club on 30/08/2026; existing PSP pre-match injury/availability sources consulted. Cutoff: 02/09/2026. Different xG providers can vary slightly; the Statistical Core keeps one provider context instead of averaging incompatible models.
 `
   ],
   editorialStandard: "psp-v1",

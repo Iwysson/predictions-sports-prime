@@ -10,7 +10,7 @@ export const brightonVsAstonVilla: EditorialPrediction = {
 
   "For Brighton & Hove Albion-Aston Villa, England 2025/26 final tables supports only broad season-record context and is not stretched into evidence about transfers, availability or either team's match plan.",
 
-  "Brighton & Hove Albion versus Aston Villa retains the published selection, Over 2.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Brighton & Hove Albion versus Aston Villa retains the published selection, Over 2.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

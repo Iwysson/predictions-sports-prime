@@ -74,15 +74,13 @@ Hamburger SV's HOME reference shows **1.41 points per game** and **1.47 goals sc
 
 Hamburg’s 3-4-2-1 can use the two attacking midfielders behind Daka to attack Mainz’s outside centre-backs. Mainz can overload midfield before releasing the front two. For Over 2.5 Goals, an early opener is the clearest route to a more expansive game.
 
-### Conflict Detector
-
-The supporting case comes from the venue-specific process above. The main counter-signal is also retained: The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. Both teams failed to score on Matchday 1, a direct counter-signal to Over 2.5 Goals.
+The supporting case comes from the venue-specific process above. The main counterpoint is also retained: The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. Both teams failed to score on Matchday 1, a direct counterpoint to Over 2.5 Goals.
 
 This opposing evidence materially limits confidence and remains part of the final sporting assessment.
 
 ### Risks and Limitations
 
-The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. Both teams failed to score on Matchday 1, a direct counter-signal to Over 2.5 Goals. Current availability is based on the Bundesliga's official Matchday 2 update and remains subject to late training changes.
+The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level. Both teams failed to score on Matchday 1, a direct counterpoint to Over 2.5 Goals. Current availability is based on the Bundesliga's official Matchday 2 update and remains subject to late training changes.
 
 ### Odds + Implied Probability
 
@@ -94,7 +92,7 @@ The price is assessed against the full evidence set. The selection is attractive
 
 ### Conclusion
 
-The original market and odds remain coherent with the documented venue process and the current team-news picture, while the counter-signals above define the principal ways the selection can fail.
+The original market and odds remain coherent with the documented venue process and the current team-news picture, while the counterpoints above define the principal ways the selection can fail.
 
 **Prediction:** Over 2.5 Goals
 **Odds:** 1.67

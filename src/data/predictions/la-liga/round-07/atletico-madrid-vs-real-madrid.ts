@@ -22,8 +22,6 @@ The X1 market is built around Atlético avoiding defeat, and the HOME/AWAY split
 
 The tactical battle should be shaped by transition management. Atlético can protect the centre with three defenders and use Llorente, Grimaldo and the two attacking midfielders to escape pressure quickly. Real Madrid's front line can punish any poor rest defence, especially if Mbappé and Vinícius receive into space rather than against a set block. For the X1, a controlled midfield phase is more comfortable than an end-to-end game because the selection also wins with a draw.
 
-### Risks and Counter-Signals
-
 There is substantial counter-evidence. Real Madrid are second with fifteen points, have scored seventeen league goals and possess enough individual quality to decide a balanced match in one action. Atlético's availability is also less stable, with Le Normand suspended and several important attackers or midfielders carrying injury questions. If Real Madrid score first, Atlético must open the game and the double-chance protection narrows to a comeback or equalizer. If Atlético score first, their HOME defensive profile gives them a clearer way to manage the remaining state.
 
 ### Statistical Core Predictions-Sports-Prime

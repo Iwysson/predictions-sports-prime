@@ -25,7 +25,7 @@ No Go Ahead Eagles, Gerrit Nauber está fora com lesão na perna, enquanto Robbi
 **FC Utrecht (3-4-3)** — Vasilios Barkas; Siebe Horemans, Neville Ogidi Nwankwo, Matisse Didden; Niklas Vesterlund, Dani de Wit, Victor Berg, Arthur Zagré; Lucas Alarcón, David Min, Yoann Cathline. **Go Ahead Eagles (4-2-3-1)** — Luca Plogmann/Haug; Alfons Sampsted, Julius Dirksen, Joris Kramer, Dean James; Evert Linthorst, Melle Meulensteen; Søren Tengstedt, Victor Edvardsen, Mathis Suray; Erik Flataker. Barkas, Nwankwo e Didden aparecem em boletins médicos de uma das bases e, por isso, o trio precisa de confirmação final; a projeção representa o desenho-base, não XI oficial. O Utrecht possui uma lista extensa de jogadores lesionados ou em recuperação. Noah Ohio está fora após cirurgia no joelho; Alonzo Engwanda apresenta lesão muscular; Kevin Paredes aparece com problema no joelho; Miliano Jonathans está em recuperação de lesão ligamentar; e Victor Jensen também aparece com problema no joelho. Oualid Agougil e Marius Broholm completam a relação preliminar de situações que precisam ser acompanhadas.
 
 ### Suspensions / Eligibility
-Only absences already supported by the retained pre-match source set are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
+Only absences already supported by the retained pre-match sources consulted are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
 
 ### Match Context
 The analysis is independent of the published pick. The first task is to understand the matchup from the available pre-match evidence; only then is the existing market assessed. The Eredivisie is still in an early 2026/27 sample, so venue-specific averages can move sharply after a single match. That makes it essential to separate HOME from AWAY and to label any fallback explicitly rather than presenting mixed data as if it were a clean venue split.
@@ -70,14 +70,13 @@ The xG comparison gives another layer. xG describes chance quality, not finishin
 | Clean sheets | 0% | 0% |
 | Failed to score | 0% | 0% |
 
-### Conflict Detector
 The main conflict is sample size and source granularity. Several current venue splits contain only one or two league matches. In addition, some shot, possession, corner or event-rate rows use a clearly labelled overall or structural fallback because the supplied editorial package does not contain a full venue-level feed for both teams. Those fallbacks are context, not invented HOME/AWAY observations. A second conflict is game-state dependence: early red cards, an early goal or an unusually efficient finishing day can overwhelm the pre-match averages.
 
 ### Market Price Context
 At decimal odds **1.52**, the raw implied probability is **65.8%** (1 / 1.52 = 65.8%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
 
 ### Value Assessment
-The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the Conflict Detector.
+The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the risk analysis.
 
 ### Sources / Statistical Provenance
 

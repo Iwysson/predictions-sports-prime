@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-21T12:12:53-03:00";
+const updatedAt = "2026-09-21T14:45:00-03:00";
 
 export const azerbaijanVsTajikistan: EditorialPrediction = {
   league: "international-friendlies",
@@ -27,7 +28,11 @@ Aykhan Abbasov named a **30-player Azerbaijan squad**. Goalkeepers Aydin Bayramo
 
 Tajikistan coach Igor Angelovski selected **28 players: three goalkeepers, ten defenders, ten midfielders and five forwards** for the matches against Azerbaijan, Palestine and China. The size of both squads makes rotation possible, so the final XI remains more uncertain than it would be for a competitive qualifier.
 
-**Probable Azerbaijan XI:** Bayramov; Toral Bayramov, Badavi Huseynov, Krivotsyuk, Rahil Mammadov; Emin Mahmudov, Aleksey Isayev; Anatoli Nuriyev, Rufat Abdullazade, Vusal Isgandarli; Mahir Emreli. **Probable Tajikistan XI:** projection from the current 28-man call-up; the federation had confirmed the squad but not the starting XI at publication time.
+**Projected Azerbaijan XI (not confirmed):** Bayramov; Toral Bayramov, Badavi Huseynov, Krivotsyuk, Rahil Mammadov; Emin Mahmudov, Aleksey Isayev; Anatoli Nuriyev, Rufat Abdullazade, Vusal Isgandarli; Mahir Emreli. **Tajikistan:** the federation confirmed a 28-player squad but no starting XI, and no credible projected eleven was available, so none is presented. Official team sheets take precedence.
+
+### Injuries, suspensions and availability
+
+The only omission reported for Azerbaijan is Shahrudin Mahammadaliyev, who was not included in the 30-player group; no injuries or suspensions were reported for either side in the sources listed below. That is a gap in reporting rather than a confirmed clean bill of health, so late withdrawals from these large squads remain possible.
 
 ### Match analysis
 
@@ -66,7 +71,7 @@ At published odds of **1.72**, the raw implied probability is **58.1%**, calcula
   },
   published: true,
   publishedAt: "2026-09-21T12:12:53-03:00",
-  updatedAt: publishedAt,
+  updatedAt,
   freshness: {
     editorialUpdatedAt: publishedAt,
     teamNewsUpdatedAt: publishedAt,

@@ -12,7 +12,7 @@ export const romaVsFiorentina: EditorialPrediction = {
 
   "Rather than making the bet dependent on the final result or on Fiorentina contributing to the scoreline, we need only the hosts to score at least twice.",
 
-  "Roma versus Fiorentina retains the published selection, Roma Over 1.5 Team Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Roma versus Fiorentina retains the published selection, Roma Over 1.5 Team Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
   picks: {

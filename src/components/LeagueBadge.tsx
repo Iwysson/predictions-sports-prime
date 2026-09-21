@@ -20,6 +20,7 @@ export function LeagueBadge({
           src={asset.src}
           alt={league.name}
           loading="lazy"
+          decoding="async"
         />
       </span>
     );

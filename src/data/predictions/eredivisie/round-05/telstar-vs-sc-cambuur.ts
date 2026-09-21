@@ -27,7 +27,7 @@ Essa diferença de divisão é fundamental: os números longos do Cambuur precis
 **Provável Telstar (3-4-2-1): Ronald Koeman; Sem Valk, Abdelnor Soualhia, Marvin Peersman; Gerald Alders (Prince Aning), Nils Rossen, Tyrone Owusu, Jeff Hardeveld; Rui Mendes (Gabi Caschili), Patrick Brouwer (Emirhan Demircan); Jelani Seedorf (Fabiano Rust).** O desenho utiliza como referência a formação competitiva mais recente. O Telstar vem alternando entre linha de três e estruturas mais convencionais, portanto **Prince Aning, Caschili, Demircan e Fabiano Rust** permanecem como alternativas naturais em caso de mudança de desenho ou rotação. **Provável Cambuur (4-3-3): Thijs Jansen; Lucas Jetten, Jamal Amofa, Ismaël Baouf, Billy van Duijl; Nicky Souren, Jorn Berkhout, Rafik El Arguioui; Iwan Henstra (Ilyes Hamache), Sami Bouhoudane (Nicolas Binder), Morgan Costarelli (Fabian Kvam).** **Daan Visser** permanece entre os nomes ausentes por problema no joelho. No ataque, **Hamache** é a principal ameaça à manutenção do XI depois de entrar e marcar recentemente, enquanto Binder e Kvam também permanecem como opções reais. Esses são **lineups projetados**, não escalações oficiais, e a composição definitiva precisa ser revista após os últimos treinamentos.
 
 ### Suspensions / Eligibility
-Only absences already supported by the retained pre-match source set are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
+Only absences already supported by the retained pre-match sources consulted are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
 
 ### Match Context
 The analysis is independent of the published pick. The first task is to understand the matchup from the available pre-match evidence; only then is the existing market assessed. The Eredivisie is still in an early 2026/27 sample, so venue-specific averages can move sharply after a single match. That makes it essential to separate HOME from AWAY and to label any fallback explicitly rather than presenting mixed data as if it were a clean venue split.
@@ -72,14 +72,13 @@ The xG comparison gives another layer. xG describes chance quality, not finishin
 | Clean sheets | 0% | 0% |
 | Failed to score | 50% | 0% |
 
-### Conflict Detector
 The main conflict is sample size and source granularity. Several current venue splits contain only one or two league matches. In addition, some shot, possession, corner or event-rate rows use a clearly labelled overall or structural fallback because the supplied editorial package does not contain a full venue-level feed for both teams. Those fallbacks are context, not invented HOME/AWAY observations. A second conflict is game-state dependence: early red cards, an early goal or an unusually efficient finishing day can overwhelm the pre-match averages.
 
 ### Market Price Context
 At decimal odds **1.62**, the raw implied probability is **61.7%** (1 / 1.62 = 61.7%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
 
 ### Value Assessment
-The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the Conflict Detector.
+The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the risk analysis.
 
 ### Sources / Statistical Provenance
 

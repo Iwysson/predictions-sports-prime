@@ -14,7 +14,7 @@ export const vitoriaGuimaraesVsNacional: EditorialPrediction = {
 
   "We do not need Vitoria to dominate from the opening minute or produce a multi-goal victory.",
 
-  "Vitoria de Guimaraes versus Nacional retains the published selection, Vitoria de Guimaraes to Win, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Vitoria de Guimaraes versus Nacional retains the published selection, Vitoria de Guimaraes to Win, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

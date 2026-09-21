@@ -73,15 +73,13 @@ Troyes can keep a compact 4-2-3-1 and attack through Picard and Ifnaoui around R
 
 Troyes can keep a compact 4-2-3-1 and attack through Picard and Ifnaoui around Ripart. Strasbourg have more creative options between the lines through Reyna, Nanasi and Yassine, but El Mourabet’s suspension removes one midfield option. The over needs an early disruption to the compact home block; a 0-0 first half is a major negative game state.
 
-### Conflict Detector
-
-The supporting case comes from the HOME/AWAY process, but the counter-signal is material rather than cosmetic. Both relevant venue samples show **0.00 GF/game**, and Troyes’ HOME xG was only 0.38. Strasbourg also created just 0.27 xG in their opening away loss. Those are direct counter-signals to Over 2.5, even though Strasbourg’s second-round rebound shows their attack can improve quickly.
+The supporting case comes from the HOME/AWAY process, but the counterpoint is material rather than cosmetic. Both relevant venue samples show **0.00 GF/game**, and Troyes’ HOME xG was only 0.38. Strasbourg also created just 0.27 xG in their opening away loss. Those are direct counterpoints to Over 2.5, even though Strasbourg’s second-round rebound shows their attack can improve quickly.
 
 That conflict is part of the match analysis and limits confidence where the market requires more than one condition to land.
 
 ### Risks and Limitations
 
-Both relevant venue samples show **0.00 GF/game**, and Troyes’ HOME xG was only 0.38. Strasbourg also created just 0.27 xG in their opening away loss. Those are direct counter-signals to Over 2.5, even though Strasbourg’s second-round rebound shows their attack can improve quickly.
+Both relevant venue samples show **0.00 GF/game**, and Troyes’ HOME xG was only 0.38. Strasbourg also created just 0.27 xG in their opening away loss. Those are direct counterpoints to Over 2.5, even though Strasbourg’s second-round rebound shows their attack can improve quickly.
 
 Early-season venue samples can move sharply after a single match. Injuries, transfers and tactical changes also mean prior-season fallback data should be treated as context, not as a current-form substitute.
 

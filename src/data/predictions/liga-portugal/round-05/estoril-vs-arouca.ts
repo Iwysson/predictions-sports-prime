@@ -78,9 +78,7 @@ The split is descriptive evidence rather than a fixed probability model. The mos
 
 Estoril need to convert superior home shot and corner volume into clearer chances, especially through wide overloads. Arouca have survived away despite heavy pressure, so the first goal is crucial: if Estoril score first, that low-volume approach becomes harder to sustain.
 
-### Conflict Detector
-
-The main case comes from the venue-specific process above. The counter-signal is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. A draw remains the simplest way for the selection to fail even if the preferred side controls more territory.
+The main case comes from the venue-specific process above. The counterpoint is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. A draw remains the simplest way for the selection to fail even if the preferred side controls more territory.
 
 ### Risks and Limitations
 

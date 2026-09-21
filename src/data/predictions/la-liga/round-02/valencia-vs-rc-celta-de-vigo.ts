@@ -13,7 +13,7 @@ analysis: [
 
   "Valencia were competitive at Mestalla, so this prediction should not be interpreted as a bet against a poor home side.",
 
-  "Valencia versus RC Celta de Vigo retains the published selection, Celta Vigo or Draw (X2), as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Valencia versus RC Celta de Vigo retains the published selection, Celta Vigo or Draw (X2), as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

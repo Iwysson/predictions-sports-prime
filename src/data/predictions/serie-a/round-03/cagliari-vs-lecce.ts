@@ -80,15 +80,13 @@ The core is descriptive evidence, not a probability model. With one-match venue 
 
 Cagliari should use Fazzini and Maldini behind Mendy to attack the spaces between Lecce's midfield and back four. Lecce can counter through the wide forwards and use Štulić as the reference point after Geubbels' injury. If Lecce score first, Cagliari will have to open the game; if Cagliari score first, Lecce's away chance creation suggests they can still contribute.
 
-### Conflict Detector
-
-The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: Lecce's clean sheet and Cagliari's zero home goals are both direct counter-signals to an over market. The underlying xGA numbers are high, but one match can exaggerate defensive weakness. The selection therefore needs a better conversion rate than Cagliari showed in their first home fixture.
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counterpoint remains visible: Lecce's clean sheet and Cagliari's zero home goals are both direct counterpoints to an over market. The underlying xGA numbers are high, but one match can exaggerate defensive weakness. The selection therefore needs a better conversion rate than Cagliari showed in their first home fixture.
 
 The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
 
 ### Risks and Limitations
 
-Lecce's clean sheet and Cagliari's zero home goals are both direct counter-signals to an over market. The underlying xGA numbers are high, but one match can exaggerate defensive weakness. The selection therefore needs a better conversion rate than Cagliari showed in their first home fixture.
+Lecce's clean sheet and Cagliari's zero home goals are both direct counterpoints to an over market. The underlying xGA numbers are high, but one match can exaggerate defensive weakness. The selection therefore needs a better conversion rate than Cagliari showed in their first home fixture.
 
 Most current-season HOME/AWAY samples contain only one league match. Where a current venue sample does not exist, the reference window is disclosed explicitly rather than replaced by an overall or cross-competition average.
 
@@ -132,8 +130,8 @@ The Statistical Core comes from the verified editorial dataset supplied for this
     },
     {
         "name": "La Gazzetta dello Sport — Probabili Formazioni Serie A",
-        "url": "https://www.gazzetta.it/Calcio/prob_form/cagliari-lecce/2638143",
-        "description": "Current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
+        "url": "https://web.archive.org/web/20260902163625/https://www.gazzetta.it/Calcio/prob_form/cagliari-lecce/2638143",
+        "description": "Internet Archive copy of the original Gazzetta match page, captured before the match (the live page is no longer available). Original use: current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
         "accessedAt": "2026-09-03T14:30:00+02:00"
     },
     {

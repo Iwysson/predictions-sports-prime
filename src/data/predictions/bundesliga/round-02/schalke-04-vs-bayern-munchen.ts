@@ -75,8 +75,6 @@ Schalke 04's HOME reference shows **2.47 points per game** and **1.71 goals scor
 
 Schalke are likely to protect the centre with a back three and use Džeko as the first target when they escape pressure. Bayern can attack that block from several angles: Olise and Díaz can isolate wing-backs, Kane can pin the central defenders and Kimmich can recycle possession around the box. Schalke’s suspended Schallenberg removes one defensive midfield option in a game where protecting second balls will be essential.
 
-### Conflict Detector
-
 Bayern’s attacking ceiling is clearly higher, but a -2 Asian line demands separation on the scoreboard rather than simply match control. Schalke can reduce that margin by defending the box compactly, slowing restarts and keeping the game within one or two goals for long periods.
 
 ### Market Context

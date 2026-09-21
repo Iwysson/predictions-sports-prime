@@ -77,8 +77,6 @@ SC Paderborn 07's HOME reference shows **1.94 points per game** and **1.88 goals
 
 Paderborn’s back three and wing-backs can keep the penalty area crowded, but their midfield absences reduce rotation options when Freiburg press. Freiburg can move Beste and Scherhant inside around Suzuki, with Matanović occupying the centre-backs and the full-backs providing the outside lane. Paderborn’s clearest attacking route is to release Marino and Vidović quickly around Pieringer before Freiburg recover their shape.
 
-### Conflict Detector
-
 Both sides have routes to chances, but an over-goals reading is vulnerable if either team chooses a conservative early phase or if finishing underperforms the shot volume. Paderborn’s step up in opposition and Freiburg’s ability to manage possession are the clearest reasons the match could stay below its attacking indicators.
 
 ### Market Context

@@ -71,9 +71,7 @@ The broader season context is Toronto FC at **5-10-7** with **32 scored and 38 c
 
 The core numbers do not need to be forced into a single verdict. Toronto FC produce 1.43 xG from 12.25 home shots, while Chicago Fire produce 1.41 xG from 11.73 away shots; that makes the chance-quality comparison fairly balanced even before actual finishing is considered. At the other end, the xGA comparison of 1.40 to 1.57 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. Toronto FC's 1.92 home goals per game sit beside 1.43 xG, while Chicago Fire's 1.73 away goals sit beside 1.41 xG; defensively, the corresponding pairs are 1.92/1.40 and 1.55/1.57. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. Toronto FC's 1.92 home goals per game sit beside 1.43 xG, while Chicago Fire's 1.73 away goals sit beside 1.41 xG; defensively, the corresponding pairs are 1.92/1.40 and 1.55/1.57. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 

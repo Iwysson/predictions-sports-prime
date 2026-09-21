@@ -80,9 +80,7 @@ The core is descriptive evidence, not a probability model. With one-match venue 
 
 Udinese can attack through the two narrow creators behind Davis and use Kamara/Vojvoda for width. Lazio's front three should look to isolate the outside centre-backs and attack quickly before Udinese's wing-backs recover. With Rovella absent, Lazio's ability to control the centre may be less secure, which matters if Udinese can sustain second-ball pressure.
 
-### Conflict Detector
-
-The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: Lazio already converted a low-xG away performance into a win and clean sheet, showing that game management can outweigh chance volume. Udinese's one HOME match also cannot establish a stable attacking level. The 1X position depends on the home side reproducing the underlying chance creation rather than the finishing outcome.
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counterpoint remains visible: Lazio already converted a low-xG away performance into a win and clean sheet, showing that game management can outweigh chance volume. Udinese's one HOME match also cannot establish a stable attacking level. The 1X position depends on the home side reproducing the underlying chance creation rather than the finishing outcome.
 
 The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
 
@@ -98,7 +96,7 @@ Implied probability = 1 / decimal odds. At 1.47, 1 / 1.47 = 0.680, or approximat
 
 ### Conclusion
 
-The core gives Udinese more attacking process than the results column suggests and exposes a Lazio away defence that allowed substantial xGA. That supports home-or-draw protection, although Lazio's ability to win low-event matches remains the main counter-signal.
+The core gives Udinese more attacking process than the results column suggests and exposes a Lazio away defence that allowed substantial xGA. That supports home-or-draw protection, although Lazio's ability to win low-event matches remains the main counterpoint.
 
 **Prediction:** Udinese or Draw (1X)
 **Odds:** 1.47
@@ -128,12 +126,6 @@ The Statistical Core comes from the verified editorial dataset supplied for this
         "name": "Lega Serie A",
         "url": "https://www.legaseriea.it/",
         "description": "Official competition reference for Serie A fixture context.",
-        "accessedAt": "2026-09-03T14:30:00+02:00"
-    },
-    {
-        "name": "La Gazzetta dello Sport — Probabili Formazioni Serie A",
-        "url": "https://www.gazzetta.it/Calcio/prob_form/udinese-lazio/2638151",
-        "description": "Current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
         "accessedAt": "2026-09-03T14:30:00+02:00"
     },
     {

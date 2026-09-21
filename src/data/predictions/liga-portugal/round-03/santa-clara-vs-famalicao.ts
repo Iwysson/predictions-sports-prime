@@ -14,7 +14,7 @@ export const santaClaraVsFamalicao: EditorialPrediction = {
 
   "Santa Clara-Famalicao needs two total goals for Over 1.5 Goals; 0-0 and 1-0 lose, and the cited table is insufficient for a fixture-level goals probability.",
 
-  "Santa Clara versus Famalicao retains the published selection, Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Santa Clara versus Famalicao retains the published selection, Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

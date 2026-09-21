@@ -22,8 +22,6 @@ The two-goal threshold is low, but neither attack has been prolific. Getafe have
 
 Getafe's likely structure should emphasize duels, second balls and direct access to the front line rather than long spells of sterile possession. Málaga's 4-5-1 can keep numbers behind the ball, but their AWAY goals-against rate of 2.33 shows that the block has not consistently survived. If Getafe score first, Málaga eventually have to take more responsibility with the ball and the match should offer more transition space. A long 0-0 is the main danger because it lets both sides remain in their preferred cautious shapes.
 
-### Risks and Counter-Signals
-
 Personnel adds another layer of uncertainty. Getafe lose Mario Martín to suspension and have a long current absence list, while Málaga also arrive with multiple unavailable players and doubts. That can reduce attacking fluency as easily as it can weaken defensive structure. The market therefore should not be read as a simple endorsement of attacking quality: it is primarily a two-goal requirement against an away defence that has already conceded more than two per trip.
 
 ### Statistical Core Predictions-Sports-Prime

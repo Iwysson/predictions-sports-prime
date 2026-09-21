@@ -68,18 +68,16 @@ The strongest reliable venue-specific signal is the set-piece environment. Ipswi
 
 Ipswich are likely to defend in a compact 4-2-3-1 and use Maeda, Enciso and Fatawu to attack the space behind Liverpool's advanced full-backs. Liverpool should have the larger possession share and can create repeated final-third entries through Wirtz, Gakpo/Muñoz and Isak. If Liverpool score first, Ipswich will have to release their full-backs more aggressively, increasing the chance of both shots and corners. A long 0-0 is the clearest negative game state.
 
-### Conflict Detector
-
 Signals supporting the main scenario:
 - The strongest venue-specific process described above gives the primary analytical direction.
 - The expected game state offers a realistic route for that process to influence the published market.
 
-Counter-signals:
+Counterpoints:
 - Ipswich's current Premier League sample is too small to support many exact HOME rates. Liverpool are without Hugo Ekitike, Conor Bradley and Giovanni Leoni, while Joe Gomez is not expected back in training until next week. Ipswich are without Jaden Philogene and Jack Taylor, with Emersonn, Azor Matusiwa and Florentino Luis among the current doubts.
 - Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
 
 Assessment:
-The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
+The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counterpoint is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
 
 ### Risks and Limitations
 

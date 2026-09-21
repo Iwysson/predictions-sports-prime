@@ -73,8 +73,6 @@ Brentford’s home structure is built to generate pressure without requiring lon
 
 Brentford can attack Sunderland’s full-back zones through Ouattara and Schade while Igor Thiago occupies the central defenders, with Damsgaard linking the phases. Sunderland have more transition speed after the arrival of Fofana and can attack the space behind Brentford’s advanced wide players. Xhaka and Sadiki will be important in deciding whether Sunderland can play through pressure rather than simply defend repeated second balls.
 
-### Conflict Detector
-
 Sunderland have already shown they can win a tight game, and Brentford are missing Jensen as well as van den Berg. That weakens both creative depth and defensive continuity for the hosts. Conversely, Sunderland’s away record at Brentford is poor historically, so the visitors still have to prove that their improved squad can translate into control at this venue.
 
 ### Market Context

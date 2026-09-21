@@ -15,7 +15,7 @@ export const lensVsAuxerre: EditorialPrediction = {
 
   "Lens to Win requires Lens to win; a draw is a full loss. Season-level evidence can frame the matchup, but it cannot establish the outcome of one fixture.",
 
-  "Lens versus Auxerre retains the published selection, Lens to Win, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Lens versus Auxerre retains the published selection, Lens to Win, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

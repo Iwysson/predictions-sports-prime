@@ -12,7 +12,7 @@ export const maritimoVsAcademicoDeViseu: EditorialPrediction = {
 
   "For Marítimo-Académico Viseu, Portugal 2025/26 final tables supports only broad season-record context and is not stretched into evidence about transfers, availability or either team's match plan.",
 
-  "Marítimo versus Académico Viseu retains the published selection, Marítimo or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick.",
+  "Marítimo versus Académico Viseu retains the published selection, Marítimo or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick.",
 
   "Marítimo or Draw (1X) + Over 1.5 Goals gives Marítimo-Académico Viseu two independent tests: the protected result and at least two goals; no unsupported venue percentage is used to claim that both legs are likely."
 ],

@@ -15,7 +15,10 @@ export function TeamBadge({
         <img
           src={localBadge.src}
           alt={team}
+          width={size === "sm" ? 32 : 45}
+          height={size === "sm" ? 38 : 52}
           loading="lazy"
+          decoding="async"
         />
       </span>
     );

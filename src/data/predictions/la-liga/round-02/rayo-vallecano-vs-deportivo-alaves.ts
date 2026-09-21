@@ -11,7 +11,7 @@ analysis: [
 
   "Nevertheless, our expectation is that Rayo remain competitive throughout the match and create enough attacking opportunities for the goals requirement to be reached without needing to take the additional risk of a straight Rayo victory.",
 
-  "Rayo Vallecano versus Deportivo Alavés retains the published selection, Rayo Vallecano or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Rayo Vallecano versus Deportivo Alavés retains the published selection, Rayo Vallecano or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

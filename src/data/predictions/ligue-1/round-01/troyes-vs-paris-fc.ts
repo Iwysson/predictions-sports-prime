@@ -8,11 +8,11 @@ export const troyesVsParisFc: EditorialPrediction = {
   analysis: [
   "Troyes-Paris FC must produce three goals for Over 2.5 Goals; low-event scorelines such as 1-0 and 1-1 lose, and the retained table does not prove how often this matchup should cross the line.",
 
-  "Troyes-Paris FC has one retained evidence boundary: France 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
+  "Troyes-Paris FC has one limit on the available evidence: France 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
 
   "That is particularly relevant because this selection does not depend entirely on Paris FC generating the scoring.",
 
-  "Troyes versus Paris FC retains the published selection, Over 2.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Troyes versus Paris FC retains the published selection, Over 2.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

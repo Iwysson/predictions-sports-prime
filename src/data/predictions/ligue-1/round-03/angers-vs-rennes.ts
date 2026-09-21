@@ -73,9 +73,7 @@ Angers can use van den Boomen to switch play and release the full-backs, but Ren
 
 Angers can use van den Boomen to switch play and release the full-backs, but Rennes have more speed between the lines through Thomasson, Szymański and Tamari. If Rennes score first, Angers will have to advance their wide defenders and the X2 leg becomes structurally stronger; if Angers control second balls, they can keep the game in the low-margin zone that protects the home side.
 
-### Conflict Detector
-
-The supporting case comes from the HOME/AWAY process, but the counter-signal is material rather than cosmetic. Angers created 2.28 xG in their available HOME reference despite losing, so the zero-goal scoreline understates the chance quality. Rennes’ away figures are older and therefore less representative of the current squad. A 1-0 Angers game state is the clearest path against the combined market.
+The supporting case comes from the HOME/AWAY process, but the counterpoint is material rather than cosmetic. Angers created 2.28 xG in their available HOME reference despite losing, so the zero-goal scoreline understates the chance quality. Rennes’ away figures are older and therefore less representative of the current squad. A 1-0 Angers game state is the clearest path against the combined market.
 
 That conflict is part of the match analysis and limits confidence where the market requires more than one condition to land.
 

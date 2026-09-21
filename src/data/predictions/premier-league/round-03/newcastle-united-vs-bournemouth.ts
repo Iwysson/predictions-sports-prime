@@ -73,8 +73,6 @@ The current HOME/AWAY table contains only one league match for each side, so its
 
 Newcastle can use Elanga and Barnes to stretch Bournemouth horizontally while Wissa occupies the centre-backs, with Willock arriving from midfield rather than playing as a fixed winger. Bournemouth’s best route is to escape the first press through Cook and Scott and then find Kluivert or Tavernier before Newcastle reset. The absence of Joelinton reduces some of the hosts’ ball-winning power in those transition moments.
 
-### Conflict Detector
-
 Newcastle’s injury list removes experience from the back line and midfield, and Bournemouth have gone eight league meetings unbeaten against the Magpies. That history does not decide Saturday’s game, but it is a relevant warning against treating home advantage as sufficient on its own. The one-match venue sample is also far too small for strong percentage-based conclusions.
 
 ### Market Context

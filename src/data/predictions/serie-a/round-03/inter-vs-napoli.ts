@@ -78,15 +78,13 @@ The table is descriptive evidence rather than a stand-alone forecast. With one-m
 
 Inter should try to pin Napoli's full-backs with the wing-backs and create overloads around Barella and Çalhanoğlu. Napoli can threaten the space behind Inter's wide players through Politano and Alisson Santos, with De Bruyne supplying early passes into Højlund. The first goal matters heavily: an Inter lead would allow Chivu's side to attack transition space, while a Napoli lead would test Inter against a deeper block.
 
-### Conflict Detector
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counterpoint remains visible: Napoli's away defensive process is the clearest counterpoint to a home-win selection. Inter's four-goal opener also overperformed xG, so the current scoreline gap is larger than the underlying chance-quality gap. One match per venue is not enough to call either pattern stable.
 
-The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: Napoli's away defensive process is the clearest counter-signal to a home-win selection. Inter's four-goal opener also overperformed xG, so the current scoreline gap is larger than the underlying chance-quality gap. One match per venue is not enough to call either pattern stable.
-
-The evidence is mixed rather than unanimous, so the counter-signals remain part of the match assessment.
+The evidence is mixed rather than unanimous, so the counterpoints remain part of the match assessment.
 
 ### Risks and Limitations
 
-Napoli's away defensive process is the clearest counter-signal to a home-win selection. Inter's four-goal opener also overperformed xG, so the current scoreline gap is larger than the underlying chance-quality gap. One match per venue is not enough to call either pattern stable.
+Napoli's away defensive process is the clearest counterpoint to a home-win selection. Inter's four-goal opener also overperformed xG, so the current scoreline gap is larger than the underlying chance-quality gap. One match per venue is not enough to call either pattern stable.
 
 Most current-season HOME/AWAY samples contain only one league match. Where a current venue sample does not exist, the reference window is disclosed explicitly rather than replaced by an overall or cross-competition average.
 

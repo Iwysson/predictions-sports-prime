@@ -78,11 +78,9 @@ The table is descriptive evidence rather than a stand-alone forecast. With one-m
 
 Fiorentina should try to occupy the half-spaces with Mastantuono and Atta behind the striker, while the full-backs provide width. Torino can attack the space left outside Fiorentina's centre-backs and use Adams/Simeone to turn recoveries into direct attacks. If Fiorentina score first, Torino will have to release the wing-backs; if Torino score first, the home side's high shot volume points toward sustained pressure.
 
-### Conflict Detector
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counterpoint remains visible: Fiorentina have already shown that high xG and shot volume do not guarantee goals. Torino can also slow the game with a back three and protect central space. The corner component is more robust than a high-goal projection, but the sample remains only one HOME match and one AWAY match.
 
-The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: Fiorentina have already shown that high xG and shot volume do not guarantee goals. Torino can also slow the game with a back three and protect central space. The corner component is more robust than a high-goal projection, but the sample remains only one HOME match and one AWAY match.
-
-The evidence is mixed rather than unanimous, so the counter-signals remain part of the match assessment.
+The evidence is mixed rather than unanimous, so the counterpoints remain part of the match assessment.
 
 ### Risks and Limitations
 
@@ -119,12 +117,6 @@ The strongest evidence is Fiorentina's ability to generate shots and corners at 
         "name": "Lega Serie A",
         "url": "https://www.legaseriea.it/",
         "description": "Official competition reference for Serie A fixture context.",
-        "accessedAt": "2026-09-03T14:30:00+02:00"
-    },
-    {
-        "name": "La Gazzetta dello Sport — Probabili Formazioni Serie A",
-        "url": "https://www.gazzetta.it/calcio/prob_form/fiorentina-torino/2638144",
-        "description": "Current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
         "accessedAt": "2026-09-03T14:30:00+02:00"
     },
     {

@@ -68,7 +68,7 @@ Statistical coverage is partial: unavailable target metrics remain unavailable r
 | Same-competition possession | Not yet established | Not yet established |
 | Same-competition corners | Not yet established | Not yet established |
 
-The Core is deliberately incomplete at the opening whistle of the campaign. That is not a data error; it is the consequence of applying the competition-and-season rule consistently. The matchup makes that distinction useful because neither side benefits from treating territorial pressure as an end in itself.
+The Core is incomplete at the opening whistle of the campaign. That is not a data error; it is the consequence of applying the competition-and-season rule consistently. The matchup makes that distinction useful because neither side benefits from treating territorial pressure as an end in itself.
 
 The principal risk to a result-based selection is a game-state swing that pure volume does not capture. A red card, a set-piece goal or a short spell of poor rest-defence can turn an otherwise balanced reading. The relevant question is whether the selected side can preserve its structural advantage when the match stops following the expected script. For Real Sociedad against Bournemouth, avoiding a chaotic second half is especially important because the selected result can be undone by a single transition even after a strong first hour.
 

@@ -5,7 +5,7 @@ export const siteConfig = {
   name: "Predictions Sports Prime",
   shortName: "PSP",
   description:
-    "Football predictions, betting tips and manually written match analysis from Predictions Sports Prime, with fixtures and league standings.",
+    "Football predictions, betting tips and match analysis based on identified sources and data from Predictions Sports Prime, with fixtures and league standings.",
   defaultTitle: "Football Predictions & Betting Tips | Predictions Sports Prime",
 
   /*

@@ -69,9 +69,7 @@ Seattle Sounders' current league line is **7-5-9** with **24 scored and 29 conce
 
 The core numbers do not need to be forced into a single verdict. Seattle Sounders produce 1.69 xG from 14.60 home shots, while New York Red Bulls produce 1.54 xG from 13.20 away shots; that makes the chance-quality comparison fairly balanced even before actual finishing is considered. At the other end, the xGA comparison of 1.61 to 1.67 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. Seattle Sounders' 1.60 home goals per game sit beside 1.69 xG, while New York Red Bulls' 1.40 away goals sit beside 1.54 xG; defensively, the corresponding pairs are 1.80/1.61 and 2.30/1.67. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. Seattle Sounders' 1.60 home goals per game sit beside 1.69 xG, while New York Red Bulls' 1.40 away goals sit beside 1.54 xG; defensively, the corresponding pairs are 1.80/1.61 and 2.30/1.67. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 

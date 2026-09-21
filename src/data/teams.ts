@@ -65,6 +65,24 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "South Korea": { src: "/team-badges/south-korea.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134517" },
   Ecuador: { src: "/team-badges/ecuador.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134507" },
 
+  // Africa Cup of Nations Qualifying national teams
+  "Côte d’Ivoire": { src: "/team-badges/cote-divoire.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134502" },
+  "Côte d'Ivoire": { src: "/team-badges/cote-divoire.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134502" },
+  "Ivory Coast": { src: "/team-badges/cote-divoire.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134502" },
+  Ghana: { src: "/team-badges/ghana.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134513" },
+  Cameroon: { src: "/team-badges/cameroon.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134498" },
+  Comoros: { src: "/team-badges/comoros.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=136512" },
+  Gambia: { src: "/team-badges/gambia.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=136508" },
+  Somalia: { src: "/team-badges/somalia.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=140186" },
+  Nigeria: { src: "/team-badges/nigeria.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134512" },
+  Madagascar: { src: "/team-badges/madagascar.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=136509" },
+  Egypt: { src: "/team-badges/egypt.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=136138" },
+  Angola: { src: "/team-badges/angola.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=136485" },
+  Algeria: { src: "/team-badges/algeria.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134516" },
+  Zambia: { src: "/team-badges/zambia.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=136476" },
+  Kenya: { src: "/team-badges/kenya.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=136506" },
+  Eritrea: { src: "/team-badges/eritrea.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=140185" },
+
   "Kasımpaşa": { src: "/team-badges/kasimpasa.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/uryxtp1448203236.png" },
 
   // Turkish clubs

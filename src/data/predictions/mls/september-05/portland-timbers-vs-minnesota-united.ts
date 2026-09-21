@@ -67,9 +67,7 @@ The broader season context is Portland Timbers at **8-4-10** with **39 scored an
 
 The core numbers do not need to be forced into a single verdict. Portland Timbers produce 1.59 xG from 13.09 home shots, while Minnesota United produce 1.46 xG from 12.18 away shots; that makes the chance-quality comparison fairly balanced even before actual finishing is considered. At the other end, the xGA comparison of 1.60 to 1.64 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. Portland Timbers' 2.18 home goals per game sit beside 1.59 xG, while Minnesota United's 1.73 away goals sit beside 1.46 xG; defensively, the corresponding pairs are 1.64/1.60 and 1.91/1.64. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. Portland Timbers' 2.18 home goals per game sit beside 1.59 xG, while Minnesota United's 1.73 away goals sit beside 1.46 xG; defensively, the corresponding pairs are 1.64/1.60 and 1.91/1.64. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 

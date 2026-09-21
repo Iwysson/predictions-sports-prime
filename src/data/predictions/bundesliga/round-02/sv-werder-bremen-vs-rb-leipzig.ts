@@ -75,8 +75,6 @@ SV Werder Bremen's HOME reference shows **1.12 points per game** and **1.12 goal
 
 Bremen can use Füllkrug as a reference point for direct passes and second balls, with Grüll and the midfield runners attacking around him. Leipzig have more speed between the lines and can create overloads through Nusa and their advanced midfielders, but Bremen’s best chance of disrupting that rhythm is to turn the contest into repeated duels and set-piece phases rather than a clean transition game.
 
-### Conflict Detector
-
 Leipzig’s stronger individual quality does not remove Bremen’s ability to create pressure at home, especially through wide attacks and second phases. The corner component also depends on game state: an early goal can either accelerate territorial pressure or reduce the need for repeated wide attacks.
 
 ### Market Context

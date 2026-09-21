@@ -74,9 +74,7 @@ Brest's challenge is converting volume into clean chances without Del Castillo's
 
 Le Havre's 3-4-2-1 is designed to keep numbers behind the ball and release Samatta after recoveries, while Brest can build longer attacking sequences around Ajorque and Doumbia. The visitors' shot volume suggests they will spend more time in advanced areas, but the loss of Del Castillo changes how they create from set pieces and the right half-space. If Brest cannot turn pressure into an early goal, Le Havre can keep the contest in the low-margin state they prefer.
 
-### Conflict Detector
-
-Le Havre's scoring output is the main counter-signal to a combined goals-and-corners selection: they failed to score in their only home league match and have created less xG than Brest. Brest's own problem is efficiency, having drawn twice despite dominant shot production. The corner side of the profile is stronger than the goal side, and the one-match venue samples remain too small to treat either trend as established.
+Le Havre's scoring output is the main counterpoint to a combined goals-and-corners selection: they failed to score in their only home league match and have created less xG than Brest. Brest's own problem is efficiency, having drawn twice despite dominant shot production. The corner side of the profile is stronger than the goal side, and the one-match venue samples remain too small to treat either trend as established.
 
 ### Risks and Limitations
 

@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Predictions Sports Prime",
     short_name: "PSP",
     description:
-      "Football predictions, fixtures, standings and manually written match analysis.",
+      "Football predictions, fixtures, standings and match analysis based on identified sources and data.",
     start_url: "/",
     display: "standalone",
     background_color: "#071019",

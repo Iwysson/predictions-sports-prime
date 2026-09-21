@@ -71,9 +71,7 @@ The broader season context is New York City FC at **7-5-7** with **33 scored and
 
 The core numbers do not need to be forced into a single verdict. New York City FC produce 1.55 xG from 13.91 home shots, while Nashville SC produce 1.15 xG from 9.70 away shots; that makes the chance-quality comparison favour the host even before actual finishing is considered. At the other end, the xGA comparison of 1.36 to 1.27 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. New York City FC's 2.27 home goals per game sit beside 1.55 xG, while Nashville SC's 1.10 away goals sit beside 1.15 xG; defensively, the corresponding pairs are 1.64/1.36 and 0.50/1.27. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. New York City FC's 2.27 home goals per game sit beside 1.55 xG, while Nashville SC's 1.10 away goals sit beside 1.15 xG; defensively, the corresponding pairs are 1.64/1.36 and 0.50/1.27. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 

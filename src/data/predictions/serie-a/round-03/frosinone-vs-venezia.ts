@@ -79,9 +79,7 @@ The core is descriptive evidence, not a probability model. With one-match venue 
 
 Frosinone should attack through the front three and use the full-backs to create wide overloads against Venezia's wing-backs. Venezia can respond with a five-man midfield and direct access to Adams/Yeboah. An early goal is especially important for the over-1.5 leg because neither side's current venue finishing gives much margin for a slow first half.
 
-### Conflict Detector
-
-The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: The largest risk is obvious: both relevant venue samples show zero goals scored. Frosinone's 12 corners conceded also inflate the first-match corner environment and should not be treated as a guaranteed repeat. The market needs either better finishing or a game state that forces more aggressive attacking after the opener.
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counterpoint remains visible: The largest risk is obvious: both relevant venue samples show zero goals scored. Frosinone's 12 corners conceded also inflate the first-match corner environment and should not be treated as a guaranteed repeat. The market needs either better finishing or a game state that forces more aggressive attacking after the opener.
 
 The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
 
@@ -129,8 +127,8 @@ The Statistical Core comes from the verified editorial dataset supplied for this
     },
     {
         "name": "La Gazzetta dello Sport — Probabili Formazioni Serie A",
-        "url": "https://www.gazzetta.it/calcio/prob_form/frosinone-venezia/2638145",
-        "description": "Current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
+        "url": "https://web.archive.org/web/20260905025512/https://www.gazzetta.it/Calcio/prob_form/frosinone-venezia/2638145",
+        "description": "Internet Archive copy of the original Gazzetta match page, captured before the match (the live page is no longer available). Original use: current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
         "accessedAt": "2026-09-03T14:30:00+02:00"
     },
     {

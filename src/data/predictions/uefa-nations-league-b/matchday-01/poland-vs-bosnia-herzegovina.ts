@@ -44,7 +44,7 @@ The fixture also has an unusual crowd detail: Bosnia's federation confirmed that
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The sourced rows below preserve the package's current squad, schedule, recent-form and H2H context.
+Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The rows below show the squad, head-to-head and current-status context that is available.
 
 | Current indicator | Poland | Bosnia and Herzegovina |
 |---|---:|---:|
@@ -62,7 +62,7 @@ At published odds of **1.65**, the raw implied probability is **60.6%**, calcula
 
 ### Conclusion
 
-Poland's deeper attacking rotation and home platform support the selection, although the visitors' experienced central reference means the match should not be reduced to league status or squad reputation alone.
+Poland's deeper attacking rotation and home platform give them the edge, although the visitors' experienced central reference means the match should not be reduced to league status or squad reputation alone.
 
 **Prediction:** Poland to Win  
 **Odds:** 1.65`],

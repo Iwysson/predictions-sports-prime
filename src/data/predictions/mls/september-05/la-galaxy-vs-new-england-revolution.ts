@@ -67,9 +67,7 @@ The broader season context is LA Galaxy at **6-8-9** with **28 scored and 35 con
 
 The core numbers do not need to be forced into a single verdict. LA Galaxy produce 1.65 xG from 13.64 home shots, while New England Revolution produce 1.58 xG from 13.60 away shots; that makes the chance-quality comparison fairly balanced even before actual finishing is considered. At the other end, the xGA comparison of 1.52 to 1.56 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. LA Galaxy's 1.09 home goals per game sit beside 1.65 xG, while New England Revolution's 1.40 away goals sit beside 1.58 xG; defensively, the corresponding pairs are 1.27/1.52 and 1.60/1.56. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. LA Galaxy's 1.09 home goals per game sit beside 1.65 xG, while New England Revolution's 1.40 away goals sit beside 1.58 xG; defensively, the corresponding pairs are 1.27/1.52 and 1.60/1.56. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 

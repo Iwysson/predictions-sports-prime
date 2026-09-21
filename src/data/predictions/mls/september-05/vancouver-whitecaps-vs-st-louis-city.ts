@@ -67,9 +67,7 @@ Vancouver Whitecaps' current league line is **13-4-4** with **48 scored and 18 c
 
 The core numbers do not need to be forced into a single verdict. Vancouver Whitecaps produce 2.09 xG from 18.18 home shots, while St. Louis City produce 1.36 xG from 12.36 away shots; that makes the chance-quality comparison favour the host even before actual finishing is considered. At the other end, the xGA comparison of 0.86 to 1.45 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. Vancouver Whitecaps' 2.45 home goals per game sit beside 2.09 xG, while St. Louis City's 1.09 away goals sit beside 1.36 xG; defensively, the corresponding pairs are 0.55/0.86 and 1.45/1.45. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. Vancouver Whitecaps' 2.45 home goals per game sit beside 2.09 xG, while St. Louis City's 1.09 away goals sit beside 1.36 xG; defensively, the corresponding pairs are 0.55/0.86 and 1.45/1.45. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 
