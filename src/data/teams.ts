@@ -55,6 +55,16 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "North Macedonia": { src: "/team-badges/north-macedonia.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=North%20Macedonia" },
   Switzerland: { src: "/team-badges/switzerland.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Switzerland" },
 
+  // International Friendlies national teams
+  Azerbaijan: { src: "/team-badges/azerbaijan.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=136455" },
+  Tajikistan: { src: "/team-badges/tajikistan.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=140159" },
+  Japan: { src: "/team-badges/japan.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134503" },
+  Uruguay: { src: "/team-badges/uruguay.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134504" },
+  Australia: { src: "/team-badges/australia.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134500" },
+  Brazil: { src: "/team-badges/brazil.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134496" },
+  "South Korea": { src: "/team-badges/south-korea.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134517" },
+  Ecuador: { src: "/team-badges/ecuador.png", sourceUrl: "https://www.thesportsdb.com/api/v1/json/3/lookupteam.php?id=134507" },
+
   "Kasımpaşa": { src: "/team-badges/kasimpasa.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/uryxtp1448203236.png" },
 
   // Turkish clubs
