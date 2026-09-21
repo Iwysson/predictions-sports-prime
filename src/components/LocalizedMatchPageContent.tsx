@@ -1,5 +1,6 @@
 import Link from "@/components/DocumentLink";
 import { AdSlot } from "@/components/ads";
+import { AdsterraNativeBanner } from "@/components/ads/AdsterraNativeBanner";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { TeamBadge } from "@/components/TeamBadge";
 import { LiveMatchMeta } from "@/components/LiveMatchMeta";
@@ -362,6 +363,10 @@ export function LocalizedMatchPageContent({
           localizedSlugs={localizedRelatedSlugs}
           indexableMatchSlugs={indexableMatchSlugs}
         />
+      </div>
+
+      <div className="container adsterra-native-banner-area">
+        <AdsterraNativeBanner />
       </div>
 
       <PredictionLeagueCategories locale={locale} />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "@/components/DocumentLink";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ads";
+import { AdsterraNativeBanner } from "@/components/ads/AdsterraNativeBanner";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { TeamBadge } from "@/components/TeamBadge";
 import { LiveMatchMeta } from "@/components/LiveMatchMeta";
@@ -292,6 +293,10 @@ export default async function MatchPage({
           matches={selectedRelatedMatches}
           indexableMatchSlugs={indexableMatchSlugs}
         />
+      </div>
+
+      <div className="container adsterra-native-banner-area">
+        <AdsterraNativeBanner />
       </div>
 
       <PredictionLeagueCategories />
