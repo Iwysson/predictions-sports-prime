@@ -52,7 +52,7 @@ export const kenyaVsEritrea: EditorialPrediction = {
   matchInfo: {
     date: "2026-09-26",
     time: "13:00",
-    round: "Group D — Matchday 1",
+    round: "Matchday 1",
     venue: "Nyayo National Stadium",
     venueAddress: {
       addressLocality: "Nairobi",

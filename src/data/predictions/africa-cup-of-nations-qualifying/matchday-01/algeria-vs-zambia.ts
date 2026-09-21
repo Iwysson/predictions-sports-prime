@@ -51,7 +51,7 @@ export const algeriaVsZambia: EditorialPrediction = {
   matchInfo: {
     date: "2026-09-25",
     time: "19:00",
-    round: "Group I — Matchday 1",
+    round: "Matchday 1",
     venue: "Stade Hocine Aït Ahmed",
     venueAddress: {
       addressLocality: "Tizi Ouzou",
