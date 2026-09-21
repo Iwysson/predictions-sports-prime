@@ -52,7 +52,7 @@ export const coteDivoireVsGhana: EditorialPrediction = {
   matchInfo: {
     date: "2026-09-24",
     time: "19:00",
-    round: "Group C — Matchday 1",
+    round: "Matchday 1",
     venue: "Stade de la Paix",
     venueAddress: {
       addressLocality: "Bouaké",

@@ -50,7 +50,7 @@ export const egyptVsAngola: EditorialPrediction = {
   matchInfo: {
     date: "2026-09-25",
     time: "19:00",
-    round: "Group B — Matchday 1",
+    round: "Matchday 1",
     venue: "Cairo International Stadium",
     venueAddress: {
       addressLocality: "Cairo",

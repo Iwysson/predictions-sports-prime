@@ -53,7 +53,7 @@ export const nigeriaVsMadagascar: EditorialPrediction = {
   matchInfo: {
     date: "2026-09-25",
     time: "16:00",
-    round: "Group L — Matchday 1",
+    round: "Matchday 1",
     venue: "Godswill Akpabio International Stadium",
     venueAddress: {
       addressLocality: "Uyo",

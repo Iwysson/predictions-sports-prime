@@ -52,7 +52,7 @@ export const cameroonVsComoros: EditorialPrediction = {
   matchInfo: {
     date: "2026-09-24",
     time: "19:00",
-    round: "Group G — Matchday 1",
+    round: "Matchday 1",
     venue: "Stade Roumdé Adjia",
     venueAddress: {
       addressLocality: "Garoua",

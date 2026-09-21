@@ -51,7 +51,7 @@ export const gambiaVsSomalia: EditorialPrediction = {
   matchInfo: {
     date: "2026-09-25",
     time: "16:00",
-    round: "Group C — Matchday 1",
+    round: "Matchday 1",
     venue: "Independence Stadium",
     venueAddress: {
       addressLocality: "Bakau",
