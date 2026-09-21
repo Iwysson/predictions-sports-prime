@@ -22,8 +22,6 @@ This is a team-corners market rather than a match-result bet, so Barcelona's ter
 
 The AWAY scoring split explains why game state can cut both ways. Barcelona have won all three away matches, scoring fourteen and conceding two. If they spend long periods attacking a Sevilla 4-5-1, repeated switches to Yamal, Gordon and the overlapping full-backs can generate blocked crosses, defensive clearances and corners. However, if Barcelona score very early and gain a two-goal cushion, they may no longer need the same volume of repeated box entries. A dominant scoreboard can reduce urgency even when possession remains high.
 
-### Risks and Counter-Signals
-
 Sevilla have been strong at HOME at 2-0-1, and that resistance can actually be useful for a Barcelona-corners line if it keeps the match competitive. The risk is that Sevilla defend the box cleanly without conceding many restarts, or that Barcelona convert their best early attacks directly into goals. Corner markets are especially sensitive to shot deflections and defensive choices, so the 8.17 average should not be treated as a fixture probability.
 
 ### Statistical Core Predictions-Sports-Prime

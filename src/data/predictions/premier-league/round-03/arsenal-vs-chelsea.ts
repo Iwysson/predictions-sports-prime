@@ -69,18 +69,16 @@ Arsenal's current HOME split shows **2.30 xG** and only **0.30 xGA**, with 20 sh
 
 Arsenal should try to lock Chelsea into their own half with Rice/Guimarães controlling second balls and Ødegaard/Eze receiving between the lines. Chelsea can hurt Arsenal if Palmer and Rogers escape pressure and release João Pedro before the home back line is set. Arsenal leading allows them to protect central space, while Chelsea leading would force the champions to increase width and attacking numbers.
 
-### Conflict Detector
-
 Signals supporting the main scenario:
 - The strongest venue-specific process described above gives the primary analytical direction.
 - The expected game state offers a realistic route for that process to influence the published market.
 
-Counter-signals:
+Counterpoints:
 - Both venue splits contain one match. Arsenal are without Jurrien Timber and William Saliba, and Bruno Guimarães has carried a doubt. Chelsea's availability is also fluid around Caicedo and several defensive/midfield names. The derby context increases variance beyond what a one-match statistical split can capture.
 - Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
 
 Assessment:
-The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
+The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counterpoint is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
 
 ### Risks and Limitations
 

@@ -22,7 +22,7 @@ Georgia's second home match of the Nations League window comes only three days a
 
 Georgia's attacking identity is built around the freedom of Kvaratskhelia and Mikautadze rather than a rigid front line. Kvaratskhelia can start wide and carry the ball into central areas, while Mikautadze is comfortable leaving the centre-forward zone to combine. Kochorashvili and Kiteishvili then become crucial because they have to support those attacks without leaving the centre-backs exposed to Ukraine's counterattacks.
 
-Ukraine also arrive from a Matchday 1 game, away to Hungary on 25 September. Their squad changed immediately before the camp: Artem Dovbyk withdrew because of injury and Oleksandr Andrievskyi is unavailable after appendicitis. Ihor Krasnoper and Oleksandr Pikhalyonok were called in. Anatoliy Trubin, Ilya Zabarnyi, Mykola Matviyenko, Vitaliy Mykolenko, Volodymyr Brazhko, Mykola Shaparenko, Georgiy Sudakov, Viktor Tsygankov, Oleksandr Zubkov, Andriy Yarmolenko, Vladyslav Vanat and Roman Yaremchuk remain the core names.
+Ukraine also arrive from a Matchday 1 game, away to Hungary on 25 September. Their squad changed immediately before the camp: Artem Dovbyk withdrew because of injury and Oleksandr Andrievskyi is unavailable after appendicitis; Oleksandr Pikhalionok and Ihor Krasnopir were called up in their place. Ihor Krasnoper and Oleksandr Pikhalyonok were called in. Anatoliy Trubin, Ilya Zabarnyi, Mykola Matviyenko, Vitaliy Mykolenko, Volodymyr Brazhko, Mykola Shaparenko, Georgiy Sudakov, Viktor Tsygankov, Oleksandr Zubkov, Andriy Yarmolenko, Vladyslav Vanat and Roman Yaremchuk remain the core names.
 
 Dovbyk's absence removes one of Ukraine's most established penalty-area finishers, but there are still several ways to construct the front line. Vanat can run behind, Yaremchuk can occupy centre-backs, and Sudakov or Tsygankov can become the main creator depending on where Georgia leave space. The additional concern is physical recovery after the Hungary match, especially in midfield and at full-back.
 
@@ -40,11 +40,11 @@ The H2H strongly favours Ukraine historically. The teams have met 11 times, with
 
 The matchup is still different two years later. Georgia now have a clearer expectation to take initiative at home rather than simply survive. Mamardashvili provides security behind an aggressive shape, and Kvaratskhelia gives them a player who can change the game without Georgia needing to dominate possession. Ukraine's strongest counter is the quality of Zabarnyi and Matviyenko in defending space plus the ability of Sudakov and Tsygankov to punish a turnover.
 
-The state of the group after Matchday 1 will matter. Georgia face Northern Ireland while Ukraine face Hungary, so both teams could enter this match needing a different level of risk from the one currently projected. That is why the prediction page should be refreshed on 26 September with the first-round results, minutes played and any new injuries.
+The state of the group after Matchday 1 will matter. Georgia face Northern Ireland while Ukraine face Hungary, so both teams could enter this match needing a different level of risk from the one currently projected. That is why team news should be checked again on 26 September, once the first-round results, minutes played and any new injuries are known.
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The sourced rows below preserve the package's current squad, schedule, recent-form and H2H context.
+Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The rows below show the squad, head-to-head and current-status context that is available.
 
 | Current indicator | Georgia | Ukraine |
 |---|---:|---:|
@@ -62,7 +62,7 @@ At published odds of **1.57**, the raw implied probability is **63.7%**, calcula
 
 ### Conclusion
 
-Georgia's home initiative and individual match-winners support the double chance, while Ukraine's seven wins in eleven meetings explain why the protection of the draw is central to the selection.
+Georgia's home initiative and individual match-winners give them a credible platform, while Ukraine's seven wins in eleven meetings explain why the match is unlikely to be one-sided.
 
 **Prediction:** Georgia or Draw  
 **Odds:** 1.57`],
@@ -79,15 +79,16 @@ Georgia's home initiative and individual match-winners support the double chance
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-20T18:49:50-03:00",
+  updatedAt: "2026-09-21T16:17:17-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-20T18:49:50-03:00",
-    teamNewsUpdatedAt: "2026-09-20T18:49:50-03:00",
-    lineupUpdatedAt: "2026-09-20T18:49:50-03:00",
+    editorialUpdatedAt: "2026-09-21T16:17:17-03:00",
+    teamNewsUpdatedAt: "2026-09-21T16:17:17-03:00",
+    lineupUpdatedAt: "2026-09-21T16:17:17-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    {"name":"Mezha — Ukraine replaces Dovbyk and Andrievskyi before Nations League start","url":"https://mezha.net/eng/news/846a006e_ukraine_replaces_dovbyk/","description":"Ukraine replacements Oleksandr Pikhalionok and Ihor Krasnopir.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"UAF — Changes to the Ukraine squad","url":"https://uaf.ua/en/news/changes-to-the-composition-of-the-ukraine-national-team-2","description":"Official squad, withdrawals and replacements.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"Georgian Football Federation","url":"https://gff.ge/en/","description":"National-team updates used for Georgia camp context.","accessedAt":"2026-09-20T18:49:50-03:00"}

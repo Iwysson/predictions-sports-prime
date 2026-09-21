@@ -68,18 +68,16 @@ Manchester United's AWAY baseline carries **1.53 points per game** and **1.58 go
 
 Everton can make the match physical through Barry, Dewsbury-Hall and direct second balls, while United should have the more dangerous creators between the lines through Fernandes, Mbeumo and Cunha. If United score first, Everton's full-backs will need to advance and the game can open. If Everton lead, United still have enough central and wide creativity to push the match toward a second goal.
 
-### Conflict Detector
-
 Signals supporting the main scenario:
 - The strongest venue-specific process described above gives the primary analytical direction.
 - The expected game state offers a realistic route for that process to influence the published market.
 
-Counter-signals:
+Counterpoints:
 - United have significant absences: Baleba, Ugarte, De Ligt, Heaton, Mount and Diallo are currently listed out. Everton are without Iroegbunam and Nørgaard, with Hackney doubtful. Those midfield losses can change control and tempo, while Everton's positive start means the away double chance should not be treated as automatic.
 - Early-season results remain a small sample and can be distorted by finishing variance, opponent strength and game-state effects.
 
 Assessment:
-The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counter-signal is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
+The matchup has a coherent main direction, but the opposing evidence is material enough to limit confidence. The counterpoint is retained because it can genuinely change the outcome rather than being treated as a token disclaimer.
 
 ### Risks and Limitations
 

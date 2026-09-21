@@ -27,7 +27,7 @@ Santa Clara's HOME sample shows **2.00 points per game**, 1.50 goals and 1.55 xG
 
 ### Team News and Probable Lineups
 
-**Availability:** No additional injury change is inserted beyond the retained pre-match source set; late club updates can still change the final XI.
+**Availability:** No additional injury change is inserted beyond the retained pre-match sources consulted; late club updates can still change the final XI.
 
 **Suspensions / eligibility:** No active suspension affecting the projected XI was identified in the retained pre-match sources. A later official matchday update overrides this status.
 
@@ -73,9 +73,7 @@ The split is descriptive evidence rather than a fixed probability model. The mos
 
 Santa Clara should use home territory and wide circulation to push Rio Ave deeper, while the visitors can threaten on direct transitions. The first goal will determine whether the match stays controlled or becomes end-to-end.
 
-### Conflict Detector
-
-The main case comes from the venue-specific process above. The counter-signal is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level.
+The main case comes from the venue-specific process above. The counterpoint is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level.
 
 ### Risks and Limitations
 

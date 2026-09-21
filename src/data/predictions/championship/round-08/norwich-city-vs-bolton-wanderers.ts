@@ -59,12 +59,6 @@ export const norwichCityVsBoltonWanderers: EditorialPrediction = {
       "url": "https://the72.co.uk/2026/09/18/bolton-wanderers-team-news-predicted-xi-norwich-city/",
       "description": "Bolton availability update including Chris Forino and Thierry Gale.",
       "accessedAt": "2026-09-18T16:43:00.000Z"
-    },
-    {
-      "name": "canaries.co.uk — Team News: Norwich City v Bolton Wanderers",
-      "url": "https://www.canaries.co.uk/content/team-news-norwich-city-v-bolton-wanderers",
-      "description": "Norwich availability update including Onel Hernandez.",
-      "accessedAt": "2026-09-18T16:43:00.000Z"
     }
   ],
   "publishedAt": "2026-09-15T21:47:44.000Z",

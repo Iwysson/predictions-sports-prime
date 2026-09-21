@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-21T12:12:53-03:00";
+const updatedAt = "2026-09-21T16:17:37-03:00";
 
 export const southKoreaVsEcuador: EditorialPrediction = {
   league: "international-friendlies",
@@ -25,9 +26,13 @@ export const southKoreaVsEcuador: EditorialPrediction = {
 
 Moreno named a **30-player South Korea squad** for the four-match run against Ecuador, Uruguay, Venezuela and Uzbekistan. The established core still contains **Son Heung-min, Lee Kang-in, Kim Min-jae and Lee Jae-sung**, while Rangers winger Kim Min-su received his first senior call-up and Jeong Seung-won was another notable selection. Twelve members of the squad are based in the K League, giving Moreno a mix of domestic players and the established European-based core.
 
-Gallardo announced his first **26-player Ecuador squad** on 20 September. The most significant team-news points are the absences of **Moisés Caicedo**, who is recovering from a muscular problem, and **Piero Hincapié**, who has a groin issue. Enner Valencia is no longer part of the international setup after retiring from national-team football following the World Cup. Willian Pacho becomes one of the senior defensive references, while Nilson Angulo, Pedro Vite, Alan Minda and Keny Arroyo are among the younger attacking and creative options. Experienced goalkeeper Hernán Galíndez was recalled.
+Gallardo announced his first **26-player Ecuador squad** on 20 September. The most significant team-news points are the absences of **Moisés Caicedo**, who is recovering from a muscular problem, and **Piero Hincapié**, who has a groin issue. Joel Ordóñez is also reported injured. Enner Valencia is no longer part of the international setup after retiring from national-team football following the World Cup. Willian Pacho becomes one of the senior defensive references, while Nilson Angulo, Pedro Vite, Alan Minda and Keny Arroyo are among the younger attacking and creative options. Experienced goalkeeper Hernán Galíndez was recalled.
 
-**Probable South Korea XI:** goalkeeper from Moreno's current group; Kim Min-jae leading the defensive line; Lee Jae-sung and Lee Kang-in involved in midfield/advanced roles; Son Heung-min in the attacking unit. Moreno has discussed a new structure and the exact shape should be treated as provisional until his first official team sheet. **Probable Ecuador XI:** Galíndez; a defence led by Pacho; midfield reconstructed without Caicedo; Angulo, Vite, Minda and Arroyo competing for attacking roles. Hincapié and Caicedo are not expected to feature based on the latest squad information.
+**Projected lineups (not confirmed):** no official XI had been released. For South Korea, Kim Min-jae leads the defensive line, Lee Jae-sung and Lee Kang-in are the main midfield and creative names, and Son Heung-min is the reference attacker; Moreno has discussed a new structure, so the shape itself is provisional until his first official team sheet. For Ecuador, Galíndez and Pacho anchor the back line, the midfield has to be rebuilt without Caicedo, and Angulo, Vite, Minda and Arroyo compete for the attacking roles. Hincapié and Caicedo are not expected to feature according to the latest squad information.
+
+### Injuries, suspensions and availability
+
+Ecuador are expected to be without Caicedo and Hincapié according to the latest squad information cited below. No injuries or suspensions were reported for South Korea in those sources, but that reflects the reporting available and not a confirmed clean bill of health.
 
 ### Match analysis
 
@@ -68,7 +73,7 @@ At published odds of **1.98**, the raw implied probability is **50.5%**, calcula
   },
   published: true,
   publishedAt: "2026-09-21T12:12:53-03:00",
-  updatedAt: publishedAt,
+  updatedAt,
   freshness: {
     editorialUpdatedAt: publishedAt,
     teamNewsUpdatedAt: publishedAt,
@@ -77,6 +82,7 @@ At published odds of **1.98**, the raw implied probability is **50.5%**, calcula
   },
   sourceStatus: "partial",
   sources: [
+    {"name":"Infobae/EFE — Gallardo keeps World Cup core in first Ecuador squad","url":"https://www.infobae.com/espana/agencias/2026/09/20/gallardo-mantiene-base-mundialista-en-su-primera-lista-con-ecuador-con-bajas-por-lesion/","description":"Ecuador squad and injured players.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {
       name: "Korea Football Association — Robert Moreno's 30-player squad",
       url: "https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&check_url=bGF5ZXI%3D&div_code=news&idx=28281&lang=KOR",

@@ -79,15 +79,13 @@ The core is descriptive evidence, not a probability model. With one-match venue 
 
 Genoa can make the match uncomfortable through a back three, direct pressure and the movement of Baldanzi behind two forwards. Como should have the cleaner possession structure, with Nico Paz and Baturina receiving between lines and Diao stretching the defensive block. If Como score first, Genoa should be forced to advance the wing-backs, a game state that can increase both final-third actions and corners.
 
-### Conflict Detector
-
-The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: The central counter-signal is Genoa's lack of league goals. Como can also protect leads without turning matches into high-volume chaos. A prolonged 0-0 would hurt both legs of the combined market, and one-match HOME/AWAY samples are too small to be treated as stable team identities.
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counterpoint remains visible: The central counterpoint is Genoa's lack of league goals. Como can also protect leads without turning matches into high-volume chaos. A prolonged 0-0 would hurt both legs of the combined market, and one-match HOME/AWAY samples are too small to be treated as stable team identities.
 
 The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
 
 ### Risks and Limitations
 
-The central counter-signal is Genoa's lack of league goals. Como can also protect leads without turning matches into high-volume chaos. A prolonged 0-0 would hurt both legs of the combined market, and one-match HOME/AWAY samples are too small to be treated as stable team identities.
+The central counterpoint is Genoa's lack of league goals. Como can also protect leads without turning matches into high-volume chaos. A prolonged 0-0 would hurt both legs of the combined market, and one-match HOME/AWAY samples are too small to be treated as stable team identities.
 
 Most current-season HOME/AWAY samples contain only one league match. Where a current venue sample does not exist, the reference window is disclosed explicitly rather than replaced by an overall or cross-competition average.
 
@@ -125,12 +123,6 @@ The Statistical Core comes from the verified editorial dataset supplied for this
         "name": "Lega Serie A",
         "url": "https://www.legaseriea.it/",
         "description": "Official competition reference for Serie A fixture context.",
-        "accessedAt": "2026-09-03T14:30:00+02:00"
-    },
-    {
-        "name": "La Gazzetta dello Sport — Probabili Formazioni Serie A",
-        "url": "https://www.gazzetta.it/calcio/prob_form/genoa-como/2638146",
-        "description": "Current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
         "accessedAt": "2026-09-03T14:30:00+02:00"
     },
     {

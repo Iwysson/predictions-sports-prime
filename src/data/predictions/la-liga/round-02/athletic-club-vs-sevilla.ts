@@ -7,11 +7,11 @@ awayTeam: "Sevilla",
 analysis: [
   "Athletic Club or Draw (1X) + Over 1.5 Goals gives Athletic Club-Sevilla two independent tests: the protected result and at least two goals; no unsupported venue percentage is used to claim that both legs are likely.",
 
-  "Athletic Club-Sevilla has one retained evidence boundary: Spain 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
+  "Athletic Club-Sevilla has one limit on the available evidence: Spain 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
 
   "Rather than requiring Athletic to win, this market gives us protection against a draw while asking for only two goals in the match.",
 
-  "Athletic Club versus Sevilla retains the published selection, Athletic Club or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Athletic Club versus Sevilla retains the published selection, Athletic Club or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

@@ -69,9 +69,7 @@ Columbus Crew's current league line is **5-5-12** with **31 scored and 39 conced
 
 The core numbers do not need to be forced into a single verdict. Columbus Crew produce 1.41 xG from 11.09 home shots, while Colorado Rapids produce 0.95 xG from 7.64 away shots; that makes the chance-quality comparison favour the host even before actual finishing is considered. At the other end, the xGA comparison of 1.28 to 1.48 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. Columbus Crew's 1.27 home goals per game sit beside 1.41 xG, while Colorado Rapids' 0.91 away goals sit beside 0.95 xG; defensively, the corresponding pairs are 1.27/1.28 and 1.73/1.48. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. Columbus Crew's 1.27 home goals per game sit beside 1.41 xG, while Colorado Rapids' 0.91 away goals sit beside 0.95 xG; defensively, the corresponding pairs are 1.27/1.28 and 1.73/1.48. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 

@@ -12,7 +12,7 @@ export const atalantaVsSassuolo: EditorialPrediction = {
 
   "That prevents us from treating this as an automatic goals selection based purely on Atalanta's home results.",
 
-  "Atalanta versus Sassuolo retains the published selection, Over 2.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Atalanta versus Sassuolo retains the published selection, Over 2.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
   picks: {

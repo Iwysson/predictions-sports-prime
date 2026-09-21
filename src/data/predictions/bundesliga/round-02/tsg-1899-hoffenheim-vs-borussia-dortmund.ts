@@ -75,9 +75,7 @@ TSG 1899 Hoffenheim's HOME reference shows **1.88 points per game** and **2.06 g
 
 Hoffenheim’s front two can occupy Dortmund’s back three and create room for Daghim and Conté to attack from the second line. Dortmund will look to release Guirassy centrally while Ryerson and Beier provide width, but the absences in their defensive unit reduce continuity when Hoffenheim break the first press. Avdullahu and Burger are central to keeping the home side connected during those transitions.
 
-### Conflict Detector
-
-Hoffenheim’s home route is credible, but Dortmund still possess enough attacking quality to punish any loss of structure in transition. The main counter-signal is therefore the visitors’ ability to turn a small number of high-quality breaks into decisive chances even if Hoffenheim control more territory.
+Hoffenheim’s home route is credible, but Dortmund still possess enough attacking quality to punish any loss of structure in transition. The main counterpoint is therefore the visitors’ ability to turn a small number of high-quality breaks into decisive chances even if Hoffenheim control more territory.
 
 ### Market Context
 

@@ -73,15 +73,13 @@ Lyon can use Tolisso between the lines with Nuamah and Boudache stretching the f
 
 Lyon can use Tolisso between the lines with Nuamah and Boudache stretching the full-backs, while Openda attacks the depth. Auxerre’s depleted back line has to survive repeated transition moments after turnovers. If Lyon score first, the visitors’ need to push higher should open the spaces required for the second-goal leg.
 
-### Conflict Detector
-
-The supporting case comes from the HOME/AWAY process, but the counter-signal is material rather than cosmetic. Lyon’s first HOME match finished only 1-1, and Auxerre still generated 1.86 xG in their away sample despite conceding five. That attacking output is a meaningful counter-signal to a comfortable home win, particularly if Lyon fail to control transition defence.
+The supporting case comes from the HOME/AWAY process, but the counterpoint is material rather than cosmetic. Lyon’s first HOME match finished only 1-1, and Auxerre still generated 1.86 xG in their away sample despite conceding five. That attacking output is a meaningful counterpoint to a comfortable home win, particularly if Lyon fail to control transition defence.
 
 That conflict is part of the match analysis and limits confidence where the market requires more than one condition to land.
 
 ### Risks and Limitations
 
-Lyon’s first HOME match finished only 1-1, and Auxerre still generated 1.86 xG in their away sample despite conceding five. That attacking output is a meaningful counter-signal to a comfortable home win, particularly if Lyon fail to control transition defence.
+Lyon’s first HOME match finished only 1-1, and Auxerre still generated 1.86 xG in their away sample despite conceding five. That attacking output is a meaningful counterpoint to a comfortable home win, particularly if Lyon fail to control transition defence.
 
 Early-season venue samples can move sharply after a single match. Injuries, transfers and tactical changes also mean prior-season fallback data should be treated as context, not as a current-form substitute.
 

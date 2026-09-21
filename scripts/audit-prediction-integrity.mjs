@@ -14,6 +14,7 @@ walk(base);
 
 const errors = [];
 const warnings = [];
+const legacyOddsWithoutProvenance = [];
 let published = 0;
 let oddsRecords = 0;
 let latestRecords = 0;
@@ -31,12 +32,16 @@ for (const file of files) {
   if (/\bpreviousOdds:\s*\d/.test(source)) errors.push(`${label}: previousOdds is ambiguous; migrate to latestObservedOdds`);
   if (/\bpublishedOdds:\s*\d/.test(source) && /(?:^|\s)odds:\s*\d/m.test(source)) errors.push(`${label}: duplicate published odds fields`);
   if (/\blatestObservedOdds:\s*\d/.test(source) && !/\bpublishedOdds:\s*\d/.test(source)) errors.push(`${label}: latestObservedOdds requires explicit publishedOdds`);
-  if (hasPublishedOdds && !/\boddsProvenance:\s*\{/.test(source)) warnings.push(`${label}: odds source/capture not recorded`);
+  if (hasPublishedOdds && !/\boddsProvenance:\s*\{/.test(source)) legacyOddsWithoutProvenance.push(label);
 }
 
 const chelsea = readFileSync(join(base, "efl-cup", "round-02", "chelsea-vs-luton-town.ts"), "utf8");
 if (!/publishedOdds:\s*1\.75/.test(chelsea) || !/latestObservedOdds:\s*1\.55/.test(chelsea)) {
   errors.push("chelsea-vs-luton-town: published 1.75 and latest observed 1.55 are not preserved separately");
+}
+if (legacyOddsWithoutProvenance.length) {
+  console.log(`NOTE: ${legacyOddsWithoutProvenance.length} legacy records carry editorially supplied odds with no recorded bookmaker or capture time. They are historical/frozen, are not attributed to any bookmaker, and are left unchanged:`);
+  legacyOddsWithoutProvenance.forEach((label) => console.log(`  - ${label}`));
 }
 console.log(`Prediction integrity: ${published} published / ${oddsRecords} with published odds / ${latestRecords} with later observations`);
 warnings.forEach((warning) => console.log(`WARNING: ${warning}`));

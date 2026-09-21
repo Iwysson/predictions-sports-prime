@@ -11,9 +11,9 @@ export const niceVsLorient: EditorialPrediction = {
 
   "That profile fits our market construction particularly well: Nice have historically been difficult for Lorient to beat at this venue, while the matchup has frequently produced enough scoring activity to clear a two-goal line.",
 
-  "Nice-Lorient has one retained evidence boundary: France 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
+  "Nice-Lorient has one limit on the available evidence: France 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
 
-  "Nice versus Lorient retains the published selection, Nice or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick.",
+  "Nice versus Lorient retains the published selection, Nice or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick.",
 
   "Nice or Draw (1X) + Over 1.5 Goals gives Nice-Lorient two independent tests: the protected result and at least two goals; no unsupported venue percentage is used to claim that both legs are likely."
 ],

@@ -12,7 +12,7 @@ export const deportivoLaCoruñaVsElche: EditorialPrediction = {
 
   "We only want to enter if the match itself confirms the attacking pattern we expect.",
 
-  "RC Deportivo La Coruña versus Elche retains the published selection, Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "RC Deportivo La Coruña versus Elche retains the published selection, Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

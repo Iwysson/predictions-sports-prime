@@ -13,7 +13,7 @@ export const olympiqueDeMarseilleVsStrasbourg: EditorialPrediction = {
 
   "The possibility of another draw is the clearest danger to our moneyline selection.",
 
-  "Olympique de Marseille versus Strasbourg retains the published selection, Olympique de Marseille to Win, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Olympique de Marseille versus Strasbourg retains the published selection, Olympique de Marseille to Win, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

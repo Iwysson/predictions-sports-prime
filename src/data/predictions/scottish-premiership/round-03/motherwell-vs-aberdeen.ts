@@ -43,7 +43,7 @@ Statistical coverage is partial: unavailable target metrics remain unavailable r
 | Corners against/game | 2.50 | — |
 | Total corners/game | 8.00 | — |
 
-This Core is deliberately narrow: Motherwell HOME and Aberdeen AWAY in the 2026/27 Premiership. Motherwell's two home clean sheets and Aberdeen's two scoreless away appearances are real observations, but each comes from only two games. The dash in the Aberdeen corner cells means the exact split was not verified to the same standard, not that Aberdeen recorded no corners.
+This Core is narrow: Motherwell HOME and Aberdeen AWAY in the 2026/27 Premiership. Motherwell's two home clean sheets and Aberdeen's two scoreless away appearances are real observations, but each comes from only two games. The dash in the Aberdeen corner cells means the exact split was not verified to the same standard, not that Aberdeen recorded no corners.
 
 The supplied **1.75** market price has a raw implied probability of **57.1%**, calculated as \`1 / decimal odds\`. That number includes no adjustment for bookmaker margin. Any value assessment must keep it separate from the tiny two-match over/under samples because they do not measure the same thing.
 

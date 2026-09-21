@@ -71,9 +71,7 @@ Austin FC's current league line is **6-6-10** with **28 scored and 41 conceded**
 
 The core numbers do not need to be forced into a single verdict. Austin FC produce 1.43 xG from 11.90 home shots, while San Jose Earthquakes produce 1.24 xG from 10.73 away shots; that makes the chance-quality comparison favour the host even before actual finishing is considered. At the other end, the xGA comparison of 1.39 to 1.66 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. Austin FC's 1.40 home goals per game sit beside 1.43 xG, while San Jose Earthquakes' 1.82 away goals sit beside 1.24 xG; defensively, the corresponding pairs are 1.00/1.39 and 1.27/1.66. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. Austin FC's 1.40 home goals per game sit beside 1.43 xG, while San Jose Earthquakes' 1.82 away goals sit beside 1.24 xG; defensively, the corresponding pairs are 1.00/1.39 and 1.27/1.66. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 

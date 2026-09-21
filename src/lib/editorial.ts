@@ -170,7 +170,7 @@ function playersFromEditorial(text: string, homeTeam: string, awayTeam: string) 
 }
 
 function statisticsFromEditorial(text: string) {
-  const section = text.match(/#{0,3}\s*Statistical Core[^\n]*\n+([\s\S]*?)(?=\n\s*(?:#{1,6}\s*)?(?:\*\*)?(?:Conflict Detector|Risks and Counter-Signals)(?:\*\*)?|$)/i)?.[1];
+  const section = text.match(/#{0,3}\s*Statistical Core[^\n]*\n+([\s\S]*?)(?=\n\s*(?:#{1,6}\s*)?(?:\*\*)?(?:Conflict Detector|Risks and Counter-Signals|What Could Go Against the Pick|Risks and Limitations|Market Price Context|Market price and value|Odds + Implied Probability)(?:\*\*)?|$)/i)?.[1];
   if (!section) return undefined;
   const tableLines = section.split("\n").filter((line) => line.trim().startsWith("|"));
   if (tableLines.length < 3) return undefined;

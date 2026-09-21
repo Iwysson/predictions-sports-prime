@@ -73,8 +73,6 @@ Fulham have the healthier squad and should be able to field a familiar defensive
 
 Fulham can use Iwobi and Palacios to move around Palace’s wing-backs while Josh King receives between midfield and defence. Palace are likely to rely more heavily on Pino and McNeil to connect with Strand Larsen because Mateta and Sarr are unavailable. Wharton’s passing under pressure remains crucial: if Fulham prevent him from turning, Palace may struggle to move from their back three into sustained attacking possession.
 
-### Conflict Detector
-
 Fulham have not yet shown consistent attacking efficiency, and Palace’s three-centre-back structure can still make central progression difficult even with absences. Palace, meanwhile, have lost both opening league games, so relying on their historical competitiveness at Craven Cottage without accounting for current form would overstate the visitors’ position.
 
 ### Market Context

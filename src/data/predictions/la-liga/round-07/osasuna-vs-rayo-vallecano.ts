@@ -22,8 +22,6 @@ Both teams sit on seven points, but the HOME/AWAY evidence directly challenges t
 
 The tactical route for Rayo is nevertheless identifiable. Their 4-2-3-1 can attack the spaces outside Osasuna's back five and use the three players behind Camello to create second-ball pressure after direct attacks. Osasuna's own HOME scoring rate is only 0.33 goals per match, which means a compact game can stay within reach for a long period. If the hosts do not convert their first territorial spell, a 0-0 or 1-1 game state becomes materially more plausible and both outcomes protect the X2.
 
-### Risks and Counter-Signals
-
 The danger is what happens when Rayo are forced to chase. Their AWAY defensive record of 3.67 goals conceded per game shows how badly the road sample has stretched when control has been lost. An Osasuna first goal would allow the hosts to retreat into the same low-event structure that has produced only two HOME goals conceded, while Rayo would have to take more positional risk. Conversely, if Rayo score first, Osasuna's low HOME scoring output becomes a much more important limitation.
 
 ### Statistical Core Predictions-Sports-Prime

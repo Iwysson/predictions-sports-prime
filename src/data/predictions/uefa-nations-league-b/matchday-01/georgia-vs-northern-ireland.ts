@@ -44,7 +44,7 @@ The fixture is the opening game of a B2 group that also contains Hungary and Ukr
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The sourced rows below preserve the package's current squad, schedule, recent-form and H2H context.
+Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The rows below show the squad, head-to-head and current-status context that is available.
 
 | Current indicator | Georgia | Northern Ireland |
 |---|---:|---:|
@@ -62,7 +62,7 @@ At published odds of **1.65**, the raw implied probability is **60.6%**, calcula
 
 ### Conclusion
 
-Georgia's front three offer more routes to create than the lone 2008 H2H can explain, but the empty stadium and Northern Ireland's aerial threat keep the combined market from being treated as routine.
+Georgia's front three offer more routes to create than the lone 2008 head-to-head can explain, but the empty stadium and Northern Ireland's aerial threat mean the match will not be routine.
 
 **Prediction:** Georgia or Draw + Over 1.5 Goals  
 **Odds:** 1.65`],

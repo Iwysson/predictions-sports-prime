@@ -73,9 +73,7 @@ Toulouse can create through Jørgensen between the lines and Vignolo/Oppong in w
 
 Toulouse can create through Jørgensen between the lines and Vignolo/Oppong in wide zones, but the absence of Gboho and Dønnum removes two established attacking options. Lille can use Giroud as the reference for second balls while Mbappé and Haraldsson attack around him. If Lille score first, Toulouse will have to commit more numbers forward and the second-goal leg becomes more likely.
 
-### Conflict Detector
-
-The supporting case comes from the HOME/AWAY process, but the counter-signal is material rather than cosmetic. Toulouse generated 2.29 xG in their home defeat, while Lille allowed 1.87 xGA in their away win. Those figures show that the scorelines flatter Lille and underrate Toulouse’s chance creation. A low-conversion 0-1 or a Toulouse first goal are the main threats to the combined market.
+The supporting case comes from the HOME/AWAY process, but the counterpoint is material rather than cosmetic. Toulouse generated 2.29 xG in their home defeat, while Lille allowed 1.87 xGA in their away win. Those figures show that the scorelines flatter Lille and underrate Toulouse’s chance creation. A low-conversion 0-1 or a Toulouse first goal are the main threats to the combined market.
 
 That conflict is part of the match analysis and limits confidence where the market requires more than one condition to land.
 

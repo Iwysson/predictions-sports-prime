@@ -6,7 +6,7 @@ export const angersVsLille: EditorialPrediction = {
   awayTeam: "Lille",
 
   analysis: [
-  "Angers-Lille has one retained evidence boundary: France 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
+  "Angers-Lille has one limit on the available evidence: France 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
 
   "The difference becomes particularly relevant when we examine Lille away from home.",
 
@@ -14,7 +14,7 @@ export const angersVsLille: EditorialPrediction = {
 
   "Lille to Win requires Lille to win; a draw is a full loss. Season-level evidence can frame the matchup, but it cannot establish the outcome of one fixture.",
 
-  "Angers versus Lille retains the published selection, Lille to Win, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Angers versus Lille retains the published selection, Lille to Win, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

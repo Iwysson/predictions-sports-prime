@@ -1,5 +1,5 @@
 import { publishableWithGaps as p } from "../../editorial-tools/wave-27/factory";
-const base={league:"efl-cup" as const,competition:"EFL Cup 2026/27",round:"Third round",sourceName:"Established fixture coverage",sourceUrl:"https://www.skysports.com/carabao-cup-fixtures"};
+const base={league:"efl-cup" as const,competition:"EFL Cup 2026/27",round:"Third round",sourceName:"Established fixture coverage",sourceUrl:"https://www.skysports.com/efl-cup-scores-fixtures"};
 export const eflCupWave27=[
 p({...base,home:"Bournemouth",away:"Lincoln City",slug:"bournemouth-vs-lincoln-city",date:"2026-09-08",time:"19:45",venue:"Vitality Stadium",pick:"Bournemouth -1.5",odds:1.90,evidence:"The scheduled cup tie and venue were cross-checked in current match coverage.",tactical:"Bournemouth need to pin Lincoln's outlets and create a two-goal separation; cup rotation and Lincoln's set-piece threat remain the clearest dangers."}),
 p({...base,home:"Crystal Palace",away:"Middlesbrough",slug:"crystal-palace-vs-middlesbrough",date:"2026-09-08",time:"19:45",venue:"Selhurst Park",pick:"Over 2.5",odds:1.62,evidence:"Current match coverage lists the tie at Selhurst Park on September 8.",tactical:"Palace's width and Middlesbrough's route through midfield turnovers can create an open cup game, but rotation may reduce attacking fluency."}),

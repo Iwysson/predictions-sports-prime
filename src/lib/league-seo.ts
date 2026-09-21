@@ -21,6 +21,7 @@ const leagueSearchAliases: Partial<Record<LeagueConfig["slug"], readonly string[
   mls: ["Major League Soccer", "MLS USA", "United States MLS"],
   "uefa-europa-league": ["Europa League", "UEL", "UEFA Cup"],
   "uefa-nations-league-b": ["Nations League B", "UNL League B", "UEFA Nations League Division B"],
+  "africa-cup-of-nations-qualifying": ["AFCON Qualifiers", "AFCON 2027 Qualifying", "Eliminatórias da Copa Africana de Nações 2027"],
   "international-friendlies": ["International Friendly Matches", "Football Friendlies", "National Team Friendlies"],
 };
 
@@ -39,6 +40,7 @@ const leagueEditorialIntros: Partial<Record<LeagueConfig["slug"], string>> = {
   championship: "Compare Championship predictions through demanding schedules, home-away splits and the small margins that shape each market.",
   "scottish-premiership": "Review Scottish Premiership predictions using current venue evidence, team availability and the tactical route behind the pick.",
   "uefa-nations-league-b": "Follow UEFA Nations League B predictions across the 2026/27 groups, with squad availability, projected lineups and match-specific tactical evidence kept alongside each published price.",
+  "africa-cup-of-nations-qualifying": "Follow 2027 Africa Cup of Nations qualifying with squad call-ups, injury and suspension news, projected lineups, head-to-head history and the evidence available for each match before kick-off.",
   "international-friendlies": "Follow International Friendlies predictions with current national-team call-ups, projected lineups, recent form and the evidence available for each published price.",
 };
 
@@ -93,6 +95,12 @@ export function leagueSeoTitle(league: LeagueConfig, capabilities?: LeagueSeoCap
   return full.length <= 70 ? full : compact;
 }
 
+const knockoutStyleLeagues = new Set<string>(["copa-do-brasil", "efl-cup", "copa-libertadores", "copa-sudamericana", "champions-league", "uefa-europa-league"]);
+
+function scheduleContext(league: LeagueConfig) {
+  return knockoutStyleLeagues.has(league.slug) ? "knockout" : "fixture";
+}
+
 export function leagueSeoDescription(league: LeagueConfig, capabilities?: LeagueSeoCapabilities) {
   if (capabilities) {
     const inventory = capabilities.upcomingCount > 0
@@ -100,7 +108,7 @@ export function leagueSeoDescription(league: LeagueConfig, capabilities?: League
       : `${capabilities.publishedCount} published ${capabilities.publishedCount === 1 ? "analysis" : "analyses"}`;
     const context = league.display.showStandings
       ? "current-round and table context"
-      : "current-stage knockout context";
+      : `current-stage ${scheduleContext(league)} context`;
     const full = `${league.name} predictions for ${league.country}: ${inventory}, published picks, available odds and ${context}.`;
     return full.length <= 160
       ? full
@@ -109,7 +117,7 @@ export function leagueSeoDescription(league: LeagueConfig, capabilities?: League
   const index = league.slug.length % 4;
   const standings = league.display.showStandings
     ? " and validated standings when available"
-    : " and the current knockout schedule";
+    : ` and the current ${scheduleContext(league)} schedule`;
 
   const description = index === 0
     ? `${league.name} predictions and betting tips for ${league.country}. Explore current fixtures, published picks, available odds${standings}.`
@@ -132,7 +140,7 @@ export function leagueIntro(league: LeagueConfig, publishedCount: number) {
 
   const context = league.display.showStandings
     ? "validated league standings when data is available"
-    : "the current knockout schedule";
+    : `the current ${scheduleContext(league)} schedule`;
 
   const editorialLead = leagueEditorialIntros[league.slug]
     ?? `Follow ${league.name} predictions through the current round, with the match evidence and price considered together.`;

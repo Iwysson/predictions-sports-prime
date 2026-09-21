@@ -27,7 +27,7 @@ export const adoDenHaagVsFortunaSittard: EditorialPrediction = {
 A projeção utiliza o **XI competitivo mais recente** como referência e altera posições apenas quando existe ausência, dúvida física ou possibilidade clara de retorno. Em posições abertas, o **substituto mais provável aparece entre parênteses**. **ADO Den Haag — provável escalação (4-4-2):** **Kilian Nikièma; Othniël Raterink, Pascal Mulder, Milan Hokke, Sékou Sylla; Daryl van Mieghem, Jan Zamburek, Juho Kilo, Nigel Thomas; Evan Rottier, Yannick Eduardo (Donát Bárány).** O núcleo da projeção vem do time utilizado mais recentemente pelo ADO, com **Nikièma; Raterink, Mulder, Hokke, Sylla; Van Mieghem, Zamburek, Kilo, Thomas; Rottier e Eduardo**. A situação de **Donát Bárány** precisa ser monitorada. O atacante aparece com problema no joelho e status próximo de *day-to-day*, razão pela qual **Yannick Eduardo** permanece como referência inicial na projeção. **Cameron Peupion** está fora com lesão no joelho, enquanto **Jalen Hawkins** aparece em recuperação de problema muscular. O ADO não possui neste momento uma suspensão de grande impacto indicada para esse XI, portanto a maior incerteza está ligada à disponibilidade física e não a cartões. **Fortuna Sittard — provável escalação (4-3-3 / 4-2-3-1):** **Mattijs Branderhorst; Ivo Pinto, Rodrigo Guth, Justin Hubner, Mitchell Dijks (Kristoffer Peterson em estrutura mais ofensiva); Shiloh 't Zand, Philip Brittijn, Édouard Michut; Mohammed Ihattaren, Lequincio Zeefuik, Anthony Descotte.** A base é o XI utilizado na vitória por **3–2 sobre o Groningen**, com **Branderhorst; Pinto, Guth, Hubner, Dahlhaus; Michut, 't Zand, Brittijn; Ihattaren, Zeefuik e Descotte**. **Sven Simons** aparece com lesão muscular, enquanto **Iván Márquez** também está listado entre os jogadores em recuperação. **Ramazan Bayram** apresenta problema no joelho. A situação dessas peças deve ser revisada próximo ao jogo. Fortuna possui maior flexibilidade ofensiva porque **Ihattaren** pode atuar tanto por dentro quanto partindo de uma faixa lateral, enquanto **Michut** pode participar da primeira construção ou receber liberdade para avançar entrelinhas.
 
 ### Suspensions / Eligibility
-Only absences already supported by the retained pre-match source set are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
+Only absences already supported by the retained pre-match sources consulted are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
 
 ### Match Context
 The analysis is independent of the published pick. The first task is to understand the matchup from the available pre-match evidence; only then is the existing market assessed. The Eredivisie is still in an early 2026/27 sample, so venue-specific averages can move sharply after a single match. That makes it essential to separate HOME from AWAY and to label any fallback explicitly rather than presenting mixed data as if it were a clean venue split.
@@ -72,14 +72,13 @@ The xG comparison gives another layer. xG describes chance quality, not finishin
 | Clean sheets | 0% | 0% |
 | Failed to score | 0% | 0% |
 
-### Conflict Detector
 The main conflict is sample size and source granularity. Several current venue splits contain only one or two league matches. In addition, some shot, possession, corner or event-rate rows use a clearly labelled overall or structural fallback because the supplied editorial package does not contain a full venue-level feed for both teams. Those fallbacks are context, not invented HOME/AWAY observations. A second conflict is game-state dependence: early red cards, an early goal or an unusually efficient finishing day can overwhelm the pre-match averages.
 
 ### Market Price Context
 At decimal odds **1.45**, the raw implied probability is **69.0%** (1 / 1.45 = 69.0%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
 
 ### Value Assessment
-The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the Conflict Detector.
+The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the risk analysis.
 
 ### Sources / Statistical Provenance
 

@@ -22,8 +22,6 @@ The league table actually has Alavés above Athletic entering the round, so the 
 
 Athletic's projected front four gives them several ways to attack a deeper block. Sancet can receive between lines, the Williams brothers can stretch the last line, and the full-backs can create width without requiring every attack to become an early cross. Alavés' likely five-man defensive line can reduce central space and make the hosts circulate around the box. That shape is most effective while the score is level; an Athletic first goal would force Alavés to release more players into midfield and create larger recovery distances.
 
-### Risks and Counter-Signals
-
 The strongest concern is Athletic's own HOME inconsistency. One win from three is not the profile of a side that should be treated as automatic at a price below 1.70, and Alavés have conceded only three times in their two away matches. The home side's ability to move the visitors laterally therefore matters more than simple possession. A slow game with few clean chances keeps the draw alive deep into the second half, while an early Athletic lead shifts the tactical burden sharply onto the visitor.
 
 ### Statistical Core Predictions-Sports-Prime

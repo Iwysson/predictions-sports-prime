@@ -44,7 +44,7 @@ Slovenia's first priority will still be to protect the central space in front of
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The sourced rows below preserve the package's current squad, schedule, recent-form and H2H context.
+Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The rows below show the squad, head-to-head and current-status context that is available.
 
 | Current indicator | Slovenia | Scotland |
 |---|---:|---:|

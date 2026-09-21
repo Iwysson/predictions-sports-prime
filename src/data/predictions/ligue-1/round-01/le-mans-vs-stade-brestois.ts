@@ -12,7 +12,7 @@ export const leMansVsStadeBrestois: EditorialPrediction = {
 
   "We are not asking Brest to win away from home; instead, we use the draw protection while requiring only two total goals.",
 
-  "Le Mans versus Brest retains the published selection, Brest or Draw (X2) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Le Mans versus Brest retains the published selection, Brest or Draw (X2) + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

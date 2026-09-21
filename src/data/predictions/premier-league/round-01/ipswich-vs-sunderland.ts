@@ -14,7 +14,7 @@ export const ipswichTownVsSunderland: EditorialPrediction = {
 
   "Sunderland or Draw + Over 1.5 Goals gives Ipswich Town-Sunderland two independent tests: the protected result and at least two goals; no unsupported venue percentage is used to claim that both legs are likely.",
 
-  "Ipswich Town versus Sunderland retains the published selection, Sunderland or Draw + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Ipswich Town versus Sunderland retains the published selection, Sunderland or Draw + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

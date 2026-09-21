@@ -37,13 +37,13 @@ export const spartaRotterdamVsPecZwolle: EditorialPrediction = {
 | Last H2H shots | 20 | 15 |
 | Last H2H SOT | 7 | 6 |
 
-**Conflict Detector.** This is one of the strongest conflicts in the batch: five straight H2Hs without a Sparta win and five straight Under 2.5 results. No formal value claim is justified without a joint probability model.
+This is one of the strongest conflicts in the batch: five straight H2Hs without a Sparta win and five straight Under 2.5 results. No formal value claim is justified without a joint probability model.
 
 ### Probable Lineups
 Jasper Schendelaar; Olivier Aertssen, Simon Graves, Nick Viergever, Damian van der Haar; Ryan Thomas, Tobias Sommer; Dylan Mbayo, Thijs Oosting; Elias Sørensen, Koen Kostons. Sparta's final XI must remain based on the latest league team sheet. **Andrej Kostić** is suspended and **Max de Ligt** injured; PEC have **Younes Namli** carrying a knee issue and **Jan Bürger** among minor concerns.
 
 ### Suspensions / Eligibility
-Only absences already supported by the retained pre-match source set are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
+Only absences already supported by the retained pre-match sources consulted are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
 
 ### Match Context
 The analysis is independent of the published pick. The first task is to understand the matchup from the available pre-match evidence; only then is the existing market assessed. The Eredivisie is still in an early 2026/27 sample, so venue-specific averages can move sharply after a single match. That makes it essential to separate HOME from AWAY and to label any fallback explicitly rather than presenting mixed data as if it were a clean venue split.
@@ -88,14 +88,13 @@ The xG comparison gives another layer. xG describes chance quality, not finishin
 | Clean sheets | 0% | 50% |
 | Failed to score | 50% | 0% |
 
-### Conflict Detector
 The main conflict is sample size and source granularity. Several current venue splits contain only one or two league matches. In addition, some shot, possession, corner or event-rate rows use a clearly labelled overall or structural fallback because the supplied editorial package does not contain a full venue-level feed for both teams. Those fallbacks are context, not invented HOME/AWAY observations. A second conflict is game-state dependence: early red cards, an early goal or an unusually efficient finishing day can overwhelm the pre-match averages.
 
 ### Market Price Context
 At decimal odds **1.93**, the raw implied probability is **51.8%** (1 / 1.93 = 51.8%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
 
 ### Value Assessment
-The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the Conflict Detector.
+The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the risk analysis.
 
 ### Sources / Statistical Provenance
 

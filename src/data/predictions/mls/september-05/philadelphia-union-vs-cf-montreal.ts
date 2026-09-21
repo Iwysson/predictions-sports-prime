@@ -71,9 +71,7 @@ The broader season context is Philadelphia Union at **6-6-10** with **34 scored 
 
 The core numbers do not need to be forced into a single verdict. Philadelphia Union produce 1.94 xG from 17.20 home shots, while CF Montreal produce 1.40 xG from 12.55 away shots; that makes the chance-quality comparison favour the host even before actual finishing is considered. At the other end, the xGA comparison of 0.93 to 1.61 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. Philadelphia Union's 1.20 home goals per game sit beside 1.94 xG, while CF Montreal's 1.36 away goals sit beside 1.40 xG; defensively, the corresponding pairs are 1.10/0.93 and 3.00/1.61. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. Philadelphia Union's 1.20 home goals per game sit beside 1.94 xG, while CF Montreal's 1.36 away goals sit beside 1.40 xG; defensively, the corresponding pairs are 1.10/0.93 and 3.00/1.61. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 

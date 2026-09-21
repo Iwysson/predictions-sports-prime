@@ -74,9 +74,7 @@ Eintracht Frankfurt's HOME reference shows **1.47 points per game** and **1.71 g
 
 Eintracht Frankfurt should try to turn the HOME advantages in the core into sustained territorial pressure, while Augsburg will look for transition space when the host commits numbers forward. The first goal is the main game-state hinge because it can either reinforce the venue pattern or force the trailing side into a more open structure.
 
-### Conflict Detector
-
-The supporting case comes from the venue-specific process above. The main counter-signal is also retained: The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level.
+The supporting case comes from the venue-specific process above. The main counterpoint is also retained: The core is a historical venue reference rather than a direct 2026/27 forecast, so transfers, coaching changes and the opening round can materially change the current level.
 
 This opposing evidence materially limits confidence and remains part of the final sporting assessment.
 
@@ -94,7 +92,7 @@ The price is assessed against the full evidence set. The selection is attractive
 
 ### Conclusion
 
-The original market and odds remain coherent with the documented venue process and the current team-news picture, while the counter-signals above define the principal ways the selection can fail.
+The original market and odds remain coherent with the documented venue process and the current team-news picture, while the counterpoints above define the principal ways the selection can fail.
 
 **Prediction:** Eintracht Frankfurt to Win
 **Odds:** 1.93

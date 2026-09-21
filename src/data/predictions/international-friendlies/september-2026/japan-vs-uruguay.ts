@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-21T12:12:53-03:00";
+const updatedAt = "2026-09-21T14:45:00-03:00";
 
 export const japanVsUruguay: EditorialPrediction = {
   league: "international-friendlies",
@@ -27,7 +28,11 @@ The Japan Football Association announced a **31-player squad** on 17 September. 
 
 Uruguay also travel with a refreshed group under **Diego Forlán**, whose first senior match in charge comes against Japan. The travelling roster includes Federico Valverde and Rodrigo Bentancur, while Darwin Núñez, Federico Viñas, Joaquín Piquerez and Juan Manuel Sanabria are among the attacking options reported in the current group. The new coaching cycle adds an extra tactical variable because previous Uruguay patterns were established under a different staff.
 
-**Probable Japan XI:** Zion Suzuki; Itakura, Watanabe and a third centre-back option; wide roles from the current squad; Kaishu Sano, Kubo and Nakamura supporting the forward line. **Probable Uruguay XI:** built around the current travelling squad, with Valverde and Bentancur central to the midfield options and Núñez available in attack. Both starting XIs remain projections until the official match sheets are issued.
+**Projected lineups (not confirmed):** no starting XI had been published, and the call-ups alone do not support a full eleven for either team, so none is presented. Zion Suzuki, Itakura and Watanabe are the Japan defensive names to watch, with Kaishu Sano, Kubo and Nakamura among the players supporting the forward line. For Uruguay, Valverde and Bentancur are central to the midfield options and Núñez is available in attack. Official team sheets take precedence once they are issued.
+
+### Injuries, suspensions and availability
+
+No injuries, suspensions or withdrawals for Japan or Uruguay were reported in the sources listed below. That reflects the coverage available rather than a confirmed clean bill of health, and travelling squads in international windows are often adjusted close to the match.
 
 ### Match analysis
 
@@ -35,7 +40,7 @@ Japan's last six matches read **three wins, two draws and one defeat**, with ten
 
 Uruguay's last five matches listed by the JFA ended with **four draws and one defeat**: 1-1 with England, 0-0 with Algeria, 1-1 with Saudi Arabia, 2-2 with Cabo Verde and 0-1 against Spain. The sequence shows how difficult Uruguay have been to separate from opponents, but also how frequently their games have remained close. Historically, Uruguay lead the senior head-to-head against Japan, although recent generations of the Japanese team have narrowed the competitive gap considerably.
 
-This market combines two independent conditions: Japan must avoid defeat and the game must produce **at least two goals**. A 1-1 draw qualifies; a 1-0 Japan win does not. That makes the goals component important even if Japan maintain their recent home resilience.
+Two separate questions decide how this match is read: whether Japan avoid defeat and whether the game produces **at least two goals**. A 1-1 draw qualifies; a 1-0 Japan win does not. That makes the goals component important even if Japan maintain their recent home resilience.
 
 **Prediction: Japan 1X + Over 1.5 goals @ 1.78.**
 
@@ -66,7 +71,7 @@ At published odds of **1.78**, the raw implied probability is **56.2%**, calcula
   },
   published: true,
   publishedAt: "2026-09-21T12:12:53-03:00",
-  updatedAt: publishedAt,
+  updatedAt,
   freshness: {
     editorialUpdatedAt: publishedAt,
     teamNewsUpdatedAt: publishedAt,

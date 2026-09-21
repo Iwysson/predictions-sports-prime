@@ -79,9 +79,7 @@ The core is descriptive evidence, not a probability model. With one-match venue 
 
 Parma's likely move to a 5-3-2 should give them more security in buildup and allow Valeri/Britschgi to advance as wing-backs. Monza can attack the spaces around those wing-backs through Colpani and Ngonge supporting Cutrone. If Parma score first, Monza's need to chase should create the clearest path to a second goal.
 
-### Conflict Detector
-
-The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counter-signal remains visible: Parma failed to score in their first home match and Monza's four goals conceded came in a single game, so both signals can be distorted by small samples. Bernabé's fitness also affects Parma's ability to control possession and progress centrally.
+The supporting case is the venue-specific process described above: shot volume, chance quality, defensive exposure and/or corner production point toward the main scenario. The clearest counterpoint remains visible: Parma failed to score in their first home match and Monza's four goals conceded came in a single game, so both signals can be distorted by small samples. Bernabé's fitness also affects Parma's ability to control possession and progress centrally.
 
 The evidence is mixed rather than unanimous. That matters because the prediction should remain a sporting conclusion, not an argument constructed backwards from the market.
 
@@ -129,8 +127,8 @@ The Statistical Core comes from the verified editorial dataset supplied for this
     },
     {
         "name": "La Gazzetta dello Sport — Probabili Formazioni Serie A",
-        "url": "https://www.gazzetta.it/calcio/prob_form/parma-monza/2638149",
-        "description": "Current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
+        "url": "https://web.archive.org/web/20260902163548/https://www.gazzetta.it/Calcio/prob_form/parma-monza/2638149",
+        "description": "Internet Archive copy of the original Gazzetta match page, captured before the match (the live page is no longer available). Original use: current probable lineups, injury status, doubts and suspension/eligibility check for Matchday 3.",
         "accessedAt": "2026-09-03T14:30:00+02:00"
     },
     {

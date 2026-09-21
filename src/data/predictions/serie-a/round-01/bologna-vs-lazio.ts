@@ -14,7 +14,7 @@ export const bolognaVsLazio: EditorialPrediction = {
 
   "Bologna or Draw (1X) + Over 1.5 Goals gives Bologna-Lazio two independent tests: the protected result and at least two goals; no unsupported venue percentage is used to claim that both legs are likely.",
 
-  "Bologna versus Lazio retains the published selection, Bologna or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Bologna versus Lazio retains the published selection, Bologna or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
   picks: {

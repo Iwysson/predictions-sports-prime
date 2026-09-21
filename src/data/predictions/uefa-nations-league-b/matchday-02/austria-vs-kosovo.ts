@@ -18,9 +18,9 @@ export const austriaVsKosovo: EditorialPrediction = {
 
 ### Team news, availability and recent form
 
-Austria's second Nations League match arrives only three days after the opener against Israel, so this is one of the fixtures where the probable lineup must be treated with more caution than usual. The September squad still gives Austria enough depth to rotate without changing their basic identity. Alexander Schlager is the senior goalkeeper option, Kevin Danso, Philipp Lienhart, Stefan Posch, Marco Friedl and Maximilian Wöber form the experienced defensive core, while Konrad Laimer, Nicolas Seiwald, Xaver Schlager, Romano Schmid, Patrick Wimmer, Paul Wanner and Carney Chukwuemeka provide several midfield combinations.
+Austria's second Nations League match arrives only three days after the opener against Israel, so this is one of the fixtures where the probable lineup must be treated with more caution than usual. The September squad still gives Austria enough depth to rotate without changing their basic identity. Alexander Schlager is the senior goalkeeper option, Kevin Danso, Philipp Lienhart, Stefan Posch, Marco Friedl and Maximilian Wöber form the experienced defensive core, while Konrad Laimer (out injured for this match), Nicolas Seiwald, Xaver Schlager, Romano Schmid, Patrick Wimmer, Paul Wanner and Carney Chukwuemeka provide several midfield combinations.
 
-The attacking group contains Michael Gregoritsch, Sasa Kalajdzic, Junior Adamu and Marco Grüll. David Alaba and Marcel Sabitzer are not part of this camp, which reduces the amount of experience available for a four-game block. It also increases the importance of players such as Danso, Laimer and Seiwald in maintaining the press and defensive distances when the lineup changes between matchdays.
+The attacking group contains Michael Gregoritsch, Sasa Kalajdzic, Junior Adamu and Marco Grüll. David Alaba and Marcel Sabitzer are not part of this camp, which reduces the amount of experience available for a four-game block. It also increases the importance of players such as Danso and Seiwald in maintaining the press and defensive distances when the lineup changes between matchdays.
 
 Kosovo have the same scheduling issue after opening against the Republic of Ireland on 24 September. Their current squad includes Arijanet Muric, Mergim Vojvoda, Lumbardh Dellova, Albian Hajdari, Leon Avdullahu, Lindon Emërllahu, Milot Rashica, Edon Zhegrova, Fisnik Asllani, Albion Rrahmani and Vedat Muriqi. Captain Amir Rrahmani is absent from the current group, and Florent Hadergjonaj is also missing, which removes experience from the defensive unit.
 
@@ -31,7 +31,7 @@ Austria's recent year has also had contrasting phases. Strong wins over Ghana, S
 ### Projected lineups
 
 **Projected Austria XI (4-2-3-1):** Schlager; Posch, Danso, Lienhart, Prass; Seiwald, Xaver Schlager; Wimmer, Wanner, Schmid; Kalajdzic.  
-**Rotation note:** Laimer, Mwene, Gregoritsch and Chukwuemeka are all realistic starters depending on minutes played against Israel. The final XI cannot be responsibly fixed before Matchday 1 is completed.
+**Rotation note:** Mwene, Gregoritsch and Chukwuemeka are all realistic starters depending on minutes played against Israel. The final XI cannot be responsibly fixed before Matchday 1 is completed.
 
 **Projected Kosovo XI (4-2-3-1):** Muric; Vojvoda, Dellova, Hajdari, Gallapeni; Avdullahu, Emërllahu; Rashica, Zhegrova, Asllani; Muriqi.  
 **Rotation note:** Rrudhani, Rrahmani and Kacuri can enter if Kosovo need fresh legs after the Ireland match.
@@ -46,7 +46,7 @@ Kosovo's defensive absences matter most when Austria sustain pressure. Without A
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The sourced rows below preserve the package's current squad, schedule, recent-form and H2H context.
+Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The rows below show the squad, head-to-head and current-status context that is available.
 
 | Current indicator | Austria | Kosovo |
 |---|---:|---:|
@@ -81,15 +81,16 @@ Austria's deeper midfield and attacking bench support the home win, yet Matchday
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-20T18:49:50-03:00",
+  updatedAt: "2026-09-21T16:17:17-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-20T18:49:50-03:00",
-    teamNewsUpdatedAt: "2026-09-20T18:49:50-03:00",
-    lineupUpdatedAt: "2026-09-20T18:49:50-03:00",
+    editorialUpdatedAt: "2026-09-21T16:17:17-03:00",
+    teamNewsUpdatedAt: "2026-09-21T16:17:17-03:00",
+    lineupUpdatedAt: "2026-09-21T16:17:17-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    {"name":"AllFootball — Laimer out for first two Nations League matches","url":"https://www.allfootballapp.com/articles/5384508-austria-official-laimer-out-first-two","description":"Austria midfielder Konrad Laimer's adductor injury, announced by the Austrian federation.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"ORF — Austria Nations League squad","url":"https://sport.orf.at/stories/3162407/","description":"Austria squad and fixture details for Israel and Kosovo.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"UEFA — Kosovo matches","url":"https://www.uefa.com/uefanationsleague/teams/2608110/matches/","description":"Official Kosovo competition schedule.","accessedAt":"2026-09-20T18:49:50-03:00"}

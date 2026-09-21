@@ -6,7 +6,7 @@ export const evertonVsCrystalPalace: EditorialPrediction = {
   awayTeam: "Crystal Palace",
 
   analysis: [
-  "Everton-Crystal Palace has one retained evidence boundary: England 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
+  "Everton-Crystal Palace has one limit on the available evidence: England 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
 
   "Crystal Palace remain capable of making this a difficult match, which is why the selection avoids relying on an Everton victory alone.",
 
@@ -14,7 +14,7 @@ export const evertonVsCrystalPalace: EditorialPrediction = {
 
   "Everton or Draw + Over 1.5 Goals gives Everton-Crystal Palace two independent tests: the protected result and at least two goals; no unsupported venue percentage is used to claim that both legs are likely.",
 
-  "Everton versus Crystal Palace retains the published selection, Everton or Draw + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Everton versus Crystal Palace retains the published selection, Everton or Draw + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

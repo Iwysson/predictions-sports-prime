@@ -74,9 +74,7 @@ Lens should be able to create width through Skóras and Udol while Thauvin and I
 
 Lens can create overloads by letting Thauvin and Ivanović drift inside while Skóras and Udol hold the width. That shape can pin Lorient's wing-backs and make clearances difficult to sustain. Lorient need the first pass after recovery to be clean; otherwise they risk defending consecutive attacks with little time to reset. If Lorient score first, the game can stay compact. If Lens lead, the visitors will have to open spaces that are better suited to Lens' attacking rotations.
 
-### Conflict Detector
-
-Lorient's away clean sheet at Nice is the clearest counter-signal. They allowed 14 shots but only one on target, showing that a low block can reduce the quality of the opponent's final action even when territory is conceded. Lens' five-goal home opener is also a one-match sample, so that finishing rate cannot be treated as normal. The home side carries the stronger attacking profile, but Lorient have already shown a credible route to making the game slower and less efficient.
+Lorient's away clean sheet at Nice is the clearest counterpoint. They allowed 14 shots but only one on target, showing that a low block can reduce the quality of the opponent's final action even when territory is conceded. Lens' five-goal home opener is also a one-match sample, so that finishing rate cannot be treated as normal. The home side carries the stronger attacking profile, but Lorient have already shown a credible route to making the game slower and less efficient.
 
 ### Risks and Limitations
 

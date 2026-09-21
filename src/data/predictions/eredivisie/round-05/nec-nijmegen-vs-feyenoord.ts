@@ -25,7 +25,7 @@ Há baixas e dúvidas relevantes nos dois elencos, portanto os nomes devem ser l
 **NEC Nijmegen (3-1-4-2)** — Robin Roefs/Crettaz; Calvin Verdonk/Storm, Nemanja Nejašmić, Fonville; Tahaui; Pereira, Monteiro, Dušan Tadić, Noah Naujoks/Bischoff; Tjaronn Chery, Bryan Linssen. **Feyenoord (4-2-3-1)** — Liam Bossin/Ernst; Givairo Read, Tsuyoshi Watanabe, David Møller Wolfe/Màrmol, Jordan Lotomba/Juste; Oussama Targhalline/Vanhoutte, Gjivai Zechiël; Anis Hadj-Moussa, Luciano Valente, Gaoussou Diarra; Ayase Ueda. Há baixas e dúvidas relevantes nos dois elencos, portanto os nomes devem ser lidos como projeção pré-jogo.
 
 ### Suspensions / Eligibility
-Only absences already supported by the retained pre-match source set are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
+Only absences already supported by the retained pre-match sources consulted are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
 
 ### Match Context
 The analysis is independent of the published pick. The first task is to understand the matchup from the available pre-match evidence; only then is the existing market assessed. The Eredivisie is still in an early 2026/27 sample, so venue-specific averages can move sharply after a single match. That makes it essential to separate HOME from AWAY and to label any fallback explicitly rather than presenting mixed data as if it were a clean venue split.
@@ -70,14 +70,13 @@ The xG comparison gives another layer. xG describes chance quality, not finishin
 | Clean sheets | 0% | 50% |
 | Failed to score | 0% | 0% |
 
-### Conflict Detector
 The main conflict is sample size and source granularity. Several current venue splits contain only one or two league matches. In addition, some shot, possession, corner or event-rate rows use a clearly labelled overall or structural fallback because the supplied editorial package does not contain a full venue-level feed for both teams. Those fallbacks are context, not invented HOME/AWAY observations. A second conflict is game-state dependence: early red cards, an early goal or an unusually efficient finishing day can overwhelm the pre-match averages.
 
 ### Market Price Context
 At decimal odds **1.72**, the raw implied probability is **58.1%** (1 / 1.72 = 58.1%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
 
 ### Value Assessment
-The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the Conflict Detector.
+The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the risk analysis.
 
 ### Sources / Statistical Provenance
 

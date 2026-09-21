@@ -9,9 +9,9 @@ analysis: [
 
   "The structure of the selection gives us several realistic winning scenarios.  We therefore do not need an emphatic Betis performance or a high-scoring shootout; we simply need the hosts to avoid defeat and the teams to combine for at least two goals.",
 
-  "Real Betis-Real Sociedad has one retained evidence boundary: Spain 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
+  "Real Betis-Real Sociedad has one limit on the available evidence: Spain 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
 
-  "Real Betis versus Real Sociedad retains the published selection, Real Betis or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick.",
+  "Real Betis versus Real Sociedad retains the published selection, Real Betis or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick.",
 
   "Real Betis or Draw (1X) + Over 1.5 Goals gives Real Betis-Real Sociedad two independent tests: the protected result and at least two goals; no unsupported venue percentage is used to claim that both legs are likely."
 ],

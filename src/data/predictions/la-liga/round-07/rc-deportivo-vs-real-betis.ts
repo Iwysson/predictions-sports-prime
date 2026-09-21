@@ -39,8 +39,6 @@ Tactically, Deportivo can attack with two forwards while still using Cruz and th
 
 The Core uses only the current 2026/27 LaLiga HOME sample for RC Deportivo La Coruña and the current 2026/27 LaLiga AWAY sample for Real Betis. **RC Deportivo La Coruña have 1.33 points per HOME match**, while **Real Betis have 2.00 points per AWAY match**. The sample is still early-season and should be interpreted as a venue-specific snapshot, not as a stable long-term rate.
 
-### Risks and Counter-Signals
-
 The important limitation is the combined nature of the bet. A 1-1 with six corners loses, as does a 1-0 with twelve corners. Betis' strong third-place start and Deportivo's respectable HOME defensive record pull in different directions, so the analysis keeps both legs separate rather than treating the combination as one generic 'open game' market.
 
 Statistical coverage is partial: verified current-season HOME/AWAY xG, xGA, shots, shots on target and full venue-specific corner splits were not available from one consistent source at the editorial cutoff, so unavailable target metrics remain unavailable rather than being estimated, backfilled from another season or converted into zero.

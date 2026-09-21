@@ -67,9 +67,7 @@ The broader season context is Charlotte FC at **10-5-7** with **40 scored and 32
 
 The core numbers do not need to be forced into a single verdict. Charlotte FC produce 1.56 xG from 13.25 home shots, while Houston Dynamo produce 1.49 xG from 13.64 away shots; that makes the chance-quality comparison fairly balanced even before actual finishing is considered. At the other end, the xGA comparison of 1.43 to 1.59 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. Charlotte FC's 2.17 home goals per game sit beside 1.56 xG, while Houston Dynamo's 1.55 away goals sit beside 1.49 xG; defensively, the corresponding pairs are 1.08/1.43 and 1.73/1.59. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. Charlotte FC's 2.17 home goals per game sit beside 1.56 xG, while Houston Dynamo's 1.55 away goals sit beside 1.49 xG; defensively, the corresponding pairs are 1.08/1.43 and 1.73/1.59. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 

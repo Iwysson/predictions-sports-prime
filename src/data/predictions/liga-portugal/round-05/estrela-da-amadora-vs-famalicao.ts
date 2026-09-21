@@ -27,7 +27,7 @@ Estrela da Amadora's HOME sample shows **1.00 points per game**, 2.00 goals and 
 
 ### Team News and Probable Lineups
 
-**Availability:** No additional injury change is inserted beyond the retained pre-match source set; late club updates can still change the final XI.
+**Availability:** No additional injury change is inserted beyond the retained pre-match sources consulted; late club updates can still change the final XI.
 
 **Suspensions / eligibility:** No active suspension affecting the projected XI was identified in the retained pre-match sources. A later official matchday update overrides this status.
 
@@ -73,9 +73,7 @@ The split is descriptive evidence rather than a fixed probability model. The mos
 
 Estrela have already shown comfort in open game states, while Famalicão can punish loose transitions. The key is whether Estrela keep enough midfield protection when committing players forward. A first-half goal should increase transition frequency.
 
-### Conflict Detector
-
-The main case comes from the venue-specific process above. The counter-signal is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 1 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level.
+The main case comes from the venue-specific process above. The counterpoint is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 1 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level.
 
 ### Risks and Limitations
 

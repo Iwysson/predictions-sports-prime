@@ -75,8 +75,6 @@ Borussia Mönchengladbach's HOME reference shows **1.41 points per game** and **
 
 Gladbach can stretch Elversberg through Honorat and Hack, with Stöger supplying passes between the lines and Kleindienst occupying the centre-backs. Elversberg’s Petkov and Campbell offer counterattacking speed, so Gladbach’s double pivot must protect the spaces left when the full-backs advance. Elversberg will be most comfortable if the game stays level and they can defend in a compact mid-block.
 
-### Conflict Detector
-
 Mönchengladbach hold the stronger top-flight HOME profile, but Elversberg’s promotion momentum and willingness to play through pressure make this less straightforward than the division gap suggests. A slow home start or an early transition conceded would materially change the expected game state.
 
 ### Market Context

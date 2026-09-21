@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-21T12:12:53-03:00";
+const updatedAt = "2026-09-21T14:45:00-03:00";
 
 export const australiaVsBrazil: EditorialPrediction = {
   league: "international-friendlies",
@@ -27,7 +28,11 @@ Carlo Ancelotti initially named **26 players** for Brazil's first squad after th
 
 Australia coach Tony Popovic has also changed his group substantially. Former captain **Mathew Ryan, with 105 caps, was omitted**, while the squad contains seven players who could make senior debuts. Patrick Beach and Paul Izzo remain among the goalkeeper options, with a younger group being assessed ahead of the 2027 Asian Cup. Jackson Irvine, Riley McGree, Connor Metcalfe, Aiden O'Neill, Harry Souttar, Mohamed Toure and Patrick Yazbek provide experience around the newer selections.
 
-**Probable Australia XI:** Beach; a defensive unit built around Souttar and the current call-ups; Irvine, O'Neill and McGree among the midfield options; Toure/Yengi in the attacking rotation. **Probable Brazil XI:** current squad projection with the goalkeeper position open, Marquinhos available in defence and a forward structure featuring combinations from Vinícius Júnior, Raphinha, Endrick and the other selected attackers. The official XI had not been released at publication time.
+**Projected lineups (not confirmed):** neither federation had published a starting XI, and the call-up lists alone do not support a credible eleven for either side, so none is presented here. From the squads, Souttar is the reference centre-back for Australia, with Irvine, O'Neill and McGree the midfield names to watch and Toure and Yengi competing for the forward roles. For Brazil, Marquinhos anchors the defence and the attack is likely to be drawn from Vinícius Júnior, Raphinha and Endrick. Official team sheets, usually released about an hour before kick-off, take precedence.
+
+### Injuries, suspensions and availability
+
+The squad reports cited here mention João Pedro's withdrawal from Brazil's group and Mathew Ryan's omission from Australia's, and this page treats those as the only known changes. No complete injury or suspension list for either side was found, so nothing further is assumed; Brazil's squad has already been reshaped once, so a late change is realistic.
 
 ### Match analysis
 
@@ -68,7 +73,7 @@ At published odds of **1.47**, the raw implied probability is **68.0%**, calcula
   },
   published: true,
   publishedAt: "2026-09-21T12:12:53-03:00",
-  updatedAt: publishedAt,
+  updatedAt,
   freshness: {
     editorialUpdatedAt: publishedAt,
     teamNewsUpdatedAt: publishedAt,

@@ -67,9 +67,7 @@ The broader season context is FC Cincinnati at **8-7-7** with **49 scored and 51
 
 The core numbers do not need to be forced into a single verdict. FC Cincinnati produce 1.73 xG from 15.73 home shots, while DC United produce 1.21 xG from 10.91 away shots; that makes the chance-quality comparison favour the host even before actual finishing is considered. At the other end, the xGA comparison of 1.65 to 1.69 is a better guide to the volume and quality of chances conceded than the raw goals-against line on its own. The result is a profile in which attacking output, defensive prevention and finishing efficiency can point in slightly different directions, which is more informative than treating one metric as decisive.
 
-### Conflict Detector
-
-The main counter-signal comes from the gap between process and outcomes. FC Cincinnati's 2.82 home goals per game sit beside 1.73 xG, while DC United's 1.18 away goals sit beside 1.21 xG; defensively, the corresponding pairs are 1.91/1.65 and 1.27/1.69. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
+The main counterpoint comes from the gap between process and outcomes. FC Cincinnati's 2.82 home goals per game sit beside 1.73 xG, while DC United's 1.18 away goals sit beside 1.21 xG; defensively, the corresponding pairs are 1.91/1.65 and 1.27/1.69. Those differences can reflect finishing, goalkeeping and game state rather than a permanent team trait. For that reason, a strong PPG figure is not treated as proof of control, and a weak recent result is not allowed to erase the longer home/away sample.
 
 ### Sample and Data Limitations
 

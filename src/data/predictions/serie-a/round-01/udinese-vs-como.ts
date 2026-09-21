@@ -11,7 +11,7 @@ analysis: [
 
   "Italy 2025/26 final tables is retained only for Udinese Calcio and Como 1907's prior-season competition context; it documents no pre-match lineup, injury list, tactical plan or bookmaker price for this fixture.",
 
-  "Udinese Calcio versus Como 1907 retains the published selection, Como or Draw (X2) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick.",
+  "Udinese Calcio versus Como 1907 retains the published selection, Como or Draw (X2) + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick.",
 
   "Como or Draw (X2) + Over 1.5 Goals gives Udinese Calcio-Como 1907 two independent tests: the protected result and at least two goals; no unsupported venue percentage is used to claim that both legs are likely."
 ],

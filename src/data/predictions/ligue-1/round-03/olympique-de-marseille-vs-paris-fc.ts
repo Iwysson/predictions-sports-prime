@@ -75,9 +75,7 @@ Marseille should have the ball and use Weah and Emerson to create width around a
 
 Marseille should have the ball and use Weah and Emerson to create width around a narrow Paris FC midfield. The visitors can break through Kebbal, Simon and Sinayoko if Marseille’s full-backs are caught high. For the corner leg, the ideal game state is sustained Marseille pressure without an early two-goal cushion that slows the tempo.
 
-### Conflict Detector
-
-The supporting case comes from the HOME/AWAY process, but the counter-signal is material rather than cosmetic. The corner component is the clear conflict: Marseille’s first HOME match had seven total corners and Paris FC’s AWAY sample had five, both below the selected 8.5 line. Paris FC have also kept two clean sheets in two league games, so the over-1.5 goal leg cannot be treated as automatic.
+The supporting case comes from the HOME/AWAY process, but the counterpoint is material rather than cosmetic. The corner component is the clear conflict: Marseille’s first HOME match had seven total corners and Paris FC’s AWAY sample had five, both below the selected 8.5 line. Paris FC have also kept two clean sheets in two league games, so the over-1.5 goal leg cannot be treated as automatic.
 
 That conflict is part of the match analysis and limits confidence where the market requires more than one condition to land.
 

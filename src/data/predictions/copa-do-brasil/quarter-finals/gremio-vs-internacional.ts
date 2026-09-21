@@ -37,7 +37,7 @@ This is one of the reasons 1X + Under 3.5 is structurally different from simply 
 
 
 ### Suspensions / Eligibility
-Only suspensions, registration restrictions or eligibility issues already supported by the retained pre-match source set are treated as confirmed. No player is removed or inserted merely to complete the template. The official CBF match sheet and final club updates override any preliminary projection.
+Only suspensions, registration restrictions or eligibility issues already supported by the retained pre-match sources consulted are treated as confirmed. No player is removed or inserted merely to complete the template. The official CBF match sheet and final club updates override any preliminary projection.
 The HOME/AWAY split is the primary statistical layer. Where a reliable venue-specific metric is unavailable, the table uses clearly labelled league-average, overall-season or first-leg context only. Those contextual figures are not treated as HOME/AWAY equivalents and are not used as automatic substitutes in the final prediction.
 
 ### Statistical Core Predictions-Sports-Prime
@@ -67,7 +67,7 @@ The HOME/AWAY split is the primary statistical layer. Where a reliable venue-spe
 | Failed to score | 100% (first-leg matchup context — single-match sample) | 100% (first-leg matchup context — single-match sample) |
 
 
-**Conflict Detector** is essential here. The strongest evidence supporting the selection is the combination of Grêmio's much better home scoring profile, Internacional's modest 0.91 away goals per game, both relevant splits producing 73% Under 3.5, and a first leg that finished 0–0 after a highly interrupted, low-quality attacking contest. The counter-signals are equally important. Grêmio's home defence is not elite: they concede approximately 1.18 per match, while Internacional still produce nearly 14 shots away. Grêmio themselves have scored 18 in 11 at home, so a match can become more open if the first goal arrives early. A red card would be especially disruptive in a derby that produced 43 fouls in the first leg.
+The contrary evidence is essential here. The strongest evidence supporting the selection is the combination of Grêmio's much better home scoring profile, Internacional's modest 0.91 away goals per game, both relevant splits producing 73% Under 3.5, and a first leg that finished 0–0 after a highly interrupted, low-quality attacking contest. The counterpoints are equally important. Grêmio's home defence is not elite: they concede approximately 1.18 per match, while Internacional still produce nearly 14 shots away. Grêmio themselves have scored 18 in 11 at home, so a match can become more open if the first goal arrives early. A red card would be especially disruptive in a derby that produced 43 fouls in the first leg.
 
 The main danger to 1X is straightforward: Internacional score first and successfully defend the advantage. The main danger to Under 3.5 is an early goal that forces the trailing team into a prolonged aggressive game state, especially if followed quickly by a second. Those risks are real and should remain visible rather than being hidden by the 0–0 first-leg result. On the other hand, the selection does not require a specific winner or an extremely low score. 0–0, 1–0, 1–1, 2–0, 2–1 and 3–0 Grêmio all satisfy it. The combination therefore covers many of the score structures naturally compatible with the available data.
 
@@ -81,7 +81,7 @@ The strength of the selection comes from interaction rather than one isolated st
 At decimal odds **1.65**, the raw implied probability is **60.6%** (1 / 1.65 = 60.6%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
 
 ### Value Assessment
-The published price is retained exactly as supplied. The sporting evidence is assessed independently from the market price, and no unsupported fair-odds estimate is introduced. The relevant question is whether the HOME/AWAY evidence, knockout game state, availability picture and Conflict Detector make the listed market coherent at the published price.
+The published price is retained exactly as supplied. The sporting evidence is assessed independently from the market price, and no unsupported fair-odds estimate is introduced. The relevant question is whether the HOME/AWAY evidence, knockout game state, availability picture and the contrary evidence make the listed market coherent at the published price.
 
 ### Final Prediction
 **Prediction:** Grêmio or Draw (1X) + Under 3.5 Goals

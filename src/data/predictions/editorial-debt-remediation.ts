@@ -24,7 +24,7 @@ const NATIONS_LEAGUE_OPENING_CONTEXT: Record<string, string> = {
   "serbia-vs-netherlands": "Serbia and the Netherlands reach their second fixture inside a compressed window, while the source was prepared before Matchday 1 created any current-edition venue data. Recovery, rotation and the direct duel between Serbia's centre-forwards and the Dutch back line shape this matchup.",
   "norway-vs-portugal": "Norway and Portugal play again three days after their openers, so the pre-Matchday 1 source cannot supply a valid 2026/27 HOME/AWAY split. The analysis instead centres on recovery, midfield protection and the contrast between Norway's vertical attack and Portugal's circulation.",
   "germany-vs-greece": "Germany and Greece enter this second-round fixture before a current competition venue sample was available at publication. Germany's assigned first-window squad, Greece's compact structure and the minutes accumulated on Matchday 1 are the decisive pre-kickoff references.",
-  "denmark-vs-wales": "Denmark and Wales meet in Matchday 2 after only a three-day recovery period, and no current-edition HOME/AWAY sample existed at the editorial cutoff. Rotation, Denmark's central combinations and Wales' transition outlets define the more useful comparison.",
+  "denmark-vs-wales": "Denmark and Wales meet in Matchday 2 after only a three-day recovery period, and no current-edition HOME/AWAY sample existed at the time of writing. Rotation, Denmark's central combinations and Wales' transition outlets define the more useful comparison.",
 };
 
 const NATIONS_LEAGUE_CORE_CONTEXT: Record<string, string> = {
@@ -38,7 +38,7 @@ const NATIONS_LEAGUE_CORE_CONTEXT: Record<string, string> = {
   "england-vs-spain": "Wembley supplies England's first HOME observation and Spain's first AWAY observation of the edition. The Core therefore shows unavailable current data and leaves older H2H evidence in its own section.",
   "serbia-vs-netherlands": "The source predates Matchday 1, so Serbia HOME and Netherlands AWAY metrics for this edition were not yet available. Those first-round results require a later factual refresh rather than a pre-emptive estimate.",
   "norway-vs-portugal": "Norway's HOME and Portugal's AWAY numbers cannot be established until the opening fixtures are complete. The Core does not convert older international matches into a false current-edition split.",
-  "germany-vs-greece": "Germany HOME and Greece AWAY data from the 2026/27 competition did not exist at the cutoff. Matchday 1 can supply the first relevant observations, but no value is filled in before that evidence exists.",
+  "germany-vs-greece": "Germany HOME and Greece AWAY data from the 2026/27 competition did not exist at the time of writing. Matchday 1 can supply the first relevant observations, but no value is filled in before that evidence exists.",
   "denmark-vs-wales": "Denmark's HOME record and Wales' AWAY record begin during this condensed window. The table remains honest about that timing instead of blending World Cup, friendly or previous-edition figures.",
 };
 
@@ -95,7 +95,7 @@ export function applyWave08EditorialDebtRemediation(
       .split(/\n\s*\n/)
       .flatMap((paragraph) => {
         const normalized = normalize(paragraph);
-        if (normalized.startsWith("the 2026 27 nations league has not started at the editorial cutoff")) {
+        if ((normalized.startsWith("the 2026 27 nations league has not started at the editorial cutoff") || normalized.startsWith("the 2026 27 nations league has not started at the time of writing"))) {
           return NATIONS_LEAGUE_OPENING_CONTEXT[predictionSlug] ?? paragraph;
         }
         if (normalized.startsWith("the core is intentionally limited to the current competition and current edition")) {
@@ -114,7 +114,7 @@ export function applyWave08EditorialDebtRemediation(
     analysis[0] = analysis[0]
       .replace(
         /^### Head-to-Head$/m,
-        "A current verified suspension list was unavailable at the editorial cutoff, so no additional absence is inferred.\n\n### Head-to-Head",
+        `No verified suspension list for ${prediction.homeTeam} or ${prediction.awayTeam} was available at the time of writing, so no additional absence is assumed.\n\n### Head-to-Head`,
       );
   }
 

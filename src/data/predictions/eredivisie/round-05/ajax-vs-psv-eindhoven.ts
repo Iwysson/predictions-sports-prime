@@ -25,7 +25,7 @@ No Ajax, Rayane Bounida aparece lesionado, Amourricho van Axel Dongen enfrenta p
 **Ajax** — Marc-André ter Stegen; Anton Gaaei, Aaron Bouwman, Dies Janse, Caio Henrique; Davy Klaassen, Jorthy Mokio, Julian Brandt; Steven Berghuis, Oscar Gloukh; Tolu Arokodare. **PSV Eindhoven** — Matej Kovář; Sergiño Dest, Ryan Flamingo, Armando Obispo, Mauro Júnior; Noah Fernández, Kodai Sano; Ruben van Bommel, Guus Til, Ivan Perišić; Ricardo Pepi. O baseline utiliza os XIs competitivos mais recentes disponíveis, não escalações confirmadas para 5 de setembro. As escalações definitivas ainda dependem dos treinamentos da semana e da evolução de jogadores lesionados ou em dúvida. A confirmação oficial deverá ocorrer aproximadamente uma hora antes do início da partida.
 
 ### Suspensions / Eligibility
-Only absences already supported by the retained pre-match source set are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
+Only absences already supported by the retained pre-match sources consulted are treated as confirmed. No player is removed or inserted merely to complete the template. The official squad list and match sheet override this projection.
 
 ### Match Context
 The analysis is independent of the published pick. The first task is to understand the matchup from the available pre-match evidence; only then is the existing market assessed. The Eredivisie is still in an early 2026/27 sample, so venue-specific averages can move sharply after a single match. That makes it essential to separate HOME from AWAY and to label any fallback explicitly rather than presenting mixed data as if it were a clean venue split.
@@ -70,14 +70,13 @@ The xG comparison gives another layer. xG describes chance quality, not finishin
 | Clean sheets | 0% | 0% |
 | Failed to score | 0% | 0% |
 
-### Conflict Detector
 The main conflict is sample size and source granularity. Several current venue splits contain only one or two league matches. In addition, some shot, possession, corner or event-rate rows use a clearly labelled overall or structural fallback because the supplied editorial package does not contain a full venue-level feed for both teams. Those fallbacks are context, not invented HOME/AWAY observations. A second conflict is game-state dependence: early red cards, an early goal or an unusually efficient finishing day can overwhelm the pre-match averages.
 
 ### Market Price Context
 At decimal odds **1.90**, the raw implied probability is **52.6%** (1 / 1.90 = 52.6%), before bookmaker margin. This is a price-derived threshold, not a proprietary model probability.
 
 ### Value Assessment
-The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the Conflict Detector.
+The published price is retained exactly as supplied. The evidence is strong enough to evaluate whether the market is coherent with the matchup, but the small early-season sample does not justify inventing fair odds or a false precision edge. Value therefore remains conditional on the HOME/AWAY evidence, the disclosed fallbacks and the specific failure routes identified in the risk analysis.
 
 ### Sources / Statistical Provenance
 

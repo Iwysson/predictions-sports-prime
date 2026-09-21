@@ -75,9 +75,7 @@ Bayer 04 Leverkusen's HOME reference shows **1.82 points per game** and **2.24 g
 
 Leverkusen can use García and Fernández to circulate around Union’s compact midfield before accelerating through Diaby, Maza and Moreira behind Schick. Union’s two-forward structure gives them an outlet when possession is recovered, particularly if Leverkusen’s full-backs are high. The hosts therefore need territorial pressure without leaving the first defensive pass uncontested.
 
-### Conflict Detector
-
-Leverkusen have the stronger HOME attacking reference, but Union’s direct two-forward outlet and physical midfield remain the main counter-signal. If Union survive the opening pressure and keep the game compact, the hosts may be forced into a slower, less efficient attacking rhythm.
+Leverkusen have the stronger HOME attacking reference, but Union’s direct two-forward outlet and physical midfield remain the main counterpoint. If Union survive the opening pressure and keep the game compact, the hosts may be forced into a slower, less efficient attacking rhythm.
 
 ### Market Context
 

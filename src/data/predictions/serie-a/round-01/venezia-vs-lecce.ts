@@ -12,7 +12,7 @@ export const veneziaVsLecce: EditorialPrediction = {
 
   "Although Serie A represents a significant increase in opposition quality, this level of home attacking consistency remains highly relevant when we require only two total goals.",
 
-  "Venezia versus Lecce retains the published selection, Venezia or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Venezia versus Lecce retains the published selection, Venezia or Draw (1X) + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
   picks: {

@@ -18,9 +18,9 @@ export const swedenVsRomania: EditorialPrediction = {
 
 ### Team news, availability and recent form
 
-Sweden enter the Nations League with one of the strongest forward pairings in League B but also with several important personnel changes around them. Alexander Isak and Viktor Gyökeres headline the attack, while Lucas Bergvall, Yasin Ayari, Sebastian Nanasi, Jesper Karlström, Williot Swedberg and Benjamin Nygren give the midfield and supporting line technical quality. At the back, Victor Nilsson Lindelöf, Carl Starfelt, Gabriel Gudmundsson, Emil Holm, Hjalmar Ekdal and Gustaf Lagerbielke are part of the current pool.
+Sweden enter the Nations League with one of the strongest forward pairings in League B but also with several important personnel changes around them. Alexander Isak and Viktor Gyökeres headline the attack, while Lucas Bergvall, Yasin Ayari, Sebastian Nanasi, Jesper Karlström and Benjamin Nygren give the midfield and supporting line technical quality. At the back, Victor Nilsson Lindelöf, Carl Starfelt, Gabriel Gudmundsson, Emil Holm, Hjalmar Ekdal and Gustaf Lagerbielke are part of the current pool.
 
-The September list has already changed after publication. Mattias Svanberg withdrew and Hugo Larsson was called into the squad. Gustaf Nilsson also withdrew, while John Mellberg was promoted into the group. Sweden are additionally without several names who would normally be in the discussion, including Anthony Elanga, Dejan Kulusevski and Isak Hien. Those absences reduce some of the depth around the first XI, but the Isak-Gyökeres combination remains a major problem for any League B defence.
+The September list has already changed after publication. Mattias Svanberg withdrew and Hugo Larsson was called into the squad. Gustaf Nilsson also withdrew, while John Mellberg was promoted into the group. Sweden are additionally without several names who would normally be in the discussion, including Anthony Elanga, Dejan Kulusevski and Isak Hien, and Hugo Larsson and Williot Swedberg were also left out by Graham Potter. Those absences reduce some of the depth around the first XI, but the Isak-Gyökeres combination remains a major problem for any League B defence.
 
 Sweden's 2026 results show a high-variance team. They beat Ukraine 3-1 and Poland 3-2 in the World Cup play-offs, lost 3-1 to Norway and drew Greece 2-2 in June preparation, then opened the World Cup with a 5-1 win over Tunisia. Heavy defeats against the Netherlands and France followed, with a 1-1 draw against Japan between them. The level of opponent matters here: Romania are not expected to give Sweden the same volume of space as the Netherlands or France, so the home side will need more patience in possession.
 
@@ -31,7 +31,7 @@ Romania's last competitive push ended before the World Cup, and their March 2026
 ### Projected lineups
 
 **Projected Sweden XI (4-4-2):** Viktor Johansson; Holm, Lindelöf, Starfelt, Gudmundsson; Bergvall, Karlström, Ayari, Nanasi; Isak, Gyökeres.  
-**Possible changes:** Hugo Larsson can enter midfield after his late call-up, while Swedberg and Nygren provide different attacking profiles. Mellberg increases the defensive depth after the latest changes.
+**Possible changes:** Hugo Larsson can enter midfield after his late call-up, while Nygren provides a different attacking profile. Mellberg increases the defensive depth after the latest changes.
 
 **Projected Romania XI (4-2-3-1):** Radu; Rațiu, Drăgușin, Burcă, Bancu; Marius Marin, Răzvan Marin; Dennis Man, Stanciu, Mihăilă; Drăguș.  
 **Possible changes:** Ianis Hagi can operate as the central creator, Munteanu is an alternative No. 9 and Borza offers a younger option at left-back.
@@ -44,7 +44,7 @@ The key tactical duel is likely to be Sweden's two-striker presence against Roma
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The sourced rows below preserve the package's current squad, schedule, recent-form and H2H context.
+Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The rows below show the squad, head-to-head and current-status context that is available.
 
 | Current indicator | Sweden | Romania |
 |---|---:|---:|
@@ -62,7 +62,7 @@ At published odds of **1.55**, the raw implied probability is **64.5%**, calcula
 
 ### Conclusion
 
-Sweden's home attacking ceiling and multiple penalty-area threats support the win market, but the late squad changes and Romania's counterattacking route place a clear limit on confidence.
+Sweden's home attacking ceiling and multiple penalty-area threats give them the stronger platform, but the late squad changes and Romania's counterattacking route leave real room for a contested match.
 
 **Prediction:** Sweden to Win  
 **Odds:** 1.55`],
@@ -79,15 +79,17 @@ Sweden's home attacking ceiling and multiple penalty-area threats support the wi
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-20T18:49:50-03:00",
+  updatedAt: "2026-09-21T16:17:17-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-20T18:49:50-03:00",
-    teamNewsUpdatedAt: "2026-09-20T18:49:50-03:00",
-    lineupUpdatedAt: "2026-09-20T18:49:50-03:00",
+    editorialUpdatedAt: "2026-09-21T16:17:17-03:00",
+    teamNewsUpdatedAt: "2026-09-21T16:17:17-03:00",
+    lineupUpdatedAt: "2026-09-21T16:17:17-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    {"name":"Svensk fotboll — Potters trupp till Nations League","url":"https://www.svenskfotboll.se/nyheter/landslag/2026/09/trupp-nations-league/","description":"Sweden squad announcement.","accessedAt":"2026-09-21T16:17:17-03:00"},
+    {"name":"Sweden Herald — Potter leaves out Elanga, Larsson and Swedberg","url":"https://swedenherald.com/article/injured-elanga-misses-swedens-nations-league-squad","description":"Sweden squad omissions.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"Swedish FA — Nations League squad","url":"https://www.svenskfotboll.se/nyheter/landslag/2026/09/trupp-nations-league/","description":"Official Sweden squad and competition schedule.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"Swedish FA — squad changes","url":"https://www.svenskfotboll.se/nyheter/landslag/2026/09/herr-john-mellberg/","description":"Official 20 September injury and replacement update.","accessedAt":"2026-09-20T18:49:50-03:00"},

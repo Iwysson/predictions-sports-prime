@@ -13,7 +13,7 @@ analysis: [
 
   "Inter Milan -1.5 Asian Handicap depends on winning margin rather than simple favouritism. A narrow Internazionale Milano win may not cover the line, which is why the page does not infer handicap value from league position alone.",
 
-  "Internazionale Milano versus AC Monza retains the published selection, Inter Milan -1.5 Asian Handicap, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Internazionale Milano versus AC Monza retains the published selection, Inter Milan -1.5 Asian Handicap, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

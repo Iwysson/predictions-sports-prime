@@ -12,7 +12,7 @@ export const fcPortoVsArouca: EditorialPrediction = {
 
   "For our selection, however, the main question is not whether Porto are the stronger side.",
 
-  "FC Porto versus Arouca retains the published selection, Over 2.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "FC Porto versus Arouca retains the published selection, Over 2.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

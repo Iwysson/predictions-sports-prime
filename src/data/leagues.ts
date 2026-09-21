@@ -111,6 +111,7 @@ export const leagues: LeagueConfig[] = [
   defineLeague({ slug: "copa-sudamericana", name: "CONMEBOL Sudamericana", country: "South America", short: "SUD", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 32, expectedGamesPerRound: 4, timezone: "America/Sao_Paulo", liveDataId: "conmebol.sudamericana" }),
   defineLeague({ slug: "uefa-nations-league", name: "UEFA Nations League", country: "Europe", short: "UNL", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 16, expectedGamesPerRound: 8, timezone: "Europe/Paris", liveDataId: "uefa.nations" }),
   defineLeague({ slug: "uefa-nations-league-b", name: "UEFA Nations League B", country: "Europe", short: "UNL B", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 16, expectedGamesPerRound: 8, timezone: "Europe/Paris", liveDataId: "uefa.nations.b" }),
+  defineLeague({ slug: "africa-cup-of-nations-qualifying", name: "Africa Cup of Nations Qualifying", country: "Africa", short: "AFCON Q", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 48, expectedGamesPerRound: 24, timezone: "UTC", liveDataId: "caf.nations_qual" }),
   defineLeague({ slug: "international-friendlies", name: "International Friendlies", country: "International", short: "IF", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 8, expectedGamesPerRound: 4, timezone: "UTC", liveDataId: "fifa.friendly" }),
 ];
 
@@ -145,6 +146,7 @@ export const primaryPredictionLeagueSlugs = [
   "uefa-nations-league",
   "uefa-nations-league-b",
   "international-friendlies",
+  "africa-cup-of-nations-qualifying",
 ] as const satisfies readonly LeagueSlug[];
 
 export const primaryPredictionLeagues = primaryPredictionLeagueSlugs.map(

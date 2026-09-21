@@ -74,9 +74,7 @@ Nice should try to create width through Clauss and Bard while Hein and Diop rece
 
 Nice can stretch Le Mans' midfield five by keeping Clauss and Bard high, then looking for Hein and Diop between the lines. Le Mans are most dangerous when they can bypass that pressure and find Mafouta early. The visitors' back line has already allowed heavy shot volume away, so repeated Nice possession should create opportunities; the question is whether the hosts can improve the final touch that has been missing in the first two rounds.
 
-### Conflict Detector
-
-Nice's finishing is the obvious counter-signal to a home-win selection. They are still scoreless and managed only one shot on target in their first home game despite controlling territory. Le Mans, meanwhile, created 2.51 xG in their first away sample, so they have enough attacking threat to punish another inefficient Nice performance. The hosts' territorial edge is real, but it has not yet translated into goals.
+Nice's finishing is the obvious counterpoint to a home-win selection. They are still scoreless and managed only one shot on target in their first home game despite controlling territory. Le Mans, meanwhile, created 2.51 xG in their first away sample, so they have enough attacking threat to punish another inefficient Nice performance. The hosts' territorial edge is real, but it has not yet translated into goals.
 
 ### Risks and Limitations
 

@@ -73,8 +73,6 @@ Brighton’s first two league matches have already shown both sides of their app
 
 Brighton will still try to create overloads between the lines through Groß and Diego Gómez, with De Cuyper attacking from the left, but the absence of Mitoma and Minteh removes natural wide acceleration. Leeds’ back three can defend the box compactly and use Bogle and Justin to break forward when Brighton commit numbers. Rodon’s absence is important because the visitors must reproduce that spacing with a changed central defensive unit.
 
-### Conflict Detector
-
 Brighton’s injury list is the central counterweight to their home advantage. Six players are ruled out and two more are doubtful, so the attacking structure may be less fluid than the opening results imply. Leeds also lose Rodon, however, forcing a change in a defence that had begun the season with encouraging cohesion.
 
 ### Market Context

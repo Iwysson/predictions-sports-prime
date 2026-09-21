@@ -13,7 +13,7 @@ analysis: [
 
   "RCD Espanyol de Barcelona-Real Madrid must produce three goals for Over 2.5 Goals; low-event scorelines such as 1-0 and 1-1 lose, and the retained table does not prove how often this matchup should cross the line.",
 
-  "RCD Espanyol de Barcelona versus Real Madrid retains the published selection, Over 2.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "RCD Espanyol de Barcelona versus Real Madrid retains the published selection, Over 2.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

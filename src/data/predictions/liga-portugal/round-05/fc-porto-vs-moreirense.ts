@@ -73,9 +73,7 @@ The split is descriptive evidence rather than a fixed probability model. The mos
 
 Porto should dominate territory at the Dragão, stretching Moreirense with width while the midfield attacks second balls. Moreirense can keep the contest close with a compact block and direct counters. An early Porto goal is especially important because the handicap requires margin, not merely control.
 
-### Conflict Detector
-
-The main case comes from the venue-specific process above. The counter-signal is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. The handicap also needs winning margin, so a one-goal victory may still be insufficient.
+The main case comes from the venue-specific process above. The counterpoint is equally important: The main limitation is sample size: the relevant HOME/AWAY windows contain 2 and 2 matches. Early-season finishing can move faster than xG or shot volume, and late-window squad changes can alter the true current level. The handicap also needs winning margin, so a one-goal victory may still be insufficient.
 
 ### Risks and Limitations
 

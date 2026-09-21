@@ -22,8 +22,6 @@ The requested home win runs directly against Villarreal's current HOME results. 
 
 Villarreal have enough attacking profiles to create a higher-tempo home game, especially with Pépé, Gerard Moreno and Mikautadze able to occupy different zones. The challenge is preventing possession from becoming transition exposure, which has already hurt them in the HOME sample. Levante can defend with a compact midfield and wait for moments to release Brugui or their central striker, but a road attack at 0.00 goals per match has not yet proven it can punish mistakes consistently.
 
-### Risks and Counter-Signals
-
 If Villarreal score first, Levante must change a road approach that has been built around staying close to the opponent, and the home side can attack the spaces that appear. If Levante score first, the evidence against the selection becomes much stronger because Villarreal have already lost twice at home and would be forced to chase. The main risk is therefore explicit: the price asks the bettor to believe that Villarreal's attacking quality will finally translate into a first HOME league win rather than simply extrapolating the badge or preseason expectation.
 
 ### Statistical Core Predictions-Sports-Prime

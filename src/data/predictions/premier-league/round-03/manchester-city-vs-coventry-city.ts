@@ -73,8 +73,6 @@ City have already scored six league goals in two matches. Their first home fixtu
 
 City will try to pin Coventry’s back five with Haaland occupying the central defenders while Cherki and Foden receive between midfield and defence. Gvardiol and Khusanov can keep the width or step inside depending on the phase, allowing Anderson and Bouaddi to hold the second line and recycle possession around the box. Coventry’s midfield three need to stay close enough to the defence to deny those pockets without leaving every clearance uncontested. Their attacking opportunities are likely to come from Mason-Clark and Awoniyi turning isolated recoveries into territory before City’s rest defence is organised.
 
-### Conflict Detector
-
 Coventry’s most credible route is to compress the central zone, defend crosses with numbers and keep the match scoreless for as long as possible. Coventry can reduce the number of possessions by defending deep and slowing restarts, while an early City lead could also lead to game management rather than continuous attacking risk. The visitors’ lack of a league goal is concerning, but it may encourage an even more conservative setup.
 
 ### Market Context

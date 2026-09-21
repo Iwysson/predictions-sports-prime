@@ -68,7 +68,7 @@ Statistical coverage is partial: unavailable target metrics remain unavailable r
 | Same-competition possession | Not yet established | Not yet established |
 | Same-competition corners | Not yet established | Not yet established |
 
-The Core is deliberately incomplete at the opening whistle of the campaign. That is not a data error; it is the consequence of applying the competition-and-season rule consistently. For this matchup, the issue is especially relevant because both teams have personnel capable of changing the rhythm from the bench.
+The Core is incomplete at the opening whistle of the campaign. That is not a data error; it is the consequence of applying the competition-and-season rule consistently. For this matchup, the issue is especially relevant because both teams have personnel capable of changing the rhythm from the bench.
 
 Over 2.5 does not require both teams to play well. It requires enough high-value attacking moments to produce three goals. The main risk is a first half dominated by low-tempo circulation and set defensive blocks, especially if neither side is forced to take early risks. In Levski Sofia vs Salzburg, the critical signal will be whether the side without the ball can slow the match after losing territory; if it can, attacking volume may arrive without enough clean finishes.
 

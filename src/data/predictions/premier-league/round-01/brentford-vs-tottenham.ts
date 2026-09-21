@@ -10,7 +10,7 @@ export const brentfordVsTottenham: EditorialPrediction = {
 
   "Brentford-Tottenham Hotspur uses England 2025/26 final tables as a final-table reference; xG, personnel, detailed head-to-head and venue-percentage claims were removed because that source does not verify them.",
 
-  "Brentford versus Tottenham Hotspur retains the published selection, Over 2.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick.",
+  "Brentford versus Tottenham Hotspur retains the published selection, Over 2.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick.",
 
   "Brentford-Tottenham Hotspur must produce three goals for Over 2.5 Goals; low-event scorelines such as 1-0 and 1-1 lose, and the retained table does not prove how often this matchup should cross the line."
 ],

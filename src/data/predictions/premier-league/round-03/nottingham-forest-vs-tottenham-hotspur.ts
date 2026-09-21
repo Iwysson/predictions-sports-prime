@@ -73,8 +73,6 @@ Forest’s early results suggest a side more comfortable attacking space than co
 
 Forest’s 3-4-2-1 gives Gibbs-White and Ndoye freedom to receive behind Tottenham’s midfield while Muñoz and Williams provide width. Spurs need Bentancur and Tonali to progress through the first pressure cleanly and give Mateus Fernandes and Tel touches closer to Marmoush. If Tottenham’s full-backs advance together, Forest’s direct attacks into the channels become especially relevant.
 
-### Conflict Detector
-
 The strongest objection to a high-scoring reading is Tottenham’s blank start: two matches, two defeats and no league goal. Forest have also shown they can defend compactly for stretches. On the other hand, Forest conceded twice after taking the lead at Liverpool, so neither a low-event game nor sustained defensive control can be assumed.
 
 ### Market Context

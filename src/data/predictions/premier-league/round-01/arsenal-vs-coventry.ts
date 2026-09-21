@@ -12,7 +12,7 @@ export const arsenalVsCoventry: EditorialPrediction = {
 
   "Arsenal -1.75 Asian Handicap depends on winning margin rather than simple favouritism. A narrow Arsenal win may not cover the line, which is why the page does not infer handicap value from league position alone.",
 
-  "Arsenal versus Coventry City retains the published selection, Arsenal -1.75 Asian Handicap, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Arsenal versus Coventry City retains the published selection, Arsenal -1.75 Asian Handicap, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

@@ -8,11 +8,11 @@ export const spartaRotterdamVsUtrecht: EditorialPrediction = {
   analysis: [
   "Sparta Rotterdam-FC Utrecht must produce three goals for Over 2.5 Goals; low-event scorelines such as 1-0 and 1-1 lose, and the retained table does not prove how often this matchup should cross the line.",
 
-  "Sparta Rotterdam-FC Utrecht has one retained evidence boundary: Netherlands 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
+  "Sparta Rotterdam-FC Utrecht has one limit on the available evidence: Netherlands 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
 
   "FC Utrecht's away profile provides the strongest statistical support for the selection.",
 
-  "Sparta Rotterdam versus FC Utrecht retains the published selection, Over 2.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Sparta Rotterdam versus FC Utrecht retains the published selection, Over 2.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
 picks: {

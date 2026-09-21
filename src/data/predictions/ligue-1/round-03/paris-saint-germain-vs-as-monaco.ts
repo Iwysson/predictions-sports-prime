@@ -75,9 +75,7 @@ PSG should dominate the ball through Vitinha and Fabián Ruiz, with Hakimi provi
 
 PSG should dominate the ball through Vitinha and Fabián Ruiz, with Hakimi providing width and Akliouche/Kvaratskhelia attacking the half-spaces. Monaco can threaten behind that advanced structure through Brunner and Golovin. The -1.5 handicap needs PSG not only to control possession but also to prevent Monaco’s first transition wave from producing the opening goal.
 
-### Conflict Detector
-
-The supporting case comes from the HOME/AWAY process, but the counter-signal is material rather than cosmetic. Monaco have won both league games and kept two consecutive clean sheets, while PSG have conceded twice in each league match. The handicap also requires a two-goal winning margin, so a routine one-goal PSG victory is still a losing outcome for the selection.
+The supporting case comes from the HOME/AWAY process, but the counterpoint is material rather than cosmetic. Monaco have won both league games and kept two consecutive clean sheets, while PSG have conceded twice in each league match. The handicap also requires a two-goal winning margin, so a routine one-goal PSG victory is still a losing outcome for the selection.
 
 That conflict is part of the match analysis and limits confidence where the market requires more than one condition to land.
 
@@ -97,7 +95,7 @@ The price is acceptable only if the sporting evidence supports a probability abo
 
 ### Conclusion
 
-PSG’s long-run home attacking baseline supports the possibility of a multi-goal win, but current form and Monaco’s clean-sheet start are substantial counter-signals. The handicap is therefore a high-variance position that requires PSG to translate possession into early score separation.
+PSG’s long-run home attacking baseline supports the possibility of a multi-goal win, but current form and Monaco’s clean-sheet start are substantial counterpoints. The handicap is therefore a high-variance position that requires PSG to translate possession into early score separation.
 
 **Prediction:** PSG -1.5 Asian Handicap
 **Odds:** 2.10

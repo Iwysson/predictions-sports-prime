@@ -6,7 +6,7 @@ export const torinoVsMilan: EditorialPrediction = {
   awayTeam: "Milan",
 
   analysis: [
-  "Torino-Milan has one retained evidence boundary: Italy 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
+  "Torino-Milan has one limit on the available evidence: Italy 2025/26 final tables records the completed competition but cannot substantiate the old granular statistical and team-news claims, which are omitted rather than reconstructed.",
 
   "Rather than requiring Milan to win away from home, this market gives us protection against the draw while maintaining a relatively modest two-goal requirement.",
 
@@ -14,7 +14,7 @@ export const torinoVsMilan: EditorialPrediction = {
 
   "Milan or Draw (X2) + Over 1.5 Goals gives Torino-Milan two independent tests: the protected result and at least two goals; no unsupported venue percentage is used to claim that both legs are likely.",
 
-  "Torino versus Milan retains the published selection, Milan or Draw (X2) + Over 1.5 Goals, as part of its pre-match record; this migration uses no eventual result and does not claim that the available evidence independently proves the pick."
+  "Torino versus Milan retains the published selection, Milan or Draw (X2) + Over 1.5 Goals, as part of its pre-match record; this page uses no eventual result and does not claim that the available evidence independently proves the pick."
 ],
 
   picks: {
