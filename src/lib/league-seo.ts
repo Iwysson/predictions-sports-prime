@@ -21,6 +21,7 @@ const leagueSearchAliases: Partial<Record<LeagueConfig["slug"], readonly string[
   mls: ["Major League Soccer", "MLS USA", "United States MLS"],
   "uefa-europa-league": ["Europa League", "UEL", "UEFA Cup"],
   "uefa-nations-league-b": ["Nations League B", "UNL League B", "UEFA Nations League Division B"],
+  "international-friendlies": ["International Friendly Matches", "Football Friendlies", "National Team Friendlies"],
 };
 
 const leagueEditorialIntros: Partial<Record<LeagueConfig["slug"], string>> = {
@@ -38,6 +39,7 @@ const leagueEditorialIntros: Partial<Record<LeagueConfig["slug"], string>> = {
   championship: "Compare Championship predictions through demanding schedules, home-away splits and the small margins that shape each market.",
   "scottish-premiership": "Review Scottish Premiership predictions using current venue evidence, team availability and the tactical route behind the pick.",
   "uefa-nations-league-b": "Follow UEFA Nations League B predictions across the 2026/27 groups, with squad availability, projected lineups and match-specific tactical evidence kept alongside each published price.",
+  "international-friendlies": "Follow International Friendlies predictions with current national-team call-ups, projected lineups, recent form and the evidence available for each published price.",
 };
 
 export function leagueSeoKeywords(league: LeagueConfig) {

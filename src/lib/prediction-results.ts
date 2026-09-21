@@ -95,6 +95,12 @@ function parseLeg(source: string): ParsedPredictionLeg | null {
   const doubleChance = source.match(/^(.+?) or Draw(?: \((1X|X2)\))?$/i);
   if (doubleChance) return { kind: "double-chance", team: doubleChance[1], side: doubleChance[2]?.toUpperCase() as "1X" | "X2" | undefined, source };
 
+  const labelledDoubleChance = source.match(/^(.+?) double chance \((1X|X1|X2)\)$/i);
+  if (labelledDoubleChance) {
+    const side = labelledDoubleChance[2].toUpperCase() === "X2" ? "X2" : "1X";
+    return { kind: "double-chance", team: labelledDoubleChance[1], side, source };
+  }
+
   const compactDoubleChance = source.match(/^(.+?) (1X|X1|X2)$/i);
   if (compactDoubleChance) {
     const side = compactDoubleChance[2].toUpperCase() === "X2" ? "X2" : "1X";
