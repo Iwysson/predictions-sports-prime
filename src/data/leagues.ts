@@ -42,6 +42,8 @@ const graphicalLeagueAssets: Partial<
   "uefa-europa-league": { src: "/league-badges/uefa-europa-league.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/mlsr7d1718774547.png" },
   "copa-libertadores": { src: "/league-badges/copa-libertadores.png", sourceUrl: "https://commons.wikimedia.org/wiki/File:Conmebol-libertadores.svg" },
   "copa-sudamericana": { src: "/league-badges/copa-sudamericana.png", sourceUrl: "https://commons.wikimedia.org/wiki/File:Conmebol-sudamericana.svg" },
+  "uefa-nations-league": { src: "/league-badges/uefa-nations-league.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/cwsp321698386224.png" },
+  "uefa-nations-league-b": { src: "/league-badges/uefa-nations-league.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/cwsp321698386224.png" },
 };
 
 const source = (path: string) => `https://raw.githubusercontent.com/openfootball/${path}`;
