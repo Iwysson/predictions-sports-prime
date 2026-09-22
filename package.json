@@ -24,6 +24,7 @@
     "validate:production": "npm run typecheck && npm run build"
   },
   "dependencies": {
+    "@next/third-parties": "^16.3.5",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
