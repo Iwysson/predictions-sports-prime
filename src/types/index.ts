@@ -23,6 +23,9 @@ export type LeagueSlug =
   | "copa-sudamericana"
   | "uefa-nations-league"
   | "uefa-nations-league-b"
+  | "uefa-nations-league-c"
+  | "uefa-nations-league-d"
+  | "gulf-cup"
   | "international-friendlies"
   | "africa-cup-of-nations-qualifying";
 

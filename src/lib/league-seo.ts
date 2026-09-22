@@ -21,6 +21,9 @@ const leagueSearchAliases: Partial<Record<LeagueConfig["slug"], readonly string[
   mls: ["Major League Soccer", "MLS USA", "United States MLS"],
   "uefa-europa-league": ["Europa League", "UEL", "UEFA Cup"],
   "uefa-nations-league-b": ["Nations League B", "UNL League B", "UEFA Nations League Division B"],
+  "uefa-nations-league-c": ["Nations League C", "UNL League C", "UEFA Nations League Division C"],
+  "uefa-nations-league-d": ["Nations League D", "UNL League D", "UEFA Nations League Division D"],
+  "gulf-cup": ["Arabian Gulf Cup", "Gulf Cup 27", "Khaleeji 27"],
   "africa-cup-of-nations-qualifying": ["AFCON Qualifiers", "AFCON 2027 Qualifying", "Eliminatórias da Copa Africana de Nações 2027"],
   "international-friendlies": ["International Friendly Matches", "Football Friendlies", "National Team Friendlies"],
 };
@@ -40,6 +43,9 @@ const leagueEditorialIntros: Partial<Record<LeagueConfig["slug"], string>> = {
   championship: "Compare Championship predictions through demanding schedules, home-away splits and the small margins that shape each market.",
   "scottish-premiership": "Review Scottish Premiership predictions using current venue evidence, team availability and the tactical route behind the pick.",
   "uefa-nations-league-b": "Follow UEFA Nations League B predictions across the 2026/27 groups, with squad availability, projected lineups and match-specific tactical evidence kept alongside each published price.",
+  "uefa-nations-league-c": "Follow UEFA Nations League C predictions across the 2026/27 groups, with squad availability, projected lineups and match-specific tactical evidence kept alongside each published price.",
+  "uefa-nations-league-d": "Follow UEFA Nations League D predictions across the 2026/27 groups, with squad availability, projected lineups and match-specific tactical evidence kept alongside each published price.",
+  "gulf-cup": "Follow Arabian Gulf Cup predictions with current tournament squads, projected lineups, match context and the evidence available for each published price.",
   "africa-cup-of-nations-qualifying": "Follow 2027 Africa Cup of Nations qualifying with squad call-ups, injury and suspension news, projected lineups, head-to-head history and the evidence available for each match before kick-off.",
   "international-friendlies": "Follow International Friendlies predictions with current national-team call-ups, projected lineups, recent form and the evidence available for each published price.",
 };

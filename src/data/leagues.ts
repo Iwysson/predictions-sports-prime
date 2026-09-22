@@ -12,7 +12,7 @@ export type LeagueConfig = {
   expectedClubs: number;
   expectedGamesPerRound: number;
   artworkId?: number;
-  liveDataId: string;
+  liveDataId?: string;
   timezone: string;
   manualOnly?: boolean;
   asset:
@@ -44,6 +44,9 @@ const graphicalLeagueAssets: Partial<
   "copa-sudamericana": { src: "/league-badges/copa-sudamericana.png", sourceUrl: "https://commons.wikimedia.org/wiki/File:Conmebol-sudamericana.svg" },
   "uefa-nations-league": { src: "/league-badges/uefa-nations-league.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/cwsp321698386224.png" },
   "uefa-nations-league-b": { src: "/league-badges/uefa-nations-league.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/cwsp321698386224.png" },
+  "uefa-nations-league-c": { src: "/league-badges/uefa-nations-league.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/cwsp321698386224.png" },
+  "uefa-nations-league-d": { src: "/league-badges/uefa-nations-league.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/cwsp321698386224.png" },
+  "gulf-cup": { src: "/league-badges/gulf-cup.svg", sourceUrl: "https://fontawesome.com/icons/trophy" },
   "africa-cup-of-nations-qualifying": { src: "/league-badges/africa-cup-of-nations-qualifying.svg", sourceUrl: "https://fontawesome.com/icons/earth-africa" },
   "international-friendlies": { src: "/league-badges/international-friendlies.svg", sourceUrl: "https://fontawesome.com/icons/futbol" },
 };
@@ -113,6 +116,9 @@ export const leagues: LeagueConfig[] = [
   defineLeague({ slug: "copa-sudamericana", name: "CONMEBOL Sudamericana", country: "South America", short: "SUD", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 32, expectedGamesPerRound: 4, timezone: "America/Sao_Paulo", liveDataId: "conmebol.sudamericana" }),
   defineLeague({ slug: "uefa-nations-league", name: "UEFA Nations League", country: "Europe", short: "UNL", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 16, expectedGamesPerRound: 8, timezone: "Europe/Paris", liveDataId: "uefa.nations" }),
   defineLeague({ slug: "uefa-nations-league-b", name: "UEFA Nations League B", country: "Europe", short: "UNL B", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 16, expectedGamesPerRound: 8, timezone: "Europe/Paris", liveDataId: "uefa.nations.b" }),
+  defineLeague({ slug: "uefa-nations-league-c", name: "UEFA Nations League C", country: "Europe", short: "UNL C", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 16, expectedGamesPerRound: 8, timezone: "Europe/Paris" }),
+  defineLeague({ slug: "uefa-nations-league-d", name: "UEFA Nations League D", country: "Europe", short: "UNL D", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 6, expectedGamesPerRound: 2, timezone: "Europe/Paris" }),
+  defineLeague({ slug: "gulf-cup", name: "Arabian Gulf Cup", country: "Middle East", short: "GULF", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 8, expectedGamesPerRound: 4, timezone: "Asia/Riyadh" }),
   defineLeague({ slug: "africa-cup-of-nations-qualifying", name: "Africa Cup of Nations Qualifying", country: "Africa", short: "AFCON Q", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 48, expectedGamesPerRound: 24, timezone: "UTC", liveDataId: "caf.nations_qual" }),
   defineLeague({ slug: "international-friendlies", name: "International Friendlies", country: "International", short: "IF", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 8, expectedGamesPerRound: 4, timezone: "UTC", liveDataId: "fifa.friendly" }),
 ];
@@ -147,6 +153,9 @@ export const primaryPredictionLeagueSlugs = [
   "copa-sudamericana",
   "uefa-nations-league",
   "uefa-nations-league-b",
+  "uefa-nations-league-c",
+  "uefa-nations-league-d",
+  "gulf-cup",
   "international-friendlies",
   "africa-cup-of-nations-qualifying",
 ] as const satisfies readonly LeagueSlug[];
