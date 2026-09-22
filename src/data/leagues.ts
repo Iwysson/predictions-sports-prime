@@ -44,6 +44,8 @@ const graphicalLeagueAssets: Partial<
   "copa-sudamericana": { src: "/league-badges/copa-sudamericana.png", sourceUrl: "https://commons.wikimedia.org/wiki/File:Conmebol-sudamericana.svg" },
   "uefa-nations-league": { src: "/league-badges/uefa-nations-league.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/cwsp321698386224.png" },
   "uefa-nations-league-b": { src: "/league-badges/uefa-nations-league.png", sourceUrl: "https://r2.thesportsdb.com/images/media/league/badge/cwsp321698386224.png" },
+  "africa-cup-of-nations-qualifying": { src: "/league-badges/africa-cup-of-nations-qualifying.svg", sourceUrl: "https://fontawesome.com/icons/earth-africa" },
+  "international-friendlies": { src: "/league-badges/international-friendlies.svg", sourceUrl: "https://fontawesome.com/icons/futbol" },
 };
 
 const source = (path: string) => `https://raw.githubusercontent.com/openfootball/${path}`;
