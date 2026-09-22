@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { AdSenseScript } from "@/components/ads";
 import { AdsterraSocialBar } from "@/components/ads/AdsterraSocialBar";
 import { ConsentIntegration } from "@/components/consent/ConsentIntegration";
+import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { JsonLd } from "@/components/JsonLd";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import type { Locale } from "@/i18n/dictionaries";
@@ -54,6 +55,7 @@ export default async function LocalizedRootLayout({ children, params }: Readonly
         </I18nProvider>
         <AdsterraSocialBar />
       </body>
+      <SiteAnalytics />
     </html>
   );
 }
