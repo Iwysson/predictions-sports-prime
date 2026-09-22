@@ -1,7 +1,7 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-09-21T04:52:54.145Z",
+  "generatedAt": "2026-09-22T11:35:25.264Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
@@ -196,21 +196,12 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "nyg",
-      "wins": 1,
-      "losses": 0,
-      "ties": 0,
-      "winPct": 1,
-      "conferenceRank": 6,
-      "playoffStatus": "wild-card"
-    },
-    {
       "teamId": "det",
       "wins": 1,
       "losses": 1,
       "ties": 0,
       "winPct": 0.5,
-      "conferenceRank": 7,
+      "conferenceRank": 6,
       "playoffStatus": "wild-card"
     },
     {
@@ -219,11 +210,20 @@
       "losses": 1,
       "ties": 0,
       "winPct": 0.5,
+      "conferenceRank": 7,
+      "playoffStatus": "wild-card"
+    },
+    {
+      "teamId": "lar",
+      "wins": 1,
+      "losses": 1,
+      "ties": 0,
+      "winPct": 0.5,
       "conferenceRank": 8,
       "playoffStatus": "none"
     },
     {
-      "teamId": "dal",
+      "teamId": "nyg",
       "wins": 1,
       "losses": 1,
       "ties": 0,
@@ -232,7 +232,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "gb",
+      "teamId": "dal",
       "wins": 1,
       "losses": 1,
       "ties": 0,
@@ -241,7 +241,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "no",
+      "teamId": "gb",
       "wins": 1,
       "losses": 1,
       "ties": 0,
@@ -250,7 +250,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "ari",
+      "teamId": "no",
       "wins": 1,
       "losses": 1,
       "ties": 0,
@@ -259,11 +259,11 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "lar",
-      "wins": 0,
+      "teamId": "ari",
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "winPct": 0,
+      "winPct": 0.5,
       "conferenceRank": 13,
       "playoffStatus": "none"
     },
