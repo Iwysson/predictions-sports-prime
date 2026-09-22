@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-21T12:12:53-03:00";
-const updatedAt = "2026-09-21T14:45:00-03:00";
+const updatedAt = "2026-09-22T14:31:00-03:00";
 
 export const azerbaijanVsTajikistan: EditorialPrediction = {
   league: "international-friendlies",

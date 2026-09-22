@@ -20,7 +20,7 @@ export const englandVsSpain: EditorialPrediction = {
   },
   published: true,
   publishedAt: "2026-09-18T13:49:00-03:00",
-  updatedAt: "2026-09-21T15:46:57-03:00",
+  updatedAt: "2026-09-22T14:31:00-03:00",
   sourceStatus: "partial",
   sources: [
     {"name":"The Canadian Press via Lethbridge Herald — Palmer and Rice among five players ruled out of England matches","url":"https://lethbridgeherald.com/sports/national-sports/2026/09/21/palmer-and-rice-among-5-players-ruled-out-of-england-matches-in-nations-league/","description":"England withdrawals and replacements.","accessedAt":"2026-09-21T15:46:57-03:00"},

@@ -23,7 +23,7 @@ export const seattleSoundersVsRealSaltLake: EditorialPrediction = {
     },
     "published": true,
     "publishedAt": "2026-09-21T09:44:47-03:00",
-    "updatedAt": "2026-09-21T16:17:17-03:00",
+    "updatedAt": "2026-09-22T14:31:00-03:00",
     "freshness": {
       "editorialUpdatedAt": "2026-09-21T16:17:17-03:00",
       "teamNewsUpdatedAt": "2026-09-21T16:17:17-03:00",
