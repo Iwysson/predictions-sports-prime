@@ -17,7 +17,7 @@ export type AdSenseContentClassification =
 export type AdSenseContentQualityDecision = {
   classification: AdSenseContentClassification;
   indexable: boolean;
-  source: "audited-snapshot-2026-09-03" | "automatic-fallback" | "manual-publication-allowlist-2026-09-15" | "manual-publication-allowlist-2026-09-18";
+  source: "audited-snapshot-2026-09-03" | "automatic-fallback" | "manual-publication-allowlist-2026-09-15" | "manual-publication-allowlist-2026-09-18" | "manual-publication-allowlist-2026-09-22";
   reasons: string[];
 };
 
@@ -162,14 +162,56 @@ const MANUAL_PUBLICATION_ALLOWLIST_2026_09_18 = new Set<string>([
   "denmark-vs-wales",
 ]);
 
+// Explicit publication authorization for the 31-page international wave.
+// Partial data coverage remains disclosed in-page and is not a publication blocker.
+const MANUAL_PUBLICATION_ALLOWLIST_2026_09_22 = new Set<string>([
+  // UEFA Nations League B (11)
+  "kosovo-vs-republic-of-ireland",
+  "austria-vs-israel",
+  "georgia-vs-northern-ireland",
+  "hungary-vs-ukraine",
+  "poland-vs-bosnia-herzegovina",
+  "sweden-vs-romania",
+  "slovenia-vs-scotland",
+  "north-macedonia-vs-switzerland",
+  "austria-vs-kosovo",
+  "israel-vs-republic-of-ireland",
+  "georgia-vs-ukraine",
+  // International Friendlies (7)
+  "azerbaijan-vs-tajikistan",
+  "japan-vs-uruguay",
+  "australia-vs-brazil",
+  "south-korea-vs-ecuador",
+  "canada-vs-chile",
+  "mexico-vs-colombia",
+  "usa-vs-peru",
+  // Gulf Cup (1)
+  "iraq-vs-oman",
+  // UEFA Nations League C (8)
+  "armenia-vs-latvia",
+  "montenegro-vs-cyprus",
+  "bulgaria-vs-luxembourg",
+  "faroe-islands-vs-kazakhstan",
+  "san-marino-vs-finland",
+  "albania-vs-belarus",
+  "iceland-vs-estonia",
+  "slovakia-vs-moldova",
+  // UEFA Nations League D (4)
+  "andorra-vs-malta",
+  "liechtenstein-vs-lithuania",
+  "lithuania-vs-azerbaijan",
+  "gibraltar-vs-andorra",
+]);
+
 function manualPublicationAllowlistMatch(
   prediction: EditorialPrediction
-): "2026-09-15" | "2026-09-18" | null {
+): "2026-09-15" | "2026-09-18" | "2026-09-22" | null {
   if (prediction.published !== true) return null;
   const slug =
     prediction.slug ?? predictionSlug(prediction.homeTeam, prediction.awayTeam);
   if (MANUAL_PUBLICATION_ALLOWLIST_2026_09_15.has(slug)) return "2026-09-15";
   if (MANUAL_PUBLICATION_ALLOWLIST_2026_09_18.has(slug)) return "2026-09-18";
+  if (MANUAL_PUBLICATION_ALLOWLIST_2026_09_22.has(slug)) return "2026-09-22";
   return null;
 }
 
@@ -609,7 +651,8 @@ export function getAdSenseContentQualityDecision(
       indexable: true,
       source: `manual-publication-allowlist-${allowlistMatch}` as
         | "manual-publication-allowlist-2026-09-15"
-        | "manual-publication-allowlist-2026-09-18",
+        | "manual-publication-allowlist-2026-09-18"
+        | "manual-publication-allowlist-2026-09-22",
       reasons: [`manual_publication_override_${allowlistMatch.replace(/-/g, "_")}`],
     };
   }
