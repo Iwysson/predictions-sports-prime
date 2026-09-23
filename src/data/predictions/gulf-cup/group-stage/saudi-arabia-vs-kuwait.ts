@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-22T14:31:00-03:00";
+const updatedAt = "2026-09-23T10:45:00-03:00";
 
 export const saudiArabiaVsKuwait: EditorialPrediction = {
   league: "gulf-cup",
@@ -31,7 +32,7 @@ No injury absences beyond the disciplinary exclusion of Musab Al-Juwayr were dis
 
 ### Probable lineups
 
-A probable Saudi Arabia XI is **Mohammed Al-Owais; Nawaf Boushal, Abdulelah Al-Amri, Hassan Al-Tambakti, Moteb Al-Harbi; Abdullah Al-Khaibari, Nasser Al-Dawsari, Mohammed Kanno; Sultan Mandash, Saleh Abu Al-Shamat; Firas Al-Buraikan**. This remains a projected lineup rather than a confirmed starting XI. Al-Buraikan offers a clear reference in the final third, while Kanno and Al-Khaibari give Donis experienced midfield options around a younger supporting group.
+**Matchday projected Saudi Arabia XI (4-3-3, not confirmed): Mohammed Al-Owais; Mohammed Abu Al-Shamat, Abdulelah Al-Amri, Hassan Al-Tambakti, Zakaria Hawsawi; Mohammed Kanno, Abdullah Al-Khaibari, Nasser Al-Dawsari; Sultan Mandash, Abdullah Al-Hamdan, Firas Al-Buraikan.** This September 23 projection supersedes the earlier version and follows the latest report attributed to Saudi newspaper Al-Riyadiyah. Donis was still due to settle the official team at the technical meeting, so it must not be read as a confirmed XI.
 
 A projected Kuwait XI is **Khaled Al-Rashidi; Rashed Al-Awadhi, Fahad Al-Hajeri, Khaled Sabah, Sultan Al-Dhafiri; Ahmad Al-Dhefiri, Redha Hani, Mohsen Falah; Eid Al-Rashedi/Mohammad Daham, Yousef Nasser, Faisal Zaid/Mohammad Majed**. Selection uncertainty remains in the wide and attacking roles, so this should be treated as an expected rather than confirmed lineup.
 
@@ -64,6 +65,8 @@ Saudi Arabia's home platform in Jeddah, their retained core of experienced playe
 - Arab Times — Kuwait steps up preparations for Gulf Cup opener (Nasser and Falah return to training): https://www.arabtimesonline.com/news/kuwait-steps-up-preparations-for-gulf-cup-opener/
 - Goal.com — Salem Al-Dawsari and Saud Abdulhamid left out of Saudi Arabia's Gulf Cup 27 squad: https://www.goal.com/en/news/salem-and-saud-left-out-shock-surprises-in-saudi-arabia-s-squad-for-gulf-cup-27/blt95a471bfd1fa1931
 - Gulf Cup 27 schedule and venue: https://arenahub.sa/tournaments/gulf-cup-27?lang=en
+- Saudi Arabian Football Federation — final training before Kuwait: https://www.saff.com.sa/news.php?id=4366
+- Al Ain — September 23 Saudi Arabia projected XI attributed to Al-Riyadiyah: https://al-ain.com/article/donis-ksa-lineup-kuwait-gulf-cup
 
 Lineup status: probable lineups are projections, not confirmed starting XIs. The prediction and quoted odds were supplied by the editor.`],
   analysisFormat: "markdown",
@@ -79,11 +82,11 @@ Lineup status: probable lineups are projections, not confirmed starting XIs. The
   },
   published: true,
   publishedAt,
-  updatedAt: publishedAt,
+  updatedAt,
   freshness: {
-    editorialUpdatedAt: publishedAt,
-    teamNewsUpdatedAt: publishedAt,
-    lineupUpdatedAt: publishedAt,
+    editorialUpdatedAt: updatedAt,
+    teamNewsUpdatedAt: updatedAt,
+    lineupUpdatedAt: updatedAt,
     statisticsUpdatedAt: publishedAt,
   },
   sourceStatus: "partial",
@@ -93,7 +96,56 @@ Lineup status: probable lineups are projections, not confirmed starting XIs. The
     { name: "Arab Times — Kuwait Gulf Cup preparations", url: "https://www.arabtimesonline.com/news/kuwait-steps-up-preparations-for-gulf-cup-opener/", accessedAt: publishedAt },
     { name: "Goal.com — Saudi Arabia Gulf Cup 27 squad", url: "https://www.goal.com/en/news/salem-and-saud-left-out-shock-surprises-in-saudi-arabia-s-squad-for-gulf-cup-27/blt95a471bfd1fa1931", accessedAt: publishedAt },
     { name: "Gulf Cup 27 schedule and venue", url: "https://arenahub.sa/tournaments/gulf-cup-27?lang=en", accessedAt: publishedAt },
+    { name: "Saudi Arabian Football Federation — final training before Kuwait", url: "https://www.saff.com.sa/news.php?id=4366", description: "Official final-session update from September 22.", accessedAt: updatedAt },
+    { name: "Al Ain — Saudi Arabia matchday projected XI", url: "https://al-ain.com/article/donis-ksa-lineup-kuwait-gulf-cup", description: "September 23 projection attributed to Saudi newspaper Al-Riyadiyah; official XI still pending.", accessedAt: updatedAt },
   ],
+  matchSeo: {
+    information: {
+      city: "Jeddah",
+      country: "Saudi Arabia",
+      timezone: "Asia/Riyadh",
+      sources: [
+        { name: "Saudi Arabian Football Federation — Gulf Cup squad and schedule", url: "https://www.saff.com.sa/news.php?id=4356", accessedAt: updatedAt },
+      ],
+      updatedAt,
+    },
+    lineups: {
+      status: "expected",
+      home: { formation: "4-3-3", players: ["Mohammed Al-Owais", "Mohammed Abu Al-Shamat", "Abdulelah Al-Amri", "Hassan Al-Tambakti", "Zakaria Hawsawi", "Mohammed Kanno", "Abdullah Al-Khaibari", "Nasser Al-Dawsari", "Sultan Mandash", "Abdullah Al-Hamdan", "Firas Al-Buraikan"] },
+      away: { formation: "4-3-3", players: ["Khaled Al-Rashidi", "Rashed Al-Awadhi", "Fahad Al-Hajeri", "Khaled Sabah", "Sultan Al-Dhafiri", "Ahmad Al-Dhefiri", "Redha Hani", "Mohsen Falah", "Mohammad Majed", "Yousef Nasser", "Mohammad Daham"] },
+      sources: [
+        { name: "Al Ain — Saudi Arabia matchday projected XI", url: "https://al-ain.com/article/donis-ksa-lineup-kuwait-gulf-cup", accessedAt: updatedAt },
+        { name: "Sports Mole — Kuwait projected XI", url: "https://www.sportsmole.co.uk/football/saudi-arabia/preview/saudi-arabia-vs-kuwait-prediction-team-news-lineups_605590.html", accessedAt: updatedAt },
+      ],
+      updatedAt,
+    },
+    availability: {
+      entries: [
+        { team: "home", player: "Musab Al-Juwayr", status: "unavailable", detail: "Removed from the tournament squad for disciplinary reasons.", updatedAt },
+        { team: "home", player: "Salem Al-Dawsari", status: "injured", detail: "Not selected after a hamstring injury was reported.", updatedAt },
+        { team: "home", player: "Saud Abdulhamid", status: "injured", detail: "Not selected for the Gulf Cup squad.", updatedAt },
+        { team: "away", player: "Yousef Nasser", status: "returning", detail: "Returned to training after a muscle problem; starting status remains projected.", updatedAt },
+        { team: "away", player: "Mohsen Falah", status: "returning", detail: "Returned to training after a muscle problem; starting status remains projected.", updatedAt },
+      ],
+      sources: [
+        { name: "Associated Press — Al-Juwayr disciplinary exclusion", url: "https://apnews.com/article/arabian-gulf-cup-soccer-d6e4650aaf51f89ac66e313ffaf1d84c", accessedAt: updatedAt },
+        { name: "Sports Mole — Kuwait availability", url: "https://www.sportsmole.co.uk/football/saudi-arabia/preview/saudi-arabia-vs-kuwait-prediction-team-news-lineups_605590.html", accessedAt: updatedAt },
+        { name: "Dostor — Saudi Arabia availability and projected XI", url: "https://www.dostor.org/5712582", accessedAt: updatedAt },
+      ],
+      updatedAt,
+    },
+    teamNews: {
+      entries: [
+        { team: "home", text: "Saudi Arabia completed their final session in Jeddah with set-piece work; the federation reported no new withdrawal." },
+        { team: "away", text: "Kuwait reached the final preparation stage with Yousef Nasser and Mohsen Falah back in training after muscle problems." },
+      ],
+      sources: [
+        { name: "Saudi Arabian Football Federation — final training", url: "https://www.saff.com.sa/news.php?id=4366", accessedAt: updatedAt },
+        { name: "Sports Mole — Kuwait availability", url: "https://www.sportsmole.co.uk/football/saudi-arabia/preview/saudi-arabia-vs-kuwait-prediction-team-news-lineups_605590.html", accessedAt: updatedAt },
+      ],
+      updatedAt,
+    },
+  },
   matchInfo: {
     date: "2026-09-23",
     time: "21:00",
