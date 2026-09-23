@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-21T12:12:53-03:00";
-const updatedAt = "2026-09-21T16:17:37-03:00";
+const updatedAt = "2026-09-23T06:50:58-03:00";
 
 export const southKoreaVsEcuador: EditorialPrediction = {
   league: "international-friendlies",
@@ -30,9 +30,13 @@ Gallardo announced his first **26-player Ecuador squad** on 20 September. The mo
 
 **Projected lineups (not confirmed):** no official XI had been released. For South Korea, Kim Min-jae leads the defensive line, Lee Jae-sung and Lee Kang-in are the main midfield and creative names, and Son Heung-min is the reference attacker; Moreno has discussed a new structure, so the shape itself is provisional until his first official team sheet. For Ecuador, Galíndez and Pacho anchor the back line, the midfield has to be rebuilt without Caicedo, and Angulo, Vite, Minda and Arroyo compete for the attacking roles. Hincapié and Caicedo are not expected to feature according to the latest squad information.
 
+### Ecuador lineup update — 23 September
+
+A current Ecuador report projects **Hernán Galíndez; Ángelo Preciado, Félix Torres, Willian Pacho, Pervis Estupiñán; Pedro Vite, Alan Franco, Jordy Alcívar; John Yeboah, Nilson Angulo, Jordy Caicedo**. This is a probable XI, not a confirmed team sheet. Gallardo is also without Piero Hincapié, Joel Ordóñez, Moisés Caicedo, Gonzalo Plata and Kevin Rodríguez; Jordy Caicedo is the leading candidate to fill the centre-forward vacancy left by Enner Valencia's international retirement.
+
 ### Injuries, suspensions and availability
 
-Ecuador are expected to be without Caicedo and Hincapié according to the latest squad information cited below. No injuries or suspensions were reported for South Korea in those sources, but that reflects the reporting available and not a confirmed clean bill of health.
+Ecuador are expected to be without Caicedo, Hincapié, Ordóñez, Plata and Kevin Rodríguez according to the latest squad information cited below. No injuries or suspensions were reported for South Korea in those sources, but that reflects the reporting available and not a confirmed clean bill of health.
 
 ### Match analysis
 
@@ -75,13 +79,14 @@ At published odds of **1.98**, the raw implied probability is **50.5%**, calcula
   publishedAt: "2026-09-21T12:12:53-03:00",
   updatedAt,
   freshness: {
-    editorialUpdatedAt: publishedAt,
-    teamNewsUpdatedAt: publishedAt,
-    lineupUpdatedAt: publishedAt,
+    editorialUpdatedAt: "2026-09-23T06:50:58-03:00",
+    teamNewsUpdatedAt: "2026-09-23T06:50:58-03:00",
+    lineupUpdatedAt: "2026-09-23T06:50:58-03:00",
     statisticsUpdatedAt: publishedAt,
   },
   sourceStatus: "partial",
   sources: [
+    { name: "Primicias — projected Ecuador lineup against South Korea", url: "https://www.primicias.ec/deportes/seleccion/alineacion-ecuador-marcelo-gallardo-corea-sur-debut-jugadores-amistoso-133189/", description: "Projected Ecuador XI and expanded injury list for Gallardo's debut.", accessedAt: "2026-09-23T06:50:58-03:00" },
     {"name":"Infobae/EFE — Gallardo keeps World Cup core in first Ecuador squad","url":"https://www.infobae.com/espana/agencias/2026/09/20/gallardo-mantiene-base-mundialista-en-su-primera-lista-con-ecuador-con-bajas-por-lesion/","description":"Ecuador squad and injured players.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {
       name: "Korea Football Association — Robert Moreno's 30-player squad",
@@ -114,6 +119,7 @@ At published odds of **1.98**, the raw implied probability is **50.5%**, calcula
       country: "South Korea",
       timezone: "Asia/Seoul",
       sources: [
+
         {
           name: "KFA — South Korea international-window squad",
           url: "https://www.kfa.or.kr/layer_popup/popup_live.php?act=news_tv_detail&check_url=bGF5ZXI%3D&div_code=news&idx=28281&lang=KOR",

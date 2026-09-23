@@ -20,13 +20,17 @@ export const austriaVsIsrael: EditorialPrediction = {
 
 Austria begin Group B3 at home with a squad that is noticeably different from the one many supporters associate with the last major tournament cycle. The current group includes Alexander Schlager, Lukas Jungwirth, Florian Wiegele and Christian Zawieschitzky in goal; David Affengruber, Felix Bacher, Kevin Danso, Marco Friedl, Philipp Lienhart, Phillipp Mwene, Stefan Posch, Alexander Prass, Nikolas Veratschnig and Maximilian Wöber in defence; and a midfield/attacking group featuring Konrad Laimer, Xaver Schlager, Nicolas Seiwald, Romano Schmid, Patrick Wimmer, Paul Wanner, Carney Chukwuemeka, Christoph Lang, Junior Adamu, Michael Gregoritsch, Marco Grüll and Sasa Kalajdzic.
 
-David Alaba is not part of this window and Marcel Sabitzer is also absent, so Austria lose two of their most experienced names. Even with those absences, the spine remains strong: Danso and Lienhart offer top-level centre-back experience, Seiwald gives the midfield intensity, with Laimer out injured,, while Gregoritsch, Kalajdzic, Wimmer and Wanner provide several different attacking profiles. The four-match international window also makes rotation a genuine consideration, particularly with Kosovo following three days later.
+David Alaba is not part of this window and Marcel Sabitzer is also absent, so Austria lose two of their most experienced names. Even with those absences, the spine remains strong: Danso and Lienhart offer top-level centre-back experience, Seiwald gives the midfield intensity, with Laimer out injured, while Gregoritsch, Kalajdzic, Wimmer and Wanner provide several different attacking profiles. The four-match international window also makes rotation a genuine consideration, particularly with Kosovo following three days later.
 
 Austria's 2026 sequence has contained both very strong and difficult periods. Before and during the World Cup cycle they recorded wins over Ghana, South Korea, Tunisia and Jordan, while the summer tournament also produced a 3-3 draw with Algeria and defeats against Argentina and Spain. The 3-0 loss to Spain ended their World Cup run, but it does not erase how effectively Austria can press and create territorial pressure against opponents who struggle to play through midfield.
 
 Israel arrive with a 27-man squad named by Ran Ben Shimon on 17 September. Daniel Peretz, Omri Glazer and Assaf Tzur are the goalkeepers. Eli Dasa, Guy Mizrahi, Roy Revivo, Anan Khalaili, Idan Nachmias, Ilay Feingold, Raz Shlomo, Nikita Stoyanov and Noam Stiefman are among the defensive options. The midfield and attack include Oscar Gloukh, Gabi Kanichowsky, Dor Peretz, Omri Gandelman, Mohammad Abu Fani, Manor Solomon, Liel Abada, Tai Baribo, Dor Turgeman, Idan Toklomati, Yarden Shua and Saied Abu Farchi.
 
 Israel's technical ceiling is obvious around Gloukh and Solomon, and the wide threat from Abada can punish a full-back who steps too aggressively. Their recent 2026 results include a 2-2 draw with Georgia and a 1-0 win over Albania. The bigger question in Austria is whether Israel can play through the first and second Austrian pressing lines consistently enough to prevent long spells without the ball.
+
+### Late team update — 23 September
+
+Austria's reset is broader than the initial injury list: Marko Arnautovic has retired from international football, Marcel Sabitzer is taking a break, David Alaba was not selected and **Konrad Laimer is out with an adductor injury**. Israel are missing defenders **Stav Lemkin, Itay Rotman and Or Blorian** through injury. The visiting centre-back situation strengthens Austria's route to repeated box entries, while Israel still retain transition quality through Gloukh, Solomon and Abada.
 
 ### Projected lineups
 
@@ -79,15 +83,16 @@ Austria's pressing depth and penalty-area options give them the stronger claim o
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-21T16:17:17-03:00",
+  updatedAt: "2026-09-23T06:50:58-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-21T16:17:17-03:00",
-    teamNewsUpdatedAt: "2026-09-21T16:17:17-03:00",
-    lineupUpdatedAt: "2026-09-21T16:17:17-03:00",
+    editorialUpdatedAt: "2026-09-23T06:50:58-03:00",
+    teamNewsUpdatedAt: "2026-09-23T06:50:58-03:00",
+    lineupUpdatedAt: "2026-09-23T06:50:58-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    { name: "Sports Mole — Austria vs Israel team news and probable lineups", url: "https://www.sportsmole.co.uk/football/austria/uefa-nations-league/preview/austria-vs-israel-prediction-team-news-lineups_605620.html", description: "Latest Austria availability, Israel defensive injuries and projected XIs.", accessedAt: "2026-09-23T06:50:58-03:00" },
     {"name":"AllFootball — Laimer out for first two Nations League matches","url":"https://www.allfootballapp.com/articles/5384508-austria-official-laimer-out-first-two","description":"Austria midfielder Konrad Laimer's adductor injury, announced by the Austrian federation.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"Israel Football Association — September Nations League squad","url":"https://www.football.org.il/?itemid=%7BE29F4A20-B9AC-4C40-8669-630CE1C685C3%7D","description":"Official 27-player Israel squad announced on 17 September 2026.","accessedAt":"2026-09-20T18:49:50-03:00"},
@@ -96,10 +101,11 @@ Austria's pressing depth and penalty-area options give them the stronger claim o
   matchSeo: {
     lineups: {
       status: "expected",
-      home: {"formation":"4-2-3-1","players":["Schlager","Posch","Danso","Lienhart","Mwene","Seiwald","Laimer","Wimmer","Schmid","Prass","Gregoritsch."]},
+      home: {"formation":"4-2-3-1","players":["Schlager","Posch","Danso","Lienhart","Mwene","Seiwald","Xaver Schlager","Wanner","Schmid","Wimmer","Gregoritsch."]},
       away: {"formation":"4-2-3-1","players":["Daniel Peretz","Dasa","Nachmias","Raz Shlomo","Revivo","Abu Fani","Dor Peretz","Abada","Gloukh","Solomon","Baribo."]},
-      sources: [{"name":"Israel Football Association — September Nations League squad","url":"https://www.football.org.il/?itemid=%7BE29F4A20-B9AC-4C40-8669-630CE1C685C3%7D","accessedAt":"2026-09-20T18:49:50-03:00"}],
-      updatedAt: "2026-09-20T18:49:50-03:00",
+      sources: [
+{"name":"Israel Football Association — September Nations League squad","url":"https://www.football.org.il/?itemid=%7BE29F4A20-B9AC-4C40-8669-630CE1C685C3%7D","accessedAt":"2026-09-20T18:49:50-03:00"}],
+      updatedAt: "2026-09-23T06:50:58-03:00",
     },
   },
   matchInfo: {

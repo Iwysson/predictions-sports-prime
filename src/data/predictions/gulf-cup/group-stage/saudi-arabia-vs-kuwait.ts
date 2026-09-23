@@ -65,7 +65,7 @@ Saudi Arabia's home platform in Jeddah, their retained core of experienced playe
 - Goal.com — Salem Al-Dawsari and Saud Abdulhamid left out of Saudi Arabia's Gulf Cup 27 squad: https://www.goal.com/en/news/salem-and-saud-left-out-shock-surprises-in-saudi-arabia-s-squad-for-gulf-cup-27/blt95a471bfd1fa1931
 - Gulf Cup 27 schedule and venue: https://arenahub.sa/tournaments/gulf-cup-27?lang=en
 
-Editorial note: probable lineups are projections, not confirmed starting XIs. The prediction and quoted odds were supplied by the editor.`],
+Lineup status: probable lineups are projections, not confirmed starting XIs. The prediction and quoted odds were supplied by the editor.`],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {

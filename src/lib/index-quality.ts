@@ -48,7 +48,7 @@ type CurrentDecision = {
   indexable: boolean;
 };
 
-const INTERNAL_NOTE = /\b(?:WAIT LIVE|TODO|FIXME|TBD|PLACEHOLDER|internal note|editorial note|do not publish|undefined|null)\b/i;
+const INTERNAL_NOTE = /\b(?:WAIT LIVE|TODO|FIXME|TBD|PLACEHOLDER|internal note|do not publish|undefined|null)\b/i;
 const TRACEABLE_SOURCE = /^https:\/\//i;
 
 function hasInternalNotes(markdown: string) {

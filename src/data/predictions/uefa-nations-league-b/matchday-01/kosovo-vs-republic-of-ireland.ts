@@ -26,12 +26,16 @@ The Republic of Ireland arrive with a different squad profile. Heimir Hallgríms
 
 The most important Irish change is at centre-back. Captain Nathan Collins has been ruled out of the entire four-match window through injury, which led to a first senior call-up for Liam Kitching. Rocco Vata is back after a long injury absence, while several players retained their places after the summer friendlies. Jamie McGrath and Harvey Vale have since withdrawn after picking up injuries in club warm-ups, and St Mirren midfielder Killian Phillips has been called up in their place. Ireland have nevertheless entered this window with a more stable defensive identity than during earlier qualification cycles, and Kelleher gives them a goalkeeper comfortable defending space behind the back line.
 
+### Late team update — 23 September
+
+The latest match preview confirms that **Nathan Collins is out with a calf injury** and adds Jack Taylor, Mikey Johnston, Evan Ferguson and Josh Cullen to Ireland's unavailable list alongside Harvey Vale and Jamie McGrath. Liam Kitching, Joel Bagan and Owen Elding remain potential debutants. Kosovo captaincy has passed to Mergim Vojvoda with Amir Rrahmani outside the current setup, while Vedat Muriqi remains the central attacking reference.
+
 ### Projected lineups
 
 **Projected Kosovo XI (4-2-3-1):** Muric; Vojvoda, Dellova, Hajdari, Gallapeni; Avdullahu, Emërllahu; Rashica, Zhegrova, Asllani; Muriqi.  
 **Possible changes:** Rrudhani, Rrahmani and Kacuri are alternatives if Foda wants more physicality or a different midfield balance.
 
-**Projected Republic of Ireland XI (4-2-3-1):** Kelleher; Abankwah, O'Shea, O'Brien, Manning; Molumby, Knight; Ogbene, Azaz, Vata; Parrott.  
+**Projected Republic of Ireland XI (3-4-2-1):** Kelleher; O'Brien, Egan, O'Shea; Abankwah, Molumby, Knight, Manning; Azaz, Ogbene; Parrott.
 **Possible changes:** Scales can enter at centre-back, Idah offers a more physical No. 9 profile and Cannon is another option. Kitching is the direct new defensive addition after Collins' withdrawal.
 
 ### Head-to-head and tactical analysis
@@ -77,15 +81,17 @@ Ireland's preference for a controlled away contest and the absence of a prior se
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-21T15:46:57-03:00",
+  updatedAt: "2026-09-23T06:50:58-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-21T15:46:57-03:00",
-    teamNewsUpdatedAt: "2026-09-21T15:46:57-03:00",
-    lineupUpdatedAt: "2026-09-21T15:46:57-03:00",
+    editorialUpdatedAt: "2026-09-23T06:50:58-03:00",
+    teamNewsUpdatedAt: "2026-09-23T06:50:58-03:00",
+    lineupUpdatedAt: "2026-09-23T06:50:58-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    { name: "Sports Mole — Kosovo vs Republic of Ireland team news and lineups", url: "https://www.sportsmole.co.uk/football/kosovo/uefa-nations-league/preview/kosovo-vs-republic-of-ireland-prediction-team-news-lineups_605624.html", description: "Late availability report and projected shapes for both teams.", accessedAt: "2026-09-23T06:50:58-03:00" },
+    { name: "RTÉ — Kosovo v Republic of Ireland match guide", url: "https://www.rte.ie/sport/soccer/2026/0922/1592573-kosovo-v-republic-of-ireland-all-you-need-to-know/", description: "Match-day logistics and current context from Pristina.", accessedAt: "2026-09-23T06:50:58-03:00" },
     {"name":"The Irish Times — Killian Phillips called into Ireland squad","url":"https://www.irishtimes.com/sport/soccer/2026/09/21/killian-phillips-called-into-ireland-squad-for-nations-league-matches/","description":"Ireland withdrawals and replacement.","accessedAt":"2026-09-21T15:46:57-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"FAI — Republic of Ireland Nations League squad","url":"https://www.fai.ie/latest/hallgrimsson-names-26-man-squad-uefa-nations-league-fixtures/","description":"Official Ireland squad, Nathan Collins withdrawal, Liam Kitching call-up and fixture details.","accessedAt":"2026-09-20T18:49:50-03:00"},
@@ -95,9 +101,10 @@ Ireland's preference for a controlled away contest and the absence of a prior se
     lineups: {
       status: "expected",
       home: {"formation":"4-2-3-1","players":["Muric","Vojvoda","Dellova","Hajdari","Gallapeni","Avdullahu","Emërllahu","Rashica","Zhegrova","Asllani","Muriqi."]},
-      away: {"formation":"4-2-3-1","players":["Kelleher","Abankwah","O'Shea","O'Brien","Manning","Molumby","Knight","Ogbene","Azaz","Vata","Parrott."]},
-      sources: [{"name":"FAI — Republic of Ireland Nations League squad","url":"https://www.fai.ie/latest/hallgrimsson-names-26-man-squad-uefa-nations-league-fixtures/","accessedAt":"2026-09-20T18:49:50-03:00"}],
-      updatedAt: "2026-09-20T18:49:50-03:00",
+      away: {"formation":"3-4-2-1","players":["Kelleher","O'Brien","Egan","O'Shea","Abankwah","Molumby","Knight","Manning","Azaz","Ogbene","Parrott."]},
+      sources: [
+{"name":"FAI — Republic of Ireland Nations League squad","url":"https://www.fai.ie/latest/hallgrimsson-names-26-man-squad-uefa-nations-league-fixtures/","accessedAt":"2026-09-20T18:49:50-03:00"}],
+      updatedAt: "2026-09-23T06:50:58-03:00",
     },
   },
   matchInfo: {
