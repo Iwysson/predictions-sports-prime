@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-21T12:12:53-03:00";
-const updatedAt = "2026-09-21T14:45:00-03:00";
+const updatedAt = "2026-09-23T06:50:58-03:00";
 
 export const japanVsUruguay: EditorialPrediction = {
   league: "international-friendlies",
@@ -30,9 +30,13 @@ Uruguay also travel with a refreshed group under **Diego Forlán**, whose first 
 
 **Projected lineups (not confirmed):** no starting XI had been published, and the call-ups alone do not support a full eleven for either team, so none is presented. Zion Suzuki, Itakura and Watanabe are the Japan defensive names to watch, with Kaishu Sano, Kubo and Nakamura among the players supporting the forward line. For Uruguay, Valverde and Bentancur are central to the midfield options and Núñez is available in attack. Official team sheets take precedence once they are issued.
 
+### Final squad and arrival update — 23 September
+
+The JFA has now published Uruguay's 26-player travelling squad. Federico Valverde withdrew injured and was replaced by Palmeiras midfielder Emiliano Martínez, who was scheduled to arrive in Japan on the evening of September 23. Japan's final session brought three availability concerns: **Tomoya Ando missed training with lower-back pain**, Takehiro Tomiyasu was already out with a calf problem, and goalkeeper Zion Suzuki trained separately because of pain around his side. Hajime Moriyasu also indicated that the starting group would be drawn mainly from players who had arrived by Monday, so the full XI remains too uncertain to label beyond a projection.
+
 ### Injuries, suspensions and availability
 
-No injuries, suspensions or withdrawals for Japan or Uruguay were reported in the sources listed below. That reflects the coverage available rather than a confirmed clean bill of health, and travelling squads in international windows are often adjusted close to the match.
+Valverde is unavailable for Uruguay, with Emiliano Martínez replacing him. For Japan, Tomiyasu is out, Ando missed the final training session and Suzuki worked separately. No suspension was reported in the latest checks.
 
 ### Match analysis
 
@@ -73,13 +77,16 @@ At published odds of **1.78**, the raw implied probability is **56.2%**, calcula
   publishedAt: "2026-09-21T12:12:53-03:00",
   updatedAt,
   freshness: {
-    editorialUpdatedAt: publishedAt,
-    teamNewsUpdatedAt: publishedAt,
-    lineupUpdatedAt: publishedAt,
+    editorialUpdatedAt: "2026-09-23T06:50:58-03:00",
+    teamNewsUpdatedAt: "2026-09-23T06:50:58-03:00",
+    lineupUpdatedAt: "2026-09-23T06:50:58-03:00",
     statisticsUpdatedAt: publishedAt,
   },
   sourceStatus: "partial",
   sources: [
+    { name: "JFA — Uruguay travelling squad for Japan friendly", url: "https://jfa.jp/national_team_2026/news/00036797/", description: "Official 26-player Uruguay travel roster and Emiliano Martínez arrival note.", accessedAt: "2026-09-23T06:50:58-03:00" },
+    { name: "Daily Sports Japan — Ando and Suzuki training update", url: "https://www.daily.co.jp/soccer/2026/09/23/0020851274.shtml", description: "Japan final-session availability report for Ando, Tomiyasu and Suzuki.", accessedAt: "2026-09-23T06:50:58-03:00" },
+    { name: "EFE — Valverde withdrawal and Emiliano Martínez call-up", url: "https://efe.com/deportes/2026-09-22/valverde-baja-uruguay-lesion-emiliano-martinez/", description: "Uruguay injury replacement confirmed before travel completion.", accessedAt: "2026-09-23T06:50:58-03:00" },
     {
       name: "Japan Football Association — match page",
       url: "https://www.jfa.jp/eng/samuraiblue/20260924/match_page.html",
@@ -105,6 +112,9 @@ At published odds of **1.78**, the raw implied probability is **56.2%**, calcula
       country: "Japan",
       timezone: "Asia/Tokyo",
       sources: [
+
+
+
         {
           name: "Japan Football Association — match page",
           url: "https://www.jfa.jp/eng/samuraiblue/20260924/match_page.html",
