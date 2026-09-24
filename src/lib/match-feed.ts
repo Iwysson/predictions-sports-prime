@@ -140,7 +140,7 @@ export function validateHomePredictionSelection(
 
   if (
     todayMatches.some(
-      (match) => match.status !== "published" || match.date !== today
+      (match) => match.status !== "published" || (fixtureDateInTimeZone(match) ?? match.date) !== today
     )
   ) {
     errors.push("Today contains a non-current or unpublished prediction.");
