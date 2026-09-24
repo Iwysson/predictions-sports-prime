@@ -22,7 +22,7 @@ export const tanzaniaVsGuineaBissau: EditorialPrediction = {
   },
   published: true,
   publishedAt,
-  updatedAt: publishedAt,
+  updatedAt: "2026-09-24T16:55:00-03:00",
   freshness: {
     editorialUpdatedAt: publishedAt,
     teamNewsUpdatedAt: publishedAt,

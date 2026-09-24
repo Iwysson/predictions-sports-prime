@@ -31,10 +31,10 @@ Romania's last competitive push ended before the World Cup, and their March 2026
 ### Projected lineups
 
 **Projected Sweden XI (4-4-2):** Viktor Johansson; Holm, Lindelöf, Starfelt, Gudmundsson; Bergvall, Karlström, Ayari, Nanasi; Isak, Gyökeres.  
-**Possible changes:** Hugo Larsson can enter midfield after his late call-up, while Nygren provides a different attacking profile. Mellberg increases the defensive depth after the latest changes.
+**Possible changes:** Hugo Larsson can enter midfield after his late call-up, while Nygren provides a different attacking profile. Mellberg increases the defensive depth after the latest changes. The 24 September Sports Mole preview reports Gustaf Lagerbielke (groin), Isak Hien (hamstring), Anthony Elanga (knee) and goalkeeper Jacob Widell Zetterström (knee) unavailable and projects a back three of Stroud, Starfelt and Lindelöf with Holm and Gudmundsson as wing-backs, so the four-man line above is only one option and Sweden may field a makeshift defence; nothing is confirmed.
 
 **Projected Romania XI (4-2-3-1):** Radu; Rațiu, Drăgușin, Burcă, Bancu; Marius Marin, Răzvan Marin; Dennis Man, Stanciu, Mihăilă; Drăguș.  
-**Possible changes:** Ianis Hagi can operate as the central creator, Munteanu is an alternative No. 9 and Borza offers a younger option at left-back.
+**Possible changes:** Ianis Hagi can operate as the central creator, Munteanu is an alternative No. 9 and Borza offers a younger option at left-back. Sports Mole's 24 September projection has Ianis Hagi in midfield alongside Marin and Dragomir with Man, Mihăilă and Bîrligea ahead of them, and reports no specific Romania injuries; this remains unconfirmed.
 
 ### Head-to-head and tactical analysis
 
@@ -79,15 +79,16 @@ Sweden's home attacking ceiling and multiple penalty-area threats give them the 
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-21T16:17:17-03:00",
+  updatedAt: "2026-09-24T16:55:00-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-21T16:17:17-03:00",
-    teamNewsUpdatedAt: "2026-09-21T16:17:17-03:00",
-    lineupUpdatedAt: "2026-09-21T16:17:17-03:00",
+    editorialUpdatedAt: "2026-09-24T16:55:00-03:00",
+    teamNewsUpdatedAt: "2026-09-24T16:55:00-03:00",
+    lineupUpdatedAt: "2026-09-24T16:55:00-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    {"name":"Sports Mole — Sweden vs Romania preview, team news and lineups","url":"https://www.sportsmole.co.uk/football/sweden/uefa-nations-league/preview/sweden-vs-romania-prediction-team-news-lineups_605686.html","description":"Predicted XIs and Sweden defensive injuries (secondary source).","accessedAt":"2026-09-24T16:55:00-03:00"},
     {"name":"Svensk fotboll — Potters trupp till Nations League","url":"https://www.svenskfotboll.se/nyheter/landslag/2026/09/trupp-nations-league/","description":"Sweden squad announcement.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"Sweden Herald — Potter leaves out Elanga, Larsson and Swedberg","url":"https://swedenherald.com/article/injured-elanga-misses-swedens-nations-league-squad","description":"Sweden squad omissions.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},

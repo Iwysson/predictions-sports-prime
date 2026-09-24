@@ -25,6 +25,8 @@ Latvia coach Paolo Nicolato selected 26 players for the extended September-Octob
 
 A projected Armenia XI is **Ognjen Čančarević; David Terteryan, Sergey Muradyan, Georgi Harutyunyan, Nair Tiknizyan; Ugochukwu Iwu, Narek Aghasaryan; Edgar Sevikyan, Eduard Spertsyan, Narek Grigoryan; Artur Miranyan**. The XI is expected rather than confirmed and Armenia's injury list makes late team news especially important.
 
+The 24 September Sports Mole preview projects a slightly different, unconfirmed Armenia 4-3-3 with Čančarević in goal, Tiknizyan in defence, Spertsyan, Iwu and Sevikyan in midfield and Serobyan, Shaghoyan and Miranyan in attack, and reports no new Armenia absences beyond those already listed. For Latvia it projects Matrevičs; Savaļnieks, Balodis, Melnieks, Cirkins; Saveļjevs, Emsis, Vapne, Grabovskis; Ikaunieks, Gutkovskis, with QPR's Dennis Cirkin possibly handed a debut after switching allegiance from England. No Latvia injury or suspension was reported in that preview; a verified check found no further confirmed absences at the time of writing, but official teamsheets take precedence.
+
 ### Statistical Core Predictions-Sports-Prime
 
 Statistical coverage is partial: a complete 22/22 Statistical Core with comparable current-cycle HOME data for Armenia and AWAY data for Latvia, including xG, xGA, shots, shots on target, possession and corners, is unavailable in the cited material. Those metrics remain unavailable rather than being estimated.
@@ -43,7 +45,8 @@ The prediction is **Armenia or Draw (1X) + Over 1.5 Goals at 1.53**. Home advant
 ### Sources
 - UEFA — 2026/27 Nations League official fixtures
 - Football Federation of Armenia / Armenpress — Armenia squad and injury absences, September 17, 2026
-- Latvian Football Federation — Latvia 26-player squad, September 17, 2026`],
+- Latvian Football Federation — Latvia 26-player squad, September 17, 2026
+- Sports Mole — Armenia vs Latvia team news and predicted lineups: https://www.sportsmole.co.uk/football/armenia/uefa-nations-league/preview/armenia-vs-latvia-prediction-team-news-lineups_605650.html`],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {
@@ -57,15 +60,16 @@ The prediction is **Armenia or Draw (1X) + Over 1.5 Goals at 1.53**. Home advant
   },
   published: true,
   publishedAt,
-  updatedAt: publishedAt,
+  updatedAt: "2026-09-24T16:55:00-03:00",
   freshness: {
-    editorialUpdatedAt: publishedAt,
-    teamNewsUpdatedAt: publishedAt,
-    lineupUpdatedAt: publishedAt,
+    editorialUpdatedAt: "2026-09-24T16:55:00-03:00",
+    teamNewsUpdatedAt: "2026-09-24T16:55:00-03:00",
+    lineupUpdatedAt: "2026-09-24T16:55:00-03:00",
     statisticsUpdatedAt: publishedAt,
   },
   sourceStatus: "partial",
   sources: [
+    { name: "Sports Mole — Armenia vs Latvia preview, team news and lineups", url: "https://www.sportsmole.co.uk/football/armenia/uefa-nations-league/preview/armenia-vs-latvia-prediction-team-news-lineups_605650.html", description: "Predicted XIs and Latvia debut note (secondary source).", accessedAt: "2026-09-24T16:55:00-03:00" },
     { name: "UEFA — official 2026/27 Nations League fixtures", url: "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/", accessedAt: publishedAt },
     { name: "Latvian Football Federation — September 2026 calendar", url: "https://lff.lv/kalendars/?p=202609", accessedAt: publishedAt },
   ],
