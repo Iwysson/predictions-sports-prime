@@ -29,10 +29,10 @@ Barbarez named a 24-player squad for this Nations League block but acknowledged 
 ### Projected lineups
 
 **Projected Poland XI (4-2-3-1):** Bułka; Cash, Bednarek, Kiwior, Puchacz; Slisz, Zieliński; Frankowski, Szymański, Zalewski; Lewandowski.  
-**Possible changes:** Grabara is a legitimate alternative in goal, Urbański can add another technical midfielder and Świderski can be used alongside or behind Lewandowski.
+**Possible changes:** Grabara is a legitimate alternative in goal, Urbański can add another technical midfielder and Świderski can be used alongside or behind Lewandowski. The 24 September Sports Mole preview points to a Świderski–Lewandowski pairing with Cash and Puchacz as wing-backs, Zalewski, Zieliński and Szymański in midfield, and lists Adrian Benedyczak (broken wrist) and Filip Rózga (muscle injury) as unavailable; other previews differ on Bednarek's status, so his place should be checked against the official teamsheet.
 
 **Projected Bosnia and Herzegovina XI (4-2-2-2):** Vasilj; Dedić, Katić, Kolašinac, Mujakić; Šunjić, Gigović; Bajraktarević, Alajbegović; Demirović, Džeko.  
-**Possible changes:** Muharemović and Radeljić are alternatives in central defence, while Tabaković and Baždar can change the forward pairing. Benjamin Tahirović is on the standby list, so he is not treated as part of the initial 24-man squad.
+**Possible changes:** Muharemović and Radeljić are alternatives in central defence, while Tabaković and Baždar can change the forward pairing. Benjamin Tahirović is on the standby list, so he is not treated as part of the initial 24-man squad. Sports Mole's 24 September projection has a back three of Katić, Radeljić and Muharemović with Alajbegović behind Džeko and Demirović, while other previews report Dedić and Busuladžić as injured; sources disagree, so both readings remain unconfirmed.
 
 ### Head-to-head and tactical analysis
 
@@ -79,15 +79,16 @@ Poland's deeper attacking rotation and home platform give them the edge, althoug
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-20T18:49:50-03:00",
+  updatedAt: "2026-09-24T16:55:00-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-20T18:49:50-03:00",
-    teamNewsUpdatedAt: "2026-09-20T18:49:50-03:00",
-    lineupUpdatedAt: "2026-09-20T18:49:50-03:00",
+    editorialUpdatedAt: "2026-09-24T16:55:00-03:00",
+    teamNewsUpdatedAt: "2026-09-24T16:55:00-03:00",
+    lineupUpdatedAt: "2026-09-24T16:55:00-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    {"name":"Sports Mole — Poland vs Bosnia-Herzegovina preview, team news and lineups","url":"https://www.sportsmole.co.uk/football/poland/uefa-nations-league/preview/poland-vs-bosnia-hvina-prediction-team-news-lineups_605687.html","description":"Predicted XIs and availability (secondary source; previews disagree on some absences).","accessedAt":"2026-09-24T16:55:00-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"PZPN — Poland Nations League call-ups","url":"https://pzpn.pl/reprezentacje/reprezentacja-a/aktualnosci/2026-09-18/powolania-do-reprezentacji-polski-na-mecze-ligi-narodow-uefa","description":"Official Poland squad and Nations League schedule.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"N/FSBiH — Bosnia and Herzegovina squad","url":"https://www.nfsbih.ba/en/news/football-m/a-national-team-m/sergej-barbarez-makes-roster-for-upcoming-uefa-nations-league-matches/","description":"Official 24-player squad and match schedule.","accessedAt":"2026-09-20T18:49:50-03:00"}

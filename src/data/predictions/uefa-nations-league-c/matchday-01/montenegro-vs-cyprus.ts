@@ -25,6 +25,8 @@ Cyprus have also assembled a large Nations League group, with 27 players and thr
 
 A projected Montenegro XI is **Balša Popović; Marko Vešović, Stefan Savić, Igor Vujačić, Risto Radunović; Marko Janković, Andrija Bulatović; Stevan Jovetić, Nikola Krstović and the leading wide options from Vučinić's final group**. The exact attacking arrangement remains subject to the final team sheet, so the lineup is explicitly projected.
 
+The 24 September Sports Mole preview reports no specific Montenegro injuries or suspensions and projects a 4-3-3 with Petković in goal, Vešović, Savić, Vujačić and Radunović in defence, Janković, Hakšabanović and Lončar in midfield and Jovetić, Osmajić and Krstović up front. For Cyprus it projects Mall; Pileas, Sielis, Siikkis, Konomis; Kastanos, Kyprianou, Andreou; Edwards, Pittas, Loizou. Marcus Edwards, Leonidas Konomis and Nicholas Tsaroulla are first-time call-ups who could debut, with Edwards expected to start, while striker Iasonas Pikis was left out of the squad. These XIs are projected, not confirmed.
+
 Montenegro's case is based on the home setting and the amount of senior experience available through the spine. Cyprus can make the game uncomfortable and the opening round of a new Nations League campaign naturally carries tactical uncertainty, but Montenegro do not need a margin for this selection.
 
 ### Statistical Core Predictions-Sports-Prime
@@ -46,7 +48,8 @@ The prediction is **Montenegro to Win at 1.72**. The main risk is an opener that
 - UEFA — official Nations League C2 fixtures
 - FSCG / CG Sport — Montenegro squad for the September-October Nations League window
 - Vijesti — subsequent Montenegro squad additions
-- Cyprus FA / current Cyprus Nations League squad reporting`],
+- Cyprus FA / current Cyprus Nations League squad reporting
+- Sports Mole — Montenegro vs Cyprus team news and predicted lineups: https://www.sportsmole.co.uk/football/cyprus/uefa-nations-league/preview/montenegro-vs-cyprus-prediction-team-news-lineups_605653.html`],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {
@@ -60,15 +63,16 @@ The prediction is **Montenegro to Win at 1.72**. The main risk is an opener that
   },
   published: true,
   publishedAt,
-  updatedAt: publishedAt,
+  updatedAt: "2026-09-24T16:55:00-03:00",
   freshness: {
-    editorialUpdatedAt: publishedAt,
-    teamNewsUpdatedAt: publishedAt,
-    lineupUpdatedAt: publishedAt,
+    editorialUpdatedAt: "2026-09-24T16:55:00-03:00",
+    teamNewsUpdatedAt: "2026-09-24T16:55:00-03:00",
+    lineupUpdatedAt: "2026-09-24T16:55:00-03:00",
     statisticsUpdatedAt: publishedAt,
   },
   sourceStatus: "partial",
   sources: [
+    { name: "Sports Mole — Montenegro vs Cyprus preview, team news and lineups", url: "https://www.sportsmole.co.uk/football/cyprus/uefa-nations-league/preview/montenegro-vs-cyprus-prediction-team-news-lineups_605653.html", description: "Predicted XIs and Cyprus debut notes (secondary source).", accessedAt: "2026-09-24T16:55:00-03:00" },
     { name: "UEFA — official 2026/27 Nations League fixtures", url: "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/", accessedAt: publishedAt },
     { name: "Cyprus FA — Nations League schedule", url: "https://www.cfa.com.cy/En/news/52724", accessedAt: publishedAt },
   ],

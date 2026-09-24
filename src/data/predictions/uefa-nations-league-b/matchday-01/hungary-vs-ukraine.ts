@@ -28,11 +28,11 @@ Dovbyk's absence changes the centre-forward hierarchy but does not leave Ukraine
 
 ### Projected lineups
 
-**Projected Hungary XI (3-4-2-1):** Balázs Tóth; Bolla, Orbán, Kornél Szűcs; Kerkez, Csongvai, Schäfer, Styles; Szoboszlai, Sallai; centre-forward open after Barnabás Varga's injury.  
-**Possible changes:** Alex Tóth can enter midfield, while Redzic and Lukács offer alternatives around Varga. The new-look goalkeeper position remains one of the areas to confirm on matchday.
+**Projected Hungary XI (4-2-3-1, PROJECTED — not confirmed):** Balázs Tóth; Osváth, Orbán, Csinger, Kerkez; Schäfer, Vitalis; Redzic, Alex Tóth, Szoboszlai; Lukács.
+**Match-day update (24 September):** The latest Sports Mole preview lists both Roland Sallai and Barnabás Varga as missing from the Hungary squad, which removes Sallai from the earlier projected attacking pair and leaves Lukács as the likeliest centre-forward, with Redzic on the flank and Szoboszlai possibly moving wider. The shape could also be a back three, so the goalkeeper and back-line structure remain to be confirmed on matchday.
 
 **Projected Ukraine XI (4-2-3-1):** Trubin; Khrupskyi, Zabarnyi, Matviyenko, Mykolenko; Brazhko, Shaparenko; Tsygankov, Sudakov, Zubkov; Vanat.  
-**Possible changes:** Yaremchuk can start as the No. 9, Pikhalyonok adds another midfield passer and Yarmolenko remains an experienced option from the right.
+**Possible changes:** Sports Mole's 24 September projection instead has a 4-3-3 with Zabarnyi at right-back, Nazaryna as the single pivot, Shaparenko and Ocheretko in midfield and Yaremchuk at No. 9, and notes that Ruslan Malinovskyi is missing and Andriy Yarmolenko is expected to begin on the bench. Neither XI is confirmed.
 
 ### Head-to-head and tactical analysis
 
@@ -79,15 +79,16 @@ Ukraine still retain enough midfield and wide quality to avoid placing the whole
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-21T16:17:17-03:00",
+  updatedAt: "2026-09-24T16:55:00-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-21T16:17:17-03:00",
-    teamNewsUpdatedAt: "2026-09-21T16:17:17-03:00",
-    lineupUpdatedAt: "2026-09-21T16:17:17-03:00",
+    editorialUpdatedAt: "2026-09-24T16:55:00-03:00",
+    teamNewsUpdatedAt: "2026-09-24T16:55:00-03:00",
+    lineupUpdatedAt: "2026-09-24T16:55:00-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    {"name":"Sports Mole — Hungary vs Ukraine preview, team news and lineups","url":"https://www.sportsmole.co.uk/football/hungary/uefa-nations-league/preview/hungary-vs-ukraine-prediction-team-news-lineups_605652.html","description":"Predicted XIs; Sallai and Varga missing for Hungary, Malinovskyi missing for Ukraine (secondary source).","accessedAt":"2026-09-24T16:55:00-03:00"},
     {"name":"Mezha — Ukraine replaces Dovbyk and Andrievskyi before Nations League start","url":"https://mezha.net/eng/news/846a006e_ukraine_replaces_dovbyk/","description":"Ukraine replacements Oleksandr Pikhalionok and Ihor Krasnopir.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"Newsy Today — Donát Bárány receives national team call-up","url":"https://www.newsy-today.com/donat-barany-receives-national-team-call-up/","description":"Varga injury and replacement, attributed to the Hungarian federation (secondary source).","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
@@ -97,7 +98,7 @@ Ukraine still retain enough midfield and wide quality to avoid placing the whole
   matchSeo: {
     lineups: {
       status: "expected",
-      home: {"formation":"3-4-2-1","players":["Balázs Tóth","Bolla","Orbán","Kornél Szűcs","Kerkez","Csongvai","Schäfer","Styles","Szoboszlai","Sallai","Varga."]},
+      home: {"formation":"3-4-2-1","players":["Balázs Tóth","Bolla","Orbán","Kornél Szűcs","Kerkez","Csongvai","Schäfer","Styles","Szoboszlai","Redzic","Lukács"]},
       away: {"formation":"4-2-3-1","players":["Trubin","Khrupskyi","Zabarnyi","Matviyenko","Mykolenko","Brazhko","Shaparenko","Tsygankov","Sudakov","Zubkov","Vanat."]},
       sources: [{"name":"MLSZ — Hungary squad for the Nations League","url":"https://en.mlsz.hu/hir/five-new-players-in-latest-hungary-men%E2%80%99s-squad","accessedAt":"2026-09-20T18:49:50-03:00"}],
       updatedAt: "2026-09-20T18:49:50-03:00",

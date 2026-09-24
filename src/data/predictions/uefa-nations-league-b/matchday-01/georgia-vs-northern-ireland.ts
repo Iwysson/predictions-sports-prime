@@ -29,10 +29,10 @@ There are important changes around that list. Ballard and McNair are back, but C
 ### Projected lineups
 
 **Projected Georgia XI (3-4-2-1):** Mamardashvili; Kakabadze, Kashia, Lochoshvili; Gocholeishvili, Kochorashvili, Kiteishvili, Tsitaishvili; Davitashvili, Kvaratskhelia; Mikautadze.  
-**Possible changes:** Mekvabishvili can enter the midfield if Georgia want more ball security, while Budu Zivzivadze is an alternative centre-forward profile.
+**Possible changes:** Mekvabishvili can enter the midfield if Georgia want more ball security, while Budu Zivzivadze is an alternative centre-forward profile. The 24 September Sports Mole preview projects a 5-3-2 with Lasha Dvali returning to the back three and 18-year-old Saba Kharebashvili at left wing-back, and no Georgia absentees are flagged; this remains a projection, not a confirmed XI.
 
 **Projected Northern Ireland XI (3-4-2-1):** Peacock-Farrell; Hume, Ballard, McNair; Spencer, Shea Charles, Galbraith, Brown; Isaac Price, Donley; Dion Charles.  
-**Possible changes:** Callum Marshall offers another mobile forward option and Devenny can add legs in midfield. McNair's return also gives O'Neill flexibility between a back three and midfield.
+**Possible changes:** Callum Marshall offers another mobile forward option and Devenny can add legs in midfield. McNair's return also gives O'Neill flexibility between a back three and midfield. Sports Mole's 24 September projection has Pierce Charles in goal, Ballard back in a back three with Hume and Brown, Galbraith and Devenny in midfield, and Donley as the lone striker, with Ali McCann absent and O'Neill weighing a traditional number nine; this is unconfirmed.
 
 ### Head-to-head and tactical analysis
 
@@ -79,15 +79,16 @@ Georgia's front three offer more routes to create than the lone 2008 head-to-hea
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-20T18:49:50-03:00",
+  updatedAt: "2026-09-24T16:55:00-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-20T18:49:50-03:00",
-    teamNewsUpdatedAt: "2026-09-20T18:49:50-03:00",
-    lineupUpdatedAt: "2026-09-20T18:49:50-03:00",
+    editorialUpdatedAt: "2026-09-24T16:55:00-03:00",
+    teamNewsUpdatedAt: "2026-09-24T16:55:00-03:00",
+    lineupUpdatedAt: "2026-09-24T16:55:00-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    {"name":"Sports Mole — Georgia vs Northern Ireland preview, team news and lineups","url":"https://www.sportsmole.co.uk/football/northern-ireland/uefa-nations-league/preview/georgia-vs-northern-ireland-prediction-team-news-lineups_605651.html","description":"Predicted XIs and match-day availability (secondary source).","accessedAt":"2026-09-24T16:55:00-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"Irish FA — Northern Ireland Nations League squad","url":"https://www.irishfa.com/news/2026/september/northern-ireland-squad-for-unl-quadruple-header-named","description":"Official 28-player squad, returns, injuries and four-match schedule.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"Georgian Football Federation","url":"https://gff.ge/en/","description":"National-team updates used for Georgia camp context.","accessedAt":"2026-09-20T18:49:50-03:00"}
