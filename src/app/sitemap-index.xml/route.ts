@@ -6,6 +6,7 @@ export async function GET() {
   const xml = serializeSitemapIndex([
     "/sitemap.xml",
     "/sitemaps/upcoming-matches/sitemap.xml",
+    "/sitemaps/nfl/sitemap.xml",
     ...leagueSitemapEntries(),
   ]);
 

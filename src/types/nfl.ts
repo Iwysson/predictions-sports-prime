@@ -13,7 +13,9 @@ export type NFLInjuryStatus =
   | "Out"
   | "IR"
   | "Probable"
-  | "Day-to-Day";
+  | "Day-to-Day"
+  | "No game designation"
+  | "Season-ending";
 
 export type NFLInjury = {
   player: string;
@@ -21,7 +23,17 @@ export type NFLInjury = {
   team: string;
   injury: string;
   status: NFLInjuryStatus;
+  practiceStatus?: "DNP" | "Limited" | "Full" | "Not filed";
+  note?: string;
   replacement?: string;
+};
+
+export type NFLSource = {
+  name: string;
+  url: string;
+  accessedAt: string;
+  confidence: "verified-primary" | "established-secondary" | "secondary";
+  scope: string;
 };
 
 export type NFLStarter = { position: string; player: string };
@@ -65,4 +77,15 @@ export type NFLGame = {
   result?: { awayScore: number; homeScore: number; outcome: "green" | "red" | "push" };
   published: boolean;
   sourceFile: string;
+  slug?: string;
+  editorialStandard?: "psp-v1";
+  publicationStatus?: "DATA_READY" | "DATA_PUBLISHABLE_WITH_GAPS" | "DATA_BLOCKED";
+  publishedAt?: string;
+  updatedAt?: string;
+  freshness?: { asOf: string; note: string };
+  sourceStatus?: "verified" | "partial" | "secondary-source";
+  sources?: NFLSource[];
+  records?: { away: string; home: string };
+  matchSeo?: { title: string; description: string; indexable: boolean };
+  oddsProvenance?: { source: "author-supplied"; bookmaker: null; capturedAt: string; immutable: true };
 };
