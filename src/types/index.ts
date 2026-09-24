@@ -234,6 +234,7 @@ export type Match = {
   id: string;
   fixtureId?: string;
   kickoffUtc?: string;
+  timezone?: string;
   timeConfirmed?: boolean;
   slug: string;
   league: LeagueSlug;

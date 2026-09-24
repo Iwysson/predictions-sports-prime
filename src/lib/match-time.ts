@@ -63,7 +63,7 @@ const championsLeagueVenueTimezones: Record<string, string> = {
 };
 
 
-function localDateTimeToUtc(date: string, time: string, timeZone: string) {
+export function localDateTimeToUtc(date: string, time: string, timeZone: string) {
   const [year, month, day] = date.split("-").map(Number);
   const [hour, minute] = time.split(":").map(Number);
   if (![year, month, day, hour, minute].every(Number.isFinite)) return null;
@@ -122,10 +122,13 @@ function formatInTimeZone(value: string, timeZone: string) {
   };
 }
 
-export function resolveMatchTimezone(match: Pick<Match | MatchPreview, "league" | "venue">): {
+export function resolveMatchTimezone(match: Pick<Match | MatchPreview, "league" | "venue" | "timezone">): {
   timezone: string | null;
   timezoneSource: MatchTimezoneSource;
 } {
+  if (match.timezone) {
+    return { timezone: match.timezone, timezoneSource: "city" };
+  }
   if (match.league === "mls" && match.venue && mlsVenueTimezones[match.venue]) {
     return { timezone: mlsVenueTimezones[match.venue], timezoneSource: "venue" };
   }
@@ -149,7 +152,7 @@ export function resolveMatchTimezone(match: Pick<Match | MatchPreview, "league" 
   return { timezone: null, timezoneSource: "unknown" };
 }
 
-export function normalizeMatchTime(match: Pick<Match | MatchPreview, "league" | "kickoffUtc" | "date" | "time" | "timeConfirmed" | "venue">): NormalizedMatchTime | null {
+export function normalizeMatchTime(match: Pick<Match | MatchPreview, "league" | "kickoffUtc" | "date" | "time" | "timeConfirmed" | "venue" | "timezone">): NormalizedMatchTime | null {
   const { timezone, timezoneSource } = resolveMatchTimezone(match);
   const kickoffUtc = parseKickoffUtc(match, timezone);
   if (!kickoffUtc) return null;
@@ -176,7 +179,7 @@ const kickoffCopy = {
   tr: { local: "Yerel saat", unavailable: "Başlama saati kullanılamıyor", kickoff: "Başlama", inWord: "konum" },
 } as const;
 
-export function getMatchDisplayTime(match: Pick<Match | MatchPreview, "league" | "kickoffUtc" | "date" | "time" | "timeConfirmed" | "venue">, locale: keyof typeof kickoffCopy = "en") {
+export function getMatchDisplayTime(match: Pick<Match | MatchPreview, "league" | "kickoffUtc" | "date" | "time" | "timeConfirmed" | "venue" | "timezone">, locale: keyof typeof kickoffCopy = "en") {
   const copy = kickoffCopy[locale] ?? kickoffCopy.en;
   const normalized = normalizeMatchTime(match);
   if (!normalized) return { display: "TBD", sublabel: "", ariaLabel: copy.unavailable };
