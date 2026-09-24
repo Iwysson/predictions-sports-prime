@@ -455,6 +455,27 @@ for (const [route, lastmod] of sitemapEntries) {
     continue;
   }
 
+  const nflEditorial = route.match(/^\/nfl\/([^/]+)\/$/);
+  if (nflEditorial) {
+    const html = pages.get(route);
+    if (!html) {
+      errors.push(`${route}: NFL sitemap lastmod has no generated editorial page`);
+      continue;
+    }
+
+    const schemaPublished = html.match(/\"datePublished\":\"([^\"]+)\"/)?.[1];
+    const schemaModified = html.match(/\"dateModified\":\"([^\"]+)\"/)?.[1];
+    const expectedLastmod = schemaModified ?? schemaPublished;
+    if (!expectedLastmod) {
+      errors.push(`${route}: NFL sitemap contains a timestamp with no Article editorial date`);
+      continue;
+    }
+    if (Date.parse(lastmod) !== Date.parse(expectedLastmod)) {
+      errors.push(`${route}: NFL sitemap lastmod must equal Article dateModified ?? datePublished`);
+    }
+    continue;
+  }
+
   if (!route.startsWith("/match/")) {
     errors.push(`${route}: non-editorial sitemap URL has an unexplained lastmod`);
   }

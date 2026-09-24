@@ -11,6 +11,7 @@
     "fixtures:validate": "tsx scripts/validate-fixture-snapshot.mjs",
     "nfl:standings:sync": "tsx scripts/sync-nfl-standings.mjs",
     "audit:nfl-standings": "tsx scripts/audit-nfl-standings.mjs",
+    "audit:nfl-week3": "node --import tsx scripts/audit-nfl-week3.mjs",
     "audit:publication-content": "node --import tsx scripts/audit-publication-content.mjs",
     "audit:psp-editorial-standard": "node --import tsx scripts/audit-psp-editorial-standard.mjs",
     "audit:production-integrity": "node scripts/audit-production-integrity.mjs",

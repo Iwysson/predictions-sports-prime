@@ -18,4 +18,15 @@ const copies: Record<SeoLocale, NFLCopy> = {
   tr: { title: "Bugünün NFL Tahminleri ve Haftalık Seçimler | Predictions Sports Prime", description: "2026 sezonu için oranlar, sakatlıklar, beklenen ilk oyuncular ve stadyumlarla NFL tahminleri ve analizleri.", h1: "NFL Tahminleri ve Analizleri", subheading: "Haftalık NFL tahminleri, eşleşme analizleri, sakatlıklar, beklenen oyuncular, stadyumlar ve oranlar.", season: "2026 NFL Sezonu", week: "2. Hafta", weekHeading: "NFL 2. Hafta Tahminleri", prediction: "Tahmin", analysis: "Maç Analizi", odds: "Oranlar", americanOdds: "Amerikan Oranları", venueKickoff: "Stadyum ve Başlama", venue: "Stadyum", kickoff: "Başlama", available: "Tahmin mevcut", awayAtHome: "deplasmanda", previous: "Önceki hafta", next: "Sonraki hafta" },
 };
 
-export function getNFLCopy(locale: SeoLocale) { return copies[locale]; }
+const week3Labels: Record<SeoLocale, Pick<NFLCopy, "week" | "weekHeading">> = {
+  en: { week: "Week 3", weekHeading: "NFL Week 3 Predictions" },
+  "pt-br": { week: "Semana 3", weekHeading: "Palpites NFL — Semana 3" },
+  es: { week: "Semana 3", weekHeading: "Pronósticos NFL — Semana 3" },
+  fr: { week: "Semaine 3", weekHeading: "Pronostics NFL — Semaine 3" },
+  de: { week: "Woche 3", weekHeading: "NFL Woche 3 Tipps" },
+  it: { week: "Settimana 3", weekHeading: "Pronostici NFL — Settimana 3" },
+  nl: { week: "Week 3", weekHeading: "NFL Week 3 Voorspellingen" },
+  tr: { week: "3. Hafta", weekHeading: "NFL 3. Hafta Tahminleri" },
+};
+
+export function getNFLCopy(locale: SeoLocale) { return { ...copies[locale], ...week3Labels[locale] }; }

@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment, useEffect, useState } from "react";
+import Link from "next/link";
 import type { NFLGame } from "@/types/nfl";
 import type { SeoLocale } from "@/lib/seo-locales";
 import { getNFLCopy } from "@/lib/nfl-i18n";
@@ -82,6 +83,7 @@ export function NFLWeekAccordion({ games, locale }: { games: NFLGame[]; locale: 
             : <p>{localizedAnalysisNotice[locale]}</p>}
           </section>
           <section className="nfl-detail"><h4>{copy.venueKickoff}</h4><dl className="nfl-venue"><div><dt>{copy.venue}</dt><dd>{game.stadium ?? "TBA"}{game.city ? ` — ${game.city}${game.state ? `, ${game.state}` : ""}` : ""}</dd></div><div><dt>{copy.kickoff}</dt><dd>{game.kickoff}{game.timezone ? ` ${game.timezone}` : ""}</dd></div></dl></section>
+          {game.slug ? <Link className="nfl-game__article-link" href={`/nfl/${game.slug}/`}>Read the full prediction, injuries and projected personnel</Link> : null}
         </div>
       </article>;
     })}
