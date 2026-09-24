@@ -49,6 +49,8 @@ const graphicalLeagueAssets: Partial<
   "gulf-cup": { src: "/league-badges/gulf-cup.svg", sourceUrl: "https://fontawesome.com/icons/trophy" },
   "africa-cup-of-nations-qualifying": { src: "/league-badges/africa-cup-of-nations-qualifying.svg", sourceUrl: "https://fontawesome.com/icons/earth-africa" },
   "international-friendlies": { src: "/league-badges/international-friendlies.svg", sourceUrl: "https://fontawesome.com/icons/futbol" },
+  "fifa-asean-cup": { src: "/league-badges/fifa-asean-cup.svg", sourceUrl: "https://fontawesome.com/icons/trophy" },
+  "concacaf-nations-league": { src: "/league-badges/concacaf-nations-league.svg", sourceUrl: "https://fontawesome.com/icons/trophy" },
 };
 
 const source = (path: string) => `https://raw.githubusercontent.com/openfootball/${path}`;
@@ -120,6 +122,8 @@ export const leagues: LeagueConfig[] = [
   defineLeague({ slug: "uefa-nations-league-d", name: "UEFA Nations League D", country: "Europe", short: "UNL D", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 6, expectedGamesPerRound: 2, timezone: "Europe/Paris" }),
   defineLeague({ slug: "gulf-cup", name: "Arabian Gulf Cup", country: "Middle East", short: "GULF", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 8, expectedGamesPerRound: 4, timezone: "Asia/Riyadh" }),
   defineLeague({ slug: "africa-cup-of-nations-qualifying", name: "Africa Cup of Nations Qualifying", country: "Africa", short: "AFCON Q", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 48, expectedGamesPerRound: 24, timezone: "UTC", liveDataId: "caf.nations_qual" }),
+  defineLeague({ slug: "fifa-asean-cup", name: "FIFA ASEAN Cup", country: "Southeast Asia", short: "ASEAN", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 4, expectedGamesPerRound: 2, timezone: "Asia/Jakarta" }),
+  defineLeague({ slug: "concacaf-nations-league", name: "Concacaf Nations League", country: "North America", short: "CNL", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 16, expectedGamesPerRound: 8, timezone: "America/New_York" }),
   defineLeague({ slug: "international-friendlies", name: "International Friendlies", country: "International", short: "IF", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 8, expectedGamesPerRound: 4, timezone: "UTC", liveDataId: "fifa.friendly" }),
 ];
 
@@ -158,6 +162,8 @@ export const primaryPredictionLeagueSlugs = [
   "gulf-cup",
   "international-friendlies",
   "africa-cup-of-nations-qualifying",
+  "fifa-asean-cup",
+  "concacaf-nations-league",
 ] as const satisfies readonly LeagueSlug[];
 
 export const primaryPredictionLeagues = primaryPredictionLeagueSlugs.map(

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">FIFA ASEAN Cup</title>
+  <desc id="desc">Neutral trophy badge used for the FIFA ASEAN Cup competition.</desc>
+  <rect width="128" height="128" rx="24" fill="#071f36"/>
+  <path fill="#d7ad52" d="M42 25h44v10h13v12c0 15-10 27-25 31v10h13v10H41V88h13V78C39 74 29 62 29 47V35h13V25Zm0 20h-3v2c0 8 4 15 11 19-5-7-8-14-8-21Zm47 0c0 7-3 14-8 21 7-4 11-11 11-19v-2h-3ZM52 35v10c0 14 5 23 12 25 7-2 12-11 12-25V35H52Z"/>
+  <text x="64" y="116" fill="#fff" font-family="Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle">ASEAN CUP</text>
+</svg>

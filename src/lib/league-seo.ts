@@ -25,6 +25,8 @@ const leagueSearchAliases: Partial<Record<LeagueConfig["slug"], readonly string[
   "uefa-nations-league-d": ["Nations League D", "UNL League D", "UEFA Nations League Division D"],
   "gulf-cup": ["Arabian Gulf Cup", "Gulf Cup 27", "Khaleeji 27"],
   "africa-cup-of-nations-qualifying": ["AFCON Qualifiers", "AFCON 2027 Qualifying", "Eliminatórias da Copa Africana de Nações 2027"],
+  "fifa-asean-cup": ["ASEAN Cup", "FIFA ASEAN Cup 2026", "ASEAN Cup predictions"],
+  "concacaf-nations-league": ["Concacaf Nations League", "CNL", "Nations League Concacaf 2026/27"],
   "international-friendlies": ["International Friendly Matches", "Football Friendlies", "National Team Friendlies"],
 };
 
@@ -47,6 +49,8 @@ const leagueEditorialIntros: Partial<Record<LeagueConfig["slug"], string>> = {
   "uefa-nations-league-d": "Follow UEFA Nations League D predictions across the 2026/27 groups, with squad availability, projected lineups and match-specific tactical evidence kept alongside each published price.",
   "gulf-cup": "Follow Arabian Gulf Cup predictions with current tournament squads, projected lineups, match context and the evidence available for each published price.",
   "africa-cup-of-nations-qualifying": "Follow 2027 Africa Cup of Nations qualifying with squad call-ups, injury and suspension news, projected lineups, head-to-head history and the evidence available for each match before kick-off.",
+  "fifa-asean-cup": "Follow the FIFA ASEAN Cup with squad news, injury reports, projected lineups, head-to-head history and the evidence available for each published price.",
+  "concacaf-nations-league": "Follow Concacaf Nations League predictions with squad call-ups, injury and suspension news, projected lineups, venue context and the evidence available for each match before kick-off.",
   "international-friendlies": "Follow International Friendlies predictions with current national-team call-ups, projected lineups, recent form and the evidence available for each published price.",
 };
 
