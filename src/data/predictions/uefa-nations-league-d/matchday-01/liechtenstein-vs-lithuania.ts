@@ -25,13 +25,15 @@ A projected Lithuania XI is **Edvinas Gertmonas; Justas Lasickas, Edgaras Utkus,
 
 Liechtenstein's current pool includes Justin Ospelt, Gabriel Foser and Lorenzo Lo Russo in goal; Max Göppel, Lars Traber, Andreas Malin, Luca Beck and Jens Hofer in defence; Aron Sele, Livio Meier, Liam Kranz and Sandro Wolfinger among the midfield options; and Ferhat Saglam, Dennis Salanović, Villiam Pizzi, Fabio Luque-Notaro, Kenny Kindle and Emanuel Zünd in attack.
 
-A September 22 preview reports no fresh Lithuania injuries and identifies Armandas Kučys as the likely attacking reference, with Gvidas Gineitis expected to anchor midfield. For Liechtenstein, Dennis Salanović remains the main final-third reference. The secondary projections disagree on several defensive positions, so the source below is used to refine roles without presenting either XI as confirmed.
+### Match-day availability check — 24 September
+
+The latest check reports no fresh Lithuania injuries and identifies Armandas Kučys as the likely attacking reference, with Gvidas Gineitis expected to anchor midfield. For Liechtenstein, Dennis Salanović remains the main final-third reference. Secondary projections disagree on several defensive positions, so the source below is used to refine roles without presenting either XI as confirmed.
 
 A projected Liechtenstein structure is **Justin Ospelt; Lars Traber, Andreas Malin, Max Göppel; Sandro Wolfinger, Aron Sele, Livio Meier, Liam Kranz, Luca Beck; Dennis Salanović, Ferhat Saglam**. Konrad Fünfstück has enough options to vary the shape, so this should not be treated as a confirmed XI.
 
 Lithuania's likely route is to establish Gineitis and Vorobjovas on the ball, then use Kučys to pin the central defender while the wide players attack second balls. Liechtenstein can answer by keeping Sele close to the back line and asking Salanović to hold up clearances, but that approach offers limited attacking support if the visitors score first.
 
-The absence of a fresh Lithuania injury report reduces one source of uncertainty without making the projected XI official. Liechtenstein's defensive personnel remain less settled across the available secondary projections, so the preview retains the current squad-based structure and treats the exact goalkeeper and back-line combination as open until UEFA publishes the teamsheet.
+Liechtenstein's defensive personnel remain less settled across the available secondary projections, so the exact goalkeeper and back-line combination stays open until UEFA publishes the teamsheet. That uncertainty is material because an early defensive change could alter the compact shape behind Sele.
 
 The Under 2.5 market is built around game state rather than requiring either side to keep a clean sheet. Lithuania have the stronger individual midfield options and may control more possession, but Liechtenstein can prioritise compactness at home. A 1-0, 1-1 or 2-0 result all remain inside the selection.
 
@@ -68,16 +70,16 @@ The prediction is **Under 2.5 Goals at 1.70**. The principal danger is an early 
   },
   published: true,
   publishedAt,
-  updatedAt: "2026-09-23T06:50:58-03:00",
+  updatedAt: "2026-09-24T06:27:39-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-23T06:50:58-03:00",
-    teamNewsUpdatedAt: "2026-09-23T06:50:58-03:00",
-    lineupUpdatedAt: "2026-09-23T06:50:58-03:00",
+    editorialUpdatedAt: "2026-09-24T06:27:39-03:00",
+    teamNewsUpdatedAt: "2026-09-24T06:27:39-03:00",
+    lineupUpdatedAt: "2026-09-24T06:27:39-03:00",
     statisticsUpdatedAt: publishedAt,
   },
   sourceStatus: "partial",
   sources: [
-    { name: "Sports Mole — Liechtenstein vs Lithuania team news and probable lineups", url: "https://www.sportsmole.co.uk/football/lithuania/uefa-nations-league/preview/liechtenstein-vs-lithuania-prediction-team-news-lineups_605604.html", description: "September 22 availability and lineup-role cross-check.", accessedAt: "2026-09-23T06:50:58-03:00" },
+    { name: "Sports Mole — Liechtenstein vs Lithuania team news and probable lineups", url: "https://www.sportsmole.co.uk/football/lithuania/uefa-nations-league/preview/liechtenstein-vs-lithuania-prediction-team-news-lineups_605604.html", description: "Day-of-match availability and lineup-role cross-check.", accessedAt: "2026-09-24T06:27:39-03:00" },
     { name: "UEFA — official 2026/27 Nations League fixtures", url: "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/", accessedAt: publishedAt },
     { name: "Lithuanian Football Federation", url: "https://www.lff.lt/", accessedAt: publishedAt },
   ],
