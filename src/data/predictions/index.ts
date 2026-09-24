@@ -24,6 +24,8 @@ import { uefaNationsLeagueDPredictions } from "./uefa-nations-league-d";
 import { gulfCupPredictions } from "./gulf-cup";
 import { africaCupOfNationsQualifyingPredictions } from "./africa-cup-of-nations-qualifying";
 import { internationalFriendliesPredictions } from "./international-friendlies";
+import { fifaAseanCupPredictions } from "./fifa-asean-cup";
+import { concacafNationsLeaguePredictions } from "./concacaf-nations-league";
 import { applyWave08EditorialDebtRemediation } from "./editorial-debt-remediation";
 
 export const editorialPredictionsRaw = [
@@ -53,6 +55,8 @@ export const editorialPredictionsRaw = [
   ...gulfCupPredictions,
   ...internationalFriendliesPredictions,
   ...africaCupOfNationsQualifyingPredictions,
+  ...fifaAseanCupPredictions,
+  ...concacafNationsLeaguePredictions,
 ];
 
 export const editorialPredictions = editorialPredictionsRaw.map(applyWave08EditorialDebtRemediation);

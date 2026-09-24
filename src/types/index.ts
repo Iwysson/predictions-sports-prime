@@ -27,7 +27,9 @@ export type LeagueSlug =
   | "uefa-nations-league-d"
   | "gulf-cup"
   | "international-friendlies"
-  | "africa-cup-of-nations-qualifying";
+  | "africa-cup-of-nations-qualifying"
+  | "fifa-asean-cup"
+  | "concacaf-nations-league";
 
 export type PredictionItem = {
   label: string;
