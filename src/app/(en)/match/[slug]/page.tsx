@@ -279,15 +279,15 @@ export default async function MatchPage({
         </div>
       </section>
 
+      <div className="container adsterra-native-banner-area">
+        <AdsterraNativeBanner />
+      </div>
+
       <div className="container related-predictions-area">
         <RelatedPredictions
           matches={selectedRelatedMatches}
           indexableMatchSlugs={indexableMatchSlugs}
         />
-      </div>
-
-      <div className="container adsterra-native-banner-area">
-        <AdsterraNativeBanner />
       </div>
 
       <PredictionLeagueCategories />

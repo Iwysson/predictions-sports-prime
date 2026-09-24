@@ -347,6 +347,10 @@ export function LocalizedMatchPageContent({
         </div>
       </section>
 
+      <div className="container adsterra-native-banner-area">
+        <AdsterraNativeBanner />
+      </div>
+
       <div className="container related-predictions-area">
         <RelatedPredictions
           matches={selectedRelatedMatches}
@@ -354,10 +358,6 @@ export function LocalizedMatchPageContent({
           localizedSlugs={localizedRelatedSlugs}
           indexableMatchSlugs={indexableMatchSlugs}
         />
-      </div>
-
-      <div className="container adsterra-native-banner-area">
-        <AdsterraNativeBanner />
       </div>
 
       <PredictionLeagueCategories locale={locale} />

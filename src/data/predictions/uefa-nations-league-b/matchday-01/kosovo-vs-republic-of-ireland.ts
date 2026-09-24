@@ -24,11 +24,11 @@ Kosovo's 2026 results have not followed one single pattern. They won 4-3 away to
 
 The Republic of Ireland arrive with a different squad profile. Heimir Hallgrímsson named a 26-man group on 17 September, with Caoimhin Kelleher, Gavin Bazunu and Max O'Leary as the goalkeepers; Dara O'Shea, Jake O'Brien, Liam Scales, John Egan, Jimmy Dunne, James Abankwah, Ryan Manning, Joel Bagan and Liam Kitching among the defenders; and Finn Azaz, Jason Knight, Jayson Molumby, Conor Coventry, Jamie McGrath and Harvey Vale (both since withdrawn through injury) and Bosun Lawal in midfield, with Killian Phillips added as the replacement. Troy Parrott, Adam Idah, Chiedozie Ogbene, Tom Cannon, Rocco Vata, Jack Moylan and Owen Elding make up the attacking options.
 
-The most important Irish change is at centre-back. Captain Nathan Collins has been ruled out of the entire four-match window through injury, which led to a first senior call-up for Liam Kitching. Rocco Vata is back after a long injury absence, while several players retained their places after the summer friendlies. Jamie McGrath and Harvey Vale have since withdrawn after picking up injuries in club warm-ups, and St Mirren midfielder Killian Phillips has been called up in their place. Ireland have nevertheless entered this window with a more stable defensive identity than during earlier qualification cycles, and Kelleher gives them a goalkeeper comfortable defending space behind the back line.
+Captain Nathan Collins has been ruled out of the entire four-match window, which led to a first senior call-up for Liam Kitching. Rocco Vata is back after a long injury absence and Killian Phillips joined the midfield group following earlier withdrawals. Ireland nevertheless enter this window with a more stable defensive identity than during earlier qualification cycles, and Kelleher gives them a goalkeeper comfortable defending space behind the back line.
 
-### Late team update — 23 September
+### Match-day team update — 24 September
 
-The latest match preview confirms that **Nathan Collins is out with a calf injury** and adds Jack Taylor, Mikey Johnston, Evan Ferguson and Josh Cullen to Ireland's unavailable list alongside Harvey Vale and Jamie McGrath. Liam Kitching, Joel Bagan and Owen Elding remain potential debutants. Kosovo captaincy has passed to Mergim Vojvoda with Amir Rrahmani outside the current setup, while Vedat Muriqi remains the central attacking reference.
+Ireland completed final training at Fadil Vokrri Stadium with the travelling group available. **Bosun Lawal stayed with Stoke City to continue his rehabilitation and will not play**, while Nathan Collins, Jack Taylor, Mikey Johnston, Evan Ferguson, Josh Cullen, Harvey Vale and Jamie McGrath are also outside the match group. Liam Kitching, Joel Bagan and Owen Elding remain potential debutants. Kosovo captaincy has passed to Mergim Vojvoda with Amir Rrahmani outside the current setup, while Vedat Muriqi remains the central attacking reference.
 
 ### Projected lineups
 
@@ -81,15 +81,16 @@ Ireland's preference for a controlled away contest and the absence of a prior se
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-23T06:50:58-03:00",
+  updatedAt: "2026-09-24T06:27:39-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-23T06:50:58-03:00",
-    teamNewsUpdatedAt: "2026-09-23T06:50:58-03:00",
-    lineupUpdatedAt: "2026-09-23T06:50:58-03:00",
+    editorialUpdatedAt: "2026-09-24T06:27:39-03:00",
+    teamNewsUpdatedAt: "2026-09-24T06:27:39-03:00",
+    lineupUpdatedAt: "2026-09-24T06:27:39-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    { name: "FAI — match preview from Pristina", url: "https://www.fai.ie/latest/match-preview-kosovo-v-republic-ireland/", description: "Official final-training update, local kick-off confirmation and Bosun Lawal unavailability.", accessedAt: "2026-09-24T06:27:39-03:00" },
     { name: "Sports Mole — Kosovo vs Republic of Ireland team news and lineups", url: "https://www.sportsmole.co.uk/football/kosovo/uefa-nations-league/preview/kosovo-vs-republic-of-ireland-prediction-team-news-lineups_605624.html", description: "Late availability report and projected shapes for both teams.", accessedAt: "2026-09-23T06:50:58-03:00" },
     { name: "RTÉ — Kosovo v Republic of Ireland match guide", url: "https://www.rte.ie/sport/soccer/2026/0922/1592573-kosovo-v-republic-of-ireland-all-you-need-to-know/", description: "Match-day logistics and current context from Pristina.", accessedAt: "2026-09-23T06:50:58-03:00" },
     {"name":"The Irish Times — Killian Phillips called into Ireland squad","url":"https://www.irishtimes.com/sport/soccer/2026/09/21/killian-phillips-called-into-ireland-squad-for-nations-league-matches/","description":"Ireland withdrawals and replacement.","accessedAt":"2026-09-21T15:46:57-03:00"},
@@ -104,7 +105,7 @@ Ireland's preference for a controlled away contest and the absence of a prior se
       away: {"formation":"3-4-2-1","players":["Kelleher","O'Brien","Egan","O'Shea","Abankwah","Molumby","Knight","Manning","Azaz","Ogbene","Parrott."]},
       sources: [
 {"name":"FAI — Republic of Ireland Nations League squad","url":"https://www.fai.ie/latest/hallgrimsson-names-26-man-squad-uefa-nations-league-fixtures/","accessedAt":"2026-09-20T18:49:50-03:00"}],
-      updatedAt: "2026-09-23T06:50:58-03:00",
+      updatedAt: "2026-09-24T06:27:39-03:00",
     },
   },
   matchInfo: {

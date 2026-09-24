@@ -3462,6 +3462,47 @@ html[dir="rtl"] .latest-match {
   max-width: 100%;
 }
 
+.adsterra-banner-320x50 {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 18px;
+  overflow-x: hidden;
+}
+
+.adsterra-banner-320x50[hidden] {
+  display: none;
+}
+
+.adsterra-banner-320x50__label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.adsterra-banner-320x50__slot {
+  width: 320px;
+  height: 50px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.adsterra-banner-320x50__slot iframe {
+  display: block;
+  width: 320px;
+  height: 50px;
+  max-width: 100%;
+  border: 0;
+}
+
 .footer-inner {
   flex-wrap: wrap;
   align-items: center;
@@ -3643,6 +3684,7 @@ html[dir="rtl"] .footer-links { direction: rtl; }
   .adsterra-native-banner-area { padding-block: 12px; }
   .adsterra-native-banner { min-height: 240px; padding: 10px; }
   .adsterra-native-banner__container { min-height: 202px; }
+  .adsterra-banner-320x50 { padding-block: 12px; }
   .legal-content { gap: 10px; padding-top: 14px; }
   .legal-content section { padding: 12px; }
   .footer-links { gap: 7px 12px; }
