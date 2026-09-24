@@ -12,6 +12,7 @@ import {
   validatePspEditorialStandard,
 } from "@/lib/editorial-standard";
 import { parsePredictionMarket } from "@/lib/prediction-results";
+import { localDateTimeToUtc } from "@/lib/match-time";
 
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
@@ -73,6 +74,7 @@ export function toMatchPreview(match: Match): MatchPreview {
     id: match.id,
     fixtureId: match.fixtureId,
     kickoffUtc: match.kickoffUtc,
+    timezone: match.timezone,
     timeConfirmed: match.timeConfirmed,
     slug: match.slug,
     league: match.league,
@@ -228,9 +230,15 @@ export function editorialToMatch(
     : undefined;
   const finalScore = result?.finalScore;
   const hasFinalScore = isValidFinalScore(finalScore?.home, finalScore?.away);
+  const timezone = prediction.matchSeo?.information?.timezone;
+  const kickoffUtc = prediction.matchInfo?.date && prediction.matchInfo?.time && timezone
+    ? localDateTimeToUtc(prediction.matchInfo.date, prediction.matchInfo.time, timezone) ?? undefined
+    : undefined;
 
   return {
     id: `${prediction.league}-${slug}`,
+    kickoffUtc,
+    timezone,
     slug,
     league: prediction.league,
     round: prediction.matchInfo?.round ?? "Current Round",
