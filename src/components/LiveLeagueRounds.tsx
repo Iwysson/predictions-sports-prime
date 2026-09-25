@@ -125,7 +125,7 @@ export function LiveLeagueRounds({
         />
       </section>
 
-      <section className="league-round-section" aria-labelledby="next-round-heading">
+      {surface.flat ? null : <section className="league-round-section" aria-labelledby="next-round-heading">
         <div className="section-heading section-heading--compact league-next-round-heading">
           <div className="heading-with-icon">
             <span className="section-icon" aria-hidden="true">+</span>
@@ -151,7 +151,7 @@ export function LiveLeagueRounds({
           indexableMatchSlugs={indexableMatchSet}
           localizedMatchSlugs={localizedMatchSet}
         />
-      </section>
+      </section>}
     </div>
   );
 }

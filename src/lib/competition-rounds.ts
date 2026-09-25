@@ -18,7 +18,47 @@ export type CompetitionRoundSurface = {
   current: CompetitionRoundSection | null;
   next: CompetitionRoundSection | null;
   followingRound: number | string | null;
+  /** All active fixtures in one kickoff-ordered list (no round grouping). */
+  flat?: boolean;
 };
+
+// Competitions whose fixtures are shown as a single chronological queue so no
+// matchday/group can hide upcoming games.
+export const FLAT_FIXTURE_LEAGUES: ReadonlySet<string> = new Set([
+  "uefa-nations-league",
+  "uefa-nations-league-b",
+  "uefa-nations-league-c",
+  "uefa-nations-league-d",
+  "concacaf-nations-league",
+  "international-friendlies",
+  "africa-cup-of-nations-qualifying",
+  "gulf-cup",
+  "fifa-asean-cup",
+]);
+
+function flattenSurface(
+  surface: CompetitionRoundSurface,
+  editorial: CompetitionRoundSurface
+): CompetitionRoundSurface {
+  const editorialMatches = editorial.current?.matches ?? [];
+  if (!surface.current && !editorialMatches.length) return surface;
+  const seen = new Set<string>();
+  const matches = sortMatchesByKickoff(
+    [...(surface.current?.matches ?? []), ...(surface.next?.matches ?? []), ...editorialMatches].filter((match) => {
+      if (seen.has(match.id)) return false;
+      seen.add(match.id);
+      return true;
+    })
+  );
+  return {
+    ...surface,
+    sourceState: surface.current ? surface.sourceState : editorial.sourceState,
+    current: { round: "Upcoming fixtures", factualFixtures: [], matches },
+    next: null,
+    followingRound: null,
+    flat: true,
+  };
+}
 
 function slugify(value: string) {
   return value
@@ -156,7 +196,7 @@ function editorialFallback(manualMatches: MatchPreview[], now: Date | string): C
   };
 }
 
-export function buildCompetitionRoundSurface(input: {
+function buildRoundSurface(input: {
   league: LeagueSlug;
   rounds: OpenFootballRound[];
   publishedMatches: MatchPreview[];
@@ -198,4 +238,22 @@ export function buildCompetitionRoundSurface(input: {
     ),
     followingRound: resolved.followingRound?.round ?? null,
   };
+}
+
+export function buildCompetitionRoundSurface(input: Parameters<typeof buildRoundSurface>[0]): CompetitionRoundSurface {
+  const surface = buildRoundSurface(input);
+  if (!FLAT_FIXTURE_LEAGUES.has(input.league)) return surface;
+  // Factual schedules can lag behind published editorial fixtures; merge both.
+  const now = input.now ?? new Date();
+  const active = sortMatchesByKickoff(input.publishedMatches.filter((match) =>
+    match.status === "published" &&
+    isActiveFixtureState(classifyFixture({ ...match, status: match.fixtureStatus ?? "scheduled" }, now))
+  ));
+  const editorial: CompetitionRoundSurface = {
+    sourceState: active.length ? "editorial-fallback" : "unavailable",
+    current: active.length ? { round: "Upcoming fixtures", factualFixtures: [], matches: active } : null,
+    next: null,
+    followingRound: null,
+  };
+  return flattenSurface(surface, editorial);
 }
