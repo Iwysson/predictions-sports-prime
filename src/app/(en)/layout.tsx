@@ -131,8 +131,8 @@ export default function RootLayout({
           <Footer />
         </I18nProvider>
         <AdsterraSocialBar />
+        <SiteAnalytics />
       </body>
-      <SiteAnalytics />
     </html>
   );
 }

@@ -54,8 +54,8 @@ export default async function LocalizedRootLayout({ children, params }: Readonly
           <LocalizedFooter locale={locale} />
         </I18nProvider>
         <AdsterraSocialBar />
+        <SiteAnalytics />
       </body>
-      <SiteAnalytics />
     </html>
   );
 }
