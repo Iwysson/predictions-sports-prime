@@ -1,7 +1,7 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-09-22T11:35:25.264Z",
+  "generatedAt": "2026-09-25T04:55:15.745Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
@@ -88,7 +88,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "cle",
+      "teamId": "pit",
       "wins": 1,
       "losses": 1,
       "ties": 0,
@@ -97,7 +97,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "pit",
+      "teamId": "cle",
       "wins": 1,
       "losses": 1,
       "ties": 0,
@@ -151,7 +151,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "min",
+      "teamId": "sea",
       "wins": 2,
       "losses": 0,
       "ties": 0,
@@ -160,7 +160,7 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "sea",
+      "teamId": "min",
       "wins": 2,
       "losses": 0,
       "ties": 0,
@@ -241,7 +241,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "gb",
+      "teamId": "no",
       "wins": 1,
       "losses": 1,
       "ties": 0,
@@ -250,7 +250,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "no",
+      "teamId": "ari",
       "wins": 1,
       "losses": 1,
       "ties": 0,
@@ -259,12 +259,21 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "ari",
+      "teamId": "atl",
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "winPct": 0.5,
+      "winPct": 0.33333334,
       "conferenceRank": 13,
+      "playoffStatus": "none"
+    },
+    {
+      "teamId": "gb",
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "winPct": 0.33333334,
+      "conferenceRank": 14,
       "playoffStatus": "none"
     },
     {
@@ -273,20 +282,11 @@
       "losses": 2,
       "ties": 0,
       "winPct": 0,
-      "conferenceRank": 14,
-      "playoffStatus": "none"
-    },
-    {
-      "teamId": "tb",
-      "wins": 0,
-      "losses": 2,
-      "ties": 0,
-      "winPct": 0,
       "conferenceRank": 15,
       "playoffStatus": "none"
     },
     {
-      "teamId": "atl",
+      "teamId": "tb",
       "wins": 0,
       "losses": 2,
       "ties": 0,
