@@ -24,19 +24,19 @@ The midfield still contains the two best-known creative players, Elif Elmas and 
 
 Four players are receiving first senior call-ups: Meliqi, Dzekov, Gashtarov and Maleski. That expanded group is partly a response to the schedule, which puts four matches into 11 days. It also arrives after a difficult run of results. North Macedonia lost 4-0 to Denmark and later 4-0 to Türkiye, drew 0-0 with the Republic of Ireland and Bosnia and Herzegovina, and ended the previous qualification campaign with a heavy defeat to Wales. Their main issue has been converting possession into high-quality chances; Elmas and Bardhi can progress the ball, but the team have too often relied on isolated moments from Miovski or Churlinov.
 
-Switzerland come to Skopje from a much stronger summer. Murat Yakin's team reached the latter stages of the 2026 World Cup before losing 3-1 to Argentina in the quarter-final. Their tournament included a 2-0 knockout win over Algeria, while the group stage featured wins over Canada and Bosnia and Herzegovina and a draw with Qatar. That run reinforced the value of a settled spine around Gregor Kobel, Manuel Akanji, Remo Freuler and Breel Embolo, although captain Granit Xhaka is not part of this camp.
+Switzerland come to Skopje from a much stronger summer. Murat Yakin's team reached the latter stages of the 2026 World Cup before losing 3-1 to Argentina in the quarter-final. Their tournament included a 2-0 knockout win over Algeria, while the group stage featured wins over Canada and Bosnia and Herzegovina and a draw with Qatar. That run reinforced the value of a settled spine around Gregor Kobel, Manuel Akanji and Remo Freuler. The latest previews add two gaps to the one already known: captain Granit Xhaka is not part of this camp, Denis Zakaria is listed among the unavailable players, and Breel Embolo is reported as suspended for this opener (Sports Mole, 25 September).
 
-The current Swiss pool also contains Nico Elvedi, Ricardo Rodríguez, Silvan Widmer and Miro Muheim in defence; Denis Zakaria, Michel Aebischer, Fabian Rieder and Johan Manzambi through midfield; and Dan Ndoye, Ruben Vargas, Zeki Amdouni/other attacking alternatives around Embolo depending on the final matchday selection. Their biggest strength against North Macedonia should be control rather than simple attacking volume: Switzerland can keep enough players around the ball to limit counterattacks while still sending runners into the box.
+The current Swiss pool also contains Nico Elvedi, Ricardo Rodríguez, Silvan Widmer and Miro Muheim in defence; Michel Aebischer, Fabian Rieder and Johan Manzambi through midfield; and Dan Ndoye, Ruben Vargas and Zeki Amdouni among the attacking alternatives, with Embolo's suspension leaving the centre-forward role open. Their biggest strength against North Macedonia should be control rather than simple attacking volume: Switzerland can keep enough players around the ball to limit counterattacks while still sending runners into the box.
 
 Captain Granit Xhaka will not join the squad for the Nations League games against North Macedonia, Scotland and Slovenia; the Swiss federation said the decision was taken jointly with the player.
 
 ### Projected lineups
 
-**Projected North Macedonia XI (3-5-2):** Dimitrievski; Zajkov, Musliu, Mladenovski; Alioski, Atanasov, Elmas, Bardhi, Churlinov; Miovski, Rastoder.  
+**Projected North Macedonia XI (3-4-1-2, PSP projection, not confirmed):** Dimitrievski; Stojchevski, Zajkov, Musliu; Ilievski, Gashtarov, Bardhi, Alioski; Elmas; Miovski, Rastoder.  
 **Possible changes:** Elezi can make the midfield more defensive and one of the four debutants could be introduced during the four-game sequence.
 
-**Projected Switzerland XI (4-2-3-1):** Kobel; Widmer, Akanji, Elvedi, Rodríguez; midfield partner open (Granit Xhaka is not in camp), Freuler; Ndoye, Rieder, Vargas; Embolo.  
-**Possible changes:** Zakaria can increase midfield power, Aebischer gives another possession option and Manzambi can be used between midfield and attack.
+**Projected Switzerland XI (4-2-3-1, PSP projection, not confirmed):** Kobel; Widmer, Akanji, Elvedi, Rodríguez; Aebischer, Freuler; Ndoye, Rieder, Vargas; Amdouni.  
+**Possible changes:** Manzambi can be used between midfield and attack, and the striker slot depends on how Yakin replaces the suspended Embolo. Official teamsheets take precedence.
 
 ### Head-to-head and tactical analysis
 
@@ -53,7 +53,7 @@ Statistical coverage is partial because the 2026/27 competition has not started.
 | Nations League B1 record | 0-0-0 | 0-0-0 |
 | Recent major tournament | Did not qualify for WC | 2026 WC quarter-finalist |
 | Major squad change | 4 debutants; Serafimov injured | Core largely retained |
-| Main attacking references | Elmas, Bardhi, Miovski | Embolo, Ndoye, Vargas |
+| Main attacking references | Elmas, Bardhi, Miovski | Ndoye, Vargas, Rieder (Embolo suspended) |
 | Senior H2H | No meaningful previous sample | No meaningful previous sample |
 
 ### Market price and value
@@ -64,7 +64,7 @@ At published odds of **1.42**, the raw implied probability is **70.4%**, calcula
 
 ### Conclusion
 
-Switzerland's settled central spine should help them control the spaces around Elmas and Bardhi, but patience is essential if the hosts defend with five and keep Miovski available for direct exits.
+Even without Xhaka, Zakaria and the suspended Embolo, Switzerland's settled central spine should help them control the spaces around Elmas and Bardhi, but patience is essential if the hosts defend with five and keep Miovski available for direct exits.
 
 **Prediction:** Switzerland to Win  
 **Odds:** 1.42`],
@@ -80,16 +80,18 @@ Switzerland's settled central spine should help them control the spaces around E
     },
   },
   published: true,
-  publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-21T16:17:17-03:00",
+  publishedAt: "2026-09-25T15:48:13-03:00",
+  updatedAt: "2026-09-25T15:48:13-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-21T16:17:17-03:00",
-    teamNewsUpdatedAt: "2026-09-21T16:17:17-03:00",
-    lineupUpdatedAt: "2026-09-21T16:17:17-03:00",
+    editorialUpdatedAt: "2026-09-25T15:48:13-03:00",
+    teamNewsUpdatedAt: "2026-09-25T15:48:13-03:00",
+    lineupUpdatedAt: "2026-09-25T15:48:13-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+
+    { name: "Sports Mole — North Macedonia vs Switzerland preview, team news, lineups", url: "https://www.sportsmole.co.uk/football/macedonia/uefa-nations-league/preview/n-macedonia-vs-switzerland-prediction-team-news-lineups_605711.html", description: "Team news, availability and projected lineups checked on 25 September.", accessedAt: "2026-09-25T15:48:13-03:00" },
     {"name":"Yahoo Sports — Switzerland captain Granit Xhaka skips Nations League games","url":"https://sports.yahoo.com/articles/switzerland-captain-granit-xhaka-admits-103811443.html","description":"Xhaka's absence from the Nations League camp.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"FFM — North Macedonia Nations League squad","url":"https://www.ffm.mk/en/goce-sedloski-go-objavi-spisokot-za-cetirite-natprevari-vo-ligata-na-nacii/","description":"Official squad, four debutants and Serafimov injury.","accessedAt":"2026-09-20T18:49:50-03:00"},
@@ -99,10 +101,10 @@ Switzerland's settled central spine should help them control the spaces around E
   matchSeo: {
     lineups: {
       status: "expected",
-      home: {"formation":"3-5-2","players":["Dimitrievski","Zajkov","Musliu","Mladenovski","Alioski","Atanasov","Elmas","Bardhi","Churlinov","Miovski","Rastoder."]},
-      away: {"formation":"4-2-3-1","players":["Kobel","Widmer","Akanji","Elvedi","Rodríguez","Xhaka","Freuler","Ndoye","Rieder","Vargas","Embolo."]},
+      home: {"formation":"3-4-1-2","players":["Dimitrievski","Stojchevski","Zajkov","Musliu","Ilievski","Gashtarov","Bardhi","Alioski","Elmas","Miovski","Rastoder"]},
+      away: {"formation":"4-2-3-1","players":["Kobel","Widmer","Akanji","Elvedi","Rodríguez","Aebischer","Freuler","Ndoye","Rieder","Vargas","Amdouni"]},
       sources: [{"name":"FFM — North Macedonia Nations League squad","url":"https://www.ffm.mk/en/goce-sedloski-go-objavi-spisokot-za-cetirite-natprevari-vo-ligata-na-nacii/","accessedAt":"2026-09-20T18:49:50-03:00"}],
-      updatedAt: "2026-09-20T18:49:50-03:00",
+      updatedAt: "2026-09-25T15:48:13-03:00",
     },
   },
   matchInfo: {

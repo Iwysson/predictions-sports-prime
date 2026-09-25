@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
-const publishedAt = "2026-09-22T10:20:24-03:00";
+const publishedAt = "2026-09-25T15:48:13-03:00";
+const previousAccessedAt = "2026-09-22T10:20:24-03:00";
 
 export const usaVsPeru: EditorialPrediction = {
   league: "international-friendlies",
@@ -25,13 +26,13 @@ There has also been a late attacking change. Ricardo Pepi was named in the origi
 
 **Current USA call-up:** Goalkeepers — Chris Brady, Matt Freese, Diego Kochen, Brian Schwake. Defenders — George Campbell, Sergiño Dest, Alex Freeman, Peyton Miller, Neil Pierre, Chris Richards, Antonee Robinson, Miles Robinson, Auston Trusty, Frankie Westfield. Midfielders — Tyler Adams, Mathis Albert, Sebastian Berhalter, Zavier Gozo, Adri Mehmeti, Yunus Musah, Brooklyn Raines, Gio Reyna, Malik Tillman. Forwards — Cole Campbell, Justin Ellis, Julian Hall, Cavan Sullivan, Damion Downs. Ricardo Pepi is out injured.
 
-A probable USA XI is **Matt Freese; Sergiño Dest, Chris Richards, Miles Robinson, Antonee Robinson; Tyler Adams, Yunus Musah; Malik Tillman, Gio Reyna, Cavan Sullivan; Damion Downs**. The official team sheet has not yet been released. With so many uncapped players and four matches in the window, rotation is a real variable, especially in attack.
+A projected USA XI, as published in the 24 September previews, is **Matt Freese; Alex Freeman, Auston Trusty, Chris Richards, Antonee Robinson; Tyler Adams, Sebastian Berhalter; Sergiño Dest, Malik Tillman, Gio Reyna; Damion Downs**. The official team sheet has not yet been released. With so many uncapped players and four matches in the window, rotation is a real variable, especially in attack; Philadelphia Union's 16-year-old Cavan Sullivan is among the young options. Reports describe Folarin Balogun, Weston McKennie and Christian Pulisic as absent for fitness reasons, and no further injuries or suspensions are reported for the players in the squad.
 
 Peru did not qualify for the 2026 World Cup, so there is no Peru World Cup roster to compare directly with this call-up. Mano Menezes has selected 26 players for matches against the USA, Mexico, Canada and Colombia. Gianluca Lapadula returns to the group, while Pedro Gallese, André Carrillo, Yoshimar Yotún, Oliver Sonne and Erick Noriega provide experience around a squad that also contains several Liga 1 players.
 
 **Current Peru call-up:** Goalkeepers — Diego Romero, Matías Córdova, Pedro Gallese. Defenders — César Inga, Erick Noriega, Fabio Gruber, Marco Huamán, Marcos López, Matías Zegarra, Miguel Araujo, Oliver Sonne, Renzo Garcés. Midfielders — André Carrillo, Jairo Concha, Jairo Vélez, Jesús Pretell, Oslimg Mora, Rodrigo Vilca, Wilder Cartagena, Yoshimar Yotún. Forwards — Adrián Ugarriza, Alex Valera, Bascco Soyer, Gianluca Lapadula, Jhonny Vidales, Piero Magallanes.
 
-A probable Peru XI is **Pedro Gallese; Oliver Sonne, Miguel Araujo, Renzo Garcés, Marcos López; Erick Noriega, Wilder Cartagena; André Carrillo, Jairo Concha, Rodrigo Vilca; Gianluca Lapadula**. It remains an expected lineup because Mano Menezes has four friendlies in a short period and can distribute minutes.
+A projected Peru XI is **Pedro Gallese; Marcos López, Renzo Garcés, Miguel Araujo, Marco Huamán; Jesús Pretell, Erick Noriega, Yoshimar Yotún, Jairo Vélez; Alex Valera, Gianluca Lapadula**. It remains an expected lineup because Mano Menezes has four friendlies in a short period and can distribute minutes.
 
 The tactical picture is different from the World Cup version of the USA. Pochettino still has an established defensive and midfield spine, but the attack is much less settled without Pulisic, Balogun and now Pepi. Peru also enter a rebuilding phase after missing the tournament. Home conditions and the deeper American pool support the USA side of the selection, while the two-goal threshold does not require an open shootout.
 
@@ -73,12 +74,15 @@ The prediction is **USA to Win + Over 1.5 Goals at 1.75**. The principal risk is
     editorialUpdatedAt: publishedAt,
     teamNewsUpdatedAt: publishedAt,
     lineupUpdatedAt: publishedAt,
-    statisticsUpdatedAt: publishedAt,
+    statisticsUpdatedAt: previousAccessedAt,
   },
   sourceStatus: "partial",
   sources: [
-    { name: "U.S. Soccer — September/October 2026 roster", url: "https://www.ussoccer.com/stories/2026/09/usmnt/mauricio-pochettino-september-october-roster", accessedAt: publishedAt },
-    { name: "U.S. Soccer — Damion Downs replaces Ricardo Pepi", url: "https://www.ussoccer.com/stories/2026/09/usmnt/damion-downs-added-to-fall-roster", accessedAt: publishedAt },
+
+    { name: "bet365 News — USA vs Peru friendly lineups, stats and odds (24 Sep)", url: "https://news.bet365.com/en-us/article/usa-vs-peru-friendly-lineups-stats-odds-and-how-to-watch/2026092417100139277", description: "Team news, availability and projected lineups checked on 25 September.", accessedAt: "2026-09-25T15:48:13-03:00" },
+    { name: "Goal — USA vs Peru friendly preview", url: "https://www.goal.com/en/news/usa-peru-friendly-preview/blt6fa5fcb52817ad0a", description: "Team news, availability and projected lineups checked on 25 September.", accessedAt: "2026-09-25T15:48:13-03:00" },
+    { name: "U.S. Soccer — September/October 2026 roster", url: "https://www.ussoccer.com/stories/2026/09/usmnt/mauricio-pochettino-september-october-roster", accessedAt: previousAccessedAt },
+    { name: "U.S. Soccer — Damion Downs replaces Ricardo Pepi", url: "https://www.ussoccer.com/stories/2026/09/usmnt/damion-downs-added-to-fall-roster", accessedAt: previousAccessedAt },
   ],
   matchInfo: {
     date: "2026-09-26",

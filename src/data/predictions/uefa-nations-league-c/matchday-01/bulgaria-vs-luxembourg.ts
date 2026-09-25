@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
-const publishedAt = "2026-09-22T10:20:24-03:00";
+const publishedAt = "2026-09-25T15:48:13-03:00";
+const previousAccessedAt = "2026-09-22T10:20:24-03:00";
 
 export const bulgariaVsLuxembourg: EditorialPrediction = {
   league: "uefa-nations-league-c",
@@ -23,7 +24,9 @@ Those changes matter because Bulgaria's attacking ceiling cannot simply be asses
 
 Luxembourg enter League C after becoming increasingly competitive in recent international cycles. Their ability to stay organised without the ball makes the total-goals component important: Bulgaria's home edge can coexist with a match that never becomes a four-goal contest.
 
-A projected Bulgaria XI should be treated cautiously until the final training sessions because Dimitrov has a 27-man group and is beginning a four-match window. The absence of Despodov is the clearest selection fact affecting the attacking structure.
+A projected Bulgaria XI should be treated cautiously until the final training sessions because Dimitrov has a 27-man group and is beginning a four-match window. The absence of Despodov is the clearest selection fact affecting the attacking structure, although Sports Mole's 25 September projection still lists him in a 4-4-2 (Mitov; Popov, Petkov, Petrov, Nürnberger; Despodov, Kraev, Gruev, Krastev; Petkov, Kolev), so his status should be confirmed against the official squad. The same preview reports no injury or suspension concerns for Bulgaria.
+
+The form guide is mixed. Bulgaria have won three of their last five, but lost 4-2 on aggregate to the Republic of Ireland in the promotion play-offs after leading in both legs. Luxembourg beat Albania 1-0 in their last match and won 2-0 and 3-0 against Malta in the March play-offs that kept them in League C.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -62,12 +65,14 @@ The prediction is **Bulgaria or Draw (1X) + Under 3.5 Goals at 1.65**. The doubl
     editorialUpdatedAt: publishedAt,
     teamNewsUpdatedAt: publishedAt,
     lineupUpdatedAt: publishedAt,
-    statisticsUpdatedAt: publishedAt,
+    statisticsUpdatedAt: previousAccessedAt,
   },
   sourceStatus: "partial",
   sources: [
-    { name: "UEFA — official 2026/27 Nations League fixtures", url: "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/", accessedAt: publishedAt },
-    { name: "Bulgarian National Television — sport", url: "https://bntnews.bg/news/sport-100", accessedAt: publishedAt },
+
+    { name: "Sports Mole — Bulgaria vs Luxembourg preview, team news, lineups", url: "https://www.sportsmole.co.uk/football/bulgaria/uefa-nations-league/preview/bulgaria-vs-luxembourg-prediction-team-news-lineups_605734.html", description: "Team news, availability and projected lineups checked on 25 September.", accessedAt: "2026-09-25T15:48:13-03:00" },
+    { name: "UEFA — official 2026/27 Nations League fixtures", url: "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/", accessedAt: previousAccessedAt },
+    { name: "Bulgarian National Television — sport", url: "https://bntnews.bg/news/sport-100", accessedAt: previousAccessedAt },
   ],
   matchInfo: {
     date: "2026-09-26",

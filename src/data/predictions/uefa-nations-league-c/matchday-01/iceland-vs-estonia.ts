@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
-const publishedAt = "2026-09-22T10:20:24-03:00";
+const publishedAt = "2026-09-25T15:48:13-03:00";
+const previousAccessedAt = "2026-09-22T10:20:24-03:00";
 
 export const icelandVsEstonia: EditorialPrediction = {
   league: "uefa-nations-league-c",
@@ -27,7 +28,9 @@ Estonia coach Jürgen Henn has named a 26-player group, but his preparation has 
 
 Those changes leave Estonia without several familiar options, particularly Sappinen in attack and Kreida in midfield, but the squad still contains an established senior base. Karl Jakob Hein remains an important goalkeeper, while Märten Kuusk, Rasmus Peetson, Mattias Käit, Markus Soomets, Kevor Palumets, Patrik Kristal and Markus Poom are among the players who can provide continuity.
 
-A projected Iceland XI is **Elías Rafn Ólafsson; Logi Tómasson, Daníel Leó Grétarsson, Hörður Björgvin Magnússon, Guðlaugur Victor Pálsson; Ísak Bergmann Jóhannesson, Hákon Arnar Haraldsson, Mikael Egill Ellertsson; Albert Guðmundsson, Orri Steinn Óskarsson, Jón Dagur Þorsteinsson**. Estonia's exact structure is less certain because of the number of absences and potential debutants, so its final XI should be updated when matchday information becomes available. Neither lineup should be presented as confirmed before the official team sheets.
+Goalkeeper Elías Rafn Ólafsson is reported to miss the opening set of Nations League matches after kidney surgery (Sports Mole, 25 September), so Hákon Rafn Valdimarsson is the likelier starter. Iceland arrive without a win in five friendlies (defeats to Mexico, Japan and Argentina, draws with Canada and Haiti), while Estonia come in as Baltic Cup champions after beating the Faroe Islands and Lithuania this summer.
+
+A projected Iceland XI is **Hákon Rafn Valdimarsson; Logi Tómasson, Daníel Leó Grétarsson, Hörður Björgvin Magnússon, Guðlaugur Victor Pálsson; Ísak Bergmann Jóhannesson, Hákon Arnar Haraldsson, Mikael Egill Ellertsson; Albert Guðmundsson, Orri Steinn Óskarsson, Jón Dagur Þorsteinsson**. Estonia's exact structure is less certain because of the number of absences and potential debutants, so its final XI should be updated when matchday information becomes available. Neither lineup should be presented as confirmed before the official team sheets.
 
 The handicap gives Estonia a 1.5-goal cushion, meaning the selection remains successful if Estonia draw, win or lose by exactly one goal. Iceland have the stronger collection of established attacking options and home advantage, but Estonia's task for this market is not to outperform Iceland outright. Henn can prioritise compactness and try to keep the opening match within one goal.
 
@@ -69,13 +72,15 @@ The prediction is **Estonia +1.5 Asian Handicap at 1.87**. The main risk is Icel
     editorialUpdatedAt: publishedAt,
     teamNewsUpdatedAt: publishedAt,
     lineupUpdatedAt: publishedAt,
-    statisticsUpdatedAt: publishedAt,
+    statisticsUpdatedAt: previousAccessedAt,
   },
   sourceStatus: "partial",
   sources: [
-    { name: "UEFA — official 2026/27 Nations League fixtures", url: "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/", accessedAt: publishedAt },
-    { name: "Icelandic Football Association", url: "https://www.ksi.is/", accessedAt: publishedAt },
-    { name: "Estonian Football Association", url: "https://jalgpall.ee/", accessedAt: publishedAt },
+
+    { name: "Sports Mole — Iceland vs Estonia preview, team news, lineups", url: "https://www.sportsmole.co.uk/football/iceland/uefa-nations-league/preview/iceland-vs-estonia-prediction-team-news-lineups_605726.html", description: "Team news, availability and projected lineups checked on 25 September.", accessedAt: "2026-09-25T15:48:13-03:00" },
+    { name: "UEFA — official 2026/27 Nations League fixtures", url: "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/", accessedAt: previousAccessedAt },
+    { name: "Icelandic Football Association", url: "https://www.ksi.is/", accessedAt: previousAccessedAt },
+    { name: "Estonian Football Association", url: "https://jalgpall.ee/", accessedAt: previousAccessedAt },
   ],
   matchInfo: {
     date: "2026-09-26",

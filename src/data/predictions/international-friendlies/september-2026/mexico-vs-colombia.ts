@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
-const publishedAt = "2026-09-22T10:20:24-03:00";
+const publishedAt = "2026-09-25T15:48:13-03:00";
+const previousAccessedAt = "2026-09-22T10:20:24-03:00";
 
 export const mexicoVsColombia: EditorialPrediction = {
   league: "international-friendlies",
@@ -24,6 +25,8 @@ Márquez initially selected 30 players. Compared with Mexico's World Cup squad, 
 There has already been a further change. Alan Cervantes withdrew with muscular discomfort and will miss the window. Mexico announced that Isaías Violante would join the group immediately rather than later under the original club-release arrangement. Cervantes therefore should not appear in the projected XI against Colombia.
 
 **Current Mexico call-up:** Goalkeepers — Raúl Rangel, Óscar García, Alex Padilla. Defenders — Johan Vásquez, César Montes, Jorge Sánchez, Jesús Gallardo, Víctor Guzmán, Israel Reyes, Everardo López, Mateo Chávez, Diego Campillo. Midfielders — Luis Chávez, Orbelín Pineda, Erik Lira, Álvaro Fidalgo, Obed Vargas, Jeremy Márquez, Denzell García, Santiago Sandoval, Luis Romo, Gilberto Mora, Isaías Violante. Forwards — Santiago Giménez, Armando González, Roberto Alvarado, Hugo Camberos, Hirving Lozano, Germán Berterame. Alan Cervantes is out.
+
+Previews of the 25 September window agree that Márquez's debut side is likely to build around Giménez and Lozano in attack, with Álvaro Fidalgo and Erik Lira among the midfield options; Edson Álvarez was left out because of limited minutes at West Ham United rather than injury. On the Colombian side, Jhon Córdoba is out with a muscle bruise.
 
 A probable Mexico XI is **Raúl Rangel; Jorge Sánchez, César Montes, Johan Vásquez, Mateo Chávez; Erik Lira, Luis Chávez; Roberto Alvarado, Orbelín Pineda, Hirving Lozano; Santiago Giménez**. The official team sheet has not yet been released. Márquez has a large first-camp group and some Liga MX players were subject to staggered release arrangements.
 
@@ -78,13 +81,15 @@ The prediction is **Over 2.5 Goals at 1.88**. It avoids choosing a winner in a m
     editorialUpdatedAt: publishedAt,
     teamNewsUpdatedAt: publishedAt,
     lineupUpdatedAt: publishedAt,
-    statisticsUpdatedAt: publishedAt,
+    statisticsUpdatedAt: previousAccessedAt,
   },
   sourceStatus: "partial",
   sources: [
-    { name: "Mexico national team — September 2026 call-up", url: "https://miseleccion.mx/noticias/6626-Convocatoria-de-la-Selecci%C3%B3n-Nacional-de-M%C3%A9xico%3A-Rafael-M%C3%A1rquez-inicia-su-camino-rumbo-al-2030", accessedAt: publishedAt },
-    { name: "Colombian Football Federation — September 2026 squad", url: "https://www.fcf.com.co/2026/09/17/convocatoria-de-la-seleccion-colombia-de-mayores-amistosos-internacionales-de-septiembre-octubre-2026/", accessedAt: publishedAt },
-    { name: "TelevisaUnivision — kickoff confirmation", url: "https://corporate.televisaunivision.com/press/2026/09/21/televisaunivision-presents-mexico-vs-colombia-the-concacaf-nations-league-liga-mx-usl-championship-and-more-across-tv-and-streaming/", accessedAt: publishedAt },
+
+    { name: "Sports Mole — Mexico vs Colombia preview, team news, lineups", url: "https://www.sportsmole.co.uk/football/mexico/international-friendlies-predictions/preview/mexico-vs-colombia-prediction-team-news-lineups_605754.html", description: "Team news, availability and projected lineups checked on 25 September.", accessedAt: "2026-09-25T15:48:13-03:00" },
+    { name: "Mexico national team — September 2026 call-up", url: "https://miseleccion.mx/noticias/6626-Convocatoria-de-la-Selecci%C3%B3n-Nacional-de-M%C3%A9xico%3A-Rafael-M%C3%A1rquez-inicia-su-camino-rumbo-al-2030", accessedAt: previousAccessedAt },
+    { name: "Colombian Football Federation — September 2026 squad", url: "https://www.fcf.com.co/2026/09/17/convocatoria-de-la-seleccion-colombia-de-mayores-amistosos-internacionales-de-septiembre-octubre-2026/", accessedAt: previousAccessedAt },
+    { name: "TelevisaUnivision — kickoff confirmation", url: "https://corporate.televisaunivision.com/press/2026/09/21/televisaunivision-presents-mexico-vs-colombia-the-concacaf-nations-league-liga-mx-usl-championship-and-more-across-tv-and-streaming/", accessedAt: previousAccessedAt },
   ],
   matchInfo: {
     date: "2026-09-26",

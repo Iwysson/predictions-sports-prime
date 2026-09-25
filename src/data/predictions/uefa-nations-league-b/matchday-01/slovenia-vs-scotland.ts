@@ -18,29 +18,29 @@ export const sloveniaVsScotland: EditorialPrediction = {
 
 ### Team news, availability and recent form
 
-Slovenia start the Nations League at home with the core that has made them difficult to break down but also with enough attacking quality to move beyond a purely defensive identity. Jan Oblak remains the obvious reference in goal. Jaka Bijol, Vanja Drkušić, David Brekalo, Erik Janža, Petar Stojanović and Žan Karničnik form the experienced defensive pool, while Adam Gnezda Čerin, Timi Max Elšnik, Sandi Lovrić, Svit Sešlar and Tomi Horvat give Matjaž Kek options in midfield. Benjamin Šeško is the attacking focal point, supported by Andraž Šporar, Žan Vipotnik, Jan Mlakar and Nejc Gradišar.
+Slovenia start the Nations League at home with the core that has made them difficult to break down but also with enough attacking quality to move beyond a purely defensive identity. Jan Oblak remains the obvious reference in goal. Jaka Bijol, Vanja Drkušić, David Brekalo, Erik Janža, Petar Stojanović and Žan Karničnik form the experienced defensive pool, while Adam Gnezda Čerin, Timi Max Elšnik, Sandi Lovrić, Svit Sešlar and Tomi Horvat give Matjaž Kek options in midfield. Benjamin Šeško was the natural attacking focal point, but the latest previews report that he has withdrawn with a shin problem, so Andraž Šporar and Žan Vipotnik now carry the central attacking load, with Jan Mlakar and Nejc Gradišar as further options.
 
 Slovenia's recent 2026 scorelines have been more varied than the old stereotype of a low-event side. They lost 2-1 to Croatia in June, drew Cyprus 1-1, beat Montenegro 3-2 in March and lost 1-0 to Hungary. Their final 2025 qualifier against Sweden was also 1-1. Four of those five listed matches produced at least two total goals, but the route has changed from game to game: sometimes Slovenia create through Šeško and transition play, while on other nights the second goal appears because they have to chase after conceding.
 
 Scotland arrive at the beginning of a new coaching cycle. Sébastien Pocognoli named an expanded 28-man squad containing seven uncapped players and 14 players who did not feature in Scotland's World Cup squad. The selection includes Scott Bain, Angus Gunn, Liam Kelly and Jon McCracken in goal; Jack Hendry, Scott McKenna, Andy Robertson, Kieran Tierney, Aaron Hickey, Josh Doig, Nathan Patterson, Luis Binks, Colby Donovan, Luke Graham and Stephen Welsh in defence; and Billy Gilmour, Lewis Ferguson, John McGinn, Ryan Christie, Lennon Miller, Kenny McLean and Josh McPake in midfield.
 
-The forward group is also different. Oli McBurnie is back after a long absence from international football, while Kieron Bowie, Ben Gannon-Doak, Findlay Curtis, Robbie Ure and James Wilson are included. Scott McTominay is unavailable while recovering from a recent heart procedure, and Ché Adams is injured. Those two absences remove proven goal contributions and force the new coach to find a different balance around McGinn, Christie and the centre-forward.
+The forward group is also different. Oli McBurnie is back after a long absence from international football, while Kieron Bowie, Ben Gannon-Doak, Findlay Curtis, Robbie Ure and James Wilson are included. Scott McTominay is unavailable while recovering from a recent heart procedure, and Ché Adams and Lawrence Shankland are also listed as sidelined in the 25 September previews. Those two absences remove proven goal contributions and force the new coach to find a different balance around McGinn, Christie and the centre-forward.
 
 ### Projected lineups
 
-**Projected Slovenia XI (4-4-2):** Oblak; Karničnik, Bijol, Drkušić, Janža; Stojanović, Gnezda Čerin, Elšnik, Sešlar; Šeško, Šporar.  
-**Possible changes:** Lovrić can add creativity in midfield and Vipotnik provides another penalty-area option.
+**Projected Slovenia XI (4-3-2-1, PSP projection, not confirmed):** Oblak; Karničnik, Drkušić, Bijol, Brekalo; Lovrić, Gnezda Čerin, Elšnik; Horvat, Vipotnik; Šporar.  
+**Possible changes:** Janža or Stojanović can return to the back line, and Mlakar offers another penalty-area option with Šeško absent.
 
-**Projected Scotland XI (4-2-3-1):** Gunn; Hickey, Hendry, McKenna, Robertson; Gilmour, Ferguson; Gannon-Doak, McGinn, Christie; McBurnie.  
+**Projected Scotland XI (3-4-2-1, PSP projection, not confirmed):** Gunn; Hendry, McKenna, Welsh; Robertson, Ferguson, Gilmour, Hickey; McGinn, Christie; McBurnie.  
 **Possible changes:** Tierney can start either at left-back or as part of a back three, while Bowie and Ure offer alternatives at centre-forward. The number of new faces makes the final structure less certain than usual.
 
 ### Head-to-head and tactical analysis
 
 The H2H is tight. UEFA's historical record lists five meetings, with Scotland winning two and the other three ending in draws; Slovenia have not won the matchup. The last competitive encounter in 2017 finished 2-2 in Ljubljana, after Scotland had won the earlier match in Glasgow 1-0. There were also earlier draws and a 3-0 Scotland win in the mid-2000s.
 
-This fixture is tactically interesting because both teams have reasons to be more proactive than usual. Slovenia are at home and possess an elite transition striker in Šeško. Scotland are starting a new cycle and their coach has selected a broader, younger group rather than simply repeating the World Cup squad. That can increase attacking energy but may also create defensive timing issues, especially against a forward who can run into the channels.
+This fixture is tactically interesting because both teams have reasons to be more proactive than usual. Slovenia are at home, although the reported loss of Šeško removes their elite transition striker. Scotland are starting a new cycle and their coach has selected a broader, younger group rather than simply repeating the World Cup squad. That can increase attacking energy but may also create defensive timing issues, especially against a forward who can run into the channels.
 
-Slovenia's first priority will still be to protect the central space in front of Bijol and Drkušić. Scotland's best way around that may be to move Robertson and the right-sided full-back high, pull Slovenia's wide midfielders backwards and create room for McGinn or Christie between the lines. At the opposite end, Scotland must avoid leaving Šeško one-on-one with a centre-back after turnovers.
+Slovenia's first priority will still be to protect the central space in front of Bijol and Drkušić. Scotland's best way around that may be to move Robertson and the right-sided full-back high, pull Slovenia's wide midfielders backwards and create room for McGinn or Christie between the lines. At the opposite end, Scotland must still avoid leaving Šporar or Vipotnik one-on-one with a centre-back after turnovers, even without Šeško's pace.
 
 ### Statistical Core Predictions-Sports-Prime
 
@@ -50,8 +50,8 @@ Statistical coverage is partial because the 2026/27 competition has not started.
 |---|---:|---:|
 | Nations League B1 record | 0-0-0 | 0-0-0 |
 | Recent squad continuity | High | Major refresh |
-| Key absence | No major confirmed core loss in cited list | McTominay and Ché Adams out |
-| Main attacking reference | Šeško | McGinn / new forward group |
+| Key absence | Šeško (shin, reported) | McTominay, Ché Adams and Shankland out |
+| Main attacking reference | Šporar / Vipotnik | McGinn / new forward group |
 | UEFA H2H | 0 wins, 3 draws | 2 wins, 3 draws |
 
 ### Market price and value
@@ -62,7 +62,7 @@ At published odds of **1.44**, the raw implied probability is **69.4%**, calcula
 
 ### Conclusion
 
-Šeško's depth-running and Scotland's ability to attack through wide service create more than one scoring route, while the coaching and personnel changes stop the historical H2H from carrying excessive weight.
+Slovenia's transition running through Vipotnik and Šporar and Scotland's ability to attack through wide service create more than one scoring route, while the coaching and personnel changes stop the historical H2H from carrying excessive weight.
 
 **Prediction:** Over 1.5 Goals  
 **Odds:** 1.44`],
@@ -78,16 +78,19 @@ At published odds of **1.44**, the raw implied probability is **69.4%**, calcula
     },
   },
   published: true,
-  publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-20T18:49:50-03:00",
+  publishedAt: "2026-09-25T15:48:13-03:00",
+  updatedAt: "2026-09-25T15:48:13-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-20T18:49:50-03:00",
-    teamNewsUpdatedAt: "2026-09-20T18:49:50-03:00",
-    lineupUpdatedAt: "2026-09-20T18:49:50-03:00",
+    editorialUpdatedAt: "2026-09-25T15:48:13-03:00",
+    teamNewsUpdatedAt: "2026-09-25T15:48:13-03:00",
+    lineupUpdatedAt: "2026-09-25T15:48:13-03:00",
     statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
   },
   sourceStatus: "partial",
   sources: [
+
+    { name: "Sports Mole — Slovenia vs Scotland preview, team news, lineups", url: "https://www.sportsmole.co.uk/football/slovenia/uefa-nations-league/preview/slovenia-vs-scotland-prediction-team-news-lineups_605706.html", description: "Team news, availability and projected lineups checked on 25 September.", accessedAt: "2026-09-25T15:48:13-03:00" },
+    { name: "Racing Post — Slovenia vs Scotland predictions and team news", url: "https://www.racingpost.com/sport/football-tips/slovenia-vs-scotlandpredictions-14-1-bet-builder-tip-team-news-and-odds-aiEku2I1l7ar/", description: "Team news, availability and projected lineups checked on 25 September.", accessedAt: "2026-09-25T15:48:13-03:00" },
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"Slovenian FA — Slovenia vs Scotland","url":"https://www.nzs.si/reprezentance/moski/a-reprezentanca/tekme/slovenija-skotska-unl2026-2026-09-26-150000","description":"Official fixture page and Slovenia squad-news links.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"Scottish FA — Scotland Nations League squad","url":"https://www.scottishfa.co.uk/en/news/sebastien-pocognoli-selects-first-scotland-squad-for-upcoming-uefa-nations-league-fixtures","description":"Official Scotland squad and fixture details.","accessedAt":"2026-09-20T18:49:50-03:00"}
@@ -95,10 +98,10 @@ At published odds of **1.44**, the raw implied probability is **69.4%**, calcula
   matchSeo: {
     lineups: {
       status: "expected",
-      home: {"formation":"4-4-2","players":["Oblak","Karničnik","Bijol","Drkušić","Janža","Stojanović","Gnezda Čerin","Elšnik","Sešlar","Šeško","Šporar."]},
-      away: {"formation":"4-2-3-1","players":["Gunn","Hickey","Hendry","McKenna","Robertson","Gilmour","Ferguson","Gannon-Doak","McGinn","Christie","McBurnie."]},
+      home: {"formation":"4-3-2-1","players":["Oblak","Karničnik","Drkušić","Bijol","Brekalo","Lovrić","Gnezda Čerin","Elšnik","Horvat","Vipotnik","Šporar"]},
+      away: {"formation":"3-4-2-1","players":["Gunn","Hendry","McKenna","Welsh","Robertson","Ferguson","Gilmour","Hickey","McGinn","Christie","McBurnie"]},
       sources: [{"name":"Slovenian FA — Slovenia vs Scotland","url":"https://www.nzs.si/reprezentance/moski/a-reprezentanca/tekme/slovenija-skotska-unl2026-2026-09-26-150000","accessedAt":"2026-09-20T18:49:50-03:00"}],
-      updatedAt: "2026-09-20T18:49:50-03:00",
+      updatedAt: "2026-09-25T15:48:13-03:00",
     },
   },
   matchInfo: {

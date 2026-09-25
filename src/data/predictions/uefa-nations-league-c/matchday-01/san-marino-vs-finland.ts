@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
-const publishedAt = "2026-09-22T10:20:24-03:00";
+const publishedAt = "2026-09-25T15:48:13-03:00";
+const previousAccessedAt = "2026-09-22T10:20:24-03:00";
 
 export const sanMarinoVsFinland: EditorialPrediction = {
   league: "uefa-nations-league-c",
@@ -22,6 +23,8 @@ San Marino host Finland on September 26 in Group C1. Finland coach Jacob Friis n
 The attacking options include Joel Pohjanpalo, Benjamin Källman, Daniel Håkans, Topi Keskinen, Oiva Jukkola and Svanbäck, while Robin Lod, Kairinen, Kamara, Valakari, Matti Peltola and Leo Walta give Friis multiple midfield combinations. Lukas Hradecky, Bergström and Viljami Sinisalo are the goalkeepers.
 
 A projected Finland XI is **Lukas Hradecky; Adam Ståhl, Miro Tenho, Ville Koski, Juho Lähteenmäki; Glen Kamara, Kaan Kairinen; Robin Lod, Onni Valakari, Daniel Håkans; Joel Pohjanpalo**. It is an expected lineup rather than a confirmed XI, and the four-match window creates rotation risk.
+
+The context is lopsided but not free of doubt. San Marino, coached by Roberto Cevoli and ranked 211th, have won once since 2024 (3-1 against Liechtenstein in November 2024), while Finland, ranked 75th, have lost each of their last three matches since beating New Zealand 2-0 in March. Sports Mole's projection points to a Benjamin Källman–Joel Pohjanpalo pairing, so the front line may differ from the XI above, and no injuries are reported for San Marino.
 
 For San Marino, the challenge is to keep the penalty area protected against a Finland side that can attack through both crosses and central combinations. Finland's returning midfielders should improve their ability to sustain pressure, while Pohjanpalo offers an experienced finishing reference.
 
@@ -63,12 +66,14 @@ The prediction is **Over 2.5 Goals at 1.52**. The selection can be reached large
     editorialUpdatedAt: publishedAt,
     teamNewsUpdatedAt: publishedAt,
     lineupUpdatedAt: publishedAt,
-    statisticsUpdatedAt: publishedAt,
+    statisticsUpdatedAt: previousAccessedAt,
   },
   sourceStatus: "partial",
   sources: [
-    { name: "UEFA — official 2026/27 Nations League fixtures", url: "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/", accessedAt: publishedAt },
-    { name: "Football Association of Finland", url: "https://www.palloliitto.fi/ajankohtaista", accessedAt: publishedAt },
+
+    { name: "Sports Mole — San Marino vs Finland preview, team news, lineups", url: "https://www.sportsmole.co.uk/football/san-marino/uefa-nations-league/preview/san-marino-vs-finland-prediction-team-news-lineups_605750.html", description: "Team news, availability and projected lineups checked on 25 September.", accessedAt: "2026-09-25T15:48:13-03:00" },
+    { name: "UEFA — official 2026/27 Nations League fixtures", url: "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/", accessedAt: previousAccessedAt },
+    { name: "Football Association of Finland", url: "https://www.palloliitto.fi/ajankohtaista", accessedAt: previousAccessedAt },
   ],
   matchInfo: {
     date: "2026-09-26",

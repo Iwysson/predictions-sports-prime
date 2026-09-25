@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
-const publishedAt = "2026-09-22T10:20:24-03:00";
+const publishedAt = "2026-09-25T15:48:13-03:00";
+const previousAccessedAt = "2026-09-22T10:20:24-03:00";
 
 export const canadaVsChile: EditorialPrediction = {
   league: "international-friendlies",
@@ -24,6 +25,8 @@ The biggest absence is captain Alphonso Davies. Canada Soccer says he is unavail
 There is still substantial continuity. Dayne St. Clair and Owen Goodman remain goalkeeper options; Derek Cornelius, Luc de Fougerolles, Richie Laryea and Niko Sigur return in defence; Tajon Buchanan, Mathieu Choinière, Stephen Eustáquio, Liam Millar, Nathan Saliba and Jacob Shaffelburg remain available across midfield and wide areas; Jonathan David, Promise David, Cyle Larin and Tani Oluwaseyi all carry over from the World Cup attacking group. James Pantemis, Richard Chukwu, Jovan Ivanisevic, Ralph Priso, Jeevan Badwal, Junior Hoilett, Samuel Piette, Daniel Jebbison and Jacen Russell-Rowe add different options.
 
 **Current Canada call-up:** Goalkeepers — Owen Goodman, James Pantemis, Dayne St. Clair. Defenders — Derek Cornelius, Richard Chukwu, Luc de Fougerolles, Alfie Jones, Jovan Ivanisevic, Richie Laryea, Ralph Priso, Niko Sigur. Midfielders — Jeevan Badwal, Tajon Buchanan, Mathieu Choinière, Stephen Eustáquio, Junior Hoilett, Liam Millar, Samuel Piette, Nathan Saliba, Jacob Shaffelburg. Forwards — Jonathan David, Promise David, Daniel Jebbison, Cyle Larin, Tani Oluwaseyi, Jacen Russell-Rowe.
+
+The 25 September previews also list Alfie Jones (injury) among the unavailable Canada players alongside Bombito, Johnston, Ahmed and Koné, so the centre-back pairing is the least settled part of the side; no specific Chile injuries were reported. Chile have won two of their last ten away fixtures and conceded 20 goals in them, according to Sports Mole.
 
 A probable Canada XI is **Dayne St. Clair; Richie Laryea, Derek Cornelius, Luc de Fougerolles, Niko Sigur; Stephen Eustáquio, Nathan Saliba; Tajon Buchanan, Jonathan David, Jacob Shaffelburg; Tani Oluwaseyi**. The official XI is still pending. Davies' absence changes the left side from the World Cup structure, while the six-forward group gives Marsch several alternatives.
 
@@ -74,12 +77,14 @@ The prediction is **Canada to Win at 1.72**. The case is built on the retained C
     editorialUpdatedAt: publishedAt,
     teamNewsUpdatedAt: publishedAt,
     lineupUpdatedAt: publishedAt,
-    statisticsUpdatedAt: publishedAt,
+    statisticsUpdatedAt: previousAccessedAt,
   },
   sourceStatus: "partial",
   sources: [
-    { name: "Canada Soccer — September/October 2026 squad", url: "https://news.canadasoccer.com/canmnt-squad-named-for-september-october-international-window-following-historic-fifa-world-cup-26", accessedAt: publishedAt },
-    { name: "Canada Soccer — senior match schedule", url: "https://canadasoccer.com/national-teams/mens/senior/", accessedAt: publishedAt },
+
+    { name: "Sports Mole — Canada vs Chile preview, team news, lineups", url: "https://www.sportsmole.co.uk/football/canada/international-friendlies-predictions/preview/canada-vs-chile-prediction-team-news-lineups_605743.html", description: "Team news, availability and projected lineups checked on 25 September.", accessedAt: "2026-09-25T15:48:13-03:00" },
+    { name: "Canada Soccer — September/October 2026 squad", url: "https://news.canadasoccer.com/canmnt-squad-named-for-september-october-international-window-following-historic-fifa-world-cup-26", accessedAt: previousAccessedAt },
+    { name: "Canada Soccer — senior match schedule", url: "https://canadasoccer.com/national-teams/mens/senior/", accessedAt: previousAccessedAt },
   ],
   matchInfo: {
     date: "2026-09-26",
