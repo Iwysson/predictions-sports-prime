@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-26T18:51:22-03:00";
 
 export const chinaVsNewZealand: EditorialPrediction = {
   league: "international-friendlies",
@@ -26,7 +26,7 @@ China's most natural route is to control risk and protect central areas rather t
 
 **China PR (projected 4-2-3-1):** goalkeeper from the current senior group; conventional back four; two holding/central midfielders; three attacking midfielders behind the selected striker.
 
-**New Zealand (projected 4-3-3/4-2-3-1):** goalkeeper from Darren Bazeley's current squad; available first-choice defensive unit; central midfield balancing progression and second balls; wide runners around the selected centre-forward. Finn Surman is among the players called for this window.
+**New Zealand (projected 4-3-3/4-2-3-1):** Max Crocombe; Tim Payne, Finn Surman, Tyler Bindon, available left-back; Marko Stamenic, Joe Bell, Ryan Thomas; Elijah Just, Chris Wood, Sarpreet Singh. Recovery from the 2-2 draw with Palestine can change the XI, so this remains a projection rather than a confirmed teamsheet.
 
 The XI is projected, not confirmed, and should reflect recovery from New Zealand's preceding fixture.
 
@@ -77,12 +77,12 @@ China PR against New Zealand leaves a clear settlement test: **Under 2.5 Goals a
       {
           "name": "New Zealand Football — official China PR fixture details",
           "url": "https://www.nzfootball.co.nz/newsarticle/170128?newsfeedId=2171790",
-          "accessedAt": "2026-09-25T07:15:00-03:00"
+          "accessedAt": "2026-09-26T18:51:22-03:00"
       },
       {
           "name": "New Zealand Football — official 2-2 Palestine match report",
           "url": "https://www.nzfootball.co.nz/newsarticle/170605?newsfeedId=1275608",
-          "accessedAt": "2026-09-25T07:15:00-03:00"
+          "accessedAt": "2026-09-26T18:51:22-03:00"
       }
   ],
   matchInfo: {

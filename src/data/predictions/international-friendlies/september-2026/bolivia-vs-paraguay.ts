@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-26T18:51:22-03:00";
 
 export const boliviaVsParaguay: EditorialPrediction = {
   league: "international-friendlies",
@@ -20,11 +20,11 @@ export const boliviaVsParaguay: EditorialPrediction = {
 
 The APF match center lists Bolivia vs Paraguay at Audi Field in Washington. The Paraguayan federation confirms this as the Albirroja's first match after a World Cup campaign that reached the round of 16.
 
-Paraguay eliminated Germany on penalties after a 1-1 draw before losing to France in the round of 16. That tournament run gives Gustavo Alfaro's group a stronger current reference point than an ordinary friendly. Andrés Cubas is among the players called for the September/October window.
+Paraguay eliminated Germany on penalties after a 1-1 draw before losing to France in the round of 16. Gustavo Alfaro has selected a 28-player group for the post-World Cup friendlies, retaining Gustavo Gómez, Omar Alderete, Andrés Cubas, Diego Gómez, Miguel Almirón and Julio Enciso. The continuity gives Paraguay a stronger current reference point than an ordinary experimental friendly.
 
 ### Team news, availability and projected lineups
 
-**Paraguay (projected 4-2-3-1/4-3-3):** goalkeeper from Alfaro's current group; available first-choice defensive line; Andrés Cubas among the central midfield options; Miguel Almirón and other current creators supporting the selected striker.
+**Paraguay (projected 4-2-3-1/4-3-3):** Orlando Gill; Juan Cáceres, Gustavo Gómez, Omar Alderete, Junior Alonso; Andrés Cubas, Diego Gómez; Miguel Almirón, Julio Enciso, Ramón Sosa; Antonio Sanabria. Hugo Cuenca is a new senior-squad option, while Alfaro also has Matías Galarza, Alex Arce and Robert Morales available.
 
 **Bolivia (projected 4-2-3-1):** goalkeeper from the current squad; compact back four; central midfield designed to protect transitions; three supporting attackers around the centre-forward.
 
@@ -74,13 +74,18 @@ For this International Friendly fixture, the retained call is **Paraguay to Win 
   sources: [
       {
           "name": "Paraguayan Football Association — official match and squad reporting",
-          "url": "https://www.apf.org.py/seleccion-absoluta-masculina",
-          "accessedAt": "2026-09-25T07:15:00-03:00"
+          "url": "https://www.apf.org.py/noticias/la-albirroja-inicia-un-nuevo-camino",
+          "accessedAt": "2026-09-26T18:51:22-03:00"
       },
       {
           "name": "Paraguayan Football Association — official match and squad reporting",
           "url": "https://www.apf.org.py/noticias/la-seleccion-avanza-en-su-preparacion-pensando-en-bolivia",
-          "accessedAt": "2026-09-25T07:15:00-03:00"
+          "accessedAt": "2026-09-26T18:51:22-03:00"
+      },
+      {
+          "name": "Audi Field — official event announcement",
+          "url": "https://audifield.com/bolivia-returns-to-audi-field-to-face-paraguay-in-september-friendly/",
+          "accessedAt": "2026-09-26T18:51:22-03:00"
       }
   ],
   matchInfo: {
