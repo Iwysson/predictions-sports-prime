@@ -19,6 +19,8 @@ export function LeagueBadge({
         <img
           src={asset.src}
           alt={league.name}
+          width={size === "sm" ? 24 : 34}
+          height={size === "sm" ? 24 : 34}
           loading="lazy"
           decoding="async"
         />

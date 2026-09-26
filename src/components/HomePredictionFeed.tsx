@@ -86,7 +86,7 @@ export function HomePredictionFeed({
   if (!now) {
     return (
       <>
-        <section className="section section--compact" data-static-home-discovery="true">
+        <section className="section section--compact" id="today" data-static-home-discovery="true">
           <div className="container home-today-layout">
             <HomeLeagueTaxonomy copy={copy} locale={locale} />
           </div>

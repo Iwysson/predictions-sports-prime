@@ -8,6 +8,7 @@ import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategor
 import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { matches } from "@/data/matches";
 import { resolveCanonicalMatches } from "@/lib/canonical-match";
+import { toMatchPreview } from "@/lib/editorial";
 import { localizedAlternates } from "@/lib/international-seo";
 import { absoluteUrl } from "@/lib/site-config";
 import {
@@ -71,7 +72,9 @@ export default async function LocalizedHome({
   if (!isSeoLocale(locale)) notFound();
 
   const copy = seoLocales[locale];
-  const resolvedMatches = await resolveCanonicalMatches(matches);
+  // Client components receive lightweight previews: full Match objects (analysis, comment,
+  // predictions) would be serialized into every localized home page payload.
+  const resolvedMatches = (await resolveCanonicalMatches(matches)).map(toMatchPreview);
   const localizedMatchSlugs = Object.keys(localizedEditorialBySlug)
     .filter((slug) => hasCompleteLocalizedEditorial(slug, locale));
   const clientMatches = selectTemporalClientMatches(resolvedMatches, true);

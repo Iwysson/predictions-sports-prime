@@ -21,6 +21,7 @@
     "audit:prediction-integrity": "node scripts/audit-prediction-integrity.mjs",
     "audit:international-seo": "node scripts/audit-international-seo.mjs",
     "audit:structured-data": "node scripts/audit-structured-data.mjs",
+    "audit:site-links": "node scripts/audit-site-links.mjs",
     "validate:source": "npm run typecheck",
     "validate:production": "npm run typecheck && npm run build"
   },
