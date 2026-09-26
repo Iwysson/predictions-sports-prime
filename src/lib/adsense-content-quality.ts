@@ -1,3 +1,4 @@
+import { isPspEditorialStandard } from "@/lib/editorial-standard";
 import type { EditorialPrediction } from "@/types";
 import { predictionSlug } from "@/lib/editorial";
 import { isSeoFeatureEnabled } from "@/config/seo-enterprise";
@@ -605,7 +606,7 @@ function fallbackDecision(
     hasStructuredTeamContext(prediction) || TEAM_CONTEXT_PATTERN.test(text);
   const hasTraceableSource = validHttpsSourceCount(prediction) > 0;
   const sourceVerified = prediction.sourceStatus === "verified";
-  const pspEditorialStandard = prediction.editorialStandard === "psp-v1";
+  const pspEditorialStandard = isPspEditorialStandard(prediction.editorialStandard);
 
   const missing = [
     !pspEditorialStandard ? "missing_psp_v1" : "",

@@ -1,6 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 import {
   classifyPspEditorialLifecycle,
+  isPspEditorialStandard,
   validatePspEditorialStandard,
 } from "@/lib/editorial-standard";
 import { editorialPresentationText } from "@/lib/editorial-presentation";
@@ -121,10 +122,10 @@ export function evaluatePredictionIndexQuality(
   const sourceCount = (prediction.sources ?? []).filter((source) =>
     TRACEABLE_SOURCE.test(source.url)
   ).length;
-  const pspErrors = prediction.editorialStandard === "psp-v1"
+  const pspErrors = isPspEditorialStandard(prediction.editorialStandard)
     ? validatePspEditorialStandard(prediction)
     : [];
-  const coreRequired = prediction.editorialStandard === "psp-v1";
+  const coreRequired = isPspEditorialStandard(prediction.editorialStandard);
   const provenanceRequired = pspErrors.some((error) => /structured Statistical Core|provenance/i.test(error));
   const provenanceComplete = !provenanceRequired || hasCompleteProvenance(prediction);
   const statisticalCoreComplete =

@@ -7,6 +7,7 @@ import {
 import { leaguesBySlug } from "@/data/leagues";
 import { isValidFinalScore } from "@/lib/fixture-status";
 import {
+  isPspEditorialStandard,
   isPspFutureEligible,
   isPspPolicyEnforcedForPrediction,
   validatePspEditorialStandard,
@@ -255,6 +256,7 @@ export function editorialToMatch(
     analysis: prediction.analysis,
     analysisFormat: prediction.analysisFormat,
     seoTitle: prediction.seoTitle,
+    editorialStandard: prediction.editorialStandard,
     comment: prediction.comment,
     predictions: picksToItems(prediction),
     betResult: typeof prediction.picks.result === "string"
@@ -359,10 +361,10 @@ export function validateEditorialPredictions(
     // while the fixture is still pre-match. Once kickoff has passed, the page is treated
     // as frozen history and is never forced through a retroactive editorial migration.
     if (isPublished && isPspFutureEligible(prediction)) {
-      if (isPspPolicyEnforcedForPrediction(prediction) && prediction.editorialStandard !== "psp-v1") {
-        errors.push(`${label}: future/pre-match content published or materially updated under the PSP policy requires editorialStandard: "psp-v1".`);
+      if (isPspPolicyEnforcedForPrediction(prediction) && !isPspEditorialStandard(prediction.editorialStandard)) {
+        errors.push(`${label}: future/pre-match content published or materially updated under the PSP policy requires editorialStandard: "psp-v1" or "psp-v2".`);
       }
-      if (prediction.editorialStandard === "psp-v1") {
+      if (isPspEditorialStandard(prediction.editorialStandard)) {
         for (const error of validatePspEditorialStandard(prediction)) {
           errors.push(`${label}: PSP editorial standard: ${error}.`);
         }

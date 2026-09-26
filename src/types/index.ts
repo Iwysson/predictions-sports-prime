@@ -188,7 +188,7 @@ export type EditorialPrediction = {
 
   // Opt-in marker for the strict Predictions-Sports-Prime editorial contract.
   // New and fully migrated predictions must use psp-v1.
-  editorialStandard?: "psp-v1";
+  editorialStandard?: "psp-v1" | "psp-v2";
   seoTitle?: string;
 
   // Optional note shown below the analysis.
@@ -254,7 +254,7 @@ export type Match = {
 
   // Opt-in marker for the strict Predictions-Sports-Prime editorial contract.
   // New and fully migrated predictions must use psp-v1.
-  editorialStandard?: "psp-v1";
+  editorialStandard?: "psp-v1" | "psp-v2";
   seoTitle?: string;
   comment?: string;
   predictions: PredictionItem[];

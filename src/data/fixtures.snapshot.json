@@ -18220,7 +18220,9 @@
     "uefa-europa-league:ofi-crete-vs-hoffenheim": "401915585",
     "uefa-europa-league:real-sociedad-vs-bournemouth": "401915583",
     "uefa-europa-league:sturm-graz-vs-rennes": "official:uefa-europa-league:sturm-graz-vs-rennes:2026-09-16",
-    "uefa-europa-league:sunderland-vs-az-alkmaar": "401915592"
+    "uefa-europa-league:sunderland-vs-az-alkmaar": "401915592",
+    "brasileirao-serie-a:sao-paulo-vs-santos": "editorial:brasileirao-serie-a:sao-paulo-vs-santos:2026-10-02",
+    "brasileirao-serie-a:atletico-mg-vs-red-bull-bragantino": "editorial:brasileirao-serie-a:atletico-mg-vs-red-bull-bragantino:2026-10-03"
   },
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
@@ -21353,6 +21355,38 @@
       "sourceAgreement": true,
       "kickoffUtc": "2026-09-20T15:00:00.000Z",
       "timeConfirmed": true
+    },
+    "editorial:brasileirao-serie-a:sao-paulo-vs-santos:2026-10-02": {
+      "round": 21,
+      "date": "2026-10-02",
+      "time": "20:00",
+      "homeTeam": "São Paulo",
+      "awayTeam": "Santos",
+      "venue": "MorumBIS",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "editorial-package",
+      "id": "editorial:brasileirao-serie-a:sao-paulo-vs-santos:2026-10-02",
+      "sourceAgreement": false,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-02T23:00:00.000Z"
+    },
+    "editorial:brasileirao-serie-a:atletico-mg-vs-red-bull-bragantino:2026-10-03": {
+      "round": 21,
+      "date": "2026-10-03",
+      "time": "18:30",
+      "homeTeam": "Atlético-MG",
+      "awayTeam": "Red Bull Bragantino",
+      "venue": "Arena MRV",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "editorial-package",
+      "id": "editorial:brasileirao-serie-a:atletico-mg-vs-red-bull-bragantino:2026-10-03",
+      "sourceAgreement": false,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-03T21:30:00.000Z"
     }
   }
 }

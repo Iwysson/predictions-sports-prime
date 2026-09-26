@@ -2,6 +2,7 @@ import { editorialPredictions } from "../src/data/predictions/index.ts";
 import {
   PSP_NATURAL_RISK_POLICY_EFFECTIVE_AT,
   PSP_EDITORIAL_STANDARD,
+  isPspEditorialStandard,
   classifyPspEditorialLifecycle,
 } from "../src/lib/editorial-standard.ts";
 
@@ -43,7 +44,7 @@ const records = future.map((prediction) => {
     status = "critical";
     reasons.push("missing or placeholder editorial content");
   } else {
-    if (prediction.editorialStandard !== PSP_EDITORIAL_STANDARD) reasons.push(`not marked ${PSP_EDITORIAL_STANDARD}`);
+    if (!isPspEditorialStandard(prediction.editorialStandard)) reasons.push(`not marked ${PSP_EDITORIAL_STANDARD}`);
     if (words < 650) reasons.push(`${words} words (<650 PSP target)`);
     if (signals < 4) reasons.push(`${signals} context signals`);
     if (boilerplate.test(text)) reasons.push("evidence-boundary boilerplate");

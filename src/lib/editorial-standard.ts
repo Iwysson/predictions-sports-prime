@@ -6,6 +6,14 @@ import {
 } from "@/lib/statistical-core";
 
 export const PSP_EDITORIAL_STANDARD = "psp-v1" as const;
+// psp-v2 marks content published under the post-2026-09-26 international policy. It is a strict
+// superset of psp-v1 (same validation) and additionally opts the page into its own editorial
+// SEO title/description. It must never be applied retroactively to historical content.
+export const PSP_EDITORIAL_STANDARD_V2 = "psp-v2" as const;
+
+export function isPspEditorialStandard(value: string | undefined) {
+  return value === PSP_EDITORIAL_STANDARD || value === PSP_EDITORIAL_STANDARD_V2;
+}
 export const PSP_EDITORIAL_POLICY_EFFECTIVE_AT = "2026-09-02T00:00:00-03:00";
 export const PSP_EDITORIAL_TIME_ZONE = "America/Sao_Paulo";
 export const PSP_NATURAL_RISK_POLICY_EFFECTIVE_AT = "2026-09-07T12:00:00-03:00";
@@ -133,7 +141,7 @@ export function isPspPolicyEnforcedForPrediction(
   now: Date = new Date()
 ) {
   if (!isPspFutureEligible(prediction, now)) return false;
-  if (prediction.editorialStandard === PSP_EDITORIAL_STANDARD) return true;
+  if (isPspEditorialStandard(prediction.editorialStandard)) return true;
 
   const timestamps = [prediction.publishedAt, prediction.updatedAt]
     .filter((value): value is string => Boolean(value))
@@ -170,8 +178,8 @@ export function validatePspEditorialStandard(prediction: EditorialPrediction) {
   if (prediction.analysisFormat !== "markdown") errors.push("analysisFormat must be markdown");
   if (!/^#\s+.+Prediction.+(?:Odds|Betting Tips)/im.test(markdown)) errors.push("missing PSP H1 with Prediction and Odds/Betting Tips");
 
-  const predictionLabels = occurrences(markdown, /\*\*Prediction:\*\*/gi);
-  const oddsLabels = occurrences(markdown, /\*\*Odds:\*\*/gi);
+  const predictionLabels = occurrences(markdown, /\*\*(?:Match )?Prediction:\*\*/gi);
+  const oddsLabels = occurrences(markdown, /\*\*(?:Reference odds(?: at publication)?|Odds):\*\*/gi);
   if (predictionLabels < 2) errors.push("Prediction must appear at the opening and final closing");
   if (oddsLabels < 2) errors.push("Odds must appear at the opening and final closing");
 

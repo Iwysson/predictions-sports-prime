@@ -16,6 +16,8 @@ import { buildMatchMetadataV2 } from "@/lib/title-engine-v2";
 import { isMatchSearchIntentV2Eligible } from "@/lib/search-intent-v2";
 
 export function matchSeoTitle(match: Match) {
+  // psp-v2 (post-2026-09-26 policy) pages publish their own editorial SEO title.
+  if (match.editorialStandard === "psp-v2" && match.seoTitle) return match.seoTitle;
   if (isSeoFeatureEnabled("title-engine-v2") && isMatchSearchIntentV2Eligible(match)) {
     return buildMatchMetadataV2(match).title;
   }
@@ -41,6 +43,10 @@ export function matchSeoTitle(match: Match) {
 }
 
 export function matchSeoDescription(match: Match) {
+  if (match.editorialStandard === "psp-v2") {
+    const league = leaguesBySlug[match.league];
+    return `${match.homeTeam} vs ${match.awayTeam} prediction for ${league?.name ?? "the competition"}: projected lineups, team news, head-to-head record, match analysis, the match prediction and reference odds at publication.`;
+  }
   if (isSeoFeatureEnabled("title-engine-v2") && isMatchSearchIntentV2Eligible(match)) {
     return buildMatchMetadataV2(match).description;
   }
