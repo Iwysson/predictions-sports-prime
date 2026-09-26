@@ -151,7 +151,17 @@ export const localizedEditorialBySlug: Record<string, Record<SeoLocaleSlug, Loca
   ...wave3LocalizedEditorial as Record<string, Record<SeoLocaleSlug, LocalizedEditorial>>,
 };
 
+// International publishing policy (cutoff 2026-09-26): Portuguese (pt-br) match pages are a
+// frozen historical archive. Only matches whose pt-br page was published before the cutoff are
+// served; no new or updated match may gain a pt-br page, metadata, hreflang or sitemap entry.
+export const PT_BR_CUTOFF_DATE = "2026-09-26";
+export const ptBrHistoricalMatchSlugs: ReadonlySet<string> = new Set([
+  "aston-villa-vs-arsenal",
+  "barcelona-vs-feyenoord",
+]);
+
 export function getLocalizedEditorial(slug: string, locale: SeoLocaleSlug) {
+  if (locale === "pt-br" && !ptBrHistoricalMatchSlugs.has(slug)) return undefined;
   return localizedEditorialBySlug[slug]?.[locale];
 }
 

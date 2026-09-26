@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/cookies/",
       "/terms/",
       "/responsible-gambling/",
+      "/international-audience-regulatory-notice/",
       "/author/iwysson-nascimento/",
       ...intentHubSlugs.map((slug) => `/${slug}/`),
     ].map((path) => ({

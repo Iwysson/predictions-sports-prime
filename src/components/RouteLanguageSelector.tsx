@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import {
-  seoLocaleSlugs,
+  selectableLocaleSlugs,
   seoLocales,
   type SeoLocale,
 } from "@/lib/seo-locales";
@@ -32,11 +32,12 @@ export function RouteLanguageSelector({
     <label className="language-selector" aria-label="Language" title="Language">
       <span aria-hidden="true">◎</span>
       <select
-        value={currentLocale}
+        value={currentLocale === "pt-br" ? "" : currentLocale}
         onChange={(event) => navigate(event.target.value as SeoLocale)}
       >
+        {currentLocale === "pt-br" ? <option value="" hidden disabled>Language</option> : null}
         <option value="en">English</option>
-        {seoLocaleSlugs.map((locale) => (
+        {selectableLocaleSlugs.map((locale) => (
           <option key={locale} value={locale}>
             {seoLocales[locale].displayName}
           </option>

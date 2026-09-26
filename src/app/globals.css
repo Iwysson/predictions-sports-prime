@@ -4628,3 +4628,21 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   .home-ad-space { padding-block: 8px; }
   .home-ad-space .ad-slot { min-height: 60px; }
 }
+
+
+.intl-notice {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.02);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.intl-notice .container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.intl-notice p { margin: 0; }
+
+.intl-notice a { color: var(--text); text-decoration: underline; }

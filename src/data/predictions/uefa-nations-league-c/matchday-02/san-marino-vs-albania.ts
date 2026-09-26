@@ -44,7 +44,7 @@ Statistical coverage is partial. A complete comparable current-cycle HOME sample
 
 **Price conversion:** **1 / 1.53 = 65.4%** raw implied probability before bookmaker margin.
 
-Albania must win a match containing at least three goals. The favourite can dominate and still lose the wager with a 1-0 or 2-0 score, so the issue is sustained conversion against a deep block rather than the match winner alone. This is a market-price assessment rather than a claim that the implied percentage is a historical frequency or an independent forecast.
+Albania must win a match containing at least three goals. The favourite can dominate and still lose the selection with a 1-0 or 2-0 score, so the issue is sustained conversion against a deep block rather than the match winner alone. This is a market-price assessment rather than a claim that the implied percentage is a historical frequency or an independent forecast.
 
 ### Conclusion
 

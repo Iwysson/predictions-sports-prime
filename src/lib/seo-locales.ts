@@ -2,6 +2,10 @@ import type { LeagueConfig } from "@/data/leagues";
 
 export const seoLocaleSlugs = ["pt-br", "es", "fr", "de", "it", "nl", "tr"] as const;
 export type SeoLocaleSlug = (typeof seoLocaleSlugs)[number];
+// Locales offered in public language selectors. pt-br routes remain only as a historical archive.
+export const selectableLocaleSlugs = seoLocaleSlugs.filter(
+  (locale) => locale !== "pt-br"
+) as Exclude<SeoLocaleSlug, "pt-br">[];
 export const indexableLocalizedHubLocaleSlugs = ["pt-br", "es", "fr", "de", "it"] as const satisfies readonly SeoLocaleSlug[];
 
 export function isIndexableLocalizedHubLocale(locale: SeoLocaleSlug) {

@@ -33,6 +33,7 @@ export function Footer() {
           <Link href="/privacy/">{t("privacy")}</Link>
           <Link href="/cookies/">{t("cookies")}</Link>
           <Link href="/terms/">{t("terms")}</Link>
+          <Link href="/international-audience-regulatory-notice/">International Audience &amp; Regulatory Notice</Link>
           <Link href="/responsible-gambling/">
             {t("responsibleGambling")}
           </Link>

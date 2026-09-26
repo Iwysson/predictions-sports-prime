@@ -4,7 +4,7 @@ import { ResponsibleGamblingNoticeContent } from "@/components/ResponsibleGambli
 import { responsibleCopyForSeoLocale } from "@/lib/responsible-gambling-copy";
 import {
   localePath,
-  seoLocaleSlugs,
+  selectableLocaleSlugs,
   seoLocales,
   type SeoLocaleSlug,
 } from "@/lib/seo-locales";
@@ -52,11 +52,13 @@ export function LocalizedFooter({ locale }: { locale: SeoLocaleSlug }) {
           <p>{copy.responsible}</p>
         </div>
 
+        <p><Link href="/international-audience-regulatory-notice/" hrefLang="en">International Audience &amp; Regulatory Notice</Link></p>
+
         <nav aria-label="Language versions">
           <Link href="/" hrefLang="en">
             English
           </Link>{" "}
-          {seoLocaleSlugs.map((item) => (
+          {selectableLocaleSlugs.map((item) => (
             <Link
               key={item}
               href={localePath(item)}
