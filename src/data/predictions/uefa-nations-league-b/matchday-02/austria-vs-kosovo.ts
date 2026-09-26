@@ -18,7 +18,9 @@ export const austriaVsKosovo: EditorialPrediction = {
 
 ### Team news, availability and recent form
 
-Austria's second Nations League match arrives only three days after the opener against Israel, so this is one of the fixtures where the probable lineup must be treated with more caution than usual. The September squad still gives Austria enough depth to rotate without changing their basic identity. Alexander Schlager is the senior goalkeeper option, Kevin Danso, Philipp Lienhart, Stefan Posch, Marco Friedl and Maximilian Wöber form the experienced defensive core, while Konrad Laimer (out injured for this match), Nicolas Seiwald, Xaver Schlager, Romano Schmid, Patrick Wimmer, Paul Wanner and Carney Chukwuemeka provide several midfield combinations.
+Austria arrive after a **3-1 home win over Israel**, although the scoreline was secured by goals in the 90th and 93rd minutes against ten opponents. Kosovo also started with three points, beating the Republic of Ireland **1-0** through Vedat Muriqi's 83rd-minute header. Both openers therefore support the favorite's quality but also warn against treating this as a routine home assignment.
+
+Austria's second Nations League match arrives only three days after the opener, so the probable lineup must be treated with more caution than usual. The September squad still gives Austria enough depth to rotate without changing their basic identity. Alexander Schlager is the senior goalkeeper option, Kevin Danso, Philipp Lienhart, Stefan Posch, Marco Friedl and Maximilian Wöber form the experienced defensive core, while Konrad Laimer (out injured for this match), Nicolas Seiwald, Xaver Schlager, Romano Schmid, Patrick Wimmer, Paul Wanner and Carney Chukwuemeka provide several midfield combinations.
 
 The attacking group contains Michael Gregoritsch, Sasa Kalajdzic, Junior Adamu and Marco Grüll. David Alaba and Marcel Sabitzer are not part of this camp, which reduces the amount of experience available for a four-game block. It also increases the importance of players such as Danso and Seiwald in maintaining the press and defensive distances when the lineup changes between matchdays.
 
@@ -31,10 +33,10 @@ Austria's recent year has also had contrasting phases. Strong wins over Ghana, S
 ### Projected lineups
 
 **Projected Austria XI (4-2-3-1):** Schlager; Posch, Danso, Lienhart, Prass; Seiwald, Xaver Schlager; Wimmer, Wanner, Schmid; Kalajdzic.  
-**Rotation note:** Mwene, Gregoritsch and Chukwuemeka are all realistic starters depending on minutes played against Israel. The final XI cannot be responsibly fixed before Matchday 1 is completed.
+**Rotation note:** Mwene, Gregoritsch and Chukwuemeka are all realistic starters after the Israel match. The final XI remains projected because Austria may refresh the press after the short turnaround.
 
 **Projected Kosovo XI (4-2-3-1):** Muric; Vojvoda, Dellova, Hajdari, Gallapeni; Avdullahu, Emërllahu; Rashica, Zhegrova, Asllani; Muriqi.  
-**Rotation note:** Rrudhani, Rrahmani and Kacuri can enter if Kosovo need fresh legs after the Ireland match.
+**Rotation note:** Rrudhani, Albion Rrahmani and Kacuri can enter if Kosovo need fresh legs after the Ireland match; Muriqi's winning goal makes him the clearest candidate to retain the No. 9 role.
 
 ### Head-to-head and tactical analysis
 
@@ -46,12 +48,13 @@ Kosovo's defensive absences matter most when Austria sustain pressure. Without A
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The rows below show the squad, head-to-head and current-status context that is available.
+Statistical coverage is partial after one match. A complete 22/22 Core, including comparable xG, shots, possession and corners, remains unavailable; the verified result indicators are shown without estimating missing metrics.
 
 | Current indicator | Austria | Kosovo |
 |---|---:|---:|
-| Nations League B3 record before MD1 | 0-0-0 | 0-0-0 |
-| Schedule before this game | Israel, 24 Sep | Ireland, 24 Sep |
+| Nations League B3 record | **1-0-0** | **1-0-0** |
+| Goals for / against | **3 / 1** | **1 / 0** |
+| Current split | **HOME 1-0-0** | HOME 1-0-0; AWAY unavailable |
 | Major squad issue | Alaba/Sabitzer absent | Amir Rrahmani absent |
 | Main attacking references | Wimmer, Wanner, Gregoritsch/Kalajdzic | Muriqi, Zhegrova, Rashica |
 | Senior H2H | First meeting | First meeting |
@@ -64,7 +67,7 @@ At published odds of **1.55**, the raw implied probability is **64.5%**, calcula
 
 ### Conclusion
 
-Austria's deeper midfield and attacking bench support the home win, yet Matchday 1 minutes and any new injury must be weighed before kickoff because this projection precedes both teams' opening games.
+Austria's deeper midfield and attacking bench support the home win, but Kosovo's clean-sheet victory and Muriqi's late threat make transition control essential. The Austrian opener also showed that a flattering late score can conceal a match that stayed level for a long time.
 
 **Prediction:** Austria to Win  
 **Odds:** 1.55`],
@@ -81,15 +84,16 @@ Austria's deeper midfield and attacking bench support the home win, yet Matchday
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-21T16:17:17-03:00",
+  updatedAt: "2026-09-26T18:51:22-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-21T16:17:17-03:00",
-    teamNewsUpdatedAt: "2026-09-21T16:17:17-03:00",
-    lineupUpdatedAt: "2026-09-21T16:17:17-03:00",
-    statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
+    editorialUpdatedAt: "2026-09-26T18:51:22-03:00",
+    teamNewsUpdatedAt: "2026-09-26T18:51:22-03:00",
+    lineupUpdatedAt: "2026-09-26T18:51:22-03:00",
+    statisticsUpdatedAt: "2026-09-26T18:51:22-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    {"name":"UEFA — Matchday 1 round-up and results","url":"https://www.uefa.com/uefanationsleague/news/02a9-21abb9d8b85c-0d9416d472ce-1000--uefa-nations-league-matchday-1-round-up-cody-gakpo-denie/","description":"Official opener results and match context for Austria and Kosovo.","accessedAt":"2026-09-26T18:51:22-03:00"},
     {"name":"AllFootball — Laimer out for first two Nations League matches","url":"https://www.allfootballapp.com/articles/5384508-austria-official-laimer-out-first-two","description":"Austria midfielder Konrad Laimer's adductor injury, announced by the Austrian federation.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"ORF — Austria Nations League squad","url":"https://sport.orf.at/stories/3162407/","description":"Austria squad and fixture details for Israel and Kosovo.","accessedAt":"2026-09-20T18:49:50-03:00"},

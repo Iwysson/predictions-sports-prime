@@ -1,51 +1,92 @@
 import type { EditorialPrediction } from "@/types";
 
+const publishedAt = "2026-09-18T13:49:00-03:00";
+const updatedAt = "2026-09-26T18:51:22-03:00";
+
 export const serbiaVsNetherlands: EditorialPrediction = {
   league: "uefa-nations-league",
   homeTeam: "Serbia",
   awayTeam: "Netherlands",
   slug: "serbia-vs-netherlands",
   title: "Serbia vs Netherlands Prediction, Odds and Betting Tips",
-  analysis: ["# Serbia vs Netherlands Prediction, Odds and Betting Tips\n\n**Prediction:** Netherlands X2 + Over 1.5 Goals\n**Odds:** 1.60\n\n**Competition:** UEFA Nations League 2026/27 | **League:** A | **Group:** A2 | **Date:** 27 September 2026 | **Kick-off:** 18:00 CET\n\nThe 2026/27 Nations League has not started at the time of writing, so there is no legitimate current-season HOME/AWAY sample to quote for either side. This preview uses the announced September squads, projected tactical structures, verified H2H and current team changes without importing club statistics, World Cup numbers or previous Nations League editions into the Statistical Core.\n\n### Team News and Call-Ups\n\n**Serbia call-up:** Vanja Milinković-Savić, Đorđe Petrović, Filip Stanković; Strahinja Pavlović, Strahinja Eraković, Srđan Babić, Nikola Simić, Kosta Nedeljković, Aleksa Terzić, Petar Sukačev, Lazar Nikolić; Aleksandar Stanković, Nemanja Maksimović, Sergej Milinković-Savić, Saša Lukić, Nemanja Gudelj, Vanja Dragojević, Lazar Samardžić, Andrija Živković, Filip Kostić, Stefan Džodić, Vasilije Kostov, Dušan Tadić; Dušan Vlahović, Luka Jović, Dejan Joveljić, Mihajlo Cvetković, Jovan Milošević.\n\n**Netherlands call-up:** Mark Flekken, Robin Roefs, Bart Verbruggen; Nathan Aké, Denzel Dumfries, Jeremie Frimpong, Lutsharel Geertruida, Jorrel Hato, Jurriën Timber, Micky van de Ven, Virgil van Dijk, Jan Paul van Hecke; Ryan Gravenberch, Teun Koopmeiners, Tijjani Reijnders, Kenneth Taylor, Quinten Timber, Joey Veerman, Gjivai Zechiël; Justin Kluivert, Ruben van Bommel, Brian Brobbey, Cody Gakpo, Noa Lang, Donyell Malen and Crysencio Summerville. Malen and Justin Kluivert have since withdrawn through injury and are expected to miss this match, and replacements have been called up.\n\n**Squad changes:** Veljko Paunović begins the League A campaign with an experienced spine but also several younger domestic or emerging options. Dušan Tadić is back in a creative role within the squad, while Vlahović, Jović and Joveljić give Serbia three distinct centre-forward profiles. Xavi Hernández starts a new cycle without Memphis Depay, while Frenkie de Jong is unavailable. Ruben van Bommel and Gjivai Zechiël are fresh selections, and Frimpong, Kenneth Taylor and Jurriën Timber return to the group.\n\n### Probable Lineups — PSP Projection\n\n**Probable lineups — PSP projection, not confirmed teamsheets:** Serbia: Đorđe Petrović; Strahinja Eraković, Srđan Babić, Strahinja Pavlović; Andrija Živković, Saša Lukić, Nemanja Gudelj, Filip Kostić; Lazar Samardžić, Dušan Tadić; Dušan Vlahović. Netherlands: Bart Verbruggen; Denzel Dumfries, Virgil van Dijk, Micky van de Ven, Nathan Aké; Ryan Gravenberch, Tijjani Reijnders, Teun Koopmeiners; Jeremie Frimpong, Brian Brobbey, Cody Gakpo. These XIs are an editorial projection from the current call-ups and tactical roles. Official teamsheets take precedence and should be checked close to kickoff.\n\n### Head-to-Head\n\n**H2H:** No verified senior meeting between the modern Serbia national team and the Netherlands was found in the sources consulted before publication. Matches involving Yugoslavia or Serbia and Montenegro are deliberately not merged into a Serbia-era H2H line.\n\n### Match Analysis\n\nThis preview is written before Matchday 1, so it does not assume any result from Serbia-Greece or Netherlands-Germany. That makes the away side's ability to progress through pressure more important than simply comparing individual names.\n\n### Tactical Analysis\n\nSerbia's back three can become a back five when Kostić and Živković drop, but that shape can also leave space in front of the wing-backs if they are caught halfway. Xavi's Netherlands can attack those zones with Frimpong/Dumfries on one side and Gakpo on the other, while Reijnders and Gravenberch try to move Serbia's midfield screen. Serbia's strongest counter is Vlahović: if Van Dijk and Van de Ven have to defend direct deliveries while Samardžić and Tadić collect second balls, the Dutch cannot keep both full-backs permanently high.\n\n### Statistical Core Predictions-Sports-Prime\n\n| Current competition metric | Serbia | Netherlands |\n| --- | --- | --- |\n| UEFA Nations League 2026/27 matches played | Not started | Not started |\n| Current group points | Not available yet | Not available yet |\n| Current HOME/AWAY competition split | Not available yet | Not available yet |\n| Current-season goals/corners/xG sample | Not available yet | Not available yet |\n\nThe Core is intentionally limited to the current competition and current edition. Because Matchday 1 begins on 24 September, replacing the missing sample with friendlies, World Cup matches or older Nations League editions would create a false current-season comparison. H2H is kept outside the Core because it spans other competitions and eras.\n\n### What Could Go Against the Pick\n\nThe two-goal requirement is compatible with a 1-1, which is important because that score also lands the X2. A Serbian 1-0 is a realistic script if Paunović manages the game conservatively and the Netherlands' first camp under Xavi is still searching for attacking automatisms without Depay and De Jong.\n\n### Market Price and Value Assessment\n\nAt decimal odds of **1.60**, the raw implied probability is **62.5%** because **1 / 1.60 = 0.6250**, before bookmaker margin. That figure is a market-price threshold, not a model forecast.\n\nNo Matchday 1 outcome is pre-filled and no current-season Nations League rates have been invented to support this value read. The case for Netherlands X2 + Over 1.5 Goals rests on current squad quality and the tactical match-up rather than an existing statistical edge, since no 2026/27 competitive sample exists yet for either side.\n\n### Conclusion\n\nSerbia vs Netherlands opens Group A2's Matchday 2 with both sides still searching for rhythm in a new international cycle. This preview should be revisited after Matchday 1 results are known, because no opening-round outcome has been pre-written into it.\n\n**Prediction:** Netherlands X2 + Over 1.5 Goals\n**Odds:** 1.60\n\n### Sources\n\n- UEFA — 2026/27 Nations League league-phase fixtures: https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/\n- Serbia current squad/call-up source: https://fss.rs/a-tim-selektor-veljko-paunovic-odabrao-igrace-za-cetiri-meca-lige-nacija/?script=lat\n- Netherlands current squad/call-up source: https://www.reuters.com/sports/soccer/van-dijk-stays-depay-omitted-xavis-first-netherlands-squad-2026-09-18/"],
+  analysis: [`# Serbia vs Netherlands Prediction, Odds and Betting Tips
+
+**Prediction:** **Netherlands X2 + Over 1.5 Goals**
+
+**Odds:** **1.60**
+
+### Match information
+
+**Competition:** UEFA Nations League A | **Date:** 2026-09-27 | **Kick-off:** 18:00 CET | **Round:** Matchday 2 — Group A2 | **Venue/location:** Stadion Rajko Mitić, Belgrade
+
+Serbia lost **2-1 at home to Greece** after taking a fourth-minute lead through Andrija Živković. Greece equalised through Christos Tzolis and Tasos Douvikas headed a late winner. The Netherlands drew **1-1** with Germany in Amsterdam, Cody Gakpo scoring in added time. Both openers produced two or more goals, while Serbia and the Netherlands each scored.
+
+### Team news and projected lineups
+
+Serbia retain Dušan Tadić, Dušan Vlahović, Luka Jović, Sergej Milinković-Savić, Saša Lukić, Filip Kostić and Živković around an experienced spine. The Dutch group includes Virgil van Dijk, Micky van de Ven, Ryan Gravenberch, Tijjani Reijnders, Cody Gakpo and Jeremie Frimpong. Donyell Malen and Justin Kluivert withdrew through injury before Matchday 1, while Memphis Depay and Frenkie de Jong were not selected for this camp.
+
+**Serbia projected XI (3-4-2-1):** Petrović; Eraković, Babić, Pavlović; Živković, Lukić, Gudelj, Kostić; Samardžić, Tadić; Vlahović.
+
+**Netherlands projected XI (4-3-3):** Verbruggen; Dumfries, Van Dijk, Van de Ven, Aké; Gravenberch, Reijnders, Koopmeiners; Frimpong, Brobbey, Gakpo.
+
+Both lineups remain projected. The three-day recovery period and first-round minutes may produce changes, especially in the Dutch front line after the withdrawals.
+
+### Match and tactical analysis
+
+Serbia's opener supplied both sides of the selection: they scored early, but Greece then controlled long stretches and found two goals. The Netherlands also needed a late goal to avoid defeat, yet their ability to sustain pressure until added time supports the X2 leg. Serbia can still threaten directly through Vlahović while Tadić and Samardžić attack second balls, so Dutch possession is not defensive protection by itself.
+
+When Serbia's back three becomes a back five, the visitors can target the space around the wing-backs with Gakpo and Frimpong/Dumfries. Reijnders and Gravenberch must move Serbia's midfield screen without leaving the centre open after turnovers. A Serbian 1-0 remains the clearest losing script because it defeats both the X2 and two-goal requirements.
+
+### Statistical Core Predictions-Sports-Prime
+
+Statistical coverage is partial because the current competition sample contains only one match per team.
+
+| Current Nations League metric | Serbia | Netherlands |
+|---|---:|---:|
+| Matches | **1** | **1** |
+| W-D-L | **0-0-1** | **0-1-0** |
+| Goals for/game | **1.00** | **1.00** |
+| Goals against/game | **2.00** | **1.00** |
+| BTTS | **100%** | **100%** |
+| Current split | HOME | HOME; AWAY unavailable |
+
+This is a one-match sample, and the Netherlands' result was at home rather than the preferred away split. Comparable xG, shots, possession and corner figures are unavailable in the official round-up and are not synthesized.
+
+### Market price and value
+
+At **1.60**, the raw implied probability is **62.5%**, calculated as **1 / 1.60 = 0.6250** before bookmaker margin. That is the market threshold, not a historical hit rate or an independent PSP probability.
+
+The two-goal condition can land with a 1-1 draw, which also protects the X2. Serbia's early lead against Greece is the main warning: if Paunović's side score first and defend the penalty area more effectively, the Netherlands may again need a late recovery.
+
+### Conclusion
+
+Serbia conceded twice after leading Greece, while the Netherlands recovered late against Germany. The retained call is **Netherlands X2 + Over 1.5 Goals at 1.60**, with Serbia's home response and direct forward play the principal risks.
+
+**Prediction:** **Netherlands X2 + Over 1.5 Goals**
+
+**Odds:** **1.60**`],
   analysisFormat: "markdown",
   editorialStandard: "psp-v1",
   picks: {
     main: "Netherlands X2 + Over 1.5 Goals",
     publishedOdds: 1.60,
-    oddsProvenance: {
-      source: "PSP author-supplied publication selection — 18/09/2026",
-      provenance: "author_attested",
-      market: "Netherlands X2 + Over 1.5 Goals"
-    }
+    oddsProvenance: { source: "PSP author-supplied publication selection — 18/09/2026", provenance: "author_attested", market: "Netherlands X2 + Over 1.5 Goals" },
   },
   published: true,
   publishedAt: "2026-09-18T13:49:00-03:00",
-  updatedAt: "2026-09-21T16:17:17-03:00",
+  updatedAt,
+  freshness: { editorialUpdatedAt: updatedAt, teamNewsUpdatedAt: updatedAt, lineupUpdatedAt: updatedAt, statisticsUpdatedAt: updatedAt },
   sourceStatus: "partial",
   sources: [
-    {"name":"beIN SPORTS — Malen withdraws from Netherlands squad through injury","url":"https://www.beinsports.com/en-us/soccer/uefa-nations-league/articles/malen-withdraws-from-netherlands-squad-through-injury-2026-09-21","description":"Netherlands withdrawal and replacements.","accessedAt":"2026-09-21T15:46:57-03:00"},
-  {
-    name: "UEFA — 2026/27 Nations League league-phase fixtures",
-    url: "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/",
-    description: "Official UEFA Nations League 2026/27 fixture and competition reference.",
-    accessedAt: "2026-09-18T13:49:00-03:00"
-  },
-  {
-    name: "Serbia current squad/call-up source",
-    url: "https://fss.rs/a-tim-selektor-veljko-paunovic-odabrao-igrace-za-cetiri-meca-lige-nacija/?script=lat",
-    description: "Serbian FA (FSS) September squad announcement used for the Serbia call-up list.",
-    accessedAt: "2026-09-18T13:49:00-03:00"
-  },
-  {
-    name: "Netherlands current squad/call-up source",
-    url: "https://www.reuters.com/sports/soccer/van-dijk-stays-depay-omitted-xavis-first-netherlands-squad-2026-09-18/",
-    description: "Reuters report on Xavi Hernández's first Netherlands squad, used for the Netherlands call-up list and squad changes.",
-    accessedAt: "2026-09-18T13:49:00-03:00"
-  }
-],
+    { name: "UEFA — Matchday 1 round-up and results", url: "https://www.uefa.com/uefanationsleague/news/02a9-21abb9d8b85c-0d9416d472ce-1000--uefa-nations-league-matchday-1-round-up-cody-gakpo-denie/", description: "Official Serbia-Greece and Netherlands-Germany results and match detail.", accessedAt: updatedAt },
+    { name: "Serbian FA — September squad", url: "https://fss.rs/a-tim-selektor-veljko-paunovic-odabrao-igrace-za-cetiri-meca-lige-nacija/?script=lat", accessedAt: publishedAt },
+    { name: "Reuters — Netherlands September squad", url: "https://www.reuters.com/sports/soccer/van-dijk-stays-depay-omitted-xavis-first-netherlands-squad-2026-09-18/", accessedAt: publishedAt },
+  ],
   matchInfo: {
     date: "2026-09-27",
     time: "18:00",
-    round: "Matchday 2"
-  }
+    round: "Matchday 2 — Group A2",
+    venue: "Stadion Rajko Mitić",
+    venueAddress: { addressLocality: "Belgrade", addressCountry: "Serbia" },
+  },
 };

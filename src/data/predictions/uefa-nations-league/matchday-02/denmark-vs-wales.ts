@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-18T13:49:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-26T18:51:22-03:00";
 
 export const denmarkVsWales: EditorialPrediction = {
   league: "uefa-nations-league",
@@ -18,7 +18,7 @@ export const denmarkVsWales: EditorialPrediction = {
 
 **Competition:** UEFA Nations League A | **Date:** 2026-09-27 | **Kick-off:** 18:00 local | **Round:** Matchday 2 — Group A4 | **Venue/location:** Parken, Copenhagen
 
-Denmark return to Parken needing a response after losing 3-2 away to Norway in their Nations League opener. Wales also arrive after defeat, having lost 1-0 in Portugal. Both are looking for their first points, but Denmark already showed enough attacking output to score twice in Oslo.
+Denmark return to Parken needing a response after losing **3-2** in Norway. Mikkel Damsgaard scored from a free kick and Rasmus Højlund headed the equaliser before Erling Haaland's second goal decided the match. Wales also arrive without a point after a **1-0** defeat in Portugal, although Brennan Johnson hit the crossbar late and nearly changed the result.
 
 Denmark's availability affects the edges of the team: Alexander Bah is out with a shoulder injury and Kasper Dolberg is unavailable with a knee problem. Wales have Nathan Broadhead and Isaak Davies injured, Joe Rodon carrying a hamstring issue and Dylan Lawlor listed doubtful.
 
@@ -30,7 +30,7 @@ Denmark's availability affects the edges of the team: Alexander Bah is out with 
 
 ### Match analysis, tactics and H2H
 
-Denmark's 3-2 defeat in Norway exposed defensive vulnerability but also demonstrated attacking capacity. Wales kept Portugal to one goal, suggesting the hosts may need patience rather than expecting an early separation.
+Denmark's opener exposed vulnerability when Norway attacked quickly through Oscar Bobb, Antonio Nusa and Haaland, but it also demonstrated recovery and penalty-area presence. Wales kept Portugal to one goal and threatened the frame of the goal themselves, suggesting the hosts may need patience rather than expecting an early separation.
 
 Denmark lead the historical series seven wins to four, with no draws in 11 meetings, and have won the last three. The latest was a 4-0 Euro 2020 knockout victory; Denmark also won both 2018 Nations League meetings. The age of those games limits direct predictive value, but the series is clearly favorable to the Danes.
 
@@ -85,9 +85,9 @@ The schedule, venue and tactical matchup lead to the retained position of **Denm
           "accessedAt": "2026-09-25T07:15:00-03:00"
       },
       {
-          "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
-          "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
-          "accessedAt": "2026-09-25T07:15:00-03:00"
+          "name": "UEFA — Matchday 1 round-up and results",
+          "url": "https://www.uefa.com/uefanationsleague/news/02a9-21abb9d8b85c-0d9416d472ce-1000--uefa-nations-league-matchday-1-round-up-cody-gakpo-denie/",
+          "accessedAt": "2026-09-26T18:51:22-03:00"
       }
   ],
   matchInfo: {

@@ -18,13 +18,13 @@ export const israelVsRepublicOfIreland: EditorialPrediction = {
 
 ### Team news, availability and recent form
 
-Israel's first designated home match of this Nations League campaign will be played in Debrecen, Hungary, three days after the away opener against Austria. The neutral-location element changes the usual interpretation of home advantage: Israel avoid another travel leg from Austria to a distant venue, but they do not have the normal stadium familiarity and crowd environment of a conventional home fixture.
+Israel's first designated home match will be played in Debrecen after a **3-1 defeat in Austria**. The match was level until Austria scored in the 90th and 93rd minutes against ten-man Israel, so the final margin overstates how long the contest remained competitive. The neutral-location element still changes the usual interpretation of home advantage: Israel avoid another long travel leg but do not have a conventional home environment.
 
 Ran Ben Shimon named 27 players for the four-game window. Daniel Peretz, Omri Glazer and Assaf Tzur are the goalkeepers. The defensive group includes Eli Dasa, Guy Mizrahi, Roy Revivo, Anan Khalaili, Idan Nachmias, Ilay Feingold, Raz Shlomo, Nikita Stoyanov and Noam Stiefman. The midfield and attack contain Oscar Gloukh, Gabi Kanichowsky, Dor Peretz, Omri Gandelman, Eitan Azoulay, Mohammad Abu Fani, Manor Solomon, Liel Abada, Tai Baribo, Dor Turgeman, Idan Toklomati, Yarden Shua, Yarin Levi, Eliel Peretz and Saied Abu Farchi.
 
 The creative talent is concentrated around Gloukh and Solomon. Abada can stretch a defence from the opposite flank, while Baribo and Turgeman give Ben Shimon different centre-forward profiles. Israel's 2026 results include a 2-2 draw against Georgia and a 1-0 win over Albania. The first game against Austria will provide a much fresher measure of how the new Nations League structure is working, so this article should be updated if that opener produces an injury or major tactical change.
 
-Ireland are also playing their second game in four days after beginning away to Kosovo. Heimir Hallgrímsson's 26-man squad contains Caoimhin Kelleher, Max O'Leary and Gavin Bazunu in goal; Dara O'Shea, Jake O'Brien, Liam Scales, John Egan, Jimmy Dunne, Liam Kitching, James Abankwah, Ryan Manning and Joel Bagan in defence; and Finn Azaz, Jason Knight, Jayson Molumby, Conor Coventry, Jamie McGrath, Harvey Vale and Bosun Lawal in midfield. Troy Parrott, Adam Idah, Chiedozie Ogbene, Tom Cannon, Rocco Vata, Jack Moylan and Owen Elding are the attacking options.
+Ireland are also playing their second game in four days after a **1-0 defeat in Kosovo**, decided by Vedat Muriqi's 83rd-minute header. That opener supports the low-total reading because Ireland kept the game scoreless for more than 80 minutes, but it also exposes the set-piece and aerial risk that can decide another tight match. Heimir Hallgrímsson's 26-man squad contains Caoimhin Kelleher, Max O'Leary and Gavin Bazunu in goal; Dara O'Shea, Jake O'Brien, Liam Scales, John Egan, Jimmy Dunne, Liam Kitching, James Abankwah, Ryan Manning and Joel Bagan in defence; and Finn Azaz, Jason Knight, Jayson Molumby, Conor Coventry, Jamie McGrath, Harvey Vale and Bosun Lawal in midfield. Troy Parrott, Adam Idah, Chiedozie Ogbene, Tom Cannon, Rocco Vata, Jack Moylan and Owen Elding are the attacking options.
 
 Captain Nathan Collins is ruled out of the entire window through injury, with Kitching called into the senior squad for the first time. Vata is back after a long injury absence. McGrath and Vale have since withdrawn after picking up injuries in club warm-ups, and St Mirren midfielder Killian Phillips has been called up in their place. Ireland nevertheless enter the camp after a sequence described in the latest team coverage as a seven-match unbeaten run, and the defensive approach is likely to remain compact away from Ireland.
 
@@ -46,11 +46,12 @@ For Israel, playing the second match in a rapid sequence can also influence the 
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial because the 2026/27 competition has not started. A complete 22/22 Statistical Core, including current HOME/AWAY xG, xGA, shots, shots on target, possession and corners, is unavailable; unavailable target metrics remain unavailable rather than being estimated. The rows below show the squad, head-to-head and current-status context that is available.
+Statistical coverage is partial after one match. A complete 22/22 Core, including comparable xG, shots, possession and corners, remains unavailable; the verified opener indicators are retained without estimating missing metrics.
 
 | Current indicator | Israel | Republic of Ireland |
 |---|---:|---:|
-| Nations League B3 record before MD1 | 0-0-0 | 0-0-0 |
+| Nations League B3 record | **0-0-1** | **0-0-1** |
+| Goals for / against | **1 / 3** | **0 / 1** |
 | Venue | Neutral: Debrecen, Hungary | Away |
 | Major squad note | 27 players named | Nathan Collins injured |
 | Main creative threats | Gloukh, Solomon, Abada | Azaz, Ogbene, Parrott |
@@ -64,7 +65,7 @@ At published odds of **1.82**, the raw implied probability is **54.9%**, calcula
 
 ### Conclusion
 
-The neutral venue and Ireland's likely compact shape point toward control rather than volume, though both teams' Matchday 1 performances remain more important than their distant five-game H2H.
+The neutral venue and Ireland's compact opening performance point toward control rather than volume. Israel's late collapse with ten men is the main caution: fatigue or another disciplinary problem could create the broken game that an Under 2.5 selection does not want.
 
 **Prediction:** Under 2.5 Goals  
 **Odds:** 1.82`],
@@ -81,15 +82,16 @@ The neutral venue and Ireland's likely compact shape point toward control rather
   },
   published: true,
   publishedAt: "2026-09-20T18:49:50-03:00",
-  updatedAt: "2026-09-21T16:17:17-03:00",
+  updatedAt: "2026-09-26T18:51:22-03:00",
   freshness: {
-    editorialUpdatedAt: "2026-09-21T16:17:17-03:00",
-    teamNewsUpdatedAt: "2026-09-21T16:17:17-03:00",
-    lineupUpdatedAt: "2026-09-21T16:17:17-03:00",
-    statisticsUpdatedAt: "2026-09-20T18:49:50-03:00",
+    editorialUpdatedAt: "2026-09-26T18:51:22-03:00",
+    teamNewsUpdatedAt: "2026-09-26T18:51:22-03:00",
+    lineupUpdatedAt: "2026-09-26T18:51:22-03:00",
+    statisticsUpdatedAt: "2026-09-26T18:51:22-03:00",
   },
   sourceStatus: "partial",
   sources: [
+    {"name":"UEFA — Matchday 1 round-up and results","url":"https://www.uefa.com/uefanationsleague/news/02a9-21abb9d8b85c-0d9416d472ce-1000--uefa-nations-league-matchday-1-round-up-cody-gakpo-denie/","description":"Official opener results and match context for Israel and Republic of Ireland.","accessedAt":"2026-09-26T18:51:22-03:00"},
     {"name":"The Irish Times — Killian Phillips called into Ireland squad","url":"https://www.irishtimes.com/sport/soccer/2026/09/21/killian-phillips-called-into-ireland-squad-for-nations-league-matches/","description":"Ireland withdrawals and replacement.","accessedAt":"2026-09-21T16:17:17-03:00"},
     {"name":"UEFA — 2026/27 Nations League fixtures","url":"https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000/","description":"Official competition schedule, group and kick-off reference.","accessedAt":"2026-09-20T18:49:50-03:00"},
     {"name":"Israel Football Association — September Nations League squad","url":"https://www.football.org.il/?itemid=%7BE29F4A20-B9AC-4C40-8669-630CE1C685C3%7D","description":"Official 27-player Israel squad.","accessedAt":"2026-09-20T18:49:50-03:00"},
