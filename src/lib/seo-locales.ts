@@ -6,7 +6,8 @@ export type SeoLocaleSlug = (typeof seoLocaleSlugs)[number];
 export const selectableLocaleSlugs = seoLocaleSlugs.filter(
   (locale) => locale !== "pt-br"
 ) as Exclude<SeoLocaleSlug, "pt-br">[];
-export const indexableLocalizedHubLocaleSlugs = ["pt-br", "es", "fr", "de", "it"] as const satisfies readonly SeoLocaleSlug[];
+// pt-br hubs are retired (redirected to English); only the frozen historical pt-br match pages remain.
+export const indexableLocalizedHubLocaleSlugs = ["es", "fr", "de", "it"] as const satisfies readonly SeoLocaleSlug[];
 
 export function isIndexableLocalizedHubLocale(locale: SeoLocaleSlug) {
   return indexableLocalizedHubLocaleSlugs.includes(locale as (typeof indexableLocalizedHubLocaleSlugs)[number]);
@@ -206,6 +207,8 @@ export function isSeoLocale(value: string): value is SeoLocaleSlug {
 
 export function localePath(locale: SeoLocale, path = "/") {
   const normalized = path.startsWith("/") ? path : `/${path}`;
+  // pt-br is a frozen archive of match pages only: hubs and other routes resolve to English.
+  if (locale === "pt-br" && !normalized.startsWith("/match/")) return normalized;
   return locale === "en" ? normalized : `/${locale}${normalized}`;
 }
 

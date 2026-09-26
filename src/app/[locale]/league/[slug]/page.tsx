@@ -25,6 +25,7 @@ import {
   isSeoLocale,
   localePath,
   seoLocaleSlugs,
+  selectableLocaleSlugs,
   seoLocales,
 } from "@/lib/seo-locales";
 import { getAdSenseIndexableSlugs, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
@@ -32,7 +33,7 @@ import { resolveCanonicalMatches } from "@/lib/canonical-match";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return seoLocaleSlugs.flatMap((locale) =>
+  return selectableLocaleSlugs.flatMap((locale) =>
     leagues.map((league) => ({ locale, slug: league.slug }))
   );
 }

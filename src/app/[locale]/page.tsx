@@ -17,13 +17,14 @@ import {
   isSeoLocale,
   localePath,
   seoLocaleSlugs,
+  selectableLocaleSlugs,
   seoLocales,
 } from "@/lib/seo-locales";
 import { selectTemporalClientMatches } from "@/lib/match-feed";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return seoLocaleSlugs.map((locale) => ({ locale }));
+  return selectableLocaleSlugs.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({

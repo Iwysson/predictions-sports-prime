@@ -3,10 +3,10 @@ import { notFound } from "next/navigation";
 import { NFLPage } from "@/components/NFLPage";
 import { getNFLCopy } from "@/lib/nfl-i18n";
 import { absoluteUrl } from "@/lib/site-config";
-import { isSeoLocale, localePath, seoLocaleSlugs, seoLocales } from "@/lib/seo-locales";
+import { isSeoLocale, localePath, selectableLocaleSlugs, seoLocales } from "@/lib/seo-locales";
 
 export const dynamicParams = false;
-export function generateStaticParams() { return seoLocaleSlugs.map((locale) => ({ locale })); }
+export function generateStaticParams() { return selectableLocaleSlugs.map((locale) => ({ locale })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
