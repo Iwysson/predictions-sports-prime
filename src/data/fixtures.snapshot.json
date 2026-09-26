@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-26T05:29:50.424Z",
+  "generatedAt": "2026-09-26T14:22:03.319Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -17618,6 +17618,7 @@
     "brasileirao-serie-a:athletico-paranaense-bahia": "editorial:brasileirao-serie-a:athletico-paranaense-bahia:2026-09-20",
     "brasileirao-serie-a:athletico-pr-vs-fluminense": "401841208",
     "brasileirao-serie-a:atletico-mg-vs-fluminense": "editorial:brasileirao-serie-a:atletico-mg-vs-fluminense:2026-09-12",
+    "brasileirao-serie-a:atletico-mg-vs-red-bull-bragantino": "editorial:brasileirao-serie-a:atletico-mg-vs-red-bull-bragantino:2026-10-03",
     "brasileirao-serie-a:atletico-mineiro-chapecoense": "editorial:brasileirao-serie-a:atletico-mineiro-chapecoense:2026-09-19",
     "brasileirao-serie-a:atletico-mineiro-vs-vitoria": "401841216",
     "brasileirao-serie-a:bahia-vs-internacional": "401841215",
@@ -17662,6 +17663,7 @@
     "brasileirao-serie-a:sao-paulo-internacional": "editorial:brasileirao-serie-a:sao-paulo-internacional:2026-09-19",
     "brasileirao-serie-a:sao-paulo-vs-atletico-mg": "editorial:brasileirao-serie-a:sao-paulo-vs-atletico-mg:2026-09-05",
     "brasileirao-serie-a:sao-paulo-vs-red-bull-bragantino": "401841209",
+    "brasileirao-serie-a:sao-paulo-vs-santos": "editorial:brasileirao-serie-a:sao-paulo-vs-santos:2026-10-02",
     "brasileirao-serie-a:vasco-da-gama-coritiba": "editorial:brasileirao-serie-a:vasco-da-gama-coritiba:2026-09-19",
     "brasileirao-serie-a:vasco-da-gama-vs-cruzeiro": "401841212",
     "brasileirao-serie-a:vitoria-cruzeiro": "editorial:brasileirao-serie-a:vitoria-cruzeiro:2026-09-20",
@@ -18220,9 +18222,7 @@
     "uefa-europa-league:ofi-crete-vs-hoffenheim": "401915585",
     "uefa-europa-league:real-sociedad-vs-bournemouth": "401915583",
     "uefa-europa-league:sturm-graz-vs-rennes": "official:uefa-europa-league:sturm-graz-vs-rennes:2026-09-16",
-    "uefa-europa-league:sunderland-vs-az-alkmaar": "401915592",
-    "brasileirao-serie-a:sao-paulo-vs-santos": "editorial:brasileirao-serie-a:sao-paulo-vs-santos:2026-10-02",
-    "brasileirao-serie-a:atletico-mg-vs-red-bull-bragantino": "editorial:brasileirao-serie-a:atletico-mg-vs-red-bull-bragantino:2026-10-03"
+    "uefa-europa-league:sunderland-vs-az-alkmaar": "401915592"
   },
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
