@@ -95,8 +95,10 @@ For this International Friendly fixture, the retained call is **Brazil -1.5 Asia
       }
   ],
   matchInfo: {
+    // 20:00 AEST kickoff converted to UTC — this league's timezone config is "UTC",
+    // so matchInfo.time must be UTC or live/kickoff detection reads it wrong.
     date: "2026-09-29",
-    time: "20:00",
+    time: "10:00",
     round: "International Friendly",
     venue: "Suncorp Stadium",
     venueAddress: {

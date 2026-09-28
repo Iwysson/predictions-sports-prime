@@ -90,8 +90,10 @@ Balancing the projected personnel with the stated failure mode leaves **USA -1.5
       }
   ],
   matchInfo: {
-    date: "2026-09-29",
-    time: "19:00",
+    // 19:00 CDT kickoff converted to UTC — this league's timezone config is "UTC",
+    // so matchInfo.time must be UTC or live/kickoff detection reads it wrong.
+    date: "2026-09-30",
+    time: "00:00",
     round: "International Friendly",
     venue: "Energizer Park",
     venueAddress: {

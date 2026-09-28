@@ -84,8 +84,10 @@ Balancing the projected personnel with the stated failure mode leaves **Japan -1
       }
   ],
   matchInfo: {
+    // 19:25 JST kickoff converted to UTC — this league's timezone config is "UTC",
+    // so matchInfo.time must be UTC or live/kickoff detection reads it wrong.
     date: "2026-09-28",
-    time: "19:25",
+    time: "10:25",
     round: "Kirin Challenge Cup",
     venue: "Edion Peace Wing Hiroshima",
     venueAddress: {

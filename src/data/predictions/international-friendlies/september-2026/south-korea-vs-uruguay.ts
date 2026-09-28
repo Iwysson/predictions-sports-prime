@@ -84,8 +84,10 @@ South Korea against Uruguay leaves a clear settlement test: **Uruguay or Draw (X
       }
   ],
   matchInfo: {
+    // 20:00 KST kickoff converted to UTC — this league's timezone config is "UTC",
+    // so matchInfo.time must be UTC or live/kickoff detection reads it wrong.
     date: "2026-09-28",
-    time: "20:00",
+    time: "11:00",
     round: "International Friendly",
     venue: "Seoul World Cup Stadium",
     venueAddress: {
