@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T07:15:00-03:00";
 
 export const scotlandVsSwitzerland: EditorialPrediction = {
   league: "uefa-nations-league-b",
@@ -29,6 +29,8 @@ Pocognoli selected a heavily refreshed initial squad, with seven uncapped player
 **Switzerland (projected 3-4-2-1):** goalkeeper from the current squad; established three-man defensive structure; wing-backs; Granit Xhaka-level midfield control depending on current selection, with Johan Manzambi among the attacking midfield options and the chosen striker ahead.
 
 Final personnel should be updated after Matchday 1 rather than assuming the same XI plays twice.
+
+**Post-Matchday 1 update (28 September 2026):** Scotland drew 0-0 away to Slovenia and Switzerland beat North Macedonia 3-0, with Zeki Amdouni scoring twice and Remo Freuler also on target. Both squads emerged from that round without new injury concerns, though Switzerland's group remains stretched by their run to the 2026 World Cup quarter-finals. No changes to the published pick or odds are warranted by this update.
 
 ### Match analysis, tactics and H2H
 
@@ -67,12 +69,12 @@ The schedule, venue and tactical matchup lead to the retained position of **Scot
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: "2026-09-28T07:15:00-03:00",
   freshness: {
-    editorialUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
     teamNewsUpdatedAt: updatedAt,
     lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -90,6 +92,16 @@ The schedule, venue and tactical matchup lead to the retained position of **Scot
           "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
           "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "ESPN — Switzerland vs Scotland Matchday 1 result and team news",
+          "url": "https://www.espn.com/soccer/match/_/gameId/401861091/switzerland-scotland",
+          "accessedAt": "2026-09-28T07:15:00-03:00"
+      },
+      {
+          "name": "Sky Sports — Scotland vs Switzerland form and head-to-head",
+          "url": "https://www.skysports.com/football/scotland-vs-switzerland/554028",
+          "accessedAt": "2026-09-28T07:15:00-03:00"
       }
   ],
   matchInfo: {

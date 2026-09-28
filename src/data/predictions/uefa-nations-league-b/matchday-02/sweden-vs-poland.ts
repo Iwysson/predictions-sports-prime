@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T07:15:00-03:00";
 
 export const swedenVsPoland: EditorialPrediction = {
   league: "uefa-nations-league-b",
@@ -29,6 +29,8 @@ Sweden's pre-window squad changed because of injuries. Gustaf Nilsson withdrew a
 **Poland (projected 3-5-2/3-4-2-1):** goalkeeper from Jan Urban's current group; three central defenders with wing-backs providing width; a midfield designed to service Robert Lewandowski and the selected supporting forward.
 
 The final XIs depend on the 25 September matches; a player rested there should not be described as injured here.
+
+**Post-Matchday 1 update (28 September 2026):** Sweden beat Romania 2-1 at Strawberry Arena, with Alexander Isak and Viktor Gyökeres each scoring; Poland drew 0-0 away to Bosnia and Herzegovina. No specific new injury reports for either squad were confirmed by the sources checked for this update, so availability beyond the pre-window notes above remains unconfirmed rather than assumed clean. No changes to the published pick or odds are warranted by this update.
 
 ### Match analysis, tactics and H2H
 
@@ -67,12 +69,12 @@ Sweden against Poland leaves a clear settlement test: **Sweden or Draw (1X) + Ov
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: "2026-09-28T07:15:00-03:00",
   freshness: {
-    editorialUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
     teamNewsUpdatedAt: updatedAt,
     lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -90,6 +92,11 @@ Sweden against Poland leaves a clear settlement test: **Sweden or Draw (1X) + Ov
           "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
           "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "Sportskeeda — Sweden vs Poland prediction and betting tips, Matchday 2 form",
+          "url": "https://www.sportskeeda.com/football/sweden-vs-poland-prediction-betting-tips-september-28th-2026",
+          "accessedAt": "2026-09-28T07:15:00-03:00"
       }
   ],
   matchInfo: {

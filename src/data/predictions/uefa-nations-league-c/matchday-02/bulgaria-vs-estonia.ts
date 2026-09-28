@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T07:15:00-03:00";
 
 export const bulgariaVsEstonia: EditorialPrediction = {
   league: "uefa-nations-league-c",
@@ -29,6 +29,8 @@ Both sides competed in League C in the previous Nations League edition. Bulgaria
 **Estonia (projected 4-2-3-1/5-4-1):** goalkeeper from the current squad; compact defensive line; midfield protecting central spaces; transition runners supporting the forward.
 
 Any injury from Bulgaria–Luxembourg or Iceland–Estonia must be incorporated before final publication rather than guessed.
+
+**Post-Matchday 1 update (28 September 2026):** Bulgaria lost 2-1 to Luxembourg at home, while Estonia held Iceland to a 1-1 draw away. No Bulgarian absentees were confirmed by the sources checked, and Yoan Stoyanov has returned to the squad after a two-year absence. Estonia's injury list is significant: Rauno Sappinen (undisclosed injury), Nikita Mihhailov, Tony Varjund, Kristo Hussar, Marten-Chris Paalberg, Henri Anier (thigh) and Vladislav Kreida (health reasons) are all unavailable, and winger Vlasiy Sinyavskiy is out long-term after tearing his ACL for club side FC Baník Ostrava. No changes to the published pick or odds are warranted by this update.
 
 ### Match analysis, tactics and H2H
 
@@ -65,12 +67,12 @@ Bulgaria against Estonia leaves a clear settlement test: **Bulgaria to Win at 1.
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: "2026-09-28T07:15:00-03:00",
   freshness: {
-    editorialUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
     teamNewsUpdatedAt: updatedAt,
     lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -88,6 +90,16 @@ Bulgaria against Estonia leaves a clear settlement test: **Bulgaria to Win at 1.
           "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
           "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "Sports Mole — Bulgaria vs Estonia preview, team news and lineups",
+          "url": "https://www.sportsmole.co.uk/football/bulgaria/uefa-nations-league/preview/bulgaria-vs-estonia-prediction-team-news-lineups_605859.html",
+          "accessedAt": "2026-09-28T07:15:00-03:00"
+      },
+      {
+          "name": "SportsDunia — Bulgaria national football team injuries",
+          "url": "https://www.sportsdunia.com/football-teams/bulgaria-national-football-team-injuries",
+          "accessedAt": "2026-09-28T07:15:00-03:00"
       }
   ],
   matchInfo: {

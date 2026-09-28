@@ -1,7 +1,8 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T09:00:00-03:00";
+const teamNewsUpdatedAt = "2026-09-28T09:00:00-03:00";
 
 export const australiaVsBrazil20260929: EditorialPrediction = {
   league: "international-friendlies",
@@ -24,9 +25,9 @@ Carlo Ancelotti publicly named Brazil's starting XI for the first match: Hugo So
 
 ### Team news, availability and projected lineups
 
-**Australia (projected 4-2-3-1/3-4-2-1):** goalkeeper from the current Socceroos group; available senior defensive unit; two central midfielders; mobile wide/inside forwards around the chosen striker.
+**Australia (projected, 3-4-2-1/3-5-2 reported by outlets):** Tony Popovic has named seven debutants in his 26-man squad for this window, per Australia coverage cited below. Independent previews project a back three of Alessandro Circati, Harry Souttar and Lucas Herrington, Jackson Irvine and Aiden O'Neill in central midfield, and Nestory Irankunda leading the attacking line; formation reporting is not fully consistent across outlets (3-4-2-1 vs 3-5-2), so this remains a projection rather than a confirmed XI. No Australia unavailability was confirmed by every outlet checked; one outlet flagged a possible Touré fitness doubt while another reported the full squad fit, so that specific status is left unconfirmed rather than stated as fact.
 
-**Brazil (projected 4-2-3-1):** goalkeeper from Ancelotti's current squad; defensive line selected from Matheuzinho, Marquinhos, Vitor Reis, Douglas Santos and the other available defenders; Bruno Guimarães in midfield; Raphinha, Estêvão, Endrick and Vinicius Junior among the attacking options, with rotation possible.
+**Brazil (projected 4-2-3-1/4-3-3):** Carlo Ancelotti has made 16 changes to his squad versus the previous call-up, per coverage cited below. Alisson Becker was not part of this camp, so Hugo Souza is projected in goal; the back line is projected from Matheuzinho/Danilo, Marquinhos, Vitor Reis/Léo Magalhães and Douglas Santos, Bruno Guimarães is projected in midfield alongside a rotation option (reported as Andrey Santos), and Raphinha, Vinicius Júnior and Endrick remain the primary attacking references, with Estêvão also in the squad. As with Australia, specific unavailability (one outlet named Wesley and João Pedro as absent) was not corroborated by every source checked, so it is disclosed here as unconfirmed rather than asserted.
 
 ### Match analysis, tactics and H2H
 
@@ -63,12 +64,12 @@ For this International Friendly fixture, the retained call is **Brazil -1.5 Asia
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: updatedAt,
   freshness: {
-    editorialUpdatedAt: updatedAt,
-    teamNewsUpdatedAt: updatedAt,
-    lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
+    teamNewsUpdatedAt: teamNewsUpdatedAt,
+    lineupUpdatedAt: teamNewsUpdatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -81,6 +82,16 @@ For this International Friendly fixture, the retained call is **Brazil -1.5 Asia
           "name": "Socceroos — official squad update",
           "url": "https://socceroos.com.au/news/commbank-socceroos-squad-update-2",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "Sports Mole — Australia vs Brazil preview, team news and projected lineups",
+          "url": "https://www.sportsmole.co.uk/football/australia/preview/australia-vs-brazil-prediction-team-news-lineups_605671.html",
+          "accessedAt": "2026-09-28T09:00:00-03:00"
+      },
+      {
+          "name": "KhelNow — Australia vs Brazil preview and projected lineups",
+          "url": "https://khelnow.com/football/australia-vs-brazil-preview-international-friendly-202609-2",
+          "accessedAt": "2026-09-28T09:00:00-03:00"
       }
   ],
   matchInfo: {

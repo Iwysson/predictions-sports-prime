@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T07:00:00-03:00";
 
 export const moldovaVsFaroeIslands: EditorialPrediction = {
   league: "uefa-nations-league-c",
@@ -24,11 +24,13 @@ UEFA highlighted the Faroes' four wins in eight World Cup qualifiers, including 
 
 ### Team news, availability and projected lineups
 
-**Moldova (projected 5-3-2/3-4-2-1):** goalkeeper from the current squad; three central defenders with wing-backs supplying width; compact central midfield; two attacking references selected from the September group.
+Matchday 1 is now confirmed: Moldova lost 2-0 away to Slovakia, while the Faroe Islands drew 1-1 at home with Kazakhstan, leaving Moldova last and the Faroes third in the four-team group (source: Sports Mole preview, 28/09/2026).
 
-**Faroe Islands (projected 3-4-2-1/4-2-3-1):** goalkeeper from the current group; physically strong defensive structure; midfield prepared for second balls; mobile support behind the selected striker.
+**Moldova (projected 3-5-2):** Chelyadnik; Baboglo, Gerasimenko, Iovu; Stina, Motpan, Rata, Ryabchuk, Forov; Popescu, Kleschenko.
 
-The projected shapes must be refreshed after Slovakia–Moldova and Faroe Islands–Kazakhstan.
+**Faroe Islands (projected 5-4-1):** Lamhaauge; Danielsen, Faroe, Vatnhamar, Edmundsson, Agnarsson; Samuelsen, Turi, Bjartalid, Sorensen; Knudsen.
+
+These remain projected line-ups from pre-match preview coverage, not officially confirmed teamsheets; no specific injury or suspension news was found for either squad ahead of this fixture.
 
 ### Match analysis, tactics and H2H
 
@@ -65,12 +67,12 @@ Moldova against Faroe Islands leaves a clear settlement test: **Over 1.5 Goals a
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: "2026-09-28T07:00:00-03:00",
   freshness: {
-    editorialUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
     teamNewsUpdatedAt: updatedAt,
     lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -88,6 +90,11 @@ Moldova against Faroe Islands leaves a clear settlement test: **Over 1.5 Goals a
           "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
           "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "Sports Mole — Moldova vs Faroe Islands preview, team news and lineups",
+          "url": "https://www.sportsmole.co.uk/football/moldova/uefa-nations-league/preview/moldova-vs-faroe-islands-prediction-team-news-lineups_605872.html",
+          "accessedAt": "2026-09-28T10:00:00Z"
       }
   ],
   matchInfo: {

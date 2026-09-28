@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T07:15:00-03:00";
 
 export const armeniaVsMontenegro: EditorialPrediction = {
   league: "uefa-nations-league-c",
@@ -29,6 +29,8 @@ Armenia entered the window without defender Sergey Muradyan, whose injury was co
 **Montenegro (projected 3-4-2-1/4-2-3-1):** goalkeeper from Mirko Vučinić's current squad; defense adjusted for the unavailable Marušić/Ražnatović; central midfield protecting the first line; Nikola Krstović as the principal penalty-area reference with available creators behind him.
 
 These are projected roles, not confirmed XIs. Matchday 1 must be checked for new absences before publication.
+
+**Post-Matchday 1 update (28 September 2026):** Armenia beat Latvia 2-0 and Montenegro beat Cyprus 2-1, so both sides arrive on maximum points. Armenia's injury list has grown, with defender Junior Julio Bueno now ruled out for the entire international cycle in addition to the previously reported Muradyan absence. Montenegro coach Mirko Vučinić has called up Marko Perović and Jonathan Drešaj to bolster his flanks, partially offsetting the Marušić/Hakšabanović/Ražnatović absences already noted. No changes to the published pick or odds are warranted by this update.
 
 ### Match analysis, tactics and H2H
 
@@ -67,12 +69,12 @@ Armenia against Montenegro leaves a clear settlement test: **Under 2.5 Goals at 
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: "2026-09-28T07:15:00-03:00",
   freshness: {
-    editorialUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
     teamNewsUpdatedAt: updatedAt,
     lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -90,6 +92,11 @@ Armenia against Montenegro leaves a clear settlement test: **Under 2.5 Goals at 
           "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
           "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "Football Whispers — Armenia vs Montenegro prediction, preview and betting tips",
+          "url": "https://footballwhispers.com/blog/armenia-vs-montenegro-prediction-28-09-2026/",
+          "accessedAt": "2026-09-28T07:15:00-03:00"
       }
   ],
   matchInfo: {

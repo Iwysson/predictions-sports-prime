@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T07:15:00-03:00";
 
 export const finlandVsBelarus: EditorialPrediction = {
   league: "uefa-nations-league-c",
@@ -29,6 +29,8 @@ Finland's attacking plan can use a conventional centre-forward presence with run
 **Belarus (projected 4-2-3-1/5-4-1):** goalkeeper from the current group; a compact defensive unit; midfield positioned to protect the centre; transition runners supporting the forward.
 
 Both teams play on 26 September, so the final names must reflect any new injury or suspension from Matchday 1.
+
+**Post-Matchday 1 update (28 September 2026):** Finland thrashed San Marino 7-0, with Joel Pohjanpalo scoring a hat-trick and Leo Walta adding two goals and an assist; Belarus lost 2-0 away to Albania. Head coach Jacob Friis is reported to be considering an unchanged XI to preserve that attacking form. No specific new injury reports for either squad were confirmed by the sources checked for this update, so availability remains unconfirmed rather than assumed clean. No changes to the published pick or odds are warranted by this update.
 
 ### Match analysis, tactics and H2H
 
@@ -65,12 +67,12 @@ Balancing the projected personnel with the stated failure mode leaves **Over 1.5
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: "2026-09-28T07:15:00-03:00",
   freshness: {
-    editorialUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
     teamNewsUpdatedAt: updatedAt,
     lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -88,6 +90,11 @@ Balancing the projected personnel with the stated failure mode leaves **Over 1.5
           "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
           "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "Football Whispers — Finland vs Belarus prediction, preview and betting tips",
+          "url": "https://footballwhispers.com/blog/finland-vs-belarus-prediction-29-09-2026/",
+          "accessedAt": "2026-09-28T07:15:00-03:00"
       }
   ],
   matchInfo: {

@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T07:00:00-03:00";
 
 export const slovakiaVsKazakhstan: EditorialPrediction = {
   league: "uefa-nations-league-c",
@@ -24,11 +24,11 @@ Slovakia's home route is based on controlling midfield territory and using their
 
 ### Team news, availability and projected lineups
 
-**Slovakia (projected 4-3-3/4-2-3-1):** goalkeeper from the current group; available first-choice defensive line; midfield built around Slovakia's experienced central options; two wide attackers around the selected centre-forward.
+**Slovakia (projected 4-3-3):** Greif; Schranz, Skriniar, Obert, Hancko; Suslov, Lobotka, Duda; Kapralik, Strelec, Haraslin. Slovakia are expected to keep the same back four used against Moldova, with Lobotka anchoring midfield.
 
-**Kazakhstan (projected 5-4-1/3-4-2-1):** goalkeeper from the September squad; three central defenders with wing-backs; compact midfield; one forward with transition support from the nearest attacking midfielders.
+**Kazakhstan (projected 4-3-3):** Pokatilov; Mrynskiy, Yerlanov, Alip, Vorogovskiy; Kuat, Karaman, Islamkhan; Amir, Shushenachev, Kenzhebek.
 
-Both projected XIs require a post-Matchday 1 check.
+These are pre-match projected line-ups (source: Sports Mole preview, 28/09/2026), not confirmed teamsheets. No specific injury or suspension news was verified for either squad ahead of this fixture from the sources checked.
 
 ### Match analysis, tactics and H2H
 
@@ -65,12 +65,12 @@ For this Matchday 2 — Group C3 fixture, the retained call is **Slovakia to Win
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: "2026-09-28T07:00:00-03:00",
   freshness: {
-    editorialUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
     teamNewsUpdatedAt: updatedAt,
     lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -88,6 +88,11 @@ For this Matchday 2 — Group C3 fixture, the retained call is **Slovakia to Win
           "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
           "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "Sports Mole — Slovakia vs Kazakhstan preview, team news and lineups",
+          "url": "https://www.sportsmole.co.uk/football/slovakia/uefa-nations-league/preview/slovakia-vs-kazakhstan-prediction-team-news-lineups_605874.html",
+          "accessedAt": "2026-09-28T10:00:00Z"
       }
   ],
   matchInfo: {

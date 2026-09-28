@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T07:00:00-03:00";
 
 export const turkiyeVsItaly: EditorialPrediction = {
   league: "uefa-nations-league",
@@ -20,19 +20,19 @@ export const turkiyeVsItaly: EditorialPrediction = {
 
 Türkiye host Italy in Bursa three days after facing France, while Italy arrive after opening against Belgium in Rome. The short turnaround makes recovery and rotation part of the matchup and means the final medical picture must be refreshed after Matchday 1.
 
-Türkiye can build around Hakan Çalhanoğlu's distribution and set pieces, Kenan Yıldız's carries from the left/inside channel and Arda Güler's ability to receive between midfield and defense. Italy are rebuilding after another World Cup qualification failure and have tested combinations involving Moise Kean and Francesco Pio Esposito.
+Türkiye's team news has changed since Matchday 1: Hakan Çalhanoğlu and Kenan Yıldız are missing from the squad, and first-choice goalkeeper Uğurcan Çakır is suspended after his red card against France, with Altay Bayındır set to deputise; Orkun Kökçü is also a doubt with a lingering toe injury (source: Quotidiano.net, 28/09/2026). That leaves Arda Güler's distribution between midfield and defense as the central creative reference in Bursa. Italy, managed by Roberto Mancini, made ten changes from the opening loss to Belgium; Michael Kayode is set to make his debut, and Moise Kean was rested for fatigue with Gianluca Scamacca expected to lead the line instead.
 
 ### Team news, availability and projected lineups
 
-**Türkiye (projected 4-2-3-1):** Uğurcan Çakır; Zeki Çelik, Merih Demiral, Abdülkerim Bardakcı, Ferdi Kadıoğlu; Hakan Çalhanoğlu, Orkun Kökçü; Arda Güler, an available central/wide creator, Kenan Yıldız; the selected centre-forward.
+**Türkiye (projected 3-4-2-1):** Bayındır; Çelik, Demiral, Bardakcı; Aydın, Özcan, Yüksek, Kadıoğlu; Güler, Uzun; Yılmaz.
 
-**Italy (projected 3-5-2/3-4-2-1):** Gianluigi Donnarumma; a three-man defense from the current squad; wing-backs supplying width; a midfield built around the available Barella/Tonali-level core; Moise Kean and Francesco Pio Esposito among the leading forward options.
+**Italy (projected 4-3-3):** Donnarumma; Kayode, Scalvini, Bastoni, Ruggeri; Frattesi, Tonali, Fagioli; Raspadori, Scamacca, Cambiaghi.
 
-No player is labelled out without a current confirmation, and rotation after Matchday 1 is not described as injury.
+These are projected line-ups from pre-match preview coverage (source: Quotidiano.net, 28/09/2026), not confirmed teamsheets. Çakır (suspended), Çalhanoğlu and Yıldız are correctly excluded from Türkiye's projected starters; no Italy absence beyond Mancini's rotation choices was found in the sources checked.
 
 ### Match analysis, tactics and H2H
 
-The Italian federation officially confirmed Bursa's Atatürk Sports Complex for this game. That home setting matters to 1X because Türkiye can press Italy's buildup and use Çalhanoğlu, Güler and Yıldız higher up the pitch instead of defending deep for 90 minutes.
+The Italian federation officially confirmed Bursa's Atatürk Sports Complex for this game. That home setting still matters to 1X because Türkiye can press Italy's buildup and use Güler higher up the pitch instead of defending deep for 90 minutes, even with Çalhanoğlu and Yıldız now missing from the squad.
 
 Italy own the stronger historical series. Recent meetings include Italy's 3-0 Euro 2020 win and a 0-0 friendly in June 2024. Those matches came under different conditions, but they show why Italian control in midfield cannot be ignored.
 
@@ -50,7 +50,7 @@ Türkiye's 1X line is defeated only by an Italian away win. Bursa and Türkiye's
 
 ### Conclusion
 
-The schedule, venue and tactical matchup lead to the retained position of **Türkiye or Draw (1X) at 1.55**. Its success still depends on the specific game-state and personnel risks identified for Türkiye and Italy; the supplied market and price are unchanged.
+The schedule, venue and tactical matchup lead to the retained position of **Türkiye or Draw (1X) at 1.55**. However, the loss of Çalhanoğlu and Yıldız plus a backup goalkeeper in Bayındır is a genuine risk to Türkiye's control of the game compared with the squad that started against France, and Kökçü's toe doubt adds further uncertainty to the midfield that is supposed to carry the pressing plan; the supplied market and price are unchanged.
 
 **Prediction:** **Türkiye or Draw (1X)**  
 **Odds:** **1.55**`],
@@ -67,12 +67,12 @@ The schedule, venue and tactical matchup lead to the retained position of **Tür
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: "2026-09-28T07:00:00-03:00",
   freshness: {
-    editorialUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
     teamNewsUpdatedAt: updatedAt,
     lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -90,6 +90,11 @@ The schedule, venue and tactical matchup lead to the retained position of **Tür
           "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
           "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "Quotidiano.net — Nations League, Turkey vs Italy: Mancini reshapes the Azzurri squad",
+          "url": "https://sport.quotidiano.net/en/calcio/nations-league-oggi-turchia-italia-formazione-mancini-aceb5d5b",
+          "accessedAt": "2026-09-28T10:00:00Z"
       }
   ],
   matchInfo: {

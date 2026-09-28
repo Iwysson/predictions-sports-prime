@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T07:00:00-03:00";
 
 export const czechiaVsEngland: EditorialPrediction = {
   league: "uefa-nations-league",
@@ -20,7 +20,7 @@ export const czechiaVsEngland: EditorialPrediction = {
 
 England travel to Prague three days after facing world champions Spain at Wembley. Czechia first host Croatia. The second game in a short window makes Matchday 1 recovery part of the final team-news check.
 
-Czechia have concerns in the spine: David Zima and Lukáš Provod are listed injured, Tomáš Souček has a thigh problem and is doubtful, while Tomáš Holeš and David Douděra have carried knocks. England's current list includes doubts/issues around Reece James, Dean Henderson, John Stones, Djed Spence and Jordan Henderson, while Cole Palmer was withdrawn after initially being recalled.
+Czechia have concerns in the spine: David Zima and Lukáš Provod are listed injured, Tomáš Souček is now confirmed out through injury (upgraded from a prior doubt), while Tomáš Holeš and David Douděra have carried knocks. Adam Karabec is also a major doubt after limping off against Croatia on Matchday 1 (source: Yahoo Sports, 28/09/2026). England's current list includes doubts/issues around Reece James, Dean Henderson (unavailable), John Stones, Djed Spence and Jordan Henderson, while Cole Palmer was withdrawn after initially being recalled; Lewis Hall is an available option at left-back after a minor injury scare.
 
 ### Team news, availability and projected lineups
 
@@ -67,12 +67,12 @@ The Prague matchup is priced through the final call of **England to Win + Over 1
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: "2026-09-28T07:00:00-03:00",
   freshness: {
-    editorialUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
     teamNewsUpdatedAt: updatedAt,
     lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -90,6 +90,11 @@ The Prague matchup is priced through the final call of **England to Win + Over 1
           "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
           "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "Yahoo Sports — Czechia vs England: Nations League team news, h2h, odds",
+          "url": "https://uk.sports.yahoo.com/news/czechia-vs-england-nations-league-140015549.html",
+          "accessedAt": "2026-09-28T10:00:00Z"
       }
   ],
   matchInfo: {

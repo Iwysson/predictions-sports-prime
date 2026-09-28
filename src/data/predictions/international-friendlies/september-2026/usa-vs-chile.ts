@@ -1,7 +1,8 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T09:00:00-03:00";
+const teamNewsUpdatedAt = "2026-09-28T09:00:00-03:00";
 
 export const usaVsChile: EditorialPrediction = {
   league: "international-friendlies",
@@ -24,9 +25,9 @@ This is a younger and altered U.S. group. Christian Pulisic and Weston McKennie 
 
 ### Team news, availability and projected lineups
 
-**USA (projected 4-2-3-1):** goalkeeper from Pochettino's 28-man group; available first-choice defenders from the camp; Yunus Musah among the midfield options; a younger attacking line selected from the current roster, with Damion Downs among the centre-forward choices.
+**USA (projected 4-2-3-1):** goalkeeper from Pochettino's 28-man group; per U.S. outlets covering the camp, Antonee Robinson, Julian Hall, Sergino Dest and Sebastian Berhalter are likely starters, with Yunus Musah among the midfield options; younger players who featured against Peru — Cavan Sullivan, Justin Ellis, Peyton Miller — plus Adri Mehmeti, Neil Pierre and Zavier Gozo are reported as candidates for further minutes, with Damion Downs among the centre-forward choices.
 
-**Chile (projected 4-3-3/4-2-3-1):** goalkeeper from the current senior squad; experienced defensive structure; three central midfielders or a double pivot; mobile attackers looking to exploit transitions.
+**Chile (projected 4-3-3/4-2-3-1):** goalkeeper from the current senior squad, with Lawrence Vigouroux (Swansea City) noted for his distribution; a significant team-news update since publication — Chile lost 1-0 to Canada in Toronto and had two players sent off before the 50th minute. Forward Lucas Cepeda and captain Gabriel Suazo are reported suspended for the Chile match as a result and are unavailable; Ben Brereton Díaz is highlighted as a wide threat among the remaining attacking options.
 
 ### Match analysis, tactics and H2H
 
@@ -63,12 +64,12 @@ Balancing the projected personnel with the stated failure mode leaves **USA -1.5
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: updatedAt,
   freshness: {
-    editorialUpdatedAt: updatedAt,
-    teamNewsUpdatedAt: updatedAt,
-    lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
+    teamNewsUpdatedAt: teamNewsUpdatedAt,
+    lineupUpdatedAt: teamNewsUpdatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -81,6 +82,11 @@ Balancing the projected personnel with the stated failure mode leaves **USA -1.5
           "name": "U.S. Soccer — official fall camp reporting",
           "url": "https://www.ussoccer.com/stories/2026/09/usmnt-fall-camp-everything-you-need-to-know",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "NBC Sports — USA vs Chile team news, incl. Chile suspensions after red cards vs Canada",
+          "url": "https://www.nbcsports.com/soccer/news/how-to-watch-usa-vs-chile-stream-tv-channel-team-news-prediction",
+          "accessedAt": "2026-09-28T09:00:00-03:00"
       }
   ],
   matchInfo: {

@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T07:15:00-03:00";
 
 export const sloveniaVsNorthMacedonia: EditorialPrediction = {
   league: "uefa-nations-league-b",
@@ -29,6 +29,8 @@ The group pairs a Slovenia side that remained in League B with a North Macedonia
 **North Macedonia (projected 4-2-3-1/3-4-2-1):** Stole Dimitrievski; a defense selected without injured Nikola Serafimov; midfield from Sedloski's current group; experienced attacking creators supporting the chosen striker.
 
 These are projected roles, not confirmed lineups, because both sides have a Matchday 1 fixture first.
+
+**Post-Matchday 1 update (28 September 2026):** Slovenia drew 0-0 with Scotland; Vanja Drkušić was injured during that match and is ruled out, with David Zec the likely replacement. Beno Šeško remains unavailable with his recurring shin problem, and Andraž Šporar could miss out again, leaving Žan Vipotnik (Swansea City) an option to lead the line; Jan Oblak is on course to start what would be his 86th cap. North Macedonia lost 3-0 to Switzerland without further injury concerns, but Nikola Serafimov (elbow) remains out; captain Enis Bardhi is expected to retain his place for what would be his 84th appearance. No changes to the published pick or odds are warranted by this update.
 
 ### Match analysis, tactics and H2H
 
@@ -67,12 +69,12 @@ Slovenia against North Macedonia leaves a clear settlement test: **Slovenia to W
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: "2026-09-28T07:15:00-03:00",
   freshness: {
-    editorialUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
     teamNewsUpdatedAt: updatedAt,
     lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -90,6 +92,11 @@ Slovenia against North Macedonia leaves a clear settlement test: **Slovenia to W
           "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
           "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "Sports Mole — Slovenia vs North Macedonia preview, team news and lineups",
+          "url": "https://www.sportsmole.co.uk/football/slovenia/preview/slovenia-vs-n-macedonia-prediction-team-news-lineups_605881.html",
+          "accessedAt": "2026-09-28T07:15:00-03:00"
       }
   ],
   matchInfo: {

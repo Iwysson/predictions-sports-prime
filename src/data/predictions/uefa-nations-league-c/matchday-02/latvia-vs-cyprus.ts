@@ -1,7 +1,7 @@
 import type { EditorialPrediction } from "@/types";
 
 const publishedAt = "2026-09-25T07:15:00-03:00";
-const updatedAt = "2026-09-25T07:15:00-03:00";
+const updatedAt = "2026-09-28T07:15:00-03:00";
 
 export const latviaVsCyprus: EditorialPrediction = {
   league: "uefa-nations-league-c",
@@ -29,6 +29,8 @@ Both nations came into Group C2 from the lower half of the European internationa
 **Cyprus (projected 4-2-3-1):** goalkeeper from the current group; conventional back four; two central midfielders; three supporting attackers behind the selected centre-forward.
 
 No future Matchday 2 absence is invented here. Official reports after Armenia–Latvia and Montenegro–Cyprus should replace any provisional status.
+
+**Post-Matchday 1 update (28 September 2026):** Latvia lost 2-0 away to Armenia and Cyprus lost 2-1 away to Montenegro, leaving both sides on zero points. Latvia's injury list remains extensive, with Renārs Varslavāns, Jānis Ikaunieks, Kristaps Grabovskis, Kristers Tobers, Dario Sits, Alvis Jaunzems, Bruno Melnis and Emils Birka all unavailable; manager Paulo Nicolato may rotate, with Oskars Vientiess, Roberts Uldrikis and Maksims Toniševs among the options to come into the XI. Cyprus picked up no further injury concerns against Montenegro but remain without Konstantinos Laifis. No changes to the published pick or odds are warranted by this update.
 
 ### Match analysis, tactics and H2H
 
@@ -65,12 +67,12 @@ Latvia against Cyprus leaves a clear settlement test: **Under 2.5 Goals at 1.65*
   },
   published: true,
   publishedAt: "2026-09-25T07:15:00-03:00",
-  updatedAt: "2026-09-25T07:15:00-03:00",
+  updatedAt: "2026-09-28T07:15:00-03:00",
   freshness: {
-    editorialUpdatedAt: updatedAt,
+    editorialUpdatedAt: "2026-09-25T07:15:00-03:00",
     teamNewsUpdatedAt: updatedAt,
     lineupUpdatedAt: updatedAt,
-    statisticsUpdatedAt: updatedAt,
+    statisticsUpdatedAt: "2026-09-25T07:15:00-03:00",
   },
   sourceStatus: "partial",
   sources: [
@@ -88,6 +90,11 @@ Latvia against Cyprus leaves a clear settlement test: **Under 2.5 Goals at 1.65*
           "name": "UEFA — official 2026/27 Nations League fixtures and competition context",
           "url": "https://www.uefa.com/uefanationsleague/news/02a9-21a4f1803092-7aad154369dc-1000/",
           "accessedAt": "2026-09-25T07:15:00-03:00"
+      },
+      {
+          "name": "Sports Mole — Latvia vs Cyprus preview, team news and lineups",
+          "url": "https://www.sportsmole.co.uk/football/latvia/uefa-nations-league/preview/latvia-vs-cyprus-prediction-team-news-lineups_605834.html",
+          "accessedAt": "2026-09-28T07:15:00-03:00"
       }
   ],
   matchInfo: {
