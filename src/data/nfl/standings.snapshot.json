@@ -1,7 +1,7 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-09-27T21:19:33.230Z",
+  "generatedAt": "2026-09-28T05:21:12.764Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
@@ -44,7 +44,7 @@
     },
     {
       "teamId": "lv",
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
       "ties": 0,
       "winPct": 1,
@@ -52,7 +52,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "cin",
+      "teamId": "bal",
       "wins": 2,
       "losses": 1,
       "ties": 0,
@@ -61,7 +61,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "cle",
+      "teamId": "den",
       "wins": 2,
       "losses": 1,
       "ties": 0,
@@ -70,20 +70,20 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "bal",
-      "wins": 1,
+      "teamId": "cin",
+      "wins": 2,
       "losses": 1,
       "ties": 0,
-      "winPct": 0.5,
+      "winPct": 0.6666667,
       "conferenceRank": 8,
       "playoffStatus": "none"
     },
     {
-      "teamId": "den",
-      "wins": 1,
+      "teamId": "cle",
+      "wins": 2,
       "losses": 1,
       "ties": 0,
-      "winPct": 0.5,
+      "winPct": 0.6666667,
       "conferenceRank": 9,
       "playoffStatus": "none"
     },
@@ -152,7 +152,7 @@
     },
     {
       "teamId": "min",
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
       "ties": 0,
       "winPct": 1,
@@ -161,7 +161,7 @@
     },
     {
       "teamId": "sf",
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
       "ties": 0,
       "winPct": 1,
@@ -178,11 +178,11 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "no",
+      "teamId": "car",
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "winPct": 0.5,
+      "winPct": 0.33333334,
       "conferenceRank": 4,
       "playoffStatus": "in-playoff-position"
     },
@@ -214,7 +214,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "lar",
+      "teamId": "chi",
       "wins": 1,
       "losses": 1,
       "ties": 0,
@@ -223,39 +223,21 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "chi",
+      "teamId": "lar",
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "winPct": 0.5,
+      "winPct": 0.33333334,
       "conferenceRank": 9,
       "playoffStatus": "none"
     },
     {
       "teamId": "dal",
       "wins": 1,
-      "losses": 1,
-      "ties": 0,
-      "winPct": 0.5,
-      "conferenceRank": 10,
-      "playoffStatus": "none"
-    },
-    {
-      "teamId": "ari",
-      "wins": 1,
-      "losses": 1,
-      "ties": 0,
-      "winPct": 0.5,
-      "conferenceRank": 11,
-      "playoffStatus": "none"
-    },
-    {
-      "teamId": "car",
-      "wins": 1,
       "losses": 2,
       "ties": 0,
       "winPct": 0.33333334,
-      "conferenceRank": 12,
+      "conferenceRank": 10,
       "playoffStatus": "none"
     },
     {
@@ -264,7 +246,7 @@
       "losses": 2,
       "ties": 0,
       "winPct": 0.33333334,
-      "conferenceRank": 13,
+      "conferenceRank": 11,
       "playoffStatus": "none"
     },
     {
@@ -273,11 +255,29 @@
       "losses": 2,
       "ties": 0,
       "winPct": 0.33333334,
-      "conferenceRank": 14,
+      "conferenceRank": 12,
+      "playoffStatus": "none"
+    },
+    {
+      "teamId": "no",
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "winPct": 0.33333334,
+      "conferenceRank": 13,
       "playoffStatus": "none"
     },
     {
       "teamId": "gb",
+      "wins": 1,
+      "losses": 2,
+      "ties": 0,
+      "winPct": 0.33333334,
+      "conferenceRank": 14,
+      "playoffStatus": "none"
+    },
+    {
+      "teamId": "ari",
       "wins": 1,
       "losses": 2,
       "ties": 0,
@@ -288,7 +288,7 @@
     {
       "teamId": "tb",
       "wins": 0,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
       "winPct": 0,
       "conferenceRank": 16,
