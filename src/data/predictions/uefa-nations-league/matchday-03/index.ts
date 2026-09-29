@@ -5,6 +5,7 @@ import { denmarkVsPortugal } from "./denmark-vs-portugal";
 import { franceVsItaly } from "./france-vs-italy";
 import { germanyVsSerbia } from "./germany-vs-serbia";
 import { walesVsNorway } from "./wales-vs-norway";
+import { spainVsCzechia } from "./spain-vs-czechia";
 
 export const uefaNationsLeagueMatchday03 = [
   greeceVsNetherlands,
@@ -14,4 +15,5 @@ export const uefaNationsLeagueMatchday03 = [
   franceVsItaly,
   germanyVsSerbia,
   walesVsNorway,
+  spainVsCzechia,
 ];

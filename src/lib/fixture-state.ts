@@ -69,6 +69,14 @@ export function fixtureKickoffMillis(fixture: FixtureStateInput) {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
+// When no time is available at all, fall back to a date-only comparison —
+// but only once the fixture's date is unambiguously a prior calendar day.
+// Same-day-with-no-time stays "unknown" rather than guessing a time of day.
+function isClearlyPastByDateOnly(fixture: FixtureStateInput, now: Date | string) {
+  if (!fixture.date || !/^\d{4}-\d{2}-\d{2}$/.test(fixture.date)) return false;
+  return fixture.date < dateInTimeZone(now);
+}
+
 export function classifyFixture(
   fixture: FixtureStateInput,
   now: Date | string = new Date(),
@@ -94,7 +102,10 @@ export function classifyFixture(
     return "live";
   }
   if (status === "scheduled" || status === "rescheduled" || !status) {
-    if (kickoff === null) return status === "rescheduled" ? "rescheduled" : status ? "scheduled" : "unknown";
+    if (kickoff === null) {
+      if (isClearlyPastByDateOnly(fixture, now)) return "stale-schedule";
+      return status === "rescheduled" ? "rescheduled" : status ? "scheduled" : "unknown";
+    }
     const current = new Date(now).valueOf();
     if (kickoff <= current - staleGraceMs) return "stale-schedule";
     return status === "rescheduled" ? "rescheduled" : "scheduled";

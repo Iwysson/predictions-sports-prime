@@ -9,18 +9,28 @@ import { localTodayISO, resolveHomeTemporalBucket } from "@/lib/match-feed";
 import type { Match, MatchPreview } from "@/types";
 import { localePath, matchPredictionAnchor, type SeoLocale } from "@/lib/seo-locales";
 import { localizeRoundText } from "@/lib/localized-presentation";
-import { isFutureFixture } from "@/lib/fixture-state";
+import { isFixtureHistoryEligible, isFutureFixture } from "@/lib/fixture-state";
 
 function uniqueMatches(matches: MatchPreview[]) {
   return [...new Map(matches.map((match) => [match.slug, match])).values()];
 }
 
+/** Has a confirmed final score — used only to render a scoreline. */
 function isCompleted(match: MatchPreview | Match) {
   return isHistoryEligibleFixture({
     status: match.fixtureStatus,
     homeScore: match.homeScore,
     awayScore: match.awayScore,
   });
+}
+
+/**
+ * Kickoff (timezone-aware, per league) has passed — the canonical signal for
+ * removing a match from every active/upcoming surface, independent of
+ * whether a final score has been recorded yet.
+ */
+function isArchived(match: MatchPreview | Match) {
+  return isFixtureHistoryEligible(match);
 }
 
 const hubCopy: Record<SeoLocale, { overview: string; awaiting: string; fixtures: string; published: string; completed: string; today: string; upcoming: string; prediction: string; preview: string; latest: string; read: string; allListed: string; recent: string; review: string; archived: string; unpublished: string }> = {
@@ -116,7 +126,7 @@ export function LeagueEditorialHub({
 
   if (!now) {
     const staticLatest = [...discoverablePublishedMatches]
-      .filter((match) => !isCompleted(match))
+      .filter((match) => !isArchived(match))
       .sort((left, right) =>
         (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") ||
         right.date.localeCompare(left.date)
@@ -207,7 +217,7 @@ export function LeagueEditorialHub({
   });
   const activeSlugs = new Set([...todayMatches, ...upcomingMatches].map((match) => match.slug));
   const latest = [...discoverablePublishedMatches]
-    .filter((match) => !activeSlugs.has(match.slug) && !isCompleted(match))
+    .filter((match) => !activeSlugs.has(match.slug) && !isArchived(match))
     .sort((left, right) =>
       (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") || right.date.localeCompare(left.date)
     )

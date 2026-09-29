@@ -16,9 +16,9 @@ import { standingsByLeague } from "@/data/standings";
 import { localizedAlternates } from "@/lib/international-seo";
 import { absoluteUrl } from "@/lib/site-config";
 import { toMatchPreview } from "@/lib/editorial";
-import { findFixtureForPrediction, loadLeagueSeason } from "@/lib/openfootball";
+import { loadLeagueSeason } from "@/lib/openfootball";
 import { buildCompetitionRoundSurface } from "@/lib/competition-rounds";
-import { classifyFixture, isActiveFixtureState } from "@/lib/fixture-state";
+import { isFixtureHistoryEligible } from "@/lib/fixture-state";
 import {
   indexableLocalizedHubLocaleSlugs,
   isIndexableLocalizedHubLocale,
@@ -113,12 +113,11 @@ export default async function LocalizedLeague({
       .map((match) => match.slug)
   );
 
+  // Kickoff-based split (timezone-aware, per league): a match whose kickoff
+  // has already passed is archived, never shown alongside active fixtures,
+  // regardless of whether an automated fixture feed exists for this league.
   const surfacedPublishedMatches = [...publishedMatches]
-    .filter((match) => {
-      if (activePublishedSlugs.has(match.slug)) return false;
-      const fixture = findFixtureForPrediction(fixtureRounds, match);
-      return fixture && isActiveFixtureState(classifyFixture(fixture));
-    })
+    .filter((match) => !activePublishedSlugs.has(match.slug) && !isFixtureHistoryEligible(match))
     .sort(
       (left, right) =>
         left.date.localeCompare(right.date) ||
@@ -127,17 +126,13 @@ export default async function LocalizedLeague({
     );
 
   const archivedPublishedMatches = [...publishedMatches]
-    .filter((match) => {
-      if (activePublishedSlugs.has(match.slug)) return false;
-      const fixture = findFixtureForPrediction(fixtureRounds, match);
-      return !fixture || !isActiveFixtureState(classifyFixture(fixture));
-    })
+    .filter((match) => !activePublishedSlugs.has(match.slug) && isFixtureHistoryEligible(match))
     .sort(
       (left, right) =>
         (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") ||
         left.title.localeCompare(right.title)
     )
-    .slice(0, 4);
+    .slice(0, 12);
 
   const publishedAnalysisMatches = [
     ...surfacedPublishedMatches,

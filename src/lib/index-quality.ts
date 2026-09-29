@@ -49,7 +49,10 @@ type CurrentDecision = {
   indexable: boolean;
 };
 
-const INTERNAL_NOTE = /\b(?:WAIT LIVE|TODO|FIXME|TBD|PLACEHOLDER|internal note|do not publish|undefined|null)\b/i;
+// "do not publish this" targets an actual internal draft directive. The bare
+// phrase "do not publish" also occurs in legitimate editorial prose (e.g.
+// "sources do not publish all eleven names"), which must not be flagged.
+const INTERNAL_NOTE = /\b(?:WAIT LIVE|TODO|FIXME|TBD|PLACEHOLDER|internal note|do not publish this|undefined|null)\b/i;
 const TRACEABLE_SOURCE = /^https:\/\//i;
 
 function hasInternalNotes(markdown: string) {

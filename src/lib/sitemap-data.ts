@@ -4,6 +4,7 @@ import { leagues, leaguesBySlug } from "@/data/leagues";
 import { matches } from "@/data/matches";
 import { editorialPredictions } from "@/data/predictions";
 import { isAdSenseContentIndexable, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
+import { isFutureFixture } from "@/lib/fixture-state";
 import { isLeagueIndexable } from "@/lib/league-seo";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 import { isIndexableLocalizedHubLocale, localePath, seoLocaleSlugs } from "@/lib/seo-locales";
@@ -177,6 +178,9 @@ export function buildUpcomingMatchesSitemap(): MetadataRoute.Sitemap {
     .filter((match) => {
       if (match.status !== "published") return false;
       if (!isAdSenseContentIndexable(match.slug, editorialPredictions)) return false;
+      // Kickoff has already passed (timezone-aware, per-league): never list in the
+      // upcoming sitemap regardless of the calendar-date window or a recent edit.
+      if (!isFutureFixture(match)) return false;
       const matchDate = match.date ? new Date(match.date) : null;
       const inWindow = matchDate && matchDate >= cutLo && matchDate <= cutHi;
       if (inWindow) return true;

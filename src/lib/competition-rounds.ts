@@ -34,6 +34,7 @@ export const FLAT_FIXTURE_LEAGUES: ReadonlySet<string> = new Set([
   "africa-cup-of-nations-qualifying",
   "gulf-cup",
   "fifa-asean-cup",
+  "msg-prime-ministers-cup",
 ]);
 
 function flattenSurface(
