@@ -18,6 +18,8 @@ import { mozambiqueVsSudan } from "./mozambique-vs-sudan";
 import { somaliaVsCoteDivoire } from "./somalia-vs-cote-divoire";
 import { zambiaVsTogo } from "./zambia-vs-togo";
 import { zimbabweVsDrCongo } from "./zimbabwe-vs-dr-congo";
+import { eritreaVsSouthAfrica } from "./eritrea-vs-south-africa";
+import { guineaVsKenya } from "./guinea-vs-kenya";
 
 export const africaCupOfNationsQualifyingMatchday02 = [
   centralAfricanRepublicVsBurkinaFaso,
@@ -40,4 +42,6 @@ export const africaCupOfNationsQualifyingMatchday02 = [
   somaliaVsCoteDivoire,
   zambiaVsTogo,
   zimbabweVsDrCongo,
+  eritreaVsSouthAfrica,
+  guineaVsKenya,
 ];

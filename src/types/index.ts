@@ -29,7 +29,8 @@ export type LeagueSlug =
   | "international-friendlies"
   | "africa-cup-of-nations-qualifying"
   | "fifa-asean-cup"
-  | "concacaf-nations-league";
+  | "concacaf-nations-league"
+  | "msg-prime-ministers-cup";
 
 export type PredictionItem = {
   label: string;

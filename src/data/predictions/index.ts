@@ -26,6 +26,7 @@ import { africaCupOfNationsQualifyingPredictions } from "./africa-cup-of-nations
 import { internationalFriendliesPredictions } from "./international-friendlies";
 import { fifaAseanCupPredictions } from "./fifa-asean-cup";
 import { concacafNationsLeaguePredictions } from "./concacaf-nations-league";
+import { msgPrimeMinistersCupPredictions } from "./msg-prime-ministers-cup";
 import { applyWave08EditorialDebtRemediation } from "./editorial-debt-remediation";
 
 export const editorialPredictionsRaw = [
@@ -57,6 +58,7 @@ export const editorialPredictionsRaw = [
   ...africaCupOfNationsQualifyingPredictions,
   ...fifaAseanCupPredictions,
   ...concacafNationsLeaguePredictions,
+  ...msgPrimeMinistersCupPredictions,
 ];
 
 export const editorialPredictions = editorialPredictionsRaw.map(applyWave08EditorialDebtRemediation);

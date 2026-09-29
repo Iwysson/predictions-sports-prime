@@ -4,6 +4,7 @@ import { mlsSeptember09 } from "./september-09";
 import { mlsSeptember1213 } from "./september-12-13";
 import { mlsGameweek26 } from "./gameweek-26";
 import { mlsSeptember2327 } from "./september-23-27";
+import { mlsSeptember30October1 } from "./september-30-october-1";
 
 export const mlsPredictions = [
   ...mlsSeptember04,
@@ -12,4 +13,5 @@ export const mlsPredictions = [
   ...mlsSeptember1213,
   ...mlsGameweek26,
   ...mlsSeptember2327,
+  ...mlsSeptember30October1,
 ];

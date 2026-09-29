@@ -125,6 +125,7 @@ export const leagues: LeagueConfig[] = [
   defineLeague({ slug: "fifa-asean-cup", name: "FIFA ASEAN Cup", country: "Southeast Asia", short: "ASEAN", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 4, expectedGamesPerRound: 2, timezone: "Asia/Jakarta" }),
   defineLeague({ slug: "concacaf-nations-league", name: "Concacaf Nations League", country: "North America", short: "CNL", seasonLabel: "2026/27", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 16, expectedGamesPerRound: 8, timezone: "America/New_York" }),
   defineLeague({ slug: "international-friendlies", name: "International Friendlies", country: "International", short: "IF", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 8, expectedGamesPerRound: 4, timezone: "UTC", liveDataId: "fifa.friendly" }),
+  defineLeague({ slug: "msg-prime-ministers-cup", name: "MSG Prime Minister's Cup", country: "Oceania", short: "MSG", seasonLabel: "2026", featured: false, showOnHome: true, manualOnly: true, showStandings: false, expectedClubs: 6, expectedGamesPerRound: 3, timezone: "Pacific/Fiji" }),
 ];
 
 export const leaguesBySlug = Object.fromEntries(
@@ -164,6 +165,7 @@ export const primaryPredictionLeagueSlugs = [
   "africa-cup-of-nations-qualifying",
   "fifa-asean-cup",
   "concacaf-nations-league",
+  "msg-prime-ministers-cup",
 ] as const satisfies readonly LeagueSlug[];
 
 export const primaryPredictionLeagues = primaryPredictionLeagueSlugs.map(

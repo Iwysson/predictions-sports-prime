@@ -12,6 +12,11 @@ import { japanVsEcuador } from "./japan-vs-ecuador";
 import { japanVsVenezuela } from "./japan-vs-venezuela";
 import { southKoreaVsUruguay } from "./south-korea-vs-uruguay";
 import { usaVsChile } from "./usa-vs-chile";
+import { argentinaVsBolivia } from "./argentina-vs-bolivia";
+import { lithuaniaVsAndorra } from "./lithuania-vs-andorra";
+import { mexicoVsPeru } from "./mexico-vs-peru";
+import { seychellesVsSriLanka } from "./seychelles-vs-sri-lanka";
+import { panamaVsNewZealand } from "./panama-vs-new-zealand";
 
 export const internationalFriendliesSeptember2026 = [
   azerbaijanVsTajikistan,
@@ -28,4 +33,9 @@ export const internationalFriendliesSeptember2026 = [
   japanVsVenezuela,
   southKoreaVsUruguay,
   usaVsChile,
+  argentinaVsBolivia,
+  lithuaniaVsAndorra,
+  mexicoVsPeru,
+  seychellesVsSriLanka,
+  panamaVsNewZealand,
 ];
