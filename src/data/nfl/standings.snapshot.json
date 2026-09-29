@@ -1,7 +1,7 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-09-28T05:21:12.764Z",
+  "generatedAt": "2026-09-29T12:49:44.622Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
@@ -70,7 +70,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "cin",
+      "teamId": "cle",
       "wins": 2,
       "losses": 1,
       "ties": 0,
@@ -79,7 +79,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "cle",
+      "teamId": "cin",
       "wins": 2,
       "losses": 1,
       "ties": 0,
@@ -133,7 +133,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "hou",
+      "teamId": "ten",
       "wins": 0,
       "losses": 3,
       "ties": 0,
@@ -142,7 +142,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "ten",
+      "teamId": "hou",
       "wins": 0,
       "losses": 3,
       "ties": 0,
@@ -171,9 +171,9 @@
     {
       "teamId": "phi",
       "wins": 2,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "winPct": 1,
+      "winPct": 0.6666667,
       "conferenceRank": 3,
       "playoffStatus": "in-playoff-position"
     },
@@ -196,7 +196,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "sea",
+      "teamId": "chi",
       "wins": 2,
       "losses": 1,
       "ties": 0,
@@ -205,7 +205,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "nyg",
+      "teamId": "sea",
       "wins": 2,
       "losses": 1,
       "ties": 0,
@@ -214,11 +214,11 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "chi",
-      "wins": 1,
+      "teamId": "nyg",
+      "wins": 2,
       "losses": 1,
       "ties": 0,
-      "winPct": 0.5,
+      "winPct": 0.6666667,
       "conferenceRank": 8,
       "playoffStatus": "none"
     },
@@ -241,7 +241,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "atl",
+      "teamId": "no",
       "wins": 1,
       "losses": 2,
       "ties": 0,
@@ -259,7 +259,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "no",
+      "teamId": "atl",
       "wins": 1,
       "losses": 2,
       "ties": 0,
