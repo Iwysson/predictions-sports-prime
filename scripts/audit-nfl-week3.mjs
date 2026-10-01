@@ -102,8 +102,11 @@ if (existsSync(outDir)) {
   const nflSitemap = readFileSync(join(outDir, "sitemaps", "nfl", "sitemap.xml"), "utf8");
   const upcomingSitemap = readFileSync(join(outDir, "sitemaps", "upcoming-matches", "sitemap.xml"), "utf8");
   const sitemapIndex = readFileSync(join(outDir, "sitemap-index.xml"), "utf8");
-  if ((nflSitemap.match(/<url>/g) ?? []).length !== 17) errors.push("NFL sitemap must contain the hub plus 16 game URLs");
-  if ((upcomingSitemap.match(/\/nfl\//g) ?? []).length !== 16) errors.push("Upcoming sitemap must contain all 16 NFL game URLs");
+  if ((nflSitemap.match(/<url>/g) ?? []).length !== 32) errors.push("NFL sitemap must contain the hub plus all 31 published game URLs");
+  for (const game of nflWeek3Games) {
+    if (!nflSitemap.includes(`/nfl/${game.slug}/`)) errors.push(`${game.id}: historical route missing from NFL sitemap`);
+    if (upcomingSitemap.includes(`/nfl/${game.slug}/`)) errors.push(`${game.id}: historical route must not remain in upcoming sitemap`);
+  }
   if (!sitemapIndex.includes("/sitemaps/nfl/sitemap.xml")) errors.push("NFL sitemap is missing from the sitemap index");
 }
 
