@@ -1,7 +1,7 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-09-29T12:49:44.622Z",
+  "generatedAt": "2026-10-02T12:31:08.062Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
@@ -25,16 +25,16 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "jax",
-      "wins": 2,
+      "teamId": "cle",
+      "wins": 3,
       "losses": 1,
       "ties": 0,
-      "winPct": 0.6666667,
+      "winPct": 0.75,
       "conferenceRank": 3,
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "pit",
+      "teamId": "jax",
       "wins": 2,
       "losses": 1,
       "ties": 0,
@@ -70,7 +70,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "cle",
+      "teamId": "cin",
       "wins": 2,
       "losses": 1,
       "ties": 0,
@@ -79,11 +79,11 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "cin",
+      "teamId": "pit",
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "winPct": 0.6666667,
+      "winPct": 0.5,
       "conferenceRank": 9,
       "playoffStatus": "none"
     },
@@ -241,7 +241,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "no",
+      "teamId": "wsh",
       "wins": 1,
       "losses": 2,
       "ties": 0,
@@ -250,7 +250,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "wsh",
+      "teamId": "no",
       "wins": 1,
       "losses": 2,
       "ties": 0,
