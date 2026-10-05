@@ -184,6 +184,64 @@ code { color: var(--accent); }
   color: var(--muted);
 }
 
+/* Authentication */
+.auth-page { min-height: min(720px, calc(100vh - 62px)); }
+
+.auth-container {
+  display: grid;
+  place-items: start center;
+}
+
+.auth-card {
+  width: min(100%, 520px);
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.auth-card header { margin-bottom: 24px; }
+.auth-card h1 { margin: 0 0 8px; font-size: clamp(28px, 5vw, 38px); }
+.auth-card header p,
+.auth-switch { margin: 0; color: var(--text-secondary); line-height: 1.6; }
+
+.auth-form { display: grid; gap: 10px; }
+.auth-form label { margin-top: 6px; font-size: 13px; font-weight: 800; }
+
+.auth-form input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  color: var(--text-primary);
+  background: var(--surface);
+  font: inherit;
+}
+
+.auth-form input:focus { outline: 3px solid rgba(24, 116, 66, .18); border-color: var(--accent); }
+.auth-form .button { margin-top: 10px; border: 0; cursor: pointer; }
+.auth-form .button:disabled,
+.auth-logout-button:disabled { cursor: wait; opacity: .65; }
+.auth-switch { margin-top: 20px; font-size: 14px; }
+.auth-switch a { color: var(--accent); font-weight: 800; }
+
+.auth-primary-action { display: inline-flex; justify-content: center; }
+.auth-message { margin: 10px 0 0; line-height: 1.5; }
+.auth-message--error { color: var(--danger); }
+.auth-message--warning { color: var(--warning); }
+
+.account-details { display: grid; gap: 10px; margin: 0 0 22px; }
+.account-details div { padding: 13px 14px; border-radius: 8px; background: var(--surface-subtle); }
+.account-details dt { color: var(--text-muted); font-size: 12px; font-weight: 800; text-transform: uppercase; }
+.account-details dd { margin: 5px 0 0; overflow-wrap: anywhere; font-weight: 700; }
+.auth-logout-button { border: 0; cursor: pointer; }
+
+@media (max-width: 520px) {
+  .auth-card { padding: 22px 18px; }
+}
+
 /* Ads */
 .top-ad-space { padding-top: 18px; }
 .inline-ad-space,

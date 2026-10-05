@@ -5,6 +5,7 @@ import { useState } from "react";
 import { RouteLanguageSelector } from "@/components/RouteLanguageSelector";
 import { useI18n } from "@/i18n/I18nProvider";
 import type { SeoLocale } from "@/lib/seo-locales";
+import { useAuth } from "@/auth/AuthProvider";
 
 type HeaderNavItem = {
   href: string;
@@ -36,6 +37,10 @@ export function SiteHeader({
   localized = false,
 }: SiteHeaderProps) {
   const [open, setOpen] = useState(false);
+  const { isAuthenticated } = useAuth();
+  const accountItem = isAuthenticated
+    ? { href: "/account/", label: "My Account" }
+    : { href: "/login/", label: "Login" };
 
   return (
     <header className={`site-header${localized ? " localized-site-header" : ""}`}>
@@ -67,6 +72,7 @@ export function SiteHeader({
                 {item.label}
               </Link>
             ))}
+            <Link href={accountItem.href}>{accountItem.label}</Link>
           </nav>
 
           <RouteLanguageSelector currentLocale={currentLocale} />
@@ -103,6 +109,9 @@ export function SiteHeader({
                 {item.label}
               </Link>
             ))}
+            <Link href={accountItem.href} onClick={() => setOpen(false)}>
+              {accountItem.label}
+            </Link>
           </div>
         </nav>
       ) : null}

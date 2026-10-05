@@ -14,6 +14,7 @@ import { organizationJsonLd } from "@/lib/seo";
 import { localizedWebsiteJsonLd } from "@/lib/international-seo";
 import { isSeoLocale, seoLocaleSlugs, seoLocales } from "@/lib/seo-locales";
 import { siteConfig } from "@/lib/site-config";
+import { AuthProvider } from "@/auth/AuthProvider";
 
 export const dynamicParams = false;
 
@@ -49,12 +50,14 @@ export default async function LocalizedRootLayout({ children, params }: Readonly
       <body>
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={localizedWebsiteJsonLd(locale)} />
-        <I18nProvider initialLocale={dictionaryLocale(locale)}>
-          <LocalizedHeader locale={locale} />
-          <InternationalAudienceNotice />
-          <main>{children}</main>
-          <LocalizedFooter locale={locale} />
-        </I18nProvider>
+        <AuthProvider>
+          <I18nProvider initialLocale={dictionaryLocale(locale)}>
+            <LocalizedHeader locale={locale} />
+            <InternationalAudienceNotice />
+            <main>{children}</main>
+            <LocalizedFooter locale={locale} />
+          </I18nProvider>
+        </AuthProvider>
         <AdsterraSocialBar />
         <SiteAnalytics />
       </body>

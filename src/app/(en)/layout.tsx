@@ -9,6 +9,7 @@ import { ConsentIntegration } from "@/components/consent/ConsentIntegration";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import { JsonLd } from "@/components/JsonLd";
+import { AuthProvider } from "@/auth/AuthProvider";
 import {
   organizationJsonLd,
   websiteJsonLd,
@@ -126,12 +127,14 @@ export default function RootLayout({
         <JsonLd data={websiteJsonLd()} />
         <JsonLd data={organizationJsonLd()} />
 
-        <I18nProvider>
-          <Header />
-          <InternationalAudienceNotice />
-          <main>{children}</main>
-          <Footer />
-        </I18nProvider>
+        <AuthProvider>
+          <I18nProvider>
+            <Header />
+            <InternationalAudienceNotice />
+            <main>{children}</main>
+            <Footer />
+          </I18nProvider>
+        </AuthProvider>
         <AdsterraSocialBar />
         <SiteAnalytics />
       </body>
