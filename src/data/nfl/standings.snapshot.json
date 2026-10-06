@@ -1,7 +1,7 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-10-06T00:01:35.928Z",
+  "generatedAt": "2026-10-06T18:20:15.164Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
@@ -133,7 +133,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "ten",
+      "teamId": "hou",
       "wins": 0,
       "losses": 4,
       "ties": 0,
@@ -142,7 +142,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "hou",
+      "teamId": "ten",
       "wins": 0,
       "losses": 4,
       "ties": 0,
@@ -214,7 +214,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "det",
+      "teamId": "atl",
       "wins": 2,
       "losses": 2,
       "ties": 0,
@@ -223,7 +223,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "gb",
+      "teamId": "det",
       "wins": 2,
       "losses": 2,
       "ties": 0,
@@ -232,7 +232,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "phi",
+      "teamId": "gb",
       "wins": 2,
       "losses": 2,
       "ties": 0,
@@ -241,7 +241,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "dal",
+      "teamId": "phi",
       "wins": 2,
       "losses": 2,
       "ties": 0,
@@ -250,25 +250,25 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "atl",
-      "wins": 1,
+      "teamId": "dal",
+      "wins": 2,
       "losses": 2,
       "ties": 0,
-      "winPct": 0.33333334,
+      "winPct": 0.5,
       "conferenceRank": 12,
       "playoffStatus": "none"
     },
     {
-      "teamId": "no",
+      "teamId": "wsh",
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "winPct": 0.33333334,
+      "winPct": 0.25,
       "conferenceRank": 13,
       "playoffStatus": "none"
     },
     {
-      "teamId": "wsh",
+      "teamId": "no",
       "wins": 1,
       "losses": 3,
       "ties": 0,
