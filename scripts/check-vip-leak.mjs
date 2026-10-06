@@ -18,8 +18,16 @@ const corpus = files.map((f) => ({ f, text: readFileSync(f, "utf8") }));
 // Those are reported separately and verified by count against the public pages.
 const publicPicks = new Set(index.filter((e) => e.predictionAccess === "free").map((e) => e.prediction.main));
 const ambiguous = [];
-const freeMultiplePicks = new Set(["New Jersey Devils to win", "Over 5.5 Goals"]);
-const freeMultipleMarker = "NHL BEST MULTIPLE TODAY";
+// Legs of the FREE accumulators. Their picks may appear only inside the multiple's own block.
+// The Colorado leg is intentional: the accumulator is independent from the individual match.
+const freeMultiplePicks = new Set([
+  "New Jersey Devils to win",
+  "Over 5.5 Goals",
+  "Colorado Avalanche to Win",
+  "Cruzeiro X1 + Over 1.5 Goals",
+]);
+const freeMultipleMarkers = ["NHL BEST MULTIPLE TODAY", "NHL + FOOTBALL BEST MULTIPLE TODAY"];
+const freeMultipleMarker = freeMultipleMarkers[1];
 
 const needles = [];
 for (const e of index) {
@@ -46,7 +54,7 @@ for (const n of needles) {
 }
 for (const pick of freeMultiplePicks) {
   for (const { f, text } of corpus) {
-    if (text.includes(pick) && !text.includes(freeMultipleMarker)) {
+    if (text.includes(pick) && !freeMultipleMarkers.some((marker) => text.includes(marker))) {
       leaks.push({ slug: "nhl-best-multiple", kind: "pick-outside-free-multiple", text: pick, file: f });
     }
   }

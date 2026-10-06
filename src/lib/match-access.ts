@@ -44,6 +44,8 @@ export type ProtectedContentEntry = {
   predictionAccess: PredictionAccess;
   full: FullMatchView;
   prediction: { main: string; odds: number | null };
+  // NHL day key (YYYY-MM-DD, America/New_York) before which the endpoint returns not-found.
+  activeFromKey?: string;
 };
 
 // A prediction is publishable only with a recorded kickoff in the future.

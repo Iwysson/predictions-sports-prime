@@ -31,6 +31,19 @@ const json = (body, status = 200) =>
     },
   });
 
+// NHL day in America/New_York (same rule as src/lib/nhl-day.ts). Compared as YYYY-MM-DD strings.
+const NHL_TIME_ZONE = "America/New_York";
+const nhlDayParts = new Intl.DateTimeFormat("en-US", {
+  timeZone: NHL_TIME_ZONE,
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+const nhlTodayKey = (now = new Date()) => {
+  const parts = Object.fromEntries(nhlDayParts.formatToParts(now).map((p) => [p.type, p.value]));
+  return `${parts.year}-${parts.month}-${parts.day}`;
+};
+
 const isVipRow = (row) =>
   row?.plan === "vip" &&
   ["trialing", "active"].includes(row?.subscription_status ?? "");
@@ -43,6 +56,11 @@ export function createMatchContentHandler(index) {
       const entry = index.find((e) => e.slug === slug);
 
       if (!entry) {
+        return json({ error: "not-found" }, 404);
+      }
+
+      // Not yet active: same answer as an unknown slug, so nothing about the future day leaks.
+      if (entry.activeFromKey && nhlTodayKey() < entry.activeFromKey) {
         return json({ error: "not-found" }, 404);
       }
 

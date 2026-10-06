@@ -4655,6 +4655,11 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .psp-badge--free { background: color-mix(in srgb, var(--success) 14%, var(--surface)); color: var(--success); border: 1px solid color-mix(in srgb, var(--success) 40%, var(--border)); }
 .psp-badge--vip { background: #1d1a12; color: #f3d98b; border: 1px solid #8a6d20; }
 .psp-badge--best { background: #fff3c4; color: #6a4d00; border: 1px solid #d6a900; }
+/* LIVE is match state, shown next to the access badge. Text carries the meaning; color is secondary. */
+.match-status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .04em; color: #fff; background: #c81e1e; border: 1px solid #8f1414; white-space: nowrap; }
+.match-status-badge__dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 0 rgba(255,255,255,.7); }
+@media (prefers-reduced-motion: no-preference) { .match-status-badge__dot { animation: match-status-pulse 1.8s ease-out infinite; } }
+@keyframes match-status-pulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,.7); } 100% { box-shadow: 0 0 0 7px rgba(255,255,255,0); } }
 .access-badge { display: inline-flex; align-items: center; max-width: 100%; padding: 5px 11px; border-radius: 999px; font-size: 12px; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .access-badge--free { background: #bbf7d0; color: #052e16; border: 1px solid #16a34a; }
 .access-badge--best { background: #fff3c4; color: #6a4d00; border: 1px solid #d6a900; }

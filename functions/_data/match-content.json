@@ -2962,5 +2962,49 @@
       "main": "Florida Panthers to win",
       "odds": 1.72
     }
+  },
+  {
+    "slug": "colorado-avalanche-vs-winnipeg-jets",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Colorado has opened the season 2-0-0 and comes from a dominant 6-1 win over St. Louis. The Avalanche finished 2025/26 with 121 points, 39 more than Winnipeg, while Nathan MacKinnon has already started the new campaign with five points.",
+        "The 2025/26 head-to-head finished 2-2, but Winnipeg now plays without Connor Hellebuyck. Colorado arrives with the stronger recent performance, the higher offensive ceiling and a clear advantage based on last season's overall level."
+      ],
+      "sources": [],
+      "comment": null,
+      "picks": {
+        "main": "Colorado Avalanche to Win",
+        "odds": 1.65
+      }
+    },
+    "prediction": {
+      "main": "Colorado Avalanche to Win",
+      "odds": 1.65
+    },
+    "activeFromKey": "2026-10-07"
+  },
+  {
+    "slug": "edmonton-oilers-vs-anaheim-ducks",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Edmonton enters with the stronger high-end offensive core and has already shown it can win without needing a shootout, beating Seattle 3-1. Connor McDavid and Leon Draisaitl remain capable of deciding close games even when Edmonton is not at full strength.",
+        "Anaheim has started well but Troy Terry is unavailable, while Edmonton is missing Zach Hyman and Ryan Nugent-Hopkins. Those absences make the moneyline more attractive than a high total: Edmonton can cover this selection through a controlled 3-1 or 3-2 type of game."
+      ],
+      "sources": [],
+      "comment": null,
+      "picks": {
+        "main": "Edmonton Oilers to Win",
+        "odds": 1.87
+      }
+    },
+    "prediction": {
+      "main": "Edmonton Oilers to Win",
+      "odds": 1.87
+    },
+    "activeFromKey": "2026-10-07"
   }
 ]
