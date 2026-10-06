@@ -51,10 +51,11 @@ export function nhlMatches(): NhlMatch[] {
   });
 }
 
+// Evergreen static metadata: the static export cannot date it, so the day lives only in the client H1.
 export const NHL_PAGE = {
-  title: "NHL Predictions Today – October 6, 2026 | Predictions Sports Prime",
+  title: "NHL Predictions Today | Predictions Sports Prime",
   description:
-    "NHL predictions for October 6, 2026, including matchup analysis for Sabres vs Wild, Red Wings vs Senators, Devils vs Mammoth and more.",
+    "Today's NHL predictions, statistical analysis, free picks and PRIME VIP insights from Predictions Sports Prime.",
   path: "/nhl/",
-  h1: "NHL Predictions Today – October 6, 2026",
+  h1: "NHL Predictions Today",
 };

@@ -11,7 +11,7 @@ import { absoluteUrl } from "@/lib/site-config";
 
 // The NHL day is not frozen at build time. The static HTML shows the day that is current when it
 // was built; the client then switches to the NHL day (America/New_York) on load and every minute.
-// Metadata and JSON-LD below keep the build-time day until a rebuild.
+// Metadata is evergreen and has no date. JSON-LD carries no day either.
 export const metadata: Metadata = {
   title: { absolute: NHL_PAGE.title },
   description: NHL_PAGE.description,

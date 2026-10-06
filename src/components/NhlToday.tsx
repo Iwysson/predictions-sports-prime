@@ -10,8 +10,48 @@ import { TeamBadge } from "@/components/TeamBadge";
 import { resolveNhlSlate } from "@/data/nhl/slates";
 import { translate } from "@/i18n/dictionaries";
 import { formatNhlDayLabel, getNhlTodayKey } from "@/lib/nhl-day";
-import { liveStatusFor } from "@/lib/nhl-live";
+import { findLiveGame, liveBadgeText, type LiveGame } from "@/lib/nhl-live";
 import { sortNhlMatches, type NhlPublicMatch, type NhlPublicMultiple } from "@/lib/nhl-slates";
+
+// Live games for the given NHL day, from the runtime endpoint only. Polls every 60s, or every 30s
+// while a game is live; skips polling while the tab is hidden. Any failure clears the list, so a
+// stale LIVE is never kept on screen.
+export function useNhlLiveGames(dayKey: string): LiveGame[] {
+  const [games, setGames] = useState<LiveGame[]>([]);
+  useEffect(() => {
+    let timer: number | undefined;
+    let cancelled = false;
+    const load = async () => {
+      let nextMs = 60_000;
+      if (!document.hidden) {
+        try {
+          const res = await fetch("/api/nhl/status", { cache: "no-store" });
+          const body = res.ok ? await res.json() : null;
+          const valid = body?.state === "ok" && body?.date === dayKey && Array.isArray(body?.games);
+          if (!cancelled) setGames(valid ? (body.games as LiveGame[]) : []);
+          if (valid && body.games.some((g: LiveGame) => g.state === "live")) nextMs = 30_000;
+        } catch {
+          if (!cancelled) setGames([]);
+        }
+      }
+      if (!cancelled) timer = window.setTimeout(load, nextMs);
+    };
+    const onVisible = () => {
+      if (!document.hidden) {
+        window.clearTimeout(timer);
+        load();
+      }
+    };
+    load();
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, [dayKey]);
+  return games;
+}
 
 // The NHL day is decided only by lib/nhl-day (America/New_York). The key is re-checked every
 // minute, so the slate switches at 00:00 ET without a rebuild, a purge or a reload. The first
@@ -78,7 +118,7 @@ function MultipleLeg({ first, leg }: { first: boolean; leg: NhlPublicMultiple["l
   );
 }
 
-function GameCard({ m, dayLabel }: { m: NhlPublicMatch; dayLabel: string }) {
+function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: string; liveGames: LiveGame[] }) {
   const isFree = m.access === "free";
   const badgeItem = {
     predictionAccess: isFree ? ("free" as const) : ("vip" as const),
@@ -90,7 +130,7 @@ function GameCard({ m, dayLabel }: { m: NhlPublicMatch; dayLabel: string }) {
       <div className="psp-game__head">
         <div className="psp-game__badges">
           <AccessBadge item={badgeItem} />
-          <MatchStatusBadge status={liveStatusFor(m.slug)} />
+          <MatchStatusBadge text={liveBadgeText(findLiveGame(liveGames, m.homeTeam, m.awayTeam))} />
         </div>
         <p className="psp-game__meta">
           <NhlLeagueMark compact />
@@ -136,6 +176,7 @@ function GameCard({ m, dayLabel }: { m: NhlPublicMatch; dayLabel: string }) {
 // The whole NHL page body for the active day. The H1 and every card follow the same key.
 export function NhlDaySlate({ initialKey }: { initialKey: string }) {
   const dayKey = useNhlTodayKey(initialKey);
+  const liveGames = useNhlLiveGames(dayKey);
   const slate = resolveNhlSlate(dayKey);
   if (!slate) return null;
 
@@ -180,7 +221,7 @@ export function NhlDaySlate({ initialKey }: { initialKey: string }) {
             <h2 id="nhl-free-analyses">Free analyses</h2>
           </div>
           <div className="psp-games">
-            {free.map((m) => <GameCard key={m.slug} m={m} dayLabel={dayLabel} />)}
+            {free.map((m) => <GameCard key={m.slug} m={m} dayLabel={dayLabel} liveGames={liveGames} />)}
           </div>
         </section>
       ) : null}
@@ -192,7 +233,7 @@ export function NhlDaySlate({ initialKey }: { initialKey: string }) {
             <h2 id="nhl-vip-analyses">PRIME VIP analyses</h2>
           </div>
           <div className="psp-games">
-            {protectedGames.map((m) => <GameCard key={m.slug} m={m} dayLabel={dayLabel} />)}
+            {protectedGames.map((m) => <GameCard key={m.slug} m={m} dayLabel={dayLabel} liveGames={liveGames} />)}
           </div>
         </section>
       ) : null}

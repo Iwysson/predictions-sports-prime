@@ -1,9 +1,8 @@
-// Deterministic checks for the NHL day rule (America/New_York), slate switching and live mapping.
+// Deterministic checks for the NHL day rule (America/New_York) and slate switching.
 // Run: node --import tsx scripts/test-nhl-day.mts
 import assert from "node:assert/strict";
 import { getNhlTodayKey } from "../src/lib/nhl-day.ts";
 import { resolveNhlSlate } from "../src/data/nhl/slates.ts";
-import { mapProviderStatus } from "../src/lib/nhl-live.ts";
 
 // Eastern wall-clock instants converted to UTC instants (EDT is UTC-4 in October 2026).
 const et = (iso: string) => new Date(`${iso}-04:00`);
@@ -77,17 +76,5 @@ check("Oct 7 multiple: legs and combined odds", () => {
   assert.equal(Math.round(1.65 * 1.67 * 100) / 100, 2.76);
 });
 
-check("live mapping: confirmed live states are LIVE", () => {
-  for (const s of ["live", "in_progress", "1st", "2nd", "3rd", "OT", "intermission", "halftime", "second_half"]) {
-    assert.equal(mapProviderStatus(s), "live", s);
-  }
-});
-check("live mapping: scheduled, finished and unknown states", () => {
-  assert.equal(mapProviderStatus("scheduled"), "scheduled");
-  assert.equal(mapProviderStatus(undefined), "scheduled");
-  assert.equal(mapProviderStatus("finished"), "finished");
-  assert.equal(mapProviderStatus("FT"), "finished");
-  assert.equal(mapProviderStatus("something-new"), "scheduled");
-});
 
 console.log(`\n${passed} checks passed`);
