@@ -2,6 +2,7 @@ import Link from "@/components/DocumentLink";
 import type { MatchPreview } from "@/types";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { listingLabel } from "@/lib/match-access";
+import { AccessBadge } from "@/components/AccessBadge";
 import { TeamBadge } from "@/components/TeamBadge";
 import { leaguesBySlug } from "@/data/leagues";
 import { canRenderComingSoon } from "@/lib/fixture-status";
@@ -43,6 +44,7 @@ export function HomeMatchCard({
           <LeagueBadge slug={match.league} short={league?.short ?? "•"} size="sm" />
           <strong>{league?.name ?? match.league}</strong>
         </div>
+        <AccessBadge item={match} />
         <span className="match-time" aria-label={kickoff.ariaLabel}>
           <small className="match-date">{displayDate}</small>
           <span aria-hidden="true">◷</span>

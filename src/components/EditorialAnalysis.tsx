@@ -70,10 +70,17 @@ function MarkdownAnalysis({
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   const blocks: ReactNode[] = [];
   let paragraph: string[] = [];
+  // psp-v1 analyses carry a structural opening Prediction/Odds block for validation. Only the closing block is shown.
+  const hasOpeningPredictionBlock = /^## Match information\s*$/m.test(markdown);
+  let seenSection = false;
 
   const flushParagraph = () => {
     if (!paragraph.length) return;
     const text = paragraph.join(" ").trim();
+    if (hasOpeningPredictionBlock && !seenSection && /^\*\*(?:Prediction|Odds):\*\*/i.test(text)) {
+      paragraph = [];
+      return;
+    }
     if (text === "**Statistical Core**") {
       blocks.push(<h2 key={`block-${blocks.length}`}>{inlineMarkdown(text)}</h2>);
     } else {
@@ -90,6 +97,10 @@ function MarkdownAnalysis({
 
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
+    if (/^##\s/.test(line)) {
+      flushParagraph();
+      seenSection = true;
+    }
     if (!line.trim()) {
       flushParagraph();
       continue;

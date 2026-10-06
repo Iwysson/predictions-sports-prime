@@ -4,6 +4,7 @@ import Link from "@/components/DocumentLink";
 import { MatchPreview } from "@/types";
 import { TeamBadge } from "@/components/TeamBadge";
 import { LeagueBadge } from "@/components/LeagueBadge";
+import { AccessBadge } from "@/components/AccessBadge";
 import { leaguesBySlug } from "@/data/leagues";
 import { useI18n } from "@/i18n/I18nProvider";
 import { canRenderComingSoon } from "@/lib/fixture-status";
@@ -53,7 +54,7 @@ export function MatchCard({
           <strong>{kickoff.display}</strong>
           <small>{kickoff.sublabel}</small>
         </span>
-        {match.bestAnalysis ? <span className="psp-badge psp-badge--best">BEST BET</span> : null}
+        <AccessBadge item={match} />
       </div>
 
       <div className="compact-teams">

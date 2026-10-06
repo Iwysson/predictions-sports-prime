@@ -7,4 +7,5 @@ export const ligaPortugalPredictions = [
   ...ligaPortugalRound02,
   ...ligaPortugalRound03,
   ...ligaPortugalRound2026_10_09,
+  ...ligaPortugalRound2026_10_10,
 ];

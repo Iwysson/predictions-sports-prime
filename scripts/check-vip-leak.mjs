@@ -29,13 +29,20 @@ for (const e of index) {
   if (e.predictionAccess !== "free") {
     if (freeMultiplePicks.has(e.prediction.main)) ambiguous.push({ slug: e.slug, text: e.prediction.main, allowedIn: freeMultipleMarker });
     else if (publicPicks.has(e.prediction.main)) ambiguous.push({ slug: e.slug, text: e.prediction.main });
+    // A VIP pick that is only a fragment of a public pick (e.g. "Over 1.5 Goals" inside "Brest X1 + Over 1.5 Goals")
+    // is matched as a whole quoted value or text node, so public picks cannot cause false positives or hide a leak.
+    else if ([...publicPicks].some((p) => p.includes(e.prediction.main))) needles.push({ slug: e.slug, kind: "pick-exact", text: e.prediction.main, exact: true });
     else needles.push({ slug: e.slug, kind: "pick", text: e.prediction.main });
   }
 }
 
 const leaks = [];
+const exactForms = (pick) => [`"${pick}"`, `\\"${pick}\\"`, `>${pick}<`];
 for (const n of needles) {
-  for (const { f, text } of corpus) if (text.includes(n.text)) leaks.push({ ...n, file: f });
+  for (const { f, text } of corpus) {
+    const hit = n.exact ? exactForms(n.text).some((form) => text.includes(form)) : text.includes(n.text);
+    if (hit) leaks.push({ ...n, file: f });
+  }
 }
 for (const pick of freeMultiplePicks) {
   for (const { f, text } of corpus) {

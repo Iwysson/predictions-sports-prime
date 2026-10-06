@@ -190,7 +190,7 @@ export const championshipRound2026_10_10: EditorialPrediction[] = [
     "analysisAccess": "vip",
     "predictionAccess": "vip",
     "bestAnalysis": true,
-    "teaser": "Two productive attacks meet at the Riverside, with Middlesbrough's home scoring and Wolves' away returns both under close attention.",
+    "teaser": "Two productive attacks meet at the Riverside, with Middlesbrough's home scoring and Wolves' away returns both deserve close attention.",
     "editorialStandard": "psp-v1",
     "analysisFormat": "markdown",
     "analysisLanguage": "en",

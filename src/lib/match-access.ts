@@ -123,6 +123,22 @@ export function listingLabel(item: { analysisAccess?: PredictionAccess; predicti
   return fallback;
 }
 
+// Single source of truth for the public status badge on every listing: FREE, BEST BET (protected) or PRIME VIP.
+export type AccessBadgeKind = "free" | "best" | "vip";
+
+export function accessBadgeKind(item: { analysisAccess?: PredictionAccess; predictionAccess?: PredictionAccess; bestAnalysis?: boolean }): AccessBadgeKind | null {
+  if (item.predictionAccess === "free") return "free";
+  if (item.bestAnalysis) return "best";
+  if (item.analysisAccess === "vip" || item.predictionAccess === "vip") return "vip";
+  return null;
+}
+
+export const accessBadgeLabel: Record<AccessBadgeKind, string> = {
+  free: "FREE TO VIEW",
+  best: "★ BEST BET",
+  vip: "PRIME VIP",
+};
+
 export function sortFreePredictionsFirst<T extends { predictionAccess?: PredictionAccess }>(items: readonly T[]): T[] {
   return [...items].sort((left, right) => {
     const leftRank = left.predictionAccess === "free" ? 0 : left.predictionAccess === "vip" ? 1 : 2;

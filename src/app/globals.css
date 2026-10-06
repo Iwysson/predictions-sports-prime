@@ -4655,6 +4655,10 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .psp-badge--free { background: color-mix(in srgb, var(--success) 14%, var(--surface)); color: var(--success); border: 1px solid color-mix(in srgb, var(--success) 40%, var(--border)); }
 .psp-badge--vip { background: #1d1a12; color: #f3d98b; border: 1px solid #8a6d20; }
 .psp-badge--best { background: #fff3c4; color: #6a4d00; border: 1px solid #d6a900; }
+.access-badge { display: inline-flex; align-items: center; max-width: 100%; padding: 5px 11px; border-radius: 999px; font-size: 12px; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.access-badge--free { background: #bbf7d0; color: #052e16; border: 1px solid #16a34a; }
+.access-badge--best { background: #fff3c4; color: #6a4d00; border: 1px solid #d6a900; }
+.access-badge--vip { background: #1d1a12; color: #f3d98b; border: 1px solid #8a6d20; }
 .psp-game__badges { display: flex; flex-wrap: wrap; gap: 8px; }
 .home-editorial-highlights { background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 5%, var(--background)) 0%, var(--background) 100%); }
 .home-best-multiple { display: grid; gap: 20px; padding: clamp(22px, 4vw, 36px); border-radius: 20px; color: #f8fbf9; background: linear-gradient(135deg, #10251c, #173d2c 62%, #205c3d); border: 1px solid #357a58; box-shadow: 0 18px 48px rgba(12, 46, 30, .22); }

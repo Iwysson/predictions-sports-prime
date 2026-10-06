@@ -2,6 +2,7 @@ import Link from "@/components/DocumentLink";
 import type { Match } from "@/types";
 import { localePath, type SeoLocale } from "@/lib/seo-locales";
 import { sortFreePredictionsFirst } from "@/lib/match-access";
+import { AccessBadge } from "@/components/AccessBadge";
 
 export function LeaguePublishedAnalysis({
   leagueName,
@@ -59,7 +60,7 @@ export function LeaguePublishedAnalysis({
         {sortFreePredictionsFirst(discoverableMatches).map((match) => (
           <article className="related-prediction-card" key={match.id}>
             <span>{match.date}</span>
-            {match.bestAnalysis ? <span className="psp-badge psp-badge--best">BEST BET</span> : null}
+            <AccessBadge item={match} />
             <h3>
               <Link href={matchHref(match.slug)} data-quality-gated-match-link="true">
                 {match.homeTeam} vs {match.awayTeam}
