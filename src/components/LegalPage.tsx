@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import type { TranslationKey } from "@/i18n/dictionaries";
 import { useI18n } from "@/i18n/I18nProvider";
+import { SiteContactLine } from "@/components/SiteContactLine";
 
 export type LegalSection = {
   title: string;
@@ -14,11 +15,13 @@ export function LegalPage({
   heading,
   intro,
   sections,
+  hideContact = false,
 }: {
   titleKey: TranslationKey;
   heading?: string;
   intro: string;
   sections: LegalSection[];
+  hideContact?: boolean;
 }) {
   const { t } = useI18n();
 
@@ -29,6 +32,7 @@ export function LegalPage({
           <span className="eyebrow">{t("brandName")}</span>
           <h1>{heading ?? t(titleKey)}</h1>
           <p>{intro}</p>
+          {hideContact ? null : <SiteContactLine />}
         </header>
 
         <div className="legal-content">

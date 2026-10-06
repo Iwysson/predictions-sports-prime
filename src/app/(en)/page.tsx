@@ -14,6 +14,7 @@ import { localizedAlternates } from "@/lib/international-seo";
 import { indexableLocalizedHubLocaleSlugs } from "@/lib/seo-locales";
 import { selectTemporalClientMatches } from "@/lib/match-feed";
 import { HomeEditorialHighlights } from "@/components/HomeEditorialHighlights";
+import { SiteContactLine } from "@/components/SiteContactLine";
 
 const homeTitle = "Football Predictions Today & Betting Tips";
 const homeDescription = "Football predictions, betting tips and match analysis for today's, tomorrow's and upcoming fixtures across major leagues.";
@@ -60,6 +61,7 @@ export default async function Home() {
             concise match analysis for today, tomorrow and upcoming fixtures across
             major leagues and cup competitions.
           </p>
+          <SiteContactLine />
         </div>
       </section>
       <HomeEditorialHighlights />

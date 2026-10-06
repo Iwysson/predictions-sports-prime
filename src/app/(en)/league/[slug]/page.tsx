@@ -14,6 +14,8 @@ import { LeagueBadge } from "@/components/LeagueBadge";
 import { LeaguePageText } from "@/components/LeaguePageText";
 import { LeaguePublishedAnalysis } from "@/components/LeaguePublishedAnalysis";
 import { LeagueEditorialHub } from "@/components/LeagueEditorialHub";
+import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
+import { SiteContactLine } from "@/components/SiteContactLine";
 import { toMatchPreview } from "@/lib/editorial";
 import { loadLeagueSeason } from "@/lib/openfootball";
 import { buildCompetitionRoundSurface } from "@/lib/competition-rounds";
@@ -201,6 +203,7 @@ export default async function LeaguePage({
         <p className="league-seo-intro">
           {leagueIntro(league, publishedMatches.length)}
         </p>
+        <SiteContactLine />
       </div>
 
       <section className="section league-content-section">
@@ -217,6 +220,8 @@ export default async function LeaguePage({
               leagueName={league.name}
               matches={publishedAnalysisMatches}
             />
+
+            <PrimeVipOfferCard />
 
             <LeagueEditorialHub
               leagueName={league.name}

@@ -8,6 +8,9 @@ export const editorialAuthor = {
 
 export const publicContactEmail = "iwysson.wesklley.1995@gmail.com";
 
+// Official site contact shown across pages (SiteContactLine).
+export const siteContactEmail = "predictionssportsprime@gmail.com";
+
 export const siteResponsibleName = "Iwysson Wesklley Francisco do Nascimento";
 
 export function editorialAuthorUrl() {

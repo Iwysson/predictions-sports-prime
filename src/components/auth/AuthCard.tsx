@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { SiteContactLine } from "@/components/SiteContactLine";
 
 export function AuthCard({
   title,
@@ -16,6 +17,7 @@ export function AuthCard({
           <header>
             <h1>{title}</h1>
             <p>{intro}</p>
+            <SiteContactLine />
           </header>
           {children}
         </div>

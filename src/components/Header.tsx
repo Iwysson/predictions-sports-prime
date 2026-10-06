@@ -134,7 +134,6 @@ export function Header() {
         { href: "/#leagues", label: t("leagues") },
         { href: "/nfl/", label: "NFL" },
         { href: "/nhl/", label: "NHL" },
-        { href: "/league/brasileirao-serie-a/", label: "Brasileirão" },
         { href: "/results/", label: "Results" },
         { href: "/methodology/", label: "Methodology" },
       ]}

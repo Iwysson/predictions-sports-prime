@@ -1,4 +1,5 @@
 import Link from "@/components/DocumentLink";
+import { SiteContactLine } from "@/components/SiteContactLine";
 import { PredictionResultsArchive } from "@/components/PredictionResultsArchive";
 import { matches } from "@/data/matches";
 import { toMatchPreview } from "@/lib/editorial";
@@ -45,6 +46,7 @@ export default async function ResultsPage() {
           <span className="eyebrow">Transparency</span>
           <h1>Football Prediction Results &amp; Historical Picks</h1>
           <p>This archive separates the prediction and odds published before kickoff from the result derived afterward. Wins, losses, pushes, voids, pending fixtures and unresolved records remain visible in the full summary.</p>
+          <SiteContactLine />
         </header>
         <section className="results-settlement-note">
           <h2>Full archive</h2>

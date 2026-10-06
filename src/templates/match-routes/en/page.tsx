@@ -6,6 +6,8 @@ import { ArticleByline } from "@/components/ArticleByline";
 import { JsonLd } from "@/components/JsonLd";
 import { MatchFullContent } from "@/components/MatchFullContent";
 import { MatchGate } from "@/components/MatchGate";
+import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
+import { SiteContactLine } from "@/components/SiteContactLine";
 import { ResponsibleGamblingNotice } from "@/components/ResponsibleGamblingNotice";
 import { TeamBadge } from "@/components/TeamBadge";
 import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
@@ -95,6 +97,7 @@ export default async function MatchPage({ params }: { params: Promise<{ slug: st
             {v.updatedDate ? `Updated: ${formatMatchDate(v.updatedDate)}` : null}
           </p>
           <p className="match-seo-intro">{v.teaser}</p>
+          <SiteContactLine />
         </header>
 
         <div className="psp-match-body">
@@ -141,6 +144,8 @@ export default async function MatchPage({ params }: { params: Promise<{ slug: st
                 <MatchGate slug={model.gate.slug} showAnalysis={model.gate.showAnalysis} showPrediction={model.gate.showPrediction} />
               </div>
             ) : null}
+
+            <PrimeVipOfferCard />
           </div>
 
           <aside className="psp-match-side">

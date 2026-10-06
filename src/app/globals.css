@@ -4657,13 +4657,6 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .psp-badge--best { background: #fff3c4; color: #6a4d00; border: 1px solid #d6a900; }
 .psp-game__badges { display: flex; flex-wrap: wrap; gap: 8px; }
 .home-editorial-highlights { background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 5%, var(--background)) 0%, var(--background) 100%); }
-.home-sport-features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.home-sport-feature { position: relative; overflow: hidden; display: grid; gap: 10px; align-content: start; min-height: 210px; padding: 24px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); }
-.home-sport-feature::after { content: ""; position: absolute; width: 150px; height: 150px; right: -52px; bottom: -68px; border-radius: 50%; background: color-mix(in srgb, var(--accent) 12%, transparent); }
-.home-sport-feature__league { width: max-content; padding: 5px 9px; border-radius: 999px; color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--surface)); font-size: 12px; font-weight: 900; letter-spacing: .09em; }
-.home-sport-feature h3 { margin: 2px 0 0; font-size: clamp(22px, 3vw, 30px); }
-.home-sport-feature p { margin: 0; color: var(--text-secondary); line-height: 1.6; }
-.home-sport-feature .button { width: max-content; margin-top: auto; position: relative; z-index: 1; }
 .home-best-multiple { display: grid; gap: 20px; padding: clamp(22px, 4vw, 36px); border-radius: 20px; color: #f8fbf9; background: linear-gradient(135deg, #10251c, #173d2c 62%, #205c3d); border: 1px solid #357a58; box-shadow: 0 18px 48px rgba(12, 46, 30, .22); }
 .home-best-multiple__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
 .home-best-multiple__head > div { display: grid; gap: 4px; }
@@ -4678,16 +4671,16 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .home-best-multiple__legs strong { color: #fff; font-size: clamp(17px, 2vw, 21px); overflow-wrap: anywhere; }
 .home-best-multiple__legs > b { color: #91e3b5; font-size: 28px; }
 .home-best-multiple > p { margin: 0; color: #cce6d8; font-size: 13px; }
-.home-vip-offer { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(250px, .65fr); gap: 28px; align-items: center; padding: clamp(24px, 4vw, 40px); border: 1px solid #8a6d20; border-radius: 20px; background: radial-gradient(circle at top right, #493b16 0%, #211d12 38%, #17150f 100%); color: #f7f0dc; box-shadow: 0 18px 48px rgba(30, 24, 8, .2); }
-.home-vip-offer h2 { margin: 14px 0 6px; color: #fff7dd; font-size: clamp(24px, 4vw, 36px); }
-.home-vip-offer__trial { display: block; color: #f3d98b; font-size: 18px; }
-.home-vip-offer ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; margin: 20px 0 0; padding-left: 20px; color: #e7dcbc; }
-.home-vip-offer__price { display: grid; justify-items: start; gap: 8px; padding: 22px; border-radius: 16px; background: rgba(255,255,255,.07); border: 1px solid rgba(243,217,139,.28); }
-.home-vip-offer__price del { color: #bdb49b; font-size: 20px; text-decoration-thickness: 2px; }
-.home-vip-offer__price > strong { color: #fff3bc; font-size: clamp(32px, 5vw, 46px); line-height: 1; }
-.home-vip-offer__price strong small { font-size: 15px; font-weight: 700; color: #e7dcbc; }
-.home-vip-offer__price > span { margin-bottom: 8px; padding: 5px 10px; border-radius: 999px; color: #183422; background: #9be2b5; font-size: 13px; font-weight: 900; }
-.home-vip-offer__price .auth-message { max-width: 28ch; }
+.prime-vip-offer { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(250px, .65fr); gap: 28px; align-items: center; padding: clamp(24px, 4vw, 40px); border: 1px solid #8a6d20; border-radius: 20px; background: radial-gradient(circle at top right, #493b16 0%, #211d12 38%, #17150f 100%); color: #f7f0dc; box-shadow: 0 18px 48px rgba(30, 24, 8, .2); }
+.prime-vip-offer h2 { margin: 14px 0 6px; color: #fff7dd; font-size: clamp(24px, 4vw, 36px); }
+.prime-vip-offer__trial { display: block; color: #f3d98b; font-size: 18px; }
+.prime-vip-offer ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; margin: 20px 0 0; padding-left: 20px; color: #e7dcbc; }
+.prime-vip-offer__price { display: grid; justify-items: start; gap: 8px; padding: 22px; border-radius: 16px; background: rgba(255,255,255,.07); border: 1px solid rgba(243,217,139,.28); }
+.prime-vip-offer__price del { color: #bdb49b; font-size: 20px; text-decoration-thickness: 2px; }
+.prime-vip-offer__price > strong { color: #fff3bc; font-size: clamp(32px, 5vw, 46px); line-height: 1; }
+.prime-vip-offer__price strong small { font-size: 15px; font-weight: 700; color: #e7dcbc; }
+.prime-vip-offer__price > span { margin-bottom: 8px; padding: 5px 10px; border-radius: 999px; color: #183422; background: #9be2b5; font-size: 13px; font-weight: 900; }
+.prime-vip-offer__price .auth-message { max-width: 28ch; }
 .league-access-heading { margin: 12px 0 3px; padding: 7px 10px; border-radius: 8px; font-size: 12px; letter-spacing: .07em; }
 .league-access-heading--free { color: var(--success); background: color-mix(in srgb, var(--success) 10%, var(--surface)); }
 .league-access-heading--vip { color: #d6b95f; background: #1d1a12; }
@@ -4698,19 +4691,19 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .league-access-heading--free { color: var(--success); background: color-mix(in srgb, var(--success) 10%, var(--surface)); }
 .league-access-heading--vip { color: #d6b95f; background: #1d1a12; }
 @media (max-width: 700px) {
-  .home-sport-features, .home-vip-offer { grid-template-columns: 1fr; }
-  .home-sport-feature { min-height: 185px; padding: 20px; }
+  .prime-vip-offer { grid-template-columns: 1fr; padding: 20px; gap: 18px; }
+  .prime-vip-offer h2 { font-size: 22px; }
   .home-best-multiple__head { align-items: flex-start; flex-direction: column; }
   .home-best-multiple__legs { grid-template-columns: 1fr; gap: 10px; }
   .home-best-multiple__legs > b { justify-self: center; line-height: 1; }
-  .home-vip-offer ul { grid-template-columns: 1fr; }
-  .home-vip-offer__price { width: 100%; }
+  .prime-vip-offer ul { grid-template-columns: 1fr; }
+  .prime-vip-offer__price { width: 100%; }
   .home-editorial-highlights h2,
   .home-editorial-highlights h3,
   .home-editorial-highlights p,
   .home-editorial-highlights strong { overflow-wrap: anywhere; }
   .home-best-multiple,
-  .home-vip-offer { min-width: 0; }
+  .prime-vip-offer { min-width: 0; }
 }
 @media (max-width: 520px) {
   .page-hero h1, .league-title-copy h1 { overflow-wrap: anywhere; }
@@ -4805,3 +4798,12 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 
 .psp-team { display: inline-flex; align-items: center; gap: 8px; }
 .psp-team strong { font-size: 16px; color: var(--text-primary); }
+
+/* Site contact line: discreet, sits under the H1 or intro. */
+.site-contact-line { margin: 10px 0 0; font-size: 14px; line-height: 1.5; color: var(--text-secondary); overflow-wrap: anywhere; }
+.site-contact-line a { color: var(--accent); font-weight: 700; text-decoration: none; }
+.site-contact-line a:hover { text-decoration: underline; }
+
+/* Featured sports at the top of Top Prediction Leagues. */
+.league-card--featured { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
+.featured-league-badge { display: inline-block; width: max-content; margin-bottom: 3px; padding: 2px 8px; border-radius: 999px; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--surface)); font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }

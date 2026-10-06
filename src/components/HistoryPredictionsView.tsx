@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SiteContactLine } from "@/components/SiteContactLine";
 import { useAuth } from "@/auth/AuthProvider";
 import { supabase } from "@/lib/supabase";
 import { VipCheckoutButton } from "@/components/VipCheckoutButton";
@@ -66,6 +67,7 @@ export function HistoryPredictionsView() {
           A record of past predictions with the pick, market and published odds.
           Results are shown only where they were already recorded.
         </p>
+        <SiteContactLine />
       </header>
 
       {loading ? <p>Checking your access…</p> : null}

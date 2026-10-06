@@ -18,6 +18,7 @@ export default function ContactPage() {
     <JsonLd data={institutionalPageJsonLd("ContactPage", "Contact Predictions Sports Prime", "/contact/", description)} />
     <LegalPage
       titleKey="contact"
+      hideContact
       intro="Use the contact details below for corrections, editorial questions, feedback, privacy or general site enquiries."
       sections={[
         {

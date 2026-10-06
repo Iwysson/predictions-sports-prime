@@ -4,7 +4,9 @@ import { JsonLd } from "@/components/JsonLd";
 import { MatchFullContent } from "@/components/MatchFullContent";
 import { MatchGate } from "@/components/MatchGate";
 import { NhlBestMultiple, NhlLeagueMark } from "@/components/NhlBestMultiple";
+import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
 import { ResponsibleGamblingNotice } from "@/components/ResponsibleGamblingNotice";
+import { SiteContactLine } from "@/components/SiteContactLine";
 import { TeamBadge } from "@/components/TeamBadge";
 import { translate } from "@/i18n/dictionaries";
 import { nhlMatches, NHL_PAGE, type NhlMatch } from "@/lib/nhl";
@@ -142,6 +144,7 @@ export default function NhlPage() {
             Nine NHL games on {DATE_LABEL}. Three analyses are published in full for everyone. The remaining six are
             exclusive to PRIME VIP members.
           </p>
+          <SiteContactLine />
           <div className="psp-chips">
             <span className="psp-chip">9 games</span>
             <span className="psp-chip">
@@ -176,6 +179,8 @@ export default function NhlPage() {
             {vip.map((m) => <GameCard key={m.slug} m={m} />)}
           </div>
         </section>
+
+        <PrimeVipOfferCard />
 
         <section className="psp-matchup-directory" aria-labelledby="nhl-matchups-title">
           <div className="psp-game-group__heading">

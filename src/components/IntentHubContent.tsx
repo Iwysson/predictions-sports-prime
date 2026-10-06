@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import Link from "@/components/DocumentLink";
 import { useClientNow } from "@/lib/use-client-now";
+import { SiteContactLine } from "@/components/SiteContactLine";
 import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import type { MatchPreview } from "@/types";
 import { JsonLd } from "@/components/JsonLd";
@@ -29,6 +30,7 @@ export function IntentHubContent({ slug, matches, discovery }: { slug: IntentHub
         <span className="eyebrow">{hub.eyebrow}</span>
         <h1 id="intent-hub-title">{hub.h1}</h1>
         <p>{hub.intro}</p>
+        <SiteContactLine />
       </div>
     </section>
 
