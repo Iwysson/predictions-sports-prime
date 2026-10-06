@@ -115,8 +115,10 @@ export function buildContentIndex(
 }
 
 // Listing label for a match card: the tier a visitor will see, not a generic "available" message.
-export function listingLabel(item: { analysisAccess?: PredictionAccess; predictionAccess?: PredictionAccess }, locale: string, fallback: string): string {
+export function listingLabel(item: { analysisAccess?: PredictionAccess; predictionAccess?: PredictionAccess; bestAnalysis?: boolean }, locale: string, fallback: string): string {
   if (item.predictionAccess === "free") return translate(locale, "matchFreePrediction");
+  // BEST BET is a public badge on protected content: it names the tier without revealing the pick or odds.
+  if (item.bestAnalysis) return "★ BEST BET";
   if (item.analysisAccess === "vip" || item.predictionAccess === "vip") return translate(locale, "matchListVip");
   return fallback;
 }

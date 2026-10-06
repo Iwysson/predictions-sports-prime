@@ -10,7 +10,8 @@ import { publicContactEmail } from "../src/lib/editorial-identity.ts";
 const root = process.cwd();
 const outDir = join(root, "out");
 const siteUrl = "https://predictions-sports-prime.com";
-const authorName = "Iwysson Nascimento";
+const authorName = "Predictions Sports Prime Team";
+const articleAuthorName = "Predictions Sports Prime";
 const authorRoute = "/author/iwysson-nascimento/";
 const authorUrl = `${siteUrl}${authorRoute}`;
 const contactEmail = publicContactEmail;
@@ -237,11 +238,12 @@ for (const route of matchRoutes) {
   if (!bylineAnchor.includes(`href="${authorRoute}"`) || !bylineAnchor.includes('rel="author"')) {
     errors.push(`${route}: byline does not link to the author profile`);
   }
-  const articleAuthor = html.match(/"author":\{"@type":"Person","name":"([^"]+)","url":"([^"]+)"/);
-  if (!articleAuthor) errors.push(`${route}: Article author Person is missing`);
+  const articleAuthor = html.match(/"author":\{"@type":"Organization","name":"([^"]+)","url":"([^"]+)"/);
+  if (!articleAuthor) errors.push(`${route}: Article author Organization is missing`);
   else {
-    if (articleAuthor[1] !== authorName) errors.push(`${route}: Article author name is incorrect`);
-    if (articleAuthor[2] !== authorUrl) errors.push(`${route}: Article author URL is incorrect`);
+    if (articleAuthor[1] !== articleAuthorName) errors.push(`${route}: Article author name is incorrect`);
+    // Organization author: the publisher's root URL is the correct schema.org identity; the byline still links to the author profile.
+    if (articleAuthor[2] !== `${siteUrl}/`) errors.push(`${route}: Article author URL is incorrect`);
   }
   // Match pages carry the official contact line once, as a usable mailto link.
   if (count(html, /class="site-contact-line"/gi) !== 1 || !html.includes(`href="mailto:${contactEmail}"`)) errors.push(`${route}: match pages must show the official contact line exactly once`);
@@ -332,11 +334,11 @@ else {
   if (!authorHtml.includes(`<link rel="canonical" href="${authorUrl}"`)) errors.push(`${authorRoute}: invalid canonical`);
   if (!/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(authorHtml)) errors.push(`${authorRoute}: missing index, follow`);
   if (!visibleText(authorHtml).includes(authorName)) errors.push(`${authorRoute}: visible author identity is missing`);
-  if (!authorHtml.includes('"@type":"ProfilePage"') || !authorHtml.includes('"mainEntity":{"@type":"Person"')) {
-    errors.push(`${authorRoute}: ProfilePage/Person structured data is missing`);
+  if (!authorHtml.includes('"@type":"ProfilePage"') || !authorHtml.includes('"mainEntity":{"@type":"Organization"')) {
+    errors.push(`${authorRoute}: ProfilePage/Organization structured data is missing`);
   }
-  if (!authorHtml.includes(`"name":"${authorName}"`) || !authorHtml.includes(`"url":"${authorUrl}"`)) {
-    errors.push(`${authorRoute}: ProfilePage/Person identity is incorrect`);
+  if (!authorHtml.includes(`"name":"${articleAuthorName}"`) || !authorHtml.includes(`"url":"${authorUrl}"`)) {
+    errors.push(`${authorRoute}: ProfilePage/Organization identity is incorrect`);
   }
   for (const route of [methodologyRoute, editorialPolicyRoute, "/contact/"]) {
     if (!authorHtml.includes(`href="${route}"`)) errors.push(`${authorRoute}: missing editorial trust link to ${route}`);

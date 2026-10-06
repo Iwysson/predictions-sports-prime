@@ -141,7 +141,7 @@ for (const page of pages) {
     }
 
     if (hasType(node, "ProfilePage")) {
-      if (!node.mainEntity || !hasType(node.mainEntity, "Person")) {
+      if (!node.mainEntity || !(hasType(node.mainEntity, "Organization") || hasType(node.mainEntity, "Person"))) {
         counts.ProfilePage.invalid += 1;
         errors.push(`${page.route}: invalid ProfilePage schema`);
       }

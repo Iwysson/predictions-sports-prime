@@ -53,7 +53,7 @@ export function MatchCard({
           <strong>{kickoff.display}</strong>
           <small>{kickoff.sublabel}</small>
         </span>
-        {match.bestAnalysis ? <span className="psp-badge psp-badge--best">BEST ANALYSIS</span> : null}
+        {match.bestAnalysis ? <span className="psp-badge psp-badge--best">BEST BET</span> : null}
       </div>
 
       <div className="compact-teams">

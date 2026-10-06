@@ -1,7 +1,8 @@
 import { absoluteUrl } from "@/lib/site-config";
 
+// Analyses are signed by the editorial team, not an individual. The path is kept so existing URLs stay stable.
 export const editorialAuthor = {
-  name: "Iwysson Nascimento",
+  name: "Predictions Sports Prime Team",
   slug: "iwysson-nascimento",
   path: "/author/iwysson-nascimento/",
 } as const;
@@ -22,12 +23,11 @@ export function editorialAuthorId() {
 
 export function editorialAuthorPersonJsonLd() {
   return {
-    "@type": "Person",
-    name: editorialAuthor.name,
-    url: editorialAuthorUrl(),
+    "@type": "Organization",
+    name: "Predictions Sports Prime",
+    url: absoluteUrl("/"),
     "@id": editorialAuthorId(),
-    jobTitle: "Football analysis author",
-    worksFor: { "@id": absoluteUrl("/#organization") },
+    description: "Editorial team behind the Predictions Sports Prime football analyses.",
   };
 }
 

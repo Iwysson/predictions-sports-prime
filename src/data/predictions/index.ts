@@ -9,6 +9,8 @@ import { superLigPredictions } from "./super-lig";
 import { championshipPredictions } from "./championship";
 import { mlsPredictions } from "./mls";
 import { scottishPremiershipPredictions } from "./scottish-premiership";
+import { premierLeaguePredictions } from "./premier-league";
+import { serieAPredictions } from "./serie-a";
 import { applyWave08EditorialDebtRemediation } from "./editorial-debt-remediation";
 
 export const editorialPredictionsRaw = [
@@ -23,6 +25,8 @@ export const editorialPredictionsRaw = [
   ...championshipPredictions,
   ...mlsPredictions,
   ...scottishPremiershipPredictions,
+  ...premierLeaguePredictions,
+  ...serieAPredictions,
 ];
 
 export const editorialPredictions = editorialPredictionsRaw.map(applyWave08EditorialDebtRemediation);

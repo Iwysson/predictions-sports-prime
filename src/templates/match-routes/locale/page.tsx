@@ -96,7 +96,7 @@ export default async function LocalizedMatchPage({ params }: { params: Promise<{
             <span className={`psp-badge ${predictionFree ? "psp-badge--free" : "psp-badge--vip"}`}>
               {predictionFree ? "FREE PREDICTION" : "PRIME VIP PREDICTION"}
             </span>
-            {prediction.bestAnalysis ? <span className="psp-badge psp-badge--best">BEST ANALYSIS</span> : null}
+            {prediction.bestAnalysis ? <span className="psp-badge psp-badge--best">BEST BET</span> : null}
           </div>
           <ArticleByline />
           <p className="match-dates">

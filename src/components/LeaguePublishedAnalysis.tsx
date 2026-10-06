@@ -59,7 +59,7 @@ export function LeaguePublishedAnalysis({
         {sortFreePredictionsFirst(discoverableMatches).map((match) => (
           <article className="related-prediction-card" key={match.id}>
             <span>{match.date}</span>
-            {match.bestAnalysis ? <span className="psp-badge psp-badge--best">BEST ANALYSIS</span> : null}
+            {match.bestAnalysis ? <span className="psp-badge psp-badge--best">BEST BET</span> : null}
             <h3>
               <Link href={matchHref(match.slug)} data-quality-gated-match-link="true">
                 {match.homeTeam} vs {match.awayTeam}

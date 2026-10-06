@@ -27,7 +27,7 @@ export default function AboutPage() {
         },
         {
           title: "Who produces the analyses",
-          content: <p><Link className="legal-link" href={editorialAuthor.path}>{editorialAuthor.name}</Link> is responsible for the analyses published on Predictions Sports Prime. Each prediction represents an editorial assessment rather than a guaranteed outcome.</p>,
+          content: <p>The analyses on Predictions Sports Prime are written and signed by the <Link className="legal-link" href={editorialAuthor.path}>{editorialAuthor.name}</Link>. Each prediction represents an editorial assessment rather than a guaranteed outcome.</p>,
         },
         {
           title: "Coverage",
