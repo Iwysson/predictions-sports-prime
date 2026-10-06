@@ -6,10 +6,9 @@ export const editorialAuthor = {
   path: "/author/iwysson-nascimento/",
 } as const;
 
-export const publicContactEmail = "iwysson.wesklley.1995@gmail.com";
-
-// Official site contact shown across pages (SiteContactLine).
-export const siteContactEmail = "predictionssportsprime@gmail.com";
+// Official site contact, used by /contact/, /privacy/ and SiteContactLine.
+export const publicContactEmail = "predictionssportsprime@gmail.com";
+export const siteContactEmail = publicContactEmail;
 
 export const siteResponsibleName = "Iwysson Wesklley Francisco do Nascimento";
 

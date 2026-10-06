@@ -1,5 +1,7 @@
 import { laLigaRound01 } from "./round-01";
+import { laLigaRound2026_10_09 } from "./round-2026-10-09";
 
 export const laLigaPredictions = [
   ...laLigaRound01,
+  ...laLigaRound2026_10_09,
 ];

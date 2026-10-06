@@ -18,6 +18,11 @@ export function PredictionLeagueCategories({
   const copy = homeFeedCopy(locale);
   // NHL and NFL hubs are English-only, so they are featured on the English home only.
   const showFeatured = locale === "en";
+  // Club competitions in the requested Top Prediction Leagues order; the rest keep their order.
+  const rank = new Map(["premier-league", "la-liga", "bundesliga", "serie-a", "liga-portugal", "ligue-1", "eredivisie", "brasileirao-serie-a"].map((slug, i) => [slug, i]));
+  const orderedLeagues = [...primaryPredictionLeagues].sort(
+    (a, b) => (rank.get(a.slug) ?? 100) - (rank.get(b.slug) ?? 100)
+  );
   return (
     <section
       className={`section section--compact${muted ? " section--muted" : ""}`}
@@ -57,7 +62,7 @@ export function PredictionLeagueCategories({
               </Link>
             </>
           ) : null}
-          {primaryPredictionLeagues.map((league) => (
+          {orderedLeagues.map((league) => (
             <LeagueCard key={league.slug} {...league} href={localePath(locale, `/league/${league.slug}/`)} displayLabel={`${league.name} ${copy.predictionsSuffix}`} />
           ))}
         </div>

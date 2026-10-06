@@ -5,6 +5,7 @@ import { AdSlot } from "@/components/ads";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
 import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
+import { SiteContactLine } from "@/components/SiteContactLine";
 import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { matches } from "@/data/matches";
 import { resolveCanonicalMatches } from "@/lib/canonical-match";
@@ -87,6 +88,7 @@ export default async function LocalizedHome({
           <span className="eyebrow">Predictions Sports Prime</span>
           <h1 id="home-title">{copy.homeH1}</h1>
           <p>{copy.homeIntro}</p>
+          <SiteContactLine />
         </div>
       </section>
 

@@ -28,8 +28,10 @@ const records = [
 ];
 
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+// Club names that contain a Portuguese word but are proper nouns in English text.
+const properNouns = ["Vitória de Guimarães"];
 const failures = records.flatMap(({ label, teamNames, text }) => {
-  const editorialText = teamNames.reduce(
+  const editorialText = [...teamNames, ...properNouns].reduce(
     (value, teamName) => value.replace(new RegExp(escapeRegExp(teamName), "gi"), ""),
     text,
   );

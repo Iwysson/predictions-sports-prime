@@ -8,6 +8,8 @@ import { LeagueBadge } from "@/components/LeagueBadge";
 import { LeaguePageText } from "@/components/LeaguePageText";
 import { LeaguePublishedAnalysis } from "@/components/LeaguePublishedAnalysis";
 import { LeagueEditorialHub } from "@/components/LeagueEditorialHub";
+import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
+import { SiteContactLine } from "@/components/SiteContactLine";
 import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
 import { leagues, leaguesBySlug } from "@/data/leagues";
 import { matches, matchesByLeague } from "@/data/matches";
@@ -169,6 +171,7 @@ export default async function LocalizedLeague({
 
       <div className="container">
         <p className="league-seo-intro">{copy.leagueIntro(league.name)}</p>
+        <SiteContactLine />
       </div>
 
       <section className="section league-content-section">
@@ -190,6 +193,8 @@ export default async function LocalizedLeague({
               localizedMatchSlugs={localizedMatchSlugs}
               indexableMatchSlugs={indexableMatchSlugs}
             />
+
+            <PrimeVipOfferCard />
 
             <LeagueEditorialHub
               leagueName={league.name}

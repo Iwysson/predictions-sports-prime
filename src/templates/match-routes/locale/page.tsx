@@ -6,6 +6,8 @@ import { ArticleByline } from "@/components/ArticleByline";
 import { JsonLd } from "@/components/JsonLd";
 import { MatchFullContent } from "@/components/MatchFullContent";
 import { MatchGate } from "@/components/MatchGate";
+import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
+import { SiteContactLine } from "@/components/SiteContactLine";
 import { ResponsibleGamblingNotice } from "@/components/ResponsibleGamblingNotice";
 import { TeamBadge } from "@/components/TeamBadge";
 import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
@@ -60,7 +62,9 @@ export default async function LocalizedMatchPage({ params }: { params: Promise<{
   const model = prediction ? buildMatchPageModel(prediction, locale) : null;
   if (!model || !prediction) notFound();
   // Other publishable matches in the same league, for internal links (titles only).
-  const related = publishable().filter((p) => p.league === prediction.league && matchSlug(p) !== slug).slice(0, 4);
+  // When the league has no other published match, link to other published matches instead.
+  const sameLeague = publishable().filter((p) => p.league === prediction.league && matchSlug(p) !== slug);
+  const related = (sameLeague.length ? sameLeague : publishable().filter((p) => matchSlug(p) !== slug)).slice(0, 4);
   const leagueName = leaguesBySlug[prediction.league]?.name ?? prediction.league;
   const v = model.view;
   const analysisFree = v.analysisAccess === "free";
@@ -92,6 +96,7 @@ export default async function LocalizedMatchPage({ params }: { params: Promise<{
             <span className={`psp-badge ${predictionFree ? "psp-badge--free" : "psp-badge--vip"}`}>
               {predictionFree ? "FREE PREDICTION" : "PRIME VIP PREDICTION"}
             </span>
+            {prediction.bestAnalysis ? <span className="psp-badge psp-badge--best">BEST ANALYSIS</span> : null}
           </div>
           <ArticleByline />
           <p className="match-dates">
@@ -100,6 +105,7 @@ export default async function LocalizedMatchPage({ params }: { params: Promise<{
             {v.updatedDate ? `Updated: ${formatMatchDate(v.updatedDate)}` : null}
           </p>
           <p className="match-seo-intro">{v.teaser}</p>
+          <SiteContactLine />
         </header>
 
         <div className="psp-match-body">
@@ -146,13 +152,15 @@ export default async function LocalizedMatchPage({ params }: { params: Promise<{
                 <MatchGate slug={model.gate.slug} showAnalysis={model.gate.showAnalysis} showPrediction={model.gate.showPrediction} />
               </div>
             ) : null}
+
+            <PrimeVipOfferCard />
           </div>
 
           <aside className="psp-match-side">
             {related.length ? (
               <div className="psp-related">
               <section className="related-predictions">
-                <h2>{`More ${leagueName} predictions`}</h2>
+                <h2>{sameLeague.length ? `More ${leagueName} predictions` : "More football predictions"}</h2>
                 <ul>
                   {related.map((p) => (
                     <li key={matchSlug(p)}>

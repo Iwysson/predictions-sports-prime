@@ -57,7 +57,9 @@ export default async function MatchPage({ params }: { params: Promise<{ slug: st
   const model = prediction ? buildMatchPageModel(prediction, ROUTE_LOCALE) : null;
   if (!model || !prediction) notFound();
   // Other publishable matches in the same league, for internal links (titles only).
-  const related = publishable().filter((p) => p.league === prediction.league && matchSlug(p) !== slug).slice(0, 4);
+  // When the league has no other published match, link to other published matches instead.
+  const sameLeague = publishable().filter((p) => p.league === prediction.league && matchSlug(p) !== slug);
+  const related = (sameLeague.length ? sameLeague : publishable().filter((p) => matchSlug(p) !== slug)).slice(0, 4);
   const leagueName = leaguesBySlug[prediction.league]?.name ?? prediction.league;
   const v = model.view;
   const analysisFree = v.analysisAccess === "free";
@@ -89,6 +91,7 @@ export default async function MatchPage({ params }: { params: Promise<{ slug: st
             <span className={`psp-badge ${predictionFree ? "psp-badge--free" : "psp-badge--vip"}`}>
               {predictionFree ? "FREE PREDICTION" : "PRIME VIP PREDICTION"}
             </span>
+            {prediction.bestAnalysis ? <span className="psp-badge psp-badge--best">BEST ANALYSIS</span> : null}
           </div>
           <ArticleByline />
           <p className="match-dates">
@@ -152,7 +155,7 @@ export default async function MatchPage({ params }: { params: Promise<{ slug: st
             {related.length ? (
               <div className="psp-related">
               <section className="related-predictions">
-                <h2>{`More ${leagueName} predictions`}</h2>
+                <h2>{sameLeague.length ? `More ${leagueName} predictions` : "More football predictions"}</h2>
                 <ul>
                   {related.map((p) => (
                     <li key={matchSlug(p)}>

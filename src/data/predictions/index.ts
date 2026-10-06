@@ -2,6 +2,11 @@ import { laLigaPredictions } from "./la-liga";
 import { brasileiraoSerieAPredictions } from "./brasileirao-serie-a";
 import { ligaPortugalPredictions } from "./liga-portugal";
 import { ligue1Predictions } from "./ligue-1";
+import { bundesligaPredictions } from "./bundesliga";
+import { eredivisiePredictions } from "./eredivisie";
+import { eliteserienPredictions } from "./eliteserien";
+import { superLigPredictions } from "./super-lig";
+import { championshipPredictions } from "./championship";
 import { applyWave08EditorialDebtRemediation } from "./editorial-debt-remediation";
 
 export const editorialPredictionsRaw = [
@@ -9,6 +14,11 @@ export const editorialPredictionsRaw = [
   ...brasileiraoSerieAPredictions,
   ...ligaPortugalPredictions,
   ...ligue1Predictions,
+  ...bundesligaPredictions,
+  ...eredivisiePredictions,
+  ...eliteserienPredictions,
+  ...superLigPredictions,
+  ...championshipPredictions,
 ];
 
 export const editorialPredictions = editorialPredictionsRaw.map(applyWave08EditorialDebtRemediation);

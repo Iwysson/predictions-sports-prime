@@ -4807,3 +4807,21 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 /* Featured sports at the top of Top Prediction Leagues. */
 .league-card--featured { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
 .featured-league-badge { display: inline-block; width: max-content; margin-bottom: 3px; padding: 2px 8px; border-radius: 999px; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--surface)); font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+
+/* Header call to action: Login and My Account are visible buttons, not plain text links. */
+.header-cta { display: inline-flex; align-items: center; padding: 7px 14px; border: 2px solid var(--success); border-radius: 999px; background: color-mix(in srgb, var(--success) 14%, var(--surface)); color: var(--text-primary); font-weight: 800; white-space: nowrap; }
+.header-cta:hover { background: var(--success); color: #071019; }
+
+/* Brazil access restriction: a strong, readable compliance block above the account forms. */
+.brazil-access-restriction { margin: 0; padding: 18px 0; border-top: 3px solid #c0392b; border-bottom: 1px solid color-mix(in srgb, #c0392b 40%, var(--border)); background: color-mix(in srgb, #c0392b 10%, var(--surface)); }
+.brazil-access-restriction .container { display: grid; gap: 8px; }
+.brazil-access-restriction__title { display: block; font-size: 18px; font-weight: 900; letter-spacing: .06em; color: var(--text-primary); }
+.brazil-access-restriction p { margin: 0; color: var(--text-secondary); line-height: 1.55; overflow-wrap: anywhere; }
+.brazil-access-restriction a { color: var(--accent); font-weight: 700; }
+
+/* Register: required confirmation checkbox before the submit button. */
+.auth-checkbox { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; margin: 6px 0 14px; font-size: 14px; line-height: 1.5; color: var(--text-secondary); }
+.auth-checkbox input { width: 18px; height: 18px; margin-top: 2px; }
+
+/* BEST ANALYSIS badge on the match page: visible to all, never changes access. */
+.psp-badge--best { flex-shrink: 0; }

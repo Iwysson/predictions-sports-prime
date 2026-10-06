@@ -180,6 +180,9 @@ export type EditorialPrediction = {
   homeTeam: string;
   awayTeam: string;
 
+  // Public BEST ANALYSIS badge. Visible to every visitor; it never changes access.
+  bestAnalysis?: boolean;
+
   // Optional stable override for legitimate rematches between the same teams.
   slug?: string;
 
@@ -250,6 +253,8 @@ export type EditorialPrediction = {
 
 export type Match = {
   id: string;
+  // Public BEST ANALYSIS badge. Visible to every visitor; it never changes access.
+  bestAnalysis?: boolean;
   fixtureId?: string;
   kickoffUtc?: string;
   timezone?: string;

@@ -196,7 +196,7 @@ for (const route of matchRoutes) {
   const bodyKey = analysisText.toLowerCase();
   const hasLocalizedSemanticBody = html.includes('class="match-semantic-details"')
     && html.includes("Match Information")
-    && (html.includes('class="main-prediction-block"') || html.includes('data-prediction-reveal="locked"'))
+    && (/class="[^"]*\bmain-prediction-block\b[^"]*"/.test(html) || html.includes('data-prediction-reveal="locked"'))
     && html.includes('class="match-seo-intro"');
   if (
     Math.max(analysisText.length, sourceAnalysisText.length) < 300 &&
@@ -225,8 +225,11 @@ for (const route of matchRoutes) {
   // Protected analysis (VIP) is served by the gated endpoint and is deliberately not in static HTML.
   // Such pages must carry the explicit marker instead.
   const protectedAnalysis = html.includes('data-protected-content="analysis"');
-  if (!html.includes('class="compact-analysis-copy"') && !hasLocalizedSemanticBody && !protectedAnalysis) errors.push(`${route}: missing static editorial or semantic match content`);
-  if (!html.includes('class="main-prediction-block"') && !html.includes('data-prediction-reveal="locked"')) errors.push(`${route}: missing final prediction or click-to-reveal gate`);
+  // Class tokens: a block may carry several classes (e.g. "psp-analysis compact-analysis-copy").
+  const hasStaticAnalysis = /class="[^"]*\bcompact-analysis-copy\b[^"]*"/.test(html);
+  const hasPredictionBlock = /class="[^"]*\bmain-prediction-block\b[^"]*"/.test(html);
+  if (!hasStaticAnalysis && !hasLocalizedSemanticBody && !protectedAnalysis) errors.push(`${route}: missing static editorial or semantic match content`);
+  if (!hasPredictionBlock && !html.includes('data-prediction-reveal="locked"')) errors.push(`${route}: missing final prediction or click-to-reveal gate`);
   if (!html.includes('"@type":"Article"')) errors.push(`${route}: missing Article schema`);
   if (!html.includes('"@type":"BreadcrumbList"')) errors.push(`${route}: missing BreadcrumbList schema`);
   if (!visibleText(html).includes(`Analysis by ${authorName}`)) errors.push(`${route}: missing visible author byline`);
@@ -240,7 +243,8 @@ for (const route of matchRoutes) {
     if (articleAuthor[1] !== authorName) errors.push(`${route}: Article author name is incorrect`);
     if (articleAuthor[2] !== authorUrl) errors.push(`${route}: Article author URL is incorrect`);
   }
-  if (html.includes(contactEmail)) errors.push(`${route}: public contact email must not appear on match pages`);
+  // Match pages carry the official contact line once, as a usable mailto link.
+  if (count(html, /class="site-contact-line"/gi) !== 1 || !html.includes(`href="mailto:${contactEmail}"`)) errors.push(`${route}: match pages must show the official contact line exactly once`);
   if (!html.includes(`href="${methodologyRoute}"`)) errors.push(`${route}: missing methodology link`);
   if (!html.includes(`href="${resultsRoute}"`)) errors.push(`${route}: missing prediction-history link`);
   if (html.includes("match-search-intent")) {

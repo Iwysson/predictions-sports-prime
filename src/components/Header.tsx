@@ -38,9 +38,10 @@ export function SiteHeader({
 }: SiteHeaderProps) {
   const [open, setOpen] = useState(false);
   const { isAuthenticated } = useAuth();
+  // Login is a visible call to action; My Account gets the same treatment once signed in.
   const accountItem = isAuthenticated
-    ? { href: "/account/", label: "My Account" }
-    : { href: "/login/", label: "Login" };
+    ? { href: "/account/", label: "My Account", className: "header-cta header-cta--account" }
+    : { href: "/login/", label: "Login", className: "header-cta header-cta--login" };
 
   return (
     <header className={`site-header${localized ? " localized-site-header" : ""}`}>
@@ -72,7 +73,7 @@ export function SiteHeader({
                 {item.label}
               </Link>
             ))}
-            <Link href={accountItem.href}>{accountItem.label}</Link>
+            <Link href={accountItem.href} className={accountItem.className}>{accountItem.label}</Link>
           </nav>
 
           <RouteLanguageSelector currentLocale={currentLocale} />
@@ -109,7 +110,7 @@ export function SiteHeader({
                 {item.label}
               </Link>
             ))}
-            <Link href={accountItem.href} onClick={() => setOpen(false)}>
+            <Link href={accountItem.href} className={accountItem.className} onClick={() => setOpen(false)}>
               {accountItem.label}
             </Link>
           </div>
