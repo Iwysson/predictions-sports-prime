@@ -62,6 +62,18 @@ function hasInternalNotes(markdown: string) {
   return INTERNAL_NOTE.test(readerText) || /Supercomputador|O modelo deve/i.test(readerText);
 }
 
+// pt-BR analyses must not contain sustained English prose (mixed-language risk).
+function hasSustainedEnglishProse(markdown: string) {
+  const english = [/\bthe\b/i, /\band\b/i, /\bwith\b/i, /\bthat\b/i, /\bwhich\b/i, /\bthis\b/i, /\bfrom\b/i, /\bare\b/i, /\bteam\b/i, /\bmatch\b/i, /\bgoals\b/i];
+  return markdown
+    .replace(/^#{1,6}[^\n]*\n/gm, "\n")
+    .split(/\n\s*\n/)
+    .some((paragraph) => {
+      if (words(paragraph) < 50 || /^\s*(?:#|\||[-*]\s)/.test(paragraph)) return false;
+      return english.filter((pattern) => pattern.test(paragraph)).length >= 3;
+    });
+}
+
 function hasEnglishAnalysis(markdown: string) {
   // Canonical analyses are English. Detect sustained Portuguese prose rather
   // than proper names or source titles; no frozen copy is translated here.
@@ -142,7 +154,7 @@ export function evaluatePredictionIndexQuality(
     provenanceComplete,
     metadataValid: Boolean(prediction.homeTeam && prediction.awayTeam && prediction.picks.main),
     internalNotesClean: !hasInternalNotes(markdown),
-    contentLanguageValid: hasEnglishAnalysis(markdown),
+    contentLanguageValid: prediction.analysisLanguage === "pt-BR" ? !hasSustainedEnglishProse(markdown) : hasEnglishAnalysis(markdown),
     editorialUnique: hasEditorialUniqueness(markdown),
     fixtureValid: Boolean(
       prediction.matchInfo?.date?.match(/^\d{4}-\d{2}-\d{2}$/) &&

@@ -16,6 +16,7 @@ export const remoVsGremio: EditorialPrediction = {
   ],
   picks: { main: "Grêmio ou empate (X2)", publishedOdds: 1.7 },
   matchInfo: { date: "2026-10-07", time: "19:30", round: "Round 29", venue: "Mangueirão" },
+  analysisLanguage: "pt-BR",
   analysisAccess: "vip",
   predictionAccess: "free",
   sourceStatus: "partial",

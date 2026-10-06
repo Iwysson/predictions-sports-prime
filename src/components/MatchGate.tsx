@@ -53,20 +53,24 @@ export function MatchGate({ slug, showAnalysis, showPrediction }: { slug: string
   if (state.kind === "ready") {
     const { full, prediction } = state.data;
     return (
-      <MatchFullContent
-        analysis={showAnalysis ? full.analysis : []}
-        sources={showAnalysis ? full.sources : []}
-        comment={showAnalysis ? full.comment : null}
-        prediction={showPrediction ? prediction : null}
-        labels={{ prediction: t("mainPrediction"), odds: t("odds") }}
-      />
+      <div className="psp-unlocked">
+        <MatchFullContent
+          analysis={showAnalysis ? full.analysis : []}
+          sources={showAnalysis ? full.sources : []}
+          comment={showAnalysis ? full.comment : null}
+          prediction={showPrediction ? prediction : null}
+          labels={{ prediction: t("mainPrediction"), odds: t("odds") }}
+        />
+      </div>
     );
   }
   if (state.kind === "loading" || loading) return <p className="match-gate">{t("matchCheckingAccess")}</p>;
 
   return (
-    <div className="match-gate">
-      <p>{t("matchVipGate")}</p>
+    <div className="psp-vip-card match-gate">
+      <span className="psp-badge psp-badge--vip">PRIME VIP</span>
+      <h3>{t("matchVipCardTitle")}</h3>
+      <p>{t("matchVipCardBody")}</p>
       {!user ? (
         <Link className="button auth-primary-action" href="/login/">
           {t("matchLoginToContinue")}

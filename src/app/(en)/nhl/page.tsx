@@ -1,18 +1,26 @@
 import type { Metadata } from "next";
+import Link from "@/components/DocumentLink";
 import { JsonLd } from "@/components/JsonLd";
 import { MatchFullContent } from "@/components/MatchFullContent";
 import { MatchGate } from "@/components/MatchGate";
+import { ResponsibleGamblingNotice } from "@/components/ResponsibleGamblingNotice";
+import { TeamBadge } from "@/components/TeamBadge";
 import { translate } from "@/i18n/dictionaries";
-import { nhlMatches, NHL_PAGE } from "@/lib/nhl";
+import { nhlMatches, NHL_PAGE, type NhlMatch } from "@/lib/nhl";
 import { absoluteUrl } from "@/lib/site-config";
 
-// One NHL page for the 06/10/2026 slate. Each game has its own anchor, not its own URL.
-// FREE games render in full. VIP games render only the teaser and the gate; their analysis and
-// prediction come from /api/match-content/[slug] after the VIP session is confirmed.
-const labels = { prediction: translate("en", "mainPrediction"), odds: translate("en", "odds") };
+// One NHL page for the 06/10/2026 slate. Each game has its own anchor and H2, not its own URL.
+// FREE games (analysis access "free") render their full analysis. VIP games render only the
+// teaser and the gate; their content comes from /api/match-content/[slug] after VIP is confirmed.
+const L = {
+  prediction: translate("en", "mainPrediction"),
+  odds: translate("en", "odds"),
+  analysis: translate("en", "matchAnalysisHeading"),
+  sources: translate("en", "matchSourcesHeading"),
+};
 
 export const metadata: Metadata = {
-  title: NHL_PAGE.title,
+  title: { absolute: NHL_PAGE.title },
   description: NHL_PAGE.description,
   alternates: { canonical: absoluteUrl(NHL_PAGE.path) },
   robots: { index: true, follow: true },
@@ -20,10 +28,30 @@ export const metadata: Metadata = {
   twitter: { card: "summary", title: NHL_PAGE.title, description: NHL_PAGE.description },
 };
 
+const DATE_LABEL = "Tuesday, October 6, 2026";
+
+function FreeGame({ m }: { m: NhlMatch }) {
+  return (
+    <>
+      <div className="psp-pick">
+        <div>
+          <div className="psp-pick__label">{L.prediction}</div>
+          <div className="psp-pick__value">{m.pick}</div>
+        </div>
+        <div className="psp-pick__odds">
+          <span className="psp-pick__label">{L.odds}</span>
+          <strong>{m.odds.toFixed(2)}</strong>
+        </div>
+      </div>
+      <MatchFullContent analysis={m.analysis} sources={m.sources} comment={null} labels={L} />
+    </>
+  );
+}
+
 export default function NhlPage() {
   const matches = nhlMatches();
-  const free = matches.filter((m) => m.access === "free").length;
-  const vip = matches.length - free;
+  const free = matches.filter((m) => m.access === "free");
+  const vip = matches.filter((m) => m.access !== "free");
 
   // Public structured data only: names, date and anchor URLs. No pick, odds or analysis.
   const jsonLd = [
@@ -35,6 +63,7 @@ export default function NhlPage() {
       name: NHL_PAGE.h1,
       description: NHL_PAGE.description,
       inLanguage: "en",
+      isPartOf: { "@type": "WebSite", name: "Predictions Sports Prime", url: absoluteUrl("/") },
       mainEntity: {
         "@type": "ItemList",
         numberOfItems: matches.length,
@@ -46,42 +75,84 @@ export default function NhlPage() {
         })),
       },
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+        { "@type": "ListItem", position: 2, name: "NHL", item: absoluteUrl(NHL_PAGE.path) },
+      ],
+    },
   ];
 
   return (
-    <article className="nhl-page section">
+    <article className="section">
       <JsonLd data={jsonLd} />
       <div className="container">
-        <header>
-          <span className="eyebrow">NHL</span>
+        <nav className="psp-crumbs" aria-label="Breadcrumb">
+          <Link href="/">Home</Link> / <span>NHL</span>
+        </nav>
+
+        <header className="psp-hero">
+          <span className="psp-hero__eyebrow">NHL · {DATE_LABEL}</span>
           <h1>{NHL_PAGE.h1}</h1>
           <p>
-            Nine NHL games on October 6, 2026. {free} free analyses are published in full; {vip} analyses are
+            Nine NHL games on {DATE_LABEL}. Three analyses are published in full for everyone. The remaining six are
             exclusive to PRIME VIP members.
           </p>
+          <div className="psp-chips">
+            <span className="psp-chip">9 games</span>
+            <span className="psp-chip">
+              <span className="psp-badge psp-badge--free">FREE</span> {free.length} analyses
+            </span>
+            <span className="psp-chip">
+              <span className="psp-badge psp-badge--vip">PRIME VIP</span> {vip.length} analyses
+            </span>
+          </div>
         </header>
 
-        {matches.map((m) => (
-          <section className="nhl-game" id={m.anchor} key={m.slug}>
-            <h2>{`${m.homeTeam} vs ${m.awayTeam} Prediction`}</h2>
-            <p>
-              NHL · {m.date} · {m.access === "free" ? translate("en", "matchFreeAnalysis") : translate("en", "matchVipAnalysis")}
-            </p>
-            {m.access === "free" ? (
-              <>
-                <p>
-                  <strong>{labels.prediction}:</strong> {m.pick} · <strong>{labels.odds}:</strong> {m.odds.toFixed(2)}
-                </p>
-                <MatchFullContent analysis={m.analysis} sources={m.sources} comment={null} labels={labels} />
-              </>
-            ) : (
-              <>
-                <p>{m.teaser}</p>
-                <MatchGate slug={m.slug} showAnalysis showPrediction />
-              </>
-            )}
-          </section>
-        ))}
+        <nav className="psp-jump" aria-label="NHL games on this page">
+          {matches.map((m) => (
+            <a key={m.anchor} href={`#${m.anchor}`}>
+              {m.homeTeam} vs {m.awayTeam}
+            </a>
+          ))}
+        </nav>
+
+        <div className="psp-games">
+          {matches.map((m) => {
+            const isFree = m.access === "free";
+            return (
+              <section className={`psp-game ${isFree ? "psp-game--free" : "psp-game--vip"}`} id={m.anchor} key={m.slug}>
+                <div className="psp-game__head">
+                  <span className={`psp-badge ${isFree ? "psp-badge--free" : "psp-badge--vip"}`}>
+                    {isFree ? "FREE" : "PRIME VIP"}
+                  </span>
+                  <p className="psp-game__meta">NHL · {DATE_LABEL} · Kick-off time not listed</p>
+                </div>
+
+                <div className="psp-game__teams">
+                  <TeamBadge team={m.homeTeam} />
+                  <h2>{`${m.homeTeam} vs ${m.awayTeam} Prediction`}</h2>
+                  <TeamBadge team={m.awayTeam} />
+                </div>
+
+                {isFree ? (
+                  <FreeGame m={m} />
+                ) : (
+                  <>
+                    <p className="psp-game__teaser">{m.teaser}</p>
+                    <MatchGate slug={m.slug} showAnalysis showPrediction />
+                  </>
+                )}
+              </section>
+            );
+          })}
+        </div>
+
+        <div className="psp-notice">
+          <ResponsibleGamblingNotice />
+        </div>
       </div>
     </article>
   );

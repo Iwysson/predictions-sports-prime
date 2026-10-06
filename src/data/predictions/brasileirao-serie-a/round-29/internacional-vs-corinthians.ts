@@ -17,6 +17,7 @@ export const internacionalVsCorinthians: EditorialPrediction = {
   ],
   picks: { main: "Over 1.5 gols + Over 7.5 escanteios", publishedOdds: 1.78 },
   matchInfo: { date: "2026-10-07", time: "19:30", round: "Round 29", venue: "Beira-Rio" },
+  analysisLanguage: "pt-BR",
   analysisAccess: "vip",
   predictionAccess: "vip",
   sourceStatus: "partial",

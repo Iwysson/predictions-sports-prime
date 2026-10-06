@@ -196,6 +196,9 @@ export type EditorialPrediction = {
   access?: PredictionAccess;
   // Split access: the analysis and the prediction can have different tiers.
   // When absent, both follow access; when access is absent too, both are "vip".
+  // Declared language of the analysis text. Canonical default is English; pt-BR content is
+  // checked for mixed-in English prose instead of being rejected for being Portuguese.
+  analysisLanguage?: "en" | "pt-BR";
   analysisAccess?: PredictionAccess;
   predictionAccess?: PredictionAccess;
   // Public teaser shown to visitors who cannot read the full content.

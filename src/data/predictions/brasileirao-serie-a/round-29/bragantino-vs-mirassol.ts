@@ -17,6 +17,7 @@ export const bragantinoVsMirassol: EditorialPrediction = {
   ],
   picks: { main: "Bragantino ou empate (1X) + Over 8.5 escanteios", publishedOdds: 1.65 },
   matchInfo: { date: "2026-10-07", time: "19:30", round: "Round 29", venue: "Estádio Municipal Cícero de Souza Marques" },
+  analysisLanguage: "pt-BR",
   analysisAccess: "vip",
   predictionAccess: "vip",
   sourceStatus: "partial",

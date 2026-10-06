@@ -19,9 +19,13 @@ export type NhlMatch = {
   sources: Array<{ name: string; url: string }>;
 };
 
+// Host and path, so two sources from the same site stay distinguishable.
 const sourceName = (url: string) => {
   try {
-    return new URL(url).hostname.replace(/^www\./, "");
+    const u = new URL(url);
+    const path = u.pathname.length > 1 ? u.pathname.replace(/\/$/, "") : "";
+    const label = `${u.hostname.replace(/^www\./, "")}${path}`;
+    return label.length > 64 ? `${label.slice(0, 61)}…` : label;
   } catch {
     return url;
   }

@@ -19,7 +19,7 @@ export function VipCheckoutButton() {
   if (!isAuthenticated) {
     return (
       <Link className="button auth-primary-action" href="/login/">
-        {t("matchGetVip")}
+        {t("matchGetPrimeVip")}
       </Link>
     );
   }
@@ -48,7 +48,7 @@ export function VipCheckoutButton() {
   return (
     <div>
       <button className="button auth-primary-action" disabled={busy} onClick={startCheckout} type="button">
-        {busy ? t("matchOpeningCheckout") : t("matchGetVip")}
+        {busy ? t("matchOpeningCheckout") : t("matchGetPrimeVip")}
       </button>
       {error ? (
         <p className="auth-message auth-message--error" role="alert">

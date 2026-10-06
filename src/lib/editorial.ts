@@ -74,6 +74,8 @@ export function toMatchPreview(match: Match): MatchPreview {
 
   return {
     id: match.id,
+    analysisAccess: match.analysisAccess,
+    predictionAccess: match.predictionAccess,
     fixtureId: match.fixtureId,
     kickoffUtc: match.kickoffUtc,
     timezone: match.timezone,

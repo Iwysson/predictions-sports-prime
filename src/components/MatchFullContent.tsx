@@ -8,41 +8,54 @@ export function MatchFullContent({
   comment,
   prediction,
   labels,
+  heading,
 }: {
   analysis: string[];
   sources: Sources;
   comment: string | null;
   prediction?: { main: string; odds: number | null } | null;
-  labels: { prediction: string; odds: string };
+  labels: { prediction: string; odds: string; analysis?: string; sources?: string };
+  heading?: string;
 }) {
   return (
-    <section className="match-full-content compact-analysis-copy">
+    <div className="psp-analysis-block">
       {prediction ? (
-        <p>
-          <strong>{labels.prediction}:</strong> {prediction.main}
+        <div className="psp-pick">
+          <div>
+            <div className="psp-pick__label">{labels.prediction}</div>
+            <div className="psp-pick__value">{prediction.main}</div>
+          </div>
           {prediction.odds !== null ? (
-            <>
-              {" · "}
-              <strong>{labels.odds}:</strong> {prediction.odds.toFixed(2)}
-            </>
+            <div className="psp-pick__odds">
+              <span className="psp-pick__label">{labels.odds}</span>
+              <strong>{prediction.odds.toFixed(2)}</strong>
+            </div>
           ) : null}
-        </p>
+        </div>
       ) : null}
-      {analysis.map((paragraph, index) => (
-        <p key={index}>{paragraph}</p>
-      ))}
-      {comment ? <p className="match-note">{comment}</p> : null}
-      {sources.length ? (
-        <ul className="match-sources">
-          {sources.map((source) => (
-            <li key={source.url}>
-              <a href={source.url} rel="nofollow noopener" target="_blank">
-                {source.name}
-              </a>
-            </li>
+      {analysis.length ? (
+        <section className="psp-analysis compact-analysis-copy match-full-content">
+          <h3>{heading ?? labels.analysis ?? "Analysis"}</h3>
+          {analysis.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
           ))}
-        </ul>
+          {comment ? <p className="match-note">{comment}</p> : null}
+        </section>
       ) : null}
-    </section>
+      {sources.length ? (
+        <section className="psp-sources-block">
+          <h3 className="psp-analysis-heading">{labels.sources ?? "Sources"}</h3>
+          <ul className="psp-sources">
+            {sources.map((source) => (
+              <li key={source.url}>
+                <a href={source.url} rel="nofollow noopener" target="_blank">
+                  {source.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+    </div>
   );
 }

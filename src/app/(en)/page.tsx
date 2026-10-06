@@ -13,6 +13,7 @@ import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { localizedAlternates } from "@/lib/international-seo";
 import { indexableLocalizedHubLocaleSlugs } from "@/lib/seo-locales";
 import { selectTemporalClientMatches } from "@/lib/match-feed";
+import { HomeSportsHubs } from "@/components/HomeSportsHubs";
 
 const homeTitle = "Football Predictions Today & Betting Tips";
 const homeDescription = "Football predictions, betting tips and match analysis for today's, tomorrow's and upcoming fixtures across major leagues.";
@@ -64,7 +65,7 @@ export default async function Home() {
       <HomePredictionFeed
         matches={clientMatches}
         discovery={<PublishedMatchDirectory matches={resolvedMatches} />}
-        beforeToday={<AdSlot placement="home-before-today" showLabel compact wrapperClassName="container home-ad-space home-ad-space--compact" />}
+        beforeToday={<><HomeSportsHubs /><AdSlot placement="home-before-today" showLabel compact wrapperClassName="container home-ad-space home-ad-space--compact" /></>}
         beforeTomorrow={
           <>
             <AdSlot placement="home-before-tomorrow" showLabel wrapperClassName="container home-ad-space" />

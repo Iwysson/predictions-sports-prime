@@ -17,6 +17,7 @@ export const athleticoPrVsAtleticoMg: EditorialPrediction = {
   ],
   picks: { main: "Athletico-PR ou empate (1X) + Over 8.5 escanteios", publishedOdds: 1.78 },
   matchInfo: { date: "2026-10-08", time: "20:00", round: "Round 29", venue: "Arena da Baixada" },
+  analysisLanguage: "pt-BR",
   analysisAccess: "vip",
   predictionAccess: "vip",
   sourceStatus: "partial",

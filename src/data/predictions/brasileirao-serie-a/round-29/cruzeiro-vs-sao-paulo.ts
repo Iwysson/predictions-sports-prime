@@ -17,6 +17,7 @@ export const cruzeiroVsSaoPaulo: EditorialPrediction = {
   ],
   picks: { main: "Cruzeiro ou empate (1X) + Over 1.5 gols", publishedOdds: 1.67 },
   matchInfo: { date: "2026-10-07", time: "21:30", round: "Round 29", venue: "Mineirão" },
+  analysisLanguage: "pt-BR",
   analysisAccess: "vip",
   predictionAccess: "vip",
   sourceStatus: "partial",

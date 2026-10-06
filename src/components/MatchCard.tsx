@@ -10,6 +10,7 @@ import { canRenderComingSoon } from "@/lib/fixture-status";
 import { getMatchDisplayTime } from "@/lib/match-time";
 import { isFixtureLiveNow, isFutureFixture } from "@/lib/fixture-state";
 import { localePath, matchPredictionAnchor, seoLocales, type SeoLocale } from "@/lib/seo-locales";
+import { listingLabel } from "@/lib/match-access";
 import { localizedFixtureStatus, localizedLive } from "@/lib/localized-ui";
 
 export function MatchCard({
@@ -72,7 +73,7 @@ export function MatchCard({
         <span className={`prediction-pill prediction-pill--${live ? "live" : match.status}`}>
           <span aria-hidden="true">✓</span>
           {live ? localizedLive(locale) : match.status === "published"
-            ? t("predictionAvailable")
+            ? listingLabel(match, locale, t("predictionAvailable"))
             : showComingSoon ? t("comingSoon") : localizedFixtureStatus(match.fixtureStatus, locale)}
         </span>
 
@@ -80,7 +81,7 @@ export function MatchCard({
           <Link
             href={matchHref}
             className="button button--small"
-            aria-label={`${match.homeTeam} ${locale === "en" ? "vs" : seoLocales[locale].separator} ${match.awayTeam} — ${t("predictionAvailable")}`}
+            aria-label={`${match.homeTeam} ${locale === "en" ? "vs" : seoLocales[locale].separator} ${match.awayTeam} — ${listingLabel(match, locale, t("predictionAvailable"))}`}
           >
             {future ? matchPredictionAnchor(match.homeTeam, match.awayTeam, locale) : t("view")} <span aria-hidden="true">›</span>
           </Link>

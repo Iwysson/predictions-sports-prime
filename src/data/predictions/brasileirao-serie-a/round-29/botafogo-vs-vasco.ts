@@ -17,6 +17,7 @@ export const botafogoVsVasco: EditorialPrediction = {
   ],
   picks: { main: "Botafogo ou empate (1X) + Over 1.5 gols", publishedOdds: 1.95 },
   matchInfo: { date: "2026-10-07", time: "20:30", round: "Round 29", venue: "Nilton Santos" },
+  analysisLanguage: "pt-BR",
   analysisAccess: "vip",
   predictionAccess: "vip",
   sourceStatus: "partial",

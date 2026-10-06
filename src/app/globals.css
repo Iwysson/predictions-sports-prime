@@ -4621,3 +4621,82 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .intl-notice p { margin: 0; }
 
 .intl-notice a { color: var(--text); text-decoration: underline; }
+
+/* ===== PSP match and sports pages (FREE / PRIME VIP) ===== */
+.psp-crumbs { font-size: 13px; color: var(--text-muted); margin: 0 0 14px; }
+.psp-crumbs a { color: var(--text-secondary); text-decoration: none; }
+.psp-crumbs a:hover { color: var(--accent); text-decoration: underline; }
+.psp-hero { display: grid; gap: 10px; padding: 28px 24px; border: 1px solid var(--border); border-radius: 16px; background: linear-gradient(135deg, var(--surface) 0%, var(--surface-subtle) 100%); box-shadow: var(--shadow); }
+.psp-hero__eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.psp-hero h1 { margin: 0; font-size: clamp(26px, 4vw, 38px); line-height: 1.15; color: var(--text-primary); }
+.psp-hero p { margin: 0; color: var(--text-secondary); max-width: 68ch; }
+.psp-meta-row { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: 14px; color: var(--text-secondary); }
+.psp-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.psp-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); font-size: 13px; color: var(--text-secondary); }
+.psp-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.psp-badge--free { background: color-mix(in srgb, var(--success) 14%, var(--surface)); color: var(--success); border: 1px solid color-mix(in srgb, var(--success) 40%, var(--border)); }
+.psp-badge--vip { background: #1d1a12; color: #f3d98b; border: 1px solid #8a6d20; }
+.psp-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 8px; }
+.psp-jump a { padding: 7px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text-primary); text-decoration: none; font-size: 14px; }
+.psp-jump a:hover { border-color: var(--accent); color: var(--accent); }
+.psp-games { display: grid; gap: 18px; margin-top: 18px; }
+.psp-game { scroll-margin-top: 90px; display: grid; gap: 16px; padding: 22px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); }
+.psp-game--vip { border-color: color-mix(in srgb, #8a6d20 35%, var(--border)); }
+.psp-game__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+.psp-game__teams { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.psp-game__teams .psp-vs { color: var(--text-muted); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
+.psp-game h2 { margin: 0; font-size: clamp(19px, 2.4vw, 23px); line-height: 1.25; color: var(--text-primary); }
+.psp-game__meta { font-size: 13px; color: var(--text-muted); margin: 0; }
+.psp-game__teaser { margin: 0; color: var(--text-secondary); font-size: 16px; line-height: 1.6; }
+.psp-pick { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; padding: 16px 18px; border-radius: 12px; background: var(--surface-subtle); border: 1px solid var(--border); }
+.psp-pick__label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); }
+.psp-pick__value { font-size: 18px; font-weight: 800; color: var(--text-primary); margin-top: 2px; }
+.psp-pick__odds { text-align: right; }
+.psp-pick__odds strong { display: block; font-size: 24px; color: var(--accent); }
+.psp-analysis { display: grid; gap: 12px; }
+.psp-analysis h3 { margin: 0; font-size: 15px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); }
+.psp-analysis p { margin: 0; color: var(--text-primary); font-size: 16px; line-height: 1.72; max-width: 72ch; }
+.psp-sources { margin: 0; padding-left: 18px; font-size: 14px; }
+.psp-sources a { color: var(--accent); }
+.psp-vip-card { display: grid; gap: 12px; padding: 20px; border-radius: 14px; background: #1d1a12; color: #f6efd9; border: 1px solid #8a6d20; }
+.psp-vip-card h3 { margin: 0; font-size: 18px; color: #f3d98b; }
+.psp-vip-card p { margin: 0; color: #e7dcbc; line-height: 1.6; }
+.psp-vip-card .button, .psp-vip-card button { justify-self: start; }
+.psp-trend { display: grid; gap: 4px; padding: 14px 16px; border-radius: 12px; border: 1px dashed var(--border-strong); background: var(--surface-subtle); }
+.psp-trend__label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); }
+.psp-trend__value { font-size: 16px; font-weight: 700; color: var(--text-primary); }
+.psp-related { display: grid; gap: 10px; }
+.psp-related ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.psp-related a { display: block; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text-primary); text-decoration: none; }
+.psp-related a:hover { border-color: var(--accent); }
+.psp-hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.psp-hub-card { display: grid; gap: 6px; padding: 18px; border-radius: 14px; border: 1px solid var(--border); background: var(--surface); text-decoration: none; color: var(--text-primary); box-shadow: var(--shadow); }
+.psp-hub-card:hover { border-color: var(--accent); }
+.psp-hub-card strong { font-size: 17px; }
+.psp-hub-card span { font-size: 14px; color: var(--text-secondary); }
+@media (min-width: 760px) {
+  .psp-hero { padding: 36px 34px; }
+  .psp-game { padding: 26px 28px; }
+  .psp-match-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px; align-items: start; }
+}
+@media (max-width: 560px) {
+  .psp-pick { grid-template-columns: 1fr; }
+  .psp-pick__odds { text-align: left; }
+  .psp-game { padding: 18px 16px; }
+}
+.psp-teams { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 4px 0 2px; }
+.psp-teams .psp-vs { color: var(--text-muted); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+.psp-match-main { display: grid; gap: 18px; min-width: 0; }
+.psp-match-side { display: grid; gap: 14px; align-content: start; }
+.psp-match-body { margin-top: 18px; }
+.psp-unlocked { display: grid; gap: 18px; }
+.psp-notice { margin-top: 28px; }
+.psp-game__head .psp-game__meta { margin: 0; }
+.match-page .psp-hero .match-seo-intro { font-size: 16px; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+.match-page .psp-pick { margin: 0; }
+.psp-analysis-block { display: grid; gap: 18px; }
+.psp-sources-block { display: grid; gap: 8px; }
+.psp-analysis-heading { margin: 0; font-size: 15px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); }
+
+.psp-team { display: inline-flex; align-items: center; gap: 8px; }
+.psp-team strong { font-size: 16px; color: var(--text-primary); }

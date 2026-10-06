@@ -137,7 +137,7 @@ const en: HomeFeedCopy = {
   upcomingEyebrow: "Upcoming", upcomingTitle: "Upcoming Football Predictions",
   resultsEyebrow: "Results", resultsTitle: "Latest Football Prediction Results",
   predictionAvailable: "Prediction available", comingSoon: "Coming soon",
-  nextAvailable: "Next predictions available", exploreUpcoming: "Explore tomorrow and upcoming match analyses.",
+  nextAvailable: "No predictions for today", exploreUpcoming: "The upcoming fixtures are listed below, with tomorrow and later matchdays.",
   viewUpcoming: "View upcoming predictions", noTomorrow: "No published matches are currently available for tomorrow.",
   seeUpcoming: "See the upcoming football predictions below.", noUpcoming: "No upcoming predictions available.",
   noCompleted: "No completed predictions yet.", viewAllResults: "View all results",

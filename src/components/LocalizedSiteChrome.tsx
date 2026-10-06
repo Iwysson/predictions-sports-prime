@@ -28,6 +28,7 @@ export function LocalizedHeader({ locale }: { locale: SeoLocaleSlug }) {
         { href: homeHref, label: copy.today },
         { href: leaguesHref, label: copy.leagues },
         { href: nflHref, label: "NFL" },
+        { href: "/nhl/", label: "NHL" },
         { href: "/results/", label: copy.results, hrefLang: "en" },
         { href: "/methodology/", label: copy.methodology, hrefLang: "en" },
       ]}

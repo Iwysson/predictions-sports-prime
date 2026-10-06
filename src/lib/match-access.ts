@@ -2,6 +2,7 @@ import type { EditorialPrediction, PredictionAccess } from "@/types";
 import { contentAccess, resolveAccess, type ContentAccess } from "@/lib/vip";
 import { predictionSlug } from "@/lib/editorial";
 import { isFutureFixture } from "@/lib/fixture-state";
+import { translate } from "@/i18n/dictionaries";
 
 // Shared split between what a public page may contain and what is premium.
 // Public: teams, league, kickoff, teaser, tier labels, and a prediction only when its
@@ -109,4 +110,18 @@ export function buildContentIndex(
       };
     });
   return [...fromPredictions, ...extra];
+}
+
+// Listing label for a match card: the tier a visitor will see, not a generic "available" message.
+export function listingLabel(item: { analysisAccess?: PredictionAccess; predictionAccess?: PredictionAccess }, locale: string, fallback: string): string {
+  if (item.predictionAccess === "free") return translate(locale, "matchFreePrediction");
+  if (item.analysisAccess === "vip" || item.predictionAccess === "vip") return translate(locale, "matchListVip");
+  return fallback;
+}
+
+// Human date for match pages, for example "7 October 2026". ISO input, UTC-safe.
+export function formatMatchDate(iso: string): string {
+  const time = Date.parse(`${iso}T12:00:00Z`);
+  if (Number.isNaN(time)) return iso;
+  return new Date(time).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 }

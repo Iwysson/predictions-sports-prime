@@ -1,6 +1,7 @@
 import Link from "@/components/DocumentLink";
 import type { MatchPreview } from "@/types";
 import { LeagueBadge } from "@/components/LeagueBadge";
+import { listingLabel } from "@/lib/match-access";
 import { TeamBadge } from "@/components/TeamBadge";
 import { leaguesBySlug } from "@/data/leagues";
 import { canRenderComingSoon } from "@/lib/fixture-status";
@@ -59,10 +60,10 @@ export function HomeMatchCard({
       <div className="compact-match-footer">
         <span className={`prediction-pill prediction-pill--${live ? "live" : match.status}`}>
           <span aria-hidden="true">✓</span>
-          {live ? localizedLive(locale) : match.status === "published" ? predictionAvailableLabel : showComingSoon ? comingSoonLabel : localizedFixtureStatus(match.fixtureStatus, locale)}
+          {live ? localizedLive(locale) : match.status === "published" ? listingLabel(match, locale, predictionAvailableLabel) : showComingSoon ? comingSoonLabel : localizedFixtureStatus(match.fixtureStatus, locale)}
         </span>
         {match.status === "published" ? (
-          <Link href={href} className="button button--small" aria-label={`${match.homeTeam} ${locale === "en" ? "vs" : seoLocales[locale].separator} ${match.awayTeam} — ${predictionAvailableLabel}`}>
+          <Link href={href} className="button button--small" aria-label={`${match.homeTeam} ${locale === "en" ? "vs" : seoLocales[locale].separator} ${match.awayTeam} — ${listingLabel(match, locale, predictionAvailableLabel)}`}>
             {future ? matchPredictionAnchor(match.homeTeam, match.awayTeam, locale) : viewLabel} <span aria-hidden="true">›</span>
           </Link>
         ) : null}

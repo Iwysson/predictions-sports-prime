@@ -16,6 +16,7 @@ export const vitoriaVsChapecoense: EditorialPrediction = {
   ],
   picks: { main: "Vitória vence", publishedOdds: 1.72 },
   matchInfo: { date: "2026-10-07", time: "20:00", round: "Round 29", venue: "Barradão" },
+  analysisLanguage: "pt-BR",
   analysisAccess: "vip",
   predictionAccess: "free",
   sourceStatus: "partial",

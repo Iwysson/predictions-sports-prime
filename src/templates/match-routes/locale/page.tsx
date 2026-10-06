@@ -1,35 +1,37 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { editorialPredictions } from "@/data/predictions";
-import { JsonLd } from "@/components/JsonLd";
-import { ArticleByline } from "@/components/ArticleByline";
 import { leaguesBySlug } from "@/data/leagues";
-import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
+import { ArticleByline } from "@/components/ArticleByline";
+import { JsonLd } from "@/components/JsonLd";
 import { MatchFullContent } from "@/components/MatchFullContent";
 import { MatchGate } from "@/components/MatchGate";
-import { isPublishableFuture, matchSlug } from "@/lib/match-access";
+import { ResponsibleGamblingNotice } from "@/components/ResponsibleGamblingNotice";
+import { TeamBadge } from "@/components/TeamBadge";
+import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
+import { localePath, seoLocaleSlugs, type SeoLocaleSlug } from "@/lib/seo-locales";
+import { formatMatchDate, isPublishableFuture, matchSlug } from "@/lib/match-access";
 import { buildMatchPageModel } from "@/lib/match-page-model";
 import { absoluteUrl } from "@/lib/site-config";
-import { localePath, seoLocaleSlugs, type SeoLocaleSlug } from "@/lib/seo-locales";
 import type { EditorialPrediction } from "@/types";
 
-// Template for /[locale]/match/[slug]/. Restored by scripts/sync-match-routes.mts when a future
+// Template for /match/[slug]/. Restored by scripts/sync-match-routes.mts when a future
 // prediction with a recorded kickoff exists.
 //
 // The page renders only the public parts of the model (src/lib/match-page-model.ts):
-// - public JSON-LD (teams, league, kickoff, venue when recorded, canonical);
+// - breadcrumb, header, badges (analysis and prediction tiers), byline;
 // - the prediction, when its prediction access is "free";
 // - the trend, when the prediction is VIP;
 // - the analysis, when its analysis access is "free";
 // - the gate for whatever is VIP. The gate receives only the slug and two booleans.
 export const dynamicParams = false;
 
-function publishable() {
-  return (editorialPredictions as EditorialPrediction[]).filter((p) => isPublishableFuture(p));
-}
-
 function isLocale(value: string): value is SeoLocaleSlug {
   return (seoLocaleSlugs as readonly string[]).includes(value);
+}
+
+function publishable() {
+  return (editorialPredictions as EditorialPrediction[]).filter((p) => isPublishableFuture(p));
 }
 
 export function generateStaticParams() {
@@ -40,9 +42,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const prediction = publishable().find((p) => matchSlug(p) === slug);
-  if (!isLocale(locale)) return {};
-  const model = prediction ? buildMatchPageModel(prediction, locale) : null;
-  if (!model) return {};
+  const model = prediction && isLocale(locale) ? buildMatchPageModel(prediction, locale) : null;
+  if (!model || !isLocale(locale)) return {};
   return {
     title: model.seoTitle,
     description: model.view.teaser,
@@ -52,71 +53,125 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function MatchPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+export default async function LocalizedMatchPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   if (!isLocale(locale)) notFound();
   const prediction = publishable().find((p) => matchSlug(p) === slug);
   const model = prediction ? buildMatchPageModel(prediction, locale) : null;
   if (!model || !prediction) notFound();
-  const related = publishable().filter((q) => q.league === prediction.league && matchSlug(q) !== slug).slice(0, 4);
+  // Other publishable matches in the same league, for internal links (titles only).
+  const related = publishable().filter((p) => p.league === prediction.league && matchSlug(p) !== slug).slice(0, 4);
+  const leagueName = leaguesBySlug[prediction.league]?.name ?? prediction.league;
+  const v = model.view;
+  const analysisFree = v.analysisAccess === "free";
+  const predictionFree = v.predictionAccess === "free";
 
   return (
-    <article className="match-page">
+    <article className="section match-page">
       <JsonLd data={model.jsonLd} />
-      <header>
-        <span className="eyebrow">{model.view.kicker}</span>
-        <ArticleByline />
-        <h1>{model.view.heading}</h1>
-        <p>
-          {model.view.league} · {model.view.date} · {model.view.time}
-          {model.view.round ? ` · ${model.view.round}` : ""}
-        </p>
-        <p className="match-seo-intro">{model.view.teaser}</p>
-        <p>
-          <a href={`/league/${model.view.league}/`}>{leaguesBySlug[prediction.league]?.name ?? prediction.league} predictions</a>
-        </p>
-        <p className="match-dates">
-          {model.view.publishedDate ? `Published: ${model.view.publishedDate}` : null}
-          {model.view.publishedDate && model.view.updatedDate ? " · " : null}
-          {model.view.updatedDate ? `Updated: ${model.view.updatedDate}` : null}
-        </p>
-      </header>
-      {model.publicPrediction ? (
-        <p className="match-prediction main-prediction-block">
-          <strong>{model.labels.prediction}:</strong> {model.publicPrediction.main}
-          {model.publicPrediction.odds !== null ? <> · <strong>{model.labels.odds}:</strong> {model.publicPrediction.odds.toFixed(2)}</> : null}
-        </p>
-      ) : null}
-      {model.trend ? (
-        <p className="match-trend">
-          <strong>{model.labels.trend}:</strong> {model.trend}
-        </p>
-      ) : null}
-      {model.staticAnalysis ? (
-        <MatchFullContent
-          analysis={model.staticAnalysis.analysis}
-          sources={model.staticAnalysis.sources}
-          comment={model.staticAnalysis.comment}
-          labels={model.labels}
-        />
-      ) : null}
-      {model.gate ? (
-        <div data-prediction-reveal="locked" data-protected-content="analysis" className="match-gate-slot">
-          <MatchGate slug={model.gate.slug} showAnalysis={model.gate.showAnalysis} showPrediction={model.gate.showPrediction} />
+      <div className="container">
+        <nav className="psp-crumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a> / <a href={`/league/${prediction.league}/`}>{leagueName}</a> /{" "}
+          <span>{`${v.homeTeam} vs ${v.awayTeam}`}</span>
+        </nav>
+
+        <header className="psp-hero">
+          <div className="psp-meta-row">
+            <span className="psp-badge psp-badge--free">{leagueName}</span>
+            {prediction.matchInfo?.round ? <span>{prediction.matchInfo.round}</span> : null}
+            <span>
+              {formatMatchDate(v.date)} · {v.time}
+            </span>
+            {prediction.matchInfo?.venue ? <span>{prediction.matchInfo.venue}</span> : null}
+          </div>
+          <h1>{v.heading}</h1>
+          <div className="psp-chips">
+            <span className={`psp-badge ${analysisFree ? "psp-badge--free" : "psp-badge--vip"}`}>
+              {analysisFree ? "FREE ANALYSIS" : "PRIME VIP ANALYSIS"}
+            </span>
+            <span className={`psp-badge ${predictionFree ? "psp-badge--free" : "psp-badge--vip"}`}>
+              {predictionFree ? "FREE PREDICTION" : "PRIME VIP PREDICTION"}
+            </span>
+          </div>
+          <ArticleByline />
+          <p className="match-dates">
+            {v.publishedDate ? `Published: ${formatMatchDate(v.publishedDate)}` : null}
+            {v.publishedDate && v.updatedDate ? " · " : null}
+            {v.updatedDate ? `Updated: ${formatMatchDate(v.updatedDate)}` : null}
+          </p>
+          <p className="match-seo-intro">{v.teaser}</p>
+        </header>
+
+        <div className="psp-match-body">
+          <div className="psp-match-main">
+            <div className="psp-teams">
+              <span className="psp-team"><TeamBadge team={v.homeTeam} /> <strong>{v.homeTeam}</strong></span>
+              <span className="psp-vs">vs</span>
+              <span className="psp-team"><TeamBadge team={v.awayTeam} /> <strong>{v.awayTeam}</strong></span>
+            </div>
+
+            {model.publicPrediction ? (
+              <div className="psp-pick main-prediction-block">
+                <div>
+                  <div className="psp-pick__label">{model.labels.prediction}</div>
+                  <div className="psp-pick__value">{model.publicPrediction.main}</div>
+                </div>
+                {model.publicPrediction.odds !== null ? (
+                  <div className="psp-pick__odds">
+                    <span className="psp-pick__label">{model.labels.odds}</span>
+                    <strong>{model.publicPrediction.odds.toFixed(2)}</strong>
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
+
+            {model.trend ? (
+              <div className="psp-trend">
+                <span className="psp-trend__label">{model.labels.trend}</span>
+                <span className="psp-trend__value">{model.trend}</span>
+              </div>
+            ) : null}
+
+            {model.staticAnalysis ? (
+              <MatchFullContent
+                analysis={model.staticAnalysis.analysis}
+                sources={model.staticAnalysis.sources}
+                comment={model.staticAnalysis.comment}
+                labels={model.labels}
+              />
+            ) : null}
+
+            {model.gate ? (
+              <div data-prediction-reveal="locked" data-protected-content="analysis" className="match-gate-slot">
+                <MatchGate slug={model.gate.slug} showAnalysis={model.gate.showAnalysis} showPrediction={model.gate.showPrediction} />
+              </div>
+            ) : null}
+          </div>
+
+          <aside className="psp-match-side">
+            {related.length ? (
+              <div className="psp-related">
+              <section className="related-predictions">
+                <h2>{`More ${leagueName} predictions`}</h2>
+                <ul>
+                  {related.map((p) => (
+                    <li key={matchSlug(p)}>
+                      <a href={`/match/${matchSlug(p)}/`} aria-label={`${p.homeTeam} vs ${p.awayTeam} Prediction`}>
+                        {`${p.homeTeam} vs ${p.awayTeam} Prediction`}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+              </div>
+            ) : null}
+          </aside>
         </div>
-      ) : null}
-      {related.length ? (
-        <section className="related-predictions">
-          <h2>More {leaguesBySlug[prediction.league]?.name ?? prediction.league} predictions</h2>
-          <ul>
-            {related.map((q) => (
-              <li key={matchSlug(q)}>
-                <a href={`/match/${matchSlug(q)}/`} aria-label={`${q.homeTeam} vs ${q.awayTeam} Prediction`}>{`${q.homeTeam} vs ${q.awayTeam} Prediction`}</a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
+
+        <div className="psp-notice">
+          <ResponsibleGamblingNotice />
+        </div>
+      </div>
     </article>
   );
 }

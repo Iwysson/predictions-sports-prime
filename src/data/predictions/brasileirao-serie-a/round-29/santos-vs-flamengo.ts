@@ -17,6 +17,7 @@ export const santosVsFlamengo: EditorialPrediction = {
   ],
   picks: { main: "Santos ou empate (1X)", publishedOdds: 2 },
   matchInfo: { date: "2026-10-08", time: "19:30", round: "Round 29", venue: "Vila Belmiro" },
+  analysisLanguage: "pt-BR",
   analysisAccess: "vip",
   predictionAccess: "vip",
   sourceStatus: "partial",

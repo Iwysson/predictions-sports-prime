@@ -17,6 +17,7 @@ export const palmeirasVsBahia: EditorialPrediction = {
   ],
   picks: { main: "Palmeiras vence", publishedOdds: 1.57 },
   matchInfo: { date: "2026-10-08", time: "21:30", round: "Round 29", venue: "Nubank Parque" },
+  analysisLanguage: "pt-BR",
   analysisAccess: "vip",
   predictionAccess: "vip",
   sourceStatus: "partial",

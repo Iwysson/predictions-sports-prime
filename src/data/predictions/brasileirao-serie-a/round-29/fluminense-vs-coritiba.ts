@@ -17,6 +17,7 @@ export const fluminenseVsCoritiba: EditorialPrediction = {
   ],
   picks: { main: "Fluminense vence + Over 1.5 gols", publishedOdds: 1.87 },
   matchInfo: { date: "2026-10-08", time: "21:30", round: "Round 29", venue: "Maracanã" },
+  analysisLanguage: "pt-BR",
   analysisAccess: "vip",
   predictionAccess: "vip",
   sourceStatus: "partial",
