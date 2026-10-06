@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, statSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 
 const root = process.cwd();
@@ -35,9 +35,15 @@ for (const file of files) {
   if (hasPublishedOdds && !/\boddsProvenance:\s*\{/.test(source)) legacyOddsWithoutProvenance.push(label);
 }
 
-const chelsea = readFileSync(join(base, "efl-cup", "round-02", "chelsea-vs-luton-town.ts"), "utf8");
-if (!/publishedOdds:\s*1\.75/.test(chelsea) || !/latestObservedOdds:\s*1\.55/.test(chelsea)) {
-  errors.push("chelsea-vs-luton-town: published 1.75 and latest observed 1.55 are not preserved separately");
+// This fixture is a past match: its source was removed with the history migration
+// (its prediction is preserved in src/data/predictions-history/history.json). The
+// odds-separation check applies only while the source file still exists.
+const chelseaPath = join(base, "efl-cup", "round-02", "chelsea-vs-luton-town.ts");
+if (existsSync(chelseaPath)) {
+  const chelsea = readFileSync(chelseaPath, "utf8");
+  if (!/publishedOdds:\s*1\.75/.test(chelsea) || !/latestObservedOdds:\s*1\.55/.test(chelsea)) {
+    errors.push("chelsea-vs-luton-town: published 1.75 and latest observed 1.55 are not preserved separately");
+  }
 }
 if (legacyOddsWithoutProvenance.length) {
   console.log(`NOTE: ${legacyOddsWithoutProvenance.length} legacy records carry editorially supplied odds with no recorded bookmaker or capture time. They are historical/frozen, are not attributed to any bookmaker, and are left unchanged:`);

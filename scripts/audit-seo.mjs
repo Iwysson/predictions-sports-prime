@@ -349,9 +349,10 @@ if (!resultsHtml) errors.push(`${resultsRoute}: generated page is missing`);
 else {
   if (!resultsHtml.includes(`<link rel="canonical" href="${siteUrl}${resultsRoute}"`)) errors.push(`${resultsRoute}: invalid canonical`);
   if (!/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(resultsHtml)) errors.push(`${resultsRoute}: missing index, follow`);
-  if (!resultsHtml.includes("data-results-total=")) errors.push(`${resultsRoute}: complete history summary is missing`);
+  // Past predictions moved to the VIP archive; /results must link to it.
+  if (!resultsHtml.includes("/historypredictions/")) errors.push(`${resultsRoute}: link to the VIP history archive is missing`);
   const historyEntries = count(resultsHtml, /data-result-slug=/g);
-  if (historyEntries === 0) errors.push(`${resultsRoute}: completed prediction History is empty`);
+  if (historyEntries === 0 && !resultsHtml.includes("/historypredictions/")) errors.push(`${resultsRoute}: completed prediction History is empty`);
   if (historyEntries > matchRoutes.length) errors.push(`${resultsRoute}: contains more History entries than published matches`);
 }
 
@@ -376,7 +377,10 @@ for (const [route, lastmod] of sitemapEntries) {
 // Runtime registry is authoritative for publication and indexability. The
 // source-file scan above remains useful for timestamp syntax diagnostics, but
 // it must not recreate the application registry with regular expressions.
-const publishedEditorial = runtimePredictions.filter((prediction) => prediction.published === true);
+// Same rule as buildPublishedMatches: unresolved predictions without a recorded
+// kickoff stay in quarantine and deliberately get no match page.
+const publishedEditorial = runtimePredictions.filter((prediction) =>
+  prediction.published === true && prediction.matchInfo?.date && prediction.matchInfo?.time);
 if (matchRoutes.length !== publishedEditorial.length) {
   errors.push(`generated match count (${matchRoutes.length}) does not equal published editorial count (${publishedEditorial.length}); possible draft leakage`);
 }

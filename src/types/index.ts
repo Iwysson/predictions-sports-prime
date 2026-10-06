@@ -173,6 +173,8 @@ export type VenueAddress = {
   addressCountry?: string;
 };
 
+export type PredictionAccess = "free" | "vip";
+
 export type EditorialPrediction = {
   league: LeagueSlug;
   homeTeam: string;
@@ -190,6 +192,8 @@ export type EditorialPrediction = {
   // Opt-in marker for the strict Predictions-Sports-Prime editorial contract.
   // New and fully migrated predictions must use psp-v1.
   editorialStandard?: "psp-v1" | "psp-v2";
+  // Access tier. Default is "vip": a prediction is free only when explicitly marked "free".
+  access?: PredictionAccess;
   seoTitle?: string;
 
   // Optional note shown below the analysis.
@@ -256,6 +260,8 @@ export type Match = {
   // Opt-in marker for the strict Predictions-Sports-Prime editorial contract.
   // New and fully migrated predictions must use psp-v1.
   editorialStandard?: "psp-v1" | "psp-v2";
+  // Access tier. Default is "vip": a prediction is free only when explicitly marked "free".
+  access?: PredictionAccess;
   seoTitle?: string;
   comment?: string;
   predictions: PredictionItem[];

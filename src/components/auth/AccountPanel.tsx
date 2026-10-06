@@ -5,6 +5,7 @@ import Link from "@/components/DocumentLink";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { AuthCard } from "./AuthCard";
+import { VipCheckoutButton } from "@/components/VipCheckoutButton";
 
 export function AccountPanel() {
   const router = useRouter();
@@ -89,6 +90,8 @@ export function AccountPanel() {
           {logoutError}
         </p>
       ) : null}
+
+      <VipCheckoutButton />
 
       <button
         className="button auth-logout-button"

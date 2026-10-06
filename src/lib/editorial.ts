@@ -257,6 +257,7 @@ export function editorialToMatch(
     analysisFormat: prediction.analysisFormat,
     seoTitle: prediction.seoTitle,
     editorialStandard: prediction.editorialStandard,
+    access: prediction.access ?? "vip",
     comment: prediction.comment,
     predictions: picksToItems(prediction),
     betResult: typeof prediction.picks.result === "string"
@@ -334,11 +335,19 @@ function validateMatchSeo(prediction: EditorialPrediction, label: string, errors
   }
 }
 
+// A prediction is public only when its kickoff date and time are recorded.
+// Predictions without a verified kickoff stay in the source as unresolved
+// quarantine: they are not listed and get no match page, so no link points to them.
+function hasRecordedKickoff(prediction: EditorialPrediction) {
+  const info = prediction.matchInfo;
+  return Boolean(info?.date && ISO_DATE_PATTERN.test(info.date) && info.time && KICKOFF_PATTERN.test(info.time));
+}
+
 export function buildPublishedMatches(
   predictions: EditorialPrediction[]
 ) {
   return predictions
-    .filter((prediction) => prediction.published === true)
+    .filter((prediction) => prediction.published === true && hasRecordedKickoff(prediction))
     .map(editorialToMatch);
 }
 

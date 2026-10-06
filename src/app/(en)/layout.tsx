@@ -4,7 +4,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { InternationalAudienceNotice } from "@/components/InternationalAudienceNotice";
 import { AdSenseScript } from "@/components/ads";
-import { AdsterraSocialBar } from "@/components/ads/AdsterraSocialBar";
 import { ConsentIntegration } from "@/components/consent/ConsentIntegration";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { I18nProvider } from "@/i18n/I18nProvider";
@@ -121,7 +120,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <ConsentIntegration />
-        <AdSenseScript />
       </head>
       <body>
         <JsonLd data={websiteJsonLd()} />
@@ -134,8 +132,8 @@ export default function RootLayout({
             <main>{children}</main>
             <Footer />
           </I18nProvider>
+          <AdSenseScript />
         </AuthProvider>
-        <AdsterraSocialBar />
         <SiteAnalytics />
       </body>
     </html>

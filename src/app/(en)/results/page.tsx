@@ -46,6 +46,10 @@ export default async function ResultsPage() {
           <h1>Football Prediction Results &amp; Historical Picks</h1>
           <p>This archive separates the prediction and odds published before kickoff from the result derived afterward. Wins, losses, pushes, voids, pending fixtures and unresolved records remain visible in the full summary.</p>
         </header>
+        <section className="results-settlement-note">
+          <h2>Full archive</h2>
+          <p>The complete record of past predictions, with the pick, market and published odds, is kept in <Link href="/historypredictions/">Prediction History</Link> for VIP members.</p>
+        </section>
         <PredictionResultsArchive matches={resolved} />
         <section className="results-settlement-note">
           <h2>How results are settled</h2>

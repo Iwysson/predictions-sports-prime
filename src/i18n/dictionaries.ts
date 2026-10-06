@@ -1,5 +1,18 @@
 export const dictionaries = {
   en: {
+    matchFreeAnalysis: "Free analysis",
+    matchVipAnalysis: "VIP analysis",
+    matchTitle: "{home} vs {away} Prediction, Odds and Betting Tips",
+    matchFreeTeaser: "Free analysis for {home} vs {away}.",
+    matchVipTeaser: "VIP analysis for {home} vs {away}. Log in with an active VIP plan to read the full prediction.",
+    matchVipGate: "This analysis is available to PRIME VIP members.",
+    matchLoginToContinue: "Login to continue",
+    matchGetVip: "Get VIP",
+    matchCheckingAccess: "Checking your access…",
+    matchAccessNotConfirmed: "Your VIP access could not be confirmed.",
+    matchOpeningCheckout: "Opening checkout…",
+    matchCheckoutUnavailable: "Checkout is unavailable right now. Please try again later.",
+    matchSessionExpired: "Your session has expired. Please log in again.",
     brandName: "Predictions Sports Prime",
     brandTagline: "Football analysis & predictions",
     home: "Home",
@@ -60,6 +73,19 @@ export const dictionaries = {
     responsibleGambling: "Responsible Gambling",
   },
   "pt-BR": {
+    matchFreeAnalysis: "Análise gratuita",
+    matchVipAnalysis: "Análise VIP",
+    matchTitle: "{home} x {away}: Palpite, Odds e Dicas de Aposta",
+    matchFreeTeaser: "Análise gratuita para {home} x {away}.",
+    matchVipTeaser: "Análise VIP para {home} x {away}. Entre com um plano VIP ativo para ler o palpite completo.",
+    matchVipGate: "Esta análise está disponível para membros PRIME VIP.",
+    matchLoginToContinue: "Entrar para continuar",
+    matchGetVip: "Assinar VIP",
+    matchCheckingAccess: "Verificando seu acesso…",
+    matchAccessNotConfirmed: "Não foi possível confirmar seu acesso VIP.",
+    matchOpeningCheckout: "Abrindo checkout…",
+    matchCheckoutUnavailable: "O checkout está indisponível no momento. Tente novamente mais tarde.",
+    matchSessionExpired: "Sua sessão expirou. Entre novamente.",
     brandName: "Predictions Sports Prime",
     brandTagline: "Análises e palpites de futebol",
     home: "Início",
@@ -120,6 +146,19 @@ export const dictionaries = {
     responsibleGambling: "Jogo Responsável",
   },
   es: {
+    matchFreeAnalysis: "Análisis gratuito",
+    matchVipAnalysis: "Análisis VIP",
+    matchTitle: "{home} vs {away}: Pronóstico, Cuotas y Consejos de Apuestas",
+    matchFreeTeaser: "Análisis gratuito para {home} vs {away}.",
+    matchVipTeaser: "Análisis VIP para {home} vs {away}. Inicia sesión con un plan VIP activo para leer el pronóstico completo.",
+    matchVipGate: "Este análisis está disponible para miembros PRIME VIP.",
+    matchLoginToContinue: "Inicia sesión para continuar",
+    matchGetVip: "Suscribirse a VIP",
+    matchCheckingAccess: "Comprobando tu acceso…",
+    matchAccessNotConfirmed: "No se pudo confirmar tu acceso VIP.",
+    matchOpeningCheckout: "Abriendo el pago…",
+    matchCheckoutUnavailable: "El pago no está disponible en este momento. Inténtalo más tarde.",
+    matchSessionExpired: "Tu sesión ha expirado. Inicia sesión de nuevo.",
     brandName: "Predictions Sports Prime",
     brandTagline: "Análisis y predicciones de fútbol",
     home: "Inicio",
@@ -1374,3 +1413,14 @@ export const localeLabels: Record<Locale, string> = {
 };
 
 export const rtlLocales: Locale[] = ["ar", "ur", "fa", "he"];
+
+// Route locales (pt-br, es, ...) map to dictionary keys. Missing keys fall back to English, per key.
+export function toDictionaryLocale(routeLocale: string): Locale {
+  return (routeLocale === "pt-br" ? "pt-BR" : routeLocale) as Locale;
+}
+
+export function translate(routeLocale: string, key: TranslationKey, vars: Record<string, string> = {}): string {
+  const dict = dictionaries[toDictionaryLocale(routeLocale)] as Partial<Record<TranslationKey, string>>;
+  const text = dict[key] ?? dictionaries.en[key];
+  return Object.entries(vars).reduce((out, [name, value]) => out.split(`{${name}}`).join(value), text);
+}

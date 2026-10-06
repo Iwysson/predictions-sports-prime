@@ -6,7 +6,6 @@ import { goAheadEaglesVsAdoDenHaag } from "./go-ahead-eagles-vs-ado-den-haag";
 import { psvVsGroningen } from "./psv-vs-groningen";
 import { cambuurVsFeyenoord } from "./cambuur-vs-feyenoord";
 import { twenteVsTelstar } from "./twente-vs-telstar";
-import { ajaxVsWillemIi } from "./ajax-vs-willem-ii";
 
 export const eredivisieRound03 = [
   fortunaSittardVsAz,
@@ -17,5 +16,4 @@ export const eredivisieRound03 = [
   psvVsGroningen,
   cambuurVsFeyenoord,
   twenteVsTelstar,
-  ajaxVsWillemIi,
 ];

@@ -12,12 +12,15 @@ import {
   useState,
 } from "react";
 import { supabase } from "@/lib/supabase";
+import { isVip as isVipProfile } from "@/lib/vip";
 
 export type UserPlan = "free" | "vip";
 
 export type Profile = {
   plan: UserPlan;
   subscription_status: string | null;
+  trial_ends_at: string | null;
+  current_period_end: string | null;
 };
 
 type AuthContextValue = {
@@ -53,7 +56,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     const { data, error } = await supabase
       .from("profiles")
-      .select("plan, subscription_status")
+      .select("plan, subscription_status, trial_ends_at, current_period_end")
       .eq("id", nextUser.id)
       .maybeSingle();
 
@@ -71,6 +74,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           typeof data?.subscription_status === "string"
             ? data.subscription_status
             : null,
+        trial_ends_at: typeof data?.trial_ends_at === "string" ? data.trial_ends_at : null,
+        current_period_end:
+          typeof data?.current_period_end === "string" ? data.current_period_end : null,
       });
       if (!data) {
         setProfileError("No profile row was returned for this account.");
@@ -109,7 +115,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       user,
       profile,
       isAuthenticated: Boolean(user),
-      isVip: profile?.plan === "vip",
+      isVip: isVipProfile(profile),
       loading,
       profileError,
       signOut,
@@ -118,6 +124,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+}
+
+// Ads are allowed only for a resolved, non-VIP visitor. While the session is
+// loading, or outside the provider, ads stay unloaded (fail closed).
+export function useAdsAllowed() {
+  const context = useContext(AuthContext);
+  return Boolean(context && !context.loading && !context.isVip);
 }
 
 export function useAuth() {

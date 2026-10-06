@@ -23,6 +23,19 @@ const sitemapLocations = new Set(sitemapFiles.flatMap((file) =>
 ));
 const inSitemap = (url) => sitemapLocations.has(url);
 
+// Private or gated pages must be noindex, nofollow and absent from the sitemap.
+// Adding them to the sitemap just to satisfy an audit is not acceptable.
+// Auth pages: noindex, nofollow. The VIP archive: noindex (follow allowed).
+const privateRoutes = ["/login/", "/register/", "/account/", "/historypredictions/"];
+const requiresNofollow = new Set(["/login/", "/register/", "/account/"]);
+for (const route of privateRoutes) {
+  const html = pages.get(route);
+  if (!html) { errors.push(`${route}: private page missing from the build`); continue; }
+  const robots = requiresNofollow.has(route) ? "noindex, nofollow" : "noindex, follow";
+  if (!html.includes(`<meta name="robots" content="${robots}"`)) errors.push(`${route}: private page must be ${robots}`);
+  if (inSitemap(`${host}${route}`)) errors.push(`${route}: private page must not be in the sitemap`);
+}
+
 for (const [route, html] of pages) {
   if (!isIndexable(html)) continue;
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];

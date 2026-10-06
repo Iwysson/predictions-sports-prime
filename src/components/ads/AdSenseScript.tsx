@@ -3,9 +3,12 @@
 import Script from "next/script";
 import { useAdConsent } from "@/lib/use-ad-consent";
 import { adsConfig, canLoadAdSense } from "@/lib/ads";
+import { useAdsAllowed } from "@/auth/AuthProvider";
 
 export function AdSenseScript() {
   const consentGranted = useAdConsent();
+  const adsAllowed = useAdsAllowed();
+  if (!adsAllowed) return null;
   if (!canLoadAdSense()) return null;
   if (!consentGranted) return null;
 

@@ -1,64 +1,12 @@
-import { bundesligaPredictions } from "./bundesliga";
 import { laLigaPredictions } from "./la-liga";
-import { premierLeaguePredictions } from "./premier-league";
-import { serieAPredictions } from "./serie-a";
 import { ligaPortugalPredictions } from "./liga-portugal";
 import { ligue1Predictions } from "./ligue-1";
-import { eredivisiePredictions } from "./eredivisie";
-import { brasileiraoSerieAPredictions } from "./brasileirao-serie-a";
-import { copaDoBrasilPredictions } from "./copa-do-brasil";
-import { eflCupPredictions } from "./efl-cup";
-import { championshipPredictions } from "./championship";
-import { superLigPredictions } from "./super-lig";
-import { scottishPremiershipPredictions } from "./scottish-premiership";
-import { eliteserienPredictions } from "./eliteserien";
-import { mlsPredictions } from "./mls";
-import { championsLeaguePredictions } from "./champions-league";
-import { uefaEuropaLeaguePredictions } from "./uefa-europa-league";
-import { copaLibertadoresPredictions } from "./copa-libertadores";
-import { copaSudamericanaPredictions } from "./copa-sudamericana";
-import { uefaNationsLeaguePredictions } from "./uefa-nations-league";
-import { uefaNationsLeagueBPredictions } from "./uefa-nations-league-b";
-import { uefaNationsLeagueCPredictions } from "./uefa-nations-league-c";
-import { uefaNationsLeagueDPredictions } from "./uefa-nations-league-d";
-import { gulfCupPredictions } from "./gulf-cup";
-import { africaCupOfNationsQualifyingPredictions } from "./africa-cup-of-nations-qualifying";
-import { internationalFriendliesPredictions } from "./international-friendlies";
-import { fifaAseanCupPredictions } from "./fifa-asean-cup";
-import { concacafNationsLeaguePredictions } from "./concacaf-nations-league";
-import { msgPrimeMinistersCupPredictions } from "./msg-prime-ministers-cup";
 import { applyWave08EditorialDebtRemediation } from "./editorial-debt-remediation";
 
 export const editorialPredictionsRaw = [
-  ...premierLeaguePredictions,
   ...laLigaPredictions,
-  ...bundesligaPredictions,
-  ...serieAPredictions,
   ...ligaPortugalPredictions,
   ...ligue1Predictions,
-  ...eredivisiePredictions,
-  ...brasileiraoSerieAPredictions,
-  ...copaDoBrasilPredictions,
-  ...eflCupPredictions,
-  ...championshipPredictions,
-  ...superLigPredictions,
-  ...scottishPremiershipPredictions,
-  ...eliteserienPredictions,
-  ...mlsPredictions,
-  ...championsLeaguePredictions,
-  ...uefaEuropaLeaguePredictions,
-  ...copaLibertadoresPredictions,
-  ...copaSudamericanaPredictions,
-  ...uefaNationsLeaguePredictions,
-  ...uefaNationsLeagueBPredictions,
-  ...uefaNationsLeagueCPredictions,
-  ...uefaNationsLeagueDPredictions,
-  ...gulfCupPredictions,
-  ...internationalFriendliesPredictions,
-  ...africaCupOfNationsQualifyingPredictions,
-  ...fifaAseanCupPredictions,
-  ...concacafNationsLeaguePredictions,
-  ...msgPrimeMinistersCupPredictions,
 ];
 
 export const editorialPredictions = editorialPredictionsRaw.map(applyWave08EditorialDebtRemediation);

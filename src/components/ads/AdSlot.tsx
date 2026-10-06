@@ -2,6 +2,7 @@
 
 import { useAdConsent } from "@/lib/use-ad-consent";
 import { AdSenseUnit } from "@/components/ads/AdSenseUnit";
+import { useAdsAllowed } from "@/auth/AuthProvider";
 import {
   adsConfig,
   canRenderPlacement,
@@ -23,6 +24,8 @@ export function AdSlot({
   wrapperClassName?: string;
 }) {
   const consentGranted = useAdConsent();
+  const adsAllowed = useAdsAllowed();
+  if (!adsAllowed) return null;
   if (!canRenderPlacement(placement)) return null;
   if (!consentGranted) return null;
 

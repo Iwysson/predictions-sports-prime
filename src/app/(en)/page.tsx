@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AdSlot, AdsterraBanner320x50, AdsterraNativeBanner } from "@/components/ads";
+import { AdSlot } from "@/components/ads";
 import { JsonLd } from "@/components/JsonLd";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
 import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
@@ -68,15 +68,11 @@ export default async function Home() {
         beforeTomorrow={
           <>
             <AdSlot placement="home-before-tomorrow" showLabel wrapperClassName="container home-ad-space" />
-            <div className="container adsterra-native-banner-area">
-              <AdsterraNativeBanner />
-            </div>
           </>
         }
         beforeUpcoming={
           <>
             <AdSlot placement="home-upcoming" showLabel wrapperClassName="container home-ad-space" />
-            <AdsterraBanner320x50 />
           </>
         }
         beforeHistory={<PredictionLeagueCategories id="leagues" muted />}

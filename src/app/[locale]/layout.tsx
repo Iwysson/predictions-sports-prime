@@ -2,12 +2,11 @@ import type { Metadata, Viewport } from "next";
 import "../globals.css";
 import { notFound } from "next/navigation";
 import { AdSenseScript } from "@/components/ads";
-import { AdsterraSocialBar } from "@/components/ads/AdsterraSocialBar";
 import { ConsentIntegration } from "@/components/consent/ConsentIntegration";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { JsonLd } from "@/components/JsonLd";
 import { I18nProvider } from "@/i18n/I18nProvider";
-import type { Locale } from "@/i18n/dictionaries";
+import { toDictionaryLocale } from "@/i18n/dictionaries";
 import { InternationalAudienceNotice } from "@/components/InternationalAudienceNotice";
 import { LocalizedFooter, LocalizedHeader } from "@/components/LocalizedSiteChrome";
 import { organizationJsonLd } from "@/lib/seo";
@@ -33,10 +32,6 @@ export const viewport: Viewport = {
   width: "device-width", initialScale: 1, themeColor: "#071019", colorScheme: "dark",
 };
 
-function dictionaryLocale(locale: string): Locale {
-  return (locale === "pt-br" ? "pt-BR" : locale) as Locale;
-}
-
 export default async function LocalizedRootLayout({ children, params }: Readonly<{ children: React.ReactNode; params: Promise<{ locale: string }> }>) {
   const { locale } = await params;
   if (!isSeoLocale(locale)) notFound();
@@ -45,20 +40,19 @@ export default async function LocalizedRootLayout({ children, params }: Readonly
     <html lang={copy.htmlLang} suppressHydrationWarning>
       <head>
         <ConsentIntegration />
-        <AdSenseScript />
       </head>
       <body>
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={localizedWebsiteJsonLd(locale)} />
         <AuthProvider>
-          <I18nProvider initialLocale={dictionaryLocale(locale)}>
+          <I18nProvider initialLocale={toDictionaryLocale(locale)}>
             <LocalizedHeader locale={locale} />
             <InternationalAudienceNotice />
             <main>{children}</main>
             <LocalizedFooter locale={locale} />
           </I18nProvider>
+          <AdSenseScript />
         </AuthProvider>
-        <AdsterraSocialBar />
         <SiteAnalytics />
       </body>
     </html>

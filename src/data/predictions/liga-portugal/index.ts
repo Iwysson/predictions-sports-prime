@@ -1,19 +1,7 @@
-import { ligaPortugalRound04 } from "./round-04";
-import { ligaPortugalRound01 } from "./round-01";
 import { ligaPortugalRound02 } from "./round-02";
 import { ligaPortugalRound03 } from "./round-03";
-import { ligaPortugalRound05 } from "./round-05";
-import { ligaPortugalRound06 } from "./round-06";
-import { ligaPortugalWave27 } from "./round-06/wave-27";
-import { ligaPortugalRound07 } from "./round-07";
 
 export const ligaPortugalPredictions = [
-  ...ligaPortugalRound01,
   ...ligaPortugalRound02,
   ...ligaPortugalRound03,
-  ...ligaPortugalRound04,
-  ...ligaPortugalRound05,
-  ...ligaPortugalRound06,
-  ...ligaPortugalWave27,
-  ...ligaPortugalRound07,
 ];

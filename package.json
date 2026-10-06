@@ -6,13 +6,13 @@
     "dev": "next dev",
     "start": "next start",
     "typecheck": "tsc --noEmit",
+    "prebuild": "npm run match-routes:sync && npm run match-content:build",
+    "match-routes:sync": "tsx scripts/sync-match-routes.mts",
     "build": "next build",
     "fixtures:sync": "tsx scripts/sync-fixtures.mjs",
     "fixtures:validate": "tsx scripts/validate-fixture-snapshot.mjs",
     "nfl:standings:sync": "tsx scripts/sync-nfl-standings.mjs",
     "audit:nfl-standings": "tsx scripts/audit-nfl-standings.mjs",
-    "audit:nfl-week3": "node --import tsx scripts/audit-nfl-week3.mjs",
-    "audit:nfl-week4": "node --import tsx scripts/audit-nfl-week4.mjs",
     "audit:publication-content": "node --import tsx scripts/audit-publication-content.mjs",
     "audit:psp-editorial-standard": "node --import tsx scripts/audit-psp-editorial-standard.mjs",
     "audit:production-integrity": "node scripts/audit-production-integrity.mjs",
@@ -24,7 +24,8 @@
     "audit:structured-data": "node scripts/audit-structured-data.mjs",
     "audit:site-links": "node scripts/audit-site-links.mjs",
     "validate:source": "npm run typecheck",
-    "validate:production": "npm run typecheck && npm run build"
+    "validate:production": "npm run typecheck && npm run build",
+    "match-content:build": "tsx scripts/build-match-content.mts"
   },
   "dependencies": {
     "@next/third-parties": "^16.3.5",
