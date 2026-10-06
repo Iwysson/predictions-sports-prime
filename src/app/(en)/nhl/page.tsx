@@ -48,10 +48,41 @@ function FreeGame({ m }: { m: NhlMatch }) {
   );
 }
 
+function GameCard({ m }: { m: NhlMatch }) {
+  const isFree = m.access === "free";
+
+  return (
+    <section className={`psp-game ${isFree ? "psp-game--free" : "psp-game--vip"}`} id={m.anchor}>
+      <div className="psp-game__head">
+        <span className={`psp-badge ${isFree ? "psp-badge--free" : "psp-badge--vip"}`}>
+          {isFree ? "FREE ANALYSIS" : "PRIME VIP"}
+        </span>
+        <p className="psp-game__meta">NHL · {DATE_LABEL} · Kick-off time not listed</p>
+      </div>
+
+      <div className="psp-game__teams">
+        <TeamBadge team={m.homeTeam} />
+        <h2>{`${m.homeTeam} vs ${m.awayTeam} Prediction`}</h2>
+        <TeamBadge team={m.awayTeam} />
+      </div>
+
+      {isFree ? (
+        <FreeGame m={m} />
+      ) : (
+        <>
+          <p className="psp-game__teaser">{m.teaser}</p>
+          <MatchGate slug={m.slug} showAnalysis showPrediction />
+        </>
+      )}
+    </section>
+  );
+}
+
 export default function NhlPage() {
   const matches = nhlMatches();
   const free = matches.filter((m) => m.access === "free");
   const vip = matches.filter((m) => m.access !== "free");
+  const orderedMatches = [...free, ...vip];
 
   // Public structured data only: names, date and anchor URLs. No pick, odds or analysis.
   const jsonLd = [
@@ -67,7 +98,7 @@ export default function NhlPage() {
       mainEntity: {
         "@type": "ItemList",
         numberOfItems: matches.length,
-        itemListElement: matches.map((m, index) => ({
+        itemListElement: orderedMatches.map((m, index) => ({
           "@type": "ListItem",
           position: index + 1,
           name: `${m.homeTeam} vs ${m.awayTeam} Prediction`,
@@ -111,44 +142,38 @@ export default function NhlPage() {
           </div>
         </header>
 
-        <nav className="psp-jump" aria-label="NHL games on this page">
-          {matches.map((m) => (
-            <a key={m.anchor} href={`#${m.anchor}`}>
-              {m.homeTeam} vs {m.awayTeam}
-            </a>
-          ))}
-        </nav>
+        <section className="psp-game-group" aria-labelledby="nhl-free-analyses">
+          <div className="psp-game-group__heading">
+            <span className="psp-badge psp-badge--free">FREE</span>
+            <h2 id="nhl-free-analyses">Free analyses</h2>
+          </div>
+          <div className="psp-games">
+            {free.map((m) => <GameCard key={m.slug} m={m} />)}
+          </div>
+        </section>
 
-        <div className="psp-games">
-          {matches.map((m) => {
-            const isFree = m.access === "free";
-            return (
-              <section className={`psp-game ${isFree ? "psp-game--free" : "psp-game--vip"}`} id={m.anchor} key={m.slug}>
-                <div className="psp-game__head">
-                  <span className={`psp-badge ${isFree ? "psp-badge--free" : "psp-badge--vip"}`}>
-                    {isFree ? "FREE" : "PRIME VIP"}
-                  </span>
-                  <p className="psp-game__meta">NHL · {DATE_LABEL} · Kick-off time not listed</p>
-                </div>
+        <section className="psp-game-group" aria-labelledby="nhl-vip-analyses">
+          <div className="psp-game-group__heading">
+            <span className="psp-badge psp-badge--vip">PRIME VIP</span>
+            <h2 id="nhl-vip-analyses">PRIME VIP analyses</h2>
+          </div>
+          <div className="psp-games">
+            {vip.map((m) => <GameCard key={m.slug} m={m} />)}
+          </div>
+        </section>
 
-                <div className="psp-game__teams">
-                  <TeamBadge team={m.homeTeam} />
-                  <h2>{`${m.homeTeam} vs ${m.awayTeam} Prediction`}</h2>
-                  <TeamBadge team={m.awayTeam} />
-                </div>
-
-                {isFree ? (
-                  <FreeGame m={m} />
-                ) : (
-                  <>
-                    <p className="psp-game__teaser">{m.teaser}</p>
-                    <MatchGate slug={m.slug} showAnalysis showPrediction />
-                  </>
-                )}
-              </section>
-            );
-          })}
-        </div>
+        <section className="psp-matchup-directory" aria-labelledby="nhl-matchups-title">
+          <div className="psp-game-group__heading">
+            <h2 id="nhl-matchups-title">NHL Matchups – October 6, 2026</h2>
+          </div>
+          <nav className="psp-jump" aria-label="NHL games on this page">
+            {orderedMatches.map((m) => (
+              <a key={m.anchor} href={`#${m.anchor}`}>
+                {m.homeTeam} vs {m.awayTeam}
+              </a>
+            ))}
+          </nav>
+        </section>
 
         <div className="psp-notice">
           <ResponsibleGamblingNotice />

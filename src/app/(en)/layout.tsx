@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import "../globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { InternationalAudienceNotice } from "@/components/InternationalAudienceNotice";
 import { AdSenseScript } from "@/components/ads";
 import { ConsentIntegration } from "@/components/consent/ConsentIntegration";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
@@ -128,7 +127,6 @@ export default function RootLayout({
         <AuthProvider>
           <I18nProvider>
             <Header />
-            <InternationalAudienceNotice />
             <main>{children}</main>
             <Footer />
           </I18nProvider>

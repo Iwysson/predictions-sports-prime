@@ -3400,11 +3400,13 @@ html[dir="rtl"] .latest-match {
 .home-today-layout {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
+  grid-template-areas: "sidebar main";
   gap: 14px;
   align-items: start;
 }
 
 .home-leagues-sidebar {
+  grid-area: sidebar;
   position: sticky;
   top: 88px;
   display: grid;
@@ -3452,6 +3454,7 @@ html[dir="rtl"] .latest-match {
 }
 
 .home-today-main {
+  grid-area: main;
   min-width: 0;
 }
 
@@ -4246,6 +4249,9 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 @media (max-width: 980px) {
   .home-today-layout {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "sidebar";
   }
 
   .home-leagues-sidebar {
@@ -4622,6 +4628,17 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 
 .intl-notice a { color: var(--text); text-decoration: underline; }
 
+.register-notice {
+  width: min(calc(100% - 32px), 520px);
+  margin: 28px auto -22px;
+}
+.register-notice .intl-notice {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-subtle);
+}
+.register-notice .intl-notice .container { padding: 14px 16px; }
+
 /* ===== PSP match and sports pages (FREE / PRIME VIP) ===== */
 .psp-crumbs { font-size: 13px; color: var(--text-muted); margin: 0 0 14px; }
 .psp-crumbs a { color: var(--text-secondary); text-decoration: none; }
@@ -4642,6 +4659,16 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .psp-games { display: grid; gap: 18px; margin-top: 18px; }
 .psp-game { scroll-margin-top: 90px; display: grid; gap: 16px; padding: 22px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); }
 .psp-game--vip { border-color: color-mix(in srgb, #8a6d20 35%, var(--border)); }
+.psp-game--free {
+  border-color: color-mix(in srgb, var(--success) 48%, var(--border));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--success) 5%, var(--surface)) 0%, var(--surface) 44%);
+}
+.psp-game-group { margin-top: 28px; }
+.psp-game-group__heading { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.psp-game-group__heading h2 { margin: 0; font-size: clamp(21px, 3vw, 28px); color: var(--text-primary); }
+.psp-matchup-directory { margin-top: 34px; padding-top: 24px; border-top: 1px solid var(--border); }
+.psp-matchup-directory .psp-game-group__heading h2 { font-size: clamp(19px, 2.6vw, 24px); }
+.psp-matchup-directory .psp-jump { margin: 0; }
 .psp-game__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
 .psp-game__teams { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .psp-game__teams .psp-vs { color: var(--text-muted); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }

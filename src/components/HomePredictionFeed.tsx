@@ -132,8 +132,6 @@ export function HomePredictionFeed({
 
       <section className="section section--compact" id="today">
         <div className="container home-today-layout">
-          <HomeLeagueTaxonomy copy={copy} locale={locale} />
-
           <div className="home-today-main">
             <div className="section-heading section-heading--compact">
               <div className="heading-with-icon">
@@ -173,6 +171,8 @@ export function HomePredictionFeed({
               </div>
             )}
           </div>
+
+          <HomeLeagueTaxonomy copy={copy} locale={locale} />
         </div>
       </section>
 

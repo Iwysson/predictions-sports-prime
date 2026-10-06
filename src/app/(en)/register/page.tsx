@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { RegisterForm } from "@/components/auth/RegisterForm";
+import { InternationalAudienceNotice } from "@/components/InternationalAudienceNotice";
 
 // Account pages are functional, not search destinations: kept out of the index and sitemap.
 export const metadata: Metadata = {
@@ -9,5 +10,12 @@ export const metadata: Metadata = {
 };
 
 export default function RegisterPage() {
-  return <RegisterForm />;
+  return (
+    <>
+      <div className="register-notice">
+        <InternationalAudienceNotice />
+      </div>
+      <RegisterForm />
+    </>
+  );
 }

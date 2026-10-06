@@ -7,7 +7,6 @@ import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { JsonLd } from "@/components/JsonLd";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import { toDictionaryLocale } from "@/i18n/dictionaries";
-import { InternationalAudienceNotice } from "@/components/InternationalAudienceNotice";
 import { LocalizedFooter, LocalizedHeader } from "@/components/LocalizedSiteChrome";
 import { organizationJsonLd } from "@/lib/seo";
 import { localizedWebsiteJsonLd } from "@/lib/international-seo";
@@ -47,7 +46,6 @@ export default async function LocalizedRootLayout({ children, params }: Readonly
         <AuthProvider>
           <I18nProvider initialLocale={toDictionaryLocale(locale)}>
             <LocalizedHeader locale={locale} />
-            <InternationalAudienceNotice />
             <main>{children}</main>
             <LocalizedFooter locale={locale} />
           </I18nProvider>
