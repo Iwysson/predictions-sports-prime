@@ -182,7 +182,7 @@ for (const locale of ["en", "pt-br"]) {
   const ldAll: any[] = buildMatchPageModel(synthetic, "en", NOW)!.jsonLd;
   const web: any = ldAll[0];
   const article: any = ldAll[1];
-  check("JSON-LD is built from public fields (WebPage + Article, not empty)", web["@type"] === "WebPage" && web.name === "Leak Home vs Leak Away Prediction" && web.temporalCoverage === "2026-10-20T17:00:00.000Z" && article["@type"] === "Article" && article.author?.["@type"] === "Person");
+  check("JSON-LD is built from public fields (WebPage + Article, not empty)", web["@type"] === "WebPage" && web.name === "Leak Home vs Leak Away Prediction" && web.temporalCoverage === "2026-10-20T17:00:00.000Z" && article["@type"] === "Article" && article.author?.["@type"] === "Organization");
   check("JSON-LD has no SportsEvent location without a verified address", !JSON.stringify(ldAll).includes("\"location\""));
   const ld: any = ldAll;
   check("JSON-LD has no pick, odds or prediction keys", !JSON.stringify(ld).includes("to win") && !JSON.stringify(ld).includes("prediction\"") && !JSON.stringify(ld).includes("odds"));
