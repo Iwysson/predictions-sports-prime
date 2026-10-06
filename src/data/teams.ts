@@ -6,6 +6,25 @@ export type TeamBadgeAsset = { src: string; sourceUrl: string };
 export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   // Canonical overrides (correct badge file when generated table has wrong path)
   "Inter Milan": generatedTeamBadgeAssets["Internazionale Milano"],
+  // NHL club marks from the official NHL asset service.
+  "Buffalo Sabres": { src: "/nhl/team-logos/buffalo-sabres.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg" },
+  "Minnesota Wild": { src: "/nhl/team-logos/minnesota-wild.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg" },
+  "Detroit Red Wings": { src: "/nhl/team-logos/detroit-red-wings.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/DET_light.svg" },
+  "Ottawa Senators": { src: "/nhl/team-logos/ottawa-senators.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/OTT_light.svg" },
+  "New Jersey Devils": { src: "/nhl/team-logos/new-jersey-devils.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/NJD_light.svg" },
+  "Utah Mammoth": { src: "/nhl/team-logos/utah-mammoth.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/UTA_light.svg" },
+  "Montreal Canadiens": { src: "/nhl/team-logos/montreal-canadiens.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/MTL_light.svg" },
+  "Carolina Hurricanes": { src: "/nhl/team-logos/carolina-hurricanes.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/CAR_light.svg" },
+  "Toronto Maple Leafs": { src: "/nhl/team-logos/toronto-maple-leafs.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/TOR_light.svg" },
+  "Nashville Predators": { src: "/nhl/team-logos/nashville-predators.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/NSH_light.svg" },
+  "New York Rangers": { src: "/nhl/team-logos/new-york-rangers.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/NYR_light.svg" },
+  "New York Islanders": { src: "/nhl/team-logos/new-york-islanders.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/NYI_light.svg" },
+  "Chicago Blackhawks": { src: "/nhl/team-logos/chicago-blackhawks.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/CHI_light.svg" },
+  "St. Louis Blues": { src: "/nhl/team-logos/st-louis-blues.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/STL_light.svg" },
+  "Seattle Kraken": { src: "/nhl/team-logos/seattle-kraken.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/SEA_light.svg" },
+  "Vegas Golden Knights": { src: "/nhl/team-logos/vegas-golden-knights.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/VGK_light.svg" },
+  "Los Angeles Kings": { src: "/nhl/team-logos/los-angeles-kings.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/LAK_light.svg" },
+  "Florida Panthers": { src: "/nhl/team-logos/florida-panthers.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/FLA_light.svg" },
   // MLS badges added from verified league/provider assets.
   "Seattle Sounders": { src: "/team-badges/seattle-sounders.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/2dy5cx1706711036.png" },
   "Seattle Sounders FC": { src: "/team-badges/seattle-sounders.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/2dy5cx1706711036.png" },

@@ -3,6 +3,7 @@ import Link from "@/components/DocumentLink";
 import { JsonLd } from "@/components/JsonLd";
 import { MatchFullContent } from "@/components/MatchFullContent";
 import { MatchGate } from "@/components/MatchGate";
+import { NhlBestMultiple, NhlLeagueMark } from "@/components/NhlBestMultiple";
 import { ResponsibleGamblingNotice } from "@/components/ResponsibleGamblingNotice";
 import { TeamBadge } from "@/components/TeamBadge";
 import { translate } from "@/i18n/dictionaries";
@@ -61,7 +62,10 @@ function GameCard({ m }: { m: NhlMatch }) {
           </span>
           {isBestAnalysis ? <span className="psp-badge psp-badge--best">BEST ANALYSIS</span> : null}
         </div>
-        <p className="psp-game__meta">NHL · {DATE_LABEL} · Kick-off time not listed</p>
+        <p className="psp-game__meta">
+          <NhlLeagueMark compact />
+          <span>· {DATE_LABEL} · Kick-off time not listed</span>
+        </p>
       </div>
 
       <div className="psp-game__teams">
@@ -129,7 +133,10 @@ export default function NhlPage() {
         </nav>
 
         <header className="psp-hero">
-          <span className="psp-hero__eyebrow">NHL · {DATE_LABEL}</span>
+          <span className="psp-hero__eyebrow psp-hero__eyebrow--nhl">
+            <NhlLeagueMark compact />
+            <span>· {DATE_LABEL}</span>
+          </span>
           <h1>{NHL_PAGE.h1}</h1>
           <p>
             Nine NHL games on {DATE_LABEL}. Three analyses are published in full for everyone. The remaining six are
@@ -145,6 +152,10 @@ export default function NhlPage() {
             </span>
           </div>
         </header>
+
+        <section className="nhl-page-best-multiple" aria-labelledby="nhl-page-best-multiple-title">
+          <NhlBestMultiple headingId="nhl-page-best-multiple-title" />
+        </section>
 
         <section className="psp-game-group" aria-labelledby="nhl-free-analyses">
           <div className="psp-game-group__heading">

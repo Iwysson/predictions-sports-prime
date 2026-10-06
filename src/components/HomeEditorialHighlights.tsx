@@ -1,4 +1,5 @@
 import Link from "@/components/DocumentLink";
+import { NhlBestMultiple } from "@/components/NhlBestMultiple";
 import { VipCheckoutButton } from "@/components/VipCheckoutButton";
 
 export function HomeEditorialHighlights() {
@@ -31,21 +32,7 @@ export function HomeEditorialHighlights() {
 
       <section className="section section--compact" aria-labelledby="nhl-best-multiple-title">
         <div className="container">
-          <article className="home-best-multiple">
-            <div className="home-best-multiple__head">
-              <div>
-                <span className="eyebrow">NHL</span>
-                <h2 id="nhl-best-multiple-title">NHL BEST MULTIPLE TODAY</h2>
-              </div>
-              <span className="psp-badge psp-badge--free">FREE MULTIPLE</span>
-            </div>
-            <div className="home-best-multiple__legs">
-              <div><span>New Jersey Devils vs Utah Mammoth</span><strong>New Jersey Devils to win</strong></div>
-              <b aria-hidden="true">+</b>
-              <div><span>Detroit Red Wings vs Ottawa Senators</span><strong>Over 5.5 Goals</strong></div>
-            </div>
-            <p>This editorial multiple is FREE and does not change either game's individual access level. No combined official odds are stated.</p>
-          </article>
+          <NhlBestMultiple />
         </div>
       </section>
 

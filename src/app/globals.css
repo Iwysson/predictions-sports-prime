@@ -4666,11 +4666,15 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .home-sport-feature .button { width: max-content; margin-top: auto; position: relative; z-index: 1; }
 .home-best-multiple { display: grid; gap: 20px; padding: clamp(22px, 4vw, 36px); border-radius: 20px; color: #f8fbf9; background: linear-gradient(135deg, #10251c, #173d2c 62%, #205c3d); border: 1px solid #357a58; box-shadow: 0 18px 48px rgba(12, 46, 30, .22); }
 .home-best-multiple__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.home-best-multiple__head > div { display: grid; gap: 4px; }
 .home-best-multiple h2 { margin: 4px 0 0; color: #fff; font-size: clamp(24px, 4vw, 36px); }
 .home-best-multiple .eyebrow { color: #91e3b5; }
 .home-best-multiple__legs { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 18px; }
 .home-best-multiple__legs div { display: grid; gap: 5px; min-width: 0; padding: 18px; border: 1px solid rgba(255,255,255,.18); border-radius: 14px; background: rgba(255,255,255,.08); }
 .home-best-multiple__legs span { color: #cce6d8; font-size: 13px; }
+.home-best-multiple__legs .home-best-multiple__fixture { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px; }
+.home-best-multiple__fixture > span { text-align: center; }
+.home-best-multiple__fixture .team-logo { width: 32px; height: 32px; }
 .home-best-multiple__legs strong { color: #fff; font-size: clamp(17px, 2vw, 21px); overflow-wrap: anywhere; }
 .home-best-multiple__legs > b { color: #91e3b5; font-size: 28px; }
 .home-best-multiple > p { margin: 0; color: #cce6d8; font-size: 13px; }
@@ -4735,10 +4739,17 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .psp-matchup-directory .psp-game-group__heading h2 { font-size: clamp(19px, 2.6vw, 24px); }
 .psp-matchup-directory .psp-jump { margin: 0; }
 .psp-game__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
-.psp-game__teams { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.psp-game__teams { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; width: 100%; }
+.psp-game__teams h2 { text-align: center; }
 .psp-game__teams .psp-vs { color: var(--text-muted); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
 .psp-game h2 { margin: 0; font-size: clamp(19px, 2.4vw, 23px); line-height: 1.25; color: var(--text-primary); }
 .psp-game__meta { font-size: 13px; color: var(--text-muted); margin: 0; }
+.psp-game__meta, .psp-hero__eyebrow--nhl { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 7px; }
+.nhl-league-mark { display: inline-flex; align-items: center; gap: 8px; width: max-content; color: inherit; font-size: 13px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.nhl-league-mark img { display: block; width: 34px; height: 34px; object-fit: contain; }
+.nhl-league-mark--compact { gap: 6px; font-size: 12px; }
+.nhl-league-mark--compact img { width: 24px; height: 24px; }
+.nhl-page-best-multiple { margin-top: 28px; }
 .psp-game__teaser { margin: 0; color: var(--text-secondary); font-size: 16px; line-height: 1.6; }
 .psp-pick { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; padding: 16px 18px; border-radius: 12px; background: var(--surface-subtle); border: 1px solid var(--border); }
 .psp-pick__label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); }
@@ -4775,6 +4786,8 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   .psp-pick { grid-template-columns: 1fr; }
   .psp-pick__odds { text-align: left; }
   .psp-game { padding: 18px 16px; }
+  .psp-game__teams { gap: 8px; }
+  .psp-game__teams .team-logo--md { width: 36px; height: 42px; }
 }
 .psp-teams { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 4px 0 2px; }
 .psp-teams .psp-vs { color: var(--text-muted); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
