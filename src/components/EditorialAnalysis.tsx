@@ -58,29 +58,32 @@ function stripStructuredStatisticalCore(markdown: string) {
   return output.join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
+// psp-v1 analyses open with a Prediction/Odds block for validation. The public page shows that prediction
+// only in the closing block, so the opening block is removed from the rendered markdown (the source is unchanged).
+function stripOpeningPredictionBlock(markdown: string) {
+  return markdown.replace(/^((?:#[^\n]*\n+)?)\*\*(?:Prediction|Odds):\*\*[\s\S]*?(?=^## )/m, "$1");
+}
+
 function MarkdownAnalysis({
   markdown,
   hideSensitiveSnippets = false,
   sensitiveValues = [],
+  structured = false,
 }: {
   markdown: string;
   hideSensitiveSnippets?: boolean;
   sensitiveValues?: string[];
+  structured?: boolean;
 }) {
-  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+  // psp-v1 structure: the closing Prediction/Odds block is rendered once as the main prediction block.
+  const isStructuredAnalysis = structured;
+  const lines = (structured ? stripOpeningPredictionBlock(markdown) : markdown).replace(/\r\n/g, "\n").split("\n");
   const blocks: ReactNode[] = [];
   let paragraph: string[] = [];
-  // psp-v1 analyses carry a structural opening Prediction/Odds block for validation. Only the closing block is shown.
-  const hasOpeningPredictionBlock = /^## Match information\s*$/m.test(markdown);
-  let seenSection = false;
 
   const flushParagraph = () => {
     if (!paragraph.length) return;
     const text = paragraph.join(" ").trim();
-    if (hasOpeningPredictionBlock && !seenSection && /^\*\*(?:Prediction|Odds):\*\*/i.test(text)) {
-      paragraph = [];
-      return;
-    }
     if (text === "**Statistical Core**") {
       blocks.push(<h2 key={`block-${blocks.length}`}>{inlineMarkdown(text)}</h2>);
     } else {
@@ -90,17 +93,15 @@ function MarkdownAnalysis({
       );
       blocks.push(sensitive
         ? <PredictionSensitiveParagraph key={`block-${blocks.length}`}>{inlineMarkdown(text)}</PredictionSensitiveParagraph>
-        : <p key={`block-${blocks.length}`}>{inlineMarkdown(text)}</p>);
+        : isStructuredAnalysis && /\*\*Prediction:\*\*/.test(text)
+          ? <div key={`block-${blocks.length}`} className="psp-pick main-prediction-block"><p>{inlineMarkdown(text)}</p></div>
+          : <p key={`block-${blocks.length}`}>{inlineMarkdown(text)}</p>);
     }
     paragraph = [];
   };
 
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
-    if (/^##\s/.test(line)) {
-      flushParagraph();
-      seenSection = true;
-    }
     if (!line.trim()) {
       flushParagraph();
       continue;
@@ -159,7 +160,9 @@ export function EditorialAnalysis({
   const protectedValues = sensitiveValues.filter((value): value is string => Boolean(value?.trim()));
   if (format === "markdown") {
     const markdown = stripRepeatedMatchMetadata(dedupeEditorialMarkdown(analysis.join("\n\n")));
-    return <MarkdownAnalysis markdown={stripStatisticalCore ? stripStructuredStatisticalCore(markdown) : markdown} hideSensitiveSnippets={hideSensitiveSnippets} sensitiveValues={protectedValues} />;
+    // Structure is read from the raw analysis: the presentation step removes the "Match information" heading.
+    const structured = /^## Match information\s*$/m.test(analysis.join("\n\n"));
+    return <MarkdownAnalysis markdown={stripStatisticalCore ? stripStructuredStatisticalCore(markdown) : markdown} hideSensitiveSnippets={hideSensitiveSnippets} sensitiveValues={protectedValues} structured={structured} />;
   }
   const presentedAnalysis = dedupeEditorialBlocks(analysis);
   return <>{presentedAnalysis.map((paragraph, index) => {
