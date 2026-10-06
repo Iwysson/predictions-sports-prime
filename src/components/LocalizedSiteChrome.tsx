@@ -12,7 +12,6 @@ import {
 export function LocalizedHeader({ locale }: { locale: SeoLocaleSlug }) {
   const copy = seoLocales[locale];
   const homeHref = localePath(locale);
-  const leaguesHref = localePath(locale, "/league/premier-league/");
   const nflHref = localePath(locale, "/nfl/");
 
   return (
@@ -25,12 +24,8 @@ export function LocalizedHeader({ locale }: { locale: SeoLocaleSlug }) {
       navigationLabel="Primary navigation"
       mobileNavigationLabel="Mobile navigation"
       navItems={[
-        { href: homeHref, label: copy.today },
-        { href: leaguesHref, label: copy.leagues },
         { href: nflHref, label: "NFL" },
         { href: "/nhl/", label: "NHL" },
-        { href: "/results/", label: copy.results, hrefLang: "en" },
-        { href: "/methodology/", label: copy.methodology, hrefLang: "en" },
       ]}
     />
   );

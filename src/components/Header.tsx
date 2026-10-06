@@ -131,12 +131,8 @@ export function Header() {
       currentLocale="en"
       navItems={[
         { href: "/", label: t("home") },
-        { href: "/#today", label: t("today") },
-        { href: "/#leagues", label: t("leagues") },
         { href: "/nfl/", label: "NFL" },
         { href: "/nhl/", label: "NHL" },
-        { href: "/results/", label: "Results" },
-        { href: "/methodology/", label: "Methodology" },
       ]}
     />
   );
