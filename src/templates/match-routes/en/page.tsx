@@ -136,6 +136,7 @@ export default async function MatchPage({ params }: { params: Promise<{ slug: st
             {model.staticAnalysis ? (
               <MatchFullContent
                 analysis={model.staticAnalysis.analysis}
+                analysisFormat={model.staticAnalysis.analysisFormat}
                 sources={model.staticAnalysis.sources}
                 comment={model.staticAnalysis.comment}
                 labels={model.labels}

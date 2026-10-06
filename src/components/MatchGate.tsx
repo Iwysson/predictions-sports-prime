@@ -12,7 +12,7 @@ import { supabase } from "@/lib/supabase";
 // from the endpoint after the session and VIP status are confirmed. The server is the
 // authority: a 401 or 403 never shows protected text.
 type Protected = {
-  full: { analysis: string[]; sources: Array<{ name: string; url: string }>; comment: string | null };
+  full: { analysis: string[]; analysisFormat?: "markdown"; sources: Array<{ name: string; url: string }>; comment: string | null };
   prediction: { main: string; odds: number | null };
 };
 
@@ -56,6 +56,7 @@ export function MatchGate({ slug, showAnalysis, showPrediction }: { slug: string
       <div className="psp-unlocked">
         <MatchFullContent
           analysis={showAnalysis ? full.analysis : []}
+          analysisFormat={showAnalysis ? full.analysisFormat : undefined}
           sources={showAnalysis ? full.sources : []}
           comment={showAnalysis ? full.comment : null}
           prediction={showPrediction ? prediction : null}

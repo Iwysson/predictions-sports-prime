@@ -28,7 +28,7 @@ export type MatchPageModel = {
   // Public trend for a VIP prediction. Never the pick or the odds.
   trend: string | null;
   // Analysis shown publicly (analysis access "free"). Prediction is not repeated here.
-  staticAnalysis: { analysis: string[]; sources: FullMatchView["sources"]; comment: string | null } | null;
+  staticAnalysis: { analysis: string[]; analysisFormat?: "markdown"; sources: FullMatchView["sources"]; comment: string | null } | null;
   // Client gate for whatever is VIP. Carries only the slug and which parts are protected.
   gate: { slug: string; showAnalysis: boolean; showPrediction: boolean } | null;
   labels: { prediction: string; odds: string; trend: string };
@@ -139,7 +139,7 @@ export function buildMatchPageModel(
     publicPrediction: predictionFree ? full.picks : null,
     trend: !predictionFree ? (prediction.trend ?? null) : null,
     // Analysis text only. The pick and odds never travel with it, even when the prediction is VIP.
-    staticAnalysis: analysisFree ? { analysis: full.analysis, sources: full.sources, comment: full.comment } : null,
+    staticAnalysis: analysisFree ? { analysis: full.analysis, analysisFormat: full.analysisFormat, sources: full.sources, comment: full.comment } : null,
     gate: protectedAnything ? { slug, showAnalysis: !analysisFree, showPrediction: !predictionFree } : null,
     labels: {
       prediction: translate(routeLocale, "mainPrediction"),

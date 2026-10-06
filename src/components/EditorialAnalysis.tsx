@@ -135,17 +135,20 @@ function MarkdownAnalysis({
 export function EditorialAnalysis({
   analysis,
   format,
+  stripStatisticalCore = true,
   hideSensitiveSnippets = false,
   sensitiveValues = [],
 }: {
   analysis: string[];
   format?: "markdown";
+  stripStatisticalCore?: boolean;
   hideSensitiveSnippets?: boolean;
   sensitiveValues?: Array<string | undefined>;
 }) {
   const protectedValues = sensitiveValues.filter((value): value is string => Boolean(value?.trim()));
   if (format === "markdown") {
-    return <MarkdownAnalysis markdown={stripStructuredStatisticalCore(stripRepeatedMatchMetadata(dedupeEditorialMarkdown(analysis.join("\n\n"))))} hideSensitiveSnippets={hideSensitiveSnippets} sensitiveValues={protectedValues} />;
+    const markdown = stripRepeatedMatchMetadata(dedupeEditorialMarkdown(analysis.join("\n\n")));
+    return <MarkdownAnalysis markdown={stripStatisticalCore ? stripStructuredStatisticalCore(markdown) : markdown} hideSensitiveSnippets={hideSensitiveSnippets} sensitiveValues={protectedValues} />;
   }
   const presentedAnalysis = dedupeEditorialBlocks(analysis);
   return <>{presentedAnalysis.map((paragraph, index) => {

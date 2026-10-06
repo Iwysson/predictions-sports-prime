@@ -17,6 +17,7 @@ export { resolveAccess };
 
 export type FullMatchView = {
   analysis: string[];
+  analysisFormat?: "markdown";
   picks: { main: string; odds: number | null };
   sources: Array<{ name: string; url: string }>;
   comment: string | null;
@@ -80,6 +81,7 @@ export function buildPublicMatchView(prediction: EditorialPrediction): PublicMat
 export function buildFullMatchView(prediction: EditorialPrediction): FullMatchView {
   return {
     analysis: prediction.analysis,
+    analysisFormat: prediction.analysisFormat,
     picks: {
       main: prediction.picks.main,
       odds: prediction.picks.publishedOdds ?? prediction.picks.odds ?? null,

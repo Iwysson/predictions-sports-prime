@@ -1,9 +1,12 @@
+import { EditorialAnalysis } from "@/components/EditorialAnalysis";
+
 // Presentational only (no hooks). Renders on the server for public parts and inside the
 // VIP gate for protected parts. Labels arrive already translated.
 type Sources = Array<{ name: string; url: string }>;
 
 export function MatchFullContent({
   analysis,
+  analysisFormat,
   sources,
   comment,
   prediction,
@@ -11,6 +14,7 @@ export function MatchFullContent({
   heading,
 }: {
   analysis: string[];
+  analysisFormat?: "markdown";
   sources: Sources;
   comment: string | null;
   prediction?: { main: string; odds: number | null } | null;
@@ -36,9 +40,7 @@ export function MatchFullContent({
       {analysis.length ? (
         <section className="psp-analysis compact-analysis-copy match-full-content">
           <h3>{heading ?? labels.analysis ?? "Analysis"}</h3>
-          {analysis.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
+          <EditorialAnalysis analysis={analysis} format={analysisFormat} stripStatisticalCore={false} />
           {comment ? <p className="match-note">{comment}</p> : null}
         </section>
       ) : null}
