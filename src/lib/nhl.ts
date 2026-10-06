@@ -1,8 +1,8 @@
-import data from "@/data/nhl/predictions.json";
+import data from "@/data/nhl/matches.en.json";
 import type { PredictionAccess } from "@/types";
 
-// NHL 06/10/2026 page data, normalised from src/data/nhl/predictions.json (copied unchanged
-// from the editorial package). One page, one anchor per game, no per-game match routes.
+// NHL 06/10/2026 page data, English only, from src/data/nhl/matches.en.json.
+// One page, one anchor per game, no per-game match routes.
 
 export type NhlMatch = {
   slug: string;
@@ -31,8 +31,6 @@ const sourceName = (url: string) => {
   }
 };
 
-const paragraphsOf = (text: string) => text.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
-
 export function nhlMatches(): NhlMatch[] {
   return (data.matches as any[]).map((m) => {
     const [home, away] = String(m.title).split("×").map((t) => t.trim());
@@ -46,8 +44,8 @@ export function nhlMatches(): NhlMatch[] {
       access: m.access === "free" ? "free" : "vip",
       pick: m.pick,
       odds: Number(m.odds),
-      teaser: String(m.teaser ?? m.free_text ?? "").trim(),
-      analysis: paragraphsOf(String(m.analysis ?? "")),
+      teaser: String(m.teaser ?? "").trim(),
+      analysis: m.analysis as string[],
       sources: (m.sources ?? []).map((url: string) => ({ name: sourceName(url), url })),
     };
   });
