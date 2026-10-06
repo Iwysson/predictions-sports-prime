@@ -222,7 +222,10 @@ for (const route of matchRoutes) {
   if (!leagueHref) errors.push(`${route}: missing league link`);
   if (links === 0 || links > 4) errors.push(`${route}: expected 1-4 related links, found ${links}`);
   if (!html.includes('class="match-seo-intro"')) errors.push(`${route}: missing static match introduction`);
-  if (!html.includes('class="compact-analysis-copy"') && !hasLocalizedSemanticBody) errors.push(`${route}: missing static editorial or semantic match content`);
+  // Protected analysis (VIP) is served by the gated endpoint and is deliberately not in static HTML.
+  // Such pages must carry the explicit marker instead.
+  const protectedAnalysis = html.includes('data-protected-content="analysis"');
+  if (!html.includes('class="compact-analysis-copy"') && !hasLocalizedSemanticBody && !protectedAnalysis) errors.push(`${route}: missing static editorial or semantic match content`);
   if (!html.includes('class="main-prediction-block"') && !html.includes('data-prediction-reveal="locked"')) errors.push(`${route}: missing final prediction or click-to-reveal gate`);
   if (!html.includes('"@type":"Article"')) errors.push(`${route}: missing Article schema`);
   if (!html.includes('"@type":"BreadcrumbList"')) errors.push(`${route}: missing BreadcrumbList schema`);

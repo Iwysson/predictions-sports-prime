@@ -1,5 +1,6 @@
 export const dictionaries = {
   en: {
+    matchTrend: "Trends",
     matchFreeAnalysis: "Free analysis",
     matchVipAnalysis: "VIP analysis",
     matchTitle: "{home} vs {away} Prediction, Odds and Betting Tips",
@@ -73,6 +74,7 @@ export const dictionaries = {
     responsibleGambling: "Responsible Gambling",
   },
   "pt-BR": {
+    matchTrend: "Tendências",
     matchFreeAnalysis: "Análise gratuita",
     matchVipAnalysis: "Análise VIP",
     matchTitle: "{home} x {away}: Palpite, Odds e Dicas de Aposta",
@@ -146,6 +148,7 @@ export const dictionaries = {
     responsibleGambling: "Jogo Responsável",
   },
   es: {
+    matchTrend: "Tendencias",
     matchFreeAnalysis: "Análisis gratuito",
     matchVipAnalysis: "Análisis VIP",
     matchTitle: "{home} vs {away}: Pronóstico, Cuotas y Consejos de Apuestas",

@@ -1,26 +1,40 @@
-import type { FullMatchView } from "@/lib/match-access";
+// Presentational only (no hooks). Renders on the server for public parts and inside the
+// VIP gate for protected parts. Labels arrive already translated.
+type Sources = Array<{ name: string; url: string }>;
 
-// Presentational only (no hooks). Renders on the server for FREE content and inside
-// the VIP gate for protected content. Labels arrive already translated.
-export function MatchFullContent({ full, labels }: { full: FullMatchView; labels: { prediction: string; odds: string } }) {
+export function MatchFullContent({
+  analysis,
+  sources,
+  comment,
+  prediction,
+  labels,
+}: {
+  analysis: string[];
+  sources: Sources;
+  comment: string | null;
+  prediction?: { main: string; odds: number | null } | null;
+  labels: { prediction: string; odds: string };
+}) {
   return (
-    <section className="match-full-content">
-      <p>
-        <strong>{labels.prediction}:</strong> {full.picks.main}
-        {full.picks.odds !== null ? (
-          <>
-            {" · "}
-            <strong>{labels.odds}:</strong> {full.picks.odds.toFixed(2)}
-          </>
-        ) : null}
-      </p>
-      {full.analysis.map((paragraph, index) => (
+    <section className="match-full-content compact-analysis-copy">
+      {prediction ? (
+        <p>
+          <strong>{labels.prediction}:</strong> {prediction.main}
+          {prediction.odds !== null ? (
+            <>
+              {" · "}
+              <strong>{labels.odds}:</strong> {prediction.odds.toFixed(2)}
+            </>
+          ) : null}
+        </p>
+      ) : null}
+      {analysis.map((paragraph, index) => (
         <p key={index}>{paragraph}</p>
       ))}
-      {full.comment ? <p className="match-note">{full.comment}</p> : null}
-      {full.sources.length ? (
+      {comment ? <p className="match-note">{comment}</p> : null}
+      {sources.length ? (
         <ul className="match-sources">
-          {full.sources.map((source) => (
+          {sources.map((source) => (
             <li key={source.url}>
               <a href={source.url} rel="nofollow noopener" target="_blank">
                 {source.name}

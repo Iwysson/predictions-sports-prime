@@ -16,6 +16,9 @@ import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync, rmdirSync, 
 import { dirname, join, resolve } from "node:path";
 import { editorialPredictions } from "../src/data/predictions/index.ts";
 import { isFutureFixture } from "../src/lib/fixture-state.ts";
+import { predictionSlug } from "../src/lib/editorial.ts";
+import { hasCompleteLocalizedEditorial } from "../src/data/localized-editorial.ts";
+import { seoLocaleSlugs } from "../src/lib/seo-locales.ts";
 
 const CHECK = process.argv.includes("--check");
 const NOW = new Date();
@@ -26,17 +29,26 @@ const futureCount = (editorialPredictions as any[]).filter((p) => {
   return isFutureFixture({ status: "published", date: p.matchInfo.date, time: p.matchInfo.time, league: p.league } as any, NOW);
 }).length;
 
+// Localized routes exist only where a complete localized editorial is available. Otherwise
+// they would publish untranslated pages in other locales.
+const localizedCount = (editorialPredictions as any[]).reduce((n, p) => {
+  if (p.published !== true || !p.matchInfo?.date || !p.matchInfo?.time) return n;
+  if (!isFutureFixture({ status: "published", date: p.matchInfo.date, time: p.matchInfo.time, league: p.league } as any, NOW)) return n;
+  const slug = p.slug ?? predictionSlug(p.homeTeam, p.awayTeam);
+  return n + seoLocaleSlugs.filter((locale) => hasCompleteLocalizedEditorial(slug, locale)).length;
+}, 0);
+
 const routes = [
-  { template: "src/templates/match-routes/en/page.tsx", target: "src/app/(en)/match/[slug]/page.tsx" },
-  { template: "src/templates/match-routes/locale/page.tsx", target: "src/app/[locale]/match/[slug]/page.tsx" },
+  { template: "src/templates/match-routes/en/page.tsx", target: "src/app/(en)/match/[slug]/page.tsx", enabled: futureCount > 0 },
+  { template: "src/templates/match-routes/locale/page.tsx", target: "src/app/[locale]/match/[slug]/page.tsx", enabled: futureCount > 0 && localizedCount > 0 },
 ];
 
 const shouldExist = futureCount > 0;
 console.log(`future published predictions with recorded kickoff: ${futureCount} -> match routes ${shouldExist ? "ENABLED" : "DISABLED"}`);
 
-for (const { template, target } of routes) {
+for (const { template, target, enabled } of routes) {
   const targetPath = resolve(target);
-  if (shouldExist) {
+  if (enabled) {
     const next = readFileSync(resolve(template), "utf8");
     const current = existsSync(targetPath) ? readFileSync(targetPath, "utf8") : null;
     if (current === next) { console.log(`unchanged  ${target}`); continue; }

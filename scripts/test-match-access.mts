@@ -1,7 +1,7 @@
 // Tests for FREE/VIP gating of match analyses. Fake Supabase, fixture predictions, no network.
 import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";
-import { buildContentIndex, buildPublicMatchView, isPublishableFuture } from "../src/lib/match-access.ts";
+import { buildContentIndex, buildPublicMatchView, isPublishableFuture, resolveAccess } from "../src/lib/match-access.ts";
 import { isVip } from "../src/lib/vip.ts";
 import type { EditorialPrediction } from "../src/types/index.ts";
 
@@ -83,8 +83,7 @@ const call = async (slug: string, token?: string) => {
 const leaks = (text: string) => text.includes(SECRET_VIP) || text.includes(String(SECRET_ODDS)) || text.includes("to win");
 
 // 1) Absence of access means VIP
-check("missing access field -> vip in the index", entryOf("alpha-vs-one")?.access === "vip");
-check("missing access field -> vip, the field itself is never defaulted to free", !entryOf("alpha-vs-one") || entryOf("alpha-vs-one")!.access !== "free");
+check("missing access field -> analysis and prediction are vip in the index", entryOf("alpha-vs-one")?.analysisAccess === "vip" && entryOf("alpha-vs-one")?.predictionAccess === "vip");
 
 // 2) access vip + visitor: no premium content
 let r = await call("alpha-vs-one");
@@ -175,14 +174,18 @@ for (const locale of ["en", "pt-br"]) {
   const { full, gate, ...publicPart } = model;
   check(`[${locale}] public part (view, JSON-LD, labels) has no premium marker`, !leaked(JSON.stringify(publicPart)));
   check(`[${locale}] JSON-LD has no premium marker`, !leaked(JSON.stringify(model.jsonLd)));
-  check(`[${locale}] MatchGate props are only the slug`, JSON.stringify(gate) === JSON.stringify({ slug: leakSlug }));
-  check(`[${locale}] static model carries no full content for VIP`, full === null);
+  check(`[${locale}] MatchGate props are only the slug and two booleans`, JSON.stringify(gate) === JSON.stringify({ slug: leakSlug, showAnalysis: true, showPrediction: true }));
+  check(`[${locale}] static model carries no analysis, prediction or pick for VIP`, full === undefined && model.staticAnalysis === null && model.publicPrediction === null);
 }
 
 {
-  const ld: any = buildMatchPageModel(synthetic, "en", NOW)!.jsonLd;
-  check("JSON-LD is built from public fields (not empty)", ld["@type"] === "SportsEvent" && ld.name === "Leak Home vs Leak Away" && ld.startDate === "2026-10-20T17:00:00.000Z" && ld.location?.name === "Public Ground" && ld.homeTeam?.name === "Leak Home" && ld.awayTeam?.name === "Leak Away" && ld.superEvent?.name === "Premier League");
-  check("JSON-LD has no pick, odds or prediction keys", !("offers" in ld) && !("prediction" in ld) && !("odds" in ld) && !JSON.stringify(ld).includes("to win"));
+  const ldAll: any[] = buildMatchPageModel(synthetic, "en", NOW)!.jsonLd;
+  const web: any = ldAll[0];
+  const article: any = ldAll[1];
+  check("JSON-LD is built from public fields (WebPage + Article, not empty)", web["@type"] === "WebPage" && web.name === "Leak Home vs Leak Away Prediction" && web.temporalCoverage === "2026-10-20T17:00:00.000Z" && article["@type"] === "Article" && article.author?.["@type"] === "Person");
+  check("JSON-LD has no SportsEvent location without a verified address", !JSON.stringify(ldAll).includes("\"location\""));
+  const ld: any = ldAll;
+  check("JSON-LD has no pick, odds or prediction keys", !JSON.stringify(ld).includes("to win") && !JSON.stringify(ld).includes("prediction\"") && !JSON.stringify(ld).includes("odds"));
 }
 const leakCall = async (token?: string) => {
   const res = await leakHandler({
@@ -205,6 +208,33 @@ for (const [who, token, status] of denied) {
 for (const [who, token] of [["VIP trialing", "tok-trial1"], ["VIP active", "tok-active1"]] as const) {
   const r = await leakCall(token);
   check(`leak: ${who} -> 200 with all markers (authorised only)`, r.status === 200 && MARKERS.every((m) => r.text.includes(m)));
+}
+
+// ---- Access rules: analysis free implies prediction free; prediction free alone is allowed ----
+{
+  const a = resolveAccess({ analysisAccess: "free", predictionAccess: "vip" });
+  check("analysis free forces prediction free", a.analysis === "free" && a.prediction === "free");
+  const b = resolveAccess({ analysisAccess: "vip", predictionAccess: "free" });
+  check("prediction free alone is allowed with a VIP analysis", b.analysis === "vip" && b.prediction === "free");
+  check("missing fields default to vip for both", resolveAccess({}).analysis === "vip" && resolveAccess({}).prediction === "vip");
+}
+
+// Mixed case (VIP analysis, FREE prediction): visitor gets no analysis; VIP gets it.
+{
+  const SECRET_MIXED = "PSP_MIXED_SECRET_ANALYSIS_TEST";
+  const mixed: EditorialPrediction = { ...base("Mix", "Case", { analysis: [SECRET_MIXED + " paragraph."], predictionAccess: "free", analysisAccess: "vip", picks: { main: "Mix to win", publishedOdds: 1.9 } }) };
+  const mixIndex = buildContentIndex([mixed], NOW);
+  const mixHandler = endpoint.createMatchContentHandler(mixIndex);
+  const callMix = async (token?: string) => {
+    const res = await mixHandler({ request: new Request("https://x/api/match-content/mix-vs-case", { headers: token ? { Authorization: `Bearer ${token}` } : {} }), params: { slug: "mix-vs-case" }, env });
+    return { status: res.status, text: await res.text() };
+  };
+  const visitor = await callMix();
+  check("mixed: visitor gets no analysis (401, no text)", visitor.status === 401 && !visitor.text.includes(SECRET_MIXED));
+  const free = await callMix("tok-free1");
+  check("mixed: FREE user gets no analysis (403, no text)", free.status === 403 && !free.text.includes(SECRET_MIXED));
+  const vip = await callMix("tok-trial1");
+  check("mixed: VIP gets analysis and prediction (200)", vip.status === 200 && vip.text.includes(SECRET_MIXED) && vip.text.includes("Mix to win"));
 }
 
 globalThis.fetch = realFetch;

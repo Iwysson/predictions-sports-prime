@@ -16,18 +16,17 @@ const json = (body, status = 200) =>
 // Mirrors src/lib/vip.ts: plan === "vip" && subscription_status in [trialing, active].
 const isVipRow = (row) => row?.plan === "vip" && ["trialing", "active"].includes(row?.subscription_status ?? "");
 
-// Entries from the index; a missing or unknown access value is treated as VIP.
-const accessOf = (entry) => (entry?.access === "free" ? "free" : "vip");
-
 export function createMatchContentHandler(index) {
   return async function handle({ request, params, env }) {
     const slug = String(params?.slug ?? "");
     const entry = index.find((e) => e.slug === slug);
     if (!entry) return json({ error: "not-found" }, 404);
 
-    if (accessOf(entry) === "free") {
-      return json({ access: "free", slug, full: entry.full });
-    }
+    // Both parts free: public content, no session needed.
+    // Otherwise the analysis and/or the prediction is VIP and needs a verified VIP session.
+    const needsVip = entry.analysisAccess !== "free" || entry.predictionAccess !== "free";
+    const payload = { slug, analysisAccess: entry.analysisAccess, predictionAccess: entry.predictionAccess, full: entry.full, prediction: entry.prediction };
+    if (!needsVip) return json(payload);
 
     // VIP content: verify the session on the server, then the profile with the service role.
     const supabaseUrl = env.SUPABASE_URL;
@@ -53,7 +52,7 @@ export function createMatchContentHandler(index) {
     const [profile] = await profileRes.json();
 
     if (!isVipRow(profile)) return json({ error: "vip-required" }, 403);
-    return json({ access: "vip", slug, full: entry.full });
+    return json(payload);
   };
 }
 

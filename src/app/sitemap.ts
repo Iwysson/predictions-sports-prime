@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/nfl/",
       "/editorial-policy/",
       "/results/",
+      "/nhl/",
       "/privacy/",
       "/cookies/",
       "/terms/",

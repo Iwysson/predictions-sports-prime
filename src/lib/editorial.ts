@@ -14,6 +14,7 @@ import {
 } from "@/lib/editorial-standard";
 import { parsePredictionMarket } from "@/lib/prediction-results";
 import { localDateTimeToUtc } from "@/lib/match-time";
+import { resolveAccess } from "@/lib/vip";
 
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
@@ -221,6 +222,11 @@ function matchSeoFromExistingData(prediction: EditorialPrediction) {
 export function editorialToMatch(
   prediction: EditorialPrediction
 ): Match {
+  // Public listings receive only what the viewer may see without a session. Protected analysis,
+  // pick, odds, sources and statistics are removed here, at the source, for every list page.
+  const tiers = resolveAccess(prediction);
+  const publicAnalysis = tiers.analysis === "free";
+  const publicPrediction = tiers.prediction === "free";
   const slug = prediction.slug ?? predictionSlug(
       prediction.homeTeam,
       prediction.awayTeam
@@ -253,13 +259,15 @@ export function editorialToMatch(
     title:
       prediction.title ??
       `${prediction.homeTeam} vs ${prediction.awayTeam} Prediction`,
-    analysis: prediction.analysis,
-    analysisFormat: prediction.analysisFormat,
+    analysis: publicAnalysis ? prediction.analysis : [],
+    analysisAccess: tiers.analysis,
+    predictionAccess: tiers.prediction,
+    analysisFormat: publicAnalysis ? prediction.analysisFormat : undefined,
     seoTitle: prediction.seoTitle,
     editorialStandard: prediction.editorialStandard,
     access: prediction.access ?? "vip",
-    comment: prediction.comment,
-    predictions: picksToItems(prediction),
+    comment: publicAnalysis ? prediction.comment : undefined,
+    predictions: publicPrediction ? picksToItems(prediction) : [],
     betResult: typeof prediction.picks.result === "string"
       ? prediction.picks.result
       : prediction.picks.result?.status,
@@ -274,8 +282,8 @@ export function editorialToMatch(
     publishedAt: prediction.publishedAt,
     updatedAt: prediction.updatedAt,
     freshness: prediction.freshness,
-    sources: prediction.sources,
-    matchSeo: matchSeoFromExistingData(prediction),
+    sources: publicAnalysis ? prediction.sources : undefined,
+    matchSeo: publicAnalysis ? matchSeoFromExistingData(prediction) : undefined,
   };
 }
 

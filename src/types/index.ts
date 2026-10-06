@@ -194,6 +194,14 @@ export type EditorialPrediction = {
   editorialStandard?: "psp-v1" | "psp-v2";
   // Access tier. Default is "vip": a prediction is free only when explicitly marked "free".
   access?: PredictionAccess;
+  // Split access: the analysis and the prediction can have different tiers.
+  // When absent, both follow access; when access is absent too, both are "vip".
+  analysisAccess?: PredictionAccess;
+  predictionAccess?: PredictionAccess;
+  // Public teaser shown to visitors who cannot read the full content.
+  teaser?: string;
+  // Public trend label for a VIP prediction (never the pick or the odds).
+  trend?: string;
   seoTitle?: string;
 
   // Optional note shown below the analysis.
@@ -262,6 +270,14 @@ export type Match = {
   editorialStandard?: "psp-v1" | "psp-v2";
   // Access tier. Default is "vip": a prediction is free only when explicitly marked "free".
   access?: PredictionAccess;
+  // Split access: the analysis and the prediction can have different tiers.
+  // When absent, both follow access; when access is absent too, both are "vip".
+  analysisAccess?: PredictionAccess;
+  predictionAccess?: PredictionAccess;
+  // Public teaser shown to visitors who cannot read the full content.
+  teaser?: string;
+  // Public trend label for a VIP prediction (never the pick or the odds).
+  trend?: string;
   seoTitle?: string;
   comment?: string;
   predictions: PredictionItem[];

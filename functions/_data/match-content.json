@@ -1,1 +1,680 @@
-[]
+[
+  {
+    "slug": "internacional-vs-corinthians",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "É um jogo de desespero. Quatro pontos separam Internacional e Corinthians no recorte da tabela, com o Inter em 18º, somando 28 pontos, e o Corinthians em 14º, com 32. Na minha avaliação, a necessidade de reagir pode deixar o confronto aberto depois do primeiro gol. Não vejo um favorito suficientemente claro para escolher um vencedor; prefiro trabalhar com o que o jogo pode produzir.",
+        "No Beira-Rio, o Internacional tem 3 vitórias, 5 empates e 6 derrotas em 14 partidas, com médias de 1,14 gol marcado e 1,14 sofrido. O Corinthians fora soma 3 vitórias, 5 empates e 5 derrotas em 13 jogos, marcando 1,08 e sofrendo 1,23 por partida. O Over 1.5 apareceu em 71% dos jogos do Inter em casa e 77% das viagens corintianas. Esses números favorecem uma linha de dois gols, com duas equipes pressionadas pela necessidade de pontuar.",
+        "Os escanteios acrescentam outro elemento: os jogos do Inter como mandante têm média total de 10,36, contra 10,38 nos jogos do Corinthians fora. A linha de oito ou mais escanteios foi alcançada em 79% e 69% desses recortes, respectivamente. É um cenário compatível com pressão, cruzamentos e ataques que terminam em bloqueios.",
+        "Um gol pode chamar outro, mas resta saber quando o primeiro vai acontecer. Se o placar ficar zerado por muito tempo, a combinação perde força; se alguém precisar buscar o empate cedo, o ritmo pode mudar. As duas condições precisam acontecer no mesmo jogo."
+      ],
+      "picks": {
+        "main": "Over 1.5 gols + Over 7.5 escanteios",
+        "odds": 1.78
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=284-5-17-2026"
+        },
+        {
+          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Over 1.5 gols + Over 7.5 escanteios",
+      "odds": 1.78
+    }
+  },
+  {
+    "slug": "bragantino-vs-mirassol",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Um confronto paulista entre equipes que se conhecem e chegam com objetivos diferentes. O Bragantino aparece em 10º no recorte da tabela, com 36 pontos, olhando para uma aproximação das vagas continentais. O Mirassol soma 32, em 15º, apenas três acima do Grêmio, primeiro time da zona de rebaixamento nessa base. Vejo o mando como um diferencial, mas a pressão do visitante também pode tornar o jogo disputado.",
+        "O Bragantino em casa tem 6 vitórias, 2 empates e 5 derrotas em 13 jogos. Marca 1,46 e sofre 1,08 gol por partida. O Mirassol fora registra 2 vitórias, 3 empates e 8 derrotas, com médias de 0,92 marcado e 1,62 sofrido. Além disso, o Mirassol sofreu gol em todas as 13 partidas como visitante desse recorte. O Bragantino busca voltar a vencer depois de cinco partidas sem vitória no campeonato.",
+        "Nos escanteios, há um apoio mais direto ao mercado escolhido. A média total é de 11,23 nos jogos caseiros do Bragantino e 10,92 nas viagens do Mirassol. Em ambos os lados, 77% das partidas chegaram a pelo menos nove escanteios. O Bragantino cobra 6,46 por jogo em casa, enquanto o Mirassol concede 6,38 fora.",
+        "Não vejo o Bragantino perdendo como cenário principal, mas prefiro incluir o empate pela irregularidade recente. A ideia é buscar uma dupla chance com um jogo de volume nas laterais, sem precisar acertar o placar. Um jogo travado, com poucas chegadas à linha de fundo, é o principal obstáculo para a parte dos corners."
+      ],
+      "picks": {
+        "main": "Bragantino ou empate (1X) + Over 8.5 escanteios",
+        "odds": 1.65
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=286-4-13-2026"
+        },
+        {
+          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        },
+        {
+          "name": "Red Bull Bragantino — local e horário do confronto",
+          "url": "https://www.redbullbragantino.com/br-pt/noticias/check-in-e-ingressos-29-rodada-do-brasileirao-2026"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Bragantino ou empate (1X) + Over 8.5 escanteios",
+      "odds": 1.65
+    }
+  },
+  {
+    "slug": "remo-vs-gremio",
+    "analysisAccess": "vip",
+    "predictionAccess": "free",
+    "full": {
+      "analysis": [
+        "Um jogo de desespero, com dois times que precisam pontuar e pouco espaço para desperdiçar oportunidades. O Remo tem 23 pontos no recorte da tabela, em 19º, e o Grêmio soma 29, em 17º. Na minha avaliação, o Grêmio tem condições de sair com pelo menos um ponto, e vejo o empate como um resultado possível neste confronto direto.",
+        "O Grêmio fora de casa soma 14 partidas, nenhuma vitória, 4 empates e 10 derrotas. A equipe marca apenas 0,57 gol por jogo, sofre 1,57 e ficou sem marcar em metade dessas viagens. A busca por uma reação passa por organizar melhor a defesa e aproveitar as oportunidades que o Remo costuma oferecer.",
+        "Do outro lado, o Remo também não transformou o mando em uma grande vantagem: 3 vitórias, 5 empates e 6 derrotas em 14 jogos. Marca 1,29, sofre 1,36 e levou gol em 86% das partidas em casa. Ou seja, existe uma defesa que costuma dar oportunidades, mas o Grêmio precisa melhorar sua produção ofensiva para aproveitar esse espaço.",
+        "A diferença de seis pontos aumenta a importância deste confronto direto. O Remo tem o mando e números ofensivos melhores nesse recorte; o Grêmio chega com a necessidade de interromper um padrão muito ruim como visitante. Considero a cotação interessante para um confronto em que espero o Grêmio conseguindo pontuar."
+      ],
+      "picks": {
+        "main": "Grêmio ou empate (X2)",
+        "odds": 1.7
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=281-2-10-2026"
+        },
+        {
+          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Grêmio ou empate (X2)",
+      "odds": 1.7
+    }
+  },
+  {
+    "slug": "vitoria-vs-chapecoense",
+    "analysisAccess": "vip",
+    "predictionAccess": "free",
+    "full": {
+      "analysis": [
+        "Para este confronto, considero o Vitória bastante favorito. A Chapecoense está em uma situação muito difícil, na lanterna, com 18 pontos em 27 partidas no recorte consultado, enquanto o Vitória tem 33 em 28. A campanha catarinense deixa o time em uma situação muito difícil nesta reta final. O que pesa na minha escolha é a diferença entre o Vitória no Barradão e a Chape fora.",
+        "O Vitória tem 9 vitórias, 1 empate e 4 derrotas em 14 jogos em casa. Marca 1,29 gol por partida e sofre somente 0,86. Conseguiu terminar sem sofrer gols em 64% dessas partidas e abriu o placar em 71%. É uma equipe que encontrou no mando uma forma de competir melhor e proteger seu resultado.",
+        "A Chapecoense como visitante soma 1 vitória, 4 empates e 9 derrotas em 14 jogos. Marca 0,79 e sofre 1,71 gol por partida. Levou gol em todas essas viagens e sofreu o primeiro em 86%. A diferença não está apenas em quem cria mais, mas em quem consegue controlar o jogo depois de sair na frente.",
+        "Espero um Vitória tomando a iniciativa e buscando aproveitar a força do Barradão. Se o Vitória começar ansioso, errar chances e deixar o placar apertado, a Chape pode permanecer viva até o fim. A vantagem do mandante está em conseguir impor seu jogo sem oferecer transições fáceis. Prefiro a vitória simples, mantendo o palpite alinhado à força do Barradão sem acrescentar uma exigência de gols ou handicap."
+      ],
+      "picks": {
+        "main": "Vitória vence",
+        "odds": 1.72
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=282-1-11-2026"
+        },
+        {
+          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Vitória vence",
+      "odds": 1.72
+    }
+  },
+  {
+    "slug": "botafogo-vs-vasco",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Um clássico que pede cuidado, mas no qual vejo o mando pesando a favor do Botafogo. Na minha leitura, a torcida e a familiaridade com o Nilton Santos podem ajudar o time a encontrar seu ritmo. O Vasco chega para disputar um clássico importante, e espero um jogo intenso pela necessidade de pontuar dos dois lados.",
+        "O Botafogo em casa tem 5 vitórias, 6 empates e 3 derrotas em 14 jogos, com médias de 1,71 gol marcado e 1,43 sofrido. Já o Vasco fora registra 1 vitória, 5 empates e 7 derrotas em 13 partidas. Marca 1,00 e sofre 1,77 por jogo, tendo levado gol em 92% das viagens e terminado sem sofrer em apenas 8%.",
+        "A linha de dois ou mais gols ocorreu em 86% dos jogos caseiros do Botafogo e 69% dos jogos do Vasco fora. Nos sete confrontos de liga reunidos pela fonte, o Botafogo soma cinco vitórias, um empate e uma derrota. Esse histórico se soma ao mando e reforça minha preferência pelo Botafogo neste clássico.",
+        "Não considero o Botafogo um time impenetrável: sofrer 1,43 por jogo em casa abre espaço para o Vasco participar do placar. Essa é a razão para trabalhar com dupla chance e gols, sem exigir uma vitória seca. O Botafogo precisa pontuar e o jogo precisa ter pelo menos dois gols; um 1–0, mesmo favorável ao mandante, não atende à combinação."
+      ],
+      "picks": {
+        "main": "Botafogo ou empate (1X) + Over 1.5 gols",
+        "odds": 1.95
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=289-19-14-2026"
+        },
+        {
+          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Botafogo ou empate (1X) + Over 1.5 gols",
+      "odds": 1.95
+    }
+  },
+  {
+    "slug": "cruzeiro-vs-sao-paulo",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Vejo o Cruzeiro como favorito neste confronto, principalmente pelo contraste entre seu desempenho no Mineirão e o rendimento do São Paulo fora. A minha escolha mantém uma proteção para o empate, acompanhando o bom desempenho do time como mandante. Ainda assim, espero que o Cruzeiro tenha condições de comandar boa parte do jogo.",
+        "O Cruzeiro em casa soma 7 vitórias, 4 empates e 3 derrotas em 14 partidas. Marca 1,71 gol por jogo, sofre 1,14 e balançou a rede em 86% desse recorte. O São Paulo fora tem 2 vitórias, 3 empates e 9 derrotas, marcando somente 0,79 e sofrendo 1,43 por jogo. A equipe não marcou em 36% das viagens e sofreu primeiro em 79%.",
+        "Para a parte dos gols, o Over 1.5 ocorreu em 86% dos jogos do Cruzeiro em casa e 71% das partidas do São Paulo fora. Nos sete encontros de liga desse histórico, o São Paulo venceu quatro, o Cruzeiro dois e houve um empate. Nesta rodada, vejo o Cruzeiro em condições de aproveitar o contraste entre seu ataque em casa e o rendimento do visitante.",
+        "O cenário que espero é um Cruzeiro capaz de pressionar e um São Paulo obrigado a administrar períodos sem a bola. Se o visitante resistir bem, o empate continua coberto; se o jogo terminar com apenas um gol, a parte do Over não passa. A preferência está no mando e na produção ofensiva caseira, sem ignorar que o São Paulo já mostrou capacidade de dificultar esse duelo."
+      ],
+      "picks": {
+        "main": "Cruzeiro ou empate (1X) + Over 1.5 gols",
+        "odds": 1.67
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=285-20-15-2026"
+        },
+        {
+          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Cruzeiro ou empate (1X) + Over 1.5 gols",
+      "odds": 1.67
+    }
+  },
+  {
+    "slug": "santos-vs-flamengo",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Um confronto difícil para o Flamengo, mesmo reconhecendo a força e o favoritismo do time carioca. Na Vila Belmiro, espero o Santos buscando impor seu ritmo com o apoio da torcida. O Santos vem de vitória por 2–1 sobre o São Paulo em 2 de outubro. Na minha avaliação, pode aproveitar a confiança desse resultado para enfrentar um adversário mais forte sem entrar apenas para se defender.",
+        "O Santos em casa soma 6 vitórias, 4 empates e 4 derrotas em 14 jogos, com 1,43 gol marcado e 1,29 sofrido por partida. O time marcou em 86% dessas partidas. O Flamengo fora tem 8 vitórias, 3 empates e 3 derrotas em 14 jogos, marca 1,93 e sofre 0,93. Também marcou em 93% das viagens. O encontro coloca a produção do Santos na Vila diante de um Flamengo eficiente também nas viagens.",
+        "A ausência de Arrascaeta acrescenta um elemento importante. O meia passou por cirurgia após fratura no punho esquerdo e está fora deste confronto, com recuperação estimada em seis a oito semanas informada em 1º de outubro. Para mim, perder um jogador dessa capacidade pode exigir ajustes na criação, embora o Flamengo tenha alternativas e continue perigoso.",
+        "Minha leitura é que o Santos pode tornar esse jogo menos confortável do que o favoritismo flamenguista sugere. Vai precisar competir no meio, cuidar das perdas de bola e aproveitar suas chegadas, porque oferecer transições ao Flamengo seria um problema. Mesmo reconhecendo o favoritismo do Flamengo, acredito na capacidade do Santos de competir em casa e sair com pontos."
+      ],
+      "picks": {
+        "main": "Santos ou empate (1X)",
+        "odds": 2
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=288-12-16-2026"
+        },
+        {
+          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        },
+        {
+          "name": "Santos FC — vitória sobre o São Paulo em 02/10 e confirmação da Vila Belmiro",
+          "url": "https://www.santosfc.com.br/santos-fc-vence-o-classico-no-morumbis-e-iguala-recorde-no-campeonato-brasileiro/"
+        },
+        {
+          "name": "ge — cirurgia de Arrascaeta e previsão de recuperação, 01/10/2026",
+          "url": "https://ge.globo.com/google/amp/futebol/times/flamengo/noticia/2026/10/01/arrascaeta-passa-por-cirurgia-no-punho-e-desfalca-o-flamengo-de-seis-a-oito-semanas.ghtml"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Santos ou empate (1X)",
+      "odds": 2
+    }
+  },
+  {
+    "slug": "athletico-pr-vs-atletico-mg",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Diante dos números de casa e fora, considero o Athletico-PR favorito. O time tem um mando muito forte e enfrenta um Atlético-MG que costuma produzir menos nas viagens. Minha preferência é pelo Furacão pontuando, junto de uma linha de escanteios que permite buscar volume sem depender de um placar alto.",
+        "O Athletico em casa soma 9 vitórias, 4 empates e apenas 1 derrota em 14 partidas. Marca 1,79 gol por jogo e sofre 0,79. O Atlético-MG fora tem 4 vitórias, 2 empates e 8 derrotas, com médias de 0,93 gol marcado e 1,14 sofrido. O dado ofensivo mais relevante do visitante é ter ficado sem marcar em 57% dessas partidas.",
+        "Nos corners, o Athletico cobra 6,00 e concede 4,00 por jogo em casa, totalizando média de 10,00. Nas viagens do Atlético-MG, são 4,57 a favor e 5,79 contra, com média total de 10,36. A linha de nove ou mais escanteios ocorreu em 79% dos jogos do Furacão em casa e 64% dos jogos do Galo fora. Há um bom suporte para esperar pressão e chegadas pelos lados.",
+        "Nos sete encontros de liga desse histórico, o Atlético-MG venceu quatro, o Athletico dois e houve um empate. O Galo tem condições de incomodar, mesmo com um ataque menos eficiente fora. Por isso, prefiro manter o empate na seleção. O mandante pode cumprir sua parte e ainda faltar volume nos corners; os dois lados da combinação precisam aparecer na mesma partida."
+      ],
+      "picks": {
+        "main": "Athletico-PR ou empate (1X) + Over 8.5 escanteios",
+        "odds": 1.78
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=283-6-7-2026"
+        },
+        {
+          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Athletico-PR ou empate (1X) + Over 8.5 escanteios",
+      "odds": 1.78
+    }
+  },
+  {
+    "slug": "fluminense-vs-coritiba",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Para este confronto, acredito na vitória do Fluminense e em pelo menos dois gols. O Maracanã tem sido uma base muito forte para o time, que consegue produzir melhor diante de sua torcida. O Coritiba tem uma campanha competitiva fora, mas vejo o Fluminense com condições de transformar seu mando em vantagem.",
+        "O Fluminense em casa tem 10 vitórias, 3 empates e 1 derrota em 14 partidas. Marca 1,71 gol por jogo, sofre 1,00 e balançou a rede em 93% desse recorte. O Coritiba fora soma 5 vitórias, 4 empates e 5 derrotas, com 1,29 gol marcado e 1,71 sofrido por jogo. A defesa visitante permite oportunidades, embora sua campanha mostre capacidade de buscar pontos longe de casa.",
+        "O Over 1.5 ocorreu em 71% dos jogos caseiros do Fluminense e 79% das viagens do Coritiba. O ataque do Flu e a quantidade de gols sofridos pelo Coxa fora dão apoio à linha escolhida. Há também volume territorial: o Fluminense cobra 6,43 escanteios por jogo em casa. Esse volume mostra a presença do Fluminense no ataque e sua capacidade de manter a defesa adversária sob pressão.",
+        "O cuidado é com um Coritiba que pode aproveitar os espaços e obrigar o mandante a continuar atacando. O Fluminense precisa ter eficiência para não deixar sua superioridade se resumir à posse ou às chances desperdiçadas. Aqui a seleção exige vitória tricolor: um empate com gols não atende ao palpite, e um 1–0 também fica de fora. Espero um mandante capaz de vencer e levar a partida a pelo menos dois gols."
+      ],
+      "picks": {
+        "main": "Fluminense vence + Over 1.5 gols",
+        "odds": 1.87
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=290-9-3-2026"
+        },
+        {
+          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Fluminense vence + Over 1.5 gols",
+      "odds": 1.87
+    }
+  },
+  {
+    "slug": "palmeiras-vs-bahia",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Um duelo de nível mais alto, no qual considero o Palmeiras favorito pelo mando e pela consistência defensiva. O Bahia tem uma campanha visitante que merece respeito e não entra como um adversário fácil. Para este jogo, prefiro a vitória simples do Palmeiras, sem acrescentar uma linha de gols que aumentaria a exigência da seleção.",
+        "Em casa, o Palmeiras tem 9 vitórias, 3 empates e 1 derrota em 13 partidas. Marca 1,77 gol por jogo e sofre apenas 0,69. Marcou em 92% das partidas e abriu o placar em 69%. Esse equilíbrio entre ataque e defesa é o ponto que mais pesa na minha avaliação: o time consegue criar sem depender de um confronto desorganizado.",
+        "O Bahia fora soma 6 vitórias, 4 empates e 4 derrotas em 14 jogos. Marca e sofre 1,50 gol por partida, tendo balançado a rede em 86% das viagens. Nos sete confrontos de liga reunidos pela fonte, o Palmeiras venceu quatro e o Bahia três. Apenas 29% passaram de 2,5 gols. É um histórico de partidas frequentemente controladas, mas com resultados divididos.",
+        "O Palmeiras vai precisar evitar que a qualidade ofensiva do Bahia encontre espaço em transições. Se conseguir controlar a partida e aproveitar suas oportunidades, vejo um caminho para confirmar o favoritismo. O visitante, entretanto, já mostrou que sabe ganhar fora e exige atenção até o fim. A minha escolha está na força do mandante, com uma seleção simples que também permite uma vitória por margem curta."
+      ],
+      "picks": {
+        "main": "Palmeiras vence",
+        "odds": 1.57
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=287-8-18-2026"
+        },
+        {
+          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        },
+        {
+          "name": "Palmeiras — local e horário do confronto",
+          "url": "https://www.palmeiras.com.br/ingressos/?idjogo=2813"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Palmeiras vence",
+      "odds": 1.57
+    }
+  },
+  {
+    "slug": "buffalo-sabres-vs-minnesota-wild",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Buffalo venceu Chicago por 4–3 no último compromisso, mas sofreu três gols mesmo diante de um adversário que começou a temporada sem vitórias. Os Sabres somam sete gols marcados e nove sofridos em duas partidas. Minnesota venceu os dois jogos iniciais, também marcou sete gols e concedeu apenas dois, chegando após superar Boston por 4–1.",
+        "Na temporada regular 2025/26, Buffalo marcou 3,54 e sofreu 2,88 gols por jogo em casa. Minnesota apresentou médias de 3,46 marcados e 2,98 sofridos como visitante. As partidas dessas equipes nas respectivas condições tiveram médias totais de 6,41 e 6,44 gols. Nos dois encontros diretos daquela temporada, cada equipe venceu uma vez e o total foi de quatorze gols, média de 7,00 por confronto."
+      ],
+      "sources": [
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask?q=nhl+team+stats+home+and+away+2025-2026"
+        },
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask/home-away-goals-wild"
+        },
+        {
+          "name": "hockey-reference.com",
+          "url": "https://www.hockey-reference.com/teams/MIN/2026_headtohead.html"
+        },
+        {
+          "name": "plaintextsports.com",
+          "url": "https://plaintextsports.com/nhl/2026-2027/schedule"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Over 5.5 gols",
+        "odds": 1.7
+      }
+    },
+    "prediction": {
+      "main": "Over 5.5 gols",
+      "odds": 1.7
+    }
+  },
+  {
+    "slug": "detroit-red-wings-vs-ottawa-senators",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Detroit começou com duas derrotas, marcando apenas dois gols e sofrendo cinco. Ottawa venceu Toronto por 3–2 na estreia. Os Senators também enfrentam Boston em 05/10 antes de visitar Detroit, uma sequência que reduz o intervalo de recuperação entre as partidas. O resultado desse compromisso não integra o recorte estatístico utilizado aqui.",
+        "Na temporada passada, Detroit marcou 3,10 e sofreu 3,29 gols por jogo em casa. Ottawa marcou e sofreu 3,37 gols por partida fora. Os quatro encontros entre as equipes tiveram média total de 5,75 gols, com três vitórias de Detroit. O clube espera contar novamente com Dylan Larkin neste confronto, mas seu retorno permanece sem confirmação. Se estiver disponível, o principal centro de Detroit poderá ampliar as opções de criação e finalização."
+      ],
+      "sources": [
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask?q=nhl+team+stats+home+and+away+2025-2026"
+        },
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask/ottawa-goals-home-vs-away"
+        },
+        {
+          "name": "hockey-reference.com",
+          "url": "https://www.hockey-reference.com/teams/DET/2026_headtohead.html"
+        },
+        {
+          "name": "nhl.com",
+          "url": "https://www.nhl.com/news/detroit-red-wings-dylan-larkin-injury-status-update-october-1-2026"
+        },
+        {
+          "name": "plaintextsports.com",
+          "url": "https://plaintextsports.com/nhl/2026-2027/schedule"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Over 5.5 gols",
+        "odds": 1.7
+      }
+    },
+    "prediction": {
+      "main": "Over 5.5 gols",
+      "odds": 1.7
+    }
+  },
+  {
+    "slug": "new-jersey-devils-vs-utah-mammoth",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "New Jersey abriu a temporada vencendo Philadelphia por 3–2 na prorrogação, mas depois perdeu por 6–0 para os Islanders. São três gols marcados e oito sofridos em duas partidas. Utah apresenta duas vitórias em três jogos, com doze gols a favor e cinco contra, embora chegue após uma derrota por 4–2 para os Rangers.",
+        "Em 2025/26, os Devils venceram 21 das 41 partidas em casa, com médias de 2,90 gols marcados e 3,00 sofridos. Utah venceu 21 jogos fora, marcando 3,20 e sofrendo 2,83 gols por compromisso. Nos dois encontros diretos daquela temporada, New Jersey venceu ambos e terminou com seis gols marcados contra dois de Utah. O reencontro coloca os mandantes diante de um adversário que começou esta campanha com produção ofensiva superior."
+      ],
+      "sources": [
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask/new-jersey-devils-shots-on-goal-per-game-at-home-this-season"
+        },
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask/utah-home-record-vs-away"
+        },
+        {
+          "name": "hockey-reference.com",
+          "url": "https://www.hockey-reference.com/teams/UTA/2026_headtohead.html"
+        },
+        {
+          "name": "plaintextsports.com",
+          "url": "https://plaintextsports.com/nhl/2026-2027/schedule"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "New Jersey Devils vence",
+        "odds": 1.72
+      }
+    },
+    "prediction": {
+      "main": "New Jersey Devils vence",
+      "odds": 1.72
+    }
+  },
+  {
+    "slug": "montreal-canadiens-vs-carolina-hurricanes",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Montreal marcou oito gols e sofreu oito nos dois primeiros jogos. Depois de vencer Toronto por 3–2, perdeu para Pittsburgh por 6–5 na prorrogação. Carolina soma cinco gols marcados e oito sofridos em três partidas, chegando após vencer Philadelphia por 3–2, também no tempo extra.",
+        "Na temporada regular anterior, os Canadiens marcaram 3,29 e sofreram 3,07 gols por jogo em casa, com média total de 6,37. Os Hurricanes marcaram 3,22 e sofreram 2,71 fora, com média total de 5,93. Montreal venceu os três encontros da temporada regular 2025/26, somando quinze gols contra oito de Carolina. A média desses confrontos foi de 7,67 gols. Os duelos dos playoffs ficam fora desse recorte, mantendo a comparação entre partidas da mesma fase da competição."
+      ],
+      "sources": [
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask?q=nhl+team+stats+home+and+away+2025-2026"
+        },
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask/carolina-hurricanes-goals-per-game-away"
+        },
+        {
+          "name": "hockey-reference.com",
+          "url": "https://www.hockey-reference.com/teams/MTL/2026_headtohead.html"
+        },
+        {
+          "name": "plaintextsports.com",
+          "url": "https://plaintextsports.com/nhl/2026-2027/schedule"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Over 5.5 gols",
+        "odds": 1.67
+      }
+    },
+    "prediction": {
+      "main": "Over 5.5 gols",
+      "odds": 1.67
+    }
+  },
+  {
+    "slug": "toronto-maple-leafs-vs-nashville-predators",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Toronto começou com uma vitória e duas derrotas, marcando seis gols e sofrendo sete. Seu último compromisso terminou em derrota por 3–2 para Ottawa. Nashville soma uma vitória em dois jogos, com três gols marcados e quatro sofridos, vindo de uma vitória por 2–1 sobre Dallas. Os dois ataques ainda apresentam produção limitada neste início de campanha.",
+        "Na temporada passada, Toronto venceu dezoito das 41 partidas em casa, marcando 3,29 e sofrendo 3,49 gols por jogo. Nashville venceu dezessete compromissos fora, com médias de 2,88 gols marcados e 3,29 sofridos. Cada equipe venceu um dos dois confrontos diretos de 2025/26, com Toronto somando dez gols e Nashville nove. O encontro oferece aos Maple Leafs uma oportunidade de reação diante de sua torcida."
+      ],
+      "sources": [
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask?q=nhl+team+stats+home+and+away+2025-2026"
+        },
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask/predators-home-record-and-away-record"
+        },
+        {
+          "name": "hockey-reference.com",
+          "url": "https://www.hockey-reference.com/teams/TOR/2026_headtohead.html"
+        },
+        {
+          "name": "plaintextsports.com",
+          "url": "https://plaintextsports.com/nhl/2026-2027/schedule"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Toronto Maple Leafs vence",
+        "odds": 1.6
+      }
+    },
+    "prediction": {
+      "main": "Toronto Maple Leafs vence",
+      "odds": 1.6
+    }
+  },
+  {
+    "slug": "new-york-rangers-vs-new-york-islanders",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Os Rangers venceram três dos quatro primeiros jogos, somando onze gols marcados e seis sofridos. Chegam após superar Utah por 4–2. Os Islanders têm uma vitória em duas partidas, com sete gols a favor e apenas dois contra, depois de golear New Jersey por 6–0. As duas equipes apresentaram boa produção ofensiva no último compromisso.",
+        "Na temporada anterior, os Rangers marcaram 2,54 e sofreram 3,00 gols por partida em casa. Os Islanders marcaram 2,73 e sofreram 2,83 fora. As médias totais nessas condições foram de 5,54 e 5,56 gols. Nos quatro clássicos da temporada regular 2025/26, os Islanders venceram todos, com quatorze gols marcados e três sofridos. A média do confronto direto foi de 4,25 gols, em jogos que tiveram domínio dos Islanders."
+      ],
+      "sources": [
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask?q=nhl+team+stats+home+and+away+2025-2026"
+        },
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask/islanders-average-goals-per-game-away"
+        },
+        {
+          "name": "hockey-reference.com",
+          "url": "https://www.hockey-reference.com/teams/NYR/2026_headtohead.html"
+        },
+        {
+          "name": "plaintextsports.com",
+          "url": "https://plaintextsports.com/nhl/2026-2027/schedule"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Over 5.5 gols",
+        "odds": 1.85
+      }
+    },
+    "prediction": {
+      "main": "Over 5.5 gols",
+      "odds": 1.85
+    }
+  },
+  {
+    "slug": "chicago-blackhawks-vs-st-louis-blues",
+    "analysisAccess": "free",
+    "predictionAccess": "free",
+    "full": {
+      "analysis": [
+        "Chicago começou com três derrotas, cinco gols marcados e quinze sofridos. Depois de perder por 6–0 para Utah, mostrou uma reação ofensiva na derrota por 4–3 para Buffalo. St. Louis venceu Dallas por 4–0 na estreia, mas perdeu para Colorado por 6–1 no compromisso seguinte. Os Blues somam cinco gols a favor e seis contra em duas partidas.",
+        "Na temporada passada, Chicago marcou 2,61 e sofreu 3,22 gols por jogo em casa, com média total de 5,83. St. Louis marcou 2,80 e sofreu 3,20 fora, com média total de 6,00. Os encontros diretos foram mais abertos: quatro jogos, duas vitórias para cada lado e 34 gols somados, média de 8,50. O reencontro coloca dois ataques de produção inicial irregular diante de defesas que precisam recuperar estabilidade."
+      ],
+      "sources": [
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask?q=nhl+team+stats+home+and+away+2025-2026"
+        },
+        {
+          "name": "hockey-reference.com",
+          "url": "https://www.hockey-reference.com/teams/STL/2026_headtohead.html"
+        },
+        {
+          "name": "plaintextsports.com",
+          "url": "https://plaintextsports.com/nhl/2026-2027/schedule"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Under 6.5 gols",
+        "odds": 1.62
+      }
+    },
+    "prediction": {
+      "main": "Under 6.5 gols",
+      "odds": 1.62
+    }
+  },
+  {
+    "slug": "seattle-kraken-vs-vegas-golden-knights",
+    "analysisAccess": "free",
+    "predictionAccess": "free",
+    "full": {
+      "analysis": [
+        "Seattle começou com duas vitórias em três partidas, marcando treze gols e sofrendo cinco. Aplicou 6–1 em Calgary no último jogo, repetindo o placar da estreia contra o mesmo adversário. Vegas também venceu duas das três partidas, com onze gols a favor e oito contra, chegando após superar Vancouver por 3–2.",
+        "Em 2025/26, Seattle marcou 2,93 e sofreu 3,00 gols por jogo em casa. Vegas marcou 2,90 e sofreu 2,95 como visitante. As médias totais nessas condições foram de 5,93 e 5,85 gols. Seattle venceu três dos quatro confrontos diretos da temporada passada, embora cada equipe tenha somado dez gols no agregado. A média desses encontros foi de 5,00. Nesta campanha, os ataques chegam com produção superior às respectivas médias históricas."
+      ],
+      "sources": [
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask/nhl-kraken-average-goals-per-game-home"
+        },
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask/golden-knights-record-away-games"
+        },
+        {
+          "name": "hockey-reference.com",
+          "url": "https://www.hockey-reference.com/teams/SEA/2026_headtohead.html"
+        },
+        {
+          "name": "plaintextsports.com",
+          "url": "https://plaintextsports.com/nhl/2026-2027/schedule"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Over 5.5 gols",
+        "odds": 1.65
+      }
+    },
+    "prediction": {
+      "main": "Over 5.5 gols",
+      "odds": 1.65
+    }
+  },
+  {
+    "slug": "los-angeles-kings-vs-florida-panthers",
+    "analysisAccess": "free",
+    "predictionAccess": "free",
+    "full": {
+      "analysis": [
+        "Los Angeles ainda não venceu: perdeu por 8–4 para Colorado e por 5–4 para San Jose na prorrogação. Apesar dos oito gols marcados, concedeu treze em apenas duas partidas. Florida começou com uma vitória e duas derrotas no tempo extra, marcando seis gols e sofrendo sete. Seus três compromissos foram decididos além do tempo regulamentar.",
+        "Na temporada passada, os Kings venceram quinze das 41 partidas em casa, com médias de 2,59 gols marcados e 3,02 sofridos. Florida venceu dezessete jogos fora, marcando 2,85 e sofrendo 3,71 gols por partida. Os Panthers venceram os dois encontros diretos daquela campanha, somando oito gols contra quatro dos Kings. O reencontro acontece com Los Angeles buscando corrigir um início defensivo vulnerável e Florida procurando transformar jogos equilibrados em vitórias."
+      ],
+      "sources": [
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask?q=nhl+team+stats+home+and+away+2025-2026"
+        },
+        {
+          "name": "statmuse.com",
+          "url": "https://www.statmuse.com/nhl/ask?q=stars%2C+blue+jackets%2C+sabres%2C+canadiens%2C+blackhawks%2C+hurricanes%2C+knights%2C+bruins%2C+senators%2C+predators%2C+panthers%2C+jets%2C+penguins%2C+oilers%2C+red+wings%2C+wild+home+away+stats+25-26"
+        },
+        {
+          "name": "hockey-reference.com",
+          "url": "https://www.hockey-reference.com/teams/FLA/2026_headtohead.html"
+        },
+        {
+          "name": "plaintextsports.com",
+          "url": "https://plaintextsports.com/nhl/2026-2027/schedule"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Florida Panthers vence",
+        "odds": 1.72
+      }
+    },
+    "prediction": {
+      "main": "Florida Panthers vence",
+      "odds": 1.72
+    }
+  }
+]

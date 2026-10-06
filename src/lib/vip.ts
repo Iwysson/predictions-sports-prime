@@ -1,3 +1,5 @@
+import type { EditorialPrediction, PredictionAccess } from "@/types";
+
 // Single source of truth for VIP access. Used by the client (AuthProvider, ads)
 // and mirrored by the server-side history endpoint.
 export const VIP_PLAN = "vip" as const;
@@ -21,6 +23,17 @@ export function isVip(profile: VipProfile | null | undefined): boolean {
     profile?.plan === VIP_PLAN &&
     (VIP_ACTIVE_STATUSES as readonly string[]).includes(profile.subscription_status ?? "")
   );
+}
+
+export type ResolvedAccess = { analysis: "free" | "vip"; prediction: "free" | "vip" };
+
+// Editorial rule: a free analysis always comes with a free prediction. The reverse is allowed
+// (a free prediction can accompany a VIP analysis), so prediction access may be free alone.
+export function resolveAccess(item: Partial<Pick<EditorialPrediction, "access" | "analysisAccess" | "predictionAccess">>): ResolvedAccess {
+  const base = contentAccess(item);
+  const analysis: PredictionAccess = item.analysisAccess === "free" || item.analysisAccess === "vip" ? item.analysisAccess : base;
+  const explicitPrediction: PredictionAccess = item.predictionAccess === "free" || item.predictionAccess === "vip" ? item.predictionAccess : base;
+  return { analysis, prediction: analysis === "free" ? "free" : explicitPrediction };
 }
 
 // Access tier for predictions and analyses. Default is "vip". Only an explicit

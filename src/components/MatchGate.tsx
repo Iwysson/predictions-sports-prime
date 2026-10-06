@@ -7,18 +7,18 @@ import { useI18n } from "@/i18n/I18nProvider";
 import { VipCheckoutButton } from "@/components/VipCheckoutButton";
 import { MatchFullContent } from "@/components/MatchFullContent";
 import { supabase } from "@/lib/supabase";
-import type { FullMatchView } from "@/lib/match-access";
 
-// VIP analysis gate. The page ships only the teaser and receives only the slug as a prop.
-// The full content is requested from the protected endpoint once the session and VIP
-// status are confirmed. The server is the authority: a 401 or 403 never shows protected text.
-type State =
-  | { kind: "idle" }
-  | { kind: "loading" }
-  | { kind: "ready"; full: FullMatchView }
-  | { kind: "denied" };
+// VIP gate. The page passes only the slug and two booleans. The protected text is requested
+// from the endpoint after the session and VIP status are confirmed. The server is the
+// authority: a 401 or 403 never shows protected text.
+type Protected = {
+  full: { analysis: string[]; sources: Array<{ name: string; url: string }>; comment: string | null };
+  prediction: { main: string; odds: number | null };
+};
 
-export function MatchGate({ slug }: { slug: string }) {
+type State = { kind: "idle" } | { kind: "loading" } | { kind: "ready"; data: Protected } | { kind: "denied" };
+
+export function MatchGate({ slug, showAnalysis, showPrediction }: { slug: string; showAnalysis: boolean; showPrediction: boolean }) {
   const { t } = useI18n();
   const { user, isVip, loading } = useAuth();
   const [state, setState] = useState<State>({ kind: "idle" });
@@ -39,8 +39,8 @@ export function MatchGate({ slug }: { slug: string }) {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) throw new Error(`status ${res.status}`);
-        const body = (await res.json()) as { full: FullMatchView };
-        if (active) setState({ kind: "ready", full: body.full });
+        const body = (await res.json()) as Protected;
+        if (active) setState({ kind: "ready", data: body });
       } catch {
         if (active) setState({ kind: "denied" });
       }
@@ -51,7 +51,16 @@ export function MatchGate({ slug }: { slug: string }) {
   }, [loading, user, isVip, slug]);
 
   if (state.kind === "ready") {
-    return <MatchFullContent full={state.full} labels={{ prediction: t("mainPrediction"), odds: t("odds") }} />;
+    const { full, prediction } = state.data;
+    return (
+      <MatchFullContent
+        analysis={showAnalysis ? full.analysis : []}
+        sources={showAnalysis ? full.sources : []}
+        comment={showAnalysis ? full.comment : null}
+        prediction={showPrediction ? prediction : null}
+        labels={{ prediction: t("mainPrediction"), odds: t("odds") }}
+      />
+    );
   }
   if (state.kind === "loading" || loading) return <p className="match-gate">{t("matchCheckingAccess")}</p>;
 

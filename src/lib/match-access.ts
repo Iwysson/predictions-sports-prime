@@ -1,12 +1,25 @@
-import type { EditorialPrediction } from "@/types";
-import { contentAccess, type ContentAccess } from "@/lib/vip";
+import type { EditorialPrediction, PredictionAccess } from "@/types";
+import { contentAccess, resolveAccess, type ContentAccess } from "@/lib/vip";
 import { predictionSlug } from "@/lib/editorial";
 import { isFutureFixture } from "@/lib/fixture-state";
 
 // Shared split between what a public page may contain and what is premium.
-// Public view: safe to ship in static HTML for every visitor.
-// Full view: analysis, picks, odds, sources. Only for access "free" in static HTML,
-// and for VIP through the protected endpoint otherwise.
+// Public: teams, league, kickoff, teaser, tier labels, and a prediction only when its
+// prediction access is "free". Analysis is public only when its analysis access is "free".
+// Protected content (the rest) is served only by /api/match-content/[slug] to VIP.
+
+export type ResolvedAccess = { analysis: PredictionAccess; prediction: PredictionAccess };
+export { resolveAccess };
+
+// Explicit analysisAccess / predictionAccess win. Otherwise access applies to both.
+// Otherwise both are "vip": a missing field never makes content free.
+
+export type FullMatchView = {
+  analysis: string[];
+  picks: { main: string; odds: number | null };
+  sources: Array<{ name: string; url: string }>;
+  comment: string | null;
+};
 
 export type PublicMatchView = {
   slug: string;
@@ -18,14 +31,17 @@ export type PublicMatchView = {
   round: string | null;
   title: string;
   access: ContentAccess;
-  teaser: string;
+  analysisAccess: PredictionAccess;
+  predictionAccess: PredictionAccess;
+  teaser: string | null;
 };
 
-export type FullMatchView = {
-  analysis: string[];
-  picks: { main: string; odds: number | null };
-  sources: Array<{ name: string; url: string }>;
-  comment: string | null;
+export type ProtectedContentEntry = {
+  slug: string;
+  analysisAccess: PredictionAccess;
+  predictionAccess: PredictionAccess;
+  full: FullMatchView;
+  prediction: { main: string; odds: number | null };
 };
 
 // A prediction is publishable only with a recorded kickoff in the future.
@@ -40,9 +56,8 @@ export function matchSlug(prediction: EditorialPrediction) {
   return prediction.slug ?? predictionSlug(prediction.homeTeam, prediction.awayTeam);
 }
 
-// The teaser is generic for VIP content: it never quotes the analysis or the pick.
 export function buildPublicMatchView(prediction: EditorialPrediction): PublicMatchView {
-  const access = contentAccess(prediction);
+  const access = resolveAccess(prediction);
   const home = prediction.homeTeam;
   const away = prediction.awayTeam;
   return {
@@ -54,11 +69,10 @@ export function buildPublicMatchView(prediction: EditorialPrediction): PublicMat
     time: prediction.matchInfo?.time ?? "",
     round: prediction.matchInfo?.round ?? null,
     title: prediction.title ?? `${home} vs ${away} Prediction`,
-    access,
-    teaser:
-      access === "free"
-        ? `Free analysis for ${home} vs ${away}.`
-        : `VIP analysis for ${home} vs ${away}. Log in with an active VIP plan to read the full prediction.`,
+    access: access.analysis === "free" ? "free" : "vip",
+    analysisAccess: access.analysis,
+    predictionAccess: access.prediction,
+    teaser: prediction.teaser ?? null,
   };
 }
 
@@ -74,15 +88,25 @@ export function buildFullMatchView(prediction: EditorialPrediction): FullMatchVi
   };
 }
 
-export type ProtectedContentEntry = {
-  slug: string;
-  access: ContentAccess;
-  full: FullMatchView;
-};
-
 // Index consumed only by the protected endpoint (functions/). Never imported by pages or client code.
-export function buildContentIndex(predictions: EditorialPrediction[], now: Date | string = new Date()): ProtectedContentEntry[] {
-  return predictions
+// `extra` carries entries from other editorial sources (for example the NHL page).
+export function buildContentIndex(
+  predictions: EditorialPrediction[],
+  now: Date | string = new Date(),
+  extra: ProtectedContentEntry[] = [],
+): ProtectedContentEntry[] {
+  const fromPredictions = predictions
     .filter((p) => isPublishableFuture(p, now))
-    .map((p) => ({ slug: matchSlug(p), access: contentAccess(p), full: buildFullMatchView(p) }));
+    .map((p) => {
+      const access = resolveAccess(p);
+      const full = buildFullMatchView(p);
+      return {
+        slug: matchSlug(p),
+        analysisAccess: access.analysis,
+        predictionAccess: access.prediction,
+        full,
+        prediction: full.picks,
+      };
+    });
+  return [...fromPredictions, ...extra];
 }
