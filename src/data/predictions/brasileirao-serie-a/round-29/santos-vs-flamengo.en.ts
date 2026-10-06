@@ -1,0 +1,22 @@
+import type { EditorialPrediction } from "@/types";
+import { buildRound29Editorial } from "./editorial";
+
+export const santosVsFlamengo: EditorialPrediction = {
+  league: "brasileirao-serie-a", homeTeam: "Santos", awayTeam: "Flamengo", seoTitle: "Santos vs Flamengo Prediction – Brasileirão 2026", title: "Santos vs Flamengo",
+  teaser: "Flamengo arrive as favourites, but Vila Belmiro could make the matchup more difficult than it looks. The full Santos-focused prediction is available with PRIME VIP.", trend: "Competitive home side",
+  ...buildRound29Editorial({
+    homeTeam: "Santos", awayTeam: "Flamengo", pick: "Santos or Draw (1X)", price: 2.00, date: "2026-10-08", time: "19:30", venue: "Vila Belmiro",
+    overview: "This is a difficult matchup for Flamengo despite their strength and overall favouritism. At Vila Belmiro, Santos can try to impose their rhythm with support from the crowd. Santos beat São Paulo 2–1 on 2 October and can use the confidence from that result to face a stronger opponent without setting up only to defend.",
+    homeAnalysis: "Santos have **6 wins, 4 draws and 4 defeats in 14 home matches**, averaging 1.43 goals scored and 1.29 conceded. They scored in 86% of those games. That production gives the hosts a route to compete even against one of the league's stronger travellers.",
+    awayAnalysis: "Flamengo have **8 wins, 3 draws and 3 defeats in 14 away matches**. They average 1.93 goals scored and 0.93 conceded, finding the net in 93% of their trips. Those figures confirm why Flamengo are favourites and form the strongest evidence against the selection.",
+    marketAnalysis: "Arrascaeta's absence is important. The midfielder underwent surgery after fracturing his left wrist and was ruled out, with a recovery estimate of six to eight weeks reported on 1 October. Losing a creator of his quality may require adjustments, although Flamengo retain alternatives and remain dangerous.",
+    tacticalAnalysis: "Santos need to compete through midfield, protect the ball after regains and avoid offering easy transitions to Flamengo. Home territory can help them play with more initiative, but careless losses would expose them to an away attack averaging 1.93 goals. The double chance is built around Santos making the contest uncomfortable rather than dominating it.",
+    riskAnalysis: "Flamengo's eight away wins, strong scoring rate and low goals-against average make this an aggressive position. Arrascaeta's absence does not erase the visitors' depth. Santos must translate home competitiveness into points against an opponent that has repeatedly won on the road.",
+    conclusion: "Flamengo deserve respect as favourites, but Santos' home record, recent derby win and the visitors' confirmed creative absence support a calculated home double chance. The call remains Santos or Draw, with Flamengo's travel strength the central risk.",
+    coreRows: [["Matches (N)", "14", "14"], ["W-D-L", "**6-4-4**", "**8-3-3**"], ["GF/game", "1.43", "1.93"], ["GA/game", "1.29", "0.93"], ["Scored", "86%", "93%"]],
+  }),
+  picks: { main: "Santos or Draw (1X)", publishedOdds: 2 }, matchInfo: { date: "2026-10-08", time: "19:30", round: "Round 29", venue: "Vila Belmiro" }, analysisAccess: "vip", predictionAccess: "vip", sourceStatus: "partial",
+  statisticalCoreProvenance: { season: "2026", home: { sampleType: "home", source: "SoccerSTATS", competition: "Brasileirão Série A", matches: 14 }, away: { sampleType: "away", source: "SoccerSTATS", competition: "Brasileirão Série A", matches: 14 } },
+  sources: [{ name: "SoccerSTATS — 2026 Série A home/away splits and league history", url: "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=288-12-16-2026" }, { name: "ge — CBF Round 29 dates, kick-off times and venues", url: "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml" }, { name: "Santos FC — win over São Paulo on 2 October and Vila Belmiro confirmation", url: "https://www.santosfc.com.br/santos-fc-vence-o-classico-no-morumbis-e-iguala-recorde-no-campeonato-brasileiro/" }, { name: "ge — Arrascaeta surgery and recovery estimate, 1 October 2026", url: "https://ge.globo.com/google/amp/futebol/times/flamengo/noticia/2026/10/01/arrascaeta-passa-por-cirurgia-no-punho-e-desfalca-o-flamengo-de-seis-a-oito-semanas.ghtml" }],
+  publishedAt: "2026-10-05T15:00:00.000Z", updatedAt: "2026-10-06T18:00:00.000Z", published: true,
+};

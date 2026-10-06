@@ -28,5 +28,5 @@ export const palmeirasVsBahia: EditorialPrediction = {
   ],
   publishedAt: "2026-10-05T15:00:00.000Z",
   updatedAt: "2026-10-05T15:00:00.000Z",
-  published: true,
+  published: false,
 };

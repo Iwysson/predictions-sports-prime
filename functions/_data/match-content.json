@@ -1,101 +1,30 @@
 [
   {
-    "slug": "internacional-vs-corinthians",
-    "analysisAccess": "vip",
-    "predictionAccess": "vip",
-    "full": {
-      "analysis": [
-        "É um jogo de desespero. Quatro pontos separam Internacional e Corinthians no recorte da tabela, com o Inter em 18º, somando 28 pontos, e o Corinthians em 14º, com 32. Na minha avaliação, a necessidade de reagir pode deixar o confronto aberto depois do primeiro gol. Não vejo um favorito suficientemente claro para escolher um vencedor; prefiro trabalhar com o que o jogo pode produzir.",
-        "No Beira-Rio, o Internacional tem 3 vitórias, 5 empates e 6 derrotas em 14 partidas, com médias de 1,14 gol marcado e 1,14 sofrido. O Corinthians fora soma 3 vitórias, 5 empates e 5 derrotas em 13 jogos, marcando 1,08 e sofrendo 1,23 por partida. O Over 1.5 apareceu em 71% dos jogos do Inter em casa e 77% das viagens corintianas. Esses números favorecem uma linha de dois gols, com duas equipes pressionadas pela necessidade de pontuar.",
-        "Os escanteios acrescentam outro elemento: os jogos do Inter como mandante têm média total de 10,36, contra 10,38 nos jogos do Corinthians fora. A linha de oito ou mais escanteios foi alcançada em 79% e 69% desses recortes, respectivamente. É um cenário compatível com pressão, cruzamentos e ataques que terminam em bloqueios.",
-        "Um gol pode chamar outro, mas resta saber quando o primeiro vai acontecer. Se o placar ficar zerado por muito tempo, a combinação perde força; se alguém precisar buscar o empate cedo, o ritmo pode mudar. As duas condições precisam acontecer no mesmo jogo."
-      ],
-      "picks": {
-        "main": "Over 1.5 gols + Over 7.5 escanteios",
-        "odds": 1.78
-      },
-      "sources": [
-        {
-          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
-          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=284-5-17-2026"
-        },
-        {
-          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
-          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
-        }
-      ],
-      "comment": null
-    },
-    "prediction": {
-      "main": "Over 1.5 gols + Over 7.5 escanteios",
-      "odds": 1.78
-    }
-  },
-  {
-    "slug": "bragantino-vs-mirassol",
-    "analysisAccess": "vip",
-    "predictionAccess": "vip",
-    "full": {
-      "analysis": [
-        "Um confronto paulista entre equipes que se conhecem e chegam com objetivos diferentes. O Bragantino aparece em 10º no recorte da tabela, com 36 pontos, olhando para uma aproximação das vagas continentais. O Mirassol soma 32, em 15º, apenas três acima do Grêmio, primeiro time da zona de rebaixamento nessa base. Vejo o mando como um diferencial, mas a pressão do visitante também pode tornar o jogo disputado.",
-        "O Bragantino em casa tem 6 vitórias, 2 empates e 5 derrotas em 13 jogos. Marca 1,46 e sofre 1,08 gol por partida. O Mirassol fora registra 2 vitórias, 3 empates e 8 derrotas, com médias de 0,92 marcado e 1,62 sofrido. Além disso, o Mirassol sofreu gol em todas as 13 partidas como visitante desse recorte. O Bragantino busca voltar a vencer depois de cinco partidas sem vitória no campeonato.",
-        "Nos escanteios, há um apoio mais direto ao mercado escolhido. A média total é de 11,23 nos jogos caseiros do Bragantino e 10,92 nas viagens do Mirassol. Em ambos os lados, 77% das partidas chegaram a pelo menos nove escanteios. O Bragantino cobra 6,46 por jogo em casa, enquanto o Mirassol concede 6,38 fora.",
-        "Não vejo o Bragantino perdendo como cenário principal, mas prefiro incluir o empate pela irregularidade recente. A ideia é buscar uma dupla chance com um jogo de volume nas laterais, sem precisar acertar o placar. Um jogo travado, com poucas chegadas à linha de fundo, é o principal obstáculo para a parte dos corners."
-      ],
-      "picks": {
-        "main": "Bragantino ou empate (1X) + Over 8.5 escanteios",
-        "odds": 1.65
-      },
-      "sources": [
-        {
-          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
-          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=286-4-13-2026"
-        },
-        {
-          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
-          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
-        },
-        {
-          "name": "Red Bull Bragantino — local e horário do confronto",
-          "url": "https://www.redbullbragantino.com/br-pt/noticias/check-in-e-ingressos-29-rodada-do-brasileirao-2026"
-        }
-      ],
-      "comment": null
-    },
-    "prediction": {
-      "main": "Bragantino ou empate (1X) + Over 8.5 escanteios",
-      "odds": 1.65
-    }
-  },
-  {
     "slug": "remo-vs-gremio",
     "analysisAccess": "vip",
     "predictionAccess": "free",
     "full": {
       "analysis": [
-        "Um jogo de desespero, com dois times que precisam pontuar e pouco espaço para desperdiçar oportunidades. O Remo tem 23 pontos no recorte da tabela, em 19º, e o Grêmio soma 29, em 17º. Na minha avaliação, o Grêmio tem condições de sair com pelo menos um ponto, e vejo o empate como um resultado possível neste confronto direto.",
-        "O Grêmio fora de casa soma 14 partidas, nenhuma vitória, 4 empates e 10 derrotas. A equipe marca apenas 0,57 gol por jogo, sofre 1,57 e ficou sem marcar em metade dessas viagens. A busca por uma reação passa por organizar melhor a defesa e aproveitar as oportunidades que o Remo costuma oferecer.",
-        "Do outro lado, o Remo também não transformou o mando em uma grande vantagem: 3 vitórias, 5 empates e 6 derrotas em 14 jogos. Marca 1,29, sofre 1,36 e levou gol em 86% das partidas em casa. Ou seja, existe uma defesa que costuma dar oportunidades, mas o Grêmio precisa melhorar sua produção ofensiva para aproveitar esse espaço.",
-        "A diferença de seis pontos aumenta a importância deste confronto direto. O Remo tem o mando e números ofensivos melhores nesse recorte; o Grêmio chega com a necessidade de interromper um padrão muito ruim como visitante. Considero a cotação interessante para um confronto em que espero o Grêmio conseguindo pontuar."
+        "# Remo vs Grêmio Prediction, Odds and Betting Tips\n\n**Prediction:** Grêmio or Draw (X2)\n\n**Odds:** 1.70\n\n## Match information\n\n- **Competition:** Brasileirão Série A\n- **Date:** 2026-10-07\n- **Kick-off:** 19:30\n- **Round:** Round 29\n- **Venue:** Mangueirão\n\n## Team news and projected lineups\n\nThe supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.\n\n## Match analysis\n\nThis is a high-pressure game between two teams that need points and have little room to waste opportunities. Remo have 23 points and sit 19th in the referenced table snapshot, while Grêmio have 29 in 17th. Grêmio can leave with at least one point, and the draw is a realistic outcome in this direct contest.\n\nRemo have not turned home advantage into a dominant record: **3 wins, 5 draws and 6 defeats in 14 home matches**. They average 1.29 goals scored and 1.36 conceded, allowing a goal in 86% of those fixtures. Their home attacking output is better than Grêmio's away production, but the defensive record regularly gives opponents opportunities.\n\nGrêmio have **0 wins, 4 draws and 10 defeats in 14 away matches**. They average only 0.57 goals scored and 1.57 conceded, failing to score in half of those trips. A response depends on better defensive organisation and making more of the openings that Remo tend to allow at home.\n\nThe six-point difference increases the importance of the matchup. Remo have home advantage and the stronger attacking numbers in these venue splits, yet their six home defeats and frequent concessions leave room for Grêmio to compete. The price is accepted for an away side to earn at least a draw, not because its travel record is strong.\n\n## Tactical analysis and expected game state\n\nRemo can try to use the Mangueirão setting to play on the front foot, but an overly aggressive approach could leave transition space. Grêmio's path is likely to rely on compact defending, patience and efficient use of limited chances. A level game deep into the second half would favour the double-chance position.\n\n### Statistical Core Predictions-Sports-Prime\n\nThe figures below use the host's home matches and the visitor's away matches in the 2026 league season. Statistical coverage is partial; unavailable target metrics, including xG, xGA, shots, shots on target and possession, were not synthesized.\n\n| Metric | Remo HOME | Grêmio AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 14 | 14 |\n| W-D-L | **3-5-6** | **0-4-10** |\n| GF/game | 1.29 | 0.57 |\n| GA/game | 1.36 | 1.57 |\n| Failed to score | Unavailable | 50% |\n| Conceded | 86% | Unavailable |\n\nRemo's figures describe only its league matches at home, while Grêmio's figures describe only its league matches away. That venue alignment makes the comparison more relevant to this fixture, but it does not turn past frequency into certainty. The partial dataset is strongest for results, goals and any corner measures shown above; metrics not listed were unavailable in the retained source set. The sample should therefore inform the selection alongside the tactical matchup, market price and the specific risks identified below, rather than carry the judgment on its own.\n\n## Market assessment and risk\n\nGrêmio's winless away record and 0.57 goals per road game are the principal warning against the selection. Remo's better home scoring rate can punish another low-output visiting performance. The pick therefore depends on Grêmio interrupting a very poor travel pattern, even though draw protection reduces the demand.\n\nThe published market price is **1.70**, which carries a raw implied probability of **58.8%** using 1 / 1.70. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific home/away evidence and the stated game-state interpretation, while the risks above remain material.\n\n## Conclusion\n\nRemo's home edge is real, but their defensive record creates a route for Grêmio to remain in the contest. With the draw included, the final call is Grêmio or Draw rather than an away win.\n\n**Prediction:** Grêmio or Draw (X2)\n\n**Odds:** 1.70"
       ],
       "picks": {
-        "main": "Grêmio ou empate (X2)",
+        "main": "Grêmio or Draw (X2)",
         "odds": 1.7
       },
       "sources": [
         {
-          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "name": "SoccerSTATS — 2026 Série A home/away splits and league history",
           "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=281-2-10-2026"
         },
         {
-          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "name": "ge — CBF Round 29 dates, kick-off times and venues",
           "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
         }
       ],
       "comment": null
     },
     "prediction": {
-      "main": "Grêmio ou empate (X2)",
+      "main": "Grêmio or Draw (X2)",
       "odds": 1.7
     }
   },
@@ -105,30 +34,89 @@
     "predictionAccess": "free",
     "full": {
       "analysis": [
-        "Para este confronto, considero o Vitória bastante favorito. A Chapecoense está em uma situação muito difícil, na lanterna, com 18 pontos em 27 partidas no recorte consultado, enquanto o Vitória tem 33 em 28. A campanha catarinense deixa o time em uma situação muito difícil nesta reta final. O que pesa na minha escolha é a diferença entre o Vitória no Barradão e a Chape fora.",
-        "O Vitória tem 9 vitórias, 1 empate e 4 derrotas em 14 jogos em casa. Marca 1,29 gol por partida e sofre somente 0,86. Conseguiu terminar sem sofrer gols em 64% dessas partidas e abriu o placar em 71%. É uma equipe que encontrou no mando uma forma de competir melhor e proteger seu resultado.",
-        "A Chapecoense como visitante soma 1 vitória, 4 empates e 9 derrotas em 14 jogos. Marca 0,79 e sofre 1,71 gol por partida. Levou gol em todas essas viagens e sofreu o primeiro em 86%. A diferença não está apenas em quem cria mais, mas em quem consegue controlar o jogo depois de sair na frente.",
-        "Espero um Vitória tomando a iniciativa e buscando aproveitar a força do Barradão. Se o Vitória começar ansioso, errar chances e deixar o placar apertado, a Chape pode permanecer viva até o fim. A vantagem do mandante está em conseguir impor seu jogo sem oferecer transições fáceis. Prefiro a vitória simples, mantendo o palpite alinhado à força do Barradão sem acrescentar uma exigência de gols ou handicap."
+        "# Vitória vs Chapecoense Prediction, Odds and Betting Tips\n\n**Prediction:** Vitória to win\n\n**Odds:** 1.72\n\n## Match information\n\n- **Competition:** Brasileirão Série A\n- **Date:** 2026-10-07\n- **Kick-off:** 20:00\n- **Round:** Round 29\n- **Venue:** Barradão\n\n## Team news and projected lineups\n\nThe supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.\n\n## Match analysis\n\nVitória are strong favourites in this matchup. Chapecoense are bottom with 18 points from 27 matches in the referenced snapshot, while Vitória have 33 from 28. The visitors' position is extremely difficult at this stage of the season, and the largest contrast is between Vitória at the Barradão and Chapecoense away.\n\nVitória have **9 wins, 1 draw and 4 defeats in 14 home matches**. They average 1.29 goals scored and only 0.86 conceded, kept clean sheets in 64% and scored first in 71%. Home conditions have helped the team compete more effectively and protect leads.\n\nChapecoense have **1 win, 4 draws and 9 defeats in 14 away matches**. They average 0.79 goals scored and 1.71 conceded, allowed a goal in every trip and conceded first in 86%. The difference concerns both chance creation and the ability to control the match after falling behind.\n\nThe selection is a straightforward home win. It does not add a goals line or handicap, so Vitória can satisfy it with a narrow victory. That keeps the market aligned with the strongest venue evidence instead of demanding an additional outcome not established by the data.\n\n## Tactical analysis and expected game state\n\nVitória are expected to take the initiative and use the Barradão atmosphere to apply early pressure. Once ahead, their home defensive record suggests a route to controlling the game state. Chapecoense need to stay compact and avoid conceding first, because chasing from behind has repeatedly been a difficult away scenario.\n\n### Statistical Core Predictions-Sports-Prime\n\nThe figures below use the host's home matches and the visitor's away matches in the 2026 league season. Statistical coverage is partial; unavailable target metrics, including xG, xGA, shots, shots on target and possession, were not synthesized.\n\n| Metric | Vitória HOME | Chapecoense AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 14 | 14 |\n| W-D-L | **9-1-4** | **1-4-9** |\n| GF/game | 1.29 | 0.79 |\n| GA/game | 0.86 | 1.71 |\n| First to score | 71% | Unavailable |\n| First to concede | Unavailable | 86% |\n| Clean sheets | 64% | Unavailable |\n| Conceded | Unavailable | 100% |\n\nVitória's figures describe only its league matches at home, while Chapecoense's figures describe only its league matches away. That venue alignment makes the comparison more relevant to this fixture, but it does not turn past frequency into certainty. The partial dataset is strongest for results, goals and any corner measures shown above; metrics not listed were unavailable in the retained source set. The sample should therefore inform the selection alongside the tactical matchup, market price and the specific risks identified below, rather than carry the judgment on its own.\n\n## Market assessment and risk\n\nVitória could become anxious, miss chances and leave a close scoreline alive until late. That would give Chapecoense a path to frustrate the home side. Easy transition chances for the visitors would also undermine the control suggested by Vitória's home record.\n\nThe published market price is **1.72**, which carries a raw implied probability of **58.1%** using 1 / 1.72. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific home/away evidence and the stated game-state interpretation, while the risks above remain material.\n\n## Conclusion\n\nThe home and away split is decisive: Vitória's strong Barradão results meet a Chapecoense side with one away win and persistent defensive problems. The simple home-win market remains the preferred option.\n\n**Prediction:** Vitória to win\n\n**Odds:** 1.72"
       ],
       "picks": {
-        "main": "Vitória vence",
+        "main": "Vitória to win",
         "odds": 1.72
       },
       "sources": [
         {
-          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "name": "SoccerSTATS — 2026 Série A home/away splits and league history",
           "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=282-1-11-2026"
         },
         {
-          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "name": "ge — CBF Round 29 dates, kick-off times and venues",
           "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
         }
       ],
       "comment": null
     },
     "prediction": {
-      "main": "Vitória vence",
+      "main": "Vitória to win",
       "odds": 1.72
+    }
+  },
+  {
+    "slug": "internacional-vs-corinthians",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "# Internacional vs Corinthians Prediction, Odds and Betting Tips\n\n**Prediction:** Over 1.5 Goals + Over 7.5 Corners\n\n**Odds:** 1.78\n\n## Match information\n\n- **Competition:** Brasileirão Série A\n- **Date:** 2026-10-07\n- **Kick-off:** 19:30\n- **Round:** Round 29\n- **Venue:** Beira-Rio\n\n## Team news and projected lineups\n\nThe supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.\n\n## Match analysis\n\nThis is a high-pressure match. Four points separate the teams in the referenced table snapshot: Internacional are 18th with 28 points and Corinthians are 14th with 32. The need to respond could make the contest more open after the first goal. There is not a sufficiently clear favourite to justify choosing a winner, so the preference is to back what the match itself may produce.\n\nAt home, Internacional have **3 wins, 5 draws and 6 defeats in 14 matches**. They average 1.14 goals scored and 1.14 conceded per game. Over 1.5 Goals landed in 71% of their home fixtures, giving the goals leg a meaningful venue-specific base without suggesting that a high-scoring match is guaranteed.\n\nCorinthians have **3 wins, 5 draws and 5 defeats in 13 away matches**. They average 1.08 goals scored and 1.23 conceded on the road, while Over 1.5 Goals landed in 77% of that sample. The away record is balanced enough to resist a one-sided match call but still supports the possibility of at least two goals.\n\nCorners add the second part of the selection. Internacional's home matches average 10.36 total corners and Corinthians' away matches average 10.38. At least eight corners were recorded in 79% and 69% of those samples respectively. Those figures support Over 7.5 Corners in a game where both clubs have reasons to apply pressure.\n\n## Tactical analysis and expected game state\n\nThe expected game state depends heavily on the first goal. A team that falls behind is likely to chase points, increasing pressure, crosses and blocked attacks that can contribute to corners. If the score stays level for a long period, the tempo may remain cautious; an earlier breakthrough would be more favourable to both legs.\n\n### Statistical Core Predictions-Sports-Prime\n\nThe figures below use the host's home matches and the visitor's away matches in the 2026 league season. Statistical coverage is partial; unavailable target metrics, including xG, xGA, shots, shots on target and possession, were not synthesized.\n\n| Metric | Internacional HOME | Corinthians AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 14 | 13 |\n| W-D-L | **3-5-6** | **3-5-5** |\n| GF/game | 1.14 | 1.08 |\n| GA/game | 1.14 | 1.23 |\n| Total corners/game | 10.36 | 10.38 |\n| Over 1.5 goals | 71% | 77% |\n| Over 7.5 corners | 79% | 69% |\n\nInternacional's figures describe only its league matches at home, while Corinthians's figures describe only its league matches away. That venue alignment makes the comparison more relevant to this fixture, but it does not turn past frequency into certainty. The partial dataset is strongest for results, goals and any corner measures shown above; metrics not listed were unavailable in the retained source set. The sample should therefore inform the selection alongside the tactical matchup, market price and the specific risks identified below, rather than carry the judgment on its own.\n\n## Market assessment and risk\n\nThe main risk is timing. A prolonged 0–0 would weaken the goals leg and may also reduce the urgency needed for corner volume. The two conditions must land in the same match, so strong historical rates for each component do not remove the added risk created by combining them.\n\nThe published market price is **1.78**, which carries a raw implied probability of **56.2%** using 1 / 1.78. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific home/away evidence and the stated game-state interpretation, while the risks above remain material.\n\n## Conclusion\n\nThe home and away samples point more clearly to a moderate goals-and-corners combination than to either side winning. The final preference remains Over 1.5 Goals together with Over 7.5 Corners, with a slow start treated as the principal concern.\n\n**Prediction:** Over 1.5 Goals + Over 7.5 Corners\n\n**Odds:** 1.78"
+      ],
+      "picks": {
+        "main": "Over 1.5 Goals + Over 7.5 Corners",
+        "odds": 1.78
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — 2026 Série A home/away splits and league history",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=284-5-17-2026"
+        },
+        {
+          "name": "ge — CBF Round 29 dates, kick-off times and venues",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Over 1.5 Goals + Over 7.5 Corners",
+      "odds": 1.78
+    }
+  },
+  {
+    "slug": "bragantino-vs-mirassol",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "# Bragantino vs Mirassol Prediction, Odds and Betting Tips\n\n**Prediction:** Bragantino or Draw (1X) + Over 8.5 Corners\n\n**Odds:** 1.65\n\n## Match information\n\n- **Competition:** Brasileirão Série A\n- **Date:** 2026-10-07\n- **Kick-off:** 19:30\n- **Round:** Round 29\n- **Venue:** Estádio Municipal Cícero de Souza Marques\n\n## Team news and projected lineups\n\nThe supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.\n\n## Match analysis\n\nThis São Paulo state matchup brings together teams with different objectives. Bragantino are 10th with 36 points in the referenced table snapshot and are looking toward the continental places. Mirassol have 32 points in 15th, only three above Grêmio, the first team in the relegation zone in that same snapshot. Home advantage matters, although the visitors' pressure for points can keep the contest competitive.\n\nBragantino have **6 wins, 2 draws and 5 defeats in 13 home matches**. They average 1.46 goals scored and 1.08 conceded. They are trying to end a five-match winless league run, so the strong venue record is balanced by recent inconsistency and supports keeping the draw within the selection.\n\nMirassol have **2 wins, 3 draws and 8 defeats in 13 away matches**, averaging 0.92 goals scored and 1.62 conceded. They conceded in all 13 away fixtures in this sample. That vulnerability favours Bragantino avoiding defeat, but Mirassol's urgent league position means they still have reason to contest the match aggressively.\n\nThe corner evidence is direct. Bragantino's home games average 11.23 total corners and Mirassol's away games average 10.92. At least nine corners were recorded in 77% of both samples. Bragantino take 6.46 corners per home game, while Mirassol concede 6.38 per away game.\n\n## Tactical analysis and expected game state\n\nBragantino should have opportunities to build territory and attack through wide areas, while Mirassol's need for points may prevent a passive away plan. Sustained pressure, deliveries from the flanks and defensive blocks would suit the corner leg. Draw protection covers a competitive scoreline without requiring Bragantino to turn control into a win.\n\n### Statistical Core Predictions-Sports-Prime\n\nThe figures below use the host's home matches and the visitor's away matches in the 2026 league season. Statistical coverage is partial; unavailable target metrics, including xG, xGA, shots, shots on target and possession, were not synthesized.\n\n| Metric | Bragantino HOME | Mirassol AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 13 | 13 |\n| W-D-L | **6-2-5** | **2-3-8** |\n| GF/game | 1.46 | 0.92 |\n| GA/game | 1.08 | 1.62 |\n| Corners for/game | 6.46 | Unavailable |\n| Corners against/game | Unavailable | 6.38 |\n| Total corners/game | 11.23 | 10.92 |\n| Over 8.5 corners | 77% | 77% |\n\nBragantino's figures describe only its league matches at home, while Mirassol's figures describe only its league matches away. That venue alignment makes the comparison more relevant to this fixture, but it does not turn past frequency into certainty. The partial dataset is strongest for results, goals and any corner measures shown above; metrics not listed were unavailable in the retained source set. The sample should therefore inform the selection alongside the tactical matchup, market price and the specific risks identified below, rather than carry the judgment on its own.\n\n## Market assessment and risk\n\nA low-tempo match with few trips to the byline is the clearest danger to Over 8.5 Corners. Bragantino's recent winless run also makes a home win harder to demand, which is why the selection includes the draw. Both conditions must still succeed together.\n\nThe published market price is **1.65**, which carries a raw implied probability of **60.6%** using 1 / 1.65. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific home/away evidence and the stated game-state interpretation, while the risks above remain material.\n\n## Conclusion\n\nBragantino's home record and Mirassol's away defensive numbers favour the hosts avoiding defeat, while both venue samples support nine or more corners. The combined selection preserves draw protection and targets the stronger volume signal.\n\n**Prediction:** Bragantino or Draw (1X) + Over 8.5 Corners\n\n**Odds:** 1.65"
+      ],
+      "picks": {
+        "main": "Bragantino or Draw (1X) + Over 8.5 Corners",
+        "odds": 1.65
+      },
+      "sources": [
+        {
+          "name": "SoccerSTATS — 2026 Série A home/away splits and league history",
+          "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=286-4-13-2026"
+        },
+        {
+          "name": "ge — CBF Round 29 dates, kick-off times and venues",
+          "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
+        },
+        {
+          "name": "Red Bull Bragantino — match venue and kick-off time",
+          "url": "https://www.redbullbragantino.com/br-pt/noticias/check-in-e-ingressos-29-rodada-do-brasileirao-2026"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Bragantino or Draw (1X) + Over 8.5 Corners",
+      "odds": 1.65
     }
   },
   {
@@ -137,29 +125,26 @@
     "predictionAccess": "vip",
     "full": {
       "analysis": [
-        "Um clássico que pede cuidado, mas no qual vejo o mando pesando a favor do Botafogo. Na minha leitura, a torcida e a familiaridade com o Nilton Santos podem ajudar o time a encontrar seu ritmo. O Vasco chega para disputar um clássico importante, e espero um jogo intenso pela necessidade de pontuar dos dois lados.",
-        "O Botafogo em casa tem 5 vitórias, 6 empates e 3 derrotas em 14 jogos, com médias de 1,71 gol marcado e 1,43 sofrido. Já o Vasco fora registra 1 vitória, 5 empates e 7 derrotas em 13 partidas. Marca 1,00 e sofre 1,77 por jogo, tendo levado gol em 92% das viagens e terminado sem sofrer em apenas 8%.",
-        "A linha de dois ou mais gols ocorreu em 86% dos jogos caseiros do Botafogo e 69% dos jogos do Vasco fora. Nos sete confrontos de liga reunidos pela fonte, o Botafogo soma cinco vitórias, um empate e uma derrota. Esse histórico se soma ao mando e reforça minha preferência pelo Botafogo neste clássico.",
-        "Não considero o Botafogo um time impenetrável: sofrer 1,43 por jogo em casa abre espaço para o Vasco participar do placar. Essa é a razão para trabalhar com dupla chance e gols, sem exigir uma vitória seca. O Botafogo precisa pontuar e o jogo precisa ter pelo menos dois gols; um 1–0, mesmo favorável ao mandante, não atende à combinação."
+        "# Botafogo vs Vasco Prediction, Odds and Betting Tips\n\n**Prediction:** Botafogo or Draw (1X) + Over 1.5 Goals\n\n**Odds:** 1.95\n\n## Match information\n\n- **Competition:** Brasileirão Série A\n- **Date:** 2026-10-07\n- **Kick-off:** 20:30\n- **Round:** Round 29\n- **Venue:** Nilton Santos\n\n## Team news and projected lineups\n\nThe supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.\n\n## Match analysis\n\nThis derby requires caution, but home advantage weighs in Botafogo's favour. The crowd and familiarity with the Nilton Santos can help the hosts find their rhythm. Vasco arrive for an important rivalry match, and the need for points on both sides should keep the contest intense.\n\nBotafogo have **5 wins, 6 draws and 3 defeats in 14 home matches**, averaging 1.71 goals scored and 1.43 conceded. Two or more goals were recorded in 86% of that home sample. The record supports draw protection for Botafogo but also shows that the hosts are not defensively impenetrable.\n\nVasco have **1 win, 5 draws and 7 defeats in 13 away matches**. They average 1.00 goal scored and 1.77 conceded, allowed a goal in 92% of their trips and kept a clean sheet in only 8%. Two or more goals were recorded in 69% of the away sample.\n\nBotafogo won five of the seven league meetings gathered by the source, with one draw and one Vasco win. That record, home advantage and Vasco's travel performance reinforce the preference for Botafogo not to lose. The Over 1.5 leg avoids requiring a high total but still needs at least two goals.\n\n## Tactical analysis and expected game state\n\nBotafogo can use home territory to press and create, but conceding 1.43 goals per home game leaves a route for Vasco to affect the score. The derby setting may produce aggressive duels and transitions rather than steady control. Draw protection accommodates that volatility while the goals leg benefits if either team has to chase.\n\n### Statistical Core Predictions-Sports-Prime\n\nThe figures below use the host's home matches and the visitor's away matches in the 2026 league season. Statistical coverage is partial; unavailable target metrics, including xG, xGA, shots, shots on target and possession, were not synthesized.\n\n| Metric | Botafogo HOME | Vasco AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 14 | 13 |\n| W-D-L | **5-6-3** | **1-5-7** |\n| GF/game | 1.71 | 1.00 |\n| GA/game | 1.43 | 1.77 |\n| Over 1.5 goals | 86% | 69% |\n| Clean sheets | Unavailable | 8% |\n| Conceded | Unavailable | 92% |\n\nBotafogo's figures describe only its league matches at home, while Vasco's figures describe only its league matches away. That venue alignment makes the comparison more relevant to this fixture, but it does not turn past frequency into certainty. The partial dataset is strongest for results, goals and any corner measures shown above; metrics not listed were unavailable in the retained source set. The sample should therefore inform the selection alongside the tactical matchup, market price and the specific risks identified below, rather than carry the judgment on its own.\n\n## Market assessment and risk\n\nA 1–0 Botafogo win would fit the home-side reading but lose the combined bet. Vasco can also exploit Botafogo's defensive vulnerability, so the hosts must avoid turning territorial initiative into exposed transitions. Derby variance remains an important limitation.\n\nThe published market price is **1.95**, which carries a raw implied probability of **51.3%** using 1 / 1.95. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific home/away evidence and the stated game-state interpretation, while the risks above remain material.\n\n## Conclusion\n\nThe evidence favours Botafogo avoiding defeat and at least two total goals, without requiring a clean sheet or an outright home win. That balance leads to the combined double-chance and Over 1.5 selection.\n\n**Prediction:** Botafogo or Draw (1X) + Over 1.5 Goals\n\n**Odds:** 1.95"
       ],
       "picks": {
-        "main": "Botafogo ou empate (1X) + Over 1.5 gols",
+        "main": "Botafogo or Draw (1X) + Over 1.5 Goals",
         "odds": 1.95
       },
       "sources": [
         {
-          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "name": "SoccerSTATS — 2026 Série A home/away splits and league history",
           "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=289-19-14-2026"
         },
         {
-          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "name": "ge — CBF Round 29 dates, kick-off times and venues",
           "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
         }
       ],
       "comment": null
     },
     "prediction": {
-      "main": "Botafogo ou empate (1X) + Over 1.5 gols",
+      "main": "Botafogo or Draw (1X) + Over 1.5 Goals",
       "odds": 1.95
     }
   },
@@ -169,29 +154,26 @@
     "predictionAccess": "vip",
     "full": {
       "analysis": [
-        "Vejo o Cruzeiro como favorito neste confronto, principalmente pelo contraste entre seu desempenho no Mineirão e o rendimento do São Paulo fora. A minha escolha mantém uma proteção para o empate, acompanhando o bom desempenho do time como mandante. Ainda assim, espero que o Cruzeiro tenha condições de comandar boa parte do jogo.",
-        "O Cruzeiro em casa soma 7 vitórias, 4 empates e 3 derrotas em 14 partidas. Marca 1,71 gol por jogo, sofre 1,14 e balançou a rede em 86% desse recorte. O São Paulo fora tem 2 vitórias, 3 empates e 9 derrotas, marcando somente 0,79 e sofrendo 1,43 por jogo. A equipe não marcou em 36% das viagens e sofreu primeiro em 79%.",
-        "Para a parte dos gols, o Over 1.5 ocorreu em 86% dos jogos do Cruzeiro em casa e 71% das partidas do São Paulo fora. Nos sete encontros de liga desse histórico, o São Paulo venceu quatro, o Cruzeiro dois e houve um empate. Nesta rodada, vejo o Cruzeiro em condições de aproveitar o contraste entre seu ataque em casa e o rendimento do visitante.",
-        "O cenário que espero é um Cruzeiro capaz de pressionar e um São Paulo obrigado a administrar períodos sem a bola. Se o visitante resistir bem, o empate continua coberto; se o jogo terminar com apenas um gol, a parte do Over não passa. A preferência está no mando e na produção ofensiva caseira, sem ignorar que o São Paulo já mostrou capacidade de dificultar esse duelo."
+        "# Cruzeiro vs São Paulo Prediction, Odds and Betting Tips\n\n**Prediction:** Cruzeiro or Draw (1X) + Over 1.5 Goals\n\n**Odds:** 1.67\n\n## Match information\n\n- **Competition:** Brasileirão Série A\n- **Date:** 2026-10-07\n- **Kick-off:** 21:30\n- **Round:** Round 29\n- **Venue:** Mineirão\n\n## Team news and projected lineups\n\nThe supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.\n\n## Match analysis\n\nCruzeiro are favoured mainly because of the contrast between their Mineirão performance and São Paulo's away results. The selection retains protection against a draw while following the hosts' stronger venue record. Cruzeiro should still be capable of directing substantial periods of the match.\n\nCruzeiro have **7 wins, 4 draws and 3 defeats in 14 home matches**. They average 1.71 goals scored and 1.14 conceded, scoring in 86% of that sample. Over 1.5 Goals landed in 86% of their home fixtures.\n\nSão Paulo have **2 wins, 3 draws and 9 defeats in 14 away matches**, averaging only 0.79 goals scored and 1.43 conceded. They failed to score in 36% of those trips and conceded first in 79%. Over 1.5 Goals landed in 71% of the away sample.\n\nSão Paulo won four of the seven league meetings in the sourced history, with two Cruzeiro wins and one draw. That contrary head-to-head record deserves respect, but the current home/away contrast points toward Cruzeiro avoiding defeat. The goals leg is supported by both venue samples.\n\n## Tactical analysis and expected game state\n\nCruzeiro are expected to apply pressure and make São Paulo manage stretches without the ball. If the visitors resist, the draw remains covered; if they concede first, the game state can become more open as they chase. Cruzeiro's home attack is the main driver, with São Paulo's road output a reason not to demand a home win.\n\n### Statistical Core Predictions-Sports-Prime\n\nThe figures below use the host's home matches and the visitor's away matches in the 2026 league season. Statistical coverage is partial; unavailable target metrics, including xG, xGA, shots, shots on target and possession, were not synthesized.\n\n| Metric | Cruzeiro HOME | São Paulo AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 14 | 14 |\n| W-D-L | **7-4-3** | **2-3-9** |\n| GF/game | 1.71 | 0.79 |\n| GA/game | 1.14 | 1.43 |\n| Over 1.5 goals | 86% | 71% |\n| First to concede | Unavailable | 79% |\n| Failed to score | Unavailable | 36% |\n\nCruzeiro's figures describe only its league matches at home, while São Paulo's figures describe only its league matches away. That venue alignment makes the comparison more relevant to this fixture, but it does not turn past frequency into certainty. The partial dataset is strongest for results, goals and any corner measures shown above; metrics not listed were unavailable in the retained source set. The sample should therefore inform the selection alongside the tactical matchup, market price and the specific risks identified below, rather than carry the judgment on its own.\n\n## Market assessment and risk\n\nA disciplined São Paulo performance could keep the contest level and low scoring. The double chance would survive a draw, but a match with only one total goal would lose the Over leg. The visitors' favourable recent league-meeting record is also evidence against treating the matchup as straightforward.\n\nThe published market price is **1.67**, which carries a raw implied probability of **59.9%** using 1 / 1.67. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific home/away evidence and the stated game-state interpretation, while the risks above remain material.\n\n## Conclusion\n\nCruzeiro's home production and São Paulo's away difficulties justify backing the hosts not to lose, while the venue-specific goal rates support Over 1.5. Both conditions remain necessary for the combined pick.\n\n**Prediction:** Cruzeiro or Draw (1X) + Over 1.5 Goals\n\n**Odds:** 1.67"
       ],
       "picks": {
-        "main": "Cruzeiro ou empate (1X) + Over 1.5 gols",
+        "main": "Cruzeiro or Draw (1X) + Over 1.5 Goals",
         "odds": 1.67
       },
       "sources": [
         {
-          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "name": "SoccerSTATS — 2026 Série A home/away splits and league history",
           "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=285-20-15-2026"
         },
         {
-          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "name": "ge — CBF Round 29 dates, kick-off times and venues",
           "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
         }
       ],
       "comment": null
     },
     "prediction": {
-      "main": "Cruzeiro ou empate (1X) + Over 1.5 gols",
+      "main": "Cruzeiro or Draw (1X) + Over 1.5 Goals",
       "odds": 1.67
     }
   },
@@ -201,37 +183,34 @@
     "predictionAccess": "vip",
     "full": {
       "analysis": [
-        "Um confronto difícil para o Flamengo, mesmo reconhecendo a força e o favoritismo do time carioca. Na Vila Belmiro, espero o Santos buscando impor seu ritmo com o apoio da torcida. O Santos vem de vitória por 2–1 sobre o São Paulo em 2 de outubro. Na minha avaliação, pode aproveitar a confiança desse resultado para enfrentar um adversário mais forte sem entrar apenas para se defender.",
-        "O Santos em casa soma 6 vitórias, 4 empates e 4 derrotas em 14 jogos, com 1,43 gol marcado e 1,29 sofrido por partida. O time marcou em 86% dessas partidas. O Flamengo fora tem 8 vitórias, 3 empates e 3 derrotas em 14 jogos, marca 1,93 e sofre 0,93. Também marcou em 93% das viagens. O encontro coloca a produção do Santos na Vila diante de um Flamengo eficiente também nas viagens.",
-        "A ausência de Arrascaeta acrescenta um elemento importante. O meia passou por cirurgia após fratura no punho esquerdo e está fora deste confronto, com recuperação estimada em seis a oito semanas informada em 1º de outubro. Para mim, perder um jogador dessa capacidade pode exigir ajustes na criação, embora o Flamengo tenha alternativas e continue perigoso.",
-        "Minha leitura é que o Santos pode tornar esse jogo menos confortável do que o favoritismo flamenguista sugere. Vai precisar competir no meio, cuidar das perdas de bola e aproveitar suas chegadas, porque oferecer transições ao Flamengo seria um problema. Mesmo reconhecendo o favoritismo do Flamengo, acredito na capacidade do Santos de competir em casa e sair com pontos."
+        "# Santos vs Flamengo Prediction, Odds and Betting Tips\n\n**Prediction:** Santos or Draw (1X)\n\n**Odds:** 2.00\n\n## Match information\n\n- **Competition:** Brasileirão Série A\n- **Date:** 2026-10-08\n- **Kick-off:** 19:30\n- **Round:** Round 29\n- **Venue:** Vila Belmiro\n\n## Team news and projected lineups\n\nThe supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.\n\n## Match analysis\n\nThis is a difficult matchup for Flamengo despite their strength and overall favouritism. At Vila Belmiro, Santos can try to impose their rhythm with support from the crowd. Santos beat São Paulo 2–1 on 2 October and can use the confidence from that result to face a stronger opponent without setting up only to defend.\n\nSantos have **6 wins, 4 draws and 4 defeats in 14 home matches**, averaging 1.43 goals scored and 1.29 conceded. They scored in 86% of those games. That production gives the hosts a route to compete even against one of the league's stronger travellers.\n\nFlamengo have **8 wins, 3 draws and 3 defeats in 14 away matches**. They average 1.93 goals scored and 0.93 conceded, finding the net in 93% of their trips. Those figures confirm why Flamengo are favourites and form the strongest evidence against the selection.\n\nArrascaeta's absence is important. The midfielder underwent surgery after fracturing his left wrist and was ruled out, with a recovery estimate of six to eight weeks reported on 1 October. Losing a creator of his quality may require adjustments, although Flamengo retain alternatives and remain dangerous.\n\n## Tactical analysis and expected game state\n\nSantos need to compete through midfield, protect the ball after regains and avoid offering easy transitions to Flamengo. Home territory can help them play with more initiative, but careless losses would expose them to an away attack averaging 1.93 goals. The double chance is built around Santos making the contest uncomfortable rather than dominating it.\n\n### Statistical Core Predictions-Sports-Prime\n\nThe figures below use the host's home matches and the visitor's away matches in the 2026 league season. Statistical coverage is partial; unavailable target metrics, including xG, xGA, shots, shots on target and possession, were not synthesized.\n\n| Metric | Santos HOME | Flamengo AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 14 | 14 |\n| W-D-L | **6-4-4** | **8-3-3** |\n| GF/game | 1.43 | 1.93 |\n| GA/game | 1.29 | 0.93 |\n| Scored | 86% | 93% |\n\nSantos's figures describe only its league matches at home, while Flamengo's figures describe only its league matches away. That venue alignment makes the comparison more relevant to this fixture, but it does not turn past frequency into certainty. The partial dataset is strongest for results, goals and any corner measures shown above; metrics not listed were unavailable in the retained source set. The sample should therefore inform the selection alongside the tactical matchup, market price and the specific risks identified below, rather than carry the judgment on its own.\n\n## Market assessment and risk\n\nFlamengo's eight away wins, strong scoring rate and low goals-against average make this an aggressive position. Arrascaeta's absence does not erase the visitors' depth. Santos must translate home competitiveness into points against an opponent that has repeatedly won on the road.\n\nThe published market price is **2.00**, which carries a raw implied probability of **50.0%** using 1 / 2.00. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific home/away evidence and the stated game-state interpretation, while the risks above remain material.\n\n## Conclusion\n\nFlamengo deserve respect as favourites, but Santos' home record, recent derby win and the visitors' confirmed creative absence support a calculated home double chance. The call remains Santos or Draw, with Flamengo's travel strength the central risk.\n\n**Prediction:** Santos or Draw (1X)\n\n**Odds:** 2.00"
       ],
       "picks": {
-        "main": "Santos ou empate (1X)",
+        "main": "Santos or Draw (1X)",
         "odds": 2
       },
       "sources": [
         {
-          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "name": "SoccerSTATS — 2026 Série A home/away splits and league history",
           "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=288-12-16-2026"
         },
         {
-          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "name": "ge — CBF Round 29 dates, kick-off times and venues",
           "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
         },
         {
-          "name": "Santos FC — vitória sobre o São Paulo em 02/10 e confirmação da Vila Belmiro",
+          "name": "Santos FC — win over São Paulo on 2 October and Vila Belmiro confirmation",
           "url": "https://www.santosfc.com.br/santos-fc-vence-o-classico-no-morumbis-e-iguala-recorde-no-campeonato-brasileiro/"
         },
         {
-          "name": "ge — cirurgia de Arrascaeta e previsão de recuperação, 01/10/2026",
+          "name": "ge — Arrascaeta surgery and recovery estimate, 1 October 2026",
           "url": "https://ge.globo.com/google/amp/futebol/times/flamengo/noticia/2026/10/01/arrascaeta-passa-por-cirurgia-no-punho-e-desfalca-o-flamengo-de-seis-a-oito-semanas.ghtml"
         }
       ],
       "comment": null
     },
     "prediction": {
-      "main": "Santos ou empate (1X)",
+      "main": "Santos or Draw (1X)",
       "odds": 2
     }
   },
@@ -241,29 +220,26 @@
     "predictionAccess": "vip",
     "full": {
       "analysis": [
-        "Diante dos números de casa e fora, considero o Athletico-PR favorito. O time tem um mando muito forte e enfrenta um Atlético-MG que costuma produzir menos nas viagens. Minha preferência é pelo Furacão pontuando, junto de uma linha de escanteios que permite buscar volume sem depender de um placar alto.",
-        "O Athletico em casa soma 9 vitórias, 4 empates e apenas 1 derrota em 14 partidas. Marca 1,79 gol por jogo e sofre 0,79. O Atlético-MG fora tem 4 vitórias, 2 empates e 8 derrotas, com médias de 0,93 gol marcado e 1,14 sofrido. O dado ofensivo mais relevante do visitante é ter ficado sem marcar em 57% dessas partidas.",
-        "Nos corners, o Athletico cobra 6,00 e concede 4,00 por jogo em casa, totalizando média de 10,00. Nas viagens do Atlético-MG, são 4,57 a favor e 5,79 contra, com média total de 10,36. A linha de nove ou mais escanteios ocorreu em 79% dos jogos do Furacão em casa e 64% dos jogos do Galo fora. Há um bom suporte para esperar pressão e chegadas pelos lados.",
-        "Nos sete encontros de liga desse histórico, o Atlético-MG venceu quatro, o Athletico dois e houve um empate. O Galo tem condições de incomodar, mesmo com um ataque menos eficiente fora. Por isso, prefiro manter o empate na seleção. O mandante pode cumprir sua parte e ainda faltar volume nos corners; os dois lados da combinação precisam aparecer na mesma partida."
+        "# Athletico-PR vs Atlético-MG Prediction, Odds and Betting Tips\n\n**Prediction:** Athletico-PR or Draw (1X) + Over 8.5 Corners\n\n**Odds:** 1.78\n\n## Match information\n\n- **Competition:** Brasileirão Série A\n- **Date:** 2026-10-08\n- **Kick-off:** 20:00\n- **Round:** Round 29\n- **Venue:** Arena da Baixada\n\n## Team news and projected lineups\n\nThe supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.\n\n## Match analysis\n\nThe home and away numbers make Athletico-PR the more convincing side. They have a very strong home record and meet an Atlético-MG team that tends to produce less on its travels. The preference is for Athletico to earn at least a point together with a corner line that seeks volume without depending on a high score.\n\nAthletico have **9 wins, 4 draws and only 1 defeat in 14 home matches**. They average 1.79 goals scored and 0.79 conceded. That balance supplies the double-chance foundation and reduces the need to demand an outright home win.\n\nAtlético-MG have **4 wins, 2 draws and 8 defeats in 14 away matches**, averaging 0.93 goals scored and 1.14 conceded. Their most notable attacking weakness is failing to score in 57% of those trips, although four away wins show they can still threaten.\n\nAthletico take 6.00 corners and concede 4.00 per home game, for a 10.00 total average. Atlético-MG's away matches feature 4.57 corners for and 5.79 against, averaging 10.36. Nine or more corners landed in 79% of Athletico's home games and 64% of Atlético-MG's away games.\n\n## Tactical analysis and expected game state\n\nAthletico's home strength should allow them to build pressure and reach wide areas, a pattern that can support corner volume. Atlético-MG may be less productive away but remain capable of disrupting the hosts. Keeping the draw protects the side of the bet if territorial control does not become a win.\n\n### Statistical Core Predictions-Sports-Prime\n\nThe figures below use the host's home matches and the visitor's away matches in the 2026 league season. Statistical coverage is partial; unavailable target metrics, including xG, xGA, shots, shots on target and possession, were not synthesized.\n\n| Metric | Athletico-PR HOME | Atlético-MG AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 14 | 14 |\n| W-D-L | **9-4-1** | **4-2-8** |\n| GF/game | 1.79 | 0.93 |\n| GA/game | 0.79 | 1.14 |\n| Corners for/game | 6.00 | 4.57 |\n| Corners against/game | 4.00 | 5.79 |\n| Total corners/game | 10.00 | 10.36 |\n| Over 8.5 corners | 79% | 64% |\n| Failed to score | Unavailable | 57% |\n\nAthletico-PR's figures describe only its league matches at home, while Atlético-MG's figures describe only its league matches away. That venue alignment makes the comparison more relevant to this fixture, but it does not turn past frequency into certainty. The partial dataset is strongest for results, goals and any corner measures shown above; metrics not listed were unavailable in the retained source set. The sample should therefore inform the selection alongside the tactical matchup, market price and the specific risks identified below, rather than carry the judgment on its own.\n\n## Market assessment and risk\n\nAtlético-MG won four of the seven sourced league meetings, compared with two Athletico wins and one draw, so the historical matchup is contrary evidence. Athletico could also avoid defeat without producing enough corners. Both parts of the combination must occur in the same game.\n\nThe published market price is **1.78**, which carries a raw implied probability of **56.2%** using 1 / 1.78. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific home/away evidence and the stated game-state interpretation, while the risks above remain material.\n\n## Conclusion\n\nAthletico's decisive home record and the corner averages from both venue samples support the combined position. Draw protection respects Atlético-MG's ability to compete while Over 8.5 Corners targets the available volume evidence.\n\n**Prediction:** Athletico-PR or Draw (1X) + Over 8.5 Corners\n\n**Odds:** 1.78"
       ],
       "picks": {
-        "main": "Athletico-PR ou empate (1X) + Over 8.5 escanteios",
+        "main": "Athletico-PR or Draw (1X) + Over 8.5 Corners",
         "odds": 1.78
       },
       "sources": [
         {
-          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "name": "SoccerSTATS — 2026 Série A home/away splits and league history",
           "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=283-6-7-2026"
         },
         {
-          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "name": "ge — CBF Round 29 dates, kick-off times and venues",
           "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
         }
       ],
       "comment": null
     },
     "prediction": {
-      "main": "Athletico-PR ou empate (1X) + Over 8.5 escanteios",
+      "main": "Athletico-PR or Draw (1X) + Over 8.5 Corners",
       "odds": 1.78
     }
   },
@@ -273,29 +249,26 @@
     "predictionAccess": "vip",
     "full": {
       "analysis": [
-        "Para este confronto, acredito na vitória do Fluminense e em pelo menos dois gols. O Maracanã tem sido uma base muito forte para o time, que consegue produzir melhor diante de sua torcida. O Coritiba tem uma campanha competitiva fora, mas vejo o Fluminense com condições de transformar seu mando em vantagem.",
-        "O Fluminense em casa tem 10 vitórias, 3 empates e 1 derrota em 14 partidas. Marca 1,71 gol por jogo, sofre 1,00 e balançou a rede em 93% desse recorte. O Coritiba fora soma 5 vitórias, 4 empates e 5 derrotas, com 1,29 gol marcado e 1,71 sofrido por jogo. A defesa visitante permite oportunidades, embora sua campanha mostre capacidade de buscar pontos longe de casa.",
-        "O Over 1.5 ocorreu em 71% dos jogos caseiros do Fluminense e 79% das viagens do Coritiba. O ataque do Flu e a quantidade de gols sofridos pelo Coxa fora dão apoio à linha escolhida. Há também volume territorial: o Fluminense cobra 6,43 escanteios por jogo em casa. Esse volume mostra a presença do Fluminense no ataque e sua capacidade de manter a defesa adversária sob pressão.",
-        "O cuidado é com um Coritiba que pode aproveitar os espaços e obrigar o mandante a continuar atacando. O Fluminense precisa ter eficiência para não deixar sua superioridade se resumir à posse ou às chances desperdiçadas. Aqui a seleção exige vitória tricolor: um empate com gols não atende ao palpite, e um 1–0 também fica de fora. Espero um mandante capaz de vencer e levar a partida a pelo menos dois gols."
+        "# Fluminense vs Coritiba Prediction, Odds and Betting Tips\n\n**Prediction:** Fluminense to win + Over 1.5 Goals\n\n**Odds:** 1.87\n\n## Match information\n\n- **Competition:** Brasileirão Série A\n- **Date:** 2026-10-08\n- **Kick-off:** 21:30\n- **Round:** Round 29\n- **Venue:** Maracanã\n\n## Team news and projected lineups\n\nThe supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.\n\n## Match analysis\n\nThe preference is for Fluminense to win in a match with at least two goals. The Maracanã has been a strong base for the hosts, who produce more effectively in front of their supporters. Coritiba have a competitive away campaign, but Fluminense can turn home advantage into a decisive edge.\n\nFluminense have **10 wins, 3 draws and 1 defeat in 14 home matches**. They average 1.71 goals scored and 1.00 conceded, finding the net in 93% of that sample. Over 1.5 Goals landed in 71% of their home fixtures, and they also average 6.43 corners.\n\nCoritiba have **5 wins, 4 draws and 5 defeats in 14 away matches**, averaging 1.29 goals scored and 1.71 conceded. Over 1.5 Goals landed in 79% of those trips. The defence permits opportunities, although the balanced away record shows an ability to collect points outside home.\n\nFluminense's home attack and Coritiba's away concession rate support the two-goal threshold. The hosts' 6.43 home corners also signal sustained attacking presence, but the selection is tied to goals rather than corners. Fluminense must win; a scoring draw does not satisfy the bet.\n\n## Tactical analysis and expected game state\n\nFluminense should be able to establish territory and keep Coritiba's defence under pressure. The visitors can use spaces in transition, potentially forcing the hosts to continue attacking rather than simply protect a lead. Efficient finishing matters because possession or pressure alone will not fulfil either leg.\n\n### Statistical Core Predictions-Sports-Prime\n\nThe figures below use the host's home matches and the visitor's away matches in the 2026 league season. Statistical coverage is partial; unavailable target metrics, including xG, xGA, shots, shots on target and possession, were not synthesized.\n\n| Metric | Fluminense HOME | Coritiba AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 14 | 14 |\n| W-D-L | **10-3-1** | **5-4-5** |\n| GF/game | 1.71 | 1.29 |\n| GA/game | 1.00 | 1.71 |\n| Corners for/game | 6.43 | Unavailable |\n| Over 1.5 goals | 71% | 79% |\n| Scored | 93% | Unavailable |\n\nFluminense's figures describe only its league matches at home, while Coritiba's figures describe only its league matches away. That venue alignment makes the comparison more relevant to this fixture, but it does not turn past frequency into certainty. The partial dataset is strongest for results, goals and any corner measures shown above; metrics not listed were unavailable in the retained source set. The sample should therefore inform the selection alongside the tactical matchup, market price and the specific risks identified below, rather than carry the judgment on its own.\n\n## Market assessment and risk\n\nCoritiba's five away wins show that they cannot be treated as passive visitors. A draw with goals would lose the home-win leg, while a 1–0 Fluminense victory would lose the total-goals leg. The combined market therefore demands both superiority and enough scoring output.\n\nThe published market price is **1.87**, which carries a raw implied probability of **53.5%** using 1 / 1.87. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific home/away evidence and the stated game-state interpretation, while the risks above remain material.\n\n## Conclusion\n\nFluminense's 10 home wins, strong scoring frequency and Coritiba's away goals-against average support the hosts. The preferred construction is Fluminense to win with Over 1.5 Goals, accepting the extra risk of a combined market.\n\n**Prediction:** Fluminense to win + Over 1.5 Goals\n\n**Odds:** 1.87"
       ],
       "picks": {
-        "main": "Fluminense vence + Over 1.5 gols",
+        "main": "Fluminense to win + Over 1.5 Goals",
         "odds": 1.87
       },
       "sources": [
         {
-          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "name": "SoccerSTATS — 2026 Série A home/away splits and league history",
           "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=290-9-3-2026"
         },
         {
-          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "name": "ge — CBF Round 29 dates, kick-off times and venues",
           "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
         }
       ],
       "comment": null
     },
     "prediction": {
-      "main": "Fluminense vence + Over 1.5 gols",
+      "main": "Fluminense to win + Over 1.5 Goals",
       "odds": 1.87
     }
   },
@@ -305,33 +278,30 @@
     "predictionAccess": "vip",
     "full": {
       "analysis": [
-        "Um duelo de nível mais alto, no qual considero o Palmeiras favorito pelo mando e pela consistência defensiva. O Bahia tem uma campanha visitante que merece respeito e não entra como um adversário fácil. Para este jogo, prefiro a vitória simples do Palmeiras, sem acrescentar uma linha de gols que aumentaria a exigência da seleção.",
-        "Em casa, o Palmeiras tem 9 vitórias, 3 empates e 1 derrota em 13 partidas. Marca 1,77 gol por jogo e sofre apenas 0,69. Marcou em 92% das partidas e abriu o placar em 69%. Esse equilíbrio entre ataque e defesa é o ponto que mais pesa na minha avaliação: o time consegue criar sem depender de um confronto desorganizado.",
-        "O Bahia fora soma 6 vitórias, 4 empates e 4 derrotas em 14 jogos. Marca e sofre 1,50 gol por partida, tendo balançado a rede em 86% das viagens. Nos sete confrontos de liga reunidos pela fonte, o Palmeiras venceu quatro e o Bahia três. Apenas 29% passaram de 2,5 gols. É um histórico de partidas frequentemente controladas, mas com resultados divididos.",
-        "O Palmeiras vai precisar evitar que a qualidade ofensiva do Bahia encontre espaço em transições. Se conseguir controlar a partida e aproveitar suas oportunidades, vejo um caminho para confirmar o favoritismo. O visitante, entretanto, já mostrou que sabe ganhar fora e exige atenção até o fim. A minha escolha está na força do mandante, com uma seleção simples que também permite uma vitória por margem curta."
+        "# Palmeiras vs Bahia Prediction, Odds and Betting Tips\n\n**Prediction:** Palmeiras to win\n\n**Odds:** 1.57\n\n## Match information\n\n- **Competition:** Brasileirão Série A\n- **Date:** 2026-10-08\n- **Kick-off:** 21:30\n- **Round:** Round 29\n- **Venue:** Nubank Parque\n\n## Team news and projected lineups\n\nThe supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.\n\n## Match analysis\n\nThis is a higher-level matchup in which Palmeiras are favoured by home advantage and defensive consistency. Bahia's away campaign deserves respect and makes them a difficult opponent. The preference is for a simple Palmeiras win without adding a goals line that would place an extra demand on the selection.\n\nPalmeiras have **9 wins, 3 draws and 1 defeat in 13 home matches**. They average 1.77 goals scored and only 0.69 conceded, scored in 92% and opened the scoring in 69%. The balance between attack and defence is the strongest part of the case: they can create without needing a disorganised contest.\n\nBahia have **6 wins, 4 draws and 4 defeats in 14 away matches**. They average 1.50 goals both scored and conceded and found the net in 86% of those trips. That record is substantial contrary evidence and shows why the visitors cannot be considered an easy matchup.\n\nPalmeiras won four of the seven sourced league meetings and Bahia won three. Only 29% went over 2.5 goals, describing a history of often controlled matches but divided results. A simple moneyline allows a narrow Palmeiras victory and avoids forcing a goals total onto that evidence.\n\n## Tactical analysis and expected game state\n\nPalmeiras need to control the ball after turnovers so Bahia's attacking quality cannot find open transition lanes. Their home defensive record provides a base for managing the game state, especially if they score first. Bahia's away scoring frequency means the hosts must remain attentive throughout rather than rely on passive control.\n\n### Statistical Core Predictions-Sports-Prime\n\nThe figures below use the host's home matches and the visitor's away matches in the 2026 league season. Statistical coverage is partial; unavailable target metrics, including xG, xGA, shots, shots on target and possession, were not synthesized.\n\n| Metric | Palmeiras HOME | Bahia AWAY |\n| --- | ---: | ---: |\n| Matches (N) | 13 | 14 |\n| W-D-L | **9-3-1** | **6-4-4** |\n| GF/game | 1.77 | 1.50 |\n| GA/game | 0.69 | 1.50 |\n| First to score | 69% | Unavailable |\n| Scored | 92% | 86% |\n| Over 2.5 goals | Unavailable | Unavailable (H2H: 29%) |\n\nPalmeiras's figures describe only its league matches at home, while Bahia's figures describe only its league matches away. That venue alignment makes the comparison more relevant to this fixture, but it does not turn past frequency into certainty. The partial dataset is strongest for results, goals and any corner measures shown above; metrics not listed were unavailable in the retained source set. The sample should therefore inform the selection alongside the tactical matchup, market price and the specific risks identified below, rather than carry the judgment on its own.\n\n## Market assessment and risk\n\nBahia have already won six times away and score 1.50 goals per road game, so they present a credible threat against the pick. The head-to-head split is also competitive. Palmeiras' home numbers justify favouritism, but they do not remove the danger of a draw or a successful Bahia transition.\n\nThe published market price is **1.57**, which carries a raw implied probability of **63.7%** using 1 / 1.57. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific home/away evidence and the stated game-state interpretation, while the risks above remain material.\n\n## Conclusion\n\nPalmeiras' one home defeat, 0.69 goals conceded per home game and reliable scoring record make them the preferred side. Keeping the selection to a straight home win respects Bahia's quality and the history of lower-scoring meetings.\n\n**Prediction:** Palmeiras to win\n\n**Odds:** 1.57"
       ],
       "picks": {
-        "main": "Palmeiras vence",
+        "main": "Palmeiras to win",
         "odds": 1.57
       },
       "sources": [
         {
-          "name": "SoccerSTATS — Série A 2026, recortes de mando e histórico de liga",
+          "name": "SoccerSTATS — 2026 Série A home/away splits and league history",
           "url": "https://www.soccerstats.com/pmatch.asp?league=brazil&stats=287-8-18-2026"
         },
         {
-          "name": "ge — tabela detalhada da CBF: datas, horários e locais da rodada 29",
+          "name": "ge — CBF Round 29 dates, kick-off times and venues",
           "url": "https://ge.globo.com/pr/futebol/brasileirao-serie-a/noticia/2026/08/31/cbf-detalha-datas-e-horarios-dos-jogos-das-rodadas-27-a-30-do-brasileirao-veja-a-tabela.ghtml"
         },
         {
-          "name": "Palmeiras — local e horário do confronto",
+          "name": "Palmeiras — match venue and kick-off time",
           "url": "https://www.palmeiras.com.br/ingressos/?idjogo=2813"
         }
       ],
       "comment": null
     },
     "prediction": {
-      "main": "Palmeiras vence",
+      "main": "Palmeiras to win",
       "odds": 1.57
     }
   },
@@ -406,12 +376,12 @@
       ],
       "comment": null,
       "picks": {
-        "main": "Over 5.5 goals",
+        "main": "Over 5.5 Goals",
         "odds": 1.7
       }
     },
     "prediction": {
-      "main": "Over 5.5 goals",
+      "main": "Over 5.5 Goals",
       "odds": 1.7
     }
   },

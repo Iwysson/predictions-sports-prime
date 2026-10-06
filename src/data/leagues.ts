@@ -138,6 +138,16 @@ export const homeLeagues = leagues.filter(
   (item) => item.display.showOnHome
 );
 
+const nationalTeamCompetitionSlugs = new Set<LeagueSlug>([
+  "uefa-nations-league", "uefa-nations-league-b", "uefa-nations-league-c", "uefa-nations-league-d",
+  "gulf-cup", "international-friendlies", "africa-cup-of-nations-qualifying",
+  "fifa-asean-cup", "concacaf-nations-league", "msg-prime-ministers-cup",
+]);
+
+export const homeClubLeagues = homeLeagues.filter(
+  (item) => !nationalTeamCompetitionSlugs.has(item.slug)
+);
+
 export const primaryPredictionLeagueSlugs = [
   "premier-league",
   "la-liga",
@@ -168,7 +178,9 @@ export const primaryPredictionLeagueSlugs = [
   "msg-prime-ministers-cup",
 ] as const satisfies readonly LeagueSlug[];
 
-export const primaryPredictionLeagues = primaryPredictionLeagueSlugs.map(
+export const primaryPredictionLeagues = primaryPredictionLeagueSlugs
+  .filter((slug) => !nationalTeamCompetitionSlugs.has(slug))
+  .map(
   (slug) => {
     const league = leaguesBySlug[slug];
     return slug === "eredivisie" ? { ...league, name: "Eredivisie" } : league;

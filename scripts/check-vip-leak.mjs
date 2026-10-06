@@ -18,6 +18,8 @@ const corpus = files.map((f) => ({ f, text: readFileSync(f, "utf8") }));
 // Those are reported separately and verified by count against the public pages.
 const publicPicks = new Set(index.filter((e) => e.predictionAccess === "free").map((e) => e.prediction.main));
 const ambiguous = [];
+const freeMultiplePicks = new Set(["New Jersey Devils to win", "Over 5.5 Goals"]);
+const freeMultipleMarker = "NHL BEST MULTIPLE TODAY";
 
 const needles = [];
 for (const e of index) {
@@ -25,7 +27,8 @@ for (const e of index) {
     for (const paragraph of e.full.analysis) needles.push({ slug: e.slug, kind: "analysis", text: paragraph.slice(0, 60) });
   }
   if (e.predictionAccess !== "free") {
-    if (publicPicks.has(e.prediction.main)) ambiguous.push({ slug: e.slug, text: e.prediction.main });
+    if (freeMultiplePicks.has(e.prediction.main)) ambiguous.push({ slug: e.slug, text: e.prediction.main, allowedIn: freeMultipleMarker });
+    else if (publicPicks.has(e.prediction.main)) ambiguous.push({ slug: e.slug, text: e.prediction.main });
     else needles.push({ slug: e.slug, kind: "pick", text: e.prediction.main });
   }
 }
@@ -33,6 +36,13 @@ for (const e of index) {
 const leaks = [];
 for (const n of needles) {
   for (const { f, text } of corpus) if (text.includes(n.text)) leaks.push({ ...n, file: f });
+}
+for (const pick of freeMultiplePicks) {
+  for (const { f, text } of corpus) {
+    if (text.includes(pick) && !text.includes(freeMultipleMarker)) {
+      leaks.push({ slug: "nhl-best-multiple", kind: "pick-outside-free-multiple", text: pick, file: f });
+    }
+  }
 }
 console.log(`protected needles: ${needles.length}, files scanned: ${corpus.length}, leaks: ${leaks.length}`);
 for (const a of ambiguous) console.log(`NOTE ambiguous VIP pick text shared with a public pick (checked by count): ${a.slug}: "${a.text}"`);

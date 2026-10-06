@@ -7,7 +7,7 @@ import Link from "@/components/DocumentLink";
 import { MatchPreview } from "@/types";
 import { HomeMatchCard } from "@/components/HomeMatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
-import { leagues, leaguesBySlug } from "@/data/leagues";
+import { homeClubLeagues, leaguesBySlug } from "@/data/leagues";
 import {
   filterCompletedPredictions,
   filterTodaysPublishedPredictions,
@@ -41,7 +41,7 @@ function HomeLeagueTaxonomy({
       </div>
 
       <div className="home-leagues-sidebar__list">
-        {leagues.map((league) => (
+        {homeClubLeagues.map((league) => (
           <Link
             key={league.slug}
             href={localePath(locale, `/league/${league.slug}/`)}

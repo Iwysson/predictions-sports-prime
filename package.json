@@ -23,6 +23,7 @@
     "audit:international-seo": "node scripts/audit-international-seo.mjs",
     "audit:structured-data": "node scripts/audit-structured-data.mjs",
     "audit:site-links": "node scripts/audit-site-links.mjs",
+    "check:editorial-language": "node --import tsx scripts/check-editorial-language.mjs",
     "validate:source": "npm run typecheck",
     "validate:production": "npm run typecheck && npm run build",
     "match-content:build": "tsx scripts/build-match-content.mts"

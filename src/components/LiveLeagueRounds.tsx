@@ -1,10 +1,12 @@
 "use client";
 
+import { Fragment } from "react";
 import { MatchCard } from "@/components/MatchCard";
 import type { CompetitionRoundSection, CompetitionRoundSurface } from "@/lib/competition-rounds";
 import { useI18n } from "@/i18n/I18nProvider";
 import { localePath, type SeoLocale } from "@/lib/seo-locales";
 import { localizeRoundText } from "@/lib/localized-presentation";
+import { sortFreePredictionsFirst } from "@/lib/match-access";
 
 function roundLabel(round: number | string, locale: SeoLocale) {
   const value = typeof round === "number" ? `Matchday ${round}` : round;
@@ -45,33 +47,46 @@ function RoundFixtures({
     );
   }
 
+  const orderedMatches = sortFreePredictionsFirst(section.matches);
+  const hasPublishedTiers = orderedMatches.some((match) =>
+    match.status === "published" && (match.predictionAccess === "free" || match.predictionAccess === "vip")
+  );
+  let previousTier: "free" | "vip" | null = null;
+
   return (
     <div className="league-match-list" data-round-surface={surfaceName}>
-      {section.matches.map((match) => (
-        <div
-          key={match.fixtureId ?? match.id}
-          data-round-fixture={match.fixtureId ?? match.id}
-          data-round-position={surfaceName}
-          data-publication-state={match.status}
-          data-home-team={match.homeTeam}
-          data-away-team={match.awayTeam}
-        >
-          <MatchCard
-            match={match}
-            locale={locale}
-            href={
-              locale !== "en" && localizedMatchSlugs.has(match.slug)
-                ? localePath(locale, `/match/${match.slug}/`)
-                : `/match/${match.slug}/`
-            }
-            discoverable={
-              match.status !== "published" ||
-              indexableMatchSlugs === null ||
-              indexableMatchSlugs.has(match.slug)
-            }
-          />
-        </div>
-      ))}
+      {orderedMatches.map((match) => {
+        const tier = match.status === "published" && match.predictionAccess === "free"
+          ? "free"
+          : match.status === "published" && match.predictionAccess === "vip"
+            ? "vip"
+            : null;
+        const showHeading = tier !== null && tier !== previousTier && hasPublishedTiers;
+        if (tier) previousTier = tier;
+        return (
+          <Fragment key={match.fixtureId ?? match.id}>
+            {showHeading ? (
+              <h3 className={`league-access-heading league-access-heading--${tier}`}>
+                {tier === "free" ? "FREE PREDICTIONS" : "PRIME VIP PREDICTIONS"}
+              </h3>
+            ) : null}
+            <div
+              data-round-fixture={match.fixtureId ?? match.id}
+              data-round-position={surfaceName}
+              data-publication-state={match.status}
+              data-home-team={match.homeTeam}
+              data-away-team={match.awayTeam}
+            >
+              <MatchCard
+                match={match}
+                locale={locale}
+                href={locale !== "en" && localizedMatchSlugs.has(match.slug) ? localePath(locale, `/match/${match.slug}/`) : `/match/${match.slug}/`}
+                discoverable={match.status !== "published" || indexableMatchSlugs === null || indexableMatchSlugs.has(match.slug)}
+              />
+            </div>
+          </Fragment>
+        );
+      })}
     </div>
   );
 }

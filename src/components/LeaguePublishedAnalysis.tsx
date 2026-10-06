@@ -1,6 +1,7 @@
 import Link from "@/components/DocumentLink";
 import type { Match } from "@/types";
 import { localePath, type SeoLocale } from "@/lib/seo-locales";
+import { sortFreePredictionsFirst } from "@/lib/match-access";
 
 export function LeaguePublishedAnalysis({
   leagueName,
@@ -55,7 +56,7 @@ export function LeaguePublishedAnalysis({
       </p>
 
       <div className="related-predictions-grid">
-        {discoverableMatches.map((match) => (
+        {sortFreePredictionsFirst(discoverableMatches).map((match) => (
           <article className="related-prediction-card" key={match.id}>
             <span>{match.date}</span>
             <h3>

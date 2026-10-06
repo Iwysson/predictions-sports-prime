@@ -119,6 +119,14 @@ export function listingLabel(item: { analysisAccess?: PredictionAccess; predicti
   return fallback;
 }
 
+export function sortFreePredictionsFirst<T extends { predictionAccess?: PredictionAccess }>(items: readonly T[]): T[] {
+  return [...items].sort((left, right) => {
+    const leftRank = left.predictionAccess === "free" ? 0 : left.predictionAccess === "vip" ? 1 : 2;
+    const rightRank = right.predictionAccess === "free" ? 0 : right.predictionAccess === "vip" ? 1 : 2;
+    return leftRank - rightRank;
+  });
+}
+
 // Human date for match pages, for example "7 October 2026". ISO input, UTC-safe.
 export function formatMatchDate(iso: string): string {
   const time = Date.parse(`${iso}T12:00:00Z`);

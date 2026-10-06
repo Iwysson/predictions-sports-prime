@@ -10,6 +10,7 @@ import type { Match, MatchPreview } from "@/types";
 import { localePath, matchPredictionAnchor, type SeoLocale } from "@/lib/seo-locales";
 import { localizeRoundText } from "@/lib/localized-presentation";
 import { isFixtureHistoryEligible, isFutureFixture } from "@/lib/fixture-state";
+import { sortFreePredictionsFirst } from "@/lib/match-access";
 
 function uniqueMatches(matches: MatchPreview[]) {
   return [...new Map(matches.map((match) => [match.slug, match])).values()];
@@ -64,7 +65,7 @@ function MatchLinks({
       : `/match/${slug}/`;
   return (
     <div className="league-hub-list">
-      {matches.map((match) => (
+      {sortFreePredictionsFirst(matches).map((match) => (
         <article className="league-hub-fixture" key={match.slug}>
           <div>
             <span>{match.date}{match.time && match.time !== "TBD" ? ` · ${match.time}` : ""}</span>

@@ -50,13 +50,17 @@ function FreeGame({ m }: { m: NhlMatch }) {
 
 function GameCard({ m }: { m: NhlMatch }) {
   const isFree = m.access === "free";
+  const isBestAnalysis = m.slug === "detroit-red-wings-vs-ottawa-senators";
 
   return (
     <section className={`psp-game ${isFree ? "psp-game--free" : "psp-game--vip"}`} id={m.anchor}>
       <div className="psp-game__head">
-        <span className={`psp-badge ${isFree ? "psp-badge--free" : "psp-badge--vip"}`}>
-          {isFree ? "FREE ANALYSIS" : "PRIME VIP"}
-        </span>
+        <div className="psp-game__badges">
+          <span className={`psp-badge ${isFree ? "psp-badge--free" : "psp-badge--vip"}`}>
+            {isFree ? "FREE ANALYSIS" : "PRIME VIP"}
+          </span>
+          {isBestAnalysis ? <span className="psp-badge psp-badge--best">BEST ANALYSIS</span> : null}
+        </div>
         <p className="psp-game__meta">NHL · {DATE_LABEL} · Kick-off time not listed</p>
       </div>
 
@@ -164,7 +168,7 @@ export default function NhlPage() {
 
         <section className="psp-matchup-directory" aria-labelledby="nhl-matchups-title">
           <div className="psp-game-group__heading">
-            <h2 id="nhl-matchups-title">NHL Matchups – October 6, 2026</h2>
+            <h2 id="nhl-matchups-title">All NHL Matchups – October 6, 2026</h2>
           </div>
           <nav className="psp-jump" aria-label="NHL games on this page">
             {orderedMatches.map((m) => (
