@@ -47,7 +47,7 @@ export function createMatchContentHandler(index) {
 
     const profileRes = await fetch(
       `${supabaseUrl}/rest/v1/profiles?id=eq.${encodeURIComponent(user.id)}&select=plan,subscription_status`,
-      { headers: { apikey: serviceKey, Authorization: `Bearer ${serviceKey}` } },
+      { headers: { apikey: serviceKey } },
     );
     if (!profileRes.ok) return json({ error: "unavailable" }, 503);
     const [profile] = await profileRes.json();
