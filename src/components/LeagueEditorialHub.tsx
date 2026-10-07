@@ -193,7 +193,7 @@ export function LeagueEditorialHub({
 
         <PublishedMatchDirectory
           matches={discoverablePublishedMatches.filter(
-            (match) => !staticLatestSlugs.has(match.slug) && !completedSlugs.has(match.slug)
+            (match) => isArchived(match) && !staticLatestSlugs.has(match.slug) && !completedSlugs.has(match.slug)
           )}
           locale={locale}
           localizedMatchSlugs={localizedMatchSlugs}
@@ -206,6 +206,7 @@ export function LeagueEditorialHub({
   const roundMatches = uniqueMatches([
     ...(surface.current?.matches ?? []),
     ...(surface.next?.matches ?? []),
+    ...(surface.additional ?? []).flatMap((section) => section.matches),
     ...discoverablePublishedMatches,
   ]);
   const todayMatches = roundMatches.filter(
@@ -298,7 +299,7 @@ export function LeagueEditorialHub({
       ) : null}
       <PublishedMatchDirectory
         matches={discoverablePublishedMatches.filter((match) =>
-          !activeSlugs.has(match.slug) && !latest.some((item) => item.slug === match.slug) && !completed.some((item) => item.slug === match.slug)
+          isArchived(match) && !activeSlugs.has(match.slug) && !latest.some((item) => item.slug === match.slug) && !completed.some((item) => item.slug === match.slug)
         )}
         locale={locale}
         localizedMatchSlugs={localizedMatchSlugs}

@@ -51,23 +51,25 @@ function RoundFixtures({
   const hasPublishedTiers = orderedMatches.some((match) =>
     match.status === "published" && (match.predictionAccess === "free" || match.predictionAccess === "vip")
   );
-  let previousTier: "free" | "vip" | null = null;
+  let previousTier: "free" | "best" | "vip" | null = null;
 
   return (
     <div className="league-match-list" data-round-surface={surfaceName}>
       {orderedMatches.map((match) => {
         const tier = match.status === "published" && match.predictionAccess === "free"
           ? "free"
-          : match.status === "published" && match.predictionAccess === "vip"
-            ? "vip"
-            : null;
+          : match.status === "published" && match.bestAnalysis
+            ? "best"
+            : match.status === "published" && match.predictionAccess === "vip"
+              ? "vip"
+              : null;
         const showHeading = tier !== null && tier !== previousTier && hasPublishedTiers;
         if (tier) previousTier = tier;
         return (
           <Fragment key={match.fixtureId ?? match.id}>
             {showHeading ? (
               <h3 className={`league-access-heading league-access-heading--${tier}`}>
-                {tier === "free" ? "FREE PREDICTIONS" : "PRIME VIP PREDICTIONS"}
+                {tier === "free" ? "FREE TO VIEW" : tier === "best" ? "BEST BET" : "PRIME VIP"}
               </h3>
             ) : null}
             <div
@@ -167,6 +169,31 @@ export function LiveLeagueRounds({
           localizedMatchSlugs={localizedMatchSet}
         />
       </section>}
+
+      {surface.flat ? null : (surface.additional ?? []).map((section, index) => (
+        <section className="league-round-section" aria-labelledby={`upcoming-round-${index}-heading`} key={String(section.round)}>
+          <div className="section-heading section-heading--compact league-next-round-heading">
+            <div className="heading-with-icon">
+              <span className="section-icon" aria-hidden="true">+</span>
+              <div>
+                <span className="eyebrow">{t("fixtures")}</span>
+                <h2 id={`upcoming-round-${index}-heading`}>{roundLabel(section.round, locale)}</h2>
+              </div>
+            </div>
+            <span className="league-match-count" aria-label={`${section.matches.length} ${copy.count}`}>
+              {section.matches.length}
+            </span>
+          </div>
+          <RoundFixtures
+            section={section}
+            surfaceName="next"
+            emptyMessage={copy.unavailable}
+            locale={locale}
+            indexableMatchSlugs={indexableMatchSet}
+            localizedMatchSlugs={localizedMatchSet}
+          />
+        </section>
+      ))}
     </div>
   );
 }

@@ -106,29 +106,11 @@ export default async function LocalizedLeague({
     now: new Date(),
   });
 
-  const activePublishedSlugs = new Set(
-    [
-      ...(roundSurface.current?.matches ?? []),
-      ...(roundSurface.next?.matches ?? []),
-    ]
-      .filter((match) => match.status === "published")
-      .map((match) => match.slug)
-  );
-
   // Kickoff-based split (timezone-aware, per league): a match whose kickoff
   // has already passed is archived, never shown alongside active fixtures,
   // regardless of whether an automated fixture feed exists for this league.
-  const surfacedPublishedMatches = [...publishedMatches]
-    .filter((match) => !activePublishedSlugs.has(match.slug) && !isFixtureHistoryEligible(match))
-    .sort(
-      (left, right) =>
-        left.date.localeCompare(right.date) ||
-        left.time.localeCompare(right.time) ||
-        left.title.localeCompare(right.title)
-    );
-
   const archivedPublishedMatches = [...publishedMatches]
-    .filter((match) => !activePublishedSlugs.has(match.slug) && isFixtureHistoryEligible(match))
+    .filter((match) => isFixtureHistoryEligible(match))
     .sort(
       (left, right) =>
         (right.publishedAt ?? "").localeCompare(left.publishedAt ?? "") ||
@@ -136,10 +118,7 @@ export default async function LocalizedLeague({
     )
     .slice(0, 12);
 
-  const publishedAnalysisMatches = [
-    ...surfacedPublishedMatches,
-    ...archivedPublishedMatches,
-  ];
+  const publishedAnalysisMatches = archivedPublishedMatches;
 
   const localizedMatchSlugs = Object.keys(localizedEditorialBySlug)
     .filter((matchSlug) => hasCompleteLocalizedEditorial(matchSlug, locale));

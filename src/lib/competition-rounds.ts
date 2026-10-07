@@ -17,10 +17,63 @@ export type CompetitionRoundSurface = {
   sourceState: CompetitionRoundSourceState;
   current: CompetitionRoundSection | null;
   next: CompetitionRoundSection | null;
+  additional?: CompetitionRoundSection[];
   followingRound: number | string | null;
   /** All active fixtures in one kickoff-ordered list (no round grouping). */
   flat?: boolean;
 };
+
+function normalizedRoundKey(value: string | number | undefined) {
+  const text = String(value ?? "Current Round").trim().toLowerCase();
+  const number = text.match(/\d+/)?.[0];
+  return number
+    ? `round:${number}`
+    : text.replace(/(?:matchday|round|league)/g, "").replace(/\s+/g, " ").trim();
+}
+
+function mergePublishedActive(
+  surface: CompetitionRoundSurface,
+  publishedMatches: MatchPreview[],
+  now: Date | string,
+): CompetitionRoundSurface {
+  const active = publishedMatches.filter((match) =>
+    match.status === "published" &&
+    isActiveFixtureState(classifyFixture({ ...match, status: match.fixtureStatus ?? "scheduled" }, now))
+  );
+  const sections = [surface.current, surface.next, ...(surface.additional ?? [])].filter(
+    (section): section is CompetitionRoundSection => Boolean(section)
+  );
+  const known = new Set(sections.flatMap((section) => section.matches.map((match) => match.slug)));
+
+  for (const match of active) {
+    if (known.has(match.slug)) continue;
+    const key = normalizedRoundKey(match.round);
+    let section = sections.find((candidate) => normalizedRoundKey(candidate.round) === key);
+    if (!section) {
+      section = { round: match.round || "Upcoming fixtures", factualFixtures: [], matches: [] };
+      sections.push(section);
+    }
+    section.matches.push(match);
+    known.add(match.slug);
+  }
+
+  for (const section of sections) section.matches = sortMatchesByKickoff(section.matches);
+  sections.sort((left, right) => {
+    const leftFirst = left.matches[0];
+    const rightFirst = right.matches[0];
+    return `${leftFirst?.date ?? ""}T${leftFirst?.time ?? ""}`.localeCompare(
+      `${rightFirst?.date ?? ""}T${rightFirst?.time ?? ""}`
+    );
+  });
+
+  return {
+    ...surface,
+    current: sections[0] ?? null,
+    next: sections[1] ?? null,
+    additional: sections.slice(2),
+    followingRound: sections[2]?.round ?? null,
+  };
+}
 
 // Competitions whose fixtures are shown as a single chronological queue so no
 // matchday/group can hide upcoming games.
@@ -180,10 +233,19 @@ function editorialFallback(manualMatches: MatchPreview[], now: Date | string): C
   }
 
   const currentRound = active[0].round || "Current Round";
-  const currentMatches = active.filter((match) => (match.round || "Current Round") === currentRound);
+  const currentKey = normalizedRoundKey(currentRound);
+  const currentMatches = active.filter((match) => normalizedRoundKey(match.round) === currentKey);
   const laterRounds = active.filter((match) => !currentMatches.includes(match));
   const nextRound = laterRounds[0]?.round;
-  const nextMatches = nextRound ? laterRounds.filter((match) => match.round === nextRound) : [];
+  const nextKey = normalizedRoundKey(nextRound);
+  const nextMatches = nextRound ? laterRounds.filter((match) => normalizedRoundKey(match.round) === nextKey) : [];
+  const remaining = laterRounds.filter((match) => !nextMatches.includes(match));
+  const additional = [...new Map(remaining.map((match) => [normalizedRoundKey(match.round), match.round])).values()]
+    .map((round) => ({
+      round,
+      factualFixtures: [],
+      matches: remaining.filter((match) => normalizedRoundKey(match.round) === normalizedRoundKey(round)),
+    }));
 
   return {
     sourceState: "editorial-fallback",
@@ -193,7 +255,8 @@ function editorialFallback(manualMatches: MatchPreview[], now: Date | string): C
       matches: currentMatches,
     },
     next: nextRound ? { round: nextRound, factualFixtures: [], matches: nextMatches } : null,
-    followingRound: null,
+    additional,
+    followingRound: additional[0]?.round ?? null,
   };
 }
 
@@ -242,10 +305,10 @@ function buildRoundSurface(input: {
 }
 
 export function buildCompetitionRoundSurface(input: Parameters<typeof buildRoundSurface>[0]): CompetitionRoundSurface {
-  const surface = buildRoundSurface(input);
+  const now = input.now ?? new Date();
+  const surface = mergePublishedActive(buildRoundSurface(input), input.publishedMatches, now);
   if (!FLAT_FIXTURE_LEAGUES.has(input.league)) return surface;
   // Factual schedules can lag behind published editorial fixtures; merge both.
-  const now = input.now ?? new Date();
   const active = sortMatchesByKickoff(input.publishedMatches.filter((match) =>
     match.status === "published" &&
     isActiveFixtureState(classifyFixture({ ...match, status: match.fixtureStatus ?? "scheduled" }, now))

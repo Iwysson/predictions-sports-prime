@@ -3,6 +3,7 @@ import type { Match } from "@/types";
 import { localePath, type SeoLocale } from "@/lib/seo-locales";
 import { sortFreePredictionsFirst } from "@/lib/match-access";
 import { AccessBadge } from "@/components/AccessBadge";
+import { isFixtureHistoryEligible } from "@/lib/fixture-state";
 
 export function LeaguePublishedAnalysis({
   leagueName,
@@ -31,9 +32,9 @@ export function LeaguePublishedAnalysis({
   const indexableSet = indexableMatchSlugs
     ? new Set(indexableMatchSlugs)
     : null;
-  const discoverableMatches = indexableSet
+  const discoverableMatches = (indexableSet
     ? matches.filter((match) => indexableSet.has(match.slug))
-    : matches;
+    : matches).filter((match) => isFixtureHistoryEligible(match));
   const matchHref = (slug: string) =>
     locale !== "en" && localizedSet.has(slug)
       ? localePath(locale, `/match/${slug}/`)

@@ -120,7 +120,7 @@ export function buildContentIndex(
 export function listingLabel(item: { analysisAccess?: PredictionAccess; predictionAccess?: PredictionAccess; bestAnalysis?: boolean }, locale: string, fallback: string): string {
   if (item.predictionAccess === "free") return translate(locale, "matchFreePrediction");
   // BEST BET is a public badge on protected content: it names the tier without revealing the pick or odds.
-  if (item.bestAnalysis) return "★ BEST BET";
+  if (item.bestAnalysis) return "BEST BET";
   if (item.analysisAccess === "vip" || item.predictionAccess === "vip") return translate(locale, "matchListVip");
   return fallback;
 }
@@ -137,15 +137,16 @@ export function accessBadgeKind(item: { analysisAccess?: PredictionAccess; predi
 
 export const accessBadgeLabel: Record<AccessBadgeKind, string> = {
   free: "FREE TO VIEW",
-  best: "★ BEST BET",
+  best: "BEST BET",
   vip: "PRIME VIP",
 };
 
-export function sortFreePredictionsFirst<T extends { predictionAccess?: PredictionAccess }>(items: readonly T[]): T[] {
+export function sortFreePredictionsFirst<T extends { predictionAccess?: PredictionAccess; bestAnalysis?: boolean; date?: string; time?: string }>(items: readonly T[]): T[] {
   return [...items].sort((left, right) => {
-    const leftRank = left.predictionAccess === "free" ? 0 : left.predictionAccess === "vip" ? 1 : 2;
-    const rightRank = right.predictionAccess === "free" ? 0 : right.predictionAccess === "vip" ? 1 : 2;
-    return leftRank - rightRank;
+    const rank = (item: T) => item.predictionAccess === "free" ? 0 : item.bestAnalysis ? 1 : item.predictionAccess === "vip" ? 2 : 3;
+    return rank(left) - rank(right) ||
+      (left.date ?? "").localeCompare(right.date ?? "") ||
+      (left.time ?? "").localeCompare(right.time ?? "");
   });
 }
 

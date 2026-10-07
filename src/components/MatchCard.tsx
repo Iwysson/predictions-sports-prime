@@ -72,12 +72,14 @@ export function MatchCard({
       </div>
 
       <div className="compact-match-footer">
-        <span className={`prediction-pill prediction-pill--${live ? "live" : match.status}`}>
-          <span aria-hidden="true">✓</span>
-          {live ? localizedLive(locale) : match.status === "published"
-            ? listingLabel(match, locale, t("predictionAvailable"))
-            : showComingSoon ? t("comingSoon") : localizedFixtureStatus(match.fixtureStatus, locale)}
-        </span>
+        {match.bestAnalysis && match.status === "published" ? null : (
+          <span className={`prediction-pill prediction-pill--${live ? "live" : match.status}`}>
+            <span aria-hidden="true">✓</span>
+            {live ? localizedLive(locale) : match.status === "published"
+              ? listingLabel(match, locale, t("predictionAvailable"))
+              : showComingSoon ? t("comingSoon") : localizedFixtureStatus(match.fixtureStatus, locale)}
+          </span>
+        )}
 
         {match.status === "published" && discoverable ? (
           <Link
