@@ -294,6 +294,9 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "Estoril": generatedTeamBadgeAssets["Estoril Praia"],
   "Porto": generatedTeamBadgeAssets["FC Porto"],
   "SC Braga": generatedTeamBadgeAssets["Braga"],
+  "Nacional": generatedTeamBadgeAssets["C.D. Nacional"],
+  "Vitória de Guimarães": generatedTeamBadgeAssets["Vitória de Guimaraes"],
+  "Vitória Guimarães": generatedTeamBadgeAssets["Vitória de Guimaraes"],
 
   // Scottish aliases (without accent / alternative spellings)
   "Dundee FC": generatedTeamBadgeAssets["Dundee"],
