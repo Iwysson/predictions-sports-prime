@@ -135,7 +135,7 @@ function MultipleLeg({ first, leg }: { first: boolean; leg: NhlPublicMultiple["l
   );
 }
 
-function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: string; liveGames: LiveGame[] }) {
+function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: string | null; liveGames: LiveGame[] }) {
   const isFree = m.access === "free";
   const badgeItem = {
     predictionAccess: isFree ? ("free" as const) : ("vip" as const),
@@ -151,7 +151,7 @@ function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: str
         </div>
         <p className="psp-game__meta">
           <NhlLeagueMark compact />
-          <span>· {dayLabel} · Kick-off time not listed</span>
+          <span>{dayLabel ? `· ${dayLabel} ` : ""}· Kick-off time not listed</span>
         </p>
       </div>
 
@@ -194,10 +194,14 @@ function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: str
 export function NhlDaySlate({ initialKey }: { initialKey: string }) {
   const dayKey = useNhlTodayKey(initialKey);
   const liveGames = useNhlLiveGames(dayKey);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const slate = resolveNhlSlate(dayKey);
   if (!slate) return null;
 
-  const dayLabel = formatNhlDayLabel(slate.dayKey);
+  // The static HTML carries no current-day text: the date is rendered only after mount, so crawlers
+  // and search snippets never see a build-day date. It still follows America/New_York at runtime.
+  const dayLabel = mounted ? formatNhlDayLabel(slate.dayKey) : null;
   const matches = sortNhlMatches(slate.matches);
   const free = matches.filter((m) => m.access === "free");
   const protectedGames = matches.filter((m) => m.access !== "free");
@@ -208,11 +212,12 @@ export function NhlDaySlate({ initialKey }: { initialKey: string }) {
       <header className="psp-hero">
         <span className="psp-hero__eyebrow psp-hero__eyebrow--nhl">
           <NhlLeagueMark compact />
-          <span>· {dayLabel}</span>
+          <span>· NHL</span>
         </span>
-        <h1>{`NHL Predictions Today – ${dayLabel}`}</h1>
+        <h1>NHL Predictions Today</h1>
+        <p className="psp-hero__date" style={{ minHeight: "1.5em", fontWeight: 600 }}>{dayLabel}</p>
         <p>
-          {matches.length} NHL games on {dayLabel}. {free.length} {analyses(free.length)} {free.length === 1 ? "is" : "are"}{" "}
+          {matches.length} NHL games today. {free.length} {analyses(free.length)} {free.length === 1 ? "is" : "are"}{" "}
           published in full for everyone. The remaining {protectedGames.length} {protectedGames.length === 1 ? "is" : "are"}{" "}
           exclusive to PRIME VIP members.
         </p>
@@ -259,7 +264,7 @@ export function NhlDaySlate({ initialKey }: { initialKey: string }) {
 
       <section className="psp-matchup-directory" aria-labelledby="nhl-matchups-title">
         <div className="psp-game-group__heading">
-          <h2 id="nhl-matchups-title">{`All NHL Matchups – ${dayLabel}`}</h2>
+          <h2 id="nhl-matchups-title">{dayLabel ? `All NHL Matchups – ${dayLabel}` : "All NHL Matchups"}</h2>
         </div>
         <nav className="psp-jump" aria-label="NHL games on this page">
           {matches.map((m) => (

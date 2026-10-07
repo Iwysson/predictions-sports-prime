@@ -51,11 +51,11 @@ export function nhlMatches(): NhlMatch[] {
   });
 }
 
-// Evergreen static metadata: the static export cannot date it, so the day lives only in the client H1.
+// Evergreen static metadata: the static export cannot date it, so the day lives only in a separate client-rendered line.
 export const NHL_PAGE = {
-  title: "NHL Predictions Today | Predictions Sports Prime",
+  title: "NHL Predictions Today, Picks & Analysis | Predictions Sports Prime",
   description:
-    "Today's NHL predictions, statistical analysis, free picks and PRIME VIP insights from Predictions Sports Prime.",
+    "Daily NHL predictions, picks and match analysis from Predictions Sports Prime, including FREE selections, BEST BET analysis and PRIME VIP coverage.",
   path: "/nhl/",
   h1: "NHL Predictions Today",
 };
