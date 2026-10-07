@@ -31,19 +31,26 @@ function gtag(..._args: unknown[]) {
 }
 
 /**
- * GA4 with Consent Mode. Defaults (all denied) are set in ConsentIntegration.
- * gtag.js is loaded only after the visitor grants analytics storage, which
- * this component updates via `consent update`. Advertising signals are never
- * touched here; they remain governed by the TCF CMP used for AdSense.
- * page_view is sent manually (send_page_view: false) for the first load and
- * every client-side route change, once per pathname.
+ * GA4 with Consent Mode v2. Defaults (all denied) are set in ConsentIntegration, before this
+ * component or gtag.js ever runs. Per Google's own Consent Mode design, gtag.js must load
+ * unconditionally and is told to behave via `consent` state, not via whether the script tag
+ * exists at all: when `analytics_storage` is denied, the tag sends only cookieless, unidentified
+ * pings (no cookies, no storage, no per-visitor id) that Google may model in aggregate; it does
+ * NOT silently stop sending anything. Gating the script tag itself behind explicit consent (the
+ * previous implementation) throws that modeled signal away entirely and undercounts real traffic
+ * by an order of magnitude, which is why GA4 can show far fewer sessions than Cloudflare Web
+ * Analytics (cookieless by design, unaffected by this consent gate) for the same traffic.
+ * `consent update` still flips to "granted"/"denied" from the banner, which is what actually
+ * controls whether a cookie/identifier is set — the privacy guarantee lives there, not in
+ * whether gtag.js loads. page_view is sent manually (send_page_view: false) for the first load
+ * and every client-side route change, once per pathname, regardless of the consent choice.
  */
 export function SiteAnalytics() {
   const pathname = usePathname();
   const [choice, setChoice] = useState<Choice | null>(null);
   const [ready, setReady] = useState(false);
   const [open, setOpen] = useState(false);
-  const configured = useRef(false);
+  const [configured, setConfigured] = useState(false);
   const lastPath = useRef<string | null>(null);
 
   useEffect(() => {
@@ -57,44 +64,39 @@ export function SiteAnalytics() {
     writeChoice(next);
     setChoice(next);
     setOpen(false);
-    if (next === "denied") {
-      gtag("consent", "update", { analytics_storage: "denied" });
-      (window as unknown as Record<string, unknown>)[`ga-disable-${GA_MEASUREMENT_ID}`] = true;
-    }
   }, []);
 
-  const granted = ready && choice === "granted";
-
   useEffect(() => {
-    if (!granted) return;
-    (window as unknown as Record<string, unknown>)[`ga-disable-${GA_MEASUREMENT_ID}`] = false;
-    gtag("consent", "update", { analytics_storage: "granted" });
-    if (!configured.current) {
-      configured.current = true;
-      gtag("js", new Date());
-      gtag("config", GA_MEASUREMENT_ID, { send_page_view: false });
-    }
-  }, [granted]);
+    if (!ready || choice === null) return;
+    gtag("consent", "update", { analytics_storage: choice });
+  }, [ready, choice]);
 
+  const configure = useCallback(() => {
+    gtag("js", new Date());
+    gtag("config", GA_MEASUREMENT_ID, { send_page_view: false });
+    setConfigured(true);
+  }, []);
+
+  // Wait for `config` to have been pushed before the first `event page_view`, so gtag.js
+  // processes the dataLayer queue in the order GA4 expects (config, then events).
   useEffect(() => {
-    if (!granted || lastPath.current === pathname) return;
+    if (!configured || lastPath.current === pathname) return;
     lastPath.current = pathname;
     gtag("event", "page_view", {
       page_location: window.location.href,
       page_path: pathname,
       page_title: document.title,
     });
-  }, [granted, pathname]);
+  }, [configured, pathname]);
 
   return (
     <>
-      {granted ? (
-        <Script
-          id="ga4-gtag"
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        />
-      ) : null}
+      <Script
+        id="ga4-gtag"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        onLoad={configure}
+      />
       {ready && open ? (
         <div
           role="dialog"
