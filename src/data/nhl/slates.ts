@@ -4,7 +4,7 @@ import type { NhlPublicSlate } from "@/lib/nhl-slates";
 
 // Every NHL day with a slate, oldest first. Adding a day here (and its protected entries) is the
 // only change a new NHL day needs. The active slate is the latest one whose day has started.
-const SLATES: NhlPublicSlate[] = [
+export const SLATES: NhlPublicSlate[] = [
   {
     dayKey: "2026-10-06",
     matches: NHL_PUBLIC_SLATE_OCT_06,
@@ -35,4 +35,16 @@ export function resolveNhlSlate(todayKey: string): NhlPublicSlate | null {
     if (slate.dayKey <= todayKey) active = slate;
   }
   return active;
+}
+
+// The exact slate published for `dayKey`, or null if no slate was published that day. Unlike
+// resolveNhlSlate, this never falls back to an earlier day — used by history/settlement, which
+// must only ever grade a prediction that was actually published for that day.
+export function findNhlSlateForDay(dayKey: string): NhlPublicSlate | null {
+  return SLATES.find((slate) => slate.dayKey === dayKey) ?? null;
+}
+
+// Every published NHL day, oldest first. Adding a day to SLATES is the only change this needs.
+export function allNhlDayKeys(): string[] {
+  return SLATES.map((slate) => slate.dayKey);
 }

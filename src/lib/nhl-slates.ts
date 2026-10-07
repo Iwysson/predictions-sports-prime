@@ -22,7 +22,15 @@ export type NhlPublicMatch = {
 export type NhlPublicMultiple = {
   title: string;
   badge: string;
-  legs: Array<{ fixture: string; teams: [string, string] | null; pick: string; odds: number | null }>;
+  legs: Array<{
+    fixture: string;
+    teams: [string, string] | null;
+    pick: string;
+    odds: number | null;
+    // Present only for a non-NHL leg, so its competition can be identified and badged (for
+    // example Brasileirão Série A). An NHL leg is identified by its teams instead.
+    league?: { slug: string; short: string; name: string };
+  }>;
   combinedOdds: number | null;
   comment: string;
 };

@@ -119,3 +119,38 @@ export function liveBadgeText(game: LiveGame | null): string | null {
   if (!game || game.state !== "live") return null;
   return ["LIVE", game.period, game.clock].filter(Boolean).join(" · ");
 }
+
+// Final-score extraction, used only by history/settlement (never by the LIVE badge path above).
+// Kept separate from normalizeScore so the existing LIVE payload shape/contract is never touched.
+export type FinalScoreGame = {
+  home: string; // official abbreviation
+  away: string; // official abbreviation
+  homeScore: number;
+  awayScore: number;
+  state: MatchStatus;
+};
+
+export function normalizeFinalScores(payload: unknown): FinalScoreGame[] | null {
+  const games = (payload as { games?: unknown } | null)?.games;
+  if (!Array.isArray(games)) return null;
+  const out: FinalScoreGame[] = [];
+  for (const g of games) {
+    const game = g as Record<string, any> | null;
+    const home = game?.homeTeam?.abbrev;
+    const away = game?.awayTeam?.abbrev;
+    const homeScore = game?.homeTeam?.score;
+    const awayScore = game?.awayTeam?.score;
+    if (typeof game?.id !== "number" || typeof home !== "string" || typeof away !== "string") continue;
+    if (typeof homeScore !== "number" || typeof awayScore !== "number") continue;
+    out.push({ home, away, homeScore, awayScore, state: mapGameState(game.gameState) });
+  }
+  return out;
+}
+
+// Matches a slate game to its final score by official abbreviations, same rule as findLiveGame.
+export function findFinalScore(games: FinalScoreGame[], homeTeam: string, awayTeam: string): FinalScoreGame | null {
+  const home = NHL_ABBREV[homeTeam];
+  const away = NHL_ABBREV[awayTeam];
+  if (!home || !away) return null;
+  return games.find((g) => g.home === home && g.away === away) ?? null;
+}

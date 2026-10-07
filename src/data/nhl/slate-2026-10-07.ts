@@ -48,7 +48,13 @@ export const NHL_PUBLIC_MULTIPLE_OCT_07: NhlPublicMultiple = {
   badge: "FREE TO VIEW",
   legs: [
     { fixture: "Colorado Avalanche vs Winnipeg Jets", teams: ["Colorado Avalanche", "Winnipeg Jets"], pick: "Colorado Avalanche to Win", odds: 1.65 },
-    { fixture: "Cruzeiro vs São Paulo", teams: null, pick: "Cruzeiro X1 + Over 1.5 Goals", odds: 1.67 },
+    {
+      fixture: "Cruzeiro vs São Paulo",
+      teams: null,
+      pick: "Cruzeiro X1 + Over 1.5 Goals",
+      odds: 1.67,
+      league: { slug: "brasileirao-serie-a", short: "BRA", name: "Brazilian Série A" },
+    },
   ],
   combinedOdds: 2.76,
   comment:

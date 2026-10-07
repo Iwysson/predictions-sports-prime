@@ -4713,6 +4713,9 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   .home-editorial-highlights strong { overflow-wrap: anywhere; }
   .home-best-multiple,
   .prime-vip-offer { min-width: 0; }
+  .nhl-history__row { grid-template-columns: 1fr; }
+  .nhl-history__status { justify-self: start; }
+  .nhl-history__summary { flex-direction: column; }
 }
 @media (max-width: 520px) {
   .page-hero h1, .league-title-copy h1 { overflow-wrap: anywhere; }
@@ -4752,6 +4755,42 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .nhl-league-mark--compact { gap: 6px; font-size: 12px; }
 .nhl-league-mark--compact img { width: 24px; height: 24px; }
 .nhl-page-best-multiple { margin-top: 28px; }
+.nhl-moneyline-note { margin: 14px 0 0; padding: 10px 14px; border-radius: 10px; border: 1px dashed var(--border-strong); background: var(--surface-subtle); font-size: 13px; color: var(--text-secondary); }
+.nhl-moneyline-note strong { color: var(--text-primary); }
+.home-best-multiple__fixture-meta { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 20px; }
+.home-best-multiple__league { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: #cce6d8; }
+.home-best-multiple__league .league-logo { width: 18px; height: 18px; }
+
+/* ===== NHL Prediction History ===== */
+.nhl-history { margin-top: 28px; display: grid; gap: 16px; padding: clamp(20px, 3vw, 30px); border: 1px solid var(--border); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); }
+.nhl-history__head { display: grid; gap: 6px; }
+.nhl-history__head h2 { margin: 0; font-size: clamp(22px, 3vw, 30px); color: var(--text-primary); }
+.nhl-history__head p { margin: 0; color: var(--text-secondary); max-width: 68ch; }
+.nhl-history__summary { display: flex; flex-wrap: wrap; gap: 12px; }
+.nhl-history__stat { display: grid; gap: 2px; padding: 10px 16px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-subtle); min-width: 150px; }
+.nhl-history__stat span { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); }
+.nhl-history__stat strong { font-size: 24px; color: var(--accent); }
+.nhl-history__days { display: grid; gap: 14px; }
+.nhl-history__day { border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; background: var(--surface-subtle); }
+.nhl-history__day-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 10px; }
+.nhl-history__day-head h3 { margin: 0; font-size: 16px; color: var(--text-primary); }
+.nhl-history__day-head span { font-size: 13px; color: var(--text-muted); }
+.nhl-history__rows { display: grid; gap: 8px; }
+.nhl-history__row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; background: var(--surface); border: 1px solid var(--border); }
+.nhl-history__fixture { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-secondary); min-width: 0; }
+.nhl-history__fixture .team-logo { width: 20px; height: 24px; }
+.nhl-history__pick { font-size: 13px; color: var(--text-primary); }
+.nhl-history__pick b { color: var(--accent); }
+.nhl-history__status { justify-self: end; padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.nhl-history__status--win { background: color-mix(in srgb, var(--success) 16%, var(--surface)); color: var(--success); border: 1px solid color-mix(in srgb, var(--success) 40%, var(--border)); }
+.nhl-history__status--loss { background: #2a1414; color: #f5a3a3; border: 1px solid #7a2525; }
+.nhl-history__status--push, .nhl-history__status--unsupported { background: var(--surface-subtle); color: var(--text-muted); border: 1px solid var(--border); }
+.nhl-history__status--pending { background: #241f10; color: #e0c878; border: 1px solid #6a5a24; }
+.nhl-history__toggle { justify-self: start; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-subtle); color: var(--text-primary); font-weight: 700; cursor: pointer; }
+.nhl-history__toggle:hover { border-color: var(--accent); color: var(--accent); }
+.nhl-history__cta { margin: 0; padding: 14px 16px; border-radius: 12px; background: #1d1a12; color: #e7dcbc; border: 1px solid #8a6d20; font-size: 14px; }
+.nhl-history__cta strong { color: #f3d98b; }
+.nhl-history__cta a { color: #f3d98b; text-decoration: underline; }
 .psp-game__teaser { margin: 0; color: var(--text-secondary); font-size: 16px; line-height: 1.6; }
 .psp-pick { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; padding: 16px 18px; border-radius: 12px; background: var(--surface-subtle); border: 1px solid var(--border); }
 .psp-pick__label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); }

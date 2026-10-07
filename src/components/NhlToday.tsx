@@ -2,16 +2,19 @@
 
 import { useEffect, useState } from "react";
 import { AccessBadge } from "@/components/AccessBadge";
+import { LeagueBadge } from "@/components/LeagueBadge";
 import { MatchFullContent } from "@/components/MatchFullContent";
 import { MatchGate } from "@/components/MatchGate";
 import { MatchStatusBadge } from "@/components/MatchStatusBadge";
 import { NhlLeagueMark } from "@/components/NhlBestMultiple";
+import { NhlMoneylineNote } from "@/components/NhlMoneylineNote";
 import { TeamBadge } from "@/components/TeamBadge";
 import { resolveNhlSlate } from "@/data/nhl/slates";
 import { translate } from "@/i18n/dictionaries";
 import { formatNhlDayLabel, getNhlTodayKey } from "@/lib/nhl-day";
 import { findLiveGame, liveBadgeText, type LiveGame } from "@/lib/nhl-live";
 import { sortNhlMatches, type NhlPublicMatch, type NhlPublicMultiple } from "@/lib/nhl-slates";
+import { formatOddsPair } from "@/lib/odds";
 
 // Live games for the given NHL day, from the runtime endpoint only. Polls every 60s, or every 30s
 // while a game is live; skips polling while the tab is hidden. Any failure clears the list, so a
@@ -92,7 +95,7 @@ export function NhlBestMultiple({ headingId = "nhl-best-multiple-title", initial
         ))}
       </div>
       <p>
-        {multiple.combinedOdds !== null ? `Combined odds: ${multiple.combinedOdds.toFixed(2)}. ` : ""}
+        {multiple.combinedOdds !== null ? `Combined odds: ${formatOddsPair(multiple.combinedOdds)}. ` : ""}
         {multiple.comment}
       </p>
     </article>
@@ -100,10 +103,20 @@ export function NhlBestMultiple({ headingId = "nhl-best-multiple-title", initial
 }
 
 function MultipleLeg({ first, leg }: { first: boolean; leg: NhlPublicMultiple["legs"][number] }) {
+  const isNhlLeg = leg.teams !== null && !leg.league;
   return (
     <>
       {first ? null : <b aria-hidden="true">+</b>}
       <div>
+        <span className="home-best-multiple__fixture-meta">
+          {isNhlLeg ? <NhlLeagueMark compact /> : null}
+          {leg.league ? (
+            <span className="home-best-multiple__league">
+              <LeagueBadge slug={leg.league.slug} short={leg.league.short} size="sm" />
+              <span>{leg.league.name}</span>
+            </span>
+          ) : null}
+        </span>
         <span className="home-best-multiple__fixture">
           {leg.teams ? <TeamBadge team={leg.teams[0]} size="sm" /> : null}
           <span>{leg.fixture}</span>
@@ -111,7 +124,7 @@ function MultipleLeg({ first, leg }: { first: boolean; leg: NhlPublicMultiple["l
         </span>
         <strong>
           {leg.pick}
-          {leg.odds !== null ? ` @${leg.odds.toFixed(2)}` : ""}
+          {leg.odds !== null ? ` @${formatOddsPair(leg.odds)}` : ""}
         </strong>
       </div>
     </>
@@ -153,7 +166,7 @@ function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: str
             </div>
             <div className="psp-pick__odds">
               <span className="psp-pick__label">{L.odds}</span>
-              <strong>{m.odds.toFixed(2)}</strong>
+              <strong>{formatOddsPair(m.odds)}</strong>
             </div>
           </div>
           <MatchFullContent
@@ -209,6 +222,8 @@ export function NhlDaySlate({ initialKey }: { initialKey: string }) {
           </span>
         </div>
       </header>
+
+      <NhlMoneylineNote />
 
       <section className="nhl-page-best-multiple" aria-labelledby="nhl-page-best-multiple-title">
         <NhlBestMultiple headingId="nhl-page-best-multiple-title" initialKey={initialKey} />
