@@ -920,5 +920,275 @@ export const generatedTeamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "Utrecht": {
     "src": "/team-badges/utrecht.png",
     "sourceUrl": "https://eredivisie.b-cdn.net/production/clubs/fc-utrecht/FCUtrecht_Logo.png?height=256&quality=90&width=256"
-  }
+  },
+  // Wikipedia: "Red Bull Bragantino"
+  "Bragantino": {
+    "src": "/team-badges/bragantino.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2e/Red_Bull_Bragantino_logo.svg/330px-Red_Bull_Bragantino_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "SV Elversberg"
+  "Elversberg": {
+    "src": "/team-badges/elversberg.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/SV_Elversberg_Logo_2021.svg/330px-SV_Elversberg_Logo_2021.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "SC Freiburg"
+  "Freiburg": {
+    "src": "/team-badges/freiburg.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6d/SC_Freiburg_logo.svg/330px-SC_Freiburg_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "TSG 1899 Hoffenheim"
+  "Hoffenheim": {
+    "src": "/team-badges/hoffenheim.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_TSG_Hoffenheim.svg/960px-Logo_TSG_Hoffenheim.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Nottingham Forest F.C."
+  "Nottingham Forest": {
+    "src": "/team-badges/nottingham-forest.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e5/Nottingham_Forest_F.C._logo.svg/120px-Nottingham_Forest_F.C._logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Paris Saint-Germain FC"
+  "Paris Saint-Germain": {
+    "src": "/team-badges/paris-saint-germain.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/330px-Paris_Saint-Germain_F.C..svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Parma Calcio 1913"
+  "Parma": {
+    "src": "/team-badges/parma.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Logo_Parma_Calcio_1913_%28adozione_2016%29.svg/250px-Logo_Parma_Calcio_1913_%28adozione_2016%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Preston North End F.C."
+  "Preston North End": {
+    "src": "/team-badges/preston-north-end.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/82/Preston_North_End_FC.svg/330px-Preston_North_End_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Queens Park Rangers F.C."
+  "QPR": {
+    "src": "/team-badges/qpr.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/31/Queens_Park_Rangers_crest.svg/330px-Queens_Park_Rangers_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Racing de Santander"
+  "Racing Santander": {
+    "src": "/team-badges/racing-santander.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f5/Racing_de_Santander_logo.svg/120px-Racing_de_Santander_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "RB Leipzig"
+  "RB Leipzig": {
+    "src": "/team-badges/rb-leipzig.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/RB_Leipzig_2014_logo.svg/500px-RB_Leipzig_2014_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Real Betis"
+  "Real Betis": {
+    "src": "/team-badges/real-betis.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2f/Real_Betis_2022_logo.svg/500px-Real_Betis_2022_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Real Madrid CF"
+  "Real Madrid": {
+    "src": "/team-badges/real-madrid.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/330px-Real_Madrid_CF.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Real Sociedad"
+  "Real Sociedad": {
+    "src": "/team-badges/real-sociedad.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f1/Real_Sociedad_logo.svg/250px-Real_Sociedad_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Stade Rennais FC"
+  "Rennes": {
+    "src": "/team-badges/rennes.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9e/Stade_Rennais_FC.svg/330px-Stade_Rennais_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Rosenborg BK"
+  "Rosenborg": {
+    "src": "/team-badges/rosenborg.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Rosenborg_logo_RGB.svg/960px-Rosenborg_logo_RGB.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Sandefjord Fotball"
+  "Sandefjord": {
+    "src": "/team-badges/sandefjord.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e6/Sandefjord_Fotball_logo.svg/250px-Sandefjord_Fotball_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "C.D. Santa Clara"
+  "Santa Clara": {
+    "src": "/team-badges/santa-clara.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/37/C.D._Santa_Clara_logo.svg/330px-C.D._Santa_Clara_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Santos FC"
+  "Santos": {
+    "src": "/team-badges/santos.png",
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Santos_Logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  },
+  // Wikipedia: "São Paulo FC"
+  "São Paulo": {
+    "src": "/team-badges/sao-paulo.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/S%C3%A3o_Paulo_Futebol_Clube_logo_%282022%29.svg/60px-S%C3%A3o_Paulo_Futebol_Clube_logo_%282022%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Sarpsborg 08 FF"
+  "Sarpsborg 08": {
+    "src": "/team-badges/sarpsborg-08.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Sarpsborg_08_FF_logo.svg/500px-Sarpsborg_08_FF_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "US Sassuolo Calcio"
+  "Sassuolo": {
+    "src": "/team-badges/sassuolo.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1c/US_Sassuolo_Calcio_logo.svg/330px-US_Sassuolo_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Sevilla FC"
+  "Sevilla": {
+    "src": "/team-badges/sevilla.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3b/Sevilla_FC_logo.svg/250px-Sevilla_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Sheffield United F.C."
+  "Sheffield United": {
+    "src": "/team-badges/sheffield-united.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9c/Sheffield_United_FC_logo.svg/330px-Sheffield_United_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Southampton F.C."
+  "Southampton": {
+    "src": "/team-badges/southampton.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c9/FC_Southampton.svg/330px-FC_Southampton.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Sporting CP"
+  "Sporting CP": {
+    "src": "/team-badges/sporting-cp.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg/250px-Sporting_Clube_de_Portugal_logo_%282026%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "IK Start"
+  "Start": {
+    "src": "/team-badges/start.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Start_Kristiansand_Logo.svg/960px-Start_Kristiansand_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Stoke City F.C."
+  "Stoke City": {
+    "src": "/team-badges/stoke-city.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/bf/Stoke_City_FC_crest_2026.svg/330px-Stoke_City_FC_crest_2026.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "RC Strasbourg Alsace"
+  "Strasbourg": {
+    "src": "/team-badges/strasbourg.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/80/Racing_Club_de_Strasbourg_logo.svg/330px-Racing_Club_de_Strasbourg_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "VfB Stuttgart"
+  "Stuttgart": {
+    "src": "/team-badges/stuttgart.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/VfB_Stuttgart_1893_Logo.svg/500px-VfB_Stuttgart_1893_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Sunderland A.F.C."
+  "Sunderland": {
+    "src": "/team-badges/sunderland.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/77/Logo_Sunderland.svg/330px-Logo_Sunderland.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Swansea City A.F.C."
+  "Swansea City": {
+    "src": "/team-badges/swansea-city.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f9/Swansea_City_AFC_logo.svg/330px-Swansea_City_AFC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Torino FC"
+  "Torino": {
+    "src": "/team-badges/torino.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2e/Torino_FC_Logo.svg/330px-Torino_FC_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Tottenham Hotspur F.C."
+  "Tottenham Hotspur": {
+    "src": "/team-badges/tottenham-hotspur.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/120px-Tottenham_Hotspur.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Toulouse FC"
+  "Toulouse": {
+    "src": "/team-badges/toulouse.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/63/Toulouse_FC_2018_logo.svg/330px-Toulouse_FC_2018_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Tromsø IL"
+  "Tromsø": {
+    "src": "/team-badges/tromso.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/57/Troms%C3%B8_IL_logo.svg/330px-Troms%C3%B8_IL_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "ES Troyes AC"
+  "Troyes": {
+    "src": "/team-badges/troyes.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/ESTAC_Troyes_Logo.svg/960px-ESTAC_Troyes_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Valencia CF"
+  "Valencia": {
+    "src": "/team-badges/valencia.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ce/Valenciacf.svg/330px-Valenciacf.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Vålerenga Fotball"
+  "Vålerenga": {
+    "src": "/team-badges/valerenga.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/V%C3%A5lerenga_Oslo_logo.svg/500px-V%C3%A5lerenga_Oslo_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "CR Vasco da Gama"
+  "Vasco": {
+    "src": "/team-badges/vasco.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a5/Club_de_Regatas_Vasco_da_Gama_logo_%282021%29.svg/330px-Club_de_Regatas_Vasco_da_Gama_logo_%282021%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Venezia FC"
+  "Venezia": {
+    "src": "/team-badges/venezia.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/39/Venezia_FC_crest.svg/60px-Venezia_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Viking FK"
+  "Viking": {
+    "src": "/team-badges/viking.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Viking_FK_logo_2020.svg/500px-Viking_FK_logo_2020.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Villarreal CF"
+  "Villarreal CF": {
+    "src": "/team-badges/villarreal-cf.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b9/Villarreal_CF_logo-en.svg/330px-Villarreal_CF_logo-en.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Esporte Clube Vitória"
+  "Vitória": {
+    "src": "/team-badges/vitoria.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Esporte_Clube_Vit%C3%B3ria_%282024%29.svg/960px-Esporte_Clube_Vit%C3%B3ria_%282024%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Watford F.C."
+  "Watford": {
+    "src": "/team-badges/watford.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e2/Watford.svg/330px-Watford.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "SV Werder Bremen"
+  "Werder Bremen": {
+    "src": "/team-badges/werder-bremen.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/SV-Werder-Bremen-Logo.svg/250px-SV-Werder-Bremen-Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "West Bromwich Albion F.C."
+  "West Bromwich Albion": {
+    "src": "/team-badges/west-bromwich-albion.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/8b/West_Bromwich_Albion.svg/330px-West_Bromwich_Albion.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "West Ham United F.C."
+  "West Ham United": {
+    "src": "/team-badges/west-ham-united.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c2/West_Ham_United_FC_logo.svg/250px-West_Ham_United_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Willem II Tilburg"
+  "Willem II": {
+    "src": "/team-badges/willem-ii.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/77/Willem_II_logo.svg/250px-Willem_II_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Wolverhampton Wanderers F.C."
+  "Wolverhampton Wanderers": {
+    "src": "/team-badges/wolverhampton-wanderers.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c9/Wolverhampton_Wanderers_FC_crest.svg/500px-Wolverhampton_Wanderers_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Wrexham A.F.C."
+  "Wrexham": {
+    "src": "/team-badges/wrexham.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0d/Wrexham_A.F.C._Logo.svg/330px-Wrexham_A.F.C._Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Hamburger SV"
+  "Hamburg SV": {
+    "src": "/team-badges/hamburg-sv.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Hamburger_SV_logo.svg/960px-Hamburger_SV_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Rio Ave F.C."
+  "Rio Ave": {
+    "src": "/team-badges/rio-ave.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0c/Rio_Ave_FC_logo.svg/250px-Rio_Ave_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  // Wikipedia: "Vitória S.C."
+  "Vitória de Guimaraes": {
+    "src": "/team-badges/vitoria-de-guimaraes.png",
+    "sourceUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d5/Vit%C3%B3ria_Guimar%C3%A3es.svg/330px-Vit%C3%B3ria_Guimar%C3%A3es.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
 };

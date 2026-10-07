@@ -310,6 +310,28 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "Kasimpasa": { src: "/team-badges/kasimpasa.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/uryxtp1448203236.png" },
   "Rizespor": generatedTeamBadgeAssets["Çaykur Rizespor"],
 
+  // Display-name aliases: prediction data uses a shorter/different spelling than the generated key
+  "Köln": generatedTeamBadgeAssets["1. FC Köln"],
+  "Paderborn": generatedTeamBadgeAssets["SC Paderborn 07"],
+  "Cambuur": generatedTeamBadgeAssets["SC Cambuur"],
+  "Amed": generatedTeamBadgeAssets["Amedspor"],
+  "Başakşehir": generatedTeamBadgeAssets["İstanbul Başakşehir"],
+  "Gaziantep": generatedTeamBadgeAssets["Gaziantep FK"],
+  "Çorum": generatedTeamBadgeAssets["Çorum FK"],
+
+  // League standings/fixtures pages use a different naming convention than editorial prediction
+  // data for the same clubs; aliased to the same art rather than re-fetching.
+  "VfB Stuttgart": generatedTeamBadgeAssets["Stuttgart"],
+  "SV Elversberg": generatedTeamBadgeAssets["Elversberg"],
+  "Cologne": generatedTeamBadgeAssets["1. FC Köln"],
+  "Mainz": generatedTeamBadgeAssets["1. FSV Mainz 05"],
+  "TSG Hoffenheim": generatedTeamBadgeAssets["Hoffenheim"],
+  "SC Freiburg": generatedTeamBadgeAssets["Freiburg"],
+  "Villarreal": generatedTeamBadgeAssets["Villarreal CF"],
+  "Paris": generatedTeamBadgeAssets["Paris Saint-Germain"],
+  "Stade Rennais": generatedTeamBadgeAssets["Rennes"],
+  "Internazionale": generatedTeamBadgeAssets["Internazionale Milano"],
+
   // MLS clubs
   "Atlanta United FC": generatedTeamBadgeAssets["Atlanta United"],
   "Chicago Fire FC": generatedTeamBadgeAssets["Chicago Fire"],
