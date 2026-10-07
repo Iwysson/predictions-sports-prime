@@ -15,24 +15,41 @@ const nhlEntries: ProtectedContentEntry[] = nhlMatches().map((m) => ({
   prediction: { main: m.pick, odds: m.odds },
 }));
 
-// NHL protected entries for later days. They stay "not-found" in the endpoint until the NHL day
-// (America/New_York) reaches activeFromKey.
-const nhlLater = JSON.parse(readFileSync("src/data/nhl/protected-2026-10-07.json", "utf8")) as {
+type LaterEntryFile = {
   activeFromKey: string;
   entries: Array<{ slug: string; analysisAccess: "free" | "vip"; predictionAccess: "free" | "vip"; pick: string; odds: number; analysis: string[] }>;
 };
-for (const e of nhlLater.entries) {
-  nhlEntries.push({
-    slug: e.slug,
-    analysisAccess: e.analysisAccess,
-    predictionAccess: e.predictionAccess,
-    full: { analysis: e.analysis, sources: [], comment: null, picks: { main: e.pick, odds: e.odds } },
-    prediction: { main: e.pick, odds: e.odds },
-    activeFromKey: nhlLater.activeFromKey,
-  });
+
+// NHL protected entries for later days. They stay "not-found" in the endpoint until the NHL day
+// (America/New_York) reaches activeFromKey. Add a new file here for each later NHL day.
+const nhlLaterFiles = ["src/data/nhl/protected-2026-10-07.json", "src/data/nhl/protected-2026-10-08.json"];
+for (const file of nhlLaterFiles) {
+  const later = JSON.parse(readFileSync(file, "utf8")) as LaterEntryFile;
+  for (const e of later.entries) {
+    nhlEntries.push({
+      slug: e.slug,
+      analysisAccess: e.analysisAccess,
+      predictionAccess: e.predictionAccess,
+      full: { analysis: e.analysis, sources: [], comment: null, picks: { main: e.pick, odds: e.odds } },
+      prediction: { main: e.pick, odds: e.odds },
+      activeFromKey: later.activeFromKey,
+    });
+  }
 }
 
-const index = buildContentIndex(editorialPredictions as any[], new Date(), nhlEntries);
+// NFL protected entries (BEST BET / PRIME VIP games). Published immediately, no activeFromKey.
+const nflProtected = JSON.parse(readFileSync("src/data/nfl/week5-2026-protected.json", "utf8")) as {
+  entries: Array<{ slug: string; analysisAccess: "free" | "vip"; predictionAccess: "free" | "vip"; pick: string; odds: number; analysis: string[] }>;
+};
+const nflEntries: ProtectedContentEntry[] = nflProtected.entries.map((e) => ({
+  slug: e.slug,
+  analysisAccess: e.analysisAccess,
+  predictionAccess: e.predictionAccess,
+  full: { analysis: e.analysis, sources: [], comment: null, picks: { main: e.pick, odds: e.odds } },
+  prediction: { main: e.pick, odds: e.odds },
+}));
+
+const index = buildContentIndex(editorialPredictions as any[], new Date(), [...nhlEntries, ...nflEntries]);
 mkdirSync("functions/_data", { recursive: true });
 writeFileSync("functions/_data/match-content.json", JSON.stringify(index, null, 2) + "\n");
 const count = (fn: (e: ProtectedContentEntry) => boolean) => index.filter(fn).length;

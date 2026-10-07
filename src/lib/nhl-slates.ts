@@ -38,7 +38,7 @@ export type NhlPublicMultiple = {
 export type NhlPublicSlate = {
   dayKey: string;
   matches: NhlPublicMatch[];
-  multiple: NhlPublicMultiple | null;
+  multiples: NhlPublicMultiple[];
 };
 
 // Sort order on a slate: FREE first, then BEST BET, then PRIME VIP. Access is never changed here.

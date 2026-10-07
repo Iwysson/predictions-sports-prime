@@ -4751,10 +4751,10 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .psp-game h2 { margin: 0; font-size: clamp(19px, 2.4vw, 23px); line-height: 1.25; color: var(--text-primary); }
 .psp-game__meta { font-size: 13px; color: var(--text-muted); margin: 0; }
 .psp-game__meta, .psp-hero__eyebrow--nhl { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 7px; }
-.nhl-league-mark { display: inline-flex; align-items: center; gap: 8px; width: max-content; color: inherit; font-size: 13px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
-.nhl-league-mark img { display: block; width: 34px; height: 34px; object-fit: contain; }
-.nhl-league-mark--compact { gap: 6px; font-size: 12px; }
-.nhl-league-mark--compact img { width: 24px; height: 24px; }
+.nhl-league-mark, .nfl-league-mark { display: inline-flex; align-items: center; gap: 8px; width: max-content; color: inherit; font-size: 13px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.nhl-league-mark img, .nfl-league-mark img { display: block; width: 34px; height: 34px; object-fit: contain; }
+.nhl-league-mark--compact, .nfl-league-mark--compact { gap: 6px; font-size: 12px; }
+.nhl-league-mark--compact img, .nfl-league-mark--compact img { width: 24px; height: 24px; }
 .nhl-page-best-multiple { margin-top: 28px; }
 .nhl-moneyline-note { margin: 14px 0 0; padding: 10px 14px; border-radius: 10px; border: 1px dashed var(--border-strong); background: var(--surface-subtle); font-size: 13px; color: var(--text-secondary); }
 .nhl-moneyline-note strong { color: var(--text-primary); }

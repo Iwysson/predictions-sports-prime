@@ -43,7 +43,7 @@ check("resolveNhlSlate: Oct 6 slate until 00:00 ET on Oct 7", () => {
 check("resolveNhlSlate: Oct 7 slate from 00:00 ET", () => {
   const slate = resolveNhlSlate(getNhlTodayKey(et("2026-10-07T00:00:00")));
   assert.equal(slate?.dayKey, "2026-10-07");
-  assert.equal(slate?.multiple?.title, "NHL + FOOTBALL BEST MULTIPLE TODAY");
+  assert.equal(slate?.multiples[0]?.title, "NHL + FOOTBALL BEST MULTIPLE TODAY");
   assert.deepEqual(
     slate?.matches.map((m) => [m.access, m.homeTeam]),
     [
@@ -52,6 +52,27 @@ check("resolveNhlSlate: Oct 7 slate from 00:00 ET", () => {
       ["vip", "Edmonton Oilers"],
     ],
   );
+});
+
+check("resolveNhlSlate: Oct 7 slate still active at 23:59:59 ET on Oct 7", () => {
+  assert.equal(resolveNhlSlate(getNhlTodayKey(et("2026-10-07T23:59:59")))?.dayKey, "2026-10-07");
+});
+check("resolveNhlSlate: Oct 8 slate from 00:00 ET", () => {
+  const slate = resolveNhlSlate(getNhlTodayKey(et("2026-10-08T00:00:00")));
+  assert.equal(slate?.dayKey, "2026-10-08");
+  assert.equal(slate?.matches.length, 10);
+  assert.deepEqual(
+    slate?.multiples.map((m) => m.title),
+    ["NHL BEST MULTIPLE TODAY", "NHL + FOOTBALL BEST MULTIPLE TODAY", "NFL + FOOTBALL BEST MULTIPLE TODAY"],
+  );
+});
+check("Oct 8 public slate exposes no BEST/VIP pick or odds", () => {
+  const slate = resolveNhlSlate("2026-10-08");
+  for (const m of slate!.matches.filter((x) => x.access !== "free")) {
+    assert.equal(m.pick, undefined, `${m.slug} must not carry a pick`);
+    assert.equal(m.odds, undefined, `${m.slug} must not carry odds`);
+    assert.equal(m.analysis, undefined, `${m.slug} must not carry analysis`);
+  }
 });
 
 check("Oct 7 public slate exposes no VIP pick or odds", () => {
@@ -64,7 +85,7 @@ check("Oct 7 public slate exposes no VIP pick or odds", () => {
 });
 
 check("Oct 7 multiple: legs and combined odds", () => {
-  const multiple = resolveNhlSlate("2026-10-07")!.multiple!;
+  const multiple = resolveNhlSlate("2026-10-07")!.multiples[0]!;
   assert.deepEqual(
     multiple.legs.map((l) => [l.pick, l.odds]),
     [
@@ -74,6 +95,19 @@ check("Oct 7 multiple: legs and combined odds", () => {
   );
   assert.equal(multiple.combinedOdds, 2.76);
   assert.equal(Math.round(1.65 * 1.67 * 100) / 100, 2.76);
+});
+
+check("Oct 8 NHL Multiple: legs and combined odds", () => {
+  const multiple = resolveNhlSlate("2026-10-08")!.multiples[0]!;
+  assert.deepEqual(
+    multiple.legs.map((l) => [l.pick, l.odds]),
+    [
+      ["Montreal Canadiens to Win (Including OT/SO)", 1.67],
+      ["New York Islanders to Win (Including OT/SO)", 1.61],
+    ],
+  );
+  assert.equal(multiple.combinedOdds, 2.69);
+  assert.equal(Math.round(1.67 * 1.61 * 100) / 100, 2.69);
 });
 
 

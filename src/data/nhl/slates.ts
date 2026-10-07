@@ -1,5 +1,11 @@
 import { NHL_PUBLIC_SLATE_OCT_06 } from "@/data/nhl/public-slate-2026-10-06";
 import { NHL_PUBLIC_MATCHES_OCT_07, NHL_PUBLIC_MULTIPLE_OCT_07 } from "@/data/nhl/slate-2026-10-07";
+import {
+  NHL_PUBLIC_MATCHES_OCT_08,
+  NHL_MULTIPLE_OCT_08,
+  NHL_FOOTBALL_MULTIPLE_OCT_08,
+  NFL_FOOTBALL_MULTIPLE_OCT_08,
+} from "@/data/nhl/slate-2026-10-08";
 import type { NhlPublicSlate } from "@/lib/nhl-slates";
 
 // Every NHL day with a slate, oldest first. Adding a day here (and its protected entries) is the
@@ -8,22 +14,29 @@ export const SLATES: NhlPublicSlate[] = [
   {
     dayKey: "2026-10-06",
     matches: NHL_PUBLIC_SLATE_OCT_06,
-    multiple: {
-      title: "NHL BEST MULTIPLE TODAY",
-      badge: "FREE MULTIPLE",
-      legs: [
-        { fixture: "New Jersey Devils vs Utah Mammoth", teams: ["New Jersey Devils", "Utah Mammoth"], pick: "New Jersey Devils to win", odds: null },
-        { fixture: "Detroit Red Wings vs Ottawa Senators", teams: ["Detroit Red Wings", "Ottawa Senators"], pick: "Over 5.5 Goals", odds: null },
-      ],
-      combinedOdds: null,
-      comment:
-        "This editorial multiple is FREE and does not change either game's individual access level. No combined official odds are stated.",
-    },
+    multiples: [
+      {
+        title: "NHL BEST MULTIPLE TODAY",
+        badge: "FREE MULTIPLE",
+        legs: [
+          { fixture: "New Jersey Devils vs Utah Mammoth", teams: ["New Jersey Devils", "Utah Mammoth"], pick: "New Jersey Devils to win", odds: null },
+          { fixture: "Detroit Red Wings vs Ottawa Senators", teams: ["Detroit Red Wings", "Ottawa Senators"], pick: "Over 5.5 Goals", odds: null },
+        ],
+        combinedOdds: null,
+        comment:
+          "This editorial multiple is FREE and does not change either game's individual access level. No combined official odds are stated.",
+      },
+    ],
   },
   {
     dayKey: "2026-10-07",
     matches: NHL_PUBLIC_MATCHES_OCT_07,
-    multiple: NHL_PUBLIC_MULTIPLE_OCT_07,
+    multiples: [NHL_PUBLIC_MULTIPLE_OCT_07],
+  },
+  {
+    dayKey: "2026-10-08",
+    matches: NHL_PUBLIC_MATCHES_OCT_08,
+    multiples: [NHL_MULTIPLE_OCT_08, NHL_FOOTBALL_MULTIPLE_OCT_08, NFL_FOOTBALL_MULTIPLE_OCT_08],
   },
 ];
 

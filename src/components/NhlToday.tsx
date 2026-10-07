@@ -75,30 +75,34 @@ const L = {
   odds: translate("en", "odds"),
 };
 
-// The day's multiple, in the same slot and with the same classes as before. Only its content changes.
+// The day's multiples, in the same slot and with the same classes as before. Only the content changes.
 export function NhlBestMultiple({ headingId = "nhl-best-multiple-title", initialKey }: { headingId?: string; initialKey: string }) {
   const dayKey = useNhlTodayKey(initialKey);
-  const multiple = resolveNhlSlate(dayKey)?.multiple;
-  if (!multiple) return null;
+  const multiples = resolveNhlSlate(dayKey)?.multiples ?? [];
+  if (!multiples.length) return null;
   return (
-    <article className="home-best-multiple">
-      <div className="home-best-multiple__head">
-        <div>
-          <NhlLeagueMark />
-          <h2 id={headingId}>{multiple.title}</h2>
-        </div>
-        <span className="psp-badge psp-badge--free">{multiple.badge}</span>
-      </div>
-      <div className="home-best-multiple__legs">
-        {multiple.legs.map((leg, index) => (
-          <MultipleLeg key={leg.fixture} first={index === 0} leg={leg} />
-        ))}
-      </div>
-      <p>
-        {multiple.combinedOdds !== null ? `Combined odds: ${formatOddsPair(multiple.combinedOdds)}. ` : ""}
-        {multiple.comment}
-      </p>
-    </article>
+    <>
+      {multiples.map((multiple, index) => (
+        <article className="home-best-multiple" key={multiple.title}>
+          <div className="home-best-multiple__head">
+            <div>
+              <NhlLeagueMark />
+              <h2 id={index === 0 ? headingId : `${headingId}-${index}`}>{multiple.title}</h2>
+            </div>
+            <span className="psp-badge psp-badge--free">{multiple.badge}</span>
+          </div>
+          <div className="home-best-multiple__legs">
+            {multiple.legs.map((leg, legIndex) => (
+              <MultipleLeg key={leg.fixture} first={legIndex === 0} leg={leg} />
+            ))}
+          </div>
+          <p>
+            {multiple.combinedOdds !== null ? `Combined odds: ${formatOddsPair(multiple.combinedOdds)}. ` : ""}
+            {multiple.comment}
+          </p>
+        </article>
+      ))}
+    </>
   );
 }
 

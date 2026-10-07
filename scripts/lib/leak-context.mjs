@@ -2,7 +2,7 @@
 // inside the FREE accumulator block that the product publishes on purpose. Anywhere else, including
 // the individual match card, it is a leak. Allowances are per context, never global text exemptions.
 
-export const MULTIPLE_MARKERS = ["NHL + FOOTBALL BEST MULTIPLE TODAY", "NHL BEST MULTIPLE TODAY"];
+export const MULTIPLE_MARKERS = ["NHL + FOOTBALL BEST MULTIPLE TODAY", "NHL BEST MULTIPLE TODAY", "NFL + FOOTBALL BEST MULTIPLE TODAY"];
 
 // Characters after a multiple marker that belong to the same block (title, legs, odds, comment).
 export const MULTIPLE_SPAN = 2400;
@@ -13,6 +13,10 @@ export const FREE_MULTIPLE_LEGS = [
   "Over 5.5 Goals",
   "Colorado Avalanche to Win",
   "Cruzeiro X1 + Over 1.5 Goals",
+  "Montreal Canadiens to Win (Including OT/SO)",
+  "New York Islanders to Win (Including OT/SO)",
+  "Fluminense to Win + Over 1.5 Goals",
+  "Dallas Cowboys -3.5",
 ];
 
 // [start, end) ranges of every multiple block in a text.

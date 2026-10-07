@@ -1,0 +1,89 @@
+{
+  "activeFromKey": "2026-10-08",
+  "entries": [
+    {
+      "slug": "new-york-islanders-vs-chicago-blackhawks",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "New York Islanders to Win (Including OT/SO)",
+      "odds": 1.61,
+      "analysis": [
+        "The Islanders enter this matchup with the more favorable defensive profile and home setting. NHL's early-season comparison had Chicago at only 1.00 goal scored per game while allowing 5.50, compared with 1.00 scored and 2.00 allowed for the Islanders. The sample is small, but it creates a clear early contrast in defensive stability.",
+        "The 2025-26 location model projected approximately 3.11 goals for the Islanders against 2.72 for Chicago, giving New York the higher expected scoring side. The two teams' 2025-26 meetings were competitive, averaging 6.00 total goals, so the safer way to express the edge is the overtime/shootout-inclusive moneyline rather than a regulation handicap.",
+        "Chicago's early defensive leakage, New York's home advantage and the higher location-based scoring projection all point toward the Islanders, while OT/SO protection reduces the risk from another close head-to-head."
+      ]
+    },
+    {
+      "slug": "carolina-hurricanes-vs-vancouver-canucks",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 Goals",
+      "odds": 1.62,
+      "analysis": [
+        "This is one of the strongest statistical Over profiles on the slate. Vancouver averaged 2.68 goals scored and 3.80 allowed away from home in 2025-26, while Carolina averaged 3.88 scored and 3.05 allowed at home. Combining those splits produces approximately 2.87 expected goals for Vancouver and 3.84 for Carolina, for a 6.71-goal projection.",
+        "The direct matchup pushes the expectation higher. Their two 2025-26 meetings produced seven and ten goals, an 8.50 average, and both cleared 5.5. The early 2026-27 goaltending numbers also increase the scoring risk: Vancouver's Kevin Lankinen entered with a 4.50 GAA and .858 save percentage, while Carolina's Brandon Bussi was at 3.00 and .859.",
+        "The historical location model is already above six goals, both recent head-to-heads cleared the line, and the current goaltending profile provides another independent argument for six or more."
+      ]
+    },
+    {
+      "slug": "montreal-canadiens-vs-nashville-predators",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Montreal Canadiens to Win (Including OT/SO)",
+      "odds": 1.67,
+      "analysis": [
+        "Montreal's home scoring profile from 2025-26 gives the Canadiens a reasonable edge despite Nashville's ability to keep games competitive. Montreal averaged 3.29 goals per home game, while Nashville's road offense averaged 2.88. The same split model produced a total expectation near 6.27, showing that Montreal does not need a low-event game to justify the moneyline.",
+        "The 2025-26 head-to-head meetings were tighter, with Montreal winning games that produced five total goals on average. Nashville also brings quality goaltending through Juuse Saros, which is an important counterweight. Montreal, however, has the stronger offensive environment at Bell Centre, and the overtime/shootout-inclusive market protects the selection if the game remains tied after regulation.",
+        "Ivan Demidov is out for Montreal, so the pick is not based on an assumption of full offensive strength. The preference is instead for Montreal's home profile and the protection provided by including overtime and the shootout."
+      ]
+    },
+    {
+      "slug": "ottawa-senators-vs-philadelphia-flyers",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Ottawa Senators to Win (Including OT/SO)",
+      "odds": 1.83,
+      "analysis": [
+        "Ottawa's strongest argument is the direct matchup. The Senators won all three meetings with Philadelphia in 2025-26, with scores of 2-1, 3-2 and 2-1. That 3-0 head-to-head record is more useful for the moneyline than for a goals market, especially because the games averaged only 3.67 total goals.",
+        "The home/away profile also gives Ottawa the stronger scoring side. The Senators averaged 3.34 goals at home in 2025-26, while Philadelphia allowed 3.12 on the road. Philadelphia's early 2026-27 offense has struggled badly, entering this stretch at only 1.25 goals per game with 4.25 allowed.",
+        "Jake Sanderson remains out for Ottawa, which lowers confidence in the Senators' defensive ceiling. Even so, an overtime/shootout-inclusive moneyline fits the recent matchup better than asking Ottawa to win in regulation."
+      ]
+    },
+    {
+      "slug": "st-louis-blues-vs-san-jose-sharks",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 Goals",
+      "odds": 1.91,
+      "analysis": [
+        "The location model lands just above the target. San Jose averaged 3.05 goals scored and 3.66 allowed away from home in 2025-26, while St. Louis averaged 2.80 scored and 3.00 allowed at home. Combining those figures gives an expected total around 6.26 goals.",
+        "The head-to-head evidence is less aggressive. Their three 2025-26 meetings produced five, three and nine goals, averaging 5.67, with only one clearing 5.5. That makes this a higher-variance Over than the slate's other scoring selections. San Jose's current defensive/goaltending profile nevertheless leaves room for a high total, while Macklin Celebrini's day-to-day lower-body status is an important negative for the Sharks' offensive side.",
+        "At 1.91, the market requires only about a 52.4% break-even rate. The location model is above six goals, but the mixed head-to-head profile keeps this selection below the strongest Overs in the package."
+      ]
+    },
+    {
+      "slug": "calgary-flames-vs-colorado-avalanche",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 Goals",
+      "odds": 1.77,
+      "analysis": [
+        "The longer-term location model is relatively conservative, projecting approximately 5.59 total goals from Colorado's 2025-26 road production and Calgary's home splits. The direct matchup was more favorable to scoring: the three 2025-26 meetings averaged 6.33 total goals, including a nine-goal game.",
+        "The early 2026-27 form creates the strongest upward adjustment. Colorado opened the season with 14 goals through its first two games, while Calgary began winless and was conceding at a very high rate. That combination makes the current offensive/defensive trajectory substantially more aggressive than the 2025-26 split baseline.",
+        "The selection therefore relies on convergence between Colorado's elite early scoring, Calgary's defensive vulnerability and a head-to-head average already above the 5.5 threshold. The historical split model is the main caution and keeps this below the very top Over selections."
+      ]
+    },
+    {
+      "slug": "vegas-golden-knights-vs-toronto-maple-leafs",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 Goals",
+      "odds": 1.64,
+      "analysis": [
+        "The 2025-26 home/away model is comfortably above the market line. Toronto averaged 2.85 goals scored and 3.71 allowed away from home, while Vegas averaged 3.54 scored and 2.95 allowed at home. Those splits produce approximately 2.90 expected Toronto goals and 3.62 for Vegas, or 6.52 total.",
+        "The direct matchup is even more aggressive. The two 2025-26 meetings produced nine and eleven total goals, an average of 10.00, with both comfortably clearing 5.5. Early 2026-27 results have also shown offensive upside from both sides, including a nine-goal Toronto game and a six-goal Vegas performance in their recent schedules.",
+        "The 6.52 split projection already supports the Over independently of the head-to-head. The direct meetings then provide a second, much stronger scoring signal, making six goals a realistic threshold despite the relatively short price."
+      ]
+    }
+  ]
+}
