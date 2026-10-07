@@ -16,8 +16,8 @@ import { selectTemporalClientMatches } from "@/lib/match-feed";
 import { HomeEditorialHighlights } from "@/components/HomeEditorialHighlights";
 import { SiteContactLine } from "@/components/SiteContactLine";
 
-const homeTitle = "Football Predictions Today & Betting Tips";
-const homeDescription = "Football predictions, betting tips and match analysis for today's, tomorrow's and upcoming fixtures across major leagues.";
+const homeTitle = "Football Predictions Today & Betting Tips | Predictions Sports Prime";
+const homeDescription = "Daily football predictions, betting tips, odds and statistical analysis for today's, tomorrow's and upcoming fixtures across major leagues, plus NFL and NHL picks.";
 
 export const metadata: Metadata = {
   title: { absolute: homeTitle },

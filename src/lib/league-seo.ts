@@ -98,7 +98,13 @@ export function leagueSeoTitle(league: LeagueConfig, capabilities?: LeagueSeoCap
       ? `${league.name} Predictions & Betting Tips${capabilities.hasOdds ? " with Odds" : ""}`
       : `${league.name} Predictions & Match Analysis`;
     const branded = `${full} | ${siteConfig.name}`;
-    return branded.length <= 70 ? branded : full.length <= 70 ? full : `${league.name} Predictions`;
+    if (branded.length <= 70) return branded;
+    // A long league name can push the full phrase past budget: prefer a shorter branded
+    // title over dropping the brand entirely, so the site name still appears in the SERP.
+    const compactBranded = `${league.name} Predictions | ${siteConfig.name}`;
+    if (compactBranded.length <= 70) return compactBranded;
+    const compactShortBranded = `${league.name} Predictions | ${siteConfig.shortName}`;
+    return compactShortBranded.length <= 70 ? compactShortBranded : `${league.name} Predictions`;
   }
   const full = `${league.name} Predictions & Betting Tips | ${siteConfig.name}`;
   const compact = `${league.name} Predictions | ${siteConfig.name}`;
