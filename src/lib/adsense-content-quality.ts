@@ -18,7 +18,7 @@ export type AdSenseContentClassification =
 export type AdSenseContentQualityDecision = {
   classification: AdSenseContentClassification;
   indexable: boolean;
-  source: "audited-snapshot-2026-09-03" | "automatic-fallback" | "manual-publication-allowlist-2026-09-15" | "manual-publication-allowlist-2026-09-18" | "manual-publication-allowlist-2026-09-22";
+  source: "audited-snapshot-2026-09-03" | "automatic-fallback" | "manual-publication-allowlist-2026-09-15" | "manual-publication-allowlist-2026-09-18" | "manual-publication-allowlist-2026-09-22" | "manual-publication-allowlist-2026-10-07";
   reasons: string[];
 };
 
@@ -204,15 +204,49 @@ const MANUAL_PUBLICATION_ALLOWLIST_2026_09_22 = new Set<string>([
   "gibraltar-vs-andorra",
 ]);
 
+// Explicit publication authorization for the 28-match, six-league wave dated
+// 11-12 October 2026. Partial coverage is disclosed on every page.
+const MANUAL_PUBLICATION_ALLOWLIST_2026_10_07 = new Set<string>([
+  "aalesund-vs-sarpsborg",
+  "fredrikstad-vs-tromso",
+  "kfum-oslo-vs-valerenga",
+  "lillestrom-vs-molde",
+  "start-vs-hamkam",
+  "elche-vs-celta",
+  "levante-vs-sevilla",
+  "racing-santander-vs-valencia",
+  "real-betis-vs-osasuna",
+  "real-sociedad-vs-deportivo",
+  "nice-vs-strasbourg",
+  "rennes-vs-auxerre",
+  "troyes-vs-marseille",
+  "coventry-city-vs-newcastle-united",
+  "crystal-palace-vs-nottingham-forest",
+  "hull-city-vs-everton",
+  "liverpool-vs-manchester-city",
+  "atalanta-vs-venezia",
+  "cagliari-vs-juventus",
+  "como-vs-roma",
+  "lazio-vs-monza",
+  "lecce-vs-bologna",
+  "sassuolo-vs-milan",
+  "torino-vs-udinese",
+  "besiktas-vs-kocaelispor",
+  "eyupspor-vs-goztepe",
+  "gaziantep-vs-corum",
+  "konyaspor-vs-basaksehir",
+]);
+
 function manualPublicationAllowlistMatch(
   prediction: EditorialPrediction
-): "2026-09-15" | "2026-09-18" | "2026-09-22" | null {
+): "2026-09-15" | "2026-09-18" | "2026-09-22" | "2026-10-07" | null {
   if (prediction.published !== true) return null;
   const slug =
     prediction.slug ?? predictionSlug(prediction.homeTeam, prediction.awayTeam);
   if (MANUAL_PUBLICATION_ALLOWLIST_2026_09_15.has(slug)) return "2026-09-15";
   if (MANUAL_PUBLICATION_ALLOWLIST_2026_09_18.has(slug)) return "2026-09-18";
   if (MANUAL_PUBLICATION_ALLOWLIST_2026_09_22.has(slug)) return "2026-09-22";
+  if (MANUAL_PUBLICATION_ALLOWLIST_2026_10_07.has(slug)) return "2026-10-07";
   return null;
 }
 
@@ -653,7 +687,8 @@ export function getAdSenseContentQualityDecision(
       source: `manual-publication-allowlist-${allowlistMatch}` as
         | "manual-publication-allowlist-2026-09-15"
         | "manual-publication-allowlist-2026-09-18"
-        | "manual-publication-allowlist-2026-09-22",
+        | "manual-publication-allowlist-2026-09-22"
+        | "manual-publication-allowlist-2026-10-07",
       reasons: [`manual_publication_override_${allowlistMatch.replace(/-/g, "_")}`],
     };
   }
