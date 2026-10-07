@@ -60,33 +60,56 @@ async function verifySignature(request, body, secret) {
 
 // Administrative calls use the secret key in the apikey header only.
 // Authorization: Bearer is never used with sb_secret_ (it is not a JWT).
+class SupabaseError extends Error {
+  constructor(operation, status) {
+    super(`${operation} ${status}`);
+    this.operation = operation;
+    this.status = status;
+  }
+}
+
+// Logs operation, HTTP status and the Supabase error body. Never logs keys, headers or secrets.
+async function failure(operation, res) {
+  let body = "";
+  try {
+    body = (await res.text()).slice(0, 500);
+  } catch {
+    body = "";
+  }
+  console.error(JSON.stringify({ source: "whop-webhook", operation, status: res.status, supabaseBody: body }));
+  return new SupabaseError(operation, res.status);
+}
+
 function supabaseClient(env) {
   const base = env.SUPABASE_URL;
   const key = env.SUPABASE_SECRET_KEY;
-  const headers = { apikey: key, "Content-Type": "application/json" };
+  const headers = { apikey: key, Accept: "application/json" };
+  const jsonHeaders = { ...headers, "Content-Type": "application/json" };
   return {
-    async select(path) {
+    async select(operation, path) {
       const res = await fetch(`${base}/rest/v1/${path}`, { headers });
-      if (!res.ok) throw new Error(`select ${res.status}`);
+      if (!res.ok) throw await failure(`select ${operation}`, res);
       return res.json();
     },
-    async patch(path, body) {
+    async patch(operation, path, body) {
       const res = await fetch(`${base}/rest/v1/${path}`, {
         method: "PATCH",
-        headers: { ...headers, Prefer: "return=minimal" },
+        headers: { ...jsonHeaders, Prefer: "return=minimal" },
         body: JSON.stringify(body),
       });
-      if (!res.ok) throw new Error(`patch ${res.status}`);
+      if (!res.ok) throw await failure(`patch ${operation}`, res);
     },
     async adminUser(id) {
       const res = await fetch(`${base}/auth/v1/admin/users/${encodeURIComponent(id)}`, { headers });
-      if (!res.ok) return null;
+      if (res.status === 404) return null;
+      if (!res.ok) throw await failure("auth admin user", res);
       return res.json();
     },
+    // Only columns that exist: event_id, event_type, outcome, payload_keys, profile_id, event_at.
     async recordEvent(eventId, type, outcome, payloadKeys, extra = {}) {
-      await fetch(`${base}/rest/v1/whop_webhook_events`, {
+      const res = await fetch(`${base}/rest/v1/whop_webhook_events`, {
         method: "POST",
-        headers: { ...headers, Prefer: "resolution=ignore-duplicates,return=minimal" },
+        headers: { ...jsonHeaders, Prefer: "resolution=ignore-duplicates,return=minimal" },
         body: JSON.stringify({
           event_id: eventId,
           event_type: type,
@@ -96,6 +119,7 @@ function supabaseClient(env) {
           event_at: extra.eventAt ?? null,
         }),
       });
+      if (!res.ok) await failure("insert whop_webhook_events", res);
     },
   };
 }
@@ -140,7 +164,7 @@ function planChange(type, data, profile, nowMs) {
   return null;
 }
 
-export async function onRequestPost({ request, env }) {
+async function handle(request, env) {
   const secret = env.WHOP_WEBHOOK_SECRET;
   if (!secret || !env.SUPABASE_URL || !env.SUPABASE_SECRET_KEY || !env.WHOP_PLAN_ID || !env.WHOP_PRODUCT_ID) {
     return reply(503, "webhook not configured");
@@ -183,6 +207,7 @@ export async function onRequestPost({ request, env }) {
     return reply(200, "ignored");
   }
   const [profile] = await db.select(
+    "profile by id",
     `profiles?id=eq.${encodeURIComponent(userId)}&select=id,plan,subscription_status,current_period_end,whop_membership_id`,
   );
   const authUser = profile ? await db.adminUser(profile.id) : null;
@@ -199,6 +224,7 @@ export async function onRequestPost({ request, env }) {
 
   // Out-of-order protection: a newer applied event for this profile wins.
   const newer = await db.select(
+    "newer applied event",
     `whop_webhook_events?profile_id=eq.${encodeURIComponent(profile.id)}&outcome=eq.applied&event_at=gt.${encodeURIComponent(eventAt)}&select=event_id&limit=1`,
   );
   if (newer.length) {
@@ -214,6 +240,17 @@ export async function onRequestPost({ request, env }) {
 
   const update = { ...change, whop_plan_id: planId };
 
+  // Period fields come from the membership payload only; payment payloads carry no membership dates.
+  if (type === "membership.activated") {
+    const whopUserId = data.user?.id ?? data.user_id;
+    if (typeof whopUserId === "string" && whopUserId) update.whop_user_id = whopUserId;
+    const periodEnd = isoOrNull(data.renewal_period_end);
+    if (periodEnd) {
+      update.current_period_end = periodEnd;
+      if (change.subscription_status === "trialing") update.trial_ends_at = periodEnd;
+    }
+  }
+
   // Membership binding: membership.* events only, from the membership's own id.
   // Payment events never write whop_membership_id (their data.id is the payment id).
   if (type.startsWith("membership.")) {
@@ -222,7 +259,7 @@ export async function onRequestPost({ request, env }) {
       await db.recordEvent(eventId, type, "ignored-membership-id-missing", keys, { profileId: profile.id, eventAt });
       return reply(200, "ignored");
     }
-    const [owner] = await db.select(`profiles?whop_membership_id=eq.${encodeURIComponent(membershipId)}&select=id`);
+    const [owner] = await db.select("membership owner", `profiles?whop_membership_id=eq.${encodeURIComponent(membershipId)}&select=id`);
     if (owner && owner.id !== profile.id) {
       await db.recordEvent(eventId, type, "ignored-membership-linked-elsewhere", keys, { profileId: profile.id, eventAt });
       return reply(200, "ignored");
@@ -230,7 +267,19 @@ export async function onRequestPost({ request, env }) {
     update.whop_membership_id = membershipId;
   }
 
-  await db.patch(`profiles?id=eq.${encodeURIComponent(profile.id)}`, update);
+  await db.patch("profile update", `profiles?id=eq.${encodeURIComponent(profile.id)}`, update);
   await db.recordEvent(eventId, type, "applied", keys, { profileId: profile.id, eventAt });
   return reply(200, "ok");
+}
+
+export async function onRequestPost({ request, env }) {
+  try {
+    return await handle(request, env);
+  } catch (error) {
+    // Supabase failures are already logged with operation/status/body by failure().
+    if (!(error instanceof SupabaseError)) {
+      console.error(JSON.stringify({ source: "whop-webhook", operation: "unexpected", message: String(error?.message ?? error).slice(0, 200) }));
+    }
+    return reply(500, "temporarily unavailable");
+  }
 }

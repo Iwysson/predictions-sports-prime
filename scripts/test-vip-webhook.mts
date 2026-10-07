@@ -33,7 +33,7 @@ const check = (name: string, cond: boolean, extra = "") => {
   if (!cond) failures += 1;
 };
 
-type Row = { id: string; email: string; plan: string; subscription_status: string | null; whop_membership_id: string | null; current_period_end: string | null };
+type Row = { id: string; email: string; plan: string; subscription_status: string | null; whop_membership_id: string | null; current_period_end: string | null; whop_user_id?: string; whop_plan_id?: string; trial_ends_at?: string };
 let profiles: Row[] = [];
 let authUsers: Record<string, { email: string; email_confirmed_at: string | null }> = {};
 let ledger: any[] = [];
@@ -203,10 +203,48 @@ await send("membership.activated", membership({ status: "active" }));
 await send("membership.deactivated", membership());
 check("no stored period end -> deactivation expires (no indefinite VIP)", p1().subscription_status === "expired" && !isVip(p1()));
 
-// Presumed fields are never persisted from the payload.
+// Real trial payload (confirmed by Whop): metadata id first, Whop email differs from Supabase email.
 reset();
-await send("membership.activated", membership({ status: "active", renewal_period_end: future, trial_end: future }));
-check("payload period/trial fields are not written without a confirmed shape", p1().current_period_end === null && !patches.some((pt) => "trial_ends_at" in pt.body) && !patches.some((pt) => "current_period_end" in pt.body));
+const REAL = "09bf7c1f-c280-4219-a7f0-3ffcb52d623e";
+profiles.push({ id: REAL, email: "account@example.com", plan: "free", subscription_status: null, whop_membership_id: null, current_period_end: null } as any);
+authUsers[REAL] = { email: "account@example.com", email_confirmed_at: "2026-09-01T00:00:00Z" };
+r = await send("membership.activated", {
+  id: "mem_vbzl8Wf4KmLhxY", status: "trialing", renewal_period_end: "2026-10-10T20:00:30.472Z",
+  user: { id: "user_z5VdstfDylRLz", email: "different-whop-email@example.com" },
+  plan: { id: PLAN }, product: { id: PRODUCT }, metadata: { supabase_user_id: REAL },
+});
+const real: any = profiles.find((p) => p.id === REAL)!;
+check("real trial payload: 2xx", r.status === 200);
+check("real trial payload: located by metadata id despite email mismatch, vip/trialing", real.plan === "vip" && real.subscription_status === "trialing" && isVip(real));
+check("real trial payload: membership, whop user, plan ids written", real.whop_membership_id === "mem_vbzl8Wf4KmLhxY" && real.whop_user_id === "user_z5VdstfDylRLz" && real.whop_plan_id === PLAN);
+check("real trial payload: trial_ends_at and current_period_end from renewal_period_end", real.trial_ends_at === "2026-10-10T20:00:30.472Z" && real.current_period_end === "2026-10-10T20:00:30.472Z");
+check("real trial payload: other profiles untouched", profiles.filter((p) => p.id !== REAL).every((p) => p.plan === "free"));
+check("real trial payload: no profile lookup by email", sbCalls.every((c) => !c.url.includes("email=")));
+check("real trial payload: ledger row applied with real columns only", ledger.some((l) => l.outcome === "applied" && l.profile_id === REAL) && ledger.every((l) => !("created_at" in l)));
+reset();
+await send("membership.activated", membership({ status: "active", renewal_period_end: future }));
+check("active membership: current_period_end set, no trial_ends_at", p1().current_period_end === future && !patches.some((pt) => "trial_ends_at" in pt.body));
+
+// Supabase failure: clean 500 (not an unhandled exception), no secrets in logs or response.
+reset();
+{
+  const keep = globalThis.fetch;
+  const logged: string[] = [];
+  const origErr = console.error;
+  console.error = (...a: any[]) => logged.push(a.join(" "));
+  globalThis.fetch = (async (input: any, init: any) => {
+    const u = new URL(typeof input === "string" ? input : input.url);
+    if (u.hostname === "supabase.test" && u.pathname === "/rest/v1/profiles") return new Response('{"code":"42501","message":"permission denied"}', { status: 403 });
+    return keep(input, init);
+  }) as typeof fetch;
+  r = await send("membership.activated", membership({ status: "trialing" }));
+  const text = await r.text();
+  globalThis.fetch = keep;
+  console.error = origErr;
+  check("supabase 403 -> controlled 500", r.status === 500 && text === "temporarily unavailable");
+  check("supabase 403 logged with operation, status and body", logged.some((l) => l.includes("select profile by id") && l.includes("403") && l.includes("42501")));
+  check("logs never contain secrets", logged.every((l) => !l.includes(SB_SECRET) && !l.includes(SECRET)));
+}
 
 // ---- Ordering ----
 reset();
