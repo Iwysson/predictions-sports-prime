@@ -15,7 +15,13 @@ const files = [];
 })("out");
 const corpus = files.map((f) => ({ f, text: readFileSync(f, "utf8") }));
 
-const publicPicks = new Set(index.filter((e) => e.predictionAccess === "free").map((e) => e.prediction.main));
+const publicPicks = new Set(index.filter((e) => e.predictionAccess === "free").map((e) => e.prediction.main.toLowerCase()));
+// NHL public-slate modules are deliberately client-safe and contain picks only for FREE entries.
+// Include those public picks so a generic market shared with a protected game is not misreported.
+for (const name of readdirSync("src/data/nhl").filter((name) => /^public-slate-.*\.ts$/.test(name))) {
+  const source = readFileSync(join("src/data/nhl", name), "utf8");
+  for (const match of source.matchAll(/"pick"\s*:\s*"([^"]+)"/g)) publicPicks.add(match[1].toLowerCase());
+}
 const leaks = [];
 const notes = [];
 
@@ -33,12 +39,12 @@ for (const e of index) {
   const label = `${e.slug}: "${e.prediction.main}"`;
   // Same text as a public pick (for example "Over 5.5 goals"): a text rule would also flag the public
   // card, so it is reported as a note and verified by the public pages' own tests instead.
-  if (publicPicks.has(e.prediction.main)) {
+  if (publicPicks.has(e.prediction.main.toLowerCase())) {
     notes.push(label);
     continue;
   }
   const oddsText = e.prediction.odds.toFixed(2);
-  const exact = publicPicks.size > 0 && [...publicPicks].some((p) => p.includes(e.prediction.main));
+  const exact = publicPicks.size > 0 && [...publicPicks].some((p) => p.includes(e.prediction.main.toLowerCase()));
   for (const { f, text } of corpus) {
     for (const leak of protectedPickLeaks(text, { pick: e.prediction.main, oddsText, exact }, label)) {
       leaks.push({ ...leak, file: f });
