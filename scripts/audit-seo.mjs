@@ -5,6 +5,7 @@ import { getAdSenseContentQualityDecision } from "../src/lib/adsense-content-qua
 import { matches as runtimeMatches } from "../src/data/matches.ts";
 import { materialMatchUpdatedAt } from "../src/lib/match-freshness.ts";
 import { classifyPspEditorialLifecycle } from "../src/lib/editorial-standard.ts";
+import { hasMatchPage } from "../src/lib/match-page-lifecycle.ts";
 import { publicContactEmail } from "../src/lib/editorial-identity.ts";
 
 const root = process.cwd();
@@ -388,8 +389,8 @@ for (const [route, lastmod] of sitemapEntries) {
 // it must not recreate the application registry with regular expressions.
 // Same rule as buildPublishedMatches: unresolved predictions without a recorded
 // kickoff stay in quarantine and deliberately get no match page.
-const publishedEditorial = runtimePredictions.filter((prediction) =>
-  prediction.published === true && prediction.matchInfo?.date && prediction.matchInfo?.time);
+// Matches that are FINAL and settled in the results dataset deliberately have no page any more.
+const publishedEditorial = runtimePredictions.filter((prediction) => hasMatchPage(prediction));
 if (matchRoutes.length !== publishedEditorial.length) {
   errors.push(`generated match count (${matchRoutes.length}) does not equal published editorial count (${publishedEditorial.length}); possible draft leakage`);
 }

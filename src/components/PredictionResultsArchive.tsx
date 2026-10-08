@@ -81,6 +81,7 @@ export function PredictionResultsArchive({
               <article
                 className="result-card"
                 key={record.key}
+                id={record.slug}
                 data-result-slug={record.slug}
                 data-result-status={record.result}
                 data-pick={record.prediction}
@@ -90,7 +91,7 @@ export function PredictionResultsArchive({
                 <div className="result-card__heading">
                   <div>
                     <span>{leagueName(record.league)}</span>
-                    <h2><Link href={`/match/${record.slug}/`}>{record.homeTeam} vs {record.awayTeam}</Link></h2>
+                    <h2>{record.homeTeam} vs {record.awayTeam}</h2>
                   </div>
                   <strong className={`bet-result bet-result--${tone(record.result)}`} aria-label={`Prediction result: ${resultLabels[record.result]}`}>
                     {resultLabels[record.result]}

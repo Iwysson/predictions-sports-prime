@@ -1,7 +1,7 @@
 import type { EditorialPrediction, PredictionAccess } from "@/types";
 import { contentAccess, resolveAccess, type ContentAccess } from "@/lib/vip";
 import { predictionSlug } from "@/lib/editorial";
-import { isFutureFixture } from "@/lib/fixture-state";
+import { hasMatchPage } from "@/lib/match-page-lifecycle";
 import { translate } from "@/i18n/dictionaries";
 
 // Shared split between what a public page may contain and what is premium.
@@ -48,13 +48,8 @@ export type ProtectedContentEntry = {
   activeFromKey?: string;
 };
 
-// A prediction is publishable only with a recorded kickoff in the future.
-export function isPublishableFuture(prediction: EditorialPrediction, now: Date | string = new Date()) {
-  if (prediction.published !== true) return false;
-  const info = prediction.matchInfo;
-  if (!info?.date || !info?.time) return false;
-  return isFutureFixture({ status: "published", date: info.date, time: info.time, league: prediction.league } as any, now);
-}
+// A match page exists until the match is FINAL and settled (see match-page-lifecycle.ts).
+export { hasMatchPage };
 
 export function matchSlug(prediction: EditorialPrediction) {
   return prediction.slug ?? predictionSlug(prediction.homeTeam, prediction.awayTeam);
@@ -101,7 +96,7 @@ export function buildContentIndex(
   extra: ProtectedContentEntry[] = [],
 ): ProtectedContentEntry[] {
   const fromPredictions = predictions
-    .filter((p) => isPublishableFuture(p, now))
+    .filter((p) => hasMatchPage(p))
     .map((p) => {
       const access = resolveAccess(p);
       const full = buildFullMatchView(p);

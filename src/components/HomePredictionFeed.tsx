@@ -294,7 +294,7 @@ export function HomePredictionFeed({
               {results.map((record) => {
                 const label = record.result === "green" ? "WIN" : record.result === "red" ? "LOSS" : record.result === "push" ? "PUSH" : record.result === "half-green" ? "HALF WIN" : record.result === "half-red" ? "HALF LOSS" : "VOID";
                 const tone = record.result === "green" || record.result === "half-green" ? "green" : record.result === "red" || record.result === "half-red" ? "red" : "push";
-                return <a href={matchHref(record.slug)} className="history-row" key={record.key}>
+                return <a href="/results/" className="history-row" key={record.key}>
                   <div>
                     <strong>{record.homeTeam} {separator} {record.awayTeam}</strong>
                     <span>{leaguesBySlug[record.league as keyof typeof leaguesBySlug]?.name ?? record.league} · {record.date} · {locale === "en" ? record.prediction : localizePredictionText(record.prediction, locale)}</span>

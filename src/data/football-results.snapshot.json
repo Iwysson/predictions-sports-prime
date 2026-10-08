@@ -17,7 +17,8 @@
         "away": 2
       },
       "result": "red",
-      "settledAt": "2026-10-08T02:02:59.027Z"
+      "settledAt": "2026-10-08T02:02:59.027Z",
+      "publishedAt": "2026-10-05T15:00:00.000Z"
     },
     "brasileirao-serie-a:bragantino-vs-mirassol": {
       "key": "brasileirao-serie-a:bragantino-vs-mirassol",
@@ -35,7 +36,8 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-08T02:02:59.027Z"
+      "settledAt": "2026-10-08T02:02:59.027Z",
+      "publishedAt": "2026-10-05T15:00:00.000Z"
     },
     "brasileirao-serie-a:cruzeiro-vs-sao-paulo": {
       "key": "brasileirao-serie-a:cruzeiro-vs-sao-paulo",
@@ -53,7 +55,8 @@
         "away": 0
       },
       "result": "green",
-      "settledAt": "2026-10-08T07:20:20.965Z"
+      "settledAt": "2026-10-08T07:20:20.965Z",
+      "publishedAt": "2026-10-05T15:00:00.000Z"
     },
     "brasileirao-serie-a:internacional-vs-corinthians": {
       "key": "brasileirao-serie-a:internacional-vs-corinthians",
@@ -71,7 +74,8 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-08T02:02:59.027Z"
+      "settledAt": "2026-10-08T02:02:59.027Z",
+      "publishedAt": "2026-10-05T15:00:00.000Z"
     },
     "brasileirao-serie-a:remo-vs-gremio": {
       "key": "brasileirao-serie-a:remo-vs-gremio",
@@ -89,7 +93,8 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-08T02:02:59.027Z"
+      "settledAt": "2026-10-08T02:02:59.027Z",
+      "publishedAt": "2026-10-05T15:00:00.000Z"
     },
     "brasileirao-serie-a:vitoria-vs-chapecoense": {
       "key": "brasileirao-serie-a:vitoria-vs-chapecoense",
@@ -107,7 +112,8 @@
         "away": 0
       },
       "result": "green",
-      "settledAt": "2026-10-08T02:02:59.027Z"
+      "settledAt": "2026-10-08T02:02:59.027Z",
+      "publishedAt": "2026-10-05T15:00:00.000Z"
     }
   }
 }

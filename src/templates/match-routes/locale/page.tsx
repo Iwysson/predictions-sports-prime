@@ -13,7 +13,7 @@ import { TeamBadge } from "@/components/TeamBadge";
 import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
 import { isPspEditorialStandard } from "@/lib/editorial-standard";
 import { localePath, seoLocaleSlugs, type SeoLocaleSlug } from "@/lib/seo-locales";
-import { formatMatchDate, isPublishableFuture, matchSlug } from "@/lib/match-access";
+import { formatMatchDate, hasMatchPage, matchSlug } from "@/lib/match-access";
 import { buildMatchPageModel } from "@/lib/match-page-model";
 import { absoluteUrl } from "@/lib/site-config";
 import type { EditorialPrediction } from "@/types";
@@ -34,7 +34,7 @@ function isLocale(value: string): value is SeoLocaleSlug {
 }
 
 function publishable() {
-  return (editorialPredictions as EditorialPrediction[]).filter((p) => isPublishableFuture(p));
+  return (editorialPredictions as EditorialPrediction[]).filter((p) => hasMatchPage(p));
 }
 
 export function generateStaticParams() {

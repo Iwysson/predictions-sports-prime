@@ -4,7 +4,7 @@ import { translate } from "@/i18n/dictionaries";
 import {
   buildFullMatchView,
   buildPublicMatchView,
-  isPublishableFuture,
+  hasMatchPage,
   matchSlug,
   resolveAccess,
   type FullMatchView,
@@ -111,7 +111,7 @@ export function buildMatchPageModel(
   routeLocale: RouteLocale,
   now: Date | string = new Date(),
 ): MatchPageModel | null {
-  if (!isPublishableFuture(prediction, now)) return null;
+  if (!hasMatchPage(prediction)) return null;
   const slug = matchSlug(prediction);
   const base = buildPublicMatchView(prediction);
   const vars = { home: prediction.homeTeam, away: prediction.awayTeam };

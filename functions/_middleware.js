@@ -1,5 +1,13 @@
+import results from "../src/data/football-results.snapshot.json";
+
 const LEGACY_HOSTNAME = "predictions-sports-prime.pages.dev";
 const CANONICAL_ORIGIN = "https://predictions-sports-prime.com";
+
+// Football match pages stop being generated once the match is FINAL and settled. The permanent
+// results dataset is the single source: a missing /match/<slug>/ whose slug is settled there was
+// removed on purpose, so it answers 410 Gone instead of 404. Nothing is listed by hand.
+const SETTLED_SLUGS = new Set(Object.values(results.records).map((record) => record.slug));
+const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?match\/([^/]+)\/?$/;
 
 // The pt-br hubs (home, leagues, NFL) are retired and permanently redirect to their English
 // equivalents. Only the frozen historical /pt-br/match/<slug>/ pages are still served.
@@ -26,7 +34,11 @@ export async function onRequest(context) {
     return Response.redirect(`${requestUrl.origin}${ptBrRedirect}${requestUrl.search}`, 301);
   }
 
-  const response = await context.next();
+  let response = await context.next();
+  const matchPath = response.status === 404 ? requestUrl.pathname.match(MATCH_PATH) : null;
+  if (matchPath && SETTLED_SLUGS.has(decodeURIComponent(matchPath[1]))) {
+    response = new Response(response.body, { status: 410, statusText: "Gone", headers: response.headers });
+  }
   const headers = new Headers(response.headers);
 
   if (requestUrl.pathname.startsWith("/_next/static/")) {

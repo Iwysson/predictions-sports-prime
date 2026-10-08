@@ -26,6 +26,8 @@ export type FootballResultRecord = {
   finalScore: { home: number; away: number };
   result: SettledResultStatus;
   settledAt: string;
+  /** When the prediction was first published, when known. */
+  publishedAt?: string;
 };
 
 export type FootballResultsDataset = {
@@ -76,6 +78,7 @@ export function settleFromMatch(match: MatchPreview, settledAt: string): Footbal
     finalScore: { home: match.homeScore as number, away: match.awayScore as number },
     result: evaluation.status as SettledResultStatus,
     settledAt,
+    ...(match.publishedAt ? { publishedAt: match.publishedAt } : {}),
   };
 }
 

@@ -15,25 +15,20 @@
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync, rmdirSync, readdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { editorialPredictions } from "../src/data/predictions/index.ts";
-import { isFutureFixture } from "../src/lib/fixture-state.ts";
+import { hasMatchPage } from "../src/lib/match-page-lifecycle.ts";
 import { predictionSlug } from "../src/lib/editorial.ts";
 import { hasCompleteLocalizedEditorial } from "../src/data/localized-editorial.ts";
 import { seoLocaleSlugs } from "../src/lib/seo-locales.ts";
 
 const CHECK = process.argv.includes("--check");
-const NOW = new Date();
 
-const futureCount = (editorialPredictions as any[]).filter((p) => {
-  if (p.published !== true) return false;
-  if (!p.matchInfo?.date || !p.matchInfo?.time) return false; // unresolved quarantine: never published
-  return isFutureFixture({ status: "published", date: p.matchInfo.date, time: p.matchInfo.time, league: p.league } as any, NOW);
-}).length;
+// Upcoming, live and final-but-unsettled matches keep a page; FINAL + settled ones do not.
+const futureCount = (editorialPredictions as any[]).filter((p) => hasMatchPage(p)).length;
 
 // Localized routes exist only where a complete localized editorial is available. Otherwise
 // they would publish untranslated pages in other locales.
 const localizedCount = (editorialPredictions as any[]).reduce((n, p) => {
-  if (p.published !== true || !p.matchInfo?.date || !p.matchInfo?.time) return n;
-  if (!isFutureFixture({ status: "published", date: p.matchInfo.date, time: p.matchInfo.time, league: p.league } as any, NOW)) return n;
+  if (!hasMatchPage(p)) return n;
   const slug = p.slug ?? predictionSlug(p.homeTeam, p.awayTeam);
   return n + seoLocaleSlugs.filter((locale) => hasCompleteLocalizedEditorial(slug, locale)).length;
 }, 0);
@@ -44,7 +39,7 @@ const routes = [
 ];
 
 const shouldExist = futureCount > 0;
-console.log(`future published predictions with recorded kickoff: ${futureCount} -> match routes ${shouldExist ? "ENABLED" : "DISABLED"}`);
+console.log(`match-page predictions (upcoming, live or final-unsettled): ${futureCount} -> match routes ${shouldExist ? "ENABLED" : "DISABLED"}`);
 
 for (const { template, target, enabled } of routes) {
   const targetPath = resolve(target);

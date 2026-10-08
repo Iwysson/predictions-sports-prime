@@ -38,7 +38,7 @@ export default async function ResultsPage() {
       "@type": "ListItem",
       position: index + 1,
       name: `${match.homeTeam} vs ${match.awayTeam}`,
-      url: absoluteUrl(`/match/${match.slug}/`),
+      url: absoluteUrl(`/results/#${match.slug}`),
     })),
   };
   return (

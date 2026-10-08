@@ -1,7 +1,7 @@
 // Tests for FREE/VIP gating of match analyses. Fake Supabase, fixture predictions, no network.
 import { pathToFileURL } from "node:url";
 import { resolve } from "node:path";
-import { buildContentIndex, buildPublicMatchView, isPublishableFuture, resolveAccess } from "../src/lib/match-access.ts";
+import { buildContentIndex, buildPublicMatchView, hasMatchPage, resolveAccess } from "../src/lib/match-access.ts";
 import { isVip } from "../src/lib/vip.ts";
 import type { EditorialPrediction } from "../src/types/index.ts";
 
@@ -30,7 +30,7 @@ const predictions: EditorialPrediction[] = [
   base("Alpha", "One"), // no access field: must behave as VIP
   base("Beta", "Two", { access: "vip" }),
   base("Gamma", "Three", { access: "free", analysis: [`${SECRET_FREE} open analysis.`, "Second open paragraph."] }),
-  base("Delta", "Four", { access: "vip", matchInfo: { date: "2026-08-01", time: "18:00" } }), // past: not in index
+  base("Delta", "Four", { access: "vip", matchInfo: { date: "2026-08-01", time: "18:00" } }), // past, not yet settled: keeps its page and protected content until FINAL + settled
 ];
 
 const index = buildContentIndex(predictions, NOW);
@@ -109,7 +109,7 @@ check("free + FREE user -> 200 full content", r.status === 200 && r.text.include
 r = await call("no-such-match");
 check("unknown slug -> 404", r.status === 404);
 r = await call("delta-vs-four", "tok-trial1");
-check("past prediction (not publishable) -> 404", r.status === 404);
+check("past prediction awaiting settlement keeps its protected page (VIP -> 200)", r.status === 200);
 
 // 7) invalid token never unlocks VIP
 r = await call("beta-vs-two", "tok-ghost");
@@ -130,7 +130,7 @@ check("isVip false for canceled/expired/past_due", ["canceled", "expired", "past
 const vipPublic = buildPublicMatchView(predictions[0]);
 check("public view of a VIP prediction has no analysis, odds or pick", !JSON.stringify(vipPublic).includes(SECRET_VIP) && !JSON.stringify(vipPublic).includes("to win") && !JSON.stringify(vipPublic).includes(String(SECRET_ODDS)));
 check("public view exposes the access tier", vipPublic.access === "vip" && buildPublicMatchView(predictions[2]).access === "free");
-check("publishability requires a recorded future kickoff", !isPublishableFuture(predictions[3], NOW) && isPublishableFuture(predictions[0], NOW));
+check("a match page requires a recorded kickoff and no settlement", hasMatchPage(predictions[3]) && hasMatchPage(predictions[0]) && !hasMatchPage({ ...predictions[0], matchInfo: {} }));
 
 // 10) Static-export guard: pages and components never import the protected index.
 import { readFileSync, readdirSync, statSync } from "node:fs";
