@@ -7,6 +7,7 @@ import {
   buildResultsDataset, emptyResultsDataset, latestResults, overlayStoredResult, settleFromMatch, summarizeResults, toPublicResult,
 } from "../src/lib/football-results.ts";
 import { maskSettledResultRecords } from "./lib/leak-context.mjs";
+import { latestFootballTrackRecord, trackRecordPromoState } from "../src/lib/football-track-record.ts";
 
 const NOW = "2026-10-07T23:00:00.000Z";
 const match = (pick: string, score: [number, number] | null, extra: Partial<MatchPreview> = {}): MatchPreview => ({
@@ -90,6 +91,37 @@ assert.equal(
   assert.equal(stats.pushes, 1);
   assert.equal(stats.winRate, 0.5);
 }
+
+// Track-record UI calculations: no hardcoded counts and no false percentage.
+{
+  const record = (result: "green" | "red" | "push", slug: string) => ({
+    ...settleFromMatch(match(result === "push" ? "Cruzeiro -1" : "Cruzeiro to Win", result === "green" ? [2, 0] : result === "red" ? [0, 1] : [2, 1], { slug }), NOW)!,
+    result,
+  });
+  const fiveOne = latestFootballTrackRecord([
+    ...Array.from({ length: 5 }, (_, index) => record("green", `w${index}`)),
+    record("red", "l1"),
+  ])!;
+  assert.equal(fiveOne.summary.wins, 5);
+  assert.equal(fiveOne.summary.losses, 1);
+  assert.equal((fiveOne.summary.winRate! * 100).toFixed(1), "83.3");
+
+  const fourOne = latestFootballTrackRecord([
+    ...Array.from({ length: 4 }, (_, index) => record("green", `fw${index}`)),
+    record("red", "fl1"),
+    record("push", "fp1"),
+  ])!;
+  assert.equal(fourOne.summary.settled, 6);
+  assert.equal(fourOne.summary.pushes, 1);
+  assert.equal((fourOne.summary.winRate! * 100).toFixed(1), "80.0");
+  assert.equal(latestFootballTrackRecord([]), null);
+  assert.equal(summarizeResults([record("push", "only-push")]).winRate, null);
+}
+
+// Auth state controls purchase presentation without changing subscription logic.
+assert.equal(trackRecordPromoState(false, false), "free");
+assert.equal(trackRecordPromoState(false, true), "vip");
+assert.equal(trackRecordPromoState(true, true), "loading");
 
 // Provider failure / stale snapshot: a stored settlement is never lost or downgraded
 {

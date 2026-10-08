@@ -23,6 +23,7 @@ import { localizePredictionText } from "@/lib/localized-presentation";
 import { localizedFixtureStatus, localizedResult } from "@/lib/localized-ui";
 import { homeFeedCopy } from "@/lib/home-feed-copy";
 import type { PublicFootballResult } from "@/lib/football-results";
+import { FootballTrackRecord } from "@/components/FootballTrackRecord";
 
 
 function HomeLeagueTaxonomy({
@@ -65,6 +66,7 @@ export function HomePredictionFeed({
   localizedMatchSlugs = [],
   discovery,
   results = [],
+  trackRecordResults = results,
 }: {
   matches: MatchPreview[];
   beforeHistory?: ReactNode;
@@ -76,6 +78,8 @@ export function HomePredictionFeed({
   discovery?: ReactNode;
   /** Latest settled results from the central results dataset (already limited by the page). */
   results?: PublicFootballResult[];
+  /** Complete settled dataset used only for dynamic track-record totals. */
+  trackRecordResults?: PublicFootballResult[];
 }) {
   const copy = homeFeedCopy(locale);
   const localizedMatchSet = new Set(localizedMatchSlugs);
@@ -284,6 +288,7 @@ export function HomePredictionFeed({
               <div><span className="eyebrow">{copy.resultsEyebrow}</span><h2>{copy.resultsTitle}</h2></div>
             </div>
           </div>
+          {locale === "en" && trackRecordResults.length > 0 ? <FootballTrackRecord records={trackRecordResults} /> : null}
           {results.length > 0 ? (
             <div className="history-list">
               {results.map((record) => {

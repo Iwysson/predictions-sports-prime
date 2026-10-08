@@ -8,7 +8,7 @@ import { supabase } from "@/lib/supabase";
 
 // "Get VIP". Signed-out visitors go to login. Signed-in visitors get a Whop checkout
 // bound to their own account by the server, never by a browser-supplied id.
-export function VipCheckoutButton() {
+export function VipCheckoutButton({ label }: { label?: string }) {
   const { t } = useI18n();
   const { isAuthenticated, isVip, loading } = useAuth();
   const [busy, setBusy] = useState(false);
@@ -19,7 +19,7 @@ export function VipCheckoutButton() {
   if (!isAuthenticated) {
     return (
       <Link className="button auth-primary-action" href="/login/">
-        {t("matchGetPrimeVip")}
+        {label ?? t("matchGetPrimeVip")}
       </Link>
     );
   }
@@ -48,7 +48,7 @@ export function VipCheckoutButton() {
   return (
     <div>
       <button className="button auth-primary-action" disabled={busy} onClick={startCheckout} type="button">
-        {busy ? t("matchOpeningCheckout") : t("matchGetPrimeVip")}
+        {busy ? t("matchOpeningCheckout") : label ?? t("matchGetPrimeVip")}
       </button>
       {error ? (
         <p className="auth-message auth-message--error" role="alert">

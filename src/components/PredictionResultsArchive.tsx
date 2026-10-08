@@ -1,6 +1,7 @@
 import Link from "@/components/DocumentLink";
 import { leaguesBySlug } from "@/data/leagues";
 import { resultLabels, sortedResults, summarizeResults, toPublicResult, type FootballResultRecord, type FootballResultsDataset } from "@/lib/football-results";
+import { FootballTrackRecord } from "@/components/FootballTrackRecord";
 
 export const RESULTS_VISIBLE_LIMIT = 200;
 
@@ -40,6 +41,7 @@ export function PredictionResultsArchive({
 
   return (
     <div className="results-archive" data-results-total={all.length} data-results-visible={visible.length}>
+      <FootballTrackRecord records={all} detailed />
       <div className="results-summary" aria-label="Prediction result counts">
         <span><b>{summary.settled}</b> Total settled</span>
         <span><b>{summary.wins}</b> Wins</span>

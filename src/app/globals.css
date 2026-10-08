@@ -3653,6 +3653,32 @@ html[dir="rtl"] .latest-match {
 .results-summary { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; margin-bottom: 14px; }
 .results-summary span { padding: 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); color: var(--muted); font-size: 12px; }
 .results-summary b { display: block; color: var(--text); font-size: 18px; }
+.track-record { display: grid; gap: 14px; margin: 0 0 18px; }
+.track-record__heading { display: grid; gap: 4px; }
+.track-record__heading h3 { margin: 0; color: var(--text-primary); font-size: clamp(19px, 2.5vw, 25px); }
+.track-record__heading p { margin: 0; color: var(--text-muted); font-size: 13px; line-height: 1.5; }
+.track-record__metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.track-record__metric { display: grid; gap: 2px; padding: 13px 15px; border: 1px solid var(--border); border-radius: 11px; background: var(--surface); }
+.track-record__metric strong { color: var(--text-primary); font-size: 24px; line-height: 1.1; }
+.track-record__metric span { color: var(--text-muted); font-size: 11px; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; }
+.track-record__metric--wins { border-color: color-mix(in srgb, var(--success) 45%, var(--border)); background: color-mix(in srgb, var(--success) 8%, var(--surface)); }
+.track-record__metric--wins strong { color: var(--success); }
+.track-record__metric--losses { border-color: color-mix(in srgb, var(--danger) 40%, var(--border)); background: color-mix(in srgb, var(--danger) 7%, var(--surface)); }
+.track-record__metric--losses strong { color: var(--danger); }
+.track-record__metric--rate { border-color: #357a58; background: linear-gradient(135deg, #10251c, #173d2c); }
+.track-record__metric--rate strong { color: #b8f3d0; }
+.track-record__metric--rate span { color: #cce6d8; }
+.track-record__overall { display: flex; align-items: baseline; gap: 10px; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--surface-subtle); }
+.track-record__overall span, .track-record__overall small { color: var(--text-muted); }
+.track-record__overall strong { color: var(--text-primary); font-size: 20px; }
+.track-record-promo { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 20px; padding: 18px 20px; border: 1px solid #8a6d20; border-radius: 14px; background: radial-gradient(circle at top right, #493b16 0%, #211d12 42%, #17150f 100%); color: #f7f0dc; }
+.track-record-promo h3 { margin: 8px 0 4px; color: #fff7dd; font-size: 20px; text-transform: uppercase; }
+.track-record-promo p { max-width: 68ch; margin: 0; color: #e7dcbc; font-size: 13px; line-height: 1.55; }
+.track-record-promo__offer { display: grid; justify-items: start; gap: 5px; min-width: 210px; }
+.track-record-promo__offer > strong { color: #fff3bc; font-size: 17px; }
+.track-record-promo__offer > span { color: #e7dcbc; font-size: 12px; }
+.track-record-promo__offer .button, .track-record-promo--active > .button { margin-top: 5px; white-space: normal; text-align: center; }
+.track-record-promo__loading { min-height: 38px; display: inline-flex; align-items: center; }
 .results-filters { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
 .results-filters button { padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: var(--muted); cursor: pointer; }
 .results-filters button[aria-pressed="true"] { border-color: var(--accent); color: var(--text); }
@@ -3709,6 +3735,10 @@ html[dir="rtl"] .footer-links { direction: rtl; }
   .legal-content section { padding: 12px; }
   .footer-links { gap: 7px 12px; }
   .results-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .track-record__metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .track-record-promo { grid-template-columns: 1fr; gap: 14px; padding: 16px; }
+  .track-record-promo__offer { min-width: 0; width: 100%; }
+  .track-record-promo__offer .button, .track-record-promo--active > .button { width: 100%; }
   .result-card__heading { align-items: flex-start; }
   .result-card__details { grid-template-columns: 1fr 1fr; }
   .result-card__details div:nth-child(3) { grid-column: 1 / -1; }
