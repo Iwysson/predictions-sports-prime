@@ -37,6 +37,24 @@
       "result": "green",
       "settledAt": "2026-10-08T02:02:59.027Z"
     },
+    "brasileirao-serie-a:cruzeiro-vs-sao-paulo": {
+      "key": "brasileirao-serie-a:cruzeiro-vs-sao-paulo",
+      "league": "brasileirao-serie-a",
+      "slug": "cruzeiro-vs-sao-paulo",
+      "homeTeam": "Cruzeiro",
+      "awayTeam": "São Paulo",
+      "date": "2026-10-07",
+      "fixtureId": "editorial:brasileirao-serie-a:cruzeiro-vs-sao-paulo:2026-10-07",
+      "predictionAccess": "vip",
+      "prediction": "Cruzeiro or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.67,
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-08T07:20:20.965Z"
+    },
     "brasileirao-serie-a:internacional-vs-corinthians": {
       "key": "brasileirao-serie-a:internacional-vs-corinthians",
       "league": "brasileirao-serie-a",
