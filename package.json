@@ -13,6 +13,7 @@
     "fixtures:validate": "tsx scripts/validate-fixture-snapshot.mjs",
     "test:fixture-sync": "tsx scripts/test-fixture-sync.mts",
     "test:football-results": "tsx scripts/test-football-results.mts",
+    "test:site-analytics": "tsx scripts/test-site-analytics.mts",
     "results:settle": "tsx scripts/settle-football-results.mts",
     "results:validate": "tsx scripts/validate-football-results.mts",
     "nfl:standings:sync": "tsx scripts/sync-nfl-standings.mjs",

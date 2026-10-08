@@ -3,32 +3,16 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-
-const GA_MEASUREMENT_ID = "G-3XD0F1R16S";
-const STORAGE_KEY = "psp-analytics-consent";
-
-type Choice = "granted" | "denied";
-
-function readChoice(): Choice | null {
-  try {
-    const value = window.localStorage.getItem(STORAGE_KEY);
-    return value === "granted" || value === "denied" ? value : null;
-  } catch {
-    return null;
-  }
-}
-
-function writeChoice(choice: Choice) {
-  try { window.localStorage.setItem(STORAGE_KEY, choice); } catch { /* Choice applies for this page only. */ }
-}
-
-// gtag.js only processes `arguments` objects, not arrays, so the shim must
-// push `arguments` exactly like the official snippet does.
-function gtag(..._args: unknown[]) {
-  const w = window as Window & { dataLayer?: unknown[] };
-  w.dataLayer = w.dataLayer || [];
-  w.dataLayer.push(arguments);
-}
+import {
+  GA_MEASUREMENT_ID,
+  enqueueGtag,
+  pageViewKey,
+  readAnalyticsConsent,
+  shouldTrackPageView,
+  updateAnalyticsConsent,
+  writeAnalyticsConsent,
+  type AnalyticsConsentChoice,
+} from "@/lib/analytics-consent";
 
 /**
  * GA4 with Consent Mode v2. Defaults (all denied) are set in ConsentIntegration, before this
@@ -47,44 +31,38 @@ function gtag(..._args: unknown[]) {
  */
 export function SiteAnalytics() {
   const pathname = usePathname();
-  const [choice, setChoice] = useState<Choice | null>(null);
   const [ready, setReady] = useState(false);
   const [open, setOpen] = useState(false);
   const [configured, setConfigured] = useState(false);
   const lastPath = useRef<string | null>(null);
 
   useEffect(() => {
-    const stored = readChoice();
-    setChoice(stored);
+    const stored = readAnalyticsConsent();
     setOpen(stored === null);
     setReady(true);
   }, []);
 
-  const decide = useCallback((next: Choice) => {
-    writeChoice(next);
-    setChoice(next);
+  const decide = useCallback((next: AnalyticsConsentChoice) => {
+    writeAnalyticsConsent(next);
+    updateAnalyticsConsent(next);
     setOpen(false);
   }, []);
 
-  useEffect(() => {
-    if (!ready || choice === null) return;
-    gtag("consent", "update", { analytics_storage: choice });
-  }, [ready, choice]);
-
   const configure = useCallback(() => {
-    gtag("js", new Date());
-    gtag("config", GA_MEASUREMENT_ID, { send_page_view: false });
+    enqueueGtag("js", new Date());
+    enqueueGtag("config", GA_MEASUREMENT_ID, { send_page_view: false });
     setConfigured(true);
   }, []);
 
   // Wait for `config` to have been pushed before the first `event page_view`, so gtag.js
   // processes the dataLayer queue in the order GA4 expects (config, then events).
   useEffect(() => {
-    if (!configured || lastPath.current === pathname) return;
-    lastPath.current = pathname;
-    gtag("event", "page_view", {
+    const key = pageViewKey(pathname);
+    if (!configured || !shouldTrackPageView(lastPath.current, key)) return;
+    lastPath.current = key;
+    enqueueGtag("event", "page_view", {
       page_location: window.location.href,
-      page_path: pathname,
+      page_path: key,
       page_title: document.title,
     });
   }, [configured, pathname]);
