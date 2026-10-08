@@ -17,12 +17,12 @@ const nhlEntries: ProtectedContentEntry[] = nhlMatches().map((m) => ({
 
 type LaterEntryFile = {
   activeFromKey: string;
-  entries: Array<{ slug: string; analysisAccess: "free" | "vip"; predictionAccess: "free" | "vip"; pick: string; odds: number; analysis: string[] }>;
+  entries: Array<{ slug: string; analysisAccess: "free" | "vip"; predictionAccess: "free" | "vip"; pick: string; odds: number; analysis: string[]; sources?: Array<{ name: string; url: string }> }>;
 };
 
 // NHL protected entries for later days. They stay "not-found" in the endpoint until the NHL day
 // (America/New_York) reaches activeFromKey. Add a new file here for each later NHL day.
-const nhlLaterFiles = ["src/data/nhl/protected-2026-10-07.json", "src/data/nhl/protected-2026-10-08.json"];
+const nhlLaterFiles = ["src/data/nhl/protected-2026-10-07.json", "src/data/nhl/protected-2026-10-08.json", "src/data/nhl/protected-2026-10-09.json"];
 for (const file of nhlLaterFiles) {
   const later = JSON.parse(readFileSync(file, "utf8")) as LaterEntryFile;
   for (const e of later.entries) {
@@ -30,7 +30,7 @@ for (const file of nhlLaterFiles) {
       slug: e.slug,
       analysisAccess: e.analysisAccess,
       predictionAccess: e.predictionAccess,
-      full: { analysis: e.analysis, sources: [], comment: null, picks: { main: e.pick, odds: e.odds } },
+      full: { analysis: e.analysis, sources: e.sources ?? [], comment: null, picks: { main: e.pick, odds: e.odds } },
       prediction: { main: e.pick, odds: e.odds },
       activeFromKey: later.activeFromKey,
     });

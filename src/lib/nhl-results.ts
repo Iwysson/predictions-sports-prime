@@ -5,6 +5,8 @@
 // parse, settles to "pending"/"unsupported" rather than a guessed win or loss (fail closed).
 import { nhlMatches } from "@/lib/nhl";
 import protectedOct07 from "@/data/nhl/protected-2026-10-07.json";
+import protectedOct08 from "@/data/nhl/protected-2026-10-08.json";
+import protectedOct09 from "@/data/nhl/protected-2026-10-09.json";
 import { decimalToAmericanOdds } from "@/lib/odds";
 import type { FinalScoreGame, MatchStatus } from "@/lib/nhl-live";
 import { findFinalScore } from "@/lib/nhl-live";
@@ -21,6 +23,8 @@ const PROTECTED_BY_DAY: Record<string, ProtectedEntry[]> = {
     .filter((m) => m.access === "vip")
     .map((m) => ({ slug: m.slug, pick: m.pick, odds: m.odds })),
   "2026-10-07": (protectedOct07 as { entries: ProtectedEntry[] }).entries,
+  "2026-10-08": (protectedOct08 as { entries: ProtectedEntry[] }).entries,
+  "2026-10-09": (protectedOct09 as { entries: ProtectedEntry[] }).entries,
 };
 
 export type NhlFullPrediction = {
@@ -64,11 +68,11 @@ type ParsedNhlPick =
 // automatically today, per the current editorial scope. Anything else is "unsupported".
 function parseNhlPick(pick: string, homeTeam: string, awayTeam: string): ParsedNhlPick {
   const normalized = pick.trim();
-  const total = normalized.match(/^(Over|Under)\s+(\d+(?:\.\d+)?)\s*Goals?$/i);
+  const total = normalized.match(/^(Over|Under)\s+(\d+(?:\.\d+)?)\s*(?:Total\s+)?Goals?$/i);
   if (total) {
     return { kind: "total", direction: total[1].toLowerCase() as "over" | "under", line: Number(total[2]) };
   }
-  const moneyline = normalized.match(/^(.+?)\s+to\s+win$/i);
+  const moneyline = normalized.match(/^(.+?)\s+to\s+win(?:\s*\(\s*including\s+OT[^)]*\))?$/i);
   if (moneyline) {
     const team = moneyline[1].trim().toLowerCase();
     if (team === homeTeam.toLowerCase()) return { kind: "moneyline", side: "home" };

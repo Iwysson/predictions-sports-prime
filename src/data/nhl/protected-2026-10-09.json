@@ -1,0 +1,58 @@
+{
+  "activeFromKey": "2026-10-09",
+  "entries": [
+    {
+      "slug": "columbus-blue-jackets-vs-pittsburgh-penguins",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 Total Goals",
+      "odds": 1.63,
+      "analysis": [
+        "Nationwide Arena in Columbus, Ohio hosts this game, with puck drop set for 7:00 p.m. ET on Friday, October 9.",
+        "Pittsburgh arrive after an explosive opening to the season. The Penguins scored seven against Philadelphia and six against Montreal, though the Montreal game also exposed a defensive weakness in a 6-5 overtime victory. A 3-2 loss to Winnipeg offered a more restrained picture before Washington put five past them in a 5-3 result. The swings matter more here than a simple record: Pittsburgh can create a large number of goals without always keeping the opposition quiet.",
+        "Columbus have been just as unpredictable. A 6-3 victory over Buffalo was followed by a 4-1 defeat to Utah, leaving them with seven goals scored and seven conceded through two games. The Blue Jackets' defensive depth is a further concern, with Ivan Provorov, Damon Severson and Dante Fabbro listed as unavailable in pre-game injury reports. Pittsburgh are missing Bryan Rust, so their attacking output cannot be assumed to continue at the same pace.",
+        "The longer-term home and away splits also point toward an open game. Pittsburgh averaged approximately 3.46 goals scored per away game last regular season, while Columbus averaged about 3.24 scored and 3.02 conceded at home. Those figures are no guarantee of six goals, but they explain why the line can be cleared with contributions from both attacks. Columbus' young forwards can punish Pittsburgh's lapses, while the Penguins have already shown they can score in bursts."
+      ],
+      "sources": [
+        { "name": "NHL official schedule", "url": "https://www.nhl.com/schedule" },
+        { "name": "Columbus official schedule", "url": "https://www.nhl.com/bluejackets/schedule/2026/fullseason" },
+        { "name": "Covers matchup and injury report", "url": "https://www.covers.com/sport/hockey/nhl/matchup/382343" }
+      ]
+    },
+    {
+      "slug": "washington-capitals-vs-new-york-rangers",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 Total Goals",
+      "odds": 1.85,
+      "analysis": [
+        "Capital One Arena in Washington, D.C. hosts this game, with puck drop set for 7:00 p.m. ET on Friday, October 9.",
+        "Washington host the Rangers with an offensive reference point already in place: the Capitals scored five in their recent victory over Pittsburgh. Their home attack was productive throughout the previous regular season, averaging roughly 3.39 goals per game, but the more interesting detail is that Washington also conceded only around 2.56 at home. That defensive record makes a high total less automatic than the scoring figures alone suggest.",
+        "The Rangers supply the counterweight. New York averaged approximately 3.20 goals per away game last season and conceded about 3.07, a road profile in which games can open up without the Rangers losing control of the score. That attacking capability is the main reason to lean toward goals rather than assume Washington's defense will dictate the evening.",
+        "A simple blend of last season's venue-specific scoring and conceding averages produces a total near 6.1 goals. That is a descriptive estimate rather than an expected-goals model, and it does not account for line combinations or goaltender confirmation. The most credible route past 5.5 is a competitive game in which both clubs contribute, rather than one side scoring four or five. Washington's recent scoring gives the total a solid starting point, and New York's established road production needs to supply the rest."
+      ],
+      "sources": [
+        { "name": "NHL official schedule", "url": "https://www.nhl.com/schedule" },
+        { "name": "NHL matchup schedule and records", "url": "https://deepmetricanalytics.com/nhl/schedule?date=2026-10-09" }
+      ]
+    },
+    {
+      "slug": "winnipeg-jets-vs-anaheim-ducks",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Winnipeg Jets to Win (Including OT & Shootout)",
+      "odds": 1.91,
+      "analysis": [
+        "Canada Life Centre in Winnipeg, Manitoba hosts this game, with puck drop set for 8:00 p.m. ET on Friday, October 9.",
+        "Winnipeg face Anaheim in a matchup that puts the Ducks' road defending under scrutiny. Anaheim conceded approximately 3.54 goals per away game last season, the weakest venue-specific defensive figure among the eight clubs on this slate. Winnipeg's own home scoring average was around 3.02, so the Jets do not need an exceptional attacking night to put real pressure on the visitors. A recent 3-2 win over Pittsburgh also showed that Winnipeg can win without turning every game into a shootout.",
+        "The case for Winnipeg is not one-sided. The Jets conceded approximately 3.05 goals per home game last season, and Anaheim averaged just over three goals scored on the road, which leaves a real chance the Ducks can keep pace if Winnipeg's defensive structure is loose. The Jets' ability to manage the middle of the ice and deny Anaheim easy transition chances may prove more decisive than raw shot volume.",
+        "Goaltending is another variable. Winnipeg's starter should be checked close to puck drop, given the early-season workload and uncertainty around availability. Anaheim also play Calgary the following night, which could affect how they distribute minutes, although that is no proof of a weaker performance in Winnipeg. The home setting and Anaheim's road defensive problems are the main reasons to favor the Jets, while the relatively close price reflects a contest with meaningful risk."
+      ],
+      "sources": [
+        { "name": "NHL official schedule", "url": "https://www.nhl.com/schedule" },
+        { "name": "NHL matchup schedule and records", "url": "https://deepmetricanalytics.com/nhl/schedule?date=2026-10-09" },
+        { "name": "Goalie workload and back-to-back schedule", "url": "https://fantasychalktalk.com/nhl/articles/2026-27-week-2-goalies" }
+      ]
+    }
+  ]
+}

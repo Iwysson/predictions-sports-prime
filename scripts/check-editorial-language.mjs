@@ -5,7 +5,7 @@ import { nhlMatches } from "../src/lib/nhl.ts";
 import { SLATES } from "../src/data/nhl/slates.ts";
 import { NFL_WEEK5_2026 } from "../src/data/nfl/week5-2026-public.ts";
 
-const nhlProtectedFiles = ["src/data/nhl/protected-2026-10-07.json", "src/data/nhl/protected-2026-10-08.json"];
+const nhlProtectedFiles = ["src/data/nhl/protected-2026-10-07.json", "src/data/nhl/protected-2026-10-08.json", "src/data/nhl/protected-2026-10-09.json"];
 const nhlProtectedRecords = nhlProtectedFiles.flatMap((file) => {
   const parsed = JSON.parse(readFileSync(file, "utf8"));
   return parsed.entries.map((entry) => ({
