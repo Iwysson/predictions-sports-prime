@@ -1,6 +1,6 @@
 import type { EditorialPrediction } from "@/types";
 
-export const superLigRound2026_10_10: EditorialPrediction[] = [
+const superLigRound2026_10_10Base: EditorialPrediction[] = [
   {
     "league": "super-lig",
     "homeTeam": "Gençlerbirliği",
@@ -178,3 +178,72 @@ export const superLigRound2026_10_10: EditorialPrediction[] = [
     ]
   },
 ];
+
+const refreshedAt = "2026-10-08T06:25:59.000-03:00";
+
+const genclerbirligiAmedAnalysis = `# Gençlerbirliği vs Amed Prediction, Odds and Betting Tips
+
+**Prediction:** Over 2.5 Goals  
+**Odds:** 1.75
+
+## Match information
+
+- **Competition:** Trendyol Süper Lig
+- **Date:** 10 October 2026
+- **Kick-off:** 13:30 (local time)
+- **Round:** Matchweek 7
+- **Venue:** Eryaman Stadyumu
+- **Location:** Ankara, Türkiye
+
+## Team news and projected lineups
+
+No reliable match-specific injury bulletin, suspension list or projected lineup was available at the 8 October review. No absence or starting role is inferred; official club updates and the confirmed teamsheets remain authoritative.
+
+## Match analysis
+
+Gençlerbirliği enter the seventh round in 13th place after a difficult defensive opening. They have conceded **13 goals in six league matches (2.17 per game)** while scoring five, and four of those six fixtures have finished with at least three goals. Heavy 5-0 and 4-0 defeats show how rapidly the structure can break once they fall behind.
+
+Amed arrive as league leaders with the division's most forceful early attack: **15 goals in six matches**, or 2.50 per game. The range of results matters as much as the total, with a 5-0 win over Başakşehir, a 3-2 victory against Beşiktaş and a 2-2 away draw at Kasımpaşa demonstrating that they can create both in controlled possession and in open exchanges.
+
+The fixture is not simply strong attack against weak defence. Gençlerbirliği are at home and must find a way to threaten rather than spend the entire afternoon protecting their box. Their best route is to use the wide areas quickly before Amed can set its pressure; Amed can respond by forcing turnovers in midfield and attacking the space behind the advancing full-backs.
+
+Across the teams' 12 combined league appearances, **nine have produced at least three goals (75%)**. That frequency is informative but comes from a small early-season sample, and it does not guarantee that Amed's overall attacking level will transfer unchanged to this away match.
+
+### Statistical Core Predictions-Sports-Prime
+
+Statistical coverage is partial. Gençlerbirliği's and Amed's six-match OVERALL records are used because a verified complete HOME/AWAY metric set was unavailable. The scope is explicitly overall: Gençlerbirliği have scored five and conceded 13; Amed have scored 15. Missing advanced and lineup metrics have not been estimated.
+
+## Market assessment and integrated risk
+
+The **1.75** price implies **57.14%** before margin. The observed three-goal frequency is higher, but 12 combined team appearances are too few to treat that gap as a stable edge. Amed controlling possession after taking the lead, or Gençlerbirliği offering little attacking contribution, could leave the match at 0-2 or 1-1 and defeat the Over.
+
+Raw implied probability is **57.14%** because 1 / decimal odds of 1.75 = 57.14%. The value assessment separates that market price from the small historical sample and the editorial judgment above.
+
+## Conclusion
+
+Amed's attacking start and Gençlerbirliği's concession rate create several credible routes to a third goal. The main restraint is game state: if the leaders score and then manage the match conservatively, the home side may not supply the contribution the total needs.
+
+**Prediction:** Over 2.5 Goals  
+**Odds:** **1.75**`;
+
+export const superLigRound2026_10_10: EditorialPrediction[] = superLigRound2026_10_10Base.map((prediction) => {
+  if (prediction.slug !== "genclerbirligi-vs-amed") return prediction;
+  return {
+    ...prediction,
+    analysis: [genclerbirligiAmedAnalysis],
+    updatedAt: refreshedAt,
+    sources: [{
+      name: "Gençlerbirliği — Amed SF match tickets",
+      url: "https://genclerbirligi.org.tr/haberler/amed-sf-maci-biletleri-satisa-cikti",
+      description: "Official club announcement used to verify the competition round, date, kick-off and venue.",
+      accessedAt: refreshedAt,
+    }],
+    picks: {
+      ...prediction.picks,
+      oddsProvenance: {
+        ...prediction.picks.oddsProvenance,
+        source: "Original editor attestation",
+      },
+    },
+  };
+});

@@ -25,6 +25,10 @@ export type Wave28Input = {
   awayMatches: number;
   fixtureSource: { name: string; url: string };
   statsSource: { name: string; url: string };
+  refreshedAt?: string;
+  teamNews?: string;
+  coreIntroduction?: string;
+  conclusion?: string;
 };
 
 const publishedAt = "2026-10-06T18:00:00.000-03:00";
@@ -48,7 +52,7 @@ export function createWave28Prediction(input: Wave28Input): EditorialPrediction 
 
 ## Team news and projected lineups
 
-No sufficiently reliable current team-news report or projected lineup was supplied for ${input.home} or ${input.away}. No injury, suspension, doubt, return, formation or starting player has been inferred from silence; the official teamsheet remains the authority near kick-off.
+${input.teamNews ?? `No sufficiently reliable current team-news report or projected lineup was supplied for ${input.home} or ${input.away}. No injury, suspension, doubt, return, formation or starting player has been inferred from silence; the official teamsheet remains the authority near kick-off.`}
 
 ## Match analysis
 
@@ -60,7 +64,7 @@ ${input.tactical}
 
 ### Statistical Core Predictions-Sports-Prime
 
-Statistical coverage is partial. The supplied pre-match package contains the HOME and AWAY split metrics below for the 2026 season, but unavailable target metrics have not been synthesized. The sample uses ${input.home}'s HOME matches and ${input.away}'s AWAY matches, with the statistical source checked on 6 October 2026.
+${input.coreIntroduction ?? `Statistical coverage is partial. The supplied pre-match package contains the HOME and AWAY split metrics below for the 2026 season, but unavailable target metrics have not been synthesized. The sample uses ${input.home}'s HOME matches and ${input.away}'s AWAY matches, with the statistical source checked on 6 October 2026.`}
 
 | Metric | ${input.home} HOME | ${input.away} AWAY |
 | --- | ---: | ---: |
@@ -74,7 +78,7 @@ For ${input.home} vs ${input.away}, the published price is **${input.odds.toFixe
 
 ## Conclusion
 
-For ${input.home} vs ${input.away}, the statistical case supports ${input.pick}, but the selection still depends on the match developing along the routes described above. The original editor-supplied prediction and publication price are preserved without adjustment.
+${input.conclusion ?? `For ${input.home} vs ${input.away}, the statistical case supports ${input.pick}, but the selection still depends on the match developing along the routes described above. The original editor-supplied prediction and publication price are preserved without adjustment.`}
 
 **Prediction:** ${input.pick}
 **Odds:** ${input.odds.toFixed(2)}`;
@@ -100,7 +104,7 @@ For ${input.home} vs ${input.away}, the statistical case supports ${input.pick},
       main: input.pick,
       publishedOdds: input.odds,
       oddsProvenance: {
-        source: "Editor-supplied PSP 28-match publication package",
+        source: input.refreshedAt ? "Original editor attestation" : "Editor-supplied PSP 28-match publication package",
         provenance: "author_attested",
         market: input.pick,
       },
@@ -113,20 +117,20 @@ For ${input.home} vs ${input.away}, the statistical case supports ${input.pick},
     },
     published: true,
     publishedAt,
-    updatedAt: publishedAt,
+    updatedAt: input.refreshedAt ?? publishedAt,
     sourceStatus: "partial",
     sources: [
       {
         name: input.fixtureSource.name,
         url: input.fixtureSource.url,
         description: "Official fixture schedule used for matchup, date and kick-off verification.",
-        accessedAt: publishedAt,
+        accessedAt: input.refreshedAt ?? publishedAt,
       },
       {
         name: input.statsSource.name,
         url: input.statsSource.url,
         description: "Established secondary source for the supplied current-season home and away statistical splits.",
-        accessedAt: publishedAt,
+        accessedAt: input.refreshedAt ?? publishedAt,
       },
     ],
     statisticalCoreProvenance: {

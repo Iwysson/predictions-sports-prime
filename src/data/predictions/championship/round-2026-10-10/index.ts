@@ -1,6 +1,6 @@
 import type { EditorialPrediction } from "@/types";
 
-export const championshipRound2026_10_10: EditorialPrediction[] = [
+const championshipRound2026_10_10Base: EditorialPrediction[] = [
   {
     "league": "championship",
     "homeTeam": "Blackburn Rovers",
@@ -496,3 +496,249 @@ export const championshipRound2026_10_10: EditorialPrediction[] = [
     ]
   },
 ];
+
+const refreshedAt = "2026-10-08T06:25:59.000-03:00";
+
+const refreshedAnalysis: Record<string, string> = {
+  "charlton-vs-bristol-city": `# Charlton Athletic vs Bristol City Prediction, Odds and Betting Tips
+
+**Prediction:** Charlton X1  
+**Odds:** 1.57
+
+## Match information
+
+- **Competition:** EFL Championship
+- **Date:** 10 October 2026
+- **Kick-off:** 12:30 (local time)
+- **Round:** Matchweek 9
+- **Venue:** The Valley
+- **Location:** London, England
+
+## Team news and projected lineups
+
+No reliable match-specific availability bulletin or confirmed lineup was available at the 8 October review. Projected elevens and absence claims are therefore omitted; the official teamsheets remain decisive near kick-off.
+
+## Match analysis
+
+Charlton are ninth with 12 points from eight matches, yet their strongest argument is much more specific than the table. They are **unbeaten in four home league games (2-2-0)** and have conceded only **one goal at The Valley**, a rate of 0.25 per match. The trade-off is modest home production: three goals in four games leaves little margin if Bristol City score first.
+
+Bristol City sit one point higher on 13 and bring the more aggressive away profile. Their four trips have produced a 2-1-1 record and a balanced 8-8 goal count, or 4.00 total goals per match. Wins at Burnley and Preston show they can travel with intent, although the 4-1 defeat at Southampton illustrates how quickly that approach can unravel.
+
+The contrast should shape the contest. Charlton are likely to protect the centre and make Bristol City work around a compact block, while the visitors have enough pace and ambition to push the full-backs forward. If Charlton survive the first wave, Bristol City's willingness to commit numbers can create the transition moments that the home side need.
+
+The recent sequence is mixed on both sides: Charlton's last five include two defeats and three draws, while Bristol City have three wins and two losses. That prevents a broad form claim from carrying the selection. The home double chance instead rests on Charlton's venue resistance, with the draw covering a match that may be decided by small margins.
+
+### Statistical Core Predictions-Sports-Prime
+
+The available pre-match evidence is partial. Charlton's HOME split is 2-2-0 with three scored and one conceded; Bristol City's AWAY split is 2-1-1 with eight scored and eight conceded. Advanced metrics and verified lineup data were unavailable and have not been estimated.
+
+## Market assessment and integrated risk
+
+Odds of **1.57** imply **63.69%** before margin. That market price is not the same as Charlton's four-match unbeaten-home frequency, and the sample remains small. Bristol City's eight away goals are the principal threat: an early visitor goal would force a low-output Charlton attack away from its preferred controlled game.
+
+## Conclusion
+
+Charlton's home defensive record gives them a credible route to avoid defeat, but Bristol City's road attack makes this far from automatic. The draw protection is essential rather than decorative.
+
+**Prediction:** Charlton X1  
+**Odds:** **1.57**`,
+  "west-brom-vs-birmingham": `# West Bromwich Albion vs Birmingham City Prediction, Odds and Betting Tips
+
+**Prediction:** West Brom X1 + Over 1.5 Goals  
+**Odds:** 1.82
+
+## Match information
+
+- **Competition:** EFL Championship
+- **Date:** 10 October 2026
+- **Kick-off:** 12:30 (local time)
+- **Round:** Matchweek 9
+- **Venue:** The Hawthorns
+- **Location:** West Bromwich, England
+
+## Team news and projected lineups
+
+FotMob listed Nolan Galves and Michael Johnston unavailable for West Brom, with Marc Leonard unavailable for Birmingham, at the 8 October check. Those statuses remain subject to club confirmation. No sufficiently reliable projected elevens were available, so no starting lineup is asserted.
+
+## Match analysis
+
+West Brom are fifth with 14 points from eight games, and The Hawthorns has supplied their most dependable platform. The Baggies are **2-2-0 at home**, scoring six and conceding three, while their broader unbeaten home league run has reached eleven matches. A 2.00 home points-per-game return gives the result leg a clear venue basis.
+
+Birmingham's 2-5-1 record is less forceful but difficult to dismiss. Five draws in eight show a team that stays in matches, while 12 goals scored and 11 conceded point to a more open profile than West Brom's. Their recent five-game sequence contains one win, three draws and one defeat, so the visitors have repeatedly found a way to remain competitive without controlling games.
+
+The tactical contest should turn on West Brom's ability to move Birmingham's block before attacking the box. Isaac Price's shot volume and Jimmy-Jay Morgan's creation offer routes through the inside channels, while Birmingham can threaten through Alexander Cochrane's delivery and transitions into the space behind advanced wide players. West Brom must avoid turning territorial control into sterile possession.
+
+The last two league meetings finished 1-1 and 0-0, which is relevant as a warning but not strong enough to override the current scoring environment. This selection needs two goals, so a repeat of the 1-1 at The Hawthorns succeeds; a goalless stalemate does not.
+
+### Statistical Core Predictions-Sports-Prime
+
+Available current-season data is partial. West Brom's HOME sample is 2-2-0 with six goals for and three against; Birmingham's overall eight-match record is 2-5-1 with 12 for and 11 against because a verified full AWAY metric set was unavailable. The overall fallback is explicitly labelled and no missing metric has been inferred.
+
+## Market assessment and integrated risk
+
+The **1.82** price carries a raw implied probability of **54.95%**. West Brom's unbeaten home start supports the double chance, but Birmingham's draw rate and recent derby history make a narrow contest plausible. A Birmingham win defeats the result leg, while 0-0 is the separate risk to the goal requirement.
+
+## Conclusion
+
+West Brom's home stability provides the stronger foundation, and the two-goal threshold can be cleared without demanding a dominant home win. Birmingham's resilience keeps both draw protection and the risk warning important.
+
+**Prediction:** West Brom X1 + Over 1.5 Goals  
+**Odds:** **1.82**`,
+  "blackburn-vs-cardiff": `# Blackburn Rovers vs Cardiff City Prediction, Odds and Betting Tips
+
+**Prediction:** Blackburn X1 + Over 1.5 Goals  
+**Odds:** 1.87
+
+## Match information
+
+- **Competition:** EFL Championship
+- **Date:** 10 October 2026
+- **Kick-off:** 15:00 (local time)
+- **Round:** Matchweek 9
+- **Venue:** Ewood Park
+- **Location:** Blackburn, England
+
+## Team news and projected lineups
+
+No reliable match-specific availability report or projected lineup was available at the 8 October review. No injury, suspension or starting-player claim is made without club or established match-centre confirmation.
+
+## Match analysis
+
+Blackburn are 16th with nine points, but six of those points have come at Ewood Park. Their **2-0-2 home record** contains seven goals scored and six conceded, creating a 3.25-goal average and a far more productive setting than their recent away draws at Lincoln and Portsmouth.
+
+Cardiff moved to seven points after beating Charlton 3-1, yet their road return remains the central weakness: **0-1-3 away**, three scored and seven conceded. Defeats at QPR, Portsmouth and Bolton followed an opening draw at Derby, so they have conceded on every league trip and average only 0.25 away points.
+
+Blackburn should look to establish width early and attack the second phase after crosses, where Cardiff's away defence has struggled to end pressure. Cardiff's best route is to disrupt that rhythm, keep the distances compact and release runners after turnovers. The hosts cannot afford careless rest defence merely because the table and venue splits favour them.
+
+The recent form line prevents overconfidence. Blackburn's last five league matches contain one win, two draws and two defeats, while Cardiff arrive from a confidence-building home victory. The pick is therefore not a claim of dominant momentum; it combines Blackburn's venue edge with a low two-goal threshold.
+
+### Statistical Core Predictions-Sports-Prime
+
+The verified partial split compares Blackburn's four HOME matches (2-0-2, 7-6) with Cardiff's four AWAY matches (0-1-3, 3-7). The sample does not include a reliable xG, shot or lineup dataset, so those metrics remain unavailable rather than estimated.
+
+## Market assessment and integrated risk
+
+Odds of **1.87** correspond to a raw implied probability of **53.48%**. Blackburn's home games have averaged 3.25 goals and Cardiff have conceded on all four trips, but a 0-0 or 1-0 Blackburn win fails the total leg. A Cardiff victory is the larger risk because it defeats the double chance outright.
+
+## Conclusion
+
+Ewood Park form gives Blackburn the better route to avoid defeat, while Cardiff's away concession pattern supports the second goal arriving. Recent inconsistency on both sides keeps the price from being treated as comfortable.
+
+**Prediction:** Blackburn X1 + Over 1.5 Goals  
+**Odds:** **1.87**`,
+  "bolton-vs-stoke": `# Bolton Wanderers vs Stoke City Prediction, Odds and Betting Tips
+
+**Prediction:** Bolton X1  
+**Odds:** 1.46
+
+## Match information
+
+- **Competition:** EFL Championship
+- **Date:** 10 October 2026
+- **Kick-off:** 15:00 (local time)
+- **Round:** Matchweek 9
+- **Venue:** Toughsheet Community Stadium
+- **Location:** Bolton, England
+
+## Team news and projected lineups
+
+No reliable current team-news report or projected lineup was available at the 8 October review. Availability and starting roles are left open until the clubs publish match-specific information or the official teamsheets.
+
+## Match analysis
+
+Bolton are 15th with ten points, and their home campaign is more stable than the overall table suggests. They are **2-0-2 at the Toughsheet**, scoring five and conceding five, for 1.50 points per match. The 1-0 home win over Cardiff in their latest listed league outing also shows that they can protect a narrow advantage.
+
+Stoke sit seventh on 13 points, yet the venue split is pronounced. Their **1-1-2 away record** has produced five goals for and nine against, compared with three home wins and only three home goals conceded. The road defensive rate of 2.25 per game is three times their 0.75 home rate.
+
+Bolton's task is to press with enough control to keep Stoke from playing directly into the channels. If the hosts win second balls around midfield, they can sustain attacks and test a road defence that has repeatedly been stretched. Stoke still have the higher league position and enough forward output to punish an aggressive Bolton line, so the home side's spacing behind the press will matter.
+
+This is a double-chance argument, not a claim that Bolton are the stronger team in every phase. Stoke's away win proves they can travel successfully, but two defeats in four trips and nine conceded make the draw protection valuable for a home side that has already won twice at this venue.
+
+### Statistical Core Predictions-Sports-Prime
+
+The partial venue sample uses Bolton's four HOME matches (2-0-2, 5-5, 1.50 points per game) and Stoke's four AWAY matches (1-1-2, 5-9, 1.00 point per game). Advanced metrics and verified lineup data were unavailable and have not been synthesized.
+
+## Market assessment and integrated risk
+
+The **1.46** price implies **68.49%** before margin, a demanding threshold for a four-match venue sample. Stoke's superior table position and 13-goal attack are meaningful contrary evidence. A visitor win is the single losing route, and an early Stoke goal would force Bolton to chase against a team capable of exploiting transition space.
+
+## Conclusion
+
+Bolton's home return and Stoke's defensive drop away from home make the hosts more likely to avoid defeat than their league positions alone suggest. The short price and limited sample are the reasons for restraint.
+
+**Prediction:** Bolton X1  
+**Odds:** **1.46**`,
+  "derby-vs-wrexham": `# Derby County vs Wrexham Prediction, Odds and Betting Tips
+
+**Prediction:** Under 2.5 Goals  
+**Odds:** 1.74
+
+## Match information
+
+- **Competition:** EFL Championship
+- **Date:** 10 October 2026
+- **Kick-off:** 15:00 (local time)
+- **Round:** Matchweek 9
+- **Venue:** Pride Park Stadium
+- **Location:** Derby, England
+
+## Team news and projected lineups
+
+No reliable match-specific availability bulletin or projected lineup was available at the 8 October review. The official Derby fixture listing confirms the match details, but not a starting eleven; no absence or role is inferred.
+
+## Match analysis
+
+Derby are 22nd with five points after eight games and have scored only seven. The home picture is even tighter: **0-1-3 at Pride Park**, with three goals in four matches, leaves them at 0.75 scored per home game. Their recent sequence includes a 0-1 home loss to West Brom and a 1-1 draw at Burnley.
+
+Wrexham hold ten points from a 2-4-2 start, scoring nine and conceding 12. Their last five demonstrate both the ceiling and the restraint: a 2-1 win over Southampton and a 3-0 win at Millwall sit alongside 1-1 and 0-0 draws, while the 6-0 defeat at West Ham is the clear high-scoring outlier.
+
+Derby need a compact base because opening the midfield would expose a low-output attack to a game it is poorly equipped to chase. Wrexham can use direct deliveries and second balls to move play toward the Derby box, but they have little reason to force the tempo if the match remains level. That dynamic favours long phases in which territory matters more than shot volume.
+
+The available head-to-head sample contains only two meetings, so it carries little predictive weight and is not used to drive the pick. The case comes from current production: together the teams have scored 16 goals in 16 league appearances, exactly one per team-game.
+
+### Statistical Core Predictions-Sports-Prime
+
+The partial evidence uses Derby's four HOME matches (0-1-3, three goals scored) and Wrexham's eight-match OVERALL record (2-4-2, nine scored, 12 conceded) because a verified complete AWAY split was unavailable. That fallback is explicit; no xG, shot or lineup metric has been manufactured.
+
+## Market assessment and integrated risk
+
+Odds of **1.74** imply **57.47%**. Derby's **0.75 home goals per game** supports a low total, but Wrexham's six-goal defeat at West Ham shows how the match can escape if the first defensive line collapses. An early goal is the principal tactical risk because it would force the trailing side to abandon the controlled shape.
+
+## Conclusion
+
+Derby's limited home production and Wrexham's capacity to accept a slower away game point toward a narrow scoreline. The call remains vulnerable to an early breakthrough that turns the match into a transition contest.
+
+**Prediction:** Under 2.5 Goals  
+**Odds:** **1.74**`,
+};
+
+const refreshSources: Record<string, EditorialPrediction["sources"]> = {
+  "charlton-vs-bristol-city": [{ name: "Sky Sports — Bristol City fixtures", url: "https://www.skysports.com/bristol-city-scores-fixtures/2026-10-01", description: "Established match listing used to verify the fixture and recent results.", accessedAt: refreshedAt }],
+  "west-brom-vs-birmingham": [{ name: "FotMob — West Bromwich Albion vs Birmingham City", url: "https://www.fotmob.com/en-GB/matches/birmingham-city-vs-west-bromwich-albion/2ha382", description: "Established match centre used for recent form, matchup context and provisional availability reporting.", accessedAt: refreshedAt }],
+  "blackburn-vs-cardiff": [{ name: "Sky Sports — Blackburn Rovers vs Cardiff City", url: "https://www.skysports.com/football/blackburn-rovers-vs-cardiff-city/560594", description: "Established match centre used for fixture verification and current form results.", accessedAt: refreshedAt }],
+  "bolton-vs-stoke": [{ name: "Opta Analyst — Bolton Wanderers fixtures", url: "https://theanalyst.com/football/team/scm-30/bolton-wanderers/fixtures", description: "Established statistical provider used to verify the fixture, venue and schedule.", accessedAt: refreshedAt }],
+  "derby-vs-wrexham": [{ name: "Derby County — Wrexham fixture", url: "https://www.dcfc.co.uk/fixtures?competition=&display=&home_away=h&team=1", description: "Official club fixture listing used to verify the date, kick-off and venue.", accessedAt: refreshedAt }],
+};
+
+export const championshipRound2026_10_10: EditorialPrediction[] = championshipRound2026_10_10Base.map((prediction) => {
+  const slug = prediction.slug;
+  if (!slug) return prediction;
+  const refreshed = refreshedAnalysis[slug];
+  if (!refreshed) return prediction;
+  const analysis = refreshed
+    .replace("### Statistical Core Predictions-Sports-Prime\n\n", "### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial. Unlisted target metrics remain unavailable. ")
+    .replace("## Conclusion", "Raw implied probability is calculated as 1 / decimal odds. The value assessment separates that market price from the short historical sample and the editorial judgment above.\n\n## Conclusion");
+  return {
+    ...prediction,
+    analysis: [analysis],
+    updatedAt: refreshedAt,
+    sources: refreshSources[slug],
+    picks: {
+      ...prediction.picks,
+      oddsProvenance: {
+        ...prediction.picks.oddsProvenance,
+        source: "Original editor attestation",
+      },
+    },
+  };
+});
