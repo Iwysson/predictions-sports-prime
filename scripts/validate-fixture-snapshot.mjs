@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import snapshot from "../src/data/fixtures.snapshot.json" with { type: "json" };
 import { leagues } from "../src/data/leagues.ts";
 import { matches } from "../src/data/matches.ts";
+import { editorialPredictions } from "../src/data/predictions/index.ts";
 import { validateLeagueRounds } from "../src/lib/data-validation.ts";
 import { hydratePrediction } from "../src/lib/live-predictions.ts";
 import { toMatchPreview } from "../src/lib/editorial.ts";
@@ -50,7 +51,10 @@ for (const match of matches) {
   const fixtureId = snapshot.predictionIds[`${match.league}:${match.slug}`];
   if (!fixtureId) {
     assert.ok(league.manualOnly, `${match.slug}: automatic prediction is not linked to a provider fixture ID.`);
-    assert.ok(match.sources?.some((item) => /^https:\/\//.test(item.url)), `${match.slug}: manual fixture lacks an auditable HTTPS source.`);
+    // The public match view strips sources from VIP-gated analyses to prevent leaks;
+    // audit the authoritative editorial record, which still requires an HTTPS source.
+    const editorialSources = editorialPredictions.find((item) => item.league === match.league && item.slug === match.slug)?.sources;
+    assert.ok(editorialSources?.some((item) => /^https:\/\//.test(item.url)),`${match.slug}: manual fixture lacks an auditable HTTPS source.`);
     assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(match.date) && /^\d{2}:\d{2}$/.test(match.time), `${match.slug}: manual fixture lacks a valid date/time.`);
     continue;
   }
@@ -66,7 +70,17 @@ for (const match of matches) {
   assert.equal(hydrated.time, providerFixture.time, `${match.slug}: reliable provider kickoff was not retained.`);
 }
 
-const hullUnited = await hydratePrediction(toMatchPreview(matches.find((match) => match.slug === "hull-city-vs-manchester-united")));
-assert.equal(hullUnited.time, "08:30", "Hull City vs Manchester United must remain at 08:30 in Brazil.");
+const hullPrediction = matches.find((match) => match.slug === "hull-city-vs-manchester-united");
+if (hullPrediction) {
+  const hullUnited = await hydratePrediction(toMatchPreview(hullPrediction));
+  assert.equal(hullUnited.time, "08:30", "Hull City vs Manchester United must remain at 08:30 in Brazil.");
+} else {
+  // The preview is no longer in the published inventory; keep guarding the
+  // authoritative snapshot fixture instead of crashing on the missing prediction.
+  const hullFixture = snapshot.leagues["premier-league"]
+    .flatMap((round) => round.games)
+    .find((game) => game.homeTeam === "Hull City" && game.awayTeam === "Manchester United");
+  assert.equal(hullFixture?.time, "08:30", "Hull City vs Manchester United must remain at 08:30 in Brazil.");
+}
 
 console.log(`Fixture snapshot validation: PASS (${ids.size} fixtures, ${matches.length} predictions)`);
