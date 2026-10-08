@@ -177,8 +177,6 @@ function fixtureToMatch(
       round: roundLabel,
       date: game.date,
       time: game.time,
-      homeTeam: game.homeTeam,
-      awayTeam: game.awayTeam,
       fixtureStatus: game.status,
       homeScore: game.homeScore,
       awayScore: game.awayScore,

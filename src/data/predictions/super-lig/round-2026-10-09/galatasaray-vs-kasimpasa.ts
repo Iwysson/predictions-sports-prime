@@ -25,6 +25,7 @@ export const galatasarayVsKasimpasa: EditorialPrediction = {
   "matchInfo": {
     "date": "2026-10-09",
     "time": "20:00",
+    "round": "Matchweek 7",
     "venue": "RAMS Park"
   },
   "published": true,
