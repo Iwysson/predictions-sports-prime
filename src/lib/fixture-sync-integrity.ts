@@ -1,4 +1,5 @@
 import { normalizeTeamKey, teamNamesMatch, type OpenFootballGame, type OpenFootballRound } from "@/lib/openfootball";
+import { normalizeMatchTime } from "@/lib/match-time";
 
 type PredictionIdentity = {
   homeTeam: string;
@@ -124,4 +125,58 @@ export function normalizeFixtureRounds(rounds: OpenFootballRound[]) {
 
 export function isCompleteFixture(fixture: OpenFootballGame | undefined | null): fixture is OpenFootballGame & { id: string; kickoffUtc: string } {
   return Boolean(fixture?.id && fixture.kickoffUtc && Number.isFinite(Date.parse(fixture.kickoffUtc)));
+}
+
+type EditorialFixtureSource = PredictionIdentity & {
+  league: string;
+  slug: string;
+  time?: string;
+  kickoffUtc?: string;
+  timeConfirmed?: boolean;
+  venue?: string;
+};
+
+/**
+ * Last-resort link for a PUBLISHED prediction whose fixture is absent from every
+ * available provider feed (for example a provider outage combined with a stale
+ * snapshot). Only the prediction's own verified date/time/teams are used; no
+ * provider data is invented. Returns null when an official fixture for the same
+ * home/away pairing already exists in the supplied rounds (official data always
+ * wins) or when the kickoff cannot be resolved.
+ */
+export function buildEditorialFallbackFixture(
+  prediction: EditorialFixtureSource,
+  officialRounds: OpenFootballRound[][]
+): (OpenFootballGame & { id: string; kickoffUtc: string }) | null {
+  if (!prediction.date || !prediction.time || prediction.time === "TBD") return null;
+  const suppliedRound = Number(String(prediction.round ?? "").match(/(\d+)/)?.[1]);
+  if (!Number.isInteger(suppliedRound) || suppliedRound <= 0) return null;
+  const officialExists = officialRounds.some((rounds) => rounds.some((round) => round.games.some((game) =>
+    teamNamesMatch(game.homeTeam, prediction.homeTeam) && teamNamesMatch(game.awayTeam, prediction.awayTeam)
+  )));
+  if (officialExists) return null;
+  const normalized = normalizeMatchTime({
+    league: prediction.league as Parameters<typeof normalizeMatchTime>[0]["league"],
+    kickoffUtc: prediction.kickoffUtc,
+    date: prediction.date,
+    time: prediction.time,
+    timeConfirmed: prediction.timeConfirmed,
+    venue: prediction.venue,
+  });
+  if (!normalized?.kickoffUtc) return null;
+  return {
+    round: suppliedRound,
+    date: prediction.date,
+    time: prediction.time,
+    homeTeam: prediction.homeTeam,
+    awayTeam: prediction.awayTeam,
+    homeScore: null,
+    awayScore: null,
+    status: "scheduled",
+    dataSource: "editorial-manual",
+    id: `editorial:${prediction.league}:${prediction.slug}:${prediction.date}`,
+    sourceAgreement: false,
+    timeConfirmed: prediction.timeConfirmed === true,
+    kickoffUtc: normalized.kickoffUtc,
+  } as OpenFootballGame & { id: string; kickoffUtc: string };
 }

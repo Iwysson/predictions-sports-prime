@@ -11,6 +11,7 @@
     "build": "next build",
     "fixtures:sync": "tsx scripts/sync-fixtures.mjs",
     "fixtures:validate": "tsx scripts/validate-fixture-snapshot.mjs",
+    "test:fixture-sync": "tsx scripts/test-fixture-sync.mts",
     "nfl:standings:sync": "tsx scripts/sync-nfl-standings.mjs",
     "audit:nfl-standings": "tsx scripts/audit-nfl-standings.mjs",
     "audit:publication-content": "node --import tsx scripts/audit-publication-content.mjs",

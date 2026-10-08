@@ -11,7 +11,7 @@ import {
 import { validateLeagueRounds } from "../src/lib/data-validation.ts";
 import { parsePredictionMarket } from "../src/lib/prediction-results.ts";
 import { normalizeMatchTime } from "../src/lib/match-time.ts";
-import { findPredictionFixture, normalizeFixtureRounds, isCompleteFixture, fixtureIdentityMatchesPrediction } from "../src/lib/fixture-sync-integrity.ts";
+import { buildEditorialFallbackFixture, findPredictionFixture, normalizeFixtureRounds, isCompleteFixture, fixtureIdentityMatchesPrediction } from "../src/lib/fixture-sync-integrity.ts";
 
 const outputPath = resolve("src/data/fixtures.snapshot.json");
 const marketResultsPath = resolve("src/data/market-results.snapshot.json");
@@ -215,6 +215,10 @@ async function syncLeague(league) {
       console.log(`${league.name}: skipped (no automatic fixture feed configured)`);
       return;
     }
+    if (text === null && leaguePredictions.length === 0) {
+      console.log(`${league.name}: skipped (no published predictions and no season feed)`);
+      return;
+    }
     // Editorial inventories can span several matchdays. Retain their declared
     // round instead of putting every article into a synthetic Matchday 1.
     const base = text === null
@@ -401,6 +405,20 @@ async function syncLeague(league) {
         recoveredFixture = promoteVerifiedMlsEditorialFixture(league, recoveredFixture, prediction);
       }
       const fixtureId = recoveredFixture?.id ?? savedFixture?.id;
+      // Manual-only competitions are intentionally outside the automatic-link contract.
+      if (!fixtureId && !league.manualOnly) {
+        // Neither the live refresh nor the preserved snapshot knows this
+        // published prediction (it post-dates the last valid snapshot). Complete
+        // the link from the prediction's own verified date/time without ever
+        // overriding an official fixture for the same pairing.
+        const editorialFixture = buildEditorialFallbackFixture(prediction, [savedRounds ?? [], refreshedRounds ?? []]);
+        if (editorialFixture) {
+          snapshot.predictionIds[key] = editorialFixture.id;
+          snapshot.manualFixtures[editorialFixture.id] ??= editorialFixture;
+          console.warn(`EDITORIAL_FIXTURE_FALLBACK ${key}: no provider fixture available; linked ${editorialFixture.id}`);
+          continue;
+        }
+      }
       if (fixtureId && isCompleteFixture(recoveredFixture?.id === fixtureId ? recoveredFixture : savedFixture)) {
         snapshot.predictionIds[key] = fixtureId;
         const fixtureExistsInSavedRounds = (savedRounds ?? [])

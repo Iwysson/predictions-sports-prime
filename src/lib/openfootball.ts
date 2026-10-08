@@ -18,7 +18,7 @@ export type OpenFootballGame = {
   homeScore: number | null;
   awayScore: number | null;
   status?: FixtureStatus;
-  dataSource?: "openfootball" | "espn" | "thesportsdb" | "fotmob" | "snapshot";
+  dataSource?: "openfootball" | "espn" | "thesportsdb" | "fotmob" | "snapshot" | "editorial-manual";
   fotmobMatchId?: number;
   kickoffUtc?: string;
   timeConfirmed?: boolean;
@@ -575,18 +575,23 @@ export function findProviderFixture(games: OpenFootballGame[], home: string, awa
 
 export async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[]) {
   const league = leaguesBySlug[slug];
-  const dates = league.season.includes("/")
-    ? `${league.season.slice(0, 4)}0801-${Number(league.season.slice(0, 4)) + 1}0731`
-    : `${league.season}0101-${league.season}1231`;
-  const response = await fetch(
-    `https://site.api.espn.com/apis/site/v2/sports/soccer/${league.liveDataId}/scoreboard?dates=${dates}&limit=1000`,
-    { headers: { Accept: "application/json" }, cache: "no-store" }
-  );
-
-  if (!response.ok) throw new Error(`${league.name}: live results returned ${response.status}`);
-
-  const data = (await response.json()) as { events?: LiveEvent[] };
+  // ESPN's scoreboard endpoint now answers HTTP 400 for any YYYYMMDD-YYYYMMDD
+  // range, while a single day or a whole calendar year is accepted. Request each
+  // calendar year the season spans and merge by event id.
   const seasonStartYear = Number(league.season.slice(0, 4));
+  const years = league.season.includes("/") ? [seasonStartYear, seasonStartYear + 1] : [seasonStartYear];
+  const responses = await Promise.all(years.map((year) => fetch(
+    `https://site.api.espn.com/apis/site/v2/sports/soccer/${league.liveDataId}/scoreboard?dates=${year}&limit=1000`,
+    { headers: { Accept: "application/json" }, cache: "no-store" }
+  )));
+  const failed = responses.find((response) => !response.ok);
+  if (failed) {
+    throw new Error(`${league.name}: live results returned ${failed.status} (${league.liveDataId}, dates=${years.join(",")})`);
+  }
+  const yearData = (await Promise.all(responses.map((response) => response.json()))) as { events?: LiveEvent[] }[];
+  const data = {
+    events: [...new Map(yearData.flatMap((item) => item.events ?? []).map((event) => [event.id, event])).values()],
+  };
   const baseGames = rounds.flatMap((round) => round.games);
   const events = (data.events ?? [])
     .filter((event) => event.season?.year === seasonStartYear)
