@@ -16,7 +16,7 @@ export function PrimeVipOfferCard() {
           <div className="prime-vip-offer__copy">
             <span className="psp-badge psp-badge--vip">PRIME VIP</span>
             <h2 id="prime-vip-offer-title">Unlock every prediction and full analysis.</h2>
-            <strong className="prime-vip-offer__trial">3-Day Free Trial</strong>
+            <strong className="prime-vip-offer__trial">1-Day Free Trial</strong>
             <ul>
               <li>Full match analyses</li><li>All VIP predictions</li><li>NHL &amp; NFL premium picks</li>
               <li>Best Bets</li><li>Prediction History</li><li>Ad-free experience</li>
