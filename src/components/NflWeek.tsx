@@ -3,9 +3,11 @@ import { MatchFullContent } from "@/components/MatchFullContent";
 import { MatchGate } from "@/components/MatchGate";
 import { NflLeagueMark } from "@/components/NflLeagueMark";
 import { NflTeamBadge } from "@/components/NflTeamBadge";
+import { NhlBestMultiple } from "@/components/NhlToday";
 import { NFL_WEEK5_2026 } from "@/data/nfl/week5-2026-public";
 import { translate } from "@/i18n/dictionaries";
 import { sortNflGames, type NflPublicGame } from "@/lib/nfl-slates";
+import { getNhlTodayKey } from "@/lib/nhl-day";
 import { formatOddsPair } from "@/lib/odds";
 
 const L = {
@@ -106,6 +108,10 @@ export function NflWeekSlate() {
           </span>
         </div>
       </header>
+
+      <section className="nhl-page-best-multiple" aria-labelledby="nfl-best-multiple-title">
+        <NhlBestMultiple headingId="nfl-best-multiple-title" initialKey={getNhlTodayKey()} surface="nfl" />
+      </section>
 
       {free.length ? (
         <section className="psp-game-group" aria-labelledby="nfl-free-analyses">

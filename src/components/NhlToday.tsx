@@ -13,7 +13,13 @@ import { resolveNhlSlate } from "@/data/nhl/slates";
 import { translate } from "@/i18n/dictionaries";
 import { formatNhlDayLabel, getNhlTodayKey } from "@/lib/nhl-day";
 import { findLiveGame, liveBadgeText, type LiveGame } from "@/lib/nhl-live";
-import { sortNhlMatches, type NhlPublicMatch, type NhlPublicMultiple } from "@/lib/nhl-slates";
+import {
+  multipleMatchesSurface,
+  sortNhlMatches,
+  type MultipleSurface,
+  type NhlPublicMatch,
+  type NhlPublicMultiple,
+} from "@/lib/nhl-slates";
 import { formatOddsPair } from "@/lib/odds";
 
 // Live games for the given NHL day, from the runtime endpoint only. Polls every 60s, or every 30s
@@ -76,9 +82,19 @@ const L = {
 };
 
 // The day's multiples, in the same slot and with the same classes as before. Only the content changes.
-export function NhlBestMultiple({ headingId = "nhl-best-multiple-title", initialKey }: { headingId?: string; initialKey: string }) {
+export function NhlBestMultiple({
+  headingId = "nhl-best-multiple-title",
+  initialKey,
+  surface = "general",
+}: {
+  headingId?: string;
+  initialKey: string;
+  surface?: MultipleSurface;
+}) {
   const dayKey = useNhlTodayKey(initialKey);
-  const multiples = resolveNhlSlate(dayKey)?.multiples ?? [];
+  const multiples = (resolveNhlSlate(dayKey)?.multiples ?? []).filter((multiple) =>
+    multipleMatchesSurface(multiple, surface),
+  );
   if (!multiples.length) return null;
   return (
     <>
@@ -235,7 +251,7 @@ export function NhlDaySlate({ initialKey }: { initialKey: string }) {
       <NhlMoneylineNote />
 
       <section className="nhl-page-best-multiple" aria-labelledby="nhl-page-best-multiple-title">
-        <NhlBestMultiple headingId="nhl-page-best-multiple-title" initialKey={initialKey} />
+        <NhlBestMultiple headingId="nhl-page-best-multiple-title" initialKey={initialKey} surface="nhl" />
       </section>
 
       {free.length ? (

@@ -152,5 +152,19 @@ export function findFinalScore(games: FinalScoreGame[], homeTeam: string, awayTe
   const home = NHL_ABBREV[homeTeam];
   const away = NHL_ABBREV[awayTeam];
   if (!home || !away) return null;
-  return games.find((g) => g.home === home && g.away === away) ?? null;
+  const exact = games.find((g) => g.home === home && g.away === away);
+  if (exact) return exact;
+
+  // Some early editorial slates stored the displayed fixture as "Team A vs Team B" rather than
+  // provider home/away order. Keep that frozen historical wording intact, but align the official
+  // score to the published order so settlement still grades the selected team correctly.
+  const reversed = games.find((g) => g.home === away && g.away === home);
+  if (!reversed) return null;
+  return {
+    ...reversed,
+    home: home,
+    away: away,
+    homeScore: reversed.awayScore,
+    awayScore: reversed.homeScore,
+  };
 }

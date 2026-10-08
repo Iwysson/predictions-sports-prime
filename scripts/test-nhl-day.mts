@@ -3,6 +3,7 @@
 import assert from "node:assert/strict";
 import { getNhlTodayKey } from "../src/lib/nhl-day.ts";
 import { resolveNhlSlate } from "../src/data/nhl/slates.ts";
+import { multipleMatchesSurface } from "../src/lib/nhl-slates.ts";
 
 // Eastern wall-clock instants converted to UTC instants (EDT is UTC-4 in October 2026).
 const et = (iso: string) => new Date(`${iso}-04:00`);
@@ -108,6 +109,19 @@ check("Oct 8 NHL Multiple: legs and combined odds", () => {
   );
   assert.equal(multiple.combinedOdds, 2.69);
   assert.equal(Math.round(1.67 * 1.61 * 100) / 100, 2.69);
+});
+
+check("multiple surfaces use leg leagues: NHL excludes NFL-only, NFL and general retain it", () => {
+  const multiples = resolveNhlSlate("2026-10-08")!.multiples;
+  const titles = (surface: "general" | "nhl" | "nfl") =>
+    multiples.filter((multiple) => multipleMatchesSurface(multiple, surface)).map((multiple) => multiple.title);
+  assert.deepEqual(titles("nhl"), ["NHL BEST MULTIPLE TODAY", "NHL + FOOTBALL BEST MULTIPLE TODAY"]);
+  assert.deepEqual(titles("nfl"), ["NFL + FOOTBALL BEST MULTIPLE TODAY"]);
+  assert.deepEqual(titles("general"), [
+    "NHL BEST MULTIPLE TODAY",
+    "NHL + FOOTBALL BEST MULTIPLE TODAY",
+    "NFL + FOOTBALL BEST MULTIPLE TODAY",
+  ]);
 });
 
 

@@ -41,6 +41,15 @@ export type NhlPublicSlate = {
   multiples: NhlPublicMultiple[];
 };
 
+export type MultipleSurface = "general" | "nhl" | "nfl";
+
+export function multipleMatchesSurface(multiple: NhlPublicMultiple, surface: MultipleSurface): boolean {
+  if (surface === "general") return true;
+  return multiple.legs.some((leg) =>
+    surface === "nhl" ? leg.teams !== null && leg.league === undefined : leg.league?.slug === "nfl",
+  );
+}
+
 // Sort order on a slate: FREE first, then BEST BET, then PRIME VIP. Access is never changed here.
 const TIER_RANK: Record<NhlAccessTier, number> = { free: 0, best: 1, vip: 2 };
 export const sortNhlMatches = (matches: NhlPublicMatch[]) =>

@@ -5,6 +5,7 @@
 import assert from "node:assert/strict";
 import { settleNhlPrediction, buildNhlHistoryDay } from "../src/lib/nhl-results.ts";
 import type { FinalScoreGame } from "../src/lib/nhl-live.ts";
+import { createNhlHistoryHandler } from "../functions/api/nhl/history.js";
 
 let passed = 0;
 const check = (name: string, fn: () => void) => {
@@ -94,13 +95,62 @@ check("VIP/BEST picks for a day that has not finished yet never appear (no pre-k
 
 check("VIP picks are revealed once their own game is actually FINAL/OFF", () => {
   const day = buildNhlHistoryDay("2026-10-07", [
-    { home: "COL", away: "WPG", homeScore: 4, awayScore: 2, state: "finished" },
+    { home: "WPG", away: "COL", homeScore: 3, awayScore: 2, state: "finished" },
   ]);
   const colorado = day.rows.find((r) => r.slug === "colorado-avalanche-vs-winnipeg-jets");
   assert.ok(colorado, "Colorado row should be revealed once its game is finished");
-  assert.equal(colorado!.result, "win");
+  assert.equal(colorado!.result, "loss");
   // Edmonton's game has not finished, so it must still be absent.
   assert.equal(day.rows.find((r) => r.slug === "edmonton-oilers-vs-anaheim-ducks"), undefined);
 });
+
+check("2026-10-07 official finals settle Oilers and PIT/WSH as wins and Colorado as a loss", () => {
+  const day = buildNhlHistoryDay("2026-10-07", [
+    { home: "WSH", away: "PIT", homeScore: 5, awayScore: 3, state: "finished" },
+    { home: "WPG", away: "COL", homeScore: 3, awayScore: 2, state: "finished" },
+    { home: "ANA", away: "EDM", homeScore: 2, awayScore: 5, state: "finished" },
+  ]);
+  assert.equal(day.rows.length, 3);
+  assert.equal(day.wins, 2);
+  assert.equal(day.losses, 1);
+  const bySlug = new Map(day.rows.map((row) => [row.slug, row.result]));
+  assert.equal(bySlug.get("pittsburgh-penguins-vs-washington-capitals"), "win");
+  assert.equal(bySlug.get("colorado-avalanche-vs-winnipeg-jets"), "loss");
+  assert.equal(bySlug.get("edmonton-oilers-vs-anaheim-ducks"), "win");
+  assert.equal(day.rows.filter((row) => row.result === "pending").length, 0);
+});
+
+const historyPayloads = new Map<string, FinalScoreGame[]>([
+  ["2026-10-06", oct06Scores],
+  [
+    "2026-10-07",
+    [
+      { home: "WSH", away: "PIT", homeScore: 5, awayScore: 3, state: "finished" },
+      { home: "WPG", away: "COL", homeScore: 3, awayScore: 2, state: "finished" },
+      { home: "ANA", away: "EDM", homeScore: 2, awayScore: 5, state: "finished" },
+    ],
+  ],
+  ["2026-10-08", []],
+]);
+const historyFetch = async (input: string | URL | Request) => {
+  const dayKey = String(input).split("/").at(-1)!;
+  const games = (historyPayloads.get(dayKey) ?? []).map((game, index) => ({
+    id: index + 1,
+    gameState: game.state === "finished" ? "OFF" : "FUT",
+    homeTeam: { abbrev: game.home, score: game.homeScore },
+    awayTeam: { abbrev: game.away, score: game.awayScore },
+  }));
+  return new Response(JSON.stringify({ games }), { status: 200 });
+};
+const historyResponse = await createNhlHistoryHandler(
+  historyFetch as typeof fetch,
+  () => new Date("2026-10-08T12:00:00Z"),
+)();
+const history = await historyResponse.json();
+assert.equal(history.wins, 9);
+assert.equal(history.losses, 3);
+assert.equal(history.days.find((day: { dayKey: string }) => day.dayKey === "2026-10-07").rows.length, 3);
+console.log("ok  history endpoint recalculates the complete current NHL record as 9-3 (75.0%)");
+passed += 1;
 
 console.log(`\n${passed} NHL settlement/history checks passed`);
