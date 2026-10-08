@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "records": {
+    "brasileirao-serie-a:botafogo-vs-vasco": {
+      "key": "brasileirao-serie-a:botafogo-vs-vasco",
+      "league": "brasileirao-serie-a",
+      "slug": "botafogo-vs-vasco",
+      "homeTeam": "Botafogo",
+      "awayTeam": "Vasco",
+      "date": "2026-10-07",
+      "fixtureId": "editorial:brasileirao-serie-a:botafogo-vs-vasco:2026-10-07",
+      "predictionAccess": "vip",
+      "prediction": "Botafogo or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.95,
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-10-08T02:02:59.027Z"
+    },
+    "brasileirao-serie-a:bragantino-vs-mirassol": {
+      "key": "brasileirao-serie-a:bragantino-vs-mirassol",
+      "league": "brasileirao-serie-a",
+      "slug": "bragantino-vs-mirassol",
+      "homeTeam": "Bragantino",
+      "awayTeam": "Mirassol",
+      "date": "2026-10-07",
+      "fixtureId": "editorial:brasileirao-serie-a:bragantino-vs-mirassol:2026-10-07",
+      "predictionAccess": "vip",
+      "prediction": "Bragantino or Draw (1X) + Over 8.5 Corners",
+      "odds": 1.65,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-08T02:02:59.027Z"
+    },
+    "brasileirao-serie-a:internacional-vs-corinthians": {
+      "key": "brasileirao-serie-a:internacional-vs-corinthians",
+      "league": "brasileirao-serie-a",
+      "slug": "internacional-vs-corinthians",
+      "homeTeam": "Internacional",
+      "awayTeam": "Corinthians",
+      "date": "2026-10-07",
+      "fixtureId": "editorial:brasileirao-serie-a:internacional-vs-corinthians:2026-10-07",
+      "predictionAccess": "vip",
+      "prediction": "Over 1.5 Goals + Over 7.5 Corners",
+      "odds": 1.78,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-08T02:02:59.027Z"
+    },
+    "brasileirao-serie-a:remo-vs-gremio": {
+      "key": "brasileirao-serie-a:remo-vs-gremio",
+      "league": "brasileirao-serie-a",
+      "slug": "remo-vs-gremio",
+      "homeTeam": "Remo",
+      "awayTeam": "Grêmio",
+      "date": "2026-10-07",
+      "fixtureId": "editorial:brasileirao-serie-a:remo-vs-gremio:2026-10-07",
+      "predictionAccess": "free",
+      "prediction": "Grêmio or Draw (X2)",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-08T02:02:59.027Z"
+    },
+    "brasileirao-serie-a:vitoria-vs-chapecoense": {
+      "key": "brasileirao-serie-a:vitoria-vs-chapecoense",
+      "league": "brasileirao-serie-a",
+      "slug": "vitoria-vs-chapecoense",
+      "homeTeam": "Vitória",
+      "awayTeam": "Chapecoense",
+      "date": "2026-10-07",
+      "fixtureId": "editorial:brasileirao-serie-a:vitoria-vs-chapecoense:2026-10-07",
+      "predictionAccess": "free",
+      "prediction": "Vitória to win",
+      "odds": 1.72,
+      "finalScore": {
+        "home": 4,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-08T02:02:59.027Z"
+    }
+  }
+}

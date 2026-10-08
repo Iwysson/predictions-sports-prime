@@ -94,5 +94,17 @@
     "awayCorners": 5,
     "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5793920",
     "capturedAt": "2026-08-30T10:05:00-03:00"
+  },
+  "brasileirao-serie-a:internacional-vs-corinthians": {
+    "homeCorners": 3,
+    "awayCorners": 12,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5103650",
+    "capturedAt": "2026-10-08T01:53:34.500Z"
+  },
+  "brasileirao-serie-a:bragantino-vs-mirassol": {
+    "homeCorners": 11,
+    "awayCorners": 3,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841253",
+    "capturedAt": "2026-10-08T01:55:05.950Z"
   }
 }

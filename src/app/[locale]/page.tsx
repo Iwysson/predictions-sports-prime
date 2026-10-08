@@ -3,6 +3,8 @@ import Link from "@/components/DocumentLink";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ads";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
+import footballResults from "@/data/football-results.snapshot.json";
+import { latestResults, toPublicResult, type FootballResultsDataset } from "@/lib/football-results";
 import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import { SiteContactLine } from "@/components/SiteContactLine";
@@ -94,6 +96,7 @@ export default async function LocalizedHome({
 
       <HomePredictionFeed
         matches={clientMatches}
+        results={latestResults(footballResults as FootballResultsDataset, 8).map(toPublicResult)}
         locale={locale}
         localizedMatchSlugs={localizedMatchSlugs}
         discovery={<PublishedMatchDirectory matches={resolvedMatches} locale={locale} localizedMatchSlugs={localizedMatchSlugs} />}

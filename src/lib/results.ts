@@ -6,11 +6,11 @@ import { isCompletedFixture } from "@/lib/fixture-status";
 export const resultStatusPresentation: Record<PredictionResultStatus, { label: string; icon: string }> = {
   pending: { label: "PENDING", icon: "○" },
   "awaiting-data": { label: "AWAITING DATA", icon: "○" },
-  green: { label: "WON", icon: "✓" },
-  red: { label: "LOST", icon: "✕" },
+  green: { label: "WIN", icon: "✓" },
+  red: { label: "LOSS", icon: "✕" },
   push: { label: "PUSH", icon: "—" },
-  "half-green": { label: "HALF WON", icon: "◐" },
-  "half-red": { label: "HALF LOST", icon: "◑" },
+  "half-green": { label: "HALF WIN", icon: "◐" },
+  "half-red": { label: "HALF LOSS", icon: "◑" },
   void: { label: "VOID", icon: "⊘" },
 };
 

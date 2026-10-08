@@ -3,6 +3,8 @@ import { findFixtureForPrediction, loadLeagueSeason } from "@/lib/openfootball";
 import { resolvePredictionResult } from "@/lib/prediction-results";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import marketResults from "@/data/market-results.snapshot.json";
+import footballResults from "@/data/football-results.snapshot.json";
+import { overlayStoredResult, type FootballResultsDataset } from "@/lib/football-results";
 import historicalResults from "@/data/historical-results.supplement.json";
 
 type MarketResultSnapshot = Record<string, NonNullable<MatchPreview["marketStats"]>>;

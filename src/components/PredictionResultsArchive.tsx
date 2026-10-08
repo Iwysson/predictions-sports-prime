@@ -1,102 +1,111 @@
 import Link from "@/components/DocumentLink";
-import type { MatchPreview } from "@/types";
 import { leaguesBySlug } from "@/data/leagues";
-import { buildHistoricalPerformance, buildLeaguePerformanceBreakdown, resultStatusPresentation } from "@/lib/results";
-import { evaluatePredictionSettlement } from "@/lib/prediction-results";
+import { resultLabels, sortedResults, summarizeResults, toPublicResult, type FootballResultRecord, type FootballResultsDataset } from "@/lib/football-results";
 
-export const RESULTS_VISIBLE_LIMIT = 60;
+export const RESULTS_VISIBLE_LIMIT = 200;
 
-function formatDate(value?: string) {
-  if (!value) return "Not available";
-  return new Intl.DateTimeFormat("en", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(value));
-}
+const tone = (result: FootballResultRecord["result"]) =>
+  result === "green" || result === "half-green" ? "green" : result === "red" || result === "half-red" ? "red" : "push";
 
-export function PredictionResultsArchive({ matches }: { matches: MatchPreview[] }) {
-  const performance = buildHistoricalPerformance(matches);
-  const visible = performance.entries.slice(0, RESULTS_VISIBLE_LIMIT);
-  const leagueBreakdown = buildLeaguePerformanceBreakdown(matches);
-  const winRate = performance.winRate === null ? "Not available" : `${(performance.winRate * 100).toFixed(1)}%`;
+const leagueName = (slug: string) => leaguesBySlug[slug as keyof typeof leaguesBySlug]?.name ?? slug;
+
+/**
+ * The single global Results view. Reads only the central results dataset, the
+ * same source as the homepage preview. Grouping is presentational; there are
+ * no per-match, per-league or per-day result routes.
+ */
+export function PredictionResultsArchive({
+  dataset,
+  inProgress,
+  awaitingData,
+}: {
+  dataset: FootballResultsDataset;
+  inProgress: number;
+  awaitingData: number;
+}) {
+  const all = sortedResults(dataset);
+  const summary = summarizeResults(all);
+  const visible = all.slice(0, RESULTS_VISIBLE_LIMIT).map(toPublicResult);
+  const winRate = summary.winRate === null ? "Not available" : `${(summary.winRate * 100).toFixed(1)}%`;
+
+  const byLeague = new Map<string, FootballResultRecord[]>();
+  for (const record of all) byLeague.set(record.league, [...(byLeague.get(record.league) ?? []), record]);
+  const leagueBreakdown = [...byLeague.entries()]
+    .map(([league, records]) => ({ league, ...summarizeResults(records) }))
+    .filter((entry) => entry.wins + entry.losses > 0)
+    .sort((left, right) => right.settled - left.settled || left.league.localeCompare(right.league));
+
+  const days = new Map<string, ReturnType<typeof toPublicResult>[]>();
+  for (const record of visible) days.set(record.date, [...(days.get(record.date) ?? []), record]);
 
   return (
-    <div className="results-archive" data-results-total={performance.historical} data-results-visible={visible.length}>
+    <div className="results-archive" data-results-total={all.length} data-results-visible={visible.length}>
       <div className="results-summary" aria-label="Prediction result counts">
-        <span><b>{performance.published}</b> Published</span>
-        <span><b>{performance.historical}</b> Historical</span>
-        <span><b>{performance.settled}</b> Settled</span>
-        <span><b>{performance.won}</b> Won</span>
-        <span><b>{performance.lost}</b> Lost</span>
-        <span><b>{performance.pushOrVoid}</b> Push / void</span>
-        <span><b>{performance.awaitingResult}</b> Waiting result</span>
-        <span><b>{performance.awaitingVerifiedData}</b> Awaiting verified data</span>
-        <span><b>{performance.unresolved}</b> Unresolved</span>
+        <span><b>{summary.settled}</b> Total settled</span>
+        <span><b>{summary.wins}</b> Wins</span>
+        <span><b>{summary.losses}</b> Losses</span>
+        <span><b>{summary.pushes + summary.halfWins + summary.halfLosses + summary.voids}</b> Push / half / void</span>
         <span><b>{winRate}</b> Win rate</span>
+        <span><b>{inProgress}</b> Live</span>
+        <span><b>{awaitingData}</b> Awaiting market data</span>
       </div>
 
-      <p className="results-metric-note"><strong>{performance.won} wins from {performance.decided} decided predictions.</strong> The {winRate} win rate uses wins + losses only. Pushes, voids, half-results, fixtures awaiting verified facts and unresolved records are excluded from that denominator. Missing market facts are kept visibly pending instead of being estimated. No ROI or profit is calculated because the archive does not record stakes.</p>
+      <p className="results-metric-note"><strong>{summary.wins} wins from {summary.wins + summary.losses} decided predictions.</strong> The {winRate} win rate uses wins ÷ (wins + losses). Pushes, half results, voids, live matches and fixtures awaiting verified market data are excluded. No ROI or profit is calculated because stakes are not recorded.</p>
 
-      <section className="results-breakdown" aria-labelledby="league-performance-heading">
-        <h2 id="league-performance-heading">Results by competition</h2>
-        <p>Every row includes losses and uses the same wins-plus-losses denominator. Small samples should not be treated as forecasts.</p>
-        <div className="results-breakdown__grid">
-          {leagueBreakdown.map((entry) => (
-            <Link href={`/league/${entry.league}/`} key={entry.league}>
-              <strong>{leaguesBySlug[entry.league].name}</strong>
-              <span>{entry.won}-{entry.lost} from {entry.decided} decided</span>
-            </Link>
-          ))}
-        </div>
-      </section>
+      {leagueBreakdown.length > 0 ? (
+        <section className="results-breakdown" aria-labelledby="league-performance-heading">
+          <h2 id="league-performance-heading">Results by competition</h2>
+          <div className="results-breakdown__grid">
+            {leagueBreakdown.map((entry) => (
+              <Link href={`/league/${entry.league}/`} key={entry.league}>
+                <strong>{leagueName(entry.league)}</strong>
+                <span>{entry.wins}-{entry.losses} from {entry.wins + entry.losses} decided</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
-      <h2 className="results-list-heading">Latest historical predictions</h2>
-      <p className="results-list-intro">Showing the {visible.length} most recent of {performance.historical} historical records. The summary above is calculated from the full archive.</p>
+      <h2 className="results-list-heading">Latest football prediction results</h2>
+      <p className="results-list-intro">Showing the {visible.length} most recent of {all.length} settled predictions. Each match appears once, with the final score and settlement. Free predictions show the pick and odds exactly as published before kickoff; VIP picks stay in Prediction History.</p>
 
-      <div className="results-list">
-        {visible.map((match) => {
-          const status = match.betResult ?? "pending";
-          const presentation = resultStatusPresentation[status];
-          const settlement = evaluatePredictionSettlement(match);
-          const waitingForResult = settlement.pendingReason === "NOT_COMPLETED";
-          const awaitingLabel = waitingForResult ? "WAITING RESULT" : settlement.pendingReason === "EXECUTION_DATA_MISSING" ? "AWAITING EXECUTION DATA" : status === "pending" ? "UNRESOLVED" : "AWAITING MARKET DATA";
-          const displayedAsAwaiting = waitingForResult || status === "awaiting-data" || status === "pending";
-          const finalScore = match.homeScore !== undefined && match.homeScore !== null && match.awayScore !== undefined && match.awayScore !== null
-            ? `${match.homeScore}–${match.awayScore}` : "Not available";
-          return (
-            <article
-              className="result-card"
-              key={match.id}
-              data-result-slug={match.slug}
-              data-result-status={status}
-              data-pick={match.mainPrediction ?? ""}
-              data-odds={match.odds ?? ""}
-              data-published-at={match.publishedAt ?? ""}
-              data-final-score={finalScore === "Not available" ? "" : finalScore.replace("–", "-")}
-              data-settlement-missing={settlement.missingFields.join(",")}
-              data-settlement-reason={settlement.pendingReason ?? ""}
-            >
-              <div className="result-card__heading">
-                <div>
-                  <span>{leaguesBySlug[match.league].name}</span>
-                  <h2><Link href={`/match/${match.slug}/`}>{match.homeTeam} vs {match.awayTeam}</Link></h2>
+      {all.length === 0 ? <div className="empty-state empty-state--compact"><strong>No completed predictions yet.</strong></div> : null}
+
+      {[...days.entries()].map(([date, records]) => (
+        <section className="results-day" key={date} aria-label={`Results for ${date}`}>
+          <h3 className="results-day__heading">{date}</h3>
+          <div className="results-list">
+            {records.map((record) => (
+              <article
+                className="result-card"
+                key={record.key}
+                data-result-slug={record.slug}
+                data-result-status={record.result}
+                data-pick={record.prediction ?? ""}
+                data-odds={record.odds ?? ""}
+                data-final-score={`${record.finalScore.home}-${record.finalScore.away}`}
+              >
+                <div className="result-card__heading">
+                  <div>
+                    <span>{leagueName(record.league)}</span>
+                    <h2><Link href={`/match/${record.slug}/`}>{record.homeTeam} vs {record.awayTeam}</Link></h2>
+                  </div>
+                  <strong className={`bet-result bet-result--${tone(record.result)}`} aria-label={`Prediction result: ${resultLabels[record.result]}`}>
+                    {resultLabels[record.result]}
+                  </strong>
                 </div>
-                <strong className={`bet-result bet-result--${displayedAsAwaiting ? "awaiting-data" : status}`} aria-label={`Prediction result: ${displayedAsAwaiting ? awaitingLabel : presentation.label}`}>
-                  <span aria-hidden="true">{presentation.icon}</span> {displayedAsAwaiting ? awaitingLabel : presentation.label}
-                  {!waitingForResult && status === "awaiting-data" && settlement.missingFields.length ? (
-                    <small>{settlement.missingFields.join(", ")} unavailable</small>
-                  ) : null}
-                </strong>
-              </div>
-              <dl className="result-card__details">
-                <div><dt>Match date</dt><dd>{match.date || "Not available"}</dd></div>
-                <div><dt>Published</dt><dd>{formatDate(match.publishedAt)}</dd></div>
-                <div><dt>Published prediction</dt><dd>{match.mainPrediction ?? "Not available"}</dd></div>
-                <div><dt>Published odds</dt><dd>{match.odds ?? "Not available"}</dd></div>
-                <div><dt>Final score</dt><dd>{finalScore}</dd></div>
-              </dl>
-              <Link className="result-card__link" href={`/match/${match.slug}/`}>View original analysis</Link>
-            </article>
-          );
-        })}
-      </div>
+                <dl className="result-card__details">
+                  <div><dt>Match date</dt><dd>{record.date}</dd></div>
+                  <div><dt>League</dt><dd>{leagueName(record.league)}</dd></div>
+                  <div><dt>Published prediction</dt><dd>{record.prediction ?? "VIP prediction"}</dd></div>
+                  <div><dt>Published odds</dt><dd>{record.predictionAccess === "free" ? record.odds ?? "Not available" : "VIP"}</dd></div>
+                  <div><dt>Final score</dt><dd>{record.finalScore.home}–{record.finalScore.away}</dd></div>
+                </dl>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
     </div>
   );
 }

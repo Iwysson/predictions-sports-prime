@@ -9,7 +9,6 @@ import { HomeMatchCard } from "@/components/HomeMatchCard";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { homeClubLeagues, leaguesBySlug } from "@/data/leagues";
 import {
-  filterCompletedPredictions,
   filterTodaysPublishedPredictions,
   filterTomorrowPublishedPredictions,
   findOmittedCurrentPredictions,
@@ -19,11 +18,11 @@ import {
   validateHomePredictionSelection,
 } from "@/lib/match-feed";
 import { getMatchDisplayTime } from "@/lib/match-time";
-import { evaluatePredictionSettlement } from "@/lib/prediction-results";
 import { localePath, seoLocales, type SeoLocale } from "@/lib/seo-locales";
 import { localizePredictionText } from "@/lib/localized-presentation";
 import { localizedFixtureStatus, localizedResult } from "@/lib/localized-ui";
 import { homeFeedCopy } from "@/lib/home-feed-copy";
+import type { PublicFootballResult } from "@/lib/football-results";
 
 
 function HomeLeagueTaxonomy({
@@ -65,6 +64,7 @@ export function HomePredictionFeed({
   locale = "en",
   localizedMatchSlugs = [],
   discovery,
+  results = [],
 }: {
   matches: MatchPreview[];
   beforeHistory?: ReactNode;
@@ -74,6 +74,8 @@ export function HomePredictionFeed({
   locale?: SeoLocale;
   localizedMatchSlugs?: string[];
   discovery?: ReactNode;
+  /** Latest settled results from the central results dataset (already limited by the page). */
+  results?: PublicFootballResult[];
 }) {
   const copy = homeFeedCopy(locale);
   const localizedMatchSet = new Set(localizedMatchSlugs);
@@ -102,9 +104,6 @@ export function HomePredictionFeed({
   const tomorrowMatches = filterTomorrowPublishedPredictions(matches, today, now);
   const latestMatches = selectLatestPublishedPredictions(matches, today, 10);
   const omittedMatches = findOmittedCurrentPredictions(matches, today);
-  const historyMatches = filterCompletedPredictions(matches, now)
-    .filter((match) => match.betResult === "green")
-    .slice(0, 10);
 
   if (omittedMatches.length > 0) {
     throw new Error(
@@ -285,29 +284,19 @@ export function HomePredictionFeed({
               <div><span className="eyebrow">{copy.resultsEyebrow}</span><h2>{copy.resultsTitle}</h2></div>
             </div>
           </div>
-          {historyMatches.length > 0 ? (
+          {results.length > 0 ? (
             <div className="history-list">
-              {historyMatches.map((match) => {
-                const settlement = evaluatePredictionSettlement(match);
-                const resultLabel = match.homeScore == null || match.awayScore == null
-                  ? copy.waitingScore
-                  : settlement.pendingReason === "EXECUTION_DATA_MISSING"
-                    ? copy.entryNotRecorded
-                    : settlement.pendingReason === "MARKET_DATA_MISSING"
-                      ? copy.awaitingStats
-                      : localizedResult(match.betResult, locale);
-                return <a href={matchHref(match.slug)} className="history-row" key={match.id}>
+              {results.map((record) => {
+                const label = record.result === "green" ? "WIN" : record.result === "red" ? "LOSS" : record.result === "push" ? "PUSH" : record.result === "half-green" ? "HALF WIN" : record.result === "half-red" ? "HALF LOSS" : "VOID";
+                const tone = record.result === "green" || record.result === "half-green" ? "green" : record.result === "red" || record.result === "half-red" ? "red" : "push";
+                return <a href={matchHref(record.slug)} className="history-row" key={record.key}>
                   <div>
-                    <strong>{match.homeTeam} {separator} {match.awayTeam}</strong>
-                    <span>{leaguesBySlug[match.league]?.name ?? match.league} · {match.date} · {locale === "en" ? match.mainPrediction : localizePredictionText(match.mainPrediction, locale)}</span>
+                    <strong>{record.homeTeam} {separator} {record.awayTeam}</strong>
+                    <span>{leaguesBySlug[record.league as keyof typeof leaguesBySlug]?.name ?? record.league} · {record.date}{record.prediction ? ` · ${locale === "en" ? record.prediction : localizePredictionText(record.prediction, locale)}` : ""}</span>
                   </div>
-                  <span className="history-score">
-                    {match.homeScore != null && match.awayScore != null ? `${match.homeScore}–${match.awayScore}` : copy.waitingScore}
-                  </span>
-                  <span className="history-odds">{copy.odds} {match.odds ?? "—"}</span>
-                  <b className={`bet-result bet-result--${match.homeScore == null || match.awayScore == null ? "awaiting-data" : match.betResult ?? "pending"}`}>
-                    {resultLabel}
-                  </b>
+                  <span className="history-score">{record.finalScore.home}–{record.finalScore.away}</span>
+                  <span className="history-odds">{record.prediction ? `${copy.odds} ${record.odds ?? "—"}` : "VIP"}</span>
+                  <b className={`bet-result bet-result--${tone}`}>{locale === "en" ? label : localizedResult(record.result, locale)}</b>
                 </a>
               })}
             </div>

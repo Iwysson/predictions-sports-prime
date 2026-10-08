@@ -4,12 +4,15 @@ import { leagues } from "../src/data/leagues.ts";
 import { matches } from "../src/data/matches.ts";
 import {
   hydrateLiveResults,
+  fetchDailyLeagueFixtures,
   hydrateTheSportsDb,
   parseFootballSeason,
   teamNamesMatch,
 } from "../src/lib/openfootball.ts";
 import { validateLeagueRounds } from "../src/lib/data-validation.ts";
 import { parsePredictionMarket } from "../src/lib/prediction-results.ts";
+import { settlementPreviews } from "../src/lib/settlement-source.ts";
+import { applyDailyFixtureUpdate } from "../src/lib/fixture-live-refresh.ts";
 import { normalizeMatchTime } from "../src/lib/match-time.ts";
 import { buildEditorialFallbackFixture, findPredictionFixture, normalizeFixtureRounds, isCompleteFixture, fixtureIdentityMatchesPrediction } from "../src/lib/fixture-sync-integrity.ts";
 
@@ -206,6 +209,47 @@ async function hydrateFotmobFinalScores(rounds) {
   return rounds;
 }
 
+
+const dailyScoreboardCache = new Map();
+function fetchDailyScoreboard(slug, date) {
+  const key = `${slug}:${date}`;
+  if (!dailyScoreboardCache.has(key)) dailyScoreboardCache.set(key, fetchDailyLeagueFixtures(slug, date));
+  return dailyScoreboardCache.get(key);
+}
+
+/**
+ * Refresh live/final state of fixtures that no season feed covers (preserved
+ * rounds, editorial fallbacks). Provider failure leaves fixtures untouched.
+ */
+async function refreshFixturesFromDailyScoreboard(slug, fixtures) {
+  const today = snapshot.generatedAt.slice(0, 10);
+  const horizon = new Date(`${today}T12:00:00Z`);
+  horizon.setUTCDate(horizon.getUTCDate() + 1);
+  const floor = new Date(`${today}T12:00:00Z`);
+  floor.setUTCDate(floor.getUTCDate() - 3);
+  const pending = fixtures.filter((fixture) => {
+    // A completed fixture is skipped once its provider event id is known.
+    if (fixture.status === "completed" && Number.isInteger(fixture.homeScore) && Number.isInteger(fixture.awayScore) &&
+        (fixture.espnEventId || /^[0-9]+$/.test(String(fixture.id)))) return false;
+    const at = Date.parse(`${fixture.date}T12:00:00Z`);
+    return at >= floor.getTime() && at <= horizon.getTime();
+  });
+  for (const fixture of pending) {
+    const dates = nearbyIsoDates(fixture.date);
+    const daily = [];
+    for (const date of dates) {
+      try {
+        daily.push(...await fetchDailyScoreboard(slug, date));
+      } catch (error) {
+        console.warn(`DAILY_SCOREBOARD_FAILED ${slug} ${date}: ${error instanceof Error ? error.message : String(error)}`);
+      }
+    }
+    const statusBefore = fixture.status;
+    if (applyDailyFixtureUpdate(fixture, daily) && fixture.status !== statusBefore) {
+      console.log(`${slug}: ${fixture.homeTeam} vs ${fixture.awayTeam} -> ${fixture.status}${fixture.status === "completed" ? ` ${fixture.homeScore}-${fixture.awayScore}` : ""}`);
+    }
+  }
+}
 async function syncLeague(league) {
   const leaguePredictions = matches.filter((match) => match.league === league.slug);
   let refreshedRounds = null;
@@ -372,6 +416,7 @@ async function syncLeague(league) {
           `SOURCE_REFRESH_FAILED ${league.slug}: snapshot result refresh unavailable: ${fallbackError instanceof Error ? fallbackError.message : String(fallbackError)}`
         );
       }
+      await refreshFixturesFromDailyScoreboard(league.slug, snapshot.leagues[league.slug].flatMap((round) => round.games));
       snapshot.leagueUpdatedAt[league.slug] = previous.leagueUpdatedAt?.[league.slug] ?? previous.generatedAt;
     }
     for (const [key, id] of Object.entries(previous.predictionIds ?? {})) {
@@ -493,23 +538,32 @@ async function fetchFotmobCorners(prediction, fixture) {
   return { homeCorners, awayCorners, source };
 }
 
+// Editorial/manual fixtures live outside the season rounds; refresh their
+// live/final state from the provider so settlement needs no manual edit.
+for (const [key, id] of Object.entries(snapshot.predictionIds)) {
+  const fixture = snapshot.manualFixtures[id];
+  if (fixture) await refreshFixturesFromDailyScoreboard(key.slice(0, key.indexOf(":")), [fixture]);
+}
+
 const marketResults = { ...previousMarketResults };
-const cornerPredictions = matches.filter((match) =>
+const cornerPredictions = settlementPreviews().filter((match) =>
   parsePredictionMarket(match.mainPrediction ?? "").legs.some((leg) => leg.kind === "corners")
 );
 await Promise.all(cornerPredictions.map(async (prediction) => {
   const fixtureId = snapshot.predictionIds[`${prediction.league}:${prediction.slug}`];
   if (!fixtureId) return;
   const fixture = Object.values(snapshot.leagues).flatMap((rounds) => rounds ?? [])
-    .flatMap((round) => round.games).find((game) => game.id === fixtureId);
+    .flatMap((round) => round.games).find((game) => game.id === fixtureId)
+    ?? snapshot.manualFixtures[fixtureId];
   if (fixture?.status !== "completed") return;
   const key = `${prediction.league}:${prediction.slug}`;
   if (marketResults[key]) return;
   try {
     let captured = null;
-    if (!fixtureId.startsWith("tsdb:") && !fixtureId.startsWith("official:")) {
+    const espnEventId = /^[0-9]+$/.test(fixtureId) ? fixtureId : fixture.espnEventId;
+    if (espnEventId) {
       try {
-        const source = `https://site.api.espn.com/apis/site/v2/sports/soccer/${leagues.find((item) => item.slug === prediction.league)?.liveDataId}/summary?event=${fixtureId}`;
+        const source = `https://site.api.espn.com/apis/site/v2/sports/soccer/${leagues.find((item) => item.slug === prediction.league)?.liveDataId}/summary?event=${espnEventId}`;
         const response = await fetch(source, { headers: { Accept: "application/json" }, cache: "no-store" });
         if (!response.ok) throw new Error(`ESPN HTTP ${response.status}`);
         const data = await response.json();

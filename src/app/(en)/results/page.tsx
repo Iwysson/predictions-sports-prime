@@ -1,13 +1,14 @@
 import Link from "@/components/DocumentLink";
 import { SiteContactLine } from "@/components/SiteContactLine";
 import { PredictionResultsArchive } from "@/components/PredictionResultsArchive";
-import { matches } from "@/data/matches";
-import { toMatchPreview } from "@/lib/editorial";
+import footballResults from "@/data/football-results.snapshot.json";
+import { settlementPreviews } from "@/lib/settlement-source";
+import { evaluatePredictionSettlement } from "@/lib/prediction-results";
+import { sortedResults, type FootballResultsDataset } from "@/lib/football-results";
 import { hydratePredictions } from "@/lib/live-predictions";
 import { buildLegalMetadata } from "@/lib/legal-pages";
 import { JsonLd } from "@/components/JsonLd";
 import { institutionalPageJsonLd } from "@/lib/seo";
-import { buildHistoricalPerformance } from "@/lib/results";
 import { absoluteUrl } from "@/lib/site-config";
 import { RESULTS_VISIBLE_LIMIT } from "@/components/PredictionResultsArchive";
 
@@ -20,9 +21,13 @@ export const metadata = buildLegalMetadata(
 );
 
 export default async function ResultsPage() {
-  const resolved = await hydratePredictions(matches.map(toMatchPreview));
-  const performance = buildHistoricalPerformance(resolved);
-  const listed = performance.entries.slice(0, RESULTS_VISIBLE_LIMIT);
+  const dataset = footballResults as FootballResultsDataset;
+  // Counts only (no picks): matches currently live, and finals still waiting on market data.
+  const resolved = await hydratePredictions(settlementPreviews());
+  const unsettled = resolved.filter((match) => !dataset.records[`${match.league}:${match.slug}`]);
+  const inProgress = unsettled.filter((match) => match.fixtureStatus === "in-progress").length;
+  const awaitingData = unsettled.filter((match) => match.fixtureStatus === "completed" && evaluatePredictionSettlement(match).status === "awaiting-data").length;
+  const listed = sortedResults(dataset).slice(0, RESULTS_VISIBLE_LIMIT);
   const collection = institutionalPageJsonLd("CollectionPage", "Football Prediction Results & Historical Picks", "/results/", description);
   const itemList = {
     "@context": "https://schema.org",
@@ -52,7 +57,7 @@ export default async function ResultsPage() {
           <h2>Full archive</h2>
           <p>The complete record of past predictions, with the pick, market and published odds, is kept in <Link href="/historypredictions/">Prediction History</Link> for VIP members.</p>
         </section>
-        <PredictionResultsArchive matches={resolved} />
+        <PredictionResultsArchive dataset={dataset} inProgress={inProgress} awaitingData={awaitingData} />
         <section className="results-settlement-note">
           <h2>How results are settled</h2>
           <p>A result is settled only from a stored result or a completed fixture with the factual data required by its market. Supported states are won, lost, push, Asian-handicap half won or half lost, and void when explicitly recorded. Completed fixtures missing corners or other required facts are unresolved and remain outside the win-rate denominator.</p>

@@ -198,6 +198,8 @@ export function normalizeTeamKey(name: string) {
     vitoriasc: "vitoriaguimaraes",
     olympiquemarseille: "marseille",
     psg: "parissaintgermain",
+    vascodagama: "vasco",
+    redbullbragantino: "bragantino",
     om: "marseille",
     rcstrasbourg: "strasbourg",
     rcstrasbourgalsace: "strasbourg",
