@@ -4696,20 +4696,21 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .access-badge--vip { background: #1d1a12; color: #f3d98b; border: 1px solid #8a6d20; }
 .psp-game__badges { display: flex; flex-wrap: wrap; gap: 8px; }
 .home-editorial-highlights { background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 5%, var(--background)) 0%, var(--background) 100%); }
-.home-best-multiple { display: grid; gap: 14px; padding: clamp(18px, 3vw, 26px); border-radius: 18px; color: #f8fbf9; background: linear-gradient(135deg, #10251c, #173d2c 62%, #205c3d); border: 1px solid #357a58; box-shadow: 0 14px 36px rgba(12, 46, 30, .2); }
-.home-best-multiple__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
-.home-best-multiple__head > div { display: grid; gap: 4px; }
-.home-best-multiple h2 { margin: 2px 0 0; color: #fff; font-size: clamp(21px, 3vw, 29px); }
+.home-best-multiple { display: grid; gap: 8px; padding: clamp(12px, 1.6vw, 16px); border-radius: 16px; color: #f8fbf9; background: linear-gradient(135deg, #10251c, #173d2c 62%, #205c3d); border: 1px solid #357a58; box-shadow: 0 10px 26px rgba(12, 46, 30, .18); }
+.home-best-multiple + .home-best-multiple { margin-top: 10px; }
+.home-best-multiple__head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.home-best-multiple__head > div { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; min-width: 0; }
+.home-best-multiple h2 { margin: 0; color: #fff; font-size: clamp(19px, 2.2vw, 24px); line-height: 1.15; }
 .home-best-multiple .eyebrow { color: #91e3b5; }
-.home-best-multiple__legs { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 12px; }
-.home-best-multiple__legs div { display: grid; gap: 4px; min-width: 0; padding: 13px 14px; border: 1px solid rgba(255,255,255,.18); border-radius: 12px; background: rgba(255,255,255,.08); }
-.home-best-multiple__legs span { color: #cce6d8; font-size: 13px; }
+.home-best-multiple__legs { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: stretch; gap: 8px; }
+.home-best-multiple__legs div { display: grid; align-content: center; gap: 2px; min-width: 0; padding: 7px 10px; border: 1px solid rgba(255,255,255,.18); border-radius: 10px; background: rgba(255,255,255,.08); }
+.home-best-multiple__legs span { color: #cce6d8; font-size: 12px; line-height: 1.2; }
 .home-best-multiple__legs .home-best-multiple__fixture { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px; }
 .home-best-multiple__fixture > span { text-align: center; }
-.home-best-multiple__fixture .team-logo { width: 28px; height: 28px; }
-.home-best-multiple__legs strong { color: #fff; font-size: clamp(16px, 1.7vw, 19px); overflow-wrap: anywhere; }
-.home-best-multiple__legs > b { color: #91e3b5; font-size: 24px; }
-.home-best-multiple > p { margin: 0; color: #cce6d8; font-size: 13px; }
+.home-best-multiple__fixture .team-logo { width: 24px; height: 24px; }
+.home-best-multiple__legs strong { color: #fff; font-size: clamp(14px, 1.45vw, 17px); line-height: 1.2; overflow-wrap: anywhere; }
+.home-best-multiple__legs > b { align-self: center; color: #91e3b5; font-size: 21px; line-height: 1; }
+.home-best-multiple > p { margin: 0; color: #cce6d8; font-size: 12px; line-height: 1.35; }
 .prime-vip-offer { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(250px, .65fr); gap: 28px; align-items: center; padding: clamp(24px, 4vw, 40px); border: 1px solid #8a6d20; border-radius: 20px; background: radial-gradient(circle at top right, #493b16 0%, #211d12 38%, #17150f 100%); color: #f7f0dc; box-shadow: 0 18px 48px rgba(30, 24, 8, .2); }
 .prime-vip-offer h2 { margin: 14px 0 6px; color: #fff7dd; font-size: clamp(24px, 4vw, 36px); }
 .prime-vip-offer__trial { display: block; color: #f3d98b; font-size: 18px; }
@@ -4733,8 +4734,13 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 @media (max-width: 700px) {
   .prime-vip-offer { grid-template-columns: 1fr; padding: 20px; gap: 18px; }
   .prime-vip-offer h2 { font-size: 22px; }
-  .home-best-multiple__head { align-items: flex-start; flex-direction: column; }
-  .home-best-multiple__legs { grid-template-columns: 1fr; gap: 7px; }
+  .home-best-multiple { box-sizing: border-box; width: calc(100vw - 22px); max-width: calc(100vw - 22px); gap: 7px; padding: 11px; overflow: hidden; }
+  .home-best-multiple__head { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .home-best-multiple__head > div { display: grid; justify-items: start; gap: 3px; }
+  .home-best-multiple h2 { max-width: 100%; font-size: clamp(18px, 5.4vw, 21px); overflow-wrap: anywhere; }
+  .home-best-multiple__head .psp-badge { flex: 0 0 auto; padding: 4px 8px; font-size: 10px; }
+  .home-best-multiple__legs { grid-template-columns: 1fr; gap: 4px; }
+  .home-best-multiple__legs div { padding: 6px 9px; }
   .home-best-multiple__legs > b { justify-self: center; line-height: 1; }
   .prime-vip-offer ul { grid-template-columns: 1fr; }
   .prime-vip-offer__price { width: 100%; }
@@ -4785,10 +4791,10 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .nhl-league-mark img, .nfl-league-mark img { display: block; width: 34px; height: 34px; object-fit: contain; }
 .nhl-league-mark--compact, .nfl-league-mark--compact { gap: 6px; font-size: 12px; }
 .nhl-league-mark--compact img, .nfl-league-mark--compact img { width: 24px; height: 24px; }
-.nhl-page-best-multiple { margin-top: 28px; }
+.nhl-page-best-multiple { margin-top: 16px; }
 .nhl-moneyline-note { margin: 14px 0 0; padding: 10px 14px; border-radius: 10px; border: 1px dashed var(--border-strong); background: var(--surface-subtle); font-size: 13px; color: var(--text-secondary); }
 .nhl-moneyline-note strong { color: var(--text-primary); }
-.home-best-multiple__fixture-meta { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 20px; }
+.home-best-multiple__fixture-meta { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 18px; }
 .home-best-multiple__league { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: #cce6d8; }
 .home-best-multiple__league .league-logo { width: 18px; height: 18px; }
 
