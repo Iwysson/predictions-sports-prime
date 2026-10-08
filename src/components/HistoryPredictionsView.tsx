@@ -6,6 +6,7 @@ import { SiteContactLine } from "@/components/SiteContactLine";
 import { useAuth } from "@/auth/AuthProvider";
 import { supabase } from "@/lib/supabase";
 import { VipCheckoutButton } from "@/components/VipCheckoutButton";
+import { VipTitleCta } from "@/components/VipTitleCta";
 
 // Full archive rows are fetched only after the server confirms VIP access.
 // Nothing here ships the data in the static bundle.
@@ -62,7 +63,7 @@ export function HistoryPredictionsView() {
     <>
       <header>
         <span className="eyebrow">VIP archive</span>
-        <h1>Prediction History</h1>
+        <VipTitleCta>Prediction History</VipTitleCta>
         <p>
           A record of past predictions with the pick, market and published odds.
           Results are shown only where they were already recorded.

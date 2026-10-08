@@ -11,6 +11,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { institutionalPageJsonLd } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site-config";
 import { RESULTS_VISIBLE_LIMIT } from "@/components/PredictionResultsArchive";
+import { VipTitleCta } from "@/components/VipTitleCta";
 
 const description = "Auditable football prediction results and historical picks, with published odds, final scores, settlement states and transparent performance methodology.";
 
@@ -49,7 +50,7 @@ export default async function ResultsPage() {
       <div className="container results-container">
         <header className="results-header">
           <span className="eyebrow">Transparency</span>
-          <h1>Football Prediction Results &amp; Historical Picks</h1>
+          <VipTitleCta>Football Prediction Results &amp; Historical Picks</VipTitleCta>
           <p>This archive separates the prediction and odds published before kickoff from the result derived afterward. Wins, losses, pushes, voids, pending fixtures and unresolved records remain visible in the full summary.</p>
           <SiteContactLine />
         </header>

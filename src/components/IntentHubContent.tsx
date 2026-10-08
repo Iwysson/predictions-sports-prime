@@ -14,6 +14,7 @@ import { leaguesBySlug } from "@/data/leagues";
 import { intentHubDefinitions, intentHubJsonLd, intentHubLeagueLinks, selectIntentHubMatches, type IntentHubSlug } from "@/lib/intent-hubs";
 import { isFutureFixture } from "@/lib/fixture-state";
 import { matchPredictionAnchor } from "@/lib/seo-locales";
+import { VipTitleCta } from "@/components/VipTitleCta";
 
 export function IntentHubContent({ slug, matches, discovery }: { slug: IntentHubSlug; matches: MatchPreview[]; discovery?: ReactNode }) {
   const now = useClientNow();
@@ -28,7 +29,7 @@ export function IntentHubContent({ slug, matches, discovery }: { slug: IntentHub
       <div className="container">
         <nav className="league-breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link><span aria-hidden="true">›</span><span>{hub.h1}</span></nav>
         <span className="eyebrow">{hub.eyebrow}</span>
-        <h1 id="intent-hub-title">{hub.h1}</h1>
+        <VipTitleCta id="intent-hub-title">{hub.h1}</VipTitleCta>
         <p>{hub.intro}</p>
         <SiteContactLine />
       </div>

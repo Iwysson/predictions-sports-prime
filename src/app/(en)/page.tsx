@@ -17,6 +17,7 @@ import { indexableLocalizedHubLocaleSlugs } from "@/lib/seo-locales";
 import { selectTemporalClientMatches } from "@/lib/match-feed";
 import { HomeEditorialHighlights } from "@/components/HomeEditorialHighlights";
 import { SiteContactLine } from "@/components/SiteContactLine";
+import { VipTitleCta } from "@/components/VipTitleCta";
 
 const homeTitle = "Football Predictions Today & Betting Tips | Predictions Sports Prime";
 const homeDescription = "Daily football predictions, betting tips, odds and statistical analysis for today's, tomorrow's and upcoming fixtures across major leagues, plus NFL and NHL picks.";
@@ -57,7 +58,7 @@ export default async function Home() {
       <section className="page-hero home-seo-hero" aria-labelledby="home-title">
         <div className="container">
           <span className="eyebrow">Predictions Sports Prime</span>
-          <h1 id="home-title">Football Predictions Today &amp; Betting Tips</h1>
+          <VipTitleCta id="home-title">Football Predictions Today &amp; Betting Tips</VipTitleCta>
           <p>
             Explore independently prepared football predictions, betting tips and
             concise match analysis for today, tomorrow and upcoming fixtures across

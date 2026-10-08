@@ -4685,6 +4685,12 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .psp-badge--free { background: color-mix(in srgb, var(--success) 14%, var(--surface)); color: var(--success); border: 1px solid color-mix(in srgb, var(--success) 40%, var(--border)); }
 .psp-badge--vip { background: #1d1a12; color: #f3d98b; border: 1px solid #8a6d20; }
 .psp-badge--best { background: #fff3c4; color: #6a4d00; border: 1px solid #d6a900; }
+.vip-title-row { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.vip-title-row h1 { min-width: 0; }
+.vip-title-cta { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 5px; padding: 7px 11px; border: 1px solid #a8862c; border-radius: 999px; color: #fff0b8; background: linear-gradient(135deg, #292313, #17140d); box-shadow: 0 4px 12px rgba(30, 24, 8, .2); font-size: 11px; font-weight: 850; line-height: 1; letter-spacing: .015em; text-decoration: none; white-space: nowrap; }
+.vip-title-cta span:first-child { color: #f3d98b; font-weight: 950; letter-spacing: .045em; }
+.vip-title-cta:hover { border-color: #d6b95f; color: #fff8df; background: linear-gradient(135deg, #342b15, #1d190e); transform: translateY(-1px); }
+.vip-title-cta:focus-visible { outline: 3px solid color-mix(in srgb, #d6b95f 55%, transparent); outline-offset: 3px; }
 /* LIVE is match state, shown next to the access badge. Text carries the meaning; color is secondary. */
 .match-status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .04em; color: #fff; background: #c81e1e; border: 1px solid #8f1414; white-space: nowrap; }
 .match-status-badge__dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 0 rgba(255,255,255,.7); }
@@ -4732,6 +4738,8 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .league-access-heading--free { color: var(--success); background: color-mix(in srgb, var(--success) 10%, var(--surface)); }
 .league-access-heading--vip { color: #d6b95f; background: #1d1a12; }
 @media (max-width: 700px) {
+  .vip-title-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .vip-title-cta { max-width: 100%; padding: 6px 10px; font-size: 10px; }
   .prime-vip-offer { grid-template-columns: 1fr; padding: 20px; gap: 18px; }
   .prime-vip-offer h2 { font-size: 22px; }
   .home-best-multiple { box-sizing: border-box; width: calc(100vw - 22px); max-width: calc(100vw - 22px); gap: 7px; padding: 11px; overflow: hidden; }

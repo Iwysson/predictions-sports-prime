@@ -3,6 +3,7 @@ import { NFLStandings } from "@/components/NFLStandings";
 import { NflWeekSlate } from "@/components/NflWeek";
 import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
 import { SiteContactLine } from "@/components/SiteContactLine";
+import { VipTitleCta } from "@/components/VipTitleCta";
 import { getNFLCopy } from "@/lib/nfl-i18n";
 import type { SeoLocale } from "@/lib/seo-locales";
 import { getNFLStandings, getNFLStandingsMetadata } from "@/lib/nfl-standings-provider";
@@ -14,7 +15,7 @@ export function NFLPage({ locale }: { locale: SeoLocale }) {
   const copy = getNFLCopy(locale);
   const standingsMetadata = getNFLStandingsMetadata();
   return <>
-    <section className="nfl-hero"><div className="container nfl-hero__inner"><Image src="/nfl/nfl-logo.png" alt="NFL" width={92} height={92} priority /><div><p className="eyebrow">{copy.season}</p><h1>{copy.h1}</h1><p>{copy.subheading}</p><SiteContactLine /></div></div></section>
+    <section className="nfl-hero"><div className="container nfl-hero__inner"><Image src="/nfl/nfl-logo.png" alt="NFL" width={92} height={92} priority /><div><p className="eyebrow">{copy.season}</p>{locale === "en" ? <VipTitleCta>{copy.h1}</VipTitleCta> : <h1>{copy.h1}</h1>}<p>{copy.subheading}</p><SiteContactLine /></div></div></section>
     {locale === "en" ? (
       <section className="section section--compact"><div className="container">
         <NflWeekSlate />

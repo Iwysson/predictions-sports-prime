@@ -9,6 +9,7 @@ import { MatchStatusBadge } from "@/components/MatchStatusBadge";
 import { NhlLeagueMark } from "@/components/NhlBestMultiple";
 import { NhlMoneylineNote } from "@/components/NhlMoneylineNote";
 import { TeamBadge } from "@/components/TeamBadge";
+import { VipTitleCta } from "@/components/VipTitleCta";
 import { resolveNhlSlate } from "@/data/nhl/slates";
 import { translate } from "@/i18n/dictionaries";
 import { formatNhlDayLabel, getNhlTodayKey } from "@/lib/nhl-day";
@@ -230,7 +231,7 @@ export function NhlDaySlate({ initialKey }: { initialKey: string }) {
           <NhlLeagueMark compact />
           <span>· NHL</span>
         </span>
-        <h1>NHL Predictions Today</h1>
+        <VipTitleCta>NHL Predictions Today</VipTitleCta>
         <p className="psp-hero__date" style={{ minHeight: "1.5em", fontWeight: 600 }}>{dayLabel}</p>
         <p>
           {matches.length} NHL games today. {free.length} {analyses(free.length)} {free.length === 1 ? "is" : "are"}{" "}
