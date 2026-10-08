@@ -6,6 +6,16 @@ export type TeamBadgeAsset = { src: string; sourceUrl: string };
 export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   // Canonical overrides (correct badge file when generated table has wrong path)
   "Inter Milan": generatedTeamBadgeAssets["Internazionale Milano"],
+  // "Inter" (UEFA Champions League team name) previously fell through to the generated
+  // "Inter" entry, which TheSportsDB mismatches to Intercity C.F.; point it at the
+  // correct Inter Milan crest instead.
+  "Inter": generatedTeamBadgeAssets["Internazionale Milano"],
+  // Champions League 2026/27 clubs with no entry in the generated table.
+  // Crests verified against TheSportsDB (cross-checked with Wikipedia for Slavia Praha).
+  "Sabah": { src: "/team-badges/sabah.png", sourceUrl: "https://www.thesportsdb.com/team/139455-Sabah-Baku" },
+  "Slavia Praha": { src: "/team-badges/slavia-praha.png", sourceUrl: "https://en.wikipedia.org/wiki/File:SK_Slavia_Praha_full_logo.svg" },
+  "Shakhtar Donetsk": { src: "/team-badges/shakhtar-donetsk.png", sourceUrl: "https://www.thesportsdb.com/team/134126-Shakhtar-Donetsk" },
+  "Slovan Bratislava": { src: "/team-badges/slovan-bratislava.png", sourceUrl: "https://www.thesportsdb.com/team/134090-Slovan-Bratislava" },
   // NHL club marks from the official NHL asset service.
   "Buffalo Sabres": { src: "/nhl/team-logos/buffalo-sabres.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg" },
   "Minnesota Wild": { src: "/nhl/team-logos/minnesota-wild.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/MIN_light.svg" },
