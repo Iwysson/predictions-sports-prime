@@ -3,9 +3,11 @@
 // the functions use, so it follows the real editorial data. Run after `npm run build`.
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
-import { protectedPickLeaks } from "./lib/leak-context.mjs";
+import { maskSettledResultRecords, protectedPickLeaks } from "./lib/leak-context.mjs";
 
 const index = JSON.parse(readFileSync("functions/_data/match-content.json", "utf8"));
+// Settled, officially FINAL results are the only records whose original pick/odds may be public.
+const settledResults = JSON.parse(readFileSync("src/data/football-results.snapshot.json", "utf8")).records;
 const files = [];
 (function walk(dir) {
   for (const name of readdirSync(dir)) {
@@ -14,6 +16,8 @@ const files = [];
   }
 })("out");
 const corpus = files.map((f) => ({ f, text: readFileSync(f, "utf8") }));
+// Analysis paragraphs are checked on the raw text; pick/odds rules run on text without settled result records.
+const pickCorpus = corpus.map(({ f, text }) => ({ f, text: maskSettledResultRecords(text, settledResults) }));
 
 const publicPicks = new Set(index.filter((e) => e.predictionAccess === "free").map((e) => e.prediction.main.toLowerCase()));
 // NHL public-slate modules are deliberately client-safe and contain picks only for FREE entries.
@@ -45,7 +49,7 @@ for (const e of index) {
   }
   const oddsText = e.prediction.odds.toFixed(2);
   const exact = publicPicks.size > 0 && [...publicPicks].some((p) => p.includes(e.prediction.main.toLowerCase()));
-  for (const { f, text } of corpus) {
+  for (const { f, text } of pickCorpus) {
     for (const leak of protectedPickLeaks(text, { pick: e.prediction.main, oddsText, exact }, label)) {
       leaks.push({ ...leak, file: f });
     }

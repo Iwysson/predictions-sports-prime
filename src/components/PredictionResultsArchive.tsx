@@ -67,7 +67,7 @@ export function PredictionResultsArchive({
       ) : null}
 
       <h2 className="results-list-heading">Latest football prediction results</h2>
-      <p className="results-list-intro">Showing the {visible.length} most recent of {all.length} settled predictions. Each match appears once, with the final score and settlement. Free predictions show the pick and odds exactly as published before kickoff; VIP picks stay in Prediction History.</p>
+      <p className="results-list-intro">Showing the {visible.length} most recent of {all.length} settled predictions. Each match appears once, with the final score and settlement. The pick and odds are shown exactly as published before kickoff, and only after the match is officially final; premium analysis stays protected.</p>
 
       {all.length === 0 ? <div className="empty-state empty-state--compact"><strong>No completed predictions yet.</strong></div> : null}
 
@@ -81,7 +81,7 @@ export function PredictionResultsArchive({
                 key={record.key}
                 data-result-slug={record.slug}
                 data-result-status={record.result}
-                data-pick={record.prediction ?? ""}
+                data-pick={record.prediction}
                 data-odds={record.odds ?? ""}
                 data-final-score={`${record.finalScore.home}-${record.finalScore.away}`}
               >
@@ -97,8 +97,8 @@ export function PredictionResultsArchive({
                 <dl className="result-card__details">
                   <div><dt>Match date</dt><dd>{record.date}</dd></div>
                   <div><dt>League</dt><dd>{leagueName(record.league)}</dd></div>
-                  <div><dt>Published prediction</dt><dd>{record.prediction ?? "VIP prediction"}</dd></div>
-                  <div><dt>Published odds</dt><dd>{record.predictionAccess === "free" ? record.odds ?? "Not available" : "VIP"}</dd></div>
+                  <div><dt>Published prediction</dt><dd>{record.prediction}</dd></div>
+                  <div><dt>Published odds</dt><dd>{record.odds ?? "Not available"}</dd></div>
                   <div><dt>Final score</dt><dd>{record.finalScore.home}–{record.finalScore.away}</dd></div>
                 </dl>
               </article>

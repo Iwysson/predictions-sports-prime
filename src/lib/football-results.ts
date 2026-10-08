@@ -18,7 +18,7 @@ export type FootballResultRecord = {
   awayTeam: string;
   date: string;
   fixtureId?: string;
-  /** Access tier of the original prediction. Protected picks are never rendered publicly. */
+  /** Access tier the prediction had before kickoff (informational; settled picks are public in Results). */
   predictionAccess: "free" | "vip";
   /** Original published market and price, frozen at settlement time. */
   prediction: string;
@@ -141,13 +141,14 @@ export function overlayStoredResult(match: MatchPreview, dataset: FootballResult
   return { ...match, fixtureStatus: "completed", homeScore: record.finalScore.home, awayScore: record.finalScore.away };
 }
 
-/** Record as rendered on public pages: protected picks and odds are masked. */
-export type PublicFootballResult = Omit<FootballResultRecord, "prediction" | "odds"> & {
-  prediction: string | null;
-  odds: number | null;
-};
+/**
+ * Record as rendered on public pages. Only officially FINAL, settled records
+ * exist in the dataset, so the original pick and odds are public here (the
+ * premium protection applies before and during the match). Premium analysis is
+ * never part of a record.
+ */
+export type PublicFootballResult = FootballResultRecord;
 
 export function toPublicResult(record: FootballResultRecord): PublicFootballResult {
-  if (record.predictionAccess === "free") return record;
-  return { ...record, prediction: null, odds: null };
+  return record;
 }

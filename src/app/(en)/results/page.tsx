@@ -55,7 +55,7 @@ export default async function ResultsPage() {
         </header>
         <section className="results-settlement-note">
           <h2>Full archive</h2>
-          <p>The complete record of past predictions, with the pick, market and published odds, is kept in <Link href="/historypredictions/">Prediction History</Link> for VIP members.</p>
+          <p>Once a match is officially final and settled, its original pick and published odds appear here with the final score. Before and during the match, premium picks stay protected. Premium analysis stays in <Link href="/historypredictions/">Prediction History</Link> for VIP members.</p>
         </section>
         <PredictionResultsArchive dataset={dataset} inProgress={inProgress} awaitingData={awaitingData} />
         <section className="results-settlement-note">

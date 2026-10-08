@@ -6,6 +6,7 @@ import { applyDailyFixtureUpdate } from "../src/lib/fixture-live-refresh.ts";
 import {
   buildResultsDataset, emptyResultsDataset, latestResults, overlayStoredResult, settleFromMatch, summarizeResults, toPublicResult,
 } from "../src/lib/football-results.ts";
+import { maskSettledResultRecords } from "./lib/leak-context.mjs";
 
 const NOW = "2026-10-07T23:00:00.000Z";
 const match = (pick: string, score: [number, number] | null, extra: Partial<MatchPreview> = {}): MatchPreview => ({
@@ -143,14 +144,41 @@ assert.equal(
   assert.equal(noScore.status, "in-progress");
 }
 
-// Protected (VIP) picks are masked in public views; free picks are shown; the stored record keeps the original
+// VIP / BEST BET / PRIME VIP: protected before and during the match, public in Results only once FINAL + settled
 {
-  const vip = settleFromMatch(match("Cruzeiro to Win", [2, 0], { predictionAccess: "vip" }), NOW)!;
-  const free = settleFromMatch(match("Cruzeiro to Win", [2, 0], { predictionAccess: "free" }), NOW)!;
-  assert.equal(vip.prediction, "Cruzeiro to Win");
-  assert.deepEqual([toPublicResult(vip).prediction, toPublicResult(vip).odds], [null, null]);
-  assert.deepEqual([toPublicResult(free).prediction, toPublicResult(free).odds], ["Cruzeiro to Win", 1.67]);
-  assert.equal(toPublicResult(vip).result, "green");
+  for (const access of ["vip", "free"] as const) {
+    for (const fixtureStatus of ["scheduled", "in-progress"] as const) {
+      const dataset = buildResultsDataset([match("Cruzeiro to Win", null, { predictionAccess: access, fixtureStatus })], emptyResultsDataset(), NOW);
+      assert.equal(Object.keys(dataset.records).length, 0, `${access} ${fixtureStatus} must not enter the results dataset`);
+    }
+    const final = settleFromMatch(match("Cruzeiro to Win", [2, 0], { predictionAccess: access, bestAnalysis: access === "vip" }), NOW)!;
+    assert.equal(toPublicResult(final).prediction, "Cruzeiro to Win");
+    assert.equal(toPublicResult(final).odds, 1.67);
+    assert.equal(toPublicResult(final).result, "green");
+    assert.equal(toPublicResult(final).predictionAccess, access);
+    // Only track-record fields: no analysis text can be part of a record.
+    assert.deepEqual(Object.keys(final).sort(), [
+      "awayTeam", "date", "finalScore", "homeTeam", "key", "league", "odds", "prediction", "predictionAccess", "result", "settledAt", "slug",
+    ].sort());
+  }
+}
+
+// check-vip-leak contextual exception: only the serialized settled record is exempt
+{
+  const record = { key: "l:s", slug: "s", finalScore: { home: 1, away: 0 }, result: "green" };
+  const records = { "l:s": record };
+  const PICK = "Secret Pick";
+  const card = `<article class="result-card" data-result-slug="s" data-pick="${PICK}"><dd>${PICK}</dd></article>`;
+  const json = `{"key":"l:s","prediction":"${PICK}","odds":1.9,"settledAt":"2026-10-07T23:00:00.000Z"}`;
+  const escaped = json.replaceAll('"', '\\"');
+  assert.equal(maskSettledResultRecords(card + json + escaped, records).includes(PICK), false, "settled record contexts are exempt");
+  const upcoming = `<a href="/match/s/">${PICK}</a>`;
+  assert.equal(maskSettledResultRecords(upcoming, records).includes(PICK), true, "match page / upcoming context still leaks");
+  assert.equal(maskSettledResultRecords(`{"key":"l:other","prediction":"${PICK}","settledAt":"x"}`, records).includes(PICK), true, "unsettled predictions are never exempt");
+  assert.equal(maskSettledResultRecords(`<article class="result-card" data-result-slug="other">${PICK}</article>`, records).includes(PICK), true);
+  assert.equal(maskSettledResultRecords(`<p>${PICK}</p>` + card, records).includes(PICK), true, "a pick outside the card is still reported");
+  // No settled record -> nothing is exempt
+  assert.equal(maskSettledResultRecords(card, {}).includes(PICK), true);
 }
 
 console.log("Football results tests: PASS");

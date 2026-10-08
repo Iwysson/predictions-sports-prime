@@ -292,10 +292,10 @@ export function HomePredictionFeed({
                 return <a href={matchHref(record.slug)} className="history-row" key={record.key}>
                   <div>
                     <strong>{record.homeTeam} {separator} {record.awayTeam}</strong>
-                    <span>{leaguesBySlug[record.league as keyof typeof leaguesBySlug]?.name ?? record.league} · {record.date}{record.prediction ? ` · ${locale === "en" ? record.prediction : localizePredictionText(record.prediction, locale)}` : ""}</span>
+                    <span>{leaguesBySlug[record.league as keyof typeof leaguesBySlug]?.name ?? record.league} · {record.date} · {locale === "en" ? record.prediction : localizePredictionText(record.prediction, locale)}</span>
                   </div>
                   <span className="history-score">{record.finalScore.home}–{record.finalScore.away}</span>
-                  <span className="history-odds">{record.prediction ? `${copy.odds} ${record.odds ?? "—"}` : "VIP"}</span>
+                  <span className="history-odds">{copy.odds} {record.odds ?? "—"}</span>
                   <b className={`bet-result bet-result--${tone}`}>{locale === "en" ? label : localizedResult(record.result, locale)}</b>
                 </a>
               })}

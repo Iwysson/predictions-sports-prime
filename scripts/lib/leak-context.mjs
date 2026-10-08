@@ -70,3 +70,43 @@ export function protectedPickLeaks(text, entry, label) {
   }
   return leaks;
 }
+
+// Strict contextual exception: the central Results dataset may publish the ORIGINAL pick and odds of a
+// prediction that is officially FINAL and settled. Only the serialized result record itself is removed
+// before the leak rules run (the HTML result card, or the JSON record in the RSC payload). A pick
+// anywhere else (upcoming, live, match page, metadata) stays in the text and is reported as a leak.
+
+function removeRanges(text, find) {
+  let out = text;
+  for (;;) {
+    const range = find(out);
+    if (!range) return out;
+    out = out.slice(0, range[0]) + out.slice(range[1]);
+  }
+}
+
+export function maskSettledResultRecords(text, records) {
+  let masked = text;
+  for (const record of Object.values(records ?? {})) {
+    if (!record || !record.slug || !record.key || !record.finalScore || !record.result) continue;
+    // HTML result card of this settled record.
+    masked = removeRanges(masked, (value) => {
+      const marker = value.indexOf(`data-result-slug="${record.slug}"`);
+      if (marker === -1) return null;
+      const start = value.lastIndexOf('<article class="result-card"', marker);
+      const end = value.indexOf("</article>", marker);
+      return start === -1 || end === -1 ? null : [start, end + "</article>".length];
+    });
+    // JSON result record (plain or backslash-escaped inside an RSC payload string).
+    for (const q of ['"', '\\"']) {
+      masked = removeRanges(masked, (value) => {
+        const start = value.indexOf(`{${q}key${q}:${q}${record.key}${q}`);
+        if (start === -1) return null;
+        const stamp = value.indexOf(`${q}settledAt${q}:`, start);
+        const end = stamp === -1 ? -1 : value.indexOf("}", stamp);
+        return end === -1 ? null : [start, end + 1];
+      });
+    }
+  }
+  return masked;
+}
