@@ -265,15 +265,22 @@ async function syncLeague(league) {
     }
     // Editorial inventories can span several matchdays. Retain their declared
     // round instead of putting every article into a synthetic Matchday 1.
+    // A single newly published prediction without a resolvable round must never
+    // block the rest of the league's known fixtures from refreshing: it is
+    // skipped and reported (left PENDING for settlement), never guessed.
+    const unresolvedRoundPredictions = [];
     const base = text === null
       ? normalizeFixtureRounds([{
           round: 0,
-          games: leaguePredictions.map((prediction) => {
+          games: leaguePredictions.flatMap((prediction) => {
             const suppliedRound = prediction.round?.match(/(?:Matchday|Round|Week)\s+(\d+)/i)?.[1];
             const savedFixture = findPredictionFixture(previous.leagues?.[league.slug] ?? [], prediction);
             const round = suppliedRound ? Number(suppliedRound) : savedFixture?.round;
-            if (!round) throw new PartialSourceError(`${prediction.slug}: round unavailable; cannot construct a complete round feed`);
-            return {
+            if (!round) {
+              unresolvedRoundPredictions.push(prediction.slug);
+              return [];
+            }
+            return [{
             round,
             date: prediction.date,
             time: prediction.time,
@@ -283,9 +290,20 @@ async function syncLeague(league) {
             awayScore: null,
             status: "scheduled",
             dataSource: "snapshot",
-          }; }),
+          }]; }),
         }])
       : parseFootballSeason(text);
+    if (unresolvedRoundPredictions.length) {
+      console.warn(`${league.name}: round unavailable, left pending (not guessed): ${unresolvedRoundPredictions.join(", ")}`);
+    }
+    if (text === null && base.flatMap((round) => round.games).length === 0) {
+      // Every published prediction in this manual-only league is missing a
+      // resolvable round this cycle. There is nothing new to refresh; leave the
+      // previous valid snapshot untouched rather than treating an empty round
+      // list as a data-integrity failure.
+      console.log(`${league.name}: skipped (no prediction has a resolvable round this cycle)`);
+      return;
+    }
     const espnRounds = await hydrateLiveResults(league.slug, base);
     refreshedRounds = espnRounds;
     refreshedRounds = await hydrateTheSportsDb(league.slug, espnRounds);

@@ -4,10 +4,10 @@ import type { MatchPreview } from "../src/types/index.ts";
 import { evaluatePredictionSettlement } from "../src/lib/prediction-results.ts";
 import { applyDailyFixtureUpdate } from "../src/lib/fixture-live-refresh.ts";
 import {
-  buildResultsDataset, emptyResultsDataset, latestResults, overlayStoredResult, settleFromMatch, summarizeResults, toPublicResult,
+  buildResultsDataset, emptyResultsDataset, latestResults, latestWinResults, overlayStoredResult, settleFromMatch, summarizeResults, toPublicResult,
 } from "../src/lib/football-results.ts";
 import { maskSettledResultRecords } from "./lib/leak-context.mjs";
-import { latestFootballTrackRecord, trackRecordPromoState } from "../src/lib/football-track-record.ts";
+import { trackRecordPromoState } from "../src/lib/football-track-record.ts";
 
 const NOW = "2026-10-07T23:00:00.000Z";
 const match = (pick: string, score: [number, number] | null, extra: Partial<MatchPreview> = {}): MatchPreview => ({
@@ -58,6 +58,28 @@ assert.equal(
   "green"
 );
 
+// "Total Corners" phrasing (e.g. "Over 1.5 Goals + over 7.5 total corners") parses
+// as the same total-corners market, not an unsupported leg.
+{
+  const totalCornersPick = "Over 1.5 Goals + over 7.5 total corners";
+  const missingData = evaluatePredictionSettlement(match(totalCornersPick, [1, 1]));
+  assert.deepEqual(missingData.unsupportedLegs, [], "total corners phrasing is recognized, not unsupported");
+  assert.equal(missingData.status, "awaiting-data");
+  assert.equal(missingData.pendingReason, "MARKET_DATA_MISSING");
+  const withData = evaluatePredictionSettlement(match(totalCornersPick, [1, 1], {
+    marketStats: { homeCorners: 5, awayCorners: 4, source: "t", capturedAt: NOW },
+  }));
+  assert.equal(withData.status, "green");
+}
+
+// A genuinely unrecognized market is never guessed as a win or loss.
+{
+  const unknown = evaluatePredictionSettlement(match("Some Unrecognized Prop Bet", [1, 1]));
+  assert.equal(unknown.status, "pending");
+  assert.equal(unknown.pendingReason, "UNSUPPORTED_MARKET");
+  assert.equal(settleFromMatch(match("Some Unrecognized Prop Bet", [1, 1]), NOW), null, "never enters the results dataset");
+}
+
 // Transition: LIVE -> FINAL yields exactly one new settlement and recomputed stats
 {
   const settled = [
@@ -77,6 +99,12 @@ assert.equal(
   // Idempotent: re-processing the same FINAL changes nothing (including settledAt).
   const again = buildResultsDataset([...settled, final], after, "2026-10-09T00:00:00.000Z");
   assert.equal(JSON.stringify(again), JSON.stringify(after));
+  // Running settlement 10 more times after the same final produces byte-identical output.
+  let repeated = after;
+  for (let i = 0; i < 10; i++) {
+    repeated = buildResultsDataset([...settled, final], repeated, `2026-10-${10 + i}T00:00:00.000Z`);
+  }
+  assert.equal(JSON.stringify(repeated), JSON.stringify(after), "10 repeated runs never duplicate or alter a settled record");
 }
 
 // Win rate excludes push / pending
@@ -98,24 +126,41 @@ assert.equal(
     ...settleFromMatch(match(result === "push" ? "Cruzeiro -1" : "Cruzeiro to Win", result === "green" ? [2, 0] : result === "red" ? [0, 1] : [2, 1], { slug }), NOW)!,
     result,
   });
-  const fiveOne = latestFootballTrackRecord([
+  const fiveOne = summarizeResults([
     ...Array.from({ length: 5 }, (_, index) => record("green", `w${index}`)),
     record("red", "l1"),
-  ])!;
-  assert.equal(fiveOne.summary.wins, 5);
-  assert.equal(fiveOne.summary.losses, 1);
-  assert.equal((fiveOne.summary.winRate! * 100).toFixed(1), "83.3");
+  ]);
+  assert.equal(fiveOne.wins, 5);
+  assert.equal(fiveOne.losses, 1);
+  assert.equal((fiveOne.winRate! * 100).toFixed(1), "83.3");
 
-  const fourOne = latestFootballTrackRecord([
+  const fourOne = summarizeResults([
     ...Array.from({ length: 4 }, (_, index) => record("green", `fw${index}`)),
     record("red", "fl1"),
     record("push", "fp1"),
-  ])!;
-  assert.equal(fourOne.summary.settled, 6);
-  assert.equal(fourOne.summary.pushes, 1);
-  assert.equal((fourOne.summary.winRate! * 100).toFixed(1), "80.0");
-  assert.equal(latestFootballTrackRecord([]), null);
+  ]);
+  assert.equal(fourOne.settled, 6);
+  assert.equal(fourOne.pushes, 1);
+  assert.equal((fourOne.winRate! * 100).toFixed(1), "80.0");
+  assert.equal(summarizeResults([]).settled, 0);
   assert.equal(summarizeResults([record("push", "only-push")]).winRate, null);
+}
+
+// latestWinResults: homepage preview shows only wins, newest first, aggregate stays full.
+{
+  const dataset = buildResultsDataset([
+    match("Cruzeiro to Win", [1, 0], { slug: "win-old", date: "2026-10-01" }),
+    match("Cruzeiro to Win", [1, 0], { slug: "win-new", date: "2026-10-07" }),
+    match("Cruzeiro to Win", [0, 1], { slug: "loss", date: "2026-10-06" }),
+    match("Cruzeiro -1", [2, 1], { slug: "push", date: "2026-10-05" }),
+  ], emptyResultsDataset(), NOW);
+  const wins = latestWinResults(dataset, 8);
+  assert.deepEqual(wins.map((record) => record.slug), ["win-new", "win-old"], "only green results, newest first");
+  assert.equal(wins.some((record) => record.result === "red"), false);
+  const allRecords = Object.values(dataset.records);
+  assert.equal(allRecords.length, 4, "aggregate dataset still includes the loss and push");
+  assert.equal(summarizeResults(allRecords).losses, 1);
+  assert.deepEqual(latestWinResults(dataset, 1).map((record) => record.slug), ["win-new"], "limit still applies to wins only");
 }
 
 // Auth state controls purchase presentation without changing subscription logic.

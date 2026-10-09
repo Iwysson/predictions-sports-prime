@@ -77,7 +77,7 @@ function parseLeg(source: string): ParsedPredictionLeg | null {
     return parseLeg(liveEntry[1].trim()) ?? { kind: "live-entry", market: liveEntry[1].trim(), source };
   }
 
-  const totalCorners = source.match(/^(Over|Under) (\d+(?:\.\d+)?) Corners?$/i);
+  const totalCorners = source.match(/^(Over|Under) (\d+(?:\.\d+)?) (?:Total )?Corners?$/i);
   if (totalCorners) return { kind: "corners", selection: totalCorners[1].toLowerCase() as "over" | "under", line: Number(totalCorners[2]), source };
 
   const teamCorners = source.match(/^(.+?) (Over|Under) (\d+(?:\.\d+)?) (?:Team )?Corners?$/i);
