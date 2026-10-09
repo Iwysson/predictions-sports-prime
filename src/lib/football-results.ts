@@ -115,6 +115,17 @@ export function latestResults(dataset: FootballResultsDataset, limit: number) {
   return sortedResults(dataset).slice(0, limit);
 }
 
+/**
+ * Latest settled wins only (green/half-green), for the homepage preview list.
+ * Losses, pushes and voids stay fully visible in the /results/ archive and in
+ * the track-record summary, which must keep reading the unfiltered dataset.
+ */
+export function latestWinResults(dataset: FootballResultsDataset, limit: number) {
+  return sortedResults(dataset)
+    .filter((record) => record.result === "green" || record.result === "half-green")
+    .slice(0, limit);
+}
+
 /** Win rate = wins / (wins + losses); push, half, void and pending are excluded. */
 export function summarizeResults(records: FootballResultRecord[]) {
   const count = (status: SettledResultStatus) => records.filter((record) => record.result === status).length;

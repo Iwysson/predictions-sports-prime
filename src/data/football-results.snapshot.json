@@ -190,6 +190,120 @@
       "result": "green",
       "settledAt": "2026-10-08T02:02:59.027Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
+    },
+    "bundesliga:borussia-dortmund-vs-werder-bremen": {
+      "key": "bundesliga:borussia-dortmund-vs-werder-bremen",
+      "league": "bundesliga",
+      "slug": "borussia-dortmund-vs-werder-bremen",
+      "homeTeam": "Borussia Dortmund",
+      "awayTeam": "Werder Bremen",
+      "date": "2026-10-09",
+      "fixtureId": "401884781",
+      "predictionAccess": "vip",
+      "prediction": "Borussia Dortmund to win + over 2.5 goals",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 2,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-10-09T21:28:25.608Z",
+      "publishedAt": "2026-10-06T12:00:00.000Z"
+    },
+    "eredivisie:psv-vs-heerenveen": {
+      "key": "eredivisie:psv-vs-heerenveen",
+      "league": "eredivisie",
+      "slug": "psv-vs-heerenveen",
+      "homeTeam": "PSV Eindhoven",
+      "awayTeam": "Heerenveen",
+      "date": "2026-10-09",
+      "fixtureId": "401875592",
+      "predictionAccess": "free",
+      "prediction": "PSV -1.5 handicap",
+      "odds": 1.57,
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-09T21:28:25.608Z",
+      "publishedAt": "2026-10-06T12:00:00.000Z"
+    },
+    "liga-portugal:braga-vs-sporting": {
+      "key": "liga-portugal:braga-vs-sporting",
+      "league": "liga-portugal",
+      "slug": "braga-vs-sporting",
+      "homeTeam": "Braga",
+      "awayTeam": "Sporting CP",
+      "date": "2026-10-09",
+      "fixtureId": "401885427",
+      "predictionAccess": "vip",
+      "prediction": "Sporting CP or draw (X2) + over 1.5 goals",
+      "odds": 1.73,
+      "finalScore": {
+        "home": 1,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-10-09T21:28:25.608Z",
+      "publishedAt": "2026-10-06T12:00:00.000Z"
+    },
+    "liga-portugal:moreirense-vs-gil-vicente": {
+      "key": "liga-portugal:moreirense-vs-gil-vicente",
+      "league": "liga-portugal",
+      "slug": "moreirense-vs-gil-vicente",
+      "homeTeam": "Moreirense",
+      "awayTeam": "Gil Vicente",
+      "date": "2026-10-09",
+      "fixtureId": "401885423",
+      "predictionAccess": "free",
+      "prediction": "Over 1.5 goals",
+      "odds": 1.41,
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-10-09T21:28:25.608Z",
+      "publishedAt": "2026-10-06T12:00:00.000Z"
+    },
+    "ligue-1:lens-vs-lyon": {
+      "key": "ligue-1:lens-vs-lyon",
+      "league": "ligue-1",
+      "slug": "lens-vs-lyon",
+      "homeTeam": "Lens",
+      "awayTeam": "Lyon",
+      "date": "2026-10-09",
+      "fixtureId": "401876447",
+      "predictionAccess": "vip",
+      "prediction": "Lens or draw (1X) + over 1.5 goals",
+      "odds": 1.75,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-09T21:28:25.608Z",
+      "publishedAt": "2026-10-06T12:00:00.000Z"
+    },
+    "super-lig:galatasaray-vs-kasimpasa": {
+      "key": "super-lig:galatasaray-vs-kasimpasa",
+      "league": "super-lig",
+      "slug": "galatasaray-vs-kasimpasa",
+      "homeTeam": "Galatasaray",
+      "awayTeam": "Kasimpasa",
+      "date": "2026-10-09",
+      "fixtureId": "401888280",
+      "predictionAccess": "free",
+      "prediction": "Galatasaray -1.5 handicap",
+      "odds": 1.61,
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-09T21:28:25.608Z",
+      "publishedAt": "2026-10-06T12:00:00.000Z"
     }
   }
 }

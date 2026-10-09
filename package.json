@@ -16,6 +16,7 @@
     "test:site-analytics": "tsx scripts/test-site-analytics.mts",
     "results:settle": "tsx scripts/settle-football-results.mts",
     "results:validate": "tsx scripts/validate-football-results.mts",
+    "results:update": "npm run fixtures:sync && npm run results:settle && npm run results:validate",
     "nfl:standings:sync": "tsx scripts/sync-nfl-standings.mjs",
     "audit:nfl-standings": "tsx scripts/audit-nfl-standings.mjs",
     "audit:publication-content": "node --import tsx scripts/audit-publication-content.mjs",

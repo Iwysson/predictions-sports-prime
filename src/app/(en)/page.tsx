@@ -3,7 +3,7 @@ import { AdSlot } from "@/components/ads";
 import { JsonLd } from "@/components/JsonLd";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
 import footballResults from "@/data/football-results.snapshot.json";
-import { latestResults, sortedResults, toPublicResult, type FootballResultsDataset } from "@/lib/football-results";
+import { latestWinResults, sortedResults, toPublicResult, type FootballResultsDataset } from "@/lib/football-results";
 import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import { matches } from "@/data/matches";
@@ -70,7 +70,7 @@ export default async function Home() {
       <HomeEditorialHighlights />
       <HomePredictionFeed
         matches={clientMatches}
-        results={latestResults(footballResults as FootballResultsDataset, 8).map(toPublicResult)}
+        results={latestWinResults(footballResults as FootballResultsDataset, 8).map(toPublicResult)}
         trackRecordResults={sortedResults(footballResults as FootballResultsDataset).map(toPublicResult)}
         discovery={<PublishedMatchDirectory matches={resolvedMatches} />}
         beforeTomorrow={
