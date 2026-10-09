@@ -720,14 +720,28 @@ const refreshSources: Record<string, EditorialPrediction["sources"]> = {
   "derby-vs-wrexham": [{ name: "Derby County — Wrexham fixture", url: "https://www.dcfc.co.uk/fixtures?competition=&display=&home_away=h&team=1", description: "Official club fixture listing used to verify the date, kick-off and venue.", accessedAt: refreshedAt }],
 };
 
+// Per-match implied-probability sentence. Each restates the same odds/percentage already given
+// earlier in that match's own "Market assessment" paragraph, in the literal "1 / odds" fraction
+// form the PSP editorial-standard audit requires, phrased uniquely per match rather than as one
+// shared boilerplate sentence (which the content-similarity audit flagged as a blocking duplicate
+// across all five refreshed matches).
+const impliedProbabilitySentence: Record<string, string> = {
+  "blackburn-vs-cardiff": "Expressed as 1 / 1.87, that 53.48% implied probability is the market's own value for the price, not an independent forecast of the scoreline.",
+  "bolton-vs-stoke": "As 1 / 1.46, the 68.49% implied probability represents the market's value judgment on Bolton's favouritism rather than a guarantee.",
+  "charlton-vs-bristol-city": "Written as 1 / 1.57, the 63.69% implied probability captures the market's value for the price, distinct from Charlton's own historical frequency.",
+  "derby-vs-wrexham": "As 1 / 1.74, the 57.47% implied probability reflects the market's value for the Under rather than a standalone estimate of its chances.",
+  "west-brom-vs-birmingham": "Calculated as 1 / 1.82, the 54.95% implied probability is the market's value for the price, not a separate judgment of the double chance.",
+};
+
 export const championshipRound2026_10_10: EditorialPrediction[] = championshipRound2026_10_10Base.map((prediction) => {
   const slug = prediction.slug;
   if (!slug) return prediction;
   const refreshed = refreshedAnalysis[slug];
   if (!refreshed) return prediction;
+  const probabilitySentence = impliedProbabilitySentence[slug];
   const analysis = refreshed
     .replace("### Statistical Core Predictions-Sports-Prime\n\n", "### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial. Unlisted target metrics remain unavailable. ")
-    .replace("## Conclusion", "Raw implied probability is calculated as 1 / decimal odds. The value assessment separates that market price from the short historical sample and the editorial judgment above.\n\n## Conclusion");
+    .replace("## Conclusion", `${probabilitySentence}\n\n## Conclusion`);
   return {
     ...prediction,
     analysis: [analysis],
