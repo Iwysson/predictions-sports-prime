@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T21:56:26.842Z",
+  "generatedAt": "2026-10-09T22:56:22.751Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -15336,7 +15336,6 @@
     "la-liga:barcelona-vs-getafe": "401882853",
     "la-liga:elche-vs-celta": "401882854",
     "la-liga:levante-vs-sevilla": "401882852",
-    "la-liga:malaga-vs-espanyol": "401882851",
     "la-liga:racing-santander-vs-valencia": "401882850",
     "la-liga:rayo-vallecano-vs-athletic-club": "401882849",
     "la-liga:real-betis-vs-osasuna": "401882855",
@@ -15387,11 +15386,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-09T21:56:26.842Z",
+    "bundesliga": "2026-10-09T22:56:22.751Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
-    "liga-portugal": "2026-10-09T21:56:26.842Z",
-    "ligue-1": "2026-10-09T21:56:26.842Z",
-    "eredivisie": "2026-10-09T21:56:26.842Z",
+    "liga-portugal": "2026-10-09T22:56:22.751Z",
+    "ligue-1": "2026-10-09T22:56:22.751Z",
+    "eredivisie": "2026-10-09T22:56:22.751Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
