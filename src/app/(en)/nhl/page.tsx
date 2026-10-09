@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "@/components/DocumentLink";
 import { JsonLd } from "@/components/JsonLd";
 import { NhlDaySlate } from "@/components/NhlToday";
-import { NhlHistory } from "@/components/NhlHistory";
+import { NhlResultsSection } from "@/components/NhlResultsSection";
 import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
 import { ResponsibleGamblingNotice } from "@/components/ResponsibleGamblingNotice";
 import { SiteContactLine } from "@/components/SiteContactLine";
@@ -47,7 +47,7 @@ export default function NhlPage() {
 
         <NhlDaySlate initialKey={initialKey} />
 
-        <NhlHistory />
+        <NhlResultsSection />
 
         <PrimeVipOfferCard />
 

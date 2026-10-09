@@ -3658,6 +3658,7 @@ html[dir="rtl"] .latest-match {
 .track-record__heading h3 { margin: 0; color: var(--text-primary); font-size: clamp(19px, 2.5vw, 25px); }
 .track-record__heading p { margin: 0; color: var(--text-muted); font-size: 13px; line-height: 1.5; }
 .track-record__metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.track-record__metrics--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .track-record__metric { display: grid; gap: 2px; padding: 13px 15px; border: 1px solid var(--border); border-radius: 11px; background: var(--surface); }
 .track-record__metric strong { color: var(--text-primary); font-size: 24px; line-height: 1.1; }
 .track-record__metric span { color: var(--text-muted); font-size: 11px; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; }
@@ -3668,9 +3669,6 @@ html[dir="rtl"] .latest-match {
 .track-record__metric--rate { border-color: #357a58; background: linear-gradient(135deg, #10251c, #173d2c); }
 .track-record__metric--rate strong { color: #b8f3d0; }
 .track-record__metric--rate span { color: #cce6d8; }
-.track-record__overall { display: flex; align-items: baseline; gap: 10px; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--surface-subtle); }
-.track-record__overall span, .track-record__overall small { color: var(--text-muted); }
-.track-record__overall strong { color: var(--text-primary); font-size: 20px; }
 .track-record-promo { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 20px; padding: 18px 20px; border: 1px solid #8a6d20; border-radius: 14px; background: radial-gradient(circle at top right, #493b16 0%, #211d12 42%, #17150f 100%); color: #f7f0dc; }
 .track-record-promo h3 { margin: 8px 0 4px; color: #fff7dd; font-size: 20px; text-transform: uppercase; }
 .track-record-promo p { max-width: 68ch; margin: 0; color: #e7dcbc; font-size: 13px; line-height: 1.55; }
@@ -4805,6 +4803,11 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .home-best-multiple__fixture-meta { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 18px; }
 .home-best-multiple__league { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: #cce6d8; }
 .home-best-multiple__league .league-logo { width: 18px; height: 18px; }
+
+/* ===== NHL Track Record (compact summary) ===== */
+.nhl-track-record { margin-top: 20px; display: grid; gap: 14px; padding: clamp(18px, 3vw, 26px); border: 1px solid var(--border); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); }
+.nhl-track-record__latest { display: grid; gap: 8px; }
+.nhl-track-record__latest h3 { margin: 0; font-size: 14px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; }
 
 /* ===== NHL Prediction History ===== */
 .nhl-history { margin-top: 28px; display: grid; gap: 16px; padding: clamp(20px, 3vw, 30px); border: 1px solid var(--border); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); }

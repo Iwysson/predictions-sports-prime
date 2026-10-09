@@ -41,7 +41,7 @@ export function PredictionResultsArchive({
 
   return (
     <div className="results-archive" data-results-total={all.length} data-results-visible={visible.length}>
-      <FootballTrackRecord records={all} detailed />
+      <FootballTrackRecord records={all} />
       <div className="results-summary" aria-label="Prediction result counts">
         <span><b>{summary.settled}</b> Total settled</span>
         <span><b>{summary.wins}</b> Wins</span>

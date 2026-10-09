@@ -1,30 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "@/components/DocumentLink";
 import { NhlMoneylineNote } from "@/components/NhlMoneylineNote";
 import { TeamBadge } from "@/components/TeamBadge";
 import { formatNhlDayLabel } from "@/lib/nhl-day";
 import { formatOddsPair } from "@/lib/odds";
+import type { NhlHistoryApiResponse } from "@/lib/use-nhl-history";
 
-type NhlHistoryResult = "win" | "loss" | "push" | "pending" | "unsupported";
-
-type NhlHistoryRow = {
-  slug: string;
-  homeTeam: string;
-  awayTeam: string;
-  access: "free" | "best" | "vip";
-  pick: string;
-  decimalOdds: number;
-  americanOdds: number;
-  result: NhlHistoryResult;
-  finalScore: { home: number; away: number } | null;
-};
-
-type NhlHistoryDay = { dayKey: string; rows: NhlHistoryRow[]; wins: number; losses: number };
-type NhlHistoryResponse = { state: "ok"; days: NhlHistoryDay[]; wins: number; losses: number };
-
-const STATUS_LABEL: Record<NhlHistoryResult, string> = {
+const STATUS_LABEL: Record<"win" | "loss" | "push" | "pending" | "unsupported", string> = {
   win: "WIN",
   loss: "LOSS",
   push: "PUSH",
@@ -34,28 +18,8 @@ const STATUS_LABEL: Record<NhlHistoryResult, string> = {
 
 const DEFAULT_VISIBLE_DAYS = 7;
 
-export function NhlHistory() {
-  const [data, setData] = useState<NhlHistoryResponse | null>(null);
+export function NhlHistory({ data }: { data: NhlHistoryApiResponse | null }) {
   const [expanded, setExpanded] = useState(false);
-
-  useEffect(() => {
-    let cancelled = false;
-    const load = async () => {
-      try {
-        const res = await fetch("/api/nhl/history", { cache: "no-store" });
-        const body = res.ok ? await res.json() : null;
-        if (!cancelled && body?.state === "ok" && Array.isArray(body.days)) setData(body as NhlHistoryResponse);
-      } catch {
-        // Keep the previous (or empty) state; never show a fabricated record.
-      }
-    };
-    load();
-    const id = window.setInterval(load, 5 * 60_000);
-    return () => {
-      cancelled = true;
-      window.clearInterval(id);
-    };
-  }, []);
 
   if (!data || data.days.length === 0) return null;
 

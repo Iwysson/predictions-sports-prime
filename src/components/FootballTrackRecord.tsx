@@ -3,11 +3,7 @@
 import Link from "@/components/DocumentLink";
 import { useAuth } from "@/auth/AuthProvider";
 import { VipCheckoutButton } from "@/components/VipCheckoutButton";
-import {
-  latestFootballTrackRecord,
-  shouldShowOverallTrackRecord,
-  trackRecordPromoState,
-} from "@/lib/football-track-record";
+import { trackRecordPromoState } from "@/lib/football-track-record";
 import { summarizeResults, type FootballResultRecord } from "@/lib/football-results";
 
 function formatWinRate(winRate: number | null) {
@@ -59,26 +55,18 @@ function TrackRecordPromo() {
   );
 }
 
-export function FootballTrackRecord({ records, detailed = false }: { records: FootballResultRecord[]; detailed?: boolean }) {
-  const latest = latestFootballTrackRecord(records);
-  if (!latest) return null;
-  const overall = detailed && shouldShowOverallTrackRecord(records) ? summarizeResults(records) : null;
+export function FootballTrackRecord({ records }: { records: FootballResultRecord[] }) {
+  if (records.length === 0) return null;
+  const overall = summarizeResults(records);
 
   return (
     <section className="track-record" aria-labelledby="football-track-record-title">
       <div className="track-record__heading">
-        <span className="eyebrow">{detailed ? "Football track record" : "Today's track record"}</span>
-        <h3 id="football-track-record-title">{latest.summary.wins}-{latest.summary.losses} from the latest settled matchday</h3>
-        <p>Results from {latest.date}. Pushes, half results and voids stay visible but do not enter the win-rate denominator.</p>
+        <span className="eyebrow">Overall Track Record</span>
+        <h3 id="football-track-record-title">{overall.wins}-{overall.losses} across all settled football predictions</h3>
+        <p>Performance across all settled football predictions published by Predictions Sports Prime. Pushes, half results and voids stay visible but do not enter the win-rate denominator.</p>
       </div>
-      <SummaryCards summary={latest.summary} />
-      {overall ? (
-        <div className="track-record__overall">
-          <span>Overall</span>
-          <strong>{overall.wins}-{overall.losses}</strong>
-          <small>{formatWinRate(overall.winRate) ?? "Win rate not available"}</small>
-        </div>
-      ) : null}
+      <SummaryCards summary={overall} />
       <TrackRecordPromo />
     </section>
   );
