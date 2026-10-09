@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "@/components/DocumentLink";
 import { NhlMoneylineNote } from "@/components/NhlMoneylineNote";
 import { TeamBadge } from "@/components/TeamBadge";
 import { formatNhlDayLabel } from "@/lib/nhl-day";
@@ -98,12 +97,6 @@ export function NhlHistory({ data }: { data: NhlHistoryApiResponse | null }) {
           {expanded ? "Show last 7 days" : "View Full NHL History"}
         </button>
       ) : null}
-
-      <p className="nhl-history__cta">
-        <strong>FOLLOW THE TRACK RECORD.</strong> See every NHL prediction, including PRIME VIP selections and BEST
-        BETS, with results tracked transparently after the games finish.{" "}
-        <Link href="#prime-vip-offer-title">Unlock PRIME VIP</Link>.
-      </p>
     </section>
   );
 }

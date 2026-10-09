@@ -57,10 +57,10 @@ export function createNhlHistoryHandler(fetchImpl = fetch, now = () => new Date(
     const losses = settledRows.length - wins;
 
     // Flattened, most-recent-day-first (days are already sorted desc above); the 3 most recently
-    // settled picks for the compact /nhl/ summary, excluding pending/unsupported rows.
+    // settled WINS for the compact /nhl/ "Latest Results" block (losses/pushes/pending excluded).
     const latest = days
       .flatMap((d) => d.rows.map((row) => ({ ...row, dayKey: d.dayKey })))
-      .filter((row) => row.result === "win" || row.result === "loss" || row.result === "push")
+      .filter((row) => row.result === "win")
       .slice(0, 3);
 
     // Today's slate still has live/upcoming games, so its settlement can change within minutes;
