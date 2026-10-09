@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T06:14:46.783Z",
+  "generatedAt": "2026-10-09T13:18:17.861Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -9310,7 +9310,8 @@
             "id": "401885423",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-09T17:45Z"
+            "kickoffUtc": "2026-10-09T17:45Z",
+            "espnEventId": "401885423"
           },
           {
             "round": 8,
@@ -9325,7 +9326,8 @@
             "id": "401885427",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-09T19:15Z"
+            "kickoffUtc": "2026-10-09T19:15Z",
+            "espnEventId": "401885427"
           },
           {
             "round": 8,
@@ -9340,7 +9342,8 @@
             "id": "401885426",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-10T14:30Z"
+            "kickoffUtc": "2026-10-10T14:30Z",
+            "espnEventId": "401885426"
           },
           {
             "round": 8,
@@ -9355,7 +9358,8 @@
             "id": "401885424",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-10T17:00Z"
+            "kickoffUtc": "2026-10-10T17:00Z",
+            "espnEventId": "401885424"
           },
           {
             "round": 8,
@@ -9370,7 +9374,8 @@
             "id": "401885429",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-10T19:30Z"
+            "kickoffUtc": "2026-10-10T19:30Z",
+            "espnEventId": "401885429"
           },
           {
             "round": 8,
@@ -15997,18 +16002,14 @@
     ]
   },
   "predictionIds": {
-    "brasileirao-serie-a:athletico-pr-vs-atletico-mg": "editorial:brasileirao-serie-a:athletico-pr-vs-atletico-mg:2026-10-08",
     "brasileirao-serie-a:atletico-mg-vs-santos": "editorial:brasileirao-serie-a:atletico-mg-vs-santos:2026-10-11",
     "brasileirao-serie-a:bahia-vs-mirassol": "editorial:brasileirao-serie-a:bahia-vs-mirassol:2026-10-11",
     "brasileirao-serie-a:bragantino-vs-cruzeiro": "editorial:brasileirao-serie-a:bragantino-vs-cruzeiro:2026-10-12",
     "brasileirao-serie-a:chapecoense-vs-athletico-pr": "editorial:brasileirao-serie-a:chapecoense-vs-athletico-pr:2026-10-12",
     "brasileirao-serie-a:coritiba-vs-botafogo": "editorial:brasileirao-serie-a:coritiba-vs-botafogo:2026-10-11",
     "brasileirao-serie-a:flamengo-vs-fluminense": "editorial:brasileirao-serie-a:flamengo-vs-fluminense:2026-10-11",
-    "brasileirao-serie-a:fluminense-vs-coritiba": "editorial:brasileirao-serie-a:fluminense-vs-coritiba:2026-10-08",
     "brasileirao-serie-a:gremio-vs-internacional": "editorial:brasileirao-serie-a:gremio-vs-internacional:2026-10-11",
-    "brasileirao-serie-a:palmeiras-vs-bahia": "editorial:brasileirao-serie-a:palmeiras-vs-bahia:2026-10-08",
     "brasileirao-serie-a:palmeiras-vs-corinthians": "editorial:brasileirao-serie-a:palmeiras-vs-corinthians:2026-10-11",
-    "brasileirao-serie-a:santos-vs-flamengo": "editorial:brasileirao-serie-a:santos-vs-flamengo:2026-10-08",
     "brasileirao-serie-a:sao-paulo-vs-vitoria": "editorial:brasileirao-serie-a:sao-paulo-vs-vitoria:2026-10-10",
     "brasileirao-serie-a:vasco-vs-remo": "editorial:brasileirao-serie-a:vasco-vs-remo:2026-10-10",
     "bundesliga:augsburg-vs-bayern": "401884777",
@@ -16105,11 +16106,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-09T06:14:46.783Z",
+    "bundesliga": "2026-10-09T13:18:17.861Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
     "liga-portugal": "2026-10-09T06:14:46.783Z",
-    "ligue-1": "2026-10-09T06:14:46.783Z",
-    "eredivisie": "2026-10-09T06:14:46.783Z",
+    "ligue-1": "2026-10-09T13:18:17.861Z",
+    "eredivisie": "2026-10-09T13:18:17.861Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "championship": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
