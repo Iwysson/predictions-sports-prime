@@ -31,6 +31,7 @@ jobs:
       - run: npm run fixtures:validate
       - run: npm run results:settle
       - run: npm run results:validate
+      - run: npx tsx scripts/print-results-summary.mts
       - name: Detect fixture, market-data or results changes
         id: changes
         shell: bash

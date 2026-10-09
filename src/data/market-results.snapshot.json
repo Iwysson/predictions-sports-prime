@@ -112,5 +112,11 @@
     "awayCorners": 4,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841256",
     "capturedAt": "2026-10-09T06:14:46.783Z"
+  },
+  "la-liga:malaga-vs-espanyol": {
+    "homeCorners": 8,
+    "awayCorners": 2,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882851",
+    "capturedAt": "2026-10-09T21:56:26.842Z"
   }
 }

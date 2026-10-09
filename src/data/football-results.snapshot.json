@@ -229,6 +229,25 @@
       "settledAt": "2026-10-09T21:28:25.608Z",
       "publishedAt": "2026-10-06T12:00:00.000Z"
     },
+    "la-liga:malaga-vs-espanyol": {
+      "key": "la-liga:malaga-vs-espanyol",
+      "league": "la-liga",
+      "slug": "malaga-vs-espanyol",
+      "homeTeam": "Málaga",
+      "awayTeam": "Espanyol",
+      "date": "2026-10-09",
+      "fixtureId": "401882851",
+      "predictionAccess": "vip",
+      "prediction": "Over 1.5 goals + over 7.5 total corners",
+      "odds": 1.8,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-09T21:57:35.078Z",
+      "publishedAt": "2026-10-06T12:00:00.000Z"
+    },
     "liga-portugal:braga-vs-sporting": {
       "key": "liga-portugal:braga-vs-sporting",
       "league": "liga-portugal",
