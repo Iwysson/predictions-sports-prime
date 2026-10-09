@@ -106,5 +106,11 @@
     "awayCorners": 3,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841253",
     "capturedAt": "2026-10-08T01:55:05.950Z"
+  },
+  "brasileirao-serie-a:athletico-pr-vs-atletico-mg": {
+    "homeCorners": 10,
+    "awayCorners": 4,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841256",
+    "capturedAt": "2026-10-09T06:14:46.783Z"
   }
 }

@@ -1,6 +1,25 @@
 {
   "version": 1,
   "records": {
+    "brasileirao-serie-a:athletico-pr-vs-atletico-mg": {
+      "key": "brasileirao-serie-a:athletico-pr-vs-atletico-mg",
+      "league": "brasileirao-serie-a",
+      "slug": "athletico-pr-vs-atletico-mg",
+      "homeTeam": "Athletico-PR",
+      "awayTeam": "Atlético-MG",
+      "date": "2026-10-08",
+      "fixtureId": "editorial:brasileirao-serie-a:athletico-pr-vs-atletico-mg:2026-10-08",
+      "predictionAccess": "vip",
+      "prediction": "Athletico-PR or Draw (1X) + Over 8.5 Corners",
+      "odds": 1.78,
+      "finalScore": {
+        "home": 2,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-09T06:14:59.089Z",
+      "publishedAt": "2026-10-05T15:00:00.000Z"
+    },
     "brasileirao-serie-a:botafogo-vs-vasco": {
       "key": "brasileirao-serie-a:botafogo-vs-vasco",
       "league": "brasileirao-serie-a",
@@ -58,6 +77,25 @@
       "settledAt": "2026-10-08T07:20:20.965Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
     },
+    "brasileirao-serie-a:fluminense-vs-coritiba": {
+      "key": "brasileirao-serie-a:fluminense-vs-coritiba",
+      "league": "brasileirao-serie-a",
+      "slug": "fluminense-vs-coritiba",
+      "homeTeam": "Fluminense",
+      "awayTeam": "Coritiba",
+      "date": "2026-10-08",
+      "fixtureId": "editorial:brasileirao-serie-a:fluminense-vs-coritiba:2026-10-08",
+      "predictionAccess": "vip",
+      "prediction": "Fluminense to win + Over 1.5 Goals",
+      "odds": 1.87,
+      "finalScore": {
+        "home": 4,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-09T06:14:59.089Z",
+      "publishedAt": "2026-10-05T15:00:00.000Z"
+    },
     "brasileirao-serie-a:internacional-vs-corinthians": {
       "key": "brasileirao-serie-a:internacional-vs-corinthians",
       "league": "brasileirao-serie-a",
@@ -77,6 +115,25 @@
       "settledAt": "2026-10-08T02:02:59.027Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
     },
+    "brasileirao-serie-a:palmeiras-vs-bahia": {
+      "key": "brasileirao-serie-a:palmeiras-vs-bahia",
+      "league": "brasileirao-serie-a",
+      "slug": "palmeiras-vs-bahia",
+      "homeTeam": "Palmeiras",
+      "awayTeam": "Bahia",
+      "date": "2026-10-08",
+      "fixtureId": "editorial:brasileirao-serie-a:palmeiras-vs-bahia:2026-10-08",
+      "predictionAccess": "vip",
+      "prediction": "Palmeiras to win",
+      "odds": 1.57,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-09T06:14:59.089Z",
+      "publishedAt": "2026-10-05T15:00:00.000Z"
+    },
     "brasileirao-serie-a:remo-vs-gremio": {
       "key": "brasileirao-serie-a:remo-vs-gremio",
       "league": "brasileirao-serie-a",
@@ -94,6 +151,25 @@
       },
       "result": "green",
       "settledAt": "2026-10-08T02:02:59.027Z",
+      "publishedAt": "2026-10-05T15:00:00.000Z"
+    },
+    "brasileirao-serie-a:santos-vs-flamengo": {
+      "key": "brasileirao-serie-a:santos-vs-flamengo",
+      "league": "brasileirao-serie-a",
+      "slug": "santos-vs-flamengo",
+      "homeTeam": "Santos",
+      "awayTeam": "Flamengo",
+      "date": "2026-10-08",
+      "fixtureId": "editorial:brasileirao-serie-a:santos-vs-flamengo:2026-10-08",
+      "predictionAccess": "vip",
+      "prediction": "Santos or Draw (1X)",
+      "odds": 2,
+      "finalScore": {
+        "home": 2,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-09T06:14:59.089Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
     },
     "brasileirao-serie-a:vitoria-vs-chapecoense": {
