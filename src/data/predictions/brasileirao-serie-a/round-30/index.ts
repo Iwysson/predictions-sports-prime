@@ -207,6 +207,28 @@ const flamengoVsFluminense = createPspImport26Prediction({
   publishedAt: brasileiraoRound30PublishedAt,
 });
 
+// Editorial refresh (9 October 2026): confirmed team-news update for this match specifically.
+// Flamengo's Giorgian De Arrascaeta underwent wrist surgery on 1 October 2026 (ge.globo) and
+// remains out; Fluminense confirmed on 9 October that Germán Cano has a grade-3 right-hamstring
+// strain and is also out. Both are verified against ge.globo reporting, not inferred. The rest of
+// the analysis, the prediction, the odds and the access level are unchanged from the 8 October
+// publication.
+flamengoVsFluminense.analysis[0] = flamengoVsFluminense.analysis[0]
+  .replace(
+    "## Team news and projected lineups\n\nThe supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.",
+    "## Team news and projected lineups\n\nFlamengo will be without Giorgian De Arrascaeta, who underwent surgery on a fractured left wrist on 1 October 2026 and remains sidelined. Fluminense confirmed on 9 October that Germán Cano has a grade-3 strain in his right hamstring and is also out. No further suspensions are confirmed for either club in the current source set, and no officially confirmed lineup exists at the time of writing.",
+  )
+  .replace(
+    "Flamengo should have opportunities if they can push Fluminense back and force rushed clearances, while Fluminense will look for space when Flamengo commit players forward. The visitors' respectable away scoring rate makes the clean sheet uncertain.",
+    "Flamengo should have opportunities if they can push Fluminense back and force rushed clearances, though the absence of Arrascaeta removes a key creative outlet for the hosts, while Fluminense will look for space when Flamengo commit players forward. The visitors' respectable away scoring rate makes the clean sheet uncertain, but losing Germán Cano to a grade-3 hamstring strain takes away their most direct source of away goals and should make Fluminense's attack less threatening than the season-long numbers alone suggest.",
+  );
+flamengoVsFluminense.sources = [
+  ...(flamengoVsFluminense.sources ?? []),
+  { name: "ge.globo — Arrascaeta discharged after wrist surgery", url: "https://ge.globo.com/futebol/times/flamengo/noticia/2026/10/01/arrascaeta-recebe-alta-apos-cirurgia-no-punho.ghtml", accessedAt: "2026-10-09T15:00:00.000-03:00" },
+  { name: "CNN Brasil — Fluminense confirms Cano and Ignácio injuries", url: "https://www.cnnbrasil.com.br/esportes/futebol/dupla-do-fluminense-vira-desfalque-no-brasileirao/", accessedAt: "2026-10-09T15:00:00.000-03:00" },
+];
+flamengoVsFluminense.updatedAt = "2026-10-09T15:00:00.000-03:00";
+
 const gremioVsInternacional = createPspImport26Prediction({
   league: "brasileirao-serie-a",
   competition: "Brasileirão Série A 2026",

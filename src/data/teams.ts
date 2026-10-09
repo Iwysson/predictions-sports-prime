@@ -14,7 +14,7 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   // Crests verified against TheSportsDB (cross-checked with Wikipedia for Slavia Praha).
   "Sabah": { src: "/team-badges/sabah.png", sourceUrl: "https://www.thesportsdb.com/team/139455-Sabah-Baku" },
   "Slavia Praha": { src: "/team-badges/slavia-praha.png", sourceUrl: "https://en.wikipedia.org/wiki/File:SK_Slavia_Praha_full_logo.svg" },
-  "Shakhtar Donetsk": { src: "/team-badges/fc-shakhtar-donetsk.png", sourceUrl: "https://www.thesportsdb.com/team/134126-Shakhtar-Donetsk" },
+  "Shakhtar Donetsk": { src: "/team-badges/shakhtar.png", sourceUrl: "https://www.thesportsdb.com/team/134126-Shakhtar-Donetsk" },
   "Slovan Bratislava": { src: "/team-badges/slovan-bratislava.png", sourceUrl: "https://www.thesportsdb.com/team/134090-Slovan-Bratislava" },
   // NHL club marks from the official NHL asset service.
   "Buffalo Sabres": { src: "/nhl/team-logos/buffalo-sabres.svg", sourceUrl: "https://assets.nhle.com/logos/nhl/svg/BUF_light.svg" },
@@ -359,6 +359,15 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "Le Havre AC": generatedTeamBadgeAssets["Le Havre"],
   "Le Mans FC": generatedTeamBadgeAssets["Le Mans"],
   "PSV": generatedTeamBadgeAssets["PSV Eindhoven"],
+
+  // CONMEBOL Libertadores / Sudamericana 2026 clubs with no entry in the generated table.
+  // Crests verified against TheSportsDB.
+  "Boca Juniors": { src: "/team-badges/boca-juniors.png", sourceUrl: "https://www.thesportsdb.com/team/135156-Boca-Juniors" },
+  "Estudiantes de La Plata": { src: "/team-badges/estudiantes-de-la-plata.png", sourceUrl: "https://www.thesportsdb.com/team/135160-Estudiantes-de-La-Plata" },
+  "Montevideo City Torque": { src: "/team-badges/montevideo-city-torque.png", sourceUrl: "https://www.thesportsdb.com/team/138818-Montevideo-City-Torque" },
+  // Alias: reuse the existing "Vasco" crest (TheSportsDB lists the club as "Vasco") for the
+  // "Vasco da Gama" team name used in Libertadores/Sudamericana fixtures.
+  "Vasco da Gama": generatedTeamBadgeAssets["Vasco"],
 };
 
 export function getTeamBadgeAsset(team: string) {

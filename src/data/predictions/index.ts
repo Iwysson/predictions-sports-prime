@@ -12,12 +12,16 @@ import { scottishPremiershipPredictions } from "./scottish-premiership";
 import { premierLeaguePredictions } from "./premier-league";
 import { serieAPredictions } from "./serie-a";
 import { championsLeaguePredictions } from "./champions-league";
+import { copaLibertadoresPredictions } from "./copa-libertadores";
+import { copaSudamericanaPredictions } from "./copa-sudamericana";
 import { applyWave08EditorialDebtRemediation } from "./editorial-debt-remediation";
 
 export const editorialPredictionsRaw = [
   ...laLigaPredictions,
   ...brasileiraoSerieAPredictions,
   ...championsLeaguePredictions,
+  ...copaLibertadoresPredictions,
+  ...copaSudamericanaPredictions,
   ...ligaPortugalPredictions,
   ...ligue1Predictions,
   ...bundesligaPredictions,
