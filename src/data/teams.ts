@@ -341,7 +341,7 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   "TSG Hoffenheim": generatedTeamBadgeAssets["Hoffenheim"],
   "SC Freiburg": generatedTeamBadgeAssets["Freiburg"],
   "Villarreal": generatedTeamBadgeAssets["Villarreal CF"],
-  "Paris": generatedTeamBadgeAssets["Paris Saint-Germain"],
+  "Paris": generatedTeamBadgeAssets["Paris FC"],
   "Stade Rennais": generatedTeamBadgeAssets["Rennes"],
   "Internazionale": generatedTeamBadgeAssets["Internazionale Milano"],
 
