@@ -8,6 +8,7 @@ import {
 } from "@/data/nhl/slate-2026-10-08";
 import { NHL_PUBLIC_MATCHES_OCT_09 } from "@/data/nhl/slate-2026-10-09";
 import { NHL_PUBLIC_MATCHES_OCT_10 } from "@/data/nhl/slate-2026-10-10";
+import { NHL_PUBLIC_MATCHES_OCT_11 } from "@/data/nhl/slate-2026-10-11";
 import type { NhlPublicSlate } from "@/lib/nhl-slates";
 
 // Every NHL day with a slate, oldest first. Adding a day here (and its protected entries) is the
@@ -48,6 +49,11 @@ export const SLATES: NhlPublicSlate[] = [
   {
     dayKey: "2026-10-10",
     matches: NHL_PUBLIC_MATCHES_OCT_10,
+    multiples: [],
+  },
+  {
+    dayKey: "2026-10-11",
+    matches: NHL_PUBLIC_MATCHES_OCT_11,
     multiples: [],
   },
 ];

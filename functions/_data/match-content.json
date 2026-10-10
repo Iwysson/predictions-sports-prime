@@ -5108,5 +5108,69 @@
       "main": "Atlanta Falcons to Win",
       "odds": 1.59
     }
+  },
+  {
+    "slug": "seattle-kraken-vs-washington-capitals",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Washington enter this matchup at 3-1-0 after a 3-1 victory over the Rangers, with a balanced start that gives the Capitals several routes to control the game. Seattle are 3-2-0 and arrive from an impressive 6-3 win in Detroit, so the visitors' attacking form makes this more competitive than the price alone suggests.",
+        "Home ice at Capital One Arena strengthens Washington's position, but Seattle's six-goal response in Detroit is the principal risk to the selection. No injury status or starting-goaltender assignment is assumed before official confirmation.",
+        "Washington still look better placed to secure the result through their early record, home environment and ability to limit the Rangers to one goal in their latest outing. The moneyline selection includes overtime and a shootout, so a tie after regulation does not end the wager."
+      ],
+      "sources": [
+        {
+          "name": "NHL official October 11 scoreboard",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-11"
+        },
+        {
+          "name": "NHL official October 9 scoreboard",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-09"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Washington Capitals to Win (Including OT & Shootout)",
+        "odds": 1.53
+      }
+    },
+    "prediction": {
+      "main": "Washington Capitals to Win (Including OT & Shootout)",
+      "odds": 1.53
+    },
+    "activeFromKey": "2026-10-11"
+  },
+  {
+    "slug": "carolina-hurricanes-vs-philadelphia-flyers",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "Carolina's attack has gained momentum, highlighted by a 7-2 victory over Vancouver. The Hurricanes bring a 3-1-1 record to Philadelphia, while the Flyers are 0-3-2 after a 2-1 loss in Ottawa, creating a matchup in which Carolina can contribute a large share of the six goals required.",
+        "Philadelphia's limited early scoring is the main concern for the Over because a low home contribution would leave Carolina carrying most of the total. No starting-goaltender assignment is assumed before official confirmation.",
+        "Even with that risk, Carolina's recent scoring level and Philadelphia's winless opening create enough paths to an open game at Xfinity Mobile Arena for Over 5.5 Total Goals to remain the selection."
+      ],
+      "sources": [
+        {
+          "name": "NHL official October 11 scoreboard",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-11"
+        },
+        {
+          "name": "NHL official October 8 scoreboard",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-08"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Over 5.5 Total Goals",
+        "odds": 1.83
+      }
+    },
+    "prediction": {
+      "main": "Over 5.5 Total Goals",
+      "odds": 1.83
+    },
+    "activeFromKey": "2026-10-11"
   }
 ]

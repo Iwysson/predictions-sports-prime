@@ -22,7 +22,7 @@ type LaterEntryFile = {
 
 // NHL protected entries for later days. They stay "not-found" in the endpoint until the NHL day
 // (America/New_York) reaches activeFromKey. Add a new file here for each later NHL day.
-const nhlLaterFiles = ["src/data/nhl/protected-2026-10-07.json", "src/data/nhl/protected-2026-10-08.json", "src/data/nhl/protected-2026-10-09.json", "src/data/nhl/protected-2026-10-10.json"];
+const nhlLaterFiles = ["src/data/nhl/protected-2026-10-07.json", "src/data/nhl/protected-2026-10-08.json", "src/data/nhl/protected-2026-10-09.json", "src/data/nhl/protected-2026-10-10.json", "src/data/nhl/protected-2026-10-11.json"];
 for (const file of nhlLaterFiles) {
   const later = JSON.parse(readFileSync(file, "utf8")) as LaterEntryFile;
   for (const e of later.entries) {

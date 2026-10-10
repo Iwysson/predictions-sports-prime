@@ -1,14 +1,23 @@
 // GET /api/mobile/nhl/feed
-// Serves the build-time precomputed active-slate index (scripts/build-mobile-feed.mts,
-// which calls src/data/nhl/slates.ts's own resolveNhlSlate - the exact rule the website
-// uses to decide which single NHL day is "current"). No Today/Tomorrow/Upcoming split,
-// same as the website: NHL shows one active day at a time.
-import feed from "../../../_data/mobile/nhl.json";
+// Resolves the active slate at request time through the same builder and resolveNhlSlate rule used
+// by the website. This prevents a build made before midnight ET from pinning the app to yesterday.
+import { buildMobileNhlIndex } from "../../../../src/lib/mobile-feed-build-nhl-nfl.ts";
 import { json } from "../../../_lib/mobile-feed.js";
+
+export function createMobileNhlFeedHandler(now = () => new Date()) {
+  return async function onRequestGet() {
+    try {
+      const feed = buildMobileNhlIndex(now());
+      return json({ generatedAt: feed.generatedAt, sport: "nhl", free: feed.free, vip: feed.vip }, 200, 0);
+    } catch {
+      return json({ error: "unavailable" }, 503);
+    }
+  };
+}
 
 export async function onRequestGet() {
   try {
-    return json({ generatedAt: feed.generatedAt, sport: "nhl", free: feed.free, vip: feed.vip });
+    return createMobileNhlFeedHandler()();
   } catch {
     return json({ error: "unavailable" }, 503);
   }
