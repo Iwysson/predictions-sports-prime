@@ -15,6 +15,8 @@
     "test:football-results": "tsx scripts/test-football-results.mts",
     "test:site-analytics": "tsx scripts/test-site-analytics.mts",
     "test:google-play-entitlement": "tsx scripts/test-google-play-entitlement.mts",
+    "test:mobile-feed-equivalence": "tsx scripts/test-mobile-feed-equivalence.mts",
+    "test:mobile-api-security": "tsx scripts/test-mobile-api-security.mts",
     "results:settle": "tsx scripts/settle-football-results.mts",
     "results:validate": "tsx scripts/validate-football-results.mts",
     "results:update": "npm run fixtures:sync && npm run results:settle && npm run results:validate && tsx scripts/print-results-summary.mts",

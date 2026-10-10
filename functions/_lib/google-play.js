@@ -177,6 +177,17 @@ async function reconcileGooglePlayEntitlement(db, userId, nowMs = Date.now()) {
   const granting = rows.filter((row) => rowGrantsNow(row, nowMs));
 
   if (granting.length === 0) {
+    // Google Play reconciliation only ever downgrades its OWN rail. PRIME VIP sells
+    // exclusively through Google Play going forward, but existing Whop subscribers keep
+    // paying Whop until they lapse or migrate - this function has no authority over a
+    // profile whose active subscription is still Whop's, so it leaves it untouched.
+    const [profile] = await db.select(
+      "profile billing_source",
+      `profiles?id=eq.${encodeURIComponent(userId)}&select=plan,subscription_status,current_period_end,billing_source`,
+    );
+    if (profile?.billing_source === "whop") {
+      return { plan: profile.plan, subscription_status: profile.subscription_status, current_period_end: profile.current_period_end };
+    }
     await db.patch("profile downgrade", `profiles?id=eq.${encodeURIComponent(userId)}`, {
       plan: "free",
       subscription_status: "inactive",

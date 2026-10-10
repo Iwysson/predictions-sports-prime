@@ -5,12 +5,12 @@ import { reconcileGooglePlayEntitlement, rowGrantsNow } from "../functions/_lib/
 
 const NOW = Date.parse("2026-10-10T12:00:00.000Z");
 
-function fakeDb(rows: any[]) {
+function fakeDb(rows: any[], profile: any = null) {
   const patches: any[] = [];
   return {
     db: {
-      async select() {
-        return rows;
+      async select(_operation: string, path: string) {
+        return path.startsWith("profiles?") ? (profile ? [profile] : []) : rows;
       },
       async patch(_operation: string, _path: string, body: any) {
         patches.push(body);
@@ -88,6 +88,31 @@ assert.equal(
   const result = await reconcileGooglePlayEntitlement(db, "user-1", NOW);
   assert.equal(result.plan, "vip", "an unexpired canceled row still grants VIP even alongside an expired row");
   assert.equal(result.current_period_end, "2026-11-01T00:00:00Z");
+}
+
+{
+  // A user whose active subscription is still Whop's must never be downgraded by Google
+  // Play reconciliation just because they have no (or an expired) Google Play row too.
+  const whopProfile = { plan: "vip", subscription_status: "active", current_period_end: "2027-01-01T00:00:00Z", billing_source: "whop" };
+  const { db, patches } = fakeDb([{ subscription_state: "SUBSCRIPTION_STATE_EXPIRED", expiry_time: "2026-09-01T00:00:00Z", is_trial: false }], whopProfile);
+  const result = await reconcileGooglePlayEntitlement(db, "whop-user", NOW);
+  assert.equal(result.plan, "vip", "Whop-backed profile is left as VIP");
+  assert.equal(result.subscription_status, "active");
+  assert.equal(patches.length, 0, "no profile patch is issued for a Whop-backed profile");
+}
+
+{
+  // The same no-granting-row case, but for a user who has never had any billing_source
+  // (brand new, or previously free) - Google Play reconciliation downgrades normally.
+  const { db, patches } = fakeDb([{ subscription_state: "SUBSCRIPTION_STATE_EXPIRED", expiry_time: "2026-09-01T00:00:00Z", is_trial: false }], {
+    plan: "vip",
+    subscription_status: "active",
+    current_period_end: null,
+    billing_source: null,
+  });
+  const result = await reconcileGooglePlayEntitlement(db, "user-1", NOW);
+  assert.equal(result.plan, "free", "a non-Whop profile with no granting Google Play row downgrades normally");
+  assert.equal(patches.length, 1);
 }
 
 console.log("google-play entitlement tests passed");
