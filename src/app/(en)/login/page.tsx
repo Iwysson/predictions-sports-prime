@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { LoginForm } from "@/components/auth/LoginForm";
-import { BrazilAccessRestriction } from "@/components/BrazilAccessRestriction";
 
 // Account pages are functional, not search destinations: kept out of the index and sitemap.
 export const metadata: Metadata = {
@@ -10,10 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function LoginPage() {
-  return (
-    <>
-      <BrazilAccessRestriction variant="login" />
-      <LoginForm />
-    </>
-  );
+  return <LoginForm />;
 }
