@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { AuthCard } from "./AuthCard";
 import { VipCheckoutButton } from "@/components/VipCheckoutButton";
+import { supabase } from "@/lib/supabase";
 
 export function AccountPanel() {
   const router = useRouter();
@@ -20,6 +21,9 @@ export function AccountPanel() {
   } = useAuth();
   const [logoutError, setLogoutError] = useState<string | null>(null);
   const [loggingOut, setLoggingOut] = useState(false);
+  const [confirmingDelete, setConfirmingDelete] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [deleteError, setDeleteError] = useState<string | null>(null);
 
   async function handleLogout() {
     setLoggingOut(true);
@@ -33,6 +37,30 @@ export function AccountPanel() {
         error instanceof Error ? error.message : "Unable to log out."
       );
       setLoggingOut(false);
+    }
+  }
+
+  // Required so there is a reachable web URL for account deletion requests (Google Play
+  // Data Safety policy), in addition to the Android app's own Delete Account screen.
+  // Does not cancel a Google Play or Whop subscription - billing continues at the store
+  // until the user cancels it there.
+  async function handleDeleteAccount() {
+    setDeleting(true);
+    setDeleteError(null);
+    try {
+      const { data } = await supabase.auth.getSession();
+      const token = data.session?.access_token;
+      if (!token) throw new Error("Your session has expired. Please log in again.");
+      const res = await fetch("/api/account/delete", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (!res.ok) throw new Error("Unable to delete your account right now.");
+      await signOut();
+      router.push("/");
+    } catch (error) {
+      setDeleteError(error instanceof Error ? error.message : "Unable to delete your account right now.");
+      setDeleting(false);
     }
   }
 
@@ -101,6 +129,46 @@ export function AccountPanel() {
       >
         {loggingOut ? "Logging out…" : "Logout"}
       </button>
+
+      {deleteError ? (
+        <p className="auth-message auth-message--error" role="alert">
+          {deleteError}
+        </p>
+      ) : null}
+
+      {confirmingDelete ? (
+        <>
+          <p className="auth-message auth-message--warning" role="alert">
+            This permanently deletes your account and data and cannot be undone. It does
+            not cancel a Google Play or Whop subscription - cancel that separately at the
+            store if you do not want to keep being billed.
+          </p>
+          <button
+            className="button auth-logout-button"
+            disabled={deleting}
+            onClick={handleDeleteAccount}
+            type="button"
+          >
+            {deleting ? "Deleting…" : "Confirm account deletion"}
+          </button>
+          <button
+            className="button auth-logout-button"
+            disabled={deleting}
+            onClick={() => setConfirmingDelete(false)}
+            type="button"
+          >
+            Cancel
+          </button>
+        </>
+      ) : (
+        <button
+          className="button auth-logout-button"
+          onClick={() => setConfirmingDelete(true)}
+          type="button"
+        >
+          Delete Account
+        </button>
+      )}
     </AuthCard>
   );
 }
