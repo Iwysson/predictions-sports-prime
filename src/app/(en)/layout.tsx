@@ -8,6 +8,7 @@ import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import { JsonLd } from "@/components/JsonLd";
 import { AuthProvider } from "@/auth/AuthProvider";
+import { PrimeVipSupportBanner } from "@/components/PrimeVipSupportBanner";
 import {
   organizationJsonLd,
   websiteJsonLd,
@@ -129,6 +130,7 @@ export default function RootLayout({
             <Header />
             <main>{children}</main>
             <Footer />
+            <PrimeVipSupportBanner />
           </I18nProvider>
           <AdSenseScript />
         </AuthProvider>

@@ -1,5 +1,8 @@
 export const dictionaries = {
   en: {
+    primeVipSupportMessage: "Support Predictions Sports Prime — Become a PRIME VIP Member",
+    primeVipSupportCta: "Become PRIME VIP",
+    primeVipSupportLabel: "PRIME VIP support",
     matchListVip: "PRIME VIP analysis",
     matchVipCardTitle: "PRIME VIP Analysis",
     matchVipCardBody: "Unlock the complete match analysis, prediction, odds, statistics and editorial reasoning.",
@@ -86,6 +89,9 @@ export const dictionaries = {
     responsibleGambling: "Responsible Gambling",
   },
   "pt-BR": {
+    primeVipSupportMessage: "Considere apoiar o Predictions Sports Prime — Seja PRIME VIP",
+    primeVipSupportCta: "Seja PRIME VIP",
+    primeVipSupportLabel: "Apoio PRIME VIP",
     matchListVip: "Análise PRIME VIP",
     matchVipCardTitle: "Análise PRIME VIP",
     matchVipCardBody: "Desbloqueie a análise completa do jogo, o palpite, as odds, as estatísticas e o raciocínio editorial.",
@@ -172,6 +178,9 @@ export const dictionaries = {
     responsibleGambling: "Jogo Responsável",
   },
   es: {
+    primeVipSupportMessage: "Apoya a Predictions Sports Prime — Hazte miembro PRIME VIP",
+    primeVipSupportCta: "Hazte PRIME VIP",
+    primeVipSupportLabel: "Apoyo PRIME VIP",
     matchListVip: "Análisis PRIME VIP",
     matchVipCardTitle: "Análisis PRIME VIP",
     matchVipCardBody: "Desbloquea el análisis completo del partido, el pronóstico, las cuotas, las estadísticas y el razonamiento editorial.",
@@ -255,6 +264,9 @@ export const dictionaries = {
     responsibleGambling: "Juego Responsable",
   },
   fr: {
+    primeVipSupportMessage: "Soutenez Predictions Sports Prime — Devenez membre PRIME VIP",
+    primeVipSupportCta: "Devenir PRIME VIP",
+    primeVipSupportLabel: "Soutien PRIME VIP",
     brandName: "Predictions Sports Prime",
     brandTagline: "Analyses et pronostics football",
     home: "Accueil",
@@ -312,6 +324,9 @@ export const dictionaries = {
     responsibleGambling: "Jeu Responsable",
   },
   de: {
+    primeVipSupportMessage: "Unterstützen Sie Predictions Sports Prime — Werden Sie PRIME VIP",
+    primeVipSupportCta: "PRIME VIP werden",
+    primeVipSupportLabel: "PRIME VIP unterstützen",
     brandName: "Predictions Sports Prime",
     brandTagline: "Fußballanalysen & Prognosen",
     home: "Start",
@@ -369,6 +384,9 @@ export const dictionaries = {
     responsibleGambling: "Verantwortungsvolles Spielen",
   },
   it: {
+    primeVipSupportMessage: "Sostieni Predictions Sports Prime — Diventa membro PRIME VIP",
+    primeVipSupportCta: "Diventa PRIME VIP",
+    primeVipSupportLabel: "Supporto PRIME VIP",
     brandName: "Predictions Sports Prime",
     brandTagline: "Analisi e pronostici di calcio",
     home: "Home",
@@ -426,6 +444,9 @@ export const dictionaries = {
     responsibleGambling: "Gioco Responsabile",
   },
   ar: {
+    primeVipSupportMessage: "ادعم Predictions Sports Prime — كن عضو PRIME VIP",
+    primeVipSupportCta: "انضم إلى PRIME VIP",
+    primeVipSupportLabel: "دعم PRIME VIP",
     brandName: "Predictions Sports Prime",
     brandTagline: "تحليلات وتوقعات كرة القدم",
     home: "الرئيسية",
@@ -483,6 +504,9 @@ export const dictionaries = {
     responsibleGambling: "المقامرة المسؤولة",
   },
   hi: {
+    primeVipSupportMessage: "Predictions Sports Prime का समर्थन करें — PRIME VIP सदस्य बनें",
+    primeVipSupportCta: "PRIME VIP बनें",
+    primeVipSupportLabel: "PRIME VIP समर्थन",
     brandName: "Predictions Sports Prime",
     brandTagline: "फुटबॉल विश्लेषण और भविष्यवाणियाँ",
     home: "होम",
@@ -540,6 +564,9 @@ export const dictionaries = {
     responsibleGambling: "जिम्मेदार जुआ",
   },
   bn: {
+    primeVipSupportMessage: "Predictions Sports Prime-কে সমর্থন করুন — PRIME VIP সদস্য হন",
+    primeVipSupportCta: "PRIME VIP হন",
+    primeVipSupportLabel: "PRIME VIP সহায়তা",
     brandName: "Predictions Sports Prime",
     brandTagline: "ফুটবল বিশ্লেষণ ও পূর্বাভাস",
     home: "হোম",
@@ -597,6 +624,9 @@ export const dictionaries = {
     responsibleGambling: "দায়িত্বশীল জুয়া",
   },
   ur: {
+    primeVipSupportMessage: "Predictions Sports Prime کی حمایت کریں — PRIME VIP رکن بنیں",
+    primeVipSupportCta: "PRIME VIP بنیں",
+    primeVipSupportLabel: "PRIME VIP معاونت",
     brandName: "Predictions Sports Prime",
     brandTagline: "فٹبال تجزیہ اور پیش گوئیاں",
     home: "ہوم",
@@ -654,6 +684,9 @@ export const dictionaries = {
     responsibleGambling: "ذمہ دار جوا",
   },
   tr: {
+    primeVipSupportMessage: "Predictions Sports Prime'ı destekleyin — PRIME VIP üyesi olun",
+    primeVipSupportCta: "PRIME VIP olun",
+    primeVipSupportLabel: "PRIME VIP desteği",
     brandName: "Predictions Sports Prime",
     brandTagline: "Futbol analizi ve tahminler",
     home: "Ana Sayfa",
@@ -711,6 +744,9 @@ export const dictionaries = {
     responsibleGambling: "Sorumlu Bahis",
   },
   ru: {
+    primeVipSupportMessage: "Поддержите Predictions Sports Prime — станьте участником PRIME VIP",
+    primeVipSupportCta: "Стать PRIME VIP",
+    primeVipSupportLabel: "Поддержка PRIME VIP",
     brandName: "Predictions Sports Prime",
     brandTagline: "Футбольная аналитика и прогнозы",
     home: "Главная",
@@ -768,6 +804,9 @@ export const dictionaries = {
     responsibleGambling: "Ответственная игра",
   },
   zh: {
+    primeVipSupportMessage: "支持 Predictions Sports Prime — 成为 PRIME VIP 会员",
+    primeVipSupportCta: "成为 PRIME VIP",
+    primeVipSupportLabel: "PRIME VIP 支持",
     brandName: "Predictions Sports Prime",
     brandTagline: "足球分析与预测",
     home: "首页",
@@ -825,6 +864,9 @@ export const dictionaries = {
     responsibleGambling: "理性博彩",
   },
   ja: {
+    primeVipSupportMessage: "Predictions Sports Primeを応援 — PRIME VIPメンバーになろう",
+    primeVipSupportCta: "PRIME VIPになる",
+    primeVipSupportLabel: "PRIME VIPサポート",
     brandName: "Predictions Sports Prime",
     brandTagline: "サッカー分析と予想",
     home: "ホーム",
@@ -882,6 +924,9 @@ export const dictionaries = {
     responsibleGambling: "責任あるギャンブル",
   },
   ko: {
+    primeVipSupportMessage: "Predictions Sports Prime을 후원하세요 — PRIME VIP 회원 가입",
+    primeVipSupportCta: "PRIME VIP 가입",
+    primeVipSupportLabel: "PRIME VIP 후원",
     brandName: "Predictions Sports Prime",
     brandTagline: "축구 분석 및 예측",
     home: "홈",
@@ -939,6 +984,9 @@ export const dictionaries = {
     responsibleGambling: "책임감 있는 도박",
   },
   id: {
+    primeVipSupportMessage: "Dukung Predictions Sports Prime — Jadilah anggota PRIME VIP",
+    primeVipSupportCta: "Jadi PRIME VIP",
+    primeVipSupportLabel: "Dukungan PRIME VIP",
     brandName: "Predictions Sports Prime",
     brandTagline: "Analisis & prediksi sepak bola",
     home: "Beranda",
@@ -996,6 +1044,9 @@ export const dictionaries = {
     responsibleGambling: "Perjudian Bertanggung Jawab",
   },
   ms: {
+    primeVipSupportMessage: "Sokong Predictions Sports Prime — Jadi ahli PRIME VIP",
+    primeVipSupportCta: "Jadi PRIME VIP",
+    primeVipSupportLabel: "Sokongan PRIME VIP",
     brandName: "Predictions Sports Prime",
     brandTagline: "Analisis & ramalan bola sepak",
     home: "Utama",
@@ -1053,6 +1104,9 @@ export const dictionaries = {
     responsibleGambling: "Perjudian Bertanggungjawab",
   },
   th: {
+    primeVipSupportMessage: "สนับสนุน Predictions Sports Prime — สมัครสมาชิก PRIME VIP",
+    primeVipSupportCta: "สมัคร PRIME VIP",
+    primeVipSupportLabel: "สนับสนุน PRIME VIP",
     brandName: "Predictions Sports Prime",
     brandTagline: "วิเคราะห์และคาดการณ์ฟุตบอล",
     home: "หน้าแรก",
@@ -1110,6 +1164,9 @@ export const dictionaries = {
     responsibleGambling: "การพนันอย่างรับผิดชอบ",
   },
   vi: {
+    primeVipSupportMessage: "Ủng hộ Predictions Sports Prime — Trở thành thành viên PRIME VIP",
+    primeVipSupportCta: "Trở thành PRIME VIP",
+    primeVipSupportLabel: "Ủng hộ PRIME VIP",
     brandName: "Predictions Sports Prime",
     brandTagline: "Phân tích & dự đoán bóng đá",
     home: "Trang chủ",
@@ -1167,6 +1224,9 @@ export const dictionaries = {
     responsibleGambling: "Cờ bạc Có Trách nhiệm",
   },
   nl: {
+    primeVipSupportMessage: "Steun Predictions Sports Prime — Word PRIME VIP-lid",
+    primeVipSupportCta: "Word PRIME VIP",
+    primeVipSupportLabel: "PRIME VIP steunen",
     brandName: "Predictions Sports Prime",
     brandTagline: "Voetbalanalyse & voorspellingen",
     home: "Home",
@@ -1224,6 +1284,9 @@ export const dictionaries = {
     responsibleGambling: "Verantwoord Gokken",
   },
   pl: {
+    primeVipSupportMessage: "Wesprzyj Predictions Sports Prime — Zostań członkiem PRIME VIP",
+    primeVipSupportCta: "Zostań PRIME VIP",
+    primeVipSupportLabel: "Wsparcie PRIME VIP",
     brandName: "Predictions Sports Prime",
     brandTagline: "Analizy i typy piłkarskie",
     home: "Start",
@@ -1281,6 +1344,9 @@ export const dictionaries = {
     responsibleGambling: "Odpowiedzialna Gra",
   },
   "fa": {
+    primeVipSupportMessage: "از Predictions Sports Prime حمایت کنید — عضو PRIME VIP شوید",
+    primeVipSupportCta: "عضو PRIME VIP شوید",
+    primeVipSupportLabel: "پشتیبانی PRIME VIP",
     brandName: "Predictions Sports Prime",
     brandTagline: "تحلیل و پیش‌بینی فوتبال",
     home: "خانه",
@@ -1338,6 +1404,9 @@ export const dictionaries = {
     responsibleGambling: "قمار مسئولانه",
   },
   he: {
+    primeVipSupportMessage: "תמכו ב-Predictions Sports Prime — הצטרפו ל-PRIME VIP",
+    primeVipSupportCta: "הצטרפות ל-PRIME VIP",
+    primeVipSupportLabel: "תמיכה ב-PRIME VIP",
     brandName: "Predictions Sports Prime",
     brandTagline: "ניתוח ותחזיות כדורגל",
     home: "בית",

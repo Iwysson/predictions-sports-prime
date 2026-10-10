@@ -77,15 +77,16 @@ export function SiteAnalytics() {
       />
       {ready && open ? (
         <div
+          className="analytics-consent-dialog"
           role="dialog"
           aria-label="Analytics preferences"
-          style={{ position: "fixed", left: 12, right: 12, bottom: 12, zIndex: 2147483000, maxWidth: 560, margin: "0 auto", padding: "14px 16px", background: "#0b1a27", color: "#e8eef4", border: "1px solid #24405a", borderRadius: 10, fontSize: 14, lineHeight: 1.45, boxShadow: "0 6px 24px rgba(0,0,0,.45)" }}
+          style={{ position: "fixed", left: 12, right: 12, bottom: "calc(var(--prime-vip-banner-offset, 0px) + 12px)", zIndex: 2147483000, maxWidth: 560, margin: "0 auto", padding: "14px 16px", background: "#0b1a27", color: "#e8eef4", border: "1px solid #24405a", borderRadius: 10, fontSize: 14, lineHeight: 1.45, boxShadow: "0 6px 24px rgba(0,0,0,.45)" }}
         >
           <p style={{ margin: "0 0 10px" }}>
             We use Google Analytics to measure anonymous site usage. It sets analytics cookies only if you accept.
             Advertising choices are managed separately. See our <a href="/cookies/" style={{ color: "#7cc4ff" }}>Cookie Policy</a>.
           </p>
-          <div style={{ display: "flex", gap: 8, justifyContent: "flex-end" }}>
+          <div className="analytics-consent-dialog__actions" style={{ display: "flex", gap: 8, justifyContent: "flex-end" }}>
             <button type="button" onClick={() => decide("denied")} style={{ padding: "7px 14px", borderRadius: 6, border: "1px solid #3a5a78", background: "transparent", color: "inherit", cursor: "pointer" }}>Decline</button>
             <button type="button" onClick={() => decide("granted")} style={{ padding: "7px 14px", borderRadius: 6, border: 0, background: "#2f9e5b", color: "#fff", cursor: "pointer", fontWeight: 600 }}>Accept analytics</button>
           </div>
@@ -93,9 +94,10 @@ export function SiteAnalytics() {
       ) : null}
       {ready && !open ? (
         <button
+          className="analytics-preferences-button"
           type="button"
           onClick={() => setOpen(true)}
-          style={{ position: "fixed", left: 8, bottom: 8, zIndex: 2147482999, padding: "4px 9px", borderRadius: 6, border: "1px solid #24405a", background: "#0b1a27", color: "#9db4c8", fontSize: 11, cursor: "pointer", opacity: 0.8 }}
+          style={{ position: "fixed", left: 8, bottom: "calc(var(--prime-vip-banner-offset, 0px) + 8px)", zIndex: 2147482999, padding: "4px 9px", borderRadius: 6, border: "1px solid #24405a", background: "#0b1a27", color: "#9db4c8", fontSize: 11, cursor: "pointer", opacity: 0.8 }}
         >
           Analytics preferences
         </button>

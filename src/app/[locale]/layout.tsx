@@ -13,6 +13,7 @@ import { localizedWebsiteJsonLd } from "@/lib/international-seo";
 import { isSeoLocale, seoLocaleSlugs, seoLocales } from "@/lib/seo-locales";
 import { siteConfig } from "@/lib/site-config";
 import { AuthProvider } from "@/auth/AuthProvider";
+import { PrimeVipSupportBanner } from "@/components/PrimeVipSupportBanner";
 
 export const dynamicParams = false;
 
@@ -48,6 +49,7 @@ export default async function LocalizedRootLayout({ children, params }: Readonly
             <LocalizedHeader locale={locale} />
             <main>{children}</main>
             <LocalizedFooter locale={locale} />
+            <PrimeVipSupportBanner />
           </I18nProvider>
           <AdSenseScript />
         </AuthProvider>
