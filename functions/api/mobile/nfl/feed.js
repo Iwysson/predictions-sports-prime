@@ -1,25 +1,13 @@
 // GET /api/mobile/nfl/feed
-// Public feed for the Android app: Today/Tomorrow/Upcoming x FREE/BEST BET/PRIME VIP.
+// Serves the build-time precomputed current-week index (scripts/build-mobile-feed.mts).
+// No Today/Tomorrow/Upcoming split, same as the website: only one week is published at
+// a time today, so there is nothing to bucket.
 import feed from "../../../_data/mobile/nfl.json";
-import { json, bucketByDate, splitTiers } from "../../../_lib/mobile-feed.js";
+import { json } from "../../../_lib/mobile-feed.js";
 
 export async function onRequestGet() {
   try {
-    const buckets = bucketByDate(feed.games);
-    return json({
-      generatedAt: new Date().toISOString(),
-      sport: "nfl",
-      free: {
-        today: splitTiers(buckets.today).free,
-        tomorrow: splitTiers(buckets.tomorrow).free,
-        upcoming: splitTiers(buckets.upcoming).free,
-      },
-      vip: {
-        today: splitTiers(buckets.today).vip,
-        tomorrow: splitTiers(buckets.tomorrow).vip,
-        upcoming: splitTiers(buckets.upcoming).vip,
-      },
-    });
+    return json({ generatedAt: feed.generatedAt, sport: "nfl", free: feed.free, vip: feed.vip });
   } catch {
     return json({ error: "unavailable" }, 503);
   }

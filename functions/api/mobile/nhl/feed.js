@@ -1,25 +1,14 @@
 // GET /api/mobile/nhl/feed
-// Public feed for the Android app: Today/Tomorrow/Upcoming x FREE/BEST BET/PRIME VIP.
+// Serves the build-time precomputed active-slate index (scripts/build-mobile-feed.mts,
+// which calls src/data/nhl/slates.ts's own resolveNhlSlate - the exact rule the website
+// uses to decide which single NHL day is "current"). No Today/Tomorrow/Upcoming split,
+// same as the website: NHL shows one active day at a time.
 import feed from "../../../_data/mobile/nhl.json";
-import { json, bucketSlatesByDayKey, splitTiers } from "../../../_lib/mobile-feed.js";
+import { json } from "../../../_lib/mobile-feed.js";
 
 export async function onRequestGet() {
   try {
-    const buckets = bucketSlatesByDayKey(feed.slates);
-    return json({
-      generatedAt: new Date().toISOString(),
-      sport: "nhl",
-      free: {
-        today: splitTiers(buckets.today).free,
-        tomorrow: splitTiers(buckets.tomorrow).free,
-        upcoming: splitTiers(buckets.upcoming).free,
-      },
-      vip: {
-        today: splitTiers(buckets.today).vip,
-        tomorrow: splitTiers(buckets.tomorrow).vip,
-        upcoming: splitTiers(buckets.upcoming).vip,
-      },
-    });
+    return json({ generatedAt: feed.generatedAt, sport: "nhl", free: feed.free, vip: feed.vip });
   } catch {
     return json({ error: "unavailable" }, 503);
   }

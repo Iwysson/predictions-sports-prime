@@ -1,374 +1,127 @@
 {
-  "generatedAt": "2026-10-10T12:39:49.475Z",
-  "slates": [
+  "generatedAt": "2026-10-10T13:32:09.269Z",
+  "free": [
     {
-      "dayKey": "2026-10-06",
-      "matches": [
-        {
-          "slug": "buffalo-sabres-vs-minnesota-wild",
-          "title": "Buffalo Sabres × Minnesota Wild",
-          "homeTeam": "Buffalo Sabres",
-          "awayTeam": "Minnesota Wild",
-          "badge": "vip",
-          "teaser": "Goals trend. Minnesota's attack meets a Buffalo side that has started to give up space again. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "detroit-red-wings-vs-ottawa-senators",
-          "title": "Detroit Red Wings × Ottawa Senators",
-          "homeTeam": "Detroit Red Wings",
-          "awayTeam": "Ottawa Senators",
-          "badge": "vip",
-          "teaser": "Goals trend. A possible key return could change Detroit's offensive output. See the prediction and the details with PRIME VIP."
-        },
-        {
-          "slug": "new-jersey-devils-vs-utah-mammoth",
-          "title": "New Jersey Devils × Utah Mammoth",
-          "homeTeam": "New Jersey Devils",
-          "awayTeam": "Utah Mammoth",
-          "badge": "vip",
-          "teaser": "Trend favours New Jersey. The Devils host Utah, looking to bounce back in front of their own fans. Unlock PRIME VIP for the full prediction."
-        },
-        {
-          "slug": "montreal-canadiens-vs-carolina-hurricanes",
-          "title": "Montreal Canadiens × Carolina Hurricanes",
-          "homeTeam": "Montreal Canadiens",
-          "awayTeam": "Carolina Hurricanes",
-          "badge": "vip",
-          "teaser": "Goals trend. Montreal arrives after a busy game and hosts Carolina, looking to recover. See the prediction with PRIME VIP."
-        },
-        {
-          "slug": "toronto-maple-leafs-vs-nashville-predators",
-          "title": "Toronto Maple Leafs × Nashville Predators",
-          "homeTeam": "Toronto Maple Leafs",
-          "awayTeam": "Nashville Predators",
-          "badge": "vip",
-          "teaser": "Trend favours Toronto. The Maple Leafs look to recover ground at home against Nashville. Get PRIME VIP for the prediction and the analysis."
-        },
-        {
-          "slug": "new-york-rangers-vs-new-york-islanders",
-          "title": "New York Rangers × New York Islanders",
-          "homeTeam": "New York Rangers",
-          "awayTeam": "New York Islanders",
-          "badge": "vip",
-          "teaser": "Goals trend in the rivalry game. Both teams arrive after wins with strong offensive output. Unlock PRIME VIP for the line and the full analysis."
-        },
-        {
-          "slug": "chicago-blackhawks-vs-st-louis-blues",
-          "title": "Chicago Blackhawks × St. Louis Blues",
-          "homeTeam": "Chicago Blackhawks",
-          "awayTeam": "St. Louis Blues",
-          "badge": "free",
-          "teaser": "",
-          "pick": "Under 6.5 goals",
-          "odds": 1.62
-        },
-        {
-          "slug": "seattle-kraken-vs-vegas-golden-knights",
-          "title": "Seattle Kraken × Vegas Golden Knights",
-          "homeTeam": "Seattle Kraken",
-          "awayTeam": "Vegas Golden Knights",
-          "badge": "free",
-          "teaser": "",
-          "pick": "Over 5.5 goals",
-          "odds": 1.65
-        },
-        {
-          "slug": "los-angeles-kings-vs-florida-panthers",
-          "title": "Los Angeles Kings × Florida Panthers",
-          "homeTeam": "Los Angeles Kings",
-          "awayTeam": "Florida Panthers",
-          "badge": "free",
-          "teaser": "",
-          "pick": "Florida Panthers to win",
-          "odds": 1.72
-        }
-      ]
+      "slug": "montreal-canadiens-vs-detroit-red-wings",
+      "title": "Montreal Canadiens × Detroit Red Wings",
+      "homeTeam": "Montreal Canadiens",
+      "awayTeam": "Detroit Red Wings",
+      "badge": "free",
+      "teaser": "Montreal's higher offensive ceiling and home ice at the Bell Centre are weighed against an early-season defensive slide.",
+      "pick": "Montreal Canadiens to Win (Including OT & Shootout)",
+      "odds": 1.73
     },
     {
-      "dayKey": "2026-10-07",
-      "matches": [
-        {
-          "slug": "pittsburgh-penguins-vs-washington-capitals",
-          "title": "Pittsburgh Penguins × Washington Capitals",
-          "homeTeam": "Pittsburgh Penguins",
-          "awayTeam": "Washington Capitals",
-          "badge": "free",
-          "teaser": "Goals trend. Two attacks that have produced high-scoring games early in the season meet a total of 5.5.",
-          "pick": "Over 5.5 Goals",
-          "odds": 1.62
-        },
-        {
-          "slug": "colorado-avalanche-vs-winnipeg-jets",
-          "title": "Colorado Avalanche × Winnipeg Jets",
-          "homeTeam": "Colorado Avalanche",
-          "awayTeam": "Winnipeg Jets",
-          "badge": "best",
-          "teaser": "Colorado opened 2-0-0 and arrives with the stronger form. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-        },
-        {
-          "slug": "edmonton-oilers-vs-anaheim-ducks",
-          "title": "Edmonton Oilers × Anaheim Ducks",
-          "homeTeam": "Edmonton Oilers",
-          "awayTeam": "Anaheim Ducks",
-          "badge": "vip",
-          "teaser": "Edmonton brings the stronger high-end offensive core into a game shaped by key absences. Unlock PRIME VIP for the prediction and the full analysis."
-        }
-      ]
+      "slug": "pittsburgh-penguins-vs-dallas-stars",
+      "title": "Pittsburgh Penguins × Dallas Stars",
+      "homeTeam": "Pittsburgh Penguins",
+      "awayTeam": "Dallas Stars",
+      "badge": "free",
+      "teaser": "Two attacking units with real scoring volume meet a Dallas defense that has looked very different behind recent shutouts.",
+      "pick": "Over 5.5 Goals",
+      "odds": 1.68
     },
     {
-      "dayKey": "2026-10-08",
-      "matches": [
-        {
-          "slug": "boston-bruins-vs-utah-mammoth",
-          "title": "Boston Bruins × Utah Mammoth",
-          "homeTeam": "Boston Bruins",
-          "awayTeam": "Utah Mammoth",
-          "badge": "free",
-          "teaser": "Utah's controlled offensive start meets a Boston team playing without Charlie McAvoy. The total sits under both the split model and the H2H average.",
-          "pick": "Under 6.5 Goals",
-          "odds": 1.66
-        },
-        {
-          "slug": "buffalo-sabres-vs-dallas-stars",
-          "title": "Buffalo Sabres × Dallas Stars",
-          "homeTeam": "Buffalo Sabres",
-          "awayTeam": "Dallas Stars",
-          "badge": "free",
-          "teaser": "Both location splits and the 2025-26 head-to-head average point above 5.5 goals, with Buffalo's early goaltending numbers adding further scoring risk.",
-          "pick": "Over 5.5 Goals",
-          "odds": 1.75
-        },
-        {
-          "slug": "tampa-bay-lightning-vs-minnesota-wild",
-          "title": "Tampa Bay Lightning × Minnesota Wild",
-          "homeTeam": "Tampa Bay Lightning",
-          "awayTeam": "Minnesota Wild",
-          "badge": "free",
-          "teaser": "Minnesota's road scoring and Tampa Bay's home output combine with a strong head-to-head average to point well above the total.",
-          "pick": "Over 5.5 Goals",
-          "odds": 1.8
-        },
-        {
-          "slug": "new-york-islanders-vs-chicago-blackhawks",
-          "title": "New York Islanders × Chicago Blackhawks",
-          "homeTeam": "New York Islanders",
-          "awayTeam": "Chicago Blackhawks",
-          "badge": "best",
-          "teaser": "The Islanders carry the stronger early defensive profile into a home game against a Chicago team conceding at a high rate. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-        },
-        {
-          "slug": "carolina-hurricanes-vs-vancouver-canucks",
-          "title": "Carolina Hurricanes × Vancouver Canucks",
-          "homeTeam": "Carolina Hurricanes",
-          "awayTeam": "Vancouver Canucks",
-          "badge": "best",
-          "teaser": "One of the strongest statistical Over profiles on the slate, backed by the location model, the recent head-to-head and both teams' early goaltending numbers. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-        },
-        {
-          "slug": "montreal-canadiens-vs-nashville-predators",
-          "title": "Montreal Canadiens × Nashville Predators",
-          "homeTeam": "Montreal Canadiens",
-          "awayTeam": "Nashville Predators",
-          "badge": "vip",
-          "teaser": "Montreal's home scoring profile gives the Canadiens an edge over a Nashville side that keeps games competitive. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "ottawa-senators-vs-philadelphia-flyers",
-          "title": "Ottawa Senators × Philadelphia Flyers",
-          "homeTeam": "Ottawa Senators",
-          "awayTeam": "Philadelphia Flyers",
-          "badge": "vip",
-          "teaser": "Ottawa swept the 2025-26 head-to-head against a Philadelphia offense that has struggled badly to start 2026-27. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "st-louis-blues-vs-san-jose-sharks",
-          "title": "St. Louis Blues × San Jose Sharks",
-          "homeTeam": "St. Louis Blues",
-          "awayTeam": "San Jose Sharks",
-          "badge": "vip",
-          "teaser": "The location model lands just above the goals total, though a mixed head-to-head keeps this below the slate's strongest Overs. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "calgary-flames-vs-colorado-avalanche",
-          "title": "Calgary Flames × Colorado Avalanche",
-          "homeTeam": "Calgary Flames",
-          "awayTeam": "Colorado Avalanche",
-          "badge": "vip",
-          "teaser": "Colorado's elite early scoring and Calgary's defensive vulnerability converge with a head-to-head average already above the total. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "vegas-golden-knights-vs-toronto-maple-leafs",
-          "title": "Vegas Golden Knights × Toronto Maple Leafs",
-          "homeTeam": "Vegas Golden Knights",
-          "awayTeam": "Toronto Maple Leafs",
-          "badge": "vip",
-          "teaser": "The home/away split model and a highly aggressive recent head-to-head both support the Over. Unlock PRIME VIP for the prediction and the full analysis."
-        }
-      ]
+      "slug": "st-louis-blues-vs-columbus-blue-jackets",
+      "title": "St. Louis Blues × Columbus Blue Jackets",
+      "homeTeam": "St. Louis Blues",
+      "awayTeam": "Columbus Blue Jackets",
+      "badge": "free",
+      "teaser": "Neither defense was airtight last season, and both attacks have shown they can punish a loose matchup at Enterprise Center.",
+      "pick": "Over 5.5 Goals",
+      "odds": 1.8
     },
     {
-      "dayKey": "2026-10-09",
-      "matches": [
-        {
-          "slug": "detroit-red-wings-vs-seattle-kraken",
-          "title": "Detroit Red Wings × Seattle Kraken",
-          "homeTeam": "Detroit Red Wings",
-          "awayTeam": "Seattle Kraken",
-          "badge": "free",
-          "teaser": "Detroit's home opener pairs a productive home attack with a leaky defense against a Seattle side that scored sparingly on the road last season.",
-          "pick": "Detroit Red Wings to Win (Including OT & Shootout)",
-          "odds": 1.88
-        },
-        {
-          "slug": "columbus-blue-jackets-vs-pittsburgh-penguins",
-          "title": "Columbus Blue Jackets × Pittsburgh Penguins",
-          "homeTeam": "Columbus Blue Jackets",
-          "awayTeam": "Pittsburgh Penguins",
-          "badge": "best",
-          "teaser": "Two clubs with volatile early-season scoreboards meet at Nationwide Arena, with injuries on both sides shaping how each lineup can defend. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-        },
-        {
-          "slug": "washington-capitals-vs-new-york-rangers",
-          "title": "Washington Capitals × New York Rangers",
-          "homeTeam": "Washington Capitals",
-          "awayTeam": "New York Rangers",
-          "badge": "vip",
-          "teaser": "Washington's strong home defensive record meets a Rangers road profile built on scoring and conceding in volume. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "winnipeg-jets-vs-anaheim-ducks",
-          "title": "Winnipeg Jets × Anaheim Ducks",
-          "homeTeam": "Winnipeg Jets",
-          "awayTeam": "Anaheim Ducks",
-          "badge": "vip",
-          "teaser": "Anaheim's road defending last season was the weakest figure among the clubs on this slate, and Winnipeg arrive at home. Unlock PRIME VIP for the prediction and the full analysis."
-        }
-      ]
+      "slug": "vegas-golden-knights-vs-los-angeles-kings",
+      "title": "Vegas Golden Knights × Los Angeles Kings",
+      "homeTeam": "Vegas Golden Knights",
+      "awayTeam": "Los Angeles Kings",
+      "badge": "free",
+      "teaser": "Vegas' fast start on offense meets a Los Angeles defense that has already conceded heavily through its first three games.",
+      "pick": "Over 5.5 Goals",
+      "odds": 1.8
+    }
+  ],
+  "vip": [
+    {
+      "slug": "boston-bruins-vs-philadelphia-flyers",
+      "title": "Boston Bruins × Philadelphia Flyers",
+      "homeTeam": "Boston Bruins",
+      "awayTeam": "Philadelphia Flyers",
+      "badge": "vip",
+      "teaser": "Boston's offensive edge and home ice meet a Philadelphia side off to a difficult start. Unlock PRIME VIP for the prediction and the full analysis."
     },
     {
-      "dayKey": "2026-10-10",
-      "matches": [
-        {
-          "slug": "boston-bruins-vs-philadelphia-flyers",
-          "title": "Boston Bruins × Philadelphia Flyers",
-          "homeTeam": "Boston Bruins",
-          "awayTeam": "Philadelphia Flyers",
-          "badge": "vip",
-          "teaser": "Boston's offensive edge and home ice meet a Philadelphia side off to a difficult start. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "new-jersey-devils-vs-vancouver-canucks",
-          "title": "New Jersey Devils × Vancouver Canucks",
-          "homeTeam": "New Jersey Devils",
-          "awayTeam": "Vancouver Canucks",
-          "badge": "vip",
-          "teaser": "Vancouver's early defensive breakdowns give New Jersey a favorable road matchup at Prudential Center. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "san-jose-sharks-vs-edmonton-oilers",
-          "title": "San Jose Sharks × Edmonton Oilers",
-          "homeTeam": "San Jose Sharks",
-          "awayTeam": "Edmonton Oilers",
-          "badge": "vip",
-          "teaser": "Edmonton's early scoring volume and San Jose's leaky defense point toward goals at SAP Center. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "florida-panthers-vs-minnesota-wild",
-          "title": "Florida Panthers × Minnesota Wild",
-          "homeTeam": "Florida Panthers",
-          "awayTeam": "Minnesota Wild",
-          "badge": "vip",
-          "teaser": "Minnesota's defensive structure and Florida's absences support a controlled total in Sunrise. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "buffalo-sabres-vs-utah-mammoth",
-          "title": "Buffalo Sabres × Utah Mammoth",
-          "homeTeam": "Buffalo Sabres",
-          "awayTeam": "Utah Mammoth",
-          "badge": "best",
-          "teaser": "Buffalo's offensive depth and home ice at KeyBank Center meet a Utah side coming off a heavy defeat. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-        },
-        {
-          "slug": "chicago-blackhawks-vs-carolina-hurricanes",
-          "title": "Chicago Blackhawks × Carolina Hurricanes",
-          "homeTeam": "Chicago Blackhawks",
-          "awayTeam": "Carolina Hurricanes",
-          "badge": "vip",
-          "teaser": "Carolina's two-way statistical edge travels to a Chicago side with one of the league's lower scoring rates. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "colorado-avalanche-vs-toronto-maple-leafs",
-          "title": "Colorado Avalanche × Toronto Maple Leafs",
-          "homeTeam": "Colorado Avalanche",
-          "awayTeam": "Toronto Maple Leafs",
-          "badge": "best",
-          "teaser": "Colorado's balanced attack-and-defense profile at Ball Arena is tested by a dangerous but leaky Toronto side. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-        },
-        {
-          "slug": "montreal-canadiens-vs-detroit-red-wings",
-          "title": "Montreal Canadiens × Detroit Red Wings",
-          "homeTeam": "Montreal Canadiens",
-          "awayTeam": "Detroit Red Wings",
-          "badge": "free",
-          "teaser": "Montreal's higher offensive ceiling and home ice at the Bell Centre are weighed against an early-season defensive slide.",
-          "pick": "Montreal Canadiens to Win (Including OT & Shootout)",
-          "odds": 1.73
-        },
-        {
-          "slug": "ottawa-senators-vs-nashville-predators",
-          "title": "Ottawa Senators × Nashville Predators",
-          "homeTeam": "Ottawa Senators",
-          "awayTeam": "Nashville Predators",
-          "badge": "vip",
-          "teaser": "Ottawa's more balanced two-way numbers and home ice frame this matchup against a Nashville side leaning on its goaltending. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "pittsburgh-penguins-vs-dallas-stars",
-          "title": "Pittsburgh Penguins × Dallas Stars",
-          "homeTeam": "Pittsburgh Penguins",
-          "awayTeam": "Dallas Stars",
-          "badge": "free",
-          "teaser": "Two attacking units with real scoring volume meet a Dallas defense that has looked very different behind recent shutouts.",
-          "pick": "Over 5.5 Goals",
-          "odds": 1.68
-        },
-        {
-          "slug": "st-louis-blues-vs-columbus-blue-jackets",
-          "title": "St. Louis Blues × Columbus Blue Jackets",
-          "homeTeam": "St. Louis Blues",
-          "awayTeam": "Columbus Blue Jackets",
-          "badge": "free",
-          "teaser": "Neither defense was airtight last season, and both attacks have shown they can punish a loose matchup at Enterprise Center.",
-          "pick": "Over 5.5 Goals",
-          "odds": 1.8
-        },
-        {
-          "slug": "new-york-islanders-vs-tampa-bay-lightning",
-          "title": "New York Islanders × Tampa Bay Lightning",
-          "homeTeam": "New York Islanders",
-          "awayTeam": "Tampa Bay Lightning",
-          "badge": "vip",
-          "teaser": "A controlled defensive baseline on both sides sets up this Under at UBS Arena, with Tampa's attacking talent the main variable. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "calgary-flames-vs-anaheim-ducks",
-          "title": "Calgary Flames × Anaheim Ducks",
-          "homeTeam": "Calgary Flames",
-          "awayTeam": "Anaheim Ducks",
-          "badge": "vip",
-          "teaser": "Calgary's shaky early defensive numbers meet an Anaheim side that also tends to allow chances at the other end. Unlock PRIME VIP for the prediction and the full analysis."
-        },
-        {
-          "slug": "vegas-golden-knights-vs-los-angeles-kings",
-          "title": "Vegas Golden Knights × Los Angeles Kings",
-          "homeTeam": "Vegas Golden Knights",
-          "awayTeam": "Los Angeles Kings",
-          "badge": "free",
-          "teaser": "Vegas' fast start on offense meets a Los Angeles defense that has already conceded heavily through its first three games.",
-          "pick": "Over 5.5 Goals",
-          "odds": 1.8
-        }
-      ]
+      "slug": "new-jersey-devils-vs-vancouver-canucks",
+      "title": "New Jersey Devils × Vancouver Canucks",
+      "homeTeam": "New Jersey Devils",
+      "awayTeam": "Vancouver Canucks",
+      "badge": "vip",
+      "teaser": "Vancouver's early defensive breakdowns give New Jersey a favorable road matchup at Prudential Center. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "san-jose-sharks-vs-edmonton-oilers",
+      "title": "San Jose Sharks × Edmonton Oilers",
+      "homeTeam": "San Jose Sharks",
+      "awayTeam": "Edmonton Oilers",
+      "badge": "vip",
+      "teaser": "Edmonton's early scoring volume and San Jose's leaky defense point toward goals at SAP Center. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "florida-panthers-vs-minnesota-wild",
+      "title": "Florida Panthers × Minnesota Wild",
+      "homeTeam": "Florida Panthers",
+      "awayTeam": "Minnesota Wild",
+      "badge": "vip",
+      "teaser": "Minnesota's defensive structure and Florida's absences support a controlled total in Sunrise. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "buffalo-sabres-vs-utah-mammoth",
+      "title": "Buffalo Sabres × Utah Mammoth",
+      "homeTeam": "Buffalo Sabres",
+      "awayTeam": "Utah Mammoth",
+      "badge": "best",
+      "teaser": "Buffalo's offensive depth and home ice at KeyBank Center meet a Utah side coming off a heavy defeat. Unlock PRIME VIP for the prediction, the odds and the full analysis."
+    },
+    {
+      "slug": "chicago-blackhawks-vs-carolina-hurricanes",
+      "title": "Chicago Blackhawks × Carolina Hurricanes",
+      "homeTeam": "Chicago Blackhawks",
+      "awayTeam": "Carolina Hurricanes",
+      "badge": "vip",
+      "teaser": "Carolina's two-way statistical edge travels to a Chicago side with one of the league's lower scoring rates. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "colorado-avalanche-vs-toronto-maple-leafs",
+      "title": "Colorado Avalanche × Toronto Maple Leafs",
+      "homeTeam": "Colorado Avalanche",
+      "awayTeam": "Toronto Maple Leafs",
+      "badge": "best",
+      "teaser": "Colorado's balanced attack-and-defense profile at Ball Arena is tested by a dangerous but leaky Toronto side. Unlock PRIME VIP for the prediction, the odds and the full analysis."
+    },
+    {
+      "slug": "ottawa-senators-vs-nashville-predators",
+      "title": "Ottawa Senators × Nashville Predators",
+      "homeTeam": "Ottawa Senators",
+      "awayTeam": "Nashville Predators",
+      "badge": "vip",
+      "teaser": "Ottawa's more balanced two-way numbers and home ice frame this matchup against a Nashville side leaning on its goaltending. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "new-york-islanders-vs-tampa-bay-lightning",
+      "title": "New York Islanders × Tampa Bay Lightning",
+      "homeTeam": "New York Islanders",
+      "awayTeam": "Tampa Bay Lightning",
+      "badge": "vip",
+      "teaser": "A controlled defensive baseline on both sides sets up this Under at UBS Arena, with Tampa's attacking talent the main variable. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "calgary-flames-vs-anaheim-ducks",
+      "title": "Calgary Flames × Anaheim Ducks",
+      "homeTeam": "Calgary Flames",
+      "awayTeam": "Anaheim Ducks",
+      "badge": "vip",
+      "teaser": "Calgary's shaky early defensive numbers meet an Anaheim side that also tends to allow chances at the other end. Unlock PRIME VIP for the prediction and the full analysis."
     }
   ]
 }

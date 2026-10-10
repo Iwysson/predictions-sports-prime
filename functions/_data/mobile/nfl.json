@@ -1,34 +1,6 @@
 {
-  "generatedAt": "2026-10-10T12:39:49.476Z",
-  "games": [
-    {
-      "slug": "dallas-cowboys-vs-tampa-bay-buccaneers",
-      "title": "Dallas Cowboys vs Tampa Bay Buccaneers",
-      "homeTeam": "Dallas Cowboys",
-      "awayTeam": "Tampa Bay Buccaneers",
-      "badge": "best",
-      "teaser": "Dallas enters on a clear offensive upswing after a comeback win over Houston, against a Tampa Bay team facing uncertainty at quarterback. Unlock PRIME VIP for the prediction, the odds and the full analysis.",
-      "date": "2026-10-08",
-      "kickoff": "8:15 PM",
-      "timezone": "ET",
-      "stadium": "AT&T Stadium",
-      "city": "Arlington",
-      "state": "TX"
-    },
-    {
-      "slug": "jacksonville-jaguars-vs-philadelphia-eagles",
-      "title": "Jacksonville Jaguars vs Philadelphia Eagles",
-      "homeTeam": "Jacksonville Jaguars",
-      "awayTeam": "Philadelphia Eagles",
-      "badge": "vip",
-      "teaser": "Jacksonville's turnover differential and defensive production have been among the league's best this season, against a less consistent Philadelphia offense. Unlock PRIME VIP for the prediction and the full analysis.",
-      "date": "2026-10-11",
-      "kickoff": "9:30 AM",
-      "timezone": "ET",
-      "stadium": "Tottenham Hotspur Stadium",
-      "city": "London",
-      "state": "UK"
-    },
+  "generatedAt": "2026-10-10T13:32:09.269Z",
+  "free": [
     {
       "slug": "green-bay-packers-vs-chicago-bears",
       "title": "Green Bay Packers vs Chicago Bears",
@@ -36,28 +8,8 @@
       "awayTeam": "Chicago Bears",
       "badge": "free",
       "teaser": "Chicago's improving offense meets a Green Bay attack already producing at a high level through Jordan Love.",
-      "date": "2026-10-11",
-      "kickoff": "1:00 PM",
-      "timezone": "ET",
-      "stadium": "Lambeau Field",
-      "city": "Green Bay",
-      "state": "WI",
       "pick": "Over 42.5 Points",
       "odds": 1.6
-    },
-    {
-      "slug": "miami-dolphins-vs-cincinnati-bengals",
-      "title": "Miami Dolphins vs Cincinnati Bengals",
-      "homeTeam": "Miami Dolphins",
-      "awayTeam": "Cincinnati Bengals",
-      "badge": "vip",
-      "teaser": "Cincinnati's offensive ceiling remains higher than Miami's current level despite recent defeats. Unlock PRIME VIP for the prediction and the full analysis.",
-      "date": "2026-10-11",
-      "kickoff": "1:00 PM",
-      "timezone": "ET",
-      "stadium": "Hard Rock Stadium",
-      "city": "Miami Gardens",
-      "state": "FL"
     },
     {
       "slug": "new-england-patriots-vs-las-vegas-raiders",
@@ -66,84 +18,8 @@
       "awayTeam": "Las Vegas Raiders",
       "badge": "free",
       "teaser": "New England's recent form, highlighted by a win over Buffalo, and home field support the Patriots over a Raiders team that can be pressured.",
-      "date": "2026-10-11",
-      "kickoff": "1:00 PM",
-      "timezone": "ET",
-      "stadium": "Gillette Stadium",
-      "city": "Foxborough",
-      "state": "MA",
       "pick": "New England Patriots to Win",
       "odds": 1.57
-    },
-    {
-      "slug": "new-orleans-saints-vs-minnesota-vikings",
-      "title": "New Orleans Saints vs Minnesota Vikings",
-      "homeTeam": "New Orleans Saints",
-      "awayTeam": "Minnesota Vikings",
-      "badge": "vip",
-      "teaser": "Minnesota's defensive indicators, including 16 sacks and a strong turnover differential, travel well against a resilient but turnover-prone New Orleans side. Unlock PRIME VIP for the prediction and the full analysis.",
-      "date": "2026-10-11",
-      "kickoff": "1:00 PM",
-      "timezone": "ET",
-      "stadium": "Caesars Superdome",
-      "city": "New Orleans",
-      "state": "LA"
-    },
-    {
-      "slug": "new-york-jets-vs-cleveland-browns",
-      "title": "New York Jets vs Cleveland Browns",
-      "homeTeam": "New York Jets",
-      "awayTeam": "Cleveland Browns",
-      "badge": "vip",
-      "teaser": "A low total with two defenses generating pressure, but enough recent offensive improvement on both sides to clear a modest threshold. Unlock PRIME VIP for the prediction and the full analysis.",
-      "date": "2026-10-11",
-      "kickoff": "1:00 PM",
-      "timezone": "ET",
-      "stadium": "MetLife Stadium",
-      "city": "East Rutherford",
-      "state": "NJ"
-    },
-    {
-      "slug": "pittsburgh-steelers-vs-indianapolis-colts",
-      "title": "Pittsburgh Steelers vs Indianapolis Colts",
-      "homeTeam": "Pittsburgh Steelers",
-      "awayTeam": "Indianapolis Colts",
-      "badge": "vip",
-      "teaser": "An improving Indianapolis team meets a Pittsburgh side leaning on home field and defensive pressure. Unlock PRIME VIP for the prediction and the full analysis.",
-      "date": "2026-10-11",
-      "kickoff": "1:00 PM",
-      "timezone": "ET",
-      "stadium": "Acrisure Stadium",
-      "city": "Pittsburgh",
-      "state": "PA"
-    },
-    {
-      "slug": "tennessee-titans-vs-houston-texans",
-      "title": "Tennessee Titans vs Houston Texans",
-      "homeTeam": "Tennessee Titans",
-      "awayTeam": "Houston Texans",
-      "badge": "vip",
-      "teaser": "Houston's underlying talent against a Tennessee offense that has struggled to turn possessions into points. Unlock PRIME VIP for the prediction and the full analysis.",
-      "date": "2026-10-11",
-      "kickoff": "1:00 PM",
-      "timezone": "ET",
-      "stadium": "Nissan Stadium",
-      "city": "Nashville",
-      "state": "TN"
-    },
-    {
-      "slug": "washington-commanders-vs-new-york-giants",
-      "title": "Washington Commanders vs New York Giants",
-      "homeTeam": "Washington Commanders",
-      "awayTeam": "New York Giants",
-      "badge": "vip",
-      "teaser": "Washington's home field and personnel against a New York team that has started the season better. Unlock PRIME VIP for the prediction and the full analysis.",
-      "date": "2026-10-11",
-      "kickoff": "1:00 PM",
-      "timezone": "ET",
-      "stadium": "Northwest Stadium",
-      "city": "Landover",
-      "state": "MD"
     },
     {
       "slug": "los-angeles-chargers-vs-denver-broncos",
@@ -152,56 +28,8 @@
       "awayTeam": "Denver Broncos",
       "badge": "free",
       "teaser": "A poor record does not tell the whole story for Los Angeles once the 4.5-point cushion in a divisional road game is factored in.",
-      "date": "2026-10-11",
-      "kickoff": "4:05 PM",
-      "timezone": "ET",
-      "stadium": "SoFi Stadium",
-      "city": "Inglewood",
-      "state": "CA",
       "pick": "Los Angeles Chargers +4.5",
       "odds": 1.69
-    },
-    {
-      "slug": "arizona-cardinals-vs-detroit-lions",
-      "title": "Arizona Cardinals vs Detroit Lions",
-      "homeTeam": "Arizona Cardinals",
-      "awayTeam": "Detroit Lions",
-      "badge": "best",
-      "teaser": "Detroit's offensive production and pass rush meet an Arizona team that has lost a key offensive-line starter for the season. Unlock PRIME VIP for the prediction, the odds and the full analysis.",
-      "date": "2026-10-11",
-      "kickoff": "4:25 PM",
-      "timezone": "ET",
-      "stadium": "State Farm Stadium",
-      "city": "Glendale",
-      "state": "AZ"
-    },
-    {
-      "slug": "seattle-seahawks-vs-san-francisco-49ers",
-      "title": "Seattle Seahawks vs San Francisco 49ers",
-      "homeTeam": "Seattle Seahawks",
-      "awayTeam": "San Francisco 49ers",
-      "badge": "vip",
-      "teaser": "San Francisco's unbeaten, highly efficient start against a Seattle defense generating pressure and turnovers of its own. Unlock PRIME VIP for the prediction and the full analysis.",
-      "date": "2026-10-11",
-      "kickoff": "4:25 PM",
-      "timezone": "ET",
-      "stadium": "Lumen Field",
-      "city": "Seattle",
-      "state": "WA"
-    },
-    {
-      "slug": "atlanta-falcons-vs-baltimore-ravens",
-      "title": "Atlanta Falcons vs Baltimore Ravens",
-      "homeTeam": "Atlanta Falcons",
-      "awayTeam": "Baltimore Ravens",
-      "badge": "vip",
-      "teaser": "Baltimore's uncertainty around Lamar Jackson's availability against an Atlanta team leaning on a highly productive ground game. Unlock PRIME VIP for the prediction and the full analysis.",
-      "date": "2026-10-11",
-      "kickoff": "8:20 PM",
-      "timezone": "ET",
-      "stadium": "Mercedes-Benz Stadium",
-      "city": "Atlanta",
-      "state": "GA"
     },
     {
       "slug": "los-angeles-rams-vs-buffalo-bills",
@@ -210,14 +38,98 @@
       "awayTeam": "Buffalo Bills",
       "badge": "free",
       "teaser": "Buffalo remains one of the league's highest-scoring offenses, but the Rams' yardage production and home field provide a path to the upset.",
-      "date": "2026-10-12",
-      "kickoff": "8:15 PM",
-      "timezone": "ET",
-      "stadium": "SoFi Stadium",
-      "city": "Inglewood",
-      "state": "CA",
       "pick": "Los Angeles Rams to Win",
       "odds": 1.67
+    }
+  ],
+  "vip": [
+    {
+      "slug": "dallas-cowboys-vs-tampa-bay-buccaneers",
+      "title": "Dallas Cowboys vs Tampa Bay Buccaneers",
+      "homeTeam": "Dallas Cowboys",
+      "awayTeam": "Tampa Bay Buccaneers",
+      "badge": "best",
+      "teaser": "Dallas enters on a clear offensive upswing after a comeback win over Houston, against a Tampa Bay team facing uncertainty at quarterback. Unlock PRIME VIP for the prediction, the odds and the full analysis."
+    },
+    {
+      "slug": "jacksonville-jaguars-vs-philadelphia-eagles",
+      "title": "Jacksonville Jaguars vs Philadelphia Eagles",
+      "homeTeam": "Jacksonville Jaguars",
+      "awayTeam": "Philadelphia Eagles",
+      "badge": "vip",
+      "teaser": "Jacksonville's turnover differential and defensive production have been among the league's best this season, against a less consistent Philadelphia offense. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "miami-dolphins-vs-cincinnati-bengals",
+      "title": "Miami Dolphins vs Cincinnati Bengals",
+      "homeTeam": "Miami Dolphins",
+      "awayTeam": "Cincinnati Bengals",
+      "badge": "vip",
+      "teaser": "Cincinnati's offensive ceiling remains higher than Miami's current level despite recent defeats. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "new-orleans-saints-vs-minnesota-vikings",
+      "title": "New Orleans Saints vs Minnesota Vikings",
+      "homeTeam": "New Orleans Saints",
+      "awayTeam": "Minnesota Vikings",
+      "badge": "vip",
+      "teaser": "Minnesota's defensive indicators, including 16 sacks and a strong turnover differential, travel well against a resilient but turnover-prone New Orleans side. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "new-york-jets-vs-cleveland-browns",
+      "title": "New York Jets vs Cleveland Browns",
+      "homeTeam": "New York Jets",
+      "awayTeam": "Cleveland Browns",
+      "badge": "vip",
+      "teaser": "A low total with two defenses generating pressure, but enough recent offensive improvement on both sides to clear a modest threshold. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "pittsburgh-steelers-vs-indianapolis-colts",
+      "title": "Pittsburgh Steelers vs Indianapolis Colts",
+      "homeTeam": "Pittsburgh Steelers",
+      "awayTeam": "Indianapolis Colts",
+      "badge": "vip",
+      "teaser": "An improving Indianapolis team meets a Pittsburgh side leaning on home field and defensive pressure. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "tennessee-titans-vs-houston-texans",
+      "title": "Tennessee Titans vs Houston Texans",
+      "homeTeam": "Tennessee Titans",
+      "awayTeam": "Houston Texans",
+      "badge": "vip",
+      "teaser": "Houston's underlying talent against a Tennessee offense that has struggled to turn possessions into points. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "washington-commanders-vs-new-york-giants",
+      "title": "Washington Commanders vs New York Giants",
+      "homeTeam": "Washington Commanders",
+      "awayTeam": "New York Giants",
+      "badge": "vip",
+      "teaser": "Washington's home field and personnel against a New York team that has started the season better. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "arizona-cardinals-vs-detroit-lions",
+      "title": "Arizona Cardinals vs Detroit Lions",
+      "homeTeam": "Arizona Cardinals",
+      "awayTeam": "Detroit Lions",
+      "badge": "best",
+      "teaser": "Detroit's offensive production and pass rush meet an Arizona team that has lost a key offensive-line starter for the season. Unlock PRIME VIP for the prediction, the odds and the full analysis."
+    },
+    {
+      "slug": "seattle-seahawks-vs-san-francisco-49ers",
+      "title": "Seattle Seahawks vs San Francisco 49ers",
+      "homeTeam": "Seattle Seahawks",
+      "awayTeam": "San Francisco 49ers",
+      "badge": "vip",
+      "teaser": "San Francisco's unbeaten, highly efficient start against a Seattle defense generating pressure and turnovers of its own. Unlock PRIME VIP for the prediction and the full analysis."
+    },
+    {
+      "slug": "atlanta-falcons-vs-baltimore-ravens",
+      "title": "Atlanta Falcons vs Baltimore Ravens",
+      "homeTeam": "Atlanta Falcons",
+      "awayTeam": "Baltimore Ravens",
+      "badge": "vip",
+      "teaser": "Baltimore's uncertainty around Lamar Jackson's availability against an Atlanta team leaning on a highly productive ground game. Unlock PRIME VIP for the prediction and the full analysis."
     }
   ]
 }
