@@ -248,6 +248,25 @@
       "settledAt": "2026-10-09T21:57:35.078Z",
       "publishedAt": "2026-10-06T12:00:00.000Z"
     },
+    "la-liga:rayo-vallecano-vs-athletic-club": {
+      "key": "la-liga:rayo-vallecano-vs-athletic-club",
+      "league": "la-liga",
+      "slug": "rayo-vallecano-vs-athletic-club",
+      "homeTeam": "Rayo Vallecano",
+      "awayTeam": "Athletic Club",
+      "date": "2026-10-10",
+      "fixtureId": "401882849",
+      "predictionAccess": "free",
+      "prediction": "Rayo Vallecano X1",
+      "odds": 1.56,
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-10T14:27:14.380Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
     "liga-portugal:braga-vs-sporting": {
       "key": "liga-portugal:braga-vs-sporting",
       "league": "liga-portugal",
@@ -304,6 +323,25 @@
       "result": "green",
       "settledAt": "2026-10-09T21:28:25.608Z",
       "publishedAt": "2026-10-06T12:00:00.000Z"
+    },
+    "premier-league:arsenal-vs-leeds": {
+      "key": "premier-league:arsenal-vs-leeds",
+      "league": "premier-league",
+      "slug": "arsenal-vs-leeds",
+      "homeTeam": "Arsenal",
+      "awayTeam": "Leeds United",
+      "date": "2026-10-10",
+      "fixtureId": "401879268",
+      "predictionAccess": "vip",
+      "prediction": "Arsenal to Win + Over 1.5 Goals",
+      "odds": 1.61,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-10T14:27:14.380Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
     "super-lig:galatasaray-vs-kasimpasa": {
       "key": "super-lig:galatasaray-vs-kasimpasa",
