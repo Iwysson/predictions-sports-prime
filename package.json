@@ -6,7 +6,7 @@
     "dev": "next dev",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "prebuild": "npm run match-routes:sync && npm run match-content:build",
+    "prebuild": "npm run match-routes:sync && npm run match-content:build && npm run mobile-feed:build",
     "match-routes:sync": "tsx scripts/sync-match-routes.mts",
     "build": "next build",
     "fixtures:sync": "tsx scripts/sync-fixtures.mjs",
@@ -14,6 +14,7 @@
     "test:fixture-sync": "tsx scripts/test-fixture-sync.mts",
     "test:football-results": "tsx scripts/test-football-results.mts",
     "test:site-analytics": "tsx scripts/test-site-analytics.mts",
+    "test:google-play-entitlement": "tsx scripts/test-google-play-entitlement.mts",
     "results:settle": "tsx scripts/settle-football-results.mts",
     "results:validate": "tsx scripts/validate-football-results.mts",
     "results:update": "npm run fixtures:sync && npm run results:settle && npm run results:validate && tsx scripts/print-results-summary.mts",
@@ -33,7 +34,8 @@
     "check:editorial-language": "node --import tsx scripts/check-editorial-language.mjs",
     "validate:source": "npm run typecheck",
     "validate:production": "npm run typecheck && npm run build",
-    "match-content:build": "tsx scripts/build-match-content.mts"
+    "match-content:build": "tsx scripts/build-match-content.mts",
+    "mobile-feed:build": "tsx scripts/build-mobile-feed.mts"
   },
   "dependencies": {
     "@next/third-parties": "^16.3.5",
