@@ -343,6 +343,25 @@
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "eredivisie:ajax-vs-nec-nijmegen": {
+      "key": "eredivisie:ajax-vs-nec-nijmegen",
+      "league": "eredivisie",
+      "slug": "ajax-vs-nec-nijmegen",
+      "homeTeam": "Ajax Amsterdam",
+      "awayTeam": "NEC Nijmegen",
+      "date": "2026-10-10",
+      "fixtureId": "401875589",
+      "predictionAccess": "vip",
+      "prediction": "Over 3.5 goals",
+      "odds": 1.78,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-10-10T22:00:29.883Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
     "eredivisie:feyenoord-vs-az-alkmaar": {
       "key": "eredivisie:feyenoord-vs-az-alkmaar",
       "league": "eredivisie",
@@ -360,6 +379,25 @@
       },
       "result": "red",
       "settledAt": "2026-10-10T18:45:10.591Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "eredivisie:fortuna-sittard-vs-fc-twente": {
+      "key": "eredivisie:fortuna-sittard-vs-fc-twente",
+      "league": "eredivisie",
+      "slug": "fortuna-sittard-vs-fc-twente",
+      "homeTeam": "Fortuna Sittard",
+      "awayTeam": "Twente",
+      "date": "2026-10-10",
+      "fixtureId": "401875588",
+      "predictionAccess": "vip",
+      "prediction": "Over 2.5 goals",
+      "odds": 1.35,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
     "eredivisie:go-ahead-eagles-vs-sparta-rotterdam": {
@@ -476,6 +514,44 @@
       "settledAt": "2026-10-10T14:27:14.380Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "la-liga:real-madrid-vs-villarreal": {
+      "key": "la-liga:real-madrid-vs-villarreal",
+      "league": "la-liga",
+      "slug": "real-madrid-vs-villarreal",
+      "homeTeam": "Real Madrid",
+      "awayTeam": "Villarreal",
+      "date": "2026-10-10",
+      "fixtureId": "401882848",
+      "predictionAccess": "free",
+      "prediction": "Real Madrid to Win + Over 2.5 Goals",
+      "odds": 1.56,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-10T22:00:29.883Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "liga-portugal:academico-viseu-vs-estoril-praia": {
+      "key": "liga-portugal:academico-viseu-vs-estoril-praia",
+      "league": "liga-portugal",
+      "slug": "academico-viseu-vs-estoril-praia",
+      "homeTeam": "Académico de Viseu",
+      "awayTeam": "Estoril",
+      "date": "2026-10-10",
+      "fixtureId": "401885429",
+      "predictionAccess": "free",
+      "prediction": "Académico de Viseu X1 + Over 1.5 Goals",
+      "odds": 1.83,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-10T22:00:29.883Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
     "liga-portugal:braga-vs-sporting": {
       "key": "liga-portugal:braga-vs-sporting",
       "league": "liga-portugal",
@@ -495,6 +571,44 @@
       "settledAt": "2026-10-09T21:28:25.608Z",
       "publishedAt": "2026-10-06T12:00:00.000Z"
     },
+    "liga-portugal:casa-pia-vs-santa-clara": {
+      "key": "liga-portugal:casa-pia-vs-santa-clara",
+      "league": "liga-portugal",
+      "slug": "casa-pia-vs-santa-clara",
+      "homeTeam": "Casa Pia",
+      "awayTeam": "Santa Clara",
+      "date": "2026-10-10",
+      "fixtureId": "401885426",
+      "predictionAccess": "vip",
+      "prediction": "Over 1.5 Goals",
+      "odds": 1.43,
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-10-10T22:00:29.883Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "liga-portugal:maritimo-vs-porto": {
+      "key": "liga-portugal:maritimo-vs-porto",
+      "league": "liga-portugal",
+      "slug": "maritimo-vs-porto",
+      "homeTeam": "Maritimo",
+      "awayTeam": "Porto",
+      "date": "2026-10-10",
+      "fixtureId": "401885424",
+      "predictionAccess": "vip",
+      "prediction": "FC Porto to Win + Over 1.5 Goals",
+      "odds": 1.56,
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-10T22:00:29.883Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
     "liga-portugal:moreirense-vs-gil-vicente": {
       "key": "liga-portugal:moreirense-vs-gil-vicente",
       "league": "liga-portugal",
@@ -513,6 +627,25 @@
       "result": "red",
       "settledAt": "2026-10-09T21:28:25.608Z",
       "publishedAt": "2026-10-06T12:00:00.000Z"
+    },
+    "ligue-1:brest-vs-angers": {
+      "key": "ligue-1:brest-vs-angers",
+      "league": "ligue-1",
+      "slug": "brest-vs-angers",
+      "homeTeam": "Brest",
+      "awayTeam": "Angers",
+      "date": "2026-10-10",
+      "fixtureId": "401876448",
+      "predictionAccess": "free",
+      "prediction": "Brest X1 + Over 1.5 Goals",
+      "odds": 1.62,
+      "finalScore": {
+        "home": 5,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-10T22:00:29.883Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
     "ligue-1:lens-vs-lyon": {
       "key": "ligue-1:lens-vs-lyon",
@@ -550,6 +683,63 @@
       },
       "result": "green",
       "settledAt": "2026-10-10T18:45:10.591Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "ligue-1:lorient-vs-paris-fc": {
+      "key": "ligue-1:lorient-vs-paris-fc",
+      "league": "ligue-1",
+      "slug": "lorient-vs-paris-fc",
+      "homeTeam": "Lorient",
+      "awayTeam": "Paris",
+      "date": "2026-10-10",
+      "fixtureId": "401876445",
+      "predictionAccess": "free",
+      "prediction": "Paris FC X2 + Over 1.5 Goals",
+      "odds": 1.82,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-10T22:00:29.883Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "ligue-1:monaco-vs-toulouse": {
+      "key": "ligue-1:monaco-vs-toulouse",
+      "league": "ligue-1",
+      "slug": "monaco-vs-toulouse",
+      "homeTeam": "AS Monaco",
+      "awayTeam": "Toulouse",
+      "date": "2026-10-10",
+      "fixtureId": "401876444",
+      "predictionAccess": "vip",
+      "prediction": "Monaco to Win",
+      "odds": 1.59,
+      "finalScore": {
+        "home": 2,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-10-10T22:00:29.883Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "ligue-1:psg-vs-le-mans": {
+      "key": "ligue-1:psg-vs-le-mans",
+      "league": "ligue-1",
+      "slug": "psg-vs-le-mans",
+      "homeTeam": "Paris Saint-Germain",
+      "awayTeam": "Le Mans",
+      "date": "2026-10-10",
+      "fixtureId": "401876442",
+      "predictionAccess": "free",
+      "prediction": "Paris Saint-Germain -2.5 Handicap",
+      "odds": 1.63,
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
     "premier-league:arsenal-vs-leeds": {
@@ -702,6 +892,25 @@
       },
       "result": "green",
       "settledAt": "2026-10-10T18:45:10.591Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "serie-a:napoli-vs-frosinone": {
+      "key": "serie-a:napoli-vs-frosinone",
+      "league": "serie-a",
+      "slug": "napoli-vs-frosinone",
+      "homeTeam": "Napoli",
+      "awayTeam": "Frosinone",
+      "date": "2026-10-10",
+      "fixtureId": "401874754",
+      "predictionAccess": "vip",
+      "prediction": "Napoli to Win + Over 1.5 Goals",
+      "odds": 1.62,
+      "finalScore": {
+        "home": 3,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
     "super-lig:alanyaspor-vs-erzurumspor": {
