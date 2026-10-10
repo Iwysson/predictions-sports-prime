@@ -1,0 +1,175 @@
+{
+  "generatedAt": "2026-10-10T13:32:09.270Z",
+  "records": [
+    {
+      "slug": "malaga-vs-espanyol",
+      "league": "la-liga",
+      "homeTeam": "Málaga",
+      "awayTeam": "Espanyol",
+      "date": "2026-10-09",
+      "prediction": "Over 1.5 goals + over 7.5 total corners",
+      "odds": 1.8,
+      "result": "green"
+    },
+    {
+      "slug": "borussia-dortmund-vs-werder-bremen",
+      "league": "bundesliga",
+      "homeTeam": "Borussia Dortmund",
+      "awayTeam": "Werder Bremen",
+      "date": "2026-10-09",
+      "prediction": "Borussia Dortmund to win + over 2.5 goals",
+      "odds": 1.7,
+      "result": "red"
+    },
+    {
+      "slug": "psv-vs-heerenveen",
+      "league": "eredivisie",
+      "homeTeam": "PSV Eindhoven",
+      "awayTeam": "Heerenveen",
+      "date": "2026-10-09",
+      "prediction": "PSV -1.5 handicap",
+      "odds": 1.57,
+      "result": "green"
+    },
+    {
+      "slug": "braga-vs-sporting",
+      "league": "liga-portugal",
+      "homeTeam": "Braga",
+      "awayTeam": "Sporting CP",
+      "date": "2026-10-09",
+      "prediction": "Sporting CP or draw (X2) + over 1.5 goals",
+      "odds": 1.73,
+      "result": "green"
+    },
+    {
+      "slug": "moreirense-vs-gil-vicente",
+      "league": "liga-portugal",
+      "homeTeam": "Moreirense",
+      "awayTeam": "Gil Vicente",
+      "date": "2026-10-09",
+      "prediction": "Over 1.5 goals",
+      "odds": 1.41,
+      "result": "red"
+    },
+    {
+      "slug": "lens-vs-lyon",
+      "league": "ligue-1",
+      "homeTeam": "Lens",
+      "awayTeam": "Lyon",
+      "date": "2026-10-09",
+      "prediction": "Lens or draw (1X) + over 1.5 goals",
+      "odds": 1.75,
+      "result": "green"
+    },
+    {
+      "slug": "galatasaray-vs-kasimpasa",
+      "league": "super-lig",
+      "homeTeam": "Galatasaray",
+      "awayTeam": "Kasimpasa",
+      "date": "2026-10-09",
+      "prediction": "Galatasaray -1.5 handicap",
+      "odds": 1.61,
+      "result": "green"
+    },
+    {
+      "slug": "athletico-pr-vs-atletico-mg",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Athletico-PR",
+      "awayTeam": "Atlético-MG",
+      "date": "2026-10-08",
+      "prediction": "Athletico-PR or Draw (1X) + Over 8.5 Corners",
+      "odds": 1.78,
+      "result": "green"
+    },
+    {
+      "slug": "fluminense-vs-coritiba",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Fluminense",
+      "awayTeam": "Coritiba",
+      "date": "2026-10-08",
+      "prediction": "Fluminense to win + Over 1.5 Goals",
+      "odds": 1.87,
+      "result": "green"
+    },
+    {
+      "slug": "palmeiras-vs-bahia",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Palmeiras",
+      "awayTeam": "Bahia",
+      "date": "2026-10-08",
+      "prediction": "Palmeiras to win",
+      "odds": 1.57,
+      "result": "green"
+    },
+    {
+      "slug": "santos-vs-flamengo",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Santos",
+      "awayTeam": "Flamengo",
+      "date": "2026-10-08",
+      "prediction": "Santos or Draw (1X)",
+      "odds": 2,
+      "result": "green"
+    },
+    {
+      "slug": "cruzeiro-vs-sao-paulo",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Cruzeiro",
+      "awayTeam": "São Paulo",
+      "date": "2026-10-07",
+      "prediction": "Cruzeiro or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.67,
+      "result": "green"
+    },
+    {
+      "slug": "botafogo-vs-vasco",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Botafogo",
+      "awayTeam": "Vasco",
+      "date": "2026-10-07",
+      "prediction": "Botafogo or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.95,
+      "result": "red"
+    },
+    {
+      "slug": "bragantino-vs-mirassol",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Bragantino",
+      "awayTeam": "Mirassol",
+      "date": "2026-10-07",
+      "prediction": "Bragantino or Draw (1X) + Over 8.5 Corners",
+      "odds": 1.65,
+      "result": "green"
+    },
+    {
+      "slug": "internacional-vs-corinthians",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Internacional",
+      "awayTeam": "Corinthians",
+      "date": "2026-10-07",
+      "prediction": "Over 1.5 Goals + Over 7.5 Corners",
+      "odds": 1.78,
+      "result": "green"
+    },
+    {
+      "slug": "remo-vs-gremio",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Remo",
+      "awayTeam": "Grêmio",
+      "date": "2026-10-07",
+      "prediction": "Grêmio or Draw (X2)",
+      "odds": 1.7,
+      "result": "green"
+    },
+    {
+      "slug": "vitoria-vs-chapecoense",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Vitória",
+      "awayTeam": "Chapecoense",
+      "date": "2026-10-07",
+      "prediction": "Vitória to win",
+      "odds": 1.72,
+      "result": "green"
+    }
+  ]
+}
