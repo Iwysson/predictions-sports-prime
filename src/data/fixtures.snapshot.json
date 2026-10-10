@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-10T01:59:59.570Z",
+  "generatedAt": "2026-10-10T08:11:37.363Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -9351,9 +9351,9 @@
             "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885426",
-            "sourceAgreement": true,
+            "sourceAgreement": false,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-10T14:30Z"
+            "kickoffUtc": "2026-10-10T14:30:00.000Z"
           },
           {
             "round": 8,
@@ -15538,11 +15538,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-10T01:59:59.570Z",
+    "bundesliga": "2026-10-10T08:11:37.363Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
-    "liga-portugal": "2026-10-10T01:59:59.570Z",
-    "ligue-1": "2026-10-10T01:59:59.570Z",
-    "eredivisie": "2026-10-10T01:59:59.570Z",
+    "liga-portugal": "2026-10-10T08:11:37.363Z",
+    "ligue-1": "2026-10-10T08:11:37.363Z",
+    "eredivisie": "2026-10-10T08:11:37.363Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
