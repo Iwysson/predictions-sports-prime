@@ -2620,17 +2620,6 @@
   {
     "date": "2026-09-20",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Norwich City",
-    "away_team": "Bolton Wanderers",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.57,
-    "status": null
-  },
-  {
-    "date": "2026-09-20",
-    "sport": "football",
     "league": "ligue-1",
     "home_team": "OGC Nice",
     "away_team": "Lille OSC",
@@ -2794,17 +2783,6 @@
     "status": null
   },
   {
-    "date": "2026-09-20",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Wolverhampton Wanderers",
-    "away_team": "West Bromwich Albion",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.85,
-    "status": null
-  },
-  {
     "date": "2026-09-19",
     "sport": "football",
     "league": "eredivisie",
@@ -2873,17 +2851,6 @@
   {
     "date": "2026-09-19",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Birmingham City",
-    "away_team": "Middlesbrough",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.72,
-    "status": null
-  },
-  {
-    "date": "2026-09-19",
-    "sport": "football",
     "league": "serie-a",
     "home_team": "Bologna",
     "away_team": "Torino",
@@ -2917,34 +2884,12 @@
   {
     "date": "2026-09-19",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Burnley",
-    "away_team": "Derby County",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.83,
-    "status": null
-  },
-  {
-    "date": "2026-09-19",
-    "sport": "football",
     "league": "la-liga",
     "home_team": "CA Osasuna",
     "away_team": "Rayo Vallecano",
     "prediction": "Rayo Vallecano or Draw (X2)",
     "market": "Double Chance",
     "odds": 1.6,
-    "status": null
-  },
-  {
-    "date": "2026-09-19",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Cardiff City",
-    "away_team": "Charlton Athletic",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.65,
     "status": null
   },
   {
@@ -3148,28 +3093,6 @@
   {
     "date": "2026-09-19",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Lincoln City",
-    "away_team": "Swansea City",
-    "prediction": "Over 1.5 Goals + Over 8.5 Corners",
-    "market": "Corners",
-    "odds": 1.85,
-    "status": null
-  },
-  {
-    "date": "2026-09-19",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Millwall",
-    "away_team": "West Ham United",
-    "prediction": "West Ham United or Draw (X2) + Under 4.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.53,
-    "status": null
-  },
-  {
-    "date": "2026-09-19",
-    "sport": "football",
     "league": "mls",
     "home_team": "Minnesota United FC",
     "away_team": "LA Galaxy",
@@ -3286,28 +3209,6 @@
     "prediction": "Portland Timbers or Draw (1X) + Under 4.5 Goals",
     "market": "Double Chance",
     "odds": 1.75,
-    "status": null
-  },
-  {
-    "date": "2026-09-19",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Portsmouth",
-    "away_team": "Blackburn Rovers",
-    "prediction": "Over 9.5 Corners",
-    "market": "Corners",
-    "odds": 1.6,
-    "status": null
-  },
-  {
-    "date": "2026-09-19",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Queens Park Rangers",
-    "away_team": "Preston North End",
-    "prediction": "Queens Park Rangers to Win",
-    "market": "Match Winner",
-    "odds": 1.72,
     "status": null
   },
   {
@@ -3434,17 +3335,6 @@
   {
     "date": "2026-09-19",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Stoke City",
-    "away_team": "Sheffield United",
-    "prediction": "Over 1.5 Goals + Over 7.5 Corners",
-    "market": "Corners",
-    "odds": 1.7,
-    "status": null
-  },
-  {
-    "date": "2026-09-19",
-    "sport": "football",
     "league": "premier-league",
     "home_team": "Tottenham Hotspur",
     "away_team": "Aston Villa",
@@ -3542,17 +3432,6 @@
     "status": null
   },
   {
-    "date": "2026-09-19",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Wrexham",
-    "away_team": "Southampton",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.78,
-    "status": null
-  },
-  {
     "date": "2026-09-18",
     "sport": "football",
     "league": "ligue-1",
@@ -3583,17 +3462,6 @@
     "prediction": "Chelsea or Draw (X2) + Over 1.5 Goals",
     "market": "Double Chance",
     "odds": 1.67,
-    "status": null
-  },
-  {
-    "date": "2026-09-18",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Bristol City",
-    "away_team": "Watford",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.88,
     "status": null
   },
   {
@@ -4050,17 +3918,6 @@
   {
     "date": "2026-09-15",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Bristol City",
-    "away_team": "Lincoln City",
-    "prediction": "Bristol City or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.65,
-    "status": null
-  },
-  {
-    "date": "2026-09-15",
-    "sport": "football",
     "league": "la-liga",
     "home_team": "Deportivo Alavés",
     "away_team": "Valencia CF",
@@ -4122,17 +3979,6 @@
     "prediction": "Liverpool win",
     "market": "Match Winner",
     "odds": 1.83,
-    "status": null
-  },
-  {
-    "date": "2026-09-15",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Middlesbrough",
-    "away_team": "Millwall",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.64,
     "status": null
   },
   {
@@ -4666,17 +4512,6 @@
   {
     "date": "2026-09-13",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Sheffield United",
-    "away_team": "Wolverhampton Wanderers",
-    "prediction": "Over 1.5 Goals + Over 7.5 Corners",
-    "market": "Corners",
-    "odds": 1.57,
-    "status": null
-  },
-  {
-    "date": "2026-09-13",
-    "sport": "football",
     "league": "eliteserien",
     "home_team": "Start",
     "away_team": "Brann",
@@ -4820,28 +4655,6 @@
   {
     "date": "2026-09-12",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Blackburn Rovers",
-    "away_team": "Millwall",
-    "prediction": "Over 8.5 Corners + Over 1.5 Goals",
-    "market": "Corners",
-    "odds": 1.65,
-    "status": null
-  },
-  {
-    "date": "2026-09-12",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Bolton Wanderers",
-    "away_team": "Cardiff City",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.62,
-    "status": null
-  },
-  {
-    "date": "2026-09-12",
-    "sport": "football",
     "league": "bundesliga",
     "home_team": "Borussia Dortmund",
     "away_team": "SC Paderborn 07",
@@ -4897,17 +4710,6 @@
   {
     "date": "2026-09-12",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Charlton Athletic",
-    "away_team": "Portsmouth",
-    "prediction": "Charlton Athletic or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 2.15,
-    "status": null
-  },
-  {
-    "date": "2026-09-12",
-    "sport": "football",
     "league": "premier-league",
     "home_team": "Chelsea",
     "away_team": "Hull City",
@@ -4958,17 +4760,6 @@
     "prediction": "D.C. United or Draw (1X) + Over 1.5 Goals",
     "market": "Double Chance",
     "odds": 1.7,
-    "status": null
-  },
-  {
-    "date": "2026-09-12",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Derby County",
-    "away_team": "Birmingham City",
-    "prediction": "Over 1.5 Goals + Over 8.5 Corners",
-    "market": "Corners",
-    "odds": 1.82,
     "status": null
   },
   {
@@ -5161,17 +4952,6 @@
   {
     "date": "2026-09-12",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Middlesbrough",
-    "away_team": "Norwich City",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.62,
-    "status": null
-  },
-  {
-    "date": "2026-09-12",
-    "sport": "football",
     "league": "liga-portugal",
     "home_team": "Nacional",
     "away_team": "Alverca",
@@ -5222,17 +5002,6 @@
     "prediction": "Over 2.5 Goals",
     "market": "Goals Over/Under",
     "odds": 1.72,
-    "status": null
-  },
-  {
-    "date": "2026-09-12",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Preston North End",
-    "away_team": "Lincoln City",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.87,
     "status": null
   },
   {
@@ -5337,17 +5106,6 @@
   {
     "date": "2026-09-12",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Southampton",
-    "away_team": "Bristol City",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.62,
-    "status": null
-  },
-  {
-    "date": "2026-09-12",
-    "sport": "football",
     "league": "mls",
     "home_team": "Sporting Kansas City",
     "away_team": "Los Angeles FC",
@@ -5392,17 +5150,6 @@
   {
     "date": "2026-09-12",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Swansea City",
-    "away_team": "Burnley",
-    "prediction": "Swansea City or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.75,
-    "status": null
-  },
-  {
-    "date": "2026-09-12",
-    "sport": "football",
     "league": "premier-league",
     "home_team": "Tottenham Hotspur",
     "away_team": "Everton",
@@ -5420,28 +5167,6 @@
     "prediction": "TSG Hoffenheim or Draw (1X)",
     "market": "Double Chance",
     "odds": 1.47,
-    "status": null
-  },
-  {
-    "date": "2026-09-12",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Watford",
-    "away_team": "Stoke City",
-    "prediction": "Watford or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.85,
-    "status": null
-  },
-  {
-    "date": "2026-09-12",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "West Bromwich Albion",
-    "away_team": "Queens Park Rangers",
-    "prediction": "West Bromwich Albion or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.62,
     "status": null
   },
   {
@@ -5519,17 +5244,6 @@
     "prediction": "Over 2.5 Goals",
     "market": "Goals Over/Under",
     "odds": 1.8,
-    "status": null
-  },
-  {
-    "date": "2026-09-11",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "West Ham United",
-    "away_team": "Wrexham",
-    "prediction": "West Ham United to Win",
-    "market": "Match Winner",
-    "odds": 1.62,
     "status": null
   },
   {
@@ -5700,17 +5414,6 @@
   {
     "date": "2026-09-09",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Charlton Athletic",
-    "away_team": "Queens Park Rangers",
-    "prediction": "Charlton Athletic or Draw (1X)",
-    "market": "Double Chance",
-    "odds": 1.62,
-    "status": null
-  },
-  {
-    "date": "2026-09-09",
-    "sport": "football",
     "league": "efl-cup",
     "home_team": "Chelsea",
     "away_team": "Leeds United",
@@ -5739,17 +5442,6 @@
     "prediction": "Over 2.5 Goals",
     "market": "Goals Over/Under",
     "odds": 1.72,
-    "status": null
-  },
-  {
-    "date": "2026-09-09",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Derby County",
-    "away_team": "West Bromwich Albion",
-    "prediction": "West Bromwich Albion or Draw (X2) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.91,
     "status": null
   },
   {
@@ -5849,17 +5541,6 @@
     "prediction": "New York City FC or Draw (1X) + Over 1.5 Goals",
     "market": "Double Chance",
     "odds": 1.75,
-    "status": null
-  },
-  {
-    "date": "2026-09-09",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Norwich City",
-    "away_team": "Birmingham City",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.82,
     "status": null
   },
   {
@@ -5997,28 +5678,6 @@
   {
     "date": "2026-09-08",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Blackburn Rovers",
-    "away_team": "Sheffield United",
-    "prediction": "Over 1.5 Goals + Over 8.5 Corners",
-    "market": "Corners",
-    "odds": 1.75,
-    "status": "awaiting-data"
-  },
-  {
-    "date": "2026-09-08",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Bolton Wanderers",
-    "away_team": "West Ham United",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.65,
-    "status": "green"
-  },
-  {
-    "date": "2026-09-08",
-    "sport": "football",
     "league": "champions-league",
     "home_team": "Borussia Dortmund",
     "away_team": "Villarreal",
@@ -6037,17 +5696,6 @@
     "market": "Asian Handicap",
     "odds": 1.9,
     "status": "green"
-  },
-  {
-    "date": "2026-09-08",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Cardiff City",
-    "away_team": "Stoke City",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.62,
-    "status": "red"
   },
   {
     "date": "2026-09-08",
@@ -6151,45 +5799,12 @@
   {
     "date": "2026-09-08",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Southampton",
-    "away_team": "Swansea City",
-    "prediction": "Swansea City or Draw (X2)",
-    "market": "Double Chance",
-    "odds": 1.93,
-    "status": "red"
-  },
-  {
-    "date": "2026-09-08",
-    "sport": "football",
     "league": "efl-cup",
     "home_team": "Sunderland",
     "away_team": "Hull City",
     "prediction": "Sunderland to Win",
     "market": "Match Winner",
     "odds": 1.7,
-    "status": "green"
-  },
-  {
-    "date": "2026-09-08",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Watford",
-    "away_team": "Preston North End",
-    "prediction": "Watford or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.67,
-    "status": "green"
-  },
-  {
-    "date": "2026-09-08",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Wrexham",
-    "away_team": "Burnley",
-    "prediction": "Wrexham or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.62,
     "status": "green"
   },
   {
@@ -6322,17 +5937,6 @@
     "prediction": "Arsenal to win",
     "market": "Match Winner",
     "odds": 1.73,
-    "status": null
-  },
-  {
-    "date": "2026-09-06",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Birmingham City",
-    "away_team": "Wolverhampton Wanderers",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 2.1,
     "status": null
   },
   {
@@ -6789,17 +6393,6 @@
   {
     "date": "2026-09-05",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Burnley",
-    "away_team": "Bristol City",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.87,
-    "status": null
-  },
-  {
-    "date": "2026-09-05",
-    "sport": "football",
     "league": "mls",
     "home_team": "Charlotte FC",
     "away_team": "Houston Dynamo",
@@ -6998,17 +6591,6 @@
   {
     "date": "2026-09-05",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Lincoln City",
-    "away_team": "Southampton",
-    "prediction": "Over 1.5 Goals + Over 8.5 Corners",
-    "market": "Corners",
-    "odds": 1.7,
-    "status": null
-  },
-  {
-    "date": "2026-09-05",
-    "sport": "football",
     "league": "premier-league",
     "home_team": "Manchester City",
     "away_team": "Coventry City",
@@ -7026,17 +6608,6 @@
     "prediction": "Benfica to win",
     "market": "Match Winner",
     "odds": 1.28,
-    "status": null
-  },
-  {
-    "date": "2026-09-05",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Millwall",
-    "away_team": "Bolton Wanderers",
-    "prediction": "Millwall or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.67,
     "status": null
   },
   {
@@ -7114,39 +6685,6 @@
     "prediction": "Minnesota United or Draw (X2)",
     "market": "Double Chance",
     "odds": 1.78,
-    "status": null
-  },
-  {
-    "date": "2026-09-05",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Portsmouth",
-    "away_team": "Cardiff City",
-    "prediction": "Portsmouth or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.78,
-    "status": null
-  },
-  {
-    "date": "2026-09-05",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Preston North End",
-    "away_team": "Blackburn Rovers",
-    "prediction": "Over 1.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.38,
-    "status": null
-  },
-  {
-    "date": "2026-09-05",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Queens Park Rangers",
-    "away_team": "Middlesbrough",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.82,
     "status": null
   },
   {
@@ -7262,17 +6800,6 @@
   {
     "date": "2026-09-05",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Sheffield United",
-    "away_team": "Norwich City",
-    "prediction": "Over 2.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.82,
-    "status": null
-  },
-  {
-    "date": "2026-09-05",
-    "sport": "football",
     "league": "liga-portugal",
     "home_team": "Sporting CP",
     "away_team": "C.D. Nacional",
@@ -7295,34 +6822,12 @@
   {
     "date": "2026-09-05",
     "sport": "football",
-    "league": "championship",
-    "home_team": "Stoke City",
-    "away_team": "Charlton Athletic",
-    "prediction": "Stoke City or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.82,
-    "status": null
-  },
-  {
-    "date": "2026-09-05",
-    "sport": "football",
     "league": "bundesliga",
     "home_team": "SV Werder Bremen",
     "away_team": "RB Leipzig",
     "prediction": "RB Leipzig or Draw (X2) + Over 7.5 Corners",
     "market": "Corners",
     "odds": 1.6,
-    "status": null
-  },
-  {
-    "date": "2026-09-05",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "Swansea City",
-    "away_team": "Wrexham",
-    "prediction": "Swansea City or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.75,
     "status": null
   },
   {
@@ -7367,28 +6872,6 @@
     "prediction": "Over 2.5 Goals",
     "market": "Goals Over/Under",
     "odds": 1.75,
-    "status": null
-  },
-  {
-    "date": "2026-09-05",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "West Bromwich Albion",
-    "away_team": "Watford",
-    "prediction": "West Bromwich Albion or Draw (1X) + Over 1.5 Goals",
-    "market": "Double Chance",
-    "odds": 1.67,
-    "status": null
-  },
-  {
-    "date": "2026-09-05",
-    "sport": "football",
-    "league": "championship",
-    "home_team": "West Ham United",
-    "away_team": "Derby County",
-    "prediction": "West Ham United to Win + Over 1.5 Goals",
-    "market": "Goals Over/Under",
-    "odds": 1.62,
     "status": null
   },
   {

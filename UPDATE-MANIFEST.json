@@ -2,7 +2,7 @@
   "matchDate": "2026-09-05",
   "updatedDate": "2026-09-04",
   "updatedAt": "2026-09-04T18:45:00-03:00",
-  "totalMatches": 65,
+  "totalMatches": 54,
   "note": "Original publishedAt values were preserved; only updatedAt was added or refreshed.",
   "files": [
     {
@@ -286,72 +286,6 @@
       "publishedAt": "2026-08-30T10:00:00-03:00",
       "updatedAt": "2026-09-04T18:45:00-03:00",
       "action": "updatedAt adicionado: 2026-09-04T18:45:00-03:00"
-    },
-    {
-      "file": "championship/round-05/stoke-city-vs-charlton-athletic.ts",
-      "publishedAt": "2026-09-03T11:30:00-03:00",
-      "updatedAt": "2026-09-04T18:45:00-03:00",
-      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
-    },
-    {
-      "file": "championship/round-05/burnley-vs-bristol-city.ts",
-      "publishedAt": "2026-09-03T11:30:00-03:00",
-      "updatedAt": "2026-09-04T18:45:00-03:00",
-      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
-    },
-    {
-      "file": "championship/round-05/preston-vs-blackburn.ts",
-      "publishedAt": "2026-09-03T11:30:00-03:00",
-      "updatedAt": "2026-09-04T18:45:00-03:00",
-      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
-    },
-    {
-      "file": "championship/round-05/lincoln-vs-southampton.ts",
-      "publishedAt": "2026-09-03T11:30:00-03:00",
-      "updatedAt": "2026-09-04T18:45:00-03:00",
-      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
-    },
-    {
-      "file": "championship/round-05/portsmouth-vs-cardiff-city.ts",
-      "publishedAt": "2026-09-03T11:30:00-03:00",
-      "updatedAt": "2026-09-04T18:45:00-03:00",
-      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
-    },
-    {
-      "file": "championship/round-05/west-ham-vs-derby-county.ts",
-      "publishedAt": "2026-09-03T11:30:00-03:00",
-      "updatedAt": "2026-09-04T18:45:00-03:00",
-      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
-    },
-    {
-      "file": "championship/round-05/swansea-city-vs-wrexham.ts",
-      "publishedAt": "2026-09-03T11:30:00-03:00",
-      "updatedAt": "2026-09-04T18:45:00-03:00",
-      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
-    },
-    {
-      "file": "championship/round-05/qpr-vs-middlesbrough.ts",
-      "publishedAt": "2026-09-03T11:30:00-03:00",
-      "updatedAt": "2026-09-04T18:45:00-03:00",
-      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
-    },
-    {
-      "file": "championship/round-05/sheffield-united-vs-norwich-city.ts",
-      "publishedAt": "2026-09-03T11:30:00-03:00",
-      "updatedAt": "2026-09-04T18:45:00-03:00",
-      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
-    },
-    {
-      "file": "championship/round-05/west-brom-vs-watford.ts",
-      "publishedAt": "2026-09-03T11:30:00-03:00",
-      "updatedAt": "2026-09-04T18:45:00-03:00",
-      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
-    },
-    {
-      "file": "championship/round-05/millwall-vs-bolton-wanderers.ts",
-      "publishedAt": "2026-09-03T11:30:00-03:00",
-      "updatedAt": "2026-09-04T18:45:00-03:00",
-      "action": "updatedAt 2026-09-03T16:00:00-03:00 -> 2026-09-04T18:45:00-03:00"
     },
     {
       "file": "scottish-premiership/round-06/rangers-vs-motherwell.ts",

@@ -54,7 +54,6 @@ const LOW_VALUE_PARAGRAPH_PREFIXES = [
   "the main limitation is sample size the relevant home away windows contain 2 and 2 matches",
   "btts stands at 100 for the home sample and 50 for the away sample",
   "the first restraint is sample size the main home away comparison contains only",
-  "the primary home away rows remain restricted to championship",
   "btts stands at 50 for the home sample and 100 for the away sample",
   "btts stands at 100 for the home sample and 100 for the away sample",
   "the market price is attractive only if the full pre match picture supports",

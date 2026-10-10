@@ -6,7 +6,6 @@ import { bundesligaPredictions } from "./bundesliga";
 import { eredivisiePredictions } from "./eredivisie";
 import { eliteserienPredictions } from "./eliteserien";
 import { superLigPredictions } from "./super-lig";
-import { championshipPredictions } from "./championship";
 import { mlsPredictions } from "./mls";
 import { scottishPremiershipPredictions } from "./scottish-premiership";
 import { premierLeaguePredictions } from "./premier-league";
@@ -28,7 +27,6 @@ export const editorialPredictionsRaw = [
   ...eredivisiePredictions,
   ...eliteserienPredictions,
   ...superLigPredictions,
-  ...championshipPredictions,
   ...mlsPredictions,
   ...scottishPremiershipPredictions,
   ...premierLeaguePredictions,

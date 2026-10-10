@@ -12,7 +12,6 @@ export type LeagueSlug =
   | "brasileirao-serie-a"
   | "copa-do-brasil"
   | "efl-cup"
-  | "championship"
   | "super-lig"
   | "scottish-premiership"
   | "eliteserien"
