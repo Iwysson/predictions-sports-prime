@@ -1,6 +1,26 @@
 {
-  "generatedAt": "2026-10-11T13:37:59.540Z",
+  "generatedAt": "2026-10-11T13:41:45.363Z",
   "records": [
+    {
+      "slug": "fc-utrecht-vs-willem-ii",
+      "league": "eredivisie",
+      "homeTeam": "Utrecht",
+      "awayTeam": "Willem II",
+      "date": "2026-10-11",
+      "prediction": "FC Utrecht to win",
+      "odds": 1.48,
+      "result": "green"
+    },
+    {
+      "slug": "como-vs-roma",
+      "league": "serie-a",
+      "homeTeam": "Como",
+      "awayTeam": "AS Roma",
+      "date": "2026-10-11",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.63,
+      "result": "red"
+    },
     {
       "slug": "sao-paulo-vs-vitoria",
       "league": "brasileirao-serie-a",
