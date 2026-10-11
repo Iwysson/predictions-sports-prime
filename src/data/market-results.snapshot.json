@@ -118,5 +118,17 @@
     "awayCorners": 2,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882851",
     "capturedAt": "2026-10-09T21:56:26.842Z"
+  },
+  "la-liga:elche-vs-celta": {
+    "homeCorners": 5,
+    "awayCorners": 2,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882854",
+    "capturedAt": "2026-10-11T18:05:12.957Z"
+  },
+  "premier-league:crystal-palace-vs-nottingham-forest": {
+    "homeCorners": 5,
+    "awayCorners": 8,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/summary?event=401879266",
+    "capturedAt": "2026-10-11T18:05:12.957Z"
   }
 }
