@@ -26,3 +26,16 @@ export function formatNhlDayLabel(dayKey: string): string {
     timeZone: "UTC",
   });
 }
+
+// The instant (UTC) at which `dayKey` becomes the active NHL day: 00:00 America/New_York. DST is handled by
+// probing the two possible offsets (UTC-4 and UTC-5) with the same day resolver the page uses. Used as the
+// editorial "published/active since" timestamp of a slate; it is never the build time.
+export function getNhlDayStart(dayKey: string): Date | null {
+  for (const hours of [4, 5]) {
+    const candidate = new Date(`${dayKey}T0${hours}:00:00Z`);
+    if (Number.isNaN(candidate.getTime())) return null;
+    const before = new Date(candidate.getTime() - 1000);
+    if (getNhlTodayKey(candidate) === dayKey && getNhlTodayKey(before) !== dayKey) return candidate;
+  }
+  return null;
+}

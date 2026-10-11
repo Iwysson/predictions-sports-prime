@@ -33,13 +33,11 @@ export const metadata: Metadata = {
 
   keywords: [
     "football predictions",
-    "football tips",
-    "match predictions",
+    "NFL predictions",
+    "NHL predictions",
+    "MLS predictions",
     "Premier League predictions",
-    "La Liga predictions",
-    "Bundesliga predictions",
-    "Serie A predictions",
-    "football match analysis",
+    "sports betting analysis",
   ],
 
   icons: {

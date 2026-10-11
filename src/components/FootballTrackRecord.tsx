@@ -4,7 +4,7 @@ import Link from "@/components/DocumentLink";
 import { useAuth } from "@/auth/AuthProvider";
 import { VipCheckoutButton } from "@/components/VipCheckoutButton";
 import { trackRecordPromoState } from "@/lib/football-track-record";
-import { summarizeResults, type FootballResultRecord } from "@/lib/football-results";
+import { resultsScope, resultsScopeLabel, summarizeResults, type FootballResultRecord } from "@/lib/football-results";
 
 function formatWinRate(winRate: number | null) {
   return winRate === null ? null : `${(winRate * 100).toFixed(1)}%`;
@@ -57,13 +57,15 @@ function TrackRecordPromo() {
 export function FootballTrackRecord({ records }: { records: FootballResultRecord[] }) {
   if (records.length === 0) return null;
   const overall = summarizeResults(records);
+  const scope = resultsScope(records);
+  const period = resultsScopeLabel(scope);
 
   return (
     <section className="track-record" aria-labelledby="football-track-record-title">
       <div className="track-record__heading">
-        <span className="eyebrow">Overall Track Record</span>
-        <h3 id="football-track-record-title">{overall.wins}-{overall.losses} across all settled football predictions</h3>
-        <p>Performance across all settled football predictions published by Predictions Sports Prime. Pushes, half results and voids stay visible but do not enter the win-rate denominator.</p>
+        <span className="eyebrow">Registered track record</span>
+        <h3 id="football-track-record-title">{overall.wins}-{overall.losses} across {scope.count} settled football predictions{period ? ` (${period})` : ""}</h3>
+        <p>Scope: the {scope.count} settled football predictions currently registered in the results archive{period ? `, with match dates from ${period}` : ""}. This is a snapshot of the registered period, not a lifetime or all-time record, because the results archive was introduced after the earliest analyses were published. The totals and the win rate update automatically as more predictions are settled. Pushes, half results and voids stay visible but do not enter the win-rate denominator.</p>
       </div>
       <SummaryCards summary={overall} />
       <TrackRecordPromo />

@@ -55,7 +55,7 @@ export function nhlMatches(): NhlMatch[] {
 export const NHL_PAGE = {
   title: "NHL Predictions Today, Picks & Analysis | Predictions Sports Prime",
   description:
-    "Daily NHL predictions, picks and match analysis from Predictions Sports Prime, including FREE selections, BEST BET analysis and PRIME VIP coverage.",
+    "Today's NHL predictions and picks: moneyline and total-goals selections, game analysis, published odds and official NHL sources, with free analyses and PRIME VIP picks.",
   path: "/nhl/",
   h1: "NHL Predictions Today",
 };

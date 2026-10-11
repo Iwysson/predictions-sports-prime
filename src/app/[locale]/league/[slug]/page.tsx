@@ -11,7 +11,7 @@ import { LeagueEditorialHub } from "@/components/LeagueEditorialHub";
 import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
 import { SiteContactLine } from "@/components/SiteContactLine";
 import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/localized-editorial";
-import { leagues, leaguesBySlug } from "@/data/leagues";
+import { hasLocalizedLeaguePage, leagues, leaguesBySlug } from "@/data/leagues";
 import { matches, matchesByLeague } from "@/data/matches";
 import { editorialPredictions } from "@/data/predictions";
 import { standingsByLeague } from "@/data/standings";
@@ -34,9 +34,12 @@ import { getAdSenseIndexableSlugs, isAdSenseLeagueIndexable } from "@/lib/adsens
 import { resolveCanonicalMatches } from "@/lib/canonical-match";
 
 export const dynamicParams = false;
+// A localized competition page exists only for the competitions the localized site links to (see
+// hasLocalizedLeaguePage). The other competitions keep their English page; a localized copy would be an
+// unlinked, noindex duplicate.
 export function generateStaticParams() {
   return selectableLocaleSlugs.flatMap((locale) =>
-    leagues.map((league) => ({ locale, slug: league.slug }))
+    leagues.filter((league) => hasLocalizedLeaguePage(league.slug)).map((league) => ({ locale, slug: league.slug }))
   );
 }
 

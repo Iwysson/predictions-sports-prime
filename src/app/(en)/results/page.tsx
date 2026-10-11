@@ -4,7 +4,7 @@ import { PredictionResultsArchive } from "@/components/PredictionResultsArchive"
 import footballResults from "@/data/football-results.snapshot.json";
 import { settlementPreviews } from "@/lib/settlement-source";
 import { evaluatePredictionSettlement } from "@/lib/prediction-results";
-import { sortedResults, type FootballResultsDataset } from "@/lib/football-results";
+import { resultsScope, resultsScopeLabel, sortedResults, type FootballResultsDataset } from "@/lib/football-results";
 import { hydratePredictions } from "@/lib/live-predictions";
 import { buildLegalMetadata } from "@/lib/legal-pages";
 import { JsonLd } from "@/components/JsonLd";
@@ -28,6 +28,8 @@ export default async function ResultsPage() {
   const unsettled = resolved.filter((match) => !dataset.records[`${match.league}:${match.slug}`]);
   const inProgress = unsettled.filter((match) => match.fixtureStatus === "in-progress").length;
   const awaitingData = unsettled.filter((match) => match.fixtureStatus === "completed" && evaluatePredictionSettlement(match).status === "awaiting-data").length;
+  const scope = resultsScope(sortedResults(dataset));
+  const scopePeriod = resultsScopeLabel(scope);
   const listed = sortedResults(dataset).slice(0, RESULTS_VISIBLE_LIMIT);
   const collection = institutionalPageJsonLd("CollectionPage", "Football Prediction Results & Historical Picks", "/results/", description);
   const itemList = {
@@ -55,8 +57,8 @@ export default async function ResultsPage() {
           <SiteContactLine />
         </header>
         <section className="results-settlement-note">
-          <h2>Full archive</h2>
-          <p>Once a match is officially final and settled, its original pick and published odds appear here with the final score. Before and during the match, premium picks stay protected. Premium analysis stays in <Link href="/historypredictions/">Prediction History</Link> for VIP members.</p>
+          <h2>What this archive covers</h2>
+          <p>The archive currently registers {scope.count} settled football predictions{scopePeriod ? ` with match dates from ${scopePeriod}` : ""}. It is not a lifetime record. Once a match is officially final and settled, its original pick and published odds appear here with the final score. Before and during the match, premium picks stay protected. Premium analysis stays in <Link href="/historypredictions/">Prediction History</Link> for VIP members.</p>
         </section>
         <PredictionResultsArchive dataset={dataset} inProgress={inProgress} awaitingData={awaitingData} />
         <section className="results-settlement-note">

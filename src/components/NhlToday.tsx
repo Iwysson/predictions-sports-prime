@@ -168,14 +168,14 @@ function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: str
         </div>
         <p className="psp-game__meta">
           <NhlLeagueMark compact />
-          <span>{dayLabel ? `· ${dayLabel} ` : ""}· Kick-off time not listed</span>
+          <span>{dayLabel ? `· ${dayLabel} ` : ""}· Puck drop time not listed</span>
         </p>
       </div>
 
       <div className="psp-game__teams">
-        <TeamBadge team={m.homeTeam} />
-        <h2>{`${m.homeTeam} vs ${m.awayTeam} Prediction`}</h2>
         <TeamBadge team={m.awayTeam} />
+        <h2>{`${m.awayTeam} vs ${m.homeTeam} Prediction and Picks`}</h2>
+        <TeamBadge team={m.homeTeam} />
       </div>
 
       {isFree && m.pick !== undefined && m.odds !== undefined ? (
@@ -194,13 +194,13 @@ function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: str
             analysis={m.analysis ?? []}
             sources={m.sources ?? []}
             comment={null}
-            labels={{ prediction: L.prediction, odds: L.odds, analysis: translate("en", "matchAnalysisHeading"), sources: translate("en", "matchSourcesHeading") }}
+            labels={{ prediction: L.prediction, odds: L.odds, analysis: "Game analysis", sources: translate("en", "matchSourcesHeading") }}
           />
         </>
       ) : (
         <>
           <p className="psp-game__teaser">{m.teaser}</p>
-          <MatchGate slug={m.slug} showAnalysis showPrediction />
+          <MatchGate slug={m.slug} showAnalysis showPrediction variant="game" />
         </>
       )}
     </section>
@@ -286,7 +286,7 @@ export function NhlDaySlate({ initialKey }: { initialKey: string }) {
         <nav className="psp-jump" aria-label="NHL games on this page">
           {matches.map((m) => (
             <a key={m.slug} href={`#${m.slug}`}>
-              {m.homeTeam} vs {m.awayTeam}
+              {m.awayTeam} vs {m.homeTeam}
             </a>
           ))}
         </nav>

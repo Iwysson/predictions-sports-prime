@@ -5,6 +5,11 @@ import { matches } from "@/data/matches";
 import { editorialPredictions } from "@/data/predictions";
 import { isAdSenseContentIndexable, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
 import { isFutureFixture } from "@/lib/fixture-state";
+import footballResults from "@/data/football-results.snapshot.json";
+import { resolveNhlSlate } from "@/data/nhl/slates";
+import { intentHubInventory, selectIntentHubMatches } from "@/lib/intent-hubs";
+import { getNhlDayStart, getNhlTodayKey } from "@/lib/nhl-day";
+import type { FootballResultsDataset } from "@/lib/football-results";
 import { isLeagueIndexable } from "@/lib/league-seo";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
 import { isIndexableLocalizedHubLocale, localePath, seoLocaleSlugs } from "@/lib/seo-locales";
@@ -51,13 +56,15 @@ export function buildLeagueSitemap(
     isLeagueIndexable(leagueMatches.length) &&
     isAdSenseLeagueIndexable(leagueSlug, matches, editorialPredictions);
 
+  const leagueLastmod = leagueSitemapLastmod(leagueSlug);
   const leaguePages: MetadataRoute.Sitemap = leagueIndexable
     ? [
-        { url: absoluteUrl(`/league/${league.slug}/`) },
+        { url: absoluteUrl(`/league/${league.slug}/`), ...(leagueLastmod ? { lastModified: leagueLastmod } : {}) },
         ...seoLocaleSlugs
           .filter(isIndexableLocalizedHubLocale)
           .map((locale) => ({
             url: absoluteUrl(localePath(locale, `/league/${league.slug}/`)),
+            ...(leagueLastmod ? { lastModified: leagueLastmod } : {}),
           })),
       ]
     : [];
@@ -189,4 +196,47 @@ export function buildUpcomingMatchesSitemap(): MetadataRoute.Sitemap {
     })
     .sort((a, b) => (a.date ?? "").localeCompare(b.date ?? ""))
     .map((match) => matchSitemapEntry(match, matchCanonicalPath(match)));
+}
+
+// --- Hub lastmod -----------------------------------------------------------------------------------------
+// Only editorial dates are used: the latest material update of the predictions a hub lists, the NHL day of the
+// active slate, or the latest settlement written to the results dataset. Never the build time. A hub with no
+// such date simply has no lastmod (for example /nfl/, whose public week file carries no publication timestamp).
+
+function latestDate(values: Array<string | Date | undefined | null>): Date | undefined {
+  let latest: Date | undefined;
+  for (const value of values) {
+    if (!value) continue;
+    const parsed = value instanceof Date ? value : new Date(value);
+    if (Number.isNaN(parsed.getTime())) continue;
+    if (!latest || parsed > latest) latest = parsed;
+  }
+  return latest;
+}
+
+function inventoryLastmod(entries: Match[]) {
+  return latestDate(entries.map((match) => materialMatchUpdatedAt(match) ?? match.publishedAt));
+}
+
+export function hubLastModified(now: Date = new Date()): Record<string, Date | string | undefined> {
+  const published = matches.filter(
+    (match) => match.status === "published" && isAdSenseContentIndexable(match.slug, editorialPredictions)
+  );
+  const inventory = intentHubInventory(published, now) as Match[];
+  const football = inventoryLastmod(inventory);
+  const todays = inventoryLastmod(selectIntentHubMatches("today-predictions", published, now) as Match[]);
+  const nhlDay = resolveNhlSlate(getNhlTodayKey(now))?.dayKey;
+  const results = latestDate(Object.values((footballResults as FootballResultsDataset).records).map((record) => record.settledAt));
+  const nhlActiveSince = nhlDay ? getNhlDayStart(nhlDay) ?? undefined : undefined;
+  const homeCandidates = [football, nhlActiveSince];
+  return {
+    "/": latestDate(homeCandidates),
+    "/nhl/": nhlActiveSince,
+    "/results/": results,
+    "/football-predictions/": football,
+    "/soccer-predictions/": football,
+    "/betting-tips/": football,
+    "/picks/": football,
+    "/today-predictions/": todays,
+  };
 }

@@ -18,7 +18,7 @@ type Protected = {
 
 type State = { kind: "idle" } | { kind: "loading" } | { kind: "ready"; data: Protected } | { kind: "denied" };
 
-export function MatchGate({ slug, showAnalysis, showPrediction }: { slug: string; showAnalysis: boolean; showPrediction: boolean }) {
+export function MatchGate({ slug, showAnalysis, showPrediction, variant = "match" }: { slug: string; showAnalysis: boolean; showPrediction: boolean; variant?: "match" | "game" }) {
   const { t } = useI18n();
   const { user, isVip, loading } = useAuth();
   const [state, setState] = useState<State>({ kind: "idle" });
@@ -71,7 +71,7 @@ export function MatchGate({ slug, showAnalysis, showPrediction }: { slug: string
     <div className="psp-vip-card match-gate">
       <span className="psp-badge psp-badge--vip">PRIME VIP</span>
       <h3>{t("matchVipCardTitle")}</h3>
-      <p>{t("matchVipCardBody")}</p>
+      <p>{variant === "game" ? "Unlock the complete game analysis, prediction, odds, statistics and editorial reasoning." : t("matchVipCardBody")}</p>
       {!user ? (
         <Link className="button auth-primary-action" href="/login/">
           {t("matchLoginToContinue")}

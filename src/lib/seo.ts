@@ -251,6 +251,7 @@ export function organizationJsonLd() {
     name: siteConfig.name,
     alternateName: siteConfig.shortName,
     url: siteConfig.url,
+    description: "Independent publication of pre-match football, NFL and NHL predictions and analysis.",
     logo: {
       "@type": "ImageObject",
       url: absoluteUrl("/icon-512.png"),
@@ -275,7 +276,7 @@ export function homePageJsonLd() {
     isPartOf: { "@id": absoluteUrl("/#website") },
     about: {
       "@type": "Thing",
-      name: "Football predictions and match analysis",
+      name: "Football, NFL and NHL predictions and analysis",
     },
     publisher: { "@id": absoluteUrl("/#organization") },
   };

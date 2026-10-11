@@ -44,7 +44,7 @@ export default function PrivacyPage() {
         },
         {
           title: "Privacy requests and policy updates",
-          content: <><p>Depending on the law applicable to you, you may request confirmation of processing, access, correction or deletion of personal information, information about sharing, or withdrawal of consent. Send requests to <a className="legal-link" href={`mailto:${publicContactEmail}`}>{publicContactEmail}</a>, describing the information or activity concerned. We may need proportionate information to verify the request. You may also raise concerns with the data protection authority responsible for your location.</p><p>Changes to our services or data practices will be reflected on this page with a revised update date. The date above identifies the current version.</p></>,
+          content: <><p>Depending on the law applicable to you, you may request confirmation of processing, access, correction or deletion of personal information, information about sharing, or withdrawal of consent. Send requests to <a className="legal-link" href={`mailto:${publicContactEmail}`}>{publicContactEmail}</a>, describing the information or activity concerned. We may need proportionate information to verify the request. You may also raise concerns with the data protection authority responsible for your location. If you have a site account, the <a className="legal-link" href="/delete-account/">account deletion page</a> explains how to request its deletion.</p><p>Changes to our services or data practices will be reflected on this page with a revised update date. The date above identifies the current version.</p></>,
         },
       ]}
     />

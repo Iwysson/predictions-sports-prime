@@ -131,6 +131,7 @@ export function Header() {
       currentLocale="en"
       navItems={[
         { href: "/", label: t("home") },
+        { href: "/football-predictions/", label: "Football" },
         { href: "/nfl/", label: "NFL" },
         { href: "/nhl/", label: "NHL" },
       ]}

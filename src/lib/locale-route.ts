@@ -1,3 +1,4 @@
+import { hasLocalizedLeaguePage } from "@/data/leagues";
 import { localePath, seoLocaleSlugs, type SeoLocale } from "@/lib/seo-locales";
 
 const localePrefixes: readonly SeoLocale[] = ["en", ...seoLocaleSlugs];
@@ -19,8 +20,10 @@ export function normalizeRoutePath(pathname: string) {
   return `${pathname.replace(/\/+$/, "")}/`;
 }
 
+// Localized competition pages exist only for some competitions (see hasLocalizedLeaguePage).
 function isLeaguePath(path: string) {
-  return /^\/league\/[^/]+\/$/.test(path);
+  const match = path.match(/^\/league\/([^/]+)\/$/);
+  return Boolean(match && hasLocalizedLeaguePage(match[1]));
 }
 
 export function isMatchPath(path: string) {

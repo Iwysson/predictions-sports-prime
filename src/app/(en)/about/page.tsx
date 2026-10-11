@@ -5,10 +5,10 @@ import { editorialAuthor } from "@/lib/editorial-identity";
 import { JsonLd } from "@/components/JsonLd";
 import { institutionalPageJsonLd } from "@/lib/seo";
 
-const description = "Who produces Predictions Sports Prime, what the publication covers, how its football analysis is prepared and why it exists.";
+const description = "Who produces Predictions Sports Prime, what the publication covers across football, the NFL and the NHL, how its analysis is prepared and why it exists.";
 
 export const metadata = buildLegalMetadata(
-  "About Our Football Analysis",
+  "About Our Football, NFL and NHL Analysis",
   "/about/",
   description
 );
@@ -19,7 +19,7 @@ export default function AboutPage() {
     <JsonLd data={institutionalPageJsonLd("AboutPage", "About Predictions Sports Prime", "/about/", description)} />
     <LegalPage
       titleKey="about"
-      intro="Predictions Sports Prime is an independent publication for pre-match football analysis and predictions."
+      intro="Predictions Sports Prime is an independent publication for pre-match football analysis and predictions, with NFL and NHL game predictions on dedicated hubs."
       sections={[
         {
           title: "What we publish",
@@ -31,7 +31,7 @@ export default function AboutPage() {
         },
         {
           title: "Coverage",
-          content: <p>Coverage focuses on club and national-team football: the Premier League, La Liga, Bundesliga, Serie A, Ligue 1, Liga Portugal, Eredivisie, Brasileirão Série A, Süper Lig, Scottish Premiership, Eliteserien and Major League Soccer, plus cup and continental competitions, the UEFA Nations League and international friendlies. Each fixture page is meant to be read as a stand-alone match preview, and each competition page groups the fixtures published for that league.</p>,
+          content: <p>Coverage focuses on club and national-team football: the Premier League, La Liga, Bundesliga, Serie A, Ligue 1, Liga Portugal, Eredivisie, Brasileirão Série A, Süper Lig, Scottish Premiership, Eliteserien and Major League Soccer, plus cup and continental competitions, the UEFA Nations League and international friendlies. Alongside football, the NFL hub publishes weekly game predictions and the NHL hub publishes daily game predictions, each on a single hub page. Each football fixture page is meant to be read as a stand-alone match preview, and each competition page groups the fixtures published for that league.</p>,
         },
         {
           title: "What a match page contains",

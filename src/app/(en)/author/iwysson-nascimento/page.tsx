@@ -32,7 +32,7 @@ export default function AuthorPage() {
             title: "Published analysis",
             content: (
               <p>
-                The content covers pre-match football analysis and predictions.
+                The content covers pre-match football analysis and predictions, together with NFL and NHL game predictions.
                 Each prediction is an editorial assessment intended to give readers
                 context about a fixture; sporting results are not guaranteed.
               </p>

@@ -45,7 +45,7 @@ export function PredictionLeagueCategories({
                 <div className="league-card-copy">
                   <span className="featured-league-badge">Today&apos;s picks</span>
                   <strong>NHL Predictions</strong>
-                  <small>North America</small>
+                  <small>Ice hockey</small>
                 </div>
                 <span className="arrow">→</span>
               </Link>
@@ -56,7 +56,7 @@ export function PredictionLeagueCategories({
                 <div className="league-card-copy">
                   <span className="featured-league-badge">Weekly picks</span>
                   <strong>NFL Predictions</strong>
-                  <small>North America</small>
+                  <small>American football</small>
                 </div>
                 <span className="arrow">→</span>
               </Link>

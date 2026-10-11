@@ -6,16 +6,17 @@ import { ArticleByline } from "@/components/ArticleByline";
 import { JsonLd } from "@/components/JsonLd";
 import { MatchFullContent } from "@/components/MatchFullContent";
 import { MatchGate } from "@/components/MatchGate";
+import { MatchPublicContext } from "@/components/MatchPublicContext";
 import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
 import { SiteContactLine } from "@/components/SiteContactLine";
 import { ResponsibleGamblingNotice } from "@/components/ResponsibleGamblingNotice";
 import { TeamBadge } from "@/components/TeamBadge";
 import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
 import { isPspEditorialStandard } from "@/lib/editorial-standard";
-import { localePath, seoLocaleSlugs, type SeoLocaleSlug } from "@/lib/seo-locales";
+import { seoLocaleSlugs, type SeoLocaleSlug } from "@/lib/seo-locales";
 import { formatMatchDate, hasMatchPage, matchSlug } from "@/lib/match-access";
 import { buildMatchPageModel } from "@/lib/match-page-model";
-import { absoluteUrl } from "@/lib/site-config";
+import { buildMatchPageMetadata, relatedMatchEntries } from "@/lib/match-page-seo";
 import type { EditorialPrediction } from "@/types";
 
 // Template for /match/[slug]/. Restored by scripts/sync-match-routes.mts when a future
@@ -47,13 +48,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const prediction = publishable().find((p) => matchSlug(p) === slug);
   const model = prediction && isLocale(locale) ? buildMatchPageModel(prediction, locale) : null;
   if (!model || !isLocale(locale)) return {};
-  return {
-    title: model.seoTitle,
-    description: model.view.teaser,
-    alternates: { canonical: absoluteUrl(localePath(locale, `/match/${slug}/`)) },
-    // Same quality gate as the sitemap: pages that fail it stay out of the index.
-    robots: { index: isAdSenseContentIndexable(slug, editorialPredictions as EditorialPrediction[]), follow: true },
-  };
+  // Same quality gate as the sitemap: pages that fail it stay out of the index.
+  const indexable = isAdSenseContentIndexable(slug, editorialPredictions as EditorialPrediction[]);
+  return buildMatchPageMetadata({ prediction: prediction as EditorialPrediction, model, slug, locale, indexable });
 }
 
 export default async function LocalizedMatchPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
@@ -64,8 +61,7 @@ export default async function LocalizedMatchPage({ params }: { params: Promise<{
   if (!model || !prediction) notFound();
   // Other publishable matches in the same league, for internal links (titles only).
   // When the league has no other published match, link to other published matches instead.
-  const sameLeague = publishable().filter((p) => p.league === prediction.league && matchSlug(p) !== slug);
-  const related = (sameLeague.length ? sameLeague : publishable().filter((p) => matchSlug(p) !== slug)).slice(0, 4);
+  const { sameLeague, other } = relatedMatchEntries(prediction, slug, publishable(), matchSlug);
   const leagueName = leaguesBySlug[prediction.league]?.name ?? prediction.league;
   const v = model.view;
   const analysisFree = v.analysisAccess === "free";
@@ -148,6 +144,10 @@ export default async function LocalizedMatchPage({ params }: { params: Promise<{
               />
             ) : null}
 
+            {model.publicContext && model.gate?.showAnalysis ? (
+              <MatchPublicContext context={model.publicContext} homeTeam={v.homeTeam} awayTeam={v.awayTeam} />
+            ) : null}
+
             {model.gate ? (
               <div data-prediction-reveal="locked" data-protected-content="analysis" className="match-gate-slot">
                 <MatchGate slug={model.gate.slug} showAnalysis={model.gate.showAnalysis} showPrediction={model.gate.showPrediction} />
@@ -158,22 +158,41 @@ export default async function LocalizedMatchPage({ params }: { params: Promise<{
           </div>
 
           <aside className="psp-match-side">
-            {related.length ? (
-              <div className="psp-related">
-              <section className="related-predictions">
-                <h2>{sameLeague.length ? `More ${leagueName} predictions` : "More football predictions"}</h2>
-                <ul>
-                  {related.map((p) => (
-                    <li key={matchSlug(p)}>
-                      <a href={`/match/${matchSlug(p)}/`} aria-label={`${p.homeTeam} vs ${p.awayTeam} Prediction`}>
-                        {`${p.homeTeam} vs ${p.awayTeam} Prediction`}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-              </div>
-            ) : null}
+            <div className="psp-related">
+              {sameLeague.length ? (
+                <section className="related-predictions">
+                  <h2>{`More ${leagueName} predictions`}</h2>
+                  <ul>
+                    {sameLeague.map((p) => (
+                      <li key={matchSlug(p)}>
+                        <a href={`/match/${matchSlug(p)}/`} aria-label={`${p.homeTeam} vs ${p.awayTeam} Prediction`}>
+                          {`${p.homeTeam} vs ${p.awayTeam} Prediction`}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
+              {other.length ? (
+                <section className="related-predictions">
+                  <h2>{sameLeague.length ? "Also coming up" : "More football predictions"}</h2>
+                  <ul>
+                    {other.map((p) => (
+                      <li key={matchSlug(p)}>
+                        <a href={`/match/${matchSlug(p)}/`} aria-label={`${p.homeTeam} vs ${p.awayTeam} Prediction`}>
+                          {`${p.homeTeam} vs ${p.awayTeam} Prediction`}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
+              <nav className="related-predictions related-predictions--hubs" aria-label="Prediction hubs">
+                <a href={`/league/${prediction.league}/`}>{`All ${leagueName} predictions`}</a>
+                <a href="/today-predictions/">Today&apos;s football predictions</a>
+                <a href="/results/">Prediction results</a>
+              </nav>
+            </div>
           </aside>
         </div>
 

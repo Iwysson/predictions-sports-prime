@@ -1,11 +1,10 @@
 "use client";
 
 import { useAuth } from "@/auth/AuthProvider";
-import { PrimeVipCountdown } from "@/components/PrimeVipCountdown";
 import { VipCheckoutButton } from "@/components/VipCheckoutButton";
 
 // Commercial PRIME VIP offer. Presentation only: no VIP content, prices come from the existing
-// checkout flow. Hidden for confirmed VIP members (trialing or active). Shown while auth loads.
+// checkout flow. Hidden for confirmed VIP members (active subscription). Shown while auth loads.
 export function PrimeVipOfferCard() {
   const { loading, isVip } = useAuth();
   if (!loading && isVip) return null;
@@ -24,9 +23,7 @@ export function PrimeVipOfferCard() {
             </ul>
           </div>
           <div className="prime-vip-offer__price">
-            <span className="prime-vip-offer__promotion">BIG PROMOTION 24H</span>
-            <PrimeVipCountdown />
-            <del>$29.99 / month</del>
+            <span className="prime-vip-offer__promotion">Monthly plan</span>
             <strong>$19.99 <small>/ month</small></strong>
             <VipCheckoutButton label="Get PRIME VIP" />
           </div>

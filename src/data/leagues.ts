@@ -183,3 +183,15 @@ export const primaryPredictionLeagues = primaryPredictionLeagueSlugs
     return slug === "eredivisie" ? { ...league, name: "Eredivisie" } : league;
   }
 );
+
+// Competitions that have a localized page (/es/league/<slug>/ and the other localized locales): the primary
+// competitions plus every club competition the localized home links to. Any other competition keeps only its
+// English page, so no localized URL is generated that nothing links to.
+const localizedLeaguePageSlugs = new Set<string>([
+  ...primaryPredictionLeagues.map((league) => league.slug),
+  ...homeClubLeagues.map((league) => league.slug),
+]);
+
+export function hasLocalizedLeaguePage(slug: string) {
+  return localizedLeaguePageSlugs.has(slug);
+}

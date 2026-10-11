@@ -2,6 +2,8 @@ import type { MatchPreview, PredictionResultStatus } from "@/types";
 import { evaluatePredictionSettlement } from "@/lib/prediction-results";
 import { isCompletedFixture, isValidFinalScore } from "@/lib/fixture-status";
 
+export { resultsScope, formatScopeDate, resultsScopeLabel } from "@/lib/results-scope";
+
 /**
  * Central football results dataset: the single source read by both the global
  * Results page and the homepage preview. It is derived from published

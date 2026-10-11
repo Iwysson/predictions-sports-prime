@@ -7,6 +7,8 @@ import { materialMatchUpdatedAt } from "../src/lib/match-freshness.ts";
 import { classifyPspEditorialLifecycle } from "../src/lib/editorial-standard.ts";
 import { hasMatchPage } from "../src/lib/match-page-lifecycle.ts";
 import { publicContactEmail } from "../src/lib/editorial-identity.ts";
+import { SLATES } from "../src/data/nhl/slates.ts";
+import { getNhlDayStart } from "../src/lib/nhl-day.ts";
 
 const root = process.cwd();
 const outDir = join(root, "out");
@@ -429,6 +431,13 @@ for (const route of sitemapEntries.keys()) {
   }
 }
 
+const HUB_ROUTE = /^\/(?:(?:[a-z]{2}(?:-[a-z]{2})?)\/)?(?:league\/[^/]+\/)?$|^\/(?:nhl|results|football-predictions|soccer-predictions|betting-tips|picks|today-predictions)\/$/;
+const editorialHubTimestamps = new Set([
+  ...runtimeMatches.flatMap((match) => [materialMatchUpdatedAt(match), match.publishedAt]),
+  ...Object.values(JSON.parse(readFileSync(join(root, "src", "data", "football-results.snapshot.json"), "utf8")).records).map((record) => record.settledAt),
+  ...SLATES.map((slate) => getNhlDayStart(slate.dayKey)?.toISOString()),
+].filter(Boolean).map((value) => Date.parse(value)));
+
 for (const [route, lastmod] of sitemapEntries) {
   if (!lastmod) continue;
 
@@ -486,6 +495,16 @@ for (const [route, lastmod] of sitemapEntries) {
     }
     if (Date.parse(lastmod) !== Date.parse(expectedLastmod)) {
       errors.push(`${route}: NFL sitemap lastmod must equal Article dateModified ?? datePublished`);
+    }
+    continue;
+  }
+
+  // Hub pages may carry a lastmod only when it is an editorial date: the latest material update of a listed
+  // prediction, the activation instant of the active NHL slate, or the latest settlement in the results
+  // dataset. Never the build time, and never a value that is not in that set.
+  if (HUB_ROUTE.test(route)) {
+    if (!editorialHubTimestamps.has(Date.parse(lastmod))) {
+      errors.push(`${route}: hub sitemap lastmod ${lastmod} is not an editorial date (prediction update, NHL slate day, settlement)`);
     }
     continue;
   }

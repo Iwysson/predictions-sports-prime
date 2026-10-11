@@ -75,11 +75,11 @@ export function NhlHistory({ data }: { data: NhlHistoryApiResponse | null }) {
               {day.rows.map((row) => (
                 <div className="nhl-history__row" key={row.slug}>
                   <span className="nhl-history__fixture">
-                    <TeamBadge team={row.homeTeam} size="sm" />
-                    <span>
-                      {row.homeTeam} vs {row.awayTeam}
-                    </span>
                     <TeamBadge team={row.awayTeam} size="sm" />
+                    <span>
+                      {row.awayTeam} vs {row.homeTeam}
+                    </span>
+                    <TeamBadge team={row.homeTeam} size="sm" />
                   </span>
                   <span className="nhl-history__pick">
                     {row.pick} <b>{formatOddsPair(row.decimalOdds)}</b>

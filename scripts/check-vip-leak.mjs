@@ -29,12 +29,61 @@ for (const name of readdirSync("src/data/nhl").filter((name) => /^public-slate-.
 const leaks = [];
 const notes = [];
 
+const publicSections = JSON.parse(readFileSync("src/lib/public-context-sections.json", "utf8")).allowedHeadingPrefixes;
+// Paragraphs (80+ characters, not table rows) that belong to a section outside the public-context allowlist.
+function protectedParagraphs(markdown) {
+  const out = [];
+  let allowed = false;
+  let buffer = [];
+  const flush = () => {
+    if (!allowed) {
+      for (const block of buffer.join("\n").split(/\n\s*\n/)) {
+        const paragraph = block.trim();
+        if (paragraph.length >= 80 && !paragraph.startsWith("|") && !paragraph.startsWith("<!--")) out.push(paragraph);
+      }
+    }
+    buffer = [];
+  };
+  for (const line of markdown.replace(/\r\n/g, "\n").split("\n")) {
+    const heading = line.match(/^#{1,6}\s+(.+?)\s*$/);
+    if (heading) {
+      flush();
+      allowed = publicSections.some((prefix) => heading[1].replace(/\*\*/g, "").trim().toLowerCase().startsWith(prefix));
+      continue;
+    }
+    buffer.push(line);
+  }
+  flush();
+  return out;
+}
+
+// Paragraphs that a FREE analysis publishes anyway (shared editorial wording): identical text on a protected page
+// cannot be told apart from the public copy, so it is not reported as a leak of the protected page.
+const freeParagraphKeys = new Set(
+  index
+    .filter((entry) => entry.analysisAccess === "free")
+    .flatMap((entry) => entry.full.analysis.join("\n\n").split("\n").filter((line) => !/^#{1,6}\s/.test(line)).join("\n").split(/\n\s*\n/).map((block) => block.trim().slice(0, 200))),
+);
+
 for (const e of index) {
   // Protected analysis paragraphs must never appear in the static output.
   if (e.analysisAccess !== "free") {
     for (const paragraph of e.full.analysis) {
       for (const { f, text } of corpus) {
         if (text.includes(paragraph.slice(0, 60))) leaks.push({ kind: "analysis", slug: e.slug, file: f });
+      }
+    }
+  }
+  // The analysis of a markdown page is one array element, so the check above only covers its opening line.
+  // Check every paragraph (first 200 characters, so the public trend/teaser lines cut from an analysis do not match) of the sections NOT on the public-context allowlist
+  // (src/lib/public-context-sections.json), so premium prose cannot reach the static output piecemeal.
+  if (e.analysisAccess !== "free") {
+    for (const paragraph of protectedParagraphs(e.full.analysis.join("\n\n"))) {
+      if (freeParagraphKeys.has(paragraph.slice(0, 200))) continue;
+      for (const { f, text } of corpus) {
+        if (text.includes(paragraph.slice(0, 200).replace(/'/g, "&#x27;")) || text.includes(paragraph.slice(0, 200))) {
+          leaks.push({ kind: "analysis-paragraph", slug: e.slug, file: f });
+        }
       }
     }
   }

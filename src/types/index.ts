@@ -207,6 +207,10 @@ export type EditorialPrediction = {
   teaser?: string;
   // Public trend label for a VIP prediction (never the pick or the odds).
   trend?: string;
+  // Optional pick-neutral overview shown publicly on PRIME VIP pages: matchup context, form, home/away and
+  // season data, confirmed availability and the main factors on each side, written without the selection or
+  // the price. It is checked against the pick and the odds at build time and dropped if it mentions either.
+  publicSummary?: string[];
   seoTitle?: string;
 
   // Optional note shown below the analysis.
@@ -285,6 +289,10 @@ export type Match = {
   teaser?: string;
   // Public trend label for a VIP prediction (never the pick or the odds).
   trend?: string;
+  // Optional pick-neutral overview shown publicly on PRIME VIP pages: matchup context, form, home/away and
+  // season data, confirmed availability and the main factors on each side, written without the selection or
+  // the price. It is checked against the pick and the odds at build time and dropped if it mentions either.
+  publicSummary?: string[];
   seoTitle?: string;
   comment?: string;
   predictions: PredictionItem[];

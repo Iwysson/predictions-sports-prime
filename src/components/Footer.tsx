@@ -22,6 +22,18 @@ export function Footer() {
           {t("responsible")}
         </p>
 
+        <nav className="footer-links footer-links--predictions" aria-label="Prediction hubs">
+          <Link href="/football-predictions/">Football predictions</Link>
+          <Link href="/today-predictions/">Today&apos;s predictions</Link>
+          <Link href="/picks/">Football picks</Link>
+          <Link href="/betting-tips/">Football betting tips</Link>
+          <Link href="/league/premier-league/">Premier League predictions</Link>
+          <Link href="/league/champions-league/">Champions League predictions</Link>
+          <Link href="/league/mls/">MLS predictions</Link>
+          <Link href="/nfl/">NFL predictions</Link>
+          <Link href="/nhl/">NHL predictions</Link>
+        </nav>
+
         <nav className="footer-links" aria-label="Legal and information">
           <Link href="/">Home</Link>
           <Link href="/about/">{t("about")}</Link>
@@ -30,6 +42,7 @@ export function Footer() {
           <Link href="/editorial-policy/">Editorial policy</Link>
           <Link href="/results/">Results</Link>
           <Link href="/author/iwysson-nascimento/">Author</Link>
+          <Link href="/account/">Account</Link>
           <Link href="/privacy/">{t("privacy")}</Link>
           <Link href="/cookies/">{t("cookies")}</Link>
           <Link href="/terms/">{t("terms")}</Link>

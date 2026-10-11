@@ -2,6 +2,7 @@
 
 import { TeamBadge } from "@/components/TeamBadge";
 import { formatOddsPair } from "@/lib/odds";
+import { resultsScopeLabel } from "@/lib/results-scope";
 import type { NhlHistoryApiResponse } from "@/lib/use-nhl-history";
 
 /**
@@ -22,6 +23,8 @@ export function NhlResultsSummary({
   if (!data) return null;
 
   const settled = data.wins + data.losses;
+  const settledDays = data.days.filter((day) => day.wins + day.losses > 0).map((day) => ({ date: day.dayKey }));
+  const period = resultsScopeLabel({ count: settledDays.length, firstDate: settledDays.map((d) => d.date).sort()[0] ?? null, lastDate: settledDays.map((d) => d.date).sort().slice(-1)[0] ?? null });
   const winRate = settled > 0 ? ((data.wins / settled) * 100).toFixed(1) : null;
   const latestWins = data.latest.slice(0, 3);
   if (winRate === null && latestWins.length === 0) return null;
@@ -31,7 +34,7 @@ export function NhlResultsSummary({
       <div className="track-record__heading">
         <span className="eyebrow">Track record</span>
         <h2 id="nhl-track-record-title">NHL Track Record</h2>
-        <p>Performance across all settled NHL predictions published by Predictions Sports Prime.</p>
+        <p>Scope: the {settled} decided NHL predictions currently registered{period ? `, from games played ${period}` : ""}. This is a snapshot of the registered period, not a lifetime or all-time record. Totals and win rate update automatically as games are settled.</p>
       </div>
 
       <div className="track-record__metrics track-record__metrics--three">
@@ -49,9 +52,9 @@ export function NhlResultsSummary({
             {latestWins.map((row) => (
               <div className="nhl-history__row" key={row.slug}>
                 <span className="nhl-history__fixture">
-                  <TeamBadge team={row.homeTeam} size="sm" />
-                  <span>{row.homeTeam} vs {row.awayTeam}</span>
                   <TeamBadge team={row.awayTeam} size="sm" />
+                  <span>{row.awayTeam} vs {row.homeTeam}</span>
+                  <TeamBadge team={row.homeTeam} size="sm" />
                 </span>
                 <span className="nhl-history__pick">
                   {row.pick} <b>{formatOddsPair(row.decimalOdds)}</b>

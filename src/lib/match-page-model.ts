@@ -14,6 +14,7 @@ import { localDateTimeToUtc } from "@/lib/match-time";
 import { localePath } from "@/lib/seo-locales";
 import { absoluteUrl } from "@/lib/site-config";
 import { editorialAuthorPersonJsonLd } from "@/lib/editorial-identity";
+import { buildPublicMatchContext, type PublicMatchContext } from "@/lib/match-public-context";
 
 // Single model behind the /match/[slug] templates and their tests.
 // Everything here is public. Protected parts are only flags for the client gate:
@@ -29,6 +30,9 @@ export type MatchPageModel = {
   trend: string | null;
   // Analysis shown publicly (analysis access "free"). Prediction is not repeated here.
   staticAnalysis: { analysis: string[]; analysisFormat?: "markdown"; sources: FullMatchView["sources"]; comment: string | null } | null;
+  // Pick-neutral facts (team news status, Statistical Core table, sources) for a page whose analysis is PRIME VIP.
+  // Built only from allowlisted sections; never the pick, the odds or the premium analysis.
+  publicContext: PublicMatchContext | null;
   // Client gate for whatever is VIP. Carries only the slug and which parts are protected.
   gate: { slug: string; showAnalysis: boolean; showPrediction: boolean } | null;
   labels: { prediction: string; odds: string; trend: string };
@@ -52,7 +56,9 @@ function startDateIso(prediction: EditorialPrediction): string | undefined {
 }
 
 // Public structured data: a WebPage and its Article (author, dates). No pick, odds or analysis.
-export function buildPublicJsonLd(prediction: EditorialPrediction, routeLocale: RouteLocale, slug: string, headline: string) {
+// `gated` marks a page that has a PRIME VIP part. The protected text is not in the HTML at all (it is fetched
+// after a verified session), so the paywall markup only tells Google which element is the locked part.
+export function buildPublicJsonLd(prediction: EditorialPrediction, routeLocale: RouteLocale, slug: string, headline: string, gated = false) {
   const url = absoluteUrl(routeLocale === "en" ? `/match/${slug}/` : localePath(routeLocale as any, `/match/${slug}/`));
   const language = routeLocale === "pt-br" ? "pt-BR" : routeLocale;
   const article = {
@@ -67,6 +73,10 @@ export function buildPublicJsonLd(prediction: EditorialPrediction, routeLocale: 
     ...(prediction.publishedAt ? { datePublished: prediction.publishedAt } : {}),
     ...(prediction.updatedAt ? { dateModified: prediction.updatedAt } : {}),
     author: editorialAuthorPersonJsonLd(),
+    publisher: { "@id": absoluteUrl("/#organization") },
+    image: [absoluteUrl("/og-default.png")],
+    isAccessibleForFree: !gated,
+    ...(gated ? { hasPart: [{ "@type": "WebPageElement", isAccessibleForFree: false, cssSelector: ".match-gate-slot" }] } : {}),
   };
   const leagueName = leaguesBySlug[prediction.league]?.name ?? prediction.league;
   const breadcrumb = {
@@ -135,11 +145,12 @@ export function buildMatchPageModel(
   return {
     view,
     seoTitle: prediction.seoTitle ?? heading,
-    jsonLd: buildPublicJsonLd(prediction, routeLocale, slug, heading),
+    jsonLd: buildPublicJsonLd(prediction, routeLocale, slug, heading, protectedAnything),
     publicPrediction: predictionFree ? full.picks : null,
     trend: !predictionFree ? (prediction.trend ?? null) : null,
     // Analysis text only. The pick and odds never travel with it, even when the prediction is VIP.
     staticAnalysis: analysisFree ? { analysis: full.analysis, analysisFormat: full.analysisFormat, sources: full.sources, comment: full.comment } : null,
+    publicContext: analysisFree ? null : buildPublicMatchContext(prediction),
     gate: protectedAnything ? { slug, showAnalysis: !analysisFree, showPrediction: !predictionFree } : null,
     labels: {
       prediction: translate(routeLocale, "mainPrediction"),

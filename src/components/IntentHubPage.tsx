@@ -3,14 +3,18 @@ import { toMatchPreview } from "@/lib/editorial";
 import { hydratePredictions } from "@/lib/live-predictions";
 import type { IntentHubSlug } from "@/lib/intent-hubs";
 import { IntentHubContent } from "@/components/IntentHubContent";
-import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
+import { IntentHubDirectory } from "@/components/IntentHubDirectory";
+import { AllCompetitions } from "@/components/AllCompetitions";
 import { selectTemporalClientMatches } from "@/lib/match-feed";
 
 export async function IntentHubPage({ slug }: { slug: IntentHubSlug }) {
   const resolved = await hydratePredictions(matches.map(toMatchPreview));
-  return <IntentHubContent
+  return <>
+  <IntentHubContent
     slug={slug}
     matches={selectTemporalClientMatches(resolved)}
-    discovery={<PublishedMatchDirectory matches={resolved} />}
-  />;
+    discovery={<IntentHubDirectory slug={slug} matches={resolved} />}
+  />
+  {slug === "football-predictions" ? <AllCompetitions /> : null}
+  </>;
 }

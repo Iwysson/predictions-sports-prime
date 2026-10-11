@@ -25,10 +25,10 @@ type WeekCopy = {
 const copies: Record<SeoLocale, WeekCopy> = {
   en: {
     title: (w) => `NFL Week ${w} Predictions, Odds & Picks | Predictions Sports Prime`,
-    description: (w) => `NFL Week ${w} predictions and picks for every game: matchup analysis, injuries, projected starters, stadiums and betting odds for the 2026 NFL season.`,
-    h1: "NFL Predictions & Analysis", subheading: "Weekly NFL predictions, matchup analysis, injuries, projected starters, stadium information, odds and betting insights.", season: "2026 NFL Season",
+    description: (w) => `NFL Week ${w} predictions and picks for every game: matchup analysis, kickoff and stadium details, published odds in decimal and American formats, and the 2026 standings.`,
+    h1: "NFL Predictions & Analysis", subheading: "Weekly NFL picks and predictions with game analysis, kickoff and stadium details, published odds in decimal and American formats, and the season standings.", season: "2026 NFL Season",
     weekLabel: (w) => `Week ${w}`, weekHeadingLabel: (w) => `NFL Week ${w} Predictions`,
-    prediction: "Prediction", analysis: "Match Analysis", odds: "Odds", americanOdds: "American Odds", venueKickoff: "Venue & Kickoff", venue: "Venue", kickoff: "Kickoff", available: "Prediction available", awayAtHome: "at", previous: "Previous week", next: "Next week",
+    prediction: "Prediction", analysis: "Game Analysis", odds: "Odds", americanOdds: "American Odds", venueKickoff: "Venue & Kickoff", venue: "Venue", kickoff: "Kickoff", available: "Prediction available", awayAtHome: "at", previous: "Previous week", next: "Next week",
   },
   "pt-br": {
     title: (w) => `Palpites NFL Semana ${w}: Prognósticos e Odds | Predictions Sports Prime`,

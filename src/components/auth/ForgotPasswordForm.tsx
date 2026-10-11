@@ -60,7 +60,7 @@ export function ForgotPasswordForm() {
       </form>
 
       <p className="auth-switch">
-        Remembered it? <Link href="/login/">Back to Login</Link>
+        Remembered it? <Link href="/login/">Back to Login</Link>. Already opened the link from your email? <Link href="/reset-password/">Set a new password</Link>.
       </p>
     </AuthCard>
   );

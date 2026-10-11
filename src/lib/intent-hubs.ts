@@ -8,6 +8,7 @@ import {
   localTodayISO,
 } from "@/lib/match-feed";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
+import { MARKET_FAMILY_ORDER, marketFamily } from "@/lib/betting-markets";
 
 export const intentHubSlugs = [
   "football-predictions",
@@ -36,70 +37,73 @@ export type IntentHubDefinition = {
 };
 
 export const intentHubDefinitions: Record<IntentHubSlug, IntentHubDefinition> = {
+  // Each hub answers one distinct question. The purpose is also what keeps the page list, headings and
+  // static HTML different from its siblings: competition directory, date board, pick board, market
+  // guide and MLS / North American soccer board.
   "football-predictions": {
     slug: "football-predictions",
     intent: "football predictions",
-    title: "Football Predictions and Match Analysis | Predictions Sports Prime",
+    title: "Football Predictions by League and Match | Predictions Sports Prime",
     h1: "Football Predictions",
-    description: "Published football predictions with recorded picks, available odds, fixture context and links to complete match analysis across major competitions.",
+    description: "Football predictions organized by competition: every league and cup with upcoming fixtures, linked to the full match analysis, published odds and sources.",
     eyebrow: "Football prediction hub",
-    intro: "Browse the current pre-match football inventory across domestic leagues and international competitions. Each fixture links to its own analysis, where the selection, published price when available, evidence and risks can be read in context.",
-    feedTitle: "Current football predictions",
-    feedIntro: "Fixtures are ordered from the active pre-match schedule, with today's matches followed by the next available games.",
-    guideTitle: "Using the football prediction hub",
+    intro: "Start here to find a competition, then a fixture. The hub lists every league and cup that currently has published pre-match football predictions and links each one to its own page, where the selection, the published price, the evidence and the risks can be read in context.",
+    feedTitle: "Next football fixtures with predictions",
+    feedIntro: "The next fixtures in schedule order across all competitions. Use the competition directory to narrow the view to a single league.",
+    guideTitle: "How the football hub is organized",
     guide: [
-      "Start with the fixture and main prediction, then open the full preview to assess the supporting evidence and the ways the selection could fail.",
-      "Competition pages provide a narrower league view, while the methodology explains how editorial selections and recorded prices are handled.",
+      "The hub is the entry point for competitions. Each competition page gathers the rounds, the table when one is available and the predictions published for that league; each match page holds the analysis for one fixture.",
+      "For a date-based view, use today's predictions. For free selections and the PRIME VIP board, use football picks. For how prices work, use football betting tips.",
     ],
     strategy: "football",
   },
   "soccer-predictions": {
     slug: "soccer-predictions",
     intent: "soccer predictions",
-    title: "Soccer Predictions: MLS and Global Picks | Predictions Sports Prime",
+    title: "Soccer Predictions: MLS Picks and Matches | Predictions Sports Prime",
     h1: "Soccer Predictions",
-    description: "Soccer predictions for MLS and selected global fixtures, organized for readers who use US soccer terminology and want direct match previews.",
-    eyebrow: "US soccer terminology",
-    intro: "This hub presents the site's current soccer previews with MLS shown first when published fixtures are available. It also includes selected international and club matches from the same canonical pre-match inventory, without inferring a visitor's location or preferences.",
-    feedTitle: "MLS-first soccer preview feed",
-    feedIntro: "Available MLS fixtures lead the list; other current competitions follow in chronological order so the page remains useful when the MLS schedule is quiet.",
-    guideTitle: "What this soccer view emphasizes",
+    description: "Soccer predictions led by MLS: upcoming Major League Soccer matches by date with links to the full analysis, followed by selected international and club fixtures.",
+    eyebrow: "MLS and soccer",
+    intro: "MLS fixtures lead this board, with the other competitions published on the site listed after them. It uses the soccer vocabulary common in the United States and Canada (match, kickoff, conference, regular season) and links every fixture to the same match page used across the site.",
+    feedTitle: "MLS first, then other soccer fixtures",
+    feedIntro: "Available MLS fixtures appear first in date order; other published competitions follow, so the board stays useful when the MLS schedule is quiet.",
+    guideTitle: "What the soccer board covers",
     guide: [
-      "The terminology and organization are intended for English-language readers accustomed to soccer, with an explicit MLS entry point rather than a renamed copy of the general football hub.",
-      "Every selection still opens the same canonical match analysis, and no popularity, confidence or geographic targeting is inferred.",
+      "MLS predictions are grouped by date and link to the MLS competition page, where the Eastern and Western Conference fixtures published for the current stage are collected.",
+      "Nothing here depends on where a reader is located: the same pages are available worldwide, and this board only changes the order and the terminology.",
     ],
     strategy: "soccer",
   },
   "betting-tips": {
     slug: "betting-tips",
     intent: "football betting tips",
-    title: "Football Betting Tips and Odds | Predictions Sports Prime",
+    title: "Football Betting Tips by Market and Odds | Predictions Sports Prime",
     h1: "Football Betting Tips",
-    description: "Football betting tips focused on the published market, selection, available odds, supporting rationale and material risks for upcoming fixtures.",
-    eyebrow: "Market-focused analysis",
-    intro: "Review current editorial selections through a market-focused lens. Cards confirm when a pick and published odds are available; the linked match page contains the reasoning, risks, prediction and published odds directly.",
-    feedTitle: "Published betting selections",
-    feedIntro: "Selections with a recorded price are presented first, followed by valid current predictions whose market analysis is available without a displayed price.",
-    guideTitle: "How to read these betting tips",
+    description: "Football betting tips by market: free selections grouped as goals, corners, both teams to score, results and combined bets, with published odds and a guide to reading prices.",
+    eyebrow: "Markets and odds",
+    intro: "This page groups the free football selections by betting market and explains how to read the published price. Premium selections are not shown here; they stay on their PRIME VIP match pages together with the supporting analysis and the risks.",
+    feedTitle: "Football selections by betting market",
+    feedIntro: "Free selections are grouped by market, with the published decimal odds. Fixtures whose selection is reserved for PRIME VIP are counted but not detailed.",
+    guideTitle: "Reading odds and markets",
     guide: [
-      "Decimal odds describe the recorded market price, not a promise of profit or a confidence score. Compare that price with the evidence and contrary scenarios in the complete analysis.",
-      "Markets can require different facts to settle. Read the selection precisely and use the responsible-gambling guidance before making any decision.",
+      "Decimal odds are the price recorded when the selection was published. Dividing 1 by the decimal odds gives the raw implied probability; it describes the market price, not the chance that the bet wins and not a profit promise.",
+      "Different markets settle on different facts. Check what a selection needs before reading the analysis: total goals, corners and both teams to score each depend on different match statistics.",
     ],
     strategy: "markets",
   },
   picks: {
     slug: "picks",
     intent: "football picks",
-    title: "Football Picks and Published Selections | Predictions Sports Prime",
+    title: "Football Picks and Free Selections | Predictions Sports Prime",
     h1: "Football Picks",
-    description: "A concise view of current football picks, fixtures, published selections, available odds and direct links to each complete analysis.",
-    eyebrow: "Concise selection board",
-    intro: "Scan the current published picks without an artificial ranking. This board keeps the fixture, selection and available price together, while the full reasoning remains on the canonical match page.",
-    feedTitle: "Current editorial picks",
-    feedIntro: "The board follows the current fixture schedule. It does not label picks as best, safest or highest-confidence because no such ranking is assigned.",
-    guideTitle: "From pick to analysis",
+    description: "Football picks board: the free selections with their published odds, plus the fixtures whose pick is reserved for PRIME VIP and BEST BET members.",
+    eyebrow: "Pick board",
+    intro: "The pick board shows where each upcoming selection stands. Free picks are listed with their market and published odds; PRIME VIP and BEST BET fixtures are listed by name and tier, with the selection kept on the protected match page.",
+    feedTitle: "Free picks and PRIME VIP fixtures",
+    feedIntro: "Free selections come first, then BEST BET and PRIME VIP fixtures, each in schedule order. No ranking by confidence or popularity is applied.",
+    guideTitle: "Free picks and premium picks",
     guide: [
-      "Use this page for comparison and navigation, then open a fixture before interpreting the selection. The complete preview carries the match context and material risks that a compact board cannot reproduce.",
+      "A free pick is published in full, including the market and the odds. A PRIME VIP or BEST BET fixture shows its tier publicly while the pick, the odds and the premium analysis are unlocked after sign-in with an active plan.",
     ],
     strategy: "picks",
   },
@@ -108,15 +112,14 @@ export const intentHubDefinitions: Record<IntentHubSlug, IntentHubDefinition> = 
     intent: "today's football predictions",
     title: "Today's Football Predictions | Predictions Sports Prime",
     h1: "Today's Football Predictions",
-    description: "Today's published football predictions, using the site's canonical fixture timezone and lifecycle rules with links to complete match analysis.",
-    eyebrow: "Today's fixture state",
-    intro: "This page contains only published predictions classified as today by the site's existing fixture-time and lifecycle engine. Tomorrow's fixtures, later upcoming games and matches that have moved into history are excluded automatically.",
-    feedTitle: "Predictions available today",
-    feedIntro: "The date boundary follows the site's canonical fixture timezone. A fixture leaves this view naturally as its lifecycle changes; its source record is not rewritten.",
-    guideTitle: "How today's page stays current",
+    description: "Football predictions for today's fixtures with local kick-off times and links to each full analysis; fixtures leave the page as they start.",
+    eyebrow: "Today's fixtures",
+    intro: "Only fixtures scheduled for the current day appear here, with their kick-off times. A match disappears from this page once it has started, and an empty day links to the next published fixtures.",
+    feedTitle: "Predictions for today",
+    feedIntro: "Today's fixtures in kick-off order. The day boundary follows the site's fixture timezone, and kick-off times are shown in each competition's local time.",
+    guideTitle: "How the daily page works",
     guide: [
-      "Kickoff metadata and fixture state determine eligibility. If no valid published prediction is available today, the page explains the empty state and links to the broader upcoming inventory.",
-      "Open any listed fixture for the recorded pick, price when available, full analysis and risk discussion.",
+      "Kick-off data and the fixture state decide what is listed. If nothing is published for the day, the page says so and points to the football hub for later fixtures.",
     ],
     strategy: "today",
   },
@@ -132,6 +135,11 @@ function currentInventory(matches: MatchPreview[], now: Date | string) {
   return [...new Map(combined.map((match) => [match.slug, match])).values()];
 }
 
+// The full current inventory (today, tomorrow and later), uncapped. Used by the static directory of each hub.
+export function intentHubInventory(matches: MatchPreview[], now: Date | string = new Date()) {
+  return currentInventory(matches, now);
+}
+
 export function selectIntentHubMatches(slug: IntentHubSlug, matches: MatchPreview[], now: Date | string = new Date()) {
   const definition = intentHubDefinitions[slug];
   const inventory = definition.strategy === "today"
@@ -141,9 +149,16 @@ export function selectIntentHubMatches(slug: IntentHubSlug, matches: MatchPrevie
     return [...inventory].sort((left, right) => Number(right.league === "mls") - Number(left.league === "mls")).slice(0, 18);
   }
   if (definition.strategy === "markets") {
-    return [...inventory].sort((left, right) => Number(right.odds != null) - Number(left.odds != null)).slice(0, 18);
+    // Free selections (whose market text is public) first and grouped by market; premium fixtures follow.
+    const rank = (match: MatchPreview) =>
+      match.predictionAccess === "free" && match.mainPrediction ? MARKET_FAMILY_ORDER.indexOf(marketFamily(match.mainPrediction)) : MARKET_FAMILY_ORDER.length;
+    return [...inventory].sort((left, right) => rank(left) - rank(right)).slice(0, 18);
   }
-  return inventory.slice(0, definition.strategy === "picks" ? 24 : 18);
+  if (definition.strategy === "picks") {
+    const rank = (match: MatchPreview) => (match.predictionAccess === "free" ? 0 : match.bestAnalysis ? 1 : 2);
+    return [...inventory].sort((left, right) => rank(left) - rank(right)).slice(0, 24);
+  }
+  return inventory.slice(0, 18);
 }
 
 export function intentHubMetadata(slug: IntentHubSlug): Metadata {

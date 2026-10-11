@@ -90,19 +90,39 @@ export function leagueSeoCapabilities(league: LeagueConfig, publishedMatches: Ma
   };
 }
 
+// Name readers actually search for, when it differs from the competition's formal name. "MLS" is the
+// term used in the United States and Canada; the formal name stays in the page body and the schema.
+const leagueSearchNames: Partial<Record<LeagueConfig["slug"], string>> = {
+  mls: "MLS",
+};
+
+export function leagueDisplayName(league: LeagueConfig) {
+  return leagueSearchNames[league.slug] ?? league.name;
+}
+
+// The H1 carries the topic only: no brand and no separator, which belong to the <title>.
+export function leagueSeoH1(league: LeagueConfig, capabilities?: LeagueSeoCapabilities) {
+  const name = leagueDisplayName(league);
+  if (league.slug === "mls") return capabilities && !capabilities.hasFixtures ? "MLS Predictions & Match Analysis" : "MLS Predictions & Picks";
+  return capabilities && !capabilities.hasFixtures ? `${name} Predictions & Match Analysis` : `${name} Predictions & Betting Tips`;
+}
+
 export function leagueSeoTitle(league: LeagueConfig, capabilities?: LeagueSeoCapabilities) {
   if (capabilities) {
-    const full = capabilities.hasFixtures
-      ? `${league.name} Predictions & Betting Tips${capabilities.hasOdds ? " with Odds" : ""}`
-      : `${league.name} Predictions & Match Analysis`;
+    const name = leagueDisplayName(league);
+    const full = league.slug === "mls"
+      ? `MLS Predictions & Picks${capabilities.hasFixtures && capabilities.hasOdds ? " with Odds" : ""}`
+      : capabilities.hasFixtures
+        ? `${name} Predictions & Betting Tips${capabilities.hasOdds ? " with Odds" : ""}`
+        : `${name} Predictions & Match Analysis`;
     const branded = `${full} | ${siteConfig.name}`;
     if (branded.length <= 70) return branded;
     // A long league name can push the full phrase past budget: prefer a shorter branded
     // title over dropping the brand entirely, so the site name still appears in the SERP.
-    const compactBranded = `${league.name} Predictions | ${siteConfig.name}`;
+    const compactBranded = `${name} Predictions | ${siteConfig.name}`;
     if (compactBranded.length <= 70) return compactBranded;
-    const compactShortBranded = `${league.name} Predictions | ${siteConfig.shortName}`;
-    return compactShortBranded.length <= 70 ? compactShortBranded : `${league.name} Predictions`;
+    const compactShortBranded = `${name} Predictions | ${siteConfig.shortName}`;
+    return compactShortBranded.length <= 70 ? compactShortBranded : `${name} Predictions`;
   }
   const full = `${league.name} Predictions & Betting Tips | ${siteConfig.name}`;
   const compact = `${league.name} Predictions | ${siteConfig.name}`;
@@ -123,6 +143,9 @@ export function leagueSeoDescription(league: LeagueConfig, capabilities?: League
     const context = league.display.showStandings
       ? "current-round and table context"
       : `current-stage ${scheduleContext(league)} context`;
+    if (league.slug === "mls") {
+      return `MLS predictions and picks: ${inventory}, published odds and ${context} for the Eastern and Western Conferences.`;
+    }
     const full = `${league.name} predictions for ${league.country}: ${inventory}, published picks, available odds and ${context}.`;
     return full.length <= 160
       ? full

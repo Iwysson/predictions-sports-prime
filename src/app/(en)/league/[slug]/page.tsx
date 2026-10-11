@@ -28,6 +28,7 @@ import {
   isLeagueIndexable,
   leagueSeoDescription,
   leagueSeoKeywords,
+  leagueSeoH1,
   leagueSeoTitle,
   leagueSeoCapabilities,
 } from "@/lib/league-seo";
@@ -170,7 +171,7 @@ export default async function LeaguePage({
                 <span aria-hidden="true">›</span>
                 <span aria-current="page">{league.name}</span>
               </nav>
-              <h1>{leagueSeoTitle(league, capabilities)}</h1>
+              <h1>{leagueSeoH1(league, capabilities)}</h1>
             </div>
           </div>
           <span className="league-round-label">Current Round</span>

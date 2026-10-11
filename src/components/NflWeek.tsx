@@ -44,7 +44,7 @@ function GameCard({ g }: { g: NflPublicGame }) {
 
       <div className="psp-game__teams">
         <NflTeamBadge team={g.awayTeam} />
-        <h2>{`${g.awayTeam} vs ${g.homeTeam} Prediction, Odds and Betting Tips`}</h2>
+        <h2>{`${g.awayTeam} vs ${g.homeTeam} Prediction, Odds and Picks`}</h2>
         <NflTeamBadge team={g.homeTeam} />
       </div>
 
@@ -64,13 +64,13 @@ function GameCard({ g }: { g: NflPublicGame }) {
             analysis={g.analysis ?? []}
             sources={g.sources ?? []}
             comment={null}
-            labels={{ prediction: L.prediction, odds: L.odds, analysis: translate("en", "matchAnalysisHeading"), sources: translate("en", "matchSourcesHeading") }}
+            labels={{ prediction: L.prediction, odds: L.odds, analysis: "Game analysis", sources: translate("en", "matchSourcesHeading") }}
           />
         </>
       ) : (
         <>
           <p className="psp-game__teaser">{g.teaser}</p>
-          <MatchGate slug={g.slug} showAnalysis showPrediction />
+          <MatchGate slug={g.slug} showAnalysis showPrediction variant="game" />
         </>
       )}
     </section>
@@ -92,7 +92,7 @@ export function NflWeekSlate() {
           <NflLeagueMark compact />
           <span>· NFL Week 5, 2026</span>
         </span>
-        <h1>NFL Predictions Today</h1>
+        <h2>NFL Week 5 games and picks</h2>
         <p>
           {games.length} NFL games this week. {free.length} {analyses(free.length)} {free.length === 1 ? "is" : "are"}{" "}
           published in full for everyone. The remaining {protectedGames.length} {protectedGames.length === 1 ? "is" : "are"}{" "}

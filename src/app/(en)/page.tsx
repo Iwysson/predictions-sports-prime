@@ -19,8 +19,8 @@ import { HomeEditorialHighlights } from "@/components/HomeEditorialHighlights";
 import { SiteContactLine } from "@/components/SiteContactLine";
 import { VipTitleCta } from "@/components/VipTitleCta";
 
-const homeTitle = "Football Predictions Today & Betting Tips | Predictions Sports Prime";
-const homeDescription = "Daily football predictions, betting tips, odds and statistical analysis for today's, tomorrow's and upcoming fixtures across major leagues, plus NFL and NHL picks.";
+const homeTitle = "Football Predictions Today, NFL & NHL Picks | Predictions Sports Prime";
+const homeDescription = "Football predictions for today, tomorrow and upcoming fixtures, plus NFL and NHL picks, with published odds, identified sources and a transparent results record.";
 
 export const metadata: Metadata = {
   title: { absolute: homeTitle },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
       url: absoluteUrl("/og-default.png"),
       width: 1200,
       height: 630,
-      alt: `${siteConfig.name} football predictions and match analysis`,
+      alt: `${siteConfig.name} football, NFL and NHL predictions`,
     }],
   },
   twitter: {
@@ -65,6 +65,20 @@ export default async function Home() {
             major leagues and cup competitions.
           </p>
           <SiteContactLine />
+        </div>
+      </section>
+      <section className="section section--compact" aria-labelledby="sport-hubs-title">
+        <div className="container">
+          <h2 id="sport-hubs-title">Predictions by sport</h2>
+          <div className="psp-hub-grid">
+            <Link className="psp-hub-card" href="/football-predictions/"><strong>Football predictions</strong><span>Leagues, cups and match-by-match analysis</span></Link>
+            <Link className="psp-hub-card" href="/nfl/"><strong>NFL picks and predictions</strong><span>Weekly game analysis, odds and standings</span></Link>
+            <Link className="psp-hub-card" href="/nhl/"><strong>NHL predictions today</strong><span>Daily picks, moneyline and total goals</span></Link>
+            <Link className="psp-hub-card" href="/league/mls/"><strong>MLS predictions</strong><span>Eastern and Western Conference matches</span></Link>
+          </div>
+          <p>
+            Popular competitions: <Link href="/league/premier-league/">Premier League predictions</Link>, <Link href="/league/champions-league/">Champions League predictions</Link>, <Link href="/league/la-liga/">La Liga predictions</Link> and <Link href="/football-predictions/">every football competition</Link>.
+          </p>
         </div>
       </section>
       <HomeEditorialHighlights />
@@ -108,6 +122,8 @@ export default async function Home() {
             <Link href="/betting-tips/">Betting tips</Link>
             <Link href="/picks/">Football picks</Link>
             <Link href="/today-predictions/">Today's predictions</Link>
+            <Link href="/nhl/">NHL predictions</Link>
+            <Link href="/nfl/">NFL predictions</Link>
           </nav>
         </div>
       </section>
