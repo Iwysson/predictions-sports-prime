@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const PROMO_DURATION_MS = 24 * 60 * 60 * 1000;
 const PROMO_DEADLINE_KEY = "psp-prime-vip-promo-deadline";
@@ -17,7 +17,7 @@ function formatCountdown(totalSeconds: number) {
 }
 
 export function PrimeVipCountdown() {
-  const [remainingSeconds, setRemainingSeconds] = useState(23 * 60 * 60 + 59 * 60 + 59);
+  const countdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const storedDeadline = Number(window.localStorage.getItem(PROMO_DEADLINE_KEY));
@@ -27,15 +27,19 @@ export function PrimeVipCountdown() {
 
     window.localStorage.setItem(PROMO_DEADLINE_KEY, String(deadline));
 
-    const update = () => setRemainingSeconds(getRemainingSeconds(deadline));
+    const update = () => {
+      if (countdownRef.current) {
+        countdownRef.current.textContent = formatCountdown(getRemainingSeconds(deadline));
+      }
+    };
     update();
     const interval = window.setInterval(update, 1000);
     return () => window.clearInterval(interval);
   }, []);
 
   return (
-    <div className="prime-vip-offer__countdown" aria-label="Promotion time remaining" role="timer">
-      {formatCountdown(remainingSeconds)}
+    <div ref={countdownRef} className="prime-vip-offer__countdown" aria-label="Promotion time remaining" role="timer">
+      23:59:59
     </div>
   );
 }

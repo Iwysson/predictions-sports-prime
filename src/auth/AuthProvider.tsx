@@ -11,8 +11,9 @@ import {
   useRef,
   useState,
 } from "react";
-import { supabase } from "@/lib/supabase";
 import { isVip as isVipProfile } from "@/lib/vip";
+
+const loadSupabase = () => import("@/lib/supabase").then((module) => module.supabase);
 
 export type UserPlan = "free" | "vip";
 
@@ -54,6 +55,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return;
     }
 
+    const supabase = await loadSupabase();
     const { data, error } = await supabase
       .from("profiles")
       .select("plan, subscription_status, trial_ends_at, current_period_end")
@@ -88,24 +90,33 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     let active = true;
+    let unsubscribe: (() => void) | undefined;
 
-    void supabase.auth.getSession().then(({ data }) => {
-      if (active) void loadUser(data.session?.user ?? null);
-    });
+    const initialize = async () => {
+      const supabase = await loadSupabase();
+      if (!active) return;
+      const { data } = await supabase.auth.getSession();
+      if (!active) return;
+      void loadUser(data.session?.user ?? null);
+      const { data: authListener } = supabase.auth.onAuthStateChange(
+        (_event, session) => {
+          if (active) void loadUser(session?.user ?? null);
+        }
+      );
+      unsubscribe = () => authListener.subscription.unsubscribe();
+    };
 
-    const { data: authListener } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
-        if (active) void loadUser(session?.user ?? null);
-      }
-    );
+    const idleId = window.requestIdleCallback(() => void initialize(), { timeout: 1_500 });
 
     return () => {
       active = false;
-      authListener.subscription.unsubscribe();
+      window.cancelIdleCallback(idleId);
+      unsubscribe?.();
     };
   }, [loadUser]);
 
   const signOut = useCallback(async () => {
+    const supabase = await loadSupabase();
     const { error } = await supabase.auth.signOut();
     if (error) throw error;
   }, []);

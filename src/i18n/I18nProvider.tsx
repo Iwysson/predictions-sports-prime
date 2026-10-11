@@ -8,12 +8,11 @@ import {
   useMemo,
   useState,
 } from "react";
-import {
-  dictionaries,
-  Locale,
-  rtlLocales,
-  TranslationKey,
-} from "@/i18n/dictionaries";
+import type { Locale, TranslationKey } from "@/i18n/dictionaries";
+
+type ClientDictionary = Partial<Record<TranslationKey, string>>;
+
+const rtlLocales: readonly Locale[] = ["ar", "ur", "fa", "he"];
 
 type I18nContextValue = {
   locale: Locale;
@@ -27,9 +26,13 @@ const I18nContext = createContext<I18nContextValue | null>(null);
 export function I18nProvider({
   children,
   initialLocale = "en",
+  dictionary,
+  fallbackDictionary = dictionary,
 }: {
   children: ReactNode;
   initialLocale?: Locale;
+  dictionary: ClientDictionary;
+  fallbackDictionary?: ClientDictionary;
 }) {
   const [locale, setLocaleState] = useState<Locale>(initialLocale);
 
@@ -54,11 +57,9 @@ export function I18nProvider({
       locale,
       setLocale,
       dir,
-      t: (key) =>
-        (dictionaries[locale] as Partial<Record<TranslationKey, string>>)[key] ??
-        dictionaries.en[key],
+      t: (key) => dictionary[key] ?? fallbackDictionary[key] ?? key,
     }),
-    [dir, locale]
+    [dictionary, dir, fallbackDictionary, locale]
   );
 
   return (

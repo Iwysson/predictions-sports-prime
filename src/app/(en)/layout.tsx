@@ -6,6 +6,7 @@ import { AdSenseScript } from "@/components/ads";
 import { ConsentIntegration } from "@/components/consent/ConsentIntegration";
 import { SiteAnalytics } from "@/components/analytics/SiteAnalytics";
 import { I18nProvider } from "@/i18n/I18nProvider";
+import { dictionaries } from "@/i18n/dictionaries";
 import { JsonLd } from "@/components/JsonLd";
 import { AuthProvider } from "@/auth/AuthProvider";
 import { PrimeVipSupportBanner } from "@/components/PrimeVipSupportBanner";
@@ -126,7 +127,7 @@ export default function RootLayout({
         <JsonLd data={organizationJsonLd()} />
 
         <AuthProvider>
-          <I18nProvider>
+          <I18nProvider dictionary={dictionaries.en}>
             <Header />
             <main>{children}</main>
             <Footer />

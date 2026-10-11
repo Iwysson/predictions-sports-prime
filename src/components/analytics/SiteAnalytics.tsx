@@ -71,7 +71,7 @@ export function SiteAnalytics() {
     <>
       <Script
         id="ga4-gtag"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         onLoad={configure}
       />
