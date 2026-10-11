@@ -16,6 +16,7 @@ export function NFLPage({ locale }: { locale: SeoLocale }) {
   const standingsMetadata = getNFLStandingsMetadata();
   return <>
     <section className="nfl-hero"><div className="container nfl-hero__inner"><Image src="/nfl/nfl-logo.png" alt="NFL" width={92} height={92} priority /><div><p className="eyebrow">{copy.season}</p>{locale === "en" ? <VipTitleCta>{copy.weekHeading}</VipTitleCta> : <h1>{copy.h1}</h1>}<p>{copy.subheading}</p><SiteContactLine /></div></div></section>
+    {locale === "en" ? <PrimeVipOfferCard /> : null}
     {locale === "en" ? (
       <section className="section section--compact"><div className="container">
         <NflWeekSlate />
@@ -24,6 +25,5 @@ export function NFLPage({ locale }: { locale: SeoLocale }) {
     <section className="section section--compact"><div className="container nfl-content">
       <NFLStandings standings={getNFLStandings()} generatedAt={standingsMetadata.generatedAt} seasonPhase={standingsMetadata.seasonPhase} locale={locale} />
     </div></section>
-    {locale === "en" ? <PrimeVipOfferCard /> : null}
   </>;
 }

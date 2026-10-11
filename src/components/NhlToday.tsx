@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { AccessBadge } from "@/components/AccessBadge";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { MatchFullContent } from "@/components/MatchFullContent";
@@ -208,7 +208,7 @@ function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: str
 }
 
 // The whole NHL page body for the active day. The H1 and every card follow the same key.
-export function NhlDaySlate({ initialKey }: { initialKey: string }) {
+export function NhlDaySlate({ initialKey, afterHero }: { initialKey: string; afterHero?: ReactNode }) {
   const dayKey = useNhlTodayKey(initialKey);
   const liveGames = useNhlLiveGames(dayKey);
   const [mounted, setMounted] = useState(false);
@@ -248,6 +248,8 @@ export function NhlDaySlate({ initialKey }: { initialKey: string }) {
           </span>
         </div>
       </header>
+
+      {afterHero}
 
       <NhlMoneylineNote />
 

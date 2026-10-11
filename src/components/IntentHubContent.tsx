@@ -15,6 +15,7 @@ import { intentHubDefinitions, intentHubJsonLd, intentHubLeagueLinks, selectInte
 import { isFutureFixture } from "@/lib/fixture-state";
 import { matchPredictionAnchor } from "@/lib/seo-locales";
 import { VipTitleCta } from "@/components/VipTitleCta";
+import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
 
 export function IntentHubContent({ slug, matches, discovery }: { slug: IntentHubSlug; matches: MatchPreview[]; discovery?: ReactNode }) {
   const now = useClientNow();
@@ -34,6 +35,8 @@ export function IntentHubContent({ slug, matches, discovery }: { slug: IntentHub
         <SiteContactLine />
       </div>
     </section>
+
+    {slug === "football-predictions" ? <PrimeVipOfferCard /> : null}
 
     {!now ? discovery ?? <PublishedMatchDirectory matches={matches} /> : <section className="section section--compact" aria-labelledby="intent-feed-title">
       <div className="container">

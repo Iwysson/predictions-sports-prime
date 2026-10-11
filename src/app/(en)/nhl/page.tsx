@@ -64,11 +64,9 @@ export default function NhlPage() {
           <Link href="/">Home</Link> / <span>NHL</span>
         </nav>
 
-        <NhlDaySlate initialKey={initialKey} />
+        <NhlDaySlate initialKey={initialKey} afterHero={<PrimeVipOfferCard />} />
 
         <NhlResultsSection />
-
-        <PrimeVipOfferCard />
 
         <div className="psp-notice">
           <SiteContactLine />
