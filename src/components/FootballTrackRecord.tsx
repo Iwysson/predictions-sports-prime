@@ -47,7 +47,7 @@ function TrackRecordPromo() {
         <p>Our published football predictions are settled transparently after every final result. Unlock PRIME VIP for premium predictions, BEST BET selections and full match analysis before kickoff.</p>
       </div>
       <div className="track-record-promo__offer">
-        <strong>$29.99/month</strong>
+        <strong>$19.99/month</strong>
         {state === "free" ? <VipCheckoutButton label="Get PRIME VIP" /> : <span className="track-record-promo__loading" aria-hidden="true">Checking access…</span>}
       </div>
     </aside>

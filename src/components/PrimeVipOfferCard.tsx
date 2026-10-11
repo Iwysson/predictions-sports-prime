@@ -1,6 +1,7 @@
 "use client";
 
 import { useAuth } from "@/auth/AuthProvider";
+import { PrimeVipCountdown } from "@/components/PrimeVipCountdown";
 import { VipCheckoutButton } from "@/components/VipCheckoutButton";
 
 // Commercial PRIME VIP offer. Presentation only: no VIP content, prices come from the existing
@@ -23,10 +24,11 @@ export function PrimeVipOfferCard() {
             </ul>
           </div>
           <div className="prime-vip-offer__price">
-            <del>$37.49</del>
-            <strong>$29.99 <small>/ month</small></strong>
-            <span>20% OFF</span>
-            <VipCheckoutButton />
+            <span className="prime-vip-offer__promotion">BIG PROMOTION 24H</span>
+            <PrimeVipCountdown />
+            <del>$29.99 / month</del>
+            <strong>$19.99 <small>/ month</small></strong>
+            <VipCheckoutButton label="Get PRIME VIP" />
           </div>
         </article>
       </div>

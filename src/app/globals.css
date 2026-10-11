@@ -232,6 +232,9 @@ code { color: var(--accent); }
 .auth-message { margin: 10px 0 0; line-height: 1.5; }
 .auth-message--error { color: var(--danger); }
 .auth-message--warning { color: var(--warning); }
+.account-vip-offer { display: grid; justify-items: start; gap: 8px; margin: 8px 0 16px; padding: 18px; border: 1px solid #8a6d20; border-radius: 14px; background: #211d12; color: #fff7dd; }
+.account-vip-offer > strong { font-size: 20px; }
+.account-vip-offer > span { color: #fff3bc; font-size: 24px; font-weight: 900; }
 
 .account-details { display: grid; gap: 10px; margin: 0 0 22px; }
 .account-details div { padding: 13px 14px; border-radius: 8px; background: var(--surface-subtle); }
@@ -4739,10 +4742,11 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
 .prime-vip-offer__trial { display: block; color: #f3d98b; font-size: 18px; }
 .prime-vip-offer ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; margin: 20px 0 0; padding-left: 20px; color: #e7dcbc; }
 .prime-vip-offer__price { display: grid; justify-items: start; gap: 8px; padding: 22px; border-radius: 16px; background: rgba(255,255,255,.07); border: 1px solid rgba(243,217,139,.28); }
-.prime-vip-offer__price del { color: #bdb49b; font-size: 20px; text-decoration-thickness: 2px; }
+.prime-vip-offer__price del { color: #bdb49b; font-size: 15px; text-decoration-thickness: 2px; }
 .prime-vip-offer__price > strong { color: #fff3bc; font-size: clamp(32px, 5vw, 46px); line-height: 1; }
 .prime-vip-offer__price strong small { font-size: 15px; font-weight: 700; color: #e7dcbc; }
-.prime-vip-offer__price > span { margin-bottom: 8px; padding: 5px 10px; border-radius: 999px; color: #183422; background: #9be2b5; font-size: 13px; font-weight: 900; }
+.prime-vip-offer__promotion { padding: 6px 11px; border-radius: 999px; color: #183422; background: #9be2b5; font-size: 13px; font-weight: 900; letter-spacing: .05em; }
+.prime-vip-offer__countdown { width: 100%; color: #fff; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: clamp(42px, 6vw, 68px); font-variant-numeric: tabular-nums; font-weight: 950; letter-spacing: -.06em; line-height: 1; text-align: left; text-shadow: 0 2px 18px rgba(255, 224, 117, .35); white-space: nowrap; }
 .prime-vip-offer__price .auth-message { max-width: 28ch; }
 .league-access-heading { margin: 12px 0 3px; padding: 7px 10px; border-radius: 8px; font-size: 12px; letter-spacing: .07em; }
 .league-access-heading--free { color: var(--success); background: color-mix(in srgb, var(--success) 10%, var(--surface)); }
@@ -4768,7 +4772,9 @@ a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visi
   .home-best-multiple__legs div { padding: 6px 9px; }
   .home-best-multiple__legs > b { justify-self: center; line-height: 1; }
   .prime-vip-offer ul { grid-template-columns: 1fr; }
-  .prime-vip-offer__price { width: 100%; }
+  .prime-vip-offer__price { box-sizing: border-box; width: 100%; min-width: 0; padding: 18px; }
+  .prime-vip-offer__countdown { font-size: clamp(38px, 13vw, 54px); letter-spacing: -.08em; }
+  .prime-vip-offer__price .button, .account-vip-offer .button { width: 100%; }
   .home-editorial-highlights h2,
   .home-editorial-highlights h3,
   .home-editorial-highlights p,

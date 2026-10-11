@@ -119,7 +119,13 @@ export function AccountPanel() {
         </p>
       ) : null}
 
-      <VipCheckoutButton />
+      {!isVip ? (
+        <div className="account-vip-offer">
+          <strong>PRIME VIP</strong>
+          <span>$19.99/month</span>
+          <VipCheckoutButton label="Get PRIME VIP" />
+        </div>
+      ) : null}
 
       <button
         className="button auth-logout-button"
