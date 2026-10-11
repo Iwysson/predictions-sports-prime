@@ -17,6 +17,8 @@
 // Fail closed: a payload whose shape is not confirmed grants nothing. Unknown fields
 // are not assumed; the ledger stores field NAMES so the real shape can be checked.
 
+import { primeVipWhopPlanId } from "../../_lib/whop-plan.js";
+
 const TOLERANCE_SECONDS = 300;
 const SUPPORTED = new Set(["membership.activated", "membership.deactivated", "payment.succeeded", "payment.failed"]);
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -166,7 +168,7 @@ function planChange(type, data, profile, nowMs) {
 
 async function handle(request, env) {
   const secret = env.WHOP_WEBHOOK_SECRET;
-  if (!secret || !env.SUPABASE_URL || !env.SUPABASE_SECRET_KEY || !env.WHOP_PLAN_ID || !env.WHOP_PRODUCT_ID) {
+  if (!secret || !env.SUPABASE_URL || !env.SUPABASE_SECRET_KEY || !env.WHOP_PRODUCT_ID) {
     return reply(503, "webhook not configured");
   }
 
@@ -192,10 +194,10 @@ async function handle(request, env) {
     return reply(200, "ignored");
   }
 
-  // Product and plan must both match this project's configuration.
+  // Product and plan must both match the current PRIME VIP configuration.
   const planId = data.plan?.id ?? data.plan_id;
   const productId = data.product?.id ?? data.product_id ?? data.plan?.product_id;
-  if (planId !== env.WHOP_PLAN_ID || productId !== env.WHOP_PRODUCT_ID) {
+  if (planId !== primeVipWhopPlanId(env) || productId !== env.WHOP_PRODUCT_ID) {
     await db.recordEvent(eventId, type, "ignored-other-product-or-plan", keys, { eventAt });
     return reply(200, "ignored");
   }

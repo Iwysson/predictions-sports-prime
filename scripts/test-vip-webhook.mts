@@ -11,7 +11,7 @@ const historyFn: any = await import(pathToFileURL(resolve("functions/api/history
 
 const SECRET = "ws_test_only_0123456789abcdef";
 const SB_SECRET = "sb_secret_TESTONLY_0123456789";
-const PLAN = "plan_2Hr74QO4nwjDg";
+const PLAN = "plan_OzwiIv69pwRNm";
 const PRODUCT = "prod_fZEStSLz7WoEW";
 const ENV = {
   WHOP_WEBHOOK_SECRET: SECRET,
@@ -159,6 +159,9 @@ check("membership.activated writes the membership's own id", p1().whop_membershi
 reset();
 await send("membership.activated", membership({ status: "active" }));
 check("membership.activated active -> vip active", p1().subscription_status === "active" && isVip(p1()));
+reset();
+await send("membership.activated", membership({ status: "active" }), { env: { ...ENV, WHOP_PLAN_ID: "plan_OLD" } });
+check("webhook: stale deployment variable still accepts new plan", p1().subscription_status === "active" && isVip(p1()));
 reset();
 await send("membership.activated", membership({ status: "weird" }));
 check("unknown status on activation changes nothing", patches.length === 0);
@@ -316,17 +319,29 @@ await send("membership.activated", membership({ status: "active" }), { eventId: 
 check("repeat delivery of the same event: same final state", p1().subscription_status === "active" && patches.length === 2 && patches[0].body.subscription_status === patches[1].body.subscription_status);
 check("ledger keeps field names only (no values)", ledger.every((row) => Array.isArray(row.payload_keys) && !JSON.stringify(row).includes("buyer@example.com")));
 
-// ---- Checkout (disabled: PRIME VIP now sells only through Google Play Billing) ----
+// ---- Checkout ----
 reset();
 const cReq = (token?: string, body: any = {}) => new Request("https://predictions-sports-prime.com/api/whop/checkout", {
   method: "POST",
   headers: { ...(token ? { Authorization: `Bearer ${token}` } : {}), "Content-Type": "application/json" },
   body: JSON.stringify(body),
 });
-r = await checkout.onRequestPost({ request: cReq() });
-check("checkout: disabled -> 410, no Whop call, any request", r.status === 410 && whopCalls.length === 0);
-r = await checkout.onRequestPost({ request: cReq("tok-" + U1, { supabase_user_id: U3 }) });
-check("checkout: disabled even with a valid-looking session", r.status === 410 && whopCalls.length === 0);
+r = await checkout.onRequestPost({ request: cReq(), env: ENV });
+check("checkout: no session -> 401", r.status === 401 && whopCalls.length === 0);
+whopCalls = [];
+r = await checkout.onRequestPost({ request: cReq("tok-" + U1, { supabase_user_id: U3 }), env: ENV });
+const out = await r.json();
+const call = whopCalls[0];
+check("checkout: 200 with purchase_url and session_id only", r.status === 200 && out.purchase_url === "https://whop.com/checkout/x" && Object.keys(out).sort().join(",") === "purchase_url,session_id");
+check("checkout: body supabase_user_id ignored; session user used", call?.body.metadata.supabase_user_id === U1);
+check("checkout: fixed new plan and WHOP_API_KEY", call?.body.plan_id === PLAN && call.auth === "Bearer whop-test-key");
+whopCalls = [];
+r = await checkout.onRequestPost({ request: cReq("tok-" + U1), env: { ...ENV, WHOP_PLAN_ID: "plan_OLD" } });
+check("checkout: stale deployment variable cannot select old plan", whopCalls[0]?.body.plan_id === PLAN);
+whopResponse = { body: { id: "cfg_x", purchase_url: "https://whop.com/x", plan: { id: "plan_OTHER", product_id: PRODUCT } } };
+r = await checkout.onRequestPost({ request: cReq("tok-" + U1), env: ENV });
+check("checkout: plan mismatch -> 502", r.status === 502);
+whopResponse = null;
 
 // ---- History ----
 const hReq = (token?: string) => new Request("https://x/api/history-predictions", { headers: token ? { Authorization: `Bearer ${token}` } : {} });
