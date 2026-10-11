@@ -1,0 +1,35 @@
+{
+  "activeFromKey": "2026-10-12",
+  "entries": [
+    {
+      "slug": "new-jersey-devils-vs-ottawa-senators",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 Total Goals",
+      "odds": 1.80,
+      "analysis": [
+        "Ottawa have scored 15 goals in five games, while New Jersey have allowed 14 in four. Their three meetings last season produced 19 goals — 6.33 per game — so both the current scoring rates and the recent head-to-head point toward an over."
+      ],
+      "sources": [
+        { "name": "NHL official schedule, results and team statistics", "url": "https://www.nhl.com/" },
+        { "name": "NHL official standings", "url": "https://www.nhl.com/standings" },
+        { "name": "NHL official injury and team news", "url": "https://www.nhl.com/news" }
+      ]
+    },
+    {
+      "slug": "vegas-golden-knights-vs-minnesota-wild",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 Total Goals",
+      "odds": 1.73,
+      "analysis": [
+        "Vegas have scored 23 goals in six games, an average of 3.83 per night, and both teams averaged more than three goals per game in 2025/26. Minnesota also have enough scoring talent to contribute, so the recent numbers support a matchup with six or more total goals."
+      ],
+      "sources": [
+        { "name": "NHL official schedule, results and team statistics", "url": "https://www.nhl.com/" },
+        { "name": "NHL official standings", "url": "https://www.nhl.com/standings" },
+        { "name": "NHL official injury and team news", "url": "https://www.nhl.com/news" }
+      ]
+    }
+  ]
+}

@@ -127,14 +127,45 @@ export function AccountPanel() {
         </div>
       ) : null}
 
-      <button
-        className="button auth-logout-button"
-        disabled={loggingOut}
-        onClick={handleLogout}
-        type="button"
-      >
-        {loggingOut ? "Logging out…" : "Logout"}
-      </button>
+      <div className="account-actions">
+        <button
+          className="button auth-logout-button"
+          disabled={loggingOut}
+          onClick={handleLogout}
+          type="button"
+        >
+          {loggingOut ? "Logging out…" : "Logout"}
+        </button>
+
+        {confirmingDelete ? (
+          <>
+            <button
+              className="button auth-logout-button"
+              disabled={deleting}
+              onClick={handleDeleteAccount}
+              type="button"
+            >
+              {deleting ? "Deleting…" : "Confirm account deletion"}
+            </button>
+            <button
+              className="button auth-logout-button"
+              disabled={deleting}
+              onClick={() => setConfirmingDelete(false)}
+              type="button"
+            >
+              Cancel
+            </button>
+          </>
+        ) : (
+          <button
+            className="button auth-logout-button"
+            onClick={() => setConfirmingDelete(true)}
+            type="button"
+          >
+            Delete Account
+          </button>
+        )}
+      </div>
 
       {deleteError ? (
         <p className="auth-message auth-message--error" role="alert">
@@ -143,38 +174,12 @@ export function AccountPanel() {
       ) : null}
 
       {confirmingDelete ? (
-        <>
-          <p className="auth-message auth-message--warning" role="alert">
-            This permanently deletes your account and data and cannot be undone. It does
-            not cancel a Google Play or Whop subscription - cancel that separately at the
-            store if you do not want to keep being billed.
-          </p>
-          <button
-            className="button auth-logout-button"
-            disabled={deleting}
-            onClick={handleDeleteAccount}
-            type="button"
-          >
-            {deleting ? "Deleting…" : "Confirm account deletion"}
-          </button>
-          <button
-            className="button auth-logout-button"
-            disabled={deleting}
-            onClick={() => setConfirmingDelete(false)}
-            type="button"
-          >
-            Cancel
-          </button>
-        </>
-      ) : (
-        <button
-          className="button auth-logout-button"
-          onClick={() => setConfirmingDelete(true)}
-          type="button"
-        >
-          Delete Account
-        </button>
-      )}
+        <p className="auth-message auth-message--warning" role="alert">
+          This permanently deletes your account and data and cannot be undone. It does
+          not cancel a Google Play or Whop subscription - cancel that separately at the
+          store if you do not want to keep being billed.
+        </p>
+      ) : null}
     </AuthCard>
   );
 }

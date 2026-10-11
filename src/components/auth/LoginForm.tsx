@@ -72,6 +72,10 @@ export function LoginForm() {
           type="password"
         />
 
+        <p className="auth-switch auth-forgot-link">
+          <Link href="/forgot-password/">Forgot password?</Link>
+        </p>
+
         {error ? (
           <p className="auth-message auth-message--error" role="alert">
             {error}

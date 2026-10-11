@@ -227,6 +227,7 @@ code { color: var(--accent); }
 .auth-logout-button:disabled { cursor: wait; opacity: .65; }
 .auth-switch { margin-top: 20px; font-size: 14px; }
 .auth-switch a { color: var(--accent); font-weight: 800; }
+.auth-forgot-link { margin-top: 10px; margin-bottom: 0; font-size: 13px; }
 
 .auth-primary-action { display: inline-flex; justify-content: center; }
 .auth-message { margin: 10px 0 0; line-height: 1.5; }
@@ -241,6 +242,7 @@ code { color: var(--accent); }
 .account-details dt { color: var(--text-muted); font-size: 12px; font-weight: 800; text-transform: uppercase; }
 .account-details dd { margin: 5px 0 0; overflow-wrap: anywhere; font-weight: 700; }
 .auth-logout-button { border: 0; cursor: pointer; }
+.account-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
 
 @media (max-width: 520px) {
   .auth-card { padding: 22px 18px; }

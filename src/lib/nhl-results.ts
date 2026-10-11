@@ -9,6 +9,7 @@ import protectedOct08 from "@/data/nhl/protected-2026-10-08.json";
 import protectedOct09 from "@/data/nhl/protected-2026-10-09.json";
 import protectedOct10 from "@/data/nhl/protected-2026-10-10.json";
 import protectedOct11 from "@/data/nhl/protected-2026-10-11.json";
+import protectedOct12 from "@/data/nhl/protected-2026-10-12.json";
 import { decimalToAmericanOdds } from "@/lib/odds";
 import type { FinalScoreGame, MatchStatus } from "@/lib/nhl-live";
 import { findFinalScore } from "@/lib/nhl-live";
@@ -29,6 +30,7 @@ const PROTECTED_BY_DAY: Record<string, ProtectedEntry[]> = {
   "2026-10-09": (protectedOct09 as { entries: ProtectedEntry[] }).entries,
   "2026-10-10": (protectedOct10 as { entries: ProtectedEntry[] }).entries,
   "2026-10-11": (protectedOct11 as { entries: ProtectedEntry[] }).entries,
+  "2026-10-12": (protectedOct12 as { entries: ProtectedEntry[] }).entries,
 };
 
 export type NhlFullPrediction = {
