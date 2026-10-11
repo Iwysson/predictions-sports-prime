@@ -172,6 +172,25 @@
       "settledAt": "2026-10-09T06:14:59.089Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
     },
+    "brasileirao-serie-a:vasco-vs-remo": {
+      "key": "brasileirao-serie-a:vasco-vs-remo",
+      "league": "brasileirao-serie-a",
+      "slug": "vasco-vs-remo",
+      "homeTeam": "Vasco",
+      "awayTeam": "Remo",
+      "date": "2026-10-10",
+      "fixtureId": "editorial:brasileirao-serie-a:vasco-vs-remo:2026-10-10",
+      "predictionAccess": "vip",
+      "prediction": "Vasco da Gama to Win",
+      "odds": 1.33,
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-11T00:43:40.714Z",
+      "publishedAt": "2026-10-08T12:00:00.000-03:00"
+    },
     "brasileirao-serie-a:vitoria-vs-chapecoense": {
       "key": "brasileirao-serie-a:vitoria-vs-chapecoense",
       "league": "brasileirao-serie-a",
