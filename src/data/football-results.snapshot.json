@@ -400,6 +400,25 @@
       "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "eredivisie:fc-utrecht-vs-willem-ii": {
+      "key": "eredivisie:fc-utrecht-vs-willem-ii",
+      "league": "eredivisie",
+      "slug": "fc-utrecht-vs-willem-ii",
+      "homeTeam": "Utrecht",
+      "awayTeam": "Willem II",
+      "date": "2026-10-11",
+      "fixtureId": "401875587",
+      "predictionAccess": "vip",
+      "prediction": "FC Utrecht to win",
+      "odds": 1.48,
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-11T13:15:09.765Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
     "eredivisie:feyenoord-vs-az-alkmaar": {
       "key": "eredivisie:feyenoord-vs-az-alkmaar",
       "league": "eredivisie",
@@ -893,6 +912,25 @@
       "result": "red",
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "serie-a:como-vs-roma": {
+      "key": "serie-a:como-vs-roma",
+      "league": "serie-a",
+      "slug": "como-vs-roma",
+      "homeTeam": "Como",
+      "awayTeam": "AS Roma",
+      "date": "2026-10-11",
+      "fixtureId": "401874940",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.63,
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-11T13:15:09.765Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
     "serie-a:genoa-vs-fiorentina": {
       "key": "serie-a:genoa-vs-fiorentina",
