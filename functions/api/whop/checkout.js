@@ -5,6 +5,7 @@
 import { primeVipWhopPlanId } from "../../_lib/whop-plan.js";
 
 const WHOP_CHECKOUT_URL = "https://api.whop.com/api/v1/checkout_configurations";
+const DIRECT_CHECKOUT_URL = "https://whop.com/checkout/plan_OzwiIv69pwRNm";
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 const json = (body, status = 200) =>
@@ -40,7 +41,6 @@ export async function onRequestPost({ request, env }) {
     body: JSON.stringify({
       mode: "payment",
       plan_id: planId,
-      redirect_url: env.WHOP_REDIRECT_URL || undefined,
       metadata: { kind: "psp_vip", supabase_user_id: userId, ref },
     }),
   });
@@ -51,7 +51,17 @@ export async function onRequestPost({ request, env }) {
   if (returnedPlan && returnedPlan !== planId) return json({ error: "checkout-unavailable" }, 502);
   const returnedProduct = config?.plan?.product_id ?? config?.product_id;
   if (returnedProduct && returnedProduct !== productId) return json({ error: "checkout-unavailable" }, 502);
-  if (!config?.purchase_url) return json({ error: "checkout-unavailable" }, 502);
+  let purchaseUrl = DIRECT_CHECKOUT_URL;
+  if (config?.purchase_url) {
+    try {
+      const generatedUrl = new URL(config.purchase_url);
+      if (generatedUrl.protocol === "https:" && generatedUrl.hostname === "whop.com" && generatedUrl.pathname.startsWith("/checkout/")) {
+        purchaseUrl = generatedUrl.href;
+      }
+    } catch {
+      // Keep the known-good direct checkout URL when Whop returns a malformed URL.
+    }
+  }
 
-  return json({ purchase_url: config.purchase_url, session_id: config.id ?? null });
+  return json({ purchase_url: purchaseUrl, direct_purchase_url: DIRECT_CHECKOUT_URL, session_id: config.id ?? null });
 }

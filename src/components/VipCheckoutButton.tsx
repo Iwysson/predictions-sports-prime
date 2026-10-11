@@ -36,7 +36,7 @@ export function VipCheckoutButton({ label, className = "button auth-primary-acti
       if (!res.ok) throw new Error(t("matchCheckoutUnavailable"));
       const body = (await res.json()) as { purchase_url?: string };
       if (!body.purchase_url) throw new Error(t("matchCheckoutUnavailable"));
-      window.location.assign(body.purchase_url);
+      window.location.replace(body.purchase_url);
     } catch (err) {
       setError(err instanceof Error ? err.message : t("matchCheckoutUnavailable"));
       setBusy(false);

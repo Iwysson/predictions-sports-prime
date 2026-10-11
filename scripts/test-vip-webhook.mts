@@ -332,7 +332,8 @@ whopCalls = [];
 r = await checkout.onRequestPost({ request: cReq("tok-" + U1, { supabase_user_id: U3 }), env: ENV });
 const out = await r.json();
 const call = whopCalls[0];
-check("checkout: 200 with purchase_url and session_id only", r.status === 200 && out.purchase_url === "https://whop.com/checkout/x" && Object.keys(out).sort().join(",") === "purchase_url,session_id");
+check("checkout: 200 with a Whop checkout URL", r.status === 200 && out.purchase_url === "https://whop.com/checkout/x");
+check("checkout: exposes the fixed direct-plan fallback", out.direct_purchase_url === "https://whop.com/checkout/plan_OzwiIv69pwRNm");
 check("checkout: body supabase_user_id ignored; session user used", call?.body.metadata.supabase_user_id === U1);
 check("checkout: fixed new plan and WHOP_API_KEY", call?.body.plan_id === PLAN && call.auth === "Bearer whop-test-key");
 whopCalls = [];
@@ -341,6 +342,12 @@ check("checkout: stale deployment variable cannot select old plan", whopCalls[0]
 whopResponse = { body: { id: "cfg_x", purchase_url: "https://whop.com/x", plan: { id: "plan_OTHER", product_id: PRODUCT } } };
 r = await checkout.onRequestPost({ request: cReq("tok-" + U1), env: ENV });
 check("checkout: plan mismatch -> 502", r.status === 502);
+whopResponse = null;
+whopCalls = [];
+whopResponse = { body: { id: "cfg_bad", purchase_url: "https://predictions-sports-prime.com/", plan: { id: PLAN, product_id: PRODUCT } } };
+r = await checkout.onRequestPost({ request: cReq("tok-" + U1), env: ENV });
+const safeFallback = await r.json();
+check("checkout: non-Whop redirect falls back to direct plan URL", safeFallback.purchase_url === "https://whop.com/checkout/plan_OzwiIv69pwRNm");
 whopResponse = null;
 
 // ---- History ----
