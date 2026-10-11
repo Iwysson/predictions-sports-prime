@@ -20,6 +20,25 @@
       "settledAt": "2026-10-09T06:14:59.089Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
     },
+    "brasileirao-serie-a:atletico-mg-vs-santos": {
+      "key": "brasileirao-serie-a:atletico-mg-vs-santos",
+      "league": "brasileirao-serie-a",
+      "slug": "atletico-mg-vs-santos",
+      "homeTeam": "Atlético-MG",
+      "awayTeam": "Santos",
+      "date": "2026-10-11",
+      "fixtureId": "editorial:brasileirao-serie-a:atletico-mg-vs-santos:2026-10-11",
+      "predictionAccess": "vip",
+      "prediction": "Atlético-MG or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.71,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-11T21:49:41.803Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
     "brasileirao-serie-a:botafogo-vs-vasco": {
       "key": "brasileirao-serie-a:botafogo-vs-vasco",
       "league": "brasileirao-serie-a",
@@ -666,6 +685,25 @@
       "settledAt": "2026-10-09T21:57:35.078Z",
       "publishedAt": "2026-10-06T12:00:00.000Z"
     },
+    "la-liga:racing-santander-vs-valencia": {
+      "key": "la-liga:racing-santander-vs-valencia",
+      "league": "la-liga",
+      "slug": "racing-santander-vs-valencia",
+      "homeTeam": "Racing Santander",
+      "awayTeam": "Valencia",
+      "date": "2026-10-11",
+      "fixtureId": "401882850",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.68,
+      "finalScore": {
+        "home": 2,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-11T21:49:41.803Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
     "la-liga:rayo-vallecano-vs-athletic-club": {
       "key": "la-liga:rayo-vallecano-vs-athletic-club",
       "league": "la-liga",
@@ -684,6 +722,25 @@
       "result": "green",
       "settledAt": "2026-10-10T14:27:14.380Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "la-liga:real-betis-vs-osasuna": {
+      "key": "la-liga:real-betis-vs-osasuna",
+      "league": "la-liga",
+      "slug": "real-betis-vs-osasuna",
+      "homeTeam": "Real Betis",
+      "awayTeam": "Osasuna",
+      "date": "2026-10-11",
+      "fixtureId": "401882855",
+      "predictionAccess": "vip",
+      "prediction": "Real Betis to Win",
+      "odds": 1.57,
+      "finalScore": {
+        "home": 5,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-11T21:49:41.803Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
     "la-liga:real-madrid-vs-villarreal": {
       "key": "la-liga:real-madrid-vs-villarreal",
@@ -741,6 +798,44 @@
       "result": "green",
       "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "liga-portugal:arouca-vs-estrela-amadora": {
+      "key": "liga-portugal:arouca-vs-estrela-amadora",
+      "league": "liga-portugal",
+      "slug": "arouca-vs-estrela-amadora",
+      "homeTeam": "Arouca",
+      "awayTeam": "Estrela",
+      "date": "2026-10-11",
+      "fixtureId": "401885428",
+      "predictionAccess": "vip",
+      "prediction": "Arouca X1 + Over 1.5 Goals",
+      "odds": 1.73,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-11T21:49:41.803Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
+    "liga-portugal:benfica-vs-vitoria-guimaraes": {
+      "key": "liga-portugal:benfica-vs-vitoria-guimaraes",
+      "league": "liga-portugal",
+      "slug": "benfica-vs-vitoria-guimaraes",
+      "homeTeam": "Benfica",
+      "awayTeam": "Vitória de Guimaraes",
+      "date": "2026-10-11",
+      "fixtureId": "401885421",
+      "predictionAccess": "vip",
+      "prediction": "Benfica -1.5 Asian Handicap",
+      "odds": 1.65,
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-11T21:49:41.803Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
     "liga-portugal:braga-vs-sporting": {
       "key": "liga-portugal:braga-vs-sporting",
@@ -969,6 +1064,25 @@
       "result": "red",
       "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "ligue-1:troyes-vs-marseille": {
+      "key": "ligue-1:troyes-vs-marseille",
+      "league": "ligue-1",
+      "slug": "troyes-vs-marseille",
+      "homeTeam": "Troyes",
+      "awayTeam": "Marseille",
+      "date": "2026-10-11",
+      "fixtureId": "401876440",
+      "predictionAccess": "vip",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.61,
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-10-11T21:49:41.803Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
     "premier-league:arsenal-vs-leeds": {
       "key": "premier-league:arsenal-vs-leeds",
