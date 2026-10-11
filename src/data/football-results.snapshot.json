@@ -172,6 +172,25 @@
       "settledAt": "2026-10-09T06:14:59.089Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
     },
+    "brasileirao-serie-a:sao-paulo-vs-vitoria": {
+      "key": "brasileirao-serie-a:sao-paulo-vs-vitoria",
+      "league": "brasileirao-serie-a",
+      "slug": "sao-paulo-vs-vitoria",
+      "homeTeam": "São Paulo",
+      "awayTeam": "Vitória",
+      "date": "2026-10-10",
+      "fixtureId": "editorial:brasileirao-serie-a:sao-paulo-vs-vitoria:2026-10-10",
+      "predictionAccess": "vip",
+      "prediction": "São Paulo to Win",
+      "odds": 1.67,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-11T06:28:17.912Z",
+      "publishedAt": "2026-10-08T12:00:00.000-03:00"
+    },
     "brasileirao-serie-a:vasco-vs-remo": {
       "key": "brasileirao-serie-a:vasco-vs-remo",
       "league": "brasileirao-serie-a",
