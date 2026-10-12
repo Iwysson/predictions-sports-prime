@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-11T21:49:28.143Z",
+  "generatedAt": "2026-10-12T00:45:25.932Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -10594,6 +10594,146 @@
             "kickoffUtc": "2026-12-27T20:00Z"
           }
         ]
+      },
+      {
+        "round": 17,
+        "games": [
+          {
+            "round": 17,
+            "date": "2027-01-10",
+            "time": "TBD",
+            "homeTeam": "Braga",
+            "awayTeam": "Porto",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401885344",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-10T20:00Z"
+          },
+          {
+            "round": 17,
+            "date": "2027-01-10",
+            "time": "TBD",
+            "homeTeam": "Estrela",
+            "awayTeam": "Estoril",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401885346",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-10T20:00Z"
+          },
+          {
+            "round": 17,
+            "date": "2027-01-10",
+            "time": "TBD",
+            "homeTeam": "Famalicao",
+            "awayTeam": "Vitória de Guimaraes",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401885343",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-10T20:00Z"
+          },
+          {
+            "round": 17,
+            "date": "2027-01-10",
+            "time": "TBD",
+            "homeTeam": "C.D. Nacional",
+            "awayTeam": "Gil Vicente",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401885342",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-10T20:00Z"
+          },
+          {
+            "round": 17,
+            "date": "2027-01-10",
+            "time": "TBD",
+            "homeTeam": "Rio Ave",
+            "awayTeam": "Moreirense",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401885341",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-10T20:00Z"
+          },
+          {
+            "round": 17,
+            "date": "2027-01-10",
+            "time": "TBD",
+            "homeTeam": "Arouca",
+            "awayTeam": "Benfica",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401885345",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-10T20:00Z"
+          },
+          {
+            "round": 17,
+            "date": "2027-01-10",
+            "time": "TBD",
+            "homeTeam": "Alverca",
+            "awayTeam": "Maritimo",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401885347",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-10T20:00Z"
+          },
+          {
+            "round": 17,
+            "date": "2027-01-10",
+            "time": "TBD",
+            "homeTeam": "Académico de Viseu",
+            "awayTeam": "Casa Pia",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401885348",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-10T20:00Z"
+          },
+          {
+            "round": 17,
+            "date": "2027-01-10",
+            "time": "TBD",
+            "homeTeam": "Sporting CP",
+            "awayTeam": "Santa Clara",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401885340",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-10T20:00Z"
+          }
+        ]
       }
     ],
     "ligue-1": [
@@ -15463,7 +15603,6 @@
     ]
   },
   "predictionIds": {
-    "brasileirao-serie-a:atletico-mg-vs-santos": "editorial:brasileirao-serie-a:atletico-mg-vs-santos:2026-10-11",
     "brasileirao-serie-a:bahia-vs-mirassol": "editorial:brasileirao-serie-a:bahia-vs-mirassol:2026-10-11",
     "brasileirao-serie-a:bragantino-vs-cruzeiro": "editorial:brasileirao-serie-a:bragantino-vs-cruzeiro:2026-10-12",
     "brasileirao-serie-a:chapecoense-vs-athletico-pr": "editorial:brasileirao-serie-a:chapecoense-vs-athletico-pr:2026-10-12",
@@ -15494,13 +15633,8 @@
     "eliteserien:kfum-oslo-vs-valerenga": "401843453",
     "eliteserien:lillestrom-vs-molde": "official:eliteserien:lillestr-m-vs-molde:2026-10-11",
     "la-liga:levante-vs-sevilla": "401882852",
-    "la-liga:racing-santander-vs-valencia": "401882850",
-    "la-liga:real-betis-vs-osasuna": "401882855",
-    "liga-portugal:arouca-vs-estrela-amadora": "401885428",
-    "liga-portugal:benfica-vs-vitoria-guimaraes": "401885421",
     "liga-portugal:famalicao-vs-alverca": "401885425",
     "ligue-1:rennes-vs-auxerre": "401876441",
-    "ligue-1:troyes-vs-marseille": "401876440",
     "premier-league:coventry-city-vs-newcastle-united": "401879267",
     "serie-a:atalanta-vs-venezia": "401875005",
     "serie-a:cagliari-vs-juventus": "401874764",
@@ -15527,11 +15661,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-11T21:49:28.143Z",
+    "bundesliga": "2026-10-12T00:45:25.932Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
-    "liga-portugal": "2026-10-11T21:49:28.143Z",
-    "ligue-1": "2026-10-11T21:49:28.143Z",
-    "eredivisie": "2026-10-11T21:49:28.143Z",
+    "liga-portugal": "2026-10-12T00:45:25.932Z",
+    "ligue-1": "2026-10-12T00:45:25.932Z",
+    "eredivisie": "2026-10-12T00:45:25.932Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
@@ -16788,7 +16922,8 @@
       "id": "401915410",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-13T19:00Z"
+      "kickoffUtc": "2026-10-13T19:00Z",
+      "espnEventId": "401915410"
     },
     "401915412": {
       "round": 2,
@@ -16803,7 +16938,8 @@
       "id": "401915412",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-13T19:00Z"
+      "kickoffUtc": "2026-10-13T19:00Z",
+      "espnEventId": "401915412"
     },
     "401915413": {
       "round": 2,
@@ -16818,7 +16954,8 @@
       "id": "401915413",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-13T19:00Z"
+      "kickoffUtc": "2026-10-13T19:00Z",
+      "espnEventId": "401915413"
     },
     "401915414": {
       "round": 2,
@@ -16863,7 +17000,8 @@
       "id": "401915417",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-13T19:00Z"
+      "kickoffUtc": "2026-10-13T19:00Z",
+      "espnEventId": "401915417"
     },
     "401915418": {
       "round": 2,
@@ -16878,7 +17016,8 @@
       "id": "401915418",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-13T16:45Z"
+      "kickoffUtc": "2026-10-13T16:45Z",
+      "espnEventId": "401915418"
     },
     "401915434": {
       "round": 2,
@@ -16893,7 +17032,8 @@
       "id": "401915434",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-13T19:00Z"
+      "kickoffUtc": "2026-10-13T19:00Z",
+      "espnEventId": "401915434"
     },
     "401915435": {
       "round": 2,
@@ -16908,7 +17048,8 @@
       "id": "401915435",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-13T19:00Z"
+      "kickoffUtc": "2026-10-13T19:00Z",
+      "espnEventId": "401915435"
     },
     "401915549": {
       "round": 2,
@@ -19400,9 +19541,9 @@
       "time": "19:30",
       "homeTeam": "Bahia",
       "awayTeam": "Mirassol",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "scheduled",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "completed",
       "dataSource": "editorial-manual",
       "id": "editorial:brasileirao-serie-a:bahia-vs-mirassol:2026-10-11",
       "sourceAgreement": false,
@@ -19464,9 +19605,9 @@
       "time": "17:30",
       "homeTeam": "Flamengo",
       "awayTeam": "Fluminense",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "in-progress",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "completed",
       "dataSource": "editorial-manual",
       "id": "editorial:brasileirao-serie-a:flamengo-vs-fluminense:2026-10-11",
       "sourceAgreement": false,
@@ -19480,9 +19621,9 @@
       "time": "17:30",
       "homeTeam": "Grêmio",
       "awayTeam": "Internacional",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "in-progress",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "completed",
       "dataSource": "editorial-manual",
       "id": "editorial:brasileirao-serie-a:gremio-vs-internacional:2026-10-11",
       "sourceAgreement": false,
@@ -19496,9 +19637,9 @@
       "time": "17:30",
       "homeTeam": "Palmeiras",
       "awayTeam": "Corinthians",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "in-progress",
+      "homeScore": 4,
+      "awayScore": 1,
+      "status": "completed",
       "dataSource": "editorial-manual",
       "id": "editorial:brasileirao-serie-a:palmeiras-vs-corinthians:2026-10-11",
       "sourceAgreement": false,
