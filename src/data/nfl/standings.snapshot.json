@@ -1,7 +1,7 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-10-11T21:56:15.026Z",
+  "generatedAt": "2026-10-12T15:19:14.209Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
@@ -16,7 +16,7 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "jax",
+      "teamId": "bal",
       "wins": 4,
       "losses": 1,
       "ties": 0,
@@ -25,11 +25,11 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "bal",
-      "wins": 3,
+      "teamId": "jax",
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "winPct": 0.75,
+      "winPct": 0.8,
       "conferenceRank": 3,
       "playoffStatus": "in-playoff-position"
     },
@@ -52,7 +52,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "lv",
+      "teamId": "den",
       "wins": 3,
       "losses": 2,
       "ties": 0,
@@ -61,7 +61,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "cle",
+      "teamId": "lv",
       "wins": 3,
       "losses": 2,
       "ties": 0,
@@ -70,7 +70,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "pit",
+      "teamId": "cle",
       "wins": 3,
       "losses": 2,
       "ties": 0,
@@ -79,7 +79,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "cin",
+      "teamId": "pit",
       "wins": 3,
       "losses": 2,
       "ties": 0,
@@ -88,11 +88,11 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "den",
-      "wins": 2,
+      "teamId": "cin",
+      "wins": 3,
       "losses": 2,
       "ties": 0,
-      "winPct": 0.5,
+      "winPct": 0.6,
       "conferenceRank": 10,
       "playoffStatus": "none"
     },
@@ -124,16 +124,16 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "lac",
+      "teamId": "mia",
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
       "winPct": 0,
       "conferenceRank": 14,
       "playoffStatus": "none"
     },
     {
-      "teamId": "mia",
+      "teamId": "lac",
       "wins": 0,
       "losses": 5,
       "ties": 0,
@@ -151,7 +151,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "min",
+      "teamId": "sf",
       "wins": 5,
       "losses": 0,
       "ties": 0,
@@ -160,8 +160,8 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "sf",
-      "wins": 4,
+      "teamId": "min",
+      "wins": 5,
       "losses": 0,
       "ties": 0,
       "winPct": 1,
@@ -187,21 +187,12 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "sea",
-      "wins": 3,
-      "losses": 1,
-      "ties": 0,
-      "winPct": 0.75,
-      "conferenceRank": 5,
-      "playoffStatus": "wild-card"
-    },
-    {
       "teamId": "gb",
       "wins": 3,
       "losses": 2,
       "ties": 0,
       "winPct": 0.6,
-      "conferenceRank": 6,
+      "conferenceRank": 5,
       "playoffStatus": "wild-card"
     },
     {
@@ -210,20 +201,29 @@
       "losses": 2,
       "ties": 0,
       "winPct": 0.6,
+      "conferenceRank": 6,
+      "playoffStatus": "wild-card"
+    },
+    {
+      "teamId": "det",
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "winPct": 0.6,
       "conferenceRank": 7,
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "lar",
-      "wins": 2,
+      "teamId": "sea",
+      "wins": 3,
       "losses": 2,
       "ties": 0,
-      "winPct": 0.5,
+      "winPct": 0.6,
       "conferenceRank": 8,
       "playoffStatus": "none"
     },
     {
-      "teamId": "atl",
+      "teamId": "lar",
       "wins": 2,
       "losses": 2,
       "ties": 0,
@@ -232,11 +232,11 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "det",
+      "teamId": "atl",
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "winPct": 0.5,
+      "winPct": 0.4,
       "conferenceRank": 10,
       "playoffStatus": "none"
     },
@@ -268,16 +268,16 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "ari",
+      "teamId": "tb",
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "winPct": 0.25,
+      "winPct": 0.2,
       "conferenceRank": 14,
       "playoffStatus": "none"
     },
     {
-      "teamId": "tb",
+      "teamId": "no",
       "wins": 1,
       "losses": 4,
       "ties": 0,
@@ -286,7 +286,7 @@
       "playoffStatus": "none"
     },
     {
-      "teamId": "no",
+      "teamId": "ari",
       "wins": 1,
       "losses": 4,
       "ties": 0,
