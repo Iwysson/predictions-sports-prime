@@ -1,0 +1,285 @@
+{
+  "activeFromKey": "2026-10-13",
+  "entries": [
+    {
+      "slug": "detroit-red-wings-vs-new-jersey-devils",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Detroit Red Wings win",
+      "odds": 2.07,
+      "analysis": [
+        "Detroit must deal with New Jersey's quick puck movement without getting stretched between the blue lines. The Red Wings' best chance is to keep the game close at even strength and make their power-play opportunities count. The Devils can create danger off turnovers, so Detroit's puck management matters as much as its finishing."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "columbus-blue-jackets-vs-florida-panthers",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 goals",
+      "odds": 1.73,
+      "analysis": [
+        "Florida's forecheck can force Columbus into hurried exits, but those same aggressive shifts can leave room for the Blue Jackets to attack the other way. The Over 5.5 needs more than Florida controlling possession: Columbus must turn its opportunities into goals too. Special teams could help push this past five."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "montreal-canadiens-vs-buffalo-sabres",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 goals",
+      "odds": 1.65,
+      "analysis": [
+        "Montreal and Buffalo both have forwards who can attack off the rush, making neutral-zone turnovers especially costly. Buffalo's ability to get shots through traffic could complement Montreal's pace and create a game with scoring at both ends. A disciplined, low-penalty contest would make six goals harder to reach."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "carolina-hurricanes-vs-washington-capitals",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Carolina Hurricanes win",
+      "odds": 1.77,
+      "analysis": [
+        "Carolina's relentless forecheck is designed to keep opponents defending for long stretches. Against Washington, that pressure should generate chances if the Hurricanes recover loose pucks and avoid giving up odd-man rushes. Washington still has enough finishing talent to punish a careless shift, but Carolina's ability to drive play makes the home win appealing."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "new-york-rangers-vs-tampa-bay-lightning",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 goals",
+      "odds": 1.8,
+      "analysis": [
+        "The Rangers can create danger when their forwards break quickly from the defensive zone, while Tampa Bay are dangerous when they establish possession and move the puck across the slot. Either route could produce goals, especially if penalties disrupt the five-on-five rhythm. The total becomes tougher if both teams protect the middle effectively."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "ottawa-senators-vs-st-louis-blues",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Ottawa Senators win",
+      "odds": 1.81,
+      "analysis": [
+        "Ottawa have home ice, but St. Louis can make this difficult if their forecheck disrupts the Senators' exits. Ottawa's route to a win depends on moving the puck cleanly through the neutral zone and creating pressure across more than one line. The Blues' ability to turn loose pucks into counterattacks is the principal risk."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "new-york-islanders-vs-vancouver-canucks",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "New York Islanders win",
+      "odds": 1.56,
+      "analysis": [
+        "The Islanders' path to a home win starts with limiting Vancouver's rush chances and forcing play along the boards. New York can then create pressure from turnovers and net-front traffic. Vancouver have enough attacking skill to make this uncomfortable, but the Islanders' home setting supports the selection."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "chicago-blackhawks-vs-pittsburgh-penguins",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 goals",
+      "odds": 1.64,
+      "analysis": [
+        "Pittsburgh can make Chicago defend extended shifts by moving the puck quickly below the circles. Chicago, meanwhile, have the speed to exploit gaps when the Penguins commit forwards to the attack. The Over 5.5 has a route through chances at both ends rather than relying on Pittsburgh to do all the scoring."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "winnipeg-jets-vs-minnesota-wild",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 goals",
+      "odds": 1.74,
+      "analysis": [
+        "Minnesota's scoring threat comes from quick puck movement into dangerous areas, while Winnipeg can answer through its finishing on the rush. The six-goal target becomes more realistic if neither side can keep the other out of the slot. Strong goaltending remains the biggest obstacle in a matchup with the talent to go either way."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "dallas-stars-vs-colorado-avalanche",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 goals",
+      "odds": 1.82,
+      "analysis": [
+        "Colorado's attacking speed can stretch even well-organized defenses, but Dallas have the depth to respond rather than simply absorb pressure. The Over 5.5 needs that exchange of chances to translate into goals. Dallas' ability to slow the game through puck control is the clearest concern for this selection."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "nashville-predators-vs-vegas-golden-knights",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 goals",
+      "odds": 1.78,
+      "analysis": [
+        "Vegas are dangerous when they pin opponents in their own zone, while Nashville can generate chances by attacking immediately after a turnover. That contrast could create both sustained pressure and quick breaks. The Over 5.5 is more convincing if Nashville contribute on the scoreboard instead of spending long stretches defending."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "utah-mammoth-vs-toronto-maple-leafs",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 goals",
+      "odds": 1.66,
+      "analysis": [
+        "Toronto's top forwards can create scoring chances in short bursts, and Utah have the pace to make the game competitive rather than one-sided. The Over 5.5 becomes attractive if Utah can challenge Toronto's defensive coverage on the rush. A quieter special-teams game would put more pressure on five-on-five finishing."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "anaheim-ducks-vs-calgary-flames",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Anaheim Ducks win",
+      "odds": 1.5,
+      "analysis": [
+        "Anaheim have home ice for this meeting and can use their young forwards' speed to put Calgary under pressure. The Flames can make life difficult through physical play and a tight neutral zone, but Anaheim's ability to attack quickly gives the Ducks a credible route to the win."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    },
+    {
+      "slug": "los-angeles-kings-vs-edmonton-oilers",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 goals",
+      "odds": 1.73,
+      "analysis": [
+        "Edmonton's elite attackers can create a goal from a single power-play sequence or a moment of space through the middle. Los Angeles usually try to deny exactly those openings, but they also have enough offense to contribute to the total. Six goals are possible if the Kings cannot keep Edmonton out of the high-danger areas."
+      ],
+      "sources": [
+        {
+          "name": "NHL official game schedule",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-13"
+        },
+        {
+          "name": "NHL stats",
+          "url": "https://www.nhl.com/stats/"
+        }
+      ]
+    }
+  ]
+}
