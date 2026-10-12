@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T12:48:24.987Z",
+  "generatedAt": "2026-10-12T20:28:16.707Z",
   "leagues": [
     "brasileirao-serie-a",
     "champions-league",
@@ -19,22 +19,6 @@
   ],
   "free": {
     "today": [
-      {
-        "slug": "kfum-oslo-vs-valerenga",
-        "league": "eliteserien",
-        "homeTeam": "KFUM Oslo",
-        "awayTeam": "Vålerenga",
-        "date": "2026-10-12",
-        "time": "19:00",
-        "round": "Matchday 23",
-        "title": "KFUM Oslo vs Vålerenga",
-        "analysisAccess": "free",
-        "predictionAccess": "free",
-        "badge": "free",
-        "teaser": null,
-        "pick": "Over 2.5 Goals",
-        "odds": 1.52
-      },
       {
         "slug": "chapecoense-vs-athletico-pr",
         "league": "brasileirao-serie-a",
@@ -66,22 +50,6 @@
         "teaser": null,
         "pick": "Over 2.5 Goals",
         "odds": 1.66
-      },
-      {
-        "slug": "eyupspor-vs-goztepe",
-        "league": "super-lig",
-        "homeTeam": "Eyupspor",
-        "awayTeam": "Goztepe",
-        "date": "2026-10-12",
-        "time": "20:00",
-        "round": "Matchday 7",
-        "title": "Eyüpspor vs Göztepe",
-        "analysisAccess": "free",
-        "predictionAccess": "free",
-        "badge": "free",
-        "teaser": null,
-        "pick": "Göztepe or Draw (X2) + Over 1.5 Goals",
-        "odds": 1.62
       },
       {
         "slug": "famalicao-vs-alverca",
@@ -310,25 +278,43 @@
         "teaser": null,
         "pick": "Çorum FK or Draw (1X) + Over 1.5 Goals",
         "odds": 1.68
+      },
+      {
+        "slug": "aberdeen-vs-st-mirren",
+        "league": "scottish-premiership",
+        "homeTeam": "Aberdeen",
+        "awayTeam": "St Mirren",
+        "date": "2026-10-17",
+        "time": "15:00",
+        "round": "Round 9",
+        "title": "Aberdeen vs St Mirren",
+        "analysisAccess": "free",
+        "predictionAccess": "free",
+        "badge": "free",
+        "teaser": null,
+        "pick": "Over 2.5 Goals",
+        "odds": 1.72
+      },
+      {
+        "slug": "hibernian-vs-falkirk",
+        "league": "scottish-premiership",
+        "homeTeam": "Hibernian",
+        "awayTeam": "Falkirk",
+        "date": "2026-10-17",
+        "time": "15:00",
+        "round": "Round 9",
+        "title": "Hibernian vs Falkirk",
+        "analysisAccess": "free",
+        "predictionAccess": "free",
+        "badge": "free",
+        "teaser": null,
+        "pick": "Hibernian to Win",
+        "odds": 1.61
       }
     ]
   },
   "vip": {
     "today": [
-      {
-        "slug": "atalanta-vs-venezia",
-        "league": "serie-a",
-        "homeTeam": "Atalanta",
-        "awayTeam": "Venezia",
-        "date": "2026-10-12",
-        "time": "18:30",
-        "round": "Matchday 6",
-        "title": "Atalanta vs Venezia",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
       {
         "slug": "torino-vs-udinese",
         "league": "serie-a",
@@ -1017,6 +1003,62 @@
         "analysisAccess": "vip",
         "predictionAccess": "vip",
         "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "kilmarnock-vs-motherwell",
+        "league": "scottish-premiership",
+        "homeTeam": "Kilmarnock",
+        "awayTeam": "Motherwell",
+        "date": "2026-10-17",
+        "time": "15:00",
+        "round": "Round 9",
+        "title": "Kilmarnock vs Motherwell",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "st-johnstone-vs-dundee-united",
+        "league": "scottish-premiership",
+        "homeTeam": "St Johnstone",
+        "awayTeam": "Dundee United",
+        "date": "2026-10-17",
+        "time": "15:00",
+        "round": "Round 9",
+        "title": "St Johnstone vs Dundee United",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "dundee-vs-rangers",
+        "league": "scottish-premiership",
+        "homeTeam": "Dundee",
+        "awayTeam": "Rangers",
+        "date": "2026-10-17",
+        "time": "20:00",
+        "round": "Round 9",
+        "title": "Dundee vs Rangers",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "celtic-vs-hearts",
+        "league": "scottish-premiership",
+        "homeTeam": "Celtic",
+        "awayTeam": "Hearts",
+        "date": "2026-10-18",
+        "time": "15:00",
+        "round": "Round 9",
+        "title": "Celtic vs Hearts",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "best",
         "teaser": null
       },
       {
