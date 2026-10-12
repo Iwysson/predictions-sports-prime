@@ -15,6 +15,9 @@ const uclSources = [
   { name: "UEFA — 2026/27 results and fixtures by team (7 October 2026)", url: "https://www.uefa.com/uefachampionsleague/news/02a8-2176fa83582b-d99f0b27f405-1000--champions-league-league-phase-fixtures-and-results-by-team/" },
 ];
 const uclPublishedAt = "2026-10-08T15:00:00.000-03:00";
+// Editorial refresh of the FREE fixtures (team news, projected lineups, form) on matchday eve.
+const freeRefreshAt = "2026-10-12T19:35:00.000-03:00";
+const uefaPredictedLineups = { name: "UEFA — Champions League predicted line-ups, Matchday 2", url: "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-predicted-line-ups-matchday-2-team-news-/" };
 const noVenueSplitCore = {
   kind: "disclosure" as const,
   note: "This is a single-leg Champions League league-phase fixture rather than a repeated home/away league sample, so a structured HOME/AWAY split; no sourced home and away split in the 22-metric target format is available for this matchup. The competition-record figures cited above (recent-run goals, clean sheets, head-to-head history) are the sourced metrics for this tie and are presented in prose rather than restated in a table to avoid duplicating them without new interpretation.",
@@ -160,14 +163,42 @@ const interVsClubBrugge = createPspImport26Prediction({
   teaser: "Inter's historical edge over Belgian clubs is weighed against an unusually poor current European run. The prediction is FREE; the full reasoning remains available with PRIME VIP.",
   trend: "Inter's history against Belgian clubs vs. a rare losing run",
   matchAnalysis: [
-    "Inter have little room for complacency after losing 2–1 at Real Madrid. Their broader Champions League results are unusually poor by their standards: **six defeats** in the last seven matches, including **three successive** home losses. The task is therefore not simply to beat Club Brugge but to reverse a run of underperformance emphatically enough to clear a two-goal handicap.",
-    "Brugge's 3–2 opening defeat to Aston Villa suggests they can contribute to an open match. Across their last **16 Champions League games**, **66 goals** have been scored, an average of **4.13 per fixture**. Inter's historical edge against this type of opponent is more encouraging: Brugge have won only **two of their last 18** matches against Italian teams, with six draws and ten defeats.",
+    "Inter arrive at San Siro needing a response more than a reminder of their quality. The 2–1 defeat at Real Madrid was their **sixth loss in seven Champions League matches**, and three straight home defeats in the competition is a Champions League record. Domestically the picture is far calmer, with only two points dropped in Serie A so far, and the return of Hakan Çalhanoğlu to a midfield that already has Barella and Zieliński should give them a steadier hand on the tempo.",
+    "Club Brugge are the kind of opponent that makes a two-goal margin look reachable. They lost 3–2 at home to Aston Villa after trailing 3–1, have conceded three or more goals in **seven of their last nine** European matches and have lost four of their last five away games. Their record against Italian opposition is just as poor, with **two wins in 18** (six draws, ten defeats). The caution is that Brugge do score: Vetlesen and Tresoldi both found the net against Villa, and they have scored ten goals in three straight league wins.",
   ],
-  tactical: "Inter have also won their last 18 Champions League games when leading at half-time, indicating how difficult they can be to catch once they establish control. Yet Brugge's capacity to score could turn a 2–0 position into a 2–1 finish. This is a demanding handicap rather than a conservative favourite pick: a one-goal win would be insufficient.",
-  risk: "Inter's six defeats in their last seven Champions League matches, including three straight at home, are the clearest warning that the handicap assumes an immediate turnaround in form that recent results do not yet support, even against a historically weaker opponent.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "Inter's expected 3–5–2 gives them the clearest route. With Dimarco on one flank and Diouf likely on the other, the wing-backs can pin Brugge's full-backs Sabbe and Seys, while Lautaro Martínez and Thuram attack the channels around Mechele, who is paired with Spileers or Lee Han-beom now that Joel Ordóñez is injured. Brugge's 4–2–3–1 relies on Potts and Vanaken to screen the space in front of that back four, and if Forbs recovers from his muscle problem his running alongside Virgili and Vetlesen is their best counter-attacking outlet. An early Inter goal would force Brugge to chase the game, which is exactly the state in which their defensive numbers have unravelled.",
+  risk: "The handicap is the problem rather than the winner. A one-goal win returns nothing, and a side that has lost six of seven in Europe has not yet shown it can turn control into a margin. Yann Sommer, a former Inter goalkeeper, knows the stadium, Forbs' fitness could change how dangerous Brugge are on the break, and three straight home defeats in this competition are a reminder that San Siro has not been a comfortable place for Inter lately.",
+  market: "At **1.75** the line carries a raw implied probability of **57.14%** (1 / 1.75), which is the market's price for an Inter win by two or more goals. Brugge's record in Italy, with one win in their last nine visits, supports an Inter victory, but frequency says little about the margin, so the case for value rests on Brugge's leaky away form and the early game state rather than on Inter's own European results.",
+  conclusion: "Inter's European form is poor and the handicap leaves no room for a narrow win, yet Brugge's defensive record away from home, their struggles in Italy and Inter's far steadier league form make a comfortable home result the most likely outcome. The teamsheets, especially Çalhanoğlu in midfield and Forbs on the Brugge wing, are worth a final look before kick-off. The call stays with Inter on the -1.5 handicap at 1.75.",
+  teamNews: `Team news below comes from UEFA's matchday listing and Monday's San Siro previews, and was last checked on 12 October 2026. Both lineups are PROJECTED rather than confirmed, and the official teamsheets arrive about an hour before kick-off.
+
+**Inter**
+
+- **Out:** Stones (thigh) and Jones (thigh), as listed by UEFA. Both absences reduce squad depth without removing a name from the projected eleven.
+- **Back:** Hakan Çalhanoğlu returned to the squad for the weekend win over Parma and is in the projected midfield.
+- No other injury doubts or suspensions were reported.
+
+**Club Brugge**
+
+- **Out:** Joel Ordóñez (foot). He is a centre-back, so Mechele is expected to be paired with Spileers or Lee Han-beom.
+- **Doubtful:** Carlos Forbs (muscle problem). UEFA lists him as a doubt, although some previews still expect him to start on the right.
+- No suspensions were reported.
+
+**PROJECTED Inter (3-5-2):** Josep Martínez; Bisseck, Akanji, Bastoni; Diouf, Barella, Çalhanoğlu, Zieliński, Dimarco; Lautaro Martínez, Thuram. Projections differ on the right-sided centre-back (Pavard appears in some) and on Mkhitaryan in place of Zieliński.
+
+**PROJECTED Club Brugge (4-2-3-1):** Sommer; Sabbe, Mechele, Spileers, Seys; Potts, Vanaken; Forbs, Vetlesen, Virgili; Tresoldi. Some projections use Lee Han-beom beside Mechele.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "Champions League league-phase fixtures do not provide a repeated home and away league sample, and no sourced HOME/AWAY split in the 22-metric format exists for this tie. The competition records quoted in the analysis (Inter's recent Champions League results, Brugge's record against Italian clubs and their recent league scoring) are the sourced figures used, and they are written into the analysis rather than restated in a table.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "TheHardTackle — Inter vs Club Brugge preview (12 October 2026)", url: "https://thehardtackle.com/round-up/2026/10/12/inter-milan-vs-club-brugge-preview-prediction-probable-lineups-tactics-team-news-key-stats/" },
+    { name: "TheStatsZone — Inter vs Club Brugge team news", url: "https://www.thestatszone.com/inter-milan-vs-club-brugge-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-229715" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: freeRefreshAt,
 });
 
 const rbLeipzigVsPsvEindhoven = createPspImport26Prediction({
@@ -185,14 +216,42 @@ const rbLeipzigVsPsvEindhoven = createPspImport26Prediction({
   teaser: "Leipzig's defensive struggles meet a PSV side with a weak record on German soil. The prediction is FREE; the full reasoning remains available with PRIME VIP.",
   trend: "Leipzig's defensive fragility against PSV's weak German away record",
   matchAnalysis: [
-    "Leipzig's 4–1 defeat at Como left them needing an immediate response, and the scale of that loss reflects a deeper European problem. They have won only **one of their last 11** Champions League matches, with nine defeats, and have gone **19 UEFA club fixtures** without a clean sheet. That defensive record provides a strong basis for expecting chances at both ends.",
-    "PSV drew 1–1 with Shakhtar Donetsk on the opening night, and their away history against German clubs is particularly weak: just **one win in 21 visits**, alongside five draws and 15 defeats. They have also led at half-time in only **one of their last 13** Champions League games. These numbers give Leipzig an argument for avoiding defeat even though the German side's recent form is poor.",
+    "Leipzig's season looks like two different teams. At the Red Bull Arena they have won all three Bundesliga home games, scoring 14 goals without conceding according to match previews, while in Europe they were beaten 4–1 at Como on matchday one, have won **one of their last 11** Champions League matches (nine defeats) and have gone **19 UEFA games without a clean sheet**. The home double chance leans on the version that shows up in Saxony, and the goals leg accepts that the defence will probably concede at some point.",
+    "PSV are not arriving in poor form. They are second in the Eredivisie on 19 points from eight matches with only ten league goals conceded, and Sergiño Dest's equaliser earned a 1–1 draw at home to Shakhtar on the opening night. Their problem is geography: PSV have won **just one of 21** away matches against German opposition (five draws, 15 defeats). The injury list also bites, with Wanner, Pepi, Ouaissa and Lammers listed out and Schouten reported absent by several previews.",
   ],
-  tactical: "The goals condition is a separate obstacle. Leipzig's defensive issues help the over, but a cautious response to their opening defeat could produce a lower-scoring contest. The combination needs Leipzig to avoid defeat and at least three goals; the first requirement leans on PSV's difficult German trips, while the second leans on Leipzig's inability to keep opponents out.",
-  risk: "Leipzig's nine defeats in 11 Champions League matches mean an outright loss remains a real possibility regardless of PSV's weak German away record, which would defeat the double-chance leg irrespective of the goals total.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "The projected shapes point to an open game. Leipzig's 4–2–3–1 puts Nkunku, directly involved in five goals in his last five Champions League starts, between Gruda and Nusa, and that pair's width against Dest and Mauro Júnior (or Kostić) is where the home side should hurt PSV. Geertruida, on loan at PSV from Leipzig and facing his old club, leads a back line that will have to cope with Leipzig's pace in behind. If Schouten is indeed missing, Sano and Fernandez are exposed whenever Perišić and Van Bommel stay high, which opens the transition lanes behind Baku and Raum at the other end. Whoever scores first will decide whether the evening stays stretched.",
+  risk: "Both legs of this combination carry real risk. Leipzig have lost nine of their last 11 Champions League matches, so avoiding defeat is far from guaranteed even against a PSV side with a dreadful German away record, and a cautious reaction to the Como result could leave the match on one or two goals. The goals leg also needs Leipzig's attack to travel into Europe the way it has performed at home in the league, something it did not do at Como.",
+  market: "At a market price of **1.91** the combination carries a raw implied probability of **52.36%** (1 / 1.91), close to a coin flip for a bet that needs two things to go right. PSV's one win in 21 German trips supports the double chance, while the goals leg rests on Leipzig's league scoring at home and a defence that has not kept a clean sheet in European football for 19 games. The value is modest and depends on the game opening up early rather than on a settled statistical gap.",
+  conclusion: "Leipzig's home form and PSV's history in Germany give the double chance a sound base, and neither defence has recently looked capable of shutting a game down, which supports the goals leg. The risk is Leipzig's European results, so the teamsheet matters, particularly the central midfield pair and whether Nkunku starts. The call stays with Leipzig on the double chance plus over 2.5 total goals at 1.91.",
+  teamNews: `This Leipzig and PSV availability picture was assembled on 12 October 2026 from UEFA's listing and the German and Dutch match previews. The two lineups are PROJECTED, so treat the names as expectations until the teamsheets appear about an hour before kick-off.
+
+**RB Leipzig**
+
+- **Out:** Baumgartner (thigh), Guiu (thigh) and Ouédraogo (shoulder), as listed by UEFA. One preview describes Baumgartner as close to a return. The attacking band of Gruda, Nkunku and Nusa is untouched, so the absences cost depth more than structure.
+- No other doubts or suspensions were reported.
+
+**PSV Eindhoven**
+
+- **Out:** Lammers (thigh), Ouaissa (thigh), Pepi (muscular), Sildillia and Wanner (foot), as listed by UEFA. Several previews also report Schouten absent, which would remove PSV's usual holding midfielder, and Nagalo is out for the season.
+- **Returning to face his former club:** Lutsharel Geertruida, on loan at PSV from Leipzig, is in the projected back line.
+- No suspensions were reported.
+
+**PROJECTED RB Leipzig (4-2-3-1):** Vandevoordt; Baku, Orbán, Lukeba, Raum; El Aynaoui, Banzuzi; Gruda, Nkunku, Nusa; Cardoso. Other projections have Seiwald alongside El Aynaoui and Maksimović or Gomis in the front line.
+
+**PROJECTED PSV Eindhoven (4-2-3-1):** Kovář; Dest, Geertruida, Obispo, Mauro Júnior; Sano, Fernandez; Til; Perišić, Mijnans, Van Bommel. Some projections have Kostić at left-back.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "Champions League league-phase fixtures do not provide a repeated home and away league sample, and no sourced HOME/AWAY split in the 22-metric format exists for this tie. The figures used in the analysis (Leipzig's European run, PSV's record at German opponents, and the early-season Bundesliga and Eredivisie numbers from match previews) are the sourced metrics, and they are written into the analysis rather than restated in a table.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "Yahoo Sports — RB Leipzig vs PSV Eindhoven preview, team news and predicted lineups", url: "https://sports.yahoo.com/articles/rb-leipzig-vs-psv-eindhoven-100216038.html" },
+    { name: "TheStatsZone — RB Leipzig vs PSV team news", url: "https://www.thestatszone.com/rb-leipzig-vs-psv-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-229707" },
+    { name: "Football Whispers — RB Leipzig vs PSV Eindhoven preview (secondary source)", url: "https://footballwhispers.com/blog/rb-leipzig-vs-psv-eindhoven-13-10-2026/" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: freeRefreshAt,
 });
 
 const vikingVsBayern = createPspImport26Prediction({
@@ -235,14 +294,41 @@ const villarrealVsNapoli = createPspImport26Prediction({
   teaser: "Villarreal's long winless run in Europe meets a Napoli side with a weak away record against Spanish clubs. The prediction is FREE; the full reasoning remains available with PRIME VIP.",
   trend: "Villarreal's home draw-protection against Napoli's weak Spanish away record",
   matchAnalysis: [
-    "Villarreal's 3–2 loss at Borussia Dortmund showed they can create chances against strong opponents, but their Champions League results remain a serious concern. They have gone **12 matches** without winning in the competition, drawing two and losing ten, and have lost **seven consecutive** league-phase fixtures. They have also failed to score before half-time in **seven straight** Champions League games.",
-    "Napoli were beaten 1–0 at home by Arsenal and have not won any of their last **six Champions League away matches**, drawing once and losing five. Their record against Spanish clubs is similarly poor: **two wins in their last 18 meetings**, with six draws and ten defeats. This makes the home double chance more plausible than Villarreal's long winless run might initially suggest.",
+    "Villarreal's European numbers are grim: **no win in 12 Champions League matches** (two draws, ten defeats), seven straight league-phase defeats and no first-half goal in their last seven games in the competition. Yet the 3–2 loss at Dortmund on matchday one showed an attack that can score against strong opposition, and goals have rarely been scarce around them lately, with five of their last six matches in all competitions producing at least three. At the Cerámica, with Gerard Moreno, Mikautadze and Moleiro all in the projected side, a quiet night would be a surprise.",
+    "Napoli have their own problems away from home. They have not won any of their last **six Champions League away games** (one draw, five defeats), have won only **two of their last 18** against Spanish clubs (six draws, ten defeats) and were beaten 1–0 by Arsenal on matchday one. Their last six results also include defeats to Como and Inter. Allegri has quality in De Bruyne, Højlund and Neres, but with Anguissa and Alisson Santos listed out, the midfield loses ball-winning and the attack loses pace.",
   ],
-  tactical: "The teams have split six previous meetings evenly, with two wins each and two draws, although Napoli won both Champions League encounters in 2011/12 by 2–0. For this combination, Villarreal need at least a draw and the game must contain two goals. The home side's attacking response at Dortmund supports the scoring condition, but another low-output display would expose the selection.",
-  risk: "Villarreal's own 12-match winless run in the competition, including seven straight league-phase defeats, means the hosts could still lose outright despite Napoli's weak Spanish away record, which would defeat the double-chance leg regardless of the goals total.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "Villarreal's likely 4–4–2 pairs Gerard Moreno with Mikautadze, and Moleiro provides the creative spark from midfield, which gives the home side a vertical outlet whenever Comesaña and Gueye win the ball. Napoli will want De Bruyne between the lines with Neres and Politano stretching the pitch against Mouriño and Romero, and the duels on those flanks should produce most of the chances. Napoli's away record makes them more likely to be the side reacting, particularly if Villarreal's early pressure finds the first-half goal they have lacked in Europe so far.",
+  risk: "The double chance is only as safe as a Villarreal team that has lost seven league-phase games in a row. De Bruyne and Højlund are capable of punishing the hosts' open phases, and if the game follows the pattern of Napoli's 1–0 defeat to Arsenal and stays tight, the over 1.5 leg is in danger too. Villarreal's inability to score before half-time in seven straight European games also means the goals may arrive late, leaving little margin if they fall behind.",
+  market: "At **1.73** the combination carries a raw implied probability of **57.80%** (1 / 1.73). Napoli's one draw and five defeats in their last six Champions League away games and their poor run against Spanish clubs support the double-chance leg, while the goals leg is helped by Villarreal's recent high-scoring games. The price already reflects a home advantage that Villarreal's own winless run does not obviously earn, so the value case is narrow and depends on Napoli's away weakness holding.",
+  conclusion: "Villarreal's form in the Champions League is the real reservation, but Napoli's away and Spain-facing records are worse, and a team that scores freely at home with a patchy Napoli midfield in front of it should find the net at least once. The late word on McTominay, Meret and the Villarreal wide doubts will shape the final picture. The call stays with Villarreal on the double chance plus over 1.5 total goals at 1.73.",
+  teamNews: `Villarreal and Napoli news was reviewed on 12 October 2026, drawing on UEFA's listing and the Spanish and Italian previews. Both XIs are PROJECTED and sources disagree in places, so the teamsheets about an hour before kick-off will settle it.
+
+**Villarreal**
+
+- **Doubtful:** Tajon Buchanan (hamstring) and Nicolas Pépé (eye problem). UEFA lists both as doubts, although one preview treats Buchanan as out. Both are wide options, so their status affects Villarreal's pace from the bench more than the core of the projected side.
+- Mikautadze, Gerard Moreno, Ayoze Pérez and Tani Oluwaseyi are competing for the front places. No suspensions were reported.
+
+**Napoli**
+
+- **Out:** Alisson Santos (hamstring), Anguissa (thigh), Olivera (hip) and Vergara (calf), as listed by UEFA. Some previews also name Buongiorno (knee) and Favasuli (hamstring), and one suggests Anguissa is close to a return after about a month out.
+- **Back in contention:** Scott McTominay has been cleared to return after a minor heart procedure, and Alex Meret returned in goal at the weekend. Projections differ: UEFA's version has Milinković-Savić in goal and Gilmour, Lobotka and De Bruyne in midfield, while another preview starts both Meret and McTominay.
+- No suspensions were reported.
+
+**PROJECTED Villarreal (4-4-2):** Gulácsi; Mouriño, Foyth, Renato Veiga, Carlos Romero; Comesaña, Saliba, Gueye, Moleiro; Gerard Moreno, Mikautadze. Other projections use Navarro in defence and Akhomach or Ayoze Pérez in the attacking band.
+
+**PROJECTED Napoli (4-3-3):** Milinković-Savić; Di Lorenzo, Rrahmani, Rafa Marín, Spinazzola; Gilmour, Lobotka, De Bruyne; Neres, Højlund, Politano. A second projection has Meret in goal, McTominay in midfield and Badiashile in a back three.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "Champions League league-phase fixtures do not provide a repeated home and away league sample, and no sourced HOME/AWAY split in the 22-metric format exists for this tie. The figures used in the analysis (the two clubs' European runs, Napoli's record against Spanish opponents and the recent scorelines in each club's form guide) are the sourced metrics, and they are written into the analysis rather than restated in a table. The 2011/12 meetings are too distant to weigh.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "Sports Mole — Villarreal vs Napoli preview, team news and lineups", url: "https://www.sportsmole.co.uk/football/villarreal/champions-league/preview/villarreal-vs-napoli-prediction-team-news-lineups_606662.html" },
+    { name: "NST — McTominay cleared to return, Napoli say", url: "https://www.nst.com.my/amp/sports/football/2026/10/1550258/mctominay-cleared-return-napoli-say" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: freeRefreshAt,
 });
 
 const feyenoordVsComo = createPspImport26Prediction({

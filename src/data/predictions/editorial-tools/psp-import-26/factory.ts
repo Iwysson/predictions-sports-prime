@@ -27,6 +27,11 @@ export type PspImport26Input = {
   core: ImportStatisticalCore;
   sources: Array<{ name: string; url: string }>;
   publishedAt: string;
+  // Optional pre-match refresh. When omitted the original publication output is unchanged.
+  updatedAt?: string;
+  teamNews?: string;
+  market?: string;
+  conclusion?: string;
 };
 
 export function createPspImport26Prediction(input: PspImport26Input): EditorialPrediction {
@@ -54,7 +59,7 @@ ${input.core.rows.map(([metric, home, away]) => `| ${metric} | ${home} | ${away}
 
 ## Team news and projected lineups
 
-The supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information.
+${input.teamNews ?? "The supplied pre-match source set does not establish reliable team-news lists or projected lineups for both clubs. No absence, suspension or starting player has been inferred, and those fields remain unavailable rather than being filled with unsupported information."}
 
 ## Match analysis
 
@@ -72,11 +77,11 @@ ${coreSection}
 
 ${input.risk}
 
-The published market price is **${input.odds.toFixed(2)}**, which carries a raw implied probability of **${implied}%** using 1 / ${input.odds.toFixed(2)}. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific evidence and the stated game-state interpretation above, while the risks described remain material.
+${input.market ?? `The published market price is **${input.odds.toFixed(2)}**, which carries a raw implied probability of **${implied}%** using 1 / ${input.odds.toFixed(2)}. That percentage is the market threshold, not a claim that the historical frequencies are a direct probability forecast. The value judgment comes from the matchup-specific evidence and the stated game-state interpretation above, while the risks described remain material.`}
 
 ## Conclusion
 
-${input.risk.split(". ")[0]}. Weighing that against the published evidence, the retained call stays ${input.pick} at ${input.odds.toFixed(2)}, with the price unchanged from the original publication package.
+${input.conclusion ?? `${input.risk.split(". ")[0]}. Weighing that against the published evidence, the retained call stays ${input.pick} at ${input.odds.toFixed(2)}, with the price unchanged from the original publication package.`}
 
 **Prediction:** ${input.pick}
 **Odds:** ${input.odds.toFixed(2)}`;
@@ -116,9 +121,10 @@ ${input.risk.split(". ")[0]}. Weighing that against the published evidence, the 
     },
     published: true,
     publishedAt: input.publishedAt,
-    updatedAt: input.publishedAt,
+    updatedAt: input.updatedAt ?? input.publishedAt,
+    ...(input.updatedAt ? { freshness: { editorialUpdatedAt: input.updatedAt, teamNewsUpdatedAt: input.updatedAt, lineupUpdatedAt: input.updatedAt } } : {}),
     sourceStatus: "partial",
-    sources: input.sources.map((source) => ({ ...source, accessedAt: input.publishedAt })),
+    sources: input.sources.map((source) => ({ ...source, accessedAt: input.updatedAt ?? input.publishedAt })),
   };
 
   if (input.core.kind === "rows") {
