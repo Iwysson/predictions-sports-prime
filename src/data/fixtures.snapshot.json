@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-12T06:34:46.736Z",
+  "generatedAt": "2026-10-12T16:00:17.854Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -9471,8 +9471,7 @@
             "id": "401885425",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-12T19:15Z",
-            "espnEventId": "401885425"
+            "kickoffUtc": "2026-10-12T19:15Z"
           }
         ]
       },
@@ -15607,6 +15606,7 @@
     "brasileirao-serie-a:bragantino-vs-cruzeiro": "editorial:brasileirao-serie-a:bragantino-vs-cruzeiro:2026-10-12",
     "brasileirao-serie-a:chapecoense-vs-athletico-pr": "editorial:brasileirao-serie-a:chapecoense-vs-athletico-pr:2026-10-12",
     "brasileirao-serie-a:coritiba-vs-botafogo": "editorial:brasileirao-serie-a:coritiba-vs-botafogo:2026-10-11",
+    "brasileirao-serie-a:mirassol-vs-internacional": "editorial:brasileirao-serie-a:mirassol-vs-internacional:2026-10-16",
     "champions-league:arsenal-vs-lille": "401915417",
     "champions-league:aston-villa-vs-fenerbahce": "401915409",
     "champions-league:atletico-madrid-vs-manchester-united": "401915412",
@@ -15629,14 +15629,18 @@
     "eliteserien:fredrikstad-vs-tromso": "official:eliteserien:fredrikstad-vs-troms:2026-10-11",
     "eliteserien:kfum-oslo-vs-valerenga": "401843453",
     "eliteserien:lillestrom-vs-molde": "official:eliteserien:lillestr-m-vs-molde:2026-10-11",
+    "eredivisie:sc-heerenveen-vs-excelsior": "401875583",
+    "la-liga:deportivo-la-coruna-vs-levante": "401882844",
     "la-liga:levante-vs-sevilla": "401882852",
     "liga-portugal:famalicao-vs-alverca": "401885425",
     "ligue-1:rennes-vs-auxerre": "401876441",
     "premier-league:coventry-city-vs-newcastle-united": "401879267",
     "serie-a:atalanta-vs-venezia": "401875005",
     "serie-a:cagliari-vs-juventus": "401874764",
+    "serie-a:frosinone-vs-sassuolo": "401874959",
     "serie-a:lazio-vs-monza": "401874951",
     "serie-a:torino-vs-udinese": "401874763",
+    "super-lig:corum-fk-vs-caykur-rizespor": "401888377",
     "super-lig:eyupspor-vs-goztepe": "401888284",
     "super-lig:konyaspor-vs-basaksehir": "official:super-lig:konyaspor-vs-basaksehir:2026-10-11",
     "uefa-europa-league:az-alkmaar-vs-hapoel-beer-sheva": "official:uefa-europa-league:az-alkmaar-vs-hapoel-beer-sheva:2026-10-15",
@@ -15658,11 +15662,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-12T06:34:46.736Z",
+    "bundesliga": "2026-10-12T16:00:17.854Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
-    "liga-portugal": "2026-10-12T00:45:25.932Z",
-    "ligue-1": "2026-10-12T06:34:46.736Z",
-    "eredivisie": "2026-10-12T06:34:46.736Z",
+    "liga-portugal": "2026-10-12T16:00:17.854Z",
+    "ligue-1": "2026-10-12T16:00:17.854Z",
+    "eredivisie": "2026-10-12T16:00:17.854Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
@@ -16620,6 +16624,21 @@
       "sourceAgreement": true,
       "timeConfirmed": true,
       "kickoffUtc": "2026-09-06T17:00Z"
+    },
+    "401888377": {
+      "round": 8,
+      "date": "2026-10-16",
+      "time": "20:00",
+      "homeTeam": "Çorum FK",
+      "awayTeam": "Caykur Rizespor",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "espn",
+      "id": "401888377",
+      "sourceAgreement": true,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-16T17:00Z"
     },
     "401888381": {
       "round": 6,
@@ -19803,6 +19822,21 @@
       "sourceAgreement": true,
       "kickoffUtc": "2026-10-15T16:45:00.000Z",
       "timeConfirmed": true
+    },
+    "editorial:brasileirao-serie-a:mirassol-vs-internacional:2026-10-16": {
+      "round": 30,
+      "date": "2026-10-16",
+      "time": "20:00",
+      "homeTeam": "Mirassol",
+      "awayTeam": "Internacional",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "editorial-manual",
+      "id": "editorial:brasileirao-serie-a:mirassol-vs-internacional:2026-10-16",
+      "sourceAgreement": false,
+      "timeConfirmed": false,
+      "kickoffUtc": "2026-10-16T23:00:00.000Z"
     }
   }
 }
