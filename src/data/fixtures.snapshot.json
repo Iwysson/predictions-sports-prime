@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-12T00:45:25.932Z",
+  "generatedAt": "2026-10-12T06:34:46.736Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -9471,7 +9471,8 @@
             "id": "401885425",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-12T19:15Z"
+            "kickoffUtc": "2026-10-12T19:15Z",
+            "espnEventId": "401885425"
           }
         ]
       },
@@ -15603,13 +15604,9 @@
     ]
   },
   "predictionIds": {
-    "brasileirao-serie-a:bahia-vs-mirassol": "editorial:brasileirao-serie-a:bahia-vs-mirassol:2026-10-11",
     "brasileirao-serie-a:bragantino-vs-cruzeiro": "editorial:brasileirao-serie-a:bragantino-vs-cruzeiro:2026-10-12",
     "brasileirao-serie-a:chapecoense-vs-athletico-pr": "editorial:brasileirao-serie-a:chapecoense-vs-athletico-pr:2026-10-12",
     "brasileirao-serie-a:coritiba-vs-botafogo": "editorial:brasileirao-serie-a:coritiba-vs-botafogo:2026-10-11",
-    "brasileirao-serie-a:flamengo-vs-fluminense": "editorial:brasileirao-serie-a:flamengo-vs-fluminense:2026-10-11",
-    "brasileirao-serie-a:gremio-vs-internacional": "editorial:brasileirao-serie-a:gremio-vs-internacional:2026-10-11",
-    "brasileirao-serie-a:palmeiras-vs-corinthians": "editorial:brasileirao-serie-a:palmeiras-vs-corinthians:2026-10-11",
     "champions-league:arsenal-vs-lille": "401915417",
     "champions-league:aston-villa-vs-fenerbahce": "401915409",
     "champions-league:atletico-madrid-vs-manchester-united": "401915412",
@@ -15661,11 +15658,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-12T00:45:25.932Z",
+    "bundesliga": "2026-10-12T06:34:46.736Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
     "liga-portugal": "2026-10-12T00:45:25.932Z",
-    "ligue-1": "2026-10-12T00:45:25.932Z",
-    "eredivisie": "2026-10-12T00:45:25.932Z",
+    "ligue-1": "2026-10-12T06:34:46.736Z",
+    "eredivisie": "2026-10-12T06:34:46.736Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
