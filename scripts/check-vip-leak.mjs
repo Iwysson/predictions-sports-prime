@@ -22,7 +22,7 @@ const pickCorpus = corpus.map(({ f, text }) => ({ f, text: maskSettledResultReco
 const publicPicks = new Set(index.filter((e) => e.predictionAccess === "free").map((e) => e.prediction.main.toLowerCase()));
 // NHL public-slate modules are deliberately client-safe and contain picks only for FREE entries.
 // Include those public picks so a generic market shared with a protected game is not misreported.
-for (const name of readdirSync("src/data/nhl").filter((name) => /^public-slate-.*\.ts$/.test(name))) {
+for (const name of readdirSync("src/data/nhl").filter((name) => /^public-slate-.*\.ts$|^slate-2026-10-(?:14|15)\.ts$/.test(name))) {
   const source = readFileSync(join("src/data/nhl", name), "utf8");
   for (const match of source.matchAll(/"pick"\s*:\s*"([^"]+)"/g)) publicPicks.add(match[1].toLowerCase());
 }

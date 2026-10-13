@@ -12,7 +12,7 @@ import { TeamBadge } from "@/components/TeamBadge";
 import { VipTitleCta } from "@/components/VipTitleCta";
 import { resolveNhlSlate } from "@/data/nhl/slates";
 import { translate } from "@/i18n/dictionaries";
-import { formatNhlDayLabel, getNhlTodayKey } from "@/lib/nhl-day";
+import { formatNhlDayLabel, getNhlDayStart, getNhlTodayKey } from "@/lib/nhl-day";
 import { findLiveGame, liveBadgeText, type LiveGame } from "@/lib/nhl-live";
 import {
   multipleMatchesSurface,
@@ -69,10 +69,19 @@ export function useNhlLiveGames(dayKey: string): LiveGame[] {
 export function useNhlTodayKey(initialKey: string) {
   const [dayKey, setDayKey] = useState(initialKey);
   useEffect(() => {
-    const tick = () => setDayKey(getNhlTodayKey());
+    let timer: number;
+    const tick = () => {
+      const current = getNhlTodayKey();
+      setDayKey(current);
+      const nextKey = new Date(`${current}T12:00:00Z`);
+      nextKey.setUTCDate(nextKey.getUTCDate() + 1);
+      const boundary = getNhlDayStart(nextKey.toISOString().slice(0, 10));
+      timer = window.setTimeout(tick, Math.max(50, Math.min(60_000, (boundary?.getTime() ?? Date.now() + 60_000) - Date.now())));
+    };
+    const onVisible = () => { if (!document.hidden) { window.clearTimeout(timer); tick(); } };
     tick();
-    const id = window.setInterval(tick, 60_000);
-    return () => window.clearInterval(id);
+    document.addEventListener("visibilitychange", onVisible);
+    return () => { window.clearTimeout(timer); document.removeEventListener("visibilitychange", onVisible); };
   }, []);
   return dayKey;
 }
@@ -173,9 +182,9 @@ function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: str
       </div>
 
       <div className="psp-game__teams">
-        <TeamBadge team={m.awayTeam} />
-        <h2>{`${m.awayTeam} vs ${m.homeTeam} Prediction and Picks`}</h2>
         <TeamBadge team={m.homeTeam} />
+        <h2>{`${m.homeTeam} vs ${m.awayTeam} Prediction and Picks`}</h2>
+        <TeamBadge team={m.awayTeam} />
       </div>
 
       {isFree && m.pick !== undefined && m.odds !== undefined ? (
@@ -192,6 +201,7 @@ function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: str
           </div>
           <MatchFullContent
             analysis={m.analysis ?? []}
+            analysisFormat={m.analysisFormat}
             sources={m.sources ?? []}
             comment={null}
             labels={{ prediction: L.prediction, odds: L.odds, analysis: "Game analysis", sources: translate("en", "matchSourcesHeading") }}

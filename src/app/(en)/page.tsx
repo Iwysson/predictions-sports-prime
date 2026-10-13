@@ -67,20 +67,6 @@ export default async function Home() {
           <SiteContactLine />
         </div>
       </section>
-      <section className="section section--compact" aria-labelledby="sport-hubs-title">
-        <div className="container">
-          <h2 id="sport-hubs-title">Predictions by sport</h2>
-          <div className="psp-hub-grid">
-            <Link className="psp-hub-card" href="/football-predictions/"><strong>Football predictions</strong><span>Leagues, cups and match-by-match analysis</span></Link>
-            <Link className="psp-hub-card" href="/nfl/"><strong>NFL picks and predictions</strong><span>Weekly game analysis, odds and standings</span></Link>
-            <Link className="psp-hub-card" href="/nhl/"><strong>NHL predictions today</strong><span>Daily picks, moneyline and total goals</span></Link>
-            <Link className="psp-hub-card" href="/league/mls/"><strong>MLS predictions</strong><span>Eastern and Western Conference matches</span></Link>
-          </div>
-          <p>
-            Popular competitions: <Link href="/league/premier-league/">Premier League predictions</Link>, <Link href="/league/champions-league/">Champions League predictions</Link>, <Link href="/league/la-liga/">La Liga predictions</Link> and <Link href="/football-predictions/">every football competition</Link>.
-          </p>
-        </div>
-      </section>
       <HomeEditorialHighlights />
       <HomePredictionFeed
         matches={clientMatches}
@@ -99,6 +85,21 @@ export default async function Home() {
         }
         beforeHistory={<PredictionLeagueCategories id="leagues" muted />}
       />
+
+      <section className="section section--compact" aria-labelledby="sport-hubs-title">
+        <div className="container">
+          <h2 id="sport-hubs-title">Predictions by sport</h2>
+          <div className="psp-hub-grid">
+            <Link className="psp-hub-card" href="/football-predictions/"><strong>Football predictions</strong><span>Leagues, cups and match-by-match analysis</span></Link>
+            <Link className="psp-hub-card" href="/nfl/"><strong>NFL picks and predictions</strong><span>Weekly game analysis, odds and standings</span></Link>
+            <Link className="psp-hub-card" href="/nhl/"><strong>NHL predictions today</strong><span>Daily picks, moneyline and total goals</span></Link>
+            <Link className="psp-hub-card" href="/league/mls/"><strong>MLS predictions</strong><span>Eastern and Western Conference matches</span></Link>
+          </div>
+          <p>
+            Popular competitions: <Link href="/league/premier-league/">Premier League predictions</Link>, <Link href="/league/champions-league/">Champions League predictions</Link>, <Link href="/league/la-liga/">La Liga predictions</Link> and <Link href="/football-predictions/">every football competition</Link>.
+          </p>
+        </div>
+      </section>
 
       <section className="section section--compact" aria-labelledby="trust-links-title">
         <div className="container">
