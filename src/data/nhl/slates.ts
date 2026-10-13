@@ -11,6 +11,8 @@ import { NHL_PUBLIC_MATCHES_OCT_10 } from "@/data/nhl/slate-2026-10-10";
 import { NHL_PUBLIC_MATCHES_OCT_11 } from "@/data/nhl/slate-2026-10-11";
 import { NHL_PUBLIC_MATCHES_OCT_12 } from "@/data/nhl/slate-2026-10-12";
 import { NHL_PUBLIC_MATCHES_OCT_13 } from "@/data/nhl/slate-2026-10-13";
+import { NHL_PUBLIC_MATCHES_OCT_14 } from "@/data/nhl/slate-2026-10-14";
+import { NHL_PUBLIC_MATCHES_OCT_15 } from "@/data/nhl/slate-2026-10-15";
 import type { NhlPublicSlate } from "@/lib/nhl-slates";
 
 // Every NHL day with a slate, oldest first. Adding a day here (and its protected entries) is the
@@ -68,6 +70,8 @@ export const SLATES: NhlPublicSlate[] = [
     matches: NHL_PUBLIC_MATCHES_OCT_13,
     multiples: [],
   },
+  { dayKey: "2026-10-14", matches: NHL_PUBLIC_MATCHES_OCT_14, multiples: [] },
+  { dayKey: "2026-10-15", matches: NHL_PUBLIC_MATCHES_OCT_15, multiples: [] },
 ];
 
 // The slate for the NHL day `todayKey` (YYYY-MM-DD, America/New_York). It switches at 00:00 ET

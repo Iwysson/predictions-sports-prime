@@ -16,6 +16,7 @@ export type NhlPublicMatch = {
   pick?: string;
   odds?: number;
   analysis?: string[];
+  analysisFormat?: "markdown";
   sources?: Array<{ name: string; url: string }>;
 };
 

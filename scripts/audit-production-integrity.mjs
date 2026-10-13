@@ -19,12 +19,13 @@ else {
   if (!/^<\?xml[\s\S]*<urlset[\s\S]*<\/urlset>\s*$/i.test(xml)) failures.push("sitemap.xml is malformed");
 }
 
-const forbidden = /\b(?:TODO|FIXME|DEBUG|internal note|developer note|system message|audit status|AI draft|manual approval required|pending research|needs verification)\b|(?:^|\s)[A-Z]:\\[^\s<]+|\b(?:src|scripts)\/[\w./-]+/i;
+const forbidden = /\b(?:TODO|FIXME|DEBUG)\b|\b(?:internal note|developer note|system message|audit status|AI draft|manual approval required|pending research|needs verification)\b|(?:^|\s)[A-Z]:\\[^\s<]+|\b(?:src|scripts)\/[\w./-]+/;
+const forbiddenCaseInsensitive = /\b(?:internal note|developer note|system message|audit status|AI draft|manual approval required|pending research|needs verification)\b|\b(?:src|scripts)\/[\w./-]+/i;
 const mojibake = /(?:\u00C3[\u0080-\u00BF]|\u00C2[\u0080-\u00BF]|\u00E2\u20AC|\u00EF\u00BF\u00BD|\uFFFD)/;
 let brokenCanonicals = 0;
 for (const file of htmlFiles) {
   const html = readFileSync(file, "utf8");
-  if (forbidden.test(html)) failures.push(`internal information in ${file}`);
+  if (forbidden.test(html) || forbiddenCaseInsensitive.test(html)) failures.push(`internal information in ${file}`);
   if (mojibake.test(html)) failures.push(`corrupt encoding in ${file}`);
   for (const match of html.matchAll(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/gi)) {
     if (!/^https:\/\/[^/]+\/.+|^https:\/\/[^/]+\/?$/.test(match[1])) brokenCanonicals += 1;

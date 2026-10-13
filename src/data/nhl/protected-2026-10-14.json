@@ -1,0 +1,34 @@
+{
+  "activeFromKey": "2026-10-14",
+  "entries": [
+    {
+      "slug": "colorado-avalanche-vs-dallas-stars",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Colorado Avalanche to win (including overtime and shootout)",
+      "odds": 1.77,
+      "analysis": [
+        "## Statistical matchup\n\n| Indicator | Colorado Avalanche | Dallas Stars |\n|---|---:|---:|\n| Record entering October 13 | 3–2–0 | 2–2–1 |\n| Games in record | 5 | 5 |\n| Goals per game | 5.20 | Not verified in source snapshot |\n| Leading scorer (points) | Nathan MacKinnon — 10 | Mikko Rantanen — 6 |\n\n## Analysis\n\nColorado's attack is the strongest statistical reason to back the home side. The Avalanche entered October 13 averaging an NHL-leading 5.20 goals per game across five outings, with Nathan MacKinnon producing ten points (five goals, five assists) and defenseman Cale Makar contributing seven (three goals, four assists). The production was not confined to one line: 12 Avalanche players had scored at least once and eight had multiple goals. That spread of finishing options makes it harder for Dallas to neutralize the offense by focusing on a single matchup.\n\nDallas began 2–2–1, with Mikko Rantanen leading the team on six points (two goals, four assists). Its defensive ceiling remains considerable: the Stars had recorded two consecutive shutout wins before a shootout loss to Pittsburgh. A Colorado win is therefore a more demanding selection than the raw scoring average suggests. Dallas can reduce space through the middle and turn a high-scoring opponent into a tight, low-event contest. The Stars also face an injury constraint: Matt Duchene was reported out for approximately three months following core-muscle surgery, reducing their established forward depth.\n\nThe clubs play each other twice in two days, with Colorado visiting Dallas on October 13 before returning home for this game. Travel, adjustments and potential goaltender rotation make the second leg unusually sensitive to lineup news. Colorado's 3–2–0 start and elite early scoring profile support the selection, but five games are insufficient to establish a stable 5.20-goal expectation. At 1.77, the implied break-even probability is 56.5%; Dallas' defensive track record remains the main counterargument."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 14, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-14"
+        },
+        {
+          "name": "NHL.com — NHL On Tap, October 13, 2026",
+          "url": "https://www.nhl.com/news/nhl-on-tap-news-and-notes-october-13-2026"
+        },
+        {
+          "name": "NHL.com — nationally televised games for week of October 12, 2026",
+          "url": "https://www.nhl.com/news/nhl-nationally-televised-games-for-week-of-october-12-2026"
+        },
+        {
+          "name": "NHL.com — TNT 2026–27 national schedule",
+          "url": "https://www.nhl.com/news/tnt-releases-schedule-of-72-nhl-regular-season-games-for-2026-27"
+        }
+      ]
+    }
+  ]
+}

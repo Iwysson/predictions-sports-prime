@@ -1,0 +1,230 @@
+{
+  "activeFromKey": "2026-10-15",
+  "entries": [
+    {
+      "slug": "florida-panthers-vs-vancouver-canucks",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Florida Panthers to win",
+      "odds": 1.4,
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Florida Panthers | 6 | 2.00 | 2.83 | 26.7 | 24.7 | 9.4% | 74.1% |\n| Vancouver Canucks | 7 | 3.43 | 5.00 | 21.9 | 30.7 | 19.0% | 52.0% |\n\n## Analysis\n\nVancouver's defensive record is the central argument: five goals conceded per game across seven outings, with opponents generating 30.7 shots a night. Florida's attack has not been particularly productive at 2.00 goals per game, so the Panthers cannot rely on reputation alone. Their defensive shot suppression (24.7 shots allowed) is much stronger than Vancouver's, giving Florida a plausible route to control territory and spend less time defending. The visitors' 52.0% penalty kill also presents a possible opening, although Florida's own power play has converted only 9.4% of its chances. The risk is straightforward: Florida must convert territorial control into goals despite its slow scoring start. The 1.40 price requires a 71.4% break-even win rate; the early-season figures support favoritism but do not establish that probability."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ]
+    },
+    {
+      "slug": "ottawa-senators-vs-new-york-islanders",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Ottawa Senators to win",
+      "odds": 1.81,
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Ottawa Senators | 6 | 3.00 | 2.00 | 24.0 | 26.8 | 13.8% | 80.0% |\n| New York Islanders | 5 | 3.20 | 2.60 | 24.0 | 27.2 | 25.0% | 84.2% |\n\n## Analysis\n\nOttawa has built its opening record on limiting damage rather than overwhelming shot volume: 2.00 goals allowed per game despite facing 26.8 shots. The Islanders offer a real offensive test, scoring 3.20 a night and converting 25.0% of their power plays. Ottawa's 3.00-goal offense should find opportunities against an Islanders side conceding 2.60 per game, but its 13.8% power-play conversion leaves less margin if five-on-five finishing stalls. The home side's early defensive efficiency provides the selection's clearest edge. The principal concern is New York's capacity to generate a competitive score without needing many shots. Ottawa's 1.81 line implies 55.2%; this is a competitive matchup rather than a one-sided favorite."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ]
+    },
+    {
+      "slug": "tampa-bay-lightning-vs-seattle-kraken",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Tampa Bay Lightning to win",
+      "odds": 1.59,
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Tampa Bay Lightning | 5 | 3.20 | 2.40 | 30.2 | 24.0 | 10.0% | 72.7% |\n| Seattle Kraken | 6 | 4.33 | 2.83 | 26.2 | 31.3 | 23.5% | 75.0% |\n\n## Analysis\n\nTampa Bay's shot profile is the strongest foundation for the home win. The Lightning generate 30.2 attempts on goal per game and surrender only 24.0, a substantial territorial advantage. Seattle has scored 4.33 goals per game but allows 31.3 opposing shots, leaving its defense exposed to extended pressure. Tampa's 2.40 goals against also compares favorably with Seattle's 2.83. One complication is special teams: the Lightning have converted only 10.0% of power plays, while Seattle's attack has been unusually efficient early in the season. The prediction relies on Tampa turning its superior shot differential into enough goals to offset the Kraken's hot finishing. At 1.59, the break-even rate is 62.9%, making goaltending and finishing efficiency important swing factors."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ]
+    },
+    {
+      "slug": "toronto-maple-leafs-vs-buffalo-sabres",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 total goals",
+      "odds": 1.68,
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Toronto Maple Leafs | 6 | 3.33 | 2.83 | 27.8 | 30.2 | 26.3% | 95.0% |\n| Buffalo Sabres | 6 | 2.67 | 3.67 | 27.3 | 21.5 | 13.6% | 60.0% |\n\n## Analysis\n\nThe scoring environment looks promising because Toronto's games average 6.16 total goals and Buffalo's average 6.34, based on each club's goals for and against. The Maple Leafs score 3.33 per game while Buffalo allows 3.67, a particularly favorable attacking matchup. Toronto also converts 26.3% of power plays against a Buffalo penalty kill operating at only 60.0%. Buffalo can contribute at the other end: Toronto gives up 2.83 goals and 30.2 shots per game, so the visitors do not need to be the dominant side to score twice or more. The biggest caveat is Buffalo's limited shot volume allowed (21.5), which means Toronto must capitalize efficiently rather than depend on sheer quantity. The total needs six goals; 1.68 implies a 59.5% break-even rate."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ]
+    },
+    {
+      "slug": "chicago-blackhawks-vs-winnipeg-jets",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 total goals",
+      "odds": 1.8,
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Chicago Blackhawks | 6 | 2.00 | 4.33 | 21.0 | 30.3 | 7.1% | 68.7% |\n| Winnipeg Jets | 5 | 2.60 | 3.00 | 26.2 | 29.6 | 28.6% | 90.9% |\n\n## Analysis\n\nChicago has conceded 4.33 goals per game and 30.3 shots, making its defensive end the obvious source of scoring potential. Winnipeg's offense has averaged only 2.60, but the matchup offers room to improve on that figure. The Jets also allow 3.00 goals and 29.6 shots per outing, which gives Chicago a credible chance to contribute despite scoring just 2.00 per game. Winnipeg's 28.6% power play could be especially relevant against Chicago's 68.7% penalty kill, one of the weaker early-season figures. The concern is whether Chicago can score enough to prevent this from becoming a one-sided 4-1 or 5-0 result. Six combined goals are needed, and 1.80 corresponds to a 55.6% break-even threshold."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ]
+    },
+    {
+      "slug": "minnesota-wild-vs-st-louis-blues",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Minnesota Wild to win",
+      "odds": 1.64,
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Minnesota Wild | 6 | 3.17 | 1.83 | 28.8 | 27.2 | 41.2% | 95.5% |\n| St. Louis Blues | 5 | 2.80 | 3.20 | 26.0 | 26.4 | 9.1% | 93.3% |\n\n## Analysis\n\nMinnesota's early defensive numbers stand out: 1.83 goals allowed per game, supported by a 95.5% penalty kill. St. Louis, by comparison, concedes 3.20 and scores 2.80, giving the Wild an advantage in both goal prevention and the matchup between attack and opposing defense. Minnesota also owns a 41.2% power-play conversion rate through six games, while the Blues have managed only 9.1%. Those special-teams percentages are unlikely to remain at their current extremes over a full season, but they help explain the current contrast. The Wild's 3.17-goal attack should create chances against a Blues team allowing 26.4 shots per game. St. Louis' 93.3% penalty kill is a meaningful resistance point, so Minnesota cannot assume easy power-play goals. The 1.64 quote implies a 61.0% break-even probability; the defensive foundation makes this the strongest editorial selection in this set, not a guaranteed outcome."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ]
+    },
+    {
+      "slug": "nashville-predators-vs-san-jose-sharks",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 total goals",
+      "odds": 1.77,
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Nashville Predators | 5 | 2.80 | 2.60 | 21.8 | 30.0 | 31.6% | 82.4% |\n| San Jose Sharks | 5 | 2.60 | 3.40 | 23.4 | 26.6 | 15.4% | 81.2% |\n\n## Analysis\n\nSan Jose has been involved in games averaging 6.00 total goals, driven in part by 3.40 conceded per night. Nashville's own games average 5.40, with a relatively balanced 2.80 scored and 2.60 allowed. The Predators have a clear special-teams weapon: a 31.6% power play, compared with the Sharks' 81.2% penalty kill. However, Nashville takes only 21.8 shots per game and San Jose only 23.4, so neither attack has established a high-volume five-on-five profile. That limits the confidence available from the goals-against figures alone. The Over works best if Nashville converts its power-play chances and San Jose contributes rather than merely conceding. The 1.77 price translates to a 56.5% break-even rate; this is a plausible but not low-risk scoring selection."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ]
+    },
+    {
+      "slug": "edmonton-oilers-vs-utah-mammoth",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Edmonton Oilers to win",
+      "odds": 1.67,
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Edmonton Oilers | 5 | 5.00 | 3.40 | 26.6 | 23.2 | 22.2% | 66.7% |\n| Utah Mammoth | 6 | 3.67 | 2.50 | 31.8 | 22.5 | 40.0% | 77.3% |\n\n## Analysis\n\nEdmonton's five-goal scoring average is the headline, but the matchup is not straightforward. Utah has allowed only 2.50 goals and 22.5 shots per game, a defensive profile capable of slowing even an elite offense. The Oilers' 26.6 shots per game indicate unusually efficient finishing so far, whereas Utah generates 31.8 and scores 3.67. Edmonton has also conceded 3.40 per game, and its 66.7% penalty kill faces a Utah power play converting 40.0% of chances. Those figures make special teams a genuine concern for the favorite. Edmonton's case rests on its ability to sustain elite scoring while controlling the quality of chances against a dangerous visitor. At 1.67 the implied break-even probability is 59.9%; the attack supports the pick, but Utah's form prevents a low-risk label."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ]
+    },
+    {
+      "slug": "vegas-golden-knights-vs-calgary-flames",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Vegas Golden Knights to win",
+      "odds": 1.39,
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Vegas Golden Knights | 7 | 3.43 | 2.57 | 31.6 | 24.6 | 25.0% | 76.5% |\n| Calgary Flames | 5 | 1.60 | 5.40 | 28.0 | 28.6 | 20.0% | 86.7% |\n\n## Analysis\n\nThe difference in early goal differential is stark. Vegas scores 3.43 and allows 2.57 per game, while Calgary has managed only 1.60 goals and conceded 5.40. The Golden Knights also produce 31.6 shots per outing against Calgary's 28.6 allowed, pointing to sustained pressure on a struggling defense. Calgary's problems are not purely about shot volume: conceding 5.40 on 28.6 shots suggests poor results in net and/or defensive chance quality. Vegas has a much healthier 24.6 shots-against rate and a 25.0% power play. The risk is valuation: a 1.39 line requires a 71.9% win rate just to break even, and Calgary's five-game start is too small to treat its current numbers as permanent. Vegas is the deserved statistical favorite without being risk-free."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ]
+    }
+  ]
+}
