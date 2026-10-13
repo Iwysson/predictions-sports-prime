@@ -77,6 +77,25 @@
       "settledAt": "2026-10-08T02:02:59.027Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
     },
+    "brasileirao-serie-a:bragantino-vs-cruzeiro": {
+      "key": "brasileirao-serie-a:bragantino-vs-cruzeiro",
+      "league": "brasileirao-serie-a",
+      "slug": "bragantino-vs-cruzeiro",
+      "homeTeam": "Bragantino",
+      "awayTeam": "Cruzeiro",
+      "date": "2026-10-12",
+      "fixtureId": "editorial:brasileirao-serie-a:bragantino-vs-cruzeiro:2026-10-12",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.84,
+      "finalScore": {
+        "home": 4,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-13T03:12:41.864Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
     "brasileirao-serie-a:bragantino-vs-mirassol": {
       "key": "brasileirao-serie-a:bragantino-vs-mirassol",
       "league": "brasileirao-serie-a",
@@ -95,6 +114,25 @@
       "result": "green",
       "settledAt": "2026-10-08T02:02:59.027Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
+    },
+    "brasileirao-serie-a:chapecoense-vs-athletico-pr": {
+      "key": "brasileirao-serie-a:chapecoense-vs-athletico-pr",
+      "league": "brasileirao-serie-a",
+      "slug": "chapecoense-vs-athletico-pr",
+      "homeTeam": "Chapecoense",
+      "awayTeam": "Athletico-PR",
+      "date": "2026-10-12",
+      "fixtureId": "editorial:brasileirao-serie-a:chapecoense-vs-athletico-pr:2026-10-12",
+      "predictionAccess": "free",
+      "prediction": "Athletico-PR or Draw (X2) + Over 1.5 Goals",
+      "odds": 1.74,
+      "finalScore": {
+        "home": 1,
+        "away": 4
+      },
+      "result": "green",
+      "settledAt": "2026-10-13T03:12:41.864Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
     "brasileirao-serie-a:coritiba-vs-botafogo": {
       "key": "brasileirao-serie-a:coritiba-vs-botafogo",

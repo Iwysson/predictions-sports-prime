@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-12T22:47:18.255Z",
+  "generatedAt": "2026-10-13T03:12:24.636Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -15609,7 +15609,6 @@
   "predictionIds": {
     "brasileirao-serie-a:bragantino-vs-cruzeiro": "editorial:brasileirao-serie-a:bragantino-vs-cruzeiro:2026-10-12",
     "brasileirao-serie-a:chapecoense-vs-athletico-pr": "editorial:brasileirao-serie-a:chapecoense-vs-athletico-pr:2026-10-12",
-    "brasileirao-serie-a:coritiba-vs-botafogo": "editorial:brasileirao-serie-a:coritiba-vs-botafogo:2026-10-11",
     "brasileirao-serie-a:mirassol-vs-internacional": "editorial:brasileirao-serie-a:mirassol-vs-internacional:2026-10-16",
     "champions-league:arsenal-vs-lille": "401915417",
     "champions-league:aston-villa-vs-fenerbahce": "401915409",
@@ -15631,14 +15630,10 @@
     "eliteserien:aalesund-vs-sarpsborg": "official:eliteserien:aalesund-vs-sarpsborg-08:2026-10-11",
     "eliteserien:bodo-glimt-vs-kristiansund": "official:eliteserien:bod-glimt-vs-kristiansund:2026-10-10",
     "eliteserien:fredrikstad-vs-tromso": "official:eliteserien:fredrikstad-vs-troms:2026-10-11",
-    "eliteserien:kfum-oslo-vs-valerenga": "401843453",
     "eliteserien:lillestrom-vs-molde": "official:eliteserien:lillestr-m-vs-molde:2026-10-11",
     "eredivisie:sc-heerenveen-vs-excelsior": "401875583",
     "la-liga:deportivo-la-coruna-vs-levante": "401882844",
-    "la-liga:levante-vs-sevilla": "401882852",
-    "liga-portugal:famalicao-vs-alverca": "401885425",
     "ligue-1:rennes-vs-auxerre": "401876441",
-    "premier-league:coventry-city-vs-newcastle-united": "401879267",
     "scottish-premiership:aberdeen-vs-st-mirren": "401878368",
     "scottish-premiership:dundee-vs-rangers": "401878366",
     "scottish-premiership:hibernian-vs-falkirk": "401878365",
@@ -15648,9 +15643,7 @@
     "serie-a:cagliari-vs-juventus": "401874764",
     "serie-a:frosinone-vs-sassuolo": "401874959",
     "serie-a:lazio-vs-monza": "401874951",
-    "serie-a:torino-vs-udinese": "401874763",
     "super-lig:corum-fk-vs-caykur-rizespor": "401888377",
-    "super-lig:eyupspor-vs-goztepe": "401888284",
     "super-lig:konyaspor-vs-basaksehir": "official:super-lig:konyaspor-vs-basaksehir:2026-10-11",
     "uefa-europa-league:az-alkmaar-vs-hapoel-beer-sheva": "official:uefa-europa-league:az-alkmaar-vs-hapoel-beer-sheva:2026-10-15",
     "uefa-europa-league:benfica-vs-celtic": "401915562",
@@ -15671,11 +15664,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-12T22:47:18.255Z",
+    "bundesliga": "2026-10-13T03:12:24.636Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
-    "liga-portugal": "2026-10-12T22:47:18.255Z",
-    "ligue-1": "2026-10-12T22:47:18.255Z",
-    "eredivisie": "2026-10-12T22:47:18.255Z",
+    "liga-portugal": "2026-10-13T03:12:24.636Z",
+    "ligue-1": "2026-10-13T03:12:24.636Z",
+    "eredivisie": "2026-10-13T03:12:24.636Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
@@ -16932,7 +16925,8 @@
       "id": "401915393",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-14T19:00Z"
+      "kickoffUtc": "2026-10-14T19:00Z",
+      "espnEventId": "401915393"
     },
     "401915405": {
       "round": 2,
@@ -16947,7 +16941,8 @@
       "id": "401915405",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-14T19:00Z"
+      "kickoffUtc": "2026-10-14T19:00Z",
+      "espnEventId": "401915405"
     },
     "401915406": {
       "round": 2,
@@ -16962,7 +16957,8 @@
       "id": "401915406",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-14T19:00Z"
+      "kickoffUtc": "2026-10-14T19:00Z",
+      "espnEventId": "401915406"
     },
     "401915407": {
       "round": 2,
@@ -16977,7 +16973,8 @@
       "id": "401915407",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-14T19:00Z"
+      "kickoffUtc": "2026-10-14T19:00Z",
+      "espnEventId": "401915407"
     },
     "401915408": {
       "round": 2,
@@ -16992,7 +16989,8 @@
       "id": "401915408",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-14T19:00Z"
+      "kickoffUtc": "2026-10-14T19:00Z",
+      "espnEventId": "401915408"
     },
     "401915409": {
       "round": 2,
@@ -17007,7 +17005,8 @@
       "id": "401915409",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-14T19:00Z"
+      "kickoffUtc": "2026-10-14T19:00Z",
+      "espnEventId": "401915409"
     },
     "401915410": {
       "round": 2,
@@ -17070,7 +17069,8 @@
       "id": "401915414",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-14T19:00Z"
+      "kickoffUtc": "2026-10-14T19:00Z",
+      "espnEventId": "401915414"
     },
     "401915416": {
       "round": 2,
@@ -17085,7 +17085,8 @@
       "id": "401915416",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-14T16:45Z"
+      "kickoffUtc": "2026-10-14T16:45Z",
+      "espnEventId": "401915416"
     },
     "401915417": {
       "round": 2,
@@ -19657,9 +19658,9 @@
       "time": "21:00",
       "homeTeam": "Bragantino",
       "awayTeam": "Cruzeiro",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "scheduled",
+      "homeScore": 4,
+      "awayScore": 2,
+      "status": "completed",
       "dataSource": "editorial-manual",
       "id": "editorial:brasileirao-serie-a:bragantino-vs-cruzeiro:2026-10-12",
       "sourceAgreement": false,
@@ -19673,9 +19674,9 @@
       "time": "19:30",
       "homeTeam": "Chapecoense",
       "awayTeam": "Athletico-PR",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "in-progress",
+      "homeScore": 1,
+      "awayScore": 4,
+      "status": "completed",
       "dataSource": "editorial-manual",
       "id": "editorial:brasileirao-serie-a:chapecoense-vs-athletico-pr:2026-10-12",
       "sourceAgreement": false,
