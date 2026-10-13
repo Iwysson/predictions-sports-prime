@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-13T03:12:24.636Z",
+  "generatedAt": "2026-10-13T10:31:42.374Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -15607,8 +15607,6 @@
     ]
   },
   "predictionIds": {
-    "brasileirao-serie-a:bragantino-vs-cruzeiro": "editorial:brasileirao-serie-a:bragantino-vs-cruzeiro:2026-10-12",
-    "brasileirao-serie-a:chapecoense-vs-athletico-pr": "editorial:brasileirao-serie-a:chapecoense-vs-athletico-pr:2026-10-12",
     "brasileirao-serie-a:mirassol-vs-internacional": "editorial:brasileirao-serie-a:mirassol-vs-internacional:2026-10-16",
     "champions-league:arsenal-vs-lille": "401915417",
     "champions-league:aston-villa-vs-fenerbahce": "401915409",
@@ -15664,11 +15662,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-13T03:12:24.636Z",
+    "bundesliga": "2026-10-13T10:31:42.374Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
-    "liga-portugal": "2026-10-13T03:12:24.636Z",
-    "ligue-1": "2026-10-13T03:12:24.636Z",
-    "eredivisie": "2026-10-13T03:12:24.636Z",
+    "liga-portugal": "2026-10-13T10:31:42.374Z",
+    "ligue-1": "2026-10-13T10:31:42.374Z",
+    "eredivisie": "2026-10-13T10:31:42.374Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
