@@ -77,6 +77,25 @@
       "settledAt": "2026-10-08T02:02:59.027Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
     },
+    "brasileirao-serie-a:bragantino-vs-cruzeiro": {
+      "key": "brasileirao-serie-a:bragantino-vs-cruzeiro",
+      "league": "brasileirao-serie-a",
+      "slug": "bragantino-vs-cruzeiro",
+      "homeTeam": "Bragantino",
+      "awayTeam": "Cruzeiro",
+      "date": "2026-10-12",
+      "fixtureId": "editorial:brasileirao-serie-a:bragantino-vs-cruzeiro:2026-10-12",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.84,
+      "finalScore": {
+        "home": 4,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-13T03:12:41.864Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
     "brasileirao-serie-a:bragantino-vs-mirassol": {
       "key": "brasileirao-serie-a:bragantino-vs-mirassol",
       "league": "brasileirao-serie-a",
@@ -95,6 +114,44 @@
       "result": "green",
       "settledAt": "2026-10-08T02:02:59.027Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
+    },
+    "brasileirao-serie-a:chapecoense-vs-athletico-pr": {
+      "key": "brasileirao-serie-a:chapecoense-vs-athletico-pr",
+      "league": "brasileirao-serie-a",
+      "slug": "chapecoense-vs-athletico-pr",
+      "homeTeam": "Chapecoense",
+      "awayTeam": "Athletico-PR",
+      "date": "2026-10-12",
+      "fixtureId": "editorial:brasileirao-serie-a:chapecoense-vs-athletico-pr:2026-10-12",
+      "predictionAccess": "free",
+      "prediction": "Athletico-PR or Draw (X2) + Over 1.5 Goals",
+      "odds": 1.74,
+      "finalScore": {
+        "home": 1,
+        "away": 4
+      },
+      "result": "green",
+      "settledAt": "2026-10-13T03:12:41.864Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "brasileirao-serie-a:coritiba-vs-botafogo": {
+      "key": "brasileirao-serie-a:coritiba-vs-botafogo",
+      "league": "brasileirao-serie-a",
+      "slug": "coritiba-vs-botafogo",
+      "homeTeam": "Coritiba",
+      "awayTeam": "Botafogo",
+      "date": "2026-10-11",
+      "fixtureId": "editorial:brasileirao-serie-a:coritiba-vs-botafogo:2026-10-11",
+      "predictionAccess": "vip",
+      "prediction": "Coritiba or Draw (1X)",
+      "odds": 1.5,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-12T22:47:32.243Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
     "brasileirao-serie-a:cruzeiro-vs-sao-paulo": {
       "key": "brasileirao-serie-a:cruzeiro-vs-sao-paulo",
@@ -495,6 +552,25 @@
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "eliteserien:kfum-oslo-vs-valerenga": {
+      "key": "eliteserien:kfum-oslo-vs-valerenga",
+      "league": "eliteserien",
+      "slug": "kfum-oslo-vs-valerenga",
+      "homeTeam": "KFUM Oslo",
+      "awayTeam": "Vålerenga",
+      "date": "2026-10-12",
+      "fixtureId": "401843453",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.52,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-12T22:47:32.243Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
     "eliteserien:rosenborg-vs-sandefjord": {
       "key": "eliteserien:rosenborg-vs-sandefjord",
       "league": "eliteserien",
@@ -742,6 +818,25 @@
       "settledAt": "2026-10-11T18:05:27.889Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
+    "la-liga:levante-vs-sevilla": {
+      "key": "la-liga:levante-vs-sevilla",
+      "league": "la-liga",
+      "slug": "levante-vs-sevilla",
+      "homeTeam": "Levante",
+      "awayTeam": "Sevilla",
+      "date": "2026-10-12",
+      "fixtureId": "401882852",
+      "predictionAccess": "vip",
+      "prediction": "Over 1.5 Goals",
+      "odds": 1.35,
+      "finalScore": {
+        "home": 3,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-10-12T22:47:32.243Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
     "la-liga:malaga-vs-espanyol": {
       "key": "la-liga:malaga-vs-espanyol",
       "league": "la-liga",
@@ -950,6 +1045,25 @@
       "result": "red",
       "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "liga-portugal:famalicao-vs-alverca": {
+      "key": "liga-portugal:famalicao-vs-alverca",
+      "league": "liga-portugal",
+      "slug": "famalicao-vs-alverca",
+      "homeTeam": "Famalicao",
+      "awayTeam": "Alverca",
+      "date": "2026-10-12",
+      "fixtureId": "401885425",
+      "predictionAccess": "free",
+      "prediction": "Famalicão X1 + Over 1.5 Goals",
+      "odds": 1.64,
+      "finalScore": {
+        "home": 1,
+        "away": 4
+      },
+      "result": "red",
+      "settledAt": "2026-10-12T22:47:32.243Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
     "liga-portugal:maritimo-vs-porto": {
       "key": "liga-portugal:maritimo-vs-porto",
@@ -1217,6 +1331,25 @@
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "premier-league:coventry-city-vs-newcastle-united": {
+      "key": "premier-league:coventry-city-vs-newcastle-united",
+      "league": "premier-league",
+      "slug": "coventry-city-vs-newcastle-united",
+      "homeTeam": "Coventry City",
+      "awayTeam": "Newcastle United",
+      "date": "2026-10-12",
+      "fixtureId": "401879267",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.66,
+      "finalScore": {
+        "home": 4,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-12T22:47:32.243Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
     "premier-league:crystal-palace-vs-nottingham-forest": {
       "key": "premier-league:crystal-palace-vs-nottingham-forest",
       "league": "premier-league",
@@ -1445,6 +1578,25 @@
       "settledAt": "2026-10-11T18:05:27.889Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
+    "serie-a:torino-vs-udinese": {
+      "key": "serie-a:torino-vs-udinese",
+      "league": "serie-a",
+      "slug": "torino-vs-udinese",
+      "homeTeam": "Torino",
+      "awayTeam": "Udinese",
+      "date": "2026-10-12",
+      "fixtureId": "401874763",
+      "predictionAccess": "vip",
+      "prediction": "Torino or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.89,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-12T22:47:32.243Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
     "super-lig:alanyaspor-vs-erzurumspor": {
       "key": "super-lig:alanyaspor-vs-erzurumspor",
       "league": "super-lig",
@@ -1481,6 +1633,25 @@
       },
       "result": "red",
       "settledAt": "2026-10-11T18:05:27.889Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
+    "super-lig:eyupspor-vs-goztepe": {
+      "key": "super-lig:eyupspor-vs-goztepe",
+      "league": "super-lig",
+      "slug": "eyupspor-vs-goztepe",
+      "homeTeam": "Eyupspor",
+      "awayTeam": "Goztepe",
+      "date": "2026-10-12",
+      "fixtureId": "401888284",
+      "predictionAccess": "free",
+      "prediction": "Göztepe or Draw (X2) + Over 1.5 Goals",
+      "odds": 1.62,
+      "finalScore": {
+        "home": 0,
+        "away": 4
+      },
+      "result": "green",
+      "settledAt": "2026-10-12T22:47:32.243Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
     "super-lig:galatasaray-vs-kasimpasa": {
