@@ -552,6 +552,82 @@
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "champions-league:arsenal-vs-lille": {
+      "key": "champions-league:arsenal-vs-lille",
+      "league": "champions-league",
+      "slug": "arsenal-vs-lille",
+      "homeTeam": "Arsenal",
+      "awayTeam": "Lille",
+      "date": "2026-10-13",
+      "fixtureId": "401915417",
+      "predictionAccess": "vip",
+      "prediction": "Arsenal -1.5 Asian handicap",
+      "odds": 1.72,
+      "finalScore": {
+        "home": 3,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-13T21:58:27.139Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "champions-league:galatasaray-vs-barcelona": {
+      "key": "champions-league:galatasaray-vs-barcelona",
+      "league": "champions-league",
+      "slug": "galatasaray-vs-barcelona",
+      "homeTeam": "Galatasaray",
+      "awayTeam": "Barcelona",
+      "date": "2026-10-13",
+      "fixtureId": "401915435",
+      "predictionAccess": "vip",
+      "prediction": "Barcelona -1.5 Asian handicap",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 1,
+        "away": 4
+      },
+      "result": "green",
+      "settledAt": "2026-10-13T21:58:27.139Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "champions-league:inter-vs-club-brugge": {
+      "key": "champions-league:inter-vs-club-brugge",
+      "league": "champions-league",
+      "slug": "inter-vs-club-brugge",
+      "homeTeam": "Internazionale",
+      "awayTeam": "Club Brugge",
+      "date": "2026-10-13",
+      "fixtureId": "401915413",
+      "predictionAccess": "free",
+      "prediction": "Inter -1.5 Asian handicap",
+      "odds": 1.75,
+      "finalScore": {
+        "home": 3,
+        "away": 4
+      },
+      "result": "red",
+      "settledAt": "2026-10-13T21:58:27.139Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "champions-league:lens-vs-sporting-cp": {
+      "key": "champions-league:lens-vs-sporting-cp",
+      "league": "champions-league",
+      "slug": "lens-vs-sporting-cp",
+      "homeTeam": "Lens",
+      "awayTeam": "Sporting CP",
+      "date": "2026-10-13",
+      "fixtureId": "401915418",
+      "predictionAccess": "vip",
+      "prediction": "Lens double chance (1X)",
+      "odds": 1.5,
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-10-13T21:58:27.139Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
     "eliteserien:kfum-oslo-vs-valerenga": {
       "key": "eliteserien:kfum-oslo-vs-valerenga",
       "league": "eliteserien",
