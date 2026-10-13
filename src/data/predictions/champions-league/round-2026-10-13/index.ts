@@ -17,6 +17,8 @@ const uclSources = [
 const uclPublishedAt = "2026-10-08T15:00:00.000-03:00";
 // Editorial refresh of the FREE fixtures (team news, projected lineups, form) on matchday eve.
 const freeRefreshAt = "2026-10-12T19:35:00.000-03:00";
+// Matchday-eve editorial refresh of the 14 October fixtures (team news, projected lineups, form).
+const oct14RefreshAt = "2026-10-13T08:30:00.000-03:00";
 const uefaPredictedLineups = { name: "UEFA — Champions League predicted line-ups, Matchday 2", url: "https://www.uefa.com/uefachampionsleague/news/02aa-21cf3c78cf12-1c26cfd9b696-1000--champions-league-predicted-line-ups-matchday-2-team-news-/" };
 const noVenueSplitCore = {
   kind: "disclosure" as const,
@@ -346,14 +348,40 @@ const feyenoordVsComo = createPspImport26Prediction({
   teaser: "Feyenoord's home record offers a path back after a heavy opening defeat, though Como's own debut win is a genuine warning. The prediction is FREE; the full reasoning remains available with PRIME VIP.",
   trend: "Feyenoord's home strength against a confident Como",
   matchAnalysis: [
-    "Feyenoord need a strong home response after being overwhelmed 5–1 by Barcelona on the opening matchday. The Dutch side have won **four of their last five** Champions League home games, including qualifying, and have scored in **14 of their last 16** group-stage or league-phase appearances. Those figures support their ability to compete more effectively in Rotterdam than the Barcelona scoreline suggests.",
-    "Como, however, began with an emphatic **4–1 win** over Leipzig. That result matters more to this matchup than a generic assumption about European inexperience: Como have already demonstrated they can punish a Champions League opponent. Martin Baturina also scored in that victory, extending his personal scoring run across successive appearances in the competition.",
+    "Feyenoord return to De Kuip as Eredivisie leaders, with **six wins and two draws** from eight league games and **27 goals** scored, after last weekend's 2–0 win over AZ Alkmaar. The opening Champions League night is the outlier: a **5–1 defeat at Barcelona** in which they were chasing the game from the third minute. At home the record is far steadier, with four wins in their last five Champions League games in Rotterdam (qualifying included) and a goal in 14 of their last 16 group-stage or league-phase matches. The squad is stretched, though, with seven players listed out and Tsuyoshi Watanabe a doubt, so the back line is where the home side is thinnest.",
+    "Como are the fresher story. Cesc Fàbregas's side opened with a **4–1 win over RB Leipzig**, a night on which Martin Baturina scored, yet their domestic results since have been mixed: a 2–0 defeat at newly promoted Frosinone before the international break, then a goalless draw with Roma in which Donyell Malen was sent off after 53 minutes and Como still could not find a goal. Moise Kean is the only doubt after a leg problem picked up over the international break. Feyenoord have won just one of their last seven against Italian opposition, so a visiting win is a live scenario rather than a formality.",
   ],
-  tactical: "The historical warning for Feyenoord is their record against Italian teams, with only **one victory** in their last seven such meetings. The double chance gives them the draw as protection, but Como's first-round performance makes a visiting win a credible threat. Feyenoord's home strength is the case for the pick, not a claim that the visitors are harmless.",
-  risk: "Como's 4-1 win over Leipzig on the opening matchday is direct evidence they can beat a side at this level, and Feyenoord's own record of only one win in seven meetings with Italian teams means the draw alone cannot be assumed safe.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "UEFA's projected shapes set a 4-3-3 against a 4-2-3-1. Feyenoord's front three of Hadj Moussa, Ferri and Valente will look to stretch Como's full-backs, while Zechiël, Vanhoutte and Targhalline cover a back line that must cope without Bos and Nieuwkoop, which is why Read and Javi López are projected at full-back. Como's threat sits in the pocket between those lines, where Nico Paz and Baturina can receive from Da Cunha behind Anastasios Douvikas, with Diao attacking the space left by whichever full-back steps forward. An early Feyenoord goal would drag Como into the open game they played against Leipzig, whereas an early Como goal would test how Feyenoord organise themselves after conceding five in Barcelona.",
+  risk: "The selection loses only if Como win, and the opening night showed how that can happen. Fàbregas's side scored four in its first Champions League match, Feyenoord's record against Italian opposition is poor, and a home side missing seven players that conceded five in Barcelona is not a settled defence. The draw cover matters for that reason: it protects the pick if Como land one punch and Feyenoord's home form brings a goal back, but it offers nothing if the visitors score twice against a patched-up back four.",
+  market: "The price of **1.91** carries a raw implied probability of **52.36%** (1 / 1.91), only slightly better than even for a double chance that covers two of the three outcomes. That tells you the market takes Como seriously. Feyenoord's league-leading form and home record justify paying it, while Como's flat domestic run since the Leipzig win argues against treating the opener as typical, so the value case rests on the home edge rather than on a wide statistical gap.",
+  conclusion: "Feyenoord's home record, their league form and Como's uneven results since the Leipzig win make the hosts the more reliable side to avoid defeat, even with a long injury list. The final teamsheets, particularly Watanabe's fitness on the Feyenoord side and whether Kean starts for Como, are worth a look about an hour before kick-off. On balance, Feyenoord on the double chance (1X) at 1.91 still reads as the better side of the argument.",
+  teamNews: `Team news for Feyenoord against Como follows UEFA's matchday listing, updated on 13 October 2026, and previews published on 12 October. Both lineups are PROJECTED; the official teamsheets arrive about an hour before kick-off.
+
+**Feyenoord**
+- **Out:** Jordan Bos (knee), Bart Nieuwkoop (knee), Jakub Moder (back), Gonçalo Borges, Nelson (muscular), Smal (ankle) and Van Persie (knock), as listed by UEFA. Bos and Nieuwkoop are the two defenders most likely to change the shape of the back four.
+- **Doubtful:** Tsuyoshi Watanabe (calf).
+- No suspensions were reported.
+
+**Como**
+- **Doubtful:** Moise Kean (shin), who came back from the international break with a leg problem. UEFA lists nobody as out.
+- No suspensions were reported.
+
+**PROJECTED Feyenoord (4-3-3):** Ernst; Read, St. Juste, Mármol, Javi López; Zechiël, Vanhoutte, Targhalline; Hadj Moussa, Ferri, Valente. Another preview has Deijl in the back four and López higher up the pitch.
+
+**PROJECTED Como (4-2-3-1):** Butez; Yan Couto, Ramón, Chalobah, Valle; Milla, Da Cunha; Diao, Nico Paz, Baturina; Douvikas. Another preview uses Perrone in midfield and Jacobo in defence.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "Champions League league-phase fixtures do not give a repeated home and away sample, and no sourced HOME/AWAY split in the 22-metric format exists for this tie. The league-phase records, recent results and head-to-head history quoted in the analysis are the sourced figures, and they are written into the prose rather than restated in a table.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "The Stats Zone — Feyenoord vs Como preview and team news (12 October 2026)", url: "https://www.thestatszone.com/feyenoord-vs-como-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-229799" },
+    { name: "Squawka — Feyenoord vs Como Champions League preview", url: "https://www.squawka.com/us/news/champions-league/match-preview-feyenoord-vs-como-14-10-26-champions-league/" },
+    { name: "Sports Mole — Roma vs Real Madrid preview (Como 0-0 Roma result and Malen red card)", url: "https://www.sportsmole.co.uk/football/roma/champions-league/preview/roma-vs-real-madrid-prediction-team-news-lineups_606745.html" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: oct14RefreshAt,
 });
 
 const laskVsLiverpool = createPspImport26Prediction({
@@ -371,14 +399,39 @@ const laskVsLiverpool = createPspImport26Prediction({
   teaser: "Liverpool's consistency in the league phase and a favourable recent head-to-head support the handicap, though LASK's resilience is a real caveat. Full pick and odds are in PRIME VIP.",
   trend: "Liverpool's consistency against LASK's narrow resistance",
   matchAnalysis: [
-    "Liverpool arrive in Austria after defeating Atlético de Madrid 2–1, while LASK lost 1–0 at AEK Athens. The visitors have won **19 of their last 22** Champions League group-stage or league-phase matches, an exceptional record of consistency, whereas LASK have gone **nine European** group-stage or league-phase games without winning.",
-    "The matchup has a useful recent reference point. Liverpool beat LASK **3–1 away and 4–0 at home** in the 2023/24 Europa League, demonstrating that they can create a clear scoring gap against this opponent. LASK have also failed to win any of their **six meetings** with English clubs, drawing one and losing five, while Liverpool have won **eight of ten** matches against Austrian teams.",
+    "Liverpool travel to Linz in an uncomfortable mood. Sunday's **3–0 home defeat to Manchester City**, settled by goals from Haaland, Doku and Cherki after Ryan Gravenberch was sent off for a second yellow card, followed a Champions League opener in which they came from behind to beat Atlético Madrid 2–1. Gravenberch's suspension covers the Premier League trip to Brentford only, so he is eligible and projected in midfield, but the forward line is short: Hugo Ekitiké, Conor Bradley and Giovanni Leoni are out, and Alexander Isak, Cody Gakpo and Dominik Szoboszlai are all doubts without a confirmed return, which matters for a pick that needs a two-goal margin.",
+    "LASK's route to frustrating that margin is narrow. They lost **1–0 at AEK Athens** in their league-phase opener to a Razvan Marin free kick, and they are now **nine** European group-stage or league-phase games without a win. Their qualification run does show resilience, because after a 3–0 defeat at Celtic they won the return leg 5–1 after extra time, and only George Bello and Moses Usor are listed out. The history still favours the visitors: Liverpool beat LASK 3–1 away and 4–0 at home in the 2023/24 Europa League and have won eight of ten against Austrian clubs, while LASK have failed to win any of six meetings with English opposition.",
   ],
-  tactical: "Those records strongly favour Liverpool, but the -1.5 handicap needs more than superiority on paper. LASK's narrow opening defeat shows they can keep a game close, and Liverpool's own 2–1 victory over Atlético would not have covered this line. The selection relies on the visitors translating their territorial advantage into at least a two-goal margin.",
-  risk: "LASK's narrow 1-0 opening defeat shows they can keep matches tight, and Liverpool's own 2-1 win over Atlético would not have covered this same -1.5 line, so a similarly close scoreline here is the clearest way the handicap fails.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "Liverpool's likely 4-2-3-1 builds around Florian Wirtz behind a young striker, Koumas, with Mac Allister and Gravenberch as the double pivot; UEFA projects Ngumoha and Chiesa on the flanks, while other previews use Muñoz and Barcola. LASK's back three with wing-backs Jørgensen and Dibango is designed to keep the game narrow and counter through Kalajdzić and Lang. If Liverpool score first, the wing-backs are pulled up the pitch and the space behind them, where Wirtz and Mac Allister can arrive, is the route to the second goal. If the first goal takes until the second half, the handicap becomes difficult, because a short-handed front line must then break a side defending in numbers.",
+  risk: "The handicap asks for more than a win. Liverpool's 2–1 opener against Atlético would not have covered this line, the front line is below strength, and the Brentford trip on Saturday sits three days away, which makes an early substitution plan likely once a lead is secure. LASK have shown at home that they can score in bunches, and a single goal for them would mean Liverpool need three.",
+  market: "Dividing one by the **1.63** price gives a raw implied probability of **61.35%** (1 / 1.63) for the handicap, a demanding number for a side missing its first-choice forwards and coming off a 3–0 defeat. Past results do not settle it, because the 2023/24 wins came with different squads. The value argument is the gap in European pedigree, with LASK winless in nine, rather than any sign that Liverpool's current form guarantees two goals.",
+  conclusion: "Liverpool's quality and LASK's long European winless run still point to a comfortable away win, but the forward absences and the short turnaround to Brentford make the two-goal margin the harder half of the call. The confirmed teamsheet, especially the status of Isak, Gakpo and Szoboszlai, is worth checking about an hour before kick-off. That keeps Liverpool -1.5 on the Asian handicap at 1.63 as the position.",
+  teamNews: `Team news for LASK against Liverpool follows UEFA's matchday listing, updated on 13 October 2026, and The Stats Zone's preview, revised the same day. Both lineups are PROJECTED and the sources disagree on several names; official teamsheets arrive about an hour before kick-off.
+
+**LASK**
+- **Out:** George Bello (muscular) and Moses Usor (shoulder), as listed by UEFA. No doubts or suspensions were reported.
+
+**Liverpool**
+- **Out:** Hugo Ekitiké (Achilles), Conor Bradley (knee) and Giovanni Leoni (knee).
+- **Doubtful:** Alexander Isak (thigh), Cody Gakpo (ankle) and Dominik Szoboszlai (hamstring tightness, described as a 50/50). Isak and Gakpo both missed the City game.
+- **Eligible:** Ryan Gravenberch is suspended for the Premier League trip to Brentford after his red card against City, but a domestic ban does not carry over to this match and he appears in both projected lineups.
+
+**PROJECTED LASK (3-4-1-2):** Jungwirth; Andrade, Alemão, Mbuyamba; Jørgensen, Bogarde, Horváth, Dibango; Ljubičić; Lang, Kalajdzić. UEFA's version uses Tornich in the back three and Daněk in midfield.
+
+**PROJECTED Liverpool (4-2-3-1):** Alisson; Araújo, Jacquet, Van Dijk, Kerkez; Gravenberch, Mac Allister; Muñoz, Wirtz, Barcola; Koumas. UEFA's version has Frimpong, Gomez and Tsimikas in defence and Ngumoha and Chiesa on the flanks.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "A league-phase fixture is a single match rather than a repeated home and away sample, and no sourced HOME/AWAY split in the 22-metric format exists for this tie. The recent results, European records and head-to-head figures used above are the sourced numbers, and they are kept in the prose instead of being repeated in a table.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "The Stats Zone — LASK vs Liverpool preview and team news (updated 13 October 2026)", url: "https://www.thestatszone.com/lask-vs-liverpool-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-229802" },
+    { name: "Squawka — LASK vs Liverpool Champions League preview", url: "https://www.squawka.com/us/news/champions-league/match-preview-lask-vs-liverpool-14-10-26-champions-league/" },
+    { name: "Squawka — Brentford vs Liverpool preview (Gravenberch Premier League suspension)", url: "https://www.squawka.com/us/news/premier-league/match-preview-brentford-vs-liverpool-17-10-26-premier-league/" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: oct14RefreshAt,
 });
 
 const astonVillaVsFenerbahce = createPspImport26Prediction({
@@ -397,14 +450,39 @@ const astonVillaVsFenerbahce = createPspImport26Prediction({
   teaser: "Villa's European home run and a perfect head-to-head against Fenerbahçe make this PSP's BEST BET of the Champions League wave. Full pick and odds are in PRIME VIP.",
   trend: "Villa's unbeaten home run headlines PSP's Champions League BEST BET",
   matchAnalysis: [
-    "Aston Villa's 3–2 victory at Club Brugge continued their impressive European away progress, and Villa Park has been an even more reliable source of results. They are unbeaten in **13 consecutive** European home matches, winning 12, including the last ten. They have also kept **nine clean sheets** in their last 13 home European fixtures.",
-    "The head-to-head adds substance to that home record. Villa have won **all three** previous meetings with Fenerbahçe without conceding, including a 1–0 away win in last season's Europa League. Across their last **22 European matches**, Villa have failed to score only once, a useful indication of how regularly they give themselves a route to victory.",
+    "Villa Park has been the foundation of Aston Villa's European record: Unai Emery's side are unbeaten in **13 consecutive** European home matches, winning 12 and the last ten, with **nine clean sheets** in their last 13 there. They arrive after a 3–2 win at Club Brugge on the opening night and a 2–2 league draw with Brentford on Saturday, and the left side of the defence is the selection issue. Ian Maatsen is out, Matteo Ruggeri is a doubt, and Aaron Wan-Bissaka is the likeliest left-back. UEFA lists Leon Goretzka and George Hemmings as doubts, while The Stats Zone puts Goretzka, Amadou Onana and Modou Cissé among those unavailable.",
+    "Fenerbahçe are harder to read than their European record suggests. They drew 1–1 at home to Roma on the opening night, Archie Brown equalising after Bryan Cristante's opener, and they are fourth in the Süper Lig after two wins, a draw and two defeats in their first five. In this competition they are eight matches without a win, with three draws and five defeats, and they have trailed at half-time in eight of their last ten Champions League appearances. Villa have also won all three previous meetings without conceding, the latest a 1–0 away win in last season's Europa League. Only Mert Müldür is missing on UEFA's list, so Greenwood, Asensio and Aktürkoğlu behind Muriqi still give the visitors a front line that can punish one lapse.",
   ],
-  tactical: "Fenerbahçe began with a 1–1 draw against Roma, but have now gone eight Champions League matches without a win, drawing three and losing five. They have trailed at half-time in eight of their last ten appearances in the competition. Villa's home momentum and the visitors' difficult European record make the home win a well-supported selection, although Fenerbahçe's attacking talent still demands respect.",
-  risk: "Fenerbahçe's attacking talent is acknowledged even amid their poor run, and a single moment of individual quality could disrupt Villa's sequence, though the hosts' nine clean sheets in their last 13 home European matches remain a genuine defensive foundation behind the pick.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "Emery's projected 4-2-3-1 leaves Nicolas Jackson as the lone striker with McGinn, Manzambi and Buendía behind him, while Kamara and João Gomes protect a back four of Cash, Lindelöf, Pau Torres and Wan-Bissaka. Fenerbahçe's 4-2-3-1 counters with Guendouzi and Kanté screening and Greenwood and Aktürkoğlu running into the channels beside Villa's centre-backs. Villa's route is territory and pressure on the second ball, and the danger is losing possession high with a makeshift left side. If Villa score early, a Fenerbahçe team that has been behind at half-time in eight of its last ten Champions League games is pushed into the open game it handles worst.",
+  risk: "Fenerbahçe's attacking talent is the obvious danger. One moment from Greenwood, Asensio or Aktürkoğlu can turn a clean-sheet record into a draw, and Villa have dropped points at home to both Brentford and Nottingham Forest in the league this season. A win is also the most demanding result in the 1X2 market, because a 1–1 draw, which is entirely plausible against a team that has drawn three of its eight winless Champions League games, loses the selection.",
+  market: "The selection at **1.69** has a raw implied probability of **59.17%** (1 / 1.69). A straight home win suits an unbeaten 13-match European home run, a three-from-three head-to-head record without conceding and a visitor winless in eight Champions League games. Against that, Villa's league draws at home and the left-back problem mean the price already contains a fair share of the home advantage, so the value is in the home record rather than in a bargain number.",
+  conclusion: "Villa's European home form, their record against Fenerbahçe and the visitors' winless run make the home win the best-supported outcome, even with a thin left side. The teamsheet, especially who covers at left-back and whether Goretzka is available, is worth a check about an hour before kick-off. The selection therefore remains Aston Villa to win at 1.69.",
+  teamNews: `Team news for Aston Villa against Fenerbahçe follows UEFA's matchday listing, updated on 13 October 2026, and The Stats Zone's preview published on 12 October. Both lineups are PROJECTED; official teamsheets arrive about an hour before kick-off.
+
+**Aston Villa**
+- **Out:** Ian Maatsen (ankle). The Stats Zone also lists Amadou Onana, Modou Cissé and Leon Goretzka as unavailable.
+- **Doubtful:** Matteo Ruggeri (hamstring), George Hemmings (knee), and Goretzka (fitness) on UEFA's list. With both left-backs short, Aaron Wan-Bissaka is expected to cover that side.
+- No suspensions were reported.
+
+**Fenerbahçe**
+- **Out:** Mert Müldür (knee). The Stats Zone adds Jayden Oosterwolde and Amara Diouf as injured.
+- No doubts or suspensions were reported on UEFA's list.
+
+**PROJECTED Aston Villa (4-2-3-1):** Suzuki; Cash, Lindelöf, Pau Torres, Wan-Bissaka; Kamara, João Gomes; McGinn, Manzambi, Buendía; Jackson.
+
+**PROJECTED Fenerbahçe (4-2-3-1):** Ederson; Nélson Semedo, Škriniar, Aké, Brown; Guendouzi, Kanté; Greenwood, Asensio, Aktürkoğlu; Muriqi.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "This is a single league-phase fixture, not a repeated home and away league sample, and no sourced HOME/AWAY split in the 22-metric format exists for it. Villa's European home run, the head-to-head record and Fenerbahçe's winless run are the sourced figures, and they sit in the analysis rather than in a table.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "The Stats Zone — Aston Villa vs Fenerbahce preview and team news (12 October 2026)", url: "https://www.thestatszone.com/aston-villa-vs-fenerbahce-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-229859" },
+    { name: "Squawka — Aston Villa vs Fenerbahce Champions League preview", url: "https://www.squawka.com/us/news/champions-league/match-preview-aston-villa-vs-fenerbahce-14-10-26-champions-league/" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: oct14RefreshAt,
 });
 
 const realBetisVsPorto = createPspImport26Prediction({
@@ -414,7 +492,7 @@ const realBetisVsPorto = createPspImport26Prediction({
   away: "Porto",
   date: "2026-10-14",
   time: "21:00",
-  venue: "Estadio Benito Villamarín",
+  venue: "Estadio de La Cartuja",
   venueAddress: { addressLocality: "Seville", addressCountry: "Spain" },
   pick: "Real Betis double chance (1X) + Over 1.5 total goals",
   odds: 1.71,
@@ -423,14 +501,41 @@ const realBetisVsPorto = createPspImport26Prediction({
   teaser: "Betis's European home scoring record and a goal-heavy head-to-head history back this BEST BET against a resilient Porto. Full pick and odds are in PRIME VIP.",
   trend: "Betis's home scoring record anchors PSP's second Champions League BEST BET",
   matchAnalysis: [
-    "Real Betis opened with a 3–2 victory away to Lille, extending the impression of a team comfortable in attacking European contests. Their last **nine** European home matches have each produced at least two Betis goals, while they have lost only **one of their last 11** UEFA group-stage or league-phase games, winning eight and drawing two.",
-    "Porto started with a 2–0 home defeat to Manchester City, but their own European record suggests they should not be dismissed as passive opponents. They have trailed at half-time in only **three of their last 15** Champions League matches, which points to a side capable of staying competitive early. Their recent record against Spanish teams is less favourable, with four defeats in the last five.",
+    "Real Betis are third in La Liga on **19 points** from eight games, with 14 goals scored and nine conceded, and they opened their Champions League campaign with a 3–2 win at Lille in which they came from behind twice before Troy Parrott scored the winner. The European numbers behind the pick are strong: Betis have scored at least twice in each of their last **nine** European home matches and have lost only one of their last 11 UEFA group or league-phase games. Manuel Pellegrini has seven matches to play before the end of October, so rotation is a theme, but UEFA's projection still lines up Isco and Abde Ezzalzouli behind Parrott.",
+    "Porto are the more defensive proposition. They won their first eight Liga Portugal games and conceded only four goals in them, yet lost 2–0 to Manchester City on the opening night with Erling Haaland scoring twice. Jan Bednarek is suspended, William Gomes is out with an ankle problem, Zaidu Sanusi is a doubt and another Costa is listed injured, which leaves their defensive line and left side as the places Betis can probe. Porto have also lost four of their last five against Spanish clubs, although they have trailed at half-time in only three of their last 15 Champions League matches.",
   ],
-  tactical: "Only one of Betis's last 48 UEFA fixtures has ended 0–0, and none of Porto's last 31 European matches has finished goalless. That does not guarantee two goals, but it supports the expectation of a contest with attacking intent. The home double chance is anchored in Betis's sustained European home scoring; the over 1.5 condition requires the match to avoid a single-goal outcome.",
-  risk: "Porto have trailed at half-time in only three of their last 15 Champions League matches, showing they are not an easy side to force into early trouble, which keeps a cautious Porto performance or a controlled Porto win both live risks to the combination.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "Betis' 4-2-3-1 gives Isco and Abde Ezzalzouli room between Porto's lines, with Rodrigo Riquelme on the other flank, Bernal and Ceballos as the double pivot and Parrott as the target man. The Stats Zone expects a more pragmatic approach than the 5–2 win over Osasuna, and Porto's 4-3-3 relies on Veiga, Rosário and Froholdt to shield a back four without Bednarek, with Pepê, André Silva and Pietuszewski as the counter-attacking trio. The goals leg needs only two goals in total, so a 1–1 draw would settle both halves of the pick, while a 1–0 either way would not. The first goal matters: if Betis score early, Porto must open up, and if Porto score first, the home side's nine-match run of at least two home goals becomes the main reason to expect a reply.",
+  risk: "The caution is Porto's structure. They conceded four goals in eight league games, only three of their last 15 Champions League matches saw them behind at half-time, and none of their last 31 European matches has finished goalless, which cuts both ways. A cagey Porto win or a 1–0 Betis result would defeat the combination, and The Stats Zone leans toward under 2.5 goals for exactly that reason.",
+  market: "Converted to a raw implied probability, **1.71** is **58.48%** (1 / 1.71) before the bookmaker's margin. The double chance leg is supported by Betis' home form and Porto's disrupted defence, while the Over 1.5 leg is a low threshold that Betis' European home scoring has cleared in nine straight matches. The value is therefore a modest edge built on the home side's consistency, not a claim that the match will be open.",
+  conclusion: "Betis' scoring record at home in Europe, a Porto defence missing Bednarek and the low goals threshold make the combination the better-supported route, with the main risk a tight 1–0. Pellegrini's rotation and the status of Sanusi and Gomes on the Porto side are worth checking in the teamsheets about an hour before kick-off. With that caveat in mind, Real Betis double chance (1X) plus over 1.5 total goals at 1.71 remains the call.",
+  teamNews: `Team news for Real Betis against Porto follows UEFA's matchday listing, updated on 13 October 2026, and The Stats Zone's preview published on 12 October. Both lineups are PROJECTED; official teamsheets arrive about an hour before kick-off.
+
+**Real Betis**
+- **Out:** Junior Firpo (adductor), who picked up a groin problem on international duty with the Dominican Republic.
+- **Doubtful:** Aitor Ruibal (knee), described as a longer-term absentee.
+- No suspensions were reported.
+
+**Porto**
+- **Suspended:** Jan Bednarek.
+- **Out:** William Gomes (ankle) on UEFA's list, although The Stats Zone treats him as a doubt, and J. Costa (injured).
+- **Doubtful:** Zaidu Sanusi (adductor).
+
+**PROJECTED Real Betis (4-2-3-1):** Álvaro Vallés; Héctor Bellerín, Marc Bartra, Natan, Fran García; Bernal, Dani Ceballos; Rodrigo Riquelme, Isco, Abde Ezzalzouli; Parrott.
+
+**PROJECTED Porto (4-3-3):** Diogo Costa; Alberto Costa, Nehuén Pérez, Kiwior, Francisco Moura; Gabriel Veiga, Rosário, Froholdt; Pepê, André Silva, Pietuszewski.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "Betis' recent home matches in Europe and Porto's league record are quoted in the analysis, but a single league-phase game is not a repeated home and away league sample and no sourced HOME/AWAY split in the 22-metric format exists for this tie. The sourced figures stay in the prose rather than in a table.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "The Stats Zone — Real Betis vs Porto preview and team news (12 October 2026)", url: "https://www.thestatszone.com/real-betis-vs-porto-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-229863" },
+    { name: "FC Barcelona — first-team calendar (Real Betis fixture at Estadio La Cartuja de Sevilla)", url: "https://www.fcbarcelona.com/en/futbol/primer-equipo/calendario" },
+    { name: "Wikipedia — 2026–27 La Liga table as of 12 October 2026", url: "https://en.wikipedia.org/wiki/2026%E2%80%9327_La_Liga" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: oct14RefreshAt,
 });
 
 const bodoGlimtVsDortmund = createPspImport26Prediction({
@@ -448,14 +553,39 @@ const bodoGlimtVsDortmund = createPspImport26Prediction({
   teaser: "Bodø/Glimt's home run in Europe and a recent draw in Dortmund support the double chance, despite a brutal opening scoreline. The prediction is FREE; the full reasoning remains available with PRIME VIP.",
   trend: "Bodø/Glimt's home run against Dortmund's scoring power",
   matchAnalysis: [
-    "Bodø/Glimt's 5–0 defeat at Bayern was a brutal start, but it came away from Norway and should not be treated as a complete description of their European level. At home, they have won **five successive** UEFA competition matches, including qualifying, scoring exactly **three goals** in each. That run makes their own ground a very different proposition from Munich.",
-    "Borussia Dortmund began with a 3–2 victory over Villarreal and bring an attack capable of punishing defensive mistakes. Their last **17 league-phase matches** have produced **75 goals**, an average of 4.41, and their **seven meetings** with Norwegian opponents have featured 37 goals, or 5.29 per game. They have lost only one of those seven fixtures.",
+    "Bodø/Glimt's 5–0 defeat at Bayern on the opening night was brutal, but Aspmyra is a different environment. They have won **seven straight home matches** in all competitions, scoring **21 goals**, and were last beaten there in early May. At the same ground last season they beat Manchester City 3–1, Inter 3–1 and Sporting 3–0 in this competition. Kjetil Knutsen's side beat Kristiansund 3–1 in the Eliteserien at the weekend and are level on points with Viking at the top. Odin Luras Bjørtuft is suspended after his red card at Bayern, and Hákon Evjen, Magnus Riisnæs and August Mikkelsen are injured, but Andreas Helmersen, rested for the league game, is expected back.",
+    "Borussia Dortmund are in better form than Friday's 2–2 draw at Werder Bremen suggests. Niko Kovač's side beat Villarreal 3–2 on the opening night with a Serhou Guirassy brace and are unbeaten in seven matches across competitions, with six wins and a draw. Nico Schlotterbeck and Ramy Bensebaïni are back from suspensions carried over from last season's Champions League, which restores the centre of the back line, while Julian Ryerson is a doubt with a rib injury and Emre Can is still out after a serious knee problem. The attacking record is the real threat to the hosts: Dortmund's last 17 league-phase matches have produced 75 goals, and their seven meetings with Norwegian opposition have averaged 5.29 goals per game, with one defeat.",
   ],
-  tactical: "There is also a recent direct reference: Bodø earned a 2–2 draw in Dortmund last season, coming from behind twice. The home double chance asks them to repeat that competitiveness rather than beat Dortmund outright. Nevertheless, Dortmund's finishing and the damage Bayern inflicted on Bodø make this a genuinely exposed selection, not a low-risk home pick.",
-  risk: "Dortmund's seven meetings with Norwegian clubs have produced 5.29 goals per game and only one defeat, and the 5-0 loss to Bayern shows Bodø's defence can be opened up even at a venue where they have otherwise been resilient.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "The projected shapes pit a Bodø/Glimt 4-3-3 against a Dortmund back three. Helmersen, who has 12 top-flight goals this calendar year, Blomberg and Hauge form a front line that has scored three times in each of the home European wins, and with Bjørtuft suspended the centre-back pairing is rebuilt around Aleesami and either Gundersen, on UEFA's projection, or Nielsen, on others. Dortmund's Guirassy leads a front line supported by Beier and Bellingham, and Sabitzer, Veerman and Nmecha will try to control the middle. Last season's 2–2 in Dortmund, in which Bodø twice came from behind, is the template for the hosts: an early Dortmund goal does not end the contest at Aspmyra, but an early Bodø goal would force a visiting side with Can and Ryerson short to chase.",
+  risk: "Dortmund's finishing is the plain danger. The 5–0 loss at Bayern shows how Bodø's defence can be opened up even when the home record is strong, the visitors have scored heavily against Norwegian clubs, and a Dortmund win would defeat the selection. The rebuilt centre of defence without Bjørtuft is the specific weakness a side like Dortmund will target.",
+  market: "Taking **1.78** at face value gives a raw implied probability of **56.18%** (1 / 1.78), a figure that treats Bodø/Glimt as slightly better than a coin flip not to lose against a team with stronger individual quality. The home record and last season's draw in Dortmund justify taking that price, while the Bayern result and Dortmund's goal volume explain why it is not shorter, so the value case is a narrow one built on venue.",
+  conclusion: "Bodø/Glimt's home form is the strongest argument available, and Dortmund's travelling record against Norwegian clubs is not perfect. The risks are a patched-up centre-back pairing and Dortmund's scoring power, so the confirmed teamsheets, especially who partners Aleesami, are worth a check about an hour before kick-off. Nothing in the latest news changes the selection: Bodø/Glimt on the double chance (1X) at 1.78.",
+  teamNews: `Team news for Bodø/Glimt against Borussia Dortmund follows UEFA's matchday listing, updated on 13 October 2026, and Sports Mole's preview published on 12 October. Both lineups are PROJECTED and the previews disagree on a few names; the official teamsheets arrive about an hour before kick-off.
+
+**Bodø/Glimt**
+- **Suspended:** Odin Luras Bjørtuft, after his red card in the defeat at Bayern.
+- **Out:** Hákon Evjen (knee), Magnus Riisnæs (knee) and August Mikkelsen (groin).
+- **Back:** Andreas Helmersen was rested for the weekend league game and is expected to return.
+
+**Borussia Dortmund**
+- **Doubtful:** Julian Ryerson (rib, picked up on Norway duty; Sports Mole expects him to miss out) and Chukwumeka (muscular).
+- **Out:** Emre Can, still recovering from a serious knee injury and yet to feature this season.
+- **Back:** Nico Schlotterbeck and Ramy Bensebaïni return after serving suspensions carried over from last season.
+
+**PROJECTED Bodø/Glimt (4-3-3):** Haikin; Sjøvold, Aleesami, Gundersen, Bjørkan; Auklend, Berg, Brunstad Fet; Blomberg, Helmersen, Hauge. Sports Mole has Nielsen in the centre of defence and Kitolano in midfield.
+
+**PROJECTED Borussia Dortmund (3-4-2-1):** Kobel; Gadou, Anton, Schlotterbeck; Sabitzer, Veerman, Nmecha, Svensson; Bellingham, Beier; Guirassy.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "A league-phase game is a single fixture rather than a repeated home and away league sample, so no sourced HOME/AWAY split in the 22-metric format exists for it. Bodø/Glimt's run of home wins, Dortmund's goal record and the head-to-head from last season are the sourced figures, and they are written into the analysis.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "Sports Mole — Bodø/Glimt vs Dortmund preview, team news and predicted lineups (12 October 2026)", url: "https://www.sportsmole.co.uk/football/bodo-glimt/champions-league/preview/bodoglimt-vs-dortmund-prediction-team-news-lineups_606732.html" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: oct14RefreshAt,
 });
 
 const manCityVsPsg = createPspImport26Prediction({
@@ -473,14 +603,42 @@ const manCityVsPsg = createPspImport26Prediction({
   teaser: "City's long home unbeaten run meets a PSG side with their own strong recent record against English clubs. Full pick and odds are in PRIME VIP.",
   trend: "City's home consistency against PSG's attacking quality",
   matchAnalysis: [
-    "Manchester City began with a disciplined 2–0 win at Porto, while Paris Saint-Germain overwhelmed Slovan Bratislava 6–1. Both teams arrive with convincing opening results, but City's long-term record at home is the principal reason to favour them avoiding defeat: they have lost just **one of their last 25** Champions League home group-stage or league-phase matches, winning 21 and drawing three.",
-    "Paris are a formidable opponent rather than a routine visitor. They have avoided defeat in **11 consecutive** UEFA matches against English clubs, with eight wins and three draws, and beat City **4–2** in their most recent meeting. City lead the overall head-to-head by four wins to two, with two draws, which underlines how competitive the fixture has been.",
+    "Manchester City are perfect through six Premier League games under Enzo Maresca and arrive off a **3–0 win at Anfield** in which Liverpool were reduced to ten men. The red card flatters the scoreline, so the more useful number is the home record: City have lost just **one of their last 25** Champions League home group- or league-phase matches, winning 21 and drawing three, and they have kept five clean sheets this season. UEFA lists nobody as out. Phil Foden is eligible after serving a domestic ban, Antoine Semenyo has recovered from an ankle problem, and Jérémy Doku is back from a calf injury but expected to start on the bench.",
+    "Paris Saint-Germain remain the standard in this competition. They opened with a 6–1 win over Slovan Bratislava in which Ferran Torres scored a hat-trick and Ousmane Dembélé scored and assisted twice, then rested several regulars for Saturday's game against Le Mans, so Dembélé, Nuno Mendes, Marquinhos and Willian Pacho are expected back. Only Senny Mayulu (a thigh injury, about a month out) is listed absent. PSG are unbeaten in their last **nine** against English clubs and won 4–2 at City in January 2025, yet City have won four of the eight meetings overall and all three Champions League games in Manchester.",
   ],
-  tactical: "The scoring condition is plausible given the attacking quality and PSG's six-goal opening display. Erling Haaland entered this round with **59 goals in 59** Champions League appearances, while Ousmane Dembélé had scored **eight times** in his previous five appearances in the competition. The combination needs City to avoid defeat and the teams to produce at least two goals; a 0–0 or 1–0 home result would not be enough.",
-  risk: "PSG beat City 4-2 in their most recent meeting and have avoided defeat in 11 straight matches against English clubs, so City's excellent home record faces a visitor capable of winning outright rather than merely contributing to the goals total.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "The matchup turns on the middle of the pitch. City's projected double pivot of Enzo Fernández and either Anderson or Bouaddi faces a PSG trio of João Neves, Vitinha and Fabián Ruiz, and how quickly the pivot closes Vitinha determines how much of the ball PSG keep. City's best route is transition: Semenyo's runs can drag Nuno Mendes wide and open the channel between Marquinhos and Pacho for Erling Haaland, while PSG's threat is Hakimi overlapping Doué into the space around Gvardiol and Cherki. Donnarumma, who spent two seasons at PSG with Dembélé, faces his old club for the first time since leaving. A City goal in the first half would put PSG's possession under pressure, but an early PSG goal would test City's recent run of clean sheets.",
+  risk: "PSG's pedigree is the obvious counterweight. They beat City 4–2 in the last meeting, they are unbeaten in nine against English clubs, and they can win outright rather than just contribute to the goals total. The goals leg is likely to be met, so the double chance leg carries most of the risk, and a 0–0 or 1–0 home result would defeat the combination.",
+  market: "The market price of **1.67** corresponds to a raw implied probability of **59.88%** (1 / 1.67). Opta's published simulation gives City a 44.1% chance of winning, PSG 32.0% and the draw 23.9%, which adds up to 68.0% for the double chance before any goals condition. The Over 1.5 leg explains most of the gap between that figure and the price, and it is a low bar, so the value case is a home side that rarely loses at the Etihad being priced slightly below Opta's estimate.",
+  conclusion: "City's home record, their league form and the quality PSG face in transition make the double chance a reasoned choice, while a two-goal threshold is a low bar in a game between two of the strongest attacks in the competition. Check the confirmed teamsheets for Foden and Doku on the City side and for Dembélé, Mendes and Marquinhos at PSG about an hour before kick-off. Manchester City on the double chance (1X) plus over 1.5 total goals at 1.67 therefore stands.",
+  teamNews: `Team news for Manchester City against Paris Saint-Germain follows UEFA's matchday listing, updated on 13 October 2026, and RotoWire's preview published on 12 October. Both lineups are PROJECTED; official teamsheets arrive about an hour before kick-off.
+
+**Manchester City**
+- **Out:** none listed by UEFA.
+- **Back:** Phil Foden, eligible after serving a three-match domestic ban. Antoine Semenyo has recovered from the ankle problem that cut short his Ghana duty, and Jérémy Doku is returning from a calf injury and is expected to be a substitute.
+- **Check:** Nico O'Reilly was listed as doubtful last week with an undisclosed issue and was replaced after 66 minutes against Liverpool.
+- No suspensions were reported.
+
+**Paris Saint-Germain**
+- **Out:** Senny Mayulu (thigh), expected to be unavailable for about a month.
+- **Back:** Ousmane Dembélé and Nuno Mendes were rested for the Le Mans game and are back in training; Marquinhos and Willian Pacho were on the bench and are expected to return. Warren Zaïre-Emery (adductor) and Ferran Torres (ankle) were cleared after leaving international camps with discomfort, and Achraf Hakimi is back from a thigh problem.
+- No suspensions were reported.
+
+**PROJECTED Manchester City (4-2-3-1):** Donnarumma; Matheus Nunes, Guéhi, Rúben Dias, Gvardiol; Enzo Fernández, Anderson; Semenyo, Foden, Cherki; Haaland. RotoWire has Bouaddi in midfield in place of Anderson.
+
+**PROJECTED Paris Saint-Germain (4-3-3):** Safonov; Hakimi, Marquinhos, Pacho, Nuno Mendes; João Neves, Vitinha, Fabián Ruiz; Doué, Dembélé, Kvaratskhelia.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "A league-phase fixture is a single game rather than a repeated home and away league sample, and no sourced HOME/AWAY split in the 22-metric format exists for this tie. City's home record, the head-to-head results and Opta's published probabilities are the sourced figures, and they are written into the analysis.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "RotoWire — Manchester City vs PSG prediction, predicted lineups and team news (12 October 2026)", url: "https://www.rotowire.com/soccer/article/manchester-city-vs-psg-prediction-predicted-lineups-team-news-140682" },
+    { name: "Opta Analyst — Man City vs PSG Champions League preview (October 2026)", url: "https://theanalyst.com/articles/man-city-vs-psg-prediction-champions-league-preview-10-2026" },
+    { name: "Squawka — Manchester City vs PSG Champions League preview", url: "https://www.squawka.com/us/news/champions-league/match-preview-manchester-city-vs-psg-14-10-26-champions-league/" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: oct14RefreshAt,
 });
 
 const romaVsRealMadrid = createPspImport26Prediction({
@@ -498,14 +656,41 @@ const romaVsRealMadrid = createPspImport26Prediction({
   teaser: "Roma's strong home record and Madrid's finishing quality against Italian sides both point toward goals in Rome. Full pick and odds are in PRIME VIP.",
   trend: "Roma's home form meets Madrid's finishing against Italian sides",
   matchAnalysis: [
-    "Roma's 1–1 draw away to Fenerbahçe was a cautious start, whereas Real Madrid beat Inter 2–1 at home. The case for goals rests partly on Roma's strong home record — **eight wins in their last nine** Champions League matches in Rome — and partly on Madrid's ability to produce decisive attacking moments against Italian opposition.",
-    "Madrid have won **20 of their last 22** meetings with Italian clubs, and the direct history is striking: **eight victories in 12 games** against Roma, including wins in the last four meetings without conceding. They have also won **five of their six** previous visits to Rome. Those figures favour the visitors, but they do not automatically imply a high-scoring match; several of those successes were controlled rather than expansive.",
+    "Roma remain unbeaten in Serie A with **four wins and two draws**, 14 goals scored and only three conceded, yet the last two results, a 2–2 draw with Inter and a goalless draw at Como in which Donyell Malen was sent off, have slowed a strong start. Malen's ban applies to Serie A only and he is expected to lead the line in Europe. Mile Svilar is out with a foot injury so Gollini keeps goal, Bryan Cristante's knee problem leaves the midfield short, and Roma face Genoa on Saturday. They opened the Champions League with a 1–1 draw at Fenerbahçe, and they have won eight of their last nine Champions League matches in Rome.",
+    "Real Madrid, now managed by José Mourinho, who returns to the city where he won the Conference League, beat Inter 2–1 on the opening night through Mbappé and Valverde. In La Liga they have scored 19 and conceded eight in eight games, six points behind Barcelona, and beat Villarreal 1–0 last time out despite Vinícius being sent off. Vinícius is available for Europe, Dean Huijsen is eligible again, and Camavinga, Güler and Bernardo Silva are back from UEFA bans, while Éder Militão, Rodrygo and Raúl Asencio are out. Madrid have won eight of 12 meetings with Roma, the last four without conceding, and 20 of their last 22 against Italian clubs, so goals are not guaranteed, as several of those wins were controlled rather than open.",
   ],
-  tactical: "The over 2.5 selection therefore depends on the current matchup producing more attacking exchange than some of the historical head-to-heads. Roma's strong home form makes a competitive response plausible, while Madrid's finishing gives the game a route to three goals. A 1–1 draw or 2–0 Madrid win would both fall short, so this is not a low-variance total.",
-  risk: "Several of Madrid's most recent wins over Roma, including four in a row without conceding, were controlled rather than expansive, and a 1-1 draw or a 2-0 Madrid win would both leave the total short of three goals.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "Roma's projected shape is a back three of Mancini, Balerdi and N'Dicka with Molina and Wesley França as wing-backs, Koné and De Roon in the middle and Soulé supporting Dybala and Malen. Madrid's 4-2-3-1 will ask Valverde and Tchouaméni to protect a back four while Güler, Bellingham and Vinícius feed Mbappé, whose 100th Champions League appearance is a milestone this week. The over rests on the exchange of transitions: if Roma commit wing-backs forward at the Olimpico they leave the channels that Mbappé and Vinícius attack, and if Madrid score early Roma's home form suggests a response. A cautious first half with a late goal, or an early Madrid goal followed by a controlled game, would leave the total at two.",
+  risk: "The case against the over is Roma's defence. They have conceded three goals in six league games, they kept Como at bay despite playing a man down, and Madrid's four straight clean sheets against them show how a 1–0 or 2–0 can happen. A 1–1 draw, a 2–0 Madrid win or a 1–0 either way all fall short of three goals.",
+  market: "At **1.42** the raw implied probability is **70.42%** (1 / 1.42). The league numbers support a high-scoring game on average, with Madrid's league matches averaging 3.38 goals and Roma's 2.83, but averages hide how often low-scoring results occur, so the price already carries most of the case. The value is therefore a small one, built on two attacks in form rather than a gap in the numbers.",
+  conclusion: "Roma's improving attack and Madrid's finishing give three goals a clear route, and both teams' league games average more than that. The risk is a cagey game that Madrid control, so the starting lineups, especially whether Malen and Dybala start for Roma and whether Mbappé and Vinícius play together, are worth checking about an hour before kick-off. On balance, over 2.5 total goals at 1.42 still reads as the better side of the argument.",
+  teamNews: `Team news for Roma against Real Madrid follows UEFA's matchday listing, updated on 13 October 2026, and Sports Mole's preview published on 12 October. Both lineups are PROJECTED; official teamsheets arrive about an hour before kick-off.
+
+**Roma**
+- **Out:** Mile Svilar (foot), Bryan Cristante (knee). Gollini is expected in goal.
+- **Doubtful:** Koulierakis (knee).
+- **Available:** Donyell Malen was sent off at Como and is banned for Serie A only, so he is expected to start in Europe.
+
+**Real Madrid**
+- **Out:** Éder Militão (thigh), Rodrygo (knee) and Raúl Asencio (stress fracture). Sports Mole also lists Ferland Mendy.
+- **Back:** Dean Huijsen is eligible after a domestic suspension, and Eduardo Camavinga, Arda Güler and Bernardo Silva are available again after UEFA bans. Vinícius Júnior faces a La Liga suspension that does not apply here.
+- No other suspensions were reported.
+
+**PROJECTED Roma (3-4-2-1):** Gollini; Mancini, Balerdi, N'Dicka; Molina, De Roon, Koné, Wesley França; Soulé; Dybala, Malen.
+
+**PROJECTED Real Madrid (4-2-3-1):** Courtois; Alexander-Arnold, Konaté, Huijsen, Cucurella; Valverde, Tchouaméni; Güler, Bellingham, Vinícius Júnior; Mbappé. Sports Mole has Dumfries, Rüdiger and Carreras in defence and Bernardo Silva in midfield.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "A league-phase fixture is a single game rather than a repeated home and away league sample, so no sourced HOME/AWAY split in the 22-metric format exists for this tie. Roma's and Madrid's league goal totals, the head-to-head record and Roma's home European record are the sourced figures, and they are written into the analysis.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "Sports Mole — Roma vs Real Madrid preview, team news and predicted lineups (12 October 2026)", url: "https://www.sportsmole.co.uk/football/roma/champions-league/preview/roma-vs-real-madrid-prediction-team-news-lineups_606745.html" },
+    { name: "Squawka — Roma vs Real Madrid Champions League preview", url: "https://www.squawka.com/us/news/champions-league/match-preview-roma-vs-real-madrid-14-10-26-champions-league/" },
+    { name: "Wikipedia — 2026–27 Serie A and La Liga tables as of 12 October 2026", url: "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: oct14RefreshAt,
 });
 
 const shakhtarVsAekAthens = createPspImport26Prediction({
@@ -515,22 +700,50 @@ const shakhtarVsAekAthens = createPspImport26Prediction({
   away: "AEK Athens",
   date: "2026-10-14",
   time: "21:00",
-  venue: "Unconfirmed at publication — Shakhtar and Chelsea announced a planned move to Stamford Bridge, London, subject to UEFA and local-authority approval not yet confirmed in the cited sources",
-  venueAddress: { addressCountry: "To be confirmed" },
+  venue: "Stamford Bridge, London",
+  venueAddress: { addressLocality: "London", addressCountry: "England" },
   pick: "Shakhtar Donetsk double chance (1X)",
   odds: 1.51,
   access: "vip",
   teaser: "Shakhtar's broader European consistency against a similarly resilient AEK side supports the draw-protected pick. Full pick and odds are in PRIME VIP.",
   trend: "Two resilient sides with close European records",
   matchAnalysis: [
-    "Shakhtar opened with a 1–1 draw away to PSV, a useful result against a Dutch opponent that often controls games at home. Across their last **21 UEFA fixtures**, Shakhtar have lost only **four**, winning ten and drawing seven. That longer record supports the double chance more convincingly than a single opening result would.",
-    "AEK Athens also started well, beating LASK 1–0, and their European form is strong: just **three defeats** in their last **20 UEFA matches**, with 12 wins and five draws. This is therefore not a contest between a proven favourite and an out-of-form visitor. Both sides have demonstrated an ability to avoid defeat against varied European opposition.",
+    "Shakhtar arrive with domestic momentum, having won seven of their eight league matches to sit two points clear of Polissya Zhytomyr and five ahead of Dynamo Kyiv. Their league-phase opener was a 1–1 draw at PSV in which Gleiker Mendoza scored first and Sergiño Dest equalised, which fits a longer European record of just **four defeats in 21** UEFA fixtures, with ten wins and seven draws. Pedrinho is expected back from a hamstring problem and appears in UEFA's projected XI, while Eguinaldo and Azarov are out and Marlon Santos is a doubt. The home ground is Stamford Bridge, where Shakhtar are playing their Champions League home games this season, so the usual home advantage is diluted.",
+    "AEK Athens come in with rhythm. Marko Nikolić's side beat LASK 1–0 on the opening night through a Razvan Marin free kick, won again against OFI Crete at the weekend and are unbeaten in their first seven Greek Super League matches, one point behind Panathinaikos. They have lost only **three of their last 20** UEFA matches, with 12 wins and five draws. Goalkeeper Thomas Strakosha is out and Barnabás Varga is nearing a return from a muscle problem, so Brignoli is projected in goal. Shakhtar have never lost in five meetings with Greek opposition, though four of those were draws, which is relevant to a 1X selection because the home side does not need to win.",
   ],
-  tactical: "Shakhtar have never lost to Greek opposition in five meetings, although four of those five games were draws. That detail is especially relevant to a 1X selection, because the home side does not need to win. AEK's resilience still makes the fixture difficult to separate, and Shakhtar's home designation should not be confused with an automatically decisive stadium advantage.",
-  risk: "AEK's own European form, with only three defeats in 20 UEFA matches, is close enough to Shakhtar's record that the fixture is genuinely hard to separate, and the unresolved home-venue situation adds an unusual layer of uncertainty to Shakhtar's preparation for this match.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "Shakhtar's projected 4-1-4-1 uses Ocheretko as the single holding midfielder, with Alisson Santana, Pedrinho, Marlon Gomes and Mendoza behind Kauã Elias, while AEK's 4-4-2 sets Majer, Marin, Vitális and Koita in a flat midfield behind Jović and Zini. The Stats Zone expects a cagey game and AEK to be resolute, which suggests a tempo that rewards the side willing to defend deep and counter. For the double chance, the question is whether Shakhtar can win the central duels between Ocheretko and Marin without Eguinaldo, and whether Pedrinho's fitness restores their creative link. An early Shakhtar goal would push AEK out of their shape, whereas a quiet first half favours a draw.",
+  risk: "AEK's European form, with only three defeats in 20 UEFA matches, is close enough to Shakhtar's that the game is hard to separate, and the neutral-ground feel at Stamford Bridge takes away the edge a normal home venue provides. A first goal for AEK would force Shakhtar to chase from behind against a side that has beaten LASK 1–0 by managing a lead.",
+  market: "Dividing one by the **1.51** price gives a raw implied probability of **66.23%** (1 / 1.51). That is a high number for a game with two matched records, yet the double chance covers the draw, which the head-to-head record with Greek clubs makes likely: four draws in five meetings. The value is therefore in the draw protection more than in any gap between the teams.",
+  conclusion: "Shakhtar's domestic form, their long unbeaten European record and the draw cover make the double chance the lower-variance way to back the home side, with AEK the more resilient visitor than the price suggests. Pedrinho's fitness and Marlon Santos's status are the details to check about an hour before kick-off. That keeps Shakhtar Donetsk on the double chance (1X) at 1.51 as the position.",
+  teamNews: `Team news for Shakhtar Donetsk against AEK Athens follows UEFA's matchday listing, updated on 13 October 2026, and The Stats Zone's preview published on 12 October. Both lineups are PROJECTED; official teamsheets arrive about an hour before kick-off.
+
+**Shakhtar Donetsk**
+- **Out:** Eguinaldo (shoulder) and Azarov.
+- **Doubtful:** Marlon Santos (muscular).
+- **Returning:** Pedrinho is expected back from a hamstring problem in mid-October and is in UEFA's projected XI.
+- No suspensions were reported.
+
+**AEK Athens**
+- **Out:** Thomas Strakosha (hand/wrist).
+- **Doubtful:** Barnabás Varga (muscular), who is nearing a return.
+- No suspensions were reported.
+
+**PROJECTED Shakhtar Donetsk (4-1-4-1):** Riznyk; Vinícius Tobías, Bondar, Matviyenko, Pedro Henrique; Ocheretko; Alisson Santana, Pedrinho, Marlon Gomes, Mendoza; Kauã Elias.
+
+**PROJECTED AEK Athens (4-4-2):** Brignoli; Rota, Moukoudi, Filipe Relvas, Pilios; Majer, Marin, Vitális, Koita; Jović, Zini.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "A league-phase game is a single fixture rather than a repeated home and away league sample, and no sourced HOME/AWAY split in the 22-metric format exists for this tie. The European records, domestic form and head-to-head history above are the sourced figures, and they are written into the analysis.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "The Stats Zone — Shakhtar Donetsk vs AEK Athens preview and team news (12 October 2026)", url: "https://www.thestatszone.com/shakhtar-donetsk-vs-aek-athens-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-229866" },
+    { name: "Squawka — Shakhtar Donetsk vs AEK Athens Champions League preview", url: "https://www.squawka.com/us/news/champions-league/match-preview-shakhtar-donetsk-vs-aek-athens-14-10-26-champions-league/" },
+    { name: "Football Ground Guide — Champions League fixtures Stamford Bridge will host in 2026-27", url: "https://footballgroundguide.com/news/the-four-champions-league-fixtures-stamford-bridge-will-host-in-2026-27-season-as-special-one-returns.html" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: oct14RefreshAt,
 });
 
 const slovanBratislavaVsStuttgart = createPspImport26Prediction({
@@ -548,14 +761,39 @@ const slovanBratislavaVsStuttgart = createPspImport26Prediction({
   teaser: "Stuttgart's unbeaten record against Slovakian clubs is weighed against Slovan's recent habit of finding the net. Full pick and odds are in PRIME VIP.",
   trend: "Stuttgart's record against Slovakian clubs vs. Slovan's recent scoring habit",
   matchAnalysis: [
-    "Stuttgart opened the league phase by beating Viking 3–1, while Slovan Bratislava were heavily beaten **6–1** by Paris Saint-Germain. The contrast in defensive performance is significant, but Slovan's concession of six goals came against elite opposition and should not be treated as their normal scoring environment.",
-    "Slovan have lost **all nine** of their Champions League main-stage matches, although they have scored in each of the **last six**. Stuttgart are unbeaten in **seven meetings** with Slovakian clubs, winning five and drawing two, and beat Slovan **3–1** in the 2024/25 league phase. Jamie Leweling scored twice in that previous meeting, providing a direct illustration of Stuttgart's attacking advantage.",
+    "Stuttgart come off a 3–1 home win over Viking on the opening night and a 2–0 win at newly promoted Paderborn at the weekend, in which Chris Führich scored twice. Sebastian Hoeneß's side have scored **25 goals** in seven matches across competitions, and the attacking group behind that total is projected again, with El Khannouss, Undav and Führich supporting Demirović. The injury list is the concern: Nartey, Tiago Tomás, Al-Dakhil and Jaquez are out, and Jeff Chabot and Maximilian Mittelstädt are doubts, though both appear in the projected back line and The Stats Zone expects them to push through.",
+    "Slovan are the Slovak champions and, unusually this deep into the league phase, report a fully fit squad. The resources for a result are limited: they lost **6–1 at Paris Saint-Germain** on the opening night and have now lost all nine of their Champions League main-stage matches, including eight last season with 27 goals conceded, although they have scored in each of the last six. Yaya Touré's side may be more competitive at home than away. Stuttgart are unbeaten in seven meetings with Slovakian clubs, winning five and drawing two, and beat Slovan 3–1 in the 2024/25 league phase, with Jamie Leweling scoring twice.",
   ],
-  tactical: "The win-plus-under combination is more restrictive than the away win alone. Stuttgart must take three points, but the match must also finish with no more than four total goals. Slovan's recent habit of scoring creates some danger for that ceiling, as does their heavy opening defeat. A 3–1 Stuttgart victory qualifies; 4–1 does not.",
-  risk: "Slovan have scored in each of their last six Champions League matches, so their recent habit of finding the net at least once works against the Under leg even though the win leg is well supported by Stuttgart's unbeaten record against Slovakian clubs.",
-  core: noVenueSplitCore,
-  sources: uclSources,
+  tactical: "Stuttgart's projected 4-2-3-1 gives Undav a free role behind Demirović, with Führich and El Khannouss working the half-spaces against a Slovan back line of Blackman, Bajrić, Marković and Cruz. Slovan's 4-3-3 relies on Martínez, Pokorný and Ibrahim in midfield to disrupt the build-up and on Barseghyan, Šporar and Camara to counter, and their record of scoring in six straight Champions League games shows that they threaten even when overmatched. The selection needs Stuttgart to win and the game to stay at four goals or fewer, so a controlled 2–1 or 3–1 fits; the danger is an open game in which Stuttgart's attacking depth produces a 4–1, 5–1 or 4–2. Slovan's heavy defeat at PSG suggests they will concede space if they chase.",
+  risk: "The Under 4.5 leg is the more fragile half. Slovan conceded six in Paris and 27 across eight league-phase games last season, Stuttgart have scored 25 in seven matches this season, and two or three early goals could take the game beyond the threshold. Stuttgart's defensive absences, with Chabot and Mittelstädt both carrying doubts, also give Slovan a route to a goal or two.",
+  market: "The combination at **1.91** has a raw implied probability of **52.36%** (1 / 1.91). A Stuttgart win is the most probable single result, but pairing it with a goals cap trims the chance of a heavy win, so the market is not asking much. The value comes from Stuttgart's record against Slovakian opposition and Slovan's inability to win a Champions League game, offset by the real chance of a high-scoring win.",
+  conclusion: "Stuttgart are clearly the better side and their record against Slovakian clubs supports the win, while the Under 4.5 leg is a mild safeguard against a rout. The confirmed lineup, especially whether Chabot and Mittelstädt start, and Stuttgart's choice of attack are worth checking about an hour before kick-off. The selection therefore remains Stuttgart to win plus under 4.5 total goals at 1.91.",
+  teamNews: `Team news for Slovan Bratislava against Stuttgart follows UEFA's matchday listing, updated on 13 October 2026, and The Stats Zone's preview published on 12 October. Both lineups are PROJECTED; official teamsheets arrive about an hour before kick-off.
+
+**Slovan Bratislava**
+- **Out:** none listed. The Stats Zone describes the squad as fully fit.
+- No suspensions were reported.
+
+**Stuttgart**
+- **Out:** Nartey (thigh), Tiago Tomás (muscular), Al-Dakhil (knee) and Luca Jaquez (muscular).
+- **Doubtful:** Jeff Chabot (muscular) and Maximilian Mittelstädt (foot), both named in the projected lineup and expected by The Stats Zone to push through.
+- No suspensions were reported.
+
+**PROJECTED Slovan Bratislava (4-3-3):** Takáč; Blackman, Bajrić, Marković, Sandro Cruz; Martínez, Pokorný, Ibrahim; Barseghyan, Šporar, Suleiman Camara.
+
+**PROJECTED Stuttgart (4-2-3-1):** Seimen; Vagnoman, Jeltsch, Chabot, Mittelstädt; Prömel, Stiller; El Khannouss, Undav, Führich; Demirović.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "A league-phase fixture is a single game rather than a repeated home and away league sample, so no sourced HOME/AWAY split in the 22-metric format exists for it. Slovan's Champions League record, Stuttgart's scoring total and the earlier meeting are the sourced figures, and they are written into the analysis.",
+  },
+  sources: [
+    ...uclSources,
+    uefaPredictedLineups,
+    { name: "The Stats Zone — Slovan Bratislava vs Stuttgart preview and team news (12 October 2026)", url: "https://www.thestatszone.com/slovan-bratislava-vs-stuttgart-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-229872" },
+    { name: "Squawka — Slovan Bratislava vs Stuttgart Champions League preview", url: "https://www.squawka.com/us/news/champions-league/match-preview-slovan-bratislava-vs-stuttgart-14-10-26-champions-league/" },
+  ],
   publishedAt: uclPublishedAt,
+  updatedAt: oct14RefreshAt,
 });
 
 export const championsLeagueRound20261013 = [

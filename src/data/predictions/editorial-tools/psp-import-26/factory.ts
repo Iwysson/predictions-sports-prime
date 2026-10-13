@@ -32,6 +32,9 @@ export type PspImport26Input = {
   teamNews?: string;
   market?: string;
   conclusion?: string;
+  // Optional overrides. When omitted the original UCL + Brasileirão package behaviour is unchanged.
+  oddsSource?: string;
+  analysisAccess?: PredictionAccess;
 };
 
 export function createPspImport26Prediction(input: PspImport26Input): EditorialPrediction {
@@ -95,7 +98,7 @@ ${input.conclusion ?? `${input.risk.split(". ")[0]}. Weighing that against the p
     seoTitle: `${input.home} vs ${input.away} Prediction, Odds and Betting Tips`,
     trend: input.trend,
     access: input.access,
-    analysisAccess: "vip",
+    analysisAccess: input.analysisAccess ?? "vip",
     predictionAccess: input.access,
     bestAnalysis: input.bestAnalysis,
     teaser: input.teaser,
@@ -107,7 +110,7 @@ ${input.conclusion ?? `${input.risk.split(". ")[0]}. Weighing that against the p
       main: input.pick,
       publishedOdds: input.odds,
       oddsProvenance: {
-        source: "Editor-supplied PSP UCL + Brasileirão publication package (8 October 2026)",
+        source: input.oddsSource ?? "Editor-supplied PSP UCL + Brasileirão publication package (8 October 2026)",
         provenance: "author_attested",
         market: input.pick,
       },

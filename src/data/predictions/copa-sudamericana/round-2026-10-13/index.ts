@@ -17,6 +17,8 @@ const singleLegCore = {
   note: "This is a single-leg Copa Sudamericana semifinal first-leg fixture rather than a repeated home/away league sample, so a structured HOME/AWAY split; no sourced home and away split in the 22-metric target format is available for this matchup. The competition-record figures cited above (group-stage points, goals scored/conceded, individual scoring totals) are the sourced metrics for this tie and are presented in prose rather than restated in a table to avoid duplicating them without new interpretation.",
 };
 const publishedAt = "2026-10-09T10:00:00.000-03:00";
+// Matchday-eve editorial refresh of the 14 October fixtures (team news, projected lineups, form).
+const oct14RefreshAt = "2026-10-13T08:30:00.000-03:00";
 
 const bocaJuniorsVsVascoDaGama = createPspImport26Prediction({
   ...sudamericana,
@@ -81,7 +83,7 @@ const atleticoMineiroVsMontevideoCityTorque = createPspImport26Prediction({
   away: "Montevideo City Torque",
   date: "2026-10-14",
   time: "19:00",
-  venue: "Arena MRV, Belo Horizonte, Brazil (kick-off time 19:00 BRT, subject to confirmation)",
+  venue: "Arena MRV, Belo Horizonte, Brazil (kick-off 19:00 Brasília time)",
   venueAddress: { addressLocality: "Belo Horizonte", addressCountry: "Brazil" },
   pick: "Atlético Mineiro to Win",
   odds: 1.45,
@@ -90,17 +92,39 @@ const atleticoMineiroVsMontevideoCityTorque = createPspImport26Prediction({
   teaser: "Atlético's quarterfinal comeback at Arena MRV and their deeper knockout experience make this PSP's BEST BET of the Sudamericana wave. Full pick and odds are in PRIME VIP.",
   trend: "Atlético's Arena MRV comeback form headlines PSP's Sudamericana BEST BET",
   matchAnalysis: [
-    "Atlético Mineiro arrive at the semifinal after a quarterfinal that showed both their vulnerability and their ability to respond under pressure. They overturned a 2–0 first-leg defeat against Santos with a **4–2 home win** before advancing on penalties, with Reinier scoring twice and Tomás Cuello adding another important goal. Their group-stage numbers were less dominant — **10 points**, eight goals scored and six conceded in six matches — but the home performance in the quarterfinal demonstrated how much more dangerous Atlético can become when they are able to push the game forward at Arena MRV.",
-    "Montevideo City Torque deserve significant respect. The Uruguayan side collected **13 group-stage points**, scored 11 goals and have had a major attacking contribution from Salomón Rodríguez, who has **seven goals** in the competition. That makes this far from a routine home win.",
+    "Atlético Mineiro reached the semifinal the hard way. They lost 2–0 at Santos in the quarterfinal first leg, then won the return **4–2 at home** and advanced on penalties 3–1 after goalkeeper Gabriel Delfim saved three, with Reinier scoring twice. At Arena MRV, Eduardo Domínguez has 15 wins, five draws and one defeat in 21 games, they have won four and drawn one of their five Sudamericana home matches, and they are unbeaten in their last five games in all competitions, the latest a 2–1 Brasileirão win over Santos. The cost is availability: Fred is out with a left-thigh muscle injury suffered against Athletico-PR, and Everson, Ruan Tressoldi, Mateo Cassierra and Gustavo Scarpa are also unavailable.",
+    "Montevideo City Torque deserve respect. They led Group F with **13 points**, scored 17 goals in ten Sudamericana games and also recovered from a 2–0 defeat in the quarterfinal, losing at Cienciano in Cusco before winning the return 3–0. They lead the Uruguayan Clausura with 22 points from ten rounds, though they went four games without a win before beating Danubio 1–0 on 9 October through Salomón Rodríguez. Rodríguez has seven goals in the competition and 19 in 37 games this season, eight of them with his head. There are no confirmed absentees for Marcelo Méndez's side, and this is the first official meeting between the clubs.",
   ],
-  tactical: "Atlético's quarterfinal turnaround leaned on Reinier and Tomás Cuello combining in the final third once the home crowd's pressure built, a pattern they will look to repeat against a Montevideo City Torque side built around Salomón Rodríguez's movement in behind. The difference is Atlético's deeper attacking quality, greater knockout experience and the pressure they can generate at home, which in a first leg where the Brazilian side should be motivated to build an advantage before the return match, give them the stronger overall profile.",
-  risk: "Montevideo City Torque's 13 group-stage points and Salomón Rodríguez's seven goals in the competition show a side capable of scoring against anyone, so a repeat of Atlético's earlier quarterfinal defensive lapses would give the visitors a route back into the tie regardless of the home side's attacking quality.",
-  core: singleLegCore,
+  tactical: "Domínguez is likely to use a 4-3-3, with Victor Hugo covering for Fred in midfield alongside Alan Franco and Maycon, and Cuello, Bernard and Reinier as the front three; Reinier and Thiago Borbas are competing for the striker role. City Torque's projected 4-4-2 or 4-3-3 sends Obregón, Luka Andrade and Rodríguez at a back line of Natanael, Lyanco, Vitor Hugo and Renan Lodi, and Rodríguez's aerial threat means set pieces and crosses are the visiting side's best route. In five of Atlético's last six games both teams have scored, so Atlético will expect to concede at least once, and the plan is to win the first leg by enough to play the return in Montevideo with a cushion. An early Atlético goal puts the Uruguayans in the position they struggled in after the quarterfinal first leg.",
+  risk: "City Torque's 13 group-stage points and Rodríguez's goals show a side capable of scoring against anyone, and the visitors decide the tie at home on 21 October because of their better group record. Both teams have also scored in most of Atlético's recent games, so a 2–2 or 1–1 first leg is plausible, and Atlético's management of minutes for key players with the return in mind means the lineup could be weaker than the best available.",
+  market: "Taking **1.45** at face value gives a raw implied probability of **68.97%** (1 / 1.45), the market's view that a strong home side is a clear favourite in a first leg. The home record under Domínguez and Atlético's goal-scoring in recent matches support it, while the visitors' away scoring and the injuries to Fred and others limit the margin. The value is in the home form, not in a decisive statistical gap.",
+  conclusion: "Atlético are the stronger side, they play the first leg at Arena MRV with a strong home record, and City Torque will have to cope with a larger stage than their group matches. Fred's absence and the managed minutes for several players are the details to check on the teamsheet before kick-off. Nothing in the latest news changes the selection: Atlético Mineiro to win at 1.45.",
+  teamNews: `Team news follows Trivela, O Tempo and club previews published on 12 and 13 October 2026. Both lineups are PROJECTED; the official teamsheets are released shortly before kick-off.
+
+**Atlético Mineiro**
+- **Out:** Fred (left-thigh muscle injury suffered against Athletico-PR, not expected to play), Everson, Ruan Tressoldi, Mateo Cassierra and Gustavo Scarpa (all physical problems).
+- **Managed:** Natanael, Alan Franco, Kevin Castaño and Victor Hugo had their minutes managed with the semifinal in mind. Victor Hugo is expected to take Fred's place.
+- **Check:** O Tempo reported Tomás Cuello as suspended for the Santos league game on 11 October, while other previews include him in the projected eleven, so his eligibility for this match should be confirmed.
+
+**Montevideo City Torque**
+- No confirmed absentees have been reported. Salomón Rodríguez, who scored the winner against Danubio on 9 October, is expected to lead the attack.
+
+**PROJECTED Atlético Mineiro (4-3-3):** Gabriel Delfim; Natanael, Lyanco, Vitor Hugo, Renan Lodi; Alan Franco, Maycon, Victor Hugo; Cuello, Bernard, Reinier. Reinier and Thiago Borbas are competing for the striker role.
+
+**PROJECTED Montevideo City Torque (4-4-2):** Torgnascioli; Agüero, Kevin Silva, Kagelmacher, Silvera; Pizzichillo, Siles, Montes; Obregón, Andrade, Salomón Rodríguez.`,
+  core: {
+    kind: "disclosure" as const,
+    note: "A Copa Sudamericana semifinal first leg is a single fixture rather than a repeated home and away league sample, so no sourced HOME/AWAY split in the 22-metric format exists for this tie. The quarterfinal scorelines, group record and individual scoring totals used above are the sourced figures, and they are written into the analysis.",
+  },
   sources: [
     { name: "CONMEBOL — Atlético Mineiro in Copa Sudamericana 2026", url: "https://gol.conmebol.com/sudamericana/pt-br/news/atletico-mineiro-na-conmebol-sudamericana-2026-resultados-elenco-e-calendario" },
     { name: "CONMEBOL — Montevideo City Torque in Copa Sudamericana 2026", url: "https://gol.conmebol.com/sudamericana/pt-br/news/montevideo-city-torque-na-conmebol-sudamericana-2026-resultados-elenco-e-calendario" },
+    { name: "Trivela — Atlético-MG v City Torque probable lineups and preview (14 October 2026)", url: "https://trivela.com.br/onde-assistir/palpite-escalacoes-atletico-mg-x-city-torque-14-10-2026/" },
+    { name: "O Tempo — Montevideo City Torque ahead of the Atlético tie (12 October 2026)", url: "https://otempo.com.br/sports/atletico/2026/10/12/montevideo-city-torque-chega-para-jogo-contra-o-atletico-apos-se-recuperar-na-temporada" },
+    { name: "O Tempo — Atlético lineup and absences against Santos (11 October 2026)", url: "https://www.otempo.com.br/sports/atletico/2026/10/11/veja-a-escalacao-e-os-desfalques-do-atletico-para-enfrentar-o-santos-pelo-campeonato-brasileiro" },
   ],
   publishedAt,
+  updatedAt: oct14RefreshAt,
 });
 
 export const copaSudamericanaRound20261013 = [

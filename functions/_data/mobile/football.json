@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T20:28:16.707Z",
+  "generatedAt": "2026-10-13T11:34:13.666Z",
   "leagues": [
     "brasileirao-serie-a",
     "champions-league",
@@ -19,72 +19,6 @@
   ],
   "free": {
     "today": [
-      {
-        "slug": "chapecoense-vs-athletico-pr",
-        "league": "brasileirao-serie-a",
-        "homeTeam": "Chapecoense",
-        "awayTeam": "Athletico-PR",
-        "date": "2026-10-12",
-        "time": "19:30",
-        "round": "Matchday 30",
-        "title": "Chapecoense vs Athletico-PR",
-        "analysisAccess": "vip",
-        "predictionAccess": "free",
-        "badge": "free",
-        "teaser": null,
-        "pick": "Athletico-PR or Draw (X2) + Over 1.5 Goals",
-        "odds": 1.74
-      },
-      {
-        "slug": "coventry-city-vs-newcastle-united",
-        "league": "premier-league",
-        "homeTeam": "Coventry City",
-        "awayTeam": "Newcastle United",
-        "date": "2026-10-12",
-        "time": "20:00",
-        "round": "Matchday 6",
-        "title": "Coventry City vs Newcastle United",
-        "analysisAccess": "free",
-        "predictionAccess": "free",
-        "badge": "free",
-        "teaser": null,
-        "pick": "Over 2.5 Goals",
-        "odds": 1.66
-      },
-      {
-        "slug": "famalicao-vs-alverca",
-        "league": "liga-portugal",
-        "homeTeam": "Famalicao",
-        "awayTeam": "Alverca",
-        "date": "2026-10-12",
-        "time": "20:15",
-        "round": "Matchday 8",
-        "title": "Famalicão vs Alverca",
-        "analysisAccess": "free",
-        "predictionAccess": "free",
-        "badge": "free",
-        "teaser": null,
-        "pick": "Famalicão X1 + Over 1.5 Goals",
-        "odds": 1.64
-      },
-      {
-        "slug": "bragantino-vs-cruzeiro",
-        "league": "brasileirao-serie-a",
-        "homeTeam": "Bragantino",
-        "awayTeam": "Cruzeiro",
-        "date": "2026-10-12",
-        "time": "21:00",
-        "round": "Matchday 30",
-        "title": "Bragantino vs Cruzeiro",
-        "analysisAccess": "vip",
-        "predictionAccess": "free",
-        "badge": "free",
-        "teaser": null,
-        "pick": "Over 2.5 Goals",
-        "odds": 1.84
-      }
-    ],
-    "tomorrow": [
       {
         "slug": "inter-vs-club-brugge",
         "league": "champions-league",
@@ -150,7 +84,7 @@
         "odds": 1.89
       }
     ],
-    "upcoming": [
+    "tomorrow": [
       {
         "slug": "feyenoord-vs-como",
         "league": "champions-league",
@@ -230,7 +164,9 @@
         "teaser": null,
         "pick": "Over 1.5 Goals",
         "odds": 1.61
-      },
+      }
+    ],
+    "upcoming": [
       {
         "slug": "celta-vigo-vs-juventus",
         "league": "uefa-europa-league",
@@ -267,10 +203,10 @@
         "slug": "corum-fk-vs-caykur-rizespor",
         "league": "super-lig",
         "homeTeam": "Çorum FK",
-        "awayTeam": "Çaykur Rizespor",
+        "awayTeam": "Caykur Rizespor",
         "date": "2026-10-16",
         "time": "20:00",
-        "round": "Matchweek 8",
+        "round": "Matchday 8",
         "title": "Çorum FK vs Çaykur Rizespor",
         "analysisAccess": "free",
         "predictionAccess": "free",
@@ -310,41 +246,43 @@
         "teaser": null,
         "pick": "Hibernian to Win",
         "odds": 1.61
+      },
+      {
+        "slug": "real-betis-vs-barcelona",
+        "league": "la-liga",
+        "homeTeam": "Real Betis",
+        "awayTeam": "Barcelona",
+        "date": "2026-10-18",
+        "time": "TBD",
+        "round": "Matchday 9",
+        "title": "Real Betis vs Barcelona",
+        "analysisAccess": "free",
+        "predictionAccess": "free",
+        "badge": "free",
+        "teaser": null,
+        "pick": "Barcelona to Win",
+        "odds": 1.48
+      },
+      {
+        "slug": "valencia-vs-athletic-club",
+        "league": "la-liga",
+        "homeTeam": "Valencia",
+        "awayTeam": "Athletic Club",
+        "date": "2026-10-18",
+        "time": "TBD",
+        "round": "Matchday 9",
+        "title": "Valencia vs Athletic Club",
+        "analysisAccess": "free",
+        "predictionAccess": "free",
+        "badge": "free",
+        "teaser": null,
+        "pick": "Athletic Club Double Chance (X2) + Over 1.5 Goals",
+        "odds": 1.79
       }
     ]
   },
   "vip": {
     "today": [
-      {
-        "slug": "torino-vs-udinese",
-        "league": "serie-a",
-        "homeTeam": "Torino",
-        "awayTeam": "Udinese",
-        "date": "2026-10-12",
-        "time": "20:45",
-        "round": "Matchday 6",
-        "title": "Torino vs Udinese",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
-        "slug": "levante-vs-sevilla",
-        "league": "la-liga",
-        "homeTeam": "Levante",
-        "awayTeam": "Sevilla",
-        "date": "2026-10-12",
-        "time": "TBD",
-        "round": "Matchday 8",
-        "title": "Levante vs Sevilla",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      }
-    ],
-    "tomorrow": [
       {
         "slug": "lens-vs-sporting-cp",
         "league": "champions-league",
@@ -430,7 +368,7 @@
         "teaser": null
       }
     ],
-    "upcoming": [
+    "tomorrow": [
       {
         "slug": "lask-vs-liverpool",
         "league": "champions-league",
@@ -724,7 +662,9 @@
         "predictionAccess": "vip",
         "badge": "vip",
         "teaser": null
-      },
+      }
+    ],
+    "upcoming": [
       {
         "slug": "az-alkmaar-vs-hapoel-beer-sheva",
         "league": "uefa-europa-league",
@@ -970,7 +910,7 @@
         "awayTeam": "Internacional",
         "date": "2026-10-16",
         "time": "20:00",
-        "round": "Round 30",
+        "round": "Matchday 30",
         "title": "Mirassol vs Internacional",
         "analysisAccess": "vip",
         "predictionAccess": "vip",
@@ -1006,6 +946,34 @@
         "teaser": null
       },
       {
+        "slug": "everton-vs-chelsea",
+        "league": "premier-league",
+        "homeTeam": "Everton",
+        "awayTeam": "Chelsea",
+        "date": "2026-10-17",
+        "time": "12:30",
+        "round": "Matchday 7",
+        "title": "Everton vs Chelsea",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "fulham-vs-hull-city",
+        "league": "premier-league",
+        "homeTeam": "Fulham",
+        "awayTeam": "Hull City",
+        "date": "2026-10-17",
+        "time": "15:00",
+        "round": "Matchday 7",
+        "title": "Fulham vs Hull City",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
         "slug": "kilmarnock-vs-motherwell",
         "league": "scottish-premiership",
         "homeTeam": "Kilmarnock",
@@ -1034,6 +1002,48 @@
         "teaser": null
       },
       {
+        "slug": "venezia-vs-napoli",
+        "league": "serie-a",
+        "homeTeam": "Venezia",
+        "awayTeam": "Napoli",
+        "date": "2026-10-17",
+        "time": "15:00",
+        "round": "Matchday 7",
+        "title": "Venezia vs Napoli",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "newcastle-united-vs-aston-villa",
+        "league": "premier-league",
+        "homeTeam": "Newcastle United",
+        "awayTeam": "Aston Villa",
+        "date": "2026-10-17",
+        "time": "17:30",
+        "round": "Matchday 7",
+        "title": "Newcastle United vs Aston Villa",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "bologna-vs-inter",
+        "league": "serie-a",
+        "homeTeam": "Bologna",
+        "awayTeam": "Internazionale",
+        "date": "2026-10-17",
+        "time": "18:00",
+        "round": "Matchday 7",
+        "title": "Bologna vs Inter",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
         "slug": "dundee-vs-rangers",
         "league": "scottish-premiership",
         "homeTeam": "Dundee",
@@ -1042,6 +1052,48 @@
         "time": "20:00",
         "round": "Round 9",
         "title": "Dundee vs Rangers",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "roma-vs-genoa",
+        "league": "serie-a",
+        "homeTeam": "AS Roma",
+        "awayTeam": "Genoa",
+        "date": "2026-10-17",
+        "time": "20:45",
+        "round": "Matchday 7",
+        "title": "Roma vs Genoa",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "best",
+        "teaser": null
+      },
+      {
+        "slug": "brentford-vs-liverpool",
+        "league": "premier-league",
+        "homeTeam": "Brentford",
+        "awayTeam": "Liverpool",
+        "date": "2026-10-17",
+        "time": "TBD",
+        "round": "Matchday 7",
+        "title": "Brentford vs Liverpool",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "manchester-city-vs-ipswich-town",
+        "league": "premier-league",
+        "homeTeam": "Manchester City",
+        "awayTeam": "Ipswich Town",
+        "date": "2026-10-17",
+        "time": "TBD",
+        "round": "Matchday 7",
+        "title": "Manchester City vs Ipswich Town",
         "analysisAccess": "vip",
         "predictionAccess": "vip",
         "badge": "vip",
@@ -1070,6 +1122,34 @@
         "time": "TBD",
         "round": "Matchday 9",
         "title": "Deportivo La Coruña vs Levante",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "espanyol-vs-atletico-madrid",
+        "league": "la-liga",
+        "homeTeam": "Espanyol",
+        "awayTeam": "Atlético Madrid",
+        "date": "2026-10-18",
+        "time": "TBD",
+        "round": "Matchday 9",
+        "title": "Espanyol vs Atlético Madrid",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "villarreal-vs-elche",
+        "league": "la-liga",
+        "homeTeam": "Villarreal",
+        "awayTeam": "Elche",
+        "date": "2026-10-18",
+        "time": "TBD",
+        "round": "Matchday 9",
+        "title": "Villarreal vs Elche",
         "analysisAccess": "vip",
         "predictionAccess": "vip",
         "badge": "vip",
