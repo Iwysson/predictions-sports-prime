@@ -1,7 +1,7 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-10-12T15:19:14.209Z",
+  "generatedAt": "2026-10-13T14:08:35.338Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
@@ -35,10 +35,10 @@
     },
     {
       "teamId": "buf",
-      "wins": 3,
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "winPct": 0.75,
+      "winPct": 0.8,
       "conferenceRank": 4,
       "playoffStatus": "in-playoff-position"
     },
@@ -196,7 +196,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "chi",
+      "teamId": "det",
       "wins": 3,
       "losses": 2,
       "ties": 0,
@@ -205,7 +205,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "det",
+      "teamId": "chi",
       "wins": 3,
       "losses": 2,
       "ties": 0,
@@ -225,9 +225,9 @@
     {
       "teamId": "lar",
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "winPct": 0.5,
+      "winPct": 0.4,
       "conferenceRank": 9,
       "playoffStatus": "none"
     },
