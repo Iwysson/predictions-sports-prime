@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T12:34:45.307Z",
+  "generatedAt": "2026-10-14T12:52:40.369Z",
   "leagues": [
     "brasileirao-serie-a",
     "bundesliga",
@@ -952,11 +952,11 @@
       {
         "slug": "hamkam-vs-bod-glimt",
         "league": "eliteserien",
-        "homeTeam": "HamKam",
-        "awayTeam": "Bodø/Glimt",
+        "homeTeam": "Hamarkameratene",
+        "awayTeam": "Bodo/Glimt",
         "date": "2026-10-17",
         "time": "14:00",
-        "round": "Round 24",
+        "round": "Matchday 24",
         "title": "HamKam vs Bodø/Glimt",
         "analysisAccess": "vip",
         "predictionAccess": "vip",
@@ -1526,11 +1526,11 @@
       {
         "slug": "troms-vs-kfum-oslo",
         "league": "eliteserien",
-        "homeTeam": "Tromsø",
+        "homeTeam": "Tromso",
         "awayTeam": "KFUM Oslo",
         "date": "2026-10-18",
         "time": "19:15",
-        "round": "Round 24",
+        "round": "Matchday 24",
         "title": "Tromsø vs KFUM Oslo",
         "analysisAccess": "vip",
         "predictionAccess": "vip",

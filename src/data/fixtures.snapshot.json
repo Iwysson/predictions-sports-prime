@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T12:33:25.407Z",
+  "generatedAt": "2026-10-14T12:50:44.275Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -15220,11 +15220,14 @@
     "eliteserien:aalesund-vs-sarpsborg": "official:eliteserien:aalesund-vs-sarpsborg-08:2026-10-11",
     "eliteserien:bodo-glimt-vs-kristiansund": "official:eliteserien:bod-glimt-vs-kristiansund:2026-10-10",
     "eliteserien:fredrikstad-vs-tromso": "official:eliteserien:fredrikstad-vs-troms:2026-10-11",
+    "eliteserien:hamkam-vs-bod-glimt": "401843465",
     "eliteserien:kristiansund-vs-aalesund": "official:eliteserien:kristiansund-vs-aalesund:2026-10-17",
     "eliteserien:lillestrom-vs-molde": "official:eliteserien:lillestr-m-vs-molde:2026-10-11",
     "eliteserien:molde-vs-start": "official:eliteserien:molde-vs-start:2026-10-18",
     "eliteserien:sandefjord-vs-lillestr-m": "official:eliteserien:sandefjord-vs-lillestr-m:2026-10-18",
     "eliteserien:sarpsborg-08-vs-rosenborg": "official:eliteserien:sarpsborg-08-vs-rosenborg:2026-10-18",
+    "eliteserien:start-vs-hamkam": "official:eliteserien:start-vs-hamkam:2026-10-11",
+    "eliteserien:troms-vs-kfum-oslo": "401843460",
     "eliteserien:valerenga-vs-brann": "official:eliteserien:valerenga-vs-brann:2026-10-18",
     "eliteserien:viking-vs-fredrikstad": "official:eliteserien:viking-vs-fredrikstad:2026-10-17",
     "eredivisie:ado-den-haag-vs-psv-eindhoven": "401875582",
@@ -15292,11 +15295,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-14T12:33:25.407Z",
+    "bundesliga": "2026-10-14T12:50:44.275Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
-    "liga-portugal": "2026-10-14T00:50:21.396Z",
-    "ligue-1": "2026-10-14T12:33:25.407Z",
-    "eredivisie": "2026-10-14T12:33:25.407Z",
+    "liga-portugal": "2026-10-14T12:50:44.275Z",
+    "ligue-1": "2026-10-14T12:50:44.275Z",
+    "eredivisie": "2026-10-14T12:50:44.275Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
@@ -15723,6 +15726,36 @@
       "timeConfirmed": true,
       "kickoffUtc": "2026-10-12T17:00Z",
       "espnEventId": "401843453"
+    },
+    "401843460": {
+      "round": 24,
+      "date": "2026-10-18",
+      "time": "19:15",
+      "homeTeam": "Tromso",
+      "awayTeam": "KFUM Oslo",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "espn",
+      "id": "401843460",
+      "sourceAgreement": true,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-18T17:15Z"
+    },
+    "401843465": {
+      "round": 24,
+      "date": "2026-10-17",
+      "time": "14:00",
+      "homeTeam": "Hamarkameratene",
+      "awayTeam": "Bodo/Glimt",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "espn",
+      "id": "401843465",
+      "sourceAgreement": true,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-17T12:00Z"
     },
     "401873903": {
       "round": 22,
@@ -19577,15 +19610,16 @@
       "time": "14:30",
       "homeTeam": "Fredrikstad",
       "awayTeam": "Tromsø",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "scheduled",
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "completed",
       "dataSource": "fotmob",
       "id": "official:eliteserien:fredrikstad-vs-troms:2026-10-11",
       "fotmobMatchId": 5105019,
       "sourceAgreement": true,
       "kickoffUtc": "2026-10-11T12:30:00.000Z",
-      "timeConfirmed": true
+      "timeConfirmed": true,
+      "espnEventId": "401843454"
     },
     "official:eliteserien:lillestr-m-vs-molde:2026-10-11": {
       "round": 23,
@@ -19911,6 +19945,22 @@
       "fotmobMatchId": 5105027,
       "sourceAgreement": true,
       "kickoffUtc": "2026-10-18T15:00:00.000Z",
+      "timeConfirmed": true
+    },
+    "official:eliteserien:start-vs-hamkam:2026-10-11": {
+      "round": 23,
+      "date": "2026-10-11",
+      "time": "17:00",
+      "homeTeam": "Start",
+      "awayTeam": "HamKam",
+      "homeScore": 2,
+      "awayScore": 4,
+      "status": "completed",
+      "dataSource": "fotmob",
+      "fotmobMatchId": 5105021,
+      "id": "official:eliteserien:start-vs-hamkam:2026-10-11",
+      "sourceAgreement": true,
+      "kickoffUtc": "2026-10-11T15:00:00.000Z",
       "timeConfirmed": true
     }
   }

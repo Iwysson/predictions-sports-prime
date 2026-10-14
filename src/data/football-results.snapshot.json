@@ -628,6 +628,25 @@
       "settledAt": "2026-10-13T21:58:27.139Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
+    "eliteserien:fredrikstad-vs-tromso": {
+      "key": "eliteserien:fredrikstad-vs-tromso",
+      "league": "eliteserien",
+      "slug": "fredrikstad-vs-tromso",
+      "homeTeam": "Fredrikstad",
+      "awayTeam": "Tromsø",
+      "date": "2026-10-11",
+      "fixtureId": "official:eliteserien:fredrikstad-vs-troms:2026-10-11",
+      "predictionAccess": "free",
+      "prediction": "Tromsø or Draw (X2) + Over 1.5 Goals",
+      "odds": 1.85,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-14T12:51:51.581Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
     "eliteserien:kfum-oslo-vs-valerenga": {
       "key": "eliteserien:kfum-oslo-vs-valerenga",
       "league": "eliteserien",
@@ -665,6 +684,25 @@
       "result": "red",
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "eliteserien:start-vs-hamkam": {
+      "key": "eliteserien:start-vs-hamkam",
+      "league": "eliteserien",
+      "slug": "start-vs-hamkam",
+      "homeTeam": "Start",
+      "awayTeam": "HamKam",
+      "date": "2026-10-11",
+      "fixtureId": "official:eliteserien:start-vs-hamkam:2026-10-11",
+      "predictionAccess": "vip",
+      "prediction": "HamKam or Draw (X2)",
+      "odds": 1.78,
+      "finalScore": {
+        "home": 2,
+        "away": 4
+      },
+      "result": "green",
+      "settledAt": "2026-10-14T12:51:51.581Z",
+      "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
     "eredivisie:ajax-vs-nec-nijmegen": {
       "key": "eredivisie:ajax-vs-nec-nijmegen",

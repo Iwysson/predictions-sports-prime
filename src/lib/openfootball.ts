@@ -343,6 +343,10 @@ export function normalizeTeamKey(name: string) {
     erzurumbb: "erzurumspor",
     amedsfk: "amedsk",
     amedspor: "amedsk",
+    // Norwegian clubs: the NFD step leaves ø intact, so "Tromsø" arrives as "troms" while providers say "Tromso".
+    troms: "tromso",
+    kfum: "kfumoslo",
+    hamarkameratene: "hamkam",
   };
 
   return aliases[key] ?? key;

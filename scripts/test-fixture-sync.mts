@@ -1,6 +1,6 @@
 // Regression tests for fixture sync link coverage. No network: fetch is stubbed.
 import assert from "node:assert/strict";
-import { hydrateLiveResults } from "../src/lib/openfootball.ts";
+import { hydrateLiveResults, teamNamesMatch } from "../src/lib/openfootball.ts";
 import {
   buildEditorialFallbackFixture,
   fixtureIdentityMatchesPrediction,
@@ -87,6 +87,19 @@ assert.throws(() => normalizeFixtureRounds([{ round: 0, games: [game({ round: 0 
     globalThis.fetch = realFetch;
   }
   assert.ok(calls.length >= 3 && calls.every((url) => /dates=\d{4}&limit=1000$/.test(url)), `ESPN range queries return HTTP 400; got ${calls.join(" ")}`);
+}
+
+// 8. Norwegian provider names: "Tromsø" must match the provider spelling and the club short names.
+{
+  assert.ok(teamNamesMatch("Tromsø", "Tromso"), "Tromsø must match Tromso");
+  assert.ok(teamNamesMatch("KFUM Oslo", "KFUM"), "KFUM Oslo must match KFUM");
+  assert.ok(teamNamesMatch("HamKam", "Hamarkameratene"), "HamKam must match Hamarkameratene");
+  assert.ok(!teamNamesMatch("Tromsø", "Molde"), "aliases must not merge different clubs");
+  const rounds = [{ round: 24, games: [game({ round: 24, date: "2026-10-18", homeTeam: "Tromso", awayTeam: "KFUM Oslo", id: "t1" }), game({ round: 24, date: "2026-10-17", homeTeam: "Hamarkameratene", awayTeam: "Bodo/Glimt", id: "h1" })] }];
+  const tromso = findPredictionFixture(rounds, { league: "eliteserien", slug: "troms-vs-kfum-oslo", homeTeam: "Tromsø", awayTeam: "KFUM", date: "2026-10-18", round: "Round 24" } as any);
+  assert.equal(tromso?.id, "t1");
+  const hamkam = findPredictionFixture(rounds, { league: "eliteserien", slug: "hamkam-vs-bod-glimt", homeTeam: "HamKam", awayTeam: "Bodø/Glimt", date: "2026-10-17", round: "Round 24" } as any);
+  assert.equal(hamkam?.id, "h1");
 }
 
 console.log("Fixture sync tests: PASS");
