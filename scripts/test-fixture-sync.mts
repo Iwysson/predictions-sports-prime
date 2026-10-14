@@ -1,6 +1,7 @@
 // Regression tests for fixture sync link coverage. No network: fetch is stubbed.
 import assert from "node:assert/strict";
 import { hydrateLiveResults, teamNamesMatch } from "../src/lib/openfootball.ts";
+import { displayTeams } from "../src/lib/live-predictions.ts";
 import {
   buildEditorialFallbackFixture,
   fixtureIdentityMatchesPrediction,
@@ -100,6 +101,14 @@ assert.throws(() => normalizeFixtureRounds([{ round: 0, games: [game({ round: 0 
   assert.equal(tromso?.id, "t1");
   const hamkam = findPredictionFixture(rounds, { league: "eliteserien", slug: "hamkam-vs-bod-glimt", homeTeam: "HamKam", awayTeam: "Bodø/Glimt", date: "2026-10-17", round: "Round 24" } as any);
   assert.equal(hamkam?.id, "h1");
+}
+
+// 9. Linked fixtures keep the published display names; only a reversed fixture swaps the sides.
+{
+  assert.deepEqual(displayTeams({ homeTeam: "Tromsø", awayTeam: "KFUM Oslo" }, { homeTeam: "Tromso", awayTeam: "KFUM Oslo" }), { homeTeam: "Tromsø", awayTeam: "KFUM Oslo" });
+  assert.deepEqual(displayTeams({ homeTeam: "HamKam", awayTeam: "Bodø/Glimt" }, { homeTeam: "Hamarkameratene", awayTeam: "Bodo/Glimt" }), { homeTeam: "HamKam", awayTeam: "Bodø/Glimt" });
+  assert.deepEqual(displayTeams({ homeTeam: "Gençlerbirliği", awayTeam: "Galatasaray" }, { homeTeam: "Genclerbirligi", awayTeam: "Galatasaray" }), { homeTeam: "Gençlerbirliği", awayTeam: "Galatasaray" });
+  assert.deepEqual(displayTeams({ homeTeam: "Paris Saint-Germain", awayTeam: "Rennes" }, { homeTeam: "Rennes", awayTeam: "Paris Saint-Germain" }), { homeTeam: "Rennes", awayTeam: "Paris Saint-Germain" }, "a documented home/away relocation must still swap");
 }
 
 console.log("Fixture sync tests: PASS");

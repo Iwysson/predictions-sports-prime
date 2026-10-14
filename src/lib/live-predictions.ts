@@ -1,5 +1,5 @@
 import type { MatchPreview } from "@/types";
-import { findFixtureForPrediction, loadLeagueSeason } from "@/lib/openfootball";
+import { findFixtureForPrediction, loadLeagueSeason, teamNamesMatch } from "@/lib/openfootball";
 import { resolvePredictionResult } from "@/lib/prediction-results";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
 import marketResults from "@/data/market-results.snapshot.json";
@@ -61,6 +61,21 @@ function withHistoricalSupplement(match: MatchPreview): MatchPreview {
 }
 
 /**
+ * The editorial names are the published display names. Provider spellings ("Tromso",
+ * "Hamarkameratene", "Amed SFK") must not replace them; only a fixture that is clearly the
+ * reverse of the published pairing (a documented home/away relocation) swaps the sides.
+ */
+export function displayTeams(
+  match: { homeTeam: string; awayTeam: string },
+  fixture: { homeTeam: string; awayTeam: string }
+) {
+  const reversed = teamNamesMatch(fixture.homeTeam, match.awayTeam) && teamNamesMatch(fixture.awayTeam, match.homeTeam);
+  return reversed
+    ? { homeTeam: fixture.homeTeam, awayTeam: fixture.awayTeam }
+    : { homeTeam: match.homeTeam, awayTeam: match.awayTeam };
+}
+
+/**
  * Applies the latest fixture status and score to an editorial prediction.
  * This is shared by the static build and the browser refresh so a result does
  * not depend on a new deployment after the final whistle.
@@ -98,8 +113,7 @@ export async function hydratePrediction(match: MatchPreview): Promise<MatchPrevi
       round: `Matchday ${fixture.round}`,
       date: fixture.date,
       time: fixture.time,
-      homeTeam: fixture.homeTeam,
-      awayTeam: fixture.awayTeam,
+      ...displayTeams(match, fixture),
       fixtureStatus: fixture.status,
       homeScore: fixture.homeScore,
       awayScore: fixture.awayScore,
