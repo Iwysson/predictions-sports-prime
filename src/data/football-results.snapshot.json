@@ -571,6 +571,25 @@
       "settledAt": "2026-10-13T21:58:27.139Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
+    "champions-league:feyenoord-vs-como": {
+      "key": "champions-league:feyenoord-vs-como",
+      "league": "champions-league",
+      "slug": "feyenoord-vs-como",
+      "homeTeam": "Feyenoord",
+      "awayTeam": "Como",
+      "date": "2026-10-14",
+      "fixtureId": "401915416",
+      "predictionAccess": "free",
+      "prediction": "Feyenoord double chance (1X)",
+      "odds": 1.91,
+      "finalScore": {
+        "home": 3,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-14T19:28:29.280Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
     "champions-league:galatasaray-vs-barcelona": {
       "key": "champions-league:galatasaray-vs-barcelona",
       "league": "champions-league",
