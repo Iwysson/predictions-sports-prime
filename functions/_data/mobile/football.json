@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T13:00:07.233Z",
+  "generatedAt": "2026-10-14T16:19:26.840Z",
   "leagues": [
     "brasileirao-serie-a",
     "bundesliga",
@@ -101,6 +101,38 @@
       }
     ],
     "tomorrow": [
+      {
+        "slug": "lyon-vs-crystal-palace",
+        "league": "uefa-europa-league",
+        "homeTeam": "Lyon",
+        "awayTeam": "Crystal Palace",
+        "date": "2026-10-15",
+        "time": "18:45",
+        "round": "Matchday 2",
+        "title": "Lyon vs Crystal Palace",
+        "analysisAccess": "free",
+        "predictionAccess": "free",
+        "badge": "free",
+        "teaser": null,
+        "pick": "Crystal Palace or Draw (X2)",
+        "odds": 1.68
+      },
+      {
+        "slug": "benfica-vs-celtic",
+        "league": "uefa-europa-league",
+        "homeTeam": "Benfica",
+        "awayTeam": "Celtic",
+        "date": "2026-10-15",
+        "time": "21:00",
+        "round": "Matchday 2",
+        "title": "Benfica vs Celtic",
+        "analysisAccess": "free",
+        "predictionAccess": "free",
+        "badge": "free",
+        "teaser": null,
+        "pick": "Over 2.5 Total Goals",
+        "odds": 1.47
+      },
       {
         "slug": "celta-vigo-vs-juventus",
         "league": "uefa-europa-league",
@@ -654,20 +686,6 @@
         "teaser": null
       },
       {
-        "slug": "lyon-vs-crystal-palace",
-        "league": "uefa-europa-league",
-        "homeTeam": "Lyon",
-        "awayTeam": "Crystal Palace",
-        "date": "2026-10-15",
-        "time": "18:45",
-        "round": "Matchday 2",
-        "title": "Lyon vs Crystal Palace",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
         "slug": "salzburg-vs-ac-milan",
         "league": "uefa-europa-league",
         "homeTeam": "Salzburg",
@@ -718,20 +736,6 @@
         "time": "18:45",
         "round": "League phase, Matchday 2",
         "title": "Union Saint-Gilloise vs Real Sociedad",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
-        "slug": "benfica-vs-celtic",
-        "league": "uefa-europa-league",
-        "homeTeam": "Benfica",
-        "awayTeam": "Celtic",
-        "date": "2026-10-15",
-        "time": "21:00",
-        "round": "Matchday 2",
-        "title": "Benfica vs Celtic",
         "analysisAccess": "vip",
         "predictionAccess": "vip",
         "badge": "vip",
