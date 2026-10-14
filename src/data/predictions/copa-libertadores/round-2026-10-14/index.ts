@@ -28,7 +28,7 @@ const fluminenseVsPalmeiras = createPspImport26Prediction({
   pick: "Over 1.5 Goals",
   odds: 1.61,
   access: "free",
-  teaser: "Palmeiras' attacking volume and a goal-heavy recent head-to-head support the Over at the Maracanã. The prediction is FREE; the full reasoning remains available with PRIME VIP.",
+  teaser: "Palmeiras' attacking volume and a goal-heavy recent head-to-head support the Over at the Maracanã. The prediction and full analysis are FREE for everyone.",
   trend: "A goal-heavy head-to-head frames the Over 1.5 pick",
   matchAnalysis: [
     "Fluminense host the first leg after rotating heavily for Sunday's Brasileirão match against Flamengo, when the reports had only Fábio, Millán, Martinelli, Soteldo and Canobbio from the regular side, with Guga, Thiago Silva, Ganso and Hulk held back for this tie. Rested players returning is the story: Canobbio is back from suspension, Soteldo is available again after load management, and Renê, who had been recovering from an ankle sprain, was expected to be fit for the semifinal. They reached the last four by eliminating Platense 3–2 on aggregate.",

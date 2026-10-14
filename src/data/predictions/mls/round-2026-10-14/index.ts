@@ -370,7 +370,7 @@ export const mlsRound2026_10_14 = [
     pick: "New England Revolution or Draw (X2)",
     odds: 1.77,
     access: "free",
-    teaser: "Cincinnati have one of the East's best home attacks and one of its worst defences, which is the tension behind the visitors' draw cover. The prediction is FREE; the full written analysis remains available with PRIME VIP.",
+    teaser: "Cincinnati have one of the East's best home attacks and one of its worst defences, which is the tension behind the visitors' draw cover. The prediction and full analysis are FREE for everyone.",
     trend: "Cincinnati's high-scoring home form against New England's road record",
     squawkaUrl: "https://www.squawka.com/us/news/mls/match-preview-fc-cincinnati-vs-new-england-revolution-10-14-26-mls/",
     matchAnalysis: [
@@ -620,7 +620,7 @@ export const mlsRound2026_10_14 = [
     pick: "Houston Dynamo FC or Draw (X2)",
     odds: 1.72,
     access: "free",
-    teaser: "San Diego score freely at home but concede nearly as often, while Houston's road record rests on a defence that has kept five clean sheets. The prediction is FREE; the full written analysis remains available with PRIME VIP.",
+    teaser: "San Diego score freely at home but concede nearly as often, while Houston's road record rests on a defence that has kept five clean sheets. The prediction and full analysis are FREE for everyone.",
     trend: "San Diego's open home games against Houston's solid road defence",
     squawkaUrl: "https://www.squawka.com/us/news/mls/match-preview-san-diego-fc-vs-houston-dynamo-10-14-26-mls/",
     matchAnalysis: [

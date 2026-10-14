@@ -345,7 +345,7 @@ const feyenoordVsComo = createPspImport26Prediction({
   pick: "Feyenoord double chance (1X)",
   odds: 1.91,
   access: "free",
-  teaser: "Feyenoord's home record offers a path back after a heavy opening defeat, though Como's own debut win is a genuine warning. The prediction is FREE; the full reasoning remains available with PRIME VIP.",
+  teaser: "Feyenoord's home record offers a path back after a heavy opening defeat, though Como's own debut win is a genuine warning. The prediction and full analysis are FREE for everyone.",
   trend: "Feyenoord's home strength against a confident Como",
   matchAnalysis: [
     "Feyenoord return to De Kuip as Eredivisie leaders, with **six wins and two draws** from eight league games and **27 goals** scored, after last weekend's 2–0 win over AZ Alkmaar. The opening Champions League night is the outlier: a **5–1 defeat at Barcelona** in which they were chasing the game from the third minute. At home the record is far steadier, with four wins in their last five Champions League games in Rotterdam (qualifying included) and a goal in 14 of their last 16 group-stage or league-phase matches. The squad is stretched, though, with seven players listed out and Tsuyoshi Watanabe a doubt, so the back line is where the home side is thinnest.",
@@ -550,7 +550,7 @@ const bodoGlimtVsDortmund = createPspImport26Prediction({
   pick: "Bodø/Glimt double chance (1X)",
   odds: 1.78,
   access: "free",
-  teaser: "Bodø/Glimt's home run in Europe and a recent draw in Dortmund support the double chance, despite a brutal opening scoreline. The prediction is FREE; the full reasoning remains available with PRIME VIP.",
+  teaser: "Bodø/Glimt's home run in Europe and a recent draw in Dortmund support the double chance, despite a brutal opening scoreline. The prediction and full analysis are FREE for everyone.",
   trend: "Bodø/Glimt's home run against Dortmund's scoring power",
   matchAnalysis: [
     "Bodø/Glimt's 5–0 defeat at Bayern on the opening night was brutal, but Aspmyra is a different environment. They have won **seven straight home matches** in all competitions, scoring **21 goals**, and were last beaten there in early May. At the same ground last season they beat Manchester City 3–1, Inter 3–1 and Sporting 3–0 in this competition. Kjetil Knutsen's side beat Kristiansund 3–1 in the Eliteserien at the weekend and are level on points with Viking at the top. Odin Luras Bjørtuft is suspended after his red card at Bayern, and Hákon Evjen, Magnus Riisnæs and August Mikkelsen are injured, but Andreas Helmersen, rested for the league game, is expected back.",

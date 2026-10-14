@@ -9,12 +9,18 @@ import { buildMatchPageModel } from "../src/lib/match-page-model.ts";
 import { accessBadgeKind, buildContentIndex, hasMatchPage, matchSlug, resolveAccess } from "../src/lib/match-access.ts";
 import { SLATES } from "../src/data/nhl/slates.ts";
 import { NFL_WEEK5_2026 } from "../src/data/nfl/week5-2026-public.ts";
+import { classifyPspEditorialLifecycle } from "../src/lib/editorial-standard.ts";
 import type { EditorialPrediction } from "../src/types/index.ts";
 
 const problems: string[] = [];
 const fail = (where: string, what: string) => problems.push(`${where}: ${what}`);
 let freeCount = 0;
 let vipCount = 0;
+
+// Promotional copy on a FREE page must not say or hint that the analysis, pick or odds need PRIME VIP or a login.
+// Only matches that have not started are checked: a started or finished match keeps the copy it was published with.
+const MISLEADING_FREE_COPY = /remains? available with PRIME VIP|(?:analysis|reasoning|case|numbers)[^.]*PRIME VIP|(?:pick|odds)[^.]*in PRIME VIP|unlock|log ?in|login required|sign in to|members[- ]only|VIP members/i;
+let futureFreeCopyIssues = 0;
 
 const published = (editorialPredictions as EditorialPrediction[]).filter((p) => hasMatchPage(p));
 
@@ -38,6 +44,12 @@ for (const p of published) {
     if (model.publicPrediction && model.publicPrediction.main !== p.picks.main) fail(slug, "FREE page shows a different pick than the published one");
     if (!listing.predictions.length) fail(slug, "FREE listing item carries no prediction");
     if (!listing.analysis.length) fail(slug, "FREE listing item carries no analysis");
+    if (classifyPspEditorialLifecycle(p) === "future-pre-match") {
+      const copy: Record<string, string | undefined> = { teaser: p.teaser, trend: p.trend, comment: p.comment, publicSummary: p.publicSummary?.join(" ") };
+      for (const [field, text] of Object.entries(copy)) {
+        if (text && MISLEADING_FREE_COPY.test(text)) { futureFreeCopyIssues += 1; fail(slug, `future FREE ${field} says the analysis needs PRIME VIP or login: "${text.slice(0, 90)}"`); }
+      }
+    }
   } else {
     vipCount += 1;
     if (model.publicPrediction || model.staticAnalysis) fail(slug, "non-FREE page exposes prediction or analysis publicly");
@@ -104,4 +116,4 @@ if (problems.length) {
   for (const line of problems) console.error(`  - ${line}`);
   process.exit(1);
 }
-console.log(`FREE access audit passed: ${freeCount} FREE entries show prediction and analysis without login; ${vipCount} football entries stay protected.`);
+console.log(`FREE access audit passed: ${freeCount} FREE entries show prediction and analysis without login; ${vipCount} football entries stay protected; future FREE misleading VIP copy = ${futureFreeCopyIssues}.`);
