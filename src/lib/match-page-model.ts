@@ -24,7 +24,8 @@ export type MatchPageModel = {
   view: PublicMatchView & { heading: string; kicker: string; teaser: string; publishedDate: string | null; updatedDate: string | null };
   seoTitle: string;
   jsonLd: Array<Record<string, unknown>>;
-  // Prediction shown publicly (prediction access "free").
+  // Prediction shown publicly (prediction access "free"). The page renders it as its own block right after the
+  // teams for every FREE page, PSP or not; a PSP analysis repeats it in its closing block.
   publicPrediction: { main: string; odds: number | null } | null;
   // Public trend for a VIP prediction. Never the pick or the odds.
   trend: string | null;

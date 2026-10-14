@@ -210,29 +210,33 @@ for (const [who, token] of [["VIP trialing", "tok-trial1"], ["VIP active", "tok-
   check(`leak: ${who} -> 200 with all markers (authorised only)`, r.status === 200 && MARKERS.every((m) => r.text.includes(m)));
 }
 
-// ---- Access rules: analysis free implies prediction free; prediction free alone is allowed ----
+// ---- Access rules: a FREE tier opens both the prediction and analysis ----
 {
   const a = resolveAccess({ analysisAccess: "free", predictionAccess: "vip" });
   check("analysis free forces prediction free", a.analysis === "free" && a.prediction === "free");
   const b = resolveAccess({ analysisAccess: "vip", predictionAccess: "free" });
-  check("prediction free alone is allowed with a VIP analysis", b.analysis === "vip" && b.prediction === "free");
+  check("prediction free also opens the analysis", b.analysis === "free" && b.prediction === "free");
+  const c = resolveAccess({ access: "free", analysisAccess: "vip", predictionAccess: "vip" });
+  check("explicit VIP tiers remain protected", c.analysis === "vip" && c.prediction === "vip");
   check("missing fields default to vip for both", resolveAccess({}).analysis === "vip" && resolveAccess({}).prediction === "vip");
 }
 
-// Mixed case (VIP analysis, FREE prediction): visitor gets no analysis; VIP gets it.
+// A FREE prediction opens its analysis on the public page without a session.
 {
   const SECRET_MIXED = "PSP_MIXED_SECRET_ANALYSIS_TEST";
   const mixed: EditorialPrediction = { ...base("Mix", "Case", { analysis: [SECRET_MIXED + " paragraph."], predictionAccess: "free", analysisAccess: "vip", picks: { main: "Mix to win", publishedOdds: 1.9 } }) };
   const mixIndex = buildContentIndex([mixed], NOW);
+  const publicModel = buildMatchPageModel(mixed, "en", NOW)!;
+  check("FREE badge exposes the pick and full analysis publicly", publicModel.publicPrediction?.main === "Mix to win" && publicModel.staticAnalysis?.analysis.join(" ").includes(SECRET_MIXED) === true && publicModel.gate === null);
   const mixHandler = endpoint.createMatchContentHandler(mixIndex);
   const callMix = async (token?: string) => {
     const res = await mixHandler({ request: new Request("https://x/api/match-content/mix-vs-case", { headers: token ? { Authorization: `Bearer ${token}` } : {} }), params: { slug: "mix-vs-case" }, env });
     return { status: res.status, text: await res.text() };
   };
   const visitor = await callMix();
-  check("mixed: visitor gets no analysis (401, no text)", visitor.status === 401 && !visitor.text.includes(SECRET_MIXED));
+  check("FREE analysis is available without login", visitor.status === 200 && visitor.text.includes(SECRET_MIXED));
   const free = await callMix("tok-free1");
-  check("mixed: FREE user gets no analysis (403, no text)", free.status === 403 && !free.text.includes(SECRET_MIXED));
+  check("FREE account can read the FREE analysis", free.status === 200 && free.text.includes(SECRET_MIXED));
   const vip = await callMix("tok-trial1");
   check("mixed: VIP gets analysis and prediction (200)", vip.status === 200 && vip.text.includes(SECRET_MIXED) && vip.text.includes("Mix to win"));
 }

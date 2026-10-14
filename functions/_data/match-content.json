@@ -391,7 +391,7 @@
   },
   {
     "slug": "inter-vs-club-brugge",
-    "analysisAccess": "vip",
+    "analysisAccess": "free",
     "predictionAccess": "free",
     "full": {
       "analysis": [
@@ -433,7 +433,7 @@
   },
   {
     "slug": "leipzig-vs-psv-eindhoven",
-    "analysisAccess": "vip",
+    "analysisAccess": "free",
     "predictionAccess": "free",
     "full": {
       "analysis": [
@@ -509,7 +509,7 @@
   },
   {
     "slug": "villarreal-vs-napoli",
-    "analysisAccess": "vip",
+    "analysisAccess": "free",
     "predictionAccess": "free",
     "full": {
       "analysis": [
@@ -551,7 +551,7 @@
   },
   {
     "slug": "feyenoord-vs-como",
-    "analysisAccess": "vip",
+    "analysisAccess": "free",
     "predictionAccess": "free",
     "full": {
       "analysis": [
@@ -731,7 +731,7 @@
   },
   {
     "slug": "bodo-glimt-vs-borussia-dortmund",
-    "analysisAccess": "vip",
+    "analysisAccess": "free",
     "predictionAccess": "free",
     "full": {
       "analysis": [
@@ -949,7 +949,7 @@
   },
   {
     "slug": "fluminense-vs-palmeiras",
-    "analysisAccess": "vip",
+    "analysisAccess": "free",
     "predictionAccess": "free",
     "full": {
       "analysis": [
@@ -1029,7 +1029,7 @@
   },
   {
     "slug": "boca-juniors-vs-vasco-da-gama",
-    "analysisAccess": "vip",
+    "analysisAccess": "free",
     "predictionAccess": "free",
     "full": {
       "analysis": [
@@ -1143,6 +1143,396 @@
     "prediction": {
       "main": "Rennes Win",
       "odds": 1.42
+    }
+  },
+  {
+    "slug": "le-mans-vs-toulouse",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "# Le Mans vs Toulouse Prediction, Odds and Betting Tips\n\n**Prediction:** Over 1.5 Goals + Over 7.5 Total Corners  \n**Odds:** **1.61**\n\n## Match information\n\n- **Competition:** Ligue 1 2026/27\n- **Date:** 2026-10-16\n- **Kick-off:** 20:45 CEST\n- **Round:** Matchday 7\n- **Venue:** Stade Marie-Marvingt, Le Mans\n\n## Team news and projected lineups\n\nThe Le Mans and Toulouse lineups discussed below are PROJECTED rather than official. Availability is described only where the cited match reports support it; further injury and suspension details remain unavailable at publication and have not been inferred.\n\n## Match analysis\n\nLe Mans and Toulouse meet with very little separating them in the table: the league's October 12 preview places them 14th and 15th respectively. Results have nevertheless been considerably more open than those positions suggest. Le Mans are unbeaten in three home league games (one win, two draws), including two 2–2 draws; Toulouse have drawn all three away fixtures, and three of their matches this season have also finished 2–2. Across each side's last three matches, the league counted 11 total goals in Le Mans games and 13 in Toulouse games. That is a concrete case for the two-goal component, rather than an assumption based on reputation.\n\nThe corners requirement is the more delicate part. PitchMath's early-season sample credits Toulouse with 4.6 corners won per match and Le Mans with 2.6. Those are **team corners won**, not combined match totals: adding them is not a valid estimate of the probability of eight corners in this fixture. A separate Statz matchup projection places total corners at approximately 8.8, which supports the direction of the selection but offers limited room above the 7.5 line.\n\nLe Mans are expected to use a 3-1-4-2 featuring Louis Mafouta and H. Diallo up front, while Toulouse's projected 4-2-3-1 has Guillaume Restes in goal and J. Russell-Rowe leading the line. Le Mans are missing Bourabaa, Colas and Rossignol; Toulouse are without Nicolaisen. These absences may alter defensive organisation, although neither lineup is official.\n\n## Tactical analysis and expected game state\n\nWith both teams repeatedly involved in multi-goal matches, the goals leg has a stronger foundation than the corners leg. A quiet game on the flanks or unusually efficient finishing from few attacks remains the main threat to the combination.\n\n### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial for Le Mans at home against Toulouse away. The complete 22/22 Statistical Core is unavailable from the cited source set. HOME-only and AWAY-only advanced metrics, including xG, xGA, shots, shots on target, possession and corners, remain unavailable where the supplied sources do not establish them separately. Overall team figures in the analysis are not venue splits.\n\n## Market assessment and conclusion\n\nFor Le Mans versus Toulouse, the published **1.61** market price has a raw implied probability of **62.11%** (1 / 1.61). This price threshold differs from the historical frequencies in the analysis and from the editorial value judgment about Over 1.5 Goals + Over 7.5 Total Corners. The contrary match evidence and small early-season sample limit confidence in the selection.\n\n**Prediction:** Over 1.5 Goals + Over 7.5 Total Corners  \n**Odds:** **1.61**"
+      ],
+      "analysisFormat": "markdown",
+      "picks": {
+        "main": "Over 1.5 Goals + Over 7.5 Total Corners",
+        "odds": 1.61
+      },
+      "sources": [
+        {
+          "name": "Ligue 1 — Matchday 7 official preview",
+          "url": "https://ligue1.com/fr/articles/l1_article_5732-mpp-les-infos-de-la-journee-l1"
+        },
+        {
+          "name": "Starting11 — Projected lineups and injuries",
+          "url": "https://starting11.com/ligue-1/gameweek/7"
+        },
+        {
+          "name": "PitchMath — Team corners won",
+          "url": "https://pitchmath.com/en/competitions/61/ligue-1/stats/corners"
+        },
+        {
+          "name": "Statz — Toulouse matchup corners",
+          "url": "https://statz.ai/team/toulouse/corners"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Over 1.5 Goals + Over 7.5 Total Corners",
+      "odds": 1.61
+    }
+  },
+  {
+    "slug": "strasbourg-vs-paris-saint-germain",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "# Strasbourg vs Paris Saint-Germain Prediction, Odds and Betting Tips\n\n**Prediction:** Paris Saint-Germain Win  \n**Odds:** **1.43**\n\n## Match information\n\n- **Competition:** Ligue 1 2026/27\n- **Date:** 2026-10-17\n- **Kick-off:** 17:15 CEST\n- **Round:** Matchday 7\n- **Venue:** Stade de la Meinau, Strasbourg\n\n## Team news and projected lineups\n\nThe Strasbourg and Paris Saint-Germain lineups discussed below are PROJECTED rather than official. Availability is described only where the cited match reports support it; further injury and suspension details remain unavailable at publication and have not been inferred.\n\n## Match analysis\n\nPSG travel to Alsace after three consecutive league victories, having also remained unbeaten away from home. The official Ligue 1 preview places Paris sixth, only three points off first place, while Strasbourg sit 11th following two straight defeats and a run of one point from three matches. The difference in momentum is substantial, even though PSG's away visits to Strasbourg have historically required patience.\n\nStrasbourg's season has been particularly volatile: the league identifies them as the joint-second-highest scoring side but only the 16th-ranked defence. Their matches have produced **23 goals in total**, the highest aggregate in Ligue 1 at this stage. That profile creates a credible route for PSG's attack to find chances, yet it also warns against assuming the visitors will keep a clean sheet. Paris have managed only one shutout in their last nine matches across competitions.\n\nThe injury list matters on both sides. Strasbourg are missing Ismaël Doukouré, Godo and Joaquín Panichelli, depriving them of defensive and attacking options. PSG are without Ousmane Dembélé, Nuno Mendes and Senny Mayulu, which reduces the available combinations on the left and in the forward line. The projected PSG 4-3-3 includes Safonov, Hakimi, João Neves and Maghnes Akliouche; Strasbourg's tentative 4-3-3 features Jörgensen, Dário Essugo and Gessime Yassine. These are forecasts, not confirmed starting elevens.\n\n## Tactical analysis and expected game state\n\nThe strongest argument for the away win is Paris's three-match winning sequence against Strasbourg's deteriorating form, not an expectation of an easy scoreline. The hosts' scoring record and PSG's limited clean sheets make a narrow victory entirely plausible.\n\n### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial for Strasbourg at home against Paris Saint-Germain away. The complete 22/22 Statistical Core is unavailable from the cited source set. HOME-only and AWAY-only advanced metrics, including xG, xGA, shots, shots on target, possession and corners, remain unavailable where the supplied sources do not establish them separately. Overall team figures in the analysis are not venue splits.\n\n## Market assessment and conclusion\n\nFor Strasbourg versus Paris Saint-Germain, the published **1.43** market price has a raw implied probability of **69.93%** (1 / 1.43). This price threshold differs from the historical frequencies in the analysis and from the editorial value judgment about Paris Saint-Germain Win. The risk to a Paris away win is Strasbourg's high scoring rate against a PSG defence with only one clean sheet in nine matches across competitions; the visitors' listed absences also narrow their attacking options.\n\n**Prediction:** Paris Saint-Germain Win  \n**Odds:** **1.43**"
+      ],
+      "analysisFormat": "markdown",
+      "picks": {
+        "main": "Paris Saint-Germain Win",
+        "odds": 1.43
+      },
+      "sources": [
+        {
+          "name": "Ligue 1 — Official form and squad update",
+          "url": "https://ligue1.com/fr/articles/l1_article_5732-mpp-les-infos-de-la-journee-l1"
+        },
+        {
+          "name": "Starting11 — Projected starting elevens",
+          "url": "https://starting11.com/ligue-1/gameweek/7"
+        },
+        {
+          "name": "PSG — Official match scheduling",
+          "url": "https://www.psg.fr/content/strasbourg-paris-le-1710-a-17h15-psg-ligue-1-calendrier-programmation-2026-2027"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Paris Saint-Germain Win",
+      "odds": 1.43
+    }
+  },
+  {
+    "slug": "lille-vs-brest",
+    "analysisAccess": "free",
+    "predictionAccess": "free",
+    "full": {
+      "analysis": [
+        "# Lille vs Brest Prediction, Odds and Betting Tips\n\n**Prediction:** Over 2.5 Goals  \n**Odds:** **1.72**\n\n## Match information\n\n- **Competition:** Ligue 1 2026/27\n- **Date:** 2026-10-17\n- **Kick-off:** 20:45 CEST\n- **Round:** Matchday 7\n- **Venue:** Stade Pierre-Mauroy, Villeneuve-d'Ascq\n\n## Team news and projected lineups\n\nThe Lille and Brest lineups discussed below are PROJECTED rather than official. Availability is described only where the cited match reports support it; further injury and suspension details remain unavailable at publication and have not been inferred.\n\n## Match analysis\n\nLille host Brest with a more accessible three-goal target than the four-goal threshold initially considered. Lille have scored nine times in their first six Ligue 1 fixtures, while Brest have scored 12; those totals translate to **1.50 and 2.00 goals per match**, respectively. Brest's recent 5–1 win over Angers highlights their attacking upside, although Lille's 1–0 victory against Le Havre shows why a high-scoring outcome cannot be assumed. Lille have also kept clean sheets in recent home league matches.\n\nThe underlying chance creation offers a useful contrast. xgEdge records **1.36 expected goals (xG) per match for Lille and 2.24 for Brest** in its recent six-match sample, against **1.68 and 1.22 expected goals conceded (xGA)** respectively. Brest's **19.2 shots per match**, compared with Lille's **11.5**, suggest the visitors can create chances rather than simply defend deep. However, the same model projects a combined **2.49 goals** for this fixture and estimates **Over 2.5 at 46%**. That is a meaningful warning against treating the selection as statistically secure.\n\nSquad availability also matters. Lille's pre-round bulletin lists Tiago Santos, Ethan Mbappé and Hamza Igamane unavailable, with Mbappé suspended; Brest have concerns involving Le Guen, Mama Baldé, Brendan Chardonnet and Giovani Versini. Provisional lineup projections feature Berke Özer, Nabil Bentaleb and Olivier Giroud for Lille, and Kenny Lala, Hugo Magnetti and Ludovic Ajorque for Brest. These are **possible starters, not confirmed lineups**; official team sheets take precedence.\n\n## Tactical analysis and expected game state\n\nA 2–1 result is sufficient for this selection, unlike the previous four-goal requirement. Brest's attacking production provides a credible route to that scoreline, but Lille's recent defensive discipline and the model's near-even goal projection remain significant risks. At **1.72**, the implied break-even probability is **58.1%**, above the cited model's 46% Over estimate. The prediction is retained as requested, without presenting it as a proven value bet.\n\n### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial for Lille at home against Brest away. The complete 22/22 Statistical Core is unavailable from the cited source set. HOME-only and AWAY-only advanced metrics, including xG, xGA, shots, shots on target, possession and corners, remain unavailable where the supplied sources do not establish them separately. Overall team figures in the analysis are not venue splits.\n\n## Market assessment and conclusion\n\nFor Lille versus Brest, the published **1.72** market price has a raw implied probability of **58.14%** (1 / 1.72). This price threshold differs from the historical frequencies in the analysis and from the editorial value judgment about Over 2.5 Goals. The contrary match evidence and small early-season sample limit confidence in the selection.\n\n**Prediction:** Over 2.5 Goals  \n**Odds:** **1.72**"
+      ],
+      "analysisFormat": "markdown",
+      "picks": {
+        "main": "Over 2.5 Goals",
+        "odds": 1.72
+      },
+      "sources": [
+        {
+          "name": "Ligue 1 — Official matchday 7 squad and form report",
+          "url": "https://ligue1.com/fr/articles/l1_article_5732-mpp-les-infos-de-la-journee-l1"
+        },
+        {
+          "name": "Starting11 — Projected lineups",
+          "url": "https://starting11.com/ligue-1/gameweek/7"
+        },
+        {
+          "name": "xgEdge — Lille vs Brest match model and xG statistics",
+          "url": "https://xg-edge.com/ligue-1/lille-vs-stade-brestois-2026-10-17"
+        },
+        {
+          "name": "Sports Mole — Lille vs Brest match form and scorelines",
+          "url": "https://www.sportsmole.co.uk/football/ligue-1/lille-vs-brest_game_260217.html"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Over 2.5 Goals",
+      "odds": 1.72
+    }
+  },
+  {
+    "slug": "troyes-vs-lens",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "# Troyes vs Lens Prediction, Odds and Betting Tips\n\n**Prediction:** Lens Double Chance (X2) + Over 8.5 Total Corners  \n**Odds:** **1.88**\n\n## Match information\n\n- **Competition:** Ligue 1 2026/27\n- **Date:** 2026-10-17\n- **Kick-off:** 20:45 CEST\n- **Round:** Matchday 7\n- **Venue:** Stade de l'Aube, Troyes\n\n## Team news and projected lineups\n\nThe Troyes and Lens lineups discussed below are PROJECTED rather than official. Availability is described only where the cited match reports support it; further injury and suspension details remain unavailable at publication and have not been inferred.\n\n## Match analysis\n\nTroyes approach this fixture in 17th place after **four consecutive defeats** and three straight league games without scoring. The official league preview also notes a 20-match home winless sequence in Ligue 1. Those are powerful reasons to prefer Lens avoiding defeat, especially against a home side struggling to sustain pressure. Lens, however, are only tenth and have collected **one point from their first three away games**. Their away record prevents the X2 leg from being treated as automatic.\n\nThe corners leg has a different statistical basis. PitchMath's early-season table puts Troyes at **7.6 corners won per game** and Lens at **7.0**, among the highest team attacking-corner averages in the division. These are separate teams' corners-for averages across their own matches, not a directly observed 14.6-corner head-to-head projection. They nevertheless suggest that both teams can generate set-piece pressure. Reaching at least nine total corners remains the more volatile part of the bet, particularly if Troyes spend long periods pinned back without producing attacks.\n\nLens have a credible attacking route through Florian Thauvin and Odsonne Édouard in a projected 3-4-2-1, while Troyes are expected to use Jérémy Le Douaron at the point of a 4-2-3-1. Lens must cope without the suspended Matthieu Udol, alongside injuries including Sima and Nawrocki; Troyes have absences involving Boura and Titi, with Gozzi's availability uncertain. Predicted lineups are provisional and may differ from official team sheets.\n\n## Tactical analysis and expected game state\n\nLens' superior attacking standing and Troyes' scoring drought underpin the double chance. The unusually high team-corner averages give the second leg a plausible path, but this is still a two-condition selection: a Lens draw with eight corners, or nine corners with a Troyes victory, would not qualify.\n\n### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial for Troyes at home against Lens away. The complete 22/22 Statistical Core is unavailable from the cited source set. HOME-only and AWAY-only advanced metrics, including xG, xGA, shots, shots on target, possession and corners, remain unavailable where the supplied sources do not establish them separately. Overall team figures in the analysis are not venue splits.\n\n## Market assessment and conclusion\n\nFor Troyes versus Lens, the published **1.88** market price has a raw implied probability of **53.19%** (1 / 1.88). This price threshold differs from the historical frequencies in the analysis and from the editorial value judgment about Lens Double Chance (X2) + Over 8.5 Total Corners. The contrary match evidence and small early-season sample limit confidence in the selection.\n\n**Prediction:** Lens Double Chance (X2) + Over 8.5 Total Corners  \n**Odds:** **1.88**"
+      ],
+      "analysisFormat": "markdown",
+      "picks": {
+        "main": "Lens Double Chance (X2) + Over 8.5 Total Corners",
+        "odds": 1.88
+      },
+      "sources": [
+        {
+          "name": "Ligue 1 — Official matchday form and absences",
+          "url": "https://ligue1.com/fr/articles/l1_article_5732-mpp-les-infos-de-la-journee-l1"
+        },
+        {
+          "name": "PitchMath — Corners won per team",
+          "url": "https://pitchmath.com/en/competitions/61/ligue-1/stats/corners"
+        },
+        {
+          "name": "Starting11 — Probable formations",
+          "url": "https://starting11.com/ligue-1/gameweek/7"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Lens Double Chance (X2) + Over 8.5 Total Corners",
+      "odds": 1.88
+    }
+  },
+  {
+    "slug": "eintracht-frankfurt-vs-cologne",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "# Eintracht Frankfurt vs Cologne Prediction, Odds and Betting Tips\n\n**Prediction:** Frankfurt or Draw (1X) + Under 4.5 Goals  \n**Odds:** **1.88**\n\n## Match information\n\n- **Competition:** Bundesliga 2026/27\n- **Date:** 2026-10-16\n- **Kick-off:** 20:30 CEST\n- **Round:** Matchday 6\n- **Venue:** Deutsche Bank Park, Frankfurt\n\n## Team news and projected lineups\n\nThe Eintracht Frankfurt and Cologne lineups discussed below are PROJECTED rather than official. Availability is described only where the cited match reports support it; further injury and suspension details remain unavailable at publication and have not been inferred.\n\n## Match analysis\n\nFrankfurt have taken only five points from their first five league matches, but the most striking number is the 16 goals conceded — 3.20 per game. Cologne have seven points and an 8–10 goal record, averaging 1.60 scored and 2.00 allowed. The home side therefore cannot be described as defensively secure, even with the double-chance protection.\n\nThe Under 4.5 leg allows up to four goals, a useful buffer in a fixture involving a Frankfurt defence that has already been breached repeatedly. Still, Frankfurt’s 25 total goals for and against across five rounds represent five per match, so the ceiling is a genuine concern rather than a formality. Cologne’s combined average is 3.60. Frankfurt must also avoid defeat, meaning an away win invalidates the selection even in a low-scoring game.\n\n## Tactical analysis and expected game state\n\nThe team-news picture could shape the visitors’ attacking depth: Cologne list Ache and Dallinga among their absentees, alongside Hübers and Skhiri, while Frankfurt are without Ngankam. Burkardt and Ebnoutalib are projected to lead Frankfurt’s attack. The selection rests on home advantage and a relatively generous goal cap, but recent concession rates make this a riskier combination than its name suggests.\n\n### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial for Eintracht Frankfurt at home against Cologne away. The complete 22/22 Statistical Core is unavailable from the cited source set. HOME-only and AWAY-only advanced metrics, including xG, xGA, shots, shots on target, possession and corners, remain unavailable where the supplied sources do not establish them separately. Overall team figures in the analysis are not venue splits.\n\n## Market assessment and conclusion\n\nFor Eintracht Frankfurt versus Cologne, the published **1.88** market price has a raw implied probability of **53.19%** (1 / 1.88). This price threshold differs from the historical frequencies in the analysis and from the editorial value judgment about Frankfurt or Draw (1X) + Under 4.5 Goals. The contrary match evidence and small early-season sample limit confidence in the selection.\n\n**Prediction:** Frankfurt or Draw (1X) + Under 4.5 Goals  \n**Odds:** **1.88**"
+      ],
+      "analysisFormat": "markdown",
+      "picks": {
+        "main": "Frankfurt or Draw (1X) + Under 4.5 Goals",
+        "odds": 1.88
+      },
+      "sources": [
+        {
+          "name": "DFB official table, after five matches",
+          "url": "https://datencenter.dfb.de/datencenter/bundesliga/2026-2027/6"
+        },
+        {
+          "name": "Official Bundesliga Matchday 6 probable teams and absences",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
+        },
+        {
+          "name": "Bundesliga match schedule and venues",
+          "url": "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Frankfurt or Draw (1X) + Under 4.5 Goals",
+      "odds": 1.88
+    }
+  },
+  {
+    "slug": "hamburger-sv-vs-vfb-stuttgart",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "# Hamburger SV vs VfB Stuttgart Prediction, Odds and Betting Tips\n\n**Prediction:** Over 2.5 Goals  \n**Odds:** **1.40**\n\n## Match information\n\n- **Competition:** Bundesliga 2026/27\n- **Date:** 2026-10-17\n- **Kick-off:** 15:30 CEST\n- **Round:** Matchday 6\n- **Venue:** Volksparkstadion, Hamburg\n\n## Team news and projected lineups\n\nThe Hamburger SV and VfB Stuttgart lineups discussed below are PROJECTED rather than official. Availability is described only where the cited match reports support it; further injury and suspension details remain unavailable at publication and have not been inferred.\n\n## Match analysis\n\nHamburg’s opening five matches have produced 20 goals: five scored and 15 conceded, an average of 4.00 total goals per fixture. Their defence has allowed 3.00 per game, the clearest statistical reason to consider a three-goal threshold. Stuttgart have eight goals for and nine against, a 3.40 combined-goals average, and a stronger attacking record than the hosts.\n\nThe home side’s five goals in five games also expose the main weakness in the pick: Hamburg cannot be relied upon to supply multiple goals. Stuttgart’s capacity to exploit space against a defence conceding at such a high rate is consequently central. A 1–2 or 0–3 scoreline would satisfy the market, whereas Stuttgart controlling the match without converting enough chances would not.\n\n## Tactical analysis and expected game state\n\nHamburg are expected to use Poulsen up front, with Vieira and Adeline supporting. Stuttgart’s probable attack includes Undav, Demirović, Leweling and Führich. Both squads have absences: Hamburg list Daka, Grønbæk and Remberg among those out; Stuttgart list Tomás and several defenders or midfielders. The goals data favour an open scoreline, although 1.40 implies a demanding 71.4% break-even probability that the small five-game sample does not prove.\n\n### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial for Hamburger SV at home against VfB Stuttgart away. The complete 22/22 Statistical Core is unavailable from the cited source set. HOME-only and AWAY-only advanced metrics, including xG, xGA, shots, shots on target, possession and corners, remain unavailable where the supplied sources do not establish them separately. Overall team figures in the analysis are not venue splits.\n\n## Market assessment and conclusion\n\nFor Hamburger SV versus VfB Stuttgart, the published **1.40** market price has a raw implied probability of **71.43%** (1 / 1.40). This price threshold differs from the historical frequencies in the analysis and from the editorial value judgment about Over 2.5 Goals. The contrary match evidence and small early-season sample limit confidence in the selection.\n\n**Prediction:** Over 2.5 Goals  \n**Odds:** **1.40**"
+      ],
+      "analysisFormat": "markdown",
+      "picks": {
+        "main": "Over 2.5 Goals",
+        "odds": 1.4
+      },
+      "sources": [
+        {
+          "name": "DFB official table, after five matches",
+          "url": "https://datencenter.dfb.de/datencenter/bundesliga/2026-2027/6"
+        },
+        {
+          "name": "Official Bundesliga Matchday 6 probable teams and absences",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
+        },
+        {
+          "name": "Bundesliga match schedule and venues",
+          "url": "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Over 2.5 Goals",
+      "odds": 1.4
+    }
+  },
+  {
+    "slug": "schalke-04-vs-mainz-05",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "# Schalke 04 vs Mainz 05 Prediction, Odds and Betting Tips\n\n**Prediction:** Over 2.5 Goals  \n**Odds:** **1.64**\n\n## Match information\n\n- **Competition:** Bundesliga 2026/27\n- **Date:** 2026-10-17\n- **Kick-off:** 15:30 CEST\n- **Round:** Matchday 6\n- **Venue:** Veltins-Arena, Gelsenkirchen\n\n## Team news and projected lineups\n\nThe Schalke 04 and Mainz 05 lineups discussed below are PROJECTED rather than official. Availability is described only where the cited match reports support it; further injury and suspension details remain unavailable at publication and have not been inferred.\n\n## Match analysis\n\nMainz have scored 13 goals in five Bundesliga matches, a 2.60-per-game return, and conceded 10. Their fixtures therefore average 4.60 goals in total. Schalke present a sharply different profile: only four goals scored and six conceded, or 2.00 combined per match. This is not a matchup in which both teams have independently established a strong high-scoring pattern.\n\nThe Over 2.5 case is driven mainly by Mainz’s attacking output and the possibility that Schalke will need to respond if the visitors score first. Mainz’s 13 goals represent more than three times Schalke’s four, a contrast that can generate an uneven game rather than necessarily a goal exchange. A 1–2 result would land the selection; a disciplined 0–2 away victory would fall short.\n\n## Tactical analysis and expected game state\n\nMainz are projected with Becker and Tietz ahead of an Amiri-led midfield, but Kohr and Silas are listed out, and goalkeeper Zentner is doubtful. Schalke’s expected attacking trio features Karaman, Aouchiche and Sylla, with Højlund absent. The visitor’s 13–10 goal record provides a statistical basis for the Over, while Schalke’s low scoring rate prevents this from being a top-confidence selection.\n\n### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial for Schalke 04 at home against Mainz 05 away. The complete 22/22 Statistical Core is unavailable from the cited source set. HOME-only and AWAY-only advanced metrics, including xG, xGA, shots, shots on target, possession and corners, remain unavailable where the supplied sources do not establish them separately. Overall team figures in the analysis are not venue splits.\n\n## Market assessment and conclusion\n\nFor Schalke 04 versus Mainz 05, the published **1.64** market price has a raw implied probability of **60.98%** (1 / 1.64). This price threshold differs from the historical frequencies in the analysis and from the editorial value judgment about Over 2.5 Goals. The risk to Over 2.5 is Schalke's four goals in five matches: Mainz can win 2-0 and still leave the total short, even with the visitors' stronger attack.\n\n**Prediction:** Over 2.5 Goals  \n**Odds:** **1.64**"
+      ],
+      "analysisFormat": "markdown",
+      "picks": {
+        "main": "Over 2.5 Goals",
+        "odds": 1.64
+      },
+      "sources": [
+        {
+          "name": "DFB official table, after five matches",
+          "url": "https://datencenter.dfb.de/datencenter/bundesliga/2026-2027/6"
+        },
+        {
+          "name": "Official Bundesliga Matchday 6 probable teams and absences",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
+        },
+        {
+          "name": "Bundesliga match schedule and venues",
+          "url": "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Over 2.5 Goals",
+      "odds": 1.64
+    }
+  },
+  {
+    "slug": "sv-elversberg-vs-augsburg",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "# SV Elversberg vs Augsburg Prediction, Odds and Betting Tips\n\n**Prediction:** Over 2.5 Goals  \n**Odds:** **1.44**\n\n## Match information\n\n- **Competition:** Bundesliga 2026/27\n- **Date:** 2026-10-17\n- **Kick-off:** 15:30 CEST\n- **Round:** Matchday 6\n- **Venue:** Ursapharm-Arena an der Kaiserlinde, Spiesen-Elversberg\n\n## Team news and projected lineups\n\nThe SV Elversberg and Augsburg lineups discussed below are PROJECTED rather than official. Availability is described only where the cited match reports support it; further injury and suspension details remain unavailable at publication and have not been inferred.\n\n## Match analysis\n\nAugsburg have opened the season with 13 goals scored and eight conceded across five rounds. That is 2.60 goals for, 1.60 against and 4.20 total goals per league game. Elversberg’s figures are more balanced at eight scored and eight conceded, equivalent to 3.20 total goals per match. The contrast makes Augsburg’s offensive production the strongest statistical support for the Over 2.5.\n\nElversberg’s home advantage could force a more even contest than the clubs’ scoring totals suggest. The hosts have averaged 1.60 goals themselves, enough to contribute if Augsburg’s defence gives up chances. Conversely, an Augsburg side scoring at its early-season rate can cover much of the line on its own. The danger is a lower-tempo game in which Elversberg limit transitions and Augsburg cannot reproduce their 2.60-goal average.\n\n## Tactical analysis and expected game state\n\nGregoritsch is in Augsburg’s projected starting attack, with Ibrahimović and Fellhauer providing support. Elversberg’s anticipated forward line features Mowka, Krattenmacher and Petkov. Augsburg list Claude-Maurice and Mounié among their unavailable players, while Elversberg are without Onyeka and Seifert. The goal totals support the market, but the 1.44 price requires a 69.4% break-even rate — high for a sample of only five matches.\n\n### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial for SV Elversberg at home against Augsburg away. The complete 22/22 Statistical Core is unavailable from the cited source set. HOME-only and AWAY-only advanced metrics, including xG, xGA, shots, shots on target, possession and corners, remain unavailable where the supplied sources do not establish them separately. Overall team figures in the analysis are not venue splits.\n\n## Market assessment and conclusion\n\nFor SV Elversberg versus Augsburg, the published **1.44** market price has a raw implied probability of **69.44%** (1 / 1.44). This price threshold differs from the historical frequencies in the analysis and from the editorial value judgment about Over 2.5 Goals. The contrary match evidence and small early-season sample limit confidence in the selection.\n\n**Prediction:** Over 2.5 Goals  \n**Odds:** **1.44**"
+      ],
+      "analysisFormat": "markdown",
+      "picks": {
+        "main": "Over 2.5 Goals",
+        "odds": 1.44
+      },
+      "sources": [
+        {
+          "name": "DFB official table, after five matches",
+          "url": "https://datencenter.dfb.de/datencenter/bundesliga/2026-2027/6"
+        },
+        {
+          "name": "Official Bundesliga Matchday 6 probable teams and absences",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
+        },
+        {
+          "name": "Bundesliga match schedule and venues",
+          "url": "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Over 2.5 Goals",
+      "odds": 1.44
+    }
+  },
+  {
+    "slug": "union-berlin-vs-borussia-dortmund",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "# Union Berlin vs Borussia Dortmund Prediction, Odds and Betting Tips\n\n**Prediction:** Over 2.5 Goals  \n**Odds:** **1.51**\n\n## Match information\n\n- **Competition:** Bundesliga 2026/27\n- **Date:** 2026-10-17\n- **Kick-off:** 15:30 CEST\n- **Round:** Matchday 6\n- **Venue:** Stadion An der Alten Försterei, Berlin\n\n## Team news and projected lineups\n\nThe Union Berlin and Borussia Dortmund lineups discussed below are PROJECTED rather than official. Availability is described only where the cited match reports support it; further injury and suspension details remain unavailable at publication and have not been inferred.\n\n## Match analysis\n\nUnion Berlin’s defensive record is the standout figure: 17 goals conceded in five league fixtures, an average of 3.40. With five scored, their games have contained 22 goals, or 4.40 per match. Dortmund have a far stronger balance, with 11 scored and only four conceded, averaging 3.00 combined goals. That contrast points toward a match in which Dortmund’s attacking quality may do most of the work.\n\nDortmund sit on 13 points with four wins and a draw, while Union have four points and have lost three of their opening five. The visitors’ 2.20 goals scored per game, against Union’s 3.40 conceded, provide a coherent route to three goals. However, Dortmund’s own defensive discipline means Union might contribute little, leaving the Over exposed if the visitors settle for a controlled two-goal win.\n\n## Tactical analysis and expected game state\n\nThe probable Dortmund lineup includes Guirassy, Beier and Karetsas, with Schlotterbeck anchoring the defence. Union are projected to start Jeong and Skarke in attack. Union’s injury list includes Ilić and Markgraf, with several further doubts; Dortmund list Can, Konstantelias and Lerma out. The statistical argument is primarily Union’s unusually porous defence, not an assumption that both sides will score.\n\n### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial for Union Berlin at home against Borussia Dortmund away. The complete 22/22 Statistical Core is unavailable from the cited source set. HOME-only and AWAY-only advanced metrics, including xG, xGA, shots, shots on target, possession and corners, remain unavailable where the supplied sources do not establish them separately. Overall team figures in the analysis are not venue splits.\n\n## Market assessment and conclusion\n\nFor Union Berlin versus Borussia Dortmund, the published **1.51** market price has a raw implied probability of **66.23%** (1 / 1.51). This price threshold differs from the historical frequencies in the analysis and from the editorial value judgment about Over 2.5 Goals. The contrary match evidence and small early-season sample limit confidence in the selection.\n\n**Prediction:** Over 2.5 Goals  \n**Odds:** **1.51**"
+      ],
+      "analysisFormat": "markdown",
+      "picks": {
+        "main": "Over 2.5 Goals",
+        "odds": 1.51
+      },
+      "sources": [
+        {
+          "name": "DFB official table, after five matches",
+          "url": "https://datencenter.dfb.de/datencenter/bundesliga/2026-2027/6"
+        },
+        {
+          "name": "Official Bundesliga Matchday 6 probable teams and absences",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
+        },
+        {
+          "name": "Bundesliga match schedule and venues",
+          "url": "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Over 2.5 Goals",
+      "odds": 1.51
+    }
+  },
+  {
+    "slug": "werder-bremen-vs-sc-paderborn",
+    "analysisAccess": "free",
+    "predictionAccess": "free",
+    "full": {
+      "analysis": [
+        "# Werder Bremen vs SC Paderborn Prediction, Odds and Betting Tips\n\n**Prediction:** Over 9 Corners  \n**Odds:** **1.64**\n\n## Match information\n\n- **Competition:** Bundesliga 2026/27\n- **Date:** 2026-10-17\n- **Kick-off:** 15:30 CEST\n- **Round:** Matchday 6\n- **Venue:** Weserstadion, Bremen\n\n## Team news and projected lineups\n\nThe Werder Bremen and SC Paderborn lineups discussed below are PROJECTED rather than official. Availability is described only where the cited match reports support it; further injury and suspension details remain unavailable at publication and have not been inferred.\n\n## Match analysis\n\nBremen and Paderborn have contrasting scoring records — Bremen 10 goals in five matches, Paderborn just three — but corner markets are better assessed through territorial pressure than goals alone. A current Bundesliga corner breakdown records Bremen’s matches at 7.6 total corners per game and Paderborn’s at 9.0, with the latter conceding an average of 5.6 corners. Those figures do not establish a comfortable ten-corner baseline.\n\nA separate pre-match corner model puts the probability of more than nine corners at 44.32%, while its estimate of exactly nine is 11.98%. That distinction matters: a line written as **Over 9** is commonly an Asian total, meaning nine corners may produce a refund and ten or more are needed to win; settlement rules must be checked with the bookmaker. The 1.64 price implies a 61.0% break-even win rate if treated as a simple two-way bet, considerably more demanding than that model’s over-nine estimate.\n\n## Tactical analysis and expected game state\n\nBremen’s probable front line features Füllkrug, with Grüll and Dinkçi behind him; Paderborn are expected to use Pieringer and Marino. Bremen’s injury list includes Agu, Njinmah and Stage, potentially affecting their usual attacking patterns. This is a speculative corner selection rather than a statistically dominant one, and the price should be assessed with the push rule in mind.\n\n### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial for Werder Bremen at home against SC Paderborn away. The complete 22/22 Statistical Core is unavailable from the cited source set. HOME-only and AWAY-only advanced metrics, including xG, xGA, shots, shots on target, possession and corners, remain unavailable where the supplied sources do not establish them separately. Overall team figures in the analysis are not venue splits.\n\n## Market assessment and conclusion\n\nFor Werder Bremen versus SC Paderborn, the published **1.64** market price has a raw implied probability of **60.98%** (1 / 1.64). This price threshold differs from the historical frequencies in the analysis and from the editorial value judgment about Over 9 Corners. The main risk is the gap between the cited 44.32% estimate for ten or more corners and the 61.0% raw break-even win rate at 1.64; exactly nine may push under Asian-total settlement rules.\n\n**Prediction:** Over 9 Corners  \n**Odds:** **1.64**"
+      ],
+      "analysisFormat": "markdown",
+      "picks": {
+        "main": "Over 9 Corners",
+        "odds": 1.64
+      },
+      "sources": [
+        {
+          "name": "DFB official table, after five matches",
+          "url": "https://datencenter.dfb.de/datencenter/bundesliga/2026-2027/6"
+        },
+        {
+          "name": "Official Bundesliga Matchday 6 probable teams and absences",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
+        },
+        {
+          "name": "Bundesliga match schedule and venues",
+          "url": "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures"
+        },
+        {
+          "name": "Bundesliga corner averages",
+          "url": "https://www.windrawwin.com/us/soccer-stats/corners/germany-bundesliga/"
+        },
+        {
+          "name": "Werder–Paderborn pre-match corner probabilities",
+          "url": "https://www.sportsmole.co.uk/football/bundesliga/werder-bremen-vs-paderborn_game_260096.html"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "Over 9 Corners",
+      "odds": 1.64
+    }
+  },
+  {
+    "slug": "bayern-munich-vs-rb-leipzig",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "# Bayern Munich vs RB Leipzig Prediction, Odds and Betting Tips\n\n**Prediction:** RB Leipzig -1.5 Asian Handicap  \n**Odds:** **1.53**\n\n## Match information\n\n- **Competition:** Bundesliga 2026/27\n- **Date:** 2026-10-17\n- **Kick-off:** 18:30 CEST\n- **Round:** Matchday 6\n- **Venue:** Allianz Arena, Munich\n\n## Team news and projected lineups\n\nThe Bayern Munich and RB Leipzig lineups discussed below are PROJECTED rather than official. Availability is described only where the cited match reports support it; further injury and suspension details remain unavailable at publication and have not been inferred.\n\n## Match analysis\n\nThis handicap requires Leipzig to win by at least two goals away to Bayern. The early-season evidence makes it a highly aggressive selection. Bayern are unbeaten after five Bundesliga matches, with three wins, two draws, 16 goals scored and just four conceded. Leipzig have scored 15 and conceded five, but their record is three wins and two defeats. Both attacks are productive; the decisive difference is that Bayern have not yet lost.\n\nBayern’s 3.20 goals per match and 0.80 conceded contrast with Leipzig’s 3.00 scored and 1.00 conceded. Leipzig possess the attacking output to trouble any opponent, but winning by two at the Allianz Arena demands more than a competitive performance. A one-goal Leipzig victory still loses the handicap, as do a draw or any Bayern win. The 1.53 quote implies a 65.4% break-even rate, a threshold that the available five-match records do not substantiate.\n\n## Tactical analysis and expected game state\n\nBayern’s projected front four includes Kane, Díaz, Olise and Saibari. Neuer has been managing a foot issue and Musiala is doubtful with a hamstring problem. Leipzig’s expected attacking trio features Gomis, Nkunku and Nusa; Baumgartner and Ouédraogo are among the reported absentees. Leipzig’s scoring record offers a possible upset route, but Bayern’s defensive figures and unbeaten start make the requested two-goal away handicap the riskiest prediction in this group.\n\n### Statistical Core Predictions-Sports-Prime\n\nStatistical coverage is partial for Bayern Munich at home against RB Leipzig away. The complete 22/22 Statistical Core is unavailable from the cited source set. HOME-only and AWAY-only advanced metrics, including xG, xGA, shots, shots on target, possession and corners, remain unavailable where the supplied sources do not establish them separately. Overall team figures in the analysis are not venue splits.\n\n## Market assessment and conclusion\n\nFor Bayern Munich versus RB Leipzig, the published **1.53** market price has a raw implied probability of **65.36%** (1 / 1.53). This price threshold differs from the historical frequencies in the analysis and from the editorial value judgment about RB Leipzig -1.5 Asian Handicap. The principal risk to Leipzig -1.5 is Bayern's unbeaten five-match start and four goals conceded; even a one-goal Leipzig away win fails this handicap.\n\n**Prediction:** RB Leipzig -1.5 Asian Handicap  \n**Odds:** **1.53**"
+      ],
+      "analysisFormat": "markdown",
+      "picks": {
+        "main": "RB Leipzig -1.5 Asian Handicap",
+        "odds": 1.53
+      },
+      "sources": [
+        {
+          "name": "DFB official table, after five matches",
+          "url": "https://datencenter.dfb.de/datencenter/bundesliga/2026-2027/6"
+        },
+        {
+          "name": "Official Bundesliga Matchday 6 probable teams and absences",
+          "url": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
+        },
+        {
+          "name": "Bundesliga match schedule and venues",
+          "url": "https://fbref.com/en/comps/20/schedule/Bundesliga-Scores-and-Fixtures"
+        }
+      ],
+      "comment": null
+    },
+    "prediction": {
+      "main": "RB Leipzig -1.5 Asian Handicap",
+      "odds": 1.53
     }
   },
   {
@@ -2077,7 +2467,7 @@
   },
   {
     "slug": "fc-cincinnati-vs-new-england-revolution",
-    "analysisAccess": "vip",
+    "analysisAccess": "free",
     "predictionAccess": "free",
     "full": {
       "analysis": [
@@ -2315,7 +2705,7 @@
   },
   {
     "slug": "san-diego-fc-vs-houston-dynamo-fc",
-    "analysisAccess": "vip",
+    "analysisAccess": "free",
     "predictionAccess": "free",
     "full": {
       "analysis": [
@@ -3425,7 +3815,7 @@
   },
   {
     "slug": "celta-vigo-vs-juventus",
-    "analysisAccess": "vip",
+    "analysisAccess": "free",
     "predictionAccess": "free",
     "full": {
       "analysis": [
@@ -3665,7 +4055,7 @@
   },
   {
     "slug": "n-e-c-nijmegen-vs-levski-sofia",
-    "analysisAccess": "vip",
+    "analysisAccess": "free",
     "predictionAccess": "free",
     "full": {
       "analysis": [
@@ -5408,6 +5798,360 @@
       "odds": 1.73
     },
     "activeFromKey": "2026-10-13"
+  },
+  {
+    "slug": "colorado-avalanche-vs-dallas-stars",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "## Statistical matchup\n\n| Indicator | Colorado Avalanche | Dallas Stars |\n|---|---:|---:|\n| Record entering October 13 | 3–2–0 | 2–2–1 |\n| Games in record | 5 | 5 |\n| Goals per game | 5.20 | Not verified in source snapshot |\n| Leading scorer (points) | Nathan MacKinnon — 10 | Mikko Rantanen — 6 |\n\n## Analysis\n\nColorado's attack is the strongest statistical reason to back the home side. The Avalanche entered October 13 averaging an NHL-leading 5.20 goals per game across five outings, with Nathan MacKinnon producing ten points (five goals, five assists) and defenseman Cale Makar contributing seven (three goals, four assists). The production was not confined to one line: 12 Avalanche players had scored at least once and eight had multiple goals. That spread of finishing options makes it harder for Dallas to neutralize the offense by focusing on a single matchup.\n\nDallas began 2–2–1, with Mikko Rantanen leading the team on six points (two goals, four assists). Its defensive ceiling remains considerable: the Stars had recorded two consecutive shutout wins before a shootout loss to Pittsburgh. A Colorado win is therefore a more demanding selection than the raw scoring average suggests. Dallas can reduce space through the middle and turn a high-scoring opponent into a tight, low-event contest. The Stars also face an injury constraint: Matt Duchene was reported out for approximately three months following core-muscle surgery, reducing their established forward depth.\n\nThe clubs play each other twice in two days, with Colorado visiting Dallas on October 13 before returning home for this game. Travel, adjustments and potential goaltender rotation make the second leg unusually sensitive to lineup news. Colorado's 3–2–0 start and elite early scoring profile support the selection, but five games are insufficient to establish a stable 5.20-goal expectation. At 1.77, the implied break-even probability is 56.5%; Dallas' defensive track record remains the main counterargument."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 14, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-14"
+        },
+        {
+          "name": "NHL.com — NHL On Tap, October 13, 2026",
+          "url": "https://www.nhl.com/news/nhl-on-tap-news-and-notes-october-13-2026"
+        },
+        {
+          "name": "NHL.com — nationally televised games for week of October 12, 2026",
+          "url": "https://www.nhl.com/news/nhl-nationally-televised-games-for-week-of-october-12-2026"
+        },
+        {
+          "name": "NHL.com — TNT 2026–27 national schedule",
+          "url": "https://www.nhl.com/news/tnt-releases-schedule-of-72-nhl-regular-season-games-for-2026-27"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Colorado Avalanche to win (including overtime and shootout)",
+        "odds": 1.77
+      }
+    },
+    "prediction": {
+      "main": "Colorado Avalanche to win (including overtime and shootout)",
+      "odds": 1.77
+    },
+    "activeFromKey": "2026-10-14"
+  },
+  {
+    "slug": "florida-panthers-vs-vancouver-canucks",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Florida Panthers | 6 | 2.00 | 2.83 | 26.7 | 24.7 | 9.4% | 74.1% |\n| Vancouver Canucks | 7 | 3.43 | 5.00 | 21.9 | 30.7 | 19.0% | 52.0% |\n\n## Analysis\n\nVancouver's defensive record is the central argument: five goals conceded per game across seven outings, with opponents generating 30.7 shots a night. Florida's attack has not been particularly productive at 2.00 goals per game, so the Panthers cannot rely on reputation alone. Their defensive shot suppression (24.7 shots allowed) is much stronger than Vancouver's, giving Florida a plausible route to control territory and spend less time defending. The visitors' 52.0% penalty kill also presents a possible opening, although Florida's own power play has converted only 9.4% of its chances. The risk is straightforward: Florida must convert territorial control into goals despite its slow scoring start. The 1.40 price requires a 71.4% break-even win rate; the early-season figures support favoritism but do not establish that probability."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Florida Panthers to win",
+        "odds": 1.4
+      }
+    },
+    "prediction": {
+      "main": "Florida Panthers to win",
+      "odds": 1.4
+    },
+    "activeFromKey": "2026-10-15"
+  },
+  {
+    "slug": "ottawa-senators-vs-new-york-islanders",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Ottawa Senators | 6 | 3.00 | 2.00 | 24.0 | 26.8 | 13.8% | 80.0% |\n| New York Islanders | 5 | 3.20 | 2.60 | 24.0 | 27.2 | 25.0% | 84.2% |\n\n## Analysis\n\nOttawa has built its opening record on limiting damage rather than overwhelming shot volume: 2.00 goals allowed per game despite facing 26.8 shots. The Islanders offer a real offensive test, scoring 3.20 a night and converting 25.0% of their power plays. Ottawa's 3.00-goal offense should find opportunities against an Islanders side conceding 2.60 per game, but its 13.8% power-play conversion leaves less margin if five-on-five finishing stalls. The home side's early defensive efficiency provides the selection's clearest edge. The principal concern is New York's capacity to generate a competitive score without needing many shots. Ottawa's 1.81 line implies 55.2%; this is a competitive matchup rather than a one-sided favorite."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Ottawa Senators to win",
+        "odds": 1.81
+      }
+    },
+    "prediction": {
+      "main": "Ottawa Senators to win",
+      "odds": 1.81
+    },
+    "activeFromKey": "2026-10-15"
+  },
+  {
+    "slug": "tampa-bay-lightning-vs-seattle-kraken",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Tampa Bay Lightning | 5 | 3.20 | 2.40 | 30.2 | 24.0 | 10.0% | 72.7% |\n| Seattle Kraken | 6 | 4.33 | 2.83 | 26.2 | 31.3 | 23.5% | 75.0% |\n\n## Analysis\n\nTampa Bay's shot profile is the strongest foundation for the home win. The Lightning generate 30.2 attempts on goal per game and surrender only 24.0, a substantial territorial advantage. Seattle has scored 4.33 goals per game but allows 31.3 opposing shots, leaving its defense exposed to extended pressure. Tampa's 2.40 goals against also compares favorably with Seattle's 2.83. One complication is special teams: the Lightning have converted only 10.0% of power plays, while Seattle's attack has been unusually efficient early in the season. The prediction relies on Tampa turning its superior shot differential into enough goals to offset the Kraken's hot finishing. At 1.59, the break-even rate is 62.9%, making goaltending and finishing efficiency important swing factors."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Tampa Bay Lightning to win",
+        "odds": 1.59
+      }
+    },
+    "prediction": {
+      "main": "Tampa Bay Lightning to win",
+      "odds": 1.59
+    },
+    "activeFromKey": "2026-10-15"
+  },
+  {
+    "slug": "toronto-maple-leafs-vs-buffalo-sabres",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Toronto Maple Leafs | 6 | 3.33 | 2.83 | 27.8 | 30.2 | 26.3% | 95.0% |\n| Buffalo Sabres | 6 | 2.67 | 3.67 | 27.3 | 21.5 | 13.6% | 60.0% |\n\n## Analysis\n\nThe scoring environment looks promising because Toronto's games average 6.16 total goals and Buffalo's average 6.34, based on each club's goals for and against. The Maple Leafs score 3.33 per game while Buffalo allows 3.67, a particularly favorable attacking matchup. Toronto also converts 26.3% of power plays against a Buffalo penalty kill operating at only 60.0%. Buffalo can contribute at the other end: Toronto gives up 2.83 goals and 30.2 shots per game, so the visitors do not need to be the dominant side to score twice or more. The biggest caveat is Buffalo's limited shot volume allowed (21.5), which means Toronto must capitalize efficiently rather than depend on sheer quantity. The total needs six goals; 1.68 implies a 59.5% break-even rate."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Over 5.5 total goals",
+        "odds": 1.68
+      }
+    },
+    "prediction": {
+      "main": "Over 5.5 total goals",
+      "odds": 1.68
+    },
+    "activeFromKey": "2026-10-15"
+  },
+  {
+    "slug": "chicago-blackhawks-vs-winnipeg-jets",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Chicago Blackhawks | 6 | 2.00 | 4.33 | 21.0 | 30.3 | 7.1% | 68.7% |\n| Winnipeg Jets | 5 | 2.60 | 3.00 | 26.2 | 29.6 | 28.6% | 90.9% |\n\n## Analysis\n\nChicago has conceded 4.33 goals per game and 30.3 shots, making its defensive end the obvious source of scoring potential. Winnipeg's offense has averaged only 2.60, but the matchup offers room to improve on that figure. The Jets also allow 3.00 goals and 29.6 shots per outing, which gives Chicago a credible chance to contribute despite scoring just 2.00 per game. Winnipeg's 28.6% power play could be especially relevant against Chicago's 68.7% penalty kill, one of the weaker early-season figures. The concern is whether Chicago can score enough to prevent this from becoming a one-sided 4-1 or 5-0 result. Six combined goals are needed, and 1.80 corresponds to a 55.6% break-even threshold."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Over 5.5 total goals",
+        "odds": 1.8
+      }
+    },
+    "prediction": {
+      "main": "Over 5.5 total goals",
+      "odds": 1.8
+    },
+    "activeFromKey": "2026-10-15"
+  },
+  {
+    "slug": "minnesota-wild-vs-st-louis-blues",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Minnesota Wild | 6 | 3.17 | 1.83 | 28.8 | 27.2 | 41.2% | 95.5% |\n| St. Louis Blues | 5 | 2.80 | 3.20 | 26.0 | 26.4 | 9.1% | 93.3% |\n\n## Analysis\n\nMinnesota's early defensive numbers stand out: 1.83 goals allowed per game, supported by a 95.5% penalty kill. St. Louis, by comparison, concedes 3.20 and scores 2.80, giving the Wild an advantage in both goal prevention and the matchup between attack and opposing defense. Minnesota also owns a 41.2% power-play conversion rate through six games, while the Blues have managed only 9.1%. Those special-teams percentages are unlikely to remain at their current extremes over a full season, but they help explain the current contrast. The Wild's 3.17-goal attack should create chances against a Blues team allowing 26.4 shots per game. St. Louis' 93.3% penalty kill is a meaningful resistance point, so Minnesota cannot assume easy power-play goals. The 1.64 quote implies a 61.0% break-even probability; the defensive foundation makes this the strongest editorial selection in this set, not a guaranteed outcome."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Minnesota Wild to win",
+        "odds": 1.64
+      }
+    },
+    "prediction": {
+      "main": "Minnesota Wild to win",
+      "odds": 1.64
+    },
+    "activeFromKey": "2026-10-15"
+  },
+  {
+    "slug": "nashville-predators-vs-san-jose-sharks",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Nashville Predators | 5 | 2.80 | 2.60 | 21.8 | 30.0 | 31.6% | 82.4% |\n| San Jose Sharks | 5 | 2.60 | 3.40 | 23.4 | 26.6 | 15.4% | 81.2% |\n\n## Analysis\n\nSan Jose has been involved in games averaging 6.00 total goals, driven in part by 3.40 conceded per night. Nashville's own games average 5.40, with a relatively balanced 2.80 scored and 2.60 allowed. The Predators have a clear special-teams weapon: a 31.6% power play, compared with the Sharks' 81.2% penalty kill. However, Nashville takes only 21.8 shots per game and San Jose only 23.4, so neither attack has established a high-volume five-on-five profile. That limits the confidence available from the goals-against figures alone. The Over works best if Nashville converts its power-play chances and San Jose contributes rather than merely conceding. The 1.77 price translates to a 56.5% break-even rate; this is a plausible but not low-risk scoring selection."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Over 5.5 total goals",
+        "odds": 1.77
+      }
+    },
+    "prediction": {
+      "main": "Over 5.5 total goals",
+      "odds": 1.77
+    },
+    "activeFromKey": "2026-10-15"
+  },
+  {
+    "slug": "edmonton-oilers-vs-utah-mammoth",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Edmonton Oilers | 5 | 5.00 | 3.40 | 26.6 | 23.2 | 22.2% | 66.7% |\n| Utah Mammoth | 6 | 3.67 | 2.50 | 31.8 | 22.5 | 40.0% | 77.3% |\n\n## Analysis\n\nEdmonton's five-goal scoring average is the headline, but the matchup is not straightforward. Utah has allowed only 2.50 goals and 22.5 shots per game, a defensive profile capable of slowing even an elite offense. The Oilers' 26.6 shots per game indicate unusually efficient finishing so far, whereas Utah generates 31.8 and scores 3.67. Edmonton has also conceded 3.40 per game, and its 66.7% penalty kill faces a Utah power play converting 40.0% of chances. Those figures make special teams a genuine concern for the favorite. Edmonton's case rests on its ability to sustain elite scoring while controlling the quality of chances against a dangerous visitor. At 1.67 the implied break-even probability is 59.9%; the attack supports the pick, but Utah's form prevents a low-risk label."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Edmonton Oilers to win",
+        "odds": 1.67
+      }
+    },
+    "prediction": {
+      "main": "Edmonton Oilers to win",
+      "odds": 1.67
+    },
+    "activeFromKey": "2026-10-15"
+  },
+  {
+    "slug": "vegas-golden-knights-vs-calgary-flames",
+    "analysisAccess": "vip",
+    "predictionAccess": "vip",
+    "full": {
+      "analysis": [
+        "## Statistical matchup\n\n| Team | GP | Goals for/game | Goals against/game | Shots for/game | Shots against/game | Power play | Penalty kill |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Vegas Golden Knights | 7 | 3.43 | 2.57 | 31.6 | 24.6 | 25.0% | 76.5% |\n| Calgary Flames | 5 | 1.60 | 5.40 | 28.0 | 28.6 | 20.0% | 86.7% |\n\n## Analysis\n\nThe difference in early goal differential is stark. Vegas scores 3.43 and allows 2.57 per game, while Calgary has managed only 1.60 goals and conceded 5.40. The Golden Knights also produce 31.6 shots per outing against Calgary's 28.6 allowed, pointing to sustained pressure on a struggling defense. Calgary's problems are not purely about shot volume: conceding 5.40 on 28.6 shots suggests poor results in net and/or defensive chance quality. Vegas has a much healthier 24.6 shots-against rate and a 25.0% power play. The risk is valuation: a 1.39 line requires a 71.9% win rate just to break even, and Calgary's five-game start is too small to treat its current numbers as permanent. Vegas is the deserved statistical favorite without being risk-free."
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        {
+          "name": "NHL official score API — October 15, 2026",
+          "url": "https://api-web.nhle.com/v1/score/2026-10-15"
+        },
+        {
+          "name": "2026–27 NHL team statistics — season-to-date snapshot, October 13, 2026",
+          "url": "https://kalshi.com/nhl/team-stats"
+        },
+        {
+          "name": "Official NHL schedule — October 15, 2026",
+          "url": "https://www.nhl.com/schedule/2026-10-15"
+        }
+      ],
+      "comment": null,
+      "picks": {
+        "main": "Vegas Golden Knights to win",
+        "odds": 1.39
+      }
+    },
+    "prediction": {
+      "main": "Vegas Golden Knights to win",
+      "odds": 1.39
+    },
+    "activeFromKey": "2026-10-15"
   },
   {
     "slug": "dallas-cowboys-vs-tampa-bay-buccaneers",

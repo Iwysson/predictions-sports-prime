@@ -12,7 +12,6 @@ import { SiteContactLine } from "@/components/SiteContactLine";
 import { ResponsibleGamblingNotice } from "@/components/ResponsibleGamblingNotice";
 import { TeamBadge } from "@/components/TeamBadge";
 import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
-import { isPspEditorialStandard } from "@/lib/editorial-standard";
 import { formatMatchDate, hasMatchPage, matchSlug } from "@/lib/match-access";
 import { buildMatchPageModel } from "@/lib/match-page-model";
 import { buildMatchPageMetadata, relatedMatchEntries } from "@/lib/match-page-seo";
@@ -108,7 +107,7 @@ export default async function MatchPage({ params }: { params: Promise<{ slug: st
               <span className="psp-team"><TeamBadge team={v.awayTeam} /> <strong>{v.awayTeam}</strong></span>
             </div>
 
-            {model.publicPrediction && !isPspEditorialStandard(prediction.editorialStandard) ? (
+            {model.publicPrediction ? (
               <div className="psp-pick main-prediction-block">
                 <div>
                   <div className="psp-pick__label">{model.labels.prediction}</div>

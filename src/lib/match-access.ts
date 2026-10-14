@@ -111,9 +111,18 @@ export function buildContentIndex(
   return [...fromPredictions, ...extra];
 }
 
+// A FREE tier is one policy: the complete prediction (pick and odds) and the full analysis are public
+// together, with no login. A listing item is FREE when either of its tiers is "free"; resolveAccess
+// already normalises the football source, and NHL/NFL feed both tiers from a single access value.
+type TierFields = { analysisAccess?: PredictionAccess; predictionAccess?: PredictionAccess; bestAnalysis?: boolean };
+
+export function isFreeTier(item: Pick<TierFields, "analysisAccess" | "predictionAccess">): boolean {
+  return item.predictionAccess === "free" || item.analysisAccess === "free";
+}
+
 // Listing label for a match card: the tier a visitor will see, not a generic "available" message.
-export function listingLabel(item: { analysisAccess?: PredictionAccess; predictionAccess?: PredictionAccess; bestAnalysis?: boolean }, locale: string, fallback: string): string {
-  if (item.predictionAccess === "free") return translate(locale, "matchFreePrediction");
+export function listingLabel(item: TierFields, locale: string, fallback: string): string {
+  if (isFreeTier(item)) return translate(locale, "matchFreePrediction");
   // BEST BET is a public badge on protected content: it names the tier without revealing the pick or odds.
   if (item.bestAnalysis) return "BEST BET";
   if (item.analysisAccess === "vip" || item.predictionAccess === "vip") return translate(locale, "matchListVip");
@@ -123,8 +132,8 @@ export function listingLabel(item: { analysisAccess?: PredictionAccess; predicti
 // Single source of truth for the public status badge on every listing: FREE, BEST BET (protected) or PRIME VIP.
 export type AccessBadgeKind = "free" | "best" | "vip";
 
-export function accessBadgeKind(item: { analysisAccess?: PredictionAccess; predictionAccess?: PredictionAccess; bestAnalysis?: boolean }): AccessBadgeKind | null {
-  if (item.predictionAccess === "free") return "free";
+export function accessBadgeKind(item: TierFields): AccessBadgeKind | null {
+  if (isFreeTier(item)) return "free";
   if (item.bestAnalysis) return "best";
   if (item.analysisAccess === "vip" || item.predictionAccess === "vip") return "vip";
   return null;
@@ -136,9 +145,9 @@ export const accessBadgeLabel: Record<AccessBadgeKind, string> = {
   vip: "PRIME VIP",
 };
 
-export function sortFreePredictionsFirst<T extends { predictionAccess?: PredictionAccess; bestAnalysis?: boolean; date?: string; time?: string }>(items: readonly T[]): T[] {
+export function sortFreePredictionsFirst<T extends TierFields & { date?: string; time?: string }>(items: readonly T[]): T[] {
   return [...items].sort((left, right) => {
-    const rank = (item: T) => item.predictionAccess === "free" ? 0 : item.bestAnalysis ? 1 : item.predictionAccess === "vip" ? 2 : 3;
+    const rank = (item: T) => isFreeTier(item) ? 0 : item.bestAnalysis ? 1 : item.predictionAccess === "vip" ? 2 : 3;
     return rank(left) - rank(right) ||
       (left.date ?? "").localeCompare(right.date ?? "") ||
       (left.time ?? "").localeCompare(right.time ?? "");

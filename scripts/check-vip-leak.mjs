@@ -97,9 +97,8 @@ for (const e of index) {
     continue;
   }
   const oddsText = e.prediction.odds.toFixed(2);
-  const exact = publicPicks.size > 0 && [...publicPicks].some((p) => p.includes(e.prediction.main.toLowerCase()));
   for (const { f, text } of pickCorpus) {
-    for (const leak of protectedPickLeaks(text, { pick: e.prediction.main, oddsText, exact }, label)) {
+    for (const leak of protectedPickLeaks(text, { pick: e.prediction.main, oddsText }, label)) {
       leaks.push({ ...leak, file: f });
     }
   }

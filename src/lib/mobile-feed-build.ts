@@ -1,6 +1,6 @@
 import type { MatchPreview, PredictionAccess } from "@/types";
 import { localTodayISO, filterTodaysPublishedPredictions, filterTomorrowPublishedPredictions, filterFuturePublishedPredictions } from "@/lib/match-feed";
-import { accessBadgeKind, type AccessBadgeKind } from "@/lib/match-access";
+import { accessBadgeKind, isFreeTier, type AccessBadgeKind } from "@/lib/match-access";
 
 // Server/build-only. The single place that decides which football matches are
 // "Today"/"Tomorrow"/"Upcoming" for the Android app's mobile feed - it calls the exact
@@ -32,8 +32,11 @@ export type MobilePublicMatch = {
 function toMobilePublicMatch(match: MatchPreview): MobilePublicMatch {
   // Absence of the field never makes a prediction free (src/lib/vip.ts's contentAccess
   // rule) - default to "vip" exactly like the website does, never to "free".
-  const analysisAccess = match.analysisAccess ?? "vip";
-  const predictionAccess = match.predictionAccess ?? "vip";
+  // A FREE tier opens the prediction and the analysis together (isFreeTier), so a FREE card
+  // never carries one without the other.
+  const free = isFreeTier(match);
+  const analysisAccess: PredictionAccess = free ? "free" : match.analysisAccess ?? "vip";
+  const predictionAccess: PredictionAccess = free ? "free" : match.predictionAccess ?? "vip";
   const badge = accessBadgeKind({ analysisAccess, predictionAccess, bestAnalysis: match.bestAnalysis });
   return {
     slug: match.slug,
@@ -48,8 +51,8 @@ function toMobilePublicMatch(match: MatchPreview): MobilePublicMatch {
     predictionAccess,
     badge,
     teaser: match.teaser ?? null,
-    pick: predictionAccess === "free" ? match.mainPrediction : undefined,
-    odds: predictionAccess === "free" ? match.odds ?? null : undefined,
+    pick: free ? match.mainPrediction : undefined,
+    odds: free ? match.odds ?? null : undefined,
   };
 }
 

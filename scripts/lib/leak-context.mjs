@@ -45,19 +45,22 @@ function occurrences(text, needle) {
   return found;
 }
 
-// A short pick that is part of a longer public pick ("Over 1.5 Goals" inside "X1 + Over 1.5 Goals") is
-// matched only as a whole quoted or tagged value, so public text cannot cause a false positive.
+// Match the protected entry's complete value in serialized fields or rendered elements.
+// A phrase inside a longer public pick (for example the NHL's New York Rangers selection)
+// is not the Dundee entry. Multiple legs are also checked as plain text inside their
+// bounded block, where the pick may be followed by an @odds suffix.
 const exactForms = (pick) => [`"${pick}"`, `\\"${pick}\\"`, `>${pick}<`];
-function pickOccurrences(text, entry) {
-  if (!entry.exact) return occurrences(text, entry.pick);
-  return exactForms(entry.pick).flatMap((form) => occurrences(text, form).map((i) => i + form.indexOf(entry.pick)));
+function pickOccurrences(text, pick, windows) {
+  const structured = exactForms(pick).flatMap((form) => occurrences(text, form).map((i) => i + form.indexOf(pick)));
+  const multipleLegs = occurrences(text, pick).filter((at) => inside(windows, at));
+  return [...new Set([...structured, ...multipleLegs])];
 }
 
-// Leaks for one protected entry in one text. `entry` = { pick, oddsText, exact? }. `label` names the entry in reports.
+// Leaks for one protected entry in one text. `entry` = { pick, oddsText }. `label` names the entry in reports.
 export function protectedPickLeaks(text, entry, label) {
   const leaks = [];
   const windows = multipleWindows(text);
-  const pickHits = pickOccurrences(text, entry);
+  const pickHits = pickOccurrences(text, entry.pick, windows);
   for (const at of pickHits) {
     const allowed = inside(windows, at) && FREE_MULTIPLE_LEGS.includes(entry.pick);
     if (!allowed) leaks.push({ kind: "pick-outside-context", label, at });

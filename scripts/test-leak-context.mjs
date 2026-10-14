@@ -36,6 +36,24 @@ check("a protected pick inside a multiple block is still a leak if it is not a m
 check("text without the pick produces no leak", () => {
   assert.deepEqual(protectedPickLeaks("nothing to see", colorado, "colorado"), []);
 });
+check("Dundee pick does not match the longer public NHL pick", () => {
+  const dundee = { pick: "Rangers to Win", oddsText: "1.35" };
+  const nhl = '{slug:"vancouver-canucks-vs-new-york-rangers",access:"free",pick:"New York Rangers to Win (Including OT & Shootout)",odds:1.43}';
+  assert.deepEqual(protectedPickLeaks(nhl, dundee, "dundee-vs-rangers"), []);
+});
+check("Dundee pick in its own serialized entry is still caught", () => {
+  const dundee = { pick: "Rangers to Win", oddsText: "1.35" };
+  const exposed = '{slug:"dundee-vs-rangers",pick:"Rangers to Win",odds:"1.35"}';
+  const kinds = protectedPickLeaks(exposed, dundee, "dundee-vs-rangers").map((leak) => leak.kind);
+  assert.ok(kinds.includes("pick-outside-context"));
+  assert.ok(kinds.includes("odds-outside-context"));
+});
+check("Dundee pick in a rendered HTML element is still caught", () => {
+  const dundee = { pick: "Rangers to Win", oddsText: "1.35" };
+  const kinds = protectedPickLeaks('<div class="psp-pick__value">Rangers to Win</div><b>1.35</b>', dundee, "dundee-vs-rangers").map((leak) => leak.kind);
+  assert.ok(kinds.includes("pick-outside-context"));
+  assert.ok(kinds.includes("odds-outside-context"));
+});
 check("the multiple window is bounded (does not cover the whole file)", () => {
   const text = `${multipleBlock("")}${"z".repeat(5000)}`;
   const [[start, end]] = multipleWindows(text);

@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-10-13T11:36:11.545Z",
+  "generatedAt": "2026-10-14T09:58:20.242Z",
   "leagues": [
     "brasileirao-serie-a",
+    "bundesliga",
     "champions-league",
     "copa-libertadores",
     "copa-sudamericana",
@@ -19,72 +20,6 @@
   "free": {
     "today": [
       {
-        "slug": "inter-vs-club-brugge",
-        "league": "champions-league",
-        "homeTeam": "Internazionale",
-        "awayTeam": "Club Brugge",
-        "date": "2026-10-13",
-        "time": "21:00",
-        "round": "Matchday 2",
-        "title": "Inter vs Club Brugge",
-        "analysisAccess": "vip",
-        "predictionAccess": "free",
-        "badge": "free",
-        "teaser": null,
-        "pick": "Inter -1.5 Asian handicap",
-        "odds": 1.75
-      },
-      {
-        "slug": "leipzig-vs-psv-eindhoven",
-        "league": "champions-league",
-        "homeTeam": "RB Leipzig",
-        "awayTeam": "PSV Eindhoven",
-        "date": "2026-10-13",
-        "time": "21:00",
-        "round": "Matchday 2",
-        "title": "RB Leipzig vs PSV Eindhoven",
-        "analysisAccess": "vip",
-        "predictionAccess": "free",
-        "badge": "free",
-        "teaser": null,
-        "pick": "Leipzig double chance (1X) + Over 2.5 total goals",
-        "odds": 1.91
-      },
-      {
-        "slug": "villarreal-vs-napoli",
-        "league": "champions-league",
-        "homeTeam": "Villarreal",
-        "awayTeam": "Napoli",
-        "date": "2026-10-13",
-        "time": "21:00",
-        "round": "Matchday 2",
-        "title": "Villarreal vs Napoli",
-        "analysisAccess": "vip",
-        "predictionAccess": "free",
-        "badge": "free",
-        "teaser": null,
-        "pick": "Villarreal double chance (1X) + Over 1.5 total goals",
-        "odds": 1.73
-      },
-      {
-        "slug": "boca-juniors-vs-vasco-da-gama",
-        "league": "copa-sudamericana",
-        "homeTeam": "Boca Juniors",
-        "awayTeam": "Vasco da Gama",
-        "date": "2026-10-13",
-        "time": "21:30",
-        "round": "Semifinal, First Leg",
-        "title": "Boca Juniors vs Vasco da Gama",
-        "analysisAccess": "vip",
-        "predictionAccess": "free",
-        "badge": "free",
-        "teaser": null,
-        "pick": "Boca Juniors to Win",
-        "odds": 1.89
-      }
-    ],
-    "tomorrow": [
-      {
         "slug": "feyenoord-vs-como",
         "league": "champions-league",
         "homeTeam": "Feyenoord Rotterdam",
@@ -93,7 +28,7 @@
         "time": "18:45",
         "round": "Matchday 2",
         "title": "Feyenoord vs Como",
-        "analysisAccess": "vip",
+        "analysisAccess": "free",
         "predictionAccess": "free",
         "badge": "free",
         "teaser": null,
@@ -109,7 +44,7 @@
         "time": "19:30",
         "round": "Regular season",
         "title": "FC Cincinnati vs New England Revolution",
-        "analysisAccess": "vip",
+        "analysisAccess": "free",
         "predictionAccess": "free",
         "badge": "free",
         "teaser": null,
@@ -125,7 +60,7 @@
         "time": "19:30",
         "round": "Regular season",
         "title": "San Diego FC vs Houston Dynamo FC",
-        "analysisAccess": "vip",
+        "analysisAccess": "free",
         "predictionAccess": "free",
         "badge": "free",
         "teaser": null,
@@ -141,7 +76,7 @@
         "time": "21:00",
         "round": "Matchday 2",
         "title": "Bodø/Glimt vs Borussia Dortmund",
-        "analysisAccess": "vip",
+        "analysisAccess": "free",
         "predictionAccess": "free",
         "badge": "free",
         "teaser": null,
@@ -157,7 +92,7 @@
         "time": "21:30",
         "round": "Semifinal, First Leg",
         "title": "Fluminense vs Palmeiras",
-        "analysisAccess": "vip",
+        "analysisAccess": "free",
         "predictionAccess": "free",
         "badge": "free",
         "teaser": null,
@@ -165,7 +100,7 @@
         "odds": 1.61
       }
     ],
-    "upcoming": [
+    "tomorrow": [
       {
         "slug": "celta-vigo-vs-juventus",
         "league": "uefa-europa-league",
@@ -175,7 +110,7 @@
         "time": "21:00",
         "round": "Matchday 2",
         "title": "Celta Vigo vs Juventus",
-        "analysisAccess": "vip",
+        "analysisAccess": "free",
         "predictionAccess": "free",
         "badge": "free",
         "teaser": null,
@@ -191,13 +126,15 @@
         "time": "21:00",
         "round": "Matchday 2",
         "title": "N.E.C. Nijmegen vs Levski Sofia",
-        "analysisAccess": "vip",
+        "analysisAccess": "free",
         "predictionAccess": "free",
         "badge": "free",
         "teaser": null,
         "pick": "N.E.C. Nijmegen to Win",
         "odds": 1.89
-      },
+      }
+    ],
+    "upcoming": [
       {
         "slug": "corum-fk-vs-caykur-rizespor",
         "league": "super-lig",
@@ -247,6 +184,38 @@
         "odds": 1.61
       },
       {
+        "slug": "lille-vs-brest",
+        "league": "ligue-1",
+        "homeTeam": "Lille",
+        "awayTeam": "Brest",
+        "date": "2026-10-17",
+        "time": "TBD",
+        "round": "Matchday 7",
+        "title": "Lille vs Brest",
+        "analysisAccess": "free",
+        "predictionAccess": "free",
+        "badge": "free",
+        "teaser": null,
+        "pick": "Over 2.5 Goals",
+        "odds": 1.72
+      },
+      {
+        "slug": "werder-bremen-vs-sc-paderborn",
+        "league": "bundesliga",
+        "homeTeam": "Werder Bremen",
+        "awayTeam": "SC Paderborn 07",
+        "date": "2026-10-17",
+        "time": "TBD",
+        "round": "Matchday 6",
+        "title": "Werder Bremen vs SC Paderborn",
+        "analysisAccess": "free",
+        "predictionAccess": "free",
+        "badge": "free",
+        "teaser": null,
+        "pick": "Over 9 Corners",
+        "odds": 1.64
+      },
+      {
         "slug": "real-betis-vs-barcelona",
         "league": "la-liga",
         "homeTeam": "Real Betis",
@@ -282,92 +251,6 @@
   },
   "vip": {
     "today": [
-      {
-        "slug": "lens-vs-sporting-cp",
-        "league": "champions-league",
-        "homeTeam": "Lens",
-        "awayTeam": "Sporting CP",
-        "date": "2026-10-13",
-        "time": "18:45",
-        "round": "Matchday 2",
-        "title": "Lens vs Sporting CP",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
-        "slug": "sabah-vs-slavia-praha",
-        "league": "champions-league",
-        "homeTeam": "Sabah",
-        "awayTeam": "Slavia Praha",
-        "date": "2026-10-13",
-        "time": "18:45",
-        "round": "League phase, Matchday 2",
-        "title": "Sabah vs Slavia Praha",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
-        "slug": "arsenal-vs-lille",
-        "league": "champions-league",
-        "homeTeam": "Arsenal",
-        "awayTeam": "Lille",
-        "date": "2026-10-13",
-        "time": "21:00",
-        "round": "Matchday 2",
-        "title": "Arsenal vs Lille",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
-        "slug": "atletico-madrid-vs-manchester-united",
-        "league": "champions-league",
-        "homeTeam": "Atlético Madrid",
-        "awayTeam": "Manchester United",
-        "date": "2026-10-13",
-        "time": "21:00",
-        "round": "Matchday 2",
-        "title": "Atlético de Madrid vs Manchester United",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
-        "slug": "galatasaray-vs-barcelona",
-        "league": "champions-league",
-        "homeTeam": "Galatasaray",
-        "awayTeam": "Barcelona",
-        "date": "2026-10-13",
-        "time": "21:00",
-        "round": "Matchday 2",
-        "title": "Galatasaray vs Barcelona",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
-        "slug": "viking-vs-bayern-munchen",
-        "league": "champions-league",
-        "homeTeam": "Viking",
-        "awayTeam": "Bayern München",
-        "date": "2026-10-13",
-        "time": "21:00",
-        "round": "Matchday 2",
-        "title": "Viking vs Bayern München",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      }
-    ],
-    "tomorrow": [
       {
         "slug": "lask-vs-liverpool",
         "league": "champions-league",
@@ -663,7 +546,7 @@
         "teaser": null
       }
     ],
-    "upcoming": [
+    "tomorrow": [
       {
         "slug": "az-alkmaar-vs-hapoel-beer-sheva",
         "league": "uefa-europa-league",
@@ -901,7 +784,9 @@
         "predictionAccess": "vip",
         "badge": "best",
         "teaser": null
-      },
+      }
+    ],
+    "upcoming": [
       {
         "slug": "mirassol-vs-internacional",
         "league": "brasileirao-serie-a",
@@ -931,6 +816,20 @@
         "teaser": null
       },
       {
+        "slug": "eintracht-frankfurt-vs-cologne",
+        "league": "bundesliga",
+        "homeTeam": "Eintracht Frankfurt",
+        "awayTeam": "Cologne",
+        "date": "2026-10-16",
+        "time": "20:30",
+        "round": "Matchday 6",
+        "title": "Eintracht Frankfurt vs Cologne",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
         "slug": "frosinone-vs-sassuolo",
         "league": "serie-a",
         "homeTeam": "Frosinone",
@@ -939,6 +838,20 @@
         "time": "20:45",
         "round": "Matchday 7",
         "title": "Frosinone vs Sassuolo",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "le-mans-vs-toulouse",
+        "league": "ligue-1",
+        "homeTeam": "Le Mans",
+        "awayTeam": "Toulouse",
+        "date": "2026-10-16",
+        "time": "20:45",
+        "round": "Matchday 7",
+        "title": "Le Mans vs Toulouse",
         "analysisAccess": "vip",
         "predictionAccess": "vip",
         "badge": "vip",
@@ -1015,6 +928,34 @@
         "teaser": null
       },
       {
+        "slug": "union-berlin-vs-borussia-dortmund",
+        "league": "bundesliga",
+        "homeTeam": "1. FC Union Berlin",
+        "awayTeam": "Borussia Dortmund",
+        "date": "2026-10-17",
+        "time": "15:30",
+        "round": "Matchday 6",
+        "title": "Union Berlin vs Borussia Dortmund",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "strasbourg-vs-paris-saint-germain",
+        "league": "ligue-1",
+        "homeTeam": "Strasbourg",
+        "awayTeam": "Paris Saint-Germain",
+        "date": "2026-10-17",
+        "time": "17:15",
+        "round": "Matchday 7",
+        "title": "Strasbourg vs Paris Saint-Germain",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "best",
+        "teaser": null
+      },
+      {
         "slug": "newcastle-united-vs-aston-villa",
         "league": "premier-league",
         "homeTeam": "Newcastle United",
@@ -1037,6 +978,20 @@
         "time": "18:00",
         "round": "Matchday 7",
         "title": "Bologna vs Inter",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "bayern-munich-vs-rb-leipzig",
+        "league": "bundesliga",
+        "homeTeam": "Bayern Munich",
+        "awayTeam": "RB Leipzig",
+        "date": "2026-10-17",
+        "time": "18:30",
+        "round": "Matchday 6",
+        "title": "Bayern Munich vs RB Leipzig",
         "analysisAccess": "vip",
         "predictionAccess": "vip",
         "badge": "vip",
@@ -1071,6 +1026,20 @@
         "teaser": null
       },
       {
+        "slug": "troyes-vs-lens",
+        "league": "ligue-1",
+        "homeTeam": "Troyes",
+        "awayTeam": "Lens",
+        "date": "2026-10-17",
+        "time": "20:45",
+        "round": "Matchday 7",
+        "title": "Troyes vs Lens",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
         "slug": "brentford-vs-liverpool",
         "league": "premier-league",
         "homeTeam": "Brentford",
@@ -1085,6 +1054,20 @@
         "teaser": null
       },
       {
+        "slug": "hamburger-sv-vs-vfb-stuttgart",
+        "league": "bundesliga",
+        "homeTeam": "Hamburg SV",
+        "awayTeam": "VfB Stuttgart",
+        "date": "2026-10-17",
+        "time": "TBD",
+        "round": "Matchday 6",
+        "title": "Hamburger SV vs VfB Stuttgart",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "best",
+        "teaser": null
+      },
+      {
         "slug": "manchester-city-vs-ipswich-town",
         "league": "premier-league",
         "homeTeam": "Manchester City",
@@ -1093,6 +1076,34 @@
         "time": "TBD",
         "round": "Matchday 7",
         "title": "Manchester City vs Ipswich Town",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "schalke-04-vs-mainz-05",
+        "league": "bundesliga",
+        "homeTeam": "Schalke 04",
+        "awayTeam": "Mainz",
+        "date": "2026-10-17",
+        "time": "TBD",
+        "round": "Matchday 6",
+        "title": "Schalke 04 vs Mainz 05",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "sv-elversberg-vs-augsburg",
+        "league": "bundesliga",
+        "homeTeam": "SV Elversberg",
+        "awayTeam": "Augsburg",
+        "date": "2026-10-17",
+        "time": "TBD",
+        "round": "Matchday 6",
+        "title": "SV Elversberg vs Augsburg",
         "analysisAccess": "vip",
         "predictionAccess": "vip",
         "badge": "vip",

@@ -58,8 +58,9 @@ function stripStructuredStatisticalCore(markdown: string) {
   return output.join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
-// psp-v1 analyses open with a Prediction/Odds block for validation. The public page shows that prediction
-// only in the closing block, so the opening block is removed from the rendered markdown (the source is unchanged).
+// psp-v1 analyses open with a Prediction/Odds block for validation. The match page shows that prediction in its own
+// block above the analysis, and the analysis repeats it in the closing block, so the opening block is removed from
+// the rendered markdown to avoid a third copy (the source is unchanged).
 function stripOpeningPredictionBlock(markdown: string) {
   return markdown.replace(/^((?:#[^\n]*\n+)?)\*\*(?:Prediction|Odds):\*\*[\s\S]*?(?=^## )/m, "$1");
 }

@@ -27,13 +27,15 @@ export function isVip(profile: VipProfile | null | undefined): boolean {
 
 export type ResolvedAccess = { analysis: "free" | "vip"; prediction: "free" | "vip" };
 
-// Editorial rule: a free analysis always comes with a free prediction. The reverse is allowed
-// (a free prediction can accompany a VIP analysis), so prediction access may be free alone.
+// A FREE badge promises the complete prediction and analysis to every visitor.
+// Either explicit FREE tier opens both parts; absent tiers remain VIP.
 export function resolveAccess(item: Partial<Pick<EditorialPrediction, "access" | "analysisAccess" | "predictionAccess">>): ResolvedAccess {
   const base = contentAccess(item);
   const analysis: PredictionAccess = item.analysisAccess === "free" || item.analysisAccess === "vip" ? item.analysisAccess : base;
   const explicitPrediction: PredictionAccess = item.predictionAccess === "free" || item.predictionAccess === "vip" ? item.predictionAccess : base;
-  return { analysis, prediction: analysis === "free" ? "free" : explicitPrediction };
+  return analysis === "free" || explicitPrediction === "free"
+    ? { analysis: "free", prediction: "free" }
+    : { analysis: "vip", prediction: "vip" };
 }
 
 // Access tier for predictions and analyses. Default is "vip". Only an explicit
