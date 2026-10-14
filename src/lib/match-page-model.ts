@@ -56,6 +56,18 @@ function startDateIso(prediction: EditorialPrediction): string | undefined {
   return iso && !Number.isNaN(Date.parse(iso)) ? iso : undefined;
 }
 
+// A match that has not kicked off yet. The trend teaser summarises the match story (and can spoil the pick),
+// so it is only shown once the match is history. Without a usable date the match is treated as past.
+function isUpcoming(prediction: EditorialPrediction, now: Date | string): boolean {
+  const nowMs = typeof now === "string" ? Date.parse(now) : now.getTime();
+  if (Number.isNaN(nowMs)) return false;
+  const kickoff = startDateIso(prediction);
+  if (kickoff) return Date.parse(kickoff) > nowMs;
+  const date = prediction.matchInfo?.date;
+  if (!date) return false;
+  return date >= new Date(nowMs).toISOString().slice(0, 10);
+}
+
 // Public structured data: a WebPage and its Article (author, dates). No pick, odds or analysis.
 // `gated` marks a page that has a PRIME VIP part. The protected text is not in the HTML at all (it is fetched
 // after a verified session), so the paywall markup only tells Google which element is the locked part.
@@ -148,7 +160,7 @@ export function buildMatchPageModel(
     seoTitle: prediction.seoTitle ?? heading,
     jsonLd: buildPublicJsonLd(prediction, routeLocale, slug, heading, protectedAnything),
     publicPrediction: predictionFree ? full.picks : null,
-    trend: !predictionFree ? (prediction.trend ?? null) : null,
+    trend: !predictionFree && !isUpcoming(prediction, now) ? (prediction.trend ?? null) : null,
     // Analysis text only. The pick and odds never travel with it, even when the prediction is VIP.
     staticAnalysis: analysisFree ? { analysis: full.analysis, analysisFormat: full.analysisFormat, sources: full.sources, comment: full.comment } : null,
     publicContext: analysisFree ? null : buildPublicMatchContext(prediction),
