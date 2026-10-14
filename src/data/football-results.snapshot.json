@@ -571,6 +571,44 @@
       "settledAt": "2026-10-13T21:58:27.139Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
+    "champions-league:aston-villa-vs-fenerbahce": {
+      "key": "champions-league:aston-villa-vs-fenerbahce",
+      "league": "champions-league",
+      "slug": "aston-villa-vs-fenerbahce",
+      "homeTeam": "Aston Villa",
+      "awayTeam": "Fenerbahçe",
+      "date": "2026-10-14",
+      "fixtureId": "401915409",
+      "predictionAccess": "vip",
+      "prediction": "Aston Villa to win",
+      "odds": 1.69,
+      "finalScore": {
+        "home": 6,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-14T22:29:05.086Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "champions-league:bodo-glimt-vs-borussia-dortmund": {
+      "key": "champions-league:bodo-glimt-vs-borussia-dortmund",
+      "league": "champions-league",
+      "slug": "bodo-glimt-vs-borussia-dortmund",
+      "homeTeam": "Bodø/Glimt",
+      "awayTeam": "Borussia Dortmund",
+      "date": "2026-10-14",
+      "fixtureId": "401915393",
+      "predictionAccess": "free",
+      "prediction": "Bodø/Glimt double chance (1X)",
+      "odds": 1.78,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-14T22:29:05.086Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
     "champions-league:feyenoord-vs-como": {
       "key": "champions-league:feyenoord-vs-como",
       "league": "champions-league",
@@ -645,6 +683,25 @@
       },
       "result": "red",
       "settledAt": "2026-10-13T21:58:27.139Z",
+      "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "champions-league:shakhtar-donetsk-vs-aek-athens": {
+      "key": "champions-league:shakhtar-donetsk-vs-aek-athens",
+      "league": "champions-league",
+      "slug": "shakhtar-donetsk-vs-aek-athens",
+      "homeTeam": "Shakhtar Donetsk",
+      "awayTeam": "AEK Athens",
+      "date": "2026-10-14",
+      "fixtureId": "401915406",
+      "predictionAccess": "vip",
+      "prediction": "Shakhtar Donetsk double chance (1X)",
+      "odds": 1.51,
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-14T22:29:05.086Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
     "eliteserien:fredrikstad-vs-tromso": {
