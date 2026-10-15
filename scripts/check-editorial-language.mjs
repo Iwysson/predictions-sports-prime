@@ -3,7 +3,7 @@ import { editorialPredictions } from "../src/data/predictions/index.ts";
 import { classifyPspEditorialLifecycle } from "../src/lib/editorial-standard.ts";
 import { nhlMatches } from "../src/lib/nhl.ts";
 import { SLATES } from "../src/data/nhl/slates.ts";
-import { NFL_WEEK5_2026 } from "../src/data/nfl/week5-2026-public.ts";
+import { NFL_WEEKS } from "../src/data/nfl/weeks.ts";
 
 const nhlProtectedFiles = ["src/data/nhl/protected-2026-10-07.json", "src/data/nhl/protected-2026-10-08.json", "src/data/nhl/protected-2026-10-09.json"];
 const nhlProtectedRecords = nhlProtectedFiles.flatMap((file) => {
@@ -15,12 +15,15 @@ const nhlProtectedRecords = nhlProtectedFiles.flatMap((file) => {
   }));
 });
 
-const nflProtected = JSON.parse(readFileSync("src/data/nfl/week5-2026-protected.json", "utf8"));
-const nflProtectedRecords = nflProtected.entries.map((entry) => ({
-  label: `nfl-protected/${entry.slug}`,
-  teamNames: [],
-  text: [entry.pick, ...entry.analysis].join("\n"),
-}));
+const nflProtectedFiles = ["src/data/nfl/week5-2026-protected.json", "src/data/nfl/week6-2026-protected.json"];
+const nflProtectedRecords = nflProtectedFiles.flatMap((file) => {
+  const parsed = JSON.parse(readFileSync(file, "utf8"));
+  return parsed.entries.map((entry) => ({
+    label: `nfl-protected/${entry.slug}`,
+    teamNames: [],
+    text: [entry.pick, ...entry.analysis].join("\n"),
+  }));
+});
 
 const nhlSlateRecords = SLATES.flatMap((slate) => [
   ...slate.matches.map((match) => ({
@@ -35,7 +38,7 @@ const nhlSlateRecords = SLATES.flatMap((slate) => [
   })),
 ]);
 
-const nflPublicRecords = NFL_WEEK5_2026.map((game) => ({
+const nflPublicRecords = NFL_WEEKS.flatMap((week) => week.games).map((game) => ({
   label: `nfl-public/${game.slug}`,
   teamNames: [game.homeTeam, game.awayTeam],
   text: [game.title, game.teaser, game.pick, ...(game.analysis ?? []), ...(game.sources ?? []).map((s) => s.name)].filter(Boolean).join("\n"),

@@ -38,16 +38,22 @@ for (const file of nhlLaterFiles) {
 }
 
 // NFL protected entries (BEST BET / PRIME VIP games). Published immediately, no activeFromKey.
-const nflProtected = JSON.parse(readFileSync("src/data/nfl/week5-2026-protected.json", "utf8")) as {
-  entries: Array<{ slug: string; analysisAccess: "free" | "vip"; predictionAccess: "free" | "vip"; pick: string; odds: number; analysis: string[] }>;
+// One file per published week - add a new file here for each later NFL week, same pattern as
+// nhlLaterFiles above.
+type NflEntryFile = {
+  entries: Array<{ slug: string; analysisAccess: "free" | "vip"; predictionAccess: "free" | "vip"; pick: string; odds: number; analysis: string[]; analysisFormat?: "markdown"; sources?: Array<{ name: string; url: string }> }>;
 };
-const nflEntries: ProtectedContentEntry[] = nflProtected.entries.map((e) => ({
-  slug: e.slug,
-  analysisAccess: e.analysisAccess,
-  predictionAccess: e.predictionAccess,
-  full: { analysis: e.analysis, sources: [], comment: null, picks: { main: e.pick, odds: e.odds } },
-  prediction: { main: e.pick, odds: e.odds },
-}));
+const nflWeekFiles = ["src/data/nfl/week5-2026-protected.json", "src/data/nfl/week6-2026-protected.json"];
+const nflEntries: ProtectedContentEntry[] = nflWeekFiles.flatMap((file) => {
+  const parsed = JSON.parse(readFileSync(file, "utf8")) as NflEntryFile;
+  return parsed.entries.map((e) => ({
+    slug: e.slug,
+    analysisAccess: e.analysisAccess,
+    predictionAccess: e.predictionAccess,
+    full: { analysis: e.analysis, analysisFormat: e.analysisFormat, sources: e.sources ?? [], comment: null, picks: { main: e.pick, odds: e.odds } },
+    prediction: { main: e.pick, odds: e.odds },
+  }));
+});
 
 const index = buildContentIndex(editorialPredictions as any[], new Date(), [...nhlEntries, ...nflEntries]);
 mkdirSync("functions/_data", { recursive: true });

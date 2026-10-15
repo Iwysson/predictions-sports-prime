@@ -8,9 +8,9 @@ import { getNFLCopy } from "@/lib/nfl-i18n";
 import type { SeoLocale } from "@/lib/seo-locales";
 import { getNFLStandings, getNFLStandingsMetadata } from "@/lib/nfl-standings-provider";
 
-// Week 5, 2026 is the current published week (src/data/nfl/week5-2026-public.ts). English only,
-// matching the NFL week-slate's own FREE/BEST BET/PRIME VIP gating; other locales still see the
-// season standings only.
+// The active published week is resolved by src/data/nfl/weeks.ts (resolveNflWeek), the same way
+// the NHL slate resolves its active day. English only, matching the NFL week-slate's own
+// FREE/BEST BET/PRIME VIP gating; other locales still see the season standings only.
 export function NFLPage({ locale }: { locale: SeoLocale }) {
   const copy = getNFLCopy(locale);
   const standingsMetadata = getNFLStandingsMetadata();

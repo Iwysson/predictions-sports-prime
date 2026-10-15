@@ -1,6 +1,6 @@
 import { resolveNhlSlate } from "@/data/nhl/slates";
 import { getNhlTodayKey } from "@/lib/nhl-day";
-import { NFL_WEEK5_2026 } from "@/data/nfl/week5-2026-public";
+import { resolveNflWeek } from "@/data/nfl/weeks";
 import type { NhlPublicMatch } from "@/lib/nhl-slates";
 import type { NflPublicGame } from "@/lib/nfl-slates";
 
@@ -43,13 +43,12 @@ export function buildMobileNhlIndex(now: Date = new Date()): MobileSingleSlateIn
   return { generatedAt: new Date().toISOString(), free, vip };
 }
 
-// NFL currently publishes exactly one week at a time (src/data/nfl/week5-2026-public.ts) -
-// there is no "current week" resolver on the website yet because nothing needs resolving
-// between weeks. When a second week file is added there, port its resolver here the same
-// way buildMobileNhlIndex reuses resolveNhlSlate - do not invent date-based week selection
-// ahead of that.
+// NFL shows exactly one active week at a time, resolved by src/data/nfl/weeks.ts the same way
+// buildMobileNhlIndex reuses resolveNhlSlate - so the app never shows a week the website wouldn't
+// show yet.
 export function buildMobileNflIndex(now: Date = new Date()): MobileSingleSlateIndex {
-  const items = NFL_WEEK5_2026.map(toMobileSlateItem);
+  const week = resolveNflWeek(getNhlTodayKey(now));
+  const items = (week?.games ?? []).map(toMobileSlateItem);
   const { free, vip } = splitByTier(items);
   return { generatedAt: now.toISOString(), free, vip };
 }

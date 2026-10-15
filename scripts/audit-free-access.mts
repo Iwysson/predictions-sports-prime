@@ -8,7 +8,7 @@ import { editorialToMatch } from "../src/lib/editorial.ts";
 import { buildMatchPageModel } from "../src/lib/match-page-model.ts";
 import { accessBadgeKind, buildContentIndex, hasMatchPage, matchSlug, resolveAccess } from "../src/lib/match-access.ts";
 import { SLATES } from "../src/data/nhl/slates.ts";
-import { NFL_WEEK5_2026 } from "../src/data/nfl/week5-2026-public.ts";
+import { NFL_WEEKS } from "../src/data/nfl/weeks.ts";
 import { classifyPspEditorialLifecycle } from "../src/lib/editorial-standard.ts";
 import type { EditorialPrediction } from "../src/types/index.ts";
 
@@ -107,7 +107,7 @@ const todayKeyForAudit = new Date().toISOString().slice(0, 10);
 const activeNhlDayKey = SLATES.reduce((latest: string | null, slate) => (slate.dayKey <= todayKeyForAudit ? slate.dayKey : latest), null as string | null);
 const games = [
   ...SLATES.flatMap((slate) => slate.matches.map((m) => ({ id: `nhl ${slate.dayKey} ${m.slug}`, g: m as any, dayKey: slate.dayKey }))),
-  ...NFL_WEEK5_2026.map((g) => ({ id: `nfl ${g.slug}`, g: g as any, dayKey: null as string | null })),
+  ...NFL_WEEKS.flatMap((week) => week.games.map((g) => ({ id: `nfl week${week.weekNumber} ${g.slug}`, g: g as any, dayKey: null as string | null }))),
 ];
 for (const { id, g, dayKey } of games) {
   if (g.access === "free") {

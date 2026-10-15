@@ -4,7 +4,7 @@ import { MatchGate } from "@/components/MatchGate";
 import { NflLeagueMark } from "@/components/NflLeagueMark";
 import { NflTeamBadge } from "@/components/NflTeamBadge";
 import { NhlBestMultiple } from "@/components/NhlToday";
-import { NFL_WEEK5_2026 } from "@/data/nfl/week5-2026-public";
+import { resolveNflWeek } from "@/data/nfl/weeks";
 import { translate } from "@/i18n/dictionaries";
 import { sortNflGames, type NflPublicGame } from "@/lib/nfl-slates";
 import { getNhlTodayKey } from "@/lib/nhl-day";
@@ -77,10 +77,13 @@ function GameCard({ g }: { g: NflPublicGame }) {
   );
 }
 
-// The NFL week body: a fixed set of games for the published week. A new week replaces the
-// import from src/data/nfl/week*-public.ts the same way NHL slates are replaced.
+// The NFL week body: the active published week, resolved the same way the NHL slate is (the
+// latest week whose first kickoff day has started, on the America/New_York calendar). Adding a
+// new week only means adding it to src/data/nfl/weeks.ts - nothing here changes.
 export function NflWeekSlate() {
-  const games = sortNflGames(NFL_WEEK5_2026);
+  const week = resolveNflWeek(getNhlTodayKey());
+  if (!week) return null;
+  const games = sortNflGames(week.games);
   const free = games.filter((g) => g.access === "free");
   const protectedGames = games.filter((g) => g.access !== "free");
   const analyses = (n: number) => (n === 1 ? "analysis" : "analyses");
@@ -90,9 +93,9 @@ export function NflWeekSlate() {
       <header className="psp-hero">
         <span className="psp-hero__eyebrow">
           <NflLeagueMark compact />
-          <span>· NFL Week 5, 2026</span>
+          <span>· NFL Week {week.weekNumber}, {week.season}</span>
         </span>
-        <h2>NFL Week 5 games and picks</h2>
+        <h2>NFL Week {week.weekNumber} games and picks</h2>
         <p>
           {games.length} NFL games this week. {free.length} {analyses(free.length)} {free.length === 1 ? "is" : "are"}{" "}
           published in full for everyone. The remaining {protectedGames.length} {protectedGames.length === 1 ? "is" : "are"}{" "}
@@ -139,7 +142,7 @@ export function NflWeekSlate() {
 
       <section className="psp-matchup-directory" aria-labelledby="nfl-matchups-title">
         <div className="psp-game-group__heading">
-          <h2 id="nfl-matchups-title">NFL Week 5 Matchups</h2>
+          <h2 id="nfl-matchups-title">NFL Week {week.weekNumber} Matchups</h2>
         </div>
         <nav className="psp-jump" aria-label="NFL games on this page">
           {games.map((g) => (

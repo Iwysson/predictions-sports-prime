@@ -10,7 +10,7 @@ export type NFLCopy = {
 // The published NFL week. Bump this when a new week goes live (src/data/nfl/week<N>-*-public.ts):
 // title, description, week and weekHeading below are all derived from it, so the search snippet
 // stays current without touching every locale string by hand.
-const CURRENT_WEEK = 5;
+const CURRENT_WEEK = 6;
 
 type WeekCopy = {
   title: (week: number) => string;
