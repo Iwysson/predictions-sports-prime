@@ -1900,6 +1900,139 @@
       "result": "green",
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "uefa-europa-league:celta-vigo-vs-juventus": {
+      "key": "uefa-europa-league:celta-vigo-vs-juventus",
+      "league": "uefa-europa-league",
+      "slug": "celta-vigo-vs-juventus",
+      "homeTeam": "Celta Vigo",
+      "awayTeam": "Juventus",
+      "date": "2026-10-15",
+      "fixtureId": "401915560",
+      "predictionAccess": "free",
+      "prediction": "Celta Vigo or Draw (1X)",
+      "odds": 1.73,
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-10-15T21:38:40.291Z",
+      "publishedAt": "2026-10-11T12:00:00.000-03:00"
+    },
+    "uefa-europa-league:dinamo-zagreb-vs-anderlecht": {
+      "key": "uefa-europa-league:dinamo-zagreb-vs-anderlecht",
+      "league": "uefa-europa-league",
+      "slug": "dinamo-zagreb-vs-anderlecht",
+      "homeTeam": "Dinamo Zagreb",
+      "awayTeam": "Anderlecht",
+      "date": "2026-10-15",
+      "fixtureId": "401915549",
+      "predictionAccess": "vip",
+      "prediction": "Dinamo Zagreb or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.63,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-15T21:38:40.291Z",
+      "publishedAt": "2026-10-11T12:00:00.000-03:00"
+    },
+    "uefa-europa-league:ferencvaros-vs-viktoria-plzen": {
+      "key": "uefa-europa-league:ferencvaros-vs-viktoria-plzen",
+      "league": "uefa-europa-league",
+      "slug": "ferencvaros-vs-viktoria-plzen",
+      "homeTeam": "Ferencváros",
+      "awayTeam": "Viktoria Plzeň",
+      "date": "2026-10-15",
+      "fixtureId": "401915564",
+      "predictionAccess": "vip",
+      "prediction": "Ferencváros or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.6,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-15T21:38:40.291Z",
+      "publishedAt": "2026-10-11T12:00:00.000-03:00"
+    },
+    "uefa-europa-league:lyon-vs-crystal-palace": {
+      "key": "uefa-europa-league:lyon-vs-crystal-palace",
+      "league": "uefa-europa-league",
+      "slug": "lyon-vs-crystal-palace",
+      "homeTeam": "Lyon",
+      "awayTeam": "Crystal Palace",
+      "date": "2026-10-15",
+      "fixtureId": "401915566",
+      "predictionAccess": "free",
+      "prediction": "Crystal Palace or Draw (X2)",
+      "odds": 1.68,
+      "finalScore": {
+        "home": 3,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-10-15T21:38:40.291Z",
+      "publishedAt": "2026-10-11T12:00:00.000-03:00"
+    },
+    "uefa-europa-league:marseille-vs-olympiacos": {
+      "key": "uefa-europa-league:marseille-vs-olympiacos",
+      "league": "uefa-europa-league",
+      "slug": "marseille-vs-olympiacos",
+      "homeTeam": "Marseille",
+      "awayTeam": "Olympiacos",
+      "date": "2026-10-15",
+      "fixtureId": "401915550",
+      "predictionAccess": "vip",
+      "prediction": "Marseille or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-10-15T21:38:40.291Z",
+      "publishedAt": "2026-10-11T12:00:00.000-03:00"
+    },
+    "uefa-europa-league:n-e-c-nijmegen-vs-levski-sofia": {
+      "key": "uefa-europa-league:n-e-c-nijmegen-vs-levski-sofia",
+      "league": "uefa-europa-league",
+      "slug": "n-e-c-nijmegen-vs-levski-sofia",
+      "homeTeam": "N.E.C. Nijmegen",
+      "awayTeam": "Levski Sofia",
+      "date": "2026-10-15",
+      "fixtureId": "401915565",
+      "predictionAccess": "free",
+      "prediction": "N.E.C. Nijmegen to Win",
+      "odds": 1.89,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-10-15T21:38:40.291Z",
+      "publishedAt": "2026-10-11T12:00:00.000-03:00"
+    },
+    "uefa-europa-league:torreense-vs-sunderland": {
+      "key": "uefa-europa-league:torreense-vs-sunderland",
+      "league": "uefa-europa-league",
+      "slug": "torreense-vs-sunderland",
+      "homeTeam": "Torreense",
+      "awayTeam": "Sunderland",
+      "date": "2026-10-15",
+      "fixtureId": "401915575",
+      "predictionAccess": "vip",
+      "prediction": "Sunderland to Win",
+      "odds": 1.41,
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-15T21:38:40.291Z",
+      "publishedAt": "2026-10-11T12:00:00.000-03:00"
     }
   }
 }
