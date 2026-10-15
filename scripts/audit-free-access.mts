@@ -96,13 +96,33 @@ for (const bucket of ["today", "tomorrow", "upcoming"] as const) {
 }
 
 // NHL and NFL public data: a FREE game carries pick, odds and analysis; the others carry none of them.
+//
+// Exception: a FREE NHL game whose slate day has not activated yet (its dayKey is for a day later
+// than the currently active one - see src/lib/nhl-publication-policy.ts and src/data/nhl/slates.ts)
+// is allowed to carry no inline pick/odds/analysis, because embedding them now would ship the full
+// FREE prediction in the public client bundle before its publication gate opens. In that case this
+// audit instead requires the deferred content to exist, correctly tagged FREE and activeFromKey-gated
+// to that same day, in the generated protected index - so the gap is verified closed, not just skipped.
+const todayKeyForAudit = new Date().toISOString().slice(0, 10);
+const activeNhlDayKey = SLATES.reduce((latest: string | null, slate) => (slate.dayKey <= todayKeyForAudit ? slate.dayKey : latest), null as string | null);
 const games = [
-  ...SLATES.flatMap((slate) => slate.matches.map((m) => ({ id: `nhl ${slate.dayKey} ${m.slug}`, g: m as any }))),
-  ...NFL_WEEK5_2026.map((g) => ({ id: `nfl ${g.slug}`, g: g as any })),
+  ...SLATES.flatMap((slate) => slate.matches.map((m) => ({ id: `nhl ${slate.dayKey} ${m.slug}`, g: m as any, dayKey: slate.dayKey }))),
+  ...NFL_WEEK5_2026.map((g) => ({ id: `nfl ${g.slug}`, g: g as any, dayKey: null as string | null })),
 ];
-for (const { id, g } of games) {
+for (const { id, g, dayKey } of games) {
   if (g.access === "free") {
     freeCount += 1;
+    const notYetActive = dayKey !== null && activeNhlDayKey !== null && dayKey > activeNhlDayKey;
+    if (!g.pick && notYetActive) {
+      const deferred = entries.find((e) => e.slug === g.slug) as (typeof entries)[number] & { activeFromKey?: string; prediction?: { main?: string; odds?: number | null } } | undefined;
+      if (!deferred) fail(id, "FREE game not yet active has no deferred entry in match-content.json");
+      else {
+        if (deferred.analysisAccess !== "free" || deferred.predictionAccess !== "free") fail(id, "FREE game's deferred match-content.json entry is not tagged FREE");
+        if (deferred.activeFromKey !== dayKey) fail(id, `FREE game's deferred entry activeFromKey ("${deferred.activeFromKey}") does not match its slate day ("${dayKey}")`);
+        if (!deferred.prediction?.main || deferred.prediction?.odds == null) fail(id, "FREE game's deferred match-content.json entry has no pick/odds");
+      }
+      continue;
+    }
     if (!g.pick) fail(id, "FREE game has no public pick");
     if (g.odds === undefined) fail(id, "FREE game has no public odds");
     if (!g.analysis?.length) fail(id, "FREE game has no public analysis");

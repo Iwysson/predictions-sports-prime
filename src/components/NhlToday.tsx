@@ -4,7 +4,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { AccessBadge } from "@/components/AccessBadge";
 import { LeagueBadge } from "@/components/LeagueBadge";
 import { MatchFullContent } from "@/components/MatchFullContent";
-import { MatchGate } from "@/components/MatchGate";
+import { FreeMatchContent, MatchGate } from "@/components/MatchGate";
 import { MatchStatusBadge } from "@/components/MatchStatusBadge";
 import { NhlLeagueMark } from "@/components/NhlBestMultiple";
 import { NhlMoneylineNote } from "@/components/NhlMoneylineNote";
@@ -206,6 +206,13 @@ function GameCard({ m, dayLabel, liveGames }: { m: NhlPublicMatch; dayLabel: str
             comment={null}
             labels={{ prediction: L.prediction, odds: L.odds, analysis: "Game analysis", sources: translate("en", "matchSourcesHeading") }}
           />
+        </>
+      ) : isFree ? (
+        // FREE, but not yet embedded in this public bundle (publication-gate day): fetch the full
+        // content from the protected endpoint, which answers a FREE slug without a login.
+        <>
+          <p className="psp-game__teaser">{m.teaser}</p>
+          <FreeMatchContent slug={m.slug} labels={{ prediction: L.prediction, odds: L.odds }} />
         </>
       ) : (
         <>
