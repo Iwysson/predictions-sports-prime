@@ -87,9 +87,12 @@ export function LoginForm() {
         </button>
       </form>
 
-      <p className="auth-switch">
-        No account yet? <Link href="/register/">Create one</Link>
-      </p>
+      <div className="auth-register-cta">
+        <p>No account yet?</p>
+        <Link className="auth-register-cta__link" href="/register/">
+          Create an account <span aria-hidden="true">→</span>
+        </Link>
+      </div>
     </AuthCard>
   );
 }
