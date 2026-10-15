@@ -14,12 +14,12 @@ export function RegisterForm() {
   const [error, setError] = useState<string | null>(null);
   const [confirmationEmail, setConfirmationEmail] = useState<string | null>(null);
   // Frontend condition only: no new data is stored in the profile.
-  const [notInBrazil, setNotInBrazil] = useState(false);
+  const [accessConfirmed, setAccessConfirmed] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!notInBrazil) {
-      setError("Please confirm that you are not located in Brazil to create an account.");
+    if (!accessConfirmed) {
+      setError("Please confirm that you are permitted to access this service to create an account.");
       return;
     }
     setSubmitting(true);
@@ -126,19 +126,19 @@ export function RegisterForm() {
           </p>
         ) : null}
 
-        <label className="auth-checkbox" htmlFor="register-not-in-brazil">
+        <label className="auth-checkbox" htmlFor="register-access-confirmed">
           <input
-            checked={notInBrazil}
-            id="register-not-in-brazil"
-            name="notInBrazil"
-            onChange={(event) => setNotInBrazil(event.target.checked)}
+            checked={accessConfirmed}
+            id="register-access-confirmed"
+            name="accessConfirmed"
+            onChange={(event) => setAccessConfirmed(event.target.checked)}
             required
             type="checkbox"
           />
-          <span>I confirm that I am not located in Brazil and that I am permitted to access this service under the laws applicable to me.</span>
+          <span>I confirm that I am permitted to access this service under the laws applicable to me.</span>
         </label>
 
-        <button className="button" disabled={submitting || !notInBrazil} type="submit">
+        <button className="button" disabled={submitting || !accessConfirmed} type="submit">
           {submitting ? "Creating account…" : "Register"}
         </button>
       </form>
