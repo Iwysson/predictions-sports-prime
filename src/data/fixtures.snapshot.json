@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T22:28:46.457Z",
+  "generatedAt": "2026-10-15T00:43:13.755Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -6559,6 +6559,146 @@
             "kickoffUtc": "2027-01-09T20:00Z"
           }
         ]
+      },
+      {
+        "round": 16,
+        "games": [
+          {
+            "round": 16,
+            "date": "2027-01-13",
+            "time": "TBD",
+            "homeTeam": "Mainz",
+            "awayTeam": "TSG Hoffenheim",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401884678",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-13T20:00Z"
+          },
+          {
+            "round": 16,
+            "date": "2027-01-13",
+            "time": "TBD",
+            "homeTeam": "SC Freiburg",
+            "awayTeam": "Hamburg SV",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401884680",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-13T20:00Z"
+          },
+          {
+            "round": 16,
+            "date": "2027-01-13",
+            "time": "TBD",
+            "homeTeam": "Schalke 04",
+            "awayTeam": "Werder Bremen",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401884675",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-13T20:00Z"
+          },
+          {
+            "round": 16,
+            "date": "2027-01-13",
+            "time": "TBD",
+            "homeTeam": "RB Leipzig",
+            "awayTeam": "VfB Stuttgart",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401884681",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-13T20:00Z"
+          },
+          {
+            "round": 16,
+            "date": "2027-01-13",
+            "time": "TBD",
+            "homeTeam": "1. FC Union Berlin",
+            "awayTeam": "SC Paderborn 07",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401884677",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-13T20:00Z"
+          },
+          {
+            "round": 16,
+            "date": "2027-01-13",
+            "time": "TBD",
+            "homeTeam": "Bayern Munich",
+            "awayTeam": "Bayer Leverkusen",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401884682",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-13T20:00Z"
+          },
+          {
+            "round": 16,
+            "date": "2027-01-13",
+            "time": "TBD",
+            "homeTeam": "Augsburg",
+            "awayTeam": "Borussia Mönchengladbach",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401884679",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-13T20:00Z"
+          },
+          {
+            "round": 16,
+            "date": "2027-01-13",
+            "time": "TBD",
+            "homeTeam": "SV Elversberg",
+            "awayTeam": "Eintracht Frankfurt",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401884674",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-13T20:00Z"
+          },
+          {
+            "round": 16,
+            "date": "2027-01-13",
+            "time": "TBD",
+            "homeTeam": "Cologne",
+            "awayTeam": "Borussia Dortmund",
+            "homeScore": null,
+            "awayScore": null,
+            "status": "scheduled",
+            "dataSource": "espn",
+            "id": "401884676",
+            "sourceAgreement": false,
+            "timeConfirmed": false,
+            "kickoffUtc": "2027-01-13T20:00Z"
+          }
+        ]
       }
     ],
     "serie-a": [
@@ -7538,7 +7678,8 @@
             "id": "401874959",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-16T18:45Z"
+            "kickoffUtc": "2026-10-16T18:45Z",
+            "espnEventId": "401874959"
           },
           {
             "round": 7,
@@ -15204,15 +15345,12 @@
     "bundesliga:sv-elversberg-vs-augsburg": "401884764",
     "bundesliga:union-berlin-vs-borussia-dortmund": "401884769",
     "bundesliga:werder-bremen-vs-sc-paderborn": "401884766",
-    "champions-league:aston-villa-vs-fenerbahce": "401915409",
     "champions-league:atletico-madrid-vs-manchester-united": "401915412",
-    "champions-league:bodo-glimt-vs-borussia-dortmund": "401915393",
     "champions-league:lask-vs-liverpool": "official:champions-league:lask-vs-liverpool:2026-10-14",
     "champions-league:leipzig-vs-psv-eindhoven": "401915434",
     "champions-league:manchester-city-vs-psg": "401915407",
     "champions-league:real-betis-vs-porto": "401915408",
     "champions-league:roma-vs-real-madrid": "401915414",
-    "champions-league:shakhtar-donetsk-vs-aek-athens": "401915406",
     "champions-league:slovan-bratislava-vs-stuttgart": "401915405",
     "champions-league:viking-vs-bayern-munchen": "official:champions-league:viking-vs-bayern-munchen:2026-10-13",
     "champions-league:villarreal-vs-napoli": "401915410",
@@ -15292,11 +15430,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-14T22:28:46.457Z",
+    "bundesliga": "2026-10-15T00:43:13.755Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
     "liga-portugal": "2026-10-14T12:50:44.275Z",
-    "ligue-1": "2026-10-14T22:28:46.457Z",
-    "eredivisie": "2026-10-14T22:28:46.457Z",
+    "ligue-1": "2026-10-15T00:43:13.755Z",
+    "eredivisie": "2026-10-15T00:43:13.755Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
@@ -16478,7 +16616,8 @@
       "id": "401888377",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-16T17:00Z"
+      "kickoffUtc": "2026-10-16T17:00Z",
+      "espnEventId": "401888377"
     },
     "401888378": {
       "round": 8,
@@ -19711,7 +19850,8 @@
       "id": "editorial:brasileirao-serie-a:mirassol-vs-internacional:2026-10-16",
       "sourceAgreement": false,
       "timeConfirmed": false,
-      "kickoffUtc": "2026-10-16T23:00:00.000Z"
+      "kickoffUtc": "2026-10-16T23:00:00.000Z",
+      "espnEventId": "401841275"
     },
     "editorial:brasileirao-serie-a:botafogo-vs-chapecoense:2026-10-17": {
       "round": 31,
