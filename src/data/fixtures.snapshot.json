@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-15T21:38:20.114Z",
+  "generatedAt": "2026-10-15T23:49:09.147Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -5176,7 +5176,8 @@
             "id": "401884770",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-16T18:30Z"
+            "kickoffUtc": "2026-10-16T18:30Z",
+            "espnEventId": "401884770"
           },
           {
             "round": 6,
@@ -10898,7 +10899,8 @@
             "id": "401876437",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-16T18:45Z"
+            "kickoffUtc": "2026-10-16T18:45Z",
+            "espnEventId": "401876437"
           },
           {
             "round": 7,
@@ -12580,7 +12582,8 @@
             "id": "401875583",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-16T18:00Z"
+            "kickoffUtc": "2026-10-16T18:00Z",
+            "espnEventId": "401875583"
           },
           {
             "round": 9,
@@ -15297,18 +15300,11 @@
     "uefa-europa-league:az-alkmaar-vs-hapoel-beer-sheva": "official:uefa-europa-league:az-alkmaar-vs-hapoel-beer-sheva:2026-10-15",
     "uefa-europa-league:benfica-vs-celtic": "401915562",
     "uefa-europa-league:bournemouth-vs-sturm-graz": "official:uefa-europa-league:bournemouth-vs-sturm-graz:2026-10-15",
-    "uefa-europa-league:celta-vigo-vs-juventus": "401915560",
-    "uefa-europa-league:dinamo-zagreb-vs-anderlecht": "401915549",
-    "uefa-europa-league:ferencvaros-vs-viktoria-plzen": "401915564",
     "uefa-europa-league:hoffenheim-vs-besiktas": "401915563",
     "uefa-europa-league:jagiellonia-bia-ystok-vs-ararat-armenia": "official:uefa-europa-league:jagiellonia-bia-ystok-vs-ararat-armenia:2026-10-15",
     "uefa-europa-league:lech-poznan-vs-bayer-leverkusen": "401915576",
-    "uefa-europa-league:lyon-vs-crystal-palace": "401915566",
-    "uefa-europa-league:marseille-vs-olympiacos": "401915550",
-    "uefa-europa-league:n-e-c-nijmegen-vs-levski-sofia": "401915565",
     "uefa-europa-league:rennes-vs-ofi-crete": "401915572",
-    "uefa-europa-league:salzburg-vs-ac-milan": "official:uefa-europa-league:salzburg-vs-ac-milan:2026-10-15",
-    "uefa-europa-league:torreense-vs-sunderland": "401915575"
+    "uefa-europa-league:salzburg-vs-ac-milan": "official:uefa-europa-league:salzburg-vs-ac-milan:2026-10-15"
   },
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
