@@ -1,6 +1,46 @@
 {
-  "generatedAt": "2026-10-15T12:44:59.903Z",
+  "generatedAt": "2026-10-15T12:52:12.096Z",
   "records": [
+    {
+      "slug": "aston-villa-vs-fenerbahce",
+      "league": "champions-league",
+      "homeTeam": "Aston Villa",
+      "awayTeam": "Fenerbahçe",
+      "date": "2026-10-14",
+      "prediction": "Aston Villa to win",
+      "odds": 1.69,
+      "result": "green"
+    },
+    {
+      "slug": "bodo-glimt-vs-borussia-dortmund",
+      "league": "champions-league",
+      "homeTeam": "Bodø/Glimt",
+      "awayTeam": "Borussia Dortmund",
+      "date": "2026-10-14",
+      "prediction": "Bodø/Glimt double chance (1X)",
+      "odds": 1.78,
+      "result": "green"
+    },
+    {
+      "slug": "shakhtar-donetsk-vs-aek-athens",
+      "league": "champions-league",
+      "homeTeam": "Shakhtar Donetsk",
+      "awayTeam": "AEK Athens",
+      "date": "2026-10-14",
+      "prediction": "Shakhtar Donetsk double chance (1X)",
+      "odds": 1.51,
+      "result": "green"
+    },
+    {
+      "slug": "feyenoord-vs-como",
+      "league": "champions-league",
+      "homeTeam": "Feyenoord",
+      "awayTeam": "Como",
+      "date": "2026-10-14",
+      "prediction": "Feyenoord double chance (1X)",
+      "odds": 1.91,
+      "result": "green"
+    },
     {
       "slug": "arsenal-vs-lille",
       "league": "champions-league",
