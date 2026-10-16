@@ -17,6 +17,7 @@
     "test:match-public-seo": "tsx scripts/test-match-public-seo.mts",
     "test:site-copy": "tsx scripts/test-site-copy-consistency.mts",
     "test:google-play-entitlement": "tsx scripts/test-google-play-entitlement.mts",
+    "test:nhl-oct17-activation": "tsx scripts/test-nhl-oct17-activation.mts",
     "test:mobile-feed-equivalence": "tsx scripts/test-mobile-feed-equivalence.mts",
     "test:mobile-api-security": "tsx scripts/test-mobile-api-security.mts",
     "results:settle": "tsx scripts/settle-football-results.mts",

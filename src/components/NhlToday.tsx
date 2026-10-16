@@ -20,6 +20,7 @@ import {
   type MultipleSurface,
   type NhlPublicMatch,
   type NhlPublicMultiple,
+  type NhlPublicSlate,
 } from "@/lib/nhl-slates";
 import { formatOddsPair } from "@/lib/odds";
 
@@ -61,6 +62,39 @@ export function useNhlLiveGames(dayKey: string): LiveGame[] {
     };
   }, [dayKey]);
   return games;
+}
+
+// A deferred slate (src/data/nhl/slates.ts `deferred: true`) ships no listing in this bundle: its matches are
+// fetched from /api/nhl/slate/[day], which answers only after the slate's publication gate has opened on the
+// server clock. Until then (loading, refused because the clocks disagree, offline) this returns null and
+// the caller keeps showing the previous slate. A refused or failed request is retried every 20 seconds.
+export function useDeferredNhlMatches(slate: NhlPublicSlate | null): NhlPublicMatch[] | null {
+  const dayKey = slate?.deferred ? slate.dayKey : null;
+  const [fetched, setFetched] = useState<{ dayKey: string; matches: NhlPublicMatch[] } | null>(null);
+  useEffect(() => {
+    if (!dayKey) return;
+    let cancelled = false;
+    let timer: number | undefined;
+    const load = async () => {
+      try {
+        const res = await fetch(`/api/nhl/slate/${encodeURIComponent(dayKey)}`, { cache: "no-store" });
+        const body = res.ok ? await res.json() : null;
+        if (!cancelled && body?.dayKey === dayKey && Array.isArray(body?.matches) && body.matches.length) {
+          setFetched({ dayKey, matches: body.matches as NhlPublicMatch[] });
+          return;
+        }
+      } catch {
+        // fall through to the retry below
+      }
+      if (!cancelled) timer = window.setTimeout(load, 20_000);
+    };
+    load();
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [dayKey]);
+  return dayKey && fetched?.dayKey === dayKey ? fetched.matches : null;
 }
 
 // The NHL day is decided only by lib/nhl-day (America/New_York). The key is re-checked every
@@ -230,7 +264,14 @@ export function NhlDaySlate({ initialKey, afterHero }: { initialKey: string; aft
   const liveGames = useNhlLiveGames(dayKey);
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
-  const slate = resolveNhlSlate(dayKey);
+  const resolved = resolveNhlSlate(dayKey);
+  const deferredMatches = useDeferredNhlMatches(resolved);
+  // A deferred slate is shown only once its listing has been served; until then the previous slate stays.
+  const slate: NhlPublicSlate | null = resolved?.deferred
+    ? deferredMatches
+      ? { ...resolved, matches: deferredMatches }
+      : resolveNhlSlate(dayKey, new Date(), { skipDeferred: true })
+    : resolved;
   if (!slate) return null;
 
   // The static HTML carries no current-day text: the date is rendered only after mount, so crawlers

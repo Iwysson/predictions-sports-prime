@@ -14,6 +14,7 @@ import {
 import { buildMobileFootballIndex } from "../src/lib/mobile-feed-build.ts";
 import { resolveNhlSlate } from "../src/data/nhl/slates.ts";
 import { SLATES } from "../src/data/nhl/slates.ts";
+import { deferredMatchesFor, expandDeferredSlate } from "../src/data/nhl/deferred-slates.ts";
 import { buildMobileNhlIndex } from "../src/lib/mobile-feed-build-nhl-nfl.ts";
 import { getNhlTodayKey } from "../src/lib/nhl-day.ts";
 
@@ -77,16 +78,17 @@ function slugSet(list: { slug: string }[]) {
   // NHL: the app's single active slate must equal the website's own resolveNhlSlate
   // result for the exact same "today" - never a wider or narrower set of days.
   const todayKey = getNhlTodayKey(NOW);
-  const direct = resolveNhlSlate(todayKey);
+  // A deferred slate keeps its listing out of the website bundle; the website fetches it from the server once
+  // released, the app builds it from the same server-only module, so both are compared after expansion.
+  const direct = expandDeferredSlate(resolveNhlSlate(todayKey, NOW), NOW);
   const index = buildMobileNhlIndex(NOW);
   const appSlugs = slugSet([...index.free, ...index.vip]);
   const directSlugs = slugSet(direct?.matches ?? []);
   assert.deepEqual(appSlugs, directSlugs, "mobile NHL feed must equal resolveNhlSlate(todayKey) exactly");
 
   // A future slate (later dayKey than today) must not leak into the app before its day.
-  const futureSlate = SLATES.find((s) => s.dayKey > todayKey);
-  if (futureSlate) {
-    for (const m of futureSlate.matches) {
+  for (const futureSlate of SLATES.filter((s) => s.dayKey > todayKey)) {
+    for (const m of futureSlate.deferred ? deferredMatchesFor(futureSlate.dayKey) : futureSlate.matches) {
       assert.ok(!appSlugs.has(m.slug), `a future NHL slate (${futureSlate.dayKey}) must not appear before its day starts`);
     }
   }

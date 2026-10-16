@@ -8,6 +8,7 @@ import { editorialToMatch } from "../src/lib/editorial.ts";
 import { buildMatchPageModel } from "../src/lib/match-page-model.ts";
 import { accessBadgeKind, buildContentIndex, hasMatchPage, matchSlug, resolveAccess } from "../src/lib/match-access.ts";
 import { SLATES } from "../src/data/nhl/slates.ts";
+import { deferredMatchesFor } from "../src/data/nhl/deferred-slates.ts";
 import { NFL_WEEKS } from "../src/data/nfl/weeks.ts";
 import { classifyPspEditorialLifecycle } from "../src/lib/editorial-standard.ts";
 import type { EditorialPrediction } from "../src/types/index.ts";
@@ -97,25 +98,45 @@ for (const bucket of ["today", "tomorrow", "upcoming"] as const) {
 
 // NHL and NFL public data: a FREE game carries pick, odds and analysis; the others carry none of them.
 //
-// Exception: a FREE NHL game whose slate day has not activated yet (its dayKey is for a day later
-// than the currently active one - see src/lib/nhl-publication-policy.ts and src/data/nhl/slates.ts)
-// is allowed to carry no inline pick/odds/analysis, because embedding them now would ship the full
-// FREE prediction in the public client bundle before its publication gate opens. In that case this
-// audit instead requires the deferred content to exist, correctly tagged FREE and activeFromKey-gated
-// to that same day, in the generated protected index - so the gap is verified closed, not just skipped.
-const todayKeyForAudit = new Date().toISOString().slice(0, 10);
-const activeNhlDayKey = SLATES.reduce((latest: string | null, slate) => (slate.dayKey <= todayKeyForAudit ? slate.dayKey : latest), null as string | null);
+// Exception: a FREE NHL game published without an inline pick/odds/analysis (the deferred-disclosure
+// pattern: src/data/nhl/slate-2026-10-16.ts, src/data/nhl/deferred-slates.ts). Embedding the full FREE
+// prediction in the public client bundle would ship it before its publication gate opens, so the content is
+// served only through /api/match-content/[slug]. This is time-independent on purpose: it stays valid after the
+// gate. The audit does not skip the game; it instead requires the deferred content to exist, correctly tagged
+// FREE and activeFromKey-gated to that same slate day, in the generated protected index.
+// A deferred slate (`deferred: true`) must carry no listing in the client-visible registry at all; its listing
+// is audited from the server-only module, entry by entry, against the protected index.
+for (const slate of SLATES) {
+  if (!slate.deferred) continue;
+  if (slate.matches.length) fail(`nhl ${slate.dayKey}`, "deferred slate exposes matches in the client-visible registry");
+  if (!slate.publicationTimezone) fail(`nhl ${slate.dayKey}`, "deferred slate has no publicationTimezone");
+}
 const games = [
-  ...SLATES.flatMap((slate) => slate.matches.map((m) => ({ id: `nhl ${slate.dayKey} ${m.slug}`, g: m as any, dayKey: slate.dayKey }))),
-  ...NFL_WEEKS.flatMap((week) => week.games.map((g) => ({ id: `nfl week${week.weekNumber} ${g.slug}`, g: g as any, dayKey: null as string | null }))),
+  ...SLATES.flatMap((slate) =>
+    (slate.deferred ? deferredMatchesFor(slate.dayKey) : slate.matches).map((m) => ({ id: `nhl ${slate.dayKey} ${m.slug}`, g: m as any, dayKey: slate.dayKey, deferredOnly: Boolean(slate.deferred) })),
+  ),
+  ...NFL_WEEKS.flatMap((week) => week.games.map((g) => ({ id: `nfl week${week.weekNumber} ${g.slug}`, g: g as any, dayKey: null as string | null, deferredOnly: false }))),
 ];
-for (const { id, g, dayKey } of games) {
+for (const { id, g, dayKey, deferredOnly } of games) {
+  const deferred = dayKey === null ? undefined : (entries.find((e) => e.slug === g.slug) as (typeof entries)[number] & { activeFromKey?: string; releaseTimeZone?: string; prediction?: { main?: string; odds?: number | null } } | undefined);
+  if (deferredOnly) {
+    if (!deferred) fail(id, "deferred slate game has no entry in match-content.json");
+    else {
+      if (deferred.activeFromKey !== dayKey) fail(id, `deferred entry activeFromKey ("${deferred.activeFromKey}") does not match its slate day ("${dayKey}")`);
+      if (!deferred.releaseTimeZone) fail(id, "deferred entry has no releaseTimeZone");
+      if (!deferred.prediction?.main || deferred.prediction?.odds == null) fail(id, "deferred match-content.json entry has no pick/odds");
+      const wantFree = g.access === "free";
+      if (wantFree !== (deferred.analysisAccess === "free" && deferred.predictionAccess === "free")) fail(id, "deferred entry tier does not match the listing tier");
+      if (!wantFree && (deferred.analysisAccess === "free" || deferred.predictionAccess === "free")) fail(id, "non-FREE deferred entry is tagged FREE");
+    }
+    if (g.pick || g.odds !== undefined || g.analysis?.length) fail(id, "deferred listing exposes pick, odds or analysis");
+    if (g.access === "free") freeCount += 1;
+    continue;
+  }
   if (g.access === "free") {
     freeCount += 1;
-    const notYetActive = dayKey !== null && activeNhlDayKey !== null && dayKey > activeNhlDayKey;
-    if (!g.pick && notYetActive) {
-      const deferred = entries.find((e) => e.slug === g.slug) as (typeof entries)[number] & { activeFromKey?: string; prediction?: { main?: string; odds?: number | null } } | undefined;
-      if (!deferred) fail(id, "FREE game not yet active has no deferred entry in match-content.json");
+    if (!g.pick && dayKey !== null) {
+      if (!deferred) fail(id, "FREE game published without inline content has no deferred entry in match-content.json");
       else {
         if (deferred.analysisAccess !== "free" || deferred.predictionAccess !== "free") fail(id, "FREE game's deferred match-content.json entry is not tagged FREE");
         if (deferred.activeFromKey !== dayKey) fail(id, `FREE game's deferred entry activeFromKey ("${deferred.activeFromKey}") does not match its slate day ("${dayKey}")`);

@@ -40,6 +40,14 @@ export type NhlPublicSlate = {
   dayKey: string;
   matches: NhlPublicMatch[];
   multiples: NhlPublicMultiple[];
+  // IANA zone whose local midnight on `dayKey` is the earliest instant this slate may be public
+  // (src/lib/nhl-publication-policy.ts). Absent = the original America/Sao_Paulo rule, so slates
+  // published before per-slate zones keep their behaviour.
+  publicationTimezone?: string;
+  // The public listing itself (teams, titles, tiers) is withheld from this client-visible registry
+  // until release: `matches` is empty here and the real list lives in the server-only
+  // src/data/nhl/deferred-slates.ts, served by /api/nhl/slate/[day] and the mobile feed once released.
+  deferred?: boolean;
 };
 
 export type MultipleSurface = "general" | "nhl" | "nfl";

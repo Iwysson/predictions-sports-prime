@@ -44,8 +44,10 @@ export type ProtectedContentEntry = {
   predictionAccess: PredictionAccess;
   full: FullMatchView;
   prediction: { main: string; odds: number | null };
-  // NHL day key (YYYY-MM-DD, America/New_York) before which the endpoint returns not-found.
+  // NHL day key (YYYY-MM-DD) before which the endpoint returns not-found. It opens at 00:00:00 of that date
+  // in `releaseTimeZone` (IANA name; default America/New_York, the NHL day rule).
   activeFromKey?: string;
+  releaseTimeZone?: string;
 };
 
 // A match page exists until the match is FINAL and settled (see match-page-lifecycle.ts).

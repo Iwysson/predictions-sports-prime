@@ -1,4 +1,5 @@
 import { resolveNhlSlate } from "@/data/nhl/slates";
+import { expandDeferredSlate } from "@/data/nhl/deferred-slates";
 import { getNhlTodayKey } from "@/lib/nhl-day";
 import { resolveNflWeek } from "@/data/nfl/weeks";
 import type { NhlPublicMatch } from "@/lib/nhl-slates";
@@ -35,9 +36,10 @@ function splitByTier(items: MobileSlateItem[]): { free: MobileSlateItem[]; vip: 
 // NHL shows exactly one active slate at a time on the website too (src/data/nhl/slates.ts:
 // resolveNhlSlate - "the latest slate whose day has started"), never a multi-day
 // Today/Tomorrow/Upcoming split. Reusing that resolver directly (not a reimplementation)
-// is what keeps the app from ever showing a day the website wouldn't show yet.
+// is what keeps the app from ever showing a day the website wouldn't show yet. A deferred slate's listing
+// (kept out of the website bundle until its gate) is filled in here, server-side only, and only once released.
 export function buildMobileNhlIndex(now: Date = new Date()): MobileSingleSlateIndex {
-  const slate = resolveNhlSlate(getNhlTodayKey(now));
+  const slate = expandDeferredSlate(resolveNhlSlate(getNhlTodayKey(now), now), now);
   const items = (slate?.matches ?? []).map(toMobileSlateItem);
   const { free, vip } = splitByTier(items);
   return { generatedAt: new Date().toISOString(), free, vip };

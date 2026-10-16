@@ -15,7 +15,7 @@ import { NHL_PUBLIC_MATCHES_OCT_14 } from "@/data/nhl/slate-2026-10-14";
 import { NHL_PUBLIC_MATCHES_OCT_15 } from "@/data/nhl/slate-2026-10-15";
 import { NHL_PUBLIC_MATCHES_OCT_16 } from "@/data/nhl/slate-2026-10-16";
 import type { NhlPublicSlate } from "@/lib/nhl-slates";
-import { isNhlMatchDayReleased } from "@/lib/nhl-publication-policy";
+import { NHL_NEW_YORK_TIME_ZONE, NHL_PUBLICATION_TIME_ZONE, isNhlSlateReleased } from "@/lib/nhl-publication-policy";
 
 // Every NHL day with a slate, oldest first. Adding a day here (and its protected entries) is the
 // only change a new NHL day needs. The active slate is the latest one whose day has started.
@@ -75,21 +75,33 @@ export const SLATES: NhlPublicSlate[] = [
   { dayKey: "2026-10-14", matches: NHL_PUBLIC_MATCHES_OCT_14, multiples: [] },
   { dayKey: "2026-10-15", matches: NHL_PUBLIC_MATCHES_OCT_15, multiples: [] },
   { dayKey: "2026-10-16", matches: NHL_PUBLIC_MATCHES_OCT_16, multiples: [] },
+  // Deferred slate: nothing about these 14 games (not even the teams) is in this client-visible file. The
+  // listing is server-only (src/data/nhl/deferred-slates.ts) and the full content is protected
+  // (src/data/nhl/protected-2026-10-17.json). Release: 2026-10-17 00:00:00 America/New_York.
+  { dayKey: "2026-10-17", matches: [], multiples: [], deferred: true, publicationTimezone: NHL_NEW_YORK_TIME_ZONE },
 ];
 
 // The slate for the NHL day `todayKey` (YYYY-MM-DD, America/New_York). It switches at 00:00 ET
 // because the key changes; nothing else decides it. Before the first slate it returns null.
 //
-// Mandatory PSP NHL publication rule: a slate also never activates before 00:00 America/Sao_Paulo
-// on its own dayKey (src/lib/nhl-publication-policy.ts). In practice America/New_York's local
-// midnight is always at or after America/Sao_Paulo's for the same date (New York's UTC offset is
-// always more negative than Sao Paulo's fixed UTC-3), so this check is normally already satisfied
-// by the dayKey comparison above; it is kept explicit so the rule is enforced directly rather than
-// relying on that incidental ordering.
-export function resolveNhlSlate(todayKey: string, now: Date = new Date()): NhlPublicSlate | null {
+// Mandatory PSP NHL publication rule: a slate also never activates before 00:00 on its own dayKey in its
+// publication time zone (src/lib/nhl-publication-policy.ts). A slate without `publicationTimezone` keeps
+// the original America/Sao_Paulo rule, whose midnight is never later than New York's, so for those slates
+// the dayKey comparison is the binding one. A slate with `publicationTimezone: "America/New_York"` opens at
+// exactly the New York midnight, evaluated with the IANA zone (EST/EDT handled by Intl, no fixed offset).
+//
+// `skipDeferred` lets a client fall back to the previous slate while a deferred slate's listing has not
+// been fetched yet (or the fetch was refused because the server clock has not reached the gate).
+export function resolveNhlSlate(
+  todayKey: string,
+  now: Date = new Date(),
+  options: { skipDeferred?: boolean } = {},
+): NhlPublicSlate | null {
   let active: NhlPublicSlate | null = null;
   for (const slate of SLATES) {
-    if (slate.dayKey <= todayKey && isNhlMatchDayReleased(slate.dayKey, now)) active = slate;
+    if (options.skipDeferred && slate.deferred) continue;
+    const release = { date: slate.dayKey, timezone: slate.publicationTimezone ?? NHL_PUBLICATION_TIME_ZONE };
+    if (slate.dayKey <= todayKey && isNhlSlateReleased(release, now)) active = slate;
   }
   return active;
 }

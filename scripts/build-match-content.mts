@@ -17,12 +17,14 @@ const nhlEntries: ProtectedContentEntry[] = nhlMatches().map((m) => ({
 
 type LaterEntryFile = {
   activeFromKey: string;
+  // IANA zone whose local midnight on activeFromKey opens the entries. Absent = America/New_York (the NHL day).
+  releaseTimeZone?: string;
   entries: Array<{ slug: string; analysisAccess: "free" | "vip"; predictionAccess: "free" | "vip"; pick: string; odds: number; analysis: string[]; analysisFormat?: "markdown"; sources?: Array<{ name: string; url: string }> }>;
 };
 
-// NHL protected entries for later days. They stay "not-found" in the endpoint until the NHL day
-// (America/New_York) reaches activeFromKey. Add a new file here for each later NHL day.
-const nhlLaterFiles = ["src/data/nhl/protected-2026-10-07.json", "src/data/nhl/protected-2026-10-08.json", "src/data/nhl/protected-2026-10-09.json", "src/data/nhl/protected-2026-10-10.json", "src/data/nhl/protected-2026-10-11.json", "src/data/nhl/protected-2026-10-12.json", "src/data/nhl/protected-2026-10-13.json", "src/data/nhl/protected-2026-10-14.json", "src/data/nhl/protected-2026-10-15.json", "src/data/nhl/protected-2026-10-16.json"];
+// NHL protected entries for later days. They stay "not-found" in the endpoint until 00:00 of
+// activeFromKey in the file's releaseTimeZone (default America/New_York, the NHL day). Add a new file here for each later NHL day.
+const nhlLaterFiles = ["src/data/nhl/protected-2026-10-07.json", "src/data/nhl/protected-2026-10-08.json", "src/data/nhl/protected-2026-10-09.json", "src/data/nhl/protected-2026-10-10.json", "src/data/nhl/protected-2026-10-11.json", "src/data/nhl/protected-2026-10-12.json", "src/data/nhl/protected-2026-10-13.json", "src/data/nhl/protected-2026-10-14.json", "src/data/nhl/protected-2026-10-15.json", "src/data/nhl/protected-2026-10-16.json", "src/data/nhl/protected-2026-10-17.json"];
 for (const file of nhlLaterFiles) {
   const later = JSON.parse(readFileSync(file, "utf8")) as LaterEntryFile;
   for (const e of later.entries) {
@@ -33,6 +35,7 @@ for (const file of nhlLaterFiles) {
       full: { analysis: e.analysis, analysisFormat: e.analysisFormat, sources: e.sources ?? [], comment: null, picks: { main: e.pick, odds: e.odds } },
       prediction: { main: e.pick, odds: e.odds },
       activeFromKey: later.activeFromKey,
+      ...(later.releaseTimeZone ? { releaseTimeZone: later.releaseTimeZone } : {}),
     });
   }
 }
