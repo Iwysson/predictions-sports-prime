@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-15T23:49:09.147Z",
+  "generatedAt": "2026-10-16T01:42:47.376Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -981,7 +981,8 @@
             "id": "401878771",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T11:30Z"
+            "kickoffUtc": "2026-10-17T11:30Z",
+            "espnEventId": "401878771"
           },
           {
             "round": 7,
@@ -996,7 +997,8 @@
             "id": "401878770",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T14:00Z"
+            "kickoffUtc": "2026-10-17T14:00Z",
+            "espnEventId": "401878770"
           },
           {
             "round": 7,
@@ -1011,7 +1013,8 @@
             "id": "401879259",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T14:00Z"
+            "kickoffUtc": "2026-10-17T14:00Z",
+            "espnEventId": "401879259"
           },
           {
             "round": 7,
@@ -1026,7 +1029,8 @@
             "id": "401879262",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T14:00Z"
+            "kickoffUtc": "2026-10-17T14:00Z",
+            "espnEventId": "401879262"
           },
           {
             "round": 7,
@@ -1041,7 +1045,8 @@
             "id": "401879258",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T16:30Z"
+            "kickoffUtc": "2026-10-17T16:30Z",
+            "espnEventId": "401879258"
           },
           {
             "round": 7,
@@ -5192,7 +5197,8 @@
             "id": "401884769",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T13:30Z"
+            "kickoffUtc": "2026-10-17T13:30Z",
+            "espnEventId": "401884769"
           },
           {
             "round": 6,
@@ -5207,7 +5213,8 @@
             "id": "401884767",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T13:30Z"
+            "kickoffUtc": "2026-10-17T13:30Z",
+            "espnEventId": "401884767"
           },
           {
             "round": 6,
@@ -5222,7 +5229,8 @@
             "id": "401884766",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T13:30Z"
+            "kickoffUtc": "2026-10-17T13:30Z",
+            "espnEventId": "401884766"
           },
           {
             "round": 6,
@@ -5237,7 +5245,8 @@
             "id": "401884764",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T13:30Z"
+            "kickoffUtc": "2026-10-17T13:30Z",
+            "espnEventId": "401884764"
           },
           {
             "round": 6,
@@ -5252,7 +5261,8 @@
             "id": "401884765",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T13:30Z"
+            "kickoffUtc": "2026-10-17T13:30Z",
+            "espnEventId": "401884765"
           },
           {
             "round": 6,
@@ -5267,7 +5277,8 @@
             "id": "401884772",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T16:30Z"
+            "kickoffUtc": "2026-10-17T16:30Z",
+            "espnEventId": "401884772"
           },
           {
             "round": 6,
@@ -7695,7 +7706,8 @@
             "id": "401874760",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T13:00Z"
+            "kickoffUtc": "2026-10-17T13:00Z",
+            "espnEventId": "401874760"
           },
           {
             "round": 7,
@@ -7710,7 +7722,8 @@
             "id": "401874953",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T16:00Z"
+            "kickoffUtc": "2026-10-17T16:00Z",
+            "espnEventId": "401874953"
           },
           {
             "round": 7,
@@ -7725,7 +7738,8 @@
             "id": "401874935",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T18:45Z"
+            "kickoffUtc": "2026-10-17T18:45Z",
+            "espnEventId": "401874935"
           },
           {
             "round": 7,
@@ -10915,7 +10929,8 @@
             "id": "401876432",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T15:15Z"
+            "kickoffUtc": "2026-10-17T15:15Z",
+            "espnEventId": "401876432"
           },
           {
             "round": 7,
@@ -10930,7 +10945,8 @@
             "id": "401876431",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T18:45Z"
+            "kickoffUtc": "2026-10-17T18:45Z",
+            "espnEventId": "401876431"
           },
           {
             "round": 7,
@@ -10945,7 +10961,8 @@
             "id": "401876436",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:45Z"
+            "kickoffUtc": "2026-10-17T18:45Z",
+            "espnEventId": "401876436"
           },
           {
             "round": 7,
@@ -12598,7 +12615,8 @@
             "id": "401875582",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T14:30Z"
+            "kickoffUtc": "2026-10-17T14:30Z",
+            "espnEventId": "401875582"
           },
           {
             "round": 9,
@@ -12613,7 +12631,8 @@
             "id": "401875580",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T18:00Z"
+            "kickoffUtc": "2026-10-17T18:00Z",
+            "espnEventId": "401875580"
           },
           {
             "round": 9,
@@ -12628,7 +12647,8 @@
             "id": "401875579",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T19:00Z"
+            "kickoffUtc": "2026-10-17T19:00Z",
+            "espnEventId": "401875579"
           },
           {
             "round": 9,
@@ -15769,7 +15789,8 @@
       "id": "401843465",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-17T12:00Z"
+      "kickoffUtc": "2026-10-17T12:00Z",
+      "espnEventId": "401843465"
     },
     "401873903": {
       "round": 22,
@@ -15799,7 +15820,8 @@
       "id": "401878363",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-17T14:00Z"
+      "kickoffUtc": "2026-10-17T14:00Z",
+      "espnEventId": "401878363"
     },
     "401878364": {
       "round": 9,
@@ -15814,7 +15836,8 @@
       "id": "401878364",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-17T14:00Z"
+      "kickoffUtc": "2026-10-17T14:00Z",
+      "espnEventId": "401878364"
     },
     "401878365": {
       "round": 9,
@@ -15829,7 +15852,8 @@
       "id": "401878365",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-17T14:00Z"
+      "kickoffUtc": "2026-10-17T14:00Z",
+      "espnEventId": "401878365"
     },
     "401878366": {
       "round": 9,
@@ -15844,7 +15868,8 @@
       "id": "401878366",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-17T19:00Z"
+      "kickoffUtc": "2026-10-17T19:00Z",
+      "espnEventId": "401878366"
     },
     "401878368": {
       "round": 9,
@@ -15859,7 +15884,8 @@
       "id": "401878368",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-17T14:00Z"
+      "kickoffUtc": "2026-10-17T14:00Z",
+      "espnEventId": "401878368"
     },
     "401878399": {
       "round": 1,
@@ -16084,7 +16110,8 @@
       "id": "401888271",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-17T10:30Z"
+      "kickoffUtc": "2026-10-17T10:30Z",
+      "espnEventId": "401888271"
     },
     "401888272": {
       "round": 8,
@@ -16114,7 +16141,8 @@
       "id": "401888273",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-17T16:00Z"
+      "kickoffUtc": "2026-10-17T16:00Z",
+      "espnEventId": "401888273"
     },
     "401888274": {
       "round": 8,
@@ -16129,7 +16157,8 @@
       "id": "401888274",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-17T13:00Z"
+      "kickoffUtc": "2026-10-17T13:00Z",
+      "espnEventId": "401888274"
     },
     "401888275": {
       "round": 8,
@@ -16511,7 +16540,8 @@
       "id": "401888378",
       "sourceAgreement": true,
       "timeConfirmed": true,
-      "kickoffUtc": "2026-10-17T13:00Z"
+      "kickoffUtc": "2026-10-17T13:00Z",
+      "espnEventId": "401888378"
     },
     "401888381": {
       "round": 6,
@@ -19745,7 +19775,8 @@
       "id": "editorial:brasileirao-serie-a:botafogo-vs-chapecoense:2026-10-17",
       "sourceAgreement": false,
       "timeConfirmed": false,
-      "kickoffUtc": "2026-10-17T21:00:00.000Z"
+      "kickoffUtc": "2026-10-17T21:00:00.000Z",
+      "espnEventId": "401841268"
     },
     "editorial:brasileirao-serie-a:atletico-mg-vs-coritiba:2026-10-17": {
       "round": 31,
@@ -19760,7 +19791,8 @@
       "id": "editorial:brasileirao-serie-a:atletico-mg-vs-coritiba:2026-10-17",
       "sourceAgreement": false,
       "timeConfirmed": false,
-      "kickoffUtc": "2026-10-17T21:30:00.000Z"
+      "kickoffUtc": "2026-10-17T21:30:00.000Z",
+      "espnEventId": "401841270"
     },
     "editorial:brasileirao-serie-a:athletico-pr-vs-palmeiras:2026-10-17": {
       "round": 31,
@@ -19775,7 +19807,8 @@
       "id": "editorial:brasileirao-serie-a:athletico-pr-vs-palmeiras:2026-10-17",
       "sourceAgreement": false,
       "timeConfirmed": false,
-      "kickoffUtc": "2026-10-17T22:30:00.000Z"
+      "kickoffUtc": "2026-10-17T22:30:00.000Z",
+      "espnEventId": "401841271"
     },
     "editorial:brasileirao-serie-a:sao-paulo-vs-vasco:2026-10-17": {
       "round": 31,
@@ -19790,7 +19823,8 @@
       "id": "editorial:brasileirao-serie-a:sao-paulo-vs-vasco:2026-10-17",
       "sourceAgreement": false,
       "timeConfirmed": false,
-      "kickoffUtc": "2026-10-18T00:00:00.000Z"
+      "kickoffUtc": "2026-10-18T00:00:00.000Z",
+      "espnEventId": "401841273"
     },
     "editorial:brasileirao-serie-a:fluminense-vs-santos:2026-10-18": {
       "round": 31,
