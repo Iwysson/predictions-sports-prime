@@ -130,5 +130,11 @@
     "awayCorners": 8,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/summary?event=401879266",
     "capturedAt": "2026-10-11T18:05:12.957Z"
+  },
+  "ligue-1:le-mans-vs-toulouse": {
+    "homeCorners": 2,
+    "awayCorners": 2,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876437",
+    "capturedAt": "2026-10-16T21:50:28.916Z"
   }
 }

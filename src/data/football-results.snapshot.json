@@ -419,6 +419,25 @@
       "settledAt": "2026-10-09T21:28:25.608Z",
       "publishedAt": "2026-10-06T12:00:00.000Z"
     },
+    "bundesliga:eintracht-frankfurt-vs-cologne": {
+      "key": "bundesliga:eintracht-frankfurt-vs-cologne",
+      "league": "bundesliga",
+      "slug": "eintracht-frankfurt-vs-cologne",
+      "homeTeam": "Eintracht Frankfurt",
+      "awayTeam": "Cologne",
+      "date": "2026-10-16",
+      "fixtureId": "401884770",
+      "predictionAccess": "vip",
+      "prediction": "Frankfurt or Draw (1X) + Under 4.5 Goals",
+      "odds": 1.88,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-16T21:50:41.889Z",
+      "publishedAt": "2026-10-13T12:00:00.000-03:00"
+    },
     "bundesliga:freiburg-vs-schalke": {
       "key": "bundesliga:freiburg-vs-schalke",
       "league": "bundesliga",
@@ -932,6 +951,25 @@
       "settledAt": "2026-10-09T21:28:25.608Z",
       "publishedAt": "2026-10-06T12:00:00.000Z"
     },
+    "eredivisie:sc-heerenveen-vs-excelsior": {
+      "key": "eredivisie:sc-heerenveen-vs-excelsior",
+      "league": "eredivisie",
+      "slug": "sc-heerenveen-vs-excelsior",
+      "homeTeam": "SC Heerenveen",
+      "awayTeam": "Excelsior",
+      "date": "2026-10-16",
+      "fixtureId": "401875583",
+      "predictionAccess": "vip",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.4,
+      "finalScore": {
+        "home": 4,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-16T21:50:41.889Z",
+      "publishedAt": "2026-10-12T12:00:00.000-03:00"
+    },
     "eredivisie:telstar-vs-ado-den-haag": {
       "key": "eredivisie:telstar-vs-ado-den-haag",
       "league": "eredivisie",
@@ -1331,6 +1369,25 @@
       "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "ligue-1:le-mans-vs-toulouse": {
+      "key": "ligue-1:le-mans-vs-toulouse",
+      "league": "ligue-1",
+      "slug": "le-mans-vs-toulouse",
+      "homeTeam": "Le Mans",
+      "awayTeam": "Toulouse",
+      "date": "2026-10-16",
+      "fixtureId": "401876437",
+      "predictionAccess": "vip",
+      "prediction": "Over 1.5 Goals + Over 7.5 Total Corners",
+      "odds": 1.61,
+      "finalScore": {
+        "home": 0,
+        "away": 3
+      },
+      "result": "red",
+      "settledAt": "2026-10-16T21:50:41.889Z",
+      "publishedAt": "2026-10-13T12:00:00.000-03:00"
+    },
     "ligue-1:lens-vs-lyon": {
       "key": "ligue-1:lens-vs-lyon",
       "league": "ligue-1",
@@ -1672,6 +1729,25 @@
       "result": "red",
       "settledAt": "2026-10-11T13:15:09.765Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
+    "serie-a:frosinone-vs-sassuolo": {
+      "key": "serie-a:frosinone-vs-sassuolo",
+      "league": "serie-a",
+      "slug": "frosinone-vs-sassuolo",
+      "homeTeam": "Frosinone",
+      "awayTeam": "Sassuolo",
+      "date": "2026-10-16",
+      "fixtureId": "401874959",
+      "predictionAccess": "vip",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.5,
+      "finalScore": {
+        "home": 4,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-16T21:50:41.889Z",
+      "publishedAt": "2026-10-12T12:00:00.000-03:00"
     },
     "serie-a:genoa-vs-fiorentina": {
       "key": "serie-a:genoa-vs-fiorentina",

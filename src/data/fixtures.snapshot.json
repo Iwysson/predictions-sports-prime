@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-16T18:56:09.566Z",
+  "generatedAt": "2026-10-16T21:50:28.916Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -5174,15 +5174,14 @@
             "time": "20:30",
             "homeTeam": "Eintracht Frankfurt",
             "awayTeam": "Cologne",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "in-progress",
+            "homeScore": 1,
+            "awayScore": 0,
+            "status": "completed",
             "dataSource": "espn",
             "id": "401884770",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-16T18:30Z",
-            "espnEventId": "401884770"
+            "kickoffUtc": "2026-10-16T18:30Z"
           },
           {
             "round": 6,
@@ -5197,8 +5196,7 @@
             "id": "401884769",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T13:30Z",
-            "espnEventId": "401884769"
+            "kickoffUtc": "2026-10-17T13:30Z"
           },
           {
             "round": 6,
@@ -5213,8 +5211,7 @@
             "id": "401884767",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T13:30Z",
-            "espnEventId": "401884767"
+            "kickoffUtc": "2026-10-17T13:30Z"
           },
           {
             "round": 6,
@@ -5229,8 +5226,7 @@
             "id": "401884766",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T13:30Z",
-            "espnEventId": "401884766"
+            "kickoffUtc": "2026-10-17T13:30Z"
           },
           {
             "round": 6,
@@ -5245,8 +5241,7 @@
             "id": "401884764",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T13:30Z",
-            "espnEventId": "401884764"
+            "kickoffUtc": "2026-10-17T13:30Z"
           },
           {
             "round": 6,
@@ -5261,8 +5256,7 @@
             "id": "401884765",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T13:30Z",
-            "espnEventId": "401884765"
+            "kickoffUtc": "2026-10-17T13:30Z"
           },
           {
             "round": 6,
@@ -5277,8 +5271,7 @@
             "id": "401884772",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T16:30Z",
-            "espnEventId": "401884772"
+            "kickoffUtc": "2026-10-17T16:30Z"
           },
           {
             "round": 6,
@@ -7683,15 +7676,16 @@
             "time": "20:45",
             "homeTeam": "Frosinone",
             "awayTeam": "Sassuolo",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "in-progress",
-            "dataSource": "espn",
+            "homeScore": 4,
+            "awayScore": 2,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401874959",
             "sourceAgreement": true,
             "timeConfirmed": true,
             "kickoffUtc": "2026-10-16T18:45Z",
-            "espnEventId": "401874959"
+            "espnEventId": "401874959",
+            "fotmobMatchId": 5749704
           },
           {
             "round": 7,
@@ -10906,15 +10900,14 @@
             "time": "20:45",
             "homeTeam": "Le Mans",
             "awayTeam": "Toulouse",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "in-progress",
+            "homeScore": 0,
+            "awayScore": 3,
+            "status": "completed",
             "dataSource": "espn",
             "id": "401876437",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-16T18:45Z",
-            "espnEventId": "401876437"
+            "kickoffUtc": "2026-10-16T18:45Z"
           },
           {
             "round": 7,
@@ -10929,8 +10922,7 @@
             "id": "401876432",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T15:15Z",
-            "espnEventId": "401876432"
+            "kickoffUtc": "2026-10-17T15:15Z"
           },
           {
             "round": 7,
@@ -10945,8 +10937,7 @@
             "id": "401876431",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T18:45Z",
-            "espnEventId": "401876431"
+            "kickoffUtc": "2026-10-17T18:45Z"
           },
           {
             "round": 7,
@@ -10961,8 +10952,7 @@
             "id": "401876436",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-17T18:45Z",
-            "espnEventId": "401876436"
+            "kickoffUtc": "2026-10-17T18:45Z"
           },
           {
             "round": 7,
@@ -12164,146 +12154,6 @@
     ],
     "eredivisie": [
       {
-        "round": 3,
-        "games": [
-          {
-            "round": 3,
-            "date": "2026-08-22",
-            "time": "16:30",
-            "homeTeam": "Fortuna Sittard",
-            "awayTeam": "AZ Alkmaar",
-            "homeScore": 0,
-            "awayScore": 2,
-            "status": "completed",
-            "dataSource": "espn",
-            "id": "401875637",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-22T14:30Z"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-22",
-            "time": "18:45",
-            "homeTeam": "Sparta Rotterdam",
-            "awayTeam": "Utrecht",
-            "homeScore": 3,
-            "awayScore": 3,
-            "status": "completed",
-            "dataSource": "espn",
-            "id": "401875635",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-22T16:45Z"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-22",
-            "time": "21:00",
-            "homeTeam": "Heerenveen",
-            "awayTeam": "PEC Zwolle",
-            "homeScore": 0,
-            "awayScore": 2,
-            "status": "completed",
-            "dataSource": "espn",
-            "id": "401875634",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-22T19:00Z"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "time": "12:15",
-            "homeTeam": "Go Ahead Eagles",
-            "awayTeam": "ADO Den Haag",
-            "homeScore": 3,
-            "awayScore": 1,
-            "status": "completed",
-            "dataSource": "espn",
-            "id": "401875633",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-23T10:15Z"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "time": "14:30",
-            "homeTeam": "PSV Eindhoven",
-            "awayTeam": "Groningen",
-            "homeScore": 5,
-            "awayScore": 1,
-            "status": "completed",
-            "dataSource": "espn",
-            "id": "401875632",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-23T12:30Z"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "time": "16:45",
-            "homeTeam": "SC Cambuur",
-            "awayTeam": "Feyenoord Rotterdam",
-            "homeScore": 2,
-            "awayScore": 5,
-            "status": "completed",
-            "dataSource": "espn",
-            "id": "401875631",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-08-23T14:45Z"
-          },
-          {
-            "round": 3,
-            "date": "2026-09-08",
-            "time": "18:45",
-            "homeTeam": "NEC Nijmegen",
-            "awayTeam": "Excelsior",
-            "homeScore": 2,
-            "awayScore": 2,
-            "status": "completed",
-            "dataSource": "espn",
-            "id": "401875636",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-08T16:45Z"
-          },
-          {
-            "round": 3,
-            "date": "2026-09-09",
-            "time": "18:45",
-            "homeTeam": "Twente",
-            "awayTeam": "Telstar",
-            "homeScore": 1,
-            "awayScore": 0,
-            "status": "completed",
-            "dataSource": "espn",
-            "id": "401875612",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-09T16:45Z"
-          },
-          {
-            "round": 3,
-            "date": "2026-09-15",
-            "time": "20:00",
-            "homeTeam": "Ajax Amsterdam",
-            "awayTeam": "Willem II",
-            "homeScore": 5,
-            "awayScore": 1,
-            "status": "completed",
-            "dataSource": "fotmob",
-            "id": "401875602",
-            "sourceAgreement": true,
-            "timeConfirmed": true,
-            "kickoffUtc": "2026-09-15T18:00Z"
-          }
-        ]
-      },
-      {
         "round": 7,
         "games": [
           {
@@ -12592,15 +12442,14 @@
             "time": "20:00",
             "homeTeam": "Heerenveen",
             "awayTeam": "Excelsior",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "in-progress",
+            "homeScore": 4,
+            "awayScore": 0,
+            "status": "completed",
             "dataSource": "espn",
             "id": "401875583",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-16T18:00Z",
-            "espnEventId": "401875583"
+            "kickoffUtc": "2026-10-16T18:00Z"
           },
           {
             "round": 9,
@@ -12615,8 +12464,7 @@
             "id": "401875582",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T14:30Z",
-            "espnEventId": "401875582"
+            "kickoffUtc": "2026-10-17T14:30Z"
           },
           {
             "round": 9,
@@ -12631,8 +12479,7 @@
             "id": "401875580",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T18:00Z",
-            "espnEventId": "401875580"
+            "kickoffUtc": "2026-10-17T18:00Z"
           },
           {
             "round": 9,
@@ -12647,8 +12494,7 @@
             "id": "401875579",
             "sourceAgreement": true,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-10-17T19:00Z",
-            "espnEventId": "401875579"
+            "kickoffUtc": "2026-10-17T19:00Z"
           },
           {
             "round": 9,
@@ -15308,7 +15154,6 @@
     "serie-a:udinese-vs-lecce": "401874771",
     "serie-a:venezia-vs-napoli": "401874760",
     "super-lig:amedspor-vs-konyaspor": "401888378",
-    "super-lig:corum-fk-vs-caykur-rizespor": "401888377",
     "super-lig:erzurumspor-vs-eyupspor": "401888271",
     "super-lig:fenerbahce-vs-alanyaspor": "401888273",
     "super-lig:genclerbirligi-vs-galatasaray": "401888274",
@@ -15329,11 +15174,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-15T21:38:20.114Z",
+    "bundesliga": "2026-10-16T21:50:28.916Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
     "liga-portugal": "2026-10-15T21:38:20.114Z",
-    "ligue-1": "2026-10-15T21:38:20.114Z",
-    "eredivisie": "2026-10-15T21:38:20.114Z",
+    "ligue-1": "2026-10-16T21:50:28.916Z",
+    "eredivisie": "2026-10-16T21:50:28.916Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
