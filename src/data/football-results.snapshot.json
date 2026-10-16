@@ -1825,6 +1825,25 @@
       "settledAt": "2026-10-11T18:05:27.889Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
+    "super-lig:corum-fk-vs-caykur-rizespor": {
+      "key": "super-lig:corum-fk-vs-caykur-rizespor",
+      "league": "super-lig",
+      "slug": "corum-fk-vs-caykur-rizespor",
+      "homeTeam": "Çorum FK",
+      "awayTeam": "Çaykur Rizespor",
+      "date": "2026-10-16",
+      "fixtureId": "401888377",
+      "predictionAccess": "free",
+      "prediction": "Çorum FK or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.68,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-16T18:56:26.231Z",
+      "publishedAt": "2026-10-12T12:00:00.000-03:00"
+    },
     "super-lig:eyupspor-vs-goztepe": {
       "key": "super-lig:eyupspor-vs-goztepe",
       "league": "super-lig",
