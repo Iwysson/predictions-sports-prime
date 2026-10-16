@@ -76,10 +76,20 @@ const records = [
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 // Club names that contain a Portuguese word but are proper nouns in English text.
 const properNouns = ["Vitória de Guimarães", "Casa Pia"];
+// The Brazilian club Vitória (Esporte Clube Vitória) is a proper noun in English text when it is mentioned as an
+// opponent of another fixture. Matched case-sensitively and capitalised only, so the Portuguese noun "vitória" stays flagged.
+const caseSensitiveProperNouns = ["Vitória"];
+// URLs are identifiers, not editorial prose: an official source link such as ".../match/temporada-2026-2027-laliga-..."
+// is not Portuguese text and cannot be translated without breaking the link. Prose around the link is still checked.
+const URL_PATTERN = /https?:\/\/[^\s)\]>"']+/gi;
 const failures = records.flatMap(({ label, teamNames, text }) => {
-  const editorialText = [...teamNames, ...properNouns].reduce(
+  const withoutNames = [...teamNames, ...properNouns].reduce(
     (value, teamName) => value.replace(new RegExp(escapeRegExp(teamName), "gi"), ""),
-    text,
+    text.replace(URL_PATTERN, " "),
+  );
+  const editorialText = caseSensitiveProperNouns.reduce(
+    (value, noun) => value.replace(new RegExp(escapeRegExp(noun), "g"), ""),
+    withoutNames,
   );
   return portuguesePatterns.filter((pattern) => pattern.test(editorialText)).map((pattern) => `${label}: ${pattern}`);
 }

@@ -128,6 +128,9 @@ export type FinalScoreGame = {
   homeScore: number;
   awayScore: number;
   state: MatchStatus;
+  // True when the provider marks the game as cancelled (gameScheduleState "CNCL"): its bets are void. A postponed
+  // game (PPD) is NOT void - it stays pending until it is played.
+  voided?: boolean;
 };
 
 export function normalizeFinalScores(payload: unknown): FinalScoreGame[] | null {
@@ -141,6 +144,10 @@ export function normalizeFinalScores(payload: unknown): FinalScoreGame[] | null 
     const homeScore = game?.homeTeam?.score;
     const awayScore = game?.awayTeam?.score;
     if (typeof game?.id !== "number" || typeof home !== "string" || typeof away !== "string") continue;
+    if (game.gameScheduleState === "CNCL") {
+      out.push({ home, away, homeScore: 0, awayScore: 0, state: "unknown", voided: true });
+      continue;
+    }
     if (typeof homeScore !== "number" || typeof awayScore !== "number") continue;
     out.push({ home, away, homeScore, awayScore, state: mapGameState(game.gameState) });
   }

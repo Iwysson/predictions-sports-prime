@@ -49,7 +49,7 @@ function occurrences(text, needle) {
 // A phrase inside a longer public pick (for example the NHL's New York Rangers selection)
 // is not the Dundee entry. Multiple legs are also checked as plain text inside their
 // bounded block, where the pick may be followed by an @odds suffix.
-const exactForms = (pick) => [`"${pick}"`, `\\"${pick}\\"`, `>${pick}<`];
+const exactForms = (pick) => [`"${pick}"`, `\\"${pick}\\"`, `\\\\\\"${pick}\\\\\\"`, `>${pick}<`];
 function pickOccurrences(text, pick, windows) {
   const structured = exactForms(pick).flatMap((form) => occurrences(text, form).map((i) => i + form.indexOf(pick)));
   const multipleLegs = occurrences(text, pick).filter((at) => inside(windows, at));
@@ -88,6 +88,48 @@ function removeRanges(text, find) {
   }
 }
 
+// Quote forms of a JSON/RSC string: plain, escaped once (a JSON string inside a script) and escaped twice
+// (the RSC payload that Next.js embeds as a JS string literal in the page HTML).
+const QUOTE_FORMS = ['"', '\\"', '\\\\\\"'];
+
+// End index (exclusive) of the bracketed RSC element that starts at `start` (a "["), or -1 when it never balances.
+function balancedEnd(text, start) {
+  let depth = 0;
+  for (let i = start; i < text.length; i += 1) {
+    const ch = text[i];
+    if (ch === "[") depth += 1;
+    else if (ch === "]") {
+      depth -= 1;
+      if (depth === 0) return i + 1;
+    }
+  }
+  return -1;
+}
+
+// RSC elements of a settled record's result card, at any escape depth: the keyed `article` element and the
+// separately streamed `result-card__details` element. The details element carries no slug, so it is tied to a
+// record only when it holds that record's own prediction, odds and match date together.
+function settledRscElements(value, record, q) {
+  const ranges = [];
+  const article = `[${q}$${q},${q}article${q},${q}${record.key}${q},`;
+  for (let i = value.indexOf(article); i !== -1; i = value.indexOf(article, i + 1)) {
+    const end = balancedEnd(value, i);
+    if (end !== -1) ranges.push([i, end]);
+  }
+  const details = `[${q}$${q},${q}dl${q},null,{${q}className${q}:${q}result-card__details${q}`;
+  for (let i = value.indexOf(details); i !== -1; i = value.indexOf(details, i + 1)) {
+    const end = balancedEnd(value, i);
+    if (end === -1) continue;
+    const element = value.slice(i, end);
+    const sameRecord =
+      element.includes(`${q}${record.prediction}${q}`) &&
+      element.includes(`${q}${record.date}${q}`) &&
+      (element.includes(`:${record.odds}`) || element.includes(`:${Number(record.odds).toFixed(2)}`));
+    if (sameRecord) ranges.push([i, end]);
+  }
+  return ranges;
+}
+
 export function maskSettledResultRecords(text, records) {
   let masked = text;
   for (const record of Object.values(records ?? {})) {
@@ -100,8 +142,8 @@ export function maskSettledResultRecords(text, records) {
       const end = value.indexOf("</article>", marker);
       return start === -1 || end === -1 ? null : [start, end + "</article>".length];
     });
-    // JSON result record (plain or backslash-escaped inside an RSC payload string).
-    for (const q of ['"', '\\"']) {
+    // JSON result record and RSC result-card elements (plain, or escaped once or twice inside the page payload).
+    for (const q of QUOTE_FORMS) {
       masked = removeRanges(masked, (value) => {
         const start = value.indexOf(`{${q}key${q}:${q}${record.key}${q}`);
         if (start === -1) return null;
@@ -109,6 +151,7 @@ export function maskSettledResultRecords(text, records) {
         const end = stamp === -1 ? -1 : value.indexOf("}", stamp);
         return end === -1 ? null : [start, end + 1];
       });
+      masked = removeRanges(masked, (value) => settledRscElements(value, record, q)[0] ?? null);
     }
   }
   return masked;

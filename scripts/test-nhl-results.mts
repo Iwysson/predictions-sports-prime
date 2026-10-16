@@ -47,7 +47,7 @@ check("no final score yet: PENDING, never a guessed result (fail closed)", () =>
   assert.equal(settleNhlPrediction("Team A to Win", "Team A", "Team B", { homeScore: 1, awayScore: 0, state: "live" }), "pending");
 });
 check("an unrecognized market is UNSUPPORTED, never guessed", () => {
-  assert.equal(settleNhlPrediction("Team A -1.5 Puck Line", "Team A", "Team B", finished(4, 2)), "unsupported");
+  assert.equal(settleNhlPrediction("Team A to score first", "Team A", "Team B", finished(4, 2)), "unsupported");
 });
 
 // Real final scores for 2026-10-06 (api-web.nhle.com/v1/score/2026-10-06), fetched and verified

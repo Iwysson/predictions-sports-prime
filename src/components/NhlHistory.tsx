@@ -5,12 +5,14 @@ import { NhlMoneylineNote } from "@/components/NhlMoneylineNote";
 import { TeamBadge } from "@/components/TeamBadge";
 import { formatNhlDayLabel } from "@/lib/nhl-day";
 import { formatOddsPair } from "@/lib/odds";
+import type { NhlSettlementResult } from "@/lib/nhl-results";
 import type { NhlHistoryApiResponse } from "@/lib/use-nhl-history";
 
-const STATUS_LABEL: Record<"win" | "loss" | "push" | "pending" | "unsupported", string> = {
+const STATUS_LABEL: Record<NhlSettlementResult, string> = {
   win: "WIN",
   loss: "LOSS",
   push: "PUSH",
+  void: "VOID",
   pending: "PENDING",
   unsupported: "UNSETTLED",
 };

@@ -48,7 +48,7 @@ export function createNhlHistoryHandler(fetchImpl = fetch, now = () => new Date(
     const days = [];
     for (const dayKey of dayKeys) {
       const scores = await fetchDayScores(fetchImpl, dayKey);
-      days.push(buildNhlHistoryDay(dayKey, scores));
+      days.push(buildNhlHistoryDay(dayKey, scores, now()));
     }
     days.sort((a, b) => (a.dayKey < b.dayKey ? 1 : -1));
 

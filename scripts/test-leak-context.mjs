@@ -1,6 +1,6 @@
 // Context leak rules. Run: node scripts/test-leak-context.mjs
 import assert from "node:assert/strict";
-import { protectedPickLeaks, multipleWindows } from "./lib/leak-context.mjs";
+import { protectedPickLeaks, multipleWindows, maskSettledResultRecords } from "./lib/leak-context.mjs";
 
 const colorado = { pick: "Colorado Avalanche to Win", oddsText: "1.65" };
 const multipleBlock = (inner) => `<article>NHL + FOOTBALL BEST MULTIPLE TODAY ${inner} Combined odds: 2.76</article>`;
@@ -59,6 +59,49 @@ check("the multiple window is bounded (does not cover the whole file)", () => {
   const [[start, end]] = multipleWindows(text);
   assert.equal(start, text.indexOf("NHL + FOOTBALL"));
   assert.ok(end < text.length);
+});
+
+
+// A settled result card that the page streams as an RSC payload: the keyed article element and the separately
+// streamed details element, at every escape depth Next.js produces (shapes copied from the built /results page).
+// The /results page legitimately publishes the original pick of a FINAL, settled record; a protected entry that
+// merely shares the same market text (here a VIP game with the same pick) must not be reported because of it.
+const SETTLED_PICK = "Over 1.5 Goals + Over 7.5 Corners";
+const SETTLED_KEY = "premier-league:crystal-palace-vs-nottingham-forest";
+const settled = {
+  [SETTLED_KEY]: {
+    key: SETTLED_KEY,
+    slug: "crystal-palace-vs-nottingham-forest",
+    date: "2026-10-11",
+    prediction: SETTLED_PICK,
+    odds: 1.66,
+    finalScore: { home: 3, away: 1 },
+    result: "green",
+  },
+};
+const el = (q, tag, props, children) => `[${q}$${q},${q}${tag}${q},${props},{${children}}]`;
+const kv = (q, k, v) => `${q}${k}${q}:${typeof v === "number" ? v : `${q}${v}${q}`}`;
+const rscArticle = (q) =>
+  el(q, "article", `${q}${SETTLED_KEY}${q}`, `${kv(q, "data-pick", SETTLED_PICK)},${kv(q, "data-odds", 1.66)},${q}children${q}:[[${q}$${q},${q}h2${q},null,{${kv(q, "children", "Crystal Palace")}}]]`);
+const rscDetails = (q, date = "2026-10-11", odds = 1.66) =>
+  el(q, "dl", "null", `${kv(q, "className", "result-card__details")},${q}children${q}:[${kv(q, "children", date)},${kv(q, "children", SETTLED_PICK)},${kv(q, "children", odds)}]`);
+const juventusProtected = { pick: SETTLED_PICK, oddsText: "1.60" };
+for (const [label, q] of [["plain", '"'], ["escaped once", '\\"'], ["escaped twice", '\\\\\\"']]) {
+  check(`settled RSC result card (${label}) is masked, so a same-text protected pick is not reported`, () => {
+    const text = `x ${rscArticle(q)} y ${rscDetails(q)} z`;
+    const masked = maskSettledResultRecords(text, settled);
+    assert.equal(masked.includes(SETTLED_PICK), false);
+    assert.deepEqual(protectedPickLeaks(masked, juventusProtected, "juventus-vs-lazio"), []);
+  });
+}
+check("a same-text pick in an RSC details element with another date and odds is NOT masked (still a leak)", () => {
+  const masked = maskSettledResultRecords(`a ${rscDetails('\\\\\\"', "2026-10-19", 1.6)} b`, settled);
+  assert.ok(masked.includes(SETTLED_PICK));
+  assert.ok(protectedPickLeaks(masked, juventusProtected, "juventus-vs-lazio").length > 0);
+});
+check("an unsettled record's RSC result card is never masked", () => {
+  const unsettled = { [SETTLED_KEY]: { ...settled[SETTLED_KEY], result: undefined } };
+  assert.ok(maskSettledResultRecords(rscArticle('\\"'), unsettled).includes(SETTLED_PICK));
 });
 
 console.log(`\n${passed} context checks passed`);

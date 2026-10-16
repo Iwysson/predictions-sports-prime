@@ -1,7 +1,7 @@
 // Writes the protected match-content index used by functions/api/match-content.
 // Runs in prebuild. The output lives under functions/ so it is bundled into the
 // Pages Function only and never copied into the static export or client bundles.
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, readdirSync } from "node:fs";
 import { editorialPredictions } from "../src/data/predictions/index.ts";
 import { buildContentIndex, type ProtectedContentEntry } from "../src/lib/match-access.ts";
 import { readFileSync } from "node:fs";
@@ -24,7 +24,8 @@ type LaterEntryFile = {
 
 // NHL protected entries for later days. They stay "not-found" in the endpoint until 00:00 of
 // activeFromKey in the file's releaseTimeZone (default America/New_York, the NHL day). Add a new file here for each later NHL day.
-const nhlLaterFiles = ["src/data/nhl/protected-2026-10-07.json", "src/data/nhl/protected-2026-10-08.json", "src/data/nhl/protected-2026-10-09.json", "src/data/nhl/protected-2026-10-10.json", "src/data/nhl/protected-2026-10-11.json", "src/data/nhl/protected-2026-10-12.json", "src/data/nhl/protected-2026-10-13.json", "src/data/nhl/protected-2026-10-14.json", "src/data/nhl/protected-2026-10-15.json", "src/data/nhl/protected-2026-10-16.json", "src/data/nhl/protected-2026-10-17.json"];
+// Every protected-<day>.json is picked up automatically (sorted by day), so a published NHL day can no longer be left out.
+const nhlLaterFiles = readdirSync("src/data/nhl").filter((name) => /^protected-\d{4}-\d{2}-\d{2}\.json$/.test(name)).sort().map((name) => `src/data/nhl/${name}`);
 for (const file of nhlLaterFiles) {
   const later = JSON.parse(readFileSync(file, "utf8")) as LaterEntryFile;
   for (const e of later.entries) {
