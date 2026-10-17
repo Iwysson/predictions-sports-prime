@@ -160,5 +160,17 @@
     "awayCorners": 7,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874953",
     "capturedAt": "2026-10-17T19:28:59.545Z"
+  },
+  "ligue-1:troyes-vs-lens": {
+    "homeCorners": 6,
+    "awayCorners": 4,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876431",
+    "capturedAt": "2026-10-17T21:35:55.304Z"
+  },
+  "eredivisie:telstar-vs-feyenoord": {
+    "homeCorners": 7,
+    "awayCorners": 8,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.1/summary?event=401875580",
+    "capturedAt": "2026-10-17T21:35:55.304Z"
   }
 }

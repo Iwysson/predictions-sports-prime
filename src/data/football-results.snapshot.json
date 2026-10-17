@@ -1160,6 +1160,25 @@
       "settledAt": "2026-10-11T18:05:27.889Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "eredivisie:telstar-vs-feyenoord": {
+      "key": "eredivisie:telstar-vs-feyenoord",
+      "league": "eredivisie",
+      "slug": "telstar-vs-feyenoord",
+      "homeTeam": "Telstar",
+      "awayTeam": "Feyenoord",
+      "date": "2026-10-17",
+      "fixtureId": "401875580",
+      "predictionAccess": "vip",
+      "prediction": "Over 2.5 Goals + Over 8.5 Corners",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 3,
+        "away": 4
+      },
+      "result": "green",
+      "settledAt": "2026-10-17T21:36:11.463Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
+    },
     "la-liga:alaves-vs-atletico-madrid": {
       "key": "la-liga:alaves-vs-atletico-madrid",
       "league": "la-liga",
@@ -1387,6 +1406,25 @@
       "result": "green",
       "settledAt": "2026-10-11T18:05:27.889Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
+    "la-liga:valencia-vs-athletic-club": {
+      "key": "la-liga:valencia-vs-athletic-club",
+      "league": "la-liga",
+      "slug": "valencia-vs-athletic-club",
+      "homeTeam": "Valencia",
+      "awayTeam": "Athletic Club",
+      "date": "2026-10-17",
+      "fixtureId": "401882838",
+      "predictionAccess": "free",
+      "prediction": "Athletic Club Double Chance (X2) + Over 1.5 Goals",
+      "odds": 1.79,
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-17T21:36:11.463Z",
+      "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "la-liga:villarreal-vs-elche": {
       "key": "la-liga:villarreal-vs-elche",
@@ -1635,6 +1673,25 @@
       "settledAt": "2026-10-09T21:28:25.608Z",
       "publishedAt": "2026-10-06T12:00:00.000Z"
     },
+    "ligue-1:lille-vs-brest": {
+      "key": "ligue-1:lille-vs-brest",
+      "league": "ligue-1",
+      "slug": "lille-vs-brest",
+      "homeTeam": "Lille",
+      "awayTeam": "Brest",
+      "date": "2026-10-17",
+      "fixtureId": "401876436",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.72,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-10-17T21:36:11.463Z",
+      "publishedAt": "2026-10-13T12:00:00.000-03:00"
+    },
     "ligue-1:lille-vs-le-havre": {
       "key": "ligue-1:lille-vs-le-havre",
       "league": "ligue-1",
@@ -1729,6 +1786,25 @@
       "result": "red",
       "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "ligue-1:troyes-vs-lens": {
+      "key": "ligue-1:troyes-vs-lens",
+      "league": "ligue-1",
+      "slug": "troyes-vs-lens",
+      "homeTeam": "Troyes",
+      "awayTeam": "Lens",
+      "date": "2026-10-17",
+      "fixtureId": "401876431",
+      "predictionAccess": "vip",
+      "prediction": "Lens Double Chance (X2) + Over 8.5 Total Corners",
+      "odds": 1.88,
+      "finalScore": {
+        "home": 1,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-10-17T21:36:11.463Z",
+      "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
     "ligue-1:troyes-vs-marseille": {
       "key": "ligue-1:troyes-vs-marseille",
@@ -2053,6 +2129,25 @@
       "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
     },
+    "scottish-premiership:dundee-vs-rangers": {
+      "key": "scottish-premiership:dundee-vs-rangers",
+      "league": "scottish-premiership",
+      "slug": "dundee-vs-rangers",
+      "homeTeam": "Dundee",
+      "awayTeam": "Rangers",
+      "date": "2026-10-17",
+      "fixtureId": "401878366",
+      "predictionAccess": "vip",
+      "prediction": "Rangers to Win",
+      "odds": 1.35,
+      "finalScore": {
+        "home": 2,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-10-17T21:36:11.463Z",
+      "publishedAt": "2026-10-12T12:00:00.000-03:00"
+    },
     "scottish-premiership:hibernian-vs-falkirk": {
       "key": "scottish-premiership:hibernian-vs-falkirk",
       "league": "scottish-premiership",
@@ -2242,6 +2337,25 @@
       "result": "green",
       "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "serie-a:roma-vs-genoa": {
+      "key": "serie-a:roma-vs-genoa",
+      "league": "serie-a",
+      "slug": "roma-vs-genoa",
+      "homeTeam": "Roma",
+      "awayTeam": "Genoa",
+      "date": "2026-10-17",
+      "fixtureId": "401874935",
+      "predictionAccess": "vip",
+      "prediction": "Roma to Win + Over 1.5 Goals",
+      "odds": 1.58,
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-17T21:36:11.463Z",
+      "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "serie-a:sassuolo-vs-milan": {
       "key": "serie-a:sassuolo-vs-milan",
