@@ -20,6 +20,7 @@
     "test:nhl-settlement": "tsx scripts/test-nhl-settlement.mts",
     "test:nhl-oct17-render": "tsx scripts/test-nhl-oct17-render.mts",
     "test:nhl-oct17-activation": "tsx scripts/test-nhl-oct17-activation.mts",
+    "test:nhl-oct18-activation": "tsx scripts/test-nhl-oct18-activation.mts",
     "test:mobile-feed-equivalence": "tsx scripts/test-mobile-feed-equivalence.mts",
     "test:mobile-api-security": "tsx scripts/test-mobile-api-security.mts",
     "results:settle": "tsx scripts/settle-football-results.mts",

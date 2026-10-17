@@ -1,0 +1,30 @@
+{
+  "activeFromKey": "2026-10-18",
+  "releaseTimeZone": "America/New_York",
+  "entries": [
+    {
+      "slug": "minnesota-wild-vs-columbus-blue-jackets",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Minnesota Wild to win (including overtime and shootout)",
+      "odds": 1.59,
+      "analysis": [
+        "**Market:** Minnesota Wild ML @ 1.59\n\n## Statistical matchup\n\n| Team | GP | GF/GP | GA/GP | SF/GP | SA/GP | PP | PK |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Columbus Blue Jackets | 5 | 3.00 | 4.20 | 27.8 | 26.8 | 16.7% | 61.1% |\n| Minnesota Wild | 8 | 3.25 | 2.50 | 29.1 | 26.8 | 33.3% | 88.5% |\n\n## Analysis\n\nMinnesota has the clearer edge on the numbers: 3.25 goals scored and 2.50 allowed per game, a 33.3% power play and an 88.5% penalty kill. Columbus concedes 4.20 goals per game and kills only 61.1% of its penalties, so the Wild power play meets a very exploitable unit. Minnesota has also won all three home games so far, outscoring opponents 13–7.\n\nThe risk is Columbus' scoring. The Blue Jackets have scored three or more in four of five games, including a 6–3 win over Buffalo, and Minnesota conceded five at Winnipeg and four against St. Louis in two of its last three. Columbus has played only five games, and just one on the road, so this is a lean rather than a lock.\n\n**Projected score:** Minnesota 3.7, Columbus 2.8 (average of each side's scoring rate and the opponent's goals-against rate)  \n**Raw implied probability:** 62.9% (1 / 1.59)  \n**Verdict:** LEAN MINNESOTA — medium confidence.\n\n*Odds can move before puck drop. Early-season NHL samples remain volatile, so this selection is probability-based analysis rather than a guaranteed outcome.*"
+      ],
+      "analysisFormat": "markdown",
+      "sources": []
+    },
+    {
+      "slug": "calgary-flames-vs-carolina-hurricanes",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 total goals",
+      "odds": 1.73,
+      "analysis": [
+        "**Market:** Over 5.5 @ 1.73\n\n## Statistical matchup\n\n| Team | GP | GF/GP | GA/GP | SF/GP | SA/GP | PP | PK |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Carolina Hurricanes | 9 | 3.78 | 2.33 | 32.8 | 21.7 | 27.0% | 93.5% |\n| Calgary Flames | 7 | 2.00 | 5.00 | 29.4 | 28.7 | 20.0% | 80.0% |\n\n## Analysis\n\nCalgary allows 5.00 goals per game and has gone over 5.5 total goals in six of its seven games. Carolina scores 3.78 per game on 32.8 shots, so Calgary faces a high-volume attack. Five of Carolina's nine games have also reached six or more goals.\n\nThe concern is the other side of the ledger. Calgary scores only 2.00 goals per game, and Carolina's defense is elite at 2.33 goals and 21.7 shots allowed per game with a 93.5% penalty kill. A 4–1 type result stays under, so the Over leans mostly on Carolina scoring four or more.\n\n**Projected total:** 6.56 (Carolina 4.39 + Calgary 2.17, from each side's scoring rate and the opponent's goals-against rate)  \n**Raw implied probability:** 57.8% (1 / 1.73)  \n**Verdict:** OVER LEAN — medium confidence.\n\n*Odds can move before puck drop. Early-season NHL samples remain volatile, so this selection is probability-based analysis rather than a guaranteed outcome.*"
+      ],
+      "analysisFormat": "markdown",
+      "sources": []
+    }
+  ]
+}

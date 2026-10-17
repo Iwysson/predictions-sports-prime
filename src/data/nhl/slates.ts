@@ -79,6 +79,9 @@ export const SLATES: NhlPublicSlate[] = [
   // listing is server-only (src/data/nhl/deferred-slates.ts) and the full content is protected
   // (src/data/nhl/protected-2026-10-17.json). Release: 2026-10-17 00:00:00 America/New_York.
   { dayKey: "2026-10-17", matches: [], multiples: [], deferred: true, publicationTimezone: NHL_NEW_YORK_TIME_ZONE },
+  // Deferred slate (2 games), same pattern. Server-only listing: src/data/nhl/deferred-slate-2026-10-18.json;
+  // protected content: src/data/nhl/protected-2026-10-18.json. Release: 2026-10-18 00:00:00 America/New_York.
+  { dayKey: "2026-10-18", matches: [], multiples: [], deferred: true, publicationTimezone: NHL_NEW_YORK_TIME_ZONE },
 ];
 
 // The slate for the NHL day `todayKey` (YYYY-MM-DD, America/New_York). It switches at 00:00 ET
