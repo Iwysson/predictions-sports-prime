@@ -15,6 +15,7 @@ import { copaLibertadoresPredictions } from "./copa-libertadores";
 import { copaSudamericanaPredictions } from "./copa-sudamericana";
 import { uefaEuropaLeaguePredictions } from "./uefa-europa-league";
 import { applyWave08EditorialDebtRemediation } from "./editorial-debt-remediation";
+import { applyMatchdayUpdate } from "./matchday-updates";
 
 export const editorialPredictionsRaw = [
   ...laLigaPredictions,
@@ -35,4 +36,4 @@ export const editorialPredictionsRaw = [
   ...uefaEuropaLeaguePredictions,
 ];
 
-export const editorialPredictions = editorialPredictionsRaw.map(applyWave08EditorialDebtRemediation);
+export const editorialPredictions = editorialPredictionsRaw.map(applyWave08EditorialDebtRemediation).map(applyMatchdayUpdate);
