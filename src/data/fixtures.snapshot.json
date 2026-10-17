@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-17T02:46:27.964Z",
+  "generatedAt": "2026-10-17T07:12:31.407Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -15221,7 +15221,6 @@
     "brasileirao-serie-a:corinthians-vs-vitoria": "editorial:brasileirao-serie-a:corinthians-vs-vitoria:2026-10-19",
     "brasileirao-serie-a:fluminense-vs-santos": "editorial:brasileirao-serie-a:fluminense-vs-santos:2026-10-18",
     "brasileirao-serie-a:gremio-vs-cruzeiro": "editorial:brasileirao-serie-a:gremio-vs-cruzeiro:2026-10-18",
-    "brasileirao-serie-a:mirassol-vs-internacional": "editorial:brasileirao-serie-a:mirassol-vs-internacional:2026-10-16",
     "brasileirao-serie-a:remo-vs-red-bull-bragantino": "editorial:brasileirao-serie-a:remo-vs-red-bull-bragantino:2026-10-18",
     "brasileirao-serie-a:sao-paulo-vs-vasco": "editorial:brasileirao-serie-a:sao-paulo-vs-vasco:2026-10-17",
     "bundesliga:bayer-leverkusen-vs-freiburg": "401884771",
@@ -15327,11 +15326,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-17T02:46:27.964Z",
+    "bundesliga": "2026-10-17T07:12:31.407Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
     "liga-portugal": "2026-10-15T21:38:20.114Z",
-    "ligue-1": "2026-10-17T02:46:27.964Z",
-    "eredivisie": "2026-10-17T02:46:27.964Z",
+    "ligue-1": "2026-10-17T07:12:31.407Z",
+    "eredivisie": "2026-10-17T07:12:31.407Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
