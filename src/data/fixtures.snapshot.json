@@ -3652,8 +3652,8 @@
         "games": [
           {
             "round": 9,
-            "date": "2026-10-18",
-            "time": "TBD",
+            "date": "2026-10-17",
+            "time": "16:15",
             "homeTeam": "Villarreal",
             "awayTeam": "Elche",
             "homeScore": null,
@@ -3661,9 +3661,9 @@
             "status": "scheduled",
             "dataSource": "espn",
             "id": "401882837",
-            "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-10-18T18:00Z",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-10-17T14:15Z",
             "espnEventId": "401882837"
           },
           {
@@ -3684,24 +3684,24 @@
           },
           {
             "round": 9,
-            "date": "2026-10-18",
-            "time": "TBD",
+            "date": "2026-10-17",
+            "time": "14:00",
             "homeTeam": "Espanyol",
             "awayTeam": "Atlético Madrid",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "in-progress",
             "dataSource": "espn",
             "id": "401882843",
-            "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-10-18T18:00Z",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-10-17T12:00Z",
             "espnEventId": "401882843"
           },
           {
             "round": 9,
-            "date": "2026-10-18",
-            "time": "TBD",
+            "date": "2026-10-17",
+            "time": "21:00",
             "homeTeam": "Valencia",
             "awayTeam": "Athletic Club",
             "homeScore": null,
@@ -3709,9 +3709,9 @@
             "status": "scheduled",
             "dataSource": "espn",
             "id": "401882838",
-            "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-10-18T18:00Z",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-10-17T19:00Z",
             "espnEventId": "401882838"
           },
           {
@@ -3732,8 +3732,8 @@
           },
           {
             "round": 9,
-            "date": "2026-10-18",
-            "time": "TBD",
+            "date": "2026-10-17",
+            "time": "18:30",
             "homeTeam": "Real Betis",
             "awayTeam": "Barcelona",
             "homeScore": null,
@@ -3741,9 +3741,9 @@
             "status": "scheduled",
             "dataSource": "espn",
             "id": "401882846",
-            "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-10-18T18:00Z",
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-10-17T16:30Z",
             "espnEventId": "401882846"
           },
           {
