@@ -248,6 +248,25 @@
       "settledAt": "2026-10-08T02:02:59.027Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
     },
+    "brasileirao-serie-a:mirassol-vs-internacional": {
+      "key": "brasileirao-serie-a:mirassol-vs-internacional",
+      "league": "brasileirao-serie-a",
+      "slug": "mirassol-vs-internacional",
+      "homeTeam": "Mirassol",
+      "awayTeam": "Internacional",
+      "date": "2026-10-16",
+      "fixtureId": "editorial:brasileirao-serie-a:mirassol-vs-internacional:2026-10-16",
+      "predictionAccess": "vip",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.98,
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-17T02:46:49.323Z",
+      "publishedAt": "2026-10-12T12:00:00.000-03:00"
+    },
     "brasileirao-serie-a:palmeiras-vs-bahia": {
       "key": "brasileirao-serie-a:palmeiras-vs-bahia",
       "league": "brasileirao-serie-a",
