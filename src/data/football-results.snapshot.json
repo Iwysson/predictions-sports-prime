@@ -761,6 +761,25 @@
       "settledAt": "2026-10-14T12:51:51.581Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
+    "eliteserien:hamkam-vs-bod-glimt": {
+      "key": "eliteserien:hamkam-vs-bod-glimt",
+      "league": "eliteserien",
+      "slug": "hamkam-vs-bod-glimt",
+      "homeTeam": "HamKam",
+      "awayTeam": "Bodø/Glimt",
+      "date": "2026-10-17",
+      "fixtureId": "401843465",
+      "predictionAccess": "vip",
+      "prediction": "Over 3.5 Goals",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-10-17T14:23:07.914Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
+    },
     "eliteserien:kfum-oslo-vs-valerenga": {
       "key": "eliteserien:kfum-oslo-vs-valerenga",
       "league": "eliteserien",
@@ -1064,6 +1083,25 @@
       "result": "green",
       "settledAt": "2026-10-11T18:05:27.889Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
+    "la-liga:espanyol-vs-atletico-madrid": {
+      "key": "la-liga:espanyol-vs-atletico-madrid",
+      "league": "la-liga",
+      "slug": "espanyol-vs-atletico-madrid",
+      "homeTeam": "Espanyol",
+      "awayTeam": "Atlético Madrid",
+      "date": "2026-10-17",
+      "fixtureId": "401882843",
+      "predictionAccess": "vip",
+      "prediction": "Atlético Madrid Double Chance (X2) + Under 3.5 Goals",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-17T14:23:07.914Z",
+      "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "la-liga:levante-vs-sevilla": {
       "key": "la-liga:levante-vs-sevilla",
@@ -1635,6 +1673,25 @@
       "settledAt": "2026-10-11T18:05:27.889Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
+    "premier-league:everton-vs-chelsea": {
+      "key": "premier-league:everton-vs-chelsea",
+      "league": "premier-league",
+      "slug": "everton-vs-chelsea",
+      "homeTeam": "Everton",
+      "awayTeam": "Chelsea",
+      "date": "2026-10-17",
+      "fixtureId": "401878771",
+      "predictionAccess": "vip",
+      "prediction": "Chelsea Double Chance (X2) + Over 1.5 Goals",
+      "odds": 1.67,
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-17T14:23:07.914Z",
+      "publishedAt": "2026-10-13T08:30:00.000-03:00"
+    },
     "premier-league:hull-city-vs-everton": {
       "key": "premier-league:hull-city-vs-everton",
       "league": "premier-league",
@@ -1938,6 +1995,25 @@
       "result": "green",
       "settledAt": "2026-10-16T18:56:26.231Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
+    },
+    "super-lig:erzurumspor-vs-eyupspor": {
+      "key": "super-lig:erzurumspor-vs-eyupspor",
+      "league": "super-lig",
+      "slug": "erzurumspor-vs-eyupspor",
+      "homeTeam": "Erzurumspor",
+      "awayTeam": "Eyüpspor",
+      "date": "2026-10-17",
+      "fixtureId": "401888271",
+      "predictionAccess": "vip",
+      "prediction": "Over 1.5 Goals + Over 6.5 Corners",
+      "odds": 1.64,
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-17T14:23:07.914Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "super-lig:eyupspor-vs-goztepe": {
       "key": "super-lig:eyupspor-vs-goztepe",
