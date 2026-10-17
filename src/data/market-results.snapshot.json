@@ -154,5 +154,11 @@
     "awayCorners": 3,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/summary?event=401884766",
     "capturedAt": "2026-10-17T17:20:15.506Z"
+  },
+  "serie-a:bologna-vs-inter": {
+    "homeCorners": 2,
+    "awayCorners": 7,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874953",
+    "capturedAt": "2026-10-17T19:28:59.545Z"
   }
 }

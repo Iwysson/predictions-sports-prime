@@ -419,6 +419,25 @@
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "bundesliga:bayern-munich-vs-rb-leipzig": {
+      "key": "bundesliga:bayern-munich-vs-rb-leipzig",
+      "league": "bundesliga",
+      "slug": "bayern-munich-vs-rb-leipzig",
+      "homeTeam": "Bayern Munich",
+      "awayTeam": "RB Leipzig",
+      "date": "2026-10-17",
+      "fixtureId": "401884772",
+      "predictionAccess": "vip",
+      "prediction": "Bayern Munich -1.5 Asian Handicap",
+      "odds": 1.53,
+      "finalScore": {
+        "home": 6,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-17T19:29:19.674Z",
+      "publishedAt": "2026-10-13T12:00:00.000-03:00"
+    },
     "bundesliga:borussia-dortmund-vs-werder-bremen": {
       "key": "bundesliga:borussia-dortmund-vs-werder-bremen",
       "league": "bundesliga",
@@ -1293,6 +1312,25 @@
       "settledAt": "2026-10-10T14:27:14.380Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "la-liga:real-betis-vs-barcelona": {
+      "key": "la-liga:real-betis-vs-barcelona",
+      "league": "la-liga",
+      "slug": "real-betis-vs-barcelona",
+      "homeTeam": "Real Betis",
+      "awayTeam": "Barcelona",
+      "date": "2026-10-17",
+      "fixtureId": "401882846",
+      "predictionAccess": "free",
+      "prediction": "Barcelona to Win",
+      "odds": 1.48,
+      "finalScore": {
+        "home": 2,
+        "away": 5
+      },
+      "result": "green",
+      "settledAt": "2026-10-17T19:29:19.674Z",
+      "publishedAt": "2026-10-13T08:30:00.000-03:00"
+    },
     "la-liga:real-betis-vs-osasuna": {
       "key": "la-liga:real-betis-vs-osasuna",
       "league": "la-liga",
@@ -1958,6 +1996,25 @@
       "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
+    "premier-league:newcastle-united-vs-aston-villa": {
+      "key": "premier-league:newcastle-united-vs-aston-villa",
+      "league": "premier-league",
+      "slug": "newcastle-united-vs-aston-villa",
+      "homeTeam": "Newcastle United",
+      "awayTeam": "Aston Villa",
+      "date": "2026-10-17",
+      "fixtureId": "401879258",
+      "predictionAccess": "vip",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.62,
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-10-17T19:29:19.674Z",
+      "publishedAt": "2026-10-13T08:30:00.000-03:00"
+    },
     "premier-league:sunderland-vs-brighton": {
       "key": "premier-league:sunderland-vs-brighton",
       "league": "premier-league",
@@ -2052,6 +2109,25 @@
       "result": "green",
       "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
+    },
+    "serie-a:bologna-vs-inter": {
+      "key": "serie-a:bologna-vs-inter",
+      "league": "serie-a",
+      "slug": "bologna-vs-inter",
+      "homeTeam": "Bologna",
+      "awayTeam": "Inter",
+      "date": "2026-10-17",
+      "fixtureId": "401874953",
+      "predictionAccess": "vip",
+      "prediction": "Over 7.5 Total Corners + Over 1.5 Goals",
+      "odds": 1.55,
+      "finalScore": {
+        "home": 1,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-10-17T19:29:19.674Z",
+      "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "serie-a:como-vs-roma": {
       "key": "serie-a:como-vs-roma",
@@ -2337,6 +2413,25 @@
       "result": "green",
       "settledAt": "2026-10-12T22:47:32.243Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
+    "super-lig:fenerbahce-vs-alanyaspor": {
+      "key": "super-lig:fenerbahce-vs-alanyaspor",
+      "league": "super-lig",
+      "slug": "fenerbahce-vs-alanyaspor",
+      "homeTeam": "Fenerbahçe",
+      "awayTeam": "Alanyaspor",
+      "date": "2026-10-17",
+      "fixtureId": "401888273",
+      "predictionAccess": "vip",
+      "prediction": "Fenerbahçe -1.5 Asian Handicap",
+      "odds": 1.78,
+      "finalScore": {
+        "home": 3,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-17T19:29:19.674Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "super-lig:galatasaray-vs-kasimpasa": {
       "key": "super-lig:galatasaray-vs-kasimpasa",
