@@ -203,8 +203,8 @@ export const matchdayUpdatesEurope20261017: Record<string, MatchdayUpdate> = {
   },
   "bayern-munich-vs-rb-leipzig": {
     kickoffUtc: "2026-10-17T16:30:00Z",
-    updatedAt,
-    comment: "Bayern are unbeaten this season but have dropped points twice in October, a 2-2 at Augsburg and a 3-3 draw with Viking in the Champions League, with no win since the international break, and they are without Musiala while Neuer is a doubt with a foot injury. RB Leipzig have lost all **three of their away matches** this season and are missing Baumgartner, Ouedraogo and Guiu, although they have won their last two games. The handicap pick on RB Leipzig is unchanged at its published price; the evidence for it is Bayern's recent wobble and the injuries in goal and attacking midfield, while the evidence against it is Leipzig's away record and Bayern's home scoring power with Kane and Olise.",
+    updatedAt: "2026-10-17T09:20:00-03:00",
+    comment: "Bayern Munich -1.5 needs a two-goal margin. Bayern are unbeaten this season and have won big at home (7-0 against Union Berlin, 5-0 against Bodo/Glimt), but they have dropped points twice in October, a 2-2 at Augsburg and a 3-3 draw with Viking in the Champions League, with no win since the international break, and they are without Musiala while Neuer is a doubt with a foot injury. RB Leipzig have lost all **three of their away matches** this season and are missing Baumgartner, Ouedraogo and Guiu, although they have won their last two games. The risk is a wobbling Bayern side winning by a single goal, which fails the handicap, so the Bayern Munich -1.5 pick is unchanged at 1.53.",
     lineups: {
       home: "Urbig; Stanisic, Upamecano, Tah, Davies; Kimmich, Pavlovic; Olise, Saibari, Diaz; Kane.",
       away: "Vandevoordt; Baku, Orban, Lukeba, Raum; Banzuzi, El Aynaoui; Gruda, Nkunku, Nusa; Romulo.",
