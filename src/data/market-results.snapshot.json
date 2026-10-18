@@ -172,5 +172,11 @@
     "awayCorners": 8,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.1/summary?event=401875580",
     "capturedAt": "2026-10-17T21:35:55.304Z"
+  },
+  "brasileirao-serie-a:atletico-mg-vs-coritiba": {
+    "homeCorners": 10,
+    "awayCorners": 5,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841270",
+    "capturedAt": "2026-10-18T01:12:24.344Z"
   }
 }

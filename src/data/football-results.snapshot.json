@@ -20,6 +20,44 @@
       "settledAt": "2026-10-09T06:14:59.089Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
     },
+    "brasileirao-serie-a:athletico-pr-vs-palmeiras": {
+      "key": "brasileirao-serie-a:athletico-pr-vs-palmeiras",
+      "league": "brasileirao-serie-a",
+      "slug": "athletico-pr-vs-palmeiras",
+      "homeTeam": "Athletico-PR",
+      "awayTeam": "Palmeiras",
+      "date": "2026-10-17",
+      "fixtureId": "editorial:brasileirao-serie-a:athletico-pr-vs-palmeiras:2026-10-17",
+      "predictionAccess": "vip",
+      "prediction": "X2 + Under 3.5 Goals",
+      "odds": 1.81,
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-18T01:12:41.880Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
+    },
+    "brasileirao-serie-a:atletico-mg-vs-coritiba": {
+      "key": "brasileirao-serie-a:atletico-mg-vs-coritiba",
+      "league": "brasileirao-serie-a",
+      "slug": "atletico-mg-vs-coritiba",
+      "homeTeam": "Atlético-MG",
+      "awayTeam": "Coritiba",
+      "date": "2026-10-17",
+      "fixtureId": "editorial:brasileirao-serie-a:atletico-mg-vs-coritiba:2026-10-17",
+      "predictionAccess": "vip",
+      "prediction": "Over 1.5 Goals + Over 8.5 Corners",
+      "odds": 1.6,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-18T01:12:41.880Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
+    },
     "brasileirao-serie-a:atletico-mg-vs-santos": {
       "key": "brasileirao-serie-a:atletico-mg-vs-santos",
       "league": "brasileirao-serie-a",
