@@ -9,6 +9,8 @@ import { hasMatchPage } from "../src/lib/match-page-lifecycle.ts";
 import { publicContactEmail } from "../src/lib/editorial-identity.ts";
 import { SLATES } from "../src/data/nhl/slates.ts";
 import { getNhlDayStart } from "../src/lib/nhl-day.ts";
+import footballResults from "../src/data/football-results.snapshot.json" with { type: "json" };
+import { checkResultsHistoryIntegrity } from "../src/lib/results-history-audit.ts";
 
 const root = process.cwd();
 const outDir = join(root, "out");
@@ -365,7 +367,16 @@ else {
   if (!resultsHtml.includes("/historypredictions/")) errors.push(`${resultsRoute}: link to the VIP history archive is missing`);
   const historyEntries = count(resultsHtml, /data-result-slug=/g);
   if (historyEntries === 0 && !resultsHtml.includes("/historypredictions/")) errors.push(`${resultsRoute}: completed prediction History is empty`);
-  if (historyEntries > matchRoutes.length) errors.push(`${resultsRoute}: contains more History entries than published matches`);
+
+  // The History count must track the permanent settled-results archive (football-results.snapshot.json),
+  // never the currently-published /match/[slug]/ page count: a page is retired once its match is FINAL and
+  // settled (src/lib/match-page-lifecycle.ts), while settled results only ever accumulate. Comparing against
+  // matchRoutes.length was therefore guaranteed to fail as soon as the archive outgrew the live page count,
+  // regardless of any actual SEO defect - that is the bug this replaces, not Results or settlement itself.
+  const settledSlugs = Object.values(footballResults.records).map((record) => record.slug);
+  for (const message of checkResultsHistoryIntegrity({ historyHtml: resultsHtml, settledSlugs })) {
+    errors.push(`${resultsRoute}: ${message}`);
+  }
 }
 
 for (const route of ["/", authorRoute, "/about/", methodologyRoute]) {
