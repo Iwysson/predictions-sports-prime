@@ -1141,6 +1141,25 @@
       "settledAt": "2026-10-11T18:05:27.889Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "eredivisie:pec-zwolle-vs-go-ahead-eagles": {
+      "key": "eredivisie:pec-zwolle-vs-go-ahead-eagles",
+      "league": "eredivisie",
+      "slug": "pec-zwolle-vs-go-ahead-eagles",
+      "homeTeam": "PEC Zwolle",
+      "awayTeam": "Go Ahead Eagles",
+      "date": "2026-10-18",
+      "fixtureId": "401875578",
+      "predictionAccess": "vip",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.42,
+      "finalScore": {
+        "home": 4,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-18T13:43:59.703Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
+    },
     "eredivisie:psv-vs-heerenveen": {
       "key": "eredivisie:psv-vs-heerenveen",
       "league": "eredivisie",
@@ -2433,6 +2452,25 @@
       "settledAt": "2026-10-12T22:47:32.243Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
+    "serie-a:udinese-vs-lecce": {
+      "key": "serie-a:udinese-vs-lecce",
+      "league": "serie-a",
+      "slug": "udinese-vs-lecce",
+      "homeTeam": "Udinese",
+      "awayTeam": "Lecce",
+      "date": "2026-10-18",
+      "fixtureId": "401874771",
+      "predictionAccess": "vip",
+      "prediction": "Udinese or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.65,
+      "finalScore": {
+        "home": 0,
+        "away": 3
+      },
+      "result": "red",
+      "settledAt": "2026-10-18T13:43:59.703Z",
+      "publishedAt": "2026-10-15T08:41:00-03:00"
+    },
     "serie-a:venezia-vs-napoli": {
       "key": "serie-a:venezia-vs-napoli",
       "league": "serie-a",
@@ -2603,6 +2641,25 @@
       "result": "green",
       "settledAt": "2026-10-09T21:28:25.608Z",
       "publishedAt": "2026-10-06T12:00:00.000Z"
+    },
+    "super-lig:kas-mpasa-vs-samsunspor": {
+      "key": "super-lig:kas-mpasa-vs-samsunspor",
+      "league": "super-lig",
+      "slug": "kas-mpasa-vs-samsunspor",
+      "homeTeam": "Kasımpaşa",
+      "awayTeam": "Samsunspor",
+      "date": "2026-10-18",
+      "fixtureId": "401888276",
+      "predictionAccess": "vip",
+      "prediction": "1X + Over 1.5 Goals",
+      "odds": 1.95,
+      "finalScore": {
+        "home": 4,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-18T13:43:59.703Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "super-lig:rizespor-vs-fenerbahce": {
       "key": "super-lig:rizespor-vs-fenerbahce",
