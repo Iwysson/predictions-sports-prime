@@ -1,21 +1,18 @@
 import type { Metadata } from "next";
-import { AdSlot } from "@/components/ads";
 import { JsonLd } from "@/components/JsonLd";
 import { HomePredictionFeed } from "@/components/HomePredictionFeed";
 import footballResults from "@/data/football-results.snapshot.json";
 import { latestWinResults, sortedResults, toPublicResult, type FootballResultsDataset } from "@/lib/football-results";
-import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategories";
 import { matches } from "@/data/matches";
 import { toMatchPreview } from "@/lib/editorial";
 import { hydratePredictions } from "@/lib/live-predictions";
-import Link from "@/components/DocumentLink";
 import { homePageJsonLd } from "@/lib/seo";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { localizedAlternates } from "@/lib/international-seo";
 import { indexableLocalizedHubLocaleSlugs } from "@/lib/seo-locales";
 import { selectTemporalClientMatches } from "@/lib/match-feed";
-import { HomeEditorialHighlights } from "@/components/HomeEditorialHighlights";
+import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
 import { SiteContactLine } from "@/components/SiteContactLine";
 import { VipTitleCta } from "@/components/VipTitleCta";
 
@@ -60,74 +57,24 @@ export default async function Home() {
           <span className="eyebrow">Predictions Sports Prime</span>
           <VipTitleCta id="home-title">Football Predictions Today &amp; Betting Tips</VipTitleCta>
           <p>
-            Explore independently prepared football predictions, betting tips and
-            concise match analysis for today, tomorrow and upcoming fixtures across
-            major leagues and cup competitions.
+            Explore independently prepared football predictions and betting tips
+            for today's fixtures across major leagues and cup competitions.
           </p>
           <SiteContactLine />
         </div>
       </section>
-      <HomeEditorialHighlights />
+      <PrimeVipOfferCard />
+
+      {/* Section 1 — Today's Football Predictions: only fixtures released for today, FREE/VIP tiers preserved. */}
+      {/* Section 2 — Results (unchanged): rendered inside HomePredictionFeed as its #history section. */}
       <HomePredictionFeed
         matches={clientMatches}
         results={latestWinResults(footballResults as FootballResultsDataset, 8).map(toPublicResult)}
         trackRecordResults={sortedResults(footballResults as FootballResultsDataset).map(toPublicResult)}
-        discovery={<PublishedMatchDirectory matches={resolvedMatches} />}
-        beforeTomorrow={
-          <>
-            <AdSlot placement="home-before-tomorrow" showLabel wrapperClassName="container home-ad-space" />
-          </>
-        }
-        beforeUpcoming={
-          <>
-            <AdSlot placement="home-upcoming" showLabel wrapperClassName="container home-ad-space" />
-          </>
-        }
-        beforeHistory={<PredictionLeagueCategories id="leagues" muted />}
       />
 
-      <section className="section section--compact" aria-labelledby="sport-hubs-title">
-        <div className="container">
-          <h2 id="sport-hubs-title">Predictions by sport</h2>
-          <div className="psp-hub-grid">
-            <Link className="psp-hub-card" href="/football-predictions/"><strong>Football predictions</strong><span>Leagues, cups and match-by-match analysis</span></Link>
-            <Link className="psp-hub-card" href="/nfl/"><strong>NFL picks and predictions</strong><span>Weekly game analysis, odds and standings</span></Link>
-            <Link className="psp-hub-card" href="/nhl/"><strong>NHL predictions today</strong><span>Daily picks, moneyline and total goals</span></Link>
-            <Link className="psp-hub-card" href="/league/mls/"><strong>MLS predictions</strong><span>Eastern and Western Conference matches</span></Link>
-          </div>
-          <p>
-            Popular competitions: <Link href="/league/premier-league/">Premier League predictions</Link>, <Link href="/league/champions-league/">Champions League predictions</Link>, <Link href="/league/la-liga/">La Liga predictions</Link> and <Link href="/football-predictions/">every football competition</Link>.
-          </p>
-        </div>
-      </section>
-
-      <section className="section section--compact" aria-labelledby="trust-links-title">
-        <div className="container">
-          <h2 id="trust-links-title">How Our Football Predictions Work</h2>
-          <p>
-            Each analysis weighs the relevant evidence available for that fixture,
-            which may include recent form, home and away performance, goals, corners,
-            shots, tactical context, scheduling, verified team news and market price.
-            Read the full <Link href="/methodology/">analysis methodology</Link>.
-          </p>
-          <p>
-            Predictions are editorial opinions published before settlement with
-            their recorded odds. Wins and losses remain visible in our public
-            <Link href="/results/"> Results archive</Link>, and every analysis identifies
-            <Link href="/author/iwysson-nascimento/"> its author</Link>. Learn more
-            <Link href="/about/"> about Predictions Sports Prime</Link>.
-          </p>
-          <nav className="intent-hub-nav" aria-label="Prediction hubs">
-            <Link href="/football-predictions/">Football predictions</Link>
-            <Link href="/soccer-predictions/">Soccer predictions</Link>
-            <Link href="/betting-tips/">Betting tips</Link>
-            <Link href="/picks/">Football picks</Link>
-            <Link href="/today-predictions/">Today's predictions</Link>
-            <Link href="/nhl/">NHL predictions</Link>
-            <Link href="/nfl/">NFL predictions</Link>
-          </nav>
-        </div>
-      </section>
+      {/* Section 3 — Predictions by League: every sport and competition covered by the site. */}
+      <PredictionLeagueCategories id="leagues" muted />
     </>
   );
 }

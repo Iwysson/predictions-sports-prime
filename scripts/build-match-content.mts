@@ -6,6 +6,9 @@ import { editorialPredictions } from "../src/data/predictions/index.ts";
 import { buildContentIndex, type ProtectedContentEntry } from "../src/lib/match-access.ts";
 import { readFileSync } from "node:fs";
 import { nhlMatches } from "../src/lib/nhl.ts";
+import { matches as publishedMatches } from "../src/data/matches.ts";
+import { toMatchPreview } from "../src/lib/editorial.ts";
+import { hydratePredictions } from "../src/lib/live-predictions.ts";
 
 const nhlEntries: ProtectedContentEntry[] = nhlMatches().map((m) => ({
   slug: m.slug,
@@ -67,3 +70,19 @@ console.log(
   `match content index: ${index.length} entries (analysis vip: ${count((e) => e.analysisAccess === "vip")}, ` +
     `analysis free: ${count((e) => e.analysisAccess === "free")}, prediction free: ${count((e) => e.predictionAccess === "free")})`,
 );
+
+// Public release manifest consumed by functions/_middleware.js: every football /match/[slug]/ route that is
+// (or may become) statically generated, with the calendar date its page may start being served on. The
+// middleware answers a redirect to Home for any of these slugs until that date arrives (src/lib/match-release.ts),
+// re-evaluated per request so a page already built ahead of kickoff still opens automatically with no redeploy.
+//
+// The date here MUST be the same one the homepage's Today listing uses (src/app/(en)/page.tsx hydrates
+// `matches` through hydratePredictions before computing Today), not the raw editorial `matchInfo.date` -
+// a live fixture correction can move the real kickoff a calendar day from what was first declared, and the
+// release gate must follow that correction exactly like every other "is this today" decision on the site.
+const hydratedMatches = await hydratePredictions(publishedMatches.map(toMatchPreview));
+const releaseManifest = hydratedMatches
+  .filter((m) => Boolean(m.date))
+  .map((m) => ({ slug: m.slug, date: m.date }));
+writeFileSync("functions/_data/match-release.json", JSON.stringify(releaseManifest, null, 2) + "\n");
+console.log(`match release manifest: ${releaseManifest.length} slugs`);

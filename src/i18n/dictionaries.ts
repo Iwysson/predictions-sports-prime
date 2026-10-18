@@ -36,7 +36,7 @@ export const dictionaries = {
     leagues: "Leagues",
     topLeagues: "Top Prediction Leagues",
     predictionCategories: "Prediction Categories",
-    competitions: "Football Predictions by League",
+    competitions: "Predictions by League",
     latestPredictions: "Latest Predictions",
     upcoming: "Upcoming",
     view: "View",
