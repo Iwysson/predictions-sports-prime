@@ -23,6 +23,8 @@
     "test:nhl-oct18-activation": "tsx scripts/test-nhl-oct18-activation.mts",
     "test:mobile-feed-equivalence": "tsx scripts/test-mobile-feed-equivalence.mts",
     "test:mobile-api-security": "tsx scripts/test-mobile-api-security.mts",
+    "test:match-release-gate": "tsx scripts/test-match-release-gate.mts",
+    "test:home-sections": "tsx scripts/test-home-sections.mts",
     "results:settle": "tsx scripts/settle-football-results.mts",
     "results:validate": "tsx scripts/validate-football-results.mts",
     "results:update": "npm run fixtures:sync && npm run results:settle && npm run results:validate && tsx scripts/print-results-summary.mts",

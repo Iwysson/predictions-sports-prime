@@ -1,6 +1,7 @@
 import Link from "@/components/DocumentLink";
 import type { MatchPreview } from "@/types";
 import { localePath, type SeoLocale } from "@/lib/seo-locales";
+import { isDateReleased } from "@/lib/match-release";
 
 const titles: Record<SeoLocale, string> = {
   en: "Published match analyses", "pt-br": "Análises de jogos publicadas",
@@ -14,7 +15,13 @@ export function PublishedMatchDirectory({ matches, locale = "en", localizedMatch
   matches: MatchPreview[]; locale?: SeoLocale; localizedMatchSlugs?: string[];
 }) {
   const localized = new Set(localizedMatchSlugs);
-  const published = [...new Map(matches.filter((m) => m.status === "published").map((m) => [m.slug, m])).values()]
+  const published = [...new Map(
+    matches
+      // A future match not yet released publicly (src/lib/match-release.ts) must stay out of this
+      // crawlable directory; it resumes appearing on its own once the release gate opens.
+      .filter((m) => m.status === "published" && isDateReleased(m.date))
+      .map((m) => [m.slug, m])
+  ).values()]
     .sort((a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug));
   return <section className="section section--compact" data-published-match-directory="true">
     <div className="container">

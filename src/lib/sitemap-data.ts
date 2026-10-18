@@ -5,6 +5,7 @@ import { matches } from "@/data/matches";
 import { editorialPredictions } from "@/data/predictions";
 import { isAdSenseContentIndexable, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
 import { isFutureFixture } from "@/lib/fixture-state";
+import { isDateReleased } from "@/lib/match-release";
 import footballResults from "@/data/football-results.snapshot.json";
 import { resolveNhlSlate } from "@/data/nhl/slates";
 import { intentHubInventory, selectIntentHubMatches } from "@/lib/intent-hubs";
@@ -49,7 +50,10 @@ export function buildLeagueSitemap(
     (match) =>
       match.league === leagueSlug &&
       match.status === "published" &&
-      isAdSenseContentIndexable(match.slug, editorialPredictions)
+      isAdSenseContentIndexable(match.slug, editorialPredictions) &&
+      // A future match not yet released publicly (src/lib/match-release.ts) must stay out of the
+      // sitemap: discovery resumes on its own once the release gate opens, no manual step needed.
+      isDateReleased(match.date)
   );
 
   const leagueIndexable =
