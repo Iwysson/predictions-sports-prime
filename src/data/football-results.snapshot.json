@@ -248,6 +248,44 @@
       "settledAt": "2026-10-09T06:14:59.089Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
     },
+    "brasileirao-serie-a:fluminense-vs-santos": {
+      "key": "brasileirao-serie-a:fluminense-vs-santos",
+      "league": "brasileirao-serie-a",
+      "slug": "fluminense-vs-santos",
+      "homeTeam": "Fluminense",
+      "awayTeam": "Santos",
+      "date": "2026-10-18",
+      "fixtureId": "editorial:brasileirao-serie-a:fluminense-vs-santos:2026-10-18",
+      "predictionAccess": "vip",
+      "prediction": "X2 — Santos or Draw",
+      "odds": 1.77,
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-18T21:26:22.364Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
+    },
+    "brasileirao-serie-a:gremio-vs-cruzeiro": {
+      "key": "brasileirao-serie-a:gremio-vs-cruzeiro",
+      "league": "brasileirao-serie-a",
+      "slug": "gremio-vs-cruzeiro",
+      "homeTeam": "Grêmio",
+      "awayTeam": "Cruzeiro",
+      "date": "2026-10-18",
+      "fixtureId": "editorial:brasileirao-serie-a:gremio-vs-cruzeiro:2026-10-18",
+      "predictionAccess": "vip",
+      "prediction": "X2 + Over 1.5 Goals",
+      "odds": 1.8,
+      "finalScore": {
+        "home": 2,
+        "away": 4
+      },
+      "result": "green",
+      "settledAt": "2026-10-18T21:26:22.364Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
+    },
     "brasileirao-serie-a:gremio-vs-internacional": {
       "key": "brasileirao-serie-a:gremio-vs-internacional",
       "league": "brasileirao-serie-a",
@@ -1103,6 +1141,25 @@
       "settledAt": "2026-10-18T16:56:18.471Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
+    "eredivisie:fc-twente-vs-fc-utrecht": {
+      "key": "eredivisie:fc-twente-vs-fc-utrecht",
+      "league": "eredivisie",
+      "slug": "fc-twente-vs-fc-utrecht",
+      "homeTeam": "FC Twente",
+      "awayTeam": "FC Utrecht",
+      "date": "2026-10-18",
+      "fixtureId": "401875577",
+      "predictionAccess": "vip",
+      "prediction": "Over 3.5 Goals",
+      "odds": 1.81,
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-10-18T21:26:22.364Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
+    },
     "eredivisie:fc-utrecht-vs-willem-ii": {
       "key": "eredivisie:fc-utrecht-vs-willem-ii",
       "league": "eredivisie",
@@ -1540,6 +1597,25 @@
       "settledAt": "2026-10-11T21:49:41.803Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
+    "la-liga:real-madrid-vs-sevilla": {
+      "key": "la-liga:real-madrid-vs-sevilla",
+      "league": "la-liga",
+      "slug": "real-madrid-vs-sevilla",
+      "homeTeam": "Real Madrid",
+      "awayTeam": "Sevilla",
+      "date": "2026-10-18",
+      "fixtureId": "401882839",
+      "predictionAccess": "vip",
+      "prediction": "Real Madrid -1.5 Asian Handicap",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 4,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-18T21:26:22.364Z",
+      "publishedAt": "2026-10-15T08:41:00-03:00"
+    },
     "la-liga:real-madrid-vs-villarreal": {
       "key": "la-liga:real-madrid-vs-villarreal",
       "league": "la-liga",
@@ -1957,6 +2033,25 @@
       "result": "red",
       "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "ligue-1:lyon-vs-nice": {
+      "key": "ligue-1:lyon-vs-nice",
+      "league": "ligue-1",
+      "slug": "lyon-vs-nice",
+      "homeTeam": "Lyon",
+      "awayTeam": "Nice",
+      "date": "2026-10-18",
+      "fixtureId": "401876434",
+      "predictionAccess": "vip",
+      "prediction": "Lyon to Win",
+      "odds": 1.67,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-18T21:26:22.364Z",
+      "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "ligue-1:monaco-vs-toulouse": {
       "key": "ligue-1:monaco-vs-toulouse",
@@ -2660,6 +2755,25 @@
       "result": "green",
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "serie-a:juventus-vs-lazio": {
+      "key": "serie-a:juventus-vs-lazio",
+      "league": "serie-a",
+      "slug": "juventus-vs-lazio",
+      "homeTeam": "Juventus",
+      "awayTeam": "Lazio",
+      "date": "2026-10-18",
+      "fixtureId": "401874765",
+      "predictionAccess": "vip",
+      "prediction": "Over 1.5 Goals + Over 7.5 Corners",
+      "odds": 1.6,
+      "finalScore": {
+        "home": 0,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-10-18T21:26:22.364Z",
+      "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "serie-a:lecce-vs-bologna": {
       "key": "serie-a:lecce-vs-bologna",
