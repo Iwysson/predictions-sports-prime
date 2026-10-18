@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-18T01:12:24.344Z",
+  "generatedAt": "2026-10-18T05:51:56.646Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -15509,8 +15509,6 @@
     ]
   },
   "predictionIds": {
-    "brasileirao-serie-a:athletico-pr-vs-palmeiras": "editorial:brasileirao-serie-a:athletico-pr-vs-palmeiras:2026-10-17",
-    "brasileirao-serie-a:atletico-mg-vs-coritiba": "editorial:brasileirao-serie-a:atletico-mg-vs-coritiba:2026-10-17",
     "brasileirao-serie-a:bahia-vs-flamengo": "editorial:brasileirao-serie-a:bahia-vs-flamengo:2026-10-18",
     "brasileirao-serie-a:botafogo-vs-chapecoense": "editorial:brasileirao-serie-a:botafogo-vs-chapecoense:2026-10-17",
     "brasileirao-serie-a:corinthians-vs-vitoria": "editorial:brasileirao-serie-a:corinthians-vs-vitoria:2026-10-19",
@@ -15590,11 +15588,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-18T01:12:24.344Z",
+    "bundesliga": "2026-10-18T05:51:56.646Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
     "liga-portugal": "2026-10-15T21:38:20.114Z",
-    "ligue-1": "2026-10-18T01:12:24.344Z",
-    "eredivisie": "2026-10-18T01:12:24.344Z",
+    "ligue-1": "2026-10-18T05:51:56.646Z",
+    "eredivisie": "2026-10-18T05:51:56.646Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
@@ -20082,9 +20080,9 @@
       "time": "21:00",
       "homeTeam": "São Paulo",
       "awayTeam": "Vasco",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "in-progress",
+      "homeScore": 1,
+      "awayScore": 0,
+      "status": "completed",
       "dataSource": "editorial-manual",
       "id": "editorial:brasileirao-serie-a:sao-paulo-vs-vasco:2026-10-17",
       "sourceAgreement": false,
