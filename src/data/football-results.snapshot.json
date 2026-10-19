@@ -77,6 +77,25 @@
       "settledAt": "2026-10-11T21:49:41.803Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
+    "brasileirao-serie-a:bahia-vs-flamengo": {
+      "key": "brasileirao-serie-a:bahia-vs-flamengo",
+      "league": "brasileirao-serie-a",
+      "slug": "bahia-vs-flamengo",
+      "homeTeam": "Bahia",
+      "awayTeam": "Flamengo",
+      "date": "2026-10-18",
+      "fixtureId": "editorial:brasileirao-serie-a:bahia-vs-flamengo:2026-10-18",
+      "predictionAccess": "vip",
+      "prediction": "1X — Bahia or Draw",
+      "odds": 1.75,
+      "finalScore": {
+        "home": 0,
+        "away": 3
+      },
+      "result": "red",
+      "settledAt": "2026-10-19T01:26:16.487Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
+    },
     "brasileirao-serie-a:bahia-vs-mirassol": {
       "key": "brasileirao-serie-a:bahia-vs-mirassol",
       "league": "brasileirao-serie-a",
@@ -399,6 +418,25 @@
       "result": "green",
       "settledAt": "2026-10-08T02:02:59.027Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
+    },
+    "brasileirao-serie-a:remo-vs-red-bull-bragantino": {
+      "key": "brasileirao-serie-a:remo-vs-red-bull-bragantino",
+      "league": "brasileirao-serie-a",
+      "slug": "remo-vs-red-bull-bragantino",
+      "homeTeam": "Remo",
+      "awayTeam": "Red Bull Bragantino",
+      "date": "2026-10-18",
+      "fixtureId": "editorial:brasileirao-serie-a:remo-vs-red-bull-bragantino:2026-10-18",
+      "predictionAccess": "vip",
+      "prediction": "X2 + Over 1.5 Goals",
+      "odds": 1.71,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-19T01:26:16.487Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "brasileirao-serie-a:santos-vs-flamengo": {
       "key": "brasileirao-serie-a:santos-vs-flamengo",
