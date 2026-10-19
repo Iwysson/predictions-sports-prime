@@ -1,0 +1,76 @@
+{
+  "activeFromKey": "2026-10-19",
+  "releaseTimeZone": "America/New_York",
+  "entries": [
+    {
+      "slug": "toronto-maple-leafs-vs-san-jose-sharks",
+      "analysisAccess": "free",
+      "predictionAccess": "free",
+      "pick": "Over 5.5 Total Goals",
+      "odds": 1.60,
+      "analysis": [
+        "**Market:** Over 5.5 @ 1.60\n\n## Statistical matchup\n\n| Team | GP | GF/GP | GA/GP | SF/GP | SA/GP | PP | PK |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| San Jose Sharks | 8 | 2.63 | 3.50 | 27.6 | 27.5 | 23.1% | 80.8% |\n| Toronto Maple Leafs | 9 | 3.22 | 3.44 | 28.0 | 29.3 | 26.7% | 96.4% |\n\n## Analysis\n\nToronto averages 3.22 goals scored and 3.44 allowed per game, while San Jose scores 2.63 and concedes 3.50. Combining each team's scoring rate with the opponent's defensive rate produces a simple 6.40-goal baseline, above the six goals needed for this market to win.\n\nToronto has conceded at least three goals in seven consecutive games and has lost three straight. San Jose's latest result was a 4–3 shootout defeat in Detroit, with Macklin Celebrini contributing a goal and two assists. Both teams therefore have plausible routes to multiple goals.\n\nOne important counterweight is Toronto's elite 96.4% penalty kill, which could limit San Jose's 23.1% power-play offense. The Over case is more convincing at even strength and through Toronto's defensive vulnerability than through a guaranteed special-teams breakthrough.\n\n**Projected total:** 6.40 (Toronto 3.36 + San Jose 3.03, from each side's scoring rate and the opponent's goals-against rate)  \n**Raw implied probability:** 62.5% (1 / 1.60)  \n**Verdict:** OVER PREFERRED — medium confidence.\n\n*Odds can move before puck drop. Early-season NHL samples remain volatile, so this selection is probability-based analysis rather than a guaranteed outcome. Starting goalies were not confirmed at publication.*"
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        { "name": "NHL — official 2026-10-19 schedule", "url": "https://www.nhl.com/schedule/2026-10-19" },
+        { "name": "Team season statistics", "url": "https://kalshi.com/nhl/team-stats" },
+        { "name": "Reuters — NHL roundup, Islanders/Leafs (18 October 2026)", "url": "https://www.reuters.com/sports/nhl/islanders-get-first-road-win-season-leafs-lose-again--flm-2026-10-18/" },
+        { "name": "Puckwired — Sharks vs Maple Leafs preview", "url": "https://www.puckwired.com/game-coverage/game-previews/sharks-vs-maple-leafs-prediction-picks-2026-10-19/" }
+      ]
+    },
+    {
+      "slug": "philadelphia-flyers-vs-colorado-avalanche",
+      "analysisAccess": "free",
+      "predictionAccess": "free",
+      "pick": "Colorado Avalanche to Win (Including OT/SO)",
+      "odds": 1.49,
+      "analysis": [
+        "**Market:** Colorado Avalanche ML @ 1.49\n\n## Statistical matchup\n\n| Team | GP | GF/GP | GA/GP | SF/GP | SA/GP | PP | PK |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Colorado Avalanche | 8 | 4.50 | 2.88 | 30.8 | 26.0 | 20.7% | 85.0% |\n| Philadelphia Flyers | 10 | 1.40 | 3.30 | 21.2 | 32.9 | 10.3% | 83.8% |\n\n## Analysis\n\nColorado's 4.50 goals per game is among the league's highest early-season scoring rates, and its defense allows 2.88. Philadelphia averages only 1.40 goals scored and gives up 3.30, creating a clear attack-versus-defense mismatch in favor of the visitors.\n\nThe Avalanche also generate 30.8 shots per game; the Flyers allow 32.9. That volume gap should help Colorado sustain offensive-zone pressure rather than rely on a single scoring line. Colorado enters after a 5–2 victory over Pittsburgh.\n\nPhiladelphia finally earned its first victory of the campaign by beating Ottawa 3–1 on Saturday. That improvement matters, even though the Flyers remain just 1–6–3 after ten games. Colorado is the logical side, but a short away-moneyline price should not be confused with guaranteed value.\n\n**Projected score:** Colorado 3.4, Philadelphia 2.1 (average of each side's scoring rate and the opponent's goals-against rate)  \n**Raw implied probability:** 67.1% (1 / 1.49)  \n**Verdict:** COLORADO FAVORED — price caution, medium-high confidence on the result, lower confidence on the specific price.\n\n*Odds can move before puck drop. Early-season NHL samples remain volatile, so this selection is probability-based analysis rather than a guaranteed outcome. Philadelphia's goalie situation should be checked before puck drop.*"
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        { "name": "NHL — official 2026-10-19 schedule", "url": "https://www.nhl.com/schedule/2026-10-19" },
+        { "name": "Team season statistics", "url": "https://kalshi.com/nhl/team-stats" },
+        { "name": "Mile High Hockey — Avalanche beat Penguins 5-2", "url": "https://www.milehighhockey.com/colorado-avalanche-game-coverage/67020/recap-avalanche-put-penguins-on-ice-in-5-2-win" },
+        { "name": "Reuters — Flyers notch first win of the season", "url": "https://www.reuters.com/sports/nhl/flyers-notch-first-win-season-dan-vladar-shines-goal-vs-senators--flm-2026-10-18/" },
+        { "name": "Puckwired — Avalanche vs Flyers preview", "url": "https://www.puckwired.com/game-coverage/game-previews/avalanche-vs-flyers-prediction-picks-2026-10-19/" }
+      ]
+    },
+    {
+      "slug": "new-york-rangers-vs-anaheim-ducks",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Over 5.5 Total Goals",
+      "odds": 1.73,
+      "analysis": [
+        "**Market:** Over 5.5 @ 1.73\n\n## Statistical matchup\n\n| Team | GP | GF/GP | GA/GP | SF/GP | SA/GP | PP | PK |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Anaheim Ducks | 7 | 3.14 | 3.00 | 24.1 | 26.3 | 26.9% | 80.0% |\n| New York Rangers | 10 | 2.80 | 2.20 | 23.4 | 25.2 | 20.0% | 93.5% |\n\n## Analysis\n\nAnaheim enters with 3.14 goals scored and 3.00 conceded per game, while New York averages 2.80 goals for and just 2.20 against. The Ducks offer the more balanced attack, but the Rangers' season-long defensive numbers are a warning against treating six goals as routine.\n\nThe Ducks are coming off consecutive 4–2 losses to Calgary and Boston. Their late-game defending has been an issue, and New York has gone unbeaten through its first five home games. However, the Rangers have scored only one goal across their last two games, losing 7–1 to New Jersey and 1–0 in overtime at Columbus.\n\nSpecial teams point in both directions: Anaheim has converted 26.9% of power plays, yet the Rangers have killed 93.5% of penalties. That excellent New York penalty kill reduces one obvious path toward a high total.\n\n**Projected total:** 5.57 (Anaheim 2.67 + New York 2.90, from each side's scoring rate and the opponent's goals-against rate)  \n**Raw implied probability:** 57.8% (1 / 1.73)  \n**Verdict:** OVER — cautious lean, medium confidence.\n\n*Odds can move before puck drop. Early-season NHL samples remain volatile, so this selection is probability-based analysis rather than a guaranteed outcome. Starting goalies were not confirmed at publication.*"
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        { "name": "NHL — official 2026-10-19 schedule", "url": "https://www.nhl.com/schedule/2026-10-19" },
+        { "name": "Team season statistics", "url": "https://kalshi.com/nhl/team-stats" },
+        { "name": "Reuters — Rangers seek power-play improvement before Ducks visit", "url": "https://www.reuters.com/sports/rangers-seek-power-play-improvement-ducks-visit--flm-2026-10-18/" },
+        { "name": "Puckwired — Ducks vs Rangers preview", "url": "https://www.puckwired.com/game-coverage/game-previews/ducks-vs-rangers-prediction-picks-2026-10-19/" }
+      ]
+    },
+    {
+      "slug": "utah-mammoth-vs-pittsburgh-penguins",
+      "analysisAccess": "vip",
+      "predictionAccess": "vip",
+      "pick": "Utah Mammoth to Win (Including OT/SO)",
+      "odds": 1.59,
+      "analysis": [
+        "**Market:** Utah Mammoth ML @ 1.59\n\n## Statistical matchup\n\n| Team | GP | GF/GP | GA/GP | SF/GP | SA/GP | PP | PK |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Pittsburgh Penguins | 9 | 3.11 | 3.56 | 28.3 | 27.7 | 17.9% | 83.3% |\n| Utah Mammoth | 9 | 3.67 | 3.00 | 30.2 | 22.9 | 35.3% | 73.3% |\n\n## Analysis\n\nUtah is producing 3.67 goals and 30.2 shots per game while conceding 3.00. Pittsburgh scores 3.11 but allows 3.56, giving the Mammoth the better early-season offensive and defensive profile. Utah also owns a 35.3% power play, one of the most dangerous special-teams units in the league.\n\nPittsburgh arrives after a 6–2 defeat at Vegas, its third consecutive loss and sixth defeat in seven games. Utah also lost 6–2 to Edmonton on Saturday, ending a three-game winning streak. These results point toward a bounce-back setting for both teams rather than a one-sided certainty.\n\nThe home venue and Pittsburgh's vulnerability make Utah the reasonable moneyline lean. Nevertheless, the 1.59 quote requires a win probability above 62% to break even over time, which is demanding in a matchup where independent projections have been closer.\n\n**Projected score:** Utah 3.3, Pittsburgh 3.4 (average of each side's scoring rate and the opponent's goals-against rate; this is close enough that the price is the harder part of the selection, not the lean itself)  \n**Raw implied probability:** 62.9% (1 / 1.59)  \n**Verdict:** UTAH — moderate lean, price caution.\n\n*Odds can move before puck drop. Early-season NHL samples remain volatile, so this selection is probability-based analysis rather than a guaranteed outcome. Utah's goaltending workload after allowing six against Edmonton should be checked before puck drop.*"
+      ],
+      "analysisFormat": "markdown",
+      "sources": [
+        { "name": "NHL — official 2026-10-19 schedule", "url": "https://www.nhl.com/schedule/2026-10-19" },
+        { "name": "Team season statistics", "url": "https://kalshi.com/nhl/team-stats" },
+        { "name": "Reuters — NHL roundup, Panthers natural hat trick (18 October 2026)", "url": "https://www.reuters.com/sports/nhl-roundup-panthers-make-history-with-third-straight-natural-hat-trick--flm-2026-10-18/" },
+        { "name": "PensBurgh — Penguins need to dig in to get out of slump", "url": "https://www.pensburgh.com/general/82086/sunday-standings-penguins-need-to-dig-in-to-get-out-of-slump" },
+        { "name": "Puckwired — Penguins vs Mammoth preview", "url": "https://www.puckwired.com/game-coverage/game-previews/penguins-vs-mammoth-prediction-picks-2026-10-19/" }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import oct15 from "./protected-2026-10-15.json";
 import oct16 from "./protected-2026-10-16.json";
 import oct17 from "./protected-2026-10-17.json";
 import oct18 from "./protected-2026-10-18.json";
+import oct19 from "./protected-2026-10-19.json";
 
 // SERVER-ONLY registry of every NHL protected-picks file (history settlement, tests). It holds the original
 // pick and odds of PRIME VIP / BEST BET games, so it must never be imported by a client component or by
@@ -20,7 +21,7 @@ import oct18 from "./protected-2026-10-18.json";
 export type ProtectedNhlPick = { slug: string; pick: string; odds: number };
 type ProtectedFile = { activeFromKey: string; entries: ProtectedNhlPick[] };
 
-const FILES: ProtectedFile[] = [oct07, oct08, oct09, oct10, oct11, oct12, oct13, oct14, oct15, oct16, oct17, oct18] as ProtectedFile[];
+const FILES: ProtectedFile[] = [oct07, oct08, oct09, oct10, oct11, oct12, oct13, oct14, oct15, oct16, oct17, oct18, oct19] as ProtectedFile[];
 
 export const PROTECTED_NHL_PICKS_BY_DAY: Record<string, ProtectedNhlPick[]> = Object.fromEntries(
   FILES.map((file) => [file.activeFromKey, file.entries]),

@@ -1,0 +1,41 @@
+{
+  "dayKey": "2026-10-19",
+  "matches": [
+    {
+      "slug": "new-york-rangers-vs-anaheim-ducks",
+      "title": "New York Rangers × Anaheim Ducks",
+      "homeTeam": "New York Rangers",
+      "awayTeam": "Anaheim Ducks",
+      "access": "vip",
+      "badge": "PRIME VIP",
+      "teaser": "New York Rangers host Anaheim Ducks on October 19. Unlock PRIME VIP for the prediction, odds and analysis."
+    },
+    {
+      "slug": "philadelphia-flyers-vs-colorado-avalanche",
+      "title": "Philadelphia Flyers × Colorado Avalanche",
+      "homeTeam": "Philadelphia Flyers",
+      "awayTeam": "Colorado Avalanche",
+      "access": "free",
+      "badge": "FREE TO VIEW",
+      "teaser": "Philadelphia Flyers host Colorado Avalanche on October 19. Read the free prediction and full analysis."
+    },
+    {
+      "slug": "toronto-maple-leafs-vs-san-jose-sharks",
+      "title": "Toronto Maple Leafs × San Jose Sharks",
+      "homeTeam": "Toronto Maple Leafs",
+      "awayTeam": "San Jose Sharks",
+      "access": "free",
+      "badge": "FREE TO VIEW",
+      "teaser": "Toronto Maple Leafs host San Jose Sharks on October 19. Read the free prediction and full analysis."
+    },
+    {
+      "slug": "utah-mammoth-vs-pittsburgh-penguins",
+      "title": "Utah Mammoth × Pittsburgh Penguins",
+      "homeTeam": "Utah Mammoth",
+      "awayTeam": "Pittsburgh Penguins",
+      "access": "vip",
+      "badge": "PRIME VIP",
+      "teaser": "Utah Mammoth host Pittsburgh Penguins on October 19. Unlock PRIME VIP for the prediction, odds and analysis."
+    }
+  ]
+}

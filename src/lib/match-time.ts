@@ -60,6 +60,9 @@ const championsLeagueVenueTimezones: Record<string, string> = {
   "Allianz Arena": "Europe/Berlin",
   "Old Trafford": "Europe/London",
   "Fortuna Arena": "Europe/Prague",
+  "Baku Olympic Stadium": "Asia/Baku",
+  "Etihad Stadium": "Europe/London",
+  "Stadio Olimpico": "Europe/Rome",
 };
 
 

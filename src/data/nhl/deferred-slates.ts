@@ -2,6 +2,7 @@ import type { NhlPublicMatch, NhlPublicSlate } from "../../lib/nhl-slates";
 import { NHL_PUBLICATION_TIME_ZONE, isNhlSlateReleased } from "../../lib/nhl-publication-policy";
 import oct17 from "./deferred-slate-2026-10-17.json";
 import oct18 from "./deferred-slate-2026-10-18.json";
+import oct19 from "./deferred-slate-2026-10-19.json";
 
 // SERVER-ONLY. Never import this module from a client component or from src/data/nhl/slates.ts: it holds
 // the public listing (teams, titles, tier badges, teasers - never a pick, odds or analysis) of slates whose
@@ -12,6 +13,7 @@ import oct18 from "./deferred-slate-2026-10-18.json";
 const DEFERRED_MATCHES: Record<string, NhlPublicMatch[]> = {
   [oct17.dayKey]: oct17.matches as NhlPublicMatch[],
   [oct18.dayKey]: oct18.matches as NhlPublicMatch[],
+  [oct19.dayKey]: oct19.matches as NhlPublicMatch[],
 };
 
 export function deferredMatchesFor(dayKey: string): NhlPublicMatch[] {
