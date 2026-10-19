@@ -6,6 +6,10 @@ import protectedSlate from '../src/data/nhl/protected-2026-10-20.json';
 import { createMatchContentHandler } from '../functions/api/match-content/[slug].js';
 import { createMiddlewareHandler } from '../functions/_middleware.js';
 import { isNhlSlateReleased } from '../src/lib/nhl-publication-policy.ts';
+import routes from '../public/_routes.json';
+
+assert.equal(routes.include.includes('/*'),true);
+assert.equal(routes.exclude.some(pattern=>pattern==='/*.html'||pattern==='/*.txt'),false,'Cloudflare must invoke middleware for match HTML and RSC text assets');
 
 const football = [
   ['braga-vs-gil-vicente','2026-10-19','free',1.71],
