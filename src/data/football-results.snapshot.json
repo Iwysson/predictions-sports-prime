@@ -2832,6 +2832,25 @@
       "settledAt": "2026-10-11T18:05:27.889Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
     },
+    "serie-a:monza-vs-cagliari": {
+      "key": "serie-a:monza-vs-cagliari",
+      "league": "serie-a",
+      "slug": "monza-vs-cagliari",
+      "homeTeam": "Monza",
+      "awayTeam": "Cagliari",
+      "date": "2026-10-19",
+      "fixtureId": "401874762",
+      "predictionAccess": "free",
+      "prediction": "Monza or Draw (1X) + Over 7.5 Corners",
+      "odds": 1.74,
+      "finalScore": {
+        "home": 4,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-19T19:29:38.238Z",
+      "publishedAt": "2026-10-15T08:41:00-03:00"
+    },
     "serie-a:napoli-vs-frosinone": {
       "key": "serie-a:napoli-vs-frosinone",
       "league": "serie-a",
@@ -3154,6 +3173,25 @@
       "result": "green",
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "super-lig:trabzonspor-vs-besiktas": {
+      "key": "super-lig:trabzonspor-vs-besiktas",
+      "league": "super-lig",
+      "slug": "trabzonspor-vs-besiktas",
+      "homeTeam": "Trabzonspor",
+      "awayTeam": "Beşiktaş",
+      "date": "2026-10-19",
+      "fixtureId": "401888277",
+      "predictionAccess": "vip",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.51,
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-19T19:29:38.238Z",
+      "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "uefa-europa-league:celta-vigo-vs-juventus": {
       "key": "uefa-europa-league:celta-vigo-vs-juventus",

@@ -190,5 +190,11 @@
     "awayCorners": 7,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874765",
     "capturedAt": "2026-10-18T21:26:01.758Z"
+  },
+  "serie-a:monza-vs-cagliari": {
+    "homeCorners": 2,
+    "awayCorners": 7,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874762",
+    "capturedAt": "2026-10-19T19:29:20.539Z"
   }
 }
