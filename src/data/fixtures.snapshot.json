@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-19T06:25:17.391Z",
+  "generatedAt": "2026-10-19T13:43:41.728Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -15555,6 +15555,7 @@
     "eredivisie:sparta-rotterdam-vs-willem-ii": "401875579",
     "la-liga:deportivo-la-coruna-vs-levante": "401882844",
     "la-liga:getafe-vs-rayo-vallecano": "401882842",
+    "liga-portugal:braga-vs-gil-vicente": "official:liga-portugal:sporting-clube-de-braga-vs-gil-vicente:2026-08-16",
     "ligue-1:rennes-vs-auxerre": "401876441",
     "ligue-1:strasbourg-vs-paris-saint-germain": "401876432",
     "premier-league:tottenham-hotspur-vs-coventry-city": "401879257",
@@ -15580,11 +15581,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-19T06:25:17.391Z",
+    "bundesliga": "2026-10-19T13:43:41.728Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
     "liga-portugal": "2026-10-15T21:38:20.114Z",
-    "ligue-1": "2026-10-19T06:25:17.391Z",
-    "eredivisie": "2026-10-19T06:25:17.391Z",
+    "ligue-1": "2026-10-19T13:43:41.728Z",
+    "eredivisie": "2026-10-19T13:43:41.728Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
@@ -20384,6 +20385,22 @@
       "id": "official:eliteserien:start-vs-hamkam:2026-10-11",
       "sourceAgreement": true,
       "kickoffUtc": "2026-10-11T15:00:00.000Z",
+      "timeConfirmed": true
+    },
+    "official:liga-portugal:sporting-clube-de-braga-vs-gil-vicente:2026-08-16": {
+      "round": 2,
+      "date": "2026-08-16",
+      "time": "TBD",
+      "homeTeam": "Sporting Clube de Braga",
+      "awayTeam": "Gil Vicente",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "fotmob",
+      "id": "official:liga-portugal:sporting-clube-de-braga-vs-gil-vicente:2026-08-16",
+      "fotmobMatchId": 5887594,
+      "sourceAgreement": true,
+      "kickoffUtc": "2026-08-16T19:30:00.000Z",
       "timeConfirmed": true
     }
   }
