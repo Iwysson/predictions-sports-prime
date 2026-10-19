@@ -584,6 +584,16 @@ code { color: var(--accent); }
   border-color: rgba(85,227,143,.5);
 }
 
+/* Informational-only tile (no page behind it): same look, no link affordance or hover lift. */
+.league-card--static {
+  cursor: default;
+}
+
+.league-card--static:hover {
+  transform: none;
+  border-color: var(--line);
+}
+
 .league-symbol-wrap {
   position: relative;
   width: 44px;
@@ -725,6 +735,45 @@ code { color: var(--accent); }
   color: var(--text);
   display: block;
   margin-bottom: 6px;
+}
+
+/* "Today's predictions are complete!" notice (Football, NHL, NFL, NBA). */
+.predictions-complete {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 40px 24px;
+  margin: 24px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.predictions-complete__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.predictions-complete strong {
+  color: var(--text);
+  font-size: 19px;
+}
+
+.predictions-complete p {
+  color: var(--muted);
+  max-width: 440px;
+  margin: 0;
+  line-height: 1.6;
 }
 
 .page-hero {
@@ -3652,7 +3701,7 @@ html[dir="rtl"] .latest-match {
 .results-breakdown { margin: 24px 0; }
 .results-breakdown h2, .results-list-heading { margin: 0 0 8px; font-size: 21px; }
 .results-breakdown__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
-.results-breakdown__grid a { display: grid; gap: 4px; padding: 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
+.results-breakdown__grid a, .results-breakdown__item { display: grid; gap: 4px; padding: 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
 .results-breakdown__grid span { color: var(--muted); font-size: 12px; }
 .historical-context { display: grid; gap: 4px; margin: 0 0 18px; padding: 14px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; background: var(--panel); }
 .historical-context span { color: var(--muted); font-size: 13px; line-height: 1.5; }

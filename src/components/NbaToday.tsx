@@ -3,6 +3,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import Link from "@/components/DocumentLink";
 import { AccessBadge } from "@/components/AccessBadge";
+import { PredictionsCompleteNotice } from "@/components/PredictionsCompleteNotice";
 import { TeamBadge } from "@/components/TeamBadge";
 import { VipTitleCta } from "@/components/VipTitleCta";
 import { resolveNbaSlate } from "@/data/nba/slates";
@@ -140,13 +141,22 @@ export function NbaDaySlate({ initialKey, afterHero }: { initialKey: string; aft
     : resolved;
   if (!slate) return null;
 
-  // The static HTML carries no current-day text: the date is rendered only after mount, so crawlers
-  // and search snippets never see a build-day date. It still follows America/Sao_Paulo at runtime.
-  const dayLabel = mounted ? formatNbaDayLabel(slate.dayKey) : null;
   const matches = sortNbaMatches(slate.matches);
   const free = matches.filter((m) => m.access === "free");
   const protectedGames = matches.filter((m) => m.access !== "free");
   const analyses = (n: number) => (n === 1 ? "analysis" : "analyses");
+
+  // "Today's predictions are complete": today has no slate of its own (nothing registered for the
+  // new day yet - the last published day otherwise stays available forever) or today's slate was
+  // published with zero games. NBA has no live/finished game tracking yet, so (unlike NHL) a
+  // mid-day "all games finished" state cannot be detected; this only fires for a day with nothing
+  // to show, never because a tip-off time has passed.
+  const isStaleDay = slate.dayKey !== dayKey;
+  const showComplete = isStaleDay || matches.length === 0;
+
+  // The static HTML carries no current-day text: the date is rendered only after mount, so crawlers
+  // and search snippets never see a build-day date. It still follows America/Sao_Paulo at runtime.
+  const dayLabel = mounted ? formatNbaDayLabel(isStaleDay ? dayKey : slate.dayKey) : null;
 
   return (
     <>
@@ -156,25 +166,31 @@ export function NbaDaySlate({ initialKey, afterHero }: { initialKey: string; aft
         </span>
         <VipTitleCta>NBA Predictions Today</VipTitleCta>
         <p className="psp-hero__date" style={{ minHeight: "1.5em", fontWeight: 600 }}>{dayLabel}</p>
-        <p>
-          {matches.length} NBA games today. {free.length} {analyses(free.length)} {free.length === 1 ? "is" : "are"}{" "}
-          published in full for everyone.
-          {protectedGames.length ? ` The remaining ${protectedGames.length} ${protectedGames.length === 1 ? "is" : "are"} exclusive to PRIME VIP members.` : ""}
-        </p>
-        <div className="psp-chips">
-          <span className="psp-chip">{matches.length} games</span>
-          <span className="psp-chip">
-            <span className="psp-badge psp-badge--free">FREE TO VIEW</span> {free.length} {analyses(free.length)}
-          </span>
-          {protectedGames.length ? (
-            <span className="psp-chip">
-              <span className="psp-badge psp-badge--vip">PRIME VIP</span> {protectedGames.length} {analyses(protectedGames.length)}
-            </span>
-          ) : null}
-        </div>
+        {showComplete ? null : (
+          <>
+            <p>
+              {matches.length} NBA games today. {free.length} {analyses(free.length)} {free.length === 1 ? "is" : "are"}{" "}
+              published in full for everyone.
+              {protectedGames.length ? ` The remaining ${protectedGames.length} ${protectedGames.length === 1 ? "is" : "are"} exclusive to PRIME VIP members.` : ""}
+            </p>
+            <div className="psp-chips">
+              <span className="psp-chip">{matches.length} games</span>
+              <span className="psp-chip">
+                <span className="psp-badge psp-badge--free">FREE TO VIEW</span> {free.length} {analyses(free.length)}
+              </span>
+              {protectedGames.length ? (
+                <span className="psp-chip">
+                  <span className="psp-badge psp-badge--vip">PRIME VIP</span> {protectedGames.length} {analyses(protectedGames.length)}
+                </span>
+              ) : null}
+            </div>
+          </>
+        )}
       </header>
 
       {afterHero}
+
+      {showComplete ? <PredictionsCompleteNotice /> : <>
 
       {free.length ? (
         <section className="psp-game-group" aria-labelledby="nba-free-analyses">
@@ -212,6 +228,7 @@ export function NbaDaySlate({ initialKey, afterHero }: { initialKey: string; aft
           ))}
         </nav>
       </section>
+      </>}
     </>
   );
 }

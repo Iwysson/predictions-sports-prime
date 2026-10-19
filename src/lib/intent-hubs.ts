@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import type { MatchPreview } from "@/types";
-import { leagues } from "@/data/leagues";
 import {
   filterTodaysPublishedPredictions,
   filterTomorrowPublishedPredictions,
@@ -47,12 +46,12 @@ export const intentHubDefinitions: Record<IntentHubSlug, IntentHubDefinition> = 
     h1: "Football Predictions",
     description: "Football predictions organized by competition: every league and cup with upcoming fixtures, linked to the full match analysis, published odds and sources.",
     eyebrow: "Football prediction hub",
-    intro: "Start here to find a competition, then a fixture. The hub lists every league and cup that currently has published pre-match football predictions and links each one to its own page, where the selection, the published price, the evidence and the risks can be read in context.",
+    intro: "Start here to find a fixture. The hub lists every league and cup that currently has published pre-match football predictions, grouped by competition, and links each fixture to its own match page, where the selection, the published price, the evidence and the risks can be read in context.",
     feedTitle: "Next football fixtures with predictions",
-    feedIntro: "The next fixtures in schedule order across all competitions. Use the competition directory to narrow the view to a single league.",
+    feedIntro: "The next fixtures in schedule order across all competitions. The competition directory further down groups the same fixtures by league.",
     guideTitle: "How the football hub is organized",
     guide: [
-      "The hub is the entry point for competitions. Each competition page gathers the rounds, the table when one is available and the predictions published for that league; each match page holds the analysis for one fixture.",
+      "This page is the entry point for every competition: it groups the published predictions by league and cup, and each match page holds the analysis for one fixture.",
       "For a date-based view, use today's predictions. For free selections and the PRIME VIP board, use football picks. For how prices work, use football betting tips.",
     ],
     strategy: "football",
@@ -69,7 +68,7 @@ export const intentHubDefinitions: Record<IntentHubSlug, IntentHubDefinition> = 
     feedIntro: "Available MLS fixtures appear first in date order; other published competitions follow, so the board stays useful when the MLS schedule is quiet.",
     guideTitle: "What the soccer board covers",
     guide: [
-      "MLS predictions are grouped by date and link to the MLS competition page, where the Eastern and Western Conference fixtures published for the current stage are collected.",
+      "MLS predictions are grouped by date, each one linking straight to its own match page with the selection, the published price and the full analysis.",
       "Nothing here depends on where a reader is located: the same pages are available worldwide, and this board only changes the order and the terminology.",
     ],
     strategy: "soccer",
@@ -188,7 +187,3 @@ export function intentHubJsonLd(slug: IntentHubSlug, entries: MatchPreview[]) {
   ];
 }
 
-export function intentHubLeagueLinks(entries: MatchPreview[]) {
-  const available = new Set(entries.map((entry) => entry.league));
-  return leagues.filter((league) => available.has(league.slug)).slice(0, 8);
-}

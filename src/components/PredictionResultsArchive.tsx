@@ -59,10 +59,10 @@ export function PredictionResultsArchive({
           <h2 id="league-performance-heading">Results by competition</h2>
           <div className="results-breakdown__grid">
             {leagueBreakdown.map((entry) => (
-              <Link href={`/league/${entry.league}/`} key={entry.league}>
+              <div className="results-breakdown__item" key={entry.league}>
                 <strong>{leagueName(entry.league)}</strong>
                 <span>{entry.wins}-{entry.losses} from {entry.wins + entry.losses} decided</span>
-              </Link>
+              </div>
             ))}
           </div>
         </section>

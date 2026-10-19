@@ -3,7 +3,7 @@ import { LeagueCard } from "@/components/LeagueCard";
 import { NhlLeagueMark } from "@/components/NhlBestMultiple";
 import { SectionTitle } from "@/components/SectionTitle";
 import { primaryPredictionLeagues } from "@/data/leagues";
-import { localePath, type SeoLocale } from "@/lib/seo-locales";
+import type { SeoLocale } from "@/lib/seo-locales";
 import { homeFeedCopy } from "@/lib/home-feed-copy";
 
 export function PredictionLeagueCategories({
@@ -60,10 +60,26 @@ export function PredictionLeagueCategories({
                 </div>
                 <span className="arrow">→</span>
               </Link>
+              <Link href="/nba/" className="league-card league-card--featured">
+                <div className="league-symbol-wrap league-symbol-wrap--real">
+                  <span className="team-badge team-badge--md" style={{ background: "linear-gradient(145deg, #1d428a, #1d428a 56%, #c8102e 57%, #c8102e)" }} aria-hidden="true">
+                    <span>NBA</span>
+                  </span>
+                </div>
+                <div className="league-card-copy">
+                  <span className="featured-league-badge">Today&apos;s picks</span>
+                  <strong>NBA Predictions</strong>
+                  <small>Basketball</small>
+                </div>
+                <span className="arrow">→</span>
+              </Link>
             </>
           ) : null}
+          {/* Individual football league hubs were retired (/league/<slug>/ now redirects to
+              /football-predictions/): these stay purely informational tiles, no href, so the
+              logos/names/colors/grid/spacing are unchanged but nothing links to a removed page. */}
           {orderedLeagues.map((league) => (
-            <LeagueCard key={league.slug} {...league} href={localePath(locale, `/league/${league.slug}/`)} displayLabel={`${league.name} ${copy.predictionsSuffix}`} />
+            <LeagueCard key={league.slug} {...league} displayLabel={`${league.name} ${copy.predictionsSuffix}`} />
           ))}
         </div>
       </div>

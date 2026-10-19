@@ -59,7 +59,7 @@ function CompetitionDirectory({ entries }: { entries: MatchPreview[] }) {
       <div className="intent-directory__grid">
         {groups.map(({ league, items }) => (
           <div key={league.slug}>
-            <h3><Link href={`/league/${league.slug}/`}>{league.name} predictions</Link> <small>({items.length})</small></h3>
+            <h3>{league.name} predictions <small>({items.length})</small></h3>
             <ul>
               {items.slice(0, 5).map((match) => (
                 <li key={match.slug}><time dateTime={match.date}>{dateLabel(match.date)}</time> · <FixtureLink match={match} /></li>
@@ -142,7 +142,6 @@ function SoccerBoard({ entries }: { entries: MatchPreview[] }) {
           <ul>{items.map((match) => <li key={match.slug}><FixtureLink match={match} /></li>)}</ul>
         </div>
       )) : <p>No MLS match with a published prediction is scheduled at the moment.</p>}
-      <p><Link href="/league/mls/">All MLS predictions</Link></p>
       {others.length ? (
         <>
           <h3>Other soccer competitions</h3>

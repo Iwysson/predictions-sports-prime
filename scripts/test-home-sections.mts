@@ -42,8 +42,12 @@ assert(!/How Our Football Predictions Work/i.test(html), "the removed trust-link
 const leaguesSection = html.slice(idxLeagues);
 assert(leaguesSection.includes('href="/nhl/"'), "Predictions by League still links to NHL");
 assert(leaguesSection.includes('href="/nfl/"'), "Predictions by League still links to NFL");
-for (const slug of ["premier-league", "la-liga", "champions-league", "copa-libertadores"]) {
-  assert(leaguesSection.includes(`/league/${slug}/`), `Predictions by League still links to ${slug}`);
+assert(leaguesSection.includes('href="/nba/"'), "Predictions by League still links to NBA");
+// Individual football league hub pages were retired: the cards stay visible (logos, names,
+// colors) but no longer link anywhere, and /league/ never appears in this section's markup.
+assert(!leaguesSection.includes("/league/"), "Predictions by League no longer links to individual league pages");
+for (const name of ["Premier League", "La Liga", "UEFA Champions League", "CONMEBOL Libertadores"]) {
+  assert(leaguesSection.includes(name), `Predictions by League still shows the ${name} card`);
 }
 
 // --- No future prediction leaks into the crawlable directory or the sitemaps ------------------------

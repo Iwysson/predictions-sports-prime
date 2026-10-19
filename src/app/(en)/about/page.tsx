@@ -31,7 +31,7 @@ export default function AboutPage() {
         },
         {
           title: "Coverage",
-          content: <p>Coverage focuses on club and national-team football: the Premier League, La Liga, Bundesliga, Serie A, Ligue 1, Liga Portugal, Eredivisie, Brasileirão Série A, Süper Lig, Scottish Premiership, Eliteserien and Major League Soccer, plus cup and continental competitions, the UEFA Nations League and international friendlies. Alongside football, the NFL hub publishes weekly game predictions and the NHL hub publishes daily game predictions, each on a single hub page. Each football fixture page is meant to be read as a stand-alone match preview, and each competition page groups the fixtures published for that league.</p>,
+          content: <p>Coverage focuses on club and national-team football: the Premier League, La Liga, Bundesliga, Serie A, Ligue 1, Liga Portugal, Eredivisie, Brasileirão Série A, Süper Lig, Scottish Premiership, Eliteserien and Major League Soccer, plus cup and continental competitions, the UEFA Nations League and international friendlies. Alongside football, the NFL hub publishes weekly game predictions and the NHL hub publishes daily game predictions, each on a single hub page. Each football fixture page is meant to be read as a stand-alone match preview, and the Football hub groups every published fixture by competition.</p>,
         },
         {
           title: "What a match page contains",
