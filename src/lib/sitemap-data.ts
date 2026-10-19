@@ -46,18 +46,21 @@ export function buildLeagueSitemap(
   const league = leaguesBySlug[leagueSlug];
   if (!league) return [];
 
-  const leagueMatches = matches.filter(
+  const publishedLeagueMatches = matches.filter(
     (match) =>
       match.league === leagueSlug &&
       match.status === "published" &&
-      isAdSenseContentIndexable(match.slug, editorialPredictions) &&
-      // A future match not yet released publicly (src/lib/match-release.ts) must stay out of the
-      // sitemap: discovery resumes on its own once the release gate opens, no manual step needed.
-      isDateReleased(match.date)
+      isAdSenseContentIndexable(match.slug, editorialPredictions)
   );
+  // A future match not yet released publicly (src/lib/match-release.ts) must stay out of the sitemap's
+  // list of match URLs: discovery resumes on its own once the release gate opens, no manual step needed.
+  // The league hub's own indexability, below, is intentionally NOT narrowed by this filter: whether
+  // /league/<slug>/ itself belongs in the sitemap must not flip on and off through the day purely
+  // because every current match has settled and the next round hasn't released yet.
+  const leagueMatches = publishedLeagueMatches.filter((match) => isDateReleased(match.date));
 
   const leagueIndexable =
-    isLeagueIndexable(leagueMatches.length) &&
+    isLeagueIndexable(publishedLeagueMatches.length) &&
     isAdSenseLeagueIndexable(leagueSlug, matches, editorialPredictions);
 
   const leagueLastmod = leagueSitemapLastmod(leagueSlug);
