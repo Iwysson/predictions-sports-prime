@@ -6,6 +6,7 @@ import { editorialPredictions } from "../src/data/predictions/index.ts";
 import { buildContentIndex, type ProtectedContentEntry } from "../src/lib/match-access.ts";
 import { readFileSync } from "node:fs";
 import { nhlMatches } from "../src/lib/nhl.ts";
+import { allNbaMatches } from "../src/lib/nba-match.ts";
 import { matches as publishedMatches } from "../src/data/matches.ts";
 import { toMatchPreview } from "../src/lib/editorial.ts";
 import { hydratePredictions } from "../src/lib/live-predictions.ts";
@@ -62,7 +63,22 @@ const nflEntries: ProtectedContentEntry[] = nflWeekFiles.flatMap((file) => {
   }));
 });
 
-const index = buildContentIndex(editorialPredictions as any[], new Date(), [...nhlEntries, ...nflEntries]);
+// NBA protected entries (own slate/release-gate system mirroring NHL, src/data/nba/slates.ts -
+// America/Sao_Paulo midnight - rather than the football editorialPredictions pipeline, since NBA's
+// stat shape does not fit the football-specific psp-v1 Statistical Core). One day so far
+// (2026-10-20); a later day only needs its own protected-<day>.json entries picked up by
+// src/lib/nba-match.ts, same pattern as nhlLaterFiles above.
+const nbaEntries: ProtectedContentEntry[] = allNbaMatches().map((m) => ({
+  slug: m.slug,
+  analysisAccess: m.analysisAccess,
+  predictionAccess: m.predictionAccess,
+  full: { analysis: m.analysis, analysisFormat: m.analysisFormat, sources: m.sources, comment: null, picks: { main: m.pick, odds: m.odds } },
+  prediction: { main: m.pick, odds: m.odds },
+  activeFromKey: m.matchInfo.date,
+  releaseTimeZone: "America/Sao_Paulo",
+}));
+
+const index = buildContentIndex(editorialPredictions as any[], new Date(), [...nhlEntries, ...nflEntries, ...nbaEntries]);
 mkdirSync("functions/_data", { recursive: true });
 writeFileSync("functions/_data/match-content.json", JSON.stringify(index, null, 2) + "\n");
 const count = (fn: (e: ProtectedContentEntry) => boolean) => index.filter(fn).length;
@@ -81,8 +97,13 @@ console.log(
 // a live fixture correction can move the real kickoff a calendar day from what was first declared, and the
 // release gate must follow that correction exactly like every other "is this today" decision on the site.
 const hydratedMatches = await hydratePredictions(publishedMatches.map(toMatchPreview));
-const releaseManifest = hydratedMatches
+const footballReleaseManifest = hydratedMatches
   .filter((m) => Boolean(m.date))
   .map((m) => ({ slug: m.slug, date: m.date }));
+// NBA match pages (/nba/<slug>/) share this exact manifest and middleware gate (functions/_middleware.js
+// matches both /match/ and /nba/ paths); release-gate semantics are identical (America/Fortaleza is the
+// same fixed UTC-3 offset as America/Sao_Paulo for every date since Brazil abolished DST in 2019).
+const nbaReleaseManifest = nbaEntries.map((entry) => ({ slug: entry.slug, date: entry.activeFromKey }));
+const releaseManifest = [...footballReleaseManifest, ...nbaReleaseManifest];
 writeFileSync("functions/_data/match-release.json", JSON.stringify(releaseManifest, null, 2) + "\n");
 console.log(`match release manifest: ${releaseManifest.length} slugs`);

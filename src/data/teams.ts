@@ -415,6 +415,14 @@ export const teamVisuals: Record<string, TeamVisual> = {
     primary: "#fdeb00",
     secondary: "#111111",
   },
+
+  // NBA 2026-27 opening-night clubs.
+  "Detroit Pistons": { code: "DET", primary: "#c8102e", secondary: "#1d42ba" },
+  "Boston Celtics": { code: "BOS", primary: "#007a33", secondary: "#ffffff" },
+  "New York Knicks": { code: "NYK", primary: "#006bb6", secondary: "#f58426" },
+  "Philadelphia 76ers": { code: "PHI", primary: "#006bb6", secondary: "#ed174c" },
+  "San Antonio Spurs": { code: "SAS", primary: "#000000", secondary: "#c4ced4" },
+  "Oklahoma City Thunder": { code: "OKC", primary: "#007ac1", secondary: "#ef3b24" },
 };
 
 export function getTeamVisual(team: string): TeamVisual {

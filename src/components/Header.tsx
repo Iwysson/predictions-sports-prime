@@ -134,6 +134,7 @@ export function Header() {
         { href: "/football-predictions/", label: "Football" },
         { href: "/nfl/", label: "NFL" },
         { href: "/nhl/", label: "NHL" },
+        { href: "/nba/", label: "NBA" },
       ]}
     />
   );

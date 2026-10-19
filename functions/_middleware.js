@@ -9,7 +9,11 @@ const CANONICAL_ORIGIN = "https://predictions-sports-prime.com";
 // results dataset is the single source: a missing /match/<slug>/ whose slug is settled there was
 // removed on purpose, so it answers 410 Gone instead of 404. Nothing is listed by hand.
 const SETTLED_SLUGS = new Set(Object.values(results.records).map((record) => record.slug));
-const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?match\/([^/]+)(?:\/.*)?$/;
+// Also matches /nba/<slug>/ (but never /nba/ itself, with no slug segment), so NBA match pages can
+// share this same release-date gate (functions/_data/match-release.json) without a separate
+// middleware pattern. /nba/ listing hub stays ungated here - its own gate is the deferred-slate
+// pattern (src/data/nba/slates.ts), mirroring NHL.
+const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?(?:match|nba)\/([^/]+)(?:\/.*)?$/;
 
 // Public-release gate (src/lib/match-release.ts): a future prediction's page may already exist in the
 // static export, but it must not be served until its match date arrives in the site's canonical fixture

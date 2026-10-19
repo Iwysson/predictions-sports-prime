@@ -32,6 +32,7 @@ export function Footer() {
           <Link href="/league/mls/">MLS predictions</Link>
           <Link href="/nfl/">NFL predictions</Link>
           <Link href="/nhl/">NHL predictions</Link>
+          <Link href="/nba/">NBA predictions</Link>
         </nav>
 
         <nav className="footer-links" aria-label="Legal and information">

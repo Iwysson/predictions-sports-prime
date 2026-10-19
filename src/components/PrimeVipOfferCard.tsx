@@ -18,7 +18,7 @@ export function PrimeVipOfferCard() {
             <h2 id="prime-vip-offer-title">Unlock every prediction and full analysis.</h2>
             <strong className="prime-vip-offer__trial">Join PRIME VIP</strong>
             <ul>
-              <li>Full match analyses</li><li>All VIP predictions</li><li>NHL &amp; NFL premium picks</li>
+              <li>Full match analyses</li><li>All VIP predictions</li><li>NHL, NFL &amp; NBA premium picks</li>
               <li>Best Bets</li><li>Prediction History</li><li>Ad-free experience</li>
             </ul>
           </div>
