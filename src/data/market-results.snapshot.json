@@ -172,5 +172,23 @@
     "awayCorners": 8,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.1/summary?event=401875580",
     "capturedAt": "2026-10-17T21:35:55.304Z"
+  },
+  "brasileirao-serie-a:atletico-mg-vs-coritiba": {
+    "homeCorners": 10,
+    "awayCorners": 5,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841270",
+    "capturedAt": "2026-10-18T01:12:24.344Z"
+  },
+  "la-liga:malaga-vs-real-sociedad": {
+    "homeCorners": 4,
+    "awayCorners": 5,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882841",
+    "capturedAt": "2026-10-18T19:05:58.281Z"
+  },
+  "serie-a:juventus-vs-lazio": {
+    "homeCorners": 5,
+    "awayCorners": 7,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874765",
+    "capturedAt": "2026-10-18T21:26:01.758Z"
   }
 }
