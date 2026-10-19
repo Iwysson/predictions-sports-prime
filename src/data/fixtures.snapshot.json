@@ -3813,8 +3813,8 @@
           },
           {
             "round": 9,
-            "date": "2026-10-18",
-            "time": "TBD",
+            "date": "2026-10-19",
+            "time": "21:00",
             "homeTeam": "Getafe",
             "awayTeam": "Rayo Vallecano",
             "homeScore": null,
@@ -3823,9 +3823,10 @@
             "dataSource": "espn",
             "id": "401882842",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-10-18T18:00Z",
-            "espnEventId": "401882842"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-10-19T19:00:00Z",
+            "espnEventId": "401882842",
+            "scheduleSourceUrl": "https://www.laliga.com/es-DE/noticias/horarios-de-la-novena-jornada-de-laliga-ea-sports-2026-27"
           }
         ]
       },

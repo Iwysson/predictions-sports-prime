@@ -322,7 +322,6 @@ async function syncLeague(league) {
           Math.abs(Date.parse(`${left.date}T12:00:00Z`) - Date.parse(`${fixture.date}T12:00:00Z`)) -
           Math.abs(Date.parse(`${right.date}T12:00:00Z`) - Date.parse(`${fixture.date}T12:00:00Z`))
         )[0];
-      const dateChanged = saved && saved.date !== fixture.date;
       // Provider feeds are occasionally updated out of order. Once a valid
       // final score has been observed it is immutable and must never be rolled
       // back by a stale scheduled/live response from another provider.
@@ -341,8 +340,17 @@ async function syncLeague(league) {
         fixture.kickoffUtc = saved.kickoffUtc;
         fixture.timeConfirmed = saved.timeConfirmed;
         fixture.sourceAgreement = saved.sourceAgreement;
+      } else if (saved?.timeConfirmed && !fixture.timeConfirmed && (fixture.status === "scheduled" || fixture.status === "in-progress")) {
+        // Keep a confirmed kickoff when an unconfirmed provider placeholder
+        // arrives later. Live status and final scores still come from providers.
+        fixture.date = saved.date;
+        fixture.time = saved.time;
+        fixture.kickoffUtc = saved.kickoffUtc;
+        fixture.timeConfirmed = true;
+        fixture.sourceAgreement = saved.sourceAgreement;
+        fixture.scheduleSourceUrl = saved.scheduleSourceUrl;
       }
-      if (fixture.status === "scheduled" && (saved?.status === "rescheduled" || dateChanged)) {
+      if (fixture.status === "scheduled" && (saved?.status === "rescheduled" || (saved && saved.date !== fixture.date))) {
         fixture.status = "rescheduled";
       }
     }

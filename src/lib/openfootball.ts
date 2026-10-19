@@ -23,6 +23,7 @@ export type OpenFootballGame = {
   kickoffUtc?: string;
   timeConfirmed?: boolean;
   sourceAgreement?: boolean;
+  scheduleSourceUrl?: string;
 };
 
 export type OpenFootballRound = {
