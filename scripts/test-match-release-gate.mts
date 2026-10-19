@@ -73,6 +73,13 @@ const releaseDateBySlug = new Map([
   assert(nextCalls.length === 0, "the localized static asset is never fetched either");
 }
 
+for (const suffix of [".html", "/index.html", "/index.txt", "/__next._full.txt"]) {
+  const handler = createMiddlewareHandler({ releaseDateBySlug, now: () => NOW });
+  const { context, nextCalls } = makeContext(`https://predictions-sports-prime.com/match/future-game${suffix}`, new Response("private static content"));
+  const response = await handler(context);
+  assert(response.status === 307 && nextCalls.length === 0, `future static asset ${suffix} redirects before its body is fetched`);
+}
+
 {
   // A released match (today or earlier) is served normally: next() runs, response passes through untouched.
   const handler = createMiddlewareHandler({ releaseDateBySlug, now: () => NOW });

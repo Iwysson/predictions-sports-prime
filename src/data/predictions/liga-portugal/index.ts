@@ -4,6 +4,7 @@ import { ligaPortugalRound03 } from "./round-03";
 import { ligaPortugalRound2026_10_09 } from "./round-2026-10-09";
 import { ligaPortugalRound2026_10_11 } from "./round-2026-10-11";
 import { ligaPortugalRound2026_10_12 } from "./round-2026-10-12";
+import { predictions as oct19 } from "./round-2026-10-19";
 
 export const ligaPortugalPredictions = [
   ...ligaPortugalRound02,
@@ -12,4 +13,5 @@ export const ligaPortugalPredictions = [
   ...ligaPortugalRound2026_10_10,
   ...ligaPortugalRound2026_10_11,
   ...ligaPortugalRound2026_10_12,
+  ...oct19,
 ];

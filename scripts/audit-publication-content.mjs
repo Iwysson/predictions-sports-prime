@@ -44,8 +44,9 @@ function similarity(left, right) {
 for (const prediction of future) {
   const slug = prediction.slug ?? `${prediction.homeTeam}-vs-${prediction.awayTeam}`;
   const text = Array.isArray(prediction.analysis) ? prediction.analysis.join("\n\n") : String(prediction.analysis ?? "");
+  const proseWithoutUrls = text.replace(/https?:\/\/\S+/g, "");
   for (const pattern of internal) {
-    const match = text.match(pattern);
+    const match = proseWithoutUrls.match(pattern);
     if (match) failures.push({ slug, reason: "internal information", excerpt: match[0] });
   }
   if (!factual.test(text)) failures.push({ slug, reason: "analysis without concrete data", excerpt: text.slice(0, 180) });

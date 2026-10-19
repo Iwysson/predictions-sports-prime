@@ -9,7 +9,7 @@ const CANONICAL_ORIGIN = "https://predictions-sports-prime.com";
 // results dataset is the single source: a missing /match/<slug>/ whose slug is settled there was
 // removed on purpose, so it answers 410 Gone instead of 404. Nothing is listed by hand.
 const SETTLED_SLUGS = new Set(Object.values(results.records).map((record) => record.slug));
-const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?match\/([^/]+)\/?$/;
+const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?match\/([^/]+)(?:\/.*)?$/;
 
 // Public-release gate (src/lib/match-release.ts): a future prediction's page may already exist in the
 // static export, but it must not be served until its match date arrives in the site's canonical fixture
@@ -50,7 +50,7 @@ export function createMiddlewareHandler({
     }
 
     const matchPath = requestUrl.pathname.match(MATCH_PATH);
-    const slug = matchPath ? decodeURIComponent(matchPath[1]) : null;
+    const slug = matchPath ? decodeURIComponent(matchPath[1]).replace(/\.(?:html|txt)$/i, "") : null;
 
     // Not yet released: answer the same way for a direct hit, a refresh or an anonymous tab, and never
     // let the static asset (which may already contain the full free-tier prediction) reach the client.

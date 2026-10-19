@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, type ReactNode } from "react";
+import { Fragment, useEffect, useState, type ReactNode } from "react";
 import { useClientNow } from "@/lib/use-client-now";
 import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import Link from "@/components/DocumentLink";
@@ -76,6 +76,21 @@ export function HomePredictionFeed({
       : `/match/${slug}/`;
   const separator = locale === "en" ? "vs" : seoLocales[locale].separator;
   const now = useClientNow();
+  const [dailyMatches, setDailyMatches] = useState<MatchPreview[]>([]);
+  const todayKey = now ? localTodayISO(now) : null;
+  useEffect(() => {
+    if (!todayKey) return;
+    let active = true;
+    fetch('/api/mobile/football/feed', { cache: 'no-store' })
+      .then((response) => response.ok ? response.json() : null)
+      .then((feed) => {
+        if (!active || !feed) return;
+        const entries = [...(feed.free?.today ?? []), ...(feed.vip?.today ?? [])];
+        setDailyMatches(entries.map((entry: any) => ({ ...entry, status: 'published' as const, mainPrediction: entry.pick, odds: entry.odds })));
+      })
+      .catch(() => {});
+    return () => { active = false; };
+  }, [todayKey]);
   if (!now) {
     return (
       <>
@@ -90,7 +105,7 @@ export function HomePredictionFeed({
     );
   }
   const today = localTodayISO(now);
-  const todayMatches = filterTodaysPublishedPredictions(matches, today, now);
+  const todayMatches = filterTodaysPublishedPredictions([...matches, ...dailyMatches], today, now);
 
   return (
     <>

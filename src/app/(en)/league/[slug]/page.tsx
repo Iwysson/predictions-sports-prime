@@ -17,6 +17,7 @@ import { LeagueEditorialHub } from "@/components/LeagueEditorialHub";
 import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
 import { SiteContactLine } from "@/components/SiteContactLine";
 import { toMatchPreview } from "@/lib/editorial";
+import { isDateReleased } from "@/lib/match-release";
 import { loadLeagueSeason } from "@/lib/openfootball";
 import { buildCompetitionRoundSurface } from "@/lib/competition-rounds";
 import { isFixtureHistoryEligible } from "@/lib/fixture-state";
@@ -127,13 +128,13 @@ export default async function LeaguePage({
   }
 
   const leagueSource = matchesByLeague.get(league.slug) ?? [];
-  const leagueMatches = leagueSource.map(toMatchPreview);
-  const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions);
+  const leagueMatches = leagueSource.map(toMatchPreview).filter((match) => isDateReleased(match.date));
+  const indexableMatchSlugs = getAdSenseIndexableSlugs(editorialPredictions).filter((slug) => leagueMatches.some((match) => match.slug === slug));
   const indexableMatchSet = new Set(indexableMatchSlugs);
   const publishedMatches = leagueSource.filter(
     (match) =>
       match.status === "published" &&
-      indexableMatchSet.has(match.slug)
+      indexableMatchSet.has(match.slug) && isDateReleased(match.date)
   );
   const capabilities = leagueSeoCapabilities(league, publishedMatches);
   const standings = standingsByLeague[league.slug];

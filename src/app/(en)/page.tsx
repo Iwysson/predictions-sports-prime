@@ -7,6 +7,7 @@ import { PredictionLeagueCategories } from "@/components/PredictionLeagueCategor
 import { matches } from "@/data/matches";
 import { toMatchPreview } from "@/lib/editorial";
 import { hydratePredictions } from "@/lib/live-predictions";
+import { isDateReleased } from "@/lib/match-release";
 import { homePageJsonLd } from "@/lib/seo";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { localizedAlternates } from "@/lib/international-seo";
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const resolvedMatches = await hydratePredictions(matches.map(toMatchPreview));
-  const clientMatches = selectTemporalClientMatches(resolvedMatches, true);
+  const clientMatches = selectTemporalClientMatches(resolvedMatches, true).filter((match) => isDateReleased(match.date));
 
   return (
     <>

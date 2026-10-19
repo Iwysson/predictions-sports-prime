@@ -6,9 +6,10 @@ import { IntentHubContent } from "@/components/IntentHubContent";
 import { IntentHubDirectory } from "@/components/IntentHubDirectory";
 import { AllCompetitions } from "@/components/AllCompetitions";
 import { selectTemporalClientMatches } from "@/lib/match-feed";
+import { isDateReleased } from "@/lib/match-release";
 
 export async function IntentHubPage({ slug }: { slug: IntentHubSlug }) {
-  const resolved = await hydratePredictions(matches.map(toMatchPreview));
+  const resolved = (await hydratePredictions(matches.map(toMatchPreview))).filter((match) => isDateReleased(match.date));
   return <>
   <IntentHubContent
     slug={slug}

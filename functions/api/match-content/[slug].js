@@ -41,7 +41,7 @@ const isVipRow = (row) =>
   row?.plan === "vip" &&
   ["trialing", "active"].includes(row?.subscription_status ?? "");
 
-export function createMatchContentHandler(index) {
+export function createMatchContentHandler(index, now = () => new Date()) {
   return async function handle({ request, params, env }) {
     try {
       const slug = String(params?.slug ?? "");
@@ -55,7 +55,7 @@ export function createMatchContentHandler(index) {
       // Not yet active: same answer as an unknown slug, so nothing about the future day leaks.
       if (
         entry.activeFromKey &&
-        !isNhlSlateReleased({ date: entry.activeFromKey, timezone: entry.releaseTimeZone ?? NHL_TIME_ZONE }, new Date())
+        !isNhlSlateReleased({ date: entry.activeFromKey, timezone: entry.releaseTimeZone ?? NHL_TIME_ZONE }, now())
       ) {
         return json({ error: "not-found" }, 404);
       }
