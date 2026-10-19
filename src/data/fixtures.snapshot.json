@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-19T19:29:20.539Z",
+  "generatedAt": "2026-10-19T22:59:53.650Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -1127,15 +1127,16 @@
             "time": "20:00",
             "homeTeam": "Tottenham Hotspur",
             "awayTeam": "Coventry City",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "in-progress",
-            "dataSource": "espn",
+            "homeScore": 3,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401879257",
             "sourceAgreement": true,
             "timeConfirmed": true,
             "kickoffUtc": "2026-10-19T19:00Z",
-            "espnEventId": "401879257"
+            "espnEventId": "401879257",
+            "fotmobMatchId": 5795484
           }
         ]
       },
@@ -3817,16 +3818,17 @@
             "time": "21:00",
             "homeTeam": "Getafe",
             "awayTeam": "Rayo Vallecano",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "in-progress",
-            "dataSource": "espn",
+            "homeScore": 1,
+            "awayScore": 1,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401882842",
             "sourceAgreement": false,
             "timeConfirmed": true,
             "kickoffUtc": "2026-10-19T19:00:00Z",
             "espnEventId": "401882842",
-            "scheduleSourceUrl": "https://www.laliga.com/es-DE/noticias/horarios-de-la-novena-jornada-de-laliga-ea-sports-2026-27"
+            "scheduleSourceUrl": "https://www.laliga.com/es-DE/noticias/horarios-de-la-novena-jornada-de-laliga-ea-sports-2026-27",
+            "fotmobMatchId": 5868095
           }
         ]
       },
@@ -8001,15 +8003,16 @@
             "time": "20:45",
             "homeTeam": "Parma",
             "awayTeam": "Torino",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "in-progress",
-            "dataSource": "espn",
+            "homeScore": 0,
+            "awayScore": 3,
+            "status": "completed",
+            "dataSource": "fotmob",
             "id": "401874784",
             "sourceAgreement": true,
             "timeConfirmed": true,
             "kickoffUtc": "2026-10-19T18:45Z",
-            "espnEventId": "401874784"
+            "espnEventId": "401874784",
+            "fotmobMatchId": 5749707
           }
         ]
       },
@@ -15557,19 +15560,18 @@
     "eredivisie:sparta-rotterdam-vs-willem-ii": "401875579",
     "la-liga:deportivo-la-coruna-vs-levante": "401882844",
     "la-liga:getafe-vs-rayo-vallecano": "401882842",
+    "liga-portugal:braga-vs-gil-vicente": "official:liga-portugal:sporting-clube-de-braga-vs-gil-vicente:2026-08-16",
     "ligue-1:rennes-vs-auxerre": "401876441",
     "ligue-1:strasbourg-vs-paris-saint-germain": "401876432",
     "premier-league:tottenham-hotspur-vs-coventry-city": "401879257",
     "serie-a:atalanta-vs-venezia": "401875005",
     "serie-a:cagliari-vs-juventus": "401874764",
     "serie-a:lazio-vs-monza": "401874951",
-    "serie-a:monza-vs-cagliari": "401874762",
     "serie-a:parma-vs-torino": "401874784",
     "super-lig:genclerbirligi-vs-galatasaray": "401888274",
     "super-lig:istanbul-basaksehir-vs-gaziantep-fk": "401888275",
     "super-lig:kocaelispor-vs-goztepe": "401888272",
     "super-lig:konyaspor-vs-basaksehir": "official:super-lig:konyaspor-vs-basaksehir:2026-10-11",
-    "super-lig:trabzonspor-vs-besiktas": "401888277",
     "uefa-europa-league:az-alkmaar-vs-hapoel-beer-sheva": "official:uefa-europa-league:az-alkmaar-vs-hapoel-beer-sheva:2026-10-15",
     "uefa-europa-league:benfica-vs-celtic": "401915562",
     "uefa-europa-league:bournemouth-vs-sturm-graz": "official:uefa-europa-league:bournemouth-vs-sturm-graz:2026-10-15",
@@ -15582,11 +15584,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-19T19:29:20.539Z",
+    "bundesliga": "2026-10-19T22:59:53.650Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
     "liga-portugal": "2026-10-15T21:38:20.114Z",
-    "ligue-1": "2026-10-19T19:29:20.539Z",
-    "eredivisie": "2026-10-19T19:29:20.539Z",
+    "ligue-1": "2026-10-19T22:59:53.650Z",
+    "eredivisie": "2026-10-19T22:59:53.650Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"

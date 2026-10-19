@@ -196,5 +196,11 @@
     "awayCorners": 7,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874762",
     "capturedAt": "2026-10-19T19:29:20.539Z"
+  },
+  "serie-a:parma-vs-torino": {
+    "homeCorners": 6,
+    "awayCorners": 2,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874784",
+    "capturedAt": "2026-10-19T22:59:53.650Z"
   }
 }

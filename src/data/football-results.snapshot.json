@@ -1483,6 +1483,25 @@
       "settledAt": "2026-10-17T14:23:07.914Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
+    "la-liga:getafe-vs-rayo-vallecano": {
+      "key": "la-liga:getafe-vs-rayo-vallecano",
+      "league": "la-liga",
+      "slug": "getafe-vs-rayo-vallecano",
+      "homeTeam": "Getafe",
+      "awayTeam": "Rayo Vallecano",
+      "date": "2026-10-19",
+      "fixtureId": "401882842",
+      "predictionAccess": "vip",
+      "prediction": "Over 1.5 Goals",
+      "odds": 1.53,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-19T23:00:12.228Z",
+      "publishedAt": "2026-10-15T08:41:00-03:00"
+    },
     "la-liga:levante-vs-sevilla": {
       "key": "la-liga:levante-vs-sevilla",
       "league": "la-liga",
@@ -2566,6 +2585,25 @@
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "premier-league:tottenham-hotspur-vs-coventry-city": {
+      "key": "premier-league:tottenham-hotspur-vs-coventry-city",
+      "league": "premier-league",
+      "slug": "tottenham-hotspur-vs-coventry-city",
+      "homeTeam": "Tottenham Hotspur",
+      "awayTeam": "Coventry City",
+      "date": "2026-10-19",
+      "fixtureId": "401879257",
+      "predictionAccess": "free",
+      "prediction": "Tottenham Hotspur to Win",
+      "odds": 1.48,
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-19T23:00:12.228Z",
+      "publishedAt": "2026-10-15T08:41:00-03:00"
+    },
     "scottish-premiership:aberdeen-vs-st-mirren": {
       "key": "scottish-premiership:aberdeen-vs-st-mirren",
       "league": "scottish-premiership",
@@ -2869,6 +2907,25 @@
       "result": "green",
       "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "serie-a:parma-vs-torino": {
+      "key": "serie-a:parma-vs-torino",
+      "league": "serie-a",
+      "slug": "parma-vs-torino",
+      "homeTeam": "Parma",
+      "awayTeam": "Torino",
+      "date": "2026-10-19",
+      "fixtureId": "401874784",
+      "predictionAccess": "vip",
+      "prediction": "Over 1.5 Goals + Over 6.5 Corners",
+      "odds": 1.74,
+      "finalScore": {
+        "home": 0,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-10-19T23:00:12.228Z",
+      "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "serie-a:roma-vs-genoa": {
       "key": "serie-a:roma-vs-genoa",
