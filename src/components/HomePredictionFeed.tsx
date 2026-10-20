@@ -6,8 +6,7 @@ import { PublishedMatchDirectory } from "@/components/PublishedMatchDirectory";
 import Link from "@/components/DocumentLink";
 import { MatchPreview } from "@/types";
 import { HomeMatchCard } from "@/components/HomeMatchCard";
-import { LeagueBadge } from "@/components/LeagueBadge";
-import { homeClubLeagues, leaguesBySlug } from "@/data/leagues";
+import { leaguesBySlug } from "@/data/leagues";
 import { filterTodaysPublishedPredictions, localTodayISO } from "@/lib/match-feed";
 import { localePath, seoLocales, type SeoLocale } from "@/lib/seo-locales";
 import { localizePredictionText } from "@/lib/localized-presentation";
@@ -16,36 +15,6 @@ import { homeFeedCopy } from "@/lib/home-feed-copy";
 import type { PublicFootballResult } from "@/lib/football-results";
 import { FootballTrackRecord } from "@/components/FootballTrackRecord";
 
-
-function HomeLeagueTaxonomy({
-  copy,
-  locale,
-}: {
-  copy: ReturnType<typeof homeFeedCopy>;
-  locale: SeoLocale;
-}) {
-  return (
-    <aside className="home-leagues-sidebar" aria-label={copy.competitions}>
-      <div className="home-leagues-sidebar__heading">
-        <span className="eyebrow">{copy.competitions}</span>
-        <h2>{copy.topLeagues}</h2>
-      </div>
-
-      <div className="home-leagues-sidebar__list">
-        {homeClubLeagues.map((league) => (
-          <Link
-            key={league.slug}
-            href={localePath(locale, `/league/${league.slug}/`)}
-            className="home-league-link"
-          >
-            <LeagueBadge slug={league.slug} short={league.short} size="sm" />
-            <span>{league.name}</span>
-          </Link>
-        ))}
-      </div>
-    </aside>
-  );
-}
 
 export function HomePredictionFeed({
   matches,
@@ -95,9 +64,7 @@ export function HomePredictionFeed({
     return (
       <>
         <section className="section section--compact" id="today" data-static-home-discovery="true">
-          <div className="container home-today-layout">
-            <HomeLeagueTaxonomy copy={copy} locale={locale} />
-          </div>
+          <div className="container" />
         </section>
         {discovery ?? <PublishedMatchDirectory matches={matches} locale={locale} localizedMatchSlugs={localizedMatchSlugs} />}
         {beforeHistory}
@@ -112,7 +79,7 @@ export function HomePredictionFeed({
       <Fragment key="home-before-today">{beforeToday}</Fragment>
 
       <section className="section section--compact" id="today">
-        <div className="container home-today-layout">
+        <div className="container">
           <div className="home-today-main">
             <div className="section-heading section-heading--compact">
               <div className="heading-with-icon">
@@ -149,7 +116,6 @@ export function HomePredictionFeed({
             )}
           </div>
 
-          <HomeLeagueTaxonomy copy={copy} locale={locale} />
         </div>
       </section>
 

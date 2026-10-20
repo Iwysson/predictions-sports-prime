@@ -4,68 +4,12 @@
     "date": "2026-10-18"
   },
   {
-    "slug": "villarreal-vs-elche",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "real-betis-vs-barcelona",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "valencia-vs-athletic-club",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "osasuna-vs-racing-santander",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "celta-vigo-vs-alaves",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "malaga-vs-real-sociedad",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "real-madrid-vs-sevilla",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "getafe-vs-rayo-vallecano",
-    "date": "2026-10-18"
-  },
-  {
     "slug": "botafogo-vs-chapecoense",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "atletico-mg-vs-coritiba",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "athletico-pr-vs-palmeiras",
     "date": "2026-10-17"
   },
   {
     "slug": "sao-paulo-vs-vasco",
     "date": "2026-10-17"
-  },
-  {
-    "slug": "fluminense-vs-santos",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "gremio-vs-cruzeiro",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "bahia-vs-flamengo",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "remo-vs-red-bull-bragantino",
-    "date": "2026-10-18"
   },
   {
     "slug": "corinthians-vs-vitoria",
@@ -112,12 +56,56 @@
     "date": "2026-10-14"
   },
   {
+    "slug": "fenerbahce-vs-slavia-praha",
+    "date": "2026-10-20"
+  },
+  {
+    "slug": "sabah-vs-borussia-dortmund",
+    "date": "2026-10-20"
+  },
+  {
+    "slug": "porto-vs-psv-eindhoven",
+    "date": "2026-10-20"
+  },
+  {
+    "slug": "liverpool-vs-villarreal",
+    "date": "2026-10-20"
+  },
+  {
+    "slug": "manchester-city-vs-aek-athens",
+    "date": "2026-10-20"
+  },
+  {
+    "slug": "napoli-vs-bodo-glimt",
+    "date": "2026-10-20"
+  },
+  {
+    "slug": "psg-vs-barcelona",
+    "date": "2026-10-20"
+  },
+  {
+    "slug": "roma-vs-slovan-bratislava",
+    "date": "2026-10-20"
+  },
+  {
+    "slug": "stuttgart-vs-atletico-madrid",
+    "date": "2026-10-20"
+  },
+  {
     "slug": "fluminense-vs-palmeiras",
     "date": "2026-10-14"
   },
   {
     "slug": "estudiantes-vs-flamengo",
     "date": "2026-10-15"
+  },
+  {
+    "slug": "palmeiras-vs-fluminense",
+    "date": "2026-10-21"
+  },
+  {
+    "slug": "flamengo-vs-estudiantes",
+    "date": "2026-10-22"
   },
   {
     "slug": "boca-juniors-vs-vasco-da-gama",
@@ -128,6 +116,18 @@
     "date": "2026-10-14"
   },
   {
+    "slug": "vasco-da-gama-vs-boca-juniors",
+    "date": "2026-10-20"
+  },
+  {
+    "slug": "montevideo-city-torque-vs-atletico-mg",
+    "date": "2026-10-21"
+  },
+  {
+    "slug": "braga-vs-gil-vicente",
+    "date": "2026-08-16"
+  },
+  {
     "slug": "rennes-vs-auxerre",
     "date": "2026-10-11"
   },
@@ -136,79 +136,15 @@
     "date": "2026-10-17"
   },
   {
-    "slug": "lille-vs-brest",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "troyes-vs-lens",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "angers-vs-marseille",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "le-havre-vs-auxerre",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "lorient-vs-monaco",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "paris-fc-vs-rennes",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "lyon-vs-nice",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "sv-elversberg-vs-augsburg",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "bayern-munich-vs-rb-leipzig",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "bayer-leverkusen-vs-freiburg",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "borussia-monchengladbach-vs-hoffenheim",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "ado-den-haag-vs-psv-eindhoven",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "telstar-vs-feyenoord",
-    "date": "2026-10-17"
-  },
-  {
     "slug": "sparta-rotterdam-vs-willem-ii",
     "date": "2026-10-17"
-  },
-  {
-    "slug": "pec-zwolle-vs-go-ahead-eagles",
-    "date": "2026-10-18"
   },
   {
     "slug": "sc-cambuur-vs-az-alkmaar",
     "date": "2026-10-18"
   },
   {
-    "slug": "fc-groningen-vs-ajax",
-    "date": "2026-10-18"
-  },
-  {
     "slug": "nec-nijmegen-vs-fortuna-sittard",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "fc-twente-vs-fc-utrecht",
     "date": "2026-10-18"
   },
   {
@@ -272,24 +208,12 @@
     "date": "2026-10-17"
   },
   {
-    "slug": "fenerbahce-vs-alanyaspor",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "kas-mpasa-vs-samsunspor",
-    "date": "2026-10-18"
-  },
-  {
     "slug": "kocaelispor-vs-goztepe",
     "date": "2026-10-18"
   },
   {
     "slug": "istanbul-basaksehir-vs-gaziantep-fk",
     "date": "2026-10-18"
-  },
-  {
-    "slug": "trabzonspor-vs-besiktas",
-    "date": "2026-10-19"
   },
   {
     "slug": "chicago-fire-vs-new-york-city-fc",
@@ -496,64 +420,8 @@
     "date": "2026-10-11"
   },
   {
-    "slug": "hibernian-vs-falkirk",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "aberdeen-vs-st-mirren",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "kilmarnock-vs-motherwell",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "st-johnstone-vs-dundee-united",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "dundee-vs-rangers",
-    "date": "2026-10-17"
-  },
-  {
     "slug": "celtic-vs-hearts",
     "date": "2026-10-18"
-  },
-  {
-    "slug": "brentford-vs-liverpool",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "fulham-vs-hull-city",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "manchester-city-vs-ipswich-town",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "newcastle-united-vs-aston-villa",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "bournemouth-vs-sunderland",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "brighton-vs-crystal-palace",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "leeds-united-vs-manchester-united",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "nottingham-forest-vs-arsenal",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "tottenham-hotspur-vs-coventry-city",
-    "date": "2026-10-19"
   },
   {
     "slug": "atalanta-vs-venezia",
@@ -566,38 +434,6 @@
   {
     "slug": "lazio-vs-monza",
     "date": "2026-10-11"
-  },
-  {
-    "slug": "bologna-vs-inter",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "roma-vs-genoa",
-    "date": "2026-10-17"
-  },
-  {
-    "slug": "udinese-vs-lecce",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "fiorentina-vs-como",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "ac-milan-vs-atalanta",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "juventus-vs-lazio",
-    "date": "2026-10-18"
-  },
-  {
-    "slug": "monza-vs-cagliari",
-    "date": "2026-10-19"
-  },
-  {
-    "slug": "parma-vs-torino",
-    "date": "2026-10-19"
   },
   {
     "slug": "az-alkmaar-vs-hapoel-beer-sheva",
@@ -642,5 +478,17 @@
   {
     "slug": "benfica-vs-celtic",
     "date": "2026-10-15"
+  },
+  {
+    "slug": "detroit-pistons-vs-boston-celtics",
+    "date": "2026-10-20"
+  },
+  {
+    "slug": "new-york-knicks-vs-philadelphia-76ers",
+    "date": "2026-10-20"
+  },
+  {
+    "slug": "san-antonio-spurs-vs-oklahoma-city-thunder",
+    "date": "2026-10-20"
   }
 ]

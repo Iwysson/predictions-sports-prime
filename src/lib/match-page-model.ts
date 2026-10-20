@@ -97,7 +97,7 @@ export function buildPublicJsonLd(prediction: EditorialPrediction, routeLocale: 
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
-      { "@type": "ListItem", position: 2, name: leagueName, item: absoluteUrl(`/league/${prediction.league}/`) },
+      { "@type": "ListItem", position: 2, name: leagueName, item: absoluteUrl("/football-predictions/") },
       { "@type": "ListItem", position: 3, name: `${prediction.homeTeam} vs ${prediction.awayTeam} Prediction`, item: url },
     ],
   };

@@ -195,7 +195,7 @@ export function LocalizedMatchPageContent({
           <nav className="compact-match-breadcrumb" aria-label="Breadcrumb">
             <Link href={localePath(locale)}>{copy.today}</Link>
             <span aria-hidden="true">›</span>
-            <Link href={localePath(locale, `/league/${match.league}/`)}>
+            <Link href="/football-predictions/">
               {league?.name ?? match.league}
             </Link>
             <span aria-hidden="true">›</span>

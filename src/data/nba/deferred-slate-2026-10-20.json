@@ -1,0 +1,35 @@
+{
+  "dayKey": "2026-10-20",
+  "matches": [
+    {
+      "slug": "detroit-pistons-vs-boston-celtics",
+      "title": "Detroit Pistons x Boston Celtics",
+      "homeTeam": "Detroit Pistons",
+      "awayTeam": "Boston Celtics",
+      "venue": "Little Caesars Arena, Detroit",
+      "access": "free",
+      "badge": "FREE TO VIEW",
+      "teaser": "Detroit Pistons host Boston Celtics on October 20. Read the free prediction and full analysis."
+    },
+    {
+      "slug": "new-york-knicks-vs-philadelphia-76ers",
+      "title": "New York Knicks x Philadelphia 76ers",
+      "homeTeam": "New York Knicks",
+      "awayTeam": "Philadelphia 76ers",
+      "venue": "Madison Square Garden, New York",
+      "access": "free",
+      "badge": "FREE TO VIEW",
+      "teaser": "New York Knicks host Philadelphia 76ers on October 20. Read the free prediction and full analysis."
+    },
+    {
+      "slug": "san-antonio-spurs-vs-oklahoma-city-thunder",
+      "title": "San Antonio Spurs x Oklahoma City Thunder",
+      "homeTeam": "San Antonio Spurs",
+      "awayTeam": "Oklahoma City Thunder",
+      "venue": "Frost Bank Center, San Antonio",
+      "access": "free",
+      "badge": "FREE TO VIEW",
+      "teaser": "San Antonio Spurs host Oklahoma City Thunder on October 20. Read the free prediction and full analysis."
+    }
+  ]
+}

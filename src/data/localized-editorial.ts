@@ -78,8 +78,7 @@ const astonVillaArsenal: Record<SeoLocaleSlug, LocalizedEditorial> = {
 };
 
 export const localizedEditorialBySlug: Record<string, Record<SeoLocaleSlug, LocalizedEditorial>> = {
-  "aston-villa-vs-arsenal": astonVillaArsenal,
-  ...wave3LocalizedEditorial as Record<string, Record<SeoLocaleSlug, LocalizedEditorial>>,
+  "aston-villa-vs-arsenal": astonVillaArsenal,  ...wave3LocalizedEditorial as Record<string, Record<SeoLocaleSlug, LocalizedEditorial>>,
 };
 
 // International publishing policy (cutoff 2026-09-26): Portuguese (pt-br) match pages are a

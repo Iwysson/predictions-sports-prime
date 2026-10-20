@@ -71,7 +71,7 @@ export default async function LocalizedMatchPage({ params }: { params: Promise<{
       <JsonLd data={model.jsonLd} />
       <div className="container">
         <nav className="psp-crumbs" aria-label="Breadcrumb">
-          <a href="/">Home</a> / <a href={`/league/${prediction.league}/`}>{leagueName}</a> /{" "}
+          <a href="/">Home</a> / <a href="/football-predictions/">{leagueName}</a> /{" "}
           <span>{`${v.homeTeam} vs ${v.awayTeam}`}</span>
         </nav>
 
@@ -187,7 +187,7 @@ export default async function LocalizedMatchPage({ params }: { params: Promise<{
                 </section>
               ) : null}
               <nav className="related-predictions related-predictions--hubs" aria-label="Prediction hubs">
-                <a href={`/league/${prediction.league}/`}>{`All ${leagueName} predictions`}</a>
+                <a href="/football-predictions/">{`All ${leagueName} predictions`}</a>
                 <a href="/today-predictions/">Today&apos;s football predictions</a>
                 <a href="/results/">Prediction results</a>
               </nav>

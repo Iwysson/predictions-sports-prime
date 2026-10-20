@@ -1,5 +1,5 @@
-// Verifies the homepage's mandatory 3-section structure and the public release gate's effect on
-// the built static export: Today/Results/Predictions-by-League only, in that order, with no
+// Verifies the homepage's Today/Results/Predictions-by-League structure and the public release gate's effect on
+// the built static export, with no
 // not-yet-released match exposed in the crawlable directory or the per-league sitemaps.
 // Needs `npm run build` first (also runs `npm run prebuild`, which writes functions/_data/match-release.json).
 // Run: npx tsx scripts/test-home-sections.mts   (npm run test:home-sections)
@@ -18,7 +18,7 @@ if (!existsSync("out/index.html")) throw new Error("out/ is missing: run `npm ru
 
 const html = readFileSync("out/index.html", "utf8");
 
-// --- Exactly three content sections, in order -----------------------------------------------------
+// --- Home sections and league navigation ---------------------------------------------------------
 
 const idxToday = html.indexOf('id="today"');
 const idxHistory = html.indexOf('id="history"');
@@ -26,6 +26,7 @@ const idxLeagues = html.indexOf('id="leagues"');
 
 assert(idxToday !== -1, "homepage has a Today section");
 assert(idxLeagues !== -1, "homepage has a Predictions-by-League section");
+assert(!html.includes('home-leagues-sidebar'), "homepage has no duplicate league sidebar");
 // The Results section (#history) renders only after client hydration (HomePredictionFeed is a
 // client component whose temporal sections depend on useClientNow()); it is verified in a real
 // browser below rather than in the pre-hydration static file, where it is never present by design.
@@ -36,16 +37,17 @@ assert(!html.includes('id="upcoming"'), "the Upcoming section was removed from t
 assert(!/Predictions by sport/i.test(html), "the removed 'Predictions by sport' block is gone");
 assert(!/How Our Football Predictions Work/i.test(html), "the removed trust-links block is gone");
 
-// --- Section 3 title and sport coverage -------------------------------------------------------------
-
-assert(html.includes("Predictions by League"), "the League section is titled 'Predictions by League'");
-assert(!html.includes("Football Predictions by League"), "the old 'Football Predictions by League' title is gone");
+// --- League navigation --------------------------------------------------------------------------
 
 const leaguesSection = html.slice(idxLeagues);
 assert(leaguesSection.includes('href="/nhl/"'), "Predictions by League still links to NHL");
 assert(leaguesSection.includes('href="/nfl/"'), "Predictions by League still links to NFL");
-for (const slug of ["premier-league", "la-liga", "champions-league", "copa-libertadores"]) {
-  assert(leaguesSection.includes(`/league/${slug}/`), `Predictions by League still links to ${slug}`);
+assert(leaguesSection.includes('href="/nba/"'), "Predictions by League still links to NBA");
+// Individual football league hub pages were retired: the cards stay visible (logos, names,
+// colors) but no longer link anywhere, and /league/ never appears in this section's markup.
+assert(!leaguesSection.includes("/league/"), "Predictions by League no longer links to individual league pages");
+for (const name of ["Premier League", "La Liga", "UEFA Champions League", "CONMEBOL Libertadores"]) {
+  assert(leaguesSection.includes(name), `Predictions by League still shows the ${name} card`);
 }
 
 // --- No future prediction leaks into the crawlable directory or the sitemaps ------------------------
@@ -73,7 +75,7 @@ if (existsSync("out/sitemaps")) {
   }
 }
 
-// --- Post-hydration order: Today, then Results, then Predictions by League -------------------------
+// --- Post-hydration order: Today, then Results, with one league section ----------------------------
 // HomePredictionFeed is a client component; #today's full card grid and #history (Results) only
 // exist after useClientNow() resolves. A real headless browser is the only faithful way to check the
 // order a visitor actually sees, so this drives the built static export exactly like
@@ -169,11 +171,12 @@ if (!browserPath) {
 
     assert(await evaluate(cdp, "document.getElementById('today') !== null"), "hydrated homepage has a Today section");
     assert(await evaluate(cdp, "document.getElementById('history') !== null"), "hydrated homepage has a Results section");
+    assert(await evaluate(cdp, "document.querySelectorAll('.home-leagues-sidebar').length === 0"), "hydrated homepage has no duplicate league sidebar");
     assert(await evaluate(cdp, "document.getElementById('leagues') !== null"), "hydrated homepage has a Predictions-by-League section");
     assert(await evaluate(cdp, "document.getElementById('tomorrow') === null"), "hydrated homepage has no Tomorrow section");
     assert(await evaluate(cdp, "document.getElementById('upcoming') === null"), "hydrated homepage has no Upcoming section");
     assert(todayTop !== null && historyTop !== null && todayTop < historyTop, "Today renders before Results in the real DOM");
-    assert(historyTop !== null && leaguesTop !== null && historyTop < leaguesTop, "Results renders before Predictions by League in the real DOM");
+    assert(leaguesTop !== null, "Predictions by League remains visible in the real DOM");
 
     cdp.close();
   } finally {

@@ -13,6 +13,13 @@ const ucl = {
 };
 const uefaFixtureList = { name: "UEFA — 2026/27 league phase fixtures and results", url: "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/" };
 const uclPublishedAt = "2026-10-18T21:30:00.000-03:00";
+// October 19 editorial refresh: kickoff times re-verified against UEFA's Matchday 3 CEST schedule
+// (all nine fixtures match), and team-news/lineup fields below were researched fresh. No officially
+// confirmed UEFA team sheet existed for any fixture at research time (these post ~60 minutes before
+// kickoff); aggregator-sourced "probable" lineups (Squawka/Starting11) are disclosed as PROJECTED and
+// unofficial, and are omitted rather than guessed wherever those aggregators disagreed with each other
+// or with other sourced team news.
+const uclUpdatedAt = "2026-10-19T22:00:00.000-03:00";
 
 // Each side's record across only its first two 2026/27 league-phase matches (UEFA official match
 // data). Not a home/away split and not a calibrated model - the same early-season-sample caveat
@@ -64,8 +71,10 @@ const fenerbahceVsSlaviaPraha = createPspImport26Prediction({
   tactical: "Fenerbahce will look to use home advantage to control possession and generate more high-quality chances than they managed in Birmingham, while Slavia's away record in this league phase (zero points, two defeats) gives the hosts a defence that has conceded five times to attack. Fenerbahce's own leaky back line, however, means this is being read as a home-win lean rather than a clean-sheet expectation.",
   risk: "Fenerbahce have not won in their first two league-phase matches and their defensive response is not yet proven, so a repeat of their earlier concession rate would put the home win in doubt even with Slavia also out of form.",
   core: twoMatchCore({ wdl: "0-1-1", gf: 1, ga: 7 }, { wdl: "0-0-2", gf: 2, ga: 5 }),
-  sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/fenerbahce-vs-slavia-prague-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231178" }],
+  sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/fenerbahce-vs-slavia-prague-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231178" }, { name: "Squawka — Fenerbahce vs Slavia Praha preview", url: "https://www.squawka.com/us/?p=70623" }],
+  teamNews: "The most recent available preview (Squawka, unofficial) projects Fenerbahce in a 4-3-3: Ederson in goal behind A. Brown, Nicolas Ake, Milan Skriniar and Mert Muldur, with Bartug Elmaz, Ismail Yuksek and N'Golo Kante through midfield, and Kerem Akturkoglu, Vedat Muriqi and Mason Greenwood ahead of them. This is a PROJECTED lineup from a third-party aggregator, not an officially confirmed UEFA team sheet, and should be read accordingly. A full projected XI for Slavia Praha was not established from a reliable current source at this check; only a handful of names (goalkeeper J. Markovic, defenders T. Vlcek, A. N'Guessan and D. Zima, with Danijel Sturm tipped as the main attacking threat) appear in available previews, so Slavia's lineup is disclosed as unavailable rather than completed with unsupported names. No fresh injury or suspension concern was confirmed for either club specific to this matchday; a separate injury tracker lists Slavia absentees whose stated recovery windows predate this fixture and could not be confirmed as still current, so they are not treated as active team news here.",
   publishedAt: uclPublishedAt,
+  updatedAt: uclUpdatedAt,
 });
 
 const sabahVsDortmund = createPspImport26Prediction({
@@ -89,8 +98,10 @@ const sabahVsDortmund = createPspImport26Prediction({
   tactical: "Sabah's home leg against Dortmund is the more open fixture of the two early kick-offs: the hosts have shown they can score at home (two against Slavia) while Dortmund's away goal return (one in two) suggests they will need to force the game rather than sit in. A low-scoring, cagey draw remains the main route for the total to miss.",
   risk: "Sabah kept a clean sheet in its latest European game and Dortmund failed to score at Bodø/Glimt, so three combined goals are far from assured at this price.",
   core: twoMatchCore({ wdl: "1-0-1", gf: 2, ga: 4 }, { wdl: "1-0-1", gf: 3, ga: 3 }),
-  sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/sabah-vs-borussia-dortmund-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231176" }],
+  sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/sabah-vs-borussia-dortmund-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231176" }, { name: "Squawka — Sabah vs Borussia Dortmund preview", url: "https://www.squawka.com/ca/?p=16033" }],
+  teamNews: "Squawka's unofficial preview projects Sabah in a 4-2-3-1 (S. Pokatilov; T. Puchacz, A. McCarthy, S. Solvet, A. Zedadka; I. Lepinjica, U. Rakhmonaliev; V. Simic, Du Queiroz, K. Parris; J. Mickels) against a Dortmund 3-4-2-1 (G. Kobel; D. Svensson, W. Anton, J. Gadou; M. Beier, F. Nmecha, J. Veerman, J. Ryerson; M. Sabitzer, K. Karetsas; S. Guirassy). Both are PROJECTED, aggregator-sourced lineups rather than officially confirmed team sheets. No fresh injury or suspension was confirmed for either club specific to this matchday in the same preview. Separately, secondary reporting disagrees on which Baku venue is currently hosting Sabah's home league-phase fixtures (Bank Respublika Arena versus a renovated Baku Olympic Stadium); that detail could not be resolved from available sources and is flagged here rather than silently changed from the venue already on record.",
   publishedAt: uclPublishedAt,
+  updatedAt: uclUpdatedAt,
 });
 
 const portoVsPsv = createPspImport26Prediction({
@@ -114,8 +125,10 @@ const portoVsPsv = createPspImport26Prediction({
   tactical: "Porto will look to press PSV high and exploit a visiting side that has scored only once in Europe so far, while keeping in mind their own five goals conceded in two games. A composed, lower-event match favours the hosts, who need control rather than a shootout against a PSV team still finding its form.",
   risk: "Porto have conceded five goals in two Champions League fixtures, and PSV can stay competitive in a low-scoring game even without a strong attacking record.",
   core: twoMatchCore({ wdl: "0-0-2", gf: 2, ga: 5 }, { wdl: "0-1-1", gf: 1, ga: 2 }),
-  sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/porto-vs-psv-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231202" }],
+  sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/porto-vs-psv-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231202" }, { name: "Foresportia — Porto vs PSV preview", url: "https://www.foresportia.com/en/prediction/champions-league/fc-porto-psv-2026-10-20/" }],
+  teamNews: "A full projected lineup for either club was not established from a reliable current source at this check; available previews name only a handful of expected contributors — Porto's Alan Varela and Cristian Manon through midfield with Eduardo Cossa leading the attack, and PSV's Ivan Perisic and Ruben van Bommel supporting Sergino Dest — rather than a complete, verifiable XI for both sides, so the lineup is disclosed as partial/unavailable instead of presented as confirmed. UEFA's own team-sheet pages do not post official lineups until roughly 60 minutes before kickoff. No injury or suspension specific to this fixture was confirmed from a current source; an earlier domestic report had listed several Porto players on modified training programs for unspecified fitness issues, but that report predates this matchday and could not be confirmed as still current, so it is not treated as active team news here.",
   publishedAt: uclPublishedAt,
+  updatedAt: uclUpdatedAt,
 });
 
 const liverpoolVsVillarreal = createPspImport26Prediction({
@@ -140,7 +153,9 @@ const liverpoolVsVillarreal = createPspImport26Prediction({
   risk: "Villarreal have scored five in two UCL games and Liverpool have conceded four, so defensive lapses could turn this into a tighter match than the price suggests.",
   core: twoMatchCore({ wdl: "2-0-0", gf: 8, ga: 4 }, { wdl: "1-0-1", gf: 5, ga: 4 }),
   sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/liverpool-vs-villarreal-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231207" }],
+  teamNews: "No projected lineup specific to this fixture was established from a reliable current source at this check — available results returned only lineups from the clubs' 2021-22 meeting, which do not apply here, so the team sheet is disclosed as unavailable rather than filled with outdated names. No current, matchday-specific injury was confirmed for Liverpool. For Villarreal, pre-match reporting around their most recent domestic fixture flagged Tajon Buchanan (lower-body knock picked up on international duty, fitness pending tests) and Ilias Akhomach (muscular issue, missed two matches) as doubts; neither absence has been confirmed either way for this specific Champions League match, so both are disclosed as uncertain rather than assumed in or out. No suspension was confirmed for either club.",
   publishedAt: uclPublishedAt,
+  updatedAt: uclUpdatedAt,
 });
 
 const manCityVsAek = createPspImport26Prediction({
@@ -164,8 +179,10 @@ const manCityVsAek = createPspImport26Prediction({
   tactical: "City's route to covering the line depends on breaking AEK down early and avoiding the kind of stretched, transition-heavy game that let PSG in for four. AEK's best chance of keeping the margin under three is disciplined defending in the first half, mirroring their approach against Shakhtar when they conceded their heaviest margin only after chasing the game.",
   risk: "A two-goal City victory loses at -2.5 even though it would be a convincing result on its own terms, and any rotation or missing attacker adds further risk to the handicap specifically.",
   core: twoMatchCore({ wdl: "1-0-1", gf: 4, ga: 4 }, { wdl: "1-0-1", gf: 2, ga: 3 }),
-  sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/man-city-vs-aek-athens-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231193" }],
+  sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/man-city-vs-aek-athens-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231193" }, { name: "Squawka — Man City vs AEK Athens preview", url: "https://www.squawka.com/ca/?p=16045" }],
+  teamNews: "A complete, verifiable projected XI for either club was not established at this check. Available aggregator previews name Erling Haaland as City's focal point with Enzo Fernandez, Rayan Ait-Nouri and Phil Foden also expected involved, and AEK's attack built around Razvan Marin, Barnabas Varga and Lovro Majer, but these are partial lists from an unofficial source rather than complete, confirmed team sheets, so the lineup is disclosed as incomplete. No injury or suspension was confirmed as currently active for City. AEK goalkeeper Thomas Strakosha was reported absent from a training session ahead of AEK's Champions League opener, with Alberto Brignoli as the direct replacement; that report is tied to an earlier matchday and its currency for this specific game could not be confirmed, so Strakosha's status here is disclosed as unresolved rather than assumed.",
   publishedAt: uclPublishedAt,
+  updatedAt: uclUpdatedAt,
 });
 
 const napoliVsBodoGlimt = createPspImport26Prediction({
@@ -190,7 +207,9 @@ const napoliVsBodoGlimt = createPspImport26Prediction({
   risk: "Bodø/Glimt have already beaten Dortmund this league phase, while Napoli are still without a win and averaging 0.5 UCL goals per game.",
   core: twoMatchCore({ wdl: "0-0-2", gf: 1, ga: 4 }, { wdl: "1-0-1", gf: 1, ga: 5 }),
   sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/napoli-vs-bodo-glimt-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231205" }],
+  teamNews: "A confirmed, reliable projected XI for either club was not established at this check. One unofficial aggregator preview lists Kevin De Bruyne among Napoli's starters, but that conflicts with the most recent dated injury reporting found, which describes De Bruyne recovering from a serious injury sustained in late 2025 with no confirmed return date verified through this check; given that conflict, De Bruyne's involvement is disclosed as unconfirmed rather than assumed either way, and no full Napoli or Bodo/Glimt lineup is presented. Matteo Politano and Giovanni Di Lorenzo both missed match time earlier in the season through injury; whether either has since returned could not be verified from a current source. No suspension was confirmed for either club.",
   publishedAt: uclPublishedAt,
+  updatedAt: uclUpdatedAt,
 });
 
 const psgVsBarcelona = createPspImport26Prediction({
@@ -214,8 +233,10 @@ const psgVsBarcelona = createPspImport26Prediction({
   tactical: "Expect an open, transition-heavy match between two sides built to attack: PSG's home record (10 goals in two games) and Barcelona's similarly explosive away form (9 goals in two games) both point toward goals at both ends, which is exactly why the double chance - rather than an outright PSG win - is the selection built to survive that kind of game.",
   risk: "Barcelona have won both UCL games convincingly and arrive on an unbeaten run across competitions, so a direct Barcelona win remains the clearest way this selection fails.",
   core: twoMatchCore({ wdl: "2-0-0", gf: 10, ga: 3 }, { wdl: "2-0-0", gf: 9, ga: 2 }),
-  sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/paris-saint-germain-vs-barcelona-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231198" }],
+  sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/paris-saint-germain-vs-barcelona-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231198" }, { name: "PSG official fixtures — Matchday 3", url: "https://www.psg.fr/en/mens-football/fixtures/season/2026-27?period=Oct" }],
+  teamNews: "A projected lineup specific to this fixture was not established from a reliable current source at this check — the lineup-related results found were from the clubs' meetings in past seasons, which do not apply here, so both team sheets are disclosed as unavailable rather than filled with outdated or unverified names. No current, matchday-specific injury was confirmed for either club; the most recent dated items located for each side predate this matchday by several months and are not treated as current team news. No suspension was confirmed for either club. Ferran Torres, now of PSG, faces his former club, a subplot widely noted in secondary previews but without a confirmed bearing on either side's current availability.",
   publishedAt: uclPublishedAt,
+  updatedAt: uclUpdatedAt,
 });
 
 const romaVsSlovanBratislava = createPspImport26Prediction({
@@ -240,7 +261,9 @@ const romaVsSlovanBratislava = createPspImport26Prediction({
   risk: "In three-way European -2.0 handicap betting, a Roma victory by exactly two goals does not return a profit on this selection, so the margin matters as much as the result.",
   core: twoMatchCore({ wdl: "0-1-1", gf: 4, ga: 5 }, { wdl: "0-0-2", gf: 1, ga: 9 }),
   sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/roma-vs-slovan-bratislava-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231196" }],
+  teamNews: "A complete, verifiable projected XI for either club was not established at this check. Unofficial previews name Mile Svilar in Roma's goal behind Paulo Dybala and Donyell Malen in attack and Bryan Cristante in midfield, but a separate, differently dated Italian report described Svilar playing through a fractured finger; given that conflict and the uncertainty over which report is current, Svilar's fitness is disclosed as unresolved rather than assumed. Two separate aggregator previews for Slovan Bratislava disagree with each other on both formation and personnel, so no Slovan lineup is presented here. No suspension was confirmed for either club specific to this matchday.",
   publishedAt: uclPublishedAt,
+  updatedAt: uclUpdatedAt,
 });
 
 const stuttgartVsAtleticoMadrid = createPspImport26Prediction({
@@ -265,7 +288,9 @@ const stuttgartVsAtleticoMadrid = createPspImport26Prediction({
   risk: "Stuttgart lost to Hamburg domestically at the weekend, while Atlético have put together a strong winning run, so the visitors' momentum is the clearest threat to the home selection.",
   core: twoMatchCore({ wdl: "2-0-0", gf: 6, ga: 1 }, { wdl: "1-0-1", gf: 3, ga: 2 }),
   sources: [uefaFixtureList, { name: "Pre-match form and availability — The Stats Zone", url: "https://www.thestatszone.com/stuttgart-vs-atletico-madrid-preview-team-news-prediction-2026-27-uefa-champions-league-league-phase-231200" }],
+  teamNews: "A complete, verifiable projected XI for either club was not established at this check. Available previews agree that Ermedin Demirovic and Deniz Undav lead Stuttgart's attack and that Julian Alvarez is expected to start for Atletico, but they disagree on the rest of the Atletico lineup, and one listed name could not be matched to any known current first-team player, so no full XI is presented for either side. A separate, older report naming Alex Baena among Atletico's absentees directly conflicts with his appearance in a same-day lineup preview; given that contradiction, Baena's availability is disclosed as unresolved rather than assumed. No suspension was confirmed for either club specific to this matchday.",
   publishedAt: uclPublishedAt,
+  updatedAt: uclUpdatedAt,
 });
 
 export const championsLeagueRound20261020 = [

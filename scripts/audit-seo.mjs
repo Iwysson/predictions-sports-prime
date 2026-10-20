@@ -173,7 +173,8 @@ for (const route of matchRoutes) {
     ?? "";
   const analysisText = visibleText(analysisBlock);
   const sourceAnalysisText = runtimePrediction?.analysis.join("\n\n").trim() ?? "";
-  const leagueHref = html.match(/<a[^>]+href="(\/league\/[^"#?]+\/?)"/i)?.[1];
+  // League hub pages were retired: the breadcrumb's second link now points to the Football hub instead.
+  const leagueHref = html.match(/<a[^>]+href="(\/football-predictions\/)"/i)?.[1];
   const relatedBlock = html.match(/<section[^>]+class="related-predictions"[\s\S]*?<\/section>/i)?.[0] ?? "";
   const links = count(relatedBlock, /<a\b[^>]*href="\/match\//gi);
   const relatedHrefs = [...relatedBlock.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>/gi)];
@@ -225,7 +226,7 @@ for (const route of matchRoutes) {
   if (!decision) errors.push(`${route}: missing runtime quality-gate decision`);
   else if (!crossedKickoffAfterBuild && decision.indexable && !/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(html)) errors.push(`${route}: KEEP page missing index, follow`);
   else if (!crossedKickoffAfterBuild && !decision.indexable && !/<meta name="robots" content="[^"]*noindex/i.test(html)) errors.push(`${route}: ${decision.classification} page missing noindex`);
-  if (!leagueHref) errors.push(`${route}: missing league link`);
+  if (!leagueHref) errors.push(`${route}: missing football-hub breadcrumb link`);
   if (links === 0 || links > 4) errors.push(`${route}: expected 1-4 related links, found ${links}`);
   if (!html.includes('class="match-seo-intro"')) errors.push(`${route}: missing static match introduction`);
   // Protected analysis (VIP) is served by the gated endpoint and is deliberately not in static HTML.
@@ -286,17 +287,8 @@ for (const [, routes] of editorialBodies) {
   if (routes.length > 1) errors.push(`duplicate editorial body (${routes.join(", ")})`);
 }
 
-for (const route of leagueRoutes) {
-  const html = pages.get(route);
-  const canonical = `${siteUrl}${route}`;
-  if (count(html, /<h1(?:\s|>)/gi) !== 1) errors.push(`${route}: expected one H1`);
-  if (count(html, /<title>/gi) !== 1) errors.push(`${route}: expected one title`);
-  if (!/<meta name="description" content="[^"]+"/i.test(html)) errors.push(`${route}: missing description`);
-  if (!html.includes(`<link rel="canonical" href="${canonical}"`)) errors.push(`${route}: invalid canonical`);
-  if (!html.includes('class="league-seo-intro"')) errors.push(`${route}: missing static league introduction`);
-  if (!html.includes(`"@type":"CollectionPage"`)) errors.push(`${route}: missing CollectionPage schema`);
-  if (!html.includes(`"@type":"BreadcrumbList"`)) errors.push(`${route}: missing BreadcrumbList schema`);
-}
+// Individual league hub pages (/league/<slug>/) were retired; leagueRoutes is always empty now
+// (kept below only for the sitemap-membership check and the summary counts, which correctly report 0).
 
 const sitemapFiles = walk(outDir).filter((file) => file.endsWith(`${sep}sitemap.xml`));
 const sitemapDocuments = sitemapFiles.map((file) => ({
@@ -557,7 +549,9 @@ if (brokenLinks.size > 0) errors.push(`broken internal links: ${[...brokenLinks]
 
 for (const route of matchRoutes.sort()) {
   const html = pages.get(route);
-  const leagueHref = html.match(/href="(\/league\/([^/]+)\/)"/i);
+  // League hub pages were retired; derive the "League" column from the runtime match data
+  // directly rather than scraping a now-generic /football-predictions/ breadcrumb link.
+  const leagueSlug = runtimeMatchByRoute.get(route)?.league ?? predictionByRoute.get(route)?.league;
   const publishedAt = html.match(/"datePublished":"([^"]+)"/)?.[1] ?? "—";
   const updatedAt = html.match(/"dateModified":"([^"]+)"/)?.[1] ?? "—";
   const sitemapStatus = sitemapRoutes.has(route) ? "Yes" : "No";
@@ -571,7 +565,7 @@ for (const route of matchRoutes.sort()) {
   }
 
   indexingRows.push(
-    `| ${siteUrl}${route} | ${leagueHref?.[2] ?? "Unknown"} | Published | ${publishedAt} | ${updatedAt} | ${sitemapStatus} | ${internalStatus} | ${indexable} |`
+    `| ${siteUrl}${route} | ${leagueSlug ?? "Unknown"} | Published | ${publishedAt} | ${updatedAt} | ${sitemapStatus} | ${internalStatus} | ${indexable} |`
   );
 }
 

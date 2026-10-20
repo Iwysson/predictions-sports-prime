@@ -4,6 +4,7 @@ import { MatchGate } from "@/components/MatchGate";
 import { NflLeagueMark } from "@/components/NflLeagueMark";
 import { NflTeamBadge } from "@/components/NflTeamBadge";
 import { NhlBestMultiple } from "@/components/NhlToday";
+import { PredictionsCompleteNotice } from "@/components/PredictionsCompleteNotice";
 import { resolveNflWeek } from "@/data/nfl/weeks";
 import { translate } from "@/i18n/dictionaries";
 import { sortNflGames, type NflPublicGame } from "@/lib/nfl-slates";
@@ -82,7 +83,22 @@ function GameCard({ g }: { g: NflPublicGame }) {
 // new week only means adding it to src/data/nfl/weeks.ts - nothing here changes.
 export function NflWeekSlate() {
   const week = resolveNflWeek(getNhlTodayKey());
-  if (!week) return null;
+  if (!week) {
+    // No active week is published yet (resolveNflWeek returns null until the next week is added to
+    // src/data/nfl/weeks.ts): show the same closing notice as the other sports rather than nothing.
+    // NFL has no live/finished-game tracking, so - unlike NHL - this cannot detect a week whose games
+    // have all been played while it is still the active week; that case is out of scope for now.
+    return (
+      <header className="psp-hero">
+        <span className="psp-hero__eyebrow">
+          <NflLeagueMark compact />
+          <span>· NFL</span>
+        </span>
+        <h2>NFL games and picks</h2>
+        <PredictionsCompleteNotice />
+      </header>
+    );
+  }
   const games = sortNflGames(week.games);
   const free = games.filter((g) => g.access === "free");
   const protectedGames = games.filter((g) => g.access !== "free");

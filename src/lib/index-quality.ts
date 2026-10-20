@@ -52,14 +52,19 @@ type CurrentDecision = {
 // "do not publish this" targets an actual internal draft directive. The bare
 // phrase "do not publish" also occurs in legitimate editorial prose (e.g.
 // "sources do not publish all eleven names"), which must not be flagged.
-const INTERNAL_NOTE = /\b(?:WAIT LIVE|TODO|FIXME|TBD|PLACEHOLDER|internal note|do not publish this|undefined|null)\b/i;
+// Literal placeholder markers (TODO, FIXME, TBD, PLACEHOLDER, WAIT LIVE) are
+// matched case-sensitively: this codebase's convention writes them in caps, and
+// case-insensitive matching false-positives on ordinary lowercase words inside
+// prose or source URLs (e.g. the Spanish "todo" in a CONMEBOL article slug).
+const INTERNAL_NOTE_MARKER = /\b(?:WAIT LIVE|TODO|FIXME|TBD|PLACEHOLDER)\b/;
+const INTERNAL_NOTE_PHRASE = /\b(?:internal note|do not publish this|undefined|null)\b/i;
 const TRACEABLE_SOURCE = /^https:\/\//i;
 
 function hasInternalNotes(markdown: string) {
   // This exact retained disclosure describes missing data; it is not an
   // unfilled placeholder. Other placeholder occurrences still block.
   const readerText = markdown.replace(/No placeholder is converted into zero and no post-match information from this fixture is used\./g, "");
-  return INTERNAL_NOTE.test(readerText) || /Supercomputador|O modelo deve/i.test(readerText);
+  return INTERNAL_NOTE_MARKER.test(readerText) || INTERNAL_NOTE_PHRASE.test(readerText) || /Supercomputador|O modelo deve/i.test(readerText);
 }
 
 // pt-BR analyses must not contain sustained English prose (mixed-language risk).

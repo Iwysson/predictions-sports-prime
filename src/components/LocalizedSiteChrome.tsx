@@ -26,6 +26,7 @@ export function LocalizedHeader({ locale }: { locale: SeoLocaleSlug }) {
       navItems={[
         { href: nflHref, label: "NFL" },
         { href: "/nhl/", label: "NHL" },
+        { href: "/nba/", label: "NBA" },
       ]}
     />
   );

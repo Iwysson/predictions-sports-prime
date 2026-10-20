@@ -3,7 +3,7 @@ import { localizedEditorialBySlug, hasCompleteLocalizedEditorial } from "@/data/
 import { leagues, leaguesBySlug } from "@/data/leagues";
 import { matches } from "@/data/matches";
 import { editorialPredictions } from "@/data/predictions";
-import { isAdSenseContentIndexable, isAdSenseLeagueIndexable } from "@/lib/adsense-content-quality";
+import { isAdSenseContentIndexable } from "@/lib/adsense-content-quality";
 import { isFutureFixture } from "@/lib/fixture-state";
 import { isDateReleased } from "@/lib/match-release";
 import footballResults from "@/data/football-results.snapshot.json";
@@ -11,9 +11,8 @@ import { resolveNhlSlate } from "@/data/nhl/slates";
 import { intentHubInventory, selectIntentHubMatches } from "@/lib/intent-hubs";
 import { getNhlDayStart, getNhlTodayKey } from "@/lib/nhl-day";
 import type { FootballResultsDataset } from "@/lib/football-results";
-import { isLeagueIndexable } from "@/lib/league-seo";
 import { materialMatchUpdatedAt } from "@/lib/match-freshness";
-import { isIndexableLocalizedHubLocale, localePath, seoLocaleSlugs } from "@/lib/seo-locales";
+import { localePath, seoLocaleSlugs } from "@/lib/seo-locales";
 import { matchCanonicalPath } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site-config";
 import type { LeagueSlug, Match } from "@/types";
@@ -54,28 +53,10 @@ export function buildLeagueSitemap(
   );
   // A future match not yet released publicly (src/lib/match-release.ts) must stay out of the sitemap's
   // list of match URLs: discovery resumes on its own once the release gate opens, no manual step needed.
-  // The league hub's own indexability, below, is intentionally NOT narrowed by this filter: whether
-  // /league/<slug>/ itself belongs in the sitemap must not flip on and off through the day purely
-  // because every current match has settled and the next round hasn't released yet.
   const leagueMatches = publishedLeagueMatches.filter((match) => isDateReleased(match.date));
 
-  const leagueIndexable =
-    isLeagueIndexable(publishedLeagueMatches.length) &&
-    isAdSenseLeagueIndexable(leagueSlug, matches, editorialPredictions);
-
-  const leagueLastmod = leagueSitemapLastmod(leagueSlug);
-  const leaguePages: MetadataRoute.Sitemap = leagueIndexable
-    ? [
-        { url: absoluteUrl(`/league/${league.slug}/`), ...(leagueLastmod ? { lastModified: leagueLastmod } : {}) },
-        ...seoLocaleSlugs
-          .filter(isIndexableLocalizedHubLocale)
-          .map((locale) => ({
-            url: absoluteUrl(localePath(locale, `/league/${league.slug}/`)),
-            ...(leagueLastmod ? { lastModified: leagueLastmod } : {}),
-          })),
-      ]
-    : [];
-
+  // The league hub pages themselves (/league/<slug>/) were retired - only each league's match pages
+  // are listed here, grouped per competition as a sitemap shard (src/app/sitemaps/<slug>/sitemap.ts).
   const matchPages: MetadataRoute.Sitemap = leagueMatches.map((match) =>
     matchSitemapEntry(match, matchCanonicalPath(match))
   );
@@ -93,7 +74,6 @@ export function buildLeagueSitemap(
   );
 
   return dedupeSitemap([
-    ...leaguePages,
     ...matchPages,
     ...localizedMatchPages,
   ]);

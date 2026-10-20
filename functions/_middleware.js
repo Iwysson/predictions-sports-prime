@@ -9,7 +9,11 @@ const CANONICAL_ORIGIN = "https://predictions-sports-prime.com";
 // results dataset is the single source: a missing /match/<slug>/ whose slug is settled there was
 // removed on purpose, so it answers 410 Gone instead of 404. Nothing is listed by hand.
 const SETTLED_SLUGS = new Set(Object.values(results.records).map((record) => record.slug));
-const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?match\/([^/]+)(?:\/.*)?$/;
+// Also matches /nba/<slug>/ (but never /nba/ itself, with no slug segment), so NBA match pages can
+// share this same release-date gate (functions/_data/match-release.json) without a separate
+// middleware pattern. /nba/ listing hub stays ungated here - its own gate is the deferred-slate
+// pattern (src/data/nba/slates.ts), mirroring NHL.
+const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?(?:match|nba)\/([^/]+)(?:\/.*)?$/;
 
 // Public-release gate (src/lib/match-release.ts): a future prediction's page may already exist in the
 // static export, but it must not be served until its match date arrives in the site's canonical fixture
@@ -23,10 +27,17 @@ const RELEASE_DATE_BY_SLUG = new Map(releaseManifest.map((entry) => [entry.slug,
 // equivalents. Only the frozen historical /pt-br/match/<slug>/ pages are still served.
 function ptBrHubRedirect(pathname) {
   if (pathname === "/pt-br" || pathname === "/pt-br/") return "/";
-  const league = pathname.match(/^\/pt-br\/league\/([^/]+)\/?$/);
-  if (league) return `/league/${league[1]}/`;
+  if (/^\/pt-br\/league\/[^/]+\/?$/.test(pathname)) return "/football-predictions/";
   if (/^\/pt-br\/nfl\/?$/.test(pathname)) return "/nfl/";
   return null;
+}
+
+// The individual football league hub pages (/league/<slug>/, and their localized
+// /<locale>/league/<slug>/ equivalents) are retired: only the Football hub (/football-predictions/,
+// every league's predictions organized by competition) and the individual match analysis pages
+// (/match/<slug>/) remain. Permanent redirect, same pattern as ptBrHubRedirect above.
+function leagueHubRedirect(pathname) {
+  return /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?league\/[^/]+\/?$/.test(pathname) ? "/football-predictions/" : null;
 }
 
 export function createMiddlewareHandler({
@@ -47,6 +58,11 @@ export function createMiddlewareHandler({
     const ptBrRedirect = ptBrHubRedirect(requestUrl.pathname);
     if (ptBrRedirect) {
       return Response.redirect(`${requestUrl.origin}${ptBrRedirect}${requestUrl.search}`, 301);
+    }
+
+    const leagueRedirect = leagueHubRedirect(requestUrl.pathname);
+    if (leagueRedirect) {
+      return Response.redirect(`${requestUrl.origin}${leagueRedirect}${requestUrl.search}`, 301);
     }
 
     const matchPath = requestUrl.pathname.match(MATCH_PATH);

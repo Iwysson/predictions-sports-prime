@@ -27,11 +27,9 @@ export function Footer() {
           <Link href="/today-predictions/">Today&apos;s predictions</Link>
           <Link href="/picks/">Football picks</Link>
           <Link href="/betting-tips/">Football betting tips</Link>
-          <Link href="/league/premier-league/">Premier League predictions</Link>
-          <Link href="/league/champions-league/">Champions League predictions</Link>
-          <Link href="/league/mls/">MLS predictions</Link>
           <Link href="/nfl/">NFL predictions</Link>
           <Link href="/nhl/">NHL predictions</Link>
+          <Link href="/nba/">NBA predictions</Link>
         </nav>
 
         <nav className="footer-links" aria-label="Legal and information">

@@ -135,60 +135,72 @@
     "homeCorners": 2,
     "awayCorners": 2,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876437",
-    "capturedAt": "2026-10-16T21:50:28.916Z"
-  },
-  "super-lig:erzurumspor-vs-eyupspor": {
-    "homeCorners": 3,
-    "awayCorners": 2,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/summary?event=401888271",
-    "capturedAt": "2026-10-17T14:22:47.918Z"
-  },
-  "serie-a:venezia-vs-napoli": {
-    "homeCorners": 0,
-    "awayCorners": 12,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874760",
-    "capturedAt": "2026-10-17T17:20:15.506Z"
+    "capturedAt": "2026-10-16T21:33:21.487Z"
   },
   "bundesliga:werder-bremen-vs-sc-paderborn": {
     "homeCorners": 5,
     "awayCorners": 3,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/summary?event=401884766",
-    "capturedAt": "2026-10-17T17:20:15.506Z"
+    "capturedAt": "2026-10-17T15:33:25.365Z"
   },
-  "serie-a:bologna-vs-inter": {
-    "homeCorners": 2,
-    "awayCorners": 7,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874953",
-    "capturedAt": "2026-10-17T19:28:59.545Z"
+  "serie-a:venezia-vs-napoli": {
+    "homeCorners": 0,
+    "awayCorners": 12,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874760",
+    "capturedAt": "2026-10-17T15:33:25.365Z"
   },
-  "ligue-1:troyes-vs-lens": {
-    "homeCorners": 6,
-    "awayCorners": 4,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876431",
-    "capturedAt": "2026-10-17T21:35:55.304Z"
-  },
-  "eredivisie:telstar-vs-feyenoord": {
-    "homeCorners": 7,
-    "awayCorners": 8,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.1/summary?event=401875580",
-    "capturedAt": "2026-10-17T21:35:55.304Z"
+  "super-lig:erzurumspor-vs-eyupspor": {
+    "homeCorners": 3,
+    "awayCorners": 2,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/summary?event=401888271",
+    "capturedAt": "2026-10-17T15:33:25.365Z"
   },
   "brasileirao-serie-a:atletico-mg-vs-coritiba": {
     "homeCorners": 10,
     "awayCorners": 5,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841270",
-    "capturedAt": "2026-10-18T01:12:24.344Z"
+    "capturedAt": "2026-10-18T14:33:22.511Z"
+  },
+  "eredivisie:telstar-vs-feyenoord": {
+    "homeCorners": 7,
+    "awayCorners": 8,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.1/summary?event=401875580",
+    "capturedAt": "2026-10-18T14:33:22.511Z"
+  },
+  "ligue-1:troyes-vs-lens": {
+    "homeCorners": 6,
+    "awayCorners": 4,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876431",
+    "capturedAt": "2026-10-18T14:33:22.511Z"
+  },
+  "serie-a:bologna-vs-inter": {
+    "homeCorners": 2,
+    "awayCorners": 7,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874953",
+    "capturedAt": "2026-10-18T14:33:22.511Z"
   },
   "la-liga:malaga-vs-real-sociedad": {
     "homeCorners": 4,
     "awayCorners": 5,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882841",
-    "capturedAt": "2026-10-18T19:05:58.281Z"
+    "capturedAt": "2026-10-19T23:33:22.221Z"
   },
   "serie-a:juventus-vs-lazio": {
     "homeCorners": 5,
     "awayCorners": 7,
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874765",
-    "capturedAt": "2026-10-18T21:26:01.758Z"
+    "capturedAt": "2026-10-19T23:33:22.221Z"
+  },
+  "serie-a:parma-vs-torino": {
+    "homeCorners": 6,
+    "awayCorners": 2,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874784",
+    "capturedAt": "2026-10-19T23:33:22.221Z"
+  },
+  "serie-a:monza-vs-cagliari": {
+    "homeCorners": 2,
+    "awayCorners": 7,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874762",
+    "capturedAt": "2026-10-19T23:33:22.221Z"
   }
 }

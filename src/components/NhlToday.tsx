@@ -8,6 +8,7 @@ import { FreeMatchContent, MatchGate } from "@/components/MatchGate";
 import { MatchStatusBadge } from "@/components/MatchStatusBadge";
 import { NhlLeagueMark } from "@/components/NhlBestMultiple";
 import { NhlMoneylineNote } from "@/components/NhlMoneylineNote";
+import { PredictionsCompleteNotice } from "@/components/PredictionsCompleteNotice";
 import { TeamBadge } from "@/components/TeamBadge";
 import { VipTitleCta } from "@/components/VipTitleCta";
 import { resolveNhlSlate } from "@/data/nhl/slates";
@@ -274,13 +275,28 @@ export function NhlDaySlate({ initialKey, afterHero }: { initialKey: string; aft
     : resolved;
   if (!slate) return null;
 
-  // The static HTML carries no current-day text: the date is rendered only after mount, so crawlers
-  // and search snippets never see a build-day date. It still follows America/New_York at runtime.
-  const dayLabel = mounted ? formatNhlDayLabel(slate.dayKey) : null;
   const matches = sortNhlMatches(slate.matches);
   const free = matches.filter((m) => m.access === "free");
   const protectedGames = matches.filter((m) => m.access !== "free");
   const analyses = (n: number) => (n === 1 ? "analysis" : "analyses");
+
+  // "Today's predictions are complete": either today has no slate of its own (nothing registered
+  // for the new day yet - the last published day stays available until a new one is added, so this
+  // never flips just because the clock ticked past midnight) or every one of today's games is
+  // confirmed FINAL by the live feed. A kickoff time passing is never, by itself, treated as "over" -
+  // only a genuine FINAL state from the live feed counts, and the feed being empty/unavailable never
+  // counts as "finished" (fails closed, consistent with findLiveGame never fabricating a result).
+  const isStaleDay = slate.dayKey !== dayKey;
+  const allFinished = matches.length > 0 && liveGames.length > 0 &&
+    matches.every((m) => findLiveGame(liveGames, m.homeTeam, m.awayTeam)?.state === "finished");
+  const showComplete = isStaleDay || matches.length === 0 || allFinished;
+
+  // The static HTML carries no current-day text: the date is rendered only after mount, so crawlers
+  // and search snippets never see a build-day date. It still follows America/New_York at runtime.
+  // Once a day's own slate is stale (isStaleDay), the header shows today's real date, not the last
+  // published day's - the complete notice already says nothing is active, so the header should not
+  // imply that older day is "today".
+  const dayLabel = mounted ? formatNhlDayLabel(isStaleDay ? dayKey : slate.dayKey) : null;
 
   return (
     <>
@@ -291,23 +307,29 @@ export function NhlDaySlate({ initialKey, afterHero }: { initialKey: string; aft
         </span>
         <VipTitleCta>NHL Predictions Today</VipTitleCta>
         <p className="psp-hero__date" style={{ minHeight: "1.5em", fontWeight: 600 }}>{dayLabel}</p>
-        <p>
-          {matches.length} NHL games today. {free.length} {analyses(free.length)} {free.length === 1 ? "is" : "are"}{" "}
-          published in full for everyone. The remaining {protectedGames.length} {protectedGames.length === 1 ? "is" : "are"}{" "}
-          exclusive to PRIME VIP members.
-        </p>
-        <div className="psp-chips">
-          <span className="psp-chip">{matches.length} games</span>
-          <span className="psp-chip">
-            <span className="psp-badge psp-badge--free">FREE TO VIEW</span> {free.length} {analyses(free.length)}
-          </span>
-          <span className="psp-chip">
-            <span className="psp-badge psp-badge--vip">PRIME VIP</span> {protectedGames.length} {analyses(protectedGames.length)}
-          </span>
-        </div>
+        {showComplete ? null : (
+          <>
+            <p>
+              {matches.length} NHL games today. {free.length} {analyses(free.length)} {free.length === 1 ? "is" : "are"}{" "}
+              published in full for everyone. The remaining {protectedGames.length} {protectedGames.length === 1 ? "is" : "are"}{" "}
+              exclusive to PRIME VIP members.
+            </p>
+            <div className="psp-chips">
+              <span className="psp-chip">{matches.length} games</span>
+              <span className="psp-chip">
+                <span className="psp-badge psp-badge--free">FREE TO VIEW</span> {free.length} {analyses(free.length)}
+              </span>
+              <span className="psp-chip">
+                <span className="psp-badge psp-badge--vip">PRIME VIP</span> {protectedGames.length} {analyses(protectedGames.length)}
+              </span>
+            </div>
+          </>
+        )}
       </header>
 
       {afterHero}
+
+      {showComplete ? <PredictionsCompleteNotice /> : <>
 
       <NhlMoneylineNote />
 
@@ -351,6 +373,7 @@ export function NhlDaySlate({ initialKey, afterHero }: { initialKey: string; aft
           ))}
         </nav>
       </section>
+      </>}
     </>
   );
 }

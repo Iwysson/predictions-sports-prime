@@ -27,7 +27,7 @@ export const prediction: EditorialPrediction = {
   },
   "matchInfo": {
     "date": "2026-10-19",
-    "time": "19:15",
+    "time": "20:15",
     "round": "Matchday 2",
     "venue": "Estádio Municipal de Braga"
   },

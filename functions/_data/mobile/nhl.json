@@ -1,99 +1,95 @@
 {
-  "generatedAt": "2026-10-15T13:56:51.809Z",
+  "generatedAt": "2026-10-20T15:37:14.329Z",
   "free": [
     {
-      "slug": "new-jersey-devils-vs-new-york-rangers",
-      "title": "New Jersey Devils × New York Rangers",
-      "homeTeam": "New Jersey Devils",
-      "awayTeam": "New York Rangers",
+      "slug": "montreal-canadiens-vs-san-jose-sharks",
+      "title": "Montreal Canadiens × San Jose Sharks",
+      "homeTeam": "Montreal Canadiens",
+      "awayTeam": "San Jose Sharks",
       "badge": "free",
-      "teaser": "New Jersey Devils host New York Rangers on October 15. Read the free prediction and full analysis.",
-      "pick": "Over 5.5 total goals",
-      "odds": 1.8
+      "teaser": "Montreal Canadiens host San Jose Sharks on October 20. Read the free prediction and full analysis."
     },
     {
-      "slug": "detroit-red-wings-vs-philadelphia-flyers",
-      "title": "Detroit Red Wings × Philadelphia Flyers",
-      "homeTeam": "Detroit Red Wings",
-      "awayTeam": "Philadelphia Flyers",
+      "slug": "new-jersey-devils-vs-colorado-avalanche",
+      "title": "New Jersey Devils × Colorado Avalanche",
+      "homeTeam": "New Jersey Devils",
+      "awayTeam": "Colorado Avalanche",
       "badge": "free",
-      "teaser": "Detroit Red Wings host Philadelphia Flyers on October 15. Read the free prediction and full analysis.",
-      "pick": "Over 5.5 total goals",
-      "odds": 1.79
+      "teaser": "New Jersey Devils host Colorado Avalanche on October 20. Read the free prediction and full analysis."
+    },
+    {
+      "slug": "washington-capitals-vs-los-angeles-kings",
+      "title": "Washington Capitals × Los Angeles Kings",
+      "homeTeam": "Washington Capitals",
+      "awayTeam": "Los Angeles Kings",
+      "badge": "free",
+      "teaser": "Washington Capitals host Los Angeles Kings on October 20. Read the free prediction and full analysis."
+    },
+    {
+      "slug": "edmonton-oilers-vs-minnesota-wild",
+      "title": "Edmonton Oilers × Minnesota Wild",
+      "homeTeam": "Edmonton Oilers",
+      "awayTeam": "Minnesota Wild",
+      "badge": "free",
+      "teaser": "Edmonton Oilers host Minnesota Wild on October 20. Read the free prediction and full analysis."
     }
   ],
   "vip": [
     {
-      "slug": "florida-panthers-vs-vancouver-canucks",
-      "title": "Florida Panthers × Vancouver Canucks",
-      "homeTeam": "Florida Panthers",
-      "awayTeam": "Vancouver Canucks",
+      "slug": "columbus-blue-jackets-vs-toronto-maple-leafs",
+      "title": "Columbus Blue Jackets × Toronto Maple Leafs",
+      "homeTeam": "Columbus Blue Jackets",
+      "awayTeam": "Toronto Maple Leafs",
       "badge": "vip",
-      "teaser": "Florida Panthers host Vancouver Canucks on October 15. Unlock PRIME VIP for the prediction, odds and analysis."
+      "teaser": "Columbus Blue Jackets host Toronto Maple Leafs on October 20. Unlock PRIME VIP for the prediction, odds and analysis."
     },
     {
-      "slug": "ottawa-senators-vs-new-york-islanders",
-      "title": "Ottawa Senators × New York Islanders",
-      "homeTeam": "Ottawa Senators",
-      "awayTeam": "New York Islanders",
+      "slug": "new-york-islanders-vs-anaheim-ducks",
+      "title": "New York Islanders × Anaheim Ducks",
+      "homeTeam": "New York Islanders",
+      "awayTeam": "Anaheim Ducks",
       "badge": "vip",
-      "teaser": "Ottawa Senators host New York Islanders on October 15. Unlock PRIME VIP for the prediction, odds and analysis."
+      "teaser": "New York Islanders host Anaheim Ducks on October 20. Unlock PRIME VIP for the prediction, odds and analysis."
     },
     {
-      "slug": "tampa-bay-lightning-vs-seattle-kraken",
-      "title": "Tampa Bay Lightning × Seattle Kraken",
-      "homeTeam": "Tampa Bay Lightning",
-      "awayTeam": "Seattle Kraken",
+      "slug": "dallas-stars-vs-boston-bruins",
+      "title": "Dallas Stars × Boston Bruins",
+      "homeTeam": "Dallas Stars",
+      "awayTeam": "Boston Bruins",
       "badge": "vip",
-      "teaser": "Tampa Bay Lightning host Seattle Kraken on October 15. Unlock PRIME VIP for the prediction, odds and analysis."
+      "teaser": "Dallas Stars host Boston Bruins on October 20. Unlock PRIME VIP for the prediction, odds and analysis."
     },
     {
-      "slug": "toronto-maple-leafs-vs-buffalo-sabres",
-      "title": "Toronto Maple Leafs × Buffalo Sabres",
-      "homeTeam": "Toronto Maple Leafs",
-      "awayTeam": "Buffalo Sabres",
-      "badge": "vip",
-      "teaser": "Toronto Maple Leafs host Buffalo Sabres on October 15. Unlock PRIME VIP for the prediction, odds and analysis."
-    },
-    {
-      "slug": "chicago-blackhawks-vs-winnipeg-jets",
-      "title": "Chicago Blackhawks × Winnipeg Jets",
-      "homeTeam": "Chicago Blackhawks",
+      "slug": "st-louis-blues-vs-winnipeg-jets",
+      "title": "St. Louis Blues × Winnipeg Jets",
+      "homeTeam": "St. Louis Blues",
       "awayTeam": "Winnipeg Jets",
       "badge": "vip",
-      "teaser": "Chicago Blackhawks host Winnipeg Jets on October 15. Unlock PRIME VIP for the prediction, odds and analysis."
+      "teaser": "St. Louis Blues host Winnipeg Jets on October 20. Unlock PRIME VIP for the prediction, odds and analysis."
     },
     {
-      "slug": "minnesota-wild-vs-st-louis-blues",
-      "title": "Minnesota Wild × St. Louis Blues",
-      "homeTeam": "Minnesota Wild",
-      "awayTeam": "St. Louis Blues",
-      "badge": "best",
-      "teaser": "Minnesota Wild host St. Louis Blues on October 15. Unlock PRIME VIP for the prediction, odds and analysis."
-    },
-    {
-      "slug": "nashville-predators-vs-san-jose-sharks",
-      "title": "Nashville Predators × San Jose Sharks",
-      "homeTeam": "Nashville Predators",
-      "awayTeam": "San Jose Sharks",
+      "slug": "seattle-kraken-vs-detroit-red-wings",
+      "title": "Seattle Kraken × Detroit Red Wings",
+      "homeTeam": "Seattle Kraken",
+      "awayTeam": "Detroit Red Wings",
       "badge": "vip",
-      "teaser": "Nashville Predators host San Jose Sharks on October 15. Unlock PRIME VIP for the prediction, odds and analysis."
+      "teaser": "Seattle Kraken host Detroit Red Wings on October 20. Unlock PRIME VIP for the prediction, odds and analysis."
     },
     {
-      "slug": "edmonton-oilers-vs-utah-mammoth",
-      "title": "Edmonton Oilers × Utah Mammoth",
-      "homeTeam": "Edmonton Oilers",
-      "awayTeam": "Utah Mammoth",
+      "slug": "vancouver-canucks-vs-carolina-hurricanes",
+      "title": "Vancouver Canucks × Carolina Hurricanes",
+      "homeTeam": "Vancouver Canucks",
+      "awayTeam": "Carolina Hurricanes",
       "badge": "vip",
-      "teaser": "Edmonton Oilers host Utah Mammoth on October 15. Unlock PRIME VIP for the prediction, odds and analysis."
+      "teaser": "Vancouver Canucks host Carolina Hurricanes on October 20. Unlock PRIME VIP for the prediction, odds and analysis."
     },
     {
-      "slug": "vegas-golden-knights-vs-calgary-flames",
-      "title": "Vegas Golden Knights × Calgary Flames",
+      "slug": "vegas-golden-knights-vs-tampa-bay-lightning",
+      "title": "Vegas Golden Knights × Tampa Bay Lightning",
       "homeTeam": "Vegas Golden Knights",
-      "awayTeam": "Calgary Flames",
+      "awayTeam": "Tampa Bay Lightning",
       "badge": "vip",
-      "teaser": "Vegas Golden Knights host Calgary Flames on October 15. Unlock PRIME VIP for the prediction, odds and analysis."
+      "teaser": "Vegas Golden Knights host Tampa Bay Lightning on October 20. Unlock PRIME VIP for the prediction, odds and analysis."
     }
   ]
 }

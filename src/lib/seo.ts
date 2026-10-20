@@ -186,7 +186,7 @@ export function matchBreadcrumbJsonLd(match: Match) {
         "@type": "ListItem",
         position: 2,
         name: league?.name ?? "League",
-        item: absoluteUrl(`/league/${match.league}/`),
+        item: absoluteUrl("/football-predictions/"),
       },
       {
         "@type": "ListItem",
