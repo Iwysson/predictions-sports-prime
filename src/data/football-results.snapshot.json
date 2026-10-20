@@ -989,6 +989,82 @@
       "settledAt": "2026-10-13T21:58:27.139Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
+    "champions-league:liverpool-vs-villarreal": {
+      "key": "champions-league:liverpool-vs-villarreal",
+      "league": "champions-league",
+      "slug": "liverpool-vs-villarreal",
+      "homeTeam": "Liverpool",
+      "awayTeam": "Villarreal",
+      "date": "2026-10-20",
+      "fixtureId": "401915397",
+      "predictionAccess": "free",
+      "prediction": "Liverpool to Win",
+      "odds": 1.48,
+      "finalScore": {
+        "home": 4,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-10-20T23:07:38.962Z",
+      "publishedAt": "2026-10-18T21:30:00.000-03:00"
+    },
+    "champions-league:napoli-vs-bodo-glimt": {
+      "key": "champions-league:napoli-vs-bodo-glimt",
+      "league": "champions-league",
+      "slug": "napoli-vs-bodo-glimt",
+      "homeTeam": "Napoli",
+      "awayTeam": "Bodø/Glimt",
+      "date": "2026-10-20",
+      "fixtureId": "401915400",
+      "predictionAccess": "vip",
+      "prediction": "Napoli to Win",
+      "odds": 1.61,
+      "finalScore": {
+        "home": 4,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-10-20T23:07:38.962Z",
+      "publishedAt": "2026-10-18T21:30:00.000-03:00"
+    },
+    "champions-league:porto-vs-psv-eindhoven": {
+      "key": "champions-league:porto-vs-psv-eindhoven",
+      "league": "champions-league",
+      "slug": "porto-vs-psv-eindhoven",
+      "homeTeam": "Porto",
+      "awayTeam": "PSV Eindhoven",
+      "date": "2026-10-20",
+      "fixtureId": "401915398",
+      "predictionAccess": "free",
+      "prediction": "Porto to Win",
+      "odds": 1.63,
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-10-20T23:07:38.962Z",
+      "publishedAt": "2026-10-18T21:30:00.000-03:00"
+    },
+    "champions-league:roma-vs-slovan-bratislava": {
+      "key": "champions-league:roma-vs-slovan-bratislava",
+      "league": "champions-league",
+      "slug": "roma-vs-slovan-bratislava",
+      "homeTeam": "Roma",
+      "awayTeam": "Slovan Bratislava",
+      "date": "2026-10-20",
+      "fixtureId": "401915402",
+      "predictionAccess": "vip",
+      "prediction": "Roma -2.0 Asian Handicap",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 4,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-20T23:07:38.962Z",
+      "publishedAt": "2026-10-18T21:30:00.000-03:00"
+    },
     "champions-league:shakhtar-donetsk-vs-aek-athens": {
       "key": "champions-league:shakhtar-donetsk-vs-aek-athens",
       "league": "champions-league",
