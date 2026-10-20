@@ -52,7 +52,12 @@ function occurrences(text, needle) {
 const exactForms = (pick) => [`"${pick}"`, `\\"${pick}\\"`, `\\\\\\"${pick}\\\\\\"`, `>${pick}<`];
 function pickOccurrences(text, pick, windows) {
   const structured = exactForms(pick).flatMap((form) => occurrences(text, form).map((i) => i + form.indexOf(pick)));
-  const multipleLegs = occurrences(text, pick).filter((at) => inside(windows, at));
+  // A short pick can be a text prefix of a longer, different FREE_MULTIPLE_LEGS entry (for example "New York
+  // Islanders to Win" inside "New York Islanders to Win (Including OT/SO)"). That is not an occurrence of the
+  // shorter pick at all, so skip positions where a different allowed leg is what is actually printed there.
+  const multipleLegs = occurrences(text, pick).filter(
+    (at) => inside(windows, at) && !FREE_MULTIPLE_LEGS.some((leg) => leg !== pick && leg.startsWith(pick) && text.startsWith(leg, at)),
+  );
   return [...new Set([...structured, ...multipleLegs])];
 }
 
@@ -130,6 +135,21 @@ function settledRscElements(value, record, q) {
   return ranges;
 }
 
+// When two settled result cards publish the identical "Published prediction"/"Published odds" text, Next.js
+// streams each shared div once and the other card references it by chunk id instead of repeating it inline.
+// That shared definition carries no match date, so `settledRscElements` (which ties date+prediction+odds
+// together) cannot attribute it to a specific record. Remove it directly by its own (prediction, odds) pair:
+// this exact dt/dd shape is only ever emitted by the settled-results UI, never by a protected rendering path.
+function publishedFieldChunks(record, q) {
+  const predictionDiv =
+    `[${q}$${q},${q}div${q},null,{${q}children${q}:[[${q}$${q},${q}dt${q},null,{${q}children${q}:${q}Published prediction${q}}],` +
+    `[${q}$${q},${q}dd${q},null,{${q}children${q}:${q}${record.prediction}${q}}]]}]`;
+  const oddsDiv =
+    `[${q}$${q},${q}div${q},null,{${q}children${q}:[[${q}$${q},${q}dt${q},null,{${q}children${q}:${q}Published odds${q}}],` +
+    `[${q}$${q},${q}dd${q},null,{${q}children${q}:${record.odds}}]]}]`;
+  return [predictionDiv, oddsDiv];
+}
+
 export function maskSettledResultRecords(text, records) {
   let masked = text;
   for (const record of Object.values(records ?? {})) {
@@ -142,6 +162,14 @@ export function maskSettledResultRecords(text, records) {
       const end = value.indexOf("</article>", marker);
       return start === -1 || end === -1 ? null : [start, end + "</article>".length];
     });
+    // "Settled predictions" history-row link to this record on a hub page (for example /football-predictions/).
+    masked = removeRanges(masked, (value) => {
+      const marker = value.indexOf(`href="/results/#${record.slug}" class="history-row"`);
+      if (marker === -1) return null;
+      const start = value.lastIndexOf("<a ", marker);
+      const end = value.indexOf("</a>", marker);
+      return start === -1 || end === -1 ? null : [start, end + "</a>".length];
+    });
     // JSON result record and RSC result-card elements (plain, or escaped once or twice inside the page payload).
     for (const q of QUOTE_FORMS) {
       masked = removeRanges(masked, (value) => {
@@ -152,6 +180,9 @@ export function maskSettledResultRecords(text, records) {
         return end === -1 ? null : [start, end + 1];
       });
       masked = removeRanges(masked, (value) => settledRscElements(value, record, q)[0] ?? null);
+      for (const chunk of publishedFieldChunks(record, q)) {
+        masked = masked.split(chunk).join("");
+      }
     }
   }
   return masked;
