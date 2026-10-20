@@ -13,7 +13,7 @@ const SETTLED_SLUGS = new Set(Object.values(results.records).map((record) => rec
 // share this same release-date gate (functions/_data/match-release.json) without a separate
 // middleware pattern. /nba/ listing hub stays ungated here - its own gate is the deferred-slate
 // pattern (src/data/nba/slates.ts), mirroring NHL.
-const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?(?:match|nba)\/([^/]+)(?:\/.*)?$/;
+const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?(?:match|nba|nhl)\/([^/]+)(?:\/.*)?$/;
 
 // Public-release gate (src/lib/match-release.ts): a future prediction's page may already exist in the
 // static export, but it must not be served until its match date arrives in the site's canonical fixture
@@ -21,7 +21,7 @@ const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?(?:match|nba)\/([^/]+)(?:\/.
 // release date; this is re-evaluated on every request, never cached, so a page already built ahead of
 // kickoff opens automatically with no redeploy. Same zone PSP always uses for "today" (America/Fortaleza).
 const PUBLIC_RELEASE_TIME_ZONE = "America/Fortaleza";
-const RELEASE_DATE_BY_SLUG = new Map(releaseManifest.map((entry) => [entry.slug, entry.date]));
+const RELEASE_DATE_BY_SLUG = new Map(releaseManifest.map((entry) => [entry.slug, entry.timezone ? { date: entry.date, timezone: entry.timezone } : entry.date]));
 
 // The pt-br hubs (home, leagues, NFL) are retired and permanently redirect to their English
 // equivalents. Only the frozen historical /pt-br/match/<slug>/ pages are still served.
@@ -72,7 +72,8 @@ export function createMiddlewareHandler({
     // let the static asset (which may already contain the full free-tier prediction) reach the client.
     // Temporary (307), never cached, and never a loop: the target is always Home, which is never gated.
     const releaseDate = slug ? releaseDateBySlug.get(slug) : undefined;
-    if (releaseDate && !isNhlSlateReleased({ date: releaseDate, timezone: PUBLIC_RELEASE_TIME_ZONE }, now())) {
+    const release = typeof releaseDate === "string" ? { date: releaseDate, timezone: PUBLIC_RELEASE_TIME_ZONE } : releaseDate;
+    if (release && !isNhlSlateReleased(release, now())) {
       return new Response(null, {
         status: 307,
         headers: { Location: `${requestUrl.origin}/`, "Cache-Control": "no-store" },

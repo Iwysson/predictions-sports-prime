@@ -24,6 +24,7 @@
     "test:mobile-feed-equivalence": "tsx scripts/test-mobile-feed-equivalence.mts",
     "test:mobile-api-security": "tsx scripts/test-mobile-api-security.mts",
     "test:match-release-gate": "tsx scripts/test-match-release-gate.mts",
+    "test:oct21-release": "tsx scripts/test-oct21-nba-nhl-release.mts",
     "test:home-sections": "tsx scripts/test-home-sections.mts",
     "test:results-history-audit": "tsx scripts/test-results-history-audit.mts",
     "results:settle": "tsx scripts/settle-football-results.mts",
