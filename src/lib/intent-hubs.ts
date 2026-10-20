@@ -8,6 +8,7 @@ import {
 } from "@/lib/match-feed";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import { MARKET_FAMILY_ORDER, marketFamily } from "@/lib/betting-markets";
+import type { FootballResultRecord } from "@/lib/football-results";
 
 export const intentHubSlugs = [
   "football-predictions",
@@ -42,16 +43,16 @@ export const intentHubDefinitions: Record<IntentHubSlug, IntentHubDefinition> = 
   "football-predictions": {
     slug: "football-predictions",
     intent: "football predictions",
-    title: "Football Predictions by League and Match | Predictions Sports Prime",
+    title: "Football Predictions and Results | Predictions Sports Prime",
     h1: "Football Predictions",
-    description: "Football predictions organized by competition: every league and cup with upcoming fixtures, linked to the full match analysis, published odds and sources.",
+    description: "Today's football predictions and recent settled results, with published odds, final scores and links to the full results archive.",
     eyebrow: "Football prediction hub",
-    intro: "Start here to find a fixture. The hub lists every league and cup that currently has published pre-match football predictions, grouped by competition, and links each fixture to its own match page, where the selection, the published price, the evidence and the risks can be read in context.",
-    feedTitle: "Next football fixtures with predictions",
-    feedIntro: "The next fixtures in schedule order across all competitions. The competition directory further down groups the same fixtures by league.",
+    intro: "Find today's football predictions and review recent settled results across the competitions covered by the site. Each result shows the original selection, published odds, final score and settlement, with the full archive available on the Results page.",
+    feedTitle: "Latest football prediction results",
+    feedIntro: "The most recent settled predictions across all competitions, including wins, losses and other outcomes. Each result links to the full archive.",
     guideTitle: "How the football hub is organized",
     guide: [
-      "This page is the entry point for every competition: it groups the published predictions by league and cup, and each match page holds the analysis for one fixture.",
+      "Today's board links to the analysis for each available fixture. Recent settled predictions appear below it, and the Results archive holds the wider record by competition and date.",
       "For a date-based view, use today's predictions. For free selections and the PRIME VIP board, use football picks. For how prices work, use football betting tips.",
     ],
     strategy: "football",
@@ -174,7 +175,7 @@ export function intentHubMetadata(slug: IntentHubSlug): Metadata {
   };
 }
 
-export function intentHubJsonLd(slug: IntentHubSlug, entries: MatchPreview[]) {
+export function intentHubJsonLd(slug: IntentHubSlug, entries: MatchPreview[], results: FootballResultRecord[] = []) {
   const hub = intentHubDefinitions[slug];
   const url = absoluteUrl(`/${slug}/`);
   return [
@@ -183,7 +184,9 @@ export function intentHubJsonLd(slug: IntentHubSlug, entries: MatchPreview[]) {
       { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
       { "@type": "ListItem", position: 2, name: hub.h1, item: url },
     ] },
-    ...(entries.length ? [{ "@context": "https://schema.org", "@type": "ItemList", name: hub.feedTitle, numberOfItems: entries.length, itemListElement: entries.map((match, index) => ({ "@type": "ListItem", position: index + 1, name: `${match.homeTeam} vs ${match.awayTeam}`, url: absoluteUrl(`/match/${match.slug}/`) })) }] : []),
+    ...(slug === "football-predictions" && results.length
+      ? [{ "@context": "https://schema.org", "@type": "ItemList", name: hub.feedTitle, numberOfItems: results.length, itemListElement: results.map((record, index) => ({ "@type": "ListItem", position: index + 1, name: `${record.homeTeam} vs ${record.awayTeam}`, url: absoluteUrl(`/results/#${record.slug}`) })) }]
+      : entries.length ? [{ "@context": "https://schema.org", "@type": "ItemList", name: hub.feedTitle, numberOfItems: entries.length, itemListElement: entries.map((match, index) => ({ "@type": "ListItem", position: index + 1, name: `${match.homeTeam} vs ${match.awayTeam}`, url: absoluteUrl(`/match/${match.slug}/`) })) }] : []),
   ];
 }
 
