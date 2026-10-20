@@ -3,6 +3,8 @@
 import { useEffect, useState, type ReactNode } from "react";
 import Link from "@/components/DocumentLink";
 import { AccessBadge } from "@/components/AccessBadge";
+import { FreeMatchContent, MatchGate } from "@/components/MatchGate";
+import { MatchFullContent } from "@/components/MatchFullContent";
 import { PredictionsCompleteNotice } from "@/components/PredictionsCompleteNotice";
 import { TeamBadge } from "@/components/TeamBadge";
 import { VipTitleCta } from "@/components/VipTitleCta";
@@ -77,11 +79,13 @@ const L = {
 
 function GameCard({ m, dayLabel }: { m: NbaPublicMatch; dayLabel: string | null }) {
   const isFree = m.access === "free";
+  const [expanded, setExpanded] = useState(false);
   const badgeItem = {
     predictionAccess: isFree ? ("free" as const) : ("vip" as const),
     analysisAccess: isFree ? ("free" as const) : ("vip" as const),
     bestAnalysis: m.access === "best",
   };
+  const contentId = `${m.slug}-analysis`;
   return (
     <section className={`psp-game ${isFree ? "psp-game--free" : "psp-game--vip"}`} id={m.slug}>
       <div className="psp-game__head">
@@ -97,9 +101,7 @@ function GameCard({ m, dayLabel }: { m: NbaPublicMatch; dayLabel: string | null 
 
       <div className="psp-game__teams">
         <TeamBadge team={m.homeTeam} />
-        <h2>
-          <Link href={`/nba/${m.slug}/`}>{`${m.homeTeam} vs ${m.awayTeam} Prediction and Picks`}</Link>
-        </h2>
+        <h2>{`${m.homeTeam} vs ${m.awayTeam} Prediction and Picks`}</h2>
         <TeamBadge team={m.awayTeam} />
       </div>
 
@@ -118,9 +120,36 @@ function GameCard({ m, dayLabel }: { m: NbaPublicMatch; dayLabel: string | null 
         </div>
       ) : null}
 
-      <Link className="button auth-primary-action" href={`/nba/${m.slug}/`}>
-        Read full analysis
-      </Link>
+      <button
+        type="button"
+        className="button auth-primary-action psp-game__toggle"
+        aria-expanded={expanded}
+        aria-controls={contentId}
+        onClick={() => setExpanded((value) => !value)}
+      >
+        {expanded ? "Hide analysis" : "Read full analysis"}
+      </button>
+
+      {expanded ? (
+        <div id={contentId} className="psp-game__analysis">
+          {isFree ? (
+            m.analysis?.length ? (
+              <MatchFullContent
+                analysis={m.analysis}
+                analysisFormat={m.analysisFormat}
+                sources={m.sources ?? []}
+                comment={null}
+                prediction={null}
+                labels={{ prediction: L.prediction, odds: L.odds, analysis: "Game analysis" }}
+              />
+            ) : (
+              <FreeMatchContent slug={m.slug} labels={{ prediction: L.prediction, odds: L.odds }} />
+            )
+          ) : (
+            <MatchGate slug={m.slug} showAnalysis showPrediction variant="game" />
+          )}
+        </div>
+      ) : null}
     </section>
   );
 }
@@ -222,8 +251,10 @@ export function NbaDaySlate({ initialKey, afterHero }: { initialKey: string; aft
         </div>
         <nav className="psp-jump" aria-label="NBA games on this page">
           {matches.map((m) => (
-            <Link key={m.slug} href={`/nba/${m.slug}/`}>
+            <Link key={m.slug} href={`#${m.slug}`} className="psp-jump__link">
+              <TeamBadge team={m.awayTeam} size="sm" />
               {m.awayTeam} vs {m.homeTeam}
+              <TeamBadge team={m.homeTeam} size="sm" />
             </Link>
           ))}
         </nav>

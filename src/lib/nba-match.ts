@@ -1,8 +1,9 @@
-// Server-only assembly of one NBA match's full page data: team names/venue/teaser from the
-// deferred listing (src/data/nba/deferred-slate-2026-10-20.json) plus the full protected content
-// (src/data/nba/protected-2026-10-20.json). Used only by server components (the /nba/[slug] page
-// and its metadata) at build time - never imported by a client component, mirroring the NHL
-// server-only data files this reads from.
+// Server-only assembly of one NBA match's full data: team names/venue/teaser from the deferred
+// listing (src/data/nba/deferred-slate-2026-10-20.json) plus the full protected content
+// (src/data/nba/protected-2026-10-20.json). There is no per-game page: this feeds
+// scripts/build-match-content.mts, which indexes the same content behind /api/match-content/[slug]
+// for the inline expand/collapse analysis on the /nba/ listing (src/components/NbaToday.tsx) - never
+// imported by a client component, mirroring the NHL server-only data files this reads from.
 import protectedOct20 from "@/data/nba/protected-2026-10-20.json";
 import deferredOct20 from "@/data/nba/deferred-slate-2026-10-20.json";
 
