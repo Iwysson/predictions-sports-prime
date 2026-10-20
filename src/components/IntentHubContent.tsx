@@ -18,6 +18,7 @@ import { matchPredictionAnchor } from "@/lib/seo-locales";
 import { VipTitleCta } from "@/components/VipTitleCta";
 import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
 import { PredictionsCompleteNotice } from "@/components/PredictionsCompleteNotice";
+import { resultLabels, type FootballResultRecord } from "@/lib/football-results";
 
 function TodayMatchCard({ match }: { match: MatchPreview }) {
   const league = leaguesBySlug[match.league];
@@ -34,7 +35,7 @@ function TodayMatchCard({ match }: { match: MatchPreview }) {
   </article>;
 }
 
-export function IntentHubContent({ slug, matches, discovery }: { slug: IntentHubSlug; matches: MatchPreview[]; discovery?: ReactNode }) {
+export function IntentHubContent({ slug, matches, discovery, results = [] }: { slug: IntentHubSlug; matches: MatchPreview[]; discovery?: ReactNode; results?: FootballResultRecord[] }) {
   const now = useClientNow();
   const hub = intentHubDefinitions[slug];
   const entries = now ? selectIntentHubMatches(slug, matches, now) : [];
@@ -46,7 +47,7 @@ export function IntentHubContent({ slug, matches, discovery }: { slug: IntentHub
   const todayMatches = slug === "football-predictions" && now ? filterTodaysPublishedPredictions(matches, localTodayISO(now), now) : null;
 
   return <>
-    <JsonLd data={intentHubJsonLd(slug, entries)} />
+    <JsonLd data={intentHubJsonLd(slug, entries, results)} />
     <section className="page-hero intent-hub-hero" aria-labelledby="intent-hub-title">
       <div className="container">
         <nav className="league-breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link><span aria-hidden="true">›</span><span>{hub.h1}</span></nav>
@@ -75,7 +76,23 @@ export function IntentHubContent({ slug, matches, discovery }: { slug: IntentHub
       </section>
     ) : null}
 
-    {!now ? discovery ?? <PublishedMatchDirectory matches={matches} /> : <section className="section section--compact" aria-labelledby="intent-feed-title">
+    {slug === "football-predictions" ? <section className="section section--compact" aria-labelledby="intent-feed-title">
+      <div className="container">
+        <div className="section-heading section-heading--compact"><div><span className="eyebrow">Settled predictions</span><h2 id="intent-feed-title">{hub.feedTitle}</h2><p>{hub.feedIntro}</p></div><span className="today-count">{results.length}</span></div>
+        {results.length ? <div className="history-list">
+          {results.map((record) => {
+            const tone = record.result === "green" || record.result === "half-green" ? "green" : record.result === "red" || record.result === "half-red" ? "red" : "push";
+            return <Link href={`/results/#${record.slug}`} className="history-row" key={record.key}>
+              <div><strong>{record.homeTeam} vs {record.awayTeam}</strong><span>{leaguesBySlug[record.league as keyof typeof leaguesBySlug]?.name ?? record.league} · {record.date} · {record.prediction}</span></div>
+              <span className="history-score">{record.finalScore.home}–{record.finalScore.away}</span>
+              <span className="history-odds">Odds {record.odds?.toFixed(2) ?? "—"}</span>
+              <b className={`bet-result bet-result--${tone}`}>{resultLabels[record.result]}</b>
+            </Link>;
+          })}
+        </div> : <div className="empty-state empty-state--compact"><strong>No settled football predictions yet.</strong></div>}
+        <p className="history-all-link"><Link href="/results/">View all results</Link></p>
+      </div>
+    </section> : !now ? discovery ?? <PublishedMatchDirectory matches={matches} /> : <section className="section section--compact" aria-labelledby="intent-feed-title">
       <div className="container">
         <div className="section-heading section-heading--compact"><div><span className="eyebrow">Published pre-match inventory</span><h2 id="intent-feed-title">{hub.feedTitle}</h2><p>{hub.feedIntro}</p></div><span className="today-count">{entries.length}</span></div>
         {entries.length ? <div className={compact ? "intent-picks-list" : "intent-hub-grid"}>
