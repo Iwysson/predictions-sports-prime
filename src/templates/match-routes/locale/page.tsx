@@ -149,7 +149,7 @@ export default async function LocalizedMatchPage({ params }: { params: Promise<{
 
             {model.gate ? (
               <div data-prediction-reveal="locked" data-protected-content="analysis" className="match-gate-slot">
-                <MatchGate slug={model.gate.slug} showAnalysis={model.gate.showAnalysis} showPrediction={model.gate.showPrediction} />
+                <MatchGate slug={model.gate.slug} showAnalysis={model.gate.showAnalysis} showPrediction={model.gate.showPrediction} stripStatisticalCore={Boolean(model.publicContext?.statisticalCore)} />
               </div>
             ) : null}
 

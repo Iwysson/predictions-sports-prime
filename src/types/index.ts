@@ -241,6 +241,17 @@ export type EditorialPrediction = {
     away: { sampleType: "away"; source: string; competition: string; matches: number };
   };
 
+  // Provenance for partial Cores built from overall or mixed-scope samples.
+  // Unlike statisticalCoreProvenance, these samples do not claim HOME/AWAY splits.
+  statisticalCoreSamples?: Array<{
+    sampleType: "overall" | "home" | "away";
+    source: string;
+    sourceUrl: string;
+    season: string;
+    scope: string;
+    matches?: number;
+  }>;
+
   // Optional, source-backed semantic modules for Match SEO 2.0.
   matchSeo?: MatchSeoData;
 
