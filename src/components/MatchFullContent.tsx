@@ -12,6 +12,7 @@ export function MatchFullContent({
   prediction,
   labels,
   heading,
+  stripStatisticalCore = false,
 }: {
   analysis: string[];
   analysisFormat?: "markdown";
@@ -20,6 +21,7 @@ export function MatchFullContent({
   prediction?: { main: string; odds: number | null } | null;
   labels: { prediction: string; odds: string; analysis?: string; sources?: string };
   heading?: string;
+  stripStatisticalCore?: boolean;
 }) {
   return (
     <div className="psp-analysis-block">
@@ -40,7 +42,7 @@ export function MatchFullContent({
       {analysis.length ? (
         <section className="psp-analysis compact-analysis-copy match-full-content">
           <h3>{heading ?? labels.analysis ?? "Analysis"}</h3>
-          <EditorialAnalysis analysis={analysis} format={analysisFormat} stripStatisticalCore={false} />
+          <EditorialAnalysis analysis={analysis} format={analysisFormat} stripStatisticalCore={stripStatisticalCore} />
           {comment ? <p className="match-note">{comment}</p> : null}
         </section>
       ) : null}

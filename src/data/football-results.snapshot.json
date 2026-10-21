@@ -36,7 +36,7 @@
         "away": 2
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-18T01:12:41.880Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "brasileirao-serie-a:atletico-mg-vs-coritiba": {
@@ -55,7 +55,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-18T01:12:41.880Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "brasileirao-serie-a:atletico-mg-vs-santos": {
@@ -93,7 +93,7 @@
         "away": 3
       },
       "result": "red",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-19T01:26:16.487Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "brasileirao-serie-a:bahia-vs-mirassol": {
@@ -283,7 +283,7 @@
         "away": 2
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T21:26:22.364Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "brasileirao-serie-a:gremio-vs-cruzeiro": {
@@ -302,7 +302,7 @@
         "away": 4
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T21:26:22.364Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "brasileirao-serie-a:gremio-vs-internacional": {
@@ -359,7 +359,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-17T15:34:04.999Z",
+      "settledAt": "2026-10-17T02:46:49.323Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
     },
     "brasileirao-serie-a:palmeiras-vs-bahia": {
@@ -435,7 +435,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-19T01:26:16.487Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "brasileirao-serie-a:santos-vs-flamengo": {
@@ -549,7 +549,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T16:56:18.471Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "bundesliga:bayern-munich-vs-rb-leipzig": {
@@ -568,7 +568,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T19:29:19.674Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
     "bundesliga:borussia-dortmund-vs-werder-bremen": {
@@ -606,7 +606,7 @@
         "away": 2
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T19:06:19.100Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "bundesliga:eintracht-frankfurt-vs-cologne": {
@@ -625,7 +625,7 @@
         "away": 0
       },
       "result": "green",
-      "settledAt": "2026-10-16T21:33:56.202Z",
+      "settledAt": "2026-10-16T21:50:41.889Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
     "bundesliga:freiburg-vs-schalke": {
@@ -663,7 +663,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-17T15:34:04.999Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
     "bundesliga:hoffenheim-vs-hsv": {
@@ -777,7 +777,7 @@
         "away": 1
       },
       "result": "red",
-      "settledAt": "2026-10-17T15:34:04.999Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
     "bundesliga:sv-elversberg-vs-augsburg": {
@@ -796,7 +796,7 @@
         "away": 3
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
     "bundesliga:union-berlin-vs-borussia-dortmund": {
@@ -815,7 +815,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-17T15:34:04.999Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
     "bundesliga:union-vs-elversberg": {
@@ -853,7 +853,7 @@
         "away": 2
       },
       "result": "red",
-      "settledAt": "2026-10-17T15:34:04.999Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
     "champions-league:arsenal-vs-lille": {
@@ -989,6 +989,82 @@
       "settledAt": "2026-10-13T21:58:27.139Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
+    "champions-league:liverpool-vs-villarreal": {
+      "key": "champions-league:liverpool-vs-villarreal",
+      "league": "champions-league",
+      "slug": "liverpool-vs-villarreal",
+      "homeTeam": "Liverpool",
+      "awayTeam": "Villarreal",
+      "date": "2026-10-20",
+      "fixtureId": "401915397",
+      "predictionAccess": "free",
+      "prediction": "Liverpool to Win",
+      "odds": 1.48,
+      "finalScore": {
+        "home": 4,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-10-20T23:07:38.962Z",
+      "publishedAt": "2026-10-18T21:30:00.000-03:00"
+    },
+    "champions-league:napoli-vs-bodo-glimt": {
+      "key": "champions-league:napoli-vs-bodo-glimt",
+      "league": "champions-league",
+      "slug": "napoli-vs-bodo-glimt",
+      "homeTeam": "Napoli",
+      "awayTeam": "Bodø/Glimt",
+      "date": "2026-10-20",
+      "fixtureId": "401915400",
+      "predictionAccess": "vip",
+      "prediction": "Napoli to Win",
+      "odds": 1.61,
+      "finalScore": {
+        "home": 4,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-10-20T23:07:38.962Z",
+      "publishedAt": "2026-10-18T21:30:00.000-03:00"
+    },
+    "champions-league:porto-vs-psv-eindhoven": {
+      "key": "champions-league:porto-vs-psv-eindhoven",
+      "league": "champions-league",
+      "slug": "porto-vs-psv-eindhoven",
+      "homeTeam": "Porto",
+      "awayTeam": "PSV Eindhoven",
+      "date": "2026-10-20",
+      "fixtureId": "401915398",
+      "predictionAccess": "free",
+      "prediction": "Porto to Win",
+      "odds": 1.63,
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-10-20T23:07:38.962Z",
+      "publishedAt": "2026-10-18T21:30:00.000-03:00"
+    },
+    "champions-league:roma-vs-slovan-bratislava": {
+      "key": "champions-league:roma-vs-slovan-bratislava",
+      "league": "champions-league",
+      "slug": "roma-vs-slovan-bratislava",
+      "homeTeam": "Roma",
+      "awayTeam": "Slovan Bratislava",
+      "date": "2026-10-20",
+      "fixtureId": "401915402",
+      "predictionAccess": "vip",
+      "prediction": "Roma -2.0 Asian Handicap",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 4,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-20T23:07:38.962Z",
+      "publishedAt": "2026-10-18T21:30:00.000-03:00"
+    },
     "champions-league:shakhtar-donetsk-vs-aek-athens": {
       "key": "champions-league:shakhtar-donetsk-vs-aek-athens",
       "league": "champions-league",
@@ -1043,7 +1119,7 @@
         "away": 2
       },
       "result": "red",
-      "settledAt": "2026-10-17T15:34:04.999Z",
+      "settledAt": "2026-10-17T14:23:07.914Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "eliteserien:kfum-oslo-vs-valerenga": {
@@ -1119,7 +1195,7 @@
         "away": 1
       },
       "result": "red",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "eredivisie:ajax-vs-nec-nijmegen": {
@@ -1176,7 +1252,7 @@
         "away": 5
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T16:56:18.471Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "eredivisie:fc-twente-vs-fc-utrecht": {
@@ -1195,7 +1271,7 @@
         "away": 2
       },
       "result": "red",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T21:26:22.364Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "eredivisie:fc-utrecht-vs-willem-ii": {
@@ -1309,7 +1385,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-18T13:43:59.703Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "eredivisie:psv-vs-heerenveen": {
@@ -1347,7 +1423,7 @@
         "away": 0
       },
       "result": "green",
-      "settledAt": "2026-10-16T21:33:56.202Z",
+      "settledAt": "2026-10-16T21:50:41.889Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
     },
     "eredivisie:telstar-vs-ado-den-haag": {
@@ -1385,7 +1461,7 @@
         "away": 4
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T21:36:11.463Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "la-liga:alaves-vs-atletico-madrid": {
@@ -1442,7 +1518,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T16:56:18.471Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "la-liga:elche-vs-celta": {
@@ -1470,7 +1546,7 @@
       "slug": "espanyol-vs-atletico-madrid",
       "homeTeam": "Espanyol",
       "awayTeam": "Atlético Madrid",
-      "date": "2026-10-18",
+      "date": "2026-10-17",
       "fixtureId": "401882843",
       "predictionAccess": "vip",
       "prediction": "Atlético Madrid Double Chance (X2) + Under 3.5 Goals",
@@ -1480,7 +1556,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-17T15:34:04.999Z",
+      "settledAt": "2026-10-17T14:23:07.914Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "la-liga:getafe-vs-rayo-vallecano": {
@@ -1499,7 +1575,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-19T23:00:12.228Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "la-liga:levante-vs-sevilla": {
@@ -1556,7 +1632,7 @@
         "away": 5
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T19:06:19.100Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "la-liga:osasuna-vs-racing-santander": {
@@ -1575,7 +1651,7 @@
         "away": 0
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-18T16:56:18.471Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "la-liga:racing-santander-vs-valencia": {
@@ -1622,7 +1698,7 @@
       "slug": "real-betis-vs-barcelona",
       "homeTeam": "Real Betis",
       "awayTeam": "Barcelona",
-      "date": "2026-10-18",
+      "date": "2026-10-17",
       "fixtureId": "401882846",
       "predictionAccess": "free",
       "prediction": "Barcelona to Win",
@@ -1632,7 +1708,7 @@
         "away": 5
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T19:29:19.674Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "la-liga:real-betis-vs-osasuna": {
@@ -1670,7 +1746,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T21:26:22.364Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "la-liga:real-madrid-vs-villarreal": {
@@ -1717,7 +1793,7 @@
       "slug": "valencia-vs-athletic-club",
       "homeTeam": "Valencia",
       "awayTeam": "Athletic Club",
-      "date": "2026-10-18",
+      "date": "2026-10-17",
       "fixtureId": "401882838",
       "predictionAccess": "free",
       "prediction": "Athletic Club Double Chance (X2) + Over 1.5 Goals",
@@ -1727,7 +1803,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T21:36:11.463Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "la-liga:villarreal-vs-elche": {
@@ -1736,7 +1812,7 @@
       "slug": "villarreal-vs-elche",
       "homeTeam": "Villarreal",
       "awayTeam": "Elche",
-      "date": "2026-10-18",
+      "date": "2026-10-17",
       "fixtureId": "401882837",
       "predictionAccess": "vip",
       "prediction": "Over 2.5 Goals",
@@ -1746,7 +1822,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "liga-portugal:academico-viseu-vs-estoril-praia": {
@@ -1936,7 +2012,7 @@
         "away": 5
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T16:56:18.471Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "ligue-1:brest-vs-angers": {
@@ -1974,7 +2050,7 @@
         "away": 3
       },
       "result": "red",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T19:06:19.100Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "ligue-1:le-mans-vs-toulouse": {
@@ -1993,7 +2069,7 @@
         "away": 3
       },
       "result": "red",
-      "settledAt": "2026-10-16T21:33:56.202Z",
+      "settledAt": "2026-10-16T21:50:41.889Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
     "ligue-1:lens-vs-lyon": {
@@ -2031,7 +2107,7 @@
         "away": 1
       },
       "result": "red",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T21:36:11.463Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
     "ligue-1:lille-vs-le-havre": {
@@ -2069,7 +2145,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T19:06:19.100Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "ligue-1:lorient-vs-paris-fc": {
@@ -2107,7 +2183,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T21:26:22.364Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "ligue-1:monaco-vs-toulouse": {
@@ -2164,7 +2240,7 @@
         "away": 3
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T19:06:19.100Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "ligue-1:psg-vs-le-mans": {
@@ -2202,7 +2278,7 @@
         "away": 3
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T21:36:11.463Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
     "ligue-1:troyes-vs-marseille": {
@@ -2278,7 +2354,7 @@
         "away": 0
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T16:56:18.471Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "premier-league:brentford-vs-liverpool": {
@@ -2297,7 +2373,7 @@
         "away": 2
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "premier-league:brighton-vs-crystal-palace": {
@@ -2316,7 +2392,7 @@
         "away": 0
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T16:56:18.471Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "premier-league:chelsea-vs-bournemouth": {
@@ -2392,7 +2468,7 @@
         "away": 2
       },
       "result": "green",
-      "settledAt": "2026-10-17T15:34:04.999Z",
+      "settledAt": "2026-10-17T14:23:07.914Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "premier-league:fulham-vs-hull-city": {
@@ -2411,7 +2487,7 @@
         "away": 0
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "premier-league:hull-city-vs-everton": {
@@ -2468,7 +2544,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T16:56:18.471Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "premier-league:liverpool-vs-manchester-city": {
@@ -2525,7 +2601,7 @@
         "away": 2
       },
       "result": "red",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "premier-league:newcastle-united-vs-aston-villa": {
@@ -2544,7 +2620,7 @@
         "away": 1
       },
       "result": "red",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T19:29:19.674Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "premier-league:nottingham-forest-vs-arsenal": {
@@ -2563,7 +2639,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T19:06:19.100Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "premier-league:sunderland-vs-brighton": {
@@ -2601,7 +2677,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-19T23:00:12.228Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "scottish-premiership:aberdeen-vs-st-mirren": {
@@ -2620,7 +2696,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
     },
     "scottish-premiership:dundee-vs-rangers": {
@@ -2639,7 +2715,7 @@
         "away": 2
       },
       "result": "red",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T21:36:11.463Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
     },
     "scottish-premiership:hibernian-vs-falkirk": {
@@ -2658,7 +2734,7 @@
         "away": 2
       },
       "result": "red",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
     },
     "scottish-premiership:kilmarnock-vs-motherwell": {
@@ -2677,7 +2753,7 @@
         "away": 2
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
     },
     "scottish-premiership:st-johnstone-vs-dundee-united": {
@@ -2696,7 +2772,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
     },
     "serie-a:ac-milan-vs-atalanta": {
@@ -2715,7 +2791,7 @@
         "away": 2
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T19:06:19.100Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "serie-a:bologna-vs-inter": {
@@ -2734,7 +2810,7 @@
         "away": 3
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T19:29:19.674Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "serie-a:como-vs-roma": {
@@ -2772,7 +2848,7 @@
         "away": 3
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T16:56:18.471Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "serie-a:frosinone-vs-sassuolo": {
@@ -2791,7 +2867,7 @@
         "away": 2
       },
       "result": "green",
-      "settledAt": "2026-10-16T21:33:56.202Z",
+      "settledAt": "2026-10-16T21:50:41.889Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
     },
     "serie-a:genoa-vs-fiorentina": {
@@ -2848,7 +2924,7 @@
         "away": 3
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-18T21:26:22.364Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "serie-a:lecce-vs-bologna": {
@@ -2886,7 +2962,7 @@
         "away": 0
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-19T19:29:38.238Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "serie-a:napoli-vs-frosinone": {
@@ -2924,7 +3000,7 @@
         "away": 3
       },
       "result": "green",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-19T23:00:12.228Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "serie-a:roma-vs-genoa": {
@@ -2943,7 +3019,7 @@
         "away": 0
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T21:36:11.463Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "serie-a:sassuolo-vs-milan": {
@@ -3000,7 +3076,7 @@
         "away": 3
       },
       "result": "red",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-18T13:43:59.703Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
     "serie-a:venezia-vs-napoli": {
@@ -3019,7 +3095,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-17T15:34:04.999Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
     "super-lig:alanyaspor-vs-erzurumspor": {
@@ -3057,7 +3133,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-17T15:34:04.999Z",
+      "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "super-lig:besiktas-vs-kocaelispor": {
@@ -3095,7 +3171,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-16T21:33:56.202Z",
+      "settledAt": "2026-10-16T18:56:26.231Z",
       "publishedAt": "2026-10-12T12:00:00.000-03:00"
     },
     "super-lig:erzurumspor-vs-eyupspor": {
@@ -3114,7 +3190,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-17T15:34:04.999Z",
+      "settledAt": "2026-10-17T14:23:07.914Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "super-lig:eyupspor-vs-goztepe": {
@@ -3152,7 +3228,7 @@
         "away": 0
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-17T19:29:19.674Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "super-lig:galatasaray-vs-kasimpasa": {
@@ -3190,7 +3266,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-18T14:34:00.930Z",
+      "settledAt": "2026-10-18T13:43:59.703Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "super-lig:rizespor-vs-fenerbahce": {
@@ -3247,7 +3323,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-19T23:33:59.861Z",
+      "settledAt": "2026-10-19T19:29:38.238Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
     "uefa-europa-league:celta-vigo-vs-juventus": {
@@ -3266,7 +3342,7 @@
         "away": 2
       },
       "result": "red",
-      "settledAt": "2026-10-16T17:39:38.460Z",
+      "settledAt": "2026-10-15T21:38:40.291Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
     },
     "uefa-europa-league:dinamo-zagreb-vs-anderlecht": {
@@ -3285,7 +3361,7 @@
         "away": 0
       },
       "result": "red",
-      "settledAt": "2026-10-16T17:39:38.460Z",
+      "settledAt": "2026-10-15T21:38:40.291Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
     },
     "uefa-europa-league:ferencvaros-vs-viktoria-plzen": {
@@ -3304,7 +3380,7 @@
         "away": 1
       },
       "result": "green",
-      "settledAt": "2026-10-16T17:39:38.460Z",
+      "settledAt": "2026-10-15T21:38:40.291Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
     },
     "uefa-europa-league:lyon-vs-crystal-palace": {
@@ -3323,7 +3399,7 @@
         "away": 2
       },
       "result": "red",
-      "settledAt": "2026-10-16T17:39:38.460Z",
+      "settledAt": "2026-10-15T21:38:40.291Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
     },
     "uefa-europa-league:marseille-vs-olympiacos": {
@@ -3342,7 +3418,7 @@
         "away": 1
       },
       "result": "red",
-      "settledAt": "2026-10-16T17:39:38.460Z",
+      "settledAt": "2026-10-15T21:38:40.291Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
     },
     "uefa-europa-league:n-e-c-nijmegen-vs-levski-sofia": {
@@ -3361,7 +3437,7 @@
         "away": 1
       },
       "result": "red",
-      "settledAt": "2026-10-16T17:39:38.460Z",
+      "settledAt": "2026-10-15T21:38:40.291Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
     },
     "uefa-europa-league:torreense-vs-sunderland": {
@@ -3380,7 +3456,7 @@
         "away": 2
       },
       "result": "green",
-      "settledAt": "2026-10-16T17:39:38.460Z",
+      "settledAt": "2026-10-15T21:38:40.291Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
     }
   }

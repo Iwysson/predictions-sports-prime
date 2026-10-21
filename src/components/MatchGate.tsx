@@ -60,7 +60,7 @@ type Protected = {
 
 type State = { kind: "idle" } | { kind: "loading" } | { kind: "ready"; data: Protected } | { kind: "denied" };
 
-export function MatchGate({ slug, showAnalysis, showPrediction, variant = "match" }: { slug: string; showAnalysis: boolean; showPrediction: boolean; variant?: "match" | "game" }) {
+export function MatchGate({ slug, showAnalysis, showPrediction, stripStatisticalCore = false, variant = "match" }: { slug: string; showAnalysis: boolean; showPrediction: boolean; stripStatisticalCore?: boolean; variant?: "match" | "game" }) {
   const { t } = useI18n();
   const { user, isVip, loading } = useAuth();
   const [state, setState] = useState<State>({ kind: "idle" });
@@ -102,6 +102,7 @@ export function MatchGate({ slug, showAnalysis, showPrediction, variant = "match
           sources={showAnalysis ? full.sources : []}
           comment={showAnalysis ? full.comment : null}
           prediction={showPrediction ? prediction : null}
+          stripStatisticalCore={stripStatisticalCore}
           labels={{ prediction: t("mainPrediction"), odds: t("odds") }}
         />
       </div>

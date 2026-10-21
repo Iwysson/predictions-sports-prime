@@ -75,7 +75,7 @@ const nbaEntries: ProtectedContentEntry[] = allNbaMatches().map((m) => ({
   full: { analysis: m.analysis, analysisFormat: m.analysisFormat, sources: m.sources, comment: null, picks: { main: m.pick, odds: m.odds } },
   prediction: { main: m.pick, odds: m.odds },
   activeFromKey: m.matchInfo.date,
-  releaseTimeZone: "America/Sao_Paulo",
+  releaseTimeZone: m.releaseTimeZone,
 }));
 
 const index = buildContentIndex(editorialPredictions as any[], new Date(), [...nhlEntries, ...nflEntries, ...nbaEntries]);
@@ -103,7 +103,8 @@ const footballReleaseManifest = hydratedMatches
 // NBA match pages (/nba/<slug>/) share this exact manifest and middleware gate (functions/_middleware.js
 // matches both /match/ and /nba/ paths); release-gate semantics are identical (America/Fortaleza is the
 // same fixed UTC-3 offset as America/Sao_Paulo for every date since Brazil abolished DST in 2019).
-const nbaReleaseManifest = nbaEntries.map((entry) => ({ slug: entry.slug, date: entry.activeFromKey }));
-const releaseManifest = [...footballReleaseManifest, ...nbaReleaseManifest];
+const nbaReleaseManifest = nbaEntries.map((entry) => ({ slug: entry.slug, date: entry.activeFromKey, timezone: entry.releaseTimeZone }));
+const nhlReleaseManifest = nhlEntries.filter((entry) => entry.activeFromKey === "2026-10-21" || entry.activeFromKey === "2026-10-22").map((entry) => ({ slug: entry.slug, date: entry.activeFromKey, timezone: entry.releaseTimeZone ?? "America/New_York" }));
+const releaseManifest = [...footballReleaseManifest, ...nbaReleaseManifest, ...nhlReleaseManifest];
 writeFileSync("functions/_data/match-release.json", JSON.stringify(releaseManifest, null, 2) + "\n");
 console.log(`match release manifest: ${releaseManifest.length} slugs`);

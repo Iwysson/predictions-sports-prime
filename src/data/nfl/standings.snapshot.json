@@ -1,7 +1,7 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-10-19T13:09:13.507Z",
+  "generatedAt": "2026-10-20T11:32:45.317Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
@@ -152,7 +152,7 @@
     },
     {
       "teamId": "sf",
-      "wins": 5,
+      "wins": 6,
       "losses": 0,
       "ties": 0,
       "winPct": 1,
@@ -279,9 +279,9 @@
     {
       "teamId": "wsh",
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 1,
-      "winPct": 0.3,
+      "winPct": 0.25,
       "conferenceRank": 15,
       "playoffStatus": "none"
     },

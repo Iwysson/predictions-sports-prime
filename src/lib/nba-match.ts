@@ -6,6 +6,8 @@
 // imported by a client component, mirroring the NHL server-only data files this reads from.
 import protectedOct20 from "@/data/nba/protected-2026-10-20.json";
 import deferredOct20 from "@/data/nba/deferred-slate-2026-10-20.json";
+import protectedOct21 from "@/data/nba/protected-2026-10-21.json";
+import deferredOct21 from "@/data/nba/deferred-slate-2026-10-21.json";
 
 export type NbaMatchInfo = {
   date: string;
@@ -26,6 +28,7 @@ export type NbaMatchData = {
   pick: string;
   odds: number;
   matchInfo: NbaMatchInfo;
+  releaseTimeZone: string;
   analysisFormat?: "markdown";
   analysis: string[];
   sources: Array<{ name: string; url: string }>;
@@ -45,8 +48,8 @@ type ProtectedEntry = {
 
 type DeferredEntry = { slug: string; title: string; homeTeam: string; awayTeam: string; venue: string; teaser: string };
 
-const PROTECTED_DAYS: Array<{ entries: ProtectedEntry[] }> = [protectedOct20 as { entries: ProtectedEntry[] }];
-const DEFERRED_DAYS: Array<{ matches: DeferredEntry[] }> = [deferredOct20 as { matches: DeferredEntry[] }];
+const PROTECTED_DAYS: Array<{ entries: ProtectedEntry[]; releaseTimeZone: string }> = [protectedOct20, protectedOct21] as Array<{ entries: ProtectedEntry[]; releaseTimeZone: string }>;
+const DEFERRED_DAYS: Array<{ matches: DeferredEntry[] }> = [deferredOct20, deferredOct21] as Array<{ matches: DeferredEntry[] }>;
 
 export function allNbaMatches(): NbaMatchData[] {
   const deferredBySlug = new Map<string, DeferredEntry>();
@@ -68,6 +71,7 @@ export function allNbaMatches(): NbaMatchData[] {
         pick: entry.pick,
         odds: entry.odds,
         matchInfo: entry.matchInfo,
+        releaseTimeZone: day.releaseTimeZone,
         analysisFormat: entry.analysisFormat,
         analysis: entry.analysis,
         sources: entry.sources,

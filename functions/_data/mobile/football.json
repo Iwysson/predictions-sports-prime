@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T15:37:14.326Z",
+  "generatedAt": "2026-10-21T09:00:16.421Z",
   "leagues": [
     "brasileirao-serie-a",
     "champions-league",
@@ -19,88 +19,71 @@
   "free": {
     "today": [
       {
-        "slug": "fenerbahce-vs-slavia-praha",
+        "slug": "como-vs-manchester-united",
         "league": "champions-league",
-        "homeTeam": "Fenerbahce",
-        "awayTeam": "Slavia Praha",
-        "date": "2026-10-20",
-        "time": "19:45",
+        "homeTeam": "Como",
+        "awayTeam": "Manchester United",
+        "date": "2026-10-21",
+        "time": "18:45",
         "round": "League phase, Matchday 3",
-        "title": "Fenerbahce vs Slavia Praha",
+        "title": "Como vs Manchester United Prediction, Odds and Betting Tips",
         "analysisAccess": "free",
         "predictionAccess": "free",
         "badge": "free",
         "teaser": null,
-        "pick": "Fenerbahce to Win",
-        "odds": 1.68
+        "pick": "Over 2.5 total goals",
+        "odds": 1.53
       },
       {
-        "slug": "liverpool-vs-villarreal",
+        "slug": "lille-vs-galatasaray",
         "league": "champions-league",
-        "homeTeam": "Liverpool",
-        "awayTeam": "Villarreal",
-        "date": "2026-10-20",
-        "time": "20:00",
-        "round": "Matchday 3",
-        "title": "Liverpool vs Villarreal",
+        "homeTeam": "Lille",
+        "awayTeam": "Galatasaray",
+        "date": "2026-10-21",
+        "time": "18:45",
+        "round": "League phase, Matchday 3",
+        "title": "Lille vs Galatasaray Prediction, Odds and Betting Tips",
         "analysisAccess": "free",
         "predictionAccess": "free",
         "badge": "free",
         "teaser": null,
-        "pick": "Liverpool to Win",
-        "odds": 1.48
+        "pick": "Over 2.5 total goals",
+        "odds": 1.7
       },
       {
-        "slug": "porto-vs-psv-eindhoven",
-        "league": "champions-league",
-        "homeTeam": "Porto",
-        "awayTeam": "PSV Eindhoven",
-        "date": "2026-10-20",
-        "time": "20:00",
-        "round": "Matchday 3",
-        "title": "Porto vs PSV Eindhoven",
+        "slug": "fc-cincinnati-vs-d-c-united",
+        "league": "mls",
+        "homeTeam": "FC Cincinnati",
+        "awayTeam": "D.C. United",
+        "date": "2026-10-21",
+        "time": "19:00",
+        "round": "Regular Season",
+        "title": "FC Cincinnati vs D.C. United Prediction, Odds and Betting Tips",
         "analysisAccess": "free",
         "predictionAccess": "free",
         "badge": "free",
         "teaser": null,
-        "pick": "Porto to Win",
-        "odds": 1.63
+        "pick": "FC Cincinnati or Draw (1X) + Under 4.5 Goals",
+        "odds": 1.9
       },
       {
-        "slug": "psg-vs-barcelona",
+        "slug": "real-betis-vs-feyenoord",
         "league": "champions-league",
-        "homeTeam": "Paris Saint-Germain",
-        "awayTeam": "Barcelona",
-        "date": "2026-10-20",
+        "homeTeam": "Real Betis",
+        "awayTeam": "Feyenoord",
+        "date": "2026-10-21",
         "time": "21:00",
-        "round": "Matchday 3",
-        "title": "Paris Saint-Germain vs Barcelona",
+        "round": "League phase, Matchday 3",
+        "title": "Real Betis vs Feyenoord Prediction, Odds and Betting Tips",
         "analysisAccess": "free",
         "predictionAccess": "free",
         "badge": "free",
         "teaser": null,
-        "pick": "PSG or Draw (Double Chance)",
-        "odds": 1.57
-      },
-      {
-        "slug": "vasco-da-gama-vs-boca-juniors",
-        "league": "copa-sudamericana",
-        "homeTeam": "Vasco da Gama",
-        "awayTeam": "Boca Juniors",
-        "date": "2026-10-20",
-        "time": "21:30",
-        "round": "Semifinal, second leg",
-        "title": "Vasco da Gama vs Boca Juniors Prediction, Odds and Betting Tips",
-        "analysisAccess": "free",
-        "predictionAccess": "free",
-        "badge": "free",
-        "teaser": null,
-        "pick": "Over 1.5 Total Goals",
-        "odds": 1.45
+        "pick": "Real Betis to win (90-minute moneyline)",
+        "odds": 1.64
       }
     ],
-    "tomorrow": [],
-    "upcoming": [
+    "tomorrow": [
       {
         "slug": "flamengo-vs-estudiantes",
         "league": "copa-libertadores",
@@ -117,82 +100,11 @@
         "pick": "Flamengo to Win (90-minute moneyline)",
         "odds": 1.41
       }
-    ]
+    ],
+    "upcoming": []
   },
   "vip": {
     "today": [
-      {
-        "slug": "manchester-city-vs-aek-athens",
-        "league": "champions-league",
-        "homeTeam": "Manchester City",
-        "awayTeam": "AEK Athens",
-        "date": "2026-10-20",
-        "time": "20:00",
-        "round": "Matchday 3",
-        "title": "Manchester City vs AEK Athens",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
-        "slug": "sabah-vs-borussia-dortmund",
-        "league": "champions-league",
-        "homeTeam": "Sabah",
-        "awayTeam": "Borussia Dortmund",
-        "date": "2026-10-20",
-        "time": "20:45",
-        "round": "League phase, Matchday 3",
-        "title": "Sabah vs Borussia Dortmund",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
-        "slug": "napoli-vs-bodo-glimt",
-        "league": "champions-league",
-        "homeTeam": "Napoli",
-        "awayTeam": "Bodø/Glimt",
-        "date": "2026-10-20",
-        "time": "21:00",
-        "round": "Matchday 3",
-        "title": "Napoli vs Bodø/Glimt",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
-        "slug": "roma-vs-slovan-bratislava",
-        "league": "champions-league",
-        "homeTeam": "Roma",
-        "awayTeam": "Slovan Bratislava",
-        "date": "2026-10-20",
-        "time": "21:00",
-        "round": "Matchday 3",
-        "title": "Roma vs Slovan Bratislava",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      },
-      {
-        "slug": "stuttgart-vs-atletico-madrid",
-        "league": "champions-league",
-        "homeTeam": "Stuttgart",
-        "awayTeam": "Atlético de Madrid",
-        "date": "2026-10-20",
-        "time": "21:00",
-        "round": "Matchday 3",
-        "title": "Stuttgart vs Atlético de Madrid",
-        "analysisAccess": "vip",
-        "predictionAccess": "vip",
-        "badge": "vip",
-        "teaser": null
-      }
-    ],
-    "tomorrow": [
       {
         "slug": "montevideo-city-torque-vs-atletico-mg",
         "league": "copa-sudamericana",
@@ -202,6 +114,90 @@
         "time": "19:00",
         "round": "Semifinal, second leg",
         "title": "Montevideo City Torque vs Atlético-MG Prediction, Odds and Betting Tips",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "aston-villa-vs-viking",
+        "league": "champions-league",
+        "homeTeam": "Aston Villa",
+        "awayTeam": "Viking",
+        "date": "2026-10-21",
+        "time": "21:00",
+        "round": "League phase, Matchday 3",
+        "title": "Aston Villa vs Viking Prediction, Odds and Betting Tips",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "best",
+        "teaser": null
+      },
+      {
+        "slug": "bayern-munich-vs-arsenal",
+        "league": "champions-league",
+        "homeTeam": "Bayern Munich",
+        "awayTeam": "Arsenal",
+        "date": "2026-10-21",
+        "time": "21:00",
+        "round": "League phase, Matchday 3",
+        "title": "Bayern Munich vs Arsenal Prediction, Odds and Betting Tips",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "club-brugge-vs-lens",
+        "league": "champions-league",
+        "homeTeam": "Club Brugge",
+        "awayTeam": "Lens",
+        "date": "2026-10-21",
+        "time": "21:00",
+        "round": "League phase, Matchday 3",
+        "title": "Club Brugge vs Lens Prediction, Odds and Betting Tips",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "inter-vs-shakhtar-donetsk",
+        "league": "champions-league",
+        "homeTeam": "Inter",
+        "awayTeam": "Shakhtar Donetsk",
+        "date": "2026-10-21",
+        "time": "21:00",
+        "round": "League phase, Matchday 3",
+        "title": "Inter vs Shakhtar Donetsk Prediction, Odds and Betting Tips",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "real-madrid-vs-rb-leipzig",
+        "league": "champions-league",
+        "homeTeam": "Real Madrid",
+        "awayTeam": "RB Leipzig",
+        "date": "2026-10-21",
+        "time": "21:00",
+        "round": "League phase, Matchday 3",
+        "title": "Real Madrid vs RB Leipzig Prediction, Odds and Betting Tips",
+        "analysisAccess": "vip",
+        "predictionAccess": "vip",
+        "badge": "vip",
+        "teaser": null
+      },
+      {
+        "slug": "sporting-cp-vs-lask",
+        "league": "champions-league",
+        "homeTeam": "Sporting CP",
+        "awayTeam": "LASK",
+        "date": "2026-10-21",
+        "time": "21:00",
+        "round": "League phase, Matchday 3",
+        "title": "Sporting CP vs LASK Prediction, Odds and Betting Tips",
         "analysisAccess": "vip",
         "predictionAccess": "vip",
         "badge": "vip",
@@ -222,6 +218,7 @@
         "teaser": null
       }
     ],
+    "tomorrow": [],
     "upcoming": []
   }
 }
