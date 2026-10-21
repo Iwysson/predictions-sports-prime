@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-21T12:03:13.038Z",
+  "generatedAt": "2026-10-21T17:03:53.274Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -15166,11 +15166,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-21T12:03:13.038Z",
+    "bundesliga": "2026-10-21T17:03:53.274Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
     "liga-portugal": "2026-10-15T21:38:20.114Z",
-    "ligue-1": "2026-10-21T12:03:13.038Z",
-    "eredivisie": "2026-10-21T12:03:13.038Z",
+    "ligue-1": "2026-10-21T17:03:53.274Z",
+    "eredivisie": "2026-10-21T17:03:53.274Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
@@ -16700,7 +16700,7 @@
       "awayTeam": "Manchester United",
       "homeScore": null,
       "awayScore": null,
-      "status": "scheduled",
+      "status": "in-progress",
       "dataSource": "espn",
       "id": "401915395",
       "sourceAgreement": true,
@@ -16716,7 +16716,7 @@
       "awayTeam": "Galatasaray",
       "homeScore": null,
       "awayScore": null,
-      "status": "scheduled",
+      "status": "in-progress",
       "dataSource": "espn",
       "id": "401915396",
       "sourceAgreement": true,
