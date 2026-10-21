@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-21T01:29:43.200Z",
+  "generatedAt": "2026-10-21T12:03:13.038Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -11671,7 +11671,7 @@
             "id": "401876382",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-05T20:00Z"
+            "kickoffUtc": "2026-12-05T19:45Z"
           },
           {
             "round": 13,
@@ -11705,48 +11705,48 @@
           },
           {
             "round": 13,
-            "date": "2026-12-05",
+            "date": "2026-12-06",
             "time": "TBD",
             "homeTeam": "Marseille",
             "awayTeam": "Nice",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876383",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-05T20:00Z"
+            "kickoffUtc": "2026-12-06T19:45Z"
           },
           {
             "round": 13,
-            "date": "2026-12-05",
+            "date": "2026-12-06",
             "time": "TBD",
             "homeTeam": "Stade Rennais",
             "awayTeam": "Brest",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876380",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-05T20:00Z"
+            "kickoffUtc": "2026-12-06T16:15Z"
           },
           {
             "round": 13,
-            "date": "2026-12-05",
+            "date": "2026-12-04",
             "time": "TBD",
             "homeTeam": "Toulouse",
             "awayTeam": "Paris Saint-Germain",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876378",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-05T20:00Z"
+            "kickoffUtc": "2026-12-04T19:45Z"
           },
           {
             "round": 13,
@@ -11776,7 +11776,7 @@
             "id": "401876381",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-05T20:00Z"
+            "kickoffUtc": "2026-12-05T19:45Z"
           }
         ]
       },
@@ -11796,7 +11796,7 @@
             "id": "401876371",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-12T20:00Z"
+            "kickoffUtc": "2026-12-12T19:45Z"
           },
           {
             "round": 14,
@@ -11826,7 +11826,7 @@
             "id": "401876376",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-12T20:00Z"
+            "kickoffUtc": "2026-12-12T19:45Z"
           },
           {
             "round": 14,
@@ -11856,7 +11856,7 @@
             "id": "401876373",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-12T20:00Z"
+            "kickoffUtc": "2026-12-12T19:45Z"
           },
           {
             "round": 14,
@@ -11875,18 +11875,18 @@
           },
           {
             "round": 14,
-            "date": "2026-12-12",
+            "date": "2026-12-13",
             "time": "TBD",
             "homeTeam": "Lorient",
             "awayTeam": "Lille",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876372",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-12T20:00Z"
+            "kickoffUtc": "2026-12-13T14:00Z"
           },
           {
             "round": 14,
@@ -11925,18 +11925,18 @@
         "games": [
           {
             "round": 15,
-            "date": "2027-01-02",
+            "date": "2027-01-03",
             "time": "TBD",
             "homeTeam": "Le Mans",
             "awayTeam": "Lyon",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876366",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-02T20:00Z"
+            "kickoffUtc": "2027-01-03T14:00Z"
           },
           {
             "round": 15,
@@ -12030,18 +12030,18 @@
           },
           {
             "round": 15,
-            "date": "2027-01-02",
+            "date": "2027-01-03",
             "time": "TBD",
             "homeTeam": "Lille",
             "awayTeam": "Strasbourg",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876365",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-02T20:00Z"
+            "kickoffUtc": "2027-01-03T16:15Z"
           },
           {
             "round": 15,
@@ -12065,48 +12065,48 @@
         "games": [
           {
             "round": 16,
-            "date": "2027-01-16",
+            "date": "2027-01-15",
             "time": "TBD",
             "homeTeam": "Marseille",
             "awayTeam": "Lille",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876355",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T20:00Z"
+            "kickoffUtc": "2027-01-15T19:45Z"
           },
           {
             "round": 16,
-            "date": "2027-01-16",
+            "date": "2027-01-17",
             "time": "TBD",
             "homeTeam": "Lyon",
             "awayTeam": "Lorient",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876356",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T20:00Z"
+            "kickoffUtc": "2027-01-17T19:45Z"
           },
           {
             "round": 16,
-            "date": "2027-01-16",
+            "date": "2027-01-17",
             "time": "TBD",
             "homeTeam": "Paris",
             "awayTeam": "Toulouse",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876352",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T20:00Z"
+            "kickoffUtc": "2027-01-17T14:00Z"
           },
           {
             "round": 16,
@@ -12121,7 +12121,7 @@
             "id": "401876351",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T20:00Z"
+            "kickoffUtc": "2027-01-16T19:45Z"
           },
           {
             "round": 16,
@@ -12136,7 +12136,7 @@
             "id": "401876353",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T20:00Z"
+            "kickoffUtc": "2027-01-16T19:45Z"
           },
           {
             "round": 16,
@@ -12151,7 +12151,7 @@
             "id": "401876357",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T20:00Z"
+            "kickoffUtc": "2027-01-16T19:45Z"
           },
           {
             "round": 16,
@@ -12166,22 +12166,22 @@
             "id": "401876350",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T20:00Z"
+            "kickoffUtc": "2027-01-16T19:45Z"
           },
           {
             "round": 16,
-            "date": "2027-01-16",
+            "date": "2027-01-17",
             "time": "TBD",
             "homeTeam": "AS Monaco",
             "awayTeam": "Brest",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401876354",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T20:00Z"
+            "kickoffUtc": "2027-01-17T16:15Z"
           },
           {
             "round": 16,
@@ -12196,7 +12196,7 @@
             "id": "401876358",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T20:00Z"
+            "kickoffUtc": "2027-01-16T16:15Z"
           }
         ]
       }
@@ -15109,15 +15109,24 @@
     "brasileirao-serie-a:botafogo-vs-chapecoense": "editorial:brasileirao-serie-a:botafogo-vs-chapecoense:2026-10-17",
     "brasileirao-serie-a:corinthians-vs-vitoria": "editorial:brasileirao-serie-a:corinthians-vs-vitoria:2026-10-19",
     "brasileirao-serie-a:sao-paulo-vs-vasco": "editorial:brasileirao-serie-a:sao-paulo-vs-vasco:2026-10-17",
+    "champions-league:aston-villa-vs-viking": "official:champions-league:aston-villa-vs-viking:2026-10-21",
     "champions-league:atletico-madrid-vs-manchester-united": "401915412",
+    "champions-league:bayern-munich-vs-arsenal": "401915312",
+    "champions-league:club-brugge-vs-lens": "401915388",
+    "champions-league:como-vs-manchester-united": "401915395",
+    "champions-league:inter-vs-shakhtar-donetsk": "401915390",
     "champions-league:lask-vs-liverpool": "official:champions-league:lask-vs-liverpool:2026-10-14",
     "champions-league:leipzig-vs-psv-eindhoven": "401915434",
+    "champions-league:lille-vs-galatasaray": "401915396",
     "champions-league:manchester-city-vs-aek-athens": "401915401",
     "champions-league:manchester-city-vs-psg": "401915407",
     "champions-league:psg-vs-barcelona": "401915399",
+    "champions-league:real-betis-vs-feyenoord": "401915389",
     "champions-league:real-betis-vs-porto": "401915408",
+    "champions-league:real-madrid-vs-rb-leipzig": "401915313",
     "champions-league:roma-vs-real-madrid": "401915414",
     "champions-league:slovan-bratislava-vs-stuttgart": "401915405",
+    "champions-league:sporting-cp-vs-lask": "official:champions-league:sporting-cp-vs-lask:2026-10-21",
     "champions-league:stuttgart-vs-atletico-madrid": "401915392",
     "champions-league:viking-vs-bayern-munchen": "official:champions-league:viking-vs-bayern-munchen:2026-10-13",
     "champions-league:villarreal-vs-napoli": "401915410",
@@ -15157,11 +15166,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-21T01:29:43.200Z",
+    "bundesliga": "2026-10-21T12:03:13.038Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
     "liga-portugal": "2026-10-15T21:38:20.114Z",
-    "ligue-1": "2026-10-21T01:29:43.200Z",
-    "eredivisie": "2026-10-21T01:29:43.200Z",
+    "ligue-1": "2026-10-21T12:03:13.038Z",
+    "eredivisie": "2026-10-21T12:03:13.038Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
@@ -16571,6 +16580,86 @@
       "timeConfirmed": true,
       "kickoffUtc": "2026-09-08T18:45Z"
     },
+    "401915312": {
+      "round": 3,
+      "date": "2026-10-21",
+      "time": "21:00",
+      "homeTeam": "Bayern Munich",
+      "awayTeam": "Arsenal",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "espn",
+      "id": "401915312",
+      "sourceAgreement": true,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-21T19:00Z",
+      "espnEventId": "401915312"
+    },
+    "401915313": {
+      "round": 3,
+      "date": "2026-10-21",
+      "time": "21:00",
+      "homeTeam": "Real Madrid",
+      "awayTeam": "RB Leipzig",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "espn",
+      "id": "401915313",
+      "sourceAgreement": true,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-21T19:00Z",
+      "espnEventId": "401915313"
+    },
+    "401915388": {
+      "round": 3,
+      "date": "2026-10-21",
+      "time": "21:00",
+      "homeTeam": "Club Brugge",
+      "awayTeam": "Lens",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "espn",
+      "id": "401915388",
+      "sourceAgreement": true,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-21T19:00Z",
+      "espnEventId": "401915388"
+    },
+    "401915389": {
+      "round": 3,
+      "date": "2026-10-21",
+      "time": "21:00",
+      "homeTeam": "Real Betis",
+      "awayTeam": "Feyenoord Rotterdam",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "espn",
+      "id": "401915389",
+      "sourceAgreement": true,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-21T19:00Z",
+      "espnEventId": "401915389"
+    },
+    "401915390": {
+      "round": 3,
+      "date": "2026-10-21",
+      "time": "21:00",
+      "homeTeam": "Internazionale",
+      "awayTeam": "Shakhtar Donetsk",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "espn",
+      "id": "401915390",
+      "sourceAgreement": true,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-21T19:00Z",
+      "espnEventId": "401915390"
+    },
     "401915392": {
       "round": 3,
       "date": "2026-10-20",
@@ -16602,6 +16691,38 @@
       "timeConfirmed": true,
       "kickoffUtc": "2026-10-14T19:00Z",
       "espnEventId": "401915393"
+    },
+    "401915395": {
+      "round": 3,
+      "date": "2026-10-21",
+      "time": "18:45",
+      "homeTeam": "Como",
+      "awayTeam": "Manchester United",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "espn",
+      "id": "401915395",
+      "sourceAgreement": true,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-21T16:45Z",
+      "espnEventId": "401915395"
+    },
+    "401915396": {
+      "round": 3,
+      "date": "2026-10-21",
+      "time": "18:45",
+      "homeTeam": "Lille",
+      "awayTeam": "Galatasaray",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "espn",
+      "id": "401915396",
+      "sourceAgreement": true,
+      "timeConfirmed": true,
+      "kickoffUtc": "2026-10-21T16:45Z",
+      "espnEventId": "401915396"
     },
     "401915397": {
       "round": 3,
@@ -19977,6 +20098,38 @@
       "fotmobMatchId": 5887594,
       "sourceAgreement": true,
       "kickoffUtc": "2026-08-16T19:30:00.000Z",
+      "timeConfirmed": true
+    },
+    "official:champions-league:aston-villa-vs-viking:2026-10-21": {
+      "round": 3,
+      "date": "2026-10-21",
+      "time": "21:00",
+      "homeTeam": "Aston Villa",
+      "awayTeam": "Viking",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "fotmob",
+      "id": "official:champions-league:aston-villa-vs-viking:2026-10-21",
+      "fotmobMatchId": 6106285,
+      "sourceAgreement": true,
+      "kickoffUtc": "2026-10-21T19:00:00.000Z",
+      "timeConfirmed": true
+    },
+    "official:champions-league:sporting-cp-vs-lask:2026-10-21": {
+      "round": 3,
+      "date": "2026-10-21",
+      "time": "21:00",
+      "homeTeam": "Sporting CP",
+      "awayTeam": "LASK",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "fotmob",
+      "id": "official:champions-league:sporting-cp-vs-lask:2026-10-21",
+      "fotmobMatchId": 6106281,
+      "sourceAgreement": true,
+      "kickoffUtc": "2026-10-21T19:00:00.000Z",
       "timeConfirmed": true
     }
   }
