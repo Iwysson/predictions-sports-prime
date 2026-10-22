@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const resolvedMatches = await hydratePredictions(matches.map(toMatchPreview));
-  const clientMatches = selectTemporalClientMatches(resolvedMatches, true).filter((match) => isDateReleased(match.date));
+  const clientMatches = selectTemporalClientMatches(resolvedMatches, true).filter((match) => isDateReleased(match.date, undefined, match.releaseTimeZone));
 
   return (
     <>

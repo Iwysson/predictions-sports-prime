@@ -128,6 +128,11 @@
     "date": "2026-10-22"
   },
   {
+    "slug": "flamengo-vs-estudiantes-combined",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
     "slug": "boca-juniors-vs-vasco-da-gama",
     "date": "2026-10-13"
   },
@@ -504,6 +509,91 @@
     "date": "2026-10-15"
   },
   {
+    "slug": "dinamo-zagreb-vs-nec-nijmegen",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "ararat-armenia-vs-az-alkmaar",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "ferencvaros-vs-torreense",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "juventus-vs-rennes",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "lech-poznan-vs-sunderland",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "ofi-crete-vs-leverkusen",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "sturm-graz-vs-marseille",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "union-sg-vs-hapoel-beer-sheva",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "besiktas-vs-crystal-palace",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "bournemouth-vs-milan",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "celtic-vs-celta",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "lillestrom-vs-real-sociedad",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "celje-vs-salzburg",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "olympiacos-vs-sparta-praha",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "omonia-vs-benfica",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "hoffenheim-vs-lyon",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "viktoria-plzen-vs-levski-sofia",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
     "slug": "detroit-pistons-vs-boston-celtics",
     "date": "2026-10-20",
     "timezone": "America/Sao_Paulo"
@@ -574,6 +664,16 @@
     "timezone": "America/New_York"
   },
   {
+    "slug": "philadelphia-76ers-vs-cleveland-cavaliers",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "oklahoma-city-thunder-vs-denver-nuggets",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
     "slug": "buffalo-sabres-vs-philadelphia-flyers",
     "date": "2026-10-21",
     "timezone": "America/New_York"
@@ -581,6 +681,66 @@
   {
     "slug": "ottawa-senators-vs-florida-panthers",
     "date": "2026-10-21",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "boston-bruins-vs-nashville-predators",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "new-jersey-devils-vs-anaheim-ducks",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "ottawa-senators-vs-san-jose-sharks",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "pittsburgh-penguins-vs-florida-panthers",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "toronto-maple-leafs-vs-new-york-rangers",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "new-york-islanders-vs-los-angeles-kings",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "dallas-stars-vs-winnipeg-jets",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "st-louis-blues-vs-vegas-golden-knights",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "calgary-flames-vs-minnesota-wild",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "edmonton-oilers-vs-carolina-hurricanes",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "seattle-kraken-vs-utah-mammoth",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "vancouver-canucks-vs-detroit-red-wings",
+    "date": "2026-10-22",
     "timezone": "America/New_York"
   }
 ]

@@ -10,7 +10,7 @@ import footballResults from "@/data/football-results.snapshot.json";
 import { latestResults, type FootballResultsDataset } from "@/lib/football-results";
 
 export async function IntentHubPage({ slug }: { slug: IntentHubSlug }) {
-  const resolved = (await hydratePredictions(matches.map(toMatchPreview))).filter((match) => isDateReleased(match.date));
+  const resolved = (await hydratePredictions(matches.map(toMatchPreview))).filter((match) => isDateReleased(match.date, undefined, match.releaseTimeZone));
   return (
     <IntentHubContent
       slug={slug}

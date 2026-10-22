@@ -2,6 +2,7 @@ import type { NbaPublicMatch, NbaPublicSlate } from "@/lib/nba-slates";
 import { NBA_PUBLICATION_TIME_ZONE, isNbaSlateReleased } from "@/lib/nba-publication-policy";
 import oct20 from "./deferred-slate-2026-10-20.json";
 import oct21 from "./deferred-slate-2026-10-21.json";
+import oct22 from "./deferred-slate-2026-10-22.json";
 
 // SERVER-ONLY, mirroring src/data/nhl/deferred-slates.ts. Never import this module from a client
 // component or from src/data/nba/slates.ts: it holds the public listing (teams, titles, tier
@@ -11,6 +12,7 @@ import oct21 from "./deferred-slate-2026-10-21.json";
 const DEFERRED_MATCHES: Record<string, NbaPublicMatch[]> = {
   [oct20.dayKey]: oct20.matches as NbaPublicMatch[],
   [oct21.dayKey]: oct21.matches as NbaPublicMatch[],
+  [oct22.dayKey]: oct22.matches as NbaPublicMatch[],
 };
 
 export function deferredNbaMatchesFor(dayKey: string): NbaPublicMatch[] {

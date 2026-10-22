@@ -109,7 +109,7 @@ export function buildContentIndex(
         full,
         prediction: full.picks,
         activeFromKey: p.matchInfo?.date,
-        releaseTimeZone: "America/Fortaleza",
+        releaseTimeZone: p.matchInfo?.releaseTimeZone ?? "America/Fortaleza",
       };
     });
   return [...fromPredictions, ...extra];

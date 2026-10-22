@@ -262,6 +262,11 @@ export type EditorialPrediction = {
     round?: string;
     venue?: string;
     venueAddress?: VenueAddress;
+    // IANA zone whose local midnight on matchInfo.date opens public release of this match
+    // (src/lib/match-release.ts, src/lib/match-access.ts). Absent = America/Fortaleza, the site's
+    // default fixture time zone (src/lib/fixture-state.ts) - every existing published match keeps
+    // that behavior unchanged. Set only when a match must gate on a different publication instant.
+    releaseTimeZone?: string;
   };
 };
 
@@ -272,6 +277,9 @@ export type Match = {
   fixtureId?: string;
   kickoffUtc?: string;
   timezone?: string;
+  // IANA zone whose local midnight on `date` opens public release of this match (src/lib/match-release.ts).
+  // Absent = America/Fortaleza, unchanged from every match published before this field existed.
+  releaseTimeZone?: string;
   timeConfirmed?: boolean;
   slug: string;
   league: LeagueSlug;

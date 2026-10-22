@@ -19,7 +19,7 @@ export function PublishedMatchDirectory({ matches, locale = "en", localizedMatch
     matches
       // A future match not yet released publicly (src/lib/match-release.ts) must stay out of this
       // crawlable directory; it resumes appearing on its own once the release gate opens.
-      .filter((m) => m.status === "published" && isDateReleased(m.date))
+      .filter((m) => m.status === "published" && isDateReleased(m.date, undefined, m.releaseTimeZone))
       .map((m) => [m.slug, m])
   ).values()]
     .sort((a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug));

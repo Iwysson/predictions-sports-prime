@@ -5,6 +5,7 @@ import oct18 from "./deferred-slate-2026-10-18.json";
 import oct19 from "./deferred-slate-2026-10-19.json";
 import oct20 from "./deferred-slate-2026-10-20.json";
 import oct21 from "./deferred-slate-2026-10-21.json";
+import oct22 from "./deferred-slate-2026-10-22.json";
 
 // SERVER-ONLY. Never import this module from a client component or from src/data/nhl/slates.ts: it holds
 // the public listing (teams, titles, tier badges, teasers - never a pick, odds or analysis) of slates whose
@@ -18,6 +19,7 @@ const DEFERRED_MATCHES: Record<string, NhlPublicMatch[]> = {
   [oct19.dayKey]: oct19.matches as NhlPublicMatch[],
   [oct20.dayKey]: oct20.matches as NhlPublicMatch[],
   [oct21.dayKey]: oct21.matches as NhlPublicMatch[],
+  [oct22.dayKey]: oct22.matches as NhlPublicMatch[],
 };
 
 export function deferredMatchesFor(dayKey: string): NhlPublicMatch[] {

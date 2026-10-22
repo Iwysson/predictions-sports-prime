@@ -99,7 +99,7 @@ console.log(
 const hydratedMatches = await hydratePredictions(publishedMatches.map(toMatchPreview));
 const footballReleaseManifest = hydratedMatches
   .filter((m) => Boolean(m.date))
-  .map((m) => ({ slug: m.slug, date: m.date }));
+  .map((m) => ({ slug: m.slug, date: m.date, ...(m.releaseTimeZone ? { timezone: m.releaseTimeZone } : {}) }));
 // NBA match pages (/nba/<slug>/) share this exact manifest and middleware gate (functions/_middleware.js
 // matches both /match/ and /nba/ paths); release-gate semantics are identical (America/Fortaleza is the
 // same fixed UTC-3 offset as America/Sao_Paulo for every date since Brazil abolished DST in 2019).

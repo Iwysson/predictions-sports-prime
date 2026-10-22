@@ -17,15 +17,20 @@ export const PUBLIC_RELEASE_TIME_ZONE = SITE_FIXTURE_TIME_ZONE;
 
 export function isDateReleased(
   dateKey: string | null | undefined,
-  now: Date | string = new Date()
+  now: Date | string = new Date(),
+  timezone: string = PUBLIC_RELEASE_TIME_ZONE
 ): boolean {
   if (!dateKey) return false;
-  return isNhlSlateReleased({ date: dateKey, timezone: PUBLIC_RELEASE_TIME_ZONE }, now instanceof Date ? now : new Date(now));
+  return isNhlSlateReleased({ date: dateKey, timezone }, now instanceof Date ? now : new Date(now));
 }
 
 export function isPredictionReleased(
-  prediction: { matchInfo?: { date?: string | null } | null },
+  prediction: { matchInfo?: { date?: string | null; releaseTimeZone?: string | null } | null },
   now: Date | string = new Date()
 ): boolean {
-  return isDateReleased(prediction.matchInfo?.date ?? null, now);
+  return isDateReleased(
+    prediction.matchInfo?.date ?? null,
+    now,
+    prediction.matchInfo?.releaseTimeZone ?? PUBLIC_RELEASE_TIME_ZONE
+  );
 }

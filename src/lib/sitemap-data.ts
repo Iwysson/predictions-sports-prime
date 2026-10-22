@@ -53,7 +53,7 @@ export function buildLeagueSitemap(
   );
   // A future match not yet released publicly (src/lib/match-release.ts) must stay out of the sitemap's
   // list of match URLs: discovery resumes on its own once the release gate opens, no manual step needed.
-  const leagueMatches = publishedLeagueMatches.filter((match) => isDateReleased(match.date));
+  const leagueMatches = publishedLeagueMatches.filter((match) => isDateReleased(match.date, undefined, match.releaseTimeZone));
 
   // The league hub pages themselves (/league/<slug>/) were retired - only each league's match pages
   // are listed here, grouped per competition as a sitemap shard (src/app/sitemaps/<slug>/sitemap.ts).
