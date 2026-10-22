@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-22T01:45:13.725Z",
+  "generatedAt": "2026-10-22T17:17:53.069Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -11954,7 +11954,7 @@
             "id": "401876367",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-02T20:00Z"
+            "kickoffUtc": "2027-01-02T16:00Z"
           },
           {
             "round": 15,
@@ -15180,11 +15180,11 @@
   "leagueUpdatedAt": {
     "premier-league": "2026-09-15T21:39:13.661Z",
     "la-liga": "2026-09-14T08:38:27.571Z",
-    "bundesliga": "2026-10-22T01:45:13.725Z",
+    "bundesliga": "2026-10-22T17:17:53.069Z",
     "serie-a": "2026-09-15T21:39:13.661Z",
     "liga-portugal": "2026-10-15T21:38:20.114Z",
-    "ligue-1": "2026-10-22T01:45:13.725Z",
-    "eredivisie": "2026-10-22T01:45:13.725Z",
+    "ligue-1": "2026-10-22T17:17:53.069Z",
+    "eredivisie": "2026-10-22T17:17:53.069Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
@@ -17114,7 +17114,7 @@
       "awayTeam": "Sunderland",
       "homeScore": null,
       "awayScore": null,
-      "status": "scheduled",
+      "status": "in-progress",
       "dataSource": "espn",
       "id": "401915546",
       "sourceAgreement": true,
@@ -17130,7 +17130,7 @@
       "awayTeam": "Stade Rennais",
       "homeScore": null,
       "awayScore": null,
-      "status": "scheduled",
+      "status": "in-progress",
       "dataSource": "espn",
       "id": "401915547",
       "sourceAgreement": true,
@@ -17146,7 +17146,7 @@
       "awayTeam": "AZ Alkmaar",
       "homeScore": null,
       "awayScore": null,
-      "status": "scheduled",
+      "status": "in-progress",
       "dataSource": "espn",
       "id": "401915548",
       "sourceAgreement": true,
@@ -17226,7 +17226,7 @@
       "awayTeam": "NEC Nijmegen",
       "homeScore": null,
       "awayScore": null,
-      "status": "scheduled",
+      "status": "in-progress",
       "dataSource": "espn",
       "id": "401915556",
       "sourceAgreement": true,
@@ -17242,7 +17242,7 @@
       "awayTeam": "Torreense",
       "homeScore": null,
       "awayScore": null,
-      "status": "scheduled",
+      "status": "in-progress",
       "dataSource": "espn",
       "id": "401915558",
       "sourceAgreement": true,
