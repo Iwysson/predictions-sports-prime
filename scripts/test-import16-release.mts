@@ -14,7 +14,6 @@ assert.equal(routes.exclude.some(pattern=>pattern==='/*.html'||pattern==='/*.txt
 const football = [
   ['braga-vs-gil-vicente','2026-10-19','free',1.71],
   ['vasco-da-gama-vs-boca-juniors','2026-10-20','free',1.45],
-  ['flamengo-vs-estudiantes','2026-10-22','free',1.41],
   ['palmeiras-vs-fluminense','2026-10-21','vip',1.71],
   ['montevideo-city-torque-vs-atletico-mg','2026-10-21','vip',1.91],
 ] as const;
@@ -23,9 +22,9 @@ assert.equal(slate.matches.length,11);
 assert.equal(protectedSlate.entries.length,11);
 assert.equal(slate.matches.filter(m=>m.access==='free').length,4);
 assert.equal(slate.matches.filter(m=>m.access==='vip').length,7);
-assert.equal(football.filter(([, ,tier])=>tier==='free').length,3);
+assert.equal(football.filter(([, ,tier])=>tier==='free').length,2);
 assert.equal(football.filter(([, ,tier])=>tier==='vip').length,2);
-assert.equal(new Set([...nhlSlugs,...football.map(([slug])=>slug)]).size,16);
+assert.equal(new Set([...nhlSlugs,...football.map(([slug])=>slug)]).size,15);
 assert.equal(isNhlSlateReleased({date:'2026-10-20',timezone:'America/New_York'},new Date('2026-10-20T03:59:59Z')),false);
 assert.equal(isNhlSlateReleased({date:'2026-10-20',timezone:'America/New_York'},new Date('2026-10-20T04:00:00Z')),true);
 
@@ -59,4 +58,4 @@ for (const [slug,date,tier,odds] of football) {
   assert.equal((await middleware(before)(context)).status,307,`${slug} HTML asset before midnight`);
   assert.equal((await middleware(after)(context)).status,200,`${slug} HTML asset at midnight`);
 }
-console.log('16 predictions: 7 FREE, 9 PRIME VIP; football and NHL release gates PASS');
+console.log('15 retained predictions: football and NHL release gates PASS');

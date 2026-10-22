@@ -414,6 +414,28 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   // Alias: reuse the existing "Vasco" crest (TheSportsDB lists the club as "Vasco") for the
   // "Vasco da Gama" team name used in Libertadores/Sudamericana fixtures.
   "Vasco da Gama": generatedTeamBadgeAssets["Vasco"],
+  // October 22 Europa League matchday: club-matched crests from the Starting11
+  // fixture page (API-Sports images) and TheSportsDB for Celje, Salzburg and Omonia.
+  "Dinamo Zagreb": { src: "/team-badges/dinamo-zagreb.png", sourceUrl: "https://media.api-sports.io/football/teams/620.png" },
+  "Ararat-Armenia": { src: "/team-badges/ararat-armenia.png", sourceUrl: "https://media.api-sports.io/football/teams/3683.png" },
+  "Ferencvaros": { src: "/team-badges/ferencvaros.png", sourceUrl: "https://media.api-sports.io/football/teams/651.png" },
+  "Torreense": { src: "/team-badges/torreense.png", sourceUrl: "https://media.api-sports.io/football/teams/4799.png" },
+  "Lech Poznan": { src: "/team-badges/lech-poznan.png", sourceUrl: "https://media.api-sports.io/football/teams/347.png" },
+  "OFI Crete": { src: "/team-badges/ofi-crete.png", sourceUrl: "https://media.api-sports.io/football/teams/1124.png" },
+  "Sturm Graz": { src: "/team-badges/sturm-graz.png", sourceUrl: "https://media.api-sports.io/football/teams/637.png" },
+  "Union SG": { src: "/team-badges/union-sg.png", sourceUrl: "https://media.api-sports.io/football/teams/1393.png" },
+  "Hapoel Beer-Sheva": { src: "/team-badges/hapoel-beer-sheva.png", sourceUrl: "https://media.api-sports.io/football/teams/563.png" },
+  "Lillestrom": { src: "/team-badges/lillestrom.png", sourceUrl: "https://media.api-sports.io/football/teams/321.png" },
+  "Celje": { src: "/team-badges/celje.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/amvs371681106952.png" },
+  "Salzburg": { src: "/team-badges/salzburg.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/nc2cua1781541639.png" },
+  "Olympiacos": { src: "/team-badges/olympiacos.png", sourceUrl: "https://media.api-sports.io/football/teams/553.png" },
+  "Sparta Praha": { src: "/team-badges/sparta-praha.png", sourceUrl: "https://media.api-sports.io/football/teams/628.png" },
+  "Omonia": { src: "/team-badges/omonia.png", sourceUrl: "https://r2.thesportsdb.com/images/media/team/badge/nmd7vt1779579017.png" },
+  "Viktoria Plzen": { src: "/team-badges/viktoria-plzen.png", sourceUrl: "https://media.api-sports.io/football/teams/567.png" },
+  "Levski Sofia": { src: "/team-badges/levski-sofia.png", sourceUrl: "https://media.api-sports.io/football/teams/646.png" },
+  "Estudiantes": { src: "/team-badges/estudiantes-de-la-plata.png", sourceUrl: "https://www.thesportsdb.com/team/135160-Estudiantes-de-La-Plata" },
+  "Jagiellonia": { src: "/team-badges/jagiellonia.png", sourceUrl: "https://media.api-sports.io/football/teams/336.png" },
+  "Anderlecht": { src: "/team-badges/anderlecht.png", sourceUrl: "https://media.api-sports.io/football/teams/554.png" },
 };
 
 export function getTeamBadgeAsset(team: string) {

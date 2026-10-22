@@ -15,13 +15,13 @@ import { createNhlSlateHandler } from '../functions/api/nhl/slate/[day].js';
 const before = new Date('2026-10-22T03:59:59Z');
 const at = new Date('2026-10-22T04:00:00Z');
 
-const freeFootball = ['dinamo-zagreb-vs-nec-nijmegen', 'juventus-vs-rennes', 'sturm-graz-vs-marseille', 'olympiacos-vs-sparta-praha', 'omonia-vs-benfica', 'ferencvaros-vs-torreense'];
+const freeFootball = ['dinamo-zagreb-vs-nec-nijmegen', 'juventus-vs-rennes', 'sturm-graz-vs-marseille', 'olympiacos-vs-sparta-praha', 'omonia-vs-benfica', 'ferencvaros-vs-torreense', 'jagiellonia-vs-anderlecht'];
 const vipFootball = ['ararat-armenia-vs-az-alkmaar', 'lech-poznan-vs-sunderland', 'ofi-crete-vs-leverkusen', 'union-sg-vs-hapoel-beer-sheva', 'besiktas-vs-crystal-palace', 'bournemouth-vs-milan', 'celtic-vs-celta', 'lillestrom-vs-real-sociedad', 'celje-vs-salzburg', 'hoffenheim-vs-lyon', 'viktoria-plzen-vs-levski-sofia'];
 const libertadoresFree = ['flamengo-vs-estudiantes-combined'];
 const allFootballSlugs = [...freeFootball, ...vipFootball, ...libertadoresFree];
-assert.equal(allFootballSlugs.length, 18, 'expected 18 football/Libertadores October 22 slugs');
+assert.equal(allFootballSlugs.length, 19, 'expected 19 football/Libertadores October 22 slugs');
 
-// 1. Exactly 10 FREE / 22 VIP across the whole 32-match wave.
+// 1. Publisher added a FREE Jagiellonia 1X prediction to the original 32-match wave.
 const nbaFree = nbaSlate.matches.filter((m) => m.access === 'free').length;
 const nhlFree = nhlSlate.matches.filter((m) => m.access === 'free').length;
 const nhlVip = nhlSlate.matches.filter((m) => m.access === 'vip').length;
@@ -30,13 +30,13 @@ assert.equal(nbaFree, 2);
 assert.equal(nhlSlate.matches.length, 12);
 assert.equal(nhlFree, 1);
 assert.equal(nhlVip, 11);
-assert.equal(freeFootball.length + libertadoresFree.length, 7);
+assert.equal(freeFootball.length + libertadoresFree.length, 8);
 assert.equal(vipFootball.length, 11);
 const totalFree = freeFootball.length + libertadoresFree.length + nbaFree + nhlFree;
 const totalVip = vipFootball.length + nhlVip;
-assert.equal(totalFree, 10, 'expected exactly 10 FREE across the wave');
+assert.equal(totalFree, 11, 'expected exactly 11 FREE across the expanded wave');
 assert.equal(totalVip, 22, 'expected exactly 22 PRIME VIP across the wave');
-console.log(`access split: ${totalFree} FREE, ${totalVip} PRIME VIP (32 total)`);
+console.log(`access split: ${totalFree} FREE, ${totalVip} PRIME VIP (33 total)`);
 
 // 2. Every football/Libertadores slug carries the America/New_York override in all three gate layers.
 for (const slug of allFootballSlugs) {
@@ -81,7 +81,7 @@ for (const slug of allFootballSlugs) {
   const postStatus = (await invoke(at)).status;
   assert.equal(postStatus, entry.analysisAccess === 'free' ? 200 : 503, `${slug}: API tier status after release`);
 }
-console.log('match-content API: blocked pre-release for all 18 slugs, correct tier status at release');
+console.log('match-content API: blocked pre-release for all 19 slugs, correct tier status at release');
 
 // 5. NHL/NBA slates stay not-found before 04:00 UTC and open at 04:00 UTC via their own deferred-slate gate.
 const nb = createNbaSlateHandler(() => before);
@@ -106,4 +106,4 @@ if (existsSync(`${outDir}/sitemap.xml`)) {
   console.log('sitemap.xml not found in out/ - skip (run npm run build first if this check is needed)');
 }
 
-console.log('October 22 wave (32 matches): all checks PASS');
+console.log('October 22 wave (33 matches): all checks PASS');

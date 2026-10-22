@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Link from "@/components/DocumentLink";
 import { useClientNow } from "@/lib/use-client-now";
 import { SiteContactLine } from "@/components/SiteContactLine";
@@ -37,6 +37,24 @@ function TodayMatchCard({ match }: { match: MatchPreview }) {
 
 export function IntentHubContent({ slug, matches, discovery, results = [] }: { slug: IntentHubSlug; matches: MatchPreview[]; discovery?: ReactNode; results?: FootballResultRecord[] }) {
   const now = useClientNow();
+  const [dailyMatches, setDailyMatches] = useState<MatchPreview[]>([]);
+  const [dailyFeedChecked, setDailyFeedChecked] = useState(false);
+  const todayKey = now ? localTodayISO(now) : null;
+  useEffect(() => {
+    if (slug !== "football-predictions" || !todayKey) return;
+    let active = true;
+    setDailyFeedChecked(false);
+    fetch("/api/mobile/football/feed", { cache: "no-store" })
+      .then((response) => response.ok ? response.json() : null)
+      .then((feed) => {
+        if (!active || !feed) return;
+        const entries = [...(feed.free?.today ?? []), ...(feed.vip?.today ?? [])];
+        setDailyMatches(entries.map((entry: any) => ({ ...entry, status: "published" as const, mainPrediction: entry.pick, odds: entry.odds })));
+      })
+      .catch(() => {})
+      .finally(() => { if (active) setDailyFeedChecked(true); });
+    return () => { active = false; };
+  }, [slug, todayKey]);
   const hub = intentHubDefinitions[slug];
   const entries = now ? selectIntentHubMatches(slug, matches, now) : [];
   const compact = slug === "picks";
@@ -44,7 +62,7 @@ export function IntentHubContent({ slug, matches, discovery, results = [] }: { s
   // kicked off but not finished stays in this list (resolveHomeTemporalBucket only moves a fixture
   // out of "today" once it is confirmed completed with a final score - never just because its
   // kickoff time passed), so the notice only appears once there is genuinely nothing left to show.
-  const todayMatches = slug === "football-predictions" && now ? filterTodaysPublishedPredictions(matches, localTodayISO(now), now) : null;
+  const todayMatches = slug === "football-predictions" && now ? filterTodaysPublishedPredictions([...matches, ...dailyMatches], localTodayISO(now), now) : null;
 
   return <>
     <JsonLd data={intentHubJsonLd(slug, entries, results)} />
@@ -71,7 +89,7 @@ export function IntentHubContent({ slug, matches, discovery, results = [] }: { s
             <div className="intent-hub-grid">
               {todayMatches.map((match) => <TodayMatchCard key={match.slug} match={match} />)}
             </div>
-          ) : <PredictionsCompleteNotice />}
+          ) : dailyFeedChecked ? <PredictionsCompleteNotice /> : <div className="empty-state empty-state--compact" role="status">Checking today&apos;s published predictions…</div>}
         </div>
       </section>
     ) : null}

@@ -129,8 +129,8 @@ if (!existsSync(`${out}/sitemaps/uefa-europa-league/sitemap.xml`)) {
 
   const uelSlugs = slugsFor("/sitemaps/uefa-europa-league/sitemap.xml", "America/New_York");
   const upcomingNy = slugsFor("/sitemaps/upcoming-matches/sitemap.xml", "America/New_York");
-  assert.equal(uelSlugs.length, 17, "17 Europa League matches queued for New York midnight");
-  assert.equal(upcomingNy.length, 18, "18 New York matches queued in the upcoming sitemap (17 Europa League + 1 Libertadores)");
+  assert.equal(uelSlugs.length, 18, "18 Europa League matches queued for New York midnight");
+  assert.equal(upcomingNy.length, 19, "19 New York matches queued in the upcoming sitemap (18 Europa League + 1 Libertadores)");
 
   // No hidden slug is in any static sitemap shipped in out/.
   for (const sitemap of new Set((gated as any[]).map((entry) => entry.sitemap))) {
@@ -149,16 +149,16 @@ if (!existsSync(`${out}/sitemaps/uefa-europa-league/sitemap.xml`)) {
     }
   }
 
-  // Two gates in one sitemap: the earlier-published straight-win Flamengo page keeps its own Fortaleza gate.
+  // The retained combined Flamengo pick opens at the New York release gate.
   const libertadores = "/sitemaps/copa-libertadores/sitemap.xml";
   const straight = "https://predictions-sports-prime.com/match/flamengo-vs-estudiantes/";
   const combined = "https://predictions-sports-prime.com/match/flamengo-vs-estudiantes-combined/";
   const lib = { early: await served(libertadores, "2026-10-22T02:59:59Z"), fortaleza: await served(libertadores, "2026-10-22T03:00:00Z"), ny: await served(libertadores, "2026-10-22T04:00:00Z") };
   assert.equal(lib.early.includes(straight), false);
-  assert.equal(lib.fortaleza.includes(`<loc>${straight}</loc>`), true, "straight-win page opens at Fortaleza midnight");
+  assert.equal(lib.fortaleza.includes(`<loc>${straight}</loc>`), false, "removed straight-win page stays absent");
   assert.equal(lib.fortaleza.includes(combined), false, "combined pick stays out until New York midnight");
   assert.equal(lib.ny.includes(`<loc>${combined}</loc>`), true);
-  assert.equal(countOf(lib.ny, `<loc>${straight}</loc>`), 1);
+  assert.equal(countOf(lib.ny, `<loc>${straight}</loc>`), 0);
 
   // Page and sitemap share one rule: whenever a queued URL is listed, the page is served; otherwise it redirects.
   for (const iso of ["2026-10-22T03:59:59Z", "2026-10-22T04:00:00Z"]) {

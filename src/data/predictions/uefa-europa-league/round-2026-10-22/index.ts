@@ -15,9 +15,10 @@ import { prediction as prediction13 } from './olympiacos-vs-sparta-praha';
 import { prediction as prediction14 } from './omonia-vs-benfica';
 import { prediction as prediction15 } from './hoffenheim-vs-lyon';
 import { prediction as prediction16 } from './viktoria-plzen-vs-levski-sofia';
+import { prediction as prediction17 } from './jagiellonia-vs-anderlecht';
 
 export const predictions = [
   prediction0, prediction1, prediction2, prediction3, prediction4, prediction5, prediction6,
   prediction7, prediction8, prediction9, prediction10, prediction11, prediction12, prediction13,
-  prediction14, prediction15, prediction16,
+  prediction14, prediction15, prediction16, prediction17,
 ];
