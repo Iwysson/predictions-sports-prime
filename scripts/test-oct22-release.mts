@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { editorialPredictions } from '../src/data/predictions/index.ts';
+import { hasMatchPage } from '../src/lib/match-page-lifecycle.ts';
 import content from '../functions/_data/match-content.json';
 import release from '../functions/_data/match-release.json';
 import { createMiddlewareHandler } from '../functions/_middleware.js';
@@ -20,6 +21,9 @@ const vipFootball = ['ararat-armenia-vs-az-alkmaar', 'lech-poznan-vs-sunderland'
 const libertadoresFree = ['flamengo-vs-estudiantes-combined'];
 const allFootballSlugs = [...freeFootball, ...vipFootball, ...libertadoresFree];
 assert.equal(allFootballSlugs.length, 19, 'expected 19 football/Libertadores October 22 slugs');
+// Once a match is settled its page leaves the release manifest and content index (410 lifecycle), so the
+// gate assertions below only apply to slugs that still have a match page.
+const gatedFootballSlugs = allFootballSlugs.filter((slug) => hasMatchPage((editorialPredictions as any[]).find((p) => (p.slug ?? '') === slug)));
 
 // 1. Publisher added a FREE Jagiellonia 1X prediction to the original 32-match wave.
 const nbaFree = nbaSlate.matches.filter((m) => m.access === 'free').length;
@@ -39,7 +43,7 @@ assert.equal(totalVip, 22, 'expected exactly 22 PRIME VIP across the wave');
 console.log(`access split: ${totalFree} FREE, ${totalVip} PRIME VIP (33 total)`);
 
 // 2. Every football/Libertadores slug carries the America/New_York override in all three gate layers.
-for (const slug of allFootballSlugs) {
+for (const slug of gatedFootballSlugs) {
   const prediction = (editorialPredictions as any[]).find((p) => (p.slug ?? '') === slug);
   assert.ok(prediction, `${slug}: prediction not found`);
   assert.equal(prediction.matchInfo?.releaseTimeZone, 'America/New_York', `${slug}: matchInfo.releaseTimeZone`);
@@ -58,7 +62,7 @@ const middleware = (now: Date) => createMiddlewareHandler({
   releaseDateBySlug: new Map(release.map((entry: any) => [entry.slug, entry.timezone ? { date: entry.date, timezone: entry.timezone } : entry.date])),
   now: () => now,
 });
-for (const slug of allFootballSlugs) {
+for (const slug of gatedFootballSlugs) {
   const url = `https://predictions-sports-prime.com/match/${slug}/`;
   const ctx = (now: Date) => ({ request: new Request(url), next: async () => new Response('static asset') });
   const atFortaleza = new Date('2026-10-22T03:00:00Z');
@@ -71,17 +75,17 @@ for (const slug of allFootballSlugs) {
   assert.equal(atFortalezaResp.status, 307, `${slug}: must still be blocked at 03:00 UTC (Fortaleza midnight) - NOT the gate for this wave`);
   assert.equal(post.status, 200, `${slug}: must open at 04:00 UTC (New York midnight)`);
 }
-console.log(`middleware gate: all ${allFootballSlugs.length} football/Libertadores slugs closed before 04:00Z, closed at 03:00Z (Fortaleza), open at 04:00Z (New York)`);
+console.log(`middleware gate: all ${gatedFootballSlugs.length} unsettled football/Libertadores slugs closed before 04:00Z, closed at 03:00Z (Fortaleza), open at 04:00Z (New York)`);
 
 // 4. The protected content API (/api/match-content/[slug]) follows the same instant for both tiers.
-for (const slug of allFootballSlugs) {
+for (const slug of gatedFootballSlugs) {
   const entry = content.find((e: any) => e.slug === slug);
   const invoke = (now: Date) => createMatchContentHandler(content, () => now)({ request: new Request(`https://predictions-sports-prime.com/api/match-content/${slug}`), params: { slug }, env: {} });
   assert.equal((await invoke(before)).status, 404, `${slug}: API must 404 before release`);
   const postStatus = (await invoke(at)).status;
   assert.equal(postStatus, entry.analysisAccess === 'free' ? 200 : 503, `${slug}: API tier status after release`);
 }
-console.log('match-content API: blocked pre-release for all 19 slugs, correct tier status at release');
+console.log(`match-content API: blocked pre-release for all ${gatedFootballSlugs.length} unsettled slugs (${allFootballSlugs.length - gatedFootballSlugs.length} settled), correct tier status at release`);
 
 // 5. NHL/NBA slates stay not-found before 04:00 UTC and open at 04:00 UTC via their own deferred-slate gate.
 const nb = createNbaSlateHandler(() => before);

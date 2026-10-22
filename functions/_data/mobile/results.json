@@ -1,6 +1,26 @@
 {
-  "generatedAt": "2026-10-22T22:38:18.608Z",
+  "generatedAt": "2026-10-22T22:49:55.963Z",
   "records": [
+    {
+      "slug": "juventus-vs-rennes",
+      "league": "uefa-europa-league",
+      "homeTeam": "Juventus",
+      "awayTeam": "Rennes",
+      "date": "2026-10-22",
+      "prediction": "Juventus to win",
+      "odds": 1.54,
+      "result": "red"
+    },
+    {
+      "slug": "lech-poznan-vs-sunderland",
+      "league": "uefa-europa-league",
+      "homeTeam": "Lech Poznan",
+      "awayTeam": "Sunderland",
+      "date": "2026-10-22",
+      "prediction": "Sunderland to win",
+      "odds": 1.72,
+      "result": "red"
+    },
     {
       "slug": "liverpool-vs-villarreal",
       "league": "champions-league",

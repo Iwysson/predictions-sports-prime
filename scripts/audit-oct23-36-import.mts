@@ -31,6 +31,10 @@ for (const row of rows) {
     assert.equal(hash(prediction.analysis[0]), row.sha256, `${row.slug}: intact Markdown`);
     assert.equal(prediction.preservedSource?.sha256, row.sha256);
     assert.equal(prediction.preservedSource?.packagePath, row.source);
+    assert.equal(prediction.analysis.length, 2, `${row.slug}: author Markdown plus one added Statistical Core block`);
+    assert.match(prediction.analysis[1], /^### Statistical Core Predictions-Sports-Prime$/m, `${row.slug}: added Core heading`);
+    assert.equal(prediction.statisticalCoreProvenance?.home.sampleType, 'home');
+    assert.equal(prediction.statisticalCoreProvenance?.away.sampleType, 'away');
     continue;
   }
   const entries = row.sport === 'NFL' ? nfl.entries : row.sport === 'NBA' ? nba.entries : nhl.entries;
