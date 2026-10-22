@@ -10,6 +10,7 @@ import { allNbaMatches } from "../src/lib/nba-match.ts";
 import { matches as publishedMatches } from "../src/data/matches.ts";
 import { toMatchPreview } from "../src/lib/editorial.ts";
 import { hydratePredictions } from "../src/lib/live-predictions.ts";
+import { gatedSitemapEntries } from "../src/lib/sitemap-data.ts";
 
 const nhlEntries: ProtectedContentEntry[] = nhlMatches().map((m) => ({
   slug: m.slug,
@@ -108,3 +109,10 @@ const nhlReleaseManifest = nhlEntries.filter((entry) => entry.activeFromKey === 
 const releaseManifest = [...footballReleaseManifest, ...nbaReleaseManifest, ...nhlReleaseManifest];
 writeFileSync("functions/_data/match-release.json", JSON.stringify(releaseManifest, null, 2) + "\n");
 console.log(`match release manifest: ${releaseManifest.length} slugs`);
+
+// Sitemap entries withheld from the static sitemaps because their release gate is still closed at build time
+// (src/lib/sitemap-data.ts). functions/_middleware.js appends each one to its sitemap the moment the gate that
+// guards the page itself opens, so the sitemap follows page availability with no redeploy.
+const gatedSitemap = gatedSitemapEntries();
+writeFileSync("functions/_data/sitemap-gated.json", JSON.stringify(gatedSitemap, null, 2) + "\n");
+console.log(`gated sitemap entries: ${gatedSitemap.length}`);

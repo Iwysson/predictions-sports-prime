@@ -11,6 +11,9 @@ import { SLATES } from "../src/data/nhl/slates.ts";
 import { getNhlDayStart } from "../src/lib/nhl-day.ts";
 import footballResults from "../src/data/football-results.snapshot.json" with { type: "json" };
 import { checkResultsHistoryIntegrity } from "../src/lib/results-history-audit.ts";
+import { PUBLIC_RELEASE_TIME_ZONE } from "../src/lib/match-release.ts";
+import { appendSitemapEntries, groupGatedBySitemap, releasedEntries } from "../functions/_lib/sitemap-release.js";
+import { auditGatedManifest, auditMatchSitemapState, releaseStateOf } from "./lib/seo-release-state.mjs";
 
 const root = process.cwd();
 const outDir = join(root, "out");
@@ -24,6 +27,19 @@ const methodologyRoute = "/methodology/";
 const editorialPolicyRoute = "/editorial-policy/";
 const resultsRoute = "/results/";
 const errors = [];
+// Public-release gate (src/lib/match-release.ts, functions/_middleware.js). SEO_AUDIT_NOW=<ISO instant> audits the
+// site as it will look at that instant (for example just after a release gate opens) without waiting for it.
+const auditNow = process.env.SEO_AUDIT_NOW ? new Date(process.env.SEO_AUDIT_NOW) : new Date();
+if (Number.isNaN(auditNow.valueOf())) throw new Error(`SEO_AUDIT_NOW is not a valid instant: ${process.env.SEO_AUDIT_NOW}`);
+const releaseManifest = JSON.parse(readFileSync(join(root, "functions", "_data", "match-release.json"), "utf8"));
+// SEO_AUDIT_GATED_MANIFEST points the audit at an alternative gated manifest (used only by test-seo-release.mts to
+// prove the audit still fails when the manifest is wrong).
+const gatedManifest = JSON.parse(readFileSync(process.env.SEO_AUDIT_GATED_MANIFEST ?? join(root, "functions", "_data", "sitemap-gated.json"), "utf8"));
+const releaseBySlug = new Map(releaseManifest.map((entry) => [entry.slug, { date: entry.date, timezone: entry.timezone ?? PUBLIC_RELEASE_TIME_ZONE }]));
+const gatedBySitemap = groupGatedBySitemap(gatedManifest);
+const gatedByRoute = new Map(gatedManifest.map((entry) => [new URL(entry.url).pathname, entry]));
+const routeSlug = (route) => route.match(/^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?match\/([^/]+)\/$/)?.[1];
+const releaseStateOfRoute = (route) => releaseStateOf({ hasPage: true, release: releaseBySlug.get(routeSlug(route)), now: auditNow });
 const buildTimestamp = statSync(join(root, ".next", "BUILD_ID")).mtime;
 const ISO_TIMESTAMP_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?(?:Z|[+-]\d{2}:\d{2})$/;
 
@@ -291,10 +307,13 @@ for (const [, routes] of editorialBodies) {
 // (kept below only for the sitemap-membership check and the summary counts, which correctly report 0).
 
 const sitemapFiles = walk(outDir).filter((file) => file.endsWith(`${sep}sitemap.xml`));
-const sitemapDocuments = sitemapFiles.map((file) => ({
-  file: relative(outDir, file).split(sep).join("/"),
-  xml: readFileSync(file, "utf8"),
-}));
+// The effective sitemaps: the static XML plus whatever the edge function appends at `auditNow` for matches whose
+// release gate opened after the build, so the audit checks exactly what a crawler is served at that instant.
+const sitemapDocuments = sitemapFiles.map((file) => {
+  const name = relative(outDir, file).split(sep).join("/");
+  const due = releasedEntries(gatedBySitemap.get(`/${name}`) ?? [], (slug) => releaseBySlug.get(slug), auditNow);
+  return { file: name, xml: appendSitemapEntries(readFileSync(file, "utf8"), due) };
+});
 const sitemap = sitemapDocuments.map(({ xml }) => xml).join("\n");
 const sitemapRoutes = new Set(
   [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
@@ -415,15 +434,19 @@ for (const route of matchRoutes) {
   }
 
   const shouldBeIndexable = qualityDecisionByRoute.get(route)?.indexable === true;
-  if (!crossedKickoffAfterBuild && shouldBeIndexable && !sitemapEntries.has(route)) errors.push(`${route}: KEEP prediction missing from sitemap`);
-  if (!crossedKickoffAfterBuild && !shouldBeIndexable && sitemapEntries.has(route)) errors.push(`${route}: noindex prediction leaked into sitemap`);
-  if (shouldBeIndexable && expectedLastmod) {
-    if (!sitemapLastmod || Date.parse(sitemapLastmod) !== Date.parse(expectedLastmod)) {
-      errors.push(`${route}: sitemap lastmod must equal Article dateModified ?? datePublished`);
-    }
-  } else if (shouldBeIndexable && sitemapLastmod) {
-    errors.push(`${route}: sitemap contains a timestamp with no Article editorial date`);
-  }
+  // hidden pages (release gate still closed) must be absent from the sitemap and queued for release instead;
+  // released pages follow the usual rules against the effective sitemap served at `auditNow`.
+  errors.push(...auditMatchSitemapState({
+    route,
+    state: releaseStateOfRoute(route),
+    shouldBeIndexable,
+    crossedKickoffAfterBuild,
+    effectiveLastmod: sitemapLastmod,
+    inEffectiveSitemap: sitemapEntries.has(route),
+    isGated: gatedByRoute.has(route),
+    gatedLastmod: gatedByRoute.get(route)?.lastmod,
+    expectedLastmod,
+  }));
   if (schemaPublished && !html.includes("Published:")) errors.push(`${route}: trustworthy publication date is not visible`);
   if (schemaModified && !html.includes("Updated:")) errors.push(`${route}: trustworthy update date is not visible`);
 }
@@ -516,9 +539,16 @@ for (const [route, lastmod] of sitemapEntries) {
     errors.push(`${route}: non-editorial sitemap URL has an unexplained lastmod`);
   }
 }
-for (const route of [...indexableMatchRoutes, ...indexableLeagueRoutes]) {
+// A hidden (not yet released) page is deliberately absent; that is validated per route above together with its
+// gated-manifest entry, so only released pages are required to be listed here.
+for (const route of [...indexableMatchRoutes.filter((route) => releaseStateOfRoute(route) !== "hidden"), ...indexableLeagueRoutes]) {
   if (!sitemapRoutes.has(route)) errors.push(`${route}: missing from sitemap`);
 }
+errors.push(...auditGatedManifest({
+  gatedEntries: gatedManifest,
+  pageSlugs: new Set(matchRoutes.map(routeSlug)),
+  releaseSlugs: new Set(releaseBySlug.keys()),
+}));
 for (const route of noindexLeagueRoutes) {
   if (sitemapRoutes.has(route)) errors.push(`${route}: noindex league leaked into sitemap`);
 }
@@ -554,7 +584,7 @@ for (const route of matchRoutes.sort()) {
   const leagueSlug = runtimeMatchByRoute.get(route)?.league ?? predictionByRoute.get(route)?.league;
   const publishedAt = html.match(/"datePublished":"([^"]+)"/)?.[1] ?? "—";
   const updatedAt = html.match(/"dateModified":"([^"]+)"/)?.[1] ?? "—";
-  const sitemapStatus = sitemapRoutes.has(route) ? "Yes" : "No";
+  const sitemapStatus = sitemapRoutes.has(route) ? "Yes" : gatedByRoute.has(route) && releaseStateOfRoute(route) === "hidden" ? "At release" : "No";
   const internalStatus = (inbound.get(route) ?? 0) > 0 ? "Linked" : "Orphan";
   const indexable = /content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(html)
     ? "Index/follow"
@@ -580,7 +610,8 @@ const indexingReport = [
   "",
 ].join("\n");
 
-writeFileSync(join(root, "SEO-INDEXING-QUEUE.md"), indexingReport, "utf8");
+// A simulation (SEO_AUDIT_NOW) describes a hypothetical instant, so it never overwrites the real queue report.
+if (!process.env.SEO_AUDIT_NOW) writeFileSync(join(root, "SEO-INDEXING-QUEUE.md"), indexingReport, "utf8");
 
 console.log(`Static HTML pages: ${pages.size}`);
 console.log(`Published match pages: ${matchRoutes.length}`);

@@ -1,6 +1,14 @@
 import results from "../src/data/football-results.snapshot.json";
 import releaseManifest from "./_data/match-release.json";
+import gatedSitemapManifest from "./_data/sitemap-gated.json";
 import { isNhlSlateReleased } from "../src/lib/nhl-publication-policy.ts";
+import {
+  SITEMAP_PATH,
+  appendSitemapEntries,
+  groupGatedBySitemap,
+  normalizeRelease,
+  releasedEntries,
+} from "./_lib/sitemap-release.js";
 
 const LEGACY_HOSTNAME = "predictions-sports-prime.pages.dev";
 const CANONICAL_ORIGIN = "https://predictions-sports-prime.com";
@@ -22,6 +30,9 @@ const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?(?:match|nba|nhl)\/([^/]+)(?
 // kickoff opens automatically with no redeploy. Same zone PSP always uses for "today" (America/Fortaleza).
 const PUBLIC_RELEASE_TIME_ZONE = "America/Fortaleza";
 const RELEASE_DATE_BY_SLUG = new Map(releaseManifest.map((entry) => [entry.slug, entry.timezone ? { date: entry.date, timezone: entry.timezone } : entry.date]));
+// Matches the static sitemaps omit because their gate was still closed at build time (src/lib/sitemap-data.ts).
+// They are appended per request, from the same release rule as the page itself, once the gate opens.
+const GATED_SITEMAP_ENTRIES = groupGatedBySitemap(gatedSitemapManifest);
 
 // The pt-br hubs (home, leagues, NFL) are retired and permanently redirect to their English
 // equivalents. Only the frozen historical /pt-br/match/<slug>/ pages are still served.
@@ -43,6 +54,7 @@ function leagueHubRedirect(pathname) {
 export function createMiddlewareHandler({
   settledSlugs = SETTLED_SLUGS,
   releaseDateBySlug = RELEASE_DATE_BY_SLUG,
+  gatedSitemapEntries = GATED_SITEMAP_ENTRIES,
   now = () => new Date(),
 } = {}) {
   return async function onRequest(context) {
@@ -77,6 +89,26 @@ export function createMiddlewareHandler({
       return new Response(null, {
         status: 307,
         headers: { Location: `${requestUrl.origin}/`, "Cache-Control": "no-store" },
+      });
+    }
+
+    const gatedForSitemap = SITEMAP_PATH.test(requestUrl.pathname) ? gatedSitemapEntries.get(requestUrl.pathname) : undefined;
+    if (gatedForSitemap?.length) {
+      const staticResponse = await context.next();
+      if (!staticResponse.ok) return staticResponse;
+      const due = releasedEntries(
+        gatedForSitemap,
+        (entrySlug) => normalizeRelease(releaseDateBySlug.get(entrySlug), PUBLIC_RELEASE_TIME_ZONE),
+        now(),
+      );
+      const headers = new Headers(staticResponse.headers);
+      // The body differs from the static asset: validators and encodings of the original no longer apply.
+      for (const name of ["etag", "content-length", "content-encoding", "last-modified"]) headers.delete(name);
+      headers.set("Cache-Control", "no-cache");
+      return new Response(appendSitemapEntries(await staticResponse.text(), due), {
+        status: staticResponse.status,
+        statusText: staticResponse.statusText,
+        headers,
       });
     }
 

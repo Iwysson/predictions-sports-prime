@@ -39,44 +39,46 @@ function dedupeSitemap(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap {
   return [...byUrl.values()];
 }
 
-export function buildLeagueSitemap(
-  leagueSlug: LeagueSlug
-): MetadataRoute.Sitemap {
-  const league = leaguesBySlug[leagueSlug];
-  if (!league) return [];
-
-  const publishedLeagueMatches = matches.filter(
+function indexableLeagueMatches(leagueSlug: LeagueSlug): Match[] {
+  return matches.filter(
     (match) =>
       match.league === leagueSlug &&
       match.status === "published" &&
       isAdSenseContentIndexable(match.slug, editorialPredictions)
   );
-  // A future match not yet released publicly (src/lib/match-release.ts) must stay out of the sitemap's
-  // list of match URLs: discovery resumes on its own once the release gate opens, no manual step needed.
-  const leagueMatches = publishedLeagueMatches.filter((match) => isDateReleased(match.date, undefined, match.releaseTimeZone));
+}
 
+// Public-release gate (src/lib/match-release.ts), evaluated against the match's own release zone.
+function isMatchReleased(match: Match, now: Date) {
+  return isDateReleased(match.date, now, match.releaseTimeZone);
+}
+
+// Every sitemap path a match owns: its canonical page plus each complete localized page.
+function matchSitemapPaths(match: Match): string[] {
+  const localized = Object.prototype.hasOwnProperty.call(localizedEditorialBySlug, match.slug)
+    ? seoLocaleSlugs
+        .filter((locale) => hasCompleteLocalizedEditorial(match.slug, locale))
+        .map((locale) => localePath(locale, `/match/${match.slug}/`))
+    : [];
+  return [matchCanonicalPath(match), ...localized];
+}
+
+export function buildLeagueSitemap(
+  leagueSlug: LeagueSlug,
+  now: Date = new Date()
+): MetadataRoute.Sitemap {
+  const league = leaguesBySlug[leagueSlug];
+  if (!league) return [];
+
+  // A future match not yet released publicly (src/lib/match-release.ts) must stay out of the sitemap's
+  // list of match URLs. gatedSitemapEntries() records it at build time and the edge function
+  // (functions/_lib/sitemap-release.js) appends it once its gate opens, so discovery resumes with no redeploy.
   // The league hub pages themselves (/league/<slug>/) were retired - only each league's match pages
   // are listed here, grouped per competition as a sitemap shard (src/app/sitemaps/<slug>/sitemap.ts).
-  const matchPages: MetadataRoute.Sitemap = leagueMatches.map((match) =>
-    matchSitemapEntry(match, matchCanonicalPath(match))
+  const leagueMatches = indexableLeagueMatches(leagueSlug).filter((match) => isMatchReleased(match, now));
+  return dedupeSitemap(
+    leagueMatches.flatMap((match) => matchSitemapPaths(match).map((path) => matchSitemapEntry(match, path)))
   );
-
-  const localizedMatchPages: MetadataRoute.Sitemap = seoLocaleSlugs.flatMap((locale) =>
-    leagueMatches
-      .filter(
-        (match) =>
-          Object.prototype.hasOwnProperty.call(localizedEditorialBySlug, match.slug) &&
-          hasCompleteLocalizedEditorial(match.slug, locale)
-      )
-      .map((match) =>
-        matchSitemapEntry(match, localePath(locale, `/match/${match.slug}/`))
-      )
-  );
-
-  return dedupeSitemap([
-    ...matchPages,
-    ...localizedMatchPages,
-  ]);
 }
 
 export function leagueSitemapPaths() {
@@ -159,8 +161,7 @@ export function leagueSitemapEntries(): SitemapIndexEntry[] {
   }));
 }
 
-export function buildUpcomingMatchesSitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+function upcomingMatchCandidates(now: Date): Match[] {
   const cutLo = new Date(now);
   cutLo.setDate(cutLo.getDate() - 1);
   const cutHi = new Date(now);
@@ -181,8 +182,48 @@ export function buildUpcomingMatchesSitemap(): MetadataRoute.Sitemap {
       const modifiedAt = materialMatchUpdatedAt(match);
       return Boolean(modifiedAt && new Date(modifiedAt) >= recentCut);
     })
-    .sort((a, b) => (a.date ?? "").localeCompare(b.date ?? ""))
+    .sort((a, b) => (a.date ?? "").localeCompare(b.date ?? ""));
+}
+
+export function buildUpcomingMatchesSitemap(now: Date = new Date()): MetadataRoute.Sitemap {
+  // Same release gate as the league sitemaps: a hidden match must not be advertised before it opens.
+  return upcomingMatchCandidates(now)
+    .filter((match) => isMatchReleased(match, now))
     .map((match) => matchSitemapEntry(match, matchCanonicalPath(match)));
+}
+
+// A match whose public release has not happened at build time. The static sitemap omits it; the edge function
+// (functions/_lib/sitemap-release.js) appends it once the release gate of its slug opens.
+export type GatedSitemapEntry = { sitemap: string; slug: string; url: string; lastmod?: string };
+
+function toGatedEntries(sitemap: string, selected: Match[], paths: (match: Match) => string[]): GatedSitemapEntry[] {
+  return selected.flatMap((match) =>
+    paths(match).map((path) => {
+      const lastModified = sitemapLastModified(match);
+      return {
+        sitemap,
+        slug: match.slug,
+        url: absoluteUrl(path),
+        ...(lastModified ? { lastmod: lastModified.toISOString() } : {}),
+      };
+    })
+  );
+}
+
+export function gatedSitemapEntries(now: Date = new Date()): GatedSitemapEntry[] {
+  const perLeague = leagues.flatMap((league) =>
+    toGatedEntries(
+      `/sitemaps/${league.slug}/sitemap.xml`,
+      indexableLeagueMatches(league.slug).filter((match) => !isMatchReleased(match, now)),
+      matchSitemapPaths
+    )
+  );
+  const upcoming = toGatedEntries(
+    "/sitemaps/upcoming-matches/sitemap.xml",
+    upcomingMatchCandidates(now).filter((match) => !isMatchReleased(match, now)),
+    (match) => [matchCanonicalPath(match)]
+  );
+  return [...perLeague, ...upcoming];
 }
 
 // --- Hub lastmod -----------------------------------------------------------------------------------------
