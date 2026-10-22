@@ -234,6 +234,9 @@ export type EditorialPrediction = {
   // Required for content first published after the Phase 2 source-policy cutoff.
   sourceStatus?: "verified" | "partial" | "incomplete";
   sources?: EditorialSource[];
+  // Explicit author-text preservation for the October 22 import. The source Markdown is kept
+  // byte-for-byte apart from its trailing newline; the editorial audit checks its checksum.
+  preservedSource?: { packageId: "2026-10-22-36"; packagePath: string; checksum: string; sha256: string };
 
   statisticalCoreProvenance?: {
     season: string;

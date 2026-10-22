@@ -1,7 +1,17 @@
 [
   {
+    "slug": "deportivo-alaves-vs-malaga",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
     "slug": "deportivo-la-coruna-vs-levante",
     "date": "2026-10-18"
+  },
+  {
+    "slug": "cruzeiro-vs-remo",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
   },
   {
     "slug": "botafogo-vs-chapecoense",
@@ -124,10 +134,6 @@
     "date": "2026-10-21"
   },
   {
-    "slug": "flamengo-vs-estudiantes",
-    "date": "2026-10-22"
-  },
-  {
     "slug": "flamengo-vs-estudiantes-combined",
     "date": "2026-10-22",
     "timezone": "America/New_York"
@@ -149,8 +155,18 @@
     "date": "2026-10-21"
   },
   {
+    "slug": "vitoria-guimaraes-vs-maritimo",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
     "slug": "braga-vs-gil-vicente",
     "date": "2026-08-16"
+  },
+  {
+    "slug": "brest-vs-nice",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
   },
   {
     "slug": "rennes-vs-auxerre",
@@ -159,6 +175,16 @@
   {
     "slug": "strasbourg-vs-paris-saint-germain",
     "date": "2026-10-17"
+  },
+  {
+    "slug": "vfb-stuttgart-vs-borussia-monchengladbach",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "go-ahead-eagles-vs-telstar",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
   },
   {
     "slug": "sparta-rotterdam-vs-willem-ii",
@@ -215,6 +241,11 @@
   {
     "slug": "troms-vs-kfum-oslo",
     "date": "2026-10-18"
+  },
+  {
+    "slug": "alanyaspor-vs-kocaelispor",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
   },
   {
     "slug": "genclerbirligi-vs-amed",
@@ -453,6 +484,16 @@
     "date": "2026-10-18"
   },
   {
+    "slug": "ipswich-town-vs-nottingham-forest",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "torino-vs-monza",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
     "slug": "atalanta-vs-venezia",
     "date": "2026-10-12"
   },
@@ -594,6 +635,11 @@
     "timezone": "America/New_York"
   },
   {
+    "slug": "jagiellonia-vs-anderlecht",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
     "slug": "detroit-pistons-vs-boston-celtics",
     "date": "2026-10-20",
     "timezone": "America/Sao_Paulo"
@@ -674,6 +720,61 @@
     "timezone": "America/New_York"
   },
   {
+    "slug": "milwaukee-bucks-vs-chicago-bulls",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "boston-celtics-vs-new-york-knicks",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "orlando-magic-vs-minnesota-timberwolves",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "indiana-pacers-vs-dallas-mavericks",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "washington-wizards-vs-toronto-raptors",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "charlotte-hornets-vs-atlanta-hawks",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "miami-heat-vs-detroit-pistons",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "san-antonio-spurs-vs-houston-rockets",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "utah-jazz-vs-new-orleans-pelicans",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "los-angeles-lakers-vs-la-clippers",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "golden-state-warriors-vs-memphis-grizzlies",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
     "slug": "buffalo-sabres-vs-philadelphia-flyers",
     "date": "2026-10-21",
     "timezone": "America/New_York"
@@ -741,6 +842,86 @@
   {
     "slug": "vancouver-canucks-vs-detroit-red-wings",
     "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "chicago-blackhawks-vs-montreal-canadiens",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "colorado-avalanche-vs-tampa-bay-lightning",
+    "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "chicago-bears-vs-new-england-patriots",
+    "date": "2026-10-22",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "new-orleans-saints-vs-pittsburgh-steelers",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "houston-texans-vs-new-york-giants",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "baltimore-ravens-vs-cincinnati-bengals",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "carolina-panthers-vs-tampa-bay-buccaneers",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "new-york-jets-vs-miami-dolphins",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "minnesota-vikings-vs-indianapolis-colts",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "tennessee-titans-vs-cleveland-browns",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "atlanta-falcons-vs-san-francisco-49ers",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "arizona-cardinals-vs-denver-broncos",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "las-vegas-raiders-vs-los-angeles-rams",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "detroit-lions-vs-green-bay-packers",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "seattle-seahawks-vs-kansas-city-chiefs",
+    "date": "2026-10-25",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "philadelphia-eagles-vs-dallas-cowboys",
+    "date": "2026-10-26",
     "timezone": "America/New_York"
   }
 ]

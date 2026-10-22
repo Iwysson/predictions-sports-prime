@@ -1,5 +1,6 @@
 import { NFL_WEEK5_2026 } from "@/data/nfl/week5-2026-public";
 import { NFL_WEEK6_2026 } from "@/data/nfl/week6-2026-public";
+import { NFL_WEEK7_2026 } from "@/data/nfl/week7-2026-public";
 import type { NflPublicGame } from "@/lib/nfl-slates";
 
 export type NflWeek = {
@@ -17,6 +18,7 @@ export type NflWeek = {
 export const NFL_WEEKS: NflWeek[] = [
   { weekNumber: 5, season: 2026, startDateKey: "2026-10-08", games: NFL_WEEK5_2026 },
   { weekNumber: 6, season: 2026, startDateKey: "2026-10-15", games: NFL_WEEK6_2026 },
+  { weekNumber: 7, season: 2026, startDateKey: "2026-10-22", games: NFL_WEEK7_2026 },
 ];
 
 // The week for the NFL day `todayKey` (YYYY-MM-DD, America/New_York - reuse getNhlTodayKey, the

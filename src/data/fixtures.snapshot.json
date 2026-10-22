@@ -3853,18 +3853,19 @@
           },
           {
             "round": 10,
-            "date": "2026-10-25",
-            "time": "TBD",
+            "date": "2026-10-23",
+            "time": "21:00",
             "homeTeam": "Alavés",
             "awayTeam": "Málaga",
             "homeScore": null,
             "awayScore": null,
             "status": "scheduled",
-            "dataSource": "espn",
+            "dataSource": "editorial-manual",
             "id": "401882836",
-            "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-10-25T18:00Z"
+            "sourceAgreement": true,
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-10-23T19:00:00Z",
+            "scheduleSourceUrl": "https://www.laliga.com/es-PE/noticias/horarios-de-la-decima-jornada-de-laliga-ea-sports-2026-27"
           },
           {
             "round": 10,
@@ -15109,6 +15110,13 @@
     ]
   },
   "predictionIds": {
+    "la-liga:deportivo-alaves-vs-malaga": "401882836",
+    "premier-league:ipswich-town-vs-nottingham-forest": "401879253",
+    "bundesliga:vfb-stuttgart-vs-borussia-monchengladbach": "401884761",
+    "serie-a:torino-vs-monza": "401874957",
+    "ligue-1:brest-vs-nice": "401876428",
+    "eredivisie:go-ahead-eagles-vs-telstar": "401875574",
+    "liga-portugal:vitoria-guimaraes-vs-maritimo": "401885412",
     "brasileirao-serie-a:botafogo-vs-chapecoense": "editorial:brasileirao-serie-a:botafogo-vs-chapecoense:2026-10-17",
     "brasileirao-serie-a:corinthians-vs-vitoria": "editorial:brasileirao-serie-a:corinthians-vs-vitoria:2026-10-19",
     "brasileirao-serie-a:sao-paulo-vs-vasco": "editorial:brasileirao-serie-a:sao-paulo-vs-vasco:2026-10-17",

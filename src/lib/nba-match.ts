@@ -10,6 +10,8 @@ import protectedOct21 from "@/data/nba/protected-2026-10-21.json";
 import deferredOct21 from "@/data/nba/deferred-slate-2026-10-21.json";
 import protectedOct22 from "@/data/nba/protected-2026-10-22.json";
 import deferredOct22 from "@/data/nba/deferred-slate-2026-10-22.json";
+import protectedOct23 from "@/data/nba/protected-2026-10-23.json";
+import deferredOct23 from "@/data/nba/deferred-slate-2026-10-23.json";
 
 export type NbaMatchInfo = {
   date: string;
@@ -50,8 +52,8 @@ type ProtectedEntry = {
 
 type DeferredEntry = { slug: string; title: string; homeTeam: string; awayTeam: string; venue: string; teaser: string };
 
-const PROTECTED_DAYS: Array<{ entries: ProtectedEntry[]; releaseTimeZone: string }> = [protectedOct20, protectedOct21, protectedOct22] as Array<{ entries: ProtectedEntry[]; releaseTimeZone: string }>;
-const DEFERRED_DAYS: Array<{ matches: DeferredEntry[] }> = [deferredOct20, deferredOct21, deferredOct22] as Array<{ matches: DeferredEntry[] }>;
+const PROTECTED_DAYS: Array<{ entries: ProtectedEntry[]; releaseTimeZone: string }> = [protectedOct20, protectedOct21, protectedOct22, protectedOct23] as Array<{ entries: ProtectedEntry[]; releaseTimeZone: string }>;
+const DEFERRED_DAYS: Array<{ matches: DeferredEntry[] }> = [deferredOct20, deferredOct21, deferredOct22, deferredOct23] as Array<{ matches: DeferredEntry[] }>;
 
 export function allNbaMatches(): NbaMatchData[] {
   const deferredBySlug = new Map<string, DeferredEntry>();

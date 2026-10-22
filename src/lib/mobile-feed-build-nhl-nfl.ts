@@ -49,8 +49,9 @@ export function buildMobileNhlIndex(now: Date = new Date()): MobileSingleSlateIn
 // buildMobileNhlIndex reuses resolveNhlSlate - so the app never shows a week the website wouldn't
 // show yet.
 export function buildMobileNflIndex(now: Date = new Date()): MobileSingleSlateIndex {
-  const week = resolveNflWeek(getNhlTodayKey(now));
-  const items = (week?.games ?? []).map(toMobileSlateItem);
+  const todayKey = getNhlTodayKey(now);
+  const week = resolveNflWeek(todayKey);
+  const items = (week?.games ?? []).filter((game) => game.date <= todayKey).map(toMobileSlateItem);
   const { free, vip } = splitByTier(items);
   return { generatedAt: now.toISOString(), free, vip };
 }

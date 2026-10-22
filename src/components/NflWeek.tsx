@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { AccessBadge } from "@/components/AccessBadge";
 import { MatchFullContent } from "@/components/MatchFullContent";
 import { MatchGate } from "@/components/MatchGate";
@@ -81,8 +84,15 @@ function GameCard({ g }: { g: NflPublicGame }) {
 // The NFL week body: the active published week, resolved the same way the NHL slate is (the
 // latest week whose first kickoff day has started, on the America/New_York calendar). Adding a
 // new week only means adding it to src/data/nfl/weeks.ts - nothing here changes.
-export function NflWeekSlate() {
-  const week = resolveNflWeek(getNhlTodayKey());
+export function NflWeekSlate({ initialKey }: { initialKey: string }) {
+  const [todayKey, setTodayKey] = useState(initialKey);
+  useEffect(() => {
+    const refresh = () => setTodayKey(getNhlTodayKey());
+    refresh();
+    const timer = window.setInterval(refresh, 30_000);
+    return () => window.clearInterval(timer);
+  }, []);
+  const week = resolveNflWeek(todayKey);
   if (!week) {
     // No active week is published yet (resolveNflWeek returns null until the next week is added to
     // src/data/nfl/weeks.ts): show the same closing notice as the other sports rather than nothing.
@@ -99,7 +109,7 @@ export function NflWeekSlate() {
       </header>
     );
   }
-  const games = sortNflGames(week.games);
+  const games = sortNflGames(week.games.filter((game) => game.date <= todayKey));
   const free = games.filter((g) => g.access === "free");
   const protectedGames = games.filter((g) => g.access !== "free");
   const analyses = (n: number) => (n === 1 ? "analysis" : "analyses");
@@ -129,7 +139,7 @@ export function NflWeekSlate() {
       </header>
 
       <section className="nhl-page-best-multiple" aria-labelledby="nfl-best-multiple-title">
-        <NhlBestMultiple headingId="nfl-best-multiple-title" initialKey={getNhlTodayKey()} surface="nfl" />
+        <NhlBestMultiple headingId="nfl-best-multiple-title" initialKey={todayKey} surface="nfl" />
       </section>
 
       {free.length ? (

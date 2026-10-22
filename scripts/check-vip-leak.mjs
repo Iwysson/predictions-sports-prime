@@ -26,6 +26,12 @@ for (const name of readdirSync("src/data/nhl").filter((name) => /^public-slate-.
   const source = readFileSync(join("src/data/nhl", name), "utf8");
   for (const match of source.matchAll(/"pick"\s*:\s*"([^"]+)"/g)) publicPicks.add(match[1].toLowerCase());
 }
+// Older NFL FREE cards also embed their public picks in the client-safe week files.
+// A protected game can legitimately use the same market text in a different fixture.
+for (const name of readdirSync("src/data/nfl").filter((name) => /^week\d+-\d{4}-public\.ts$/.test(name))) {
+  const source = readFileSync(join("src/data/nfl", name), "utf8");
+  for (const match of source.matchAll(/\bpick:\s*"([^"]+)"/g)) publicPicks.add(match[1].toLowerCase());
+}
 const leaks = [];
 const notes = [];
 

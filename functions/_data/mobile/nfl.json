@@ -1,118 +1,14 @@
 {
-  "generatedAt": "2026-10-22T00:15:52.727Z",
-  "free": [],
-  "vip": [
+  "generatedAt": "2026-10-22T22:38:18.604Z",
+  "free": [
     {
-      "slug": "denver-broncos-vs-seattle-seahawks",
-      "title": "Denver Broncos vs Seattle Seahawks",
-      "homeTeam": "Denver Broncos",
-      "awayTeam": "Seattle Seahawks",
-      "badge": "vip",
-      "teaser": "Denver and Seattle open Week 6 on Thursday night with identical 3-2 records, but they arrive from very different Week 5 results. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "jacksonville-jaguars-vs-houston-texans",
-      "title": "Jacksonville Jaguars vs Houston Texans",
-      "homeTeam": "Jacksonville Jaguars",
-      "awayTeam": "Houston Texans",
-      "badge": "vip",
-      "teaser": "Jacksonville enters the London divisional game at 4-1 after beating Philadelphia 19-17, while Houston is 1-4 despite finally breaking through with a 26-3 win over Tennessee. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "atlanta-falcons-vs-chicago-bears",
-      "title": "Atlanta Falcons vs Chicago Bears",
-      "homeTeam": "Atlanta Falcons",
-      "awayTeam": "Chicago Bears",
-      "badge": "vip",
-      "teaser": "Chicago travels to Atlanta at 3-2 after a heavy 31-7 loss in Green Bay, while the Falcons are 2-3 after falling 30-23 to Baltimore. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "cleveland-browns-vs-baltimore-ravens",
-      "title": "Cleveland Browns vs Baltimore Ravens",
-      "homeTeam": "Cleveland Browns",
-      "awayTeam": "Baltimore Ravens",
-      "badge": "vip",
-      "teaser": "Baltimore arrives at 4-1 after beating Atlanta 30-23, while Cleveland is 3-2 after a 17-12 loss to the Jets. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "indianapolis-colts-vs-tennessee-titans",
-      "title": "Indianapolis Colts vs Tennessee Titans",
-      "homeTeam": "Indianapolis Colts",
-      "awayTeam": "Tennessee Titans",
-      "badge": "vip",
-      "teaser": "Indianapolis is only 2-3, but this matchup is defined by Tennessee's 0-5 start. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "new-england-patriots-vs-new-york-jets",
-      "title": "New England Patriots vs New York Jets",
-      "homeTeam": "New England Patriots",
-      "awayTeam": "New York Jets",
-      "badge": "vip",
-      "teaser": "New England hosts New York at 3-2 after a 45-17 win over Las Vegas. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "new-york-giants-vs-new-orleans-saints",
-      "title": "New York Giants vs New Orleans Saints",
-      "homeTeam": "New York Giants",
-      "awayTeam": "New Orleans Saints",
-      "badge": "vip",
-      "teaser": "The Giants enter at 3-1-1 after a 27-27 tie with Washington, while New Orleans is 1-4 after losing 23-13 to Minnesota. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "philadelphia-eagles-vs-carolina-panthers",
-      "title": "Philadelphia Eagles vs Carolina Panthers",
-      "homeTeam": "Philadelphia Eagles",
-      "awayTeam": "Carolina Panthers",
-      "badge": "vip",
-      "teaser": "Carolina visits Philadelphia in one of the more contrarian moneyline positions of the slate. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "tampa-bay-buccaneers-vs-pittsburgh-steelers",
-      "title": "Tampa Bay Buccaneers vs Pittsburgh Steelers",
-      "homeTeam": "Tampa Bay Buccaneers",
-      "awayTeam": "Pittsburgh Steelers",
-      "badge": "vip",
-      "teaser": "Pittsburgh enters at 3-2 after a 34-22 win over Indianapolis. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "los-angeles-rams-vs-arizona-cardinals",
-      "title": "Los Angeles Rams vs Arizona Cardinals",
-      "homeTeam": "Los Angeles Rams",
-      "awayTeam": "Arizona Cardinals",
-      "badge": "vip",
-      "teaser": "The Rams return home at 2-3 after a 37-34 overtime loss to Buffalo, while Arizona is 1-4 after being beaten 45-21 by Detroit. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "kansas-city-chiefs-vs-los-angeles-chargers",
-      "title": "Kansas City Chiefs vs Los Angeles Chargers",
-      "homeTeam": "Kansas City Chiefs",
-      "awayTeam": "Los Angeles Chargers",
-      "badge": "vip",
-      "teaser": "Kansas City is unbeaten at 4-0, while the Chargers are 0-5 after losing 23-17 to Denver. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "las-vegas-raiders-vs-buffalo-bills",
-      "title": "Las Vegas Raiders vs Buffalo Bills",
-      "homeTeam": "Las Vegas Raiders",
-      "awayTeam": "Buffalo Bills",
-      "badge": "vip",
-      "teaser": "Buffalo travels to Las Vegas at 4-1 after a 37-34 overtime win over the Rams. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "green-bay-packers-vs-dallas-cowboys",
-      "title": "Green Bay Packers vs Dallas Cowboys",
-      "homeTeam": "Green Bay Packers",
-      "awayTeam": "Dallas Cowboys",
-      "badge": "vip",
-      "teaser": "Dallas is the clear contrarian side of the batch. Unlock PRIME VIP for the prediction, the odds and the full analysis."
-    },
-    {
-      "slug": "san-francisco-49ers-vs-washington-commanders",
-      "title": "San Francisco 49ers vs Washington Commanders",
-      "homeTeam": "San Francisco 49ers",
-      "awayTeam": "Washington Commanders",
-      "badge": "vip",
-      "teaser": "San Francisco is the NFL's cleanest record in this slate at 5-0, coming off a 32-29 road win in Seattle. Unlock PRIME VIP for the prediction, the odds and the full analysis."
+      "slug": "chicago-bears-vs-new-england-patriots",
+      "title": "New England Patriots vs Chicago Bears",
+      "homeTeam": "Chicago Bears",
+      "awayTeam": "New England Patriots",
+      "badge": "free",
+      "teaser": "New England Patriots visit Chicago Bears on 2026-10-22. Read the free prediction and analysis after release."
     }
-  ]
+  ],
+  "vip": []
 }

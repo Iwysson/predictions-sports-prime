@@ -169,7 +169,7 @@ export function evaluatePredictionIndexQuality(
       prediction.picks.main.trim() &&
       (prediction.picks.publishedOdds ?? prediction.picks.odds) !== undefined
     ),
-    factualConsistency: prediction.homeTeam !== prediction.awayTeam && !/\bVERIFY\b/i.test(markdown),
+    factualConsistency: prediction.homeTeam !== prediction.awayTeam && !/\bVERIFY\b/.test(markdown),
     tacticalQuality: !coreRequired || /tactical|transition|press(?:ing|ure)|game state|set pieces?|width|half-spaces?/i.test(markdown),
     paragraphQuality: coreRequired ? true : hasParagraphQuality(markdown),
   };

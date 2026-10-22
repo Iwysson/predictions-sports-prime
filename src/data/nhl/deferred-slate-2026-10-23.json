@@ -1,0 +1,23 @@
+{
+  "dayKey": "2026-10-23",
+  "matches": [
+    {
+      "slug": "chicago-blackhawks-vs-montreal-canadiens",
+      "title": "Chicago Blackhawks × Montreal Canadiens",
+      "homeTeam": "Chicago Blackhawks",
+      "awayTeam": "Montreal Canadiens",
+      "access": "free",
+      "badge": "FREE TO VIEW",
+      "teaser": "Montreal Canadiens visit Chicago Blackhawks on October 23. Read the free prediction and analysis."
+    },
+    {
+      "slug": "colorado-avalanche-vs-tampa-bay-lightning",
+      "title": "Colorado Avalanche × Tampa Bay Lightning",
+      "homeTeam": "Colorado Avalanche",
+      "awayTeam": "Tampa Bay Lightning",
+      "access": "vip",
+      "badge": "PRIME VIP",
+      "teaser": "Tampa Bay Lightning visit Colorado Avalanche on October 23. Unlock PRIME VIP for the prediction and analysis."
+    }
+  ]
+}

@@ -58,6 +58,15 @@ function words(text: string) {
   return text.trim().split(/\s+/).filter(Boolean).length;
 }
 
+function sourceChecksum(text: string) {
+  let value = 2166136261;
+  for (const char of text) {
+    value ^= char.codePointAt(0)!;
+    value = Math.imul(value, 16777619);
+  }
+  return (value >>> 0).toString(16).padStart(8, "0");
+}
+
 function nonPlaceholder(value: string | undefined) {
   return Boolean(value && !PLACEHOLDER_FIELD.test(value.trim()));
 }
@@ -154,6 +163,23 @@ export function isPspPolicyEnforcedForPrediction(
 export function validatePspEditorialStandard(prediction: EditorialPrediction) {
   const errors: string[] = [];
   const markdown = prediction.analysis.join("\n\n").replace(/\r\n/g, "\n");
+  // The author explicitly required the nine supplied football articles to remain intact. Validate
+  // their source integrity, fixture identity, market, provenance and one original Core table instead
+  // of rewriting the author's headings and prose to meet current presentation conventions.
+  if (prediction.preservedSource?.packageId === "2026-10-22-36") {
+    const preserved = prediction.preservedSource;
+    if (prediction.analysis.length !== 1 || sourceChecksum(markdown) !== preserved.checksum) errors.push("preserved author Markdown checksum mismatch");
+    if (!/^FOOTBALL\/[\w-]+\.md$/.test(preserved.packagePath) || !/^[a-f0-9]{64}$/.test(preserved.sha256)) errors.push("preserved source identity is invalid");
+    if (prediction.analysisFormat !== "markdown") errors.push("preserved analysis must use Markdown");
+    if (occurrences(markdown, /^## Statistical Core\s*$/gim) !== 1 || !/^\|[^\n]+\|$/m.test(markdown)) errors.push("original Statistical Core must occur once with table rows");
+    if (!markdown.includes(prediction.picks.main)) errors.push("preserved pick differs from the supplied article");
+    const suppliedOdds = Number(markdown.match(/^\*\*Published odds \(user-supplied\):\*\*\s*([\d.]+)/im)?.[1]);
+    if (!Number.isFinite(suppliedOdds) || suppliedOdds !== prediction.picks.publishedOdds) errors.push("preserved odds differ from the supplied article");
+    if (!/^2026-10-23$/.test(prediction.matchInfo?.date ?? "") || !/^[0-2]\d:[0-5]\d$/.test(prediction.matchInfo?.time ?? "") || prediction.matchInfo?.releaseTimeZone !== "America/New_York") errors.push("verified fixture or release metadata is missing");
+    if (prediction.sourceStatus !== "partial" || !prediction.sources?.length || prediction.sources.some((source) => !/^https:\/\//.test(source.url))) errors.push("source provenance or gap status is missing");
+    if (!prediction.homeTeam || !prediction.awayTeam || prediction.homeTeam === prediction.awayTeam) errors.push("fixture identity is invalid");
+    return errors;
+  }
   const publishableGapDisclosure = prediction.sourceStatus === "partial" &&
     /(?:complete\s+22(?:\/22)?\s+Statistical Core|statistical coverage is partial|unavailable target metrics)/i.test(markdown);
   const naturalRiskPolicyApplies = [prediction.publishedAt, prediction.updatedAt]

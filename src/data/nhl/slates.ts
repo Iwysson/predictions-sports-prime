@@ -89,6 +89,7 @@ export const SLATES: NhlPublicSlate[] = [
   { dayKey: "2026-10-20", matches: [], multiples: [], deferred: true, publicationTimezone: NHL_NEW_YORK_TIME_ZONE },
   { dayKey: "2026-10-21", matches: [], multiples: [], deferred: true, publicationTimezone: NHL_NEW_YORK_TIME_ZONE },
   { dayKey: "2026-10-22", matches: [], multiples: [], deferred: true, publicationTimezone: NHL_NEW_YORK_TIME_ZONE },
+  { dayKey: "2026-10-23", matches: [], multiples: [], deferred: true, publicationTimezone: NHL_NEW_YORK_TIME_ZONE },
 ];
 
 // The slate for the NHL day `todayKey` (YYYY-MM-DD, America/New_York). It switches at 00:00 ET

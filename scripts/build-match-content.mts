@@ -24,7 +24,7 @@ type LaterEntryFile = {
   activeFromKey: string;
   // IANA zone whose local midnight on activeFromKey opens the entries. Absent = America/New_York (the NHL day).
   releaseTimeZone?: string;
-  entries: Array<{ slug: string; analysisAccess: "free" | "vip"; predictionAccess: "free" | "vip"; pick: string; odds: number; analysis: string[]; analysisFormat?: "markdown"; sources?: Array<{ name: string; url: string }> }>;
+  entries: Array<{ slug: string; analysisAccess: "free" | "vip"; predictionAccess: "free" | "vip"; pick: string; odds: number; analysis: string[]; analysisFormat?: "markdown"; sources?: Array<{ name: string; url: string }>; activeFromKey?: string; releaseTimeZone?: string }>;
 };
 
 // NHL protected entries for later days. They stay "not-found" in the endpoint until 00:00 of
@@ -52,7 +52,7 @@ for (const file of nhlLaterFiles) {
 type NflEntryFile = {
   entries: Array<{ slug: string; analysisAccess: "free" | "vip"; predictionAccess: "free" | "vip"; pick: string; odds: number; analysis: string[]; analysisFormat?: "markdown"; sources?: Array<{ name: string; url: string }> }>;
 };
-const nflWeekFiles = ["src/data/nfl/week5-2026-protected.json", "src/data/nfl/week6-2026-protected.json"];
+const nflWeekFiles = ["src/data/nfl/week5-2026-protected.json", "src/data/nfl/week6-2026-protected.json", "src/data/nfl/week7-2026-protected.json"];
 const nflEntries: ProtectedContentEntry[] = nflWeekFiles.flatMap((file) => {
   const parsed = JSON.parse(readFileSync(file, "utf8")) as NflEntryFile;
   return parsed.entries.map((e) => ({
@@ -61,6 +61,7 @@ const nflEntries: ProtectedContentEntry[] = nflWeekFiles.flatMap((file) => {
     predictionAccess: e.predictionAccess,
     full: { analysis: e.analysis, analysisFormat: e.analysisFormat, sources: e.sources ?? [], comment: null, picks: { main: e.pick, odds: e.odds } },
     prediction: { main: e.pick, odds: e.odds },
+    ...(e.activeFromKey ? { activeFromKey: e.activeFromKey, releaseTimeZone: e.releaseTimeZone ?? "America/New_York" } : {}),
   }));
 });
 
@@ -105,8 +106,9 @@ const footballReleaseManifest = hydratedMatches
 // matches both /match/ and /nba/ paths); release-gate semantics are identical (America/Fortaleza is the
 // same fixed UTC-3 offset as America/Sao_Paulo for every date since Brazil abolished DST in 2019).
 const nbaReleaseManifest = nbaEntries.map((entry) => ({ slug: entry.slug, date: entry.activeFromKey, timezone: entry.releaseTimeZone }));
-const nhlReleaseManifest = nhlEntries.filter((entry) => entry.activeFromKey === "2026-10-21" || entry.activeFromKey === "2026-10-22").map((entry) => ({ slug: entry.slug, date: entry.activeFromKey, timezone: entry.releaseTimeZone ?? "America/New_York" }));
-const releaseManifest = [...footballReleaseManifest, ...nbaReleaseManifest, ...nhlReleaseManifest];
+const nhlReleaseManifest = nhlEntries.filter((entry) => entry.activeFromKey && entry.activeFromKey >= "2026-10-21").map((entry) => ({ slug: entry.slug, date: entry.activeFromKey, timezone: entry.releaseTimeZone ?? "America/New_York" }));
+const nflReleaseManifest = nflEntries.filter((entry) => entry.activeFromKey).map((entry) => ({ slug: entry.slug, date: entry.activeFromKey, timezone: entry.releaseTimeZone ?? "America/New_York" }));
+const releaseManifest = [...footballReleaseManifest, ...nbaReleaseManifest, ...nhlReleaseManifest, ...nflReleaseManifest];
 writeFileSync("functions/_data/match-release.json", JSON.stringify(releaseManifest, null, 2) + "\n");
 console.log(`match release manifest: ${releaseManifest.length} slugs`);
 

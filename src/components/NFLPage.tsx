@@ -5,6 +5,7 @@ import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
 import { SiteContactLine } from "@/components/SiteContactLine";
 import { VipTitleCta } from "@/components/VipTitleCta";
 import { getNFLCopy } from "@/lib/nfl-i18n";
+import { getNhlTodayKey } from "@/lib/nhl-day";
 import type { SeoLocale } from "@/lib/seo-locales";
 import { getNFLStandings, getNFLStandingsMetadata } from "@/lib/nfl-standings-provider";
 
@@ -19,7 +20,7 @@ export function NFLPage({ locale }: { locale: SeoLocale }) {
     {locale === "en" ? <PrimeVipOfferCard /> : null}
     {locale === "en" ? (
       <section className="section section--compact"><div className="container">
-        <NflWeekSlate />
+        <NflWeekSlate initialKey={getNhlTodayKey()} />
       </div></section>
     ) : null}
     <section className="section section--compact"><div className="container nfl-content">

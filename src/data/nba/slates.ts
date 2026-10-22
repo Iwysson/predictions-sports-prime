@@ -10,6 +10,7 @@ export const NBA_SLATES: NbaPublicSlate[] = [
   { dayKey: "2026-10-20", matches: [], deferred: true, publicationTimezone: NBA_PUBLICATION_TIME_ZONE },
   { dayKey: "2026-10-21", matches: [], deferred: true, publicationTimezone: "America/New_York" },
   { dayKey: "2026-10-22", matches: [], deferred: true, publicationTimezone: "America/New_York" },
+  { dayKey: "2026-10-23", matches: [], deferred: true, publicationTimezone: "America/New_York" },
 ];
 
 // The slate for the NBA day `todayKey` (YYYY-MM-DD, America/Sao_Paulo). It switches at 00:00 BRT

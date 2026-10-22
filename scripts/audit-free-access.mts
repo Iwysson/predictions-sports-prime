@@ -115,7 +115,7 @@ const games = [
   ...SLATES.flatMap((slate) =>
     (slate.deferred ? deferredMatchesFor(slate.dayKey) : slate.matches).map((m) => ({ id: `nhl ${slate.dayKey} ${m.slug}`, g: m as any, dayKey: slate.dayKey, deferredOnly: Boolean(slate.deferred) })),
   ),
-  ...NFL_WEEKS.flatMap((week) => week.games.map((g) => ({ id: `nfl week${week.weekNumber} ${g.slug}`, g: g as any, dayKey: null as string | null, deferredOnly: false }))),
+  ...NFL_WEEKS.flatMap((week) => week.games.map((g) => ({ id: `nfl week${week.weekNumber} ${g.slug}`, g: g as any, dayKey: week.weekNumber === 7 ? g.date : null as string | null, deferredOnly: week.weekNumber === 7 }))),
 ];
 for (const { id, g, dayKey, deferredOnly } of games) {
   const deferred = dayKey === null ? undefined : (entries.find((e) => e.slug === g.slug) as (typeof entries)[number] & { activeFromKey?: string; releaseTimeZone?: string; prediction?: { main?: string; odds?: number | null } } | undefined);
