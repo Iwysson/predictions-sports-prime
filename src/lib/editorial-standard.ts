@@ -163,29 +163,31 @@ export function isPspPolicyEnforcedForPrediction(
 export function validatePspEditorialStandard(prediction: EditorialPrediction) {
   const errors: string[] = [];
   const markdown = prediction.analysis.join("\n\n").replace(/\r\n/g, "\n");
-  // The author explicitly required the nine supplied football articles to remain intact. Validate
-  // their source integrity, fixture identity, market, provenance and one original Core table instead
-  // of rewriting the author's headings and prose to meet current presentation conventions.
-  // A sourced venue-split Core may follow as a separate analysis block; the author's block stays byte-identical.
+  // The nine supplied football articles keep the author's prose. Their only editorial change merged the
+  // author's season table and the sourced venue-split table into one Core at the end, so the article body
+  // and its Match Analysis paragraphs are checked against checksums taken at that merge.
   if (prediction.preservedSource?.packageId === "2026-10-22-36") {
     const preserved = prediction.preservedSource;
-    const authorMarkdown = (prediction.analysis[0] ?? "").replace(/\r\n/g, "\n");
-    if (prediction.analysis.length > 2 || sourceChecksum(authorMarkdown) !== preserved.checksum) errors.push("preserved author Markdown checksum mismatch");
-    if (prediction.analysis.length === 2) {
-      const coreMarkdown = prediction.analysis[1].replace(/\r\n/g, "\n");
-      if (occurrences(coreMarkdown, /^#{1,6}\s*Statistical Core Predictions-Sports-Prime\s*$/gim) !== 1) errors.push("added Statistical Core block needs exactly one Core heading");
-      const rows = parseStatisticalCoreRows(coreMarkdown);
-      if (!rows.length) errors.push("added Statistical Core block has no table rows");
-      errors.push(...validatePartialStatisticalCoreRows(rows).map((error) => `Statistical Core: ${error}`));
-      const provenance = prediction.statisticalCoreProvenance;
-      if (provenance?.home.sampleType !== "home" || provenance?.away.sampleType !== "away" || !/^\d{4}(?:\/\d{2})?$/.test(provenance.season)) errors.push("added Statistical Core needs HOME/AWAY provenance");
-      if (!prediction.statisticalCoreSamples?.length || prediction.statisticalCoreSamples.some((sample) => !/^https:\/\//.test(sample.sourceUrl))) errors.push("added Statistical Core needs sample source URLs");
-      const matchesRow = rows.find((row) => row.label === "Matches (N)");
-      if (provenance && (Number(matchesRow?.home) !== provenance.home.matches || Number(matchesRow?.away) !== provenance.away.matches)) errors.push("Statistical Core match counts differ from provenance");
-    }
+    const coreStart = markdown.search(/^#{1,6}\s*Statistical Core Predictions-Sports-Prime\s*$/m);
+    const body = (coreStart < 0 ? markdown : markdown.slice(0, coreStart)).trimEnd();
+    const coreMarkdown = coreStart < 0 ? "" : markdown.slice(coreStart);
+    const analysisStart = body.indexOf("## Match Analysis\n");
+    const matchAnalysis = analysisStart < 0 ? "" : body.slice(analysisStart, body.indexOf("\n## ", analysisStart + 5));
+    if (prediction.analysis.length !== 1 || sourceChecksum(body) !== preserved.bodyChecksum) errors.push("preserved author Markdown checksum mismatch");
+    if (!matchAnalysis || sourceChecksum(matchAnalysis) !== preserved.matchAnalysisChecksum) errors.push("original Match Analysis paragraphs changed");
+    if (occurrences(markdown, /^#{1,6}\s*Statistical Core\b.*$/gim) !== 1 || coreStart < 0) errors.push("exactly one Statistical Core section is required");
+    // Heading plus table only: the page then shows the table once (public context) and strips it from the analysis.
+    if (coreMarkdown && !/^#{1,6}[^\n]*\n\n(?:\|[^\n]*\|\n?)+$/.test(coreMarkdown)) errors.push("Statistical Core must end the analysis with one table and no other text");
+    const rows = parseStatisticalCoreRows(coreMarkdown);
+    if (!rows.length) errors.push("Statistical Core has no table rows");
+    errors.push(...validatePartialStatisticalCoreRows(rows).map((error) => `Statistical Core: ${error}`));
+    const provenance = prediction.statisticalCoreProvenance;
+    if (provenance?.home.sampleType !== "home" || provenance?.away.sampleType !== "away" || !/^\d{4}(?:\/\d{2})?$/.test(provenance.season)) errors.push("Statistical Core needs HOME/AWAY provenance");
+    if (!prediction.statisticalCoreSamples?.length || prediction.statisticalCoreSamples.some((sample) => !/^https:\/\//.test(sample.sourceUrl))) errors.push("Statistical Core needs sample source URLs");
+    const matchesRow = rows.find((row) => row.label === "Matches (N)");
+    if (provenance && (Number(matchesRow?.home) !== provenance.home.matches || Number(matchesRow?.away) !== provenance.away.matches)) errors.push("Statistical Core match counts differ from provenance");
     if (!/^FOOTBALL\/[\w-]+\.md$/.test(preserved.packagePath) || !/^[a-f0-9]{64}$/.test(preserved.sha256)) errors.push("preserved source identity is invalid");
     if (prediction.analysisFormat !== "markdown") errors.push("preserved analysis must use Markdown");
-    if (occurrences(markdown, /^## Statistical Core\s*$/gim) !== 1 || !/^\|[^\n]+\|$/m.test(markdown)) errors.push("original Statistical Core must occur once with table rows");
     if (!markdown.includes(prediction.picks.main)) errors.push("preserved pick differs from the supplied article");
     const suppliedOdds = Number(markdown.match(/^\*\*Published odds \(user-supplied\):\*\*\s*([\d.]+)/im)?.[1]);
     if (!Number.isFinite(suppliedOdds) || suppliedOdds !== prediction.picks.publishedOdds) errors.push("preserved odds differ from the supplied article");

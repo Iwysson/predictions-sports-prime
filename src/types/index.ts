@@ -236,7 +236,7 @@ export type EditorialPrediction = {
   sources?: EditorialSource[];
   // Explicit author-text preservation for the October 22 import. The source Markdown is kept
   // byte-for-byte apart from its trailing newline; the editorial audit checks its checksum.
-  preservedSource?: { packageId: "2026-10-22-36"; packagePath: string; checksum: string; sha256: string };
+  preservedSource?: { packageId: "2026-10-22-36"; packagePath: string; checksum: string; sha256: string; bodyChecksum?: string; matchAnalysisChecksum?: string };
 
   statisticalCoreProvenance?: {
     season: string;

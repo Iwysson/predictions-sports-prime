@@ -28,11 +28,16 @@ for (const row of rows) {
     assert.equal(prediction.predictionAccess, tier);
     assert.equal(prediction.picks.main, row.pick);
     assert.equal(prediction.picks.publishedOdds, row.odds);
-    assert.equal(hash(prediction.analysis[0]), row.sha256, `${row.slug}: intact Markdown`);
+    // The author's season table was merged into the single Core at the end; everything else stays as supplied.
+    assert.equal(prediction.analysis.length, 1, `${row.slug}: one analysis block`);
+    const [body, core = ''] = prediction.analysis[0].split(/\n\n(?=### Statistical Core Predictions-Sports-Prime\n)/);
+    assert.equal(hash(body), row.bodySha256, `${row.slug}: intact author body`);
+    const analysisStart = body.indexOf('## Match Analysis\n');
+    assert.equal(hash(body.slice(analysisStart, body.indexOf('\n## ', analysisStart + 5))), row.matchAnalysisSha256, `${row.slug}: intact Match Analysis paragraphs`);
+    assert.equal((prediction.analysis[0].match(/^#{1,6} Statistical Core\b/gm) ?? []).length, 1, `${row.slug}: exactly one Statistical Core section`);
+    assert.match(core, /^### Statistical Core Predictions-Sports-Prime\n\n(?:\|[^\n]*\|\n?)+$/, `${row.slug}: Core is one table at the end`);
     assert.equal(prediction.preservedSource?.sha256, row.sha256);
     assert.equal(prediction.preservedSource?.packagePath, row.source);
-    assert.equal(prediction.analysis.length, 2, `${row.slug}: author Markdown plus one added Statistical Core block`);
-    assert.match(prediction.analysis[1], /^### Statistical Core Predictions-Sports-Prime$/m, `${row.slug}: added Core heading`);
     assert.equal(prediction.statisticalCoreProvenance?.home.sampleType, 'home');
     assert.equal(prediction.statisticalCoreProvenance?.away.sampleType, 'away');
     continue;

@@ -335,7 +335,9 @@
       "odds": 1.97,
       "access": "PRIME VIP",
       "source": "FOOTBALL/01_cruzeiro-vs-remo.md",
-      "sha256": "f651c933250899a3f25082bde0af48e3b3c8cd6d1be7b3a09908c9054bd1a845"
+      "sha256": "f651c933250899a3f25082bde0af48e3b3c8cd6d1be7b3a09908c9054bd1a845",
+      "matchAnalysisSha256": "531b64590788806f1e435ab0e61d469249c27f9a707e2ae2de5aa62c350d0581",
+      "bodySha256": "5e8039eec1e0d8cb9b057e0c7aa326dc1fd5a204583d7b2597078ba3f812d86c"
     },
     {
       "sport": "FOOTBALL",
@@ -347,7 +349,9 @@
       "odds": 1.67,
       "access": "FREE",
       "source": "FOOTBALL/02_deportivo-alaves-vs-malaga.md",
-      "sha256": "ee90c84e92ac02b9d4bb58a37d233bdc3e3e5cece6153869a64824f467e1a007"
+      "sha256": "ee90c84e92ac02b9d4bb58a37d233bdc3e3e5cece6153869a64824f467e1a007",
+      "matchAnalysisSha256": "5134ade507eb79d160212c55c3635638b5086e794e84f120322457d10ee6b74a",
+      "bodySha256": "1311e1adcd6163c09b604919ed6dbc9d44cee45082c4bd6612317740cfb70c61"
     },
     {
       "sport": "FOOTBALL",
@@ -359,7 +363,9 @@
       "odds": 1.73,
       "access": "PRIME VIP",
       "source": "FOOTBALL/03_ipswich-town-vs-nottingham-forest.md",
-      "sha256": "e7e40b448e97825d5cb7599de057d103e74f2bcf90aae73c6605eb0720e65fbb"
+      "sha256": "e7e40b448e97825d5cb7599de057d103e74f2bcf90aae73c6605eb0720e65fbb",
+      "matchAnalysisSha256": "09b7c25079df1f7cfbc010fd96b738715077b14f51c4ad6c6b6c40dd4759a293",
+      "bodySha256": "0b9e996a3989c0889252061107b9ee38d3143fbf971bdab747aac44812b556c5"
     },
     {
       "sport": "FOOTBALL",
@@ -371,7 +377,9 @@
       "odds": 1.4,
       "access": "FREE",
       "source": "FOOTBALL/04_vfb-stuttgart-vs-borussia-monchengladbach.md",
-      "sha256": "0c414afd3efd119e61a29ef250a3649417484de5da4ca13ca2ebffe185dadbbd"
+      "sha256": "0c414afd3efd119e61a29ef250a3649417484de5da4ca13ca2ebffe185dadbbd",
+      "matchAnalysisSha256": "b520d7871a28a6764714808a179dcb38b105aa313700f3510b9b8be756d9f9f9",
+      "bodySha256": "26c6cfc66091eeae3cf9ae4552f838bc2f7740639fd5e08273324e07709c756b"
     },
     {
       "sport": "FOOTBALL",
@@ -383,7 +391,9 @@
       "odds": 1.75,
       "access": "PRIME VIP",
       "source": "FOOTBALL/05_torino-vs-monza.md",
-      "sha256": "d823fbc96272e273683480f8e9262de8d7260c9474309142420936eb1a3786fc"
+      "sha256": "d823fbc96272e273683480f8e9262de8d7260c9474309142420936eb1a3786fc",
+      "matchAnalysisSha256": "5b2b0423a03e04e54c5413d7e5835db058ca06d938b00901b5652e2493d1bcdb",
+      "bodySha256": "3f8d46f87dbd67dfbcfd3eac05c369710b09c84b3896ce446a9a29b32e898d81"
     },
     {
       "sport": "FOOTBALL",
@@ -395,7 +405,9 @@
       "odds": 1.71,
       "access": "FREE",
       "source": "FOOTBALL/06_brest-vs-nice.md",
-      "sha256": "d6122711a9801b322b8491ab6bf1c27bcbf1607f826ee1c08cd959506d5076e2"
+      "sha256": "d6122711a9801b322b8491ab6bf1c27bcbf1607f826ee1c08cd959506d5076e2",
+      "matchAnalysisSha256": "782cdee7f2a6fe5cf06d9c75cb8759ecca0d7d841403083d2cf1f78396623548",
+      "bodySha256": "48a2f43b5cb1c4e56837bcb8d60a2282cb7f3f6a34d0d0bd7e4ec373c0f3123a"
     },
     {
       "sport": "FOOTBALL",
@@ -407,7 +419,9 @@
       "odds": 1.6,
       "access": "FREE",
       "source": "FOOTBALL/07_go-ahead-eagles-vs-telstar.md",
-      "sha256": "4e46a56f7337b344e3615e9c570148b81a03a37f269587c81567987b143da59f"
+      "sha256": "4e46a56f7337b344e3615e9c570148b81a03a37f269587c81567987b143da59f",
+      "matchAnalysisSha256": "9d5060685ef639ca25b6978d19c7db66df5afbfcb0e37c2746a92045595bc8b9",
+      "bodySha256": "75cbf546c0ff0c92a9522a0c99fd70024b0cedd676bc74be8cd9e03e0e9f33fe"
     },
     {
       "sport": "FOOTBALL",
@@ -419,7 +433,9 @@
       "odds": 1.67,
       "access": "PRIME VIP",
       "source": "FOOTBALL/08_vitoria-guimaraes-vs-maritimo.md",
-      "sha256": "5bcbf9377f0fb26442c45daefbbe620eefbd38acbdd6986d8df94deb678a9dc1"
+      "sha256": "5bcbf9377f0fb26442c45daefbbe620eefbd38acbdd6986d8df94deb678a9dc1",
+      "matchAnalysisSha256": "5fffcb626280ae34128b12f5aa21050e2bec5083a7499984495210feeda77e18",
+      "bodySha256": "5a62f68fb875c5fa57b039673caa14dcb60db35653e6c59eb8bf03d68de0c8dc"
     },
     {
       "sport": "FOOTBALL",
@@ -431,7 +447,9 @@
       "odds": 1.7,
       "access": "PRIME VIP",
       "source": "FOOTBALL/09_alanyaspor-vs-kocaelispor.md",
-      "sha256": "628f03d51273d643dd2d4f5df7e1105738bbc5de85997fe5dd42ed1e1ac7764c"
+      "sha256": "628f03d51273d643dd2d4f5df7e1105738bbc5de85997fe5dd42ed1e1ac7764c",
+      "matchAnalysisSha256": "537500a4f60e3d8cb789a763b26b36bc0f81eac0abb29d354f6c5d39e75143dd",
+      "bodySha256": "f40e328ab2e49def23cb0a47feaa9d48c04b5e5300d018bdeaba4bac5908ced1"
     }
   ]
 }
