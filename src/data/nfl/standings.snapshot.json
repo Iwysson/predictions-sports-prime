@@ -1,7 +1,7 @@
 {
   "version": 1,
   "season": 2026,
-  "generatedAt": "2026-10-20T11:32:45.317Z",
+  "generatedAt": "2026-10-23T04:45:56.521Z",
   "source": "ESPN public standings feed",
   "sourceUrl": "https://site.api.espn.com/apis/v2/sports/football/nfl/standings?region=us&lang=en&contentorigin=espn&type=2&level=2&sort=playoffseed%3Aasc&season=2026",
   "seasonPhase": "regular",
@@ -43,7 +43,7 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "ne",
+      "teamId": "den",
       "wins": 4,
       "losses": 2,
       "ties": 0,
@@ -52,7 +52,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "den",
+      "teamId": "pit",
       "wins": 4,
       "losses": 2,
       "ties": 0,
@@ -61,7 +61,7 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "pit",
+      "teamId": "bal",
       "wins": 4,
       "losses": 2,
       "ties": 0,
@@ -70,20 +70,20 @@
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "bal",
-      "wins": 4,
-      "losses": 2,
-      "ties": 0,
-      "winPct": 0.6666667,
-      "conferenceRank": 8,
-      "playoffStatus": "none"
-    },
-    {
       "teamId": "cin",
       "wins": 3,
       "losses": 2,
       "ties": 0,
       "winPct": 0.6,
+      "conferenceRank": 8,
+      "playoffStatus": "none"
+    },
+    {
+      "teamId": "ne",
+      "wins": 4,
+      "losses": 3,
+      "ties": 0,
+      "winPct": 0.5714286,
       "conferenceRank": 9,
       "playoffStatus": "none"
     },
@@ -187,16 +187,16 @@
       "playoffStatus": "in-playoff-position"
     },
     {
-      "teamId": "gb",
-      "wins": 4,
+      "teamId": "chi",
+      "wins": 5,
       "losses": 2,
       "ties": 0,
-      "winPct": 0.6666667,
+      "winPct": 0.71428573,
       "conferenceRank": 5,
       "playoffStatus": "wild-card"
     },
     {
-      "teamId": "chi",
+      "teamId": "gb",
       "wins": 4,
       "losses": 2,
       "ties": 0,
