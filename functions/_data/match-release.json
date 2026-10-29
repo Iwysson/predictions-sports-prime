@@ -9,6 +9,21 @@
     "date": "2026-10-18"
   },
   {
+    "slug": "atletico-mg-vs-cruzeiro",
+    "date": "2026-10-29",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "vasco-vs-flamengo",
+    "date": "2026-10-29",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "gremio-vs-athletico-pr",
+    "date": "2026-10-29",
+    "timezone": "America/New_York"
+  },
+  {
     "slug": "cruzeiro-vs-remo",
     "date": "2026-10-23",
     "timezone": "America/New_York"
@@ -486,6 +501,16 @@
   {
     "slug": "ipswich-town-vs-nottingham-forest",
     "date": "2026-10-23",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "frosinone-vs-lecce",
+    "date": "2026-10-29",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "fiorentina-vs-atalanta",
+    "date": "2026-10-29",
     "timezone": "America/New_York"
   },
   {
