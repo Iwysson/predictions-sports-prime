@@ -2,7 +2,6 @@
 //  - the only PRIME VIP price is $19.99/month: no struck-through legacy price, no fake 24h promotion timer, no trial promo;
 //  - the cookie policy describes Google Analytics as it actually behaves (tag may load, analytics_storage starts denied);
 //  - the track record states its scope instead of claiming a lifetime / "all settled" record;
-//  - NHL and NFL cards use their own sport vocabulary (no "Kick-off" on NHL, no "Match Analysis" on either).
 // Run: npx tsx scripts/test-site-copy-consistency.mts
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
@@ -42,14 +41,4 @@ check("cookie policy limits persistent cookies to after consent", /Persistent an
 const trackRecord = text("src/components/FootballTrackRecord.tsx");
 check("football track record does not claim 'all settled' predictions", !/across all settled/i.test(trackRecord) && !/Overall Track Record/.test(trackRecord));
 check("football track record states a snapshot scope, not lifetime", /not a lifetime or all-time record/.test(trackRecord));
-check("NHL track record states a snapshot scope, not lifetime", /not a lifetime or all-time record/.test(text("src/components/NhlResultsSummary.tsx")));
-
-const nhl = text("src/components/NhlToday.tsx");
-check("NHL cards do not use 'Kick-off'", !/kick-?off/i.test(nhl));
-check("NHL cards label the analysis 'Game analysis'", /Game analysis/.test(nhl));
-const nfl = text("src/components/NflWeek.tsx");
-check("NFL cards label the analysis 'Game analysis'", /Game analysis/.test(nfl));
-check("NHL/NFL cards do not use 'Match Analysis'", !/Match Analysis/i.test(nhl + nfl));
-check("NFL hub has a single H1 source", (text("src/components/NFLPage.tsx").match(/<h1>/g)?.length ?? 0) + (text("src/components/NflWeek.tsx").match(/<h1>/g)?.length ?? 0) <= 1);
-
 process.exit(failures === 0 ? 0 : 1);

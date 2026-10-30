@@ -1,6 +1,246 @@
 {
-  "generatedAt": "2026-10-22T22:49:55.963Z",
+  "generatedAt": "2026-10-30T10:14:39.820Z",
   "records": [
+    {
+      "slug": "atletico-mg-vs-cruzeiro",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Atlético-MG",
+      "awayTeam": "Cruzeiro",
+      "date": "2026-10-29",
+      "prediction": "Atlético Mineiro or Draw (1X) + Under 4.5 Total Goals",
+      "odds": 1.74,
+      "result": "red"
+    },
+    {
+      "slug": "gremio-vs-athletico-pr",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Grêmio",
+      "awayTeam": "Athletico-PR",
+      "date": "2026-10-29",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.91,
+      "result": "red"
+    },
+    {
+      "slug": "vasco-vs-flamengo",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Vasco",
+      "awayTeam": "Flamengo",
+      "date": "2026-10-29",
+      "prediction": "Flamengo or Draw (X2) + Over 1.5 Total Goals",
+      "odds": 1.65,
+      "result": "green"
+    },
+    {
+      "slug": "fiorentina-vs-atalanta",
+      "league": "serie-a",
+      "homeTeam": "Fiorentina",
+      "awayTeam": "Atalanta",
+      "date": "2026-10-29",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.6,
+      "result": "green"
+    },
+    {
+      "slug": "frosinone-vs-lecce",
+      "league": "serie-a",
+      "homeTeam": "Frosinone",
+      "awayTeam": "Lecce",
+      "date": "2026-10-29",
+      "prediction": "Frosinone or Draw (1X) + Under 4.5 Total Goals",
+      "odds": 1.7,
+      "result": "red"
+    },
+    {
+      "slug": "cruzeiro-vs-remo",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Cruzeiro",
+      "awayTeam": "Remo",
+      "date": "2026-10-23",
+      "prediction": "Cruzeiro -1.5 (win by 2+ goals)",
+      "odds": 1.97,
+      "result": "red"
+    },
+    {
+      "slug": "vfb-stuttgart-vs-borussia-monchengladbach",
+      "league": "bundesliga",
+      "homeTeam": "VfB Stuttgart",
+      "awayTeam": "Borussia Mönchengladbach",
+      "date": "2026-10-23",
+      "prediction": "VfB Stuttgart to win (90 minutes)",
+      "odds": 1.4,
+      "result": "red"
+    },
+    {
+      "slug": "go-ahead-eagles-vs-telstar",
+      "league": "eredivisie",
+      "homeTeam": "Go Ahead Eagles",
+      "awayTeam": "SC Telstar",
+      "date": "2026-10-23",
+      "prediction": "Go Ahead Eagles to win (90 minutes)",
+      "odds": 1.6,
+      "result": "green"
+    },
+    {
+      "slug": "deportivo-alaves-vs-malaga",
+      "league": "la-liga",
+      "homeTeam": "Deportivo Alavés",
+      "awayTeam": "Málaga CF",
+      "date": "2026-10-23",
+      "prediction": "Deportivo Alavés to win (90 minutes)",
+      "odds": 1.67,
+      "result": "red"
+    },
+    {
+      "slug": "vitoria-guimaraes-vs-maritimo",
+      "league": "liga-portugal",
+      "homeTeam": "Vitória SC",
+      "awayTeam": "CS Marítimo",
+      "date": "2026-10-23",
+      "prediction": "Vitória SC to win (90 minutes)",
+      "odds": 1.67,
+      "result": "green"
+    },
+    {
+      "slug": "brest-vs-nice",
+      "league": "ligue-1",
+      "homeTeam": "Brest",
+      "awayTeam": "Nice",
+      "date": "2026-10-23",
+      "prediction": "Over 2.5 total goals",
+      "odds": 1.71,
+      "result": "green"
+    },
+    {
+      "slug": "ipswich-town-vs-nottingham-forest",
+      "league": "premier-league",
+      "homeTeam": "Ipswich Town",
+      "awayTeam": "Nottingham Forest",
+      "date": "2026-10-23",
+      "prediction": "Nottingham Forest or Draw (X2) + Over 1.5 total goals",
+      "odds": 1.73,
+      "result": "green"
+    },
+    {
+      "slug": "torino-vs-monza",
+      "league": "serie-a",
+      "homeTeam": "Torino",
+      "awayTeam": "Monza",
+      "date": "2026-10-23",
+      "prediction": "Torino or Draw (1X) + Over 1.5 total goals",
+      "odds": 1.75,
+      "result": "green"
+    },
+    {
+      "slug": "alanyaspor-vs-kocaelispor",
+      "league": "super-lig",
+      "homeTeam": "Alanyaspor",
+      "awayTeam": "Kocaelispor",
+      "date": "2026-10-23",
+      "prediction": "Alanyaspor or Draw (1X) + Over 1.5 total goals",
+      "odds": 1.7,
+      "result": "red"
+    },
+    {
+      "slug": "flamengo-vs-estudiantes-combined",
+      "league": "copa-libertadores",
+      "homeTeam": "Flamengo",
+      "awayTeam": "Estudiantes",
+      "date": "2026-10-22",
+      "prediction": "Flamengo to win + Over 1.5 total goals",
+      "odds": 1.74,
+      "result": "red"
+    },
+    {
+      "slug": "ararat-armenia-vs-az-alkmaar",
+      "league": "uefa-europa-league",
+      "homeTeam": "Ararat-Armenia",
+      "awayTeam": "AZ Alkmaar",
+      "date": "2026-10-22",
+      "prediction": "Over 2.5 total goals",
+      "odds": 1.57,
+      "result": "green"
+    },
+    {
+      "slug": "besiktas-vs-crystal-palace",
+      "league": "uefa-europa-league",
+      "homeTeam": "Besiktas",
+      "awayTeam": "Crystal Palace",
+      "date": "2026-10-22",
+      "prediction": "Beşiktaş to win",
+      "odds": 2.15,
+      "result": "red"
+    },
+    {
+      "slug": "bournemouth-vs-milan",
+      "league": "uefa-europa-league",
+      "homeTeam": "Bournemouth",
+      "awayTeam": "Milan",
+      "date": "2026-10-22",
+      "prediction": "Bournemouth to win",
+      "odds": 2,
+      "result": "green"
+    },
+    {
+      "slug": "celje-vs-salzburg",
+      "league": "uefa-europa-league",
+      "homeTeam": "Celje",
+      "awayTeam": "Salzburg",
+      "date": "2026-10-22",
+      "prediction": "Over 2.5 total goals",
+      "odds": 1.61,
+      "result": "green"
+    },
+    {
+      "slug": "celtic-vs-celta",
+      "league": "uefa-europa-league",
+      "homeTeam": "Celtic",
+      "awayTeam": "Celta",
+      "date": "2026-10-22",
+      "prediction": "Celtic or Draw (1X) + Over 1.5 total goals",
+      "odds": 2,
+      "result": "red"
+    },
+    {
+      "slug": "dinamo-zagreb-vs-nec-nijmegen",
+      "league": "uefa-europa-league",
+      "homeTeam": "Dinamo Zagreb",
+      "awayTeam": "NEC Nijmegen",
+      "date": "2026-10-22",
+      "prediction": "Over 2.5 total goals",
+      "odds": 1.6,
+      "result": "green"
+    },
+    {
+      "slug": "ferencvaros-vs-torreense",
+      "league": "uefa-europa-league",
+      "homeTeam": "Ferencvaros",
+      "awayTeam": "Torreense",
+      "date": "2026-10-22",
+      "prediction": "Ferencváros to win + Over 1.5 total goals",
+      "odds": 1.6,
+      "result": "green"
+    },
+    {
+      "slug": "hoffenheim-vs-lyon",
+      "league": "uefa-europa-league",
+      "homeTeam": "Hoffenheim",
+      "awayTeam": "Lyon",
+      "date": "2026-10-22",
+      "prediction": "Hoffenheim or Draw (1X) + Over 1.5 total goals",
+      "odds": 1.6,
+      "result": "green"
+    },
+    {
+      "slug": "jagiellonia-vs-anderlecht",
+      "league": "uefa-europa-league",
+      "homeTeam": "Jagiellonia",
+      "awayTeam": "Anderlecht",
+      "date": "2026-10-22",
+      "prediction": "Jagiellonia or Draw (1X)",
+      "odds": 1.68,
+      "result": "red"
+    },
     {
       "slug": "juventus-vs-rennes",
       "league": "uefa-europa-league",
@@ -22,6 +262,206 @@
       "result": "red"
     },
     {
+      "slug": "lillestrom-vs-real-sociedad",
+      "league": "uefa-europa-league",
+      "homeTeam": "Lillestrom",
+      "awayTeam": "Real Sociedad",
+      "date": "2026-10-22",
+      "prediction": "Over 2.5 total goals",
+      "odds": 1.67,
+      "result": "green"
+    },
+    {
+      "slug": "ofi-crete-vs-leverkusen",
+      "league": "uefa-europa-league",
+      "homeTeam": "OFI Crete",
+      "awayTeam": "Leverkusen",
+      "date": "2026-10-22",
+      "prediction": "Leverkusen -1.5 handicap",
+      "odds": 1.6,
+      "result": "green"
+    },
+    {
+      "slug": "olympiacos-vs-sparta-praha",
+      "league": "uefa-europa-league",
+      "homeTeam": "Olympiacos",
+      "awayTeam": "Sparta Praha",
+      "date": "2026-10-22",
+      "prediction": "Olympiacos to win",
+      "odds": 1.52,
+      "result": "green"
+    },
+    {
+      "slug": "omonia-vs-benfica",
+      "league": "uefa-europa-league",
+      "homeTeam": "Omonia",
+      "awayTeam": "Benfica",
+      "date": "2026-10-22",
+      "prediction": "Over 2.5 total goals",
+      "odds": 1.6,
+      "result": "green"
+    },
+    {
+      "slug": "sturm-graz-vs-marseille",
+      "league": "uefa-europa-league",
+      "homeTeam": "Sturm Graz",
+      "awayTeam": "Marseille",
+      "date": "2026-10-22",
+      "prediction": "Over 2.5 total goals",
+      "odds": 1.7,
+      "result": "red"
+    },
+    {
+      "slug": "union-sg-vs-hapoel-beer-sheva",
+      "league": "uefa-europa-league",
+      "homeTeam": "Union SG",
+      "awayTeam": "Hapoel Beer-Sheva",
+      "date": "2026-10-22",
+      "prediction": "Union SG to win + Over 1.5 total goals",
+      "odds": 1.8,
+      "result": "green"
+    },
+    {
+      "slug": "viktoria-plzen-vs-levski-sofia",
+      "league": "uefa-europa-league",
+      "homeTeam": "Viktoria Plzen",
+      "awayTeam": "Levski Sofia",
+      "date": "2026-10-22",
+      "prediction": "Viktoria Plzeň or Draw (1X) + Over 1.5 total goals",
+      "odds": 1.6,
+      "result": "red"
+    },
+    {
+      "slug": "aston-villa-vs-viking",
+      "league": "champions-league",
+      "homeTeam": "Aston Villa",
+      "awayTeam": "Viking",
+      "date": "2026-10-21",
+      "prediction": "Aston Villa to win + Over 2.5 total goals",
+      "odds": 1.55,
+      "result": "green"
+    },
+    {
+      "slug": "bayern-munich-vs-arsenal",
+      "league": "champions-league",
+      "homeTeam": "Bayern Munich",
+      "awayTeam": "Arsenal",
+      "date": "2026-10-21",
+      "prediction": "Bayern Munich or Draw (1X) + Over 1.5 total goals",
+      "odds": 1.65,
+      "result": "green"
+    },
+    {
+      "slug": "club-brugge-vs-lens",
+      "league": "champions-league",
+      "homeTeam": "Club Brugge",
+      "awayTeam": "Lens",
+      "date": "2026-10-21",
+      "prediction": "Under 4.5 total goals + Over 7.5 total corners",
+      "odds": 1.7,
+      "result": "red"
+    },
+    {
+      "slug": "como-vs-manchester-united",
+      "league": "champions-league",
+      "homeTeam": "Como",
+      "awayTeam": "Manchester United",
+      "date": "2026-10-21",
+      "prediction": "Over 2.5 total goals",
+      "odds": 1.53,
+      "result": "green"
+    },
+    {
+      "slug": "inter-vs-shakhtar-donetsk",
+      "league": "champions-league",
+      "homeTeam": "Inter",
+      "awayTeam": "Shakhtar Donetsk",
+      "date": "2026-10-21",
+      "prediction": "Over 3.5 total goals",
+      "odds": 1.8,
+      "result": "red"
+    },
+    {
+      "slug": "lille-vs-galatasaray",
+      "league": "champions-league",
+      "homeTeam": "Lille",
+      "awayTeam": "Galatasaray",
+      "date": "2026-10-21",
+      "prediction": "Over 2.5 total goals",
+      "odds": 1.7,
+      "result": "green"
+    },
+    {
+      "slug": "real-betis-vs-feyenoord",
+      "league": "champions-league",
+      "homeTeam": "Real Betis",
+      "awayTeam": "Feyenoord",
+      "date": "2026-10-21",
+      "prediction": "Real Betis to win (90-minute moneyline)",
+      "odds": 1.64,
+      "result": "green"
+    },
+    {
+      "slug": "real-madrid-vs-rb-leipzig",
+      "league": "champions-league",
+      "homeTeam": "Real Madrid",
+      "awayTeam": "RB Leipzig",
+      "date": "2026-10-21",
+      "prediction": "Real Madrid -1.5 Asian handicap (win by 2+ goals)",
+      "odds": 1.57,
+      "result": "green"
+    },
+    {
+      "slug": "sporting-cp-vs-lask",
+      "league": "champions-league",
+      "homeTeam": "Sporting CP",
+      "awayTeam": "LASK",
+      "date": "2026-10-21",
+      "prediction": "Sporting CP -1.5 Asian handicap (win by 2+ goals)",
+      "odds": 1.65,
+      "result": "red"
+    },
+    {
+      "slug": "palmeiras-vs-fluminense",
+      "league": "copa-libertadores",
+      "homeTeam": "Palmeiras",
+      "awayTeam": "Fluminense",
+      "date": "2026-10-21",
+      "prediction": "Palmeiras or Draw (1X) + Over 1.5 Total Goals",
+      "odds": 1.71,
+      "result": "red"
+    },
+    {
+      "slug": "montevideo-city-torque-vs-atletico-mg",
+      "league": "copa-sudamericana",
+      "homeTeam": "Montevideo City Torque",
+      "awayTeam": "Atlético-MG",
+      "date": "2026-10-21",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.91,
+      "result": "red"
+    },
+    {
+      "slug": "fc-cincinnati-vs-d-c-united",
+      "league": "mls",
+      "homeTeam": "FC Cincinnati",
+      "awayTeam": "D.C. United",
+      "date": "2026-10-21",
+      "prediction": "FC Cincinnati or Draw (1X) + Under 4.5 Goals",
+      "odds": 1.9,
+      "result": "green"
+    },
+    {
+      "slug": "fenerbahce-vs-slavia-praha",
+      "league": "champions-league",
+      "homeTeam": "Fenerbahce",
+      "awayTeam": "Slavia Praha",
+      "date": "2026-10-20",
+      "prediction": "Fenerbahce to Win",
+      "odds": 1.68,
+      "result": "red"
+    },
+    {
       "slug": "liverpool-vs-villarreal",
       "league": "champions-league",
       "homeTeam": "Liverpool",
@@ -29,6 +469,16 @@
       "date": "2026-10-20",
       "prediction": "Liverpool to Win",
       "odds": 1.48,
+      "result": "green"
+    },
+    {
+      "slug": "manchester-city-vs-aek-athens",
+      "league": "champions-league",
+      "homeTeam": "Manchester City",
+      "awayTeam": "AEK Athens",
+      "date": "2026-10-20",
+      "prediction": "Manchester City -2.5 Goals Handicap",
+      "odds": 1.75,
       "result": "green"
     },
     {
@@ -52,6 +502,16 @@
       "result": "red"
     },
     {
+      "slug": "psg-vs-barcelona",
+      "league": "champions-league",
+      "homeTeam": "Paris Saint-Germain",
+      "awayTeam": "Barcelona",
+      "date": "2026-10-20",
+      "prediction": "PSG or Draw (Double Chance)",
+      "odds": 1.57,
+      "result": "green"
+    },
+    {
       "slug": "roma-vs-slovan-bratislava",
       "league": "champions-league",
       "homeTeam": "Roma",
@@ -60,6 +520,46 @@
       "prediction": "Roma -2.0 Asian Handicap",
       "odds": 1.7,
       "result": "green"
+    },
+    {
+      "slug": "sabah-vs-borussia-dortmund",
+      "league": "champions-league",
+      "homeTeam": "Sabah",
+      "awayTeam": "Borussia Dortmund",
+      "date": "2026-10-20",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.42,
+      "result": "green"
+    },
+    {
+      "slug": "stuttgart-vs-atletico-madrid",
+      "league": "champions-league",
+      "homeTeam": "Stuttgart",
+      "awayTeam": "Atlético de Madrid",
+      "date": "2026-10-20",
+      "prediction": "Stuttgart or Draw (Double Chance)",
+      "odds": 1.76,
+      "result": "green"
+    },
+    {
+      "slug": "vasco-da-gama-vs-boca-juniors",
+      "league": "copa-sudamericana",
+      "homeTeam": "Vasco da Gama",
+      "awayTeam": "Boca Juniors",
+      "date": "2026-10-20",
+      "prediction": "Over 1.5 Total Goals",
+      "odds": 1.45,
+      "result": "green"
+    },
+    {
+      "slug": "corinthians-vs-vitoria",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Corinthians",
+      "awayTeam": "Vitória",
+      "date": "2026-10-19",
+      "prediction": "Corinthians Win",
+      "odds": 1.73,
+      "result": "red"
     },
     {
       "slug": "getafe-vs-rayo-vallecano",
@@ -72,6 +572,16 @@
       "result": "green"
     },
     {
+      "slug": "braga-vs-gil-vicente",
+      "league": "liga-portugal",
+      "homeTeam": "Braga",
+      "awayTeam": "Gil Vicente",
+      "date": "2026-10-19",
+      "prediction": "Over 1.5 Total Goals + Over 7.5 Total Corners (same-game combination)",
+      "odds": 1.71,
+      "result": "red"
+    },
+    {
       "slug": "tottenham-hotspur-vs-coventry-city",
       "league": "premier-league",
       "homeTeam": "Tottenham Hotspur",
@@ -82,22 +592,22 @@
       "result": "green"
     },
     {
-      "slug": "parma-vs-torino",
-      "league": "serie-a",
-      "homeTeam": "Parma",
-      "awayTeam": "Torino",
-      "date": "2026-10-19",
-      "prediction": "Over 1.5 Goals + Over 6.5 Corners",
-      "odds": 1.74,
-      "result": "green"
-    },
-    {
       "slug": "monza-vs-cagliari",
       "league": "serie-a",
       "homeTeam": "Monza",
       "awayTeam": "Cagliari",
       "date": "2026-10-19",
       "prediction": "Monza or Draw (1X) + Over 7.5 Corners",
+      "odds": 1.74,
+      "result": "green"
+    },
+    {
+      "slug": "parma-vs-torino",
+      "league": "serie-a",
+      "homeTeam": "Parma",
+      "awayTeam": "Torino",
+      "date": "2026-10-19",
+      "prediction": "Over 1.5 Goals + Over 6.5 Corners",
       "odds": 1.74,
       "result": "green"
     },
@@ -122,16 +632,6 @@
       "result": "red"
     },
     {
-      "slug": "remo-vs-red-bull-bragantino",
-      "league": "brasileirao-serie-a",
-      "homeTeam": "Remo",
-      "awayTeam": "Red Bull Bragantino",
-      "date": "2026-10-18",
-      "prediction": "X2 + Over 1.5 Goals",
-      "odds": 1.71,
-      "result": "green"
-    },
-    {
       "slug": "fluminense-vs-santos",
       "league": "brasileirao-serie-a",
       "homeTeam": "Fluminense",
@@ -152,43 +652,23 @@
       "result": "green"
     },
     {
-      "slug": "fc-twente-vs-fc-utrecht",
-      "league": "eredivisie",
-      "homeTeam": "FC Twente",
-      "awayTeam": "FC Utrecht",
+      "slug": "remo-vs-red-bull-bragantino",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Remo",
+      "awayTeam": "Red Bull Bragantino",
       "date": "2026-10-18",
-      "prediction": "Over 3.5 Goals",
-      "odds": 1.81,
-      "result": "red"
-    },
-    {
-      "slug": "real-madrid-vs-sevilla",
-      "league": "la-liga",
-      "homeTeam": "Real Madrid",
-      "awayTeam": "Sevilla",
-      "date": "2026-10-18",
-      "prediction": "Real Madrid -1.5 Asian Handicap",
-      "odds": 1.7,
+      "prediction": "X2 + Over 1.5 Goals",
+      "odds": 1.71,
       "result": "green"
     },
     {
-      "slug": "lyon-vs-nice",
-      "league": "ligue-1",
-      "homeTeam": "Lyon",
-      "awayTeam": "Nice",
+      "slug": "bayer-leverkusen-vs-freiburg",
+      "league": "bundesliga",
+      "homeTeam": "Bayer Leverkusen",
+      "awayTeam": "Freiburg",
       "date": "2026-10-18",
-      "prediction": "Lyon to Win",
-      "odds": 1.67,
-      "result": "green"
-    },
-    {
-      "slug": "juventus-vs-lazio",
-      "league": "serie-a",
-      "homeTeam": "Juventus",
-      "awayTeam": "Lazio",
-      "date": "2026-10-18",
-      "prediction": "Over 1.5 Goals + Over 7.5 Corners",
-      "odds": 1.6,
+      "prediction": "Bayer Leverkusen to Win",
+      "odds": 1.71,
       "result": "green"
     },
     {
@@ -202,6 +682,126 @@
       "result": "green"
     },
     {
+      "slug": "molde-vs-start",
+      "league": "eliteserien",
+      "homeTeam": "Molde",
+      "awayTeam": "Start",
+      "date": "2026-10-18",
+      "prediction": "Molde Win + Over 2.5 Goals",
+      "odds": 1.62,
+      "result": "green"
+    },
+    {
+      "slug": "sandefjord-vs-lillestr-m",
+      "league": "eliteserien",
+      "homeTeam": "Sandefjord",
+      "awayTeam": "Lillestrøm",
+      "date": "2026-10-18",
+      "prediction": "X2 + Over 1.5 Goals",
+      "odds": 1.78,
+      "result": "green"
+    },
+    {
+      "slug": "sarpsborg-08-vs-rosenborg",
+      "league": "eliteserien",
+      "homeTeam": "Sarpsborg 08",
+      "awayTeam": "Rosenborg",
+      "date": "2026-10-18",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.48,
+      "result": "green"
+    },
+    {
+      "slug": "troms-vs-kfum-oslo",
+      "league": "eliteserien",
+      "homeTeam": "Tromsø",
+      "awayTeam": "KFUM Oslo",
+      "date": "2026-10-18",
+      "prediction": "Tromsø Win",
+      "odds": 1.53,
+      "result": "red"
+    },
+    {
+      "slug": "valerenga-vs-brann",
+      "league": "eliteserien",
+      "homeTeam": "Vålerenga",
+      "awayTeam": "Brann",
+      "date": "2026-10-18",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.4,
+      "result": "green"
+    },
+    {
+      "slug": "fc-groningen-vs-ajax",
+      "league": "eredivisie",
+      "homeTeam": "FC Groningen",
+      "awayTeam": "Ajax",
+      "date": "2026-10-18",
+      "prediction": "Over 3.5 Goals",
+      "odds": 1.89,
+      "result": "green"
+    },
+    {
+      "slug": "fc-twente-vs-fc-utrecht",
+      "league": "eredivisie",
+      "homeTeam": "FC Twente",
+      "awayTeam": "FC Utrecht",
+      "date": "2026-10-18",
+      "prediction": "Over 3.5 Goals",
+      "odds": 1.81,
+      "result": "red"
+    },
+    {
+      "slug": "nec-nijmegen-vs-fortuna-sittard",
+      "league": "eredivisie",
+      "homeTeam": "NEC Nijmegen",
+      "awayTeam": "Fortuna Sittard",
+      "date": "2026-10-18",
+      "prediction": "NEC Nijmegen Win",
+      "odds": 1.56,
+      "result": "red"
+    },
+    {
+      "slug": "pec-zwolle-vs-go-ahead-eagles",
+      "league": "eredivisie",
+      "homeTeam": "PEC Zwolle",
+      "awayTeam": "Go Ahead Eagles",
+      "date": "2026-10-18",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.42,
+      "result": "green"
+    },
+    {
+      "slug": "sc-cambuur-vs-az-alkmaar",
+      "league": "eredivisie",
+      "homeTeam": "SC Cambuur",
+      "awayTeam": "AZ Alkmaar",
+      "date": "2026-10-18",
+      "prediction": "AZ Alkmaar Win",
+      "odds": 1.44,
+      "result": "red"
+    },
+    {
+      "slug": "celta-vigo-vs-alaves",
+      "league": "la-liga",
+      "homeTeam": "Celta Vigo",
+      "awayTeam": "Alavés",
+      "date": "2026-10-18",
+      "prediction": "Celta Vigo or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.84,
+      "result": "green"
+    },
+    {
+      "slug": "deportivo-la-coruna-vs-levante",
+      "league": "la-liga",
+      "homeTeam": "Deportivo La Coruña",
+      "awayTeam": "Levante",
+      "date": "2026-10-18",
+      "prediction": "Deportivo or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.7,
+      "result": "green"
+    },
+    {
       "slug": "malaga-vs-real-sociedad",
       "league": "la-liga",
       "homeTeam": "Málaga",
@@ -209,6 +809,36 @@
       "date": "2026-10-18",
       "prediction": "Over 1.5 Goals + Over 7.5 Corners",
       "odds": 1.6,
+      "result": "green"
+    },
+    {
+      "slug": "osasuna-vs-racing-santander",
+      "league": "la-liga",
+      "homeTeam": "Osasuna",
+      "awayTeam": "Racing Santander",
+      "date": "2026-10-18",
+      "prediction": "Under 3.5 Goals",
+      "odds": 1.5,
+      "result": "green"
+    },
+    {
+      "slug": "real-madrid-vs-sevilla",
+      "league": "la-liga",
+      "homeTeam": "Real Madrid",
+      "awayTeam": "Sevilla",
+      "date": "2026-10-18",
+      "prediction": "Real Madrid -1.5 Asian Handicap",
+      "odds": 1.7,
+      "result": "green"
+    },
+    {
+      "slug": "angers-vs-marseille",
+      "league": "ligue-1",
+      "homeTeam": "Angers",
+      "awayTeam": "Marseille",
+      "date": "2026-10-18",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.63,
       "result": "green"
     },
     {
@@ -232,6 +862,16 @@
       "result": "red"
     },
     {
+      "slug": "lyon-vs-nice",
+      "league": "ligue-1",
+      "homeTeam": "Lyon",
+      "awayTeam": "Nice",
+      "date": "2026-10-18",
+      "prediction": "Lyon to Win",
+      "odds": 1.67,
+      "result": "green"
+    },
+    {
       "slug": "paris-fc-vs-rennes",
       "league": "ligue-1",
       "homeTeam": "Paris FC",
@@ -242,74 +882,14 @@
       "result": "green"
     },
     {
-      "slug": "nottingham-forest-vs-arsenal",
-      "league": "premier-league",
-      "homeTeam": "Nottingham Forest",
-      "awayTeam": "Arsenal",
+      "slug": "fc-cincinnati-vs-columbus-crew",
+      "league": "mls",
+      "homeTeam": "FC Cincinnati",
+      "awayTeam": "Columbus Crew",
       "date": "2026-10-18",
-      "prediction": "Arsenal to Win",
-      "odds": 1.61,
-      "result": "green"
-    },
-    {
-      "slug": "ac-milan-vs-atalanta",
-      "league": "serie-a",
-      "homeTeam": "AC Milan",
-      "awayTeam": "Atalanta",
-      "date": "2026-10-18",
-      "prediction": "AC Milan to Win",
-      "odds": 1.84,
-      "result": "green"
-    },
-    {
-      "slug": "bayer-leverkusen-vs-freiburg",
-      "league": "bundesliga",
-      "homeTeam": "Bayer Leverkusen",
-      "awayTeam": "Freiburg",
-      "date": "2026-10-18",
-      "prediction": "Bayer Leverkusen to Win",
-      "odds": 1.71,
-      "result": "green"
-    },
-    {
-      "slug": "fc-groningen-vs-ajax",
-      "league": "eredivisie",
-      "homeTeam": "FC Groningen",
-      "awayTeam": "Ajax",
-      "date": "2026-10-18",
-      "prediction": "Over 3.5 Goals",
-      "odds": 1.89,
-      "result": "green"
-    },
-    {
-      "slug": "celta-vigo-vs-alaves",
-      "league": "la-liga",
-      "homeTeam": "Celta Vigo",
-      "awayTeam": "Alavés",
-      "date": "2026-10-18",
-      "prediction": "Celta Vigo or Draw (1X) + Over 1.5 Goals",
-      "odds": 1.84,
-      "result": "green"
-    },
-    {
-      "slug": "osasuna-vs-racing-santander",
-      "league": "la-liga",
-      "homeTeam": "Osasuna",
-      "awayTeam": "Racing Santander",
-      "date": "2026-10-18",
-      "prediction": "Under 3.5 Goals",
-      "odds": 1.5,
-      "result": "green"
-    },
-    {
-      "slug": "angers-vs-marseille",
-      "league": "ligue-1",
-      "homeTeam": "Angers",
-      "awayTeam": "Marseille",
-      "date": "2026-10-18",
-      "prediction": "Over 2.5 Goals",
-      "odds": 1.63,
-      "result": "green"
+      "prediction": "FC Cincinnati or Draw (1X)",
+      "odds": 1.41,
+      "result": "red"
     },
     {
       "slug": "bournemouth-vs-sunderland",
@@ -342,6 +922,36 @@
       "result": "green"
     },
     {
+      "slug": "nottingham-forest-vs-arsenal",
+      "league": "premier-league",
+      "homeTeam": "Nottingham Forest",
+      "awayTeam": "Arsenal",
+      "date": "2026-10-18",
+      "prediction": "Arsenal to Win",
+      "odds": 1.61,
+      "result": "green"
+    },
+    {
+      "slug": "celtic-vs-hearts",
+      "league": "scottish-premiership",
+      "homeTeam": "Celtic",
+      "awayTeam": "Hearts",
+      "date": "2026-10-18",
+      "prediction": "Celtic to Win",
+      "odds": 1.56,
+      "result": "green"
+    },
+    {
+      "slug": "ac-milan-vs-atalanta",
+      "league": "serie-a",
+      "homeTeam": "AC Milan",
+      "awayTeam": "Atalanta",
+      "date": "2026-10-18",
+      "prediction": "AC Milan to Win",
+      "odds": 1.84,
+      "result": "green"
+    },
+    {
       "slug": "fiorentina-vs-como",
       "league": "serie-a",
       "homeTeam": "Fiorentina",
@@ -352,13 +962,13 @@
       "result": "green"
     },
     {
-      "slug": "pec-zwolle-vs-go-ahead-eagles",
-      "league": "eredivisie",
-      "homeTeam": "PEC Zwolle",
-      "awayTeam": "Go Ahead Eagles",
+      "slug": "juventus-vs-lazio",
+      "league": "serie-a",
+      "homeTeam": "Juventus",
+      "awayTeam": "Lazio",
       "date": "2026-10-18",
-      "prediction": "Over 2.5 Goals",
-      "odds": 1.42,
+      "prediction": "Over 1.5 Goals + Over 7.5 Corners",
+      "odds": 1.6,
       "result": "green"
     },
     {
@@ -372,6 +982,16 @@
       "result": "red"
     },
     {
+      "slug": "istanbul-basaksehir-vs-gaziantep-fk",
+      "league": "super-lig",
+      "homeTeam": "İstanbul Başakşehir",
+      "awayTeam": "Gaziantep FK",
+      "date": "2026-10-18",
+      "prediction": "İstanbul Başakşehir Win",
+      "odds": 1.69,
+      "result": "green"
+    },
+    {
       "slug": "kas-mpasa-vs-samsunspor",
       "league": "super-lig",
       "homeTeam": "Kasımpaşa",
@@ -380,6 +1000,16 @@
       "prediction": "1X + Over 1.5 Goals",
       "odds": 1.95,
       "result": "green"
+    },
+    {
+      "slug": "kocaelispor-vs-goztepe",
+      "league": "super-lig",
+      "homeTeam": "Kocaelispor",
+      "awayTeam": "Göztepe",
+      "date": "2026-10-18",
+      "prediction": "1X (Kocaelispor or Draw)",
+      "odds": 1.51,
+      "result": "red"
     },
     {
       "slug": "athletico-pr-vs-palmeiras",
@@ -402,63 +1032,23 @@
       "result": "red"
     },
     {
-      "slug": "telstar-vs-feyenoord",
-      "league": "eredivisie",
-      "homeTeam": "Telstar",
-      "awayTeam": "Feyenoord",
+      "slug": "botafogo-vs-chapecoense",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Botafogo",
+      "awayTeam": "Chapecoense",
       "date": "2026-10-17",
-      "prediction": "Over 2.5 Goals + Over 8.5 Corners",
-      "odds": 1.7,
+      "prediction": "Botafogo Win",
+      "odds": 1.4,
       "result": "green"
     },
     {
-      "slug": "valencia-vs-athletic-club",
-      "league": "la-liga",
-      "homeTeam": "Valencia",
-      "awayTeam": "Athletic Club",
+      "slug": "sao-paulo-vs-vasco",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "São Paulo",
+      "awayTeam": "Vasco",
       "date": "2026-10-17",
-      "prediction": "Athletic Club Double Chance (X2) + Over 1.5 Goals",
-      "odds": 1.79,
-      "result": "red"
-    },
-    {
-      "slug": "lille-vs-brest",
-      "league": "ligue-1",
-      "homeTeam": "Lille",
-      "awayTeam": "Brest",
-      "date": "2026-10-17",
-      "prediction": "Over 2.5 Goals",
-      "odds": 1.72,
-      "result": "red"
-    },
-    {
-      "slug": "troyes-vs-lens",
-      "league": "ligue-1",
-      "homeTeam": "Troyes",
-      "awayTeam": "Lens",
-      "date": "2026-10-17",
-      "prediction": "Lens Double Chance (X2) + Over 8.5 Total Corners",
-      "odds": 1.88,
-      "result": "green"
-    },
-    {
-      "slug": "dundee-vs-rangers",
-      "league": "scottish-premiership",
-      "homeTeam": "Dundee",
-      "awayTeam": "Rangers",
-      "date": "2026-10-17",
-      "prediction": "Rangers to Win",
-      "odds": 1.35,
-      "result": "red"
-    },
-    {
-      "slug": "roma-vs-genoa",
-      "league": "serie-a",
-      "homeTeam": "Roma",
-      "awayTeam": "Genoa",
-      "date": "2026-10-17",
-      "prediction": "Roma to Win + Over 1.5 Goals",
-      "odds": 1.58,
+      "prediction": "São Paulo Win",
+      "odds": 2.14,
       "result": "green"
     },
     {
@@ -469,46 +1059,6 @@
       "date": "2026-10-17",
       "prediction": "Bayern Munich -1.5 Asian Handicap",
       "odds": 1.53,
-      "result": "green"
-    },
-    {
-      "slug": "real-betis-vs-barcelona",
-      "league": "la-liga",
-      "homeTeam": "Real Betis",
-      "awayTeam": "Barcelona",
-      "date": "2026-10-17",
-      "prediction": "Barcelona to Win",
-      "odds": 1.48,
-      "result": "green"
-    },
-    {
-      "slug": "newcastle-united-vs-aston-villa",
-      "league": "premier-league",
-      "homeTeam": "Newcastle United",
-      "awayTeam": "Aston Villa",
-      "date": "2026-10-17",
-      "prediction": "Over 2.5 Goals",
-      "odds": 1.62,
-      "result": "red"
-    },
-    {
-      "slug": "bologna-vs-inter",
-      "league": "serie-a",
-      "homeTeam": "Bologna",
-      "awayTeam": "Inter",
-      "date": "2026-10-17",
-      "prediction": "Over 7.5 Total Corners + Over 1.5 Goals",
-      "odds": 1.55,
-      "result": "green"
-    },
-    {
-      "slug": "fenerbahce-vs-alanyaspor",
-      "league": "super-lig",
-      "homeTeam": "Fenerbahçe",
-      "awayTeam": "Alanyaspor",
-      "date": "2026-10-17",
-      "prediction": "Fenerbahçe -1.5 Asian Handicap",
-      "odds": 1.78,
       "result": "green"
     },
     {
@@ -562,6 +1112,36 @@
       "result": "red"
     },
     {
+      "slug": "hamkam-vs-bod-glimt",
+      "league": "eliteserien",
+      "homeTeam": "HamKam",
+      "awayTeam": "Bodø/Glimt",
+      "date": "2026-10-17",
+      "prediction": "Over 3.5 Goals",
+      "odds": 1.7,
+      "result": "red"
+    },
+    {
+      "slug": "kristiansund-vs-aalesund",
+      "league": "eliteserien",
+      "homeTeam": "Kristiansund",
+      "awayTeam": "Aalesund",
+      "date": "2026-10-17",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.5,
+      "result": "green"
+    },
+    {
+      "slug": "viking-vs-fredrikstad",
+      "league": "eliteserien",
+      "homeTeam": "Viking",
+      "awayTeam": "Fredrikstad",
+      "date": "2026-10-17",
+      "prediction": "Viking Win + Over 2.5 Goals",
+      "odds": 1.61,
+      "result": "green"
+    },
+    {
       "slug": "ado-den-haag-vs-psv-eindhoven",
       "league": "eredivisie",
       "homeTeam": "ADO Den Haag",
@@ -569,6 +1149,56 @@
       "date": "2026-10-17",
       "prediction": "PSV -1.5",
       "odds": 1.64,
+      "result": "red"
+    },
+    {
+      "slug": "sparta-rotterdam-vs-willem-ii",
+      "league": "eredivisie",
+      "homeTeam": "Sparta Rotterdam",
+      "awayTeam": "Willem II",
+      "date": "2026-10-17",
+      "prediction": "Sparta Rotterdam Win",
+      "odds": 1.59,
+      "result": "green"
+    },
+    {
+      "slug": "telstar-vs-feyenoord",
+      "league": "eredivisie",
+      "homeTeam": "Telstar",
+      "awayTeam": "Feyenoord",
+      "date": "2026-10-17",
+      "prediction": "Over 2.5 Goals + Over 8.5 Corners",
+      "odds": 1.7,
+      "result": "green"
+    },
+    {
+      "slug": "espanyol-vs-atletico-madrid",
+      "league": "la-liga",
+      "homeTeam": "Espanyol",
+      "awayTeam": "Atlético Madrid",
+      "date": "2026-10-17",
+      "prediction": "Atlético Madrid Double Chance (X2) + Under 3.5 Goals",
+      "odds": 1.7,
+      "result": "green"
+    },
+    {
+      "slug": "real-betis-vs-barcelona",
+      "league": "la-liga",
+      "homeTeam": "Real Betis",
+      "awayTeam": "Barcelona",
+      "date": "2026-10-17",
+      "prediction": "Barcelona to Win",
+      "odds": 1.48,
+      "result": "green"
+    },
+    {
+      "slug": "valencia-vs-athletic-club",
+      "league": "la-liga",
+      "homeTeam": "Valencia",
+      "awayTeam": "Athletic Club",
+      "date": "2026-10-17",
+      "prediction": "Athletic Club Double Chance (X2) + Over 1.5 Goals",
+      "odds": 1.79,
       "result": "red"
     },
     {
@@ -582,6 +1212,176 @@
       "result": "red"
     },
     {
+      "slug": "lille-vs-brest",
+      "league": "ligue-1",
+      "homeTeam": "Lille",
+      "awayTeam": "Brest",
+      "date": "2026-10-17",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.72,
+      "result": "red"
+    },
+    {
+      "slug": "strasbourg-vs-paris-saint-germain",
+      "league": "ligue-1",
+      "homeTeam": "Strasbourg",
+      "awayTeam": "Paris Saint-Germain",
+      "date": "2026-10-17",
+      "prediction": "Paris Saint-Germain Win",
+      "odds": 1.43,
+      "result": "green"
+    },
+    {
+      "slug": "troyes-vs-lens",
+      "league": "ligue-1",
+      "homeTeam": "Troyes",
+      "awayTeam": "Lens",
+      "date": "2026-10-17",
+      "prediction": "Lens Double Chance (X2) + Over 8.5 Total Corners",
+      "odds": 1.88,
+      "result": "green"
+    },
+    {
+      "slug": "atlanta-united-vs-inter-miami-cf",
+      "league": "mls",
+      "homeTeam": "Atlanta United",
+      "awayTeam": "Inter Miami CF",
+      "date": "2026-10-17",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.32,
+      "result": "green"
+    },
+    {
+      "slug": "austin-fc-vs-vancouver-whitecaps",
+      "league": "mls",
+      "homeTeam": "Austin FC",
+      "awayTeam": "Vancouver Whitecaps",
+      "date": "2026-10-17",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.51,
+      "result": "green"
+    },
+    {
+      "slug": "houston-dynamo-vs-fc-dallas",
+      "league": "mls",
+      "homeTeam": "Houston Dynamo",
+      "awayTeam": "FC Dallas",
+      "date": "2026-10-17",
+      "prediction": "Houston Dynamo or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.65,
+      "result": "green"
+    },
+    {
+      "slug": "la-galaxy-vs-san-diego-fc",
+      "league": "mls",
+      "homeTeam": "LA Galaxy",
+      "awayTeam": "San Diego FC",
+      "date": "2026-10-17",
+      "prediction": "LA Galaxy or Draw (1X)",
+      "odds": 1.4,
+      "result": "green"
+    },
+    {
+      "slug": "minnesota-united-vs-st-louis-city",
+      "league": "mls",
+      "homeTeam": "Minnesota United",
+      "awayTeam": "St. Louis City",
+      "date": "2026-10-17",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.49,
+      "result": "green"
+    },
+    {
+      "slug": "new-england-revolution-vs-chicago-fire",
+      "league": "mls",
+      "homeTeam": "New England Revolution",
+      "awayTeam": "Chicago Fire",
+      "date": "2026-10-17",
+      "prediction": "New England Revolution or Draw (1X)",
+      "odds": 1.48,
+      "result": "green"
+    },
+    {
+      "slug": "new-york-city-fc-vs-los-angeles-fc",
+      "league": "mls",
+      "homeTeam": "New York City FC",
+      "awayTeam": "Los Angeles FC",
+      "date": "2026-10-17",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.79,
+      "result": "red"
+    },
+    {
+      "slug": "new-york-red-bulls-vs-toronto-fc",
+      "league": "mls",
+      "homeTeam": "New York Red Bulls",
+      "awayTeam": "Toronto FC",
+      "date": "2026-10-17",
+      "prediction": "New York Red Bulls or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.6,
+      "result": "red"
+    },
+    {
+      "slug": "orlando-city-vs-d-c-united",
+      "league": "mls",
+      "homeTeam": "Orlando City",
+      "awayTeam": "D.C. United",
+      "date": "2026-10-17",
+      "prediction": "Orlando City to Win",
+      "odds": 1.85,
+      "result": "green"
+    },
+    {
+      "slug": "philadelphia-union-vs-charlotte-fc",
+      "league": "mls",
+      "homeTeam": "Philadelphia Union",
+      "awayTeam": "Charlotte FC",
+      "date": "2026-10-17",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.43,
+      "result": "green"
+    },
+    {
+      "slug": "portland-timbers-vs-colorado-rapids",
+      "league": "mls",
+      "homeTeam": "Portland Timbers",
+      "awayTeam": "Colorado Rapids",
+      "date": "2026-10-17",
+      "prediction": "Colorado Rapids or Draw (X2)",
+      "odds": 1.74,
+      "result": "green"
+    },
+    {
+      "slug": "san-jose-earthquakes-vs-nashville-sc",
+      "league": "mls",
+      "homeTeam": "San Jose Earthquakes",
+      "awayTeam": "Nashville SC",
+      "date": "2026-10-17",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.55,
+      "result": "red"
+    },
+    {
+      "slug": "seattle-sounders-vs-cf-montreal",
+      "league": "mls",
+      "homeTeam": "Seattle Sounders",
+      "awayTeam": "CF Montréal",
+      "date": "2026-10-17",
+      "prediction": "Seattle Sounders to Win",
+      "odds": 1.53,
+      "result": "red"
+    },
+    {
+      "slug": "sporting-kansas-city-vs-real-salt-lake",
+      "league": "mls",
+      "homeTeam": "Sporting Kansas City",
+      "awayTeam": "Real Salt Lake",
+      "date": "2026-10-17",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.5,
+      "result": "green"
+    },
+    {
       "slug": "brentford-vs-liverpool",
       "league": "premier-league",
       "homeTeam": "Brentford",
@@ -589,6 +1389,16 @@
       "date": "2026-10-17",
       "prediction": "Over 2.5 Goals",
       "odds": 1.58,
+      "result": "green"
+    },
+    {
+      "slug": "everton-vs-chelsea",
+      "league": "premier-league",
+      "homeTeam": "Everton",
+      "awayTeam": "Chelsea",
+      "date": "2026-10-17",
+      "prediction": "Chelsea Double Chance (X2) + Over 1.5 Goals",
+      "odds": 1.67,
       "result": "green"
     },
     {
@@ -612,6 +1422,16 @@
       "result": "red"
     },
     {
+      "slug": "newcastle-united-vs-aston-villa",
+      "league": "premier-league",
+      "homeTeam": "Newcastle United",
+      "awayTeam": "Aston Villa",
+      "date": "2026-10-17",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.62,
+      "result": "red"
+    },
+    {
       "slug": "aberdeen-vs-st-mirren",
       "league": "scottish-premiership",
       "homeTeam": "Aberdeen",
@@ -620,6 +1440,16 @@
       "prediction": "Over 2.5 Goals",
       "odds": 1.72,
       "result": "green"
+    },
+    {
+      "slug": "dundee-vs-rangers",
+      "league": "scottish-premiership",
+      "homeTeam": "Dundee",
+      "awayTeam": "Rangers",
+      "date": "2026-10-17",
+      "prediction": "Rangers to Win",
+      "odds": 1.35,
+      "result": "red"
     },
     {
       "slug": "hibernian-vs-falkirk",
@@ -652,6 +1482,26 @@
       "result": "green"
     },
     {
+      "slug": "bologna-vs-inter",
+      "league": "serie-a",
+      "homeTeam": "Bologna",
+      "awayTeam": "Inter",
+      "date": "2026-10-17",
+      "prediction": "Over 7.5 Total Corners + Over 1.5 Goals",
+      "odds": 1.55,
+      "result": "green"
+    },
+    {
+      "slug": "roma-vs-genoa",
+      "league": "serie-a",
+      "homeTeam": "Roma",
+      "awayTeam": "Genoa",
+      "date": "2026-10-17",
+      "prediction": "Roma to Win + Over 1.5 Goals",
+      "odds": 1.58,
+      "result": "green"
+    },
+    {
       "slug": "venezia-vs-napoli",
       "league": "serie-a",
       "homeTeam": "Venezia",
@@ -672,36 +1522,6 @@
       "result": "red"
     },
     {
-      "slug": "hamkam-vs-bod-glimt",
-      "league": "eliteserien",
-      "homeTeam": "HamKam",
-      "awayTeam": "Bodø/Glimt",
-      "date": "2026-10-17",
-      "prediction": "Over 3.5 Goals",
-      "odds": 1.7,
-      "result": "red"
-    },
-    {
-      "slug": "espanyol-vs-atletico-madrid",
-      "league": "la-liga",
-      "homeTeam": "Espanyol",
-      "awayTeam": "Atlético Madrid",
-      "date": "2026-10-17",
-      "prediction": "Atlético Madrid Double Chance (X2) + Under 3.5 Goals",
-      "odds": 1.7,
-      "result": "green"
-    },
-    {
-      "slug": "everton-vs-chelsea",
-      "league": "premier-league",
-      "homeTeam": "Everton",
-      "awayTeam": "Chelsea",
-      "date": "2026-10-17",
-      "prediction": "Chelsea Double Chance (X2) + Over 1.5 Goals",
-      "odds": 1.67,
-      "result": "green"
-    },
-    {
       "slug": "erzurumspor-vs-eyupspor",
       "league": "super-lig",
       "homeTeam": "Erzurumspor",
@@ -710,6 +1530,26 @@
       "prediction": "Over 1.5 Goals + Over 6.5 Corners",
       "odds": 1.64,
       "result": "red"
+    },
+    {
+      "slug": "fenerbahce-vs-alanyaspor",
+      "league": "super-lig",
+      "homeTeam": "Fenerbahçe",
+      "awayTeam": "Alanyaspor",
+      "date": "2026-10-17",
+      "prediction": "Fenerbahçe -1.5 Asian Handicap",
+      "odds": 1.78,
+      "result": "green"
+    },
+    {
+      "slug": "genclerbirligi-vs-galatasaray",
+      "league": "super-lig",
+      "homeTeam": "Gençlerbirliği",
+      "awayTeam": "Galatasaray",
+      "date": "2026-10-17",
+      "prediction": "Galatasaray Win",
+      "odds": 1.4,
+      "result": "green"
     },
     {
       "slug": "mirassol-vs-internacional",
@@ -772,6 +1612,56 @@
       "result": "green"
     },
     {
+      "slug": "estudiantes-vs-flamengo",
+      "league": "copa-libertadores",
+      "homeTeam": "Estudiantes de La Plata",
+      "awayTeam": "Flamengo",
+      "date": "2026-10-15",
+      "prediction": "Estudiantes or Draw (1X)",
+      "odds": 1.63,
+      "result": "green"
+    },
+    {
+      "slug": "az-alkmaar-vs-hapoel-beer-sheva",
+      "league": "uefa-europa-league",
+      "homeTeam": "AZ Alkmaar",
+      "awayTeam": "Hapoel Beer-Sheva",
+      "date": "2026-10-15",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.5,
+      "result": "green"
+    },
+    {
+      "slug": "benfica-vs-celtic",
+      "league": "uefa-europa-league",
+      "homeTeam": "Benfica",
+      "awayTeam": "Celtic",
+      "date": "2026-10-15",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.47,
+      "result": "green"
+    },
+    {
+      "slug": "bournemouth-vs-sturm-graz",
+      "league": "uefa-europa-league",
+      "homeTeam": "Bournemouth",
+      "awayTeam": "Sturm Graz",
+      "date": "2026-10-15",
+      "prediction": "Bournemouth -1.5 Asian/European Goal Handicap",
+      "odds": 1.53,
+      "result": "green"
+    },
+    {
+      "slug": "celje-vs-omonia",
+      "league": "uefa-europa-league",
+      "homeTeam": "Celje",
+      "awayTeam": "Omonia",
+      "date": "2026-10-15",
+      "prediction": "Celje or Draw (1X)",
+      "odds": 1.41,
+      "result": "red"
+    },
+    {
       "slug": "celta-vigo-vs-juventus",
       "league": "uefa-europa-league",
       "homeTeam": "Celta Vigo",
@@ -799,6 +1689,36 @@
       "date": "2026-10-15",
       "prediction": "Ferencváros or Draw (1X) + Over 1.5 Goals",
       "odds": 1.6,
+      "result": "green"
+    },
+    {
+      "slug": "hoffenheim-vs-besiktas",
+      "league": "uefa-europa-league",
+      "homeTeam": "Hoffenheim",
+      "awayTeam": "Beşiktaş",
+      "date": "2026-10-15",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.46,
+      "result": "green"
+    },
+    {
+      "slug": "jagiellonia-bia-ystok-vs-ararat-armenia",
+      "league": "uefa-europa-league",
+      "homeTeam": "Jagiellonia Białystok",
+      "awayTeam": "Ararat-Armenia",
+      "date": "2026-10-15",
+      "prediction": "Jagiellonia Białystok to Win",
+      "odds": 1.42,
+      "result": "green"
+    },
+    {
+      "slug": "lech-poznan-vs-bayer-leverkusen",
+      "league": "uefa-europa-league",
+      "homeTeam": "Lech Poznań",
+      "awayTeam": "Bayer Leverkusen",
+      "date": "2026-10-15",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.5,
       "result": "green"
     },
     {
@@ -832,6 +1752,36 @@
       "result": "red"
     },
     {
+      "slug": "rennes-vs-ofi-crete",
+      "league": "uefa-europa-league",
+      "homeTeam": "Rennes",
+      "awayTeam": "OFI Crete",
+      "date": "2026-10-15",
+      "prediction": "Rennes -1.5 Goal Handicap",
+      "odds": 1.72,
+      "result": "red"
+    },
+    {
+      "slug": "salzburg-vs-ac-milan",
+      "league": "uefa-europa-league",
+      "homeTeam": "Salzburg",
+      "awayTeam": "AC Milan",
+      "date": "2026-10-15",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.64,
+      "result": "green"
+    },
+    {
+      "slug": "sparta-praha-vs-lillestr-m",
+      "league": "uefa-europa-league",
+      "homeTeam": "Sparta Praha",
+      "awayTeam": "Lillestrøm",
+      "date": "2026-10-15",
+      "prediction": "Sparta Praha to Win",
+      "odds": 1.36,
+      "result": "red"
+    },
+    {
       "slug": "torreense-vs-sunderland",
       "league": "uefa-europa-league",
       "homeTeam": "Torreense",
@@ -839,6 +1789,16 @@
       "date": "2026-10-15",
       "prediction": "Sunderland to Win",
       "odds": 1.41,
+      "result": "green"
+    },
+    {
+      "slug": "union-saint-gilloise-vs-real-sociedad",
+      "league": "uefa-europa-league",
+      "homeTeam": "Union Saint-Gilloise",
+      "awayTeam": "Real Sociedad",
+      "date": "2026-10-15",
+      "prediction": "Real Sociedad or Draw (X2)",
+      "odds": 1.6,
       "result": "green"
     },
     {
@@ -862,16 +1822,6 @@
       "result": "green"
     },
     {
-      "slug": "shakhtar-donetsk-vs-aek-athens",
-      "league": "champions-league",
-      "homeTeam": "Shakhtar Donetsk",
-      "awayTeam": "AEK Athens",
-      "date": "2026-10-14",
-      "prediction": "Shakhtar Donetsk double chance (1X)",
-      "odds": 1.51,
-      "result": "green"
-    },
-    {
       "slug": "feyenoord-vs-como",
       "league": "champions-league",
       "homeTeam": "Feyenoord",
@@ -882,6 +1832,236 @@
       "result": "green"
     },
     {
+      "slug": "lask-vs-liverpool",
+      "league": "champions-league",
+      "homeTeam": "LASK",
+      "awayTeam": "Liverpool",
+      "date": "2026-10-14",
+      "prediction": "Liverpool -1.5 Asian handicap",
+      "odds": 1.63,
+      "result": "green"
+    },
+    {
+      "slug": "manchester-city-vs-psg",
+      "league": "champions-league",
+      "homeTeam": "Manchester City",
+      "awayTeam": "Paris Saint-Germain",
+      "date": "2026-10-14",
+      "prediction": "Manchester City double chance (1X) + Over 1.5 total goals",
+      "odds": 1.67,
+      "result": "red"
+    },
+    {
+      "slug": "real-betis-vs-porto",
+      "league": "champions-league",
+      "homeTeam": "Real Betis",
+      "awayTeam": "Porto",
+      "date": "2026-10-14",
+      "prediction": "Real Betis double chance (1X) + Over 1.5 total goals",
+      "odds": 1.71,
+      "result": "green"
+    },
+    {
+      "slug": "roma-vs-real-madrid",
+      "league": "champions-league",
+      "homeTeam": "Roma",
+      "awayTeam": "Real Madrid",
+      "date": "2026-10-14",
+      "prediction": "Over 2.5 total goals",
+      "odds": 1.42,
+      "result": "green"
+    },
+    {
+      "slug": "shakhtar-donetsk-vs-aek-athens",
+      "league": "champions-league",
+      "homeTeam": "Shakhtar Donetsk",
+      "awayTeam": "AEK Athens",
+      "date": "2026-10-14",
+      "prediction": "Shakhtar Donetsk double chance (1X)",
+      "odds": 1.51,
+      "result": "green"
+    },
+    {
+      "slug": "slovan-bratislava-vs-stuttgart",
+      "league": "champions-league",
+      "homeTeam": "Slovan Bratislava",
+      "awayTeam": "Stuttgart",
+      "date": "2026-10-14",
+      "prediction": "Stuttgart to win + Under 4.5 total goals",
+      "odds": 1.91,
+      "result": "green"
+    },
+    {
+      "slug": "fluminense-vs-palmeiras",
+      "league": "copa-libertadores",
+      "homeTeam": "Fluminense",
+      "awayTeam": "Palmeiras",
+      "date": "2026-10-14",
+      "prediction": "Over 1.5 Goals",
+      "odds": 1.61,
+      "result": "green"
+    },
+    {
+      "slug": "atletico-mineiro-vs-montevideo-city-torque",
+      "league": "copa-sudamericana",
+      "homeTeam": "Atlético Mineiro",
+      "awayTeam": "Montevideo City Torque",
+      "date": "2026-10-14",
+      "prediction": "Atlético Mineiro to Win",
+      "odds": 1.45,
+      "result": "green"
+    },
+    {
+      "slug": "cf-montreal-vs-atlanta-united-fc",
+      "league": "mls",
+      "homeTeam": "CF Montréal",
+      "awayTeam": "Atlanta United FC",
+      "date": "2026-10-14",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.59,
+      "result": "green"
+    },
+    {
+      "slug": "chicago-fire-fc-vs-philadelphia-union",
+      "league": "mls",
+      "homeTeam": "Chicago Fire FC",
+      "awayTeam": "Philadelphia Union",
+      "date": "2026-10-14",
+      "prediction": "Chicago Fire FC or Draw (1X)",
+      "odds": 1.51,
+      "result": "red"
+    },
+    {
+      "slug": "colorado-rapids-vs-minnesota-united-fc",
+      "league": "mls",
+      "homeTeam": "Colorado Rapids",
+      "awayTeam": "Minnesota United FC",
+      "date": "2026-10-14",
+      "prediction": "Colorado Rapids or Draw (1X) + Over 1.5 Total Goals",
+      "odds": 1.66,
+      "result": "green"
+    },
+    {
+      "slug": "columbus-crew-vs-charlotte-fc",
+      "league": "mls",
+      "homeTeam": "Columbus Crew",
+      "awayTeam": "Charlotte FC",
+      "date": "2026-10-14",
+      "prediction": "Charlotte FC or Draw (X2)",
+      "odds": 1.79,
+      "result": "red"
+    },
+    {
+      "slug": "d-c-united-vs-new-york-red-bulls",
+      "league": "mls",
+      "homeTeam": "D.C. United",
+      "awayTeam": "New York Red Bulls",
+      "date": "2026-10-14",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.5,
+      "result": "green"
+    },
+    {
+      "slug": "fc-cincinnati-vs-new-england-revolution",
+      "league": "mls",
+      "homeTeam": "FC Cincinnati",
+      "awayTeam": "New England Revolution",
+      "date": "2026-10-14",
+      "prediction": "New England Revolution or Draw (X2)",
+      "odds": 1.77,
+      "result": "green"
+    },
+    {
+      "slug": "fc-dallas-vs-seattle-sounders-fc",
+      "league": "mls",
+      "homeTeam": "FC Dallas",
+      "awayTeam": "Seattle Sounders FC",
+      "date": "2026-10-14",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.59,
+      "result": "red"
+    },
+    {
+      "slug": "inter-miami-cf-vs-new-york-city-fc",
+      "league": "mls",
+      "homeTeam": "Inter Miami CF",
+      "awayTeam": "New York City FC",
+      "date": "2026-10-14",
+      "prediction": "Inter Miami CF to Win",
+      "odds": 1.53,
+      "result": "green"
+    },
+    {
+      "slug": "la-galaxy-vs-portland-timbers",
+      "league": "mls",
+      "homeTeam": "LA Galaxy",
+      "awayTeam": "Portland Timbers",
+      "date": "2026-10-14",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.4,
+      "result": "red"
+    },
+    {
+      "slug": "los-angeles-fc-vs-austin-fc",
+      "league": "mls",
+      "homeTeam": "Los Angeles FC",
+      "awayTeam": "Austin FC",
+      "date": "2026-10-14",
+      "prediction": "Los Angeles FC to Win",
+      "odds": 1.43,
+      "result": "green"
+    },
+    {
+      "slug": "nashville-sc-vs-sporting-kansas-city",
+      "league": "mls",
+      "homeTeam": "Nashville SC",
+      "awayTeam": "Sporting Kansas City",
+      "date": "2026-10-14",
+      "prediction": "Nashville SC to Win",
+      "odds": 1.31,
+      "result": "green"
+    },
+    {
+      "slug": "real-salt-lake-vs-san-jose-earthquakes",
+      "league": "mls",
+      "homeTeam": "Real Salt Lake",
+      "awayTeam": "San Jose Earthquakes",
+      "date": "2026-10-14",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.43,
+      "result": "red"
+    },
+    {
+      "slug": "san-diego-fc-vs-houston-dynamo-fc",
+      "league": "mls",
+      "homeTeam": "San Diego FC",
+      "awayTeam": "Houston Dynamo FC",
+      "date": "2026-10-14",
+      "prediction": "Houston Dynamo FC or Draw (X2)",
+      "odds": 1.72,
+      "result": "green"
+    },
+    {
+      "slug": "st-louis-city-sc-vs-vancouver-whitecaps-fc",
+      "league": "mls",
+      "homeTeam": "St. Louis City SC",
+      "awayTeam": "Vancouver Whitecaps FC",
+      "date": "2026-10-14",
+      "prediction": "St. Louis City SC or Draw (1X)",
+      "odds": 1.61,
+      "result": "green"
+    },
+    {
+      "slug": "toronto-fc-vs-orlando-city-sc",
+      "league": "mls",
+      "homeTeam": "Toronto FC",
+      "awayTeam": "Orlando City SC",
+      "date": "2026-10-14",
+      "prediction": "Orlando City SC or Draw (X2)",
+      "odds": 1.66,
+      "result": "green"
+    },
+    {
       "slug": "arsenal-vs-lille",
       "league": "champions-league",
       "homeTeam": "Arsenal",
@@ -889,6 +2069,16 @@
       "date": "2026-10-13",
       "prediction": "Arsenal -1.5 Asian handicap",
       "odds": 1.72,
+      "result": "green"
+    },
+    {
+      "slug": "atletico-madrid-vs-manchester-united",
+      "league": "champions-league",
+      "homeTeam": "Atlético de Madrid",
+      "awayTeam": "Manchester United",
+      "date": "2026-10-13",
+      "prediction": "Atlético de Madrid double chance (1X) + Over 1.5 total goals",
+      "odds": 1.61,
       "result": "green"
     },
     {
@@ -912,6 +2102,16 @@
       "result": "red"
     },
     {
+      "slug": "leipzig-vs-psv-eindhoven",
+      "league": "champions-league",
+      "homeTeam": "RB Leipzig",
+      "awayTeam": "PSV Eindhoven",
+      "date": "2026-10-13",
+      "prediction": "Leipzig double chance (1X) + Over 2.5 total goals",
+      "odds": 1.91,
+      "result": "red"
+    },
+    {
       "slug": "lens-vs-sporting-cp",
       "league": "champions-league",
       "homeTeam": "Lens",
@@ -919,6 +2119,46 @@
       "date": "2026-10-13",
       "prediction": "Lens double chance (1X)",
       "odds": 1.5,
+      "result": "red"
+    },
+    {
+      "slug": "sabah-vs-slavia-praha",
+      "league": "champions-league",
+      "homeTeam": "Sabah",
+      "awayTeam": "Slavia Praha",
+      "date": "2026-10-13",
+      "prediction": "Sabah double chance (1X)",
+      "odds": 1.82,
+      "result": "green"
+    },
+    {
+      "slug": "viking-vs-bayern-munchen",
+      "league": "champions-league",
+      "homeTeam": "Viking",
+      "awayTeam": "Bayern München",
+      "date": "2026-10-13",
+      "prediction": "Viking +3.5 Asian handicap",
+      "odds": 1.53,
+      "result": "green"
+    },
+    {
+      "slug": "villarreal-vs-napoli",
+      "league": "champions-league",
+      "homeTeam": "Villarreal",
+      "awayTeam": "Napoli",
+      "date": "2026-10-13",
+      "prediction": "Villarreal double chance (1X) + Over 1.5 total goals",
+      "odds": 1.73,
+      "result": "green"
+    },
+    {
+      "slug": "boca-juniors-vs-vasco-da-gama",
+      "league": "copa-sudamericana",
+      "homeTeam": "Boca Juniors",
+      "awayTeam": "Vasco da Gama",
+      "date": "2026-10-13",
+      "prediction": "Boca Juniors to Win",
+      "odds": 1.89,
       "result": "red"
     },
     {
@@ -982,6 +2222,16 @@
       "result": "green"
     },
     {
+      "slug": "atalanta-vs-venezia",
+      "league": "serie-a",
+      "homeTeam": "Atalanta",
+      "awayTeam": "Venezia",
+      "date": "2026-10-12",
+      "prediction": "Atalanta Win",
+      "odds": 1.59,
+      "result": "green"
+    },
+    {
       "slug": "torino-vs-udinese",
       "league": "serie-a",
       "homeTeam": "Torino",
@@ -1002,33 +2252,13 @@
       "result": "green"
     },
     {
-      "slug": "fredrikstad-vs-tromso",
-      "league": "eliteserien",
-      "homeTeam": "Fredrikstad",
-      "awayTeam": "Tromsø",
-      "date": "2026-10-11",
-      "prediction": "Tromsø or Draw (X2) + Over 1.5 Goals",
-      "odds": 1.85,
-      "result": "green"
-    },
-    {
-      "slug": "start-vs-hamkam",
-      "league": "eliteserien",
-      "homeTeam": "Start",
-      "awayTeam": "HamKam",
-      "date": "2026-10-11",
-      "prediction": "HamKam or Draw (X2)",
-      "odds": 1.78,
-      "result": "green"
-    },
-    {
-      "slug": "coritiba-vs-botafogo",
+      "slug": "atletico-mg-vs-santos",
       "league": "brasileirao-serie-a",
-      "homeTeam": "Coritiba",
-      "awayTeam": "Botafogo",
+      "homeTeam": "Atlético-MG",
+      "awayTeam": "Santos",
       "date": "2026-10-11",
-      "prediction": "Coritiba or Draw (1X)",
-      "odds": 1.5,
+      "prediction": "Atlético-MG or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.71,
       "result": "green"
     },
     {
@@ -1039,6 +2269,16 @@
       "date": "2026-10-11",
       "prediction": "Bahia to Win",
       "odds": 1.74,
+      "result": "green"
+    },
+    {
+      "slug": "coritiba-vs-botafogo",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Coritiba",
+      "awayTeam": "Botafogo",
+      "date": "2026-10-11",
+      "prediction": "Coritiba or Draw (1X)",
+      "odds": 1.5,
       "result": "green"
     },
     {
@@ -1072,66 +2312,6 @@
       "result": "green"
     },
     {
-      "slug": "atletico-mg-vs-santos",
-      "league": "brasileirao-serie-a",
-      "homeTeam": "Atlético-MG",
-      "awayTeam": "Santos",
-      "date": "2026-10-11",
-      "prediction": "Atlético-MG or Draw (1X) + Over 1.5 Goals",
-      "odds": 1.71,
-      "result": "green"
-    },
-    {
-      "slug": "racing-santander-vs-valencia",
-      "league": "la-liga",
-      "homeTeam": "Racing Santander",
-      "awayTeam": "Valencia",
-      "date": "2026-10-11",
-      "prediction": "Over 2.5 Goals",
-      "odds": 1.68,
-      "result": "green"
-    },
-    {
-      "slug": "real-betis-vs-osasuna",
-      "league": "la-liga",
-      "homeTeam": "Real Betis",
-      "awayTeam": "Osasuna",
-      "date": "2026-10-11",
-      "prediction": "Real Betis to Win",
-      "odds": 1.57,
-      "result": "green"
-    },
-    {
-      "slug": "arouca-vs-estrela-amadora",
-      "league": "liga-portugal",
-      "homeTeam": "Arouca",
-      "awayTeam": "Estrela",
-      "date": "2026-10-11",
-      "prediction": "Arouca X1 + Over 1.5 Goals",
-      "odds": 1.73,
-      "result": "red"
-    },
-    {
-      "slug": "benfica-vs-vitoria-guimaraes",
-      "league": "liga-portugal",
-      "homeTeam": "Benfica",
-      "awayTeam": "Vitória de Guimaraes",
-      "date": "2026-10-11",
-      "prediction": "Benfica -1.5 Asian Handicap",
-      "odds": 1.65,
-      "result": "green"
-    },
-    {
-      "slug": "troyes-vs-marseille",
-      "league": "ligue-1",
-      "homeTeam": "Troyes",
-      "awayTeam": "Marseille",
-      "date": "2026-10-11",
-      "prediction": "Over 2.5 Goals",
-      "odds": 1.61,
-      "result": "red"
-    },
-    {
       "slug": "freiburg-vs-schalke",
       "league": "bundesliga",
       "homeTeam": "SC Freiburg",
@@ -1152,6 +2332,46 @@
       "result": "green"
     },
     {
+      "slug": "aalesund-vs-sarpsborg",
+      "league": "eliteserien",
+      "homeTeam": "Aalesund",
+      "awayTeam": "Sarpsborg 08",
+      "date": "2026-10-11",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.41,
+      "result": "green"
+    },
+    {
+      "slug": "fredrikstad-vs-tromso",
+      "league": "eliteserien",
+      "homeTeam": "Fredrikstad",
+      "awayTeam": "Tromsø",
+      "date": "2026-10-11",
+      "prediction": "Tromsø or Draw (X2) + Over 1.5 Goals",
+      "odds": 1.85,
+      "result": "green"
+    },
+    {
+      "slug": "lillestrom-vs-molde",
+      "league": "eliteserien",
+      "homeTeam": "Lillestrøm",
+      "awayTeam": "Molde",
+      "date": "2026-10-11",
+      "prediction": "Molde or Draw (X2) + Under 4.5 Goals",
+      "odds": 1.91,
+      "result": "green"
+    },
+    {
+      "slug": "start-vs-hamkam",
+      "league": "eliteserien",
+      "homeTeam": "Start",
+      "awayTeam": "HamKam",
+      "date": "2026-10-11",
+      "prediction": "HamKam or Draw (X2)",
+      "odds": 1.78,
+      "result": "green"
+    },
+    {
       "slug": "excelsior-vs-fc-groningen",
       "league": "eredivisie",
       "homeTeam": "Excelsior",
@@ -1159,6 +2379,16 @@
       "date": "2026-10-11",
       "prediction": "Groningen X2 + Over 1.5",
       "odds": 1.81,
+      "result": "green"
+    },
+    {
+      "slug": "fc-utrecht-vs-willem-ii",
+      "league": "eredivisie",
+      "homeTeam": "Utrecht",
+      "awayTeam": "Willem II",
+      "date": "2026-10-11",
+      "prediction": "FC Utrecht to win",
+      "odds": 1.48,
       "result": "green"
     },
     {
@@ -1192,6 +2422,26 @@
       "result": "green"
     },
     {
+      "slug": "racing-santander-vs-valencia",
+      "league": "la-liga",
+      "homeTeam": "Racing Santander",
+      "awayTeam": "Valencia",
+      "date": "2026-10-11",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.68,
+      "result": "green"
+    },
+    {
+      "slug": "real-betis-vs-osasuna",
+      "league": "la-liga",
+      "homeTeam": "Real Betis",
+      "awayTeam": "Osasuna",
+      "date": "2026-10-11",
+      "prediction": "Real Betis to Win",
+      "odds": 1.57,
+      "result": "green"
+    },
+    {
       "slug": "real-sociedad-vs-deportivo",
       "league": "la-liga",
       "homeTeam": "Real Sociedad",
@@ -1199,6 +2449,26 @@
       "date": "2026-10-11",
       "prediction": "Real Sociedad to Win",
       "odds": 1.66,
+      "result": "green"
+    },
+    {
+      "slug": "arouca-vs-estrela-amadora",
+      "league": "liga-portugal",
+      "homeTeam": "Arouca",
+      "awayTeam": "Estrela",
+      "date": "2026-10-11",
+      "prediction": "Arouca X1 + Over 1.5 Goals",
+      "odds": 1.73,
+      "result": "red"
+    },
+    {
+      "slug": "benfica-vs-vitoria-guimaraes",
+      "league": "liga-portugal",
+      "homeTeam": "Benfica",
+      "awayTeam": "Vitória de Guimaraes",
+      "date": "2026-10-11",
+      "prediction": "Benfica -1.5 Asian Handicap",
+      "odds": 1.65,
       "result": "green"
     },
     {
@@ -1220,6 +2490,36 @@
       "prediction": "Strasbourg or Draw (X2)",
       "odds": 1.61,
       "result": "red"
+    },
+    {
+      "slug": "rennes-vs-auxerre",
+      "league": "ligue-1",
+      "homeTeam": "Rennes",
+      "awayTeam": "Auxerre",
+      "date": "2026-10-11",
+      "prediction": "Rennes Win",
+      "odds": 1.42,
+      "result": "green"
+    },
+    {
+      "slug": "troyes-vs-marseille",
+      "league": "ligue-1",
+      "homeTeam": "Troyes",
+      "awayTeam": "Marseille",
+      "date": "2026-10-11",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.61,
+      "result": "red"
+    },
+    {
+      "slug": "st-louis-city-sc-vs-la-galaxy",
+      "league": "mls",
+      "homeTeam": "St. Louis City SC",
+      "awayTeam": "LA Galaxy",
+      "date": "2026-10-11",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.42,
+      "result": "green"
     },
     {
       "slug": "crystal-palace-vs-nottingham-forest",
@@ -1249,6 +2549,56 @@
       "date": "2026-10-11",
       "prediction": "Over 2.5 Goals",
       "odds": 1.58,
+      "result": "green"
+    },
+    {
+      "slug": "aberdeen-vs-st-johnstone",
+      "league": "scottish-premiership",
+      "homeTeam": "Aberdeen",
+      "awayTeam": "St Johnstone",
+      "date": "2026-10-11",
+      "prediction": "Over 2.5 goals",
+      "odds": 1.88,
+      "result": "red"
+    },
+    {
+      "slug": "motherwell-vs-celtic",
+      "league": "scottish-premiership",
+      "homeTeam": "Motherwell",
+      "awayTeam": "Celtic",
+      "date": "2026-10-11",
+      "prediction": "Celtic to win",
+      "odds": 1.57,
+      "result": "green"
+    },
+    {
+      "slug": "cagliari-vs-juventus",
+      "league": "serie-a",
+      "homeTeam": "Cagliari",
+      "awayTeam": "Juventus",
+      "date": "2026-10-11",
+      "prediction": "Juventus Win",
+      "odds": 1.59,
+      "result": "red"
+    },
+    {
+      "slug": "como-vs-roma",
+      "league": "serie-a",
+      "homeTeam": "Como",
+      "awayTeam": "AS Roma",
+      "date": "2026-10-11",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.63,
+      "result": "red"
+    },
+    {
+      "slug": "lazio-vs-monza",
+      "league": "serie-a",
+      "homeTeam": "Lazio",
+      "awayTeam": "Monza",
+      "date": "2026-10-11",
+      "prediction": "Lazio Win",
+      "odds": 1.59,
       "result": "green"
     },
     {
@@ -1282,24 +2632,24 @@
       "result": "red"
     },
     {
-      "slug": "fc-utrecht-vs-willem-ii",
-      "league": "eredivisie",
-      "homeTeam": "Utrecht",
-      "awayTeam": "Willem II",
+      "slug": "gaziantep-vs-corum",
+      "league": "super-lig",
+      "homeTeam": "Gaziantep",
+      "awayTeam": "Çorum",
       "date": "2026-10-11",
-      "prediction": "FC Utrecht to win",
-      "odds": 1.48,
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.87,
       "result": "green"
     },
     {
-      "slug": "como-vs-roma",
-      "league": "serie-a",
-      "homeTeam": "Como",
-      "awayTeam": "AS Roma",
+      "slug": "konyaspor-vs-basaksehir",
+      "league": "super-lig",
+      "homeTeam": "Konyaspor",
+      "awayTeam": "Başakşehir",
       "date": "2026-10-11",
-      "prediction": "Over 2.5 Goals",
-      "odds": 1.63,
-      "result": "red"
+      "prediction": "Başakşehir or Draw (X2)",
+      "odds": 1.45,
+      "result": "green"
     },
     {
       "slug": "sao-paulo-vs-vitoria",
@@ -1320,116 +2670,6 @@
       "prediction": "Vasco da Gama to Win",
       "odds": 1.33,
       "result": "red"
-    },
-    {
-      "slug": "ajax-vs-nec-nijmegen",
-      "league": "eredivisie",
-      "homeTeam": "Ajax Amsterdam",
-      "awayTeam": "NEC Nijmegen",
-      "date": "2026-10-10",
-      "prediction": "Over 3.5 goals",
-      "odds": 1.78,
-      "result": "red"
-    },
-    {
-      "slug": "fortuna-sittard-vs-fc-twente",
-      "league": "eredivisie",
-      "homeTeam": "Fortuna Sittard",
-      "awayTeam": "Twente",
-      "date": "2026-10-10",
-      "prediction": "Over 2.5 goals",
-      "odds": 1.35,
-      "result": "red"
-    },
-    {
-      "slug": "real-madrid-vs-villarreal",
-      "league": "la-liga",
-      "homeTeam": "Real Madrid",
-      "awayTeam": "Villarreal",
-      "date": "2026-10-10",
-      "prediction": "Real Madrid to Win + Over 2.5 Goals",
-      "odds": 1.56,
-      "result": "red"
-    },
-    {
-      "slug": "academico-viseu-vs-estoril-praia",
-      "league": "liga-portugal",
-      "homeTeam": "Académico de Viseu",
-      "awayTeam": "Estoril",
-      "date": "2026-10-10",
-      "prediction": "Académico de Viseu X1 + Over 1.5 Goals",
-      "odds": 1.83,
-      "result": "green"
-    },
-    {
-      "slug": "casa-pia-vs-santa-clara",
-      "league": "liga-portugal",
-      "homeTeam": "Casa Pia",
-      "awayTeam": "Santa Clara",
-      "date": "2026-10-10",
-      "prediction": "Over 1.5 Goals",
-      "odds": 1.43,
-      "result": "red"
-    },
-    {
-      "slug": "maritimo-vs-porto",
-      "league": "liga-portugal",
-      "homeTeam": "Maritimo",
-      "awayTeam": "Porto",
-      "date": "2026-10-10",
-      "prediction": "FC Porto to Win + Over 1.5 Goals",
-      "odds": 1.56,
-      "result": "green"
-    },
-    {
-      "slug": "brest-vs-angers",
-      "league": "ligue-1",
-      "homeTeam": "Brest",
-      "awayTeam": "Angers",
-      "date": "2026-10-10",
-      "prediction": "Brest X1 + Over 1.5 Goals",
-      "odds": 1.62,
-      "result": "green"
-    },
-    {
-      "slug": "lorient-vs-paris-fc",
-      "league": "ligue-1",
-      "homeTeam": "Lorient",
-      "awayTeam": "Paris",
-      "date": "2026-10-10",
-      "prediction": "Paris FC X2 + Over 1.5 Goals",
-      "odds": 1.82,
-      "result": "red"
-    },
-    {
-      "slug": "monaco-vs-toulouse",
-      "league": "ligue-1",
-      "homeTeam": "AS Monaco",
-      "awayTeam": "Toulouse",
-      "date": "2026-10-10",
-      "prediction": "Monaco to Win",
-      "odds": 1.59,
-      "result": "red"
-    },
-    {
-      "slug": "psg-vs-le-mans",
-      "league": "ligue-1",
-      "homeTeam": "Paris Saint-Germain",
-      "awayTeam": "Le Mans",
-      "date": "2026-10-10",
-      "prediction": "Paris Saint-Germain -2.5 Handicap",
-      "odds": 1.63,
-      "result": "red"
-    },
-    {
-      "slug": "napoli-vs-frosinone",
-      "league": "serie-a",
-      "homeTeam": "Napoli",
-      "awayTeam": "Frosinone",
-      "date": "2026-10-10",
-      "prediction": "Napoli to Win + Over 1.5 Goals",
-      "odds": 1.62,
-      "result": "green"
     },
     {
       "slug": "augsburg-vs-bayern",
@@ -1492,6 +2732,16 @@
       "result": "red"
     },
     {
+      "slug": "bodo-glimt-vs-kristiansund",
+      "league": "eliteserien",
+      "homeTeam": "Bodø/Glimt",
+      "awayTeam": "Kristiansund",
+      "date": "2026-10-10",
+      "prediction": "Bodø/Glimt -2.5 Handicap",
+      "odds": 1.57,
+      "result": "red"
+    },
+    {
       "slug": "rosenborg-vs-sandefjord",
       "league": "eliteserien",
       "homeTeam": "Rosenborg",
@@ -1502,6 +2752,16 @@
       "result": "red"
     },
     {
+      "slug": "ajax-vs-nec-nijmegen",
+      "league": "eredivisie",
+      "homeTeam": "Ajax Amsterdam",
+      "awayTeam": "NEC Nijmegen",
+      "date": "2026-10-10",
+      "prediction": "Over 3.5 goals",
+      "odds": 1.78,
+      "result": "red"
+    },
+    {
       "slug": "feyenoord-vs-az-alkmaar",
       "league": "eredivisie",
       "homeTeam": "Feyenoord Rotterdam",
@@ -1509,6 +2769,16 @@
       "date": "2026-10-10",
       "prediction": "Over 2.5 goals",
       "odds": 1.38,
+      "result": "red"
+    },
+    {
+      "slug": "fortuna-sittard-vs-fc-twente",
+      "league": "eredivisie",
+      "homeTeam": "Fortuna Sittard",
+      "awayTeam": "Twente",
+      "date": "2026-10-10",
+      "prediction": "Over 2.5 goals",
+      "odds": 1.35,
       "result": "red"
     },
     {
@@ -1542,6 +2812,66 @@
       "result": "green"
     },
     {
+      "slug": "rayo-vallecano-vs-athletic-club",
+      "league": "la-liga",
+      "homeTeam": "Rayo Vallecano",
+      "awayTeam": "Athletic Club",
+      "date": "2026-10-10",
+      "prediction": "Rayo Vallecano X1",
+      "odds": 1.56,
+      "result": "green"
+    },
+    {
+      "slug": "real-madrid-vs-villarreal",
+      "league": "la-liga",
+      "homeTeam": "Real Madrid",
+      "awayTeam": "Villarreal",
+      "date": "2026-10-10",
+      "prediction": "Real Madrid to Win + Over 2.5 Goals",
+      "odds": 1.56,
+      "result": "red"
+    },
+    {
+      "slug": "academico-viseu-vs-estoril-praia",
+      "league": "liga-portugal",
+      "homeTeam": "Académico de Viseu",
+      "awayTeam": "Estoril",
+      "date": "2026-10-10",
+      "prediction": "Académico de Viseu X1 + Over 1.5 Goals",
+      "odds": 1.83,
+      "result": "green"
+    },
+    {
+      "slug": "casa-pia-vs-santa-clara",
+      "league": "liga-portugal",
+      "homeTeam": "Casa Pia",
+      "awayTeam": "Santa Clara",
+      "date": "2026-10-10",
+      "prediction": "Over 1.5 Goals",
+      "odds": 1.43,
+      "result": "red"
+    },
+    {
+      "slug": "maritimo-vs-porto",
+      "league": "liga-portugal",
+      "homeTeam": "Maritimo",
+      "awayTeam": "Porto",
+      "date": "2026-10-10",
+      "prediction": "FC Porto to Win + Over 1.5 Goals",
+      "odds": 1.56,
+      "result": "green"
+    },
+    {
+      "slug": "brest-vs-angers",
+      "league": "ligue-1",
+      "homeTeam": "Brest",
+      "awayTeam": "Angers",
+      "date": "2026-10-10",
+      "prediction": "Brest X1 + Over 1.5 Goals",
+      "odds": 1.62,
+      "result": "green"
+    },
+    {
       "slug": "lille-vs-le-havre",
       "league": "ligue-1",
       "homeTeam": "Lille",
@@ -1549,6 +2879,186 @@
       "date": "2026-10-10",
       "prediction": "Lille to Win",
       "odds": 1.43,
+      "result": "green"
+    },
+    {
+      "slug": "lorient-vs-paris-fc",
+      "league": "ligue-1",
+      "homeTeam": "Lorient",
+      "awayTeam": "Paris",
+      "date": "2026-10-10",
+      "prediction": "Paris FC X2 + Over 1.5 Goals",
+      "odds": 1.82,
+      "result": "red"
+    },
+    {
+      "slug": "monaco-vs-toulouse",
+      "league": "ligue-1",
+      "homeTeam": "AS Monaco",
+      "awayTeam": "Toulouse",
+      "date": "2026-10-10",
+      "prediction": "Monaco to Win",
+      "odds": 1.59,
+      "result": "red"
+    },
+    {
+      "slug": "psg-vs-le-mans",
+      "league": "ligue-1",
+      "homeTeam": "Paris Saint-Germain",
+      "awayTeam": "Le Mans",
+      "date": "2026-10-10",
+      "prediction": "Paris Saint-Germain -2.5 Handicap",
+      "odds": 1.63,
+      "result": "red"
+    },
+    {
+      "slug": "atlanta-united-vs-fc-cincinnati",
+      "league": "mls",
+      "homeTeam": "Atlanta United",
+      "awayTeam": "FC Cincinnati",
+      "date": "2026-10-10",
+      "prediction": "Over 2.5 goals",
+      "odds": 1.42,
+      "result": "green"
+    },
+    {
+      "slug": "austin-fc-vs-nashville-sc",
+      "league": "mls",
+      "homeTeam": "Austin FC",
+      "awayTeam": "Nashville SC",
+      "date": "2026-10-10",
+      "prediction": "Over 2.5 goals",
+      "odds": 1.78,
+      "result": "green"
+    },
+    {
+      "slug": "charlotte-fc-vs-fc-dallas",
+      "league": "mls",
+      "homeTeam": "Charlotte FC",
+      "awayTeam": "FC Dallas",
+      "date": "2026-10-10",
+      "prediction": "FC Dallas X2",
+      "odds": 1.68,
+      "result": "red"
+    },
+    {
+      "slug": "chicago-fire-vs-new-york-city-fc",
+      "league": "mls",
+      "homeTeam": "Chicago Fire",
+      "awayTeam": "New York City FC",
+      "date": "2026-10-10",
+      "prediction": "Chicago Fire to win",
+      "odds": 1.88,
+      "result": "green"
+    },
+    {
+      "slug": "colorado-rapids-vs-san-jose-earthquakes",
+      "league": "mls",
+      "homeTeam": "Colorado Rapids",
+      "awayTeam": "San Jose Earthquakes",
+      "date": "2026-10-10",
+      "prediction": "Over 2.5 goals",
+      "odds": 1.58,
+      "result": "red"
+    },
+    {
+      "slug": "inter-miami-vs-dc-united",
+      "league": "mls",
+      "homeTeam": "Inter Miami",
+      "awayTeam": "D.C. United",
+      "date": "2026-10-10",
+      "prediction": "Inter Miami to win",
+      "odds": 1.42,
+      "result": "green"
+    },
+    {
+      "slug": "los-angeles-fc-vs-vancouver-whitecaps",
+      "league": "mls",
+      "homeTeam": "Los Angeles FC",
+      "awayTeam": "Vancouver Whitecaps",
+      "date": "2026-10-10",
+      "prediction": "Over 2.5 goals",
+      "odds": 1.6,
+      "result": "red"
+    },
+    {
+      "slug": "minnesota-united-vs-houston-dynamo",
+      "league": "mls",
+      "homeTeam": "Minnesota United",
+      "awayTeam": "Houston Dynamo",
+      "date": "2026-10-10",
+      "prediction": "Houston Dynamo X2",
+      "odds": 1.75,
+      "result": "green"
+    },
+    {
+      "slug": "new-england-revolution-vs-seattle-sounders",
+      "league": "mls",
+      "homeTeam": "New England Revolution",
+      "awayTeam": "Seattle Sounders",
+      "date": "2026-10-10",
+      "prediction": "New England X1 + Over 1.5",
+      "odds": 1.53,
+      "result": "red"
+    },
+    {
+      "slug": "new-york-red-bulls-vs-san-diego-fc",
+      "league": "mls",
+      "homeTeam": "New York Red Bulls",
+      "awayTeam": "San Diego FC",
+      "date": "2026-10-10",
+      "prediction": "Over 2.5 goals",
+      "odds": 1.42,
+      "result": "green"
+    },
+    {
+      "slug": "orlando-city-vs-columbus-crew",
+      "league": "mls",
+      "homeTeam": "Orlando City",
+      "awayTeam": "Columbus Crew",
+      "date": "2026-10-10",
+      "prediction": "Orlando X1 + Over 1.5",
+      "odds": 1.59,
+      "result": "green"
+    },
+    {
+      "slug": "philadelphia-union-vs-real-salt-lake",
+      "league": "mls",
+      "homeTeam": "Philadelphia Union",
+      "awayTeam": "Real Salt Lake",
+      "date": "2026-10-10",
+      "prediction": "Philadelphia Union to win",
+      "odds": 1.46,
+      "result": "green"
+    },
+    {
+      "slug": "sporting-kansas-city-vs-portland-timbers",
+      "league": "mls",
+      "homeTeam": "Sporting Kansas City",
+      "awayTeam": "Portland Timbers",
+      "date": "2026-10-10",
+      "prediction": "Portland Timbers X2",
+      "odds": 1.59,
+      "result": "green"
+    },
+    {
+      "slug": "toronto-fc-vs-cf-montreal",
+      "league": "mls",
+      "homeTeam": "Toronto FC",
+      "awayTeam": "CF Montréal",
+      "date": "2026-10-10",
+      "prediction": "Toronto X1 + Under 4.5",
+      "odds": 1.65,
+      "result": "green"
+    },
+    {
+      "slug": "arsenal-vs-leeds",
+      "league": "premier-league",
+      "homeTeam": "Arsenal",
+      "awayTeam": "Leeds United",
+      "date": "2026-10-10",
+      "prediction": "Arsenal to Win + Over 1.5 Goals",
+      "odds": 1.61,
       "result": "green"
     },
     {
@@ -1602,6 +3112,36 @@
       "result": "red"
     },
     {
+      "slug": "dundee-united-vs-hibernian",
+      "league": "scottish-premiership",
+      "homeTeam": "Dundee United",
+      "awayTeam": "Hibernian",
+      "date": "2026-10-10",
+      "prediction": "Hibernian X2",
+      "odds": 1.42,
+      "result": "red"
+    },
+    {
+      "slug": "falkirk-vs-dundee-fc",
+      "league": "scottish-premiership",
+      "homeTeam": "Falkirk",
+      "awayTeam": "Dundee FC",
+      "date": "2026-10-10",
+      "prediction": "Over 2.5 goals",
+      "odds": 1.69,
+      "result": "green"
+    },
+    {
+      "slug": "hearts-vs-st-mirren",
+      "league": "scottish-premiership",
+      "homeTeam": "Hearts",
+      "awayTeam": "St Mirren",
+      "date": "2026-10-10",
+      "prediction": "Over 2.5 goals",
+      "odds": 1.47,
+      "result": "green"
+    },
+    {
       "slug": "genoa-vs-fiorentina",
       "league": "serie-a",
       "homeTeam": "Genoa",
@@ -1622,6 +3162,16 @@
       "result": "green"
     },
     {
+      "slug": "napoli-vs-frosinone",
+      "league": "serie-a",
+      "homeTeam": "Napoli",
+      "awayTeam": "Frosinone",
+      "date": "2026-10-10",
+      "prediction": "Napoli to Win + Over 1.5 Goals",
+      "odds": 1.62,
+      "result": "green"
+    },
+    {
       "slug": "alanyaspor-vs-erzurumspor",
       "league": "super-lig",
       "homeTeam": "Alanyaspor",
@@ -1630,6 +3180,16 @@
       "prediction": "Alanyaspor X1 + Over 1.5 Goals",
       "odds": 1.81,
       "result": "red"
+    },
+    {
+      "slug": "genclerbirligi-vs-amed",
+      "league": "super-lig",
+      "homeTeam": "Gençlerbirliği",
+      "awayTeam": "Amed",
+      "date": "2026-10-10",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.75,
+      "result": "green"
     },
     {
       "slug": "rizespor-vs-fenerbahce",
@@ -1652,36 +3212,6 @@
       "result": "green"
     },
     {
-      "slug": "rayo-vallecano-vs-athletic-club",
-      "league": "la-liga",
-      "homeTeam": "Rayo Vallecano",
-      "awayTeam": "Athletic Club",
-      "date": "2026-10-10",
-      "prediction": "Rayo Vallecano X1",
-      "odds": 1.56,
-      "result": "green"
-    },
-    {
-      "slug": "arsenal-vs-leeds",
-      "league": "premier-league",
-      "homeTeam": "Arsenal",
-      "awayTeam": "Leeds United",
-      "date": "2026-10-10",
-      "prediction": "Arsenal to Win + Over 1.5 Goals",
-      "odds": 1.61,
-      "result": "green"
-    },
-    {
-      "slug": "malaga-vs-espanyol",
-      "league": "la-liga",
-      "homeTeam": "Málaga",
-      "awayTeam": "Espanyol",
-      "date": "2026-10-09",
-      "prediction": "Over 1.5 goals + over 7.5 total corners",
-      "odds": 1.8,
-      "result": "green"
-    },
-    {
       "slug": "borussia-dortmund-vs-werder-bremen",
       "league": "bundesliga",
       "homeTeam": "Borussia Dortmund",
@@ -1692,6 +3222,16 @@
       "result": "red"
     },
     {
+      "slug": "brann-vs-viking",
+      "league": "eliteserien",
+      "homeTeam": "Brann",
+      "awayTeam": "Viking",
+      "date": "2026-10-09",
+      "prediction": "Viking or draw (X2) + over 2.5 goals",
+      "odds": 2.11,
+      "result": "red"
+    },
+    {
       "slug": "psv-vs-heerenveen",
       "league": "eredivisie",
       "homeTeam": "PSV Eindhoven",
@@ -1699,6 +3239,16 @@
       "date": "2026-10-09",
       "prediction": "PSV -1.5 handicap",
       "odds": 1.57,
+      "result": "green"
+    },
+    {
+      "slug": "malaga-vs-espanyol",
+      "league": "la-liga",
+      "homeTeam": "Málaga",
+      "awayTeam": "Espanyol",
+      "date": "2026-10-09",
+      "prediction": "Over 1.5 goals + over 7.5 total corners",
+      "odds": 1.8,
       "result": "green"
     },
     {
@@ -1782,16 +3332,6 @@
       "result": "green"
     },
     {
-      "slug": "cruzeiro-vs-sao-paulo",
-      "league": "brasileirao-serie-a",
-      "homeTeam": "Cruzeiro",
-      "awayTeam": "São Paulo",
-      "date": "2026-10-07",
-      "prediction": "Cruzeiro or Draw (1X) + Over 1.5 Goals",
-      "odds": 1.67,
-      "result": "green"
-    },
-    {
       "slug": "botafogo-vs-vasco",
       "league": "brasileirao-serie-a",
       "homeTeam": "Botafogo",
@@ -1809,6 +3349,16 @@
       "date": "2026-10-07",
       "prediction": "Bragantino or Draw (1X) + Over 8.5 Corners",
       "odds": 1.65,
+      "result": "green"
+    },
+    {
+      "slug": "cruzeiro-vs-sao-paulo",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Cruzeiro",
+      "awayTeam": "São Paulo",
+      "date": "2026-10-07",
+      "prediction": "Cruzeiro or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.67,
       "result": "green"
     },
     {

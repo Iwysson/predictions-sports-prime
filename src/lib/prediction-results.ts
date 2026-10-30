@@ -13,6 +13,7 @@ export type SettlementPendingReason =
   | "EXECUTION_DATA_MISSING"
   | "TEAM_NOT_RESOLVED"
   | "EVIDENCE_UNAVAILABLE"
+  | "HANDICAP_TYPE_AMBIGUOUS"
   | "MANUAL_PENDING";
 
 export type ParsedPredictionLeg =
@@ -22,7 +23,7 @@ export type ParsedPredictionLeg =
   | { kind: "double-chance"; team: string; side?: "1X" | "X2"; source: string }
   | { kind: "win"; team: string; source: string }
   | { kind: "team-total"; team: string; selection: "over" | "under"; line: number; source: string }
-  | { kind: "handicap"; team: string; line: number; source: string }
+  | { kind: "handicap"; team: string; line: number; style?: "asian" | "european"; source: string }
   | { kind: "corners"; team?: string; selection: "over" | "under"; line: number; source: string };
 
 export type SettlementEvaluation = {
@@ -67,8 +68,13 @@ function selectedTeamIsHome(label: string, match: MatchPreview) {
   return null;
 }
 
+// Parentheticals that restate a market without changing what is graded. Removing them lets every
+// published spelling reach one grammar; the original text is still what the record stores and shows.
+const NON_SEMANTIC_SUFFIX = /\s*\((?:90[ -]minutes?(?: moneyline)?|win by \d\+ goals?|same[- ]game combination|handicap)\)$/i;
+
 function parseLeg(source: string): ParsedPredictionLeg | null {
-  const liveEntry = source.match(/^(.+?)\s*[-\u2014]\s*(?:Live Entry|Wait Live)$/i);
+  const text = source.replace(NON_SEMANTIC_SUFFIX, "").trim();
+  const liveEntry = text.match(/^(.+?)\s*[-—]\s*(?:Live Entry|Wait Live)$/i);
   if (liveEntry) {
     // "Live Entry" describes timing/price provenance, not a different sports
     // market. Once the fixture is final, grade the explicit market written
@@ -77,52 +83,63 @@ function parseLeg(source: string): ParsedPredictionLeg | null {
     return parseLeg(liveEntry[1].trim()) ?? { kind: "live-entry", market: liveEntry[1].trim(), source };
   }
 
-  const totalCorners = source.match(/^(Over|Under) (\d+(?:\.\d+)?) (?:Total )?Corners?$/i);
+  const totalCorners = text.match(/^(Over|Under) (\d+(?:\.\d+)?) (?:Total )?Corners?$/i);
   if (totalCorners) return { kind: "corners", selection: totalCorners[1].toLowerCase() as "over" | "under", line: Number(totalCorners[2]), source };
 
-  const teamCorners = source.match(/^(.+?) (Over|Under) (\d+(?:\.\d+)?) (?:Team )?Corners?$/i);
+  const teamCorners = text.match(/^(.+?) (Over|Under) (\d+(?:\.\d+)?) (?:Team )?Corners?$/i);
   if (teamCorners) return { kind: "corners", team: teamCorners[1], selection: teamCorners[2].toLowerCase() as "over" | "under", line: Number(teamCorners[3]), source };
 
-  const total = source.match(/^(Over|Under) (\d+(?:\.\d+)?) Goals$/i);
+  const total = text.match(/^(Over|Under) (\d+(?:\.\d+)?)(?: Total)?(?: Goals?)?$/i);
   if (total) return { kind: "total-goals", selection: total[1].toLowerCase() as "over" | "under", line: Number(total[2]), source };
 
-  const compactTotal = source.match(/^(Over|Under) (\d+(?:\.\d+)?)$/i);
-  if (compactTotal) return { kind: "total-goals", selection: compactTotal[1].toLowerCase() as "over" | "under", line: Number(compactTotal[2]), source };
-
-  const btts = source.match(/^Both Teams to Score\s*[-\u2014]\s*(Yes|No)$/i);
+  const btts = text.match(/^Both Teams to Score\s*[-—]\s*(Yes|No)$/i);
   if (btts) return { kind: "btts", selection: btts[1].toLowerCase() as "yes" | "no", source };
 
-  const doubleChance = source.match(/^(.+?) or Draw(?: \((1X|X2)\))?$/i);
-  if (doubleChance) return { kind: "double-chance", team: doubleChance[1], side: doubleChance[2]?.toUpperCase() as "1X" | "X2" | undefined, source };
+  const doubleChance = text.match(/^(.+?) or Draw(?: \((1X|X1|X2|Double Chance)\))?$/i);
+  if (doubleChance) {
+    const side = doubleChance[2]?.toUpperCase();
+    return { kind: "double-chance", team: doubleChance[1], side: side === "X2" ? "X2" : side === "1X" || side === "X1" ? "1X" : undefined, source };
+  }
 
-  const labelledDoubleChance = source.match(/^(.+?) double chance \((1X|X1|X2)\)$/i);
+  const leadingDoubleChance = text.match(/^(1X|X1|X2) \((.+?) or Draw\)$/i);
+  if (leadingDoubleChance) {
+    return { kind: "double-chance", team: leadingDoubleChance[2], side: leadingDoubleChance[1].toUpperCase() === "X2" ? "X2" : "1X", source };
+  }
+
+  const labelledDoubleChance = text.match(/^(.+?) double chance \((1X|X1|X2)\)$/i);
   if (labelledDoubleChance) {
     const side = labelledDoubleChance[2].toUpperCase() === "X2" ? "X2" : "1X";
     return { kind: "double-chance", team: labelledDoubleChance[1], side, source };
   }
 
-  const compactDoubleChance = source.match(/^(.+?) (1X|X1|X2)$/i);
+  const compactDoubleChance = text.match(/^(.+?) (1X|X1|X2)$/i);
   if (compactDoubleChance) {
     const side = compactDoubleChance[2].toUpperCase() === "X2" ? "X2" : "1X";
     return { kind: "double-chance", team: compactDoubleChance[1], side, source };
   }
 
-  const bareDoubleChance = source.match(/^(1X|X1|X2)$/i);
+  const bareDoubleChance = text.match(/^(1X|X1|X2)$/i);
   if (bareDoubleChance) {
     const side = bareDoubleChance[1].toUpperCase() === "X2" ? "X2" : "1X";
     return { kind: "double-chance", team: "", side, source };
   }
 
-  const teamTotal = source.match(/^(.+?) (Over|Under) (\d+(?:\.\d+)?) Team Goals$/i);
+  const teamTotal = text.match(/^(.+?) (Over|Under) (\d+(?:\.\d+)?) Team Goals$/i);
   if (teamTotal) return { kind: "team-total", team: teamTotal[1], selection: teamTotal[2].toLowerCase() as "over" | "under", line: Number(teamTotal[3]), source };
 
-  const handicap = source.match(/^(.+?) ([+-]\d+(?:\.\d+)?) (?:Asian )?Handicap$/i);
-  if (handicap) return { kind: "handicap", team: handicap[1], line: Number(handicap[2]), source };
+  const handicap = text.match(/^(.+?) ([+-]\d+(?:\.\d+)?)(?: Goals?)?(?: (Asian|European|Asian\/European))?(?: Goals?)? Handicap$/i);
+  if (handicap) {
+    const style = handicap[3]?.toLowerCase();
+    return { kind: "handicap", team: handicap[1], line: Number(handicap[2]), ...(style === "asian" || style === "european" ? { style } : {}), source };
+  }
 
-  const compactHandicap = source.match(/^(.+?) ([+-]\d+(?:\.\d+)?)$/i);
+  const reversedHandicap = text.match(/^(.+?) handicap ([+-]\d+(?:\.\d+)?)$/i);
+  if (reversedHandicap) return { kind: "handicap", team: reversedHandicap[1], line: Number(reversedHandicap[2]), source };
+
+  const compactHandicap = text.match(/^(.+?) ([+-]\d+(?:\.\d+)?)(?: Goals?)?$/i);
   if (compactHandicap) return { kind: "handicap", team: compactHandicap[1], line: Number(compactHandicap[2]), source };
 
-  const win = source.match(/^(.+?) to Win$/i);
+  const win = text.match(/^(.+?) (?:to )?Win$/i);
   if (win) return { kind: "win", team: win[1], source };
 
   return null;
@@ -180,7 +197,14 @@ function evaluateLeg(leg: ParsedPredictionLeg, match: MatchPreview, score: Score
   if (leg.kind === "team-total") {
     return { status: settleDirectional((isHome ? score.home : score.away) - leg.line, leg.selection) };
   }
-  return { status: settleHandicap(isHome ? score.home - score.away : score.away - score.home, leg.line) };
+  const margin = isHome ? score.home - score.away : score.away - score.home;
+  // A whole-goal line lands exactly on the margin only here: Asian rules refund it, a European (three-way)
+  // line loses it. A published pick that does not say which it was is never graded by assumption.
+  if (Number.isInteger(leg.line) && margin + leg.line === 0) {
+    if (leg.style === "european") return { status: "red" as const };
+    if (leg.style !== "asian") return { status: "pending" as const, reason: "HANDICAP_TYPE_AMBIGUOUS" as const };
+  }
+  return { status: settleHandicap(margin, leg.line) };
 }
 
 function combineLegResults(results: PredictionResultStatus[]): PredictionResultStatus {

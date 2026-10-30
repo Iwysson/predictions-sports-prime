@@ -3685,6 +3685,13 @@ html[dir="rtl"] .latest-match {
 .results-filters button[aria-pressed="true"] { border-color: var(--accent); color: var(--text); }
 .results-list { display: grid; gap: 10px; }
 .result-card { padding: 15px; border: 1px solid var(--line); border-radius: 11px; background: var(--panel); }
+.results-filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0 0 16px; }
+.results-filters label { display: grid; gap: 4px; min-width: 0; color: var(--muted); font-size: 11px; text-transform: uppercase; }
+.results-filters select { width: 100%; min-height: 40px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); color: var(--text); font-size: 14px; text-transform: none; }
+.results-pagination { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 18px 0 4px; color: var(--muted); font-size: 13px; }
+.results-pagination button { min-height: 40px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); color: var(--text); font-size: 13px; cursor: pointer; }
+.results-pagination button:disabled { opacity: .45; cursor: default; }
+@media (max-width: 640px) { .results-filters { grid-template-columns: 1fr; } }
 .result-card__heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
 .result-card__heading span { color: var(--muted); font-size: 11px; }
 .result-card__heading h2 { margin: 4px 0 0; font-size: 17px; }

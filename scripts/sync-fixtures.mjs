@@ -367,14 +367,14 @@ async function syncLeague(league) {
     if (validation.warnings.length > 0) {
       throw new PartialSourceError(`${league.name}: ${validation.warnings.join(" | ")}`);
     }
-    const invalidSnapshotFixture = rounds.flatMap((round) => round.games).find((fixture) =>
-      !fixture.id || !fixture.kickoffUtc || !Number.isFinite(Date.parse(fixture.kickoffUtc))
-    );
-    if (invalidSnapshotFixture) {
-      throw new Error(
-        `${league.name}: incomplete normalized fixture ${invalidSnapshotFixture.homeTeam} vs ${invalidSnapshotFixture.awayTeam} ` +
-        `(id=${invalidSnapshotFixture.id ?? "missing"}, kickoffUtc=${invalidSnapshotFixture.kickoffUtc ?? "missing"})`
-      );
+    // A season-file fixture the providers do not list has no identity to store. It is left out of this
+    // snapshot and reported; it must not reject the refresh of the other fixtures in the league.
+    for (const round of rounds) {
+      round.games = round.games.filter((fixture) => {
+        const complete = fixture.id && fixture.kickoffUtc && Number.isFinite(Date.parse(fixture.kickoffUtc));
+        if (!complete) console.warn(`INCOMPLETE_FIXTURE ${league.slug}: ${fixture.homeTeam} vs ${fixture.awayTeam} (id=${fixture.id ?? "missing"}, kickoffUtc=${fixture.kickoffUtc ?? "missing"})`);
+        return complete;
+      });
     }
     const linkedIds = new Set();
     for (const prediction of leaguePredictions) {
@@ -393,7 +393,17 @@ async function syncLeague(league) {
           .filter((game) => game.homeTeam.includes(prediction.homeTeam.split(" ")[0]) || game.awayTeam.includes(prediction.awayTeam.split(" ")[0]))
           .slice(0, 8)
           .map((game) => `${game.homeTeam} vs ${game.awayTeam} [${game.id ?? "no id"}]`);
-        throw new Error(`${league.name}: no authoritative fixture ID for ${prediction.slug}. Candidates: ${candidates.join(" | ")}`);
+        // One unlinked prediction must not throw away the refresh of every other fixture in its league.
+        // Link it from its own verified date/time when no official fixture exists for the pairing.
+        const editorialFixture = buildEditorialFallbackFixture(prediction, [rounds, previous.leagues?.[league.slug] ?? []]);
+        if (editorialFixture) {
+          snapshot.predictionIds[predictionKey] = editorialFixture.id;
+          snapshot.manualFixtures[editorialFixture.id] ??= editorialFixture;
+          console.warn(`EDITORIAL_FIXTURE_FALLBACK ${predictionKey}: no provider fixture available; linked ${editorialFixture.id}`);
+          continue;
+        }
+        console.warn(`UNLINKED_PREDICTION ${league.slug}:${prediction.slug}. Candidates: ${candidates.join(" | ")}`);
+        continue;
       }
 
       const previousId = previous.predictionIds?.[predictionKey];
@@ -420,17 +430,23 @@ async function syncLeague(league) {
     windowStart.setUTCDate(windowStart.getUTCDate() - 30);
     const windowEnd = new Date(`${generatedDay}T00:00:00Z`);
     windowEnd.setUTCDate(windowEnd.getUTCDate() + 90);
-    snapshot.leagues[league.slug] = rounds.filter((round) =>
+    const retainedRounds = rounds.filter((round) =>
       round.games.some((game) => linkedIds.has(game.id)) ||
       round.games.some((game) => {
         const date = new Date(`${game.date}T00:00:00Z`);
         return date >= windowStart && date <= windowEnd;
       })
     );
+    // A season file that ends before the window (a hand-kept source running out) has nothing to offer: keep
+    // the previous rounds and their live refresh below instead of erasing the league from the snapshot.
+    if (!retainedRounds.length) throw new PartialSourceError(`${league.name}: season feed has no fixture in the snapshot window`);
+    snapshot.leagues[league.slug] = retainedRounds;
     snapshot.leagueUpdatedAt[league.slug] = snapshot.generatedAt;
     console.log(`${league.name}: ${rounds.flatMap((round) => round.games).length} fixtures, ${leaguePredictions.length} predictions linked`);
   } catch (error) {
-    if (error instanceof FixtureIntegrityError) throw error;
+    // Integrity failures keep this league's last valid snapshot like any other refresh failure below;
+    // they are logged, and they can no longer stop the other leagues from refreshing.
+    if (error instanceof FixtureIntegrityError) console.error(`FIXTURE_INTEGRITY ${league.slug}: ${error.message}`);
     const savedRounds = previous.leagues?.[league.slug];
     if (savedRounds?.length) {
       const preservedRounds = structuredClone(savedRounds);
@@ -641,15 +657,15 @@ const missingPredictionKeys = automaticPredictionKeys
   });
 const producedAutomaticPredictionLinks = automaticPredictionKeys.length - missingPredictionKeys.length;
 
+// One prediction without a fixture link must never stop every other league from refreshing: this was
+// fatal until 2026-10-30 and froze all settlement for a week over a single match. The prediction stays
+// PENDING, and results:reconcile looks for its result directly at the providers.
 if (missingPredictionKeys.length > 0) {
-  throw new Error(
-    `Expected ${automaticPredictions.length} automatic prediction links, produced ${producedAutomaticPredictionLinks}. ` +
-    `Missing: ${missingPredictionKeys.join(", ")}.`
-  );
+  console.warn(`UNLINKED_PREDICTIONS ${missingPredictionKeys.length}: ${missingPredictionKeys.join(", ")}`);
 }
 
 console.log(
-  `Automatic prediction links: ${automaticPredictions.length} expected, ${producedAutomaticPredictionLinks} produced; missing links: 0`
+  `Automatic prediction links: ${automaticPredictions.length} expected, ${producedAutomaticPredictionLinks} produced; missing links: ${missingPredictionKeys.length}`
 );
 
 // A resolvable ID is insufficient: legacy snapshots can contain a reverse-leg
@@ -661,8 +677,11 @@ const conflictingPredictionKeys = automaticPredictions.filter((prediction) => {
     ?? snapshot.manualFixtures[id];
   return !fixtureIdentityMatchesPrediction(prediction, fixture);
 }).map((prediction) => `${prediction.league}:${prediction.slug}`);
+// The bad association is dropped (never written), the rest of the snapshot still refreshes, and only an
+// explicit documented fixture reconciliation may permit a post-publication home/away change.
 if (conflictingPredictionKeys.length) {
-  throw new FixtureIntegrityError(`Prediction fixture identity conflicts (teams/home-away): ${conflictingPredictionKeys.join(", ")}. Snapshot write blocked; only an explicit documented fixture reconciliation may permit a post-publication home/away change.`);
+  console.error(`FIXTURE_IDENTITY_CONFLICT (link dropped): ${conflictingPredictionKeys.join(", ")}`);
+  for (const key of conflictingPredictionKeys) delete snapshot.predictionIds[key];
 }
 
 // Frequent polling is important around full time, but generatedAt alone must

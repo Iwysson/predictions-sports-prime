@@ -72,12 +72,15 @@ const slugHtml = (slug: string) => `<article data-result-slug="${slug}"></articl
   assert(errors.length === 0, "an empty archive with no rendered entries is consistent");
 }
 
-// --- The cap constant must stay in sync with PredictionResultsArchive.RESULTS_VISIBLE_LIMIT ----------
+// --- The page size lives in the module the audit reads, so the component cannot drift from it -------
 {
   const componentSource = readFileSync("src/components/PredictionResultsArchive.tsx", "utf8");
-  const match = componentSource.match(/RESULTS_VISIBLE_LIMIT\s*=\s*(\d+)/);
-  assert(match !== null, "PredictionResultsArchive.tsx still exports a numeric RESULTS_VISIBLE_LIMIT");
-  assert(Number(match?.[1]) === RESULTS_HISTORY_VISIBLE_LIMIT, "RESULTS_HISTORY_VISIBLE_LIMIT matches the component's RESULTS_VISIBLE_LIMIT");
+  assert(componentSource.includes("RESULTS_HISTORY_VISIBLE_LIMIT"), "PredictionResultsArchive.tsx paginates with RESULTS_HISTORY_VISIBLE_LIMIT");
+  const errors = checkResultsHistoryIntegrity({ historyHtml: slugHtml("a"), settledSlugs: ["a", "b"], visibleLimit: 1, requireFullPayload: true });
+  assert(errors.some((e) => e.includes("missing from the page payload")), "a settled record absent from the payload is flagged");
+  const withPending = checkResultsHistoryIntegrity({ historyHtml: `<article data-pending-slug="p"></article>${slugHtml("a")}`, settledSlugs: ["a", "b"], visibleLimit: 2 });
+  assert(withPending.length === 0, "a pending record may occupy a slot of the first page");
+
 }
 
 console.log("All results-history-audit tests passed.");

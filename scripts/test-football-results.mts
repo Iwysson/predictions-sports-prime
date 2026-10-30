@@ -34,8 +34,8 @@ assert.equal(status("Both Teams to Score — Yes", [1, 1]), "green");
 assert.equal(status("Both Teams to Score — Yes", [1, 0]), "red");
 assert.equal(status("Cruzeiro or Draw (1X) + Over 1.5 Goals", [1, 1]), "green");
 assert.equal(status("Cruzeiro or Draw (1X) + Over 1.5 Goals", [1, 0]), "red", "one losing leg loses the combined pick");
-assert.equal(status("Cruzeiro -1", [2, 1]), "push");
-assert.equal(status("Cruzeiro -1", [3, 1]), "green");
+assert.equal(status("Cruzeiro -1 Asian Handicap", [2, 1]), "push");
+assert.equal(status("Cruzeiro -1 Asian Handicap", [3, 1]), "green");
 assert.equal(status("Cruzeiro -0.75 Handicap", [1, 0]), "half-green");
 assert.equal(status("Over 2 Goals", [1, 1]), "push");
 
@@ -43,7 +43,10 @@ assert.equal(status("Over 2 Goals", [1, 1]), "push");
 for (const fixtureStatus of ["scheduled", "in-progress", "postponed", "canceled"] as const) {
   const evaluation = evaluatePredictionSettlement(match("Cruzeiro to Win", null, { fixtureStatus }));
   assert.equal(evaluation.status, "pending", fixtureStatus);
-  assert.equal(settleFromMatch(match("Cruzeiro to Win", null, { fixtureStatus }), NOW), null);
+  // Only an officially cancelled fixture closes as VOID, with no score; every other state stays open.
+  const record = settleFromMatch(match("Cruzeiro to Win", null, { fixtureStatus }), NOW);
+  if (fixtureStatus === "canceled") assert.deepEqual([record?.result, record?.finalScore], ["void", null]);
+  else assert.equal(record, null, fixtureStatus);
 }
 // Live with a partial score is still pending
 assert.equal(settleFromMatch(match("Cruzeiro to Win", [2, 0], { fixtureStatus: "in-progress" }), NOW), null);
@@ -112,7 +115,7 @@ assert.equal(
   const records = Object.values(buildResultsDataset([
     match("Cruzeiro to Win", [1, 0], { slug: "w" }),
     match("Cruzeiro to Win", [0, 1], { slug: "l" }),
-    match("Cruzeiro -1", [2, 1], { slug: "p" }),
+    match("Cruzeiro -1 Asian Handicap", [2, 1], { slug: "p" }),
   ], emptyResultsDataset(), NOW).records);
   const stats = summarizeResults(records);
   assert.equal(stats.settled, 3);
@@ -123,7 +126,7 @@ assert.equal(
 // Track-record UI calculations: no hardcoded counts and no false percentage.
 {
   const record = (result: "green" | "red" | "push", slug: string) => ({
-    ...settleFromMatch(match(result === "push" ? "Cruzeiro -1" : "Cruzeiro to Win", result === "green" ? [2, 0] : result === "red" ? [0, 1] : [2, 1], { slug }), NOW)!,
+    ...settleFromMatch(match(result === "push" ? "Cruzeiro -1 Asian Handicap" : "Cruzeiro to Win", result === "green" ? [2, 0] : result === "red" ? [0, 1] : [2, 1], { slug }), NOW)!,
     result,
   });
   const fiveOne = summarizeResults([
@@ -152,7 +155,7 @@ assert.equal(
     match("Cruzeiro to Win", [1, 0], { slug: "win-old", date: "2026-10-01" }),
     match("Cruzeiro to Win", [1, 0], { slug: "win-new", date: "2026-10-07" }),
     match("Cruzeiro to Win", [0, 1], { slug: "loss", date: "2026-10-06" }),
-    match("Cruzeiro -1", [2, 1], { slug: "push", date: "2026-10-05" }),
+    match("Cruzeiro -1 Asian Handicap", [2, 1], { slug: "push", date: "2026-10-05" }),
   ], emptyResultsDataset(), NOW);
   const wins = latestWinResults(dataset, 8);
   assert.deepEqual(wins.map((record) => record.slug), ["win-new", "win-old"], "only green results, newest first");

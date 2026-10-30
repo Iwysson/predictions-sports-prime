@@ -40,9 +40,10 @@ assert(!/How Our Football Predictions Work/i.test(html), "the removed trust-link
 // --- League navigation --------------------------------------------------------------------------
 
 const leaguesSection = html.slice(idxLeagues);
-assert(leaguesSection.includes('href="/nhl/"'), "Predictions by League still links to NHL");
-assert(leaguesSection.includes('href="/nfl/"'), "Predictions by League still links to NFL");
-assert(leaguesSection.includes('href="/nba/"'), "Predictions by League still links to NBA");
+for (const sport of ["nhl", "nfl", "nba"]) {
+  assert(!html.includes(`href="/${sport}/"`), `the homepage has no link to the retired /${sport}/ hub`);
+}
+assert(!/\b(?:NFL|NHL|NBA)\b/.test(leaguesSection), "Predictions by League lists football competitions only");
 // Individual football league hub pages were retired: the cards stay visible (logos, names,
 // colors) but no longer link anywhere, and /league/ never appears in this section's markup.
 assert(!leaguesSection.includes("/league/"), "Predictions by League no longer links to individual league pages");

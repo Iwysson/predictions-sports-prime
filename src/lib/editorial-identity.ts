@@ -27,7 +27,7 @@ export function editorialAuthorPersonJsonLd() {
     name: "Predictions Sports Prime",
     url: absoluteUrl("/"),
     "@id": editorialAuthorId(),
-    description: "Editorial team behind the Predictions Sports Prime football, NFL, NHL and NBA analyses.",
+    description: "Editorial team behind the Predictions Sports Prime football analyses.",
   };
 }
 

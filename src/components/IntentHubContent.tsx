@@ -102,7 +102,7 @@ export function IntentHubContent({ slug, matches, discovery, results = [] }: { s
             const tone = record.result === "green" || record.result === "half-green" ? "green" : record.result === "red" || record.result === "half-red" ? "red" : "push";
             return <Link href={`/results/#${record.slug}`} className="history-row" key={record.key}>
               <div><strong>{record.homeTeam} vs {record.awayTeam}</strong><span>{leaguesBySlug[record.league as keyof typeof leaguesBySlug]?.name ?? record.league} · {record.date} · {record.prediction}</span></div>
-              <span className="history-score">{record.finalScore.home}–{record.finalScore.away}</span>
+              <span className="history-score">{record.finalScore ? `${record.finalScore.home}–${record.finalScore.away}` : "–"}</span>
               <span className="history-odds">Odds {record.odds?.toFixed(2) ?? "—"}</span>
               <b className={`bet-result bet-result--${tone}`}>{resultLabels[record.result]}</b>
             </Link>;
@@ -132,6 +132,6 @@ export function IntentHubContent({ slug, matches, discovery, results = [] }: { s
       </div>
     </section>}
 
-    <section className="section section--compact section--muted" aria-labelledby="intent-guide-title"><div className="container intent-hub-editorial"><div><span className="eyebrow">Editorial context</span><h2 id="intent-guide-title">{hub.guideTitle}</h2>{hub.guide.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div><aside aria-labelledby="intent-links-title"><h2 id="intent-links-title">Useful paths</h2><ul><li><Link href="/methodology/">Editorial methodology</Link></li><li><Link href="/results/">Prediction results</Link></li><li><Link href="/responsible-gambling/">Responsible gambling</Link></li>{slug !== "football-predictions" ? <li><Link href="/football-predictions/">All football predictions</Link></li> : null}{slug !== "today-predictions" ? <li><Link href="/today-predictions/">Today's predictions</Link></li> : null}{slug !== "soccer-predictions" ? <li><Link href="/soccer-predictions/">MLS predictions</Link></li> : null}<li><Link href="/nhl/">NHL predictions</Link></li><li><Link href="/nfl/">NFL predictions</Link></li><li><Link href="/nba/">NBA predictions</Link></li></ul></aside></div></section>
+    <section className="section section--compact section--muted" aria-labelledby="intent-guide-title"><div className="container intent-hub-editorial"><div><span className="eyebrow">Editorial context</span><h2 id="intent-guide-title">{hub.guideTitle}</h2>{hub.guide.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div><aside aria-labelledby="intent-links-title"><h2 id="intent-links-title">Useful paths</h2><ul><li><Link href="/methodology/">Editorial methodology</Link></li><li><Link href="/results/">Prediction results</Link></li><li><Link href="/responsible-gambling/">Responsible gambling</Link></li>{slug !== "football-predictions" ? <li><Link href="/football-predictions/">All football predictions</Link></li> : null}{slug !== "today-predictions" ? <li><Link href="/today-predictions/">Today's predictions</Link></li> : null}{slug !== "soccer-predictions" ? <li><Link href="/soccer-predictions/">MLS predictions</Link></li> : null}</ul></aside></div></section>
   </>;
 }

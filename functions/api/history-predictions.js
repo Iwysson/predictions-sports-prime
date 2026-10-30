@@ -39,5 +39,5 @@ export async function onRequestGet({ request, env }) {
   const [profile] = await profileRes.json();
 
   if (!isVipRow(profile)) return json({ error: "vip-required" }, 403);
-  return json({ records: history });
+  return json({ records: history.filter((record) => record.sport === "football") });
 }

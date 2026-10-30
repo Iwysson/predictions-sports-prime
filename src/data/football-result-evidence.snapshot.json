@@ -1,0 +1,1325 @@
+{
+  "version": 1,
+  "records": {
+    "brasileirao-serie-a:atletico-mg-vs-cruzeiro": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401841288",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401841288",
+      "kickoffUtc": "2026-10-29T22:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "brasileirao-serie-a:botafogo-vs-chapecoense": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401841268",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401841268",
+      "kickoffUtc": "2026-10-17T21:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "brasileirao-serie-a:corinthians-vs-vitoria": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401841272",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401841272",
+      "kickoffUtc": "2026-10-19T23:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "brasileirao-serie-a:cruzeiro-vs-remo": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401841287",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401841287",
+      "kickoffUtc": "2026-10-23T23:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "brasileirao-serie-a:gremio-vs-athletico-pr": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401841290",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401841290",
+      "kickoffUtc": "2026-10-30T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "brasileirao-serie-a:sao-paulo-vs-vasco": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401841273",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401841273",
+      "kickoffUtc": "2026-10-18T00:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "brasileirao-serie-a:vasco-vs-flamengo": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 4,
+      "provider": "espn",
+      "providerEventId": "401841292",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401841292",
+      "kickoffUtc": "2026-10-29T23:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:aston-villa-vs-viking": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401915394",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915394",
+      "kickoffUtc": "2026-10-21T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:atletico-madrid-vs-manchester-united": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401915412",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915412",
+      "kickoffUtc": "2026-10-13T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:bayern-munich-vs-arsenal": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401915312",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915312",
+      "kickoffUtc": "2026-10-21T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:club-brugge-vs-lens": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401915388",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915388",
+      "kickoffUtc": "2026-10-21T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:como-vs-manchester-united": {
+      "status": "completed",
+      "homeScore": 4,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401915395",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915395",
+      "kickoffUtc": "2026-10-21T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:inter-vs-shakhtar-donetsk": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401915390",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915390",
+      "kickoffUtc": "2026-10-21T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:lask-vs-liverpool": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 6,
+      "provider": "fotmob",
+      "providerEventId": "6106405",
+      "sourceUrl": "https://www.fotmob.com/match/6106405",
+      "kickoffUtc": "2026-10-14T16:45:00.000Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:leipzig-vs-psv-eindhoven": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401915434",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915434",
+      "kickoffUtc": "2026-10-13T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:lille-vs-galatasaray": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 4,
+      "provider": "espn",
+      "providerEventId": "401915396",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915396",
+      "kickoffUtc": "2026-10-21T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:manchester-city-vs-aek-athens": {
+      "status": "completed",
+      "homeScore": 5,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401915401",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915401",
+      "kickoffUtc": "2026-10-20T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:manchester-city-vs-psg": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 4,
+      "provider": "espn",
+      "providerEventId": "401915407",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915407",
+      "kickoffUtc": "2026-10-14T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:psg-vs-barcelona": {
+      "status": "completed",
+      "homeScore": 4,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401915399",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915399",
+      "kickoffUtc": "2026-10-20T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:real-betis-vs-feyenoord": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401915389",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915389",
+      "kickoffUtc": "2026-10-21T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:real-betis-vs-porto": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401915408",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915408",
+      "kickoffUtc": "2026-10-14T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:real-madrid-vs-rb-leipzig": {
+      "status": "completed",
+      "homeScore": 4,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401915313",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915313",
+      "kickoffUtc": "2026-10-21T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:roma-vs-real-madrid": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 4,
+      "provider": "espn",
+      "providerEventId": "401915414",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915414",
+      "kickoffUtc": "2026-10-14T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:sabah-vs-borussia-dortmund": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401915404",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915404",
+      "kickoffUtc": "2026-10-20T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:sabah-vs-slavia-praha": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401915436",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915436",
+      "kickoffUtc": "2026-10-13T16:45Z",
+      "capturedAt": "2026-10-30T09:52:35.078Z"
+    },
+    "champions-league:slovan-bratislava-vs-stuttgart": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "401915405",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915405",
+      "kickoffUtc": "2026-10-14T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:sporting-cp-vs-lask": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 3,
+      "provider": "fotmob",
+      "providerEventId": "6106281",
+      "sourceUrl": "https://www.fotmob.com/match/6106281",
+      "kickoffUtc": "2026-10-21T19:00:00.000Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:stuttgart-vs-atletico-madrid": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401915392",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915392",
+      "kickoffUtc": "2026-10-20T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:viking-vs-bayern-munchen": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "401915411",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915411",
+      "kickoffUtc": "2026-10-13T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "champions-league:villarreal-vs-napoli": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401915410",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915410",
+      "kickoffUtc": "2026-10-13T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "copa-libertadores:estudiantes-vs-flamengo": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401912523",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401912523",
+      "kickoffUtc": "2026-10-16T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "copa-libertadores:flamengo-vs-estudiantes-combined": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401912521",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401912521",
+      "kickoffUtc": "2026-10-23T00:30Z",
+      "capturedAt": "2026-10-30T09:52:35.078Z"
+    },
+    "copa-libertadores:fluminense-vs-palmeiras": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401912522",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401912522",
+      "kickoffUtc": "2026-10-15T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "copa-libertadores:palmeiras-vs-fluminense": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401912520",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401912520",
+      "kickoffUtc": "2026-10-22T00:30Z",
+      "capturedAt": "2026-10-30T09:52:35.078Z"
+    },
+    "copa-sudamericana:atletico-mineiro-vs-montevideo-city-torque": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401913916",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401913916",
+      "kickoffUtc": "2026-10-14T22:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "copa-sudamericana:boca-juniors-vs-vasco-da-gama": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401913958",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401913958",
+      "kickoffUtc": "2026-10-14T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "copa-sudamericana:montevideo-city-torque-vs-atletico-mg": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401913956",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401913956",
+      "kickoffUtc": "2026-10-21T22:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "copa-sudamericana:vasco-da-gama-vs-boca-juniors": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "401913957",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401913957",
+      "kickoffUtc": "2026-10-21T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "eliteserien:aalesund-vs-sarpsborg": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 4,
+      "provider": "fotmob",
+      "providerEventId": "5105022",
+      "sourceUrl": "https://www.fotmob.com/match/5105022",
+      "kickoffUtc": "2026-10-11T15:00:00.000Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "eliteserien:bodo-glimt-vs-kristiansund": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401843456",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843456",
+      "kickoffUtc": "2026-10-10T14:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "eliteserien:brann-vs-viking": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401843455",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843455",
+      "kickoffUtc": "2026-10-09T17:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "eliteserien:kristiansund-vs-aalesund": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 4,
+      "provider": "espn",
+      "providerEventId": "401843464",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843464",
+      "kickoffUtc": "2026-10-17T14:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "eliteserien:lillestrom-vs-molde": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 2,
+      "provider": "fotmob",
+      "providerEventId": "5105023",
+      "sourceUrl": "https://www.fotmob.com/match/5105023",
+      "kickoffUtc": "2026-10-11T17:15:00.000Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "eliteserien:molde-vs-start": {
+      "status": "completed",
+      "homeScore": 6,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401843463",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843463",
+      "kickoffUtc": "2026-10-18T15:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "eliteserien:sandefjord-vs-lillestr-m": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 2,
+      "provider": "fotmob",
+      "providerEventId": "5105030",
+      "sourceUrl": "https://www.fotmob.com/match/5105030",
+      "kickoffUtc": "2026-10-18T15:00:00.000Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "eliteserien:sarpsborg-08-vs-rosenborg": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 3,
+      "provider": "fotmob",
+      "providerEventId": "5105032",
+      "sourceUrl": "https://www.fotmob.com/match/5105032",
+      "kickoffUtc": "2026-10-18T12:30:00.000Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "eliteserien:troms-vs-kfum-oslo": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401843460",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843460",
+      "kickoffUtc": "2026-10-18T17:15Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "eliteserien:valerenga-vs-brann": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401843466",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843466",
+      "kickoffUtc": "2026-10-18T15:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "eliteserien:viking-vs-fredrikstad": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401843459",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843459",
+      "kickoffUtc": "2026-10-17T16:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "la-liga:deportivo-la-coruna-vs-levante": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401882844",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401882844",
+      "kickoffUtc": "2026-10-16T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "liga-portugal:braga-vs-gil-vicente": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401885480",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401885480",
+      "kickoffUtc": "2026-10-19T19:15Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:atlanta-united-vs-fc-cincinnati": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "761850",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761850",
+      "kickoffUtc": "2026-10-10T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:atlanta-united-vs-inter-miami-cf": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "761880",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761880",
+      "kickoffUtc": "2026-10-17T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:austin-fc-vs-nashville-sc": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 4,
+      "provider": "espn",
+      "providerEventId": "761856",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761856",
+      "kickoffUtc": "2026-10-11T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:austin-fc-vs-vancouver-whitecaps": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761882",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761882",
+      "kickoffUtc": "2026-10-18T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:cf-montreal-vs-atlanta-united-fc": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "761864",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761864",
+      "kickoffUtc": "2026-10-14T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:charlotte-fc-vs-fc-dallas": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761852",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761852",
+      "kickoffUtc": "2026-10-10T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:chicago-fire-fc-vs-philadelphia-union": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "761869",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761869",
+      "kickoffUtc": "2026-10-15T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:chicago-fire-vs-new-york-city-fc": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761846",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761846",
+      "kickoffUtc": "2026-10-10T18:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:colorado-rapids-vs-minnesota-united-fc": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761871",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761871",
+      "kickoffUtc": "2026-10-15T01:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:colorado-rapids-vs-san-jose-earthquakes": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761857",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761857",
+      "kickoffUtc": "2026-10-11T01:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:columbus-crew-vs-charlotte-fc": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761865",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761865",
+      "kickoffUtc": "2026-10-14T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:d-c-united-vs-new-york-red-bulls": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761863",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761863",
+      "kickoffUtc": "2026-10-14T23:30Z",
+      "capturedAt": "2026-10-30T09:52:35.078Z"
+    },
+    "mls:fc-cincinnati-vs-columbus-crew": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761889",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761889",
+      "kickoffUtc": "2026-10-18T21:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:fc-cincinnati-vs-d-c-united": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761773",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761773",
+      "kickoffUtc": "2026-10-21T23:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:fc-cincinnati-vs-new-england-revolution": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "761862",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761862",
+      "kickoffUtc": "2026-10-14T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:fc-dallas-vs-seattle-sounders-fc": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "761867",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761867",
+      "kickoffUtc": "2026-10-15T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:houston-dynamo-vs-fc-dallas": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761883",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761883",
+      "kickoffUtc": "2026-10-18T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:inter-miami-cf-vs-new-york-city-fc": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "761861",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761861",
+      "kickoffUtc": "2026-10-14T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:inter-miami-vs-dc-united": {
+      "status": "completed",
+      "homeScore": 4,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "761847",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761847",
+      "kickoffUtc": "2026-10-10T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:la-galaxy-vs-portland-timbers": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "761874",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761874",
+      "kickoffUtc": "2026-10-15T02:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:la-galaxy-vs-san-diego-fc": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761887",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761887",
+      "kickoffUtc": "2026-10-18T02:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:los-angeles-fc-vs-austin-fc": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 1,
+      "provider": "fotmob",
+      "providerEventId": "5071421",
+      "sourceUrl": "https://www.fotmob.com/match/5071421",
+      "kickoffUtc": "2026-10-15T02:30:00.000Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:los-angeles-fc-vs-vancouver-whitecaps": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 1,
+      "provider": "fotmob",
+      "providerEventId": "5071408",
+      "sourceUrl": "https://www.fotmob.com/match/5071408",
+      "kickoffUtc": "2026-10-11T02:30:00.000Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:minnesota-united-vs-houston-dynamo": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761854",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761854",
+      "kickoffUtc": "2026-10-11T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:minnesota-united-vs-st-louis-city": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761876",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761876",
+      "kickoffUtc": "2026-10-17T20:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:nashville-sc-vs-sporting-kansas-city": {
+      "status": "completed",
+      "homeScore": 4,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "761866",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761866",
+      "kickoffUtc": "2026-10-15T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:new-england-revolution-vs-chicago-fire": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "761879",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761879",
+      "kickoffUtc": "2026-10-17T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:new-england-revolution-vs-seattle-sounders": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "761851",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761851",
+      "kickoffUtc": "2026-10-10T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:new-york-city-fc-vs-los-angeles-fc": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 1,
+      "provider": "fotmob",
+      "providerEventId": "5071429",
+      "sourceUrl": "https://www.fotmob.com/match/5071429",
+      "kickoffUtc": "2026-10-17T23:30:00.000Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:new-york-red-bulls-vs-san-diego-fc": {
+      "status": "completed",
+      "homeScore": 4,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761853",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761853",
+      "kickoffUtc": "2026-10-10T23:30Z",
+      "capturedAt": "2026-10-30T09:52:35.078Z"
+    },
+    "mls:new-york-red-bulls-vs-toronto-fc": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761878",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761878",
+      "kickoffUtc": "2026-10-17T23:30Z",
+      "capturedAt": "2026-10-30T09:52:35.078Z"
+    },
+    "mls:orlando-city-vs-columbus-crew": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761848",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761848",
+      "kickoffUtc": "2026-10-10T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:orlando-city-vs-d-c-united": {
+      "status": "completed",
+      "homeScore": 4,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761881",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761881",
+      "kickoffUtc": "2026-10-17T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:philadelphia-union-vs-charlotte-fc": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761875",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761875",
+      "kickoffUtc": "2026-10-17T18:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:philadelphia-union-vs-real-salt-lake": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761849",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761849",
+      "kickoffUtc": "2026-10-10T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:portland-timbers-vs-colorado-rapids": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "761888",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761888",
+      "kickoffUtc": "2026-10-18T02:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:real-salt-lake-vs-san-jose-earthquakes": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761870",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761870",
+      "kickoffUtc": "2026-10-15T01:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:san-diego-fc-vs-houston-dynamo-fc": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "761872",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761872",
+      "kickoffUtc": "2026-10-15T02:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:san-jose-earthquakes-vs-nashville-sc": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761886",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761886",
+      "kickoffUtc": "2026-10-18T02:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:seattle-sounders-vs-cf-montreal": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761885",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761885",
+      "kickoffUtc": "2026-10-18T02:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:sporting-kansas-city-vs-portland-timbers": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "761855",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761855",
+      "kickoffUtc": "2026-10-11T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:sporting-kansas-city-vs-real-salt-lake": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "761884",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761884",
+      "kickoffUtc": "2026-10-18T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:st-louis-city-sc-vs-la-galaxy": {
+      "status": "completed",
+      "homeScore": 6,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "761859",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761859",
+      "kickoffUtc": "2026-10-11T23:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:st-louis-city-sc-vs-vancouver-whitecaps-fc": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "761868",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761868",
+      "kickoffUtc": "2026-10-15T00:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:toronto-fc-vs-cf-montreal": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "761845",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761845",
+      "kickoffUtc": "2026-10-10T17:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "mls:toronto-fc-vs-orlando-city-sc": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "761860",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/761860",
+      "kickoffUtc": "2026-10-14T23:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "scottish-premiership:aberdeen-vs-st-johnstone": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401878374",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878374",
+      "kickoffUtc": "2026-10-11T13:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "scottish-premiership:dundee-united-vs-hibernian": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401878373",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878373",
+      "kickoffUtc": "2026-10-10T14:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "scottish-premiership:falkirk-vs-dundee-fc": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401878372",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878372",
+      "kickoffUtc": "2026-10-10T14:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "scottish-premiership:hearts-vs-st-mirren": {
+      "status": "completed",
+      "homeScore": 5,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401878371",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878371",
+      "kickoffUtc": "2026-10-10T14:00Z",
+      "capturedAt": "2026-10-30T09:52:35.078Z"
+    },
+    "scottish-premiership:motherwell-vs-celtic": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401878370",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878370",
+      "kickoffUtc": "2026-10-11T11:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "scottish-premiership:rangers-vs-kilmarnock": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401878369",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401878369",
+      "kickoffUtc": "2026-10-10T14:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "super-lig:alanyaspor-vs-kocaelispor": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401888268",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888268",
+      "kickoffUtc": "2026-10-23T17:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "super-lig:gaziantep-vs-corum": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "401888380",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888380",
+      "kickoffUtc": "2026-10-11T13:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "super-lig:genclerbirligi-vs-galatasaray": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401888274",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888274",
+      "kickoffUtc": "2026-10-17T13:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "super-lig:istanbul-basaksehir-vs-gaziantep-fk": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401888275",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888275",
+      "kickoffUtc": "2026-10-18T16:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "super-lig:kocaelispor-vs-goztepe": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401888272",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888272",
+      "kickoffUtc": "2026-10-18T13:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "super-lig:konyaspor-vs-basaksehir": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401888281",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401888281",
+      "kickoffUtc": "2026-10-11T10:30Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:ararat-armenia-vs-az-alkmaar": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 4,
+      "provider": "espn",
+      "providerEventId": "401915548",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915548",
+      "kickoffUtc": "2026-10-22T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:az-alkmaar-vs-hapoel-beer-sheva": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401915573",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915573",
+      "kickoffUtc": "2026-10-15T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:benfica-vs-celtic": {
+      "status": "completed",
+      "homeScore": 4,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401915562",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915562",
+      "kickoffUtc": "2026-10-15T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:besiktas-vs-crystal-palace": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401915553",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915553",
+      "kickoffUtc": "2026-10-22T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:bournemouth-vs-milan": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401915552",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915552",
+      "kickoffUtc": "2026-10-22T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:bournemouth-vs-sturm-graz": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401915571",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915571",
+      "kickoffUtc": "2026-10-15T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:celje-vs-omonia": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "401915577",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915577",
+      "kickoffUtc": "2026-10-15T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:celje-vs-salzburg": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401915541",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915541",
+      "kickoffUtc": "2026-10-22T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:celtic-vs-celta": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401915555",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915555",
+      "kickoffUtc": "2026-10-22T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:dinamo-zagreb-vs-nec-nijmegen": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 4,
+      "provider": "espn",
+      "providerEventId": "401915556",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915556",
+      "kickoffUtc": "2026-10-22T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:ferencvaros-vs-torreense": {
+      "status": "completed",
+      "homeScore": 4,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401915558",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915558",
+      "kickoffUtc": "2026-10-22T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:hoffenheim-vs-besiktas": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "401915563",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915563",
+      "kickoffUtc": "2026-10-15T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:hoffenheim-vs-lyon": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401915543",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915543",
+      "kickoffUtc": "2026-10-22T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:jagiellonia-bia-ystok-vs-ararat-armenia": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 1,
+      "provider": "fotmob",
+      "providerEventId": "6112341",
+      "sourceUrl": "https://www.fotmob.com/match/6112341",
+      "kickoffUtc": "2026-10-15T19:00:00.000Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:jagiellonia-vs-anderlecht": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 3,
+      "provider": "espn",
+      "providerEventId": "401915542",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915542",
+      "kickoffUtc": "2026-10-22T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:lech-poznan-vs-bayer-leverkusen": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 4,
+      "provider": "espn",
+      "providerEventId": "401915576",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915576",
+      "kickoffUtc": "2026-10-15T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:lillestrom-vs-real-sociedad": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 6,
+      "provider": "espn",
+      "providerEventId": "401915540",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915540",
+      "kickoffUtc": "2026-10-22T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:ofi-crete-vs-leverkusen": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401915559",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915559",
+      "kickoffUtc": "2026-10-22T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:omonia-vs-benfica": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 4,
+      "provider": "espn",
+      "providerEventId": "401915544",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915544",
+      "kickoffUtc": "2026-10-22T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:rennes-vs-ofi-crete": {
+      "status": "completed",
+      "homeScore": 2,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401915572",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915572",
+      "kickoffUtc": "2026-10-15T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:salzburg-vs-ac-milan": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 4,
+      "provider": "espn",
+      "providerEventId": "401915568",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915568",
+      "kickoffUtc": "2026-10-15T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:sturm-graz-vs-marseille": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401915557",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915557",
+      "kickoffUtc": "2026-10-22T16:45Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:viktoria-plzen-vs-levski-sofia": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401915539",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915539",
+      "kickoffUtc": "2026-10-22T19:00Z",
+      "capturedAt": "2026-10-30T09:50:35.212Z"
+    }
+  }
+}

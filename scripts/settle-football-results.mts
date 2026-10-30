@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 import { settlementPreviews } from "../src/lib/settlement-source.ts";
 import { hydratePredictions } from "../src/lib/live-predictions.ts";
 import { buildResultsDataset, emptyResultsDataset, summarizeResults, type FootballResultsDataset } from "../src/lib/football-results.ts";
+import { buildPendingLedger, emptyPendingDataset, type PendingResultsDataset } from "../src/lib/pending-results.ts";
 
 const path = resolve("src/data/football-results.snapshot.json");
 let previous: FootballResultsDataset = emptyResultsDataset();
@@ -15,6 +16,19 @@ try {
 
 const hydrated = await hydratePredictions(settlementPreviews());
 const next = buildResultsDataset(hydrated, previous);
+
+// Everything past kickoff that did not settle stays visible as PENDING, with the reason.
+const pendingPath = resolve("src/data/football-results-pending.snapshot.json");
+let pendingSnapshot: PendingResultsDataset = emptyPendingDataset();
+try {
+  pendingSnapshot = JSON.parse(await readFile(pendingPath, "utf8"));
+} catch {
+  console.log("results:settle — no pending ledger; creating it.");
+}
+const pendingNext = { ...pendingSnapshot, records: buildPendingLedger(hydrated, next, pendingSnapshot.reconcileReasons ?? {}, new Date()) };
+await writeFile(`${pendingPath}.next`, `${JSON.stringify(pendingNext, null, 2)}\n`, "utf8");
+await rename(`${pendingPath}.next`, pendingPath);
+console.log(`results:settle — ${Object.keys(pendingNext.records).length} past kickoff still pending.`);
 const serialized = `${JSON.stringify(next, null, 2)}\n`;
 const unchanged = serialized === `${JSON.stringify(previous, null, 2)}\n`;
 if (!unchanged) {
@@ -26,6 +40,6 @@ const summary = summarizeResults(Object.values(next.records));
 console.log(`results:settle — ${unchanged ? "unchanged" : "updated"}; ${Object.keys(next.records).length} settled (${added.length} new).`);
 for (const key of added) {
   const record = next.records[key];
-  console.log(`  + ${key}: ${record.finalScore.home}-${record.finalScore.away} ${record.result}`);
+  console.log(`  + ${key}: ${record.finalScore ? `${record.finalScore.home}-${record.finalScore.away}` : "no score"} ${record.result}`);
 }
 console.log(`  wins ${summary.wins}, losses ${summary.losses}, pushes ${summary.pushes}, win rate ${summary.winRate === null ? "n/a" : (summary.winRate * 100).toFixed(1) + "%"}`);

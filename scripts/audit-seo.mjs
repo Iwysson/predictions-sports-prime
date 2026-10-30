@@ -7,8 +7,6 @@ import { materialMatchUpdatedAt } from "../src/lib/match-freshness.ts";
 import { classifyPspEditorialLifecycle } from "../src/lib/editorial-standard.ts";
 import { hasMatchPage } from "../src/lib/match-page-lifecycle.ts";
 import { publicContactEmail } from "../src/lib/editorial-identity.ts";
-import { SLATES } from "../src/data/nhl/slates.ts";
-import { getNhlDayStart } from "../src/lib/nhl-day.ts";
 import footballResults from "../src/data/football-results.snapshot.json" with { type: "json" };
 import { checkResultsHistoryIntegrity } from "../src/lib/results-history-audit.ts";
 import { PUBLIC_RELEASE_TIME_ZONE } from "../src/lib/match-release.ts";
@@ -385,7 +383,7 @@ else {
   // matchRoutes.length was therefore guaranteed to fail as soon as the archive outgrew the live page count,
   // regardless of any actual SEO defect - that is the bug this replaces, not Results or settlement itself.
   const settledSlugs = Object.values(footballResults.records).map((record) => record.slug);
-  for (const message of checkResultsHistoryIntegrity({ historyHtml: resultsHtml, settledSlugs })) {
+  for (const message of checkResultsHistoryIntegrity({ historyHtml: resultsHtml, settledSlugs, requireFullPayload: true })) {
     errors.push(`${resultsRoute}: ${message}`);
   }
 }
@@ -457,11 +455,10 @@ for (const route of sitemapEntries.keys()) {
   }
 }
 
-const HUB_ROUTE = /^\/(?:(?:[a-z]{2}(?:-[a-z]{2})?)\/)?(?:league\/[^/]+\/)?$|^\/(?:nhl|results|football-predictions|soccer-predictions|betting-tips|picks|today-predictions)\/$/;
+const HUB_ROUTE = /^\/(?:(?:[a-z]{2}(?:-[a-z]{2})?)\/)?(?:league\/[^/]+\/)?$|^\/(?:results|football-predictions|soccer-predictions|betting-tips|picks|today-predictions)\/$/;
 const editorialHubTimestamps = new Set([
   ...runtimeMatches.flatMap((match) => [materialMatchUpdatedAt(match), match.publishedAt]),
   ...Object.values(JSON.parse(readFileSync(join(root, "src", "data", "football-results.snapshot.json"), "utf8")).records).map((record) => record.settledAt),
-  ...SLATES.map((slate) => getNhlDayStart(slate.dayKey)?.toISOString()),
 ].filter(Boolean).map((value) => Date.parse(value)));
 
 for (const [route, lastmod] of sitemapEntries) {
@@ -504,33 +501,12 @@ for (const [route, lastmod] of sitemapEntries) {
     continue;
   }
 
-  const nflEditorial = route.match(/^\/nfl\/([^/]+)\/$/);
-  if (nflEditorial) {
-    const html = pages.get(route);
-    if (!html) {
-      errors.push(`${route}: NFL sitemap lastmod has no generated editorial page`);
-      continue;
-    }
-
-    const schemaPublished = html.match(/\"datePublished\":\"([^\"]+)\"/)?.[1];
-    const schemaModified = html.match(/\"dateModified\":\"([^\"]+)\"/)?.[1];
-    const expectedLastmod = schemaModified ?? schemaPublished;
-    if (!expectedLastmod) {
-      errors.push(`${route}: NFL sitemap contains a timestamp with no Article editorial date`);
-      continue;
-    }
-    if (Date.parse(lastmod) !== Date.parse(expectedLastmod)) {
-      errors.push(`${route}: NFL sitemap lastmod must equal Article dateModified ?? datePublished`);
-    }
-    continue;
-  }
-
   // Hub pages may carry a lastmod only when it is an editorial date: the latest material update of a listed
-  // prediction, the activation instant of the active NHL slate, or the latest settlement in the results
+  // prediction or the latest settlement in the results
   // dataset. Never the build time, and never a value that is not in that set.
   if (HUB_ROUTE.test(route)) {
     if (!editorialHubTimestamps.has(Date.parse(lastmod))) {
-      errors.push(`${route}: hub sitemap lastmod ${lastmod} is not an editorial date (prediction update, NHL slate day, settlement)`);
+      errors.push(`${route}: hub sitemap lastmod ${lastmod} is not an editorial date (prediction update, settlement)`);
     }
     continue;
   }

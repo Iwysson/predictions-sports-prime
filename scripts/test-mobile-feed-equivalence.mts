@@ -12,11 +12,6 @@ import {
   filterFuturePublishedPredictions,
 } from "../src/lib/match-feed.ts";
 import { buildMobileFootballIndex } from "../src/lib/mobile-feed-build.ts";
-import { resolveNhlSlate } from "../src/data/nhl/slates.ts";
-import { SLATES } from "../src/data/nhl/slates.ts";
-import { deferredMatchesFor, expandDeferredSlate } from "../src/data/nhl/deferred-slates.ts";
-import { buildMobileNhlIndex } from "../src/lib/mobile-feed-build-nhl-nfl.ts";
-import { getNhlTodayKey } from "../src/lib/nhl-day.ts";
 
 const NOW = new Date("2026-10-10T12:00:00.000Z"); // -03:00 local date: 2026-10-10
 
@@ -72,26 +67,6 @@ function slugSet(list: { slug: string }[]) {
   assert.ok(directToday.has("today-live"), "a live match on today's date is still 'today'");
   assert.ok(!directToday.has("draft-not-published"), "an unpublished draft never appears");
   assert.ok(appToday.has("today-vip"), "a VIP match still appears in the feed, just tagged vip");
-}
-
-{
-  // NHL: the app's single active slate must equal the website's own resolveNhlSlate
-  // result for the exact same "today" - never a wider or narrower set of days.
-  const todayKey = getNhlTodayKey(NOW);
-  // A deferred slate keeps its listing out of the website bundle; the website fetches it from the server once
-  // released, the app builds it from the same server-only module, so both are compared after expansion.
-  const direct = expandDeferredSlate(resolveNhlSlate(todayKey, NOW), NOW);
-  const index = buildMobileNhlIndex(NOW);
-  const appSlugs = slugSet([...index.free, ...index.vip]);
-  const directSlugs = slugSet(direct?.matches ?? []);
-  assert.deepEqual(appSlugs, directSlugs, "mobile NHL feed must equal resolveNhlSlate(todayKey) exactly");
-
-  // A future slate (later dayKey than today) must not leak into the app before its day.
-  for (const futureSlate of SLATES.filter((s) => s.dayKey > todayKey)) {
-    for (const m of futureSlate.deferred ? deferredMatchesFor(futureSlate.dayKey) : futureSlate.matches) {
-      assert.ok(!appSlugs.has(m.slug), `a future NHL slate (${futureSlate.dayKey}) must not appear before its day starts`);
-    }
-  }
 }
 
 console.log("mobile feed equivalence tests passed");

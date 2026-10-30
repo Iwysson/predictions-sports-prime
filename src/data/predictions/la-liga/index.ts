@@ -1,3 +1,4 @@
+import { predictions as oct30Predictions } from './round-2026-10-30';
 import { predictions as oct23Predictions } from './round-2026-10-23';
 import { laLigaRound2026_10_10 } from "./round-2026-10-10";
 import { laLigaRound01 } from "./round-01";
@@ -8,6 +9,7 @@ import { laLigaRound2026_10_17 } from "./round-2026-10-17";
 import { laLigaRound2026_10_18 } from "./round-2026-10-18";
 
 export const laLigaPredictions = [
+  ...oct30Predictions,
   ...oct23Predictions,
   ...laLigaRound01,
   ...laLigaRound2026_10_09,

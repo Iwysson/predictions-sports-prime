@@ -189,6 +189,13 @@ export function normalizeTeamKey(name: string) {
 
   const aliases: Record<string, string> = {
     az: "azalkmaar",
+    redbullnewyork: "newyorkredbulls",
+    slaviaprague: "slaviapraha",
+    spartaprague: "spartapraha",
+    heartofmidlothian: "hearts",
+    unionstgilloise: "unionsaintgilloise",
+    unionsg: "unionsaintgilloise",
+    amedsportif: "amed",
     brighton: "brightonandhovealbion",
     westhamunited: "westham",
     casapiaac: "casapia",
@@ -574,10 +581,12 @@ export function findProviderFixture(games: OpenFootballGame[], home: string, awa
   const matching = games.filter((game) => teamNamesMatch(game.homeTeam, home) && teamNamesMatch(game.awayTeam, away));
   const exact = matching.filter((game) => game.date === date);
   // Allow only the adjacent UTC/local calendar date when no exact date exists.
-  // A distant same-team event needs a stable provider identity, not proximity.
   const candidates = exact.length ? exact : matching.filter((game) => Math.abs(Date.parse(game.date) - Date.parse(date)) <= 86_400_000);
   if (candidates.length > 1) throw new Error(`Ambiguous provider fixture: ${home} vs ${away} on ${date}`);
-  return candidates[0];
+  // A rescheduled match is further away than that. When the home/away pairing occurs only once in the season
+  // it is still that same fixture; leaving it unmatched rejected the whole league's refresh for weeks.
+  // A pairing that occurs more than once needs a stable provider identity, not proximity.
+  return candidates[0] ?? (matching.length === 1 ? matching[0] : undefined);
 }
 
 export async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballRound[]) {
@@ -628,6 +637,8 @@ export async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballR
     const kickoffUtc = competition?.date ?? event.date;
     const kickoff = eventKickoffInSiteTimezone(kickoffUtc, league.timezone);
     const providerTimeValid = competition?.timeValid !== false;
+    // The provider has moved the match to another date with a real kickoff: that is the schedule now.
+    const providerRescheduled = providerTimeValid && baseDate !== kickoff.date;
     const providerMatchesRegistry = providerTimeValid && baseDate === kickoff.date && baseTime !== "TBD" && baseTime === kickoff.time;
     const retainConfirmedRegistryTime = baseTime !== "TBD" && (!providerTimeValid || (baseDate === kickoff.date && baseTime !== kickoff.time));
     fixture.id = event.id;
@@ -635,8 +646,8 @@ export async function hydrateLiveResults(slug: LeagueSlug, rounds: OpenFootballR
     fixture.awayTeam = cleanTeamName(away.team.displayName);
     fixture.sourceAgreement = providerMatchesRegistry;
     fixture.date = providerTimeValid ? kickoff.date : baseDate;
-    fixture.timeConfirmed = providerMatchesRegistry || retainConfirmedRegistryTime;
-    fixture.time = providerMatchesRegistry
+    fixture.timeConfirmed = providerMatchesRegistry || providerRescheduled || retainConfirmedRegistryTime;
+    fixture.time = providerMatchesRegistry || providerRescheduled
       ? kickoff.time
       : retainConfirmedRegistryTime
         ? baseTime

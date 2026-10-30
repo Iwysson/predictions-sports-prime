@@ -6,6 +6,15 @@ on:
     # the top of the hour, so use an offset and poll every five minutes.
     - cron: "2-59/5 * * * *"
   workflow_dispatch:
+  # A changed pipeline proves itself at once instead of waiting for the next (often delayed) schedule.
+  # Its own snapshot commits use GITHUB_TOKEN and touch no path here, so this can never loop.
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/sync-fixtures.yml
+      - scripts/reconcile-football-results.mts
+      - scripts/settle-football-results.mts
+      - scripts/sync-fixtures.mjs
 
 concurrency:
   group: sync-fixtures-main
@@ -18,6 +27,7 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -25,27 +35,61 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run fixtures:sync
+      # The season-feed refresh and the reconciler are independent on purpose: a failure in either one
+      # must never stop results that are already known from being settled and published. A step that
+      # failed still fails the run, at the very end, after everything valid has been committed.
+      - name: Refresh fixture snapshot
+        id: fixtures
+        continue-on-error: true
+        run: npm run fixtures:sync
         env:
           THESPORTSDB_API_KEY: ${{ secrets.THESPORTSDB_API_KEY }}
-      - run: npm run fixtures:validate
-      - run: npm run results:settle
-      - run: npm run results:validate
+      - name: Validate fixture snapshot
+        id: validate_fixtures
+        continue-on-error: true
+        run: npm run fixtures:validate
+      - name: Reconcile every unsettled prediction past kickoff
+        id: reconcile
+        continue-on-error: true
+        run: npm run results:reconcile
+      - name: Settle
+        run: npm run results:settle
+      - name: Validate results
+        id: validate_results
+        run: npm run results:validate
       - run: npx tsx scripts/print-results-summary.mts
       - name: Detect fixture, market-data or results changes
         id: changes
         shell: bash
         run: |
-          if git diff --quiet -- src/data/fixtures.snapshot.json src/data/market-results.snapshot.json src/data/football-results.snapshot.json; then
+          if git diff --quiet -- src/data/fixtures.snapshot.json src/data/market-results.snapshot.json src/data/football-results.snapshot.json src/data/football-result-evidence.snapshot.json src/data/football-results-pending.snapshot.json; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
       - name: Commit updated fixture and results snapshots
         if: steps.changes.outputs.changed == 'true'
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/fixtures.snapshot.json src/data/market-results.snapshot.json src/data/football-results.snapshot.json
+          git add src/data/fixtures.snapshot.json src/data/market-results.snapshot.json src/data/football-results.snapshot.json src/data/football-result-evidence.snapshot.json src/data/football-results-pending.snapshot.json
           git commit -m "chore: refresh fixture snapshot"
-          git push
+          # main moves while this job runs. Losing the race must not lose a result, so rebase and retry.
+          # A rebase conflict on a generated snapshot means a newer run already wrote it: the next run,
+          # which starts from that state, regenerates this data, so this one stops without forcing anything.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main; then
+              git push origin HEAD:main && exit 0
+            else
+              git rebase --abort || true
+            fi
+            sleep $((attempt * 15))
+          done
+          echo "Could not push snapshots after 5 attempts" >&2
+          exit 1
+      - name: Report steps that failed earlier
+        if: steps.fixtures.outcome == 'failure' || steps.validate_fixtures.outcome == 'failure' || steps.reconcile.outcome == 'failure'
+        run: |
+          echo "fixtures:sync=${{ steps.fixtures.outcome }} fixtures:validate=${{ steps.validate_fixtures.outcome }} results:reconcile=${{ steps.reconcile.outcome }}" >&2
+          exit 1

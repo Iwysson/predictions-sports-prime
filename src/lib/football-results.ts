@@ -25,7 +25,8 @@ export type FootballResultRecord = {
   /** Original published market and price, frozen at settlement time. */
   prediction: string;
   odds: number | null;
-  finalScore: { home: number; away: number };
+  /** Null only for a VOID on a fixture the provider cancelled: no match was played, so no score exists. */
+  finalScore: { home: number; away: number } | null;
   result: SettledResultStatus;
   settledAt: string;
   /** When the prediction was first published, when known. */
@@ -47,11 +48,11 @@ export const resultKey = (match: Pick<MatchPreview, "league" | "slug">) => `${ma
 
 /** Label used on the site for each settlement state. */
 export const resultLabels: Record<SettledResultStatus, string> = {
-  green: "WIN",
-  red: "LOSS",
+  green: "GREEN",
+  red: "RED",
   push: "PUSH",
-  "half-green": "HALF WIN",
-  "half-red": "HALF LOSS",
+  "half-green": "HALF GREEN",
+  "half-red": "HALF RED",
   void: "VOID",
 };
 
@@ -63,6 +64,24 @@ export const resultLabels: Record<SettledResultStatus, string> = {
  */
 export function settleFromMatch(match: MatchPreview, settledAt: string): FootballResultRecord | null {
   if (match.status !== "published" || !match.mainPrediction) return null;
+  if (match.fixtureStatus === "canceled") {
+    return {
+      key: resultKey(match),
+      league: match.league,
+      slug: match.slug,
+      homeTeam: match.homeTeam,
+      awayTeam: match.awayTeam,
+      date: match.date,
+      ...(match.fixtureId ? { fixtureId: match.fixtureId } : {}),
+      predictionAccess: match.predictionAccess === "free" ? "free" : "vip",
+      prediction: match.mainPrediction,
+      odds: match.odds ?? null,
+      finalScore: null,
+      result: "void",
+      settledAt,
+      ...(match.publishedAt ? { publishedAt: match.publishedAt } : {}),
+    };
+  }
   if (!isCompletedFixture(match.fixtureStatus) || !isValidFinalScore(match.homeScore, match.awayScore)) return null;
   const evaluation = evaluatePredictionSettlement(match);
   if (!SETTLED_STATUSES.has(evaluation.status)) return null;
@@ -109,7 +128,9 @@ export function buildResultsDataset(
 
 export function sortedResults(dataset: FootballResultsDataset) {
   return Object.values(dataset.records).sort((left, right) =>
-    right.date.localeCompare(left.date) || right.settledAt.localeCompare(left.settledAt) || left.key.localeCompare(right.key)
+    // Chronological by match date, then a stable identity: when a record was settled says nothing about
+    // when the match was played, and a backfill must not reorder a day.
+    right.date.localeCompare(left.date) || left.key.localeCompare(right.key)
   );
 }
 
@@ -154,6 +175,7 @@ export function overlayStoredResult(match: MatchPreview, dataset: FootballResult
   const record = dataset.records[resultKey(match)];
   if (!record) return match;
   if (isCompletedFixture(match.fixtureStatus) && isValidFinalScore(match.homeScore, match.awayScore)) return match;
+  if (!record.finalScore) return { ...match, fixtureStatus: "canceled" };
   return { ...match, fixtureStatus: "completed", homeScore: record.finalScore.home, awayScore: record.finalScore.away };
 }
 

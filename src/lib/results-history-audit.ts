@@ -10,9 +10,9 @@
 // archive itself: how many of its records the page renders, and whether what it renders is consistent
 // (no fabricated/stale slug, no duplicate).
 
-// Same cap as PredictionResultsArchive.RESULTS_VISIBLE_LIMIT (src/components/PredictionResultsArchive.tsx).
-// scripts/test-results-history-audit.mts asserts the two stay in sync.
-export const RESULTS_HISTORY_VISIBLE_LIMIT = 200;
+// Records per page of the /results/ list (src/components/PredictionResultsArchive.tsx). The whole archive still
+// reaches the page: every settled record is in its serialized payload, and the other pages render from there.
+export const RESULTS_HISTORY_VISIBLE_LIMIT = 50;
 
 export type ResultsHistoryCheckInput = {
   /** The rendered /results/ page HTML (or any fragment containing its data-result-slug attributes). */
@@ -21,6 +21,8 @@ export type ResultsHistoryCheckInput = {
   settledSlugs: readonly string[];
   /** Defaults to RESULTS_HISTORY_VISIBLE_LIMIT. */
   visibleLimit?: number;
+  /** The real page must carry the entire archive in its payload; unit fixtures render only cards. */
+  requireFullPayload?: boolean;
 };
 
 /** Returns plain-English integrity errors (empty when History is consistent with the archive). */
@@ -28,17 +30,26 @@ export function checkResultsHistoryIntegrity({
   historyHtml,
   settledSlugs,
   visibleLimit = RESULTS_HISTORY_VISIBLE_LIMIT,
+  requireFullPayload = false,
 }: ResultsHistoryCheckInput): string[] {
   const errors: string[] = [];
   const renderedSlugs = [...historyHtml.matchAll(/data-result-slug="([^"]*)"/g)].map((match) => match[1]);
   const historyEntries = renderedSlugs.length;
-  const expectedHistoryEntries = Math.min(settledSlugs.length, visibleLimit);
+  // The first page can legitimately hold pending records too (data-pending-slug), so it renders at most a page.
+  const pendingEntries = [...historyHtml.matchAll(/data-pending-slug="([^"]*)"/g)].length;
+  const expectedHistoryEntries = Math.min(settledSlugs.length, visibleLimit - Math.min(pendingEntries, visibleLimit));
 
   if (historyEntries !== expectedHistoryEntries) {
     errors.push(
       `renders ${historyEntries} History entries, expected ${expectedHistoryEntries} from the ` +
-        `settled-results archive (${settledSlugs.length} records, cap ${visibleLimit})`
+        `settled-results archive (${settledSlugs.length} records, ${pendingEntries} pending, page size ${visibleLimit})`
     );
+  }
+
+  // No record may be unreachable: all of them must be in the page payload, not only the first page.
+  if (requireFullPayload) {
+    const absent = [...new Set(settledSlugs)].filter((slug) => !historyHtml.includes(slug));
+    if (absent.length > 0) errors.push(`settled records missing from the page payload (${absent.join(", ")})`);
   }
 
   const duplicateRendered = [...new Set(renderedSlugs.filter((slug, index) => renderedSlugs.indexOf(slug) !== index))];

@@ -25,7 +25,7 @@ for (const [key, record] of Object.entries(dataset.records)) {
   if (record.odds !== (original.odds ?? null)) errors.push(`${key}: original odds modified (${record.odds} vs ${original.odds}).`);
   if (record.predictionAccess !== (original.predictionAccess === "free" ? "free" : "vip")) errors.push(`${key}: access tier changed since settlement.`);
   if (!SETTLED_STATUSES.has(record.result)) errors.push(`${key}: invalid settled status ${record.result}.`);
-  if (!Number.isInteger(record.finalScore?.home) || !Number.isInteger(record.finalScore?.away)) errors.push(`${key}: invalid final score.`);
+  if (record.finalScore === null ? record.result !== "void" : !Number.isInteger(record.finalScore?.home) || !Number.isInteger(record.finalScore?.away)) errors.push(`${key}: invalid final score.`);
   const identity = `${record.league}|${record.homeTeam}|${record.awayTeam}|${record.date}`;
   const duplicate = identities.get(identity);
   if (duplicate) errors.push(`${key}: duplicate settlement of the same fixture as ${duplicate}.`);
@@ -33,7 +33,7 @@ for (const [key, record] of Object.entries(dataset.records)) {
   const current = hydratedByKey.get(key);
   const recomputed = current ? settleFromMatch(current, record.settledAt) : null;
   if (recomputed && recomputed.result !== record.result) errors.push(`${key}: stored ${record.result} differs from recomputed ${recomputed.result}.`);
-  if (recomputed && (recomputed.finalScore.home !== record.finalScore.home || recomputed.finalScore.away !== record.finalScore.away)) {
+  if (recomputed && (recomputed.finalScore?.home !== record.finalScore?.home || recomputed.finalScore?.away !== record.finalScore?.away)) {
     errors.push(`${key}: stored final score differs from the official fixture.`);
   }
 }

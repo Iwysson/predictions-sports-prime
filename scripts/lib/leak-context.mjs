@@ -153,7 +153,7 @@ function publishedFieldChunks(record, q) {
 export function maskSettledResultRecords(text, records) {
   let masked = text;
   for (const record of Object.values(records ?? {})) {
-    if (!record || !record.slug || !record.key || !record.finalScore || !record.result) continue;
+    if (!record || !record.slug || !record.key || record.finalScore === undefined || !record.result) continue;
     // HTML result card of this settled record.
     masked = removeRanges(masked, (value) => {
       const marker = value.indexOf(`data-result-slug="${record.slug}"`);

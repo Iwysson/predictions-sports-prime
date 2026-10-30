@@ -88,7 +88,12 @@ export function findPredictionFixture(rounds: OpenFootballRound[], prediction: P
     teamNamesMatch(game.homeTeam, prediction.homeTeam) && teamNamesMatch(game.awayTeam, prediction.awayTeam)
   );
   const suppliedRound = typeof prediction.round === "number" ? prediction.round : Number(prediction.round?.match(/(?:Matchday|Matchweek|Round|Week)\s+(\d+)/i)?.[1]);
-  if (Number.isInteger(suppliedRound) && suppliedRound > 0) candidates = candidates.filter((game) => game.round === suppliedRound);
+  // An editorial round label can differ from the provider's numbering, and a rescheduled match keeps its
+  // pairing: a round mismatch narrows the candidates only when it leaves one to choose from.
+  if (Number.isInteger(suppliedRound) && suppliedRound > 0) {
+    const sameRound = candidates.filter((game) => game.round === suppliedRound);
+    if (sameRound.length) candidates = sameRound;
+  }
   const exactDate = candidates.filter((game) => game.date === prediction.date);
   if (exactDate.length) candidates = exactDate;
   // A unique same-season, same-round pairing can represent a reschedule.

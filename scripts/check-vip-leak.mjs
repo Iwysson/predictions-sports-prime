@@ -20,18 +20,6 @@ const corpus = files.map((f) => ({ f, text: readFileSync(f, "utf8") }));
 const pickCorpus = corpus.map(({ f, text }) => ({ f, text: maskSettledResultRecords(text, settledResults) }));
 
 const publicPicks = new Set(index.filter((e) => e.predictionAccess === "free").map((e) => e.prediction.main.toLowerCase()));
-// NHL public-slate modules are deliberately client-safe and contain picks only for FREE entries.
-// Include those public picks so a generic market shared with a protected game is not misreported.
-for (const name of readdirSync("src/data/nhl").filter((name) => /^public-slate-.*\.ts$|^slate-2026-10-(?:14|15)\.ts$/.test(name))) {
-  const source = readFileSync(join("src/data/nhl", name), "utf8");
-  for (const match of source.matchAll(/"pick"\s*:\s*"([^"]+)"/g)) publicPicks.add(match[1].toLowerCase());
-}
-// Older NFL FREE cards also embed their public picks in the client-safe week files.
-// A protected game can legitimately use the same market text in a different fixture.
-for (const name of readdirSync("src/data/nfl").filter((name) => /^week\d+-\d{4}-public\.ts$/.test(name))) {
-  const source = readFileSync(join("src/data/nfl", name), "utf8");
-  for (const match of source.matchAll(/\bpick:\s*"([^"]+)"/g)) publicPicks.add(match[1].toLowerCase());
-}
 const leaks = [];
 const notes = [];
 

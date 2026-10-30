@@ -17,11 +17,28 @@ const CANONICAL_ORIGIN = "https://predictions-sports-prime.com";
 // results dataset is the single source: a missing /match/<slug>/ whose slug is settled there was
 // removed on purpose, so it answers 410 Gone instead of 404. Nothing is listed by hand.
 const SETTLED_SLUGS = new Set(Object.values(results.records).map((record) => record.slug));
-// Also matches /nba/<slug>/ (but never /nba/ itself, with no slug segment), so NBA match pages can
-// share this same release-date gate (functions/_data/match-release.json) without a separate
-// middleware pattern. /nba/ listing hub stays ungated here - its own gate is the deferred-slate
-// pattern (src/data/nba/slates.ts), mirroring NHL.
-const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?(?:match|nba|nhl)\/([^/]+)(?:\/.*)?$/;
+const MATCH_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?match\/([^/]+)(?:\/.*)?$/;
+
+// The site is football-only. Every NBA, NHL and NFL page, hub, localized hub, static export file and feed is
+// permanently gone: 410, no redirect (there is no equivalent page) and no soft 404. The records themselves are
+// kept outside every built path, in archive/retired-sports.
+const RETIRED_SPORT_PATH = /^\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?(?:nba|nhl|nfl)(?:[/.]|$)|^\/api\/(?:mobile\/)?(?:nba|nhl|nfl)(?:\/|$)/i;
+
+function retiredSportResponse(pathname) {
+  const headers = { "Cache-Control": "public, max-age=3600", "X-Robots-Tag": "noindex" };
+  if (pathname.startsWith("/api/")) {
+    return new Response(JSON.stringify({ error: "gone" }), {
+      status: 410,
+      statusText: "Gone",
+      headers: { ...headers, "Content-Type": "application/json; charset=utf-8" },
+    });
+  }
+  return new Response(
+    '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page removed | Predictions Sports Prime</title></head>' +
+      '<body><h1>This page has been permanently removed</h1><p>Predictions Sports Prime now covers football only.</p><p><a href="/football-predictions/">Football predictions</a></p></body></html>',
+    { status: 410, statusText: "Gone", headers: { ...headers, "Content-Type": "text/html; charset=utf-8" } },
+  );
+}
 
 // Public-release gate (src/lib/match-release.ts): a future prediction's page may already exist in the
 // static export, but it must not be served until its match date arrives in the site's canonical fixture
@@ -34,12 +51,11 @@ const RELEASE_DATE_BY_SLUG = new Map(releaseManifest.map((entry) => [entry.slug,
 // They are appended per request, from the same release rule as the page itself, once the gate opens.
 const GATED_SITEMAP_ENTRIES = groupGatedBySitemap(gatedSitemapManifest);
 
-// The pt-br hubs (home, leagues, NFL) are retired and permanently redirect to their English
+// The pt-br hubs (home, leagues) are retired and permanently redirect to their English
 // equivalents. Only the frozen historical /pt-br/match/<slug>/ pages are still served.
 function ptBrHubRedirect(pathname) {
   if (pathname === "/pt-br" || pathname === "/pt-br/") return "/";
   if (/^\/pt-br\/league\/[^/]+\/?$/.test(pathname)) return "/football-predictions/";
-  if (/^\/pt-br\/nfl\/?$/.test(pathname)) return "/nfl/";
   return null;
 }
 
@@ -66,6 +82,8 @@ export function createMiddlewareHandler({
         308,
       );
     }
+
+    if (RETIRED_SPORT_PATH.test(requestUrl.pathname)) return retiredSportResponse(requestUrl.pathname);
 
     const ptBrRedirect = ptBrHubRedirect(requestUrl.pathname);
     if (ptBrRedirect) {

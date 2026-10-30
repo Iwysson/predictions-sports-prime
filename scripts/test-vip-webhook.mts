@@ -359,7 +359,8 @@ profiles.push({ id: "cancU", email: "c@example.com", plan: "vip", subscription_s
 authUsers.vipU = { email: "v@example.com", email_confirmed_at: "x" };
 authUsers.cancU = { email: "c@example.com", email_confirmed_at: "x" };
 let h = await historyFn.onRequestGet({ request: hReq("tok-vipU"), env: ENV });
-check("history: VIP trialing -> 200 with 841 records", h.status === 200 && (await h.json()).records.length === 841);
+const historyRecords = h.status === 200 ? (await h.json()).records : [];
+check("history: VIP trialing -> 200 with the 763 football records and no retired sport", historyRecords.length === 763 && historyRecords.every((record) => record.sport === "football"));
 check("history: secret sent only in apikey", sbCalls.every((c) => !(c.headers.Authorization ?? "").includes(SB_SECRET)));
 h = await historyFn.onRequestGet({ request: hReq("tok-cancU"), env: ENV });
 check("history: canceled -> 403", h.status === 403);

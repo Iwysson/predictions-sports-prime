@@ -12,7 +12,6 @@ import {
 export function LocalizedHeader({ locale }: { locale: SeoLocaleSlug }) {
   const copy = seoLocales[locale];
   const homeHref = localePath(locale);
-  const nflHref = localePath(locale, "/nfl/");
 
   return (
     <SiteHeader
@@ -23,11 +22,7 @@ export function LocalizedHeader({ locale }: { locale: SeoLocaleSlug }) {
       currentLocale={locale}
       navigationLabel="Primary navigation"
       mobileNavigationLabel="Mobile navigation"
-      navItems={[
-        { href: nflHref, label: "NFL" },
-        { href: "/nhl/", label: "NHL" },
-        { href: "/nba/", label: "NBA" },
-      ]}
+      navItems={[]}
     />
   );
 }

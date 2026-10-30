@@ -1,4 +1,5 @@
 import type { MatchPreview } from "@/types";
+import { leaguesBySlug } from "@/data/leagues";
 import { findFixtureForPrediction, loadLeagueSeason, teamNamesMatch } from "@/lib/openfootball";
 import { resolvePredictionResult } from "@/lib/prediction-results";
 import { isHistoryEligibleFixture } from "@/lib/fixture-status";
@@ -6,6 +7,8 @@ import marketResults from "@/data/market-results.snapshot.json";
 import footballResults from "@/data/football-results.snapshot.json";
 import { overlayStoredResult, type FootballResultsDataset } from "@/lib/football-results";
 import historicalResults from "@/data/historical-results.supplement.json";
+import resultEvidence from "@/data/football-result-evidence.snapshot.json";
+import type { ResultEvidenceDataset } from "@/lib/result-reconciliation";
 
 type MarketResultSnapshot = Record<string, NonNullable<MatchPreview["marketStats"]>>;
 const marketStatsByMatch = marketResults as MarketResultSnapshot;
@@ -34,8 +37,31 @@ function withMarketStats(match: MatchPreview): MatchPreview {
   return marketStats ? { ...match, marketStats } : match;
 }
 
+const reconciledEvidence = (resultEvidence as ResultEvidenceDataset).records;
+
+function kickoffDateKey(kickoffUtc: string, league: string) {
+  const instant = new Date(kickoffUtc);
+  if (Number.isNaN(instant.getTime())) return null;
+  const timeZone = leaguesBySlug[league as keyof typeof leaguesBySlug]?.timezone ?? "UTC";
+  return new Intl.DateTimeFormat("en-CA", { timeZone, year: "numeric", month: "2-digit", day: "2-digit" }).format(instant);
+}
+
 function withHistoricalSupplement(match: MatchPreview): MatchPreview {
   const key = `${match.league}:${match.slug}`;
+  // Provider evidence captured by results:reconcile. It fills a result the fixture feed does not hold,
+  // and never overrides a final score the feed already has or the hand-audited supplement below.
+  const evidence = reconciledEvidence[key];
+  if (evidence && !historicalSupplement.records[key] && !isHistoryEligibleFixture({ status: match.fixtureStatus, homeScore: match.homeScore, awayScore: match.awayScore })) {
+    match = {
+      ...match,
+      fixtureStatus: evidence.status,
+      // The provider event is what was actually played: a stale fixture link can hold an older date.
+      kickoffUtc: evidence.kickoffUtc,
+      date: kickoffDateKey(evidence.kickoffUtc, match.league) ?? match.date,
+      ...(evidence.homeScore !== undefined ? { homeScore: evidence.homeScore } : {}),
+      ...(evidence.awayScore !== undefined ? { awayScore: evidence.awayScore } : {}),
+    };
+  }
   const record = historicalSupplement.records[key];
   if (record) {
     const facts = record.facts;

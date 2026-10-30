@@ -1,21 +1,33 @@
 {
-  "la-liga:elche-vs-barcelona": {
-    "homeCorners": 3,
-    "awayCorners": 1,
-    "source": "https://www.eurosport.es/futbol/la-liga/2026-2027/live-elche-barcelona_mtc21891486/live.shtml",
-    "capturedAt": "2026-08-24T14:54:07-03:00"
+  "brasileirao-serie-a:athletico-pr-vs-atletico-mg": {
+    "homeCorners": 10,
+    "awayCorners": 4,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841256",
+    "capturedAt": "2026-10-09T06:14:46.783Z"
   },
-  "la-liga:atletico-madrid-vs-villarreal": {
-    "homeCorners": 5,
+  "brasileirao-serie-a:atletico-mg-vs-coritiba": {
+    "homeCorners": 10,
+    "awayCorners": 5,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841270",
+    "capturedAt": "2026-10-18T01:12:24.344Z"
+  },
+  "brasileirao-serie-a:bragantino-vs-mirassol": {
+    "homeCorners": 11,
     "awayCorners": 3,
-    "source": "https://ofstats.com/matches/view/atletico-de-madrid-villarreal-2026-08-23",
-    "capturedAt": "2026-08-24T14:54:07-03:00"
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841253",
+    "capturedAt": "2026-10-08T01:55:05.950Z"
   },
   "brasileirao-serie-a:fluminense-vs-remo": {
     "homeCorners": 11,
     "awayCorners": 2,
     "source": "https://www.totalcorner.com/h2h/fluminense-vs-remo",
     "capturedAt": "2026-08-24T14:54:07-03:00"
+  },
+  "brasileirao-serie-a:internacional-vs-corinthians": {
+    "homeCorners": 3,
+    "awayCorners": 12,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5103650",
+    "capturedAt": "2026-10-08T01:53:34.500Z"
   },
   "brasileirao-serie-a:red-bull-bragantino-vs-gremio": {
     "homeCorners": 8,
@@ -29,16 +41,70 @@
     "source": "https://gioscore.com/pt/futebol/partida/bahia-vitoria/19621841",
     "capturedAt": "2026-08-24T14:54:07-03:00"
   },
+  "bundesliga:werder-bremen-vs-sc-paderborn": {
+    "homeCorners": 5,
+    "awayCorners": 3,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/summary?event=401884766",
+    "capturedAt": "2026-10-17T17:20:15.506Z"
+  },
+  "champions-league:club-brugge-vs-lens": {
+    "homeCorners": 1,
+    "awayCorners": 5,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915388",
+    "capturedAt": "2026-10-21T23:33:21.242Z"
+  },
   "efl-cup:cardiff-city-vs-norwich-city": {
     "homeCorners": 5,
     "awayCorners": 3,
     "source": "https://www.fotmob.com/api/data/matchDetails?matchId=6005657",
     "capturedAt": "2026-08-28T07:26:54-03:00"
   },
+  "eredivisie:telstar-vs-feyenoord": {
+    "homeCorners": 7,
+    "awayCorners": 8,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.1/summary?event=401875580",
+    "capturedAt": "2026-10-17T21:35:55.304Z"
+  },
+  "la-liga:atletico-madrid-vs-villarreal": {
+    "homeCorners": 5,
+    "awayCorners": 3,
+    "source": "https://ofstats.com/matches/view/atletico-de-madrid-villarreal-2026-08-23",
+    "capturedAt": "2026-08-24T14:54:07-03:00"
+  },
+  "la-liga:elche-vs-barcelona": {
+    "homeCorners": 3,
+    "awayCorners": 1,
+    "source": "https://www.eurosport.es/futbol/la-liga/2026-2027/live-elche-barcelona_mtc21891486/live.shtml",
+    "capturedAt": "2026-08-24T14:54:07-03:00"
+  },
+  "la-liga:elche-vs-celta": {
+    "homeCorners": 5,
+    "awayCorners": 2,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882854",
+    "capturedAt": "2026-10-11T18:05:12.957Z"
+  },
   "la-liga:levante-vs-real-betis": {
     "homeCorners": 5,
     "awayCorners": 8,
     "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5868035",
+    "capturedAt": "2026-08-30T09:50:00-03:00"
+  },
+  "la-liga:malaga-vs-espanyol": {
+    "homeCorners": 8,
+    "awayCorners": 2,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882851",
+    "capturedAt": "2026-10-09T21:56:26.842Z"
+  },
+  "la-liga:malaga-vs-real-sociedad": {
+    "homeCorners": 4,
+    "awayCorners": 5,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882841",
+    "capturedAt": "2026-10-18T19:05:58.281Z"
+  },
+  "la-liga:racing-santander-vs-elche": {
+    "homeCorners": 5,
+    "awayCorners": 10,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5868037",
     "capturedAt": "2026-08-30T09:50:00-03:00"
   },
   "la-liga:real-sociedad-vs-espanyol": {
@@ -47,11 +113,59 @@
     "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5868039",
     "capturedAt": "2026-08-30T09:50:00-03:00"
   },
-  "la-liga:racing-santander-vs-elche": {
-    "homeCorners": 5,
-    "awayCorners": 10,
-    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5868037",
+  "liga-portugal:braga-vs-gil-vicente": {
+    "homeCorners": 4,
+    "awayCorners": 1,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/summary?event=401885480",
+    "capturedAt": "2026-10-30T09:50:35.212Z"
+  },
+  "ligue-1:brest-vs-toulouse": {
+    "homeCorners": 7,
+    "awayCorners": 2,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5802911",
     "capturedAt": "2026-08-30T09:50:00-03:00"
+  },
+  "ligue-1:le-mans-vs-toulouse": {
+    "homeCorners": 2,
+    "awayCorners": 2,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876437",
+    "capturedAt": "2026-10-16T21:50:28.916Z"
+  },
+  "ligue-1:troyes-vs-lens": {
+    "homeCorners": 6,
+    "awayCorners": 4,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876431",
+    "capturedAt": "2026-10-17T21:35:55.304Z"
+  },
+  "premier-league:crystal-palace-vs-nottingham-forest": {
+    "homeCorners": 5,
+    "awayCorners": 8,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/summary?event=401879266",
+    "capturedAt": "2026-10-11T18:05:12.957Z"
+  },
+  "scottish-premiership:hearts-vs-st-johnstone": {
+    "homeCorners": 8,
+    "awayCorners": 4,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5793919",
+    "capturedAt": "2026-08-30T10:05:00-03:00"
+  },
+  "scottish-premiership:kilmarnock-vs-dundee-united": {
+    "homeCorners": 3,
+    "awayCorners": 5,
+    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5793920",
+    "capturedAt": "2026-08-30T10:05:00-03:00"
+  },
+  "serie-a:bologna-vs-inter": {
+    "homeCorners": 2,
+    "awayCorners": 7,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874953",
+    "capturedAt": "2026-10-17T19:28:59.545Z"
+  },
+  "serie-a:juventus-vs-lazio": {
+    "homeCorners": 5,
+    "awayCorners": 7,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874765",
+    "capturedAt": "2026-10-18T21:26:01.758Z"
   },
   "serie-a:juventus-vs-parma-calcio-1913": {
     "homeCorners": 10,
@@ -59,11 +173,29 @@
     "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5749654",
     "capturedAt": "2026-08-30T09:50:00-03:00"
   },
-  "ligue-1:brest-vs-toulouse": {
-    "homeCorners": 7,
+  "serie-a:monza-vs-cagliari": {
+    "homeCorners": 2,
+    "awayCorners": 7,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874762",
+    "capturedAt": "2026-10-19T19:29:20.539Z"
+  },
+  "serie-a:parma-vs-torino": {
+    "homeCorners": 6,
     "awayCorners": 2,
-    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5802911",
-    "capturedAt": "2026-08-30T09:50:00-03:00"
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874784",
+    "capturedAt": "2026-10-19T22:59:53.650Z"
+  },
+  "serie-a:venezia-vs-napoli": {
+    "homeCorners": 0,
+    "awayCorners": 12,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874760",
+    "capturedAt": "2026-10-17T17:20:15.506Z"
+  },
+  "super-lig:erzurumspor-vs-eyupspor": {
+    "homeCorners": 3,
+    "awayCorners": 2,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/summary?event=401888271",
+    "capturedAt": "2026-10-17T14:22:47.918Z"
   },
   "super-lig:galatasaray-vs-goztepe": {
     "homeCorners": 6,
@@ -82,131 +214,5 @@
     "awayCorners": 4,
     "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5904727",
     "capturedAt": "2026-08-30T10:05:00-03:00"
-  },
-  "scottish-premiership:hearts-vs-st-johnstone": {
-    "homeCorners": 8,
-    "awayCorners": 4,
-    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5793919",
-    "capturedAt": "2026-08-30T10:05:00-03:00"
-  },
-  "scottish-premiership:kilmarnock-vs-dundee-united": {
-    "homeCorners": 3,
-    "awayCorners": 5,
-    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5793920",
-    "capturedAt": "2026-08-30T10:05:00-03:00"
-  },
-  "brasileirao-serie-a:internacional-vs-corinthians": {
-    "homeCorners": 3,
-    "awayCorners": 12,
-    "source": "https://www.fotmob.com/api/data/matchDetails?matchId=5103650",
-    "capturedAt": "2026-10-08T01:53:34.500Z"
-  },
-  "brasileirao-serie-a:bragantino-vs-mirassol": {
-    "homeCorners": 11,
-    "awayCorners": 3,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841253",
-    "capturedAt": "2026-10-08T01:55:05.950Z"
-  },
-  "brasileirao-serie-a:athletico-pr-vs-atletico-mg": {
-    "homeCorners": 10,
-    "awayCorners": 4,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841256",
-    "capturedAt": "2026-10-09T06:14:46.783Z"
-  },
-  "la-liga:malaga-vs-espanyol": {
-    "homeCorners": 8,
-    "awayCorners": 2,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882851",
-    "capturedAt": "2026-10-09T21:56:26.842Z"
-  },
-  "la-liga:elche-vs-celta": {
-    "homeCorners": 5,
-    "awayCorners": 2,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882854",
-    "capturedAt": "2026-10-11T18:05:12.957Z"
-  },
-  "premier-league:crystal-palace-vs-nottingham-forest": {
-    "homeCorners": 5,
-    "awayCorners": 8,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/summary?event=401879266",
-    "capturedAt": "2026-10-11T18:05:12.957Z"
-  },
-  "ligue-1:le-mans-vs-toulouse": {
-    "homeCorners": 2,
-    "awayCorners": 2,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876437",
-    "capturedAt": "2026-10-16T21:50:28.916Z"
-  },
-  "super-lig:erzurumspor-vs-eyupspor": {
-    "homeCorners": 3,
-    "awayCorners": 2,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/tur.1/summary?event=401888271",
-    "capturedAt": "2026-10-17T14:22:47.918Z"
-  },
-  "serie-a:venezia-vs-napoli": {
-    "homeCorners": 0,
-    "awayCorners": 12,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874760",
-    "capturedAt": "2026-10-17T17:20:15.506Z"
-  },
-  "bundesliga:werder-bremen-vs-sc-paderborn": {
-    "homeCorners": 5,
-    "awayCorners": 3,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/summary?event=401884766",
-    "capturedAt": "2026-10-17T17:20:15.506Z"
-  },
-  "serie-a:bologna-vs-inter": {
-    "homeCorners": 2,
-    "awayCorners": 7,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874953",
-    "capturedAt": "2026-10-17T19:28:59.545Z"
-  },
-  "ligue-1:troyes-vs-lens": {
-    "homeCorners": 6,
-    "awayCorners": 4,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876431",
-    "capturedAt": "2026-10-17T21:35:55.304Z"
-  },
-  "eredivisie:telstar-vs-feyenoord": {
-    "homeCorners": 7,
-    "awayCorners": 8,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.1/summary?event=401875580",
-    "capturedAt": "2026-10-17T21:35:55.304Z"
-  },
-  "brasileirao-serie-a:atletico-mg-vs-coritiba": {
-    "homeCorners": 10,
-    "awayCorners": 5,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/bra.1/summary?event=401841270",
-    "capturedAt": "2026-10-18T01:12:24.344Z"
-  },
-  "la-liga:malaga-vs-real-sociedad": {
-    "homeCorners": 4,
-    "awayCorners": 5,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/summary?event=401882841",
-    "capturedAt": "2026-10-18T19:05:58.281Z"
-  },
-  "serie-a:juventus-vs-lazio": {
-    "homeCorners": 5,
-    "awayCorners": 7,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874765",
-    "capturedAt": "2026-10-18T21:26:01.758Z"
-  },
-  "serie-a:monza-vs-cagliari": {
-    "homeCorners": 2,
-    "awayCorners": 7,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874762",
-    "capturedAt": "2026-10-19T19:29:20.539Z"
-  },
-  "serie-a:parma-vs-torino": {
-    "homeCorners": 6,
-    "awayCorners": 2,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event=401874784",
-    "capturedAt": "2026-10-19T22:59:53.650Z"
-  },
-  "champions-league:club-brugge-vs-lens": {
-    "homeCorners": 1,
-    "awayCorners": 5,
-    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/summary?event=401915388",
-    "capturedAt": "2026-10-21T23:33:21.242Z"
   }
 }

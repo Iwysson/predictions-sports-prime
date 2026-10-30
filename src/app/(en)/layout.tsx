@@ -33,8 +33,6 @@ export const metadata: Metadata = {
 
   keywords: [
     "football predictions",
-    "NFL predictions",
-    "NHL predictions",
     "MLS predictions",
     "Premier League predictions",
     "sports betting analysis",

@@ -32,7 +32,7 @@ export function isMatchPath(path: string) {
 
 export function languageSwitcherPath(pathname: string, targetLocale: SeoLocale) {
   const path = normalizeRoutePath(stripLocalePrefix(pathname));
-  const preservePath = path === "/" || path === "/nfl/" || isLeaguePath(path) || isMatchPath(path);
+  const preservePath = path === "/" || isLeaguePath(path) || isMatchPath(path);
 
   return localePath(targetLocale, preservePath ? path : "/");
 }

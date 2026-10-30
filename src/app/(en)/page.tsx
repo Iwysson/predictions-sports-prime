@@ -17,8 +17,8 @@ import { PrimeVipOfferCard } from "@/components/PrimeVipOfferCard";
 import { SiteContactLine } from "@/components/SiteContactLine";
 import { VipTitleCta } from "@/components/VipTitleCta";
 
-const homeTitle = "Football Predictions Today, NFL & NHL Picks | Predictions Sports Prime";
-const homeDescription = "Football predictions for today, tomorrow and upcoming fixtures, plus NFL and NHL picks, with published odds, identified sources and a transparent results record.";
+const homeTitle = "Football Predictions Today & Betting Tips | Predictions Sports Prime";
+const homeDescription = "Football predictions for today's fixtures across major leagues and cups, with published odds, identified sources and a transparent results record.";
 
 export const metadata: Metadata = {
   title: { absolute: homeTitle },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       url: absoluteUrl("/og-default.png"),
       width: 1200,
       height: 630,
-      alt: `${siteConfig.name} football, NFL and NHL predictions`,
+      alt: `${siteConfig.name} football predictions`,
     }],
   },
   twitter: {
@@ -74,7 +74,7 @@ export default async function Home() {
         trackRecordResults={sortedResults(footballResults as FootballResultsDataset).map(toPublicResult)}
       />
 
-      {/* Section 3 — Predictions by League: every sport and competition covered by the site. */}
+      {/* Section 3 — Predictions by League: every football competition covered by the site. */}
       <PredictionLeagueCategories id="leagues" muted />
     </>
   );
