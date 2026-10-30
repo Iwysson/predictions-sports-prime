@@ -401,6 +401,16 @@
       "kickoffUtc": "2026-10-10T14:00Z",
       "capturedAt": "2026-10-30T09:50:35.212Z"
     },
+    "eliteserien:bodo-glimt-vs-viking": {
+      "status": "completed",
+      "homeScore": 3,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401843468",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843468",
+      "kickoffUtc": "2026-10-30T18:00Z",
+      "capturedAt": "2026-10-30T21:27:24.677Z"
+    },
     "eliteserien:brann-vs-viking": {
       "status": "completed",
       "homeScore": 0,

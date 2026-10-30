@@ -925,6 +925,25 @@
       "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
+    "bundesliga:sv-elversberg-vs-mainz-05": {
+      "key": "bundesliga:sv-elversberg-vs-mainz-05",
+      "league": "bundesliga",
+      "slug": "sv-elversberg-vs-mainz-05",
+      "homeTeam": "SV Elversberg",
+      "awayTeam": "Mainz 05",
+      "date": "2026-10-30",
+      "fixtureId": "401884746",
+      "predictionAccess": "free",
+      "prediction": "Elversberg or Draw (1X)",
+      "odds": 1.72,
+      "finalScore": {
+        "home": 4,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-30T21:27:26.400Z",
+      "publishedAt": "2026-10-30T00:00:00-04:00"
+    },
     "bundesliga:union-berlin-vs-borussia-dortmund": {
       "key": "bundesliga:union-berlin-vs-borussia-dortmund",
       "league": "bundesliga",
@@ -1841,6 +1860,25 @@
       "result": "red",
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "eliteserien:bodo-glimt-vs-viking": {
+      "key": "eliteserien:bodo-glimt-vs-viking",
+      "league": "eliteserien",
+      "slug": "bodo-glimt-vs-viking",
+      "homeTeam": "Bodø/Glimt",
+      "awayTeam": "Viking",
+      "date": "2026-10-30",
+      "fixtureId": "official:eliteserien:bod-glimt-vs-viking:2026-10-30",
+      "predictionAccess": "free",
+      "prediction": "Over 3.5 Goals",
+      "odds": 1.75,
+      "finalScore": {
+        "home": 3,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-30T21:27:26.400Z",
+      "publishedAt": "2026-10-30T00:00:00-04:00"
     },
     "eliteserien:brann-vs-viking": {
       "key": "eliteserien:brann-vs-viking",
@@ -3143,6 +3181,25 @@
       "settledAt": "2026-10-18T19:06:19.100Z",
       "publishedAt": "2026-10-15T08:41:00-03:00"
     },
+    "ligue-1:le-havre-vs-psg": {
+      "key": "ligue-1:le-havre-vs-psg",
+      "league": "ligue-1",
+      "slug": "le-havre-vs-psg",
+      "homeTeam": "Le Havre",
+      "awayTeam": "Paris Saint-Germain",
+      "date": "2026-10-30",
+      "fixtureId": "401876421",
+      "predictionAccess": "free",
+      "prediction": "Paris Saint-Germain -1.5 Goals (handicap)",
+      "odds": 1.85,
+      "finalScore": {
+        "home": 1,
+        "away": 5
+      },
+      "result": "green",
+      "settledAt": "2026-10-30T21:27:26.400Z",
+      "publishedAt": "2026-10-30T00:00:00-04:00"
+    },
     "ligue-1:le-mans-vs-toulouse": {
       "key": "ligue-1:le-mans-vs-toulouse",
       "league": "ligue-1",
@@ -3294,6 +3351,25 @@
       "result": "red",
       "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "ligue-1:nice-vs-rennes": {
+      "key": "ligue-1:nice-vs-rennes",
+      "league": "ligue-1",
+      "slug": "nice-vs-rennes",
+      "homeTeam": "Nice",
+      "awayTeam": "Rennes",
+      "date": "2026-10-30",
+      "fixtureId": "401876416",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.67,
+      "finalScore": {
+        "home": 5,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-10-30T21:27:26.400Z",
+      "publishedAt": "2026-10-30T00:00:00-04:00"
     },
     "ligue-1:nice-vs-strasbourg": {
       "key": "ligue-1:nice-vs-strasbourg",
@@ -5611,6 +5687,25 @@
       "result": "green",
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-07T12:00:00.000-03:00"
+    },
+    "super-lig:konyaspor-vs-galatasaray": {
+      "key": "super-lig:konyaspor-vs-galatasaray",
+      "league": "super-lig",
+      "slug": "konyaspor-vs-galatasaray",
+      "homeTeam": "Konyaspor",
+      "awayTeam": "Galatasaray",
+      "date": "2026-10-30",
+      "fixtureId": "401888259",
+      "predictionAccess": "free",
+      "prediction": "Galatasaray to Win",
+      "odds": 1.62,
+      "finalScore": {
+        "home": 0,
+        "away": 4
+      },
+      "result": "green",
+      "settledAt": "2026-10-30T21:27:26.400Z",
+      "publishedAt": "2026-10-30T00:00:00-04:00"
     },
     "super-lig:rizespor-vs-fenerbahce": {
       "key": "super-lig:rizespor-vs-fenerbahce",

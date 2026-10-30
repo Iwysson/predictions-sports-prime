@@ -1,20 +1,46 @@
 {
   "version": 1,
   "records": {
-    "super-lig:konyaspor-vs-galatasaray": {
-      "key": "super-lig:konyaspor-vs-galatasaray",
-      "league": "super-lig",
-      "slug": "konyaspor-vs-galatasaray",
-      "homeTeam": "Konyaspor",
-      "awayTeam": "Galatasaray",
+    "la-liga:villarreal-vs-espanyol": {
+      "key": "la-liga:villarreal-vs-espanyol",
+      "league": "la-liga",
+      "slug": "villarreal-vs-espanyol",
+      "homeTeam": "Villarreal",
+      "awayTeam": "Espanyol",
       "date": "2026-10-30",
       "predictionAccess": "free",
-      "prediction": "Galatasaray to Win",
-      "odds": 1.62,
+      "prediction": "Espanyol +1.5 Goals (handicap)",
+      "odds": 1.75,
+      "reason": "NOT_COMPLETED"
+    },
+    "liga-portugal:casa-pia-vs-sporting-cp": {
+      "key": "liga-portugal:casa-pia-vs-sporting-cp",
+      "league": "liga-portugal",
+      "slug": "casa-pia-vs-sporting-cp",
+      "homeTeam": "Casa Pia",
+      "awayTeam": "Sporting CP",
+      "date": "2026-10-30",
+      "predictionAccess": "free",
+      "prediction": "Sporting CP to Win + Over 2.5 Goals",
+      "odds": 1.76,
+      "reason": "NOT_COMPLETED"
+    },
+    "ligue-1:lille-vs-lens": {
+      "key": "ligue-1:lille-vs-lens",
+      "league": "ligue-1",
+      "slug": "lille-vs-lens",
+      "homeTeam": "Lille",
+      "awayTeam": "Lens",
+      "date": "2026-10-30",
+      "predictionAccess": "free",
+      "prediction": "Over 1.5 Goals + Over 7.5 Total Corners",
+      "odds": 1.65,
       "reason": "NOT_COMPLETED"
     }
   },
   "reconcileReasons": {
-    "super-lig:konyaspor-vs-galatasaray": "NOT_COMPLETED"
+    "la-liga:villarreal-vs-espanyol": "NOT_COMPLETED",
+    "liga-portugal:casa-pia-vs-sporting-cp": "NOT_COMPLETED",
+    "ligue-1:lille-vs-lens": "NOT_COMPLETED"
   }
 }
