@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-30T10:05:01.596Z",
+  "generatedAt": "2026-10-30T17:08:52.161Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -2828,8 +2828,7 @@
             "id": "401882849",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-10-10T12:00Z",
-            "fotmobMatchId": 5868088
+            "kickoffUtc": "2026-10-10T12:00Z"
           },
           {
             "round": 8,
@@ -15973,13 +15972,13 @@
     "super-lig:konyaspor-vs-galatasaray": "401888259"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-10-30T10:05:01.596Z",
-    "la-liga": "2026-10-30T10:05:01.596Z",
-    "bundesliga": "2026-10-30T10:05:01.596Z",
-    "serie-a": "2026-10-30T10:05:01.596Z",
-    "liga-portugal": "2026-10-30T10:05:01.596Z",
-    "ligue-1": "2026-10-30T10:05:01.596Z",
-    "eredivisie": "2026-10-30T10:05:01.596Z",
+    "premier-league": "2026-10-30T17:08:52.161Z",
+    "la-liga": "2026-10-30T17:08:52.161Z",
+    "bundesliga": "2026-10-30T17:08:52.161Z",
+    "serie-a": "2026-10-30T17:08:52.161Z",
+    "liga-portugal": "2026-10-30T17:08:52.161Z",
+    "ligue-1": "2026-10-30T17:08:52.161Z",
+    "eredivisie": "2026-10-30T17:08:52.161Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00",
     "super-lig": "2026-09-10T07:20:00-03:00",
     "eliteserien": "2026-09-09T09:28:45.447Z"
@@ -16752,7 +16751,7 @@
       "awayTeam": "Galatasaray",
       "homeScore": null,
       "awayScore": null,
-      "status": "scheduled",
+      "status": "in-progress",
       "dataSource": "espn",
       "id": "401888259",
       "sourceAgreement": true,

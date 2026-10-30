@@ -1,5 +1,20 @@
 {
   "version": 1,
-  "records": {},
-  "reconcileReasons": {}
+  "records": {
+    "super-lig:konyaspor-vs-galatasaray": {
+      "key": "super-lig:konyaspor-vs-galatasaray",
+      "league": "super-lig",
+      "slug": "konyaspor-vs-galatasaray",
+      "homeTeam": "Konyaspor",
+      "awayTeam": "Galatasaray",
+      "date": "2026-10-30",
+      "predictionAccess": "free",
+      "prediction": "Galatasaray to Win",
+      "odds": 1.62,
+      "reason": "NOT_COMPLETED"
+    }
+  },
+  "reconcileReasons": {
+    "super-lig:konyaspor-vs-galatasaray": "NOT_COMPLETED"
+  }
 }
