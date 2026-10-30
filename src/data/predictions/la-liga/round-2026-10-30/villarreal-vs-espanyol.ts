@@ -14,13 +14,13 @@ export const prediction: EditorialPrediction = {
   "analysisFormat": "markdown",
   "analysisLanguage": "en",
   "analysis": [
-    "# Villarreal vs Espanyol Prediction, Odds and Betting Tips\n\n**Prediction:** **Espanyol +1.5 Goals (handicap)**\n**Odds:** **1.75**\n\n## Match information\n\n- **Competition:** La Liga 2026/27\n- **Date:** October 30, 2026\n- **Kick-off:** 2026-10-30 21:00 Europe/Madrid\n- **Round:** Matchweek 11\n- **Venue:** Estadio de la Cerámica, Villarreal, Spain\n\n## Team news and availability\n\nThe probable lineups below are PROJECTED, with alternative starters and fitness doubts retained from the cited pre-match reports. No suspension or eligibility issue is stated unless the cited reports name one. Availability may change before official team sheets are released.\n\n## Match Analysis\n\nVillarreal should control more of the ball at Estadio de la Cerámica and generate a larger volume of opportunities. Across the ten-match comparison they record 2.00 xG and 16.7 shots per match, versus 1.27 xG and 12.5 shots for Espanyol. The visitors also concede 1.8 actual goals on average, which explains why the handicap is not a straightforward defensive endorsement despite the two-goal cushion.\n\nEspanyol’s task is to keep the central distance between their back line and midfield compact, making Villarreal build around rather than through the block. Villarreal can exploit wide spaces through Buchanan and Moleiro and supply Gerard Moreno and Ayoze Pérez. Pape Gueye is suspended for the hosts; Jofre Carreras is a doubt for Espanyol, while Kike García is unavailable. These provisional lineups should be checked against the official teams shortly before kick-off.\n\nEspanyol +1.5 wins if the visitors draw, win or lose by exactly one goal. A two-goal Villarreal victory fails even when Espanyol score. Villarreal’s stronger attacking profile creates a genuine margin risk; the wager at 1.75 needs a 57.14% hit rate merely to break even before commission. A forecast of Villarreal winning does not by itself tell us whether that victory clears the two-goal margin.\n\n## Probable Starting XIs\n\n**Villarreal:** Péter Gulácsi; Santiago Mouriño, Juan Foyth, Renato Veiga, Sergi Cardona (Alex Freeman); Tajon Buchanan, Carlos Maciá, Santi Comesaña, Alberto Moleiro; Gerard Moreno, Ayoze Pérez.\n\n**Espanyol:** Ángel Fortuño; Omar El Hilali, Unai Núñez, Leandro Cabrera, Quilindschy Hartman; Pol Lozano, Edu Expósito; Javi Hernández, Álex Calatrava (Jofre Carreras, doubtful), Bryan Zaragoza; Roberto Fernández.\n\n*Brackets indicate the projected alternative or a reported doubt, not a confirmed change. Re-check official club team sheets close to kickoff.*\n\n**Statistical methodology:** Last 10 matches, all competitions. Published team rates are descriptive. Model probabilities refer to this fixture and are **not** the probability of a combined pick, unless explicitly stated. Calculated rows use the values in this table. Sample and underlying methodology differ between providers; do not blend into one forecasting model.\n\n**Data and lineup sources:**\n- forepitch.com: https://forepitch.com/pt/football/match/villarreal-espanyol-2026-10-30/\n- www.fotmob.com: https://www.fotmob.com/pt-BR/matches/espanyol-vs-villarreal/2wt7o0\n\nThe figures in the Statistical Core use the last ten matches in all competitions, not a home-versus-away venue split, and metrics the sources did not publish are marked as unavailable rather than estimated. The source-backed comparison includes **2.00 xG/game** for Villarreal and **1.27 xG/game** for Espanyol; these historical figures do not establish the probability of the selection.\n\n## Market assessment and conclusion\n\nThe published **1.75** price implies a raw implied probability of **57.14%** (1 / 1.75). That market price differs from the historical rates in the table and from the editorial judgment in the three analysis paragraphs. The main risk is that the contrary evidence in the analysis defeats the pick even if the broader form pattern continues.\n\n**Prediction:** **Espanyol +1.5 Goals (handicap)**\n**Odds:** **1.75**\n\n### Statistical Core Predictions-Sports-Prime\n\n| Metric | Villarreal | Espanyol |\n|---|---:|---:|\n| Goals scored per match | 2.2 | 1.2 |\n| Goals conceded per match | 1.4 | 1.8 |\n| xG created per match | 2.00 | 1.27 |\n| xGA conceded per match | 1.44 | 1.58 |\n| Shots per match | 16.7 | 12.5 |\n| Shots on target per match | 6.3 | 3.4 |\n| Corners per match | 6.2 | 3.7 |\n| Possession | 58.0% | 47.0% |\n| Yellow cards per match | 1.9 | 3.3 |\n| xG minus xGA per match — calculated | 0.56 | -0.31 |\n| Shots on target / shot attempts — calculated | 37.7% | 27.2% |\n| Goals / shots on target — calculated | 34.9% | 35.3% |\n| Total goals in team matches per game — calculated | 3.6 | 3.0 |\n| Shot volume per xG — calculated | 8.3 | 9.8 |\n| Independent model: home / draw / away win | 68% / 20% / 11% | Match-level estimate |\n| Independent model: Over 2.5 goals | 59% | Match-level estimate |\n| Supplied decimal odds | 1.75 | Author-supplied, not live bookmaker quote |\n| Break-even hit rate (1/odds) | 57.14% | Calculation, not model probability |"
+    "# Villarreal vs Espanyol Prediction, Odds and Betting Tips\n\n**Prediction:** **Espanyol +1.5 Goals (handicap)**\n**Odds:** **1.75**\n\n## Match information\n\n- **Competition:** La Liga 2026/27\n- **Date:** October 30, 2026\n- **Kick-off:** 2026-10-30 21:00 Europe/Madrid\n- **Round:** Matchweek 11\n- **Venue:** Estadio de la Cerámica, Villarreal, Spain\n\n## Team news and availability\n\nPape Gueye is suspended for Villarreal. Espanyol have Jofre Carreras as a doubt, with Álex Calatrava the likely replacement, and Kike García is unavailable. The reports cited below name no other suspension.\n\n## Probable Starting XIs\n\n**Villarreal:** Péter Gulácsi; Santiago Mouriño, Juan Foyth, Renato Veiga, Sergi Cardona (Alex Freeman); Tajon Buchanan, Carlos Maciá, Santi Comesaña, Alberto Moleiro; Gerard Moreno, Ayoze Pérez.\n\n**Espanyol:** Ángel Fortuño; Omar El Hilali, Unai Núñez, Leandro Cabrera, Quilindschy Hartman; Pol Lozano, Edu Expósito; Javi Hernández, Álex Calatrava (Jofre Carreras, doubtful), Bryan Zaragoza; Roberto Fernández.\n\n*Probable lineups, projected rather than official. Names in parentheses are alternative starters or reported doubts.*\n\n## Match Analysis\n\n### Match Context\n\nVillarreal have picked up form at the right time, winning three of their last five league games and only losing narrowly at the Bernabéu. Espanyol are heading the other way, with one point from their last five and home defeats by Elche and Atlético Madrid among them. The hosts lose Pape Gueye to suspension, which puts more on Santi Comesaña and Carlos Maciá in midfield, but Alberto Moleiro and Tajon Buchanan still offer plenty of width to supply Gerard Moreno and Ayoze Pérez. Espanyol's job is to stay compact and hope Bryan Zaragoza can run into the space behind.\n\n### Statistical Analysis\n\nThe underlying numbers favour Villarreal, whose home xG is more than double Espanyol's away output and who have taken far more shots in their four home league games. Their finishing has not matched it, though: they have won only one of those four, and the 4.27 xG against Levante flatters the average. Espanyol's away record is better than their form. They have scored in all five trips, and although they concede a lot of shots, none of those games has ended in a defeat by more than one goal. Both samples are small, so these patterns are a guide rather than a rule.\n\n### Betting Analysis\n\nThe two-goal cushion suits this fixture because Villarreal's home games have rarely been decided by a wide margin, while Espanyol have kept their away games close: **0 of 5** away defeats by two or more, against **1 of 4** Villarreal home wins by two or more. A draw, an Espanyol win or a one-goal home win all land. The danger is obvious, as Villarreal's chance volume could easily produce a comfortable win on a good finishing night, and an early home goal would force Espanyol out of their shape. The selection is about the margin, not about doubting who the better side is.\n\n### Statistical Core Predictions-Sports-Prime\n\n| Metric | Villarreal (home) | Espanyol (away) |\n|---|---:|---:|\n| Season (all venues): matches | 10 | 10 |\n| Season (all venues): W-D-L | 3-3-4 | 2-2-6 |\n| Season (all venues): goals scored per match | 1.50 | 1.20 |\n| Season (all venues): goals conceded per match | 1.40 | 1.40 |\n| Venue matches analysed | 4 | 5 |\n| Venue W-D-L | 1-1-2 | 1-1-3 |\n| Goals scored (total) | 6 | 6 |\n| Goals conceded (total) | 6 | 7 |\n| Goals scored per match | 1.50 | 1.20 |\n| Goals conceded per match | 1.50 | 1.40 |\n| Total goals per match | 3.00 | 2.60 |\n| xG per match | 2.44 | 1.09 |\n| xGA per match | 1.33 | 1.53 |\n| xG difference per match | +1.11 | -0.44 |\n| Shots per match | 18.00 | 11.20 |\n| Shots on target per match | 6.50 | 3.20 |\n| Shots conceded per match | 11.75 | 16.60 |\n| Shots on target conceded per match | 4.25 | 6.40 |\n| Shot conversion (goals / shots) | 8% (6/72) | 11% (6/56) |\n| Possession | 61% | 44% |\n| Corners won per match | 7.75 | 3.60 |\n| Corners conceded per match | 2.75 | 6.00 |\n| Total corners per match | 10.50 | 9.60 |\n| Won by 2+ goals | 25% (1/4) | 20% (1/5) |\n| Lost by 2+ goals | 0% (0/4) | 0% (0/5) |\n| Over 1.5 goals | 75% (3/4) | 100% (5/5) |\n| Over 2.5 goals | 75% (3/4) | 60% (3/5) |\n| Over 3.5 goals | 50% (2/4) | 0% (0/5) |\n| Under 4.5 goals | 75% (3/4) | 100% (5/5) |\n| BTTS Yes | 75% (3/4) | 80% (4/5) |\n| BTTS No | 25% (1/4) | 20% (1/5) |\n| Clean sheets | 25% (1/4) | 20% (1/5) |\n| Failed to score | 25% (1/4) | 0% (0/5) |\n\n**How to read the table:** the season rows cover all 10 and 10 La Liga 2026/27 matches played by each club. Every other row uses only Villarreal's 4 home and Espanyol's 5 away league matches this season, which is a small sample. xG and xGA are estimates of chance quality, not goals scored. Figures are calculated from FotMob match data, and final scores were checked against ESPN.\n\n**Sources:**\n- www.fotmob.com: https://www.fotmob.com/leagues/87/matches\n- www.fotmob.com: https://www.fotmob.com/pt-BR/matches/espanyol-vs-villarreal/2wt7o0\n- forepitch.com: https://forepitch.com/pt/football/match/villarreal-espanyol-2026-10-30/\n\n## Market assessment and conclusion\n\nThe published market price of **1.75** implies a raw implied probability of **57.14%** (1 / 1.75). The small venue samples point the right way, but four and five matches cannot confirm a true rate above that price.\n\n**Prediction:** **Espanyol +1.5 Goals (handicap)**\n**Odds:** **1.75**"
   ],
   "picks": {
     "main": "Espanyol +1.5 Goals (handicap)",
     "publishedOdds": 1.75,
     "oddsProvenance": {
-      "source": "Author-supplied Predictions Sports Prime Football 9 October 30 2026 ZIP",
+      "source": "Predictions Sports Prime published price, October 30 2026",
       "provenance": "author_attested",
       "market": "Espanyol +1.5 Goals (handicap)"
     }
@@ -42,29 +42,49 @@ export const prediction: EditorialPrediction = {
   "sourceStatus": "partial",
   "sources": [
     {
-      "name": "forepitch.com",
-      "url": "https://forepitch.com/pt/football/match/villarreal-espanyol-2026-10-30/"
+      "name": "www.fotmob.com",
+      "url": "https://www.fotmob.com/leagues/87/matches"
     },
     {
       "name": "www.fotmob.com",
       "url": "https://www.fotmob.com/pt-BR/matches/espanyol-vs-villarreal/2wt7o0"
+    },
+    {
+      "name": "forepitch.com",
+      "url": "https://forepitch.com/pt/football/match/villarreal-espanyol-2026-10-30/"
     }
   ],
   "statisticalCoreSamples": [
     {
-      "sampleType": "overall",
-      "source": "forepitch.com",
-      "sourceUrl": "https://forepitch.com/pt/football/match/villarreal-espanyol-2026-10-30/",
-      "season": "2026",
-      "scope": "La Liga 2026/27, Villarreal: Last 10 matches, all competitions, before 30 October 2026",
-      "matches": 10
+      "sampleType": "home",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/87/matches",
+      "season": "2026/27",
+      "scope": "La Liga 2026/27, Villarreal, home league matches before 30 October 2026",
+      "matches": 4
     },
     {
       "sampleType": "overall",
-      "source": "forepitch.com",
-      "sourceUrl": "https://forepitch.com/pt/football/match/villarreal-espanyol-2026-10-30/",
-      "season": "2026",
-      "scope": "La Liga 2026/27, Espanyol: Last 10 matches, all competitions, before 30 October 2026",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/87/matches",
+      "season": "2026/27",
+      "scope": "La Liga 2026/27, Villarreal, all league matches before 30 October 2026",
+      "matches": 10
+    },
+    {
+      "sampleType": "away",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/87/matches",
+      "season": "2026/27",
+      "scope": "La Liga 2026/27, Espanyol, away league matches before 30 October 2026",
+      "matches": 5
+    },
+    {
+      "sampleType": "overall",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/87/matches",
+      "season": "2026/27",
+      "scope": "La Liga 2026/27, Espanyol, all league matches before 30 October 2026",
       "matches": 10
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T10:14:39.820Z",
+  "generatedAt": "2026-10-30T10:36:37.625Z",
   "records": [
     {
       "slug": "atletico-mg-vs-cruzeiro",
@@ -3140,6 +3140,16 @@
       "prediction": "Over 2.5 goals",
       "odds": 1.47,
       "result": "green"
+    },
+    {
+      "slug": "rangers-vs-kilmarnock",
+      "league": "scottish-premiership",
+      "homeTeam": "Rangers",
+      "awayTeam": "Kilmarnock",
+      "date": "2026-10-10",
+      "prediction": "Rangers handicap -2",
+      "odds": 1.69,
+      "result": "push"
     },
     {
       "slug": "genoa-vs-fiorentina",

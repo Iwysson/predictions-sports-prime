@@ -14,13 +14,13 @@ export const prediction: EditorialPrediction = {
   "analysisFormat": "markdown",
   "analysisLanguage": "en",
   "analysis": [
-    "# Casa Pia vs Sporting CP Prediction, Odds and Betting Tips\n\n**Prediction:** **Sporting CP to Win + Over 2.5 Goals**\n**Odds:** **1.76**\n\n## Match information\n\n- **Competition:** Liga Portugal 2026/27\n- **Date:** October 30, 2026\n- **Kick-off:** 2026-10-30 20:15 Europe/Lisbon\n- **Round:** Matchweek 10\n- **Venue:** Estádio Municipal de Rio Maior, Rio Maior, Portugal\n\n## Team news and availability\n\nThe probable lineups below are PROJECTED, with alternative starters and fitness doubts retained from the cited pre-match reports. No suspension or eligibility issue is stated unless the cited reports name one. Availability may change before official team sheets are released.\n\n## Match Analysis\n\nCasa Pia’s defensive vulnerability and Sporting’s scoring volume underpin the away-win-and-goals combination. The ten-match comparison is stark: Casa Pia average only 0.6 goals with 1.04 xG, while Sporting produce 2.3 goals and 2.02 xG per game. In the domestic league’s home/away split, Casa Pia have conceded 3.25 goals per home game and Sporting have scored 2.50 per away game across four matches apiece, a higher-risk pattern than overall figures alone suggest.\n\nSporting can force the issue through Luís Guilherme and Irankunda supporting Suárez, with Doumbia and Altimira looking to recover second balls high up the pitch. Casa Pia’s response may involve a compact block, Ofori screening the defence and Cassiano acting as an outlet. Sporting are reported without Debast and Zalazar, while Nuno Santos is a possible late return; Casa Pia have a doubt over André Gomes. The expected elevens are not official.\n\nBoth parts must land: Sporting must win in normal time and the total must reach at least three goals. A narrow 0–1 or 0–2 Sporting win fails the over; a 2–2 draw fails the result. At 1.76 the implied break-even threshold is 56.82%. The independent model estimates Sporting winning at 79% and Over 2.5 at 61%, but those separate probabilities cannot be multiplied blindly or treated as a verified combined-market probability.\n\n## Probable Starting XIs\n\n**Casa Pia:** Patrick Sequeira; André Geraldes, Khaly, David Sousa, Pedro Silva Rosas; Seba Pérez, Lawrence Ofori; Mohamed El Boukammiri, João Rego, Benjamin Pauwels; Cassiano.\n\n**Sporting CP:** Kaique Pereira; Iván Fresneda, Ibrahima Ba, Gonçalo Inácio, Maxi Araújo; Sergi Altimira, Issa Doumbia; Luís Guilherme, Flávio Gonçalves (Geny Catamo), Nestory Irankunda; Luis Suárez.\n\n*Brackets indicate the projected alternative or a reported doubt, not a confirmed change. Re-check official club team sheets close to kickoff.*\n\n**Statistical methodology:** Last 10 matches, all competitions. Published team rates are descriptive. Model probabilities refer to this fixture and are **not** the probability of a combined pick, unless explicitly stated. Calculated rows use the values in this table. Sample and underlying methodology differ between providers; do not blend into one forecasting model.\n\n**Data and lineup sources:**\n- forepitch.com: https://forepitch.com/pt/football/match/casa-pia-ac-sporting-cp-2026-10-30/\n\nThe figures in the Statistical Core use the last ten matches in all competitions, not a home-versus-away venue split, and metrics the sources did not publish are marked as unavailable rather than estimated. The source-backed comparison includes **1.04 xG/game** for Casa Pia and **2.02 xG/game** for Sporting CP; these historical figures do not establish the probability of the selection.\n\n## Market assessment and conclusion\n\nThe published **1.76** price implies a raw implied probability of **56.82%** (1 / 1.76). That market price differs from the historical rates in the table and from the editorial judgment in the three analysis paragraphs. The main risk is that the contrary evidence in the analysis defeats the pick even if the broader form pattern continues.\n\n**Prediction:** **Sporting CP to Win + Over 2.5 Goals**\n**Odds:** **1.76**\n\n### Statistical Core Predictions-Sports-Prime\n\n| Metric | Casa Pia | Sporting CP |\n|---|---:|---:|\n| Goals scored per match | 0.6 | 2.3 |\n| Goals conceded per match | 1.8 | 1.1 |\n| xG created per match | 1.04 | 2.02 |\n| xGA conceded per match | 1.57 | 0.97 |\n| Shots per match | 10.7 | 14.6 |\n| Shots on target per match | 3.0 | 5.1 |\n| Corners per match | 4.6 | 4.9 |\n| Possession | 43.0% | 58.0% |\n| Yellow cards per match | 2.1 | 2.0 |\n| xG minus xGA per match — calculated | -0.53 | 1.05 |\n| Shots on target / shot attempts — calculated | 28.0% | 34.9% |\n| Goals / shots on target — calculated | 20.0% | 45.1% |\n| Total goals in team matches per game — calculated | 2.4 | 3.4 |\n| Shot volume per xG — calculated | 10.3 | 7.2 |\n| Home / away sample (league games) | 4 home | 4 away |\n| Goals conceded at home / scored away — per game | 3.25 conceded | 2.50 scored |\n| Independent model: home / draw / away win | 6% / 15% / 79% | Match-level estimate |\n| Independent model: Over 2.5 goals | 61% | Match-level estimate |\n| Supplied decimal odds | 1.76 | Author-supplied, not live bookmaker quote |\n| Break-even hit rate (1/odds) | 56.82% | Calculation, not model probability |"
+    "# Casa Pia vs Sporting CP Prediction, Odds and Betting Tips\n\n**Prediction:** **Sporting CP to Win + Over 2.5 Goals**\n**Odds:** **1.76**\n\n## Match information\n\n- **Competition:** Liga Portugal 2026/27\n- **Date:** October 30, 2026\n- **Kick-off:** 2026-10-30 20:15 Europe/Lisbon\n- **Round:** Matchweek 10\n- **Venue:** Estádio Municipal de Rio Maior, Rio Maior, Portugal\n\n## Team news and availability\n\nSporting CP are reported without Debast and Zalazar, while Nuno Santos may return late. Casa Pia have a doubt over André Gomes. Geny Catamo is the alternative to Flávio Gonçalves. The reports cited below name no suspension.\n\n## Probable Starting XIs\n\n**Casa Pia:** Patrick Sequeira; André Geraldes, Khaly, David Sousa, Pedro Silva Rosas; Seba Pérez, Lawrence Ofori; Mohamed El Boukammiri, João Rego, Benjamin Pauwels; Cassiano.\n\n**Sporting CP:** Kaique Pereira; Iván Fresneda, Ibrahima Ba, Gonçalo Inácio, Maxi Araújo; Sergi Altimira, Issa Doumbia; Luís Guilherme, Flávio Gonçalves (Geny Catamo), Nestory Irankunda; Luis Suárez.\n\n*Probable lineups, projected rather than official. Names in parentheses are alternative starters or reported doubts.*\n\n## Match Analysis\n\n### Match Context\n\nCasa Pia's season has an odd shape: they have won twice on the road, yet have lost all four league games at Rio Maior. Sporting CP will be keen to respond after a 2-1 home defeat by Académico Viseu ended a useful run that included a 3-1 win at Braga. Without Debast and Zalazar they still have plenty of quality, with Luis Suárez leading the line and Luís Guilherme and Nestory Irankunda on the flanks. Casa Pia will likely sit in a compact block with Lawrence Ofori screening the defence and Cassiano as the outlet.\n\n### Statistical Analysis\n\nCasa Pia's home numbers are poor, particularly at the attacking end, where they have managed a single goal in four games and failed to score in three. The defensive average is inflated by a 7-0 loss to Benfica and a 4-1 loss to Porto, because Moreirense and Santa Clara each won there by just one goal. Sporting have been very efficient away, scoring well above their xG while conceding few shots, and they have not lost on the road. Still, they dropped points at Estrela da Amadora and Famalicão despite creating far more than either opponent, so territory has not always become wins.\n\n### Betting Analysis\n\nThe combination rests on Casa Pia's weakness against stronger teams and on Sporting's scoring away from home. Both parts have to come off, and the record is mixed: Sporting have won in a game of three or more goals in **2 of 4** away trips, and **2 of 4** Casa Pia home games ended with a visiting win of that kind, both against Benfica and Porto. A 1-0 or 2-0 win fails on goals, and a repeat of those away draws fails on the result. The quality gap supports this selection, but Casa Pia's narrow home defeats show that the third goal is not guaranteed.\n\n### Statistical Core Predictions-Sports-Prime\n\n| Metric | Casa Pia (home) | Sporting CP (away) |\n|---|---:|---:|\n| Season (all venues): matches | 9 | 9 |\n| Season (all venues): W-D-L | 2-1-6 | 5-3-1 |\n| Season (all venues): goals scored per match | 0.56 | 2.33 |\n| Season (all venues): goals conceded per match | 1.89 | 1.22 |\n| Venue matches analysed | 4 | 4 |\n| Venue W-D-L | 0-0-4 | 2-2-0 |\n| Goals scored (total) | 1 | 10 |\n| Goals conceded (total) | 13 | 4 |\n| Goals scored per match | 0.25 | 2.50 |\n| Goals conceded per match | 3.25 | 1.00 |\n| Total goals per match | 3.50 | 3.50 |\n| xG per match | 0.74 | 1.86 |\n| xGA per match | 1.65 | 0.87 |\n| xG difference per match | -0.91 | +0.99 |\n| Shots per match | 9.25 | 13.50 |\n| Shots on target per match | 2.25 | 5.75 |\n| Shots conceded per match | 14.25 | 8.75 |\n| Shots on target conceded per match | 4.75 | 2.25 |\n| Shot conversion (goals / shots) | 3% (1/37) | 19% (10/54) |\n| Possession | 43% | 59% |\n| Corners won per match | 3.50 | 3.25 |\n| Corners conceded per match | 5.25 | 4.00 |\n| Total corners per match | 8.75 | 7.25 |\n| Over 1.5 goals | 50% (2/4) | 100% (4/4) |\n| Over 2.5 goals | 50% (2/4) | 75% (3/4) |\n| Over 3.5 goals | 50% (2/4) | 75% (3/4) |\n| Under 4.5 goals | 50% (2/4) | 100% (4/4) |\n| BTTS Yes | 25% (1/4) | 75% (3/4) |\n| BTTS No | 75% (3/4) | 25% (1/4) |\n| Clean sheets | 0% (0/4) | 25% (1/4) |\n| Failed to score | 75% (3/4) | 0% (0/4) |\n\n**How to read the table:** the season rows cover all 9 and 9 Liga Portugal 2026/27 matches played by each club. Every other row uses only Casa Pia's 4 home and Sporting CP's 4 away league matches this season, which is a small sample. xG and xGA are estimates of chance quality, not goals scored. Figures are calculated from FotMob match data, and final scores were checked against ESPN.\n\n**Sources:**\n- www.fotmob.com: https://www.fotmob.com/leagues/61/matches\n- forepitch.com: https://forepitch.com/pt/football/match/casa-pia-ac-sporting-cp-2026-10-30/\n\n## Market assessment and conclusion\n\nThe published market price of **1.76** implies a raw implied probability of **56.82%** (1 / 1.76). The matching venue rates of 50% fall short, so the price relies on the editorial view that this opponent resembles Benfica and Porto more than Moreirense and Santa Clara.\n\n**Prediction:** **Sporting CP to Win + Over 2.5 Goals**\n**Odds:** **1.76**"
   ],
   "picks": {
     "main": "Sporting CP to Win + Over 2.5 Goals",
     "publishedOdds": 1.76,
     "oddsProvenance": {
-      "source": "Author-supplied Predictions Sports Prime Football 9 October 30 2026 ZIP",
+      "source": "Predictions Sports Prime published price, October 30 2026",
       "provenance": "author_attested",
       "market": "Sporting CP to Win + Over 2.5 Goals"
     }
@@ -42,26 +42,46 @@ export const prediction: EditorialPrediction = {
   "sourceStatus": "partial",
   "sources": [
     {
+      "name": "www.fotmob.com",
+      "url": "https://www.fotmob.com/leagues/61/matches"
+    },
+    {
       "name": "forepitch.com",
       "url": "https://forepitch.com/pt/football/match/casa-pia-ac-sporting-cp-2026-10-30/"
     }
   ],
   "statisticalCoreSamples": [
     {
-      "sampleType": "overall",
-      "source": "forepitch.com",
-      "sourceUrl": "https://forepitch.com/pt/football/match/casa-pia-ac-sporting-cp-2026-10-30/",
-      "season": "2026",
-      "scope": "Liga Portugal 2026/27, Casa Pia: Last 10 matches, all competitions, before 30 October 2026",
-      "matches": 10
+      "sampleType": "home",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/61/matches",
+      "season": "2026/27",
+      "scope": "Liga Portugal 2026/27, Casa Pia, home league matches before 30 October 2026",
+      "matches": 4
     },
     {
       "sampleType": "overall",
-      "source": "forepitch.com",
-      "sourceUrl": "https://forepitch.com/pt/football/match/casa-pia-ac-sporting-cp-2026-10-30/",
-      "season": "2026",
-      "scope": "Liga Portugal 2026/27, Sporting CP: Last 10 matches, all competitions, before 30 October 2026",
-      "matches": 10
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/61/matches",
+      "season": "2026/27",
+      "scope": "Liga Portugal 2026/27, Casa Pia, all league matches before 30 October 2026",
+      "matches": 9
+    },
+    {
+      "sampleType": "away",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/61/matches",
+      "season": "2026/27",
+      "scope": "Liga Portugal 2026/27, Sporting CP, away league matches before 30 October 2026",
+      "matches": 4
+    },
+    {
+      "sampleType": "overall",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/61/matches",
+      "season": "2026/27",
+      "scope": "Liga Portugal 2026/27, Sporting CP, all league matches before 30 October 2026",
+      "matches": 9
     }
   ],
   "teaser": "Casa Pia host Sporting CP on October 30. Full prediction, odds and analysis are FREE."

@@ -1,18 +1,5 @@
 {
   "version": 1,
-  "records": {
-    "scottish-premiership:rangers-vs-kilmarnock": {
-      "key": "scottish-premiership:rangers-vs-kilmarnock",
-      "league": "scottish-premiership",
-      "slug": "rangers-vs-kilmarnock",
-      "homeTeam": "Rangers",
-      "awayTeam": "Kilmarnock",
-      "date": "2026-10-10",
-      "predictionAccess": "vip",
-      "prediction": null,
-      "odds": null,
-      "reason": "HANDICAP_TYPE_AMBIGUOUS"
-    }
-  },
+  "records": {},
   "reconcileReasons": {}
 }

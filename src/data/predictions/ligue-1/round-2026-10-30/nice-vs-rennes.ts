@@ -14,13 +14,13 @@ export const prediction: EditorialPrediction = {
   "analysisFormat": "markdown",
   "analysisLanguage": "en",
   "analysis": [
-    "# Nice vs Rennes Prediction, Odds and Betting Tips\n\n**Prediction:** **Over 2.5 Goals**\n**Odds:** **1.67**\n\n## Match information\n\n- **Competition:** Ligue 1 2026/27\n- **Date:** October 30, 2026\n- **Kick-off:** 2026-10-30 19:00 Europe/Paris\n- **Round:** Matchweek 9\n- **Venue:** Allianz Riviera, Nice, France\n\n## Team news and availability\n\nThe probable lineups below are PROJECTED, with alternative starters and fitness doubts retained from the cited pre-match reports. No suspension or eligibility issue is stated unless the cited reports name one. Availability may change before official team sheets are released.\n\n## Match Analysis\n\nRennes bring more attacking momentum to the Allianz Riviera, while Nice have had to balance sporadic wins against a fragile chance-prevention profile. The ten-game comparison records Rennes averaging 2.1 goals and 1.6 xG against Nice’s 1.2 goals and 0.7 xG; Nice’s 2.4 xGA also signals substantial defensive exposure in that particular provider sample. Those rates differ from other vendors and should not be mixed with their models as though they came from one dataset.\n\nNice can threaten with Wahi’s movement ahead of Amoura and Hein, particularly if the wing-backs can create high turnovers. Rennes’ projected five-defender structure offers attacking width through Frankowski and Nagida, while Camara and Rongier supply the counter-press. Both XIs are provisional, with injuries and rotations subject to late confirmation. A Rennes goal could open the contest, but a cautious spell after the opener could just as easily suppress the required third goal.\n\nOver 2.5 requires at least three goals in regulation time. Recent scorelines such as Nice’s 2–1 victory at Brest and Rennes’ 3–0 win over Strasbourg support the possibility, yet one predictive model prices the over at just 42%, materially below the 59.88% break-even threshold implied by odds of 1.67. This discrepancy is a serious risk, not evidence of positive expected value.\n\n## Probable Starting XIs\n\n**Nice:** Yehvann Diouf; Kevin Mandza, Youssouf Ndayishimiye, Mohamed Abdelmonem; Koutoune, Axel Witsel, Hicham Boudaoui, Niels Nkounkou; Jonas Hein, Mohamed Amoura; Elye Wahi.\n\n**Rennes:** Brice Samba; Abdelhamid Aït Boudlal, Charlie Cresswell, Anthony Rouault; Przemysław Frankowski, Mahamadou Nagida; Mahdi Camara, Valentin Rongier, Sebastian Szymański (Baptiste Santamaria); Mousa Al-Tamari, Dia (Habib Diallo).\n\n*Brackets indicate the projected alternative or a reported doubt, not a confirmed change. Re-check official club team sheets close to kickoff.*\n\n**Statistical methodology:** Last 10 matches, all competitions; rounded figures from Corvo Paul comparison. Published team rates are descriptive. Model probabilities refer to this fixture and are **not** the probability of a combined pick, unless explicitly stated. Calculated rows use the values in this table. Sample and underlying methodology differ between providers; do not blend into one forecasting model.\n\n**Data and lineup sources:**\n- corvopaul.com.br: https://corvopaul.com.br/partidas/2026-10-30-nice-x-rennes\n- www.fotmob.com: https://www.fotmob.com/en-GB/matches/nice-vs-rennes/37bvse\n\nThe predictive model and descriptive last-ten averages share a provider but represent different methodologies.\n\nThe figures in the Statistical Core use the last ten matches in all competitions, not a home-versus-away venue split, and metrics the sources did not publish are marked as unavailable rather than estimated. The source-backed comparison includes **0.70 xG/game** for Nice and **1.60 xG/game** for Rennes; these historical figures do not establish the probability of the selection.\n\n## Market assessment and conclusion\n\nThe published **1.67** price implies a raw implied probability of **59.88%** (1 / 1.67). That market price differs from the historical rates in the table and from the editorial judgment in the three analysis paragraphs. The main risk is that the contrary evidence in the analysis defeats the pick even if the broader form pattern continues.\n\n**Prediction:** **Over 2.5 Goals**\n**Odds:** **1.67**\n\n### Statistical Core Predictions-Sports-Prime\n\n| Metric | Nice | Rennes |\n|---|---:|---:|\n| Goals scored per match | 1.2 | 2.1 |\n| Goals conceded per match | 1.1 | 1.7 |\n| xG created per match | 0.70 | 1.60 |\n| xGA conceded per match | 2.40 | 1.40 |\n| Shots per match | 12.0 | 16.5 |\n| Shots on target per match | 4.0 | 5.5 |\n| Corners per match | 6.2 | 5.3 |\n| Possession | Not available | Not available |\n| Yellow cards per match | Not available | Not available |\n| xG minus xGA per match — calculated | -1.70 | 0.20 |\n| Shots on target / shot attempts — calculated | 33.3% | 33.3% |\n| Goals / shots on target — calculated | 30.0% | 38.2% |\n| Total goals in team matches per game — calculated | 2.3 | 3.8 |\n| Shot volume per xG — calculated | 17.1 | 10.3 |\n| Independent model: home / draw / away win | 41% / 26% / 34% | Match-level estimate |\n| Independent model: Over 2.5 goals | 42% | Match-level estimate |\n| Supplied decimal odds | 1.67 | Author-supplied, not live bookmaker quote |\n| Break-even hit rate (1/odds) | 59.88% | Calculation, not model probability |"
+    "# Nice vs Rennes Prediction, Odds and Betting Tips\n\n**Prediction:** **Over 2.5 Goals**\n**Odds:** **1.67**\n\n## Match information\n\n- **Competition:** Ligue 1 2026/27\n- **Date:** October 30, 2026\n- **Kick-off:** 2026-10-30 19:00 Europe/Paris\n- **Round:** Matchweek 9\n- **Venue:** Allianz Riviera, Nice, France\n\n## Team news and availability\n\nRennes have two open selections, Sebastian Szymański or Baptiste Santamaria in midfield and Dia or Habib Diallo up front. Both elevens remain provisional, and the reports cited below name no suspension.\n\n## Probable Starting XIs\n\n**Nice:** Yehvann Diouf; Kevin Mandza, Youssouf Ndayishimiye, Mohamed Abdelmonem; Koutoune, Axel Witsel, Hicham Boudaoui, Niels Nkounkou; Jonas Hein, Mohamed Amoura; Elye Wahi.\n\n**Rennes:** Brice Samba; Abdelhamid Aït Boudlal, Charlie Cresswell, Anthony Rouault; Przemysław Frankowski, Mahamadou Nagida; Mahdi Camara, Valentin Rongier, Sebastian Szymański (Baptiste Santamaria); Mousa Al-Tamari, Dia (Habib Diallo).\n\n*Probable lineups, projected rather than official. Names in parentheses are alternative starters or reported doubts.*\n\n## Match Analysis\n\n### Match Context\n\nRennes travel to the Allianz Riviera as the more productive attack of the two, but their results have swung wildly, from a 4-0 defeat at Lyon to a 3-0 win over Strasbourg and a 4-3 loss at Paris FC. Nice have been steadier, unbeaten at home and winners of their last two there, plus a win at Brest last time out. Elye Wahi leads a Nice side that can go direct through Mohamed Amoura and Jonas Hein, while Rennes use Przemysław Frankowski and Mahamadou Nagida for width from a back five. The contrast in styles should give the game space, if not necessarily goals.\n\n### Statistical Analysis\n\nEverything about Rennes away from home points to goals at both ends: three trips, at least three goals in each, with a high xG for and an even higher xG against. Nice give a very different picture. Their home games have been restrained, averaging two goals, and their xG is no higher than the xG they allow. They took a 0-0 and a 1-1 from their first two home matches before successive 2-1 wins. With only seven matches between the two venue samples, it is hard to know which of these patterns will dominate.\n\n### Betting Analysis\n\nThree goals is a reachable target because Rennes' defence has been so generous on its travels and Nice have scored in three of their four home games. The market needs Nice's game to look more like Rennes' than like its own, however. **Over 2.5** has landed in **2 of 4** Nice home games against **3 of 3** Rennes away games, and an independent forecast prices the over at just **42%**, well below what the odds require. A cautious spell after an early goal could also leave this at 1-0 or 2-0. There is an argument for goals, but it carries a clear warning.\n\n### Statistical Core Predictions-Sports-Prime\n\n| Metric | Nice (home) | Rennes (away) |\n|---|---:|---:|\n| Season (all venues): matches | 8 | 8 |\n| Season (all venues): W-D-L | 3-2-3 | 5-1-2 |\n| Season (all venues): goals scored per match | 1.00 | 2.25 |\n| Season (all venues): goals conceded per match | 1.25 | 1.75 |\n| Venue matches analysed | 4 | 3 |\n| Venue W-D-L | 2-2-0 | 1-0-2 |\n| Goals scored (total) | 5 | 5 |\n| Goals conceded (total) | 3 | 9 |\n| Goals scored per match | 1.25 | 1.67 |\n| Goals conceded per match | 0.75 | 3.00 |\n| Total goals per match | 2.00 | 4.67 |\n| xG per match | 1.24 | 2.09 |\n| xGA per match | 1.25 | 2.80 |\n| xG difference per match | -0.01 | -0.71 |\n| Shots per match | 10.75 | 14.00 |\n| Shots on target per match | 3.25 | 5.33 |\n| Shots conceded per match | 12.50 | 17.67 |\n| Shots on target conceded per match | 4.00 | 7.00 |\n| Shot conversion (goals / shots) | 12% (5/43) | 12% (5/42) |\n| Possession | 52% | 53% |\n| Corners won per match | 4.75 | 6.00 |\n| Corners conceded per match | 3.75 | 6.00 |\n| Total corners per match | 8.50 | 12.00 |\n| Over 1.5 goals | 75% (3/4) | 100% (3/3) |\n| Over 2.5 goals | 50% (2/4) | 100% (3/3) |\n| Over 3.5 goals | 0% (0/4) | 67% (2/3) |\n| Under 4.5 goals | 100% (4/4) | 67% (2/3) |\n| BTTS Yes | 75% (3/4) | 67% (2/3) |\n| BTTS No | 25% (1/4) | 33% (1/3) |\n| Clean sheets | 25% (1/4) | 0% (0/3) |\n| Failed to score | 25% (1/4) | 33% (1/3) |\n\n**How to read the table:** the season rows cover all 8 and 8 Ligue 1 2026/27 matches played by each club. Every other row uses only Nice's 4 home and Rennes's 3 away league matches this season, which is a small sample. xG and xGA are estimates of chance quality, not goals scored. Figures are calculated from FotMob match data, and final scores were checked against ESPN.\n\n**Sources:**\n- www.fotmob.com: https://www.fotmob.com/leagues/53/matches\n- www.fotmob.com: https://www.fotmob.com/en-GB/matches/nice-vs-rennes/37bvse\n- corvopaul.com.br: https://corvopaul.com.br/partidas/2026-10-30-nice-x-rennes\n\n## Market assessment and conclusion\n\nThe published market price of **1.67** implies a raw implied probability of **59.88%** (1 / 1.67). The independent estimate is well below that price, which is a real value concern; the editorial case rests on Rennes' away games alone.\n\n**Prediction:** **Over 2.5 Goals**\n**Odds:** **1.67**"
   ],
   "picks": {
     "main": "Over 2.5 Goals",
     "publishedOdds": 1.67,
     "oddsProvenance": {
-      "source": "Author-supplied Predictions Sports Prime Football 9 October 30 2026 ZIP",
+      "source": "Predictions Sports Prime published price, October 30 2026",
       "provenance": "author_attested",
       "market": "Over 2.5 Goals"
     }
@@ -42,30 +42,50 @@ export const prediction: EditorialPrediction = {
   "sourceStatus": "partial",
   "sources": [
     {
-      "name": "corvopaul.com.br",
-      "url": "https://corvopaul.com.br/partidas/2026-10-30-nice-x-rennes"
+      "name": "www.fotmob.com",
+      "url": "https://www.fotmob.com/leagues/53/matches"
     },
     {
       "name": "www.fotmob.com",
       "url": "https://www.fotmob.com/en-GB/matches/nice-vs-rennes/37bvse"
+    },
+    {
+      "name": "corvopaul.com.br",
+      "url": "https://corvopaul.com.br/partidas/2026-10-30-nice-x-rennes"
     }
   ],
   "statisticalCoreSamples": [
     {
-      "sampleType": "overall",
-      "source": "corvopaul.com.br",
-      "sourceUrl": "https://corvopaul.com.br/partidas/2026-10-30-nice-x-rennes",
-      "season": "2026",
-      "scope": "Ligue 1 2026/27, Nice: Last 10 matches, all competitions, before 30 October 2026",
-      "matches": 10
+      "sampleType": "home",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/53/matches",
+      "season": "2026/27",
+      "scope": "Ligue 1 2026/27, Nice, home league matches before 30 October 2026",
+      "matches": 4
     },
     {
       "sampleType": "overall",
-      "source": "corvopaul.com.br",
-      "sourceUrl": "https://corvopaul.com.br/partidas/2026-10-30-nice-x-rennes",
-      "season": "2026",
-      "scope": "Ligue 1 2026/27, Rennes: Last 10 matches, all competitions, before 30 October 2026",
-      "matches": 10
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/53/matches",
+      "season": "2026/27",
+      "scope": "Ligue 1 2026/27, Nice, all league matches before 30 October 2026",
+      "matches": 8
+    },
+    {
+      "sampleType": "away",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/53/matches",
+      "season": "2026/27",
+      "scope": "Ligue 1 2026/27, Rennes, away league matches before 30 October 2026",
+      "matches": 3
+    },
+    {
+      "sampleType": "overall",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/53/matches",
+      "season": "2026/27",
+      "scope": "Ligue 1 2026/27, Rennes, all league matches before 30 October 2026",
+      "matches": 8
     }
   ],
   "teaser": "Nice host Rennes on October 30. Full prediction, odds and analysis are FREE."

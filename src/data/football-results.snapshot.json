@@ -4840,6 +4840,24 @@
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
     },
+    "scottish-premiership:rangers-vs-kilmarnock": {
+      "key": "scottish-premiership:rangers-vs-kilmarnock",
+      "league": "scottish-premiership",
+      "slug": "rangers-vs-kilmarnock",
+      "homeTeam": "Rangers",
+      "awayTeam": "Kilmarnock",
+      "date": "2026-10-10",
+      "predictionAccess": "vip",
+      "prediction": "Rangers handicap -2",
+      "odds": 1.69,
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "result": "push",
+      "settledAt": "2026-10-30T10:35:27.497Z",
+      "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
     "scottish-premiership:st-johnstone-vs-dundee-united": {
       "key": "scottish-premiership:st-johnstone-vs-dundee-united",
       "league": "scottish-premiership",

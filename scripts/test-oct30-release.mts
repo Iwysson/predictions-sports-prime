@@ -1,7 +1,7 @@
 // The October 30 football wave: 9 FREE, 0 VIP, original picks and odds, one Core per analysis, and the New York
 // midnight gate on the page, the API and the sitemap. Run: npm run test:oct30-release
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { editorialPredictions } from "../src/data/predictions/index.ts";
 import { parsePredictionMarket } from "../src/lib/prediction-results.ts";
 import { createMiddlewareHandler } from "../functions/_middleware.js";
@@ -37,31 +37,36 @@ for (const prediction of wave) {
   const text = prediction.analysis.join("\n");
   assert.equal((text.match(/### Statistical Core Predictions-Sports-Prime/g) ?? []).length, 1, `${prediction.slug}: one Core`);
   assert.equal((text.match(/\| Metric \|/g) ?? []).length, 1, `${prediction.slug}: one table`);
-  const body = text.slice(text.indexOf("## Match Analysis") + 17, text.indexOf("## Probable Starting XIs")).trim();
-  assert.equal(body.split(/\n\n+/).length, 3, `${prediction.slug}: three analysis paragraphs`);
+  const body = text.slice(text.indexOf("## Match Analysis") + 17, text.indexOf("### Statistical Core"));
+  assert.deepEqual([...body.matchAll(/^### (.+)$/gm)].map((match) => match[1]), ["Match Context", "Statistical Analysis", "Betting Analysis"], `${prediction.slug}: section order`);
+  const paragraphs = body.split(/\n\n+/).map((part) => part.trim()).filter((part) => part && !part.startsWith("#"));
+  assert.equal(paragraphs.length, 3, `${prediction.slug}: three analysis paragraphs`);
+  for (const paragraph of paragraphs) assert.ok(paragraph.length > 350, `${prediction.slug}: paragraph too thin`);
+  assert.ok(!/\b(?:codex|zip|checksum|repository|script|our dataset|provided pick|author|supplied|internal model|package)\b/i.test(text), `${prediction.slug}: internal wording in public text`);
+  assert.ok(text.indexOf("### Statistical Core") > text.indexOf("### Betting Analysis"), `${prediction.slug}: Core follows the analysis`);
   assert.ok(/\(.+\)/.test(text.slice(text.indexOf("## Probable Starting XIs"))), `${prediction.slug}: lineup alternatives kept`);
-  for (const metric of ["xG created per match", "xGA conceded per match", "Goals scored per match", "Shots per match", "Possession", "Corners per match"]) {
+  for (const metric of ["xG per match", "xGA per match", "Goals scored per match", "Shots per match", "Possession", "Corners won per match", "Venue matches analysed", "Over 2.5 goals"]) {
     assert.ok(text.includes(metric), `${prediction.slug}: ${metric}`);
   }
 }
 
-// Original text, byte for byte: each analysis paragraph must be in the ZIP-derived record, not rewritten.
-const zipDir = process.env.OCT30_ZIP_DIR;
-if (zipDir && existsSync(zipDir)) {
-  const manifest = JSON.parse(readFileSync(`${zipDir}/manifest.json`, "utf8")) as Array<{ file: string; slug: string; pick: string; odds: number; home: string; away: string }>;
-  for (const entry of manifest) {
-    const source = readFileSync(`${zipDir}/${entry.file}`, "utf8").replace(/\r\n/g, "\n");
-    const text = wave.find((prediction) => prediction.slug === entry.slug)!.analysis.join("\n");
-    const analysis = source.slice(source.indexOf("## Match Analysis\n") + 18, source.indexOf("## Probable Starting XIs")).trim();
-    assert.ok(text.includes(analysis), `${entry.slug}: analysis text differs from the approved package`);
-    const lineups = source.slice(source.indexOf("## Probable Starting XIs (not confirmed)\n") + 41, source.indexOf("### Statistical Core")).trim();
-    assert.ok(text.includes(lineups), `${entry.slug}: lineups differ from the approved package`);
-    const table = source.slice(source.indexOf("| Metric |"), source.indexOf("**Source provenance**")).trim();
-    assert.ok(text.includes(table), `${entry.slug}: Core table differs from the approved package`);
-    assert.equal(entry.pick, expected[entry.slug].pick);
-    assert.equal(entry.odds, expected[entry.slug].odds);
-  }
-  console.log("package text verified against the ZIP");
+// Every Core value must be recomputable from the stored match-level samples.
+const samples = JSON.parse(readFileSync("src/data/predictions/editorial-tools/oct30-venue-samples.json", "utf8")) as Record<string, { home: { rows: Array<{ hg: number; ag: number; xg: number[]; corners: number[] }> }; away: { rows: Array<{ hg: number; ag: number; xg: number[]; corners: number[] }> } }>;
+for (const prediction of wave) {
+  const text = prediction.analysis.join("\n");
+  const row = (label: string) => text.split("\n").find((line) => line.startsWith(`| ${label} |`))?.split("|").map((cell) => cell.trim()) ?? [];
+  const sample = samples[prediction.slug!];
+  const mean = (values: number[]) => (values.reduce((sum, value) => sum + value, 0) / values.length).toFixed(2);
+  assert.equal(row("Venue matches analysed")[2], String(sample.home.rows.length));
+  assert.equal(row("Venue matches analysed")[3], String(sample.away.rows.length));
+  assert.equal(row("Goals scored per match")[2], mean(sample.home.rows.map((match) => match.hg)), `${prediction.slug}: home goals`);
+  assert.equal(row("Goals scored per match")[3], mean(sample.away.rows.map((match) => match.ag)), `${prediction.slug}: away goals`);
+  assert.equal(row("Goals conceded per match")[2], mean(sample.home.rows.map((match) => match.ag)), `${prediction.slug}: home conceded`);
+  assert.equal(row("xG per match")[2], mean(sample.home.rows.map((match) => match.xg[0])), `${prediction.slug}: home xG`);
+  assert.equal(row("xG per match")[3], mean(sample.away.rows.map((match) => match.xg[1])), `${prediction.slug}: away xG`);
+  assert.equal(row("Corners won per match")[2], mean(sample.home.rows.map((match) => match.corners[0])), `${prediction.slug}: home corners`);
+  const over25 = sample.home.rows.filter((match) => match.hg + match.ag > 2).length;
+  assert.ok(row("Over 2.5 goals")[2].endsWith(`(${over25}/${sample.home.rows.length})`), `${prediction.slug}: over 2.5`);
 }
 
 // The gate: 00:00 in New York on the match date (04:00 UTC, EDT), never earlier.

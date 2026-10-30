@@ -52,6 +52,8 @@ const ambiguous = evaluatePredictionSettlement(match("Lille handicap -2", 3, 1))
 assert.equal(ambiguous.status, "pending");
 assert.equal(ambiguous.pendingReason, "HANDICAP_TYPE_AMBIGUOUS");
 assert.equal(grade("Lille handicap -2", 4, 1), "green");
+// The publisher's documented answer settles the one real case, without touching its published text.
+assert.equal(grade("Rangers handicap -2", 3, 1, { league: "scottish-premiership", slug: "rangers-vs-kilmarnock", homeTeam: "Rangers", awayTeam: "Kilmarnock" }), "push");
 assert.equal(grade("Lille handicap -2", 2, 1), "red");
 
 // Totals

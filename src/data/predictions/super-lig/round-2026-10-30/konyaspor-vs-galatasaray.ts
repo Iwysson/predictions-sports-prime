@@ -14,13 +14,13 @@ export const prediction: EditorialPrediction = {
   "analysisFormat": "markdown",
   "analysisLanguage": "en",
   "analysis": [
-    "# Konyaspor vs Galatasaray Prediction, Odds and Betting Tips\n\n**Prediction:** **Galatasaray to Win**\n**Odds:** **1.62**\n\n## Match information\n\n- **Competition:** Süper Lig 2026/27\n- **Date:** October 30, 2026\n- **Kick-off:** 2026-10-30 20:00 Europe/Istanbul\n- **Round:** Matchweek 10\n- **Venue:** Medaş Konya Büyükşehir Stadyumu, Konya, Türkiye\n\n## Team news and availability\n\nThe probable lineups below are PROJECTED, with alternative starters and fitness doubts retained from the cited pre-match reports. No suspension or eligibility issue is stated unless the cited reports name one. Availability may change before official team sheets are released.\n\n## Match Analysis\n\nGalatasaray arrive top of the Süper Lig with a pronounced volume advantage: 17.9 shots, 6.2 on target and 1.80 xG per game in the ten-match sample, compared with Konyaspor’s 11.5 attempts and 1.12 xG. The league-table gap and Galatasaray’s three consecutive domestic victories favour the visitors, although Konyaspor’s low average of 1.1 conceded goals suggests the opposition cannot be dismissed as defensively helpless.\n\nTorreira and Lemina can help Galatasaray monopolise central recoveries while Osimhen offers an outlet behind the defence. Konyaspor are likely to rely on Muleka and Dompé for direct carries once possession changes. Galatasaray must compensate for Abdülkerim Bardakcı’s suspension; Singo or Elmalı is the provisional defensive solution rather than an officially confirmed starter. Konyaspor also have an injury absence in Adil Demirbağ.\n\nThe straight Galatasaray win requires an away victory after 90 minutes; there is no protection for a draw. At 1.62 the break-even rate is 61.73%. A public independent model assigns only 54% to the away win despite recognising Galatasaray as favourites, which makes the offered price difficult to justify on that estimate alone. The February 2026 2–0 home success for Konyaspor is an additional reminder of the upset risk.\n\n## Probable Starting XIs\n\n**Konyaspor:** Bahadır Han Güngördü; Rayyan Baniya, Chidozie Awaziem, Arthur Masuaku, Yhoan Andzouana; Enis Bardhi, Marko Jevtović, Melih İbrahimoğlu; Deniz Türüç, Jackson Muleka, Jean-Luc Dompé.\n\n**Galatasaray:** Uğurcan Çakır; Roland Sallai, Davinson Sánchez, Wilfried Singo (Eren Elmalı), Ismail Jakobs; Lucas Torreira, Mario Lemina; Yunus Akgün, Aleksey Batrakov (Gabriel Sara), Barış Alper Yılmaz; Victor Osimhen.\n\n*Brackets indicate the projected alternative or a reported doubt, not a confirmed change. Re-check official club team sheets close to kickoff.*\n\n**Statistical methodology:** Last 10 matches, all competitions. Published team rates are descriptive. Model probabilities refer to this fixture and are **not** the probability of a combined pick, unless explicitly stated. Calculated rows use the values in this table. Sample and underlying methodology differ between providers; do not blend into one forecasting model.\n\n**Data and lineup sources:**\n- forepitch.com: https://forepitch.com/pt/football/match/konyaspor-galatasaray-2026-10-30/\n\nGalatasaray lineup adjusted from the source latest XI to avoid listing suspended Bardakcı as a starter.\n\nThe figures in the Statistical Core use the last ten matches in all competitions, not a home-versus-away venue split, and metrics the sources did not publish are marked as unavailable rather than estimated. The source-backed comparison includes **1.12 xG/game** for Konyaspor and **1.80 xG/game** for Galatasaray; these historical figures do not establish the probability of the selection.\n\n## Market assessment and conclusion\n\nThe published **1.62** price implies a raw implied probability of **61.73%** (1 / 1.62). That market price differs from the historical rates in the table and from the editorial judgment in the three analysis paragraphs. The main risk is that the contrary evidence in the analysis defeats the pick even if the broader form pattern continues.\n\n**Prediction:** **Galatasaray to Win**\n**Odds:** **1.62**\n\n### Statistical Core Predictions-Sports-Prime\n\n| Metric | Konyaspor | Galatasaray |\n|---|---:|---:|\n| Goals scored per match | 0.7 | 1.9 |\n| Goals conceded per match | 1.1 | 1.9 |\n| xG created per match | 1.12 | 1.80 |\n| xGA conceded per match | 1.20 | 1.41 |\n| Shots per match | 11.5 | 17.9 |\n| Shots on target per match | 3.5 | 6.2 |\n| Corners per match | 3.2 | 6.8 |\n| Possession | 49.0% | 56.0% |\n| Yellow cards per match | 2.3 | 2.2 |\n| xG minus xGA per match — calculated | -0.08 | 0.39 |\n| Shots on target / shot attempts — calculated | 30.4% | 34.6% |\n| Goals / shots on target — calculated | 20.0% | 30.6% |\n| Total goals in team matches per game — calculated | 1.8 | 3.8 |\n| Shot volume per xG — calculated | 10.3 | 9.9 |\n| Independent model: home / draw / away win | 20% / 26% / 54% | Match-level estimate |\n| Independent model: Over 2.5 goals | 54% | Match-level estimate |\n| Supplied decimal odds | 1.62 | Author-supplied, not live bookmaker quote |\n| Break-even hit rate (1/odds) | 61.73% | Calculation, not model probability |"
+    "# Konyaspor vs Galatasaray Prediction, Odds and Betting Tips\n\n**Prediction:** **Galatasaray to Win**\n**Odds:** **1.62**\n\n## Match information\n\n- **Competition:** Süper Lig 2026/27\n- **Date:** October 30, 2026\n- **Kick-off:** 2026-10-30 20:00 Europe/Istanbul\n- **Round:** Matchweek 10\n- **Venue:** Medaş Konya Büyükşehir Stadyumu, Konya, Türkiye\n\n## Team news and availability\n\nAbdülkerim Bardakcı is suspended for Galatasaray, leaving Wilfried Singo or Eren Elmalı as the provisional defensive solution. Adil Demirbağ is out injured for Konyaspor.\n\n## Probable Starting XIs\n\n**Konyaspor:** Bahadır Han Güngördü; Rayyan Baniya, Chidozie Awaziem, Arthur Masuaku, Yhoan Andzouana; Enis Bardhi, Marko Jevtović, Melih İbrahimoğlu; Deniz Türüç, Jackson Muleka, Jean-Luc Dompé.\n\n**Galatasaray:** Uğurcan Çakır; Roland Sallai, Davinson Sánchez, Wilfried Singo (Eren Elmalı), Ismail Jakobs; Lucas Torreira, Mario Lemina; Yunus Akgün, Aleksey Batrakov (Gabriel Sara), Barış Alper Yılmaz; Victor Osimhen.\n\n*Probable lineups, projected rather than official. Names in parentheses are alternative starters or reported doubts.*\n\n## Match Analysis\n\n### Match Context\n\nGalatasaray lead the Süper Lig and have won their last three, capped by a 2-1 derby win over Fenerbahçe. Konyaspor have far fewer points but have made home matches difficult, beating Trabzonspor and Gençlerbirliği there and holding Başakşehir to a draw. They also beat Galatasaray 2-0 in this fixture in February, so the visitors will know it can be awkward. Lucas Torreira and Mario Lemina should control the middle, with Victor Osimhen running beyond the home defence. Bardakcı's suspension does force a reshuffle at the back.\n\n### Statistical Analysis\n\nKonyaspor's home figures describe a team that stays in games without creating much. They concede rarely, with three clean sheets from five, but they score even less often than their limited chances suggest. Galatasaray have the stronger attack away from home, with an xG roughly double that of the hosts, but they have also been beaten 4-0 at Trabzonspor and needed to survive a 3-2 at Başakşehir and a narrow 1-0 at Gençlerbirliği, so their away form has not been as dominant as the league table implies.\n\n### Betting Analysis\n\nThe visitors' quality and form justify the straight win, and Osimhen gives them the sort of finisher a low-scoring home side struggles to contain. But there is no protection if this ends level, and Konyaspor's three home clean sheets mean the first goal could decide a tight match. Galatasaray have won **3 of 4** away, while an independent Forepitch forecast gives them **54%**, which is below what the price requires. February's result is a further reminder of the upset risk. The selection follows the stronger team, and it does so at a short price.\n\n### Statistical Core Predictions-Sports-Prime\n\n| Metric | Konyaspor (home) | Galatasaray (away) |\n|---|---:|---:|\n| Season (all venues): matches | 9 | 9 |\n| Season (all venues): W-D-L | 2-2-5 | 7-1-1 |\n| Season (all venues): goals scored per match | 0.67 | 2.11 |\n| Season (all venues): goals conceded per match | 1.00 | 1.33 |\n| Venue matches analysed | 5 | 4 |\n| Venue W-D-L | 2-1-2 | 3-0-1 |\n| Goals scored (total) | 4 | 8 |\n| Goals conceded (total) | 3 | 6 |\n| Goals scored per match | 0.80 | 2.00 |\n| Goals conceded per match | 0.60 | 1.50 |\n| Total goals per match | 1.40 | 3.50 |\n| xG per match | 1.04 | 2.02 |\n| xGA per match | 1.07 | 1.60 |\n| xG difference per match | -0.03 | +0.42 |\n| Shots per match | 10.60 | 13.50 |\n| Shots on target per match | 3.60 | 4.25 |\n| Shots conceded per match | 11.60 | 12.50 |\n| Shots on target conceded per match | 3.60 | 4.25 |\n| Shot conversion (goals / shots) | 8% (4/53) | 15% (8/54) |\n| Possession | 45% | 57% |\n| Corners won per match | 3.40 | 5.50 |\n| Corners conceded per match | 5.20 | 4.50 |\n| Total corners per match | 8.60 | 10.00 |\n| Over 1.5 goals | 40% (2/5) | 75% (3/4) |\n| Over 2.5 goals | 20% (1/5) | 75% (3/4) |\n| Over 3.5 goals | 0% (0/5) | 75% (3/4) |\n| Under 4.5 goals | 100% (5/5) | 75% (3/4) |\n| BTTS Yes | 20% (1/5) | 25% (1/4) |\n| BTTS No | 80% (4/5) | 75% (3/4) |\n| Clean sheets | 60% (3/5) | 50% (2/4) |\n| Failed to score | 40% (2/5) | 25% (1/4) |\n\n**How to read the table:** the season rows cover all 9 and 9 Süper Lig 2026/27 matches played by each club. Every other row uses only Konyaspor's 5 home and Galatasaray's 4 away league matches this season, which is a small sample. xG and xGA are estimates of chance quality, not goals scored. Figures are calculated from FotMob match data, and final scores were checked against ESPN.\n\n**Sources:**\n- www.fotmob.com: https://www.fotmob.com/leagues/71/matches\n- forepitch.com: https://forepitch.com/pt/football/match/konyaspor-galatasaray-2026-10-30/\n\n## Market assessment and conclusion\n\nThe published market price of **1.62** implies a raw implied probability of **61.73%** (1 / 1.62). The away record clears it on a tiny sample, the independent estimate does not, and the editorial view backs Galatasaray's quality while recognising that the price is tight.\n\n**Prediction:** **Galatasaray to Win**\n**Odds:** **1.62**"
   ],
   "picks": {
     "main": "Galatasaray to Win",
     "publishedOdds": 1.62,
     "oddsProvenance": {
-      "source": "Author-supplied Predictions Sports Prime Football 9 October 30 2026 ZIP",
+      "source": "Predictions Sports Prime published price, October 30 2026",
       "provenance": "author_attested",
       "market": "Galatasaray to Win"
     }
@@ -42,26 +42,46 @@ export const prediction: EditorialPrediction = {
   "sourceStatus": "partial",
   "sources": [
     {
+      "name": "www.fotmob.com",
+      "url": "https://www.fotmob.com/leagues/71/matches"
+    },
+    {
       "name": "forepitch.com",
       "url": "https://forepitch.com/pt/football/match/konyaspor-galatasaray-2026-10-30/"
     }
   ],
   "statisticalCoreSamples": [
     {
-      "sampleType": "overall",
-      "source": "forepitch.com",
-      "sourceUrl": "https://forepitch.com/pt/football/match/konyaspor-galatasaray-2026-10-30/",
-      "season": "2026",
-      "scope": "Süper Lig 2026/27, Konyaspor: Last 10 matches, all competitions, before 30 October 2026",
-      "matches": 10
+      "sampleType": "home",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/71/matches",
+      "season": "2026/27",
+      "scope": "Süper Lig 2026/27, Konyaspor, home league matches before 30 October 2026",
+      "matches": 5
     },
     {
       "sampleType": "overall",
-      "source": "forepitch.com",
-      "sourceUrl": "https://forepitch.com/pt/football/match/konyaspor-galatasaray-2026-10-30/",
-      "season": "2026",
-      "scope": "Süper Lig 2026/27, Galatasaray: Last 10 matches, all competitions, before 30 October 2026",
-      "matches": 10
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/71/matches",
+      "season": "2026/27",
+      "scope": "Süper Lig 2026/27, Konyaspor, all league matches before 30 October 2026",
+      "matches": 9
+    },
+    {
+      "sampleType": "away",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/71/matches",
+      "season": "2026/27",
+      "scope": "Süper Lig 2026/27, Galatasaray, away league matches before 30 October 2026",
+      "matches": 4
+    },
+    {
+      "sampleType": "overall",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/71/matches",
+      "season": "2026/27",
+      "scope": "Süper Lig 2026/27, Galatasaray, all league matches before 30 October 2026",
+      "matches": 9
     }
   ],
   "teaser": "Konyaspor host Galatasaray on October 30. Full prediction, odds and analysis are FREE."

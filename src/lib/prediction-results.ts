@@ -54,6 +54,13 @@ function settleHandicap(goalDifference: number, line: number): PredictionResultS
   return mergeQuarterHandicap(settle(goalDifference + lower), settle(goalDifference + upper)) ?? "pending";
 }
 
+// A published pick that does not name its handicap type, confirmed by the publisher after the fact.
+// The pick text itself stays exactly as published.
+const DOCUMENTED_HANDICAP_STYLES: Record<string, "asian" | "european"> = {
+  // Confirmed Asian by the publisher on 2026-10-30: Rangers 3-1 Kilmarnock lands on the line and is a push.
+  "scottish-premiership:rangers-vs-kilmarnock": "asian",
+};
+
 function selectedTeamIsHome(label: string, match: MatchPreview) {
   const settlementTeamKey = (value: string) => {
     const normalized = normalizeTeamKey(value);
@@ -201,8 +208,9 @@ function evaluateLeg(leg: ParsedPredictionLeg, match: MatchPreview, score: Score
   // A whole-goal line lands exactly on the margin only here: Asian rules refund it, a European (three-way)
   // line loses it. A published pick that does not say which it was is never graded by assumption.
   if (Number.isInteger(leg.line) && margin + leg.line === 0) {
-    if (leg.style === "european") return { status: "red" as const };
-    if (leg.style !== "asian") return { status: "pending" as const, reason: "HANDICAP_TYPE_AMBIGUOUS" as const };
+    const style = leg.style ?? DOCUMENTED_HANDICAP_STYLES[`${match.league}:${match.slug}`];
+    if (style === "european") return { status: "red" as const };
+    if (style !== "asian") return { status: "pending" as const, reason: "HANDICAP_TYPE_AMBIGUOUS" as const };
   }
   return { status: settleHandicap(margin, leg.line) };
 }

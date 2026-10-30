@@ -14,13 +14,13 @@ export const prediction: EditorialPrediction = {
   "analysisFormat": "markdown",
   "analysisLanguage": "en",
   "analysis": [
-    "# SV Elversberg vs Mainz 05 Prediction, Odds and Betting Tips\n\n**Prediction:** **Elversberg or Draw (1X)**\n**Odds:** **1.72**\n\n## Match information\n\n- **Competition:** Bundesliga 2026/27\n- **Date:** October 30, 2026\n- **Kick-off:** 2026-10-30 20:30 Europe/Berlin\n- **Round:** Matchweek 8\n- **Venue:** URSAPHARM-Arena an der Kaiserlinde, Spiesen-Elversberg, Germany\n\n## Team news and availability\n\nThe probable lineups below are PROJECTED, with alternative starters and fitness doubts retained from the cited pre-match reports. No suspension or eligibility issue is stated unless the cited reports name one. Availability may change before official team sheets are released.\n\n## Match Analysis\n\nElversberg have a genuine opportunity to compete at home, but the underlying attacking gap makes 1X a demanding selection. Mainz average 2.41 xG and 18.4 shots over their last ten fixtures, substantially above Elversberg’s 1.55 xG and 11.4 shots. The home side’s recent 4–3 victory over Augsburg illustrates its capacity to create disorderly games, although the subsequent 4–0 defeat to RB Leipzig showed how quickly defensive spacing can unravel.\n\nElversberg are likely to retain the 4-2-3-1 structure with Krattenmacher and Petkov supplying Mokwa, whereas Mainz can overload central zones with Amiri, Sano and Lee behind their two forwards. The Bundesliga preview reports Mainz arriving with a perfect league away record, a serious counterweight to Elversberg’s home advantage. Possible choices such as Mickelson/Keidel and Schwolow/Zentner are marked as provisional; no lineup should be described as confirmed.\n\nThe pick needs an Elversberg win or draw, without a goal-total condition. The quoted 1.72 equates to a 58.14% break-even rate; the published separate-outcome model gives Elversberg 23% and a draw 29%—approximately 52% combined, which is below that threshold. This is a value concern worth disclosing explicitly rather than presenting the selection as safe.\n\n## Probable Starting XIs\n\n**SV Elversberg:** Nicolas Kristof; Nick Mickelson (Luca Sirch), Lukas Pinckert, Maximilian Rohr, Lasse Günther; Felix Keidel, Łukasz Poręba; Lukas Petkov, David Schmahl (Francis Onyeka), Maurice Krattenmacher; David Mokwa.\n\n**Mainz 05:** Alexander Schwolow (Robin Zentner); Danny da Costa, Stefan Posch, Kacper Potulski; Anthony Caci, Nadiem Amiri, Kaishu Sano, Lee Jae-sung, Phillipp Mwene; Sheraldo Becker, Phillip Tietz.\n\n*Brackets indicate the projected alternative or a reported doubt, not a confirmed change. Re-check official club team sheets close to kickoff.*\n\n**Statistical methodology:** Last 10 matches, all competitions. Published team rates are descriptive. Model probabilities refer to this fixture and are **not** the probability of a combined pick, unless explicitly stated. Calculated rows use the values in this table. Sample and underlying methodology differ between providers; do not blend into one forecasting model.\n\n**Data and lineup sources:**\n- forepitch.com: https://forepitch.com/pt/football/match/elversberg-mainz-05-2026-10-30/\n- www.fotmob.com: https://www.fotmob.com/pt-BR/matches/elversberg-vs-mainz-05/2pxonq\n\nBundesliga.com independently confirms the fixture and notes Mainz’s strong away league record.\n\nThe figures in the Statistical Core use the last ten matches in all competitions, not a home-versus-away venue split, and metrics the sources did not publish are marked as unavailable rather than estimated. The source-backed comparison includes **1.55 xG/game** for SV Elversberg and **2.41 xG/game** for Mainz 05; these historical figures do not establish the probability of the selection.\n\n## Market assessment and conclusion\n\nThe published **1.72** price implies a raw implied probability of **58.14%** (1 / 1.72). That market price differs from the historical rates in the table and from the editorial judgment in the three analysis paragraphs. The main risk is that the contrary evidence in the analysis defeats the pick even if the broader form pattern continues.\n\n**Prediction:** **Elversberg or Draw (1X)**\n**Odds:** **1.72**\n\n### Statistical Core Predictions-Sports-Prime\n\n| Metric | SV Elversberg | Mainz 05 |\n|---|---:|---:|\n| Goals scored per match | 1.9 | 2.8 |\n| Goals conceded per match | 1.9 | 1.6 |\n| xG created per match | 1.55 | 2.41 |\n| xGA conceded per match | 1.83 | 1.68 |\n| Shots per match | 11.4 | 18.4 |\n| Shots on target per match | 4.2 | 6.9 |\n| Corners per match | 4.2 | 5.4 |\n| Possession | 49.0% | 53.0% |\n| Yellow cards per match | 1.6 | 2.0 |\n| xG minus xGA per match — calculated | -0.28 | 0.73 |\n| Shots on target / shot attempts — calculated | 36.8% | 37.5% |\n| Goals / shots on target — calculated | 45.2% | 40.6% |\n| Total goals in team matches per game — calculated | 3.8 | 4.4 |\n| Shot volume per xG — calculated | 7.4 | 7.6 |\n| Independent model: home / draw / away win | 23% / 29% / 47% | Match-level estimate |\n| Independent model: Over 2.5 goals | 68% | Match-level estimate |\n| Supplied decimal odds | 1.72 | Author-supplied, not live bookmaker quote |\n| Break-even hit rate (1/odds) | 58.14% | Calculation, not model probability |"
+    "# SV Elversberg vs Mainz 05 Prediction, Odds and Betting Tips\n\n**Prediction:** **Elversberg or Draw (1X)**\n**Odds:** **1.72**\n\n## Match information\n\n- **Competition:** Bundesliga 2026/27\n- **Date:** October 30, 2026\n- **Kick-off:** 2026-10-30 20:30 Europe/Berlin\n- **Round:** Matchweek 8\n- **Venue:** URSAPHARM-Arena an der Kaiserlinde, Spiesen-Elversberg, Germany\n\n## Team news and availability\n\nElversberg have selection questions at right-back, between Nick Mickelson and Luca Sirch, and in attack, between David Schmahl and Francis Onyeka. Mainz may choose between Alexander Schwolow and Robin Zentner in goal. The reports cited below name no suspension.\n\n## Probable Starting XIs\n\n**SV Elversberg:** Nicolas Kristof; Nick Mickelson (Luca Sirch), Lukas Pinckert, Maximilian Rohr, Lasse Günther; Felix Keidel, Łukasz Poręba; Lukas Petkov, David Schmahl (Francis Onyeka), Maurice Krattenmacher; David Mokwa.\n\n**Mainz 05:** Alexander Schwolow (Robin Zentner); Danny da Costa, Stefan Posch, Kacper Potulski; Anthony Caci, Nadiem Amiri, Kaishu Sano, Lee Jae-sung, Phillipp Mwene; Sheraldo Becker, Phillip Tietz.\n\n*Probable lineups, projected rather than official. Names in parentheses are alternative starters or reported doubts.*\n\n## Match Analysis\n\n### Match Context\n\nTwo open teams meet here, and neither has much defensive stability to lean on. Elversberg arrive after a 4-0 loss at RB Leipzig, but their home ground has been a different story, with wins over Bayer Leverkusen and Augsburg already. Mainz have won every away league game so far yet lost all three of their last home games, an odd split that makes their form hard to read. David Mokwa will need service from Maurice Krattenmacher and Lukas Petkov against a Mainz side that can crowd the middle through Nadiem Amiri, Kaishu Sano and Lee Jae-sung.\n\n### Statistical Analysis\n\nThe venue figures favour the visitors, and that is the main problem for the home side. Elversberg have been outshot by a huge margin at home, conceding more than twice as many attempts as they have taken, and their results have relied on sharp finishing. Their xGA at home is more than double what Mainz allow on the road. Mainz, by contrast, have outperformed an already strong away xG, with a 5-0 win at Hamburg lifting the average. Three matches per team is a very thin sample, and all three of Elversberg's home games and two of Mainz's trips produced at least three goals, so one chance can swing the result either way.\n\n### Betting Analysis\n\nThe double chance gives Elversberg's home record two ways to pay, and it avoids having to call a winner in a match with this much volatility. It is still a selection that runs against much of the evidence. Mainz are **3 from 3** away and carry the better underlying numbers, and an independent forecast from Forepitch puts the home win and draw at about **52%** combined, below the price threshold. The case relies on Elversberg's home scoring and on Mainz's inconsistency overall, with the visitors' away form the clear risk. A Mainz first goal would test Elversberg's defence badly, so treat this as a contrarian position rather than a safe one.\n\n### Statistical Core Predictions-Sports-Prime\n\n| Metric | SV Elversberg (home) | Mainz 05 (away) |\n|---|---:|---:|\n| Season (all venues): matches | 7 | 7 |\n| Season (all venues): W-D-L | 3-1-3 | 3-1-3 |\n| Season (all venues): goals scored per match | 1.71 | 2.29 |\n| Season (all venues): goals conceded per match | 2.14 | 1.86 |\n| Venue matches analysed | 3 | 3 |\n| Venue W-D-L | 2-0-1 | 3-0-0 |\n| Goals scored (total) | 8 | 10 |\n| Goals conceded (total) | 7 | 3 |\n| Goals scored per match | 2.67 | 3.33 |\n| Goals conceded per match | 2.33 | 1.00 |\n| Total goals per match | 5.00 | 4.33 |\n| xG per match | 2.00 | 2.51 |\n| xGA per match | 2.88 | 1.29 |\n| xG difference per match | -0.88 | +1.22 |\n| Shots per match | 11.67 | 14.67 |\n| Shots on target per match | 5.00 | 7.33 |\n| Shots conceded per match | 26.00 | 12.67 |\n| Shots on target conceded per match | 6.00 | 3.67 |\n| Shot conversion (goals / shots) | 23% (8/35) | 23% (10/44) |\n| Possession | 34% | 50% |\n| Corners won per match | 3.67 | 3.33 |\n| Corners conceded per match | 8.00 | 4.67 |\n| Total corners per match | 11.67 | 8.00 |\n| Over 1.5 goals | 100% (3/3) | 67% (2/3) |\n| Over 2.5 goals | 100% (3/3) | 67% (2/3) |\n| Over 3.5 goals | 67% (2/3) | 67% (2/3) |\n| Under 4.5 goals | 33% (1/3) | 33% (1/3) |\n| BTTS Yes | 100% (3/3) | 33% (1/3) |\n| BTTS No | 0% (0/3) | 67% (2/3) |\n| Clean sheets | 0% (0/3) | 67% (2/3) |\n| Failed to score | 0% (0/3) | 0% (0/3) |\n\n**How to read the table:** the season rows cover all 7 and 7 Bundesliga 2026/27 matches played by each club. Every other row uses only SV Elversberg's 3 home and Mainz 05's 3 away league matches this season, which is a small sample. xG and xGA are estimates of chance quality, not goals scored. Figures are calculated from FotMob match data, and final scores were checked against ESPN.\n\n**Sources:**\n- www.fotmob.com: https://www.fotmob.com/leagues/54/matches\n- www.fotmob.com: https://www.fotmob.com/pt-BR/matches/elversberg-vs-mainz-05/2pxonq\n- forepitch.com: https://forepitch.com/pt/football/match/elversberg-mainz-05-2026-10-30/\n\n## Market assessment and conclusion\n\nThe published market price of **1.72** implies a raw implied probability of **58.14%** (1 / 1.72). Forepitch's estimate sits below that price, so on that independent view the selection does not offer value, and the editorial lean rests on Elversberg's results at home.\n\n**Prediction:** **Elversberg or Draw (1X)**\n**Odds:** **1.72**"
   ],
   "picks": {
     "main": "Elversberg or Draw (1X)",
     "publishedOdds": 1.72,
     "oddsProvenance": {
-      "source": "Author-supplied Predictions Sports Prime Football 9 October 30 2026 ZIP",
+      "source": "Predictions Sports Prime published price, October 30 2026",
       "provenance": "author_attested",
       "market": "Elversberg or Draw (1X)"
     }
@@ -42,30 +42,50 @@ export const prediction: EditorialPrediction = {
   "sourceStatus": "partial",
   "sources": [
     {
-      "name": "forepitch.com",
-      "url": "https://forepitch.com/pt/football/match/elversberg-mainz-05-2026-10-30/"
+      "name": "www.fotmob.com",
+      "url": "https://www.fotmob.com/leagues/54/matches"
     },
     {
       "name": "www.fotmob.com",
       "url": "https://www.fotmob.com/pt-BR/matches/elversberg-vs-mainz-05/2pxonq"
+    },
+    {
+      "name": "forepitch.com",
+      "url": "https://forepitch.com/pt/football/match/elversberg-mainz-05-2026-10-30/"
     }
   ],
   "statisticalCoreSamples": [
     {
-      "sampleType": "overall",
-      "source": "forepitch.com",
-      "sourceUrl": "https://forepitch.com/pt/football/match/elversberg-mainz-05-2026-10-30/",
-      "season": "2026",
-      "scope": "Bundesliga 2026/27, SV Elversberg: Last 10 matches, all competitions, before 30 October 2026",
-      "matches": 10
+      "sampleType": "home",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/54/matches",
+      "season": "2026/27",
+      "scope": "Bundesliga 2026/27, SV Elversberg, home league matches before 30 October 2026",
+      "matches": 3
     },
     {
       "sampleType": "overall",
-      "source": "forepitch.com",
-      "sourceUrl": "https://forepitch.com/pt/football/match/elversberg-mainz-05-2026-10-30/",
-      "season": "2026",
-      "scope": "Bundesliga 2026/27, Mainz 05: Last 10 matches, all competitions, before 30 October 2026",
-      "matches": 10
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/54/matches",
+      "season": "2026/27",
+      "scope": "Bundesliga 2026/27, SV Elversberg, all league matches before 30 October 2026",
+      "matches": 7
+    },
+    {
+      "sampleType": "away",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/54/matches",
+      "season": "2026/27",
+      "scope": "Bundesliga 2026/27, Mainz 05, away league matches before 30 October 2026",
+      "matches": 3
+    },
+    {
+      "sampleType": "overall",
+      "source": "FotMob",
+      "sourceUrl": "https://www.fotmob.com/leagues/54/matches",
+      "season": "2026/27",
+      "scope": "Bundesliga 2026/27, Mainz 05, all league matches before 30 October 2026",
+      "matches": 7
     }
   ],
   "teaser": "SV Elversberg host Mainz 05 on October 30. Full prediction, odds and analysis are FREE."
