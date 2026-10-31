@@ -2897,6 +2897,25 @@
       "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T08:30:00.000-03:00"
     },
+    "la-liga:villarreal-vs-espanyol": {
+      "key": "la-liga:villarreal-vs-espanyol",
+      "league": "la-liga",
+      "slug": "villarreal-vs-espanyol",
+      "homeTeam": "Villarreal",
+      "awayTeam": "Espanyol",
+      "date": "2026-10-30",
+      "fixtureId": "401882817",
+      "predictionAccess": "free",
+      "prediction": "Espanyol +1.5 Goals (handicap)",
+      "odds": 1.75,
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-10-31T00:55:38.781Z",
+      "publishedAt": "2026-10-30T00:00:00-04:00"
+    },
     "liga-portugal:academico-viseu-vs-estoril-praia": {
       "key": "liga-portugal:academico-viseu-vs-estoril-praia",
       "league": "liga-portugal",
@@ -3009,6 +3028,25 @@
       "result": "red",
       "settledAt": "2026-10-10T22:00:29.883Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "liga-portugal:casa-pia-vs-sporting-cp": {
+      "key": "liga-portugal:casa-pia-vs-sporting-cp",
+      "league": "liga-portugal",
+      "slug": "casa-pia-vs-sporting-cp",
+      "homeTeam": "Casa Pia",
+      "awayTeam": "Sporting CP",
+      "date": "2026-10-30",
+      "fixtureId": "401885408",
+      "predictionAccess": "free",
+      "prediction": "Sporting CP to Win + Over 2.5 Goals",
+      "odds": 1.76,
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-10-31T00:55:38.781Z",
+      "publishedAt": "2026-10-30T00:00:00-04:00"
     },
     "liga-portugal:famalicao-vs-alverca": {
       "key": "liga-portugal:famalicao-vs-alverca",
@@ -3275,6 +3313,25 @@
       "result": "green",
       "settledAt": "2026-10-10T18:45:10.591Z",
       "publishedAt": "2026-10-06T18:00:00.000-03:00"
+    },
+    "ligue-1:lille-vs-lens": {
+      "key": "ligue-1:lille-vs-lens",
+      "league": "ligue-1",
+      "slug": "lille-vs-lens",
+      "homeTeam": "Lille",
+      "awayTeam": "Lens",
+      "date": "2026-10-30",
+      "fixtureId": "401876420",
+      "predictionAccess": "free",
+      "prediction": "Over 1.5 Goals + Over 7.5 Total Corners",
+      "odds": 1.65,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-10-31T00:55:38.781Z",
+      "publishedAt": "2026-10-30T00:00:00-04:00"
     },
     "ligue-1:lorient-vs-monaco": {
       "key": "ligue-1:lorient-vs-monaco",

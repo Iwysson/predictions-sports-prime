@@ -1,46 +1,20 @@
 {
   "version": 1,
   "records": {
-    "la-liga:villarreal-vs-espanyol": {
-      "key": "la-liga:villarreal-vs-espanyol",
-      "league": "la-liga",
-      "slug": "villarreal-vs-espanyol",
-      "homeTeam": "Villarreal",
-      "awayTeam": "Espanyol",
+    "brasileirao-serie-a:corinthians-vs-mirassol": {
+      "key": "brasileirao-serie-a:corinthians-vs-mirassol",
+      "league": "brasileirao-serie-a",
+      "slug": "corinthians-vs-mirassol",
+      "homeTeam": "Corinthians",
+      "awayTeam": "Mirassol",
       "date": "2026-10-30",
       "predictionAccess": "free",
-      "prediction": "Espanyol +1.5 Goals (handicap)",
-      "odds": 1.75,
-      "reason": "NOT_COMPLETED"
-    },
-    "liga-portugal:casa-pia-vs-sporting-cp": {
-      "key": "liga-portugal:casa-pia-vs-sporting-cp",
-      "league": "liga-portugal",
-      "slug": "casa-pia-vs-sporting-cp",
-      "homeTeam": "Casa Pia",
-      "awayTeam": "Sporting CP",
-      "date": "2026-10-30",
-      "predictionAccess": "free",
-      "prediction": "Sporting CP to Win + Over 2.5 Goals",
-      "odds": 1.76,
-      "reason": "NOT_COMPLETED"
-    },
-    "ligue-1:lille-vs-lens": {
-      "key": "ligue-1:lille-vs-lens",
-      "league": "ligue-1",
-      "slug": "lille-vs-lens",
-      "homeTeam": "Lille",
-      "awayTeam": "Lens",
-      "date": "2026-10-30",
-      "predictionAccess": "free",
-      "prediction": "Over 1.5 Goals + Over 7.5 Total Corners",
+      "prediction": "Corinthians or Draw (1X) + Over 1.5 Goals",
       "odds": 1.65,
-      "reason": "NOT_COMPLETED"
+      "reason": "FIXTURE_IDENTITY_CONFLICT"
     }
   },
   "reconcileReasons": {
-    "la-liga:villarreal-vs-espanyol": "NOT_COMPLETED",
-    "liga-portugal:casa-pia-vs-sporting-cp": "NOT_COMPLETED",
-    "ligue-1:lille-vs-lens": "NOT_COMPLETED"
+    "brasileirao-serie-a:corinthians-vs-mirassol": "FIXTURE_IDENTITY_CONFLICT"
   }
 }

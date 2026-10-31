@@ -131,6 +131,12 @@
     "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876437",
     "capturedAt": "2026-10-16T21:50:28.916Z"
   },
+  "ligue-1:lille-vs-lens": {
+    "homeCorners": 10,
+    "awayCorners": 2,
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/summary?event=401876420",
+    "capturedAt": "2026-10-31T00:55:23.634Z"
+  },
   "ligue-1:troyes-vs-lens": {
     "homeCorners": 6,
     "awayCorners": 4,
