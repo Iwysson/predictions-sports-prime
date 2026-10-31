@@ -1,20 +1,5 @@
 {
   "version": 1,
-  "records": {
-    "brasileirao-serie-a:corinthians-vs-mirassol": {
-      "key": "brasileirao-serie-a:corinthians-vs-mirassol",
-      "league": "brasileirao-serie-a",
-      "slug": "corinthians-vs-mirassol",
-      "homeTeam": "Corinthians",
-      "awayTeam": "Mirassol",
-      "date": "2026-10-30",
-      "predictionAccess": "free",
-      "prediction": "Corinthians or Draw (1X) + Over 1.5 Goals",
-      "odds": 1.65,
-      "reason": "FIXTURE_IDENTITY_CONFLICT"
-    }
-  },
-  "reconcileReasons": {
-    "brasileirao-serie-a:corinthians-vs-mirassol": "FIXTURE_IDENTITY_CONFLICT"
-  }
+  "records": {},
+  "reconcileReasons": {}
 }

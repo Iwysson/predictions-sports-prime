@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-31T00:55:23.634Z",
+  "generatedAt": "2026-10-31T06:25:41.178Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -15664,19 +15664,16 @@
     ]
   },
   "predictionIds": {
-    "brasileirao-serie-a:corinthians-vs-mirassol": "editorial:brasileirao-serie-a:corinthians-vs-mirassol:2026-10-30",
-    "la-liga:villarreal-vs-espanyol": "401882817",
-    "liga-portugal:casa-pia-vs-sporting-cp": "401885408",
-    "ligue-1:lille-vs-lens": "401876420"
+    "brasileirao-serie-a:corinthians-vs-mirassol": "editorial:brasileirao-serie-a:corinthians-vs-mirassol:2026-10-30"
   },
   "leagueUpdatedAt": {
-    "premier-league": "2026-10-31T00:55:23.634Z",
-    "la-liga": "2026-10-31T00:55:23.634Z",
-    "bundesliga": "2026-10-31T00:55:23.634Z",
-    "serie-a": "2026-10-31T00:55:23.634Z",
-    "liga-portugal": "2026-10-31T00:55:23.634Z",
-    "ligue-1": "2026-10-31T00:55:23.634Z",
-    "eredivisie": "2026-10-31T00:55:23.634Z",
+    "premier-league": "2026-10-31T06:25:41.178Z",
+    "la-liga": "2026-10-31T06:25:41.178Z",
+    "bundesliga": "2026-10-31T06:25:41.178Z",
+    "serie-a": "2026-10-31T06:25:41.178Z",
+    "liga-portugal": "2026-10-31T06:25:41.178Z",
+    "ligue-1": "2026-10-31T06:25:41.178Z",
+    "eredivisie": "2026-10-31T06:25:41.178Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
@@ -20834,9 +20831,9 @@
       "time": "20:00",
       "homeTeam": "Corinthians",
       "awayTeam": "Mirassol",
-      "homeScore": null,
-      "awayScore": null,
-      "status": "in-progress",
+      "homeScore": 2,
+      "awayScore": 0,
+      "status": "completed",
       "dataSource": "editorial-manual",
       "id": "editorial:brasileirao-serie-a:corinthians-vs-mirassol:2026-10-30",
       "sourceAgreement": false,

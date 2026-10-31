@@ -227,6 +227,25 @@
       "settledAt": "2026-10-13T03:12:41.864Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
+    "brasileirao-serie-a:corinthians-vs-mirassol": {
+      "key": "brasileirao-serie-a:corinthians-vs-mirassol",
+      "league": "brasileirao-serie-a",
+      "slug": "corinthians-vs-mirassol",
+      "homeTeam": "Corinthians",
+      "awayTeam": "Mirassol",
+      "date": "2026-10-30",
+      "fixtureId": "editorial:brasileirao-serie-a:corinthians-vs-mirassol:2026-10-30",
+      "predictionAccess": "free",
+      "prediction": "Corinthians or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.65,
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-10-31T06:25:52.017Z",
+      "publishedAt": "2026-10-30T00:00:00-04:00"
+    },
     "brasileirao-serie-a:corinthians-vs-vitoria": {
       "key": "brasileirao-serie-a:corinthians-vs-vitoria",
       "league": "brasileirao-serie-a",
