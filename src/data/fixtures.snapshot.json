@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-31T06:25:41.178Z",
+  "generatedAt": "2026-10-31T12:52:54.752Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -481,7 +481,7 @@
             "awayTeam": "Manchester United",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "in-progress",
             "dataSource": "espn",
             "id": "401879248",
             "sourceAgreement": true,
@@ -15663,17 +15663,15 @@
       }
     ]
   },
-  "predictionIds": {
-    "brasileirao-serie-a:corinthians-vs-mirassol": "editorial:brasileirao-serie-a:corinthians-vs-mirassol:2026-10-30"
-  },
+  "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-10-31T06:25:41.178Z",
-    "la-liga": "2026-10-31T06:25:41.178Z",
-    "bundesliga": "2026-10-31T06:25:41.178Z",
-    "serie-a": "2026-10-31T06:25:41.178Z",
-    "liga-portugal": "2026-10-31T06:25:41.178Z",
-    "ligue-1": "2026-10-31T06:25:41.178Z",
-    "eredivisie": "2026-10-31T06:25:41.178Z",
+    "premier-league": "2026-10-31T12:52:54.752Z",
+    "la-liga": "2026-10-31T12:52:54.752Z",
+    "bundesliga": "2026-10-31T12:52:54.752Z",
+    "serie-a": "2026-10-31T12:52:54.752Z",
+    "liga-portugal": "2026-10-31T12:52:54.752Z",
+    "ligue-1": "2026-10-31T12:52:54.752Z",
+    "eredivisie": "2026-10-31T12:52:54.752Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
