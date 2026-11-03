@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-03T02:08:57.886Z",
+  "generatedAt": "2026-11-03T17:12:41.478Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -10863,18 +10863,18 @@
         "games": [
           {
             "round": 13,
-            "date": "2026-12-06",
-            "time": "TBD",
+            "date": "2026-12-04",
+            "time": "20:15",
             "homeTeam": "Sporting CP",
             "awayTeam": "Maritimo",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885376",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-04T20:15Z"
           },
           {
             "round": 13,
@@ -10889,52 +10889,52 @@
             "id": "401885383",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "kickoffUtc": "2026-12-06T15:30Z"
           },
           {
             "round": 13,
-            "date": "2026-12-06",
-            "time": "TBD",
+            "date": "2026-12-07",
+            "time": "20:15",
             "homeTeam": "Alverca",
             "awayTeam": "Moreirense",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885384",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-07T20:15Z"
           },
           {
             "round": 13,
-            "date": "2026-12-06",
-            "time": "TBD",
+            "date": "2026-12-05",
+            "time": "18:00",
             "homeTeam": "Santa Clara",
             "awayTeam": "Porto",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885377",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-05T18:00Z"
           },
           {
             "round": 13,
-            "date": "2026-12-06",
-            "time": "TBD",
+            "date": "2026-12-05",
+            "time": "15:30",
             "homeTeam": "C.D. Nacional",
             "awayTeam": "Benfica",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885379",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-05T15:30Z"
           },
           {
             "round": 13,
@@ -10949,7 +10949,7 @@
             "id": "401885381",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "kickoffUtc": "2026-12-06T18:00Z"
           },
           {
             "round": 13,
@@ -10964,22 +10964,22 @@
             "id": "401885378",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "kickoffUtc": "2026-12-06T15:30Z"
           },
           {
             "round": 13,
-            "date": "2026-12-06",
-            "time": "TBD",
+            "date": "2026-12-05",
+            "time": "20:30",
             "homeTeam": "Braga",
             "awayTeam": "Arouca",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885382",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-05T20:30Z"
           },
           {
             "round": 13,
@@ -10994,7 +10994,7 @@
             "id": "401885380",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "kickoffUtc": "2026-12-06T20:30Z"
           }
         ]
       },
@@ -11003,48 +11003,48 @@
         "games": [
           {
             "round": 14,
-            "date": "2026-12-13",
-            "time": "TBD",
+            "date": "2026-12-12",
+            "time": "18:00",
             "homeTeam": "Maritimo",
             "awayTeam": "Rio Ave",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885371",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-13T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-12T18:00Z"
           },
           {
             "round": 14,
-            "date": "2026-12-13",
-            "time": "TBD",
+            "date": "2026-12-11",
+            "time": "20:15",
             "homeTeam": "Académico de Viseu",
             "awayTeam": "Arouca",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885375",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-13T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-11T20:15Z"
           },
           {
             "round": 14,
-            "date": "2026-12-13",
-            "time": "TBD",
+            "date": "2026-12-12",
+            "time": "20:30",
             "homeTeam": "Gil Vicente",
             "awayTeam": "Sporting CP",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885372",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-13T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-12T20:30Z"
           },
           {
             "round": 14,
@@ -11059,7 +11059,7 @@
             "id": "401885374",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-13T20:00Z"
+            "kickoffUtc": "2026-12-13T15:30Z"
           },
           {
             "round": 14,
@@ -11074,7 +11074,7 @@
             "id": "401885367",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-13T20:00Z"
+            "kickoffUtc": "2026-12-13T18:00Z"
           },
           {
             "round": 14,
@@ -11089,37 +11089,37 @@
             "id": "401885370",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-13T20:00Z"
+            "kickoffUtc": "2026-12-13T15:30Z"
           },
           {
             "round": 14,
-            "date": "2026-12-13",
-            "time": "TBD",
+            "date": "2026-12-12",
+            "time": "15:30",
             "homeTeam": "Estoril",
             "awayTeam": "Santa Clara",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885373",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-13T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-12T15:30Z"
           },
           {
             "round": 14,
-            "date": "2026-12-13",
-            "time": "TBD",
+            "date": "2026-12-14",
+            "time": "20:15",
             "homeTeam": "Benfica",
             "awayTeam": "Braga",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885368",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-13T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-14T20:15Z"
           },
           {
             "round": 14,
@@ -11134,7 +11134,7 @@
             "id": "401885369",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-13T20:00Z"
+            "kickoffUtc": "2026-12-13T20:30Z"
           }
         ]
       },
@@ -16410,13 +16410,13 @@
   },
   "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-03T02:08:57.886Z",
-    "la-liga": "2026-11-03T02:08:57.886Z",
-    "bundesliga": "2026-11-03T02:08:57.886Z",
-    "serie-a": "2026-11-03T02:08:57.886Z",
-    "liga-portugal": "2026-11-03T02:08:57.886Z",
-    "ligue-1": "2026-11-03T02:08:57.886Z",
-    "eredivisie": "2026-11-03T02:08:57.886Z",
+    "premier-league": "2026-11-03T17:12:41.478Z",
+    "la-liga": "2026-11-03T17:12:41.478Z",
+    "bundesliga": "2026-11-03T17:12:41.478Z",
+    "serie-a": "2026-11-03T17:12:41.478Z",
+    "liga-portugal": "2026-11-03T17:12:41.478Z",
+    "ligue-1": "2026-11-03T17:12:41.478Z",
+    "eredivisie": "2026-11-03T17:12:41.478Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
