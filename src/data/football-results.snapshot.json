@@ -1039,6 +1039,25 @@
       "settledAt": "2026-10-17T17:20:31.721Z",
       "publishedAt": "2026-10-13T12:00:00.000-03:00"
     },
+    "champions-league:aek-athens-vs-real-madrid": {
+      "key": "champions-league:aek-athens-vs-real-madrid",
+      "league": "champions-league",
+      "slug": "aek-athens-vs-real-madrid",
+      "homeTeam": "AEK Athens",
+      "awayTeam": "Real Madrid",
+      "date": "2026-11-04",
+      "fixtureId": "401915383",
+      "predictionAccess": "free",
+      "prediction": "Real Madrid -1.5 Goals (handicap)",
+      "odds": 1.61,
+      "finalScore": {
+        "home": 2,
+        "away": 3
+      },
+      "result": "red",
+      "settledAt": "2026-11-04T22:43:22.955Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
+    },
     "champions-league:arsenal-vs-lille": {
       "key": "champions-league:arsenal-vs-lille",
       "league": "champions-league",
@@ -1150,6 +1169,25 @@
       "settledAt": "2026-10-14T22:29:05.086Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
+    "champions-league:borussia-dortmund-vs-real-betis": {
+      "key": "champions-league:borussia-dortmund-vs-real-betis",
+      "league": "champions-league",
+      "slug": "borussia-dortmund-vs-real-betis",
+      "homeTeam": "Borussia Dortmund",
+      "awayTeam": "Real Betis",
+      "date": "2026-11-04",
+      "fixtureId": "401915304",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.6,
+      "finalScore": {
+        "home": 2,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-11-04T22:43:22.955Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
+    },
     "champions-league:club-brugge-vs-lens": {
       "key": "champions-league:club-brugge-vs-lens",
       "league": "champions-league",
@@ -1185,6 +1223,44 @@
       "result": "green",
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-21T05:45:00-03:00"
+    },
+    "champions-league:fc-porto-vs-napoli": {
+      "key": "champions-league:fc-porto-vs-napoli",
+      "league": "champions-league",
+      "slug": "fc-porto-vs-napoli",
+      "homeTeam": "FC Porto",
+      "awayTeam": "Napoli",
+      "date": "2026-11-04",
+      "fixtureId": "401915301",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.71,
+      "finalScore": {
+        "home": 4,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-11-04T22:43:22.955Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
+    },
+    "champions-league:fenerbahce-vs-liverpool": {
+      "key": "champions-league:fenerbahce-vs-liverpool",
+      "league": "champions-league",
+      "slug": "fenerbahce-vs-liverpool",
+      "homeTeam": "Fenerbahçe",
+      "awayTeam": "Liverpool",
+      "date": "2026-11-04",
+      "fixtureId": "401915382",
+      "predictionAccess": "free",
+      "prediction": "Fenerbahçe +1.5 Goals (handicap)",
+      "odds": 1.74,
+      "finalScore": {
+        "home": 3,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-11-04T22:43:22.955Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
     },
     "champions-league:fenerbahce-vs-slavia-praha": {
       "key": "champions-league:fenerbahce-vs-slavia-praha",
@@ -1315,6 +1391,25 @@
       "result": "red",
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "champions-league:lens-vs-como": {
+      "key": "champions-league:lens-vs-como",
+      "league": "champions-league",
+      "slug": "lens-vs-como",
+      "homeTeam": "Lens",
+      "awayTeam": "Como",
+      "date": "2026-11-04",
+      "fixtureId": "401915305",
+      "predictionAccess": "free",
+      "prediction": "Lens or Draw (1X)",
+      "odds": 1.85,
+      "finalScore": {
+        "home": 1,
+        "away": 9
+      },
+      "result": "red",
+      "settledAt": "2026-11-04T22:43:22.955Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
     },
     "champions-league:lens-vs-sporting-cp": {
       "key": "champions-league:lens-vs-sporting-cp",
@@ -1464,6 +1559,44 @@
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-18T21:30:00.000-03:00"
     },
+    "champions-league:psv-eindhoven-vs-club-brugge": {
+      "key": "champions-league:psv-eindhoven-vs-club-brugge",
+      "league": "champions-league",
+      "slug": "psv-eindhoven-vs-club-brugge",
+      "homeTeam": "PSV Eindhoven",
+      "awayTeam": "Club Brugge",
+      "date": "2026-11-04",
+      "fixtureId": "401915303",
+      "predictionAccess": "free",
+      "prediction": "PSV Eindhoven or Draw (1X) + Over 2.5 Goals",
+      "odds": 1.88,
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-11-04T22:43:22.955Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
+    },
+    "champions-league:rb-leipzig-vs-manchester-city": {
+      "key": "champions-league:rb-leipzig-vs-manchester-city",
+      "league": "champions-league",
+      "slug": "rb-leipzig-vs-manchester-city",
+      "homeTeam": "RB Leipzig",
+      "awayTeam": "Manchester City",
+      "date": "2026-11-04",
+      "fixtureId": "401915306",
+      "predictionAccess": "free",
+      "prediction": "Over 3.5 Goals",
+      "odds": 1.86,
+      "finalScore": {
+        "home": 2,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-11-04T22:43:22.955Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
+    },
     "champions-league:real-betis-vs-feyenoord": {
       "key": "champions-league:real-betis-vs-feyenoord",
       "league": "champions-league",
@@ -1609,6 +1742,25 @@
       "result": "green",
       "settledAt": "2026-10-14T22:29:05.086Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "champions-league:slavia-prague-vs-arsenal": {
+      "key": "champions-league:slavia-prague-vs-arsenal",
+      "league": "champions-league",
+      "slug": "slavia-prague-vs-arsenal",
+      "homeTeam": "Slavia Prague",
+      "awayTeam": "Arsenal",
+      "date": "2026-11-04",
+      "fixtureId": "401915381",
+      "predictionAccess": "free",
+      "prediction": "Arsenal -1.5 Goals (handicap)",
+      "odds": 1.74,
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-11-04T22:43:22.955Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
     },
     "champions-league:slovan-bratislava-vs-stuttgart": {
       "key": "champions-league:slovan-bratislava-vs-stuttgart",

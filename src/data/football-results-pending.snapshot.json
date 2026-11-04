@@ -1,5 +1,33 @@
 {
   "version": 1,
-  "records": {},
-  "reconcileReasons": {}
+  "records": {
+    "brasileirao-serie-a:athletico-pr-vs-vasco": {
+      "key": "brasileirao-serie-a:athletico-pr-vs-vasco",
+      "league": "brasileirao-serie-a",
+      "slug": "athletico-pr-vs-vasco",
+      "homeTeam": "Athletico-PR",
+      "awayTeam": "Vasco",
+      "date": "2026-11-04",
+      "predictionAccess": "free",
+      "prediction": "Athletico-PR or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.72,
+      "reason": "NOT_COMPLETED"
+    },
+    "brasileirao-serie-a:flamengo-vs-gremio": {
+      "key": "brasileirao-serie-a:flamengo-vs-gremio",
+      "league": "brasileirao-serie-a",
+      "slug": "flamengo-vs-gremio",
+      "homeTeam": "Flamengo",
+      "awayTeam": "Grêmio",
+      "date": "2026-11-04",
+      "predictionAccess": "free",
+      "prediction": "Flamengo -1.5 Goals (handicap)",
+      "odds": 1.5,
+      "reason": "NOT_COMPLETED"
+    }
+  },
+  "reconcileReasons": {
+    "brasileirao-serie-a:athletico-pr-vs-vasco": "NOT_COMPLETED",
+    "brasileirao-serie-a:flamengo-vs-gremio": "NOT_COMPLETED"
+  }
 }
