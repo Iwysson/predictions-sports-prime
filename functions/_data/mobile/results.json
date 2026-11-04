@@ -1,6 +1,96 @@
 {
-  "generatedAt": "2026-10-30T10:36:37.625Z",
+  "generatedAt": "2026-11-04T10:16:59.026Z",
   "records": [
+    {
+      "slug": "corinthians-vs-mirassol",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Corinthians",
+      "awayTeam": "Mirassol",
+      "date": "2026-10-30",
+      "prediction": "Corinthians or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.65,
+      "result": "green"
+    },
+    {
+      "slug": "sv-elversberg-vs-mainz-05",
+      "league": "bundesliga",
+      "homeTeam": "SV Elversberg",
+      "awayTeam": "Mainz 05",
+      "date": "2026-10-30",
+      "prediction": "Elversberg or Draw (1X)",
+      "odds": 1.72,
+      "result": "green"
+    },
+    {
+      "slug": "bodo-glimt-vs-viking",
+      "league": "eliteserien",
+      "homeTeam": "Bodø/Glimt",
+      "awayTeam": "Viking",
+      "date": "2026-10-30",
+      "prediction": "Over 3.5 Goals",
+      "odds": 1.75,
+      "result": "green"
+    },
+    {
+      "slug": "villarreal-vs-espanyol",
+      "league": "la-liga",
+      "homeTeam": "Villarreal",
+      "awayTeam": "Espanyol",
+      "date": "2026-10-30",
+      "prediction": "Espanyol +1.5 Goals (handicap)",
+      "odds": 1.75,
+      "result": "green"
+    },
+    {
+      "slug": "casa-pia-vs-sporting-cp",
+      "league": "liga-portugal",
+      "homeTeam": "Casa Pia",
+      "awayTeam": "Sporting CP",
+      "date": "2026-10-30",
+      "prediction": "Sporting CP to Win + Over 2.5 Goals",
+      "odds": 1.76,
+      "result": "red"
+    },
+    {
+      "slug": "le-havre-vs-psg",
+      "league": "ligue-1",
+      "homeTeam": "Le Havre",
+      "awayTeam": "Paris Saint-Germain",
+      "date": "2026-10-30",
+      "prediction": "Paris Saint-Germain -1.5 Goals (handicap)",
+      "odds": 1.85,
+      "result": "green"
+    },
+    {
+      "slug": "lille-vs-lens",
+      "league": "ligue-1",
+      "homeTeam": "Lille",
+      "awayTeam": "Lens",
+      "date": "2026-10-30",
+      "prediction": "Over 1.5 Goals + Over 7.5 Total Corners",
+      "odds": 1.65,
+      "result": "red"
+    },
+    {
+      "slug": "nice-vs-rennes",
+      "league": "ligue-1",
+      "homeTeam": "Nice",
+      "awayTeam": "Rennes",
+      "date": "2026-10-30",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.67,
+      "result": "green"
+    },
+    {
+      "slug": "konyaspor-vs-galatasaray",
+      "league": "super-lig",
+      "homeTeam": "Konyaspor",
+      "awayTeam": "Galatasaray",
+      "date": "2026-10-30",
+      "prediction": "Galatasaray to Win",
+      "odds": 1.62,
+      "result": "green"
+    },
     {
       "slug": "atletico-mg-vs-cruzeiro",
       "league": "brasileirao-serie-a",

@@ -1,47 +1,72 @@
 [
   {
-    "slug": "villarreal-vs-espanyol",
-    "date": "2026-10-30",
+    "slug": "athletico-pr-vs-vasco",
+    "date": "2026-11-04",
     "timezone": "America/New_York"
   },
   {
-    "slug": "corinthians-vs-mirassol",
-    "date": "2026-10-30",
+    "slug": "flamengo-vs-gremio",
+    "date": "2026-11-04",
     "timezone": "America/New_York"
   },
   {
-    "slug": "casa-pia-vs-sporting-cp",
-    "date": "2026-10-30",
+    "slug": "sao-paulo-vs-corinthians",
+    "date": "2026-11-04",
     "timezone": "America/New_York"
   },
   {
-    "slug": "le-havre-vs-psg",
-    "date": "2026-10-30",
+    "slug": "botafogo-vs-atletico-mg",
+    "date": "2026-11-04",
     "timezone": "America/New_York"
   },
   {
-    "slug": "nice-vs-rennes",
-    "date": "2026-10-30",
+    "slug": "aek-athens-vs-real-madrid",
+    "date": "2026-11-04",
     "timezone": "America/New_York"
   },
   {
-    "slug": "lille-vs-lens",
-    "date": "2026-10-30",
+    "slug": "fenerbahce-vs-liverpool",
+    "date": "2026-11-04",
     "timezone": "America/New_York"
   },
   {
-    "slug": "sv-elversberg-vs-mainz-05",
-    "date": "2026-10-30",
+    "slug": "slavia-prague-vs-arsenal",
+    "date": "2026-11-04",
     "timezone": "America/New_York"
   },
   {
-    "slug": "bodo-glimt-vs-viking",
-    "date": "2026-10-30",
+    "slug": "psv-eindhoven-vs-club-brugge",
+    "date": "2026-11-04",
     "timezone": "America/New_York"
   },
   {
-    "slug": "konyaspor-vs-galatasaray",
-    "date": "2026-10-30",
+    "slug": "borussia-dortmund-vs-real-betis",
+    "date": "2026-11-04",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "viking-vs-sabah",
+    "date": "2026-11-04",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "fc-porto-vs-napoli",
+    "date": "2026-11-04",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "rb-leipzig-vs-manchester-city",
+    "date": "2026-11-04",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "lens-vs-como",
+    "date": "2026-11-04",
+    "timezone": "America/New_York"
+  },
+  {
+    "slug": "rennes-vs-olympiacos",
+    "date": "2026-11-04",
     "timezone": "America/New_York"
   }
 ]

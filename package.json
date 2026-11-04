@@ -28,6 +28,7 @@
     "test:results-reconcile": "tsx scripts/test-results-reconcile.mts",
     "test:retired-sports": "tsx scripts/test-retired-sports.mts",
     "test:oct30-release": "tsx scripts/test-oct30-release.mts",
+    "test:nov04-release": "tsx scripts/test-nov04-release.mts",
     "results:reconcile": "tsx scripts/reconcile-football-results.mts",
     "results:settle": "tsx scripts/settle-football-results.mts",
     "results:validate": "tsx scripts/validate-football-results.mts",

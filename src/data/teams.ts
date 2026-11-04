@@ -14,6 +14,7 @@ export const teamBadgeAssets: Record<string, TeamBadgeAsset> = {
   // Crests verified against TheSportsDB (cross-checked with Wikipedia for Slavia Praha).
   "Sabah": { src: "/team-badges/sabah.png", sourceUrl: "https://www.thesportsdb.com/team/139455-Sabah-Baku" },
   "Slavia Praha": { src: "/team-badges/slavia-praha.png", sourceUrl: "https://en.wikipedia.org/wiki/File:SK_Slavia_Praha_full_logo.svg" },
+  "Slavia Prague": { src: "/team-badges/slavia-praha.png", sourceUrl: "https://en.wikipedia.org/wiki/File:SK_Slavia_Praha_full_logo.svg" },
   "Shakhtar Donetsk": { src: "/team-badges/shakhtar.png", sourceUrl: "https://www.thesportsdb.com/team/134126-Shakhtar-Donetsk" },
   "Slovan Bratislava": { src: "/team-badges/slovan-bratislava.png", sourceUrl: "https://www.thesportsdb.com/team/134090-Slovan-Bratislava" },
   // MLS badges added from verified league/provider assets.
