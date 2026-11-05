@@ -291,6 +291,16 @@
       "kickoffUtc": "2026-10-13T19:00Z",
       "capturedAt": "2026-10-30T09:50:35.212Z"
     },
+    "champions-league:viking-vs-sabah": {
+      "status": "completed",
+      "homeScore": 4,
+      "awayScore": 1,
+      "provider": "espn",
+      "providerEventId": "401915302",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915302",
+      "kickoffUtc": "2026-11-04T20:00Z",
+      "capturedAt": "2026-11-05T02:47:59.135Z"
+    },
     "champions-league:villarreal-vs-napoli": {
       "status": "completed",
       "homeScore": 3,
@@ -1300,6 +1310,16 @@
       "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915572",
       "kickoffUtc": "2026-10-15T19:00Z",
       "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:rennes-vs-olympiacos": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401915551",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915551",
+      "kickoffUtc": "2026-11-04T15:30Z",
+      "capturedAt": "2026-11-05T02:47:59.135Z"
     },
     "uefa-europa-league:salzburg-vs-ac-milan": {
       "status": "completed",

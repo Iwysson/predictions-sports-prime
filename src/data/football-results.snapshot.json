@@ -39,6 +39,25 @@
       "settledAt": "2026-10-18T01:12:41.880Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
+    "brasileirao-serie-a:athletico-pr-vs-vasco": {
+      "key": "brasileirao-serie-a:athletico-pr-vs-vasco",
+      "league": "brasileirao-serie-a",
+      "slug": "athletico-pr-vs-vasco",
+      "homeTeam": "Athletico-PR",
+      "awayTeam": "Vasco",
+      "date": "2026-11-04",
+      "fixtureId": "editorial:brasileirao-serie-a:athletico-pr-vs-vasco:2026-11-04",
+      "predictionAccess": "free",
+      "prediction": "Athletico-PR or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.72,
+      "finalScore": {
+        "home": 1,
+        "away": 3
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T02:48:00.419Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
+    },
     "brasileirao-serie-a:atletico-mg-vs-coritiba": {
       "key": "brasileirao-serie-a:atletico-mg-vs-coritiba",
       "league": "brasileirao-serie-a",
@@ -132,6 +151,25 @@
       "result": "green",
       "settledAt": "2026-10-12T00:45:42.338Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "brasileirao-serie-a:botafogo-vs-atletico-mg": {
+      "key": "brasileirao-serie-a:botafogo-vs-atletico-mg",
+      "league": "brasileirao-serie-a",
+      "slug": "botafogo-vs-atletico-mg",
+      "homeTeam": "Botafogo",
+      "awayTeam": "Atlético-MG",
+      "date": "2026-11-04",
+      "fixtureId": "editorial:brasileirao-serie-a:botafogo-vs-atletico-mg:2026-11-04",
+      "predictionAccess": "free",
+      "prediction": "Botafogo to Win",
+      "odds": 1.73,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "green",
+      "settledAt": "2026-11-05T02:48:00.419Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
     },
     "brasileirao-serie-a:botafogo-vs-chapecoense": {
       "key": "brasileirao-serie-a:botafogo-vs-chapecoense",
@@ -338,6 +376,25 @@
       "result": "green",
       "settledAt": "2026-10-12T00:45:42.338Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "brasileirao-serie-a:flamengo-vs-gremio": {
+      "key": "brasileirao-serie-a:flamengo-vs-gremio",
+      "league": "brasileirao-serie-a",
+      "slug": "flamengo-vs-gremio",
+      "homeTeam": "Flamengo",
+      "awayTeam": "Grêmio",
+      "date": "2026-11-04",
+      "fixtureId": "editorial:brasileirao-serie-a:flamengo-vs-gremio:2026-11-04",
+      "predictionAccess": "free",
+      "prediction": "Flamengo -1.5 Goals (handicap)",
+      "odds": 1.5,
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-11-05T02:48:00.419Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
     },
     "brasileirao-serie-a:fluminense-vs-coritiba": {
       "key": "brasileirao-serie-a:fluminense-vs-coritiba",
@@ -565,6 +622,25 @@
       "result": "green",
       "settledAt": "2026-10-09T06:14:59.089Z",
       "publishedAt": "2026-10-05T15:00:00.000Z"
+    },
+    "brasileirao-serie-a:sao-paulo-vs-corinthians": {
+      "key": "brasileirao-serie-a:sao-paulo-vs-corinthians",
+      "league": "brasileirao-serie-a",
+      "slug": "sao-paulo-vs-corinthians",
+      "homeTeam": "São Paulo",
+      "awayTeam": "Corinthians",
+      "date": "2026-11-04",
+      "fixtureId": "editorial:brasileirao-serie-a:sao-paulo-vs-corinthians:2026-11-04",
+      "predictionAccess": "free",
+      "prediction": "São Paulo or Draw (1X) + Over 1.5 Goals",
+      "odds": 2,
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T02:48:00.419Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
     },
     "brasileirao-serie-a:sao-paulo-vs-vasco": {
       "key": "brasileirao-serie-a:sao-paulo-vs-vasco",
@@ -1833,6 +1909,24 @@
       "result": "green",
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "champions-league:viking-vs-sabah": {
+      "key": "champions-league:viking-vs-sabah",
+      "league": "champions-league",
+      "slug": "viking-vs-sabah",
+      "homeTeam": "Viking",
+      "awayTeam": "Sabah",
+      "date": "2026-11-04",
+      "predictionAccess": "free",
+      "prediction": "Viking to Win + Over 2.5 Goals",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 4,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-11-05T02:48:00.419Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
     },
     "champions-league:villarreal-vs-napoli": {
       "key": "champions-league:villarreal-vs-napoli",
@@ -6522,6 +6616,24 @@
       "result": "red",
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
+    },
+    "uefa-europa-league:rennes-vs-olympiacos": {
+      "key": "uefa-europa-league:rennes-vs-olympiacos",
+      "league": "uefa-europa-league",
+      "slug": "rennes-vs-olympiacos",
+      "homeTeam": "Rennes",
+      "awayTeam": "Olympiacos",
+      "date": "2026-11-04",
+      "predictionAccess": "free",
+      "prediction": "Rennes or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.74,
+      "finalScore": {
+        "home": 0,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T02:48:00.419Z",
+      "publishedAt": "2026-11-04T00:00:00-05:00"
     },
     "uefa-europa-league:salzburg-vs-ac-milan": {
       "key": "uefa-europa-league:salzburg-vs-ac-milan",
