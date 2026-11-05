@@ -6086,6 +6086,44 @@
       "settledAt": "2026-10-19T19:29:38.238Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
+    "uefa-europa-league:ac-milan-vs-ferencvaros": {
+      "key": "uefa-europa-league:ac-milan-vs-ferencvaros",
+      "league": "uefa-europa-league",
+      "slug": "ac-milan-vs-ferencvaros",
+      "homeTeam": "AC Milan",
+      "awayTeam": "Ferencváros",
+      "date": "2026-11-05",
+      "fixtureId": "401915534",
+      "predictionAccess": "free",
+      "prediction": "AC Milan Win + Over 2.5 Total Goals",
+      "odds": 1.74,
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
+    "uefa-europa-league:anderlecht-vs-rb-salzburg": {
+      "key": "uefa-europa-league:anderlecht-vs-rb-salzburg",
+      "league": "uefa-europa-league",
+      "slug": "anderlecht-vs-rb-salzburg",
+      "homeTeam": "Anderlecht",
+      "awayTeam": "RB Salzburg",
+      "date": "2026-11-05",
+      "fixtureId": "401915538",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.6,
+      "finalScore": {
+        "home": 2,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
     "uefa-europa-league:ararat-armenia-vs-az-alkmaar": {
       "key": "uefa-europa-league:ararat-armenia-vs-az-alkmaar",
       "league": "uefa-europa-league",
@@ -6122,6 +6160,44 @@
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
     },
+    "uefa-europa-league:az-alkmaar-vs-juventus": {
+      "key": "uefa-europa-league:az-alkmaar-vs-juventus",
+      "league": "uefa-europa-league",
+      "slug": "az-alkmaar-vs-juventus",
+      "homeTeam": "AZ Alkmaar",
+      "awayTeam": "Juventus",
+      "date": "2026-11-05",
+      "fixtureId": "401915529",
+      "predictionAccess": "free",
+      "prediction": "Juventus or Draw (X2) + Over 1.5 Total Goals",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
+    "uefa-europa-league:bayer-leverkusen-vs-olympique-marseille": {
+      "key": "uefa-europa-league:bayer-leverkusen-vs-olympique-marseille",
+      "league": "uefa-europa-league",
+      "slug": "bayer-leverkusen-vs-olympique-marseille",
+      "homeTeam": "Bayer Leverkusen",
+      "awayTeam": "Olympique Marseille",
+      "date": "2026-11-05",
+      "fixtureId": "401915533",
+      "predictionAccess": "free",
+      "prediction": "Over 3.5 Total Goals",
+      "odds": 2,
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
     "uefa-europa-league:benfica-vs-celtic": {
       "key": "uefa-europa-league:benfica-vs-celtic",
       "league": "uefa-europa-league",
@@ -6139,6 +6215,25 @@
       "result": "green",
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
+    },
+    "uefa-europa-league:benfica-vs-lech-poznan": {
+      "key": "uefa-europa-league:benfica-vs-lech-poznan",
+      "league": "uefa-europa-league",
+      "slug": "benfica-vs-lech-poznan",
+      "homeTeam": "Benfica",
+      "awayTeam": "Lech Poznań",
+      "date": "2026-11-05",
+      "fixtureId": "401915525",
+      "predictionAccess": "free",
+      "prediction": "Benfica Win + Under 4.5 Total Goals",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
     },
     "uefa-europa-league:besiktas-vs-crystal-palace": {
       "key": "uefa-europa-league:besiktas-vs-crystal-palace",
@@ -6249,6 +6344,44 @@
       "settledAt": "2026-10-15T21:38:40.291Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
     },
+    "uefa-europa-league:celta-vigo-vs-union-saint-gilloise": {
+      "key": "uefa-europa-league:celta-vigo-vs-union-saint-gilloise",
+      "league": "uefa-europa-league",
+      "slug": "celta-vigo-vs-union-saint-gilloise",
+      "homeTeam": "Celta Vigo",
+      "awayTeam": "Union Saint-Gilloise",
+      "date": "2026-11-05",
+      "fixtureId": "401915531",
+      "predictionAccess": "free",
+      "prediction": "Celta Vigo or Draw (1X) + Over 1.5 Total Goals",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 1,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
+    "uefa-europa-league:celtic-vs-besiktas": {
+      "key": "uefa-europa-league:celtic-vs-besiktas",
+      "league": "uefa-europa-league",
+      "slug": "celtic-vs-besiktas",
+      "homeTeam": "Celtic",
+      "awayTeam": "Beşiktaş",
+      "date": "2026-11-05",
+      "fixtureId": "401915522",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.6,
+      "finalScore": {
+        "home": 3,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
     "uefa-europa-league:celtic-vs-celta": {
       "key": "uefa-europa-league:celtic-vs-celta",
       "league": "uefa-europa-league",
@@ -6266,6 +6399,25 @@
       "result": "red",
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-21T06:00:00-03:00"
+    },
+    "uefa-europa-league:crystal-palace-vs-tsg-hoffenheim": {
+      "key": "uefa-europa-league:crystal-palace-vs-tsg-hoffenheim",
+      "league": "uefa-europa-league",
+      "slug": "crystal-palace-vs-tsg-hoffenheim",
+      "homeTeam": "Crystal Palace",
+      "awayTeam": "TSG Hoffenheim",
+      "date": "2026-11-05",
+      "fixtureId": "401915526",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.55,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
     },
     "uefa-europa-league:dinamo-zagreb-vs-anderlecht": {
       "key": "uefa-europa-league:dinamo-zagreb-vs-anderlecht",
@@ -6340,6 +6492,25 @@
       "result": "green",
       "settledAt": "2026-10-15T21:38:40.291Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
+    },
+    "uefa-europa-league:hapoel-beer-sheva-vs-ofi-crete": {
+      "key": "uefa-europa-league:hapoel-beer-sheva-vs-ofi-crete",
+      "league": "uefa-europa-league",
+      "slug": "hapoel-beer-sheva-vs-ofi-crete",
+      "homeTeam": "Hapoel Be’er Sheva",
+      "awayTeam": "OFI Crete",
+      "date": "2026-11-05",
+      "fixtureId": "official:uefa-europa-league:hapoel-be-er-sheva-vs-ofi-crete:2026-11-05",
+      "predictionAccess": "free",
+      "prediction": "Hapoel Be’er Sheva or Draw (1X) + Over 1.5 Total Goals",
+      "odds": 1.77,
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
     },
     "uefa-europa-league:hoffenheim-vs-besiktas": {
       "key": "uefa-europa-league:hoffenheim-vs-besiktas",
@@ -6469,6 +6640,25 @@
       "settledAt": "2026-10-22T20:35:26.380Z",
       "publishedAt": "2026-10-21T06:00:00-03:00"
     },
+    "uefa-europa-league:levski-sofia-vs-jagiellonia-bialystok": {
+      "key": "uefa-europa-league:levski-sofia-vs-jagiellonia-bialystok",
+      "league": "uefa-europa-league",
+      "slug": "levski-sofia-vs-jagiellonia-bialystok",
+      "homeTeam": "Levski Sofia",
+      "awayTeam": "Jagiellonia Białystok",
+      "date": "2026-11-05",
+      "fixtureId": "official:uefa-europa-league:levski-sofia-vs-jagiellonia-bia-ystok:2026-11-05",
+      "predictionAccess": "free",
+      "prediction": "Levski or Draw (1X) + Over 1.5 Total Goals",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
     "uefa-europa-league:lillestrom-vs-real-sociedad": {
       "key": "uefa-europa-league:lillestrom-vs-real-sociedad",
       "league": "uefa-europa-league",
@@ -6544,6 +6734,25 @@
       "settledAt": "2026-10-15T21:38:40.291Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
     },
+    "uefa-europa-league:nec-nijmegen-vs-omonia-nicosia": {
+      "key": "uefa-europa-league:nec-nijmegen-vs-omonia-nicosia",
+      "league": "uefa-europa-league",
+      "slug": "nec-nijmegen-vs-omonia-nicosia",
+      "homeTeam": "NEC Nijmegen",
+      "awayTeam": "Omonia Nicosia",
+      "date": "2026-11-05",
+      "fixtureId": "401915535",
+      "predictionAccess": "free",
+      "prediction": "NEC Nijmegen Win",
+      "odds": 1.79,
+      "finalScore": {
+        "home": 3,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
     "uefa-europa-league:ofi-crete-vs-leverkusen": {
       "key": "uefa-europa-league:ofi-crete-vs-leverkusen",
       "league": "uefa-europa-league",
@@ -6599,6 +6808,25 @@
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-21T06:00:00-03:00"
     },
+    "uefa-europa-league:real-sociedad-vs-lyon": {
+      "key": "uefa-europa-league:real-sociedad-vs-lyon",
+      "league": "uefa-europa-league",
+      "slug": "real-sociedad-vs-lyon",
+      "homeTeam": "Real Sociedad",
+      "awayTeam": "Lyon",
+      "date": "2026-11-05",
+      "fixtureId": "401915537",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.6,
+      "finalScore": {
+        "home": 1,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
     "uefa-europa-league:rennes-vs-ofi-crete": {
       "key": "uefa-europa-league:rennes-vs-ofi-crete",
       "league": "uefa-europa-league",
@@ -6653,6 +6881,44 @@
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-11T12:00:00.000-03:00"
     },
+    "uefa-europa-league:sk-sturm-graz-vs-nk-celje": {
+      "key": "uefa-europa-league:sk-sturm-graz-vs-nk-celje",
+      "league": "uefa-europa-league",
+      "slug": "sk-sturm-graz-vs-nk-celje",
+      "homeTeam": "SK Sturm Graz",
+      "awayTeam": "NK Celje",
+      "date": "2026-11-05",
+      "fixtureId": "401915524",
+      "predictionAccess": "free",
+      "prediction": "SK Sturm Graz Win",
+      "odds": 1.55,
+      "finalScore": {
+        "home": 2,
+        "away": 3
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
+    "uefa-europa-league:sparta-praha-vs-afc-bournemouth": {
+      "key": "uefa-europa-league:sparta-praha-vs-afc-bournemouth",
+      "league": "uefa-europa-league",
+      "slug": "sparta-praha-vs-afc-bournemouth",
+      "homeTeam": "Sparta Praha",
+      "awayTeam": "AFC Bournemouth",
+      "date": "2026-11-05",
+      "fixtureId": "401915528",
+      "predictionAccess": "free",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.65,
+      "finalScore": {
+        "home": 1,
+        "away": 3
+      },
+      "result": "green",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
     "uefa-europa-league:sparta-praha-vs-lillestr-m": {
       "key": "uefa-europa-league:sparta-praha-vs-lillestr-m",
       "league": "uefa-europa-league",
@@ -6689,6 +6955,44 @@
       "result": "red",
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-21T06:00:00-03:00"
+    },
+    "uefa-europa-league:sunderland-vs-dinamo-zagreb": {
+      "key": "uefa-europa-league:sunderland-vs-dinamo-zagreb",
+      "league": "uefa-europa-league",
+      "slug": "sunderland-vs-dinamo-zagreb",
+      "homeTeam": "Sunderland",
+      "awayTeam": "Dinamo Zagreb",
+      "date": "2026-11-05",
+      "fixtureId": "401915523",
+      "predictionAccess": "free",
+      "prediction": "Sunderland Win + Over 1.5 Total Goals",
+      "odds": 1.7,
+      "finalScore": {
+        "home": 0,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
+    "uefa-europa-league:torreense-vs-ararat-armenia": {
+      "key": "uefa-europa-league:torreense-vs-ararat-armenia",
+      "league": "uefa-europa-league",
+      "slug": "torreense-vs-ararat-armenia",
+      "homeTeam": "Torreense",
+      "awayTeam": "Ararat-Armenia",
+      "date": "2026-11-05",
+      "fixtureId": "401915530",
+      "predictionAccess": "free",
+      "prediction": "Torreense Win",
+      "odds": 1.72,
+      "finalScore": {
+        "home": 3,
+        "away": 2
+      },
+      "result": "green",
+      "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
     },
     "uefa-europa-league:torreense-vs-sunderland": {
       "key": "uefa-europa-league:torreense-vs-sunderland",

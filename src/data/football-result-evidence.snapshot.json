@@ -1221,6 +1221,16 @@
       "kickoffUtc": "2026-10-22T16:45Z",
       "capturedAt": "2026-10-30T09:50:35.212Z"
     },
+    "uefa-europa-league:hapoel-beer-sheva-vs-ofi-crete": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 2,
+      "provider": "espn",
+      "providerEventId": "401915532",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915532",
+      "kickoffUtc": "2026-11-05T20:00Z",
+      "capturedAt": "2026-11-05T22:51:29.241Z"
+    },
     "uefa-europa-league:hoffenheim-vs-besiktas": {
       "status": "completed",
       "homeScore": 2,
@@ -1270,6 +1280,16 @@
       "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401915576",
       "kickoffUtc": "2026-10-15T16:45Z",
       "capturedAt": "2026-10-30T09:50:35.212Z"
+    },
+    "uefa-europa-league:levski-sofia-vs-jagiellonia-bialystok": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "fotmob",
+      "providerEventId": "6112380",
+      "sourceUrl": "https://www.fotmob.com/match/6112380",
+      "kickoffUtc": "2026-11-05T17:45:00.000Z",
+      "capturedAt": "2026-11-05T22:51:29.241Z"
     },
     "uefa-europa-league:lillestrom-vs-real-sociedad": {
       "status": "completed",
