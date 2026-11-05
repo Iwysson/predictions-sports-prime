@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-05T02:47:45.669Z",
+  "generatedAt": "2026-11-05T09:52:28.696Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -16408,20 +16408,15 @@
       }
     ]
   },
-  "predictionIds": {
-    "brasileirao-serie-a:athletico-pr-vs-vasco": "editorial:brasileirao-serie-a:athletico-pr-vs-vasco:2026-11-04",
-    "brasileirao-serie-a:botafogo-vs-atletico-mg": "editorial:brasileirao-serie-a:botafogo-vs-atletico-mg:2026-11-04",
-    "brasileirao-serie-a:flamengo-vs-gremio": "editorial:brasileirao-serie-a:flamengo-vs-gremio:2026-11-04",
-    "brasileirao-serie-a:sao-paulo-vs-corinthians": "editorial:brasileirao-serie-a:sao-paulo-vs-corinthians:2026-11-04"
-  },
+  "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-05T02:47:45.669Z",
-    "la-liga": "2026-11-05T02:47:45.669Z",
-    "bundesliga": "2026-11-05T02:47:45.669Z",
-    "serie-a": "2026-11-05T02:47:45.669Z",
-    "liga-portugal": "2026-11-05T02:47:45.669Z",
-    "ligue-1": "2026-11-05T02:47:45.669Z",
-    "eredivisie": "2026-11-05T02:47:45.669Z",
+    "premier-league": "2026-11-05T09:52:28.696Z",
+    "la-liga": "2026-11-05T09:52:28.696Z",
+    "bundesliga": "2026-11-05T09:52:28.696Z",
+    "serie-a": "2026-11-05T09:52:28.696Z",
+    "liga-portugal": "2026-11-05T09:52:28.696Z",
+    "ligue-1": "2026-11-05T09:52:28.696Z",
+    "eredivisie": "2026-11-05T09:52:28.696Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
