@@ -1,6 +1,146 @@
 {
-  "generatedAt": "2026-11-04T10:16:59.026Z",
+  "generatedAt": "2026-11-05T10:42:39.580Z",
   "records": [
+    {
+      "slug": "athletico-pr-vs-vasco",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Athletico-PR",
+      "awayTeam": "Vasco",
+      "date": "2026-11-04",
+      "prediction": "Athletico-PR or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.72,
+      "result": "red"
+    },
+    {
+      "slug": "botafogo-vs-atletico-mg",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Botafogo",
+      "awayTeam": "Atlético-MG",
+      "date": "2026-11-04",
+      "prediction": "Botafogo to Win",
+      "odds": 1.73,
+      "result": "green"
+    },
+    {
+      "slug": "flamengo-vs-gremio",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Flamengo",
+      "awayTeam": "Grêmio",
+      "date": "2026-11-04",
+      "prediction": "Flamengo -1.5 Goals (handicap)",
+      "odds": 1.5,
+      "result": "green"
+    },
+    {
+      "slug": "sao-paulo-vs-corinthians",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "São Paulo",
+      "awayTeam": "Corinthians",
+      "date": "2026-11-04",
+      "prediction": "São Paulo or Draw (1X) + Over 1.5 Goals",
+      "odds": 2,
+      "result": "red"
+    },
+    {
+      "slug": "aek-athens-vs-real-madrid",
+      "league": "champions-league",
+      "homeTeam": "AEK Athens",
+      "awayTeam": "Real Madrid",
+      "date": "2026-11-04",
+      "prediction": "Real Madrid -1.5 Goals (handicap)",
+      "odds": 1.61,
+      "result": "red"
+    },
+    {
+      "slug": "borussia-dortmund-vs-real-betis",
+      "league": "champions-league",
+      "homeTeam": "Borussia Dortmund",
+      "awayTeam": "Real Betis",
+      "date": "2026-11-04",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.6,
+      "result": "green"
+    },
+    {
+      "slug": "fc-porto-vs-napoli",
+      "league": "champions-league",
+      "homeTeam": "FC Porto",
+      "awayTeam": "Napoli",
+      "date": "2026-11-04",
+      "prediction": "Over 2.5 Goals",
+      "odds": 1.71,
+      "result": "green"
+    },
+    {
+      "slug": "fenerbahce-vs-liverpool",
+      "league": "champions-league",
+      "homeTeam": "Fenerbahçe",
+      "awayTeam": "Liverpool",
+      "date": "2026-11-04",
+      "prediction": "Fenerbahçe +1.5 Goals (handicap)",
+      "odds": 1.74,
+      "result": "green"
+    },
+    {
+      "slug": "lens-vs-como",
+      "league": "champions-league",
+      "homeTeam": "Lens",
+      "awayTeam": "Como",
+      "date": "2026-11-04",
+      "prediction": "Lens or Draw (1X)",
+      "odds": 1.85,
+      "result": "red"
+    },
+    {
+      "slug": "psv-eindhoven-vs-club-brugge",
+      "league": "champions-league",
+      "homeTeam": "PSV Eindhoven",
+      "awayTeam": "Club Brugge",
+      "date": "2026-11-04",
+      "prediction": "PSV Eindhoven or Draw (1X) + Over 2.5 Goals",
+      "odds": 1.88,
+      "result": "red"
+    },
+    {
+      "slug": "rb-leipzig-vs-manchester-city",
+      "league": "champions-league",
+      "homeTeam": "RB Leipzig",
+      "awayTeam": "Manchester City",
+      "date": "2026-11-04",
+      "prediction": "Over 3.5 Goals",
+      "odds": 1.86,
+      "result": "green"
+    },
+    {
+      "slug": "slavia-prague-vs-arsenal",
+      "league": "champions-league",
+      "homeTeam": "Slavia Prague",
+      "awayTeam": "Arsenal",
+      "date": "2026-11-04",
+      "prediction": "Arsenal -1.5 Goals (handicap)",
+      "odds": 1.74,
+      "result": "red"
+    },
+    {
+      "slug": "viking-vs-sabah",
+      "league": "champions-league",
+      "homeTeam": "Viking",
+      "awayTeam": "Sabah",
+      "date": "2026-11-04",
+      "prediction": "Viking to Win + Over 2.5 Goals",
+      "odds": 1.7,
+      "result": "green"
+    },
+    {
+      "slug": "rennes-vs-olympiacos",
+      "league": "uefa-europa-league",
+      "homeTeam": "Rennes",
+      "awayTeam": "Olympiacos",
+      "date": "2026-11-04",
+      "prediction": "Rennes or Draw (1X) + Over 1.5 Goals",
+      "odds": 1.74,
+      "result": "red"
+    },
     {
       "slug": "corinthians-vs-mirassol",
       "league": "brasileirao-serie-a",
