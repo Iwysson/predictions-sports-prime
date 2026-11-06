@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-06T02:52:51.246Z",
+  "generatedAt": "2026-11-06T09:57:33.630Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -16408,18 +16408,15 @@
       }
     ]
   },
-  "predictionIds": {
-    "brasileirao-serie-a:cruzeiro-vs-bahia": "editorial:brasileirao-serie-a:cruzeiro-vs-bahia:2026-11-05",
-    "brasileirao-serie-a:palmeiras-vs-remo": "editorial:brasileirao-serie-a:palmeiras-vs-remo:2026-11-05"
-  },
+  "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-06T02:52:51.246Z",
-    "la-liga": "2026-11-06T02:52:51.246Z",
-    "bundesliga": "2026-11-06T02:52:51.246Z",
-    "serie-a": "2026-11-06T02:52:51.246Z",
-    "liga-portugal": "2026-11-06T02:52:51.246Z",
-    "ligue-1": "2026-11-06T02:52:51.246Z",
-    "eredivisie": "2026-11-06T02:52:51.246Z",
+    "premier-league": "2026-11-06T09:57:33.630Z",
+    "la-liga": "2026-11-06T09:57:33.630Z",
+    "bundesliga": "2026-11-06T09:57:33.630Z",
+    "serie-a": "2026-11-06T09:57:33.630Z",
+    "liga-portugal": "2026-11-06T09:57:33.630Z",
+    "ligue-1": "2026-11-06T09:57:33.630Z",
+    "eredivisie": "2026-11-06T09:57:33.630Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
