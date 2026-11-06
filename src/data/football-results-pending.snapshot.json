@@ -1,20 +1,5 @@
 {
   "version": 1,
-  "records": {
-    "brasileirao-serie-a:palmeiras-vs-remo": {
-      "key": "brasileirao-serie-a:palmeiras-vs-remo",
-      "league": "brasileirao-serie-a",
-      "slug": "palmeiras-vs-remo",
-      "homeTeam": "Palmeiras",
-      "awayTeam": "Remo",
-      "date": "2026-11-05",
-      "predictionAccess": "free",
-      "prediction": "Palmeiras -1.5 Asian Handicap",
-      "odds": 1.66,
-      "reason": "NOT_COMPLETED"
-    }
-  },
-  "reconcileReasons": {
-    "brasileirao-serie-a:palmeiras-vs-remo": "NOT_COMPLETED"
-  }
+  "records": {},
+  "reconcileReasons": {}
 }

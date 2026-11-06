@@ -321,6 +321,25 @@
       "settledAt": "2026-10-12T22:47:32.243Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
     },
+    "brasileirao-serie-a:cruzeiro-vs-bahia": {
+      "key": "brasileirao-serie-a:cruzeiro-vs-bahia",
+      "league": "brasileirao-serie-a",
+      "slug": "cruzeiro-vs-bahia",
+      "homeTeam": "Cruzeiro",
+      "awayTeam": "Bahia",
+      "date": "2026-11-05",
+      "fixtureId": "editorial:brasileirao-serie-a:cruzeiro-vs-bahia:2026-11-05",
+      "predictionAccess": "free",
+      "prediction": "Cruzeiro or Draw (1X) + Under 4.5 Total Goals",
+      "odds": 1.6,
+      "finalScore": {
+        "home": 3,
+        "away": 2
+      },
+      "result": "red",
+      "settledAt": "2026-11-06T02:53:01.895Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
     "brasileirao-serie-a:cruzeiro-vs-remo": {
       "key": "brasileirao-serie-a:cruzeiro-vs-remo",
       "league": "brasileirao-serie-a",
@@ -565,6 +584,25 @@
       "result": "green",
       "settledAt": "2026-10-12T00:45:42.338Z",
       "publishedAt": "2026-10-08T15:00:00.000-03:00"
+    },
+    "brasileirao-serie-a:palmeiras-vs-remo": {
+      "key": "brasileirao-serie-a:palmeiras-vs-remo",
+      "league": "brasileirao-serie-a",
+      "slug": "palmeiras-vs-remo",
+      "homeTeam": "Palmeiras",
+      "awayTeam": "Remo",
+      "date": "2026-11-05",
+      "fixtureId": "editorial:brasileirao-serie-a:palmeiras-vs-remo:2026-11-05",
+      "predictionAccess": "free",
+      "prediction": "Palmeiras -1.5 Asian Handicap",
+      "odds": 1.66,
+      "finalScore": {
+        "home": 6,
+        "away": 1
+      },
+      "result": "green",
+      "settledAt": "2026-11-06T02:53:01.895Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
     },
     "brasileirao-serie-a:remo-vs-gremio": {
       "key": "brasileirao-serie-a:remo-vs-gremio",
@@ -6657,6 +6695,24 @@
       },
       "result": "red",
       "settledAt": "2026-11-05T22:51:30.268Z",
+      "publishedAt": "2026-11-05T00:00:00-05:00"
+    },
+    "uefa-europa-league:lillestrom-sk-vs-viktoria-plzen": {
+      "key": "uefa-europa-league:lillestrom-sk-vs-viktoria-plzen",
+      "league": "uefa-europa-league",
+      "slug": "lillestrom-sk-vs-viktoria-plzen",
+      "homeTeam": "Lillestrøm SK",
+      "awayTeam": "Viktoria Plzeň",
+      "date": "2026-11-05",
+      "predictionAccess": "free",
+      "prediction": "Lillestrøm or Draw (1X)",
+      "odds": 1.65,
+      "finalScore": {
+        "home": 0,
+        "away": 1
+      },
+      "result": "red",
+      "settledAt": "2026-11-06T02:53:01.895Z",
       "publishedAt": "2026-11-05T00:00:00-05:00"
     },
     "uefa-europa-league:lillestrom-vs-real-sociedad": {

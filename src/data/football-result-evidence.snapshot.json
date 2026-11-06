@@ -1291,6 +1291,16 @@
       "kickoffUtc": "2026-11-05T17:45:00.000Z",
       "capturedAt": "2026-11-05T22:51:29.241Z"
     },
+    "uefa-europa-league:lillestrom-sk-vs-viktoria-plzen": {
+      "status": "completed",
+      "homeScore": 0,
+      "awayScore": 1,
+      "provider": "fotmob",
+      "providerEventId": "6112375",
+      "sourceUrl": "https://www.fotmob.com/match/6112375",
+      "kickoffUtc": "2026-11-05T17:45:00.000Z",
+      "capturedAt": "2026-11-06T02:53:00.978Z"
+    },
     "uefa-europa-league:lillestrom-vs-real-sociedad": {
       "status": "completed",
       "homeScore": 0,
