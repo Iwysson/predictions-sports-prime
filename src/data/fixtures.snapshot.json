@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-06T22:01:39.410Z",
+  "generatedAt": "2026-11-07T01:44:34.062Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -10742,9 +10742,9 @@
             "time": "20:45",
             "homeTeam": "Famalicao",
             "awayTeam": "Arouca",
-            "homeScore": null,
-            "awayScore": null,
-            "status": "in-progress",
+            "homeScore": 1,
+            "awayScore": 0,
+            "status": "completed",
             "dataSource": "espn",
             "id": "401885399",
             "sourceAgreement": true,
@@ -16565,13 +16565,13 @@
   },
   "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-06T22:01:39.410Z",
-    "la-liga": "2026-11-06T22:01:39.410Z",
-    "bundesliga": "2026-11-06T22:01:39.410Z",
-    "serie-a": "2026-11-06T22:01:39.410Z",
-    "liga-portugal": "2026-11-06T22:01:39.410Z",
-    "ligue-1": "2026-11-06T22:01:39.410Z",
-    "eredivisie": "2026-11-06T22:01:39.410Z",
+    "premier-league": "2026-11-07T01:44:34.062Z",
+    "la-liga": "2026-11-07T01:44:34.062Z",
+    "bundesliga": "2026-11-07T01:44:34.062Z",
+    "serie-a": "2026-11-07T01:44:34.062Z",
+    "liga-portugal": "2026-11-07T01:44:34.062Z",
+    "ligue-1": "2026-11-07T01:44:34.062Z",
+    "eredivisie": "2026-11-07T01:44:34.062Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
