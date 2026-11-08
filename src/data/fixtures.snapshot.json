@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-08T01:31:53.000Z",
+  "generatedAt": "2026-11-08T07:51:54.467Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -11099,7 +11099,7 @@
             "awayTeam": "Maritimo",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "postponed",
             "dataSource": "espn",
             "id": "401885400",
             "sourceAgreement": true,
@@ -17000,13 +17000,13 @@
   },
   "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-08T01:31:53.000Z",
-    "la-liga": "2026-11-08T01:31:53.000Z",
-    "bundesliga": "2026-11-08T01:31:53.000Z",
-    "serie-a": "2026-11-08T01:31:53.000Z",
-    "liga-portugal": "2026-11-08T01:31:53.000Z",
-    "ligue-1": "2026-11-08T01:31:53.000Z",
-    "eredivisie": "2026-11-08T01:31:53.000Z",
+    "premier-league": "2026-11-08T07:51:54.467Z",
+    "la-liga": "2026-11-08T07:51:54.467Z",
+    "bundesliga": "2026-11-08T07:51:54.467Z",
+    "serie-a": "2026-11-08T07:51:54.467Z",
+    "liga-portugal": "2026-11-08T07:51:54.467Z",
+    "ligue-1": "2026-11-08T07:51:54.467Z",
+    "eredivisie": "2026-11-08T07:51:54.467Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
