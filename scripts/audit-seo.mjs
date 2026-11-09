@@ -241,7 +241,11 @@ for (const route of matchRoutes) {
   else if (!crossedKickoffAfterBuild && decision.indexable && !/content="index, follow"[^>]*name="robots"|name="robots"[^>]*content="index, follow"/i.test(html)) errors.push(`${route}: KEEP page missing index, follow`);
   else if (!crossedKickoffAfterBuild && !decision.indexable && !/<meta name="robots" content="[^"]*noindex/i.test(html)) errors.push(`${route}: ${decision.classification} page missing noindex`);
   if (!leagueHref) errors.push(`${route}: missing football-hub breadcrumb link`);
-  if (links === 0 || links > 4) errors.push(`${route}: expected 1-4 related links, found ${links}`);
+  // A publication wave can contain one active match after older fixtures settle.
+  // There is then no legitimate match page to link in the related section.
+  if ((matchRoutes.length > 1 && links === 0) || links > 4) {
+    errors.push(`${route}: expected ${matchRoutes.length > 1 ? "1-4" : "0-4"} related links, found ${links}`);
+  }
   if (!html.includes('class="match-seo-intro"')) errors.push(`${route}: missing static match introduction`);
   // Protected analysis (VIP) is served by the gated endpoint and is deliberately not in static HTML.
   // Such pages must carry the explicit marker instead.

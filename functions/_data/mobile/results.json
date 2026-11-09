@@ -1,6 +1,196 @@
 {
-  "generatedAt": "2026-11-05T10:42:39.580Z",
+  "generatedAt": "2026-11-09T12:19:50.787Z",
   "records": [
+    {
+      "slug": "cruzeiro-vs-bahia",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Cruzeiro",
+      "awayTeam": "Bahia",
+      "date": "2026-11-05",
+      "prediction": "Cruzeiro or Draw (1X) + Under 4.5 Total Goals",
+      "odds": 1.6,
+      "result": "red"
+    },
+    {
+      "slug": "palmeiras-vs-remo",
+      "league": "brasileirao-serie-a",
+      "homeTeam": "Palmeiras",
+      "awayTeam": "Remo",
+      "date": "2026-11-05",
+      "prediction": "Palmeiras -1.5 Asian Handicap",
+      "odds": 1.66,
+      "result": "green"
+    },
+    {
+      "slug": "ac-milan-vs-ferencvaros",
+      "league": "uefa-europa-league",
+      "homeTeam": "AC Milan",
+      "awayTeam": "Ferencváros",
+      "date": "2026-11-05",
+      "prediction": "AC Milan Win + Over 2.5 Total Goals",
+      "odds": 1.74,
+      "result": "red"
+    },
+    {
+      "slug": "anderlecht-vs-rb-salzburg",
+      "league": "uefa-europa-league",
+      "homeTeam": "Anderlecht",
+      "awayTeam": "RB Salzburg",
+      "date": "2026-11-05",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.6,
+      "result": "red"
+    },
+    {
+      "slug": "az-alkmaar-vs-juventus",
+      "league": "uefa-europa-league",
+      "homeTeam": "AZ Alkmaar",
+      "awayTeam": "Juventus",
+      "date": "2026-11-05",
+      "prediction": "Juventus or Draw (X2) + Over 1.5 Total Goals",
+      "odds": 1.7,
+      "result": "green"
+    },
+    {
+      "slug": "bayer-leverkusen-vs-olympique-marseille",
+      "league": "uefa-europa-league",
+      "homeTeam": "Bayer Leverkusen",
+      "awayTeam": "Olympique Marseille",
+      "date": "2026-11-05",
+      "prediction": "Over 3.5 Total Goals",
+      "odds": 2,
+      "result": "red"
+    },
+    {
+      "slug": "benfica-vs-lech-poznan",
+      "league": "uefa-europa-league",
+      "homeTeam": "Benfica",
+      "awayTeam": "Lech Poznań",
+      "date": "2026-11-05",
+      "prediction": "Benfica Win + Under 4.5 Total Goals",
+      "odds": 1.7,
+      "result": "green"
+    },
+    {
+      "slug": "celta-vigo-vs-union-saint-gilloise",
+      "league": "uefa-europa-league",
+      "homeTeam": "Celta Vigo",
+      "awayTeam": "Union Saint-Gilloise",
+      "date": "2026-11-05",
+      "prediction": "Celta Vigo or Draw (1X) + Over 1.5 Total Goals",
+      "odds": 1.7,
+      "result": "red"
+    },
+    {
+      "slug": "celtic-vs-besiktas",
+      "league": "uefa-europa-league",
+      "homeTeam": "Celtic",
+      "awayTeam": "Beşiktaş",
+      "date": "2026-11-05",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.6,
+      "result": "green"
+    },
+    {
+      "slug": "crystal-palace-vs-tsg-hoffenheim",
+      "league": "uefa-europa-league",
+      "homeTeam": "Crystal Palace",
+      "awayTeam": "TSG Hoffenheim",
+      "date": "2026-11-05",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.55,
+      "result": "red"
+    },
+    {
+      "slug": "hapoel-beer-sheva-vs-ofi-crete",
+      "league": "uefa-europa-league",
+      "homeTeam": "Hapoel Be’er Sheva",
+      "awayTeam": "OFI Crete",
+      "date": "2026-11-05",
+      "prediction": "Hapoel Be’er Sheva or Draw (1X) + Over 1.5 Total Goals",
+      "odds": 1.77,
+      "result": "red"
+    },
+    {
+      "slug": "levski-sofia-vs-jagiellonia-bialystok",
+      "league": "uefa-europa-league",
+      "homeTeam": "Levski Sofia",
+      "awayTeam": "Jagiellonia Białystok",
+      "date": "2026-11-05",
+      "prediction": "Levski or Draw (1X) + Over 1.5 Total Goals",
+      "odds": 1.7,
+      "result": "red"
+    },
+    {
+      "slug": "lillestrom-sk-vs-viktoria-plzen",
+      "league": "uefa-europa-league",
+      "homeTeam": "Lillestrøm SK",
+      "awayTeam": "Viktoria Plzeň",
+      "date": "2026-11-05",
+      "prediction": "Lillestrøm or Draw (1X)",
+      "odds": 1.65,
+      "result": "red"
+    },
+    {
+      "slug": "nec-nijmegen-vs-omonia-nicosia",
+      "league": "uefa-europa-league",
+      "homeTeam": "NEC Nijmegen",
+      "awayTeam": "Omonia Nicosia",
+      "date": "2026-11-05",
+      "prediction": "NEC Nijmegen Win",
+      "odds": 1.79,
+      "result": "green"
+    },
+    {
+      "slug": "real-sociedad-vs-lyon",
+      "league": "uefa-europa-league",
+      "homeTeam": "Real Sociedad",
+      "awayTeam": "Lyon",
+      "date": "2026-11-05",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.6,
+      "result": "red"
+    },
+    {
+      "slug": "sk-sturm-graz-vs-nk-celje",
+      "league": "uefa-europa-league",
+      "homeTeam": "SK Sturm Graz",
+      "awayTeam": "NK Celje",
+      "date": "2026-11-05",
+      "prediction": "SK Sturm Graz Win",
+      "odds": 1.55,
+      "result": "red"
+    },
+    {
+      "slug": "sparta-praha-vs-afc-bournemouth",
+      "league": "uefa-europa-league",
+      "homeTeam": "Sparta Praha",
+      "awayTeam": "AFC Bournemouth",
+      "date": "2026-11-05",
+      "prediction": "Over 2.5 Total Goals",
+      "odds": 1.65,
+      "result": "green"
+    },
+    {
+      "slug": "sunderland-vs-dinamo-zagreb",
+      "league": "uefa-europa-league",
+      "homeTeam": "Sunderland",
+      "awayTeam": "Dinamo Zagreb",
+      "date": "2026-11-05",
+      "prediction": "Sunderland Win + Over 1.5 Total Goals",
+      "odds": 1.7,
+      "result": "red"
+    },
+    {
+      "slug": "torreense-vs-ararat-armenia",
+      "league": "uefa-europa-league",
+      "homeTeam": "Torreense",
+      "awayTeam": "Ararat-Armenia",
+      "date": "2026-11-05",
+      "prediction": "Torreense Win",
+      "odds": 1.72,
+      "result": "green"
+    },
     {
       "slug": "athletico-pr-vs-vasco",
       "league": "brasileirao-serie-a",
