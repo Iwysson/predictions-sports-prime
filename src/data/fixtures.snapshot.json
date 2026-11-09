@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-09T01:59:05.928Z",
+  "generatedAt": "2026-11-09T19:45:13.345Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -17293,15 +17293,17 @@
       }
     ]
   },
-  "predictionIds": {},
+  "predictionIds": {
+    "eliteserien:kristiansund-vs-valerenga": "official:eliteserien:kristiansund-vs-valerenga:2026-11-09"
+  },
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-09T01:59:05.928Z",
-    "la-liga": "2026-11-09T01:59:05.928Z",
-    "bundesliga": "2026-11-09T01:59:05.928Z",
-    "serie-a": "2026-11-09T01:59:05.928Z",
-    "liga-portugal": "2026-11-09T01:59:05.928Z",
-    "ligue-1": "2026-11-09T01:59:05.928Z",
-    "eredivisie": "2026-11-09T01:59:05.928Z",
+    "premier-league": "2026-11-09T19:45:13.345Z",
+    "la-liga": "2026-11-09T19:45:13.345Z",
+    "bundesliga": "2026-11-09T19:45:13.345Z",
+    "serie-a": "2026-11-09T19:45:13.345Z",
+    "liga-portugal": "2026-11-09T19:45:13.345Z",
+    "ligue-1": "2026-11-09T19:45:13.345Z",
+    "eredivisie": "2026-11-09T19:45:13.345Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
@@ -22963,6 +22965,22 @@
       "fotmobMatchId": 6112365,
       "sourceAgreement": true,
       "kickoffUtc": "2026-11-05T20:00:00.000Z",
+      "timeConfirmed": true
+    },
+    "official:eliteserien:kristiansund-vs-valerenga:2026-11-09": {
+      "round": 26,
+      "date": "2026-11-09",
+      "time": "19:00",
+      "homeTeam": "Kristiansund",
+      "awayTeam": "Vålerenga",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "dataSource": "fotmob",
+      "id": "official:eliteserien:kristiansund-vs-valerenga:2026-11-09",
+      "fotmobMatchId": 5105046,
+      "sourceAgreement": true,
+      "kickoffUtc": "2026-11-09T18:00:00.000Z",
       "timeConfirmed": true
     }
   }
