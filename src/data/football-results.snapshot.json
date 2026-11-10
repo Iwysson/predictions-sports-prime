@@ -2276,6 +2276,25 @@
       "settledAt": "2026-10-30T09:50:56.761Z",
       "publishedAt": "2026-10-14T09:00:00.000-03:00"
     },
+    "eliteserien:kristiansund-vs-valerenga": {
+      "key": "eliteserien:kristiansund-vs-valerenga",
+      "league": "eliteserien",
+      "slug": "kristiansund-vs-valerenga",
+      "homeTeam": "Kristiansund",
+      "awayTeam": "Vålerenga",
+      "date": "2026-11-09",
+      "fixtureId": "official:eliteserien:kristiansund-vs-valerenga:2026-11-09",
+      "predictionAccess": "free",
+      "prediction": "Vålerenga or Draw (X2) + Under 4.5 Total Goals",
+      "odds": 1.97,
+      "finalScore": {
+        "home": 1,
+        "away": 0
+      },
+      "result": "red",
+      "settledAt": "2026-11-10T02:24:46.255Z",
+      "publishedAt": "2026-11-09T00:00:00-05:00"
+    },
     "eliteserien:lillestrom-vs-molde": {
       "key": "eliteserien:lillestrom-vs-molde",
       "league": "eliteserien",

@@ -1,20 +1,5 @@
 {
   "version": 1,
-  "records": {
-    "eliteserien:kristiansund-vs-valerenga": {
-      "key": "eliteserien:kristiansund-vs-valerenga",
-      "league": "eliteserien",
-      "slug": "kristiansund-vs-valerenga",
-      "homeTeam": "Kristiansund",
-      "awayTeam": "Vålerenga",
-      "date": "2026-11-09",
-      "predictionAccess": "free",
-      "prediction": "Vålerenga or Draw (X2) + Under 4.5 Total Goals",
-      "odds": 1.97,
-      "reason": "NOT_COMPLETED"
-    }
-  },
-  "reconcileReasons": {
-    "eliteserien:kristiansund-vs-valerenga": "NOT_COMPLETED"
-  }
+  "records": {},
+  "reconcileReasons": {}
 }

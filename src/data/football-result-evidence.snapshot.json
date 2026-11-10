@@ -441,6 +441,16 @@
       "kickoffUtc": "2026-10-17T14:00Z",
       "capturedAt": "2026-10-30T09:50:35.212Z"
     },
+    "eliteserien:kristiansund-vs-valerenga": {
+      "status": "completed",
+      "homeScore": 1,
+      "awayScore": 0,
+      "provider": "espn",
+      "providerEventId": "401843480",
+      "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/401843480",
+      "kickoffUtc": "2026-11-09T18:00Z",
+      "capturedAt": "2026-11-10T02:24:45.190Z"
+    },
     "eliteserien:lillestrom-vs-molde": {
       "status": "completed",
       "homeScore": 2,
