@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-09T19:45:13.345Z",
+  "generatedAt": "2026-11-10T10:06:13.643Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -17293,17 +17293,15 @@
       }
     ]
   },
-  "predictionIds": {
-    "eliteserien:kristiansund-vs-valerenga": "official:eliteserien:kristiansund-vs-valerenga:2026-11-09"
-  },
+  "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-09T19:45:13.345Z",
-    "la-liga": "2026-11-09T19:45:13.345Z",
-    "bundesliga": "2026-11-09T19:45:13.345Z",
-    "serie-a": "2026-11-09T19:45:13.345Z",
-    "liga-portugal": "2026-11-09T19:45:13.345Z",
-    "ligue-1": "2026-11-09T19:45:13.345Z",
-    "eredivisie": "2026-11-09T19:45:13.345Z",
+    "premier-league": "2026-11-10T10:06:13.643Z",
+    "la-liga": "2026-11-10T10:06:13.643Z",
+    "bundesliga": "2026-11-10T10:06:13.643Z",
+    "serie-a": "2026-11-10T10:06:13.643Z",
+    "liga-portugal": "2026-11-10T10:06:13.643Z",
+    "ligue-1": "2026-11-10T10:06:13.643Z",
+    "eredivisie": "2026-11-10T10:06:13.643Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
