@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-11T02:07:53.682Z",
+  "generatedAt": "2026-11-11T17:10:01.113Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -11108,18 +11108,18 @@
           },
           {
             "round": 11,
-            "date": "2026-11-08",
-            "time": "15:30",
+            "date": "2027-01-04",
+            "time": "20:15",
             "homeTeam": "Estoril",
             "awayTeam": "Maritimo",
             "homeScore": null,
             "awayScore": null,
-            "status": "postponed",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885400",
-            "sourceAgreement": true,
+            "sourceAgreement": false,
             "timeConfirmed": true,
-            "kickoffUtc": "2026-11-08T15:30Z"
+            "kickoffUtc": "2027-01-04T20:15Z"
           },
           {
             "round": 11,
@@ -16875,13 +16875,13 @@
   },
   "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-11T02:07:53.682Z",
-    "la-liga": "2026-11-11T02:07:53.682Z",
-    "bundesliga": "2026-11-11T02:07:53.682Z",
-    "serie-a": "2026-11-11T02:07:53.682Z",
-    "liga-portugal": "2026-11-11T02:07:53.682Z",
-    "ligue-1": "2026-11-11T02:07:53.682Z",
-    "eredivisie": "2026-11-11T02:07:53.682Z",
+    "premier-league": "2026-11-11T17:10:01.113Z",
+    "la-liga": "2026-11-11T17:10:01.113Z",
+    "bundesliga": "2026-11-11T17:10:01.113Z",
+    "serie-a": "2026-11-11T17:10:01.113Z",
+    "liga-portugal": "2026-11-11T17:10:01.113Z",
+    "ligue-1": "2026-11-11T17:10:01.113Z",
+    "eredivisie": "2026-11-11T17:10:01.113Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
