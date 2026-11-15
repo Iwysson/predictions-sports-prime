@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-15T16:39:21.864Z",
+  "generatedAt": "2026-11-15T21:15:15.937Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -4208,37 +4208,37 @@
             "id": "401882781",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "kickoffUtc": "2026-12-06T13:00Z"
           },
           {
             "round": 15,
-            "date": "2026-12-06",
-            "time": "TBD",
+            "date": "2026-12-07",
+            "time": "21:00",
             "homeTeam": "Sevilla",
             "awayTeam": "Málaga",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401882778",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-07T20:00Z"
           },
           {
             "round": 15,
-            "date": "2026-12-06",
-            "time": "TBD",
+            "date": "2026-12-04",
+            "time": "21:00",
             "homeTeam": "Alavés",
             "awayTeam": "Espanyol",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401882786",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-04T20:00Z"
           },
           {
             "round": 15,
@@ -4257,33 +4257,33 @@
           },
           {
             "round": 15,
-            "date": "2026-12-06",
-            "time": "TBD",
+            "date": "2026-12-05",
+            "time": "14:00",
             "homeTeam": "Racing Santander",
             "awayTeam": "Deportivo",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401882780",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-05T13:00Z"
           },
           {
             "round": 15,
-            "date": "2026-12-06",
-            "time": "TBD",
+            "date": "2026-12-05",
+            "time": "21:00",
             "homeTeam": "Barcelona",
             "awayTeam": "Celta Vigo",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401882783",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-05T20:00Z"
           },
           {
             "round": 15,
@@ -4298,7 +4298,7 @@
             "id": "401882782",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "kickoffUtc": "2026-12-06T17:30Z"
           },
           {
             "round": 15,
@@ -4313,37 +4313,37 @@
             "id": "401882785",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "kickoffUtc": "2026-12-06T15:15Z"
           },
           {
             "round": 15,
-            "date": "2026-12-06",
-            "time": "TBD",
+            "date": "2026-12-05",
+            "time": "18:30",
             "homeTeam": "Villarreal",
             "awayTeam": "Real Sociedad",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401882777",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-05T17:30Z"
           },
           {
             "round": 15,
-            "date": "2026-12-06",
-            "time": "TBD",
+            "date": "2026-12-05",
+            "time": "16:15",
             "homeTeam": "Rayo Vallecano",
             "awayTeam": "Levante",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401882779",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-06T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-05T15:15Z"
           }
         ]
       },
@@ -17000,13 +17000,13 @@
   },
   "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-15T16:39:21.864Z",
-    "la-liga": "2026-11-15T16:39:21.864Z",
-    "bundesliga": "2026-11-15T16:39:21.864Z",
-    "serie-a": "2026-11-15T16:39:21.864Z",
-    "liga-portugal": "2026-11-15T16:39:21.864Z",
-    "ligue-1": "2026-11-15T16:39:21.864Z",
-    "eredivisie": "2026-11-15T16:39:21.864Z",
+    "premier-league": "2026-11-15T21:15:15.937Z",
+    "la-liga": "2026-11-15T21:15:15.937Z",
+    "bundesliga": "2026-11-15T21:15:15.937Z",
+    "serie-a": "2026-11-15T21:15:15.937Z",
+    "liga-portugal": "2026-11-15T21:15:15.937Z",
+    "ligue-1": "2026-11-15T21:15:15.937Z",
+    "eredivisie": "2026-11-15T21:15:15.937Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
