@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-19T03:59:57.853Z",
+  "generatedAt": "2026-11-19T12:34:15.590Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -2025,18 +2025,18 @@
         "games": [
           {
             "round": 21,
-            "date": "2027-01-16",
-            "time": "15:00",
+            "date": "2027-01-17",
+            "time": "14:00",
             "homeTeam": "Bournemouth",
             "awayTeam": "Ipswich Town",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401878726",
-            "sourceAgreement": true,
+            "sourceAgreement": false,
             "timeConfirmed": true,
-            "kickoffUtc": "2027-01-16T15:00Z"
+            "kickoffUtc": "2027-01-17T14:00Z"
           },
           {
             "round": 21,
@@ -2070,18 +2070,18 @@
           },
           {
             "round": 21,
-            "date": "2027-01-16",
-            "time": "TBD",
+            "date": "2027-01-18",
+            "time": "20:00",
             "homeTeam": "Brentford",
             "awayTeam": "Brighton & Hove Albion",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879168",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-18T20:00Z"
           },
           {
             "round": 21,
@@ -2096,22 +2096,22 @@
             "id": "401878725",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T15:00Z"
+            "kickoffUtc": "2027-01-16T17:30Z"
           },
           {
             "round": 21,
-            "date": "2027-01-16",
-            "time": "TBD",
+            "date": "2027-01-17",
+            "time": "16:30",
             "homeTeam": "Tottenham Hotspur",
             "awayTeam": "Leeds United",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879165",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-17T16:30Z"
           },
           {
             "round": 21,
@@ -2126,7 +2126,7 @@
             "id": "401878724",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-16T15:00Z"
+            "kickoffUtc": "2027-01-16T12:30Z"
           },
           {
             "round": 21,
@@ -2195,48 +2195,48 @@
           },
           {
             "round": 22,
-            "date": "2027-01-23",
-            "time": "TBD",
+            "date": "2027-01-24",
+            "time": "14:00",
             "homeTeam": "Everton",
             "awayTeam": "Brentford",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879162",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-23T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-24T14:00Z"
           },
           {
             "round": 22,
-            "date": "2027-01-23",
-            "time": "TBD",
+            "date": "2027-01-24",
+            "time": "14:00",
             "homeTeam": "Sunderland",
             "awayTeam": "Coventry City",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879159",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-23T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-24T14:00Z"
           },
           {
             "round": 22,
-            "date": "2027-01-23",
-            "time": "TBD",
+            "date": "2027-01-24",
+            "time": "14:00",
             "homeTeam": "Nottingham Forest",
             "awayTeam": "Bournemouth",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401878717",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-23T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-24T14:00Z"
           },
           {
             "round": 22,
@@ -2251,22 +2251,22 @@
             "id": "401878720",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-23T15:00Z"
+            "kickoffUtc": "2027-01-23T17:30Z"
           },
           {
             "round": 22,
-            "date": "2027-01-23",
-            "time": "TBD",
+            "date": "2027-01-25",
+            "time": "20:00",
             "homeTeam": "Leeds United",
             "awayTeam": "Chelsea",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879160",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-23T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-25T20:00Z"
           },
           {
             "round": 22,
@@ -2285,18 +2285,18 @@
           },
           {
             "round": 22,
-            "date": "2027-01-23",
-            "time": "TBD",
+            "date": "2027-01-24",
+            "time": "16:30",
             "homeTeam": "Manchester United",
             "awayTeam": "Liverpool",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401878718",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-23T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-24T16:30Z"
           },
           {
             "round": 22,
@@ -2311,22 +2311,22 @@
             "id": "401879164",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-23T15:00Z"
+            "kickoffUtc": "2027-01-23T20:00Z"
           },
           {
             "round": 22,
-            "date": "2027-01-23",
-            "time": "TBD",
+            "date": "2027-01-24",
+            "time": "14:00",
             "homeTeam": "Crystal Palace",
             "awayTeam": "Tottenham Hotspur",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879163",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-23T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-24T14:00Z"
           }
         ]
       },
@@ -2335,33 +2335,33 @@
         "games": [
           {
             "round": 23,
-            "date": "2027-01-30",
-            "time": "15:00",
+            "date": "2027-01-31",
+            "time": "14:00",
             "homeTeam": "Tottenham Hotspur",
             "awayTeam": "Sunderland",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879153",
-            "sourceAgreement": true,
+            "sourceAgreement": false,
             "timeConfirmed": true,
-            "kickoffUtc": "2027-01-30T15:00Z"
+            "kickoffUtc": "2027-01-31T14:00Z"
           },
           {
             "round": 23,
-            "date": "2027-01-30",
-            "time": "TBD",
+            "date": "2027-02-01",
+            "time": "20:00",
             "homeTeam": "Brentford",
             "awayTeam": "Manchester United",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401878715",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-30T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-02-01T20:00Z"
           },
           {
             "round": 23,
@@ -2380,48 +2380,48 @@
           },
           {
             "round": 23,
-            "date": "2027-01-30",
-            "time": "TBD",
+            "date": "2027-01-31",
+            "time": "14:00",
             "homeTeam": "Hull City",
             "awayTeam": "Crystal Palace",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879156",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-30T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-31T14:00Z"
           },
           {
             "round": 23,
-            "date": "2027-01-30",
-            "time": "TBD",
+            "date": "2027-01-31",
+            "time": "14:00",
             "homeTeam": "Coventry City",
             "awayTeam": "Leeds United",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879157",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-30T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-31T14:00Z"
           },
           {
             "round": 23,
-            "date": "2027-01-30",
-            "time": "TBD",
+            "date": "2027-01-31",
+            "time": "14:00",
             "homeTeam": "Bournemouth",
             "awayTeam": "Fulham",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879158",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-30T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-31T14:00Z"
           },
           {
             "round": 23,
@@ -2436,7 +2436,7 @@
             "id": "401878714",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-30T15:00Z"
+            "kickoffUtc": "2027-01-30T17:30Z"
           },
           {
             "round": 23,
@@ -2451,22 +2451,22 @@
             "id": "401879155",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-30T15:00Z"
+            "kickoffUtc": "2027-01-30T12:30Z"
           },
           {
             "round": 23,
-            "date": "2027-01-30",
-            "time": "TBD",
+            "date": "2027-01-31",
+            "time": "16:30",
             "homeTeam": "Manchester City",
             "awayTeam": "Arsenal",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401879154",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-30T15:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-31T16:30Z"
           },
           {
             "round": 23,
@@ -16425,13 +16425,13 @@
   },
   "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-19T03:59:57.853Z",
-    "la-liga": "2026-11-19T03:59:57.853Z",
-    "bundesliga": "2026-11-19T03:59:57.853Z",
-    "serie-a": "2026-11-19T03:59:57.853Z",
-    "liga-portugal": "2026-11-19T03:59:57.853Z",
-    "ligue-1": "2026-11-19T03:59:57.853Z",
-    "eredivisie": "2026-11-19T03:59:57.853Z",
+    "premier-league": "2026-11-19T12:34:15.590Z",
+    "la-liga": "2026-11-19T12:34:15.590Z",
+    "bundesliga": "2026-11-19T12:34:15.590Z",
+    "serie-a": "2026-11-19T12:34:15.590Z",
+    "liga-portugal": "2026-11-19T12:34:15.590Z",
+    "ligue-1": "2026-11-19T12:34:15.590Z",
+    "eredivisie": "2026-11-19T12:34:15.590Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
