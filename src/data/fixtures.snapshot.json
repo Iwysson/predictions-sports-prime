@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-19T12:34:15.590Z",
+  "generatedAt": "2026-11-20T01:56:40.715Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -16425,13 +16425,13 @@
   },
   "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-19T12:34:15.590Z",
-    "la-liga": "2026-11-19T12:34:15.590Z",
-    "bundesliga": "2026-11-19T12:34:15.590Z",
-    "serie-a": "2026-11-19T12:34:15.590Z",
-    "liga-portugal": "2026-11-19T12:34:15.590Z",
-    "ligue-1": "2026-11-19T12:34:15.590Z",
-    "eredivisie": "2026-11-19T12:34:15.590Z",
+    "premier-league": "2026-11-20T01:56:40.715Z",
+    "la-liga": "2026-11-20T01:56:40.715Z",
+    "bundesliga": "2026-11-20T01:56:40.715Z",
+    "serie-a": "2026-11-20T01:56:40.715Z",
+    "liga-portugal": "2026-11-20T01:56:40.715Z",
+    "ligue-1": "2026-11-20T01:56:40.715Z",
+    "eredivisie": "2026-11-20T01:56:40.715Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
