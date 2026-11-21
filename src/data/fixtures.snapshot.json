@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-21T04:09:55.538Z",
+  "generatedAt": "2026-11-21T12:33:25.389Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -496,7 +496,7 @@
             "awayTeam": "Fulham",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "in-progress",
             "dataSource": "espn",
             "id": "401879233",
             "sourceAgreement": false,
@@ -16270,13 +16270,13 @@
   },
   "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-21T04:09:55.538Z",
-    "la-liga": "2026-11-21T04:09:55.538Z",
-    "bundesliga": "2026-11-21T04:09:55.538Z",
-    "serie-a": "2026-11-21T04:09:55.538Z",
-    "liga-portugal": "2026-11-21T04:09:55.538Z",
-    "ligue-1": "2026-11-21T04:09:55.538Z",
-    "eredivisie": "2026-11-21T04:09:55.538Z",
+    "premier-league": "2026-11-21T12:33:25.389Z",
+    "la-liga": "2026-11-21T12:33:25.389Z",
+    "bundesliga": "2026-11-21T12:33:25.389Z",
+    "serie-a": "2026-11-21T12:33:25.389Z",
+    "liga-portugal": "2026-11-21T12:33:25.389Z",
+    "ligue-1": "2026-11-21T12:33:25.389Z",
+    "eredivisie": "2026-11-21T12:33:25.389Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
