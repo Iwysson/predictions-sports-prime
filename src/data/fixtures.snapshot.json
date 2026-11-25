@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-25T05:42:49.607Z",
+  "generatedAt": "2026-11-25T16:04:44.170Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -2823,7 +2823,7 @@
             "awayTeam": "Athletic Club",
             "homeScore": null,
             "awayScore": null,
-            "status": "suspended",
+            "status": "scheduled",
             "dataSource": "espn",
             "id": "401882849",
             "sourceAgreement": false,
@@ -16705,13 +16705,13 @@
   },
   "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-25T05:42:49.607Z",
-    "la-liga": "2026-11-25T05:42:49.607Z",
-    "bundesliga": "2026-11-25T05:42:49.607Z",
-    "serie-a": "2026-11-25T05:42:49.607Z",
-    "liga-portugal": "2026-11-25T05:42:49.607Z",
-    "ligue-1": "2026-11-25T05:42:49.607Z",
-    "eredivisie": "2026-11-25T05:42:49.607Z",
+    "premier-league": "2026-11-25T16:04:44.170Z",
+    "la-liga": "2026-11-25T16:04:44.170Z",
+    "bundesliga": "2026-11-25T16:04:44.170Z",
+    "serie-a": "2026-11-25T16:04:44.170Z",
+    "liga-portugal": "2026-11-25T16:04:44.170Z",
+    "ligue-1": "2026-11-25T16:04:44.170Z",
+    "eredivisie": "2026-11-25T16:04:44.170Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
