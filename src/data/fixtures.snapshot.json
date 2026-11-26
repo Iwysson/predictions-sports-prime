@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-26T00:11:24.012Z",
+  "generatedAt": "2026-11-26T18:22:12.119Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -10723,48 +10723,48 @@
         "games": [
           {
             "round": 15,
-            "date": "2026-12-20",
-            "time": "TBD",
+            "date": "2026-12-21",
+            "time": "18:45",
             "homeTeam": "Rio Ave",
             "awayTeam": "Benfica",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885360",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-20T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-21T18:45Z"
           },
           {
             "round": 15,
-            "date": "2026-12-20",
-            "time": "TBD",
+            "date": "2026-12-22",
+            "time": "18:45",
             "homeTeam": "Braga",
             "awayTeam": "Académico de Viseu",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885363",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-20T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-22T18:45Z"
           },
           {
             "round": 15,
-            "date": "2026-12-20",
-            "time": "TBD",
+            "date": "2026-12-22",
+            "time": "20:45",
             "homeTeam": "Sporting CP",
             "awayTeam": "Estoril",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885358",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-20T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-22T20:45Z"
           },
           {
             "round": 15,
@@ -10779,37 +10779,37 @@
             "id": "401885365",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-20T20:00Z"
+            "kickoffUtc": "2026-12-20T18:00Z"
           },
           {
             "round": 15,
-            "date": "2026-12-20",
-            "time": "TBD",
+            "date": "2026-12-21",
+            "time": "20:45",
             "homeTeam": "Famalicao",
             "awayTeam": "Porto",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885362",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-20T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-21T20:45Z"
           },
           {
             "round": 15,
-            "date": "2026-12-20",
-            "time": "TBD",
+            "date": "2026-12-19",
+            "time": "18:00",
             "homeTeam": "Alverca",
             "awayTeam": "Gil Vicente",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885366",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-20T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-19T18:00Z"
           },
           {
             "round": 15,
@@ -10824,7 +10824,7 @@
             "id": "401885359",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-20T20:00Z"
+            "kickoffUtc": "2026-12-20T20:30Z"
           },
           {
             "round": 15,
@@ -10839,22 +10839,22 @@
             "id": "401885361",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-20T20:00Z"
+            "kickoffUtc": "2026-12-20T15:30Z"
           },
           {
             "round": 15,
-            "date": "2026-12-20",
-            "time": "TBD",
+            "date": "2026-12-19",
+            "time": "20:30",
             "homeTeam": "Arouca",
             "awayTeam": "Casa Pia",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885364",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-20T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-19T20:30Z"
           }
         ]
       },
@@ -10863,48 +10863,48 @@
         "games": [
           {
             "round": 16,
-            "date": "2026-12-27",
-            "time": "TBD",
+            "date": "2027-01-03",
+            "time": "20:30",
             "homeTeam": "Vitória de Guimaraes",
             "awayTeam": "Rio Ave",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885349",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-27T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-03T20:30Z"
           },
           {
             "round": 16,
-            "date": "2026-12-27",
-            "time": "TBD",
+            "date": "2026-12-29",
+            "time": "18:45",
             "homeTeam": "Casa Pia",
             "awayTeam": "Famalicao",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885357",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-27T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-29T18:45Z"
           },
           {
             "round": 16,
-            "date": "2026-12-27",
-            "time": "TBD",
+            "date": "2026-12-28",
+            "time": "20:45",
             "homeTeam": "Porto",
             "awayTeam": "C.D. Nacional",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885352",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-27T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-28T20:45Z"
           },
           {
             "round": 16,
@@ -10919,82 +10919,82 @@
             "id": "401885351",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2026-12-27T20:00Z"
+            "kickoffUtc": "2026-12-27T15:30Z"
           },
           {
             "round": 16,
-            "date": "2026-12-27",
-            "time": "TBD",
+            "date": "2027-01-03",
+            "time": "15:30",
             "homeTeam": "Moreirense",
             "awayTeam": "Académico de Viseu",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885353",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-27T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-03T15:30Z"
           },
           {
             "round": 16,
-            "date": "2026-12-27",
-            "time": "TBD",
+            "date": "2026-12-29",
+            "time": "20:45",
             "homeTeam": "Benfica",
             "awayTeam": "Sporting CP",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885350",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-27T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-29T20:45Z"
           },
           {
             "round": 16,
-            "date": "2026-12-27",
-            "time": "TBD",
+            "date": "2026-12-28",
+            "time": "18:45",
             "homeTeam": "Gil Vicente",
             "awayTeam": "Arouca",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885355",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-27T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-28T18:45Z"
           },
           {
             "round": 16,
-            "date": "2026-12-27",
-            "time": "TBD",
+            "date": "2026-12-28",
+            "time": "18:00",
             "homeTeam": "Maritimo",
             "awayTeam": "Braga",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885354",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-27T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-28T18:00Z"
           },
           {
             "round": 16,
-            "date": "2026-12-27",
-            "time": "TBD",
+            "date": "2026-12-30",
+            "time": "20:15",
             "homeTeam": "Estoril",
             "awayTeam": "Alverca",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885356",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2026-12-27T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2026-12-30T20:15Z"
           }
         ]
       },
@@ -11029,7 +11029,7 @@
             "id": "401885346",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-10T20:00Z"
+            "kickoffUtc": "2027-01-11T20:00Z"
           },
           {
             "round": 17,
@@ -11044,7 +11044,7 @@
             "id": "401885343",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-10T20:00Z"
+            "kickoffUtc": "2027-01-11T20:00Z"
           },
           {
             "round": 17,
@@ -11059,7 +11059,7 @@
             "id": "401885342",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-10T20:00Z"
+            "kickoffUtc": "2027-01-10T15:30Z"
           },
           {
             "round": 17,
@@ -11104,7 +11104,7 @@
             "id": "401885347",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-10T20:00Z"
+            "kickoffUtc": "2027-01-10T15:30Z"
           },
           {
             "round": 17,
@@ -11123,18 +11123,18 @@
           },
           {
             "round": 17,
-            "date": "2027-01-10",
-            "time": "TBD",
+            "date": "2027-01-02",
+            "time": "20:30",
             "homeTeam": "Sporting CP",
             "awayTeam": "Santa Clara",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885340",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-10T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-02T20:30Z"
           }
         ]
       },
@@ -11143,33 +11143,33 @@
         "games": [
           {
             "round": 18,
-            "date": "2027-01-17",
-            "time": "TBD",
+            "date": "2027-01-18",
+            "time": "18:45",
             "homeTeam": "Famalicao",
             "awayTeam": "Estoril",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885338",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-17T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-18T18:45Z"
           },
           {
             "round": 18,
-            "date": "2027-01-17",
-            "time": "TBD",
+            "date": "2027-01-16",
+            "time": "20:30",
             "homeTeam": "Sporting CP",
             "awayTeam": "Estrela",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885339",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-17T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-16T20:30Z"
           },
           {
             "round": 18,
@@ -11184,7 +11184,7 @@
             "id": "401885335",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-17T20:00Z"
+            "kickoffUtc": "2027-01-16T20:00Z"
           },
           {
             "round": 18,
@@ -11199,7 +11199,7 @@
             "id": "401885337",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-17T20:00Z"
+            "kickoffUtc": "2027-01-17T20:30Z"
           },
           {
             "round": 18,
@@ -11214,37 +11214,37 @@
             "id": "401885336",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-17T20:00Z"
+            "kickoffUtc": "2027-01-17T15:30Z"
           },
           {
             "round": 18,
-            "date": "2027-01-17",
-            "time": "TBD",
+            "date": "2027-01-16",
+            "time": "15:30",
             "homeTeam": "C.D. Nacional",
             "awayTeam": "Santa Clara",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885333",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-17T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-16T15:30Z"
           },
           {
             "round": 18,
-            "date": "2027-01-17",
-            "time": "TBD",
+            "date": "2027-01-15",
+            "time": "20:15",
             "homeTeam": "Alverca",
             "awayTeam": "Porto",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885334",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-17T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-15T20:15Z"
           },
           {
             "round": 18,
@@ -11259,22 +11259,22 @@
             "id": "401885332",
             "sourceAgreement": false,
             "timeConfirmed": false,
-            "kickoffUtc": "2027-01-17T20:00Z"
+            "kickoffUtc": "2027-01-17T18:00Z"
           },
           {
             "round": 18,
-            "date": "2027-01-17",
-            "time": "TBD",
+            "date": "2027-01-18",
+            "time": "20:45",
             "homeTeam": "Arouca",
             "awayTeam": "Vitória de Guimaraes",
             "homeScore": null,
             "awayScore": null,
-            "status": "scheduled",
+            "status": "rescheduled",
             "dataSource": "espn",
             "id": "401885331",
             "sourceAgreement": false,
-            "timeConfirmed": false,
-            "kickoffUtc": "2027-01-17T20:00Z"
+            "timeConfirmed": true,
+            "kickoffUtc": "2027-01-18T20:45Z"
           }
         ]
       },
@@ -16270,13 +16270,13 @@
   },
   "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-26T00:11:24.012Z",
-    "la-liga": "2026-11-26T00:11:24.012Z",
-    "bundesliga": "2026-11-26T00:11:24.012Z",
-    "serie-a": "2026-11-26T00:11:24.012Z",
-    "liga-portugal": "2026-11-26T00:11:24.012Z",
-    "ligue-1": "2026-11-26T00:11:24.012Z",
-    "eredivisie": "2026-11-26T00:11:24.012Z",
+    "premier-league": "2026-11-26T18:22:12.119Z",
+    "la-liga": "2026-11-26T18:22:12.119Z",
+    "bundesliga": "2026-11-26T18:22:12.119Z",
+    "serie-a": "2026-11-26T18:22:12.119Z",
+    "liga-portugal": "2026-11-26T18:22:12.119Z",
+    "ligue-1": "2026-11-26T18:22:12.119Z",
+    "eredivisie": "2026-11-26T18:22:12.119Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
