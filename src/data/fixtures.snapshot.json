@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-27T10:09:57.431Z",
+  "generatedAt": "2026-11-27T19:26:40.060Z",
   "siteTimezone": "America/Fortaleza",
   "displayTimezonePolicy": "league-local",
   "leagues": {
@@ -14233,7 +14233,7 @@
             "awayTeam": "Willem II",
             "homeScore": null,
             "awayScore": null,
-            "status": "rescheduled",
+            "status": "in-progress",
             "dataSource": "espn",
             "id": "401875536",
             "sourceAgreement": true,
@@ -16270,13 +16270,13 @@
   },
   "predictionIds": {},
   "leagueUpdatedAt": {
-    "premier-league": "2026-11-27T10:09:57.431Z",
-    "la-liga": "2026-11-27T10:09:57.431Z",
-    "bundesliga": "2026-11-27T10:09:57.431Z",
-    "serie-a": "2026-11-27T10:09:57.431Z",
-    "liga-portugal": "2026-11-27T10:09:57.431Z",
-    "ligue-1": "2026-11-27T10:09:57.431Z",
-    "eredivisie": "2026-11-27T10:09:57.431Z",
+    "premier-league": "2026-11-27T19:26:40.060Z",
+    "la-liga": "2026-11-27T19:26:40.060Z",
+    "bundesliga": "2026-11-27T19:26:40.060Z",
+    "serie-a": "2026-11-27T19:26:40.060Z",
+    "liga-portugal": "2026-11-27T19:26:40.060Z",
+    "ligue-1": "2026-11-27T19:26:40.060Z",
+    "eredivisie": "2026-11-27T19:26:40.060Z",
     "brasileirao-serie-a": "2026-09-09T11:26:01-03:00"
   },
   "manualFixtures": {
